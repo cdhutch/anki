@@ -28,15 +28,24 @@ subsection).
 
 All TSV files must use this exact column order:
 
-Front\
-Back\
-Source Document\
-Source Location\
-Verification Notes\
+NoteID
+Front
+Back
+Source Document
+Source Location
+Verification Notes
 Tags
 
 Tabs must be used as delimiters.
 
+
+NoteID must be globally unique and stable.
+Format convention:
+
+<category>-<topic>-###  
+
+Example:
+lim-operating-001
 ------------------------------------------------------------------------
 
 ## Tagging Rules
