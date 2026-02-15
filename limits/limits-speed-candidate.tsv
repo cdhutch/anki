@@ -1,7 +1,0 @@
-NoteID	Front	Back	Source Document	Source Location	Verification Notes	Tags
-lim-spd-001	Maximum operating airspeed (VMO)?	340 knots	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits	Review against AOM §18.2.2	verified b737-800 limits verbatim boldface
-lim-spd-002	Maximum operating Mach number (MMO)?	.82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits	Review against AOM §18.2.2	verified b737-800 limits verbatim boldface
-lim-spd-003	Severe turbulence air penetration speed?	280 knots / .76 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits	Review against AOM §18.2.2	verified b737-800 limits verbatim boldface
-lim-spd-004	Maximum gear extension speed (VLO)?	270 knots / .82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits	Review against AOM §18.2.2	unverified b737-800 limits verbatim boldface-pending
-lim-spd-005	Maximum gear extended speed (VLE)?	320 knots / .82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits	Review against AOM §18.2.2	unverified b737-800 limits verbatim boldface-pending
-lim-spd-006	Maximum gear retraction speed (VLO)?	235 knots	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits	Review against AOM §18.2.2	unverified b737-800 limits verbatim boldface-pending
