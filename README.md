@@ -194,3 +194,16 @@ Keep clusters small and stable.
 - Always confirm the correct **Note Type** (`B737 Structured`) before import.
 - Always confirm the correct **Deck** before import.
 - Since TSVs have **no header row**, you do not need a “first row is headers” option.
+
+## 8. Note Formatting Standards
+
+We use standardized HTML formatting for structured recall.
+
+### Boolean Logic Template
+...
+
+### Phase-of-Flight Template
+...
+
+### Failure Logic Template
+...
