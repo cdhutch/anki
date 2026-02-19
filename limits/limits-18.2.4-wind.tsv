@@ -1,25 +1,28 @@
-lim-wind-000	What are wind limits predicated on?	Peak gust value.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits		common limits verbatim
-lim-wind-001	Maximum wind for takeoff and landing (knots)?	50	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table)		common limits verbatim
-lim-wind-002	Maximum tailwind component for takeoff (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table & note 1)		common limits verbatim boldface
-lim-wind-003	Maximum tailwind component for landing (knots)?	10	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table & note 2)		common limits verbatim boldface
-lim-wind-004	Maximum headwind component CAT II/III (knots)?	25	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table)		common limits verbatim
-lim-wind-005	HUD TO — tailwind limit (knots)?	10	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table)		common limits verbatim
-lim-wind-006	Takeoff crosswind limit — HUD TO (knots)?	10	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits verbatim
-lim-wind-007	Takeoff crosswind limit — Dry (knots) — 737-800?	33	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		b737-800 limits verbatim
-lim-wind-007-max	Takeoff crosswind limit — Dry (knots) — 737 MAX 8?	32	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		b737-max8 limits verbatim
-lim-wind-008	Takeoff crosswind limit — Wet (knots)?	25	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits verbatim
-lim-wind-009	Takeoff crosswind limit — Standing water/slush > 1/8 inch depth (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits verbatim
-lim-wind-010	Takeoff crosswind limit — Snow (wet and dry) (knots)?	25	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits verbatim
-lim-wind-011	Takeoff crosswind limit — Compacted snow (knots)?	20	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits verbatim
-lim-wind-012	Takeoff crosswind limit — Ice (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits verbatim
-lim-wind-013	Takeoff crosswind limit — Narrow runway (< 148 ft / 45 m) (knots)?	20	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits verbatim
-lim-wind-020	Landing crosswind limits by RCC (knots) — 737-800?	RCC 6-1: 33; 33; 33; 25; 17; 15.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		b737-800 limits verbatim
-lim-wind-020-max	Landing crosswind limits by RCC (knots) — 737 MAX 8?	RCC 6-1: 32; 32; 32; 25; 17; 15.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		b737-max8 limits verbatim
-lim-wind-026	When using asymmetric reverse thrust on wet/contaminated runways, how are crosswind limits adjusted?	Reduce crosswind limits by 5 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (note 3)		common limits verbatim company-specific
-lim-wind-027	Landing crosswind limit — HUD SA CAT I / CAT II-III approaches (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		common limits verbatim
-lim-wind-028	Landing crosswind limit — Visibility < 3/4 sm (RVR 4000 / 1200 m) (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		common limits verbatim
-lim-wind-029	Landing crosswind limit — Narrow runway (< 148 ft / 45 m) (knots)?	20	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		common limits verbatim
-lim-wind-030	Ground wind: For crosswinds greater than what value should thrust be limited to a setting normally used for taxi?	Greater than 43 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Ground Wind Limits		common limits verbatim
-lim-wind-031	Ground wind: For winds greater than what value should engine thrust be limited to idle (except when setting takeoff thrust on the runway)?	Greater than 58 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Ground Wind Limits		common limits verbatim
-lim-wind-032	Door wind limits: Do not operate entry or service doors above what wind speed?	More than 40 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Door Wind Limits		common limits verbatim
-lim-wind-033	Door wind limits: Do not let the doors stay open in wind gusts above what value?	More than 65 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Door Wind Limits		common limits verbatim
+lim-wind-000	What are wind limits predicated on?	Peak gust value.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits		common limits
+lim-wind-001	Maximum wind for takeoff and landing (knots)?	50	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table)		common limits
+lim-wind-002	Maximum tailwind component for takeoff (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table & note 1)		common limits boldface
+lim-wind-003	Maximum tailwind component for landing (knots)?	10	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table & note 2)		common limits boldface
+lim-wind-004	Maximum headwind component CAT II/III (knots)?	25	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table)		common limits
+lim-wind-005	HUD TO — tailwind limit (knots)?	10	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Wind Limits table)		common limits
+lim-wind-006	Takeoff crosswind limit — HUD TO (knots)?	10	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits
+lim-wind-007	Takeoff crosswind limit — Dry (knots) — 737-800?	33	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		b737-800 limits
+lim-wind-007-max	Takeoff crosswind limit — Dry (knots) — 737 MAX 8?	32	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		b737-max8 limits
+lim-wind-008	Takeoff crosswind limit — Wet (knots)?	25	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits
+lim-wind-009	Takeoff crosswind limit — Standing water/slush > 1/8 inch depth (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits
+lim-wind-010	Takeoff crosswind limit — Snow (wet and dry) (knots)?	25	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits
+lim-wind-011	Takeoff crosswind limit — Compacted snow (knots)?	20	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits
+lim-wind-012	Takeoff crosswind limit — Ice (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits
+lim-wind-013	Takeoff crosswind limit — Narrow runway (< 148 ft / 45 m) (knots)?	20	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)		common limits
+lim-wind-020	Landing crosswind limits by RCC (knots) — 737-800?	RCC 6-1: 33; 33; 33; 25; 17; 15.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		b737-800 limits
+lim-wind-020-max	Landing crosswind limits by RCC (knots) — 737 MAX 8?	RCC 6-1: 32; 32; 32; 25; 17; 15.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		b737-max8 limits
+lim-wind-026	When using asymmetric reverse thrust on wet/contaminated runways, how are crosswind limits adjusted?	Reduce crosswind limits by 5 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (note 3)		common limits company-specific
+lim-wind-027	Landing crosswind limit — HUD SA CAT I / CAT II-III approaches (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		common limits
+lim-wind-028	Landing crosswind limit — Visibility < 3/4 sm (RVR 4000 / 1200 m) (knots)?	15	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		common limits
+lim-wind-029	Landing crosswind limit — Narrow runway (< 148 ft / 45 m) (knots)?	20	B737 AOM Rev 9.0	Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)		common limits
+lim-wind-030	Ground wind: For crosswinds greater than what value should thrust be limited to a setting normally used for taxi?	Greater than 43 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Ground Wind Limits		common limits
+lim-wind-031	Ground wind: For winds greater than what value should engine thrust be limited to idle (except when setting takeoff thrust on the runway)?	Greater than 58 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Ground Wind Limits		common limits
+lim-wind-032	Door wind limits: Do not operate entry or service doors above what wind speed?	More than 40 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Door Wind Limits		common limits
+lim-wind-033	Door wind limits: Do not let the doors stay open in wind gusts above what value?	More than 65 knots.	B737 AOM Rev 9.0	Ch 18 §18.2.4 Door Wind Limits		common limits
+
+
+

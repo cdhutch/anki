@@ -1,8 +1,11 @@
-lim-spd-001	Maximum operating airspeed (VMO)?	340 knots	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits verbatim structural
-lim-spd-002	Maximum operating Mach number (MMO)?	.82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits verbatim structural
-lim-spd-003	Severe turbulence penetration speed?	280 knots / .76 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits verbatim boldface
-lim-spd-004	Maximum landing gear extension speed (VLO extension)?	270 knots / .82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits verbatim structural
-lim-spd-005	Maximum landing gear retraction speed (VLO retraction)?	235 knots	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits verbatim structural
-lim-spd-006	Maximum landing gear extended speed (VLE)?	320 knots / .82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits verbatim structural
-lim-spd-007	Maximum flaps extension speed B737-800 (knots)	1, 2, 5, 10, 15, 20, 30, 40: 240, 240, 240, 210, 200, 190, 175, 162	B737 AOM Rev 9.0	Ch 18 §18.2.2 Flap Operating Speeds		common limits verbatim structural b737-800
-lim-spd-008	Maximum flaps extension speed B737 MAX-8 (knots)	1, 2, 5, 10, 15, 20, 30, 40: 240, 240, 240, 210, 200, 190, 175, 166	B737 AOM Rev 9.0	Ch 18 §18.2.2 Flap Operating Speeds		common limits verbatim structural b737-max8
+lim-spd-001	Maximum operating airspeed (VMO)?	340 knots	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits structural
+lim-spd-002	Maximum operating Mach number (MMO)?	.82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits structural
+lim-spd-003	Severe turbulence penetration speed?	280 knots / .76 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits boldface
+lim-spd-004	Maximum landing gear extension speed (VLO extension)?	270 knots / .82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits structural
+lim-spd-005	Maximum landing gear retraction speed (VLO retraction)?	235 knots	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits structural
+lim-spd-006	Maximum landing gear extended speed (VLE)?	320 knots / .82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits structural
+lim-spd-007	Maximum flaps extension speed B737-800 (knots)	1, 2, 5, 10, 15, 20, 30, 40: 240, 240, 240, 210, 200, 190, 175, 162	B737 AOM Rev 9.0	Ch 18 §18.2.2 Flap Operating Speeds		common limits structural b737-800
+lim-spd-008	Maximum flaps extension speed B737 MAX-8 (knots)	1, 2, 5, 10, 15, 20, 30, 40: 240, 240, 240, 210, 200, 190, 175, 166	B737 AOM Rev 9.0	Ch 18 §18.2.2 Flap Operating Speeds		common limits structural b737-max8
+
+
+
