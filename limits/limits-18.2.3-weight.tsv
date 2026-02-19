@@ -6,3 +6,6 @@ lim-wt-003	Maximum landing weight (lbs) — 737-800?	146,300	B737 AOM Rev 9.0	Ch
 lim-wt-003-max	Maximum landing weight (lbs) — 737 MAX 8?	152,800	B737 AOM Rev 9.0	Ch 18 §18.2.3 Weight Limits (Certificated Limits table)		b737-max8 limits structural
 lim-wt-004	Maximum zero fuel weight (lbs) — 737-800?	138,300	B737 AOM Rev 9.0	Ch 18 §18.2.3 Weight Limits (Certificated Limits table)		b737-800 limits structural
 lim-wt-004-max	Maximum zero fuel weight (lbs) — 737 MAX 8?	145,400	B737 AOM Rev 9.0	Ch 18 §18.2.3 Weight Limits (Certificated Limits table)		b737-max8 limits structural
+
+
+

@@ -6,3 +6,6 @@ lim-spd-005	Maximum landing gear retraction speed (VLO retraction)?	235 knots	B7
 lim-spd-006	Maximum landing gear extended speed (VLE)?	320 knots / .82 Mach	B737 AOM Rev 9.0	Ch 18 §18.2.2 Speed Limits		common limits structural
 lim-spd-007	Maximum flaps extension speed B737-800 (knots)	1, 2, 5, 10, 15, 20, 30, 40: 240, 240, 240, 210, 200, 190, 175, 162	B737 AOM Rev 9.0	Ch 18 §18.2.2 Flap Operating Speeds		common limits structural b737-800
 lim-spd-008	Maximum flaps extension speed B737 MAX-8 (knots)	1, 2, 5, 10, 15, 20, 30, 40: 240, 240, 240, 210, 200, 190, 175, 166	B737 AOM Rev 9.0	Ch 18 §18.2.2 Flap Operating Speeds		common limits structural b737-max8
+
+
+
