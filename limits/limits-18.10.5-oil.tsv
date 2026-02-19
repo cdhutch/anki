@@ -1,2 +1,3 @@
-lim-18-10-5-001	18.10.5 Oil: Oil Temperature 3RA-3VM Before setting takeoff thrust, ensure engine oil?	Oil Temperature 3RA-3VM Before setting takeoff thrust, ensure engine oil temperature is at or above 31°C. The table below provides the approximate time needed for a cold soaked engine to reach an oil temperature of 31°C with engines operating at idle thrust.	B737 AOM Rev 9.0	Ch 18 §18.10.5 Oil		unverified common limits verbatim
-lim-18-10-5-002	18.10.5 Oil: Oil Quantity Note?	Oil Quantity Note: This does not preclude the engine from being started to determine accurate oil quantity. See 14.1.4 Quantity Checks.	B737 AOM Rev 9.0	Ch 18 §18.10.5 Oil		unverified common limits verbatim
+lim-18-10-5-001	What is the minimum engine oil temperature prior to setting takeoff thrust on the Max 8?	31°C.	B737 AOM Rev 9.0	Ch 18 §18.10.5 Oil		b737-max8 limits gotta_know
+lim-18-10-5-002	What is the minimum oil quantity for displatch for the 737-800?	12 quarts	B737 AOM Rev 9.0	Ch 18 §18.10.5 Oil		b737-800 limits gotta_know
+lim-18-10-5-003	What is the minimum oil quantity for displatch for the 737 Max 8?	14 quarts	B737 AOM Rev 9.0	Ch 18 §18.10.5 Oil		b737-max8 limits gotta_know
