@@ -58,3 +58,6 @@ domains/b737/systems/_scratch/system-737-electrical_UPDATED_v2.tsv
 /flows/
 /maneuvers/
 /recall-items/
+
+# Scratch/output (Anki formatting pipeline)
+domains/b737/anki/tmp/
