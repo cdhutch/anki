@@ -1,6 +1,6 @@
 # FSRS Configuration (Anki) — B737 Systems
 
-**Repo:** `anki`  
+**Repo:** `b737-anki`  
 **Applies to:** B737 Systems note imports (e.g., `systems-737-electrical.tsv`)  
 **Anki version observed:** 25.09.2 (3890e12c)  
 **Purpose:** Provide a *version-controlled* reference for FSRS + study preset settings. This file is the source of truth; Anki is configured manually to match.
