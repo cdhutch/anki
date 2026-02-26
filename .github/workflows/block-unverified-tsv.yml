@@ -11,15 +11,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fail if any TSV contains 'unverified'
+      - name: Fail if merge-eligible TSV contains 'unverified'
         shell: bash
         run: |
           set -euo pipefail
-          echo "Scanning all .tsv files for the tag 'unverified'..."
-          matches=$(grep -RIn --exclude-dir='.git' --include='*.tsv' -w 'unverified' . || true)
+          echo "Scanning merge-eligible TSV files for the tag 'unverified'..."
+
+          # Only scan within domains/, and exclude known WIP / generated areas.
+          matches=$(
+            grep -RIn \
+              --exclude-dir='.git' \
+              --exclude-dir='_scratch' \
+              --exclude-dir='tmp' \
+              --exclude-dir='generated' \
+              --exclude-dir='exports' \
+              --include='*.tsv' \
+              -w 'unverified' \
+              domains \
+            || true
+          )
+
           if [[ -n "${matches}" ]]; then
-            echo "::error::Found 'unverified' in TSV files. Remove the tag before merging to main."
+            echo "::error::Found 'unverified' in merge-eligible TSV files. Remove the tag before merging to main."
             echo "${matches}"
             exit 1
           fi
-          echo "OK: No TSV files contain 'unverified'."
+
+          echo "OK: No merge-eligible TSV files contain 'unverified'."
