@@ -67,3 +67,9 @@ domains/**/anki/tmp/
 # Pipeline intermediates (re-creatable)
 domains/**/anki/exports/*__after_html.tsv
 domains/**/anki/exports/*__import_html.tsv
+
+# --- Anki generated artifacts (all domains) ---
+domains/**/anki/exports/
+domains/**/anki/generated/
+domains/**/anki/tmp/
+
