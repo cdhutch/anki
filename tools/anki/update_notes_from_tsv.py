@@ -102,6 +102,43 @@ def choose_answer_field(note_fields: dict[str, Any], preferred: str | None) -> s
     )
 
 
+def resolve_note_ids_from_note_id_field(
+    rows: list[dict[str, str]],
+    *,
+    anki_url: str,
+    note_id_field: str = "NoteID",
+) -> dict[str, int]:
+    """
+    For rows missing 'noteId', resolve noteId by searching Anki for a note
+    whose field `note_id_field` exactly matches row['note_id'].
+
+    Returns mapping: note_id -> noteId (int)
+    """
+    mapping: dict[str, int] = {}
+
+    for r in rows:
+        note_id = (r.get("note_id") or "").strip()
+        noteId_s = (r.get("noteId") or "").strip()
+
+        if not note_id or noteId_s:
+            continue
+
+        # Exact match query on the NoteID field
+        # Quote value to handle punctuation safely.
+        query = f'{note_id_field}:"{note_id}"'
+        found = anki_request("findNotes", {"query": query}, url=anki_url)["result"] or []
+
+        if not found:
+            continue
+
+        if len(found) > 1:
+            print(f"WARNING: multiple notes match {query!r}; using first: {found[0]}")
+
+        mapping[note_id] = int(found[0])
+
+    return mapping
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(
         description="Update Anki notes from a TSV. Supports answer_html (legacy) or front_html/back_html (front+back)."
@@ -142,25 +179,64 @@ def main() -> None:
     print(f"AnkiConnect version: {ver}")
     print(f"Rows to process: {len(rows)}")
 
-    # Collect noteIds, fetch info once
+    # # Collect noteIds, fetch info once
+    # note_ids: list[int] = []
+    # for r in rows:
+    #     noteId_s = (r.get("noteId") or "").strip()
+    #     if noteId_s:
+    #         note_ids.append(int(noteId_s))
+
+    # info = anki_request("notesInfo", {"notes": note_ids}, url=args.anki_url)["result"]
+    # info_map: dict[int, dict[str, Any]] = {int(n["noteId"]): n for n in info if n and "noteId" in n}
+
+    # Resolve missing noteId values by searching NoteID:"<note_id>"
+    resolved = resolve_note_ids_from_note_id_field(rows, anki_url=args.anki_url, note_id_field="NoteID")
+
+    # Collect noteIds (explicit + resolved), fetch info once
     note_ids: list[int] = []
     for r in rows:
+        note_id = (r.get("note_id") or "").strip()
         noteId_s = (r.get("noteId") or "").strip()
+
         if noteId_s:
             note_ids.append(int(noteId_s))
+            continue
+
+        if note_id and note_id in resolved:
+            note_ids.append(int(resolved[note_id]))
+
+    # De-dupe (preserve order)
+    seen: set[int] = set()
+    note_ids = [n for n in note_ids if not (n in seen or seen.add(n))]
 
     info = anki_request("notesInfo", {"notes": note_ids}, url=args.anki_url)["result"]
     info_map: dict[int, dict[str, Any]] = {int(n["noteId"]): n for n in info if n and "noteId" in n}
+
+
+
+
+
 
     updates: list[dict[str, Any]] = []
     skipped = 0
 
     for r in rows:
+        # note_id = (r.get("note_id") or "").strip()
+        # noteId_s = (r.get("noteId") or "").strip()
+
+        # if not noteId_s:
+        #     print(f"SKIP (no noteId): {note_id}")
+        #     skipped += 1
+        #     continue
+
         note_id = (r.get("note_id") or "").strip()
         noteId_s = (r.get("noteId") or "").strip()
 
+        if not noteId_s and note_id and note_id in resolved:
+            noteId_s = str(resolved[note_id])
+
         if not noteId_s:
-            print(f"SKIP (no noteId): {note_id}")
+            print(f"SKIP (no noteId and could not resolve): {note_id}")
             skipped += 1
             continue
 

@@ -1,158 +1,136 @@
 #!/usr/bin/env python3
 """
-Extract AFTER_FRONT and AFTER_BACK blocks from canonical HTML into a TSV for Anki updates.
+Extract per-note AFTER_FRONT and AFTER_BACK HTML blocks from a generated canonical HTML file.
 
-Input: HTML generated from canonical markdown (md_to_html.py)
-Assumptions:
-- Each note starts with an H2: <h2>NOTE_ID</h2>
-- Canonical sections are headed by <h3>AFTER_FRONT</h3> and <h3>AFTER_BACK</h3>
-- Content for a section is the HTML between that <h3> heading and the next <h3> or <h2>.
+Why:
+- The canonical HTML can contain repeated <h3 id="after_front"> / <h3 id="after_back"> across notes.
+- So we must scope extraction to each <h2 id="NOTE_ID"> ... </h2> section first.
 
-Output TSV columns:
-note_id, field, answer_html, prompt, noteId
+Output TSV columns (tab-delimited):
+  note_id, noteId, front_html, back_html, answer_html
 
-- note_id: the canonical NoteID (string from the H2)
-- field: "Front" or "Back" (Anki field name)
-- answer_html: HTML snippet to put into that field
-- prompt: kept for compatibility (blank by default)
-- noteId: optional; if provided (via a mapping TSV), enables direct update_notes_from_tsv.
+- note_id: from <h2 id="...">
+- noteId: optional mapping from a TSV passed via --map (note_id -> noteId)
+- answer_html: kept for compatibility (defaults to back_html; falls back to section body if needed)
 """
-
 from __future__ import annotations
 
 import argparse
 import csv
 import re
 from pathlib import Path
+from typing import Dict, List, Tuple
 
 
-H2_RE = re.compile(r"<h2[^>]*>(.*?)</h2>", re.IGNORECASE | re.DOTALL)
-H3_RE = re.compile(r"<h3[^>]*>(.*?)</h3>", re.IGNORECASE | re.DOTALL)
+H2_RE = re.compile(
+    r'(?is)<h2\b[^>]*\bid="(?P<id>[^"]+)"[^>]*>.*?</h2>(?P<body>.*?)(?=(<h2\b[^>]*\bid=")|\Z)'
+)
 
-TAG_RE = re.compile(r"<[^>]+>")
+# Match an <h3 ...>AFTER_FRONT</h3> (id may repeat; we do NOT rely on it)
+AFTER_FRONT_RE = re.compile(r'(?is)<h3\b[^>]*>\s*AFTER_FRONT\s*</h3>')
+AFTER_BACK_RE  = re.compile(r'(?is)<h3\b[^>]*>\s*AFTER_BACK\s*</h3>')
+HR_RE          = re.compile(r'(?is)<hr\b[^>]*/?>')
 
-def _strip_tags(s: str) -> str:
-    # Remove HTML tags and collapse whitespace
-    t = TAG_RE.sub("", s)
-    t = re.sub(r"\s+", " ", t).strip()
-    return t
 
-def _unescape_basic(s: str) -> str:
-    # Enough for headings produced by typical markdown engines
-    return (
-        s.replace("&amp;", "&")
-         .replace("&lt;", "<")
-         .replace("&gt;", ">")
-         .replace("&quot;", '"')
-         .replace("&#39;", "'")
-         .replace("&nbsp;", " ")
-    )
+def load_noteid_map(map_tsv: Path) -> Dict[str, str]:
+    m: Dict[str, str] = {}
+    with map_tsv.open("r", encoding="utf-8", newline="") as f:
+        rdr = csv.DictReader(f, delimiter="\t")
+        if not rdr.fieldnames:
+            return m
+        # Accept either noteId or note_id variants
+        for r in rdr:
+            note_id = (r.get("note_id") or r.get("noteId") or r.get("NoteID") or "").strip()
+            noteId  = (r.get("noteId") or r.get("note_id") or "").strip()
+            # We expect note_id column to be the canonical string id, and noteId to be numeric.
+            # If the user passes a map TSV with only note_id + noteId, this works.
+            if note_id and noteId and noteId.isdigit():
+                m[note_id] = noteId
+    return m
 
-def _find_heading_positions(html: str):
+
+def extract_front_back(section_html: str) -> Tuple[str, str]:
     """
-    Return a list of tuples:
-    (level, title_text, start_idx, end_idx)
-    where end_idx is end of the heading tag.
+    Given the HTML content *within* a note's h2 section, return (front_html, back_html).
     """
-    items = []
-    for m in H2_RE.finditer(html):
-        title = _strip_tags(_unescape_basic(m.group(1)))
-        items.append(("h2", title, m.start(), m.end()))
-    for m in H3_RE.finditer(html):
-        title = _strip_tags(_unescape_basic(m.group(1)))
-        items.append(("h3", title, m.start(), m.end()))
-    items.sort(key=lambda x: x[2])
-    return items
+    m_front = AFTER_FRONT_RE.search(section_html)
+    m_back  = AFTER_BACK_RE.search(section_html)
 
-def _slice_section(html: str, headings, idx_start: int) -> str:
-    """
-    Given headings list and the index of a heading, return content until next h2/h3.
-    """
-    start = headings[idx_start][3]
-    end = len(html)
-    for j in range(idx_start + 1, len(headings)):
-        # Stop at next heading of any level
-        end = headings[j][2]
-        break
-    return html[start:end].strip()
+    if not m_front and not m_back:
+        # Nothing to split
+        return ("", "")
 
-def load_noteid_map(path: Path) -> dict[str, str]:
-    """
-    Optional TSV mapping canonical note_id -> Anki noteId (numeric).
-    Expected columns: note_id, noteId (others ignored)
-    """
-    mp: dict[str, str] = {}
-    with path.open("r", encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f, delimiter="\t")
-        for r in reader:
-            k = (r.get("note_id") or "").strip()
-            v = (r.get("noteId") or "").strip()
-            if k and v:
-                mp[k] = v
-    return mp
+    # If AFTER_FRONT exists: start after it; otherwise start at beginning
+    start_front = m_front.end() if m_front else 0
 
-def main():
-    ap = argparse.ArgumentParser(description="Extract AFTER_FRONT/AFTER_BACK blocks from canonical HTML to TSV.")
-    ap.add_argument("--in", dest="inp", required=True, help="Input canonical HTML file")
-    ap.add_argument("--out", required=True, help="Output TSV path")
-    ap.add_argument("--map", dest="map_tsv", default=None, help="Optional TSV mapping note_id -> noteId")
-    ap.add_argument("--front-field", default="Front", help="Anki field name for front (default: Front)")
-    ap.add_argument("--back-field", default="Back", help="Anki field name for back (default: Back)")
+    if m_back:
+        front_chunk = section_html[start_front:m_back.start()]
+        start_back = m_back.end()
+        # back until first <hr> (end-of-note marker) or end
+        m_hr = HR_RE.search(section_html, pos=start_back)
+        back_chunk = section_html[start_back:(m_hr.start() if m_hr else len(section_html))]
+    else:
+        front_chunk = section_html[start_front:]
+        back_chunk = ""
+
+    return (front_chunk.strip(), back_chunk.strip())
+
+
+def main() -> None:
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--in", dest="inp", required=True, help="Input HTML (e.g., domains/**/anki/generated/*__canonical.html)")
+    ap.add_argument("--out", dest="out", required=True, help="Output TSV (front+back html)")
+    ap.add_argument("--map", dest="map_tsv", default=None, help="Optional TSV mapping note_id -> noteId (numeric).")
     args = ap.parse_args()
 
-    html = Path(args.inp).read_text(encoding="utf-8")
-    headings = _find_heading_positions(html)
+    inp = Path(args.inp)
+    out = Path(args.out)
+    out.parent.mkdir(parents=True, exist_ok=True)
 
-    note_map = load_noteid_map(Path(args.map_tsv)) if args.map_tsv else {}
+    html = inp.read_text(encoding="utf-8", errors="replace")
 
-    rows = []
-    cur_note_id: str | None = None
+    noteid_map: Dict[str, str] = {}
+    if args.map_tsv:
+        noteid_map = load_noteid_map(Path(args.map_tsv))
 
-    # Walk headings; track current H2 note id; capture H3 sections
-    for i, (lvl, title, _s, _e) in enumerate(headings):
-        if lvl == "h2":
-            cur_note_id = title
-            continue
-        if lvl != "h3" or not cur_note_id:
-            continue
+    rows: List[Dict[str, str]] = []
 
-        title_norm = title.strip().upper()
-        if title_norm not in {"AFTER_FRONT", "AFTER_BACK"}:
+    for m in H2_RE.finditer(html):
+        note_id = (m.group("id") or "").strip()
+        body = m.group("body") or ""
+        if not note_id:
             continue
 
-        section_html = _slice_section(html, headings, i)
-        if not section_html:
-            continue
+        front_html, back_html = extract_front_back(body)
 
-        if title_norm == "AFTER_FRONT":
-            field = args.front_field
-        else:
-            field = args.back_field
+        # Compatibility: answer_html defaults to back_html; if missing, use whatever exists
+        answer_html = back_html or front_html or body.strip()
+
+        noteId = noteid_map.get(note_id, "")
 
         rows.append(
             {
-                "note_id": cur_note_id,
-                "noteId": note_map.get(cur_note_id, ""),
-                "prompt": "",
-                "field": field,
-                "answer_html": section_html,
+                "note_id": note_id,
+                "noteId": noteId,
+                "front_html": front_html,
+                "back_html": back_html,
+                "answer_html": answer_html,
             }
         )
 
-    out_path = Path(args.out)
-    out_path.parent.mkdir(parents=True, exist_ok=True)
-
-    with out_path.open("w", encoding="utf-8", newline="") as f:
-        writer = csv.DictWriter(
+    with out.open("w", encoding="utf-8", newline="") as f:
+        w = csv.DictWriter(
             f,
-            fieldnames=["note_id", "noteId", "prompt", "field", "answer_html"],
+            fieldnames=["note_id", "noteId", "front_html", "back_html", "answer_html"],
             delimiter="\t",
         )
-        writer.writeheader()
-        writer.writerows(rows)
+        w.writeheader()
+        for r in rows:
+            w.writerow(r)
 
     print(f"Rows: {len(rows)}")
-    print(f"Output: {out_path}")
+    print(f"Output: {out}")
+
 
 if __name__ == "__main__":
     main()
