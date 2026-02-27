@@ -3,6 +3,8 @@ repos:
     hooks:
       - id: cnsf-canonical
         name: CNSF canonical YAML order
-        entry: tools/anki/scripts/check_cnsf_canonical.sh
-        language: system
-        pass_filenames: false
+        entry: python -m tools.anki.cnsf_canonicalize --check
+        language: python
+        additional_dependencies:
+          - pyyaml
+        files: ^domains/.*/anki/notes/.*\.md$
