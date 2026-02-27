@@ -112,3 +112,31 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
+
+def render_cnsf_note_to_html(note_path: str | Path) -> dict[str, str]:
+    """
+    Render a CNSF note (.md) into HTML fragments using MultiMarkdown.
+
+    Returns:
+      {
+        "front_html": "<!-- renderer: ... -->\n ...",
+        "back_html":  "<!-- renderer: ... -->\n ...",
+        "front_provenance": "<!-- renderer: ... -->",
+        "back_provenance": "<!-- renderer: ... -->",
+      }
+    """
+    note = load_cnsf_note(str(note_path))
+
+    mmd_cmd = _find_mmd()
+    if not mmd_cmd:
+        raise RuntimeError("Could not find MultiMarkdown executable. Expected 'multimarkdown' or 'mmd' on PATH.")
+
+    front_html, front_prov = _render_with_mmd(mmd_cmd, note.front_md)
+    back_html, back_prov = _render_with_mmd(mmd_cmd, note.back_md)
+
+    return {
+        "front_html": front_html,
+        "back_html": back_html,
+        "front_provenance": front_prov,
+        "back_provenance": back_prov,
+    }
