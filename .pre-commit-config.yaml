@@ -1,0 +1,10 @@
+repos:
+  - repo: local
+    hooks:
+      - id: cnsf-canonical
+        name: CNSF canonical YAML order
+        entry: python -m tools.anki.cnsf_canonicalize --check
+        language: python
+        additional_dependencies:
+          - pyyaml
+        files: ^domains/.*/anki/notes/.*\.md$
