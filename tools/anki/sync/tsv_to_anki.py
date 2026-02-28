@@ -180,12 +180,43 @@ def main() -> int:
             update_note(r, url=args.anki_url)
             updated += 1
             print(f"OK: updated noteId {r.noteId} ({r.note_id})")
-        else:
+            continue
+
+        # No noteId provided → attempt create; if duplicate, adopt existing by NoteID and update.
+        try:
             nid = create_note(r, url=args.anki_url)
             created += 1
             print(f"OK: created noteId {nid} ({r.note_id})")
             if args.map_out:
                 append_mapping(Path(args.map_out), r.note_id, nid)
+        except RuntimeError as e:
+            msg = str(e).lower()
+            if "duplicate" not in msg:
+                raise
+
+            # Try to find an existing note by the stable CNSF note_id stored in the NoteID field.
+            # Scope to model+deck to reduce false matches.
+            query = f'note:"{r.model}" deck:"{r.deck}" NoteID:"{r.note_id}"'
+            hits = anki_request("findNotes", {"query": query}, url=args.anki_url) or []
+
+            if not hits:
+                # Fall back to field-only search (in case deck/model naming differs).
+                query2 = f'NoteID:"{r.note_id}"'
+                hits = anki_request("findNotes", {"query": query2}, url=args.anki_url) or []
+
+            if not hits:
+                raise RuntimeError(
+                    f"Duplicate on create for {r.note_id}, but could not find an existing note via NoteID search."
+                ) from e
+
+            adopted = int(hits[0])
+            r.noteId = str(adopted)
+            update_note(r, url=args.anki_url)
+            updated += 1
+            print(f"OK: adopted+updated existing noteId {adopted} ({r.note_id})")
+
+            if args.map_out:
+                append_mapping(Path(args.map_out), r.note_id, adopted)
 
     print(f"Done. updated={updated} created={created}")
     return 0
