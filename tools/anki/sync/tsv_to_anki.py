@@ -148,11 +148,42 @@ def append_mapping(map_path: Path, note_id: str, noteId: int) -> None:
         f.write(f"{note_id}\t{noteId}\n")
 
 
+def read_noteid_map(map_path: Path) -> Dict[str, str]:
+    """Read a mapping TSV with header: note_id \t noteId"""
+    m: Dict[str, str] = {}
+    if not map_path.exists():
+        return m
+    with map_path.open("r", encoding="utf-8", newline="") as f:
+        reader = csv.DictReader(f, delimiter="\t")
+        for row in reader:
+            nid = (row.get("note_id") or "").strip()
+            aid = (row.get("noteId") or "").strip()
+            if nid and aid:
+                m[nid] = aid
+    return m
+
+
+def apply_noteid_map(rows: List[TsvRow], mapping: Dict[str, str]) -> int:
+    """Fill row.noteId from mapping for any row missing noteId. Returns count applied."""
+    applied = 0
+    if not mapping:
+        return applied
+    for r in rows:
+        if not r.noteId:
+            hit = mapping.get(r.note_id, "").strip()
+            if hit:
+                r.noteId = hit
+                applied += 1
+    return applied
+
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--tsv", required=True, help="Path to L3 import TSV (HTML payload)")
     ap.add_argument("--anki-url", default=ANKI_CONNECT_URL_DEFAULT)
     ap.add_argument("--map-out", default="", help="Optional mapping TSV to append to on CREATE flows")
+    ap.add_argument("--map-in", default="", help="Optional mapping TSV (note_id->noteId) to apply before sync")
     ap.add_argument("--dry-run", action="store_true", help="Parse + validate only; do not call AnkiConnect")
     ap.add_argument("--check", action="store_true", help="Validate TSV; fail if any row would CREATE (missing noteId); no AnkiConnect calls")
     args = ap.parse_args()
@@ -166,6 +197,13 @@ def main() -> int:
     if not rows:
         eprint("No rows found.")
         return 2
+
+    # Optional: fill missing noteId values from a mapping TSV (note_id -> noteId)
+    if args.map_in:
+        mapping = read_noteid_map(Path(args.map_in))
+        applied = apply_noteid_map(rows, mapping)
+        if applied:
+            print(f"OK: map-in applied noteId for rows={applied}")
 
     if args.dry_run:
         print(f"OK: parsed rows={len(rows)} (dry-run)")
