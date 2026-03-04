@@ -42,7 +42,7 @@ def get_identity(fields, mapping):
             return fields[f]
     return None
 
-def write_note(outdir, mapping, fields, row, note_id):
+def write_note(outdir, mapping, fields, row, canonical_note_id):
 
     front = fields.get(mapping["front_field"], "")
     back = fields.get(mapping["back_field"], "")
@@ -66,7 +66,8 @@ def write_note(outdir, mapping, fields, row, note_id):
     md.append("schema: cnsf/v0")
     md.append(f"domain: {mapping['domain']}")
     md.append(f"note_type: {mapping['note_type']}")
-    md.append(f"note_id: {note_id}")
+    md.append(f"canonical_note_id: {canonical_note_id}")
+    md.append(f"anki_note_id: {row.get('anki_note_id', '')}")
     md.append("anki:")
     md.append(f"  model: {row['model']}")
 
@@ -91,7 +92,7 @@ def write_note(outdir, mapping, fields, row, note_id):
     md.append(back)
     md.append("")
 
-    outpath = Path(outdir) / f"{note_id}.md"
+    outpath = Path(outdir) / f"{canonical_note_id}.md"
     with open(outpath, "w") as f:
         f.write("\n".join(md))
 
@@ -118,12 +119,12 @@ def main():
 
             fields = strip_prefix(row)
 
-            note_id = get_identity(fields, mapping)
+            canonical_note_id = get_identity(fields, mapping)
 
-            if not note_id:
+            if not canonical_note_id:
                 continue
 
-            write_note(args.outdir, mapping, fields, row, note_id)
+            write_note(args.outdir, mapping, fields, row, canonical_note_id)
 
 if __name__ == "__main__":
     main()
