@@ -65,9 +65,14 @@ domains/**/anki/generated/*.html
 domains/**/anki/tmp/
 
 # Pipeline intermediates (re-creatable)
-domains/**/anki/exports/*__after_html.tsv
-domains/**/anki/exports/*__import_html.tsv
+domains/**/anki/exports/
 
 # Mapping files (runtime artifacts; not canonical)
 domains/**/anki/mapping/
 domains/**/anki/mapping/*.tsv
+
+# Anki pipeline exports (re-creatable; do not commit)
+domains/**/anki/exports/
+
+# Reverse pipeline inbox artifacts
+domains/**/anki/inbox/
