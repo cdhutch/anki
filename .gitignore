@@ -73,3 +73,6 @@ domains/**/anki/mapping/*.tsv
 
 # Anki pipeline exports (re-creatable; do not commit)
 domains/**/anki/exports/
+
+# Reverse pipeline inbox artifacts
+domains/**/anki/inbox/
