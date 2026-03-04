@@ -9,9 +9,6 @@ def tsv_unescape_cell(s: str) -> str:
     """Inverse of anki_to_l3_tsv.tsv_escape_cell()."""
     if s is None:
         return ""
-    # Important: unescape in reverse order of escaping.
-    # We escaped backslashes first, so here we unescape \t/\n/\r first,
-    # then collapse \\ -> \ at the end.
     s = str(s)
     s = s.replace("\\t", "\t")
     s = s.replace("\\n", "\n")
@@ -43,25 +40,24 @@ def get_identity(fields, mapping):
     return None
 
 def write_note(outdir, mapping, fields, row, canonical_note_id):
-
-    front = fields.get(mapping["front_field"], "")
-    back = fields.get(mapping["back_field"], "")
+    # front/back placeholders
+    front = fields.get(mapping.get("front_field", ""), "")
+    back = fields.get(mapping.get("back_field", ""), "")
 
     tags = []
     if mapping.get("include_anki_tags"):
         tags += row.get("tags", "").split()
-
     tags += mapping.get("add_tags", [])
-
     tags = sorted(set(t for t in tags if t))
 
+    # Preserve all fields listed in mapping['preserve_fields']
     preserve = {}
     for f in mapping.get("preserve_fields", []):
-        if f in fields and fields[f]:
-            preserve[f] = fields[f]
+        value = row.get(f, "") or fields.get(f, "")
+        if value:
+            preserve[f] = value
 
     md = []
-
     md.append("---")
     md.append("schema: cnsf/v0")
     md.append(f"domain: {mapping['domain']}")
@@ -78,7 +74,7 @@ def write_note(outdir, mapping, fields, row, canonical_note_id):
 
     if preserve:
         md.append("fields:")
-        for k,v in preserve.items():
+        for k, v in preserve.items():
             md.append(f"  {k}: {v}")
 
     md.append("---")
@@ -97,15 +93,16 @@ def write_note(outdir, mapping, fields, row, canonical_note_id):
         f.write("\n".join(md))
 
 def main():
-
     p = argparse.ArgumentParser()
     p.add_argument("--infile", required=True)
     p.add_argument("--mapping-dir", default="tools/anki/extract/mappings")
     p.add_argument("--outdir", required=True)
-
     args = p.parse_args()
 
     os.makedirs(args.outdir, exist_ok=True)
+
+    ua_counter = 1
+    processed_anki_ids = set()   # track exported Anki note IDs
 
     with open(args.infile) as f:
         reader = csv.DictReader(f, delimiter="\t")
@@ -113,18 +110,32 @@ def main():
         for row in reader:
             row = row_unescape(row)
 
+            anki_id = row.get("anki_note_id", "")
+            if anki_id in processed_anki_ids:
+                continue  # skip duplicates
+            if anki_id:
+                processed_anki_ids.add(anki_id)
+
             model = row["model"]
-
             mapping = load_mapping(args.mapping_dir, model)
-
             fields = strip_prefix(row)
 
-            canonical_note_id = get_identity(fields, mapping)
+            # Determine canonical_note_id
+            match = get_identity(fields, mapping)
+            if not match and row["model"] == "UA_Lexeme":
+                inbox = Path(args.outdir)
+                # generate unique ua-lexeme-XXX that doesn't exist yet
+                while True:
+                    candidate = f"ua-lexeme-{ua_counter:03d}"
+                    ua_counter += 1
+                    if not (inbox / f"{candidate}.md").exists():
+                        break
+                match = candidate
 
+            canonical_note_id = match
             if not canonical_note_id:
                 continue
 
             write_note(args.outdir, mapping, fields, row, canonical_note_id)
-
 if __name__ == "__main__":
     main()

@@ -1,0 +1,44 @@
+model: UA_Lexeme
+
+identity_fields:
+  - canonical_note_id
+
+note_id_field: canonical_note_id
+front_field: ""
+back_field: ""
+
+domain: ua
+note_type: inferred_from_anki
+
+# Preserve all fields that exist in the TSV
+preserve_fields:
+  - f__AspectPair_IPFV
+  - f__AspectPair_PFV
+  - f__Audio
+  - f__ConfusableSet
+  - f__ContrastNote
+  - f__CrossLang_Analog
+  - f__Derived_Adv
+  - f__Derived_Comparative
+  - f__Derived_Superlative
+  - f__EN_Example
+  - f__EN_Gloss
+  - f__EuphonyNote
+  - f__Govt_Case
+  - f__Lemma
+  - f__Mnemonic
+  - f__Morphology_Note
+  - f__Noun_Irregular
+  - f__POS
+  - f__Pattern
+  - f__Polysemy_Note
+  - f__Tags_Ch
+  - f__TypingAnswer
+  - f__UA_Example
+  - f__VerbMotion_Pair
+  - f__Verb_Conj_Table
+
+include_anki_tags: true
+add_tags:
+  - status:unverified
+  - source:anki
