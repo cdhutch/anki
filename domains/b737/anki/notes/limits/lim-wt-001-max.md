@@ -1,11 +1,13 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: limits_weight_model
-note_id: b737_limits_weight_max8
+note_type: limits_table
+note_id: lim-wt-001.md
+
 anki:
   model: B737_Structured
   deck: B737::Limits
+
 tags:
 - domain:b737
 - model:max8
