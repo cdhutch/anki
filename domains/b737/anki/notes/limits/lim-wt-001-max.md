@@ -2,19 +2,17 @@
 schema: cnsf/v0
 domain: b737
 note_type: limits_table
-note_id: lim-wt-001.md
-
+note_id: lim-wt-001
 anki:
   model: B737_Structured
   deck: B737::Limits
-
 tags:
 - domain:b737
 - model:max8
 - topic:limits
 - subtopic:weight
 - source:aom
-- status:unverified
+- status:verified
 fields:
   Source Document: B737 AOM Rev 9.0
   Source Location: Ch 18 §18.2.3 Weight Limits (Certificated Limits table)
