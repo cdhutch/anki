@@ -11,11 +11,11 @@ tags:
 - topic:limits
 - subtopic:wind
 - source:aom
-- status:unverified
+- status:verified
 - emphasis:boldface
 fields:
   Source Document: B737 AOM Rev 9.0
-  Source Location: Ch 18 §18.2.4 Wind Limits (Wind Limits table & note 2)
+  Source Location: Ch 18 §18.2.4 Wind Limits (Wind Limits table & notes 1–2)
   Verification Notes: ''
 ---
 
@@ -23,8 +23,13 @@ fields:
 
 **B737 LIMITS — WIND**
 
-Maximum tailwind component for landing (knots)?
+Maximum **tailwind component for landing**?
 
 # back_md
 
-10
+10 knots
+
+**Operational rules:**
+
+• Runway or visibility limitations may further reduce this limit.  
+• **15 knots may be authorized** only when the airport has special company data (Ops Advisory / company alert).

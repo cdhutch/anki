@@ -11,7 +11,7 @@ tags:
 - topic:limits
 - subtopic:wind
 - source:aom
-- status:unverified
+- status:verified
 fields:
   Source Document: B737 AOM Rev 9.0
   Source Location: Ch 18 §18.2.4 Wind Limits (Takeoff Crosswind Limits)
@@ -20,17 +20,16 @@ fields:
 
 # front_md
 
-**B737 LIMITS — TAKEOFF CROSSWIND (COMMON CONDITIONS)**
+**B737 LIMITS — TAKEOFF CROSSWIND (RUNWAY CONDITION)**
 
-Recall the common takeoff crosswind limits by runway condition:
+Recall the takeoff crosswind limits by **runway surface condition**.
 
 # back_md
 
 | Condition                       | Limit (kt) |
 | ---                             | ---:       |
 | Wet                             | 25         |
-| Standing water / slush > 1/8 in | 15         |
 | Snow (wet and dry)              | 25         |
 | Compacted snow                  | 20         |
+| Standing water / slush > 1/8 in | 15         |
 | Ice                             | 15         |
-| Narrow runway (< 148 ft / 45 m) | 20         |

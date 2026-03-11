@@ -11,7 +11,7 @@ tags:
 - topic:limits
 - subtopic:wind
 - source:aom
-- status:unverified
+- status:verified
 fields:
   Source Document: B737 AOM Rev 9.0
   Source Location: Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)
