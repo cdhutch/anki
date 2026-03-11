@@ -32,5 +32,5 @@ Maximum **tailwind component for landing**?
 
 **Operational rules:**
 
-• Runway or visibility limitations may further reduce this limit.  
-• **15 knots may be authorized** only when the airport has special company data (Ops Advisory / company alert).
+- Runway or visibility limitations may further reduce this limit.  
+- **15 knots may be authorized** only when the airport has special company data (Ops Advisory / company alert).

@@ -13,7 +13,6 @@ tags:
 - source:aom
 - status:verified
 - emphasis:good_to_know
-
 fields:
   Source Document: B737 AOM Rev 9.0
   Source Location: Ch 18 §18.2.1 RVSM Altimeter Tolerances Note

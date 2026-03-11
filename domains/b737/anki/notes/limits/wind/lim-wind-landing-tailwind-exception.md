@@ -30,7 +30,7 @@ When is a **15-knot landing tailwind** authorized?
 
 Only when **specifically authorized for that airport** by company data:
 
-• Listed on the **Ops Advisory page**  
-• or authorized by **Company Alert with special performance data**
+- Listed on the **Ops Advisory page**  
+- or authorized by **Company Alert with special performance data**
 
 Otherwise the **standard landing tailwind limit is 10 knots.**

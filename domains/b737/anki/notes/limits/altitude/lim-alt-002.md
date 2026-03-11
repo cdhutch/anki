@@ -13,7 +13,6 @@ tags:
 - source:aom
 - status:verified
 - emphasis:trivia
-
 fields:
   Source Document: B737 AOM Rev 9.0
   Source Location: Ch 18 §18.2.1 Altitude Limits
