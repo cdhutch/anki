@@ -92,11 +92,12 @@ def load_cnsf_note(path: str | Path) -> CNSFNote:
     note_id = (meta.get("note_id") or "").strip()
     if not note_id:
         raise ValueError(f"{p}: YAML must include note_id.")
-    if "-" in note_id:
-        raise ValueError(f"{p}: note_id must use underscores only (no hyphens): {note_id!r}")
+    if not re.fullmatch(r"[a-z0-9_-]+", note_id):
+        raise ValueError(
+            f"{p}: note_id must use lowercase letters/numbers with hyphens or underscores only: {note_id!r}"
+        )
 
     return CNSFNote(path=p, meta=meta, front_md=front_md, back_md=back_md)
-
 
 def main() -> None:
     import argparse

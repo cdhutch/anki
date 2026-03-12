@@ -60,6 +60,14 @@ class TsvRow:
     extra_fields: Dict[str, str]
 
 
+def _tsv_unescape(v: str) -> str:
+    """
+    Reverse the L3 TSV escaping performed by cnsf_to_import_tsv.py.
+    Order matters: unescape tabs first, then newlines.
+    """
+    return v.replace("\\t", "\t").replace("\\n", "\n")
+
+
 def parse_tsv(path: Path) -> Tuple[List[str], List[TsvRow]]:
     with path.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f, delimiter="\t")
@@ -87,12 +95,11 @@ def parse_tsv(path: Path) -> Tuple[List[str], List[TsvRow]]:
                     model=(r.get("model") or "").strip(),
                     deck=(r.get("deck") or "").strip(),
                     tags=tags,
-                    front_html=(r.get("front_html") or ""),
-                    back_html=(r.get("back_html") or ""),
-                    extra_fields=extra,
+                    front_html=_tsv_unescape(r.get("front_html") or ""),
+                    back_html=_tsv_unescape(r.get("back_html") or ""),
+                    extra_fields={k: _tsv_unescape(v) for k, v in extra.items()},
                 )
             )
-
     return header, rows
 
 
