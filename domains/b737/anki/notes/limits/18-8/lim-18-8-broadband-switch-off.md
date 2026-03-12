@@ -29,10 +29,14 @@ When must the **BROADBAND SYSTEM switch be OFF**?
 
 The broadband system switch must be **OFF**:
 
-- During aircraft **de-icing**  
-- While **in a hangar**  
+- During aircraft **de-icing**
+- While **in a hangar**
 - When **stopped under a skybridge**
 
-**Caution**
+<div class="caution-box">
+
+**CAUTION**
 
 The passenger oxygen mask deployment switch is located **near the broadband switch**.
+
+</div>

@@ -27,16 +27,16 @@ fields:
 Fill in the certified maximum weights (x1000 lb):
 
 | Limit    | Value |
-|---       |---    |
-| MZFW     | ___   |
-| MLW      | ___   |
-| MTOW     | ___   |
-| Max Taxi | ___   |
+| :---:    | :---: |
+| MZFW     |       |
+| MLW      |       |
+| MTOW     |       |
+| Max Taxi |       |
 
 # back_md
 
 | Limit    | Value |
-|---       |---:   |
+| :---:    | :---: |
 | MZFW     | 138.3 |
 | MLW      | 146.3 |
 | MTOW     | 174.2 |
