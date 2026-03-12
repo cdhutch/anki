@@ -33,6 +33,20 @@ def eprint(*args: Any) -> None:
     print(*args, file=sys.stderr)
 
 
+def tsv_unescape_cell(s: str) -> str:
+    """Invert TSV escaping used by our pipeline.
+    Order matters: unescape \\t/\\n/\\r first, then \\\\ last.
+    """
+    if s is None:
+        return ""
+    s = str(s)
+    s = s.replace("\\t", "\t")
+    s = s.replace("\\n", "\n")
+    s = s.replace("\\r", "\r")
+    s = s.replace("\\\\", "\\")
+    return s
+
+
 def anki_request(action: str, params: Optional[dict] = None, url: str = ANKI_CONNECT_URL_DEFAULT) -> Any:
     payload = {"action": action, "version": 6, "params": params or {}}
     req = urllib.request.Request(
@@ -86,7 +100,7 @@ def parse_tsv(path: Path) -> Tuple[List[str], List[TsvRow]]:
             tags_raw = (r.get("tags") or "").strip()
             tags = [t for t in tags_raw.split() if t]
 
-            extra = {k: (r.get(k) or "") for k in header if k not in required}
+            extra = {k: tsv_unescape_cell(r.get(k) or "") for k in header if k not in required}
 
             rows.append(
                 TsvRow(
@@ -95,9 +109,9 @@ def parse_tsv(path: Path) -> Tuple[List[str], List[TsvRow]]:
                     model=(r.get("model") or "").strip(),
                     deck=(r.get("deck") or "").strip(),
                     tags=tags,
-                    front_html=_tsv_unescape(r.get("front_html") or ""),
-                    back_html=_tsv_unescape(r.get("back_html") or ""),
-                    extra_fields={k: _tsv_unescape(v) for k, v in extra.items()},
+                    front_html=tsv_unescape_cell(r.get("front_html") or ""),
+                    back_html=tsv_unescape_cell(r.get("back_html") or ""),
+                    extra_fields=extra,
                 )
             )
     return header, rows
