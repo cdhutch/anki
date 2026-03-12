@@ -11,6 +11,10 @@ Desktop.ini
 # Linux
 *~
 
+# Generated archives
+*_md.zip
+*_tsv.zip
+
 # Temporary files
 *.tmp
 *.temp

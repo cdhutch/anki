@@ -104,12 +104,14 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     if schema != "cnsf/v0":
         raise ValueError(f"{path}: schema must be 'cnsf/v0' (found: {schema!r}).")
 
-    # Enforce underscore note_id grammar
+    # Enforce note_id grammar: lowercase tokens separated by hyphens or underscores
     note_id = (meta.get("note_id") or "").strip()
     if not note_id:
         raise ValueError(f"{path}: YAML must include note_id.")
-    if "-" in note_id:
-        raise ValueError(f"{path}: note_id must use underscores only (no hyphens): {note_id!r}")
+    if not re.fullmatch(r"[a-z0-9]+(?:[-_][a-z0-9]+)*", note_id):
+        raise ValueError(
+            f"{path}: note_id must use lowercase letters/numbers with hyphens or underscores only: {note_id!r}"
+        )
 
     # Normalize anki mapping
     anki = meta.get("anki")

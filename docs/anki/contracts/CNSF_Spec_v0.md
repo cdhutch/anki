@@ -1,48 +1,53 @@
 # CNSF Spec v0 (Canonical Note Source Format)
 
-This document defines the **canonical, repo-owned note file format** used to generate, validate, and sync Anki notes for **all domains** (e.g., `b737`, `ua`).
+This document defines the **canonical, repo-owned note file format**
+used to generate, validate, and sync Anki notes for **all domains**
+(e.g., `b737`, `ua`).
 
-- Schema identifier remains: `schema: cnsf/v0`
-- This spec **tightens rules** (naming + delimiters + validation) without introducing a new schema version.
+-   Schema identifier remains: `schema: cnsf/v0`
+-   This spec tightens rules (naming + delimiters + validation) without
+    introducing a new schema version.
 
----
+------------------------------------------------------------------------
 
 ## Goals
 
-1) **1:1 mapping** — one file corresponds to one Anki note.  
-2) **Deterministic transforms** — same input yields same outputs (HTML/TSV).  
-3) **Domain-agnostic** — works for B737 and Ukrainian note types.  
-4) **Repo is source of truth** — tags, sources, and field payloads live in the repo.
+1)  **1:1 mapping** --- one file corresponds to one Anki note.\
+2)  **Deterministic transforms** --- same input yields same outputs
+    (HTML/TSV).\
+3)  **Domain-agnostic** --- works for B737 and Ukrainian note types.\
+4)  **Repo is source of truth** --- tags, sources, and field payloads
+    live in the repo.
 
----
+------------------------------------------------------------------------
 
 ## File location and 1:1 mapping
 
 Each note is a single Markdown file:
 
-```
-domains/<domain>/anki/notes/<note_type>/<note_id>.md
-```
+    domains/<domain>/anki/notes/<note_type>/<note_id>.md
 
-- `<domain>` is a short identifier (e.g., `b737`, `ua`)
-- `<note_type>` is the **CNSF note type** identifier (underscores only)
-- `<note_id>` is the **canonical note ID** (underscores only)
+-   `<domain>` is a short identifier (e.g., `b737`, `ua`)
+-   `<note_type>` is the **CNSF note type** identifier (underscores
+    only)
+-   `<note_id>` is the **canonical note ID** (lowercase tokens separated
+    by hyphens or underscores)
 
 **1 file = 1 Anki note**.
 
----
+------------------------------------------------------------------------
 
 ## Required structure
 
 A CNSF note file has:
 
-1) YAML front matter (metadata + non-front/back fields)
-2) A `# front_md` section
-3) A `# back_md` section
+1)  YAML front matter (metadata + non-front/back fields)\
+2)  A `# front_md` section\
+3)  A `# back_md` section
 
 Example skeleton:
 
-```yaml
+``` yaml
 ---
 schema: cnsf/v0
 domain: b737
@@ -67,8 +72,9 @@ fields:
   Verification Notes: ""
 
 aliases:
-  - b737-limits-weight-800   # optional (legacy)
+  - b737-limits-weight-800
 ---
+
 # front_md
 ...markdown...
 
@@ -76,201 +82,238 @@ aliases:
 ...markdown...
 ```
 
-### Required YAML keys
+------------------------------------------------------------------------
 
-- `schema` (must equal `cnsf/v0`)
-- `domain`
-- `note_type`
-- `note_id`
-- `anki.model`
-- `anki.deck`
-- `tags` (list; may be empty but should exist)
-- `fields` (object/map; may be empty but should exist)
+## Canonical naming grammar
 
-### Required body sections
+### Repo identifiers
 
-- Exactly one `# front_md`
-- Exactly one `# back_md`
-- Everything between these headings belongs to that section.
-- Additional headings inside each section are allowed.
-
----
-
-## Canonical naming grammar (underscores)
-
-### Repo identifiers MUST use underscores
-
-For the following **repo identifiers**, underscores are mandatory:
-
-- `note_type`
-- `note_id`
-- CNSF filenames (`<note_id>.md`)
-- folder names under `notes/` (`<note_type>/`)
+-   `note_type` **must use underscores only**
+-   `note_id` **may use hyphens or underscores**
+-   Filenames must match `note_id` exactly
 
 ### Allowed character set
 
-For `domain`, `note_type`, and `note_id`:
+    [a-z0-9_-]
 
-- lowercase letters, digits, underscores only: `^[a-z0-9_]+$`
-- no spaces
-- no hyphens
+### Recommended patterns
+
+Preferred style for `note_id` is **kebab-case (hyphens)**:
+
+    lim-wind-026
+    lim-spd-007
+    lim-wt-002-max
+
+Underscores remain allowed for legacy compatibility:
+
+    lim_wind_026
+    lim_spd_007
+
+------------------------------------------------------------------------
+
+# Canonical `note_id` grammar (domain-scoped)
+
+To maintain consistency across domains and allow deterministic tooling,
+`note_id` values follow a **structured token grammar**.
+
+General form:
+
+    <category>-<topic>-<identifier>[-<variant>]
+
+Tokens are lowercase and separated by hyphens.
+
+Underscores remain allowed for legacy compatibility but **new IDs SHOULD
+use hyphens**.
+
+------------------------------------------------------------------------
+
+## Category tokens
+
+Each domain defines a short **category prefix**.
+
+  Category    Meaning
+  ----------- ----------------------------
+  `lim`       Aircraft limitations
+  `sys`       Aircraft systems knowledge
+  `flow`      Cockpit flows
+  `callout`   Standard callouts
+  `man`       Maneuvers / memory scripts
+  `ua`        Ukrainian language notes
+
+------------------------------------------------------------------------
+
+## B737 domain conventions
+
+### Limits
+
+    lim-<subject>-<index>
 
 Examples:
 
-✅ `b737_limits_weight_800`  
-✅ `ua_lexeme`  
-❌ `b737-limits-weight-800` (hyphens)  
-❌ `B737_Limits` (uppercase)  
-❌ `limits weight` (space)
+    lim-alt-001
+    lim-spd-003
+    lim-wind-026
+    lim-wt-002-max
 
----
+Variant tokens may indicate aircraft models:
 
-## Aliases (legacy compatibility)
+    lim-wt-001-800
+    lim-wt-001-max
 
-`aliases` is optional, and exists to bridge legacy Anki note IDs that used hyphens.
+Grouped tables:
 
-- `aliases` is a YAML list of strings
-- Aliases MAY contain hyphens
-- Aliases MUST NOT be used for filenames or note folders
-- Preferred usage: keep existing Anki notes addressable while canonical IDs move to underscores
+    lim-wind-ldg-rcc-models
 
-Recommended policy:
+------------------------------------------------------------------------
 
-- `note_id` is canonical (underscores)
-- existing Anki NoteID field may still contain a legacy value
-- mapping TSV resolves canonical ↔ Anki IDs
+### Systems
 
----
+    sys-<system>-<concept>
+
+Examples:
+
+    sys-elec-ac-bus-loss
+    sys-hyd-pump-b
+    sys-fuel-crossfeed
+    sys-yaw-damper-power
+
+------------------------------------------------------------------------
+
+### Flows
+
+    flow-<crew>-<phase>
+
+Examples:
+
+    flow-fo-before-start
+    flow-capt-after-start
+    flow-fo-secure
+
+------------------------------------------------------------------------
+
+### Callouts
+
+    callout-<phase>-<trigger>
+
+Examples:
+
+    callout-takeoff-80-knots
+    callout-takeoff-v1
+    callout-approach-minimums
+
+------------------------------------------------------------------------
+
+### Maneuvers
+
+    man-<maneuver>
+
+Examples:
+
+    man-windshear-escape
+    man-rejected-takeoff
+    man-single-engine-go-around
+
+------------------------------------------------------------------------
+
+## Stability guarantees
+
+The following identifiers must remain stable once published:
+
+-   `note_id`
+-   file path
+-   mapping to Anki notes
+
+Renaming requires a migration step.
+
+------------------------------------------------------------------------
 
 ## Tags policy (canonical in repo)
 
-### Source of truth
-
-- `tags:` in CNSF is **canonical**.
-- Anki tags are managed from CNSF via sync scripts (not ad-hoc).
-
-### Tag grammar
-
-Use normalized, machine-friendly tags:
-
-- Prefer namespaced tags: `key:value`
-- Use lowercase
-- Use underscores if you need a delimiter inside values
+`tags:` in CNSF is canonical and synchronized to Anki.
 
 Examples:
 
-- `domain:b737`
-- `domain:ua`
-- `topic:limits`
-- `subtopic:weight`
-- `model:max8`
-- `source:aom`
-- `status:unverified` / `status:verified`
+    domain:b737
+    topic:limits
+    subtopic:weight
+    model:max8
+    source:aom
+    status:unverified
 
-### Verification status
+Verification status tags:
 
-Standardize across all domains:
+    status:unverified
+    status:verified
 
-- `status:unverified` — default for new notes
-- `status:verified` — once confirmed against the source
-
-(Optionally add a workflow tag, but keep the above as the canonical pair.)
-
----
+------------------------------------------------------------------------
 
 ## Fields policy (non-front/back)
 
-`fields:` is a YAML map for model-specific fields **other than** front/back.
+`fields:` stores non‑Front/Back model fields.
 
-- Keys must match Anki field names exactly (case-sensitive)
-- Values are strings (empty string allowed)
+Example fields:
 
-Examples:
-- B737: `Source Document`, `Source Location`, `Verification Notes`
-- UA: `Tags_Ch` may remain as an Anki field, but canonical tags should be in `tags:`
+    Source Document
+    Source Location
+    Verification Notes
 
----
+------------------------------------------------------------------------
 
 ## Front/back ownership
 
-- `# front_md` and `# back_md` are the canonical **content source** for the Front/Back fields.
-- They are rendered to HTML by the renderer step (MultiMarkdown preferred).
+`# front_md` and `# back_md` are the canonical source for Anki
+Front/Back fields.
 
-**Card templates (Anki side) remain responsible** for adding static chrome (e.g., Source footer).  
-Content fields should stay “clean” and not duplicate template chrome.
+Card templates should provide static elements (e.g., source footer).
 
----
+------------------------------------------------------------------------
 
-## Renderer requirement (prove MultiMarkdown usage)
+## Renderer requirement
 
-### Preferred renderer
+Preferred renderer:
 
-If available on PATH, the system MUST use **Fletcher Penney MultiMarkdown**:
+**Fletcher Penney MultiMarkdown** (`multimarkdown` or `mmd`).
 
-- `multimarkdown` OR `mmd`
+Fallback renderers must:
 
-The renderer step should write provenance to logs and/or output metadata, e.g.:
+-   emit warnings
+-   remain deterministic
+-   annotate fallback outputs.
 
-- `renderer: multimarkdown`
-- `renderer_version: <version output>`
-
-### Fallback renderer
-
-If MultiMarkdown is not present, fallback is allowed, but MUST:
-
-- emit a warning
-- annotate outputs as fallback-generated (comment marker)
-- remain deterministic
-
----
+------------------------------------------------------------------------
 
 ## Validation rules
 
-A CNSF validator MUST fail the note if:
+A validator must fail when:
 
-1) YAML front matter is missing or invalid
-2) required YAML keys are missing
-3) `domain`, `note_type`, or `note_id` violates the underscore grammar
-4) `# front_md` or `# back_md` is missing or duplicated
-5) file path does not match YAML:
-   - path domain matches `domain:`
-   - folder `notes/<note_type>/` matches `note_type:`
-   - filename matches `note_id`
+-   YAML front matter missing
+-   required keys missing
+-   identifier grammar violated
+-   missing `front_md` or `back_md`
+-   file path mismatches metadata
 
-Recommended (warning-only) checks:
+Recommended warnings:
 
-- tags contain `domain:<domain>`
-- tags contain exactly one of `status:verified` or `status:unverified`
+-   missing `domain:<domain>` tag
+-   missing verification status tag
 
----
+------------------------------------------------------------------------
 
-## Mapping to Anki (summary)
+## Mapping to Anki
 
-- Canonical identifier: `note_id` (underscores)
-- Anki linkage:
-  - prefer a dedicated Anki field: `NoteID` (string)
-  - mapping TSV: `note_id` ↔ `noteId` (numeric Anki internal ID)
+Canonical identifier: `note_id`
 
-For legacy notes that still have hyphen `NoteID` values:
-- use `aliases` + mapping to locate and migrate
+Linkage options:
 
----
+-   Anki field `NoteID`
+-   mapping TSV (`note_id` ↔ Anki internal ID)
 
-## Notes on model naming (underscores)
+Legacy hyphen IDs may be mapped using `aliases`.
 
-You want Anki model names to use underscores (e.g., `B737_Structured`, `UA_Lexeme`, `UA_Grammar`).
-
-Recommendation:
-- Do not rename in-place until you have migration scripts and a backup.
-- Create new models with underscore names and migrate notes by TSV when ready.
-
----
+------------------------------------------------------------------------
 
 ## Versioning
 
-This spec is **CNSF v0**. Tightening rules does not require bumping the schema identifier, as long as:
+Schema identifier remains **cnsf/v0**.
 
-- existing notes remain representable (via `aliases`)
-- transform contracts remain compatible
-
-If a future change breaks representability, then bump to `cnsf/v1`.
+Future incompatible changes require **cnsf/v1**.

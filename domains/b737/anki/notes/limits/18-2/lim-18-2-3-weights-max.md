@@ -1,8 +1,8 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: limits_weight_model
-note_id: b737_limits_weight_max8
+note_type: limits_table
+note_id: lim-18-2-3-weights-max
 anki:
   model: B737_Structured
   deck: B737::Limits
@@ -12,7 +12,8 @@ tags:
 - topic:limits
 - subtopic:weight
 - source:aom
-- status:unverified
+- status:verified
+- emphasis:trivia
 fields:
   Source Document: B737 AOM Rev 9.0
   Source Location: Ch 18 §18.2.3 Weight Limits (Certificated Limits table)
@@ -26,18 +27,19 @@ fields:
 Fill in the certified maximum weights (x1000 lb):
 
 | Limit    | Value |
-|---       |---    |
-| MZFW     | ___   |
-| MLW      | ___   |
-| MTOW     | ___   |
-| Max Taxi | ___   |
+| :---:    | :---: |
+| MZFW     |       |
+| MLW      |       |
+| MTOW     |       |
+| Max Taxi |       |
+
 
 
 # back_md
 
 
 | Limit    | Value |
-|---       |---:   |
+| :---:    | :---: |
 | MZFW     | 145.4 |
 | MLW      | 152.8 |
 | MTOW     | 182.2 |

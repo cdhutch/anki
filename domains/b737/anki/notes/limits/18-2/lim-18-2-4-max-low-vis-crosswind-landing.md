@@ -1,0 +1,30 @@
+---
+schema: cnsf/v0
+domain: b737
+note_type: limits_numeric
+note_id: lim-18-2-4-max-low-vis-crosswind-landing
+anki:
+  model: B737_Structured
+  deck: B737::Limits
+tags:
+- domain:b737
+- topic:limits
+- subtopic:wind
+- source:aom
+- status:verified
+- emphasis:good_to_know
+fields:
+  Source Document: B737 AOM Rev 9.0
+  Source Location: Ch 18 §18.2.4 Wind Limits (Landing Crosswind Limits)
+  Verification Notes: ''
+---
+
+# front_md
+
+**B737 LIMITS — WIND**
+
+Landing crosswind limit — Visibility < 3/4 sm (RVR 4000 / 1200 m) (knots)?
+
+# back_md
+
+15 knots
