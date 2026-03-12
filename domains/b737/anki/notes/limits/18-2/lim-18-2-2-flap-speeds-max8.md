@@ -31,7 +31,7 @@ Recall the flap extension speed limits.
 **Maximum flap extension speeds (737 MAX-8)**
 
 | Flap Setting | V_FE |
-| --           | --   |
+| :--:         | :--: |
 | 1            | 240  |
 | 2            | 240  |
 | 5            | 240  |

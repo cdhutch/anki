@@ -28,7 +28,7 @@ Recall the takeoff crosswind limits by **runway surface condition**.
 # back_md
 
 | Condition                       | Limit (kt) |
-| ---                             | ---:       |
+| :---:                           | :---:      |
 | Wet                             | 25         |
 | Snow (wet and dry)              | 25         |
 | Compacted snow                  | 20         |
