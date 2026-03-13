@@ -1,0 +1,19 @@
+fields:
+  note_id: note_id
+  system: system
+  subsystem: subsystem
+  panel_group: panel_group
+  panel_name: panel_name
+  function_type: function_type
+  Front: front_html
+  Back: back_html
+  normal_state: normal_state
+  failure_logic: failure_logic
+  affects_bus: affects_bus
+  powered_by: powered_by
+  interacts_with: interacts_with
+  Source Document: fields.Source Document
+  Source Location: fields.Source Location
+  tags: tags_joined
+  notes: notes
+  Verification Notes: fields.Verification Notes

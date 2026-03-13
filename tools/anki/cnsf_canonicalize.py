@@ -77,6 +77,18 @@ def _top_level_key_order(yaml_text: str) -> list[str]:
     return keys
 
 
+def _reject_blank_lines_in_yaml(yaml_text: str, path: Path) -> None:
+    """
+    CNSF front matter must not contain blank lines.
+    This keeps YAML deterministic and avoids non-semantic formatting drift.
+    """
+    for i, line in enumerate(yaml_text.splitlines(), start=1):
+        if not line.strip():
+            raise ValueError(
+                f"{path}: blank lines are not allowed inside YAML front matter (line {i})."
+            )
+
+
 def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     """
     Normalize known CNSF keys and coerce obvious legacy variants.
@@ -190,6 +202,7 @@ def dump_yaml(meta: dict[str, Any]) -> str:
 def canonicalized_file_text(path: Path) -> tuple[str, dict[str, Any]]:
     text = path.read_text(encoding="utf-8")
     fm = split_frontmatter(text, path)
+    _reject_blank_lines_in_yaml(fm.yaml_text, path)
     meta = yaml.safe_load(fm.yaml_text) or {}
     meta_c = canonicalize_meta(meta, path)
     y = dump_yaml(meta_c)
