@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:engine_panel
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-15-4 Engine Panel
+  Source Document: 737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.10.5 Engine Panel
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Panel
@@ -41,7 +41,9 @@ What controls and indications are located on the **MAX-8 Engine Panel**?
 The **MAX-8 Engine Panel** includes:
 
 - **EEC switches**
-- **REVERSER lights**
+- **REVERSER LIMITED lights**
+- **REVERSER COMMAND light**
+- **REVERSER AIR/GRD light**
 - **ENGINE CONTROL lights**
 
 These controls provide monitoring and control of:

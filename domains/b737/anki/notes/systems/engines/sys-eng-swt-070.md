@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:indications
 - scope:common
-- status:unverified
+- status:verified
 fields:
   Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Display Control Panel
+  Source Location: 7.10.4 7.15.2 Engine Display Control Panel
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Indications

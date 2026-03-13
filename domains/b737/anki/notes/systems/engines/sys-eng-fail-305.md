@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:oil
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Oil System
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-9
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Oil System
 panel_group: ''
@@ -36,9 +36,15 @@ notes: ''
 
 What does the **OIL FILTER BYPASS** alert indicate?
 
+- Blinking?
+- Steady?
+
 # back_md
 
-The **OIL FILTER BYPASS** alert indicates the oil filter is bypassed.
+The **OIL FILTER BYPASS** an imprending bypass of oil supply filter.
+
+- Blinking: First 10 seconds
+- Steady: After first 10 seconds
 
 This means:
 

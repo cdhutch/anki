@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:start
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Starter Operation
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-17
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Engine Start
 panel_group: ''
@@ -43,4 +43,4 @@ The **starter disengages automatically when the engine reaches self-sustaining s
 At that point:
 
 - **Starter valve closes**
-- **Engine start switch returns to OFF**
+- **Engine start switch returns to AUTO**

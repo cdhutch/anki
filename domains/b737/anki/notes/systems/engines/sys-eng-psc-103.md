@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Thrust Reverser Actuation
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.8 Thrust Reverser
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Reverser
@@ -38,6 +38,6 @@ What powers thrust reverser deployment?
 
 # back_md
 
-Thrust reverser deployment is powered by the aircraft hydraulic system.
-
-Hydraulic actuators move the translating sleeve to deploy the reverser.
+- Engine №1 thrust reverser: Hydraulic System A
+- Engine №2 thrust reverser: Hydraulic System B
+- Alternate operation through standby hydraulic system

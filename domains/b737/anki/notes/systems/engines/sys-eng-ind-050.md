@@ -13,10 +13,10 @@ tags:
 - subsystem:oil
 - parameter:oil_pressure
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Oil Pressure Indication
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-14. 7-11-12
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Oil System

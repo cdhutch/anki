@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:ignition
 - scope:common
-- status:unverified
+- status:verified
 fields:
   Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Ignition System
+  Source Location: 7.10.3 7.15.1 Engine Start Switches
   Verification Notes: ''
 system: B737 Engines
 subsystem: Ignition System

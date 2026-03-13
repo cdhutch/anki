@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-15-4 Engine Panel
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-19
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Reverser
@@ -26,12 +26,11 @@ function_type: indication
 
 # front_md
 
-**ENGINES — REVERSER AID / GRD LIGHT (MAX-8)**
+**ENGINES — REVERSER AIR / GRD LIGHT (MAX-8)**
 
-What does the **REVERSER AID / GRD** light indicate?
+What does the **REVERSER AIR / GRD** light indicate?
 
 # back_md
 
-The **REVERSER AID / GRD** light indicates that the **thrust reverser system is operating in ground mode**.
+The **REVERSER AIR / GRD** light indicates that the **air/ground thrust reverser logic is failed.**.
 
-This mode assists reverser operation when the airplane is on the ground.

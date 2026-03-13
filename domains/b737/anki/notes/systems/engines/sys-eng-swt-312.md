@@ -11,8 +11,8 @@ tags:
 - topic:systems
 - system:engines
 - subsystem:EEC
-- model:b737-800
-- status:unverified
+- scope:common
+- status:verified
 fields:
   Source Document: B737 Aircraft Systems Manual — Engines
   Source Location: 7-10-19

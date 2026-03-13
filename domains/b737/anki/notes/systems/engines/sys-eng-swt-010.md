@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:start
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Start Switch
+  Source Document: 737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.10.3; 7.15.1 Engine Start Switches
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Start
@@ -34,10 +34,8 @@ notes: ''
 
 **ENGINES — START SWITCH**
 
-What component does the engine start switch control?
+What three components does the ENGINE START switch control?
 
 # back_md
 
-The **engine start switch controls the engine starter valve**.
-
-The starter valve regulates **pneumatic air flow to the starter motor**.
+The engine start switch controls the **engine starter valve, engine bleed valve, and igniter**.

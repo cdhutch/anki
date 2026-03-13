@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:fuel
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Fuel System
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.4 Engine Fuel System
   Verification Notes: ''
 system: B737 Engines
 subsystem: Fuel Supply
@@ -32,18 +32,12 @@ notes: ''
 
 # front_md
 
-**ENGINES — FUEL SPAR VALVE OPERATION**
+**ENGINES — SPAR FUEL SHUTOFF VALVE**
 
-Where is the fuel spar valve located and what controls it?
+Where is the spar fuel shutoff valve located and what controls it?
 
 # back_md
 
-The fuel spar valve is located in the **wing-to-engine fuel line at the wing front spar**.
+The spar fuel shutoff valve is located in the **wing-to-engine fuel line at the wing front spar**.
 
 The valve is controlled by the **engine start lever**.
-
-Its purpose is to:
-
-- Shut off fuel supply to the engine
-- Provide fire protection
-- Isolate the engine from the wing fuel system.

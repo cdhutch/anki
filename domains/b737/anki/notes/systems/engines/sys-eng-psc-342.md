@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:lrd
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-20-17 Load Reduction Device
+  Source Document: 737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.7 Engine Start System
   Verification Notes: ''
 system: B737 Engines
 subsystem: Load Reduction Device
@@ -34,20 +34,10 @@ notes: ''
 
 **ENGINES — LOAD REDUCTION DEVICE (LRD) AND SMOKE/FUMES**
 
-What occurs when the **LEAP-1B Load Reduction Device (LRD)** activates and how can smoke enter the airplane?
+- What are the smoke/fumes implications of an LRD activation?
+- What mechanical switch actions would isolate the affected bleed air system?
 
 # back_md
-
-The **Load Reduction Device (LRD)** reduces **unbalanced dynamic loads** transmitted to the engine structures and pylon during a **full or partial fan blade-out event** by **decoupling the fan rotor**.
-
-During **LRD activation**:
-
-- The **engine oil system is damaged**
-- **Large amounts of oil enter the bleed air system**
-- Oil ingested into the **engine core compressor** can be exposed to high temperatures
-- This may produce **smoke or fumes in the flightdeck or cabin**
-
----
 
 ### Cabin air distribution
 

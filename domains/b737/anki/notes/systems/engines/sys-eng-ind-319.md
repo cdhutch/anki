@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-15-4 Engine Panel
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-19
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Reverser
@@ -32,6 +32,8 @@ What does the **REVERSER LIMITED** light indicate?
 
 # back_md
 
-The **REVERSER LIMITED** light indicates that the **thrust reverser is operating with limitations**.
-
-The system has detected a condition that **restricts normal reverser operation**.
+The **REVERSER LIMITED** light indicates
+— On the ground
+  - A fault has occurred in the thrust reverser system
+— In-Flight
+  - Thrust reverser will not deploy or reverse thrust will be limited to idle.

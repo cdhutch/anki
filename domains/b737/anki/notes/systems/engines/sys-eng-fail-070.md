@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:start
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Starter Valve
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-20-15
+  Verification Notes: Inferred
 system: B737 Engines
 subsystem: Engine Start
 panel_group: ''

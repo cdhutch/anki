@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - model:b737-800
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-10-19 Engine Panel
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Section 7.15.3 Engine Panel
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Reverser
@@ -32,6 +32,10 @@ What does the **REVERSER light** indicate on the **737-800**?
 
 # back_md
 
-The **REVERSER light** indicates a **thrust reverser system fault or disagreement**.
+The **REVERSER** light indicates a **thrust reverser system fault or disagreement**.
 
-This indicates that the thrust reverser system has detected a malfunction.
+This indicates that the thrust reverser system has detected a malfunction. Examples:
+— Isolation valve or thrust reverser control valve is not in commanded position
+— One or more thrust reverser sleeves are not in commanded state
+— Auto–restow circuit has been activated
+— A failure has been detected in synchronization shaft lock circuitry.

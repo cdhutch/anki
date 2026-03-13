@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:fuel
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Shutdown
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-20-11
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Engine Fuel Control
 panel_group: Control Stand
@@ -40,4 +40,4 @@ How is an engine normally shut down?
 
 An engine is shut down by **moving the engine start lever to CUTOFF**.
 
-This **stops fuel flow to the engine**, terminating combustion.
+This **closes the spar fuel shutoff valve and engine fuel shutoff valve**, terminating combustion.

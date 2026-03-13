@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:fan
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: LEAP-1B Load Reduction Device
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.7 Engine Start System
   Verification Notes: ''
 system: B737 Engines
 subsystem: LEAP-1B Fan System
@@ -38,10 +38,5 @@ What is the function of the LEAP-1B load reduction device?
 
 # back_md
 
-The load reduction device protects the fan structure during abnormal loads.
-
-Its function is to:
-
-- Reduce structural loads on the fan blades
-- Protect the fan case
-- Prevent excessive loads during severe events such as bird strikes
+The load reduction device reduces unbalanced dynamic loads
+transmitted to engine structures and pylon in case of a full or partial fan blade out event by decoupling the fan rotor.

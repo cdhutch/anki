@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:anti_ice
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Anti-Ice
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Pages 7-10-5, 7-11-5
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Engine Anti-Ice
 panel_group: Engine Indications
@@ -41,10 +41,10 @@ What do the **TAI indications** represent?
 TAI indicates the status of **Thermal Anti-Ice**.
 
 - **Green TAI**
-  - engine thermal anti-ice is **operating**
+  - Cowl anti-ice valve(s) is opened and related ENG ANTI-ICE switch is positioned on**
 
 - **Amber TAI**
-  - **anti-ice valve disagreement or fault**
+  - **Cowl anti-ice valve(s) is not in position indicated by related ENG ANTI-ICE switch**
 
 - **No TAI indication**
-  - thermal anti-ice is **off**
+  - Cowl anti-ice is **off**

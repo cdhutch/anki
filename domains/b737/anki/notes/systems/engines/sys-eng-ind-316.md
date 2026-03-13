@@ -11,10 +11,10 @@ tags:
 - topic:systems
 - system:engines
 - subsystem:eec
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Panel
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-19, 7-15-4
   Verification Notes: ''
 system: B737 Engines
 subsystem: Electronic Engine Control
@@ -41,8 +41,4 @@ The **ENGINE CONTROL** light indicates a **fault in the Electronic Engine Contro
 
 When illuminated:
 
-- The EEC has detected a malfunction.
-- The engine may revert to an **alternate control mode**.
-- Certain **automatic engine functions may be degraded**.
-
-The light alerts the crew that **normal EEC operation is not available**.
+- Engine control system is **not dispatchable** due to faults in system.

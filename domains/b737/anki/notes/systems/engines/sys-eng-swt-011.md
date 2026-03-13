@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:start
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Start Switch Positions
+  Source Document: 737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.10.3; 7.15.1 Engine Start Switches
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Start

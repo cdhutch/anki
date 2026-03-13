@@ -15,10 +15,10 @@ tags:
 - aircraft:737-800
 - aircraft:737-max8
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Start Indications
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7-20-15
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Start
@@ -46,11 +46,13 @@ Typical N2 values during start:
 737-800 (CFM56-7B)
 
 - Fuel introduction: **≈ 25% N2**
-- Idle N2 after start: **≈ 60–63%**
+- Starter cutout speed: **≈56%**
+- Stabilized idle: **≈59%**
 
 737 MAX-8 (LEAP-1B)
 
 - Fuel introduction: **≈ 25% N2**
-- Idle N2 after start: **≈ 55–60%**
+- Starter cutout speed: **≈62% N2* 
+- Stabilized idle: **≈66% N2**
 
 N2 represents **core compressor speed** and is used to monitor proper engine acceleration during start.

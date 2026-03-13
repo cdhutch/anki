@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:fuel
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Fuel Spar Valve
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.4 Engine Fuel System
   Verification Notes: ''
 system: B737 Engines
 subsystem: Fuel System Interface
@@ -32,13 +32,13 @@ notes: ''
 
 # front_md
 
-**ENGINES — FUEL SPAR VALVE**
+**ENGINES — SPAR FUEL SHUTOFF VALVE**
 
-What is the purpose of the engine fuel spar valve?
+What is the purpose of the engine spar fuel shutoff valve?
 
 # back_md
 
-The fuel spar valve isolates fuel flow at the **wing-to-engine interface**.
+The engine fspar fuel shutoff valve isolates fuel flow at the **wing-to-engine interface**.
 
 Its purposes are:
 

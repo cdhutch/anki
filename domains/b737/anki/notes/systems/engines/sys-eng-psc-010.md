@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:eec
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Electronic Engine Control
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.3 Electronic Engine Control
   Verification Notes: ''
 system: B737 Engines
 subsystem: Electronic Engine Control
@@ -38,12 +38,4 @@ What is the function of the Electronic Engine Control (EEC)?
 
 # back_md
 
-The **Electronic Engine Control (EEC)** automatically manages engine operation by controlling fuel flow.
-
-The EEC provides:
-
-- thrust management  
-- engine limit protection  
-- optimized engine performance  
-
-It commands the **fuel metering unit** to maintain the desired thrust setting.
+The **Electronic Engine Control (EEC)** uses thrust lever imputs to automatically control forward and reverse thrust.

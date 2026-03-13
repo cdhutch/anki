@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:fuel
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Start Levers
+  Source Document: 737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.10.7 Engine Start Levers; 7.15.4 Engine Controls
   Verification Notes: ''
 system: B737 Engines
 subsystem: Fuel Shutoff
@@ -40,7 +40,7 @@ Which valves are controlled by the engine start lever?
 
 The engine start lever controls two fuel shutoff valves:
 
-- **Engine fuel spar valve**
+- **Engine spar fuel shutoff valve**
 - **Engine fuel shutoff valve**
 
 When the start lever is moved to **IDLE**, both valves open to allow fuel flow to the engine.

@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:vibration
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Indications — Vibration Monitoring
+  Source Document: 737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.11.2 Secondary Engine Indications
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Vibration Monitoring
@@ -34,20 +34,10 @@ notes: ''
 
 **ENGINES — VIBRATION MONITORING**
 
-What does the **engine vibration monitoring system** measure and display?
+- Where are engine vibration values displayed?
+- What does reverse videp mean?
 
 # back_md
 
-The **engine vibration monitoring system** measures **engine vibration levels** and displays them to the flight crew.
-
-Key characteristics:
-
-- A **vibration sensor** monitors engine vibration.
-- The vibration value is displayed on the **secondary engine indications**.
-- The indication allows the crew to **monitor abnormal vibration conditions**.
-
-High vibration can indicate issues such as:
-
-- Fan imbalance
-- Bearing problems
-- Foreign object damage
+- Engine vibration is shown on the **secondary engine indications**
+- Reserve video indicates **high vibration**.

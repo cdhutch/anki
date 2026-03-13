@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:EEC
 - model:b737-800
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-20-7 Idle Control
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.3 Electronic Engine Control
   Verification Notes: ''
 system: B737 Engines
 subsystem: Idle Control
@@ -40,8 +40,8 @@ Under what conditions does the EEC command **approach idle** on the 737-800?
 
 On the **737-800**, the EEC commands **approach idle** when **any of the following conditions exist**:
 
-- **Flaps are extended to 15 or greater**
-- **Engine anti-ice is ON**
-- **Wing anti-ice is ON**
+- **Cowl thermal anti-ice switch is ON for either engine 1 or engine 2**
+- **Altitude is below 19K' MSL and left or right MLG down and locked**
+- **Altitude is below 19K' MSL and left or right flaps ≥ 15**
 
 Approach idle increases N2 to improve **engine acceleration during landing configuration**.

@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:eec
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: EEC Modes
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: EPage 7-20-6
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Electronic Engine Control
 panel_group: ''
@@ -42,6 +42,4 @@ If **normal EEC operation fails**, the system **reverts to alternate mode**.
 
 In alternate mode:
 
-- Engine thrust control is less precise  
-- Some engine protections may be reduced  
-- Manual thrust management may be required
+- Thust rating shortfalls or exceedances may occur

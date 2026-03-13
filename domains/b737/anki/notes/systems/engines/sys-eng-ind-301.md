@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:indications
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Engine Indications
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Pages 7-10-6; 7-11-6
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Indications

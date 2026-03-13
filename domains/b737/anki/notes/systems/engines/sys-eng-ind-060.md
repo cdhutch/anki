@@ -13,10 +13,10 @@ tags:
 - subsystem:oil
 - parameter:oil_temperature
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Oil Temperature Indication
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Pages 7-10-15; 7-11-13
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Oil System

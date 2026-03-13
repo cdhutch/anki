@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-15-4 Engine Panel
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-19
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Reverser
@@ -32,6 +32,4 @@ What does the **REVERSER COMMAND** light indicate?
 
 # back_md
 
-The **REVERSER COMMAND** light indicates that a **thrust reverser deploy command has been issued**.
-
-This light shows that the **reverser system has received a command to deploy** the thrust reverser.
+The **REVERSER COMMAND** light indicates that the reverse thrust lever is **not in the down position in flight**.

@@ -12,15 +12,15 @@ tags:
 - system:engines
 - subsystem:oil
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Oil Pressure Warnings
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Pages 7-10-8, 7-11-8
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Engine Oil System
 panel_group: Upper DU
-panel_name: ''
+panel_name: null
 function_type: failure_logic
 normal_state: ''
 failure_logic: Indication alerts crew when oil pressure is below safe operating limits
@@ -32,16 +32,11 @@ notes: ''
 
 # front_md
 
-**ENGINES — LOW OIL PRESSURE**
+**ENGINES — LOW OIL PRESSURE Alert**
 
-Why is low oil pressure a serious engine condition?
+What does the LOW OIL PRESSURE Alert mean in both steady and blinking conditions?
 
 # back_md
 
-Low oil pressure indicates insufficient lubrication for engine components.
-
-This can result in:
-
-- Increased friction
-- Overheating
-- Possible engine damage
+- Steady: Oil pressure at or below red line.
+- Blinking: Low oil pressure; blinks for 10 seconds then remains steady on

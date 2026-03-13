@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:indications
 - model:b737-800
-- status:unverified
+- status:verified
 fields:
   Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-11-3 / 7-11-4 Primary Engine Indications
+  Source Location: 7.11.1 Primary Engine Indications
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Indications

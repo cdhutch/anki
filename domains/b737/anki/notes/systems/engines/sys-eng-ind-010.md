@@ -13,9 +13,9 @@ tags:
 - subsystem:indications
 - parameter:n1
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
   Source Location: Engine Indications
   Verification Notes: ''
 system: B737 Engines
@@ -35,7 +35,7 @@ notes: ''
 
 **ENGINES — N1**
 
-What does N1 indicate?
+What does N1 on the primary engine display indicate?
 
 # back_md
 

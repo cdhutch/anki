@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:EEC
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-20-8 Idle Control
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.3 Electronic Engine Control
   Verification Notes: ''
 system: B737 Engines
 subsystem: Idle Control
@@ -40,7 +40,7 @@ Under what conditions does the EEC command **approach idle** on the MAX-8?
 
 On the **MAX-8**, the EEC commands **approach idle** when **either of the following conditions exist**:
 
-- **Flaps are extended to landing configuration**
-- **Engine anti-ice is ON**
+- **Flaps are extended to 15 or greater**
+- **Flaps not up AND Engine anti-ice is ON**
 
 Approach idle increases N2 to ensure **adequate engine acceleration margin during approach and landing**.

@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:eec
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Electronic Engine Control Power
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: E7.20.2 Engine Indications
   Verification Notes: ''
 system: B737 Engines
 subsystem: Electronic Engine Control
@@ -38,6 +38,5 @@ What powers the Electronic Engine Control (EEC)?
 
 # back_md
 
-The **EEC is powered by the engine alternator** once the engine is operating.
-
-Prior to engine start, the EEC receives power from the **airplane electrical system**.
+- Prior to reaching 15% N2: **AC Transfer Bus 1/2 (respective)**.
+- After reaching 15% N2: **Engine-mounted EEC Alternator**

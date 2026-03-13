@@ -1,8 +1,8 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: failure_logic
-note_id: sys-eng-fail-010
+note_type: indication
+note_id: sys-eng-ind-020
 anki:
   model: B737_Systems
   deck: B737::Systems
@@ -24,7 +24,7 @@ panel_group: Upper DU
 panel_name: ''
 function_type: failure_logic
 normal_state: ''
-failure_logic: EGT indication turns red when temperature exceeds maximum limit
+failure_logic: EGT indication turns yellow when temperature exceeds continuous limit
 affects_bus: ''
 powered_by: ''
 interacts_with: EEC
@@ -35,10 +35,10 @@ notes: ''
 
 **ENGINES — EGT LIMIT**
 
-What happens on the DU when EGT exceeds the maximum takeoff or start limit?
+What happens on the DU when EGT exceeds the continuos limit?
 
 # back_md
 
-When EGT exceeds the **maximum takeoff or startlimit**, the **EGT indication turns red**.
+When EGT exceeds the **continuous limit**, the **EGT indication turns yellow**.
 
-This alerts the crew that the **engine temperature limit has been exceeded**.
+This alerts the crew that an **engine temperature limit has been exceeded**.

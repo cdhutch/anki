@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:engine_panel
 - model:b737-800
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-10-19 Engine Panel
+  Source Document: 737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.15.3 Engine Panel
   Verification Notes: ''
 system: B737 Engines
 subsystem: Engine Panel

@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_management
 - model:b737-800
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-11-2 Primary Engine Indications
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Section 7.11.1 Primary Engine Indications
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Management

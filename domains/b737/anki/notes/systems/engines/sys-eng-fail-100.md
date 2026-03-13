@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Reverser Interlocks
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-20-21
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Thrust Reverser
 panel_group: ''
@@ -34,14 +34,9 @@ notes: ''
 
 **ENGINES — REVERSER INTERLOCKS**
 
-Why are thrust reverser interlocks required?
+What are the two thrust reverser deployment interlocks?
 
 # back_md
 
-Reverser interlocks prevent deployment when conditions are unsafe.
-
-These protections prevent:
-
-- Reverser deployment in flight
-- Asymmetric deployment
-- Inadvertent deployment
+- **Either RADALT** senses less than **10 feet altitude** OR
+- **Air/ground safety sensor** is in **ground mode**.

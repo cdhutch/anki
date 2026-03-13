@@ -12,11 +12,11 @@ tags:
 - system:engines
 - subsystem:egt
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: EGT Indication
-  Verification Notes: ''
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Page 7-10-6
+  Verification Notes: Corrected
 system: B737 Engines
 subsystem: Engine Indications
 panel_group: Upper DU
@@ -38,6 +38,4 @@ When does the EGT indication blink?
 
 # back_md
 
-The EGT indication blinks when EGT exceeds the maximum limit (redline).
-
-The blinking indication alerts the crew that the engine temperature limit has been exceeded.
+EEC senses conditions that may lead to a hot start or stall during ground starting.

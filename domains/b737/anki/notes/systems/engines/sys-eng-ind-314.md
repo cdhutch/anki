@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - model:b737-max8
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-15-4 Engine Panel
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Section 7.10.5 Engine Panel
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Reverser
@@ -41,7 +41,7 @@ What thrust reverser indication lights are located on the **MAX-8 Engine Panel**
 The **MAX-8 Engine Panel** includes the following thrust reverser lights:
 
 - **REVERSER COMMAND**
-- **REVERSER AID / GRD**
+- **REVERSER AIR / GRD**
 - **REVERSER LIMITED** (Left And Right)
 
 These lights indicate reverser command status and system limitations.

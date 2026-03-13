@@ -11,10 +11,10 @@ tags:
 - topic:systems
 - system:engines
 - subsystem:eec
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: 7-10-20 (-800), 7-15-5 (MAX-8)
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Section 7.20.3 Electronic Engine Control
   Verification Notes: ''
 system: B737 Engines
 subsystem: Electronic Engine Control

@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:thrust_reverser
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Thrust Reverser Indications
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: Pages 7-10-5, 7-11-5
   Verification Notes: ''
 system: B737 Engines
 subsystem: Thrust Reverser
@@ -40,4 +40,4 @@ What does a **green REV indication** mean?
 
 A green **REV** indication means:
 
-- the **Thrust reverser sleeve is deployed**.
+- the **Thrust reverser is deployed**.

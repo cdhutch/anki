@@ -12,10 +12,10 @@ tags:
 - system:engines
 - subsystem:EEC
 - scope:common
-- status:unverified
+- status:verified
 fields:
-  Source Document: B737 Aircraft Systems Manual — Engines
-  Source Location: Electronic Engine Control
+  Source Document: B737 Aircraft Systems Manual Rev 4.0
+  Source Location: 7.20.3 Electronic Engine Control
   Verification Notes: ''
 system: B737 Engines
 subsystem: Electronic Engine Control
