@@ -80,3 +80,6 @@ domains/**/anki/exports/
 
 # Reverse pipeline inbox artifacts
 domains/**/anki/inbox/
+
+# Ignore build files
+build/*
