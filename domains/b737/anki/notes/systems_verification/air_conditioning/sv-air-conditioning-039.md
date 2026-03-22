@@ -1,0 +1,26 @@
+---
+schema: cnsf/v0
+domain: b737
+note_type: systems_verification
+note_id: air-conditioning-039
+anki:
+  model: B737_SV_Cloze
+  deck: B737::SV
+tags:
+- domain:b737
+- topic:systems-verification
+- system:air-conditioning
+- source:question-bank
+- status:verified
+fields:
+  Text: What effect will an AFT CAB ZONE TEMP caution light have on the left pack? {{c1::Output
+    temperatures is controlled by Cont.Cab temperature selector}}
+  Source Document: Systems Validation Question Bank
+  Source Location: Air Conditioning 39
+  Verification Notes: ''
+system: air-conditioning
+source_type: question-bank
+prompt_style: cloze
+notes: ''
+---
+
