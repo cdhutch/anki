@@ -13,8 +13,9 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine fire {{c1::accomplishes
-    all of the above}}.
+  Text: 'Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine fire {{c1::accomplishes
+    all of the above: extinguishes both FIRE WARN lights; silences the Fire Warning Bell;
+    resets the system for additional warnings}}.'
   Source Document: Systems Validation Question Bank
   Source Location: Flight Warning 8
   Verification Notes: ''
