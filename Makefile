@@ -36,27 +36,34 @@ apu \
 engines \
 performance
 
-SV_TSV := $(addprefix $(SV_BUILD)/sv-,$(addsuffix .tsv,$(SV_SYSTEMS)))
-
-.PHONY: sv sv-check
+.PHONY: sv sv-check sv-fix sv-clean $(addprefix sv-,$(SV_SYSTEMS))
 
 sv-check:
 	python tools/anki/cnsf_canonicalize.py --check $(SV_ROOT)/*/*.md
 
-sv: sv-check $(SV_TSV)
-	for f in $(SV_TSV); do \
-		if [ -f "$$f" ]; then \
-			python tools/anki/export/sv_import_to_anki.py "$$f"; \
+sv-fix:
+	python tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/*/*.md
+
+sv-clean:
+	rm -f $(SV_BUILD)/sv-*.tsv
+
+sv: sv-check
+	mkdir -p $(SV_BUILD)
+	for s in $(SV_SYSTEMS); do \
+		if [ -d "$(SV_ROOT)/$$s" ]; then \
+			python tools/anki/export/sv_md_to_tsv.py \
+				--in "$(SV_ROOT)/$$s" \
+				--out "$(SV_BUILD)/sv-$$s.tsv"; \
+			python tools/anki/export/sv_import_to_anki.py \
+				"$(SV_BUILD)/sv-$$s.tsv"; \
 		fi; \
 	done
 
-$(SV_BUILD)/sv-%.tsv:
+sv-%:
 	mkdir -p $(SV_BUILD)
-	if [ -d "$(SV_ROOT)/$*" ]; then \
-		python tools/anki/export/sv_md_to_tsv.py \
-			--in $(SV_ROOT)/$* \
-			--out $@; \
-	fi
-
-sv-fix:
-	python tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/*/*.md
+	python tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/$*/*.md
+	python tools/anki/export/sv_md_to_tsv.py \
+		--in "$(SV_ROOT)/$*" \
+		--out "$(SV_BUILD)/sv-$*.tsv"
+	python tools/anki/export/sv_import_to_anki.py \
+		"$(SV_BUILD)/sv-$*.tsv"
