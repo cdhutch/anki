@@ -13,7 +13,8 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: On the fire test panel, we can test for {{c1::all of the above}}.
+  Text: 'On the fire test panel, we can test for {{c1::all of the above: APU, engines, and
+    wheel well fire; engine overheat; operational fire bottle squibs}}'
   Source Document: Systems Validation Question Bank
   Source Location: Flight Warning 24
   Verification Notes: ''

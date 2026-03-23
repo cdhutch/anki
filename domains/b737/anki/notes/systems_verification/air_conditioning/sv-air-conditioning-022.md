@@ -13,8 +13,8 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: Inflight, the forward cargo compartment is heated by air drawn around it by the {{c1::recirculation
-    fan system and equipment cooling system}}.
+  Text: 'Inflight, the forward cargo compartment is heated by air drawn around it by the {{c1::both
+    2 & 3: recirculation fan system and equipment cooling system}}.'
   Source Document: Systems Validation Question Bank
   Source Location: Air Conditioning 22
   Verification Notes: ''

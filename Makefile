@@ -57,3 +57,6 @@ $(SV_BUILD)/sv-%.tsv:
 			--in $(SV_ROOT)/$* \
 			--out $@; \
 	fi
+
+sv-fix:
+	python tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/*/*.md

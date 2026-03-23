@@ -13,7 +13,9 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: Red warning lights may indicate {{c1::all of the above}}.
+  Text: 'Red warning lights may indicate {{c1::all of the above: engine, wheel well, and APU
+    fires; A/P, A/T disconnects; landing gear unsafe conditions_ extinguishes both FIRE WARN
+    lights; silences the Fire Warning Bell; resets the system for additional warnings}}.'
   Source Document: Systems Validation Question Bank
   Source Location: Flight Warning 3
   Verification Notes: ''

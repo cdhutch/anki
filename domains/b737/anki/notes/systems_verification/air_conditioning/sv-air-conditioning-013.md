@@ -14,7 +14,7 @@ tags:
 - status:verified
 fields:
   Text: The APU will supply bleed air for {{c1::1}} pack(s) {{c1::only in flight}} and {{c1::both}}
-    pack(s) {{c1::on the ground}}.
+    pack(s) {{c1::on the ground}} {{c1::The answer is "both 1 & 2"}}.
   Source Document: Systems Validation Question Bank
   Source Location: Air Conditioning 13
   Verification Notes: ''

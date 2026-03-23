@@ -13,7 +13,8 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: The Proximity Switch Electronic Unit (PSEU) monitors {{c1::all of the above}}.
+  Text: 'The Proximity Switch Electronic Unit (PSEU) monitors {{c1::all of the above: takeoff
+    and landing configuration warnings; air/ground sensing; landing gear}}.'
   Source Document: Systems Validation Question Bank
   Source Location: Flight Warning 19
   Verification Notes: ''

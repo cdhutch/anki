@@ -13,7 +13,8 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: The GPWS Inoperative (INOP) Light illuminates amber for {{c1::all of the above}}.
+  Text: 'The GPWS Inoperative (INOP) Light illuminates amber for {{c1::all of the above: a
+    GPWS malfunction; a power loss; invalid inputs.}}.'
   Source Document: Systems Validation Question Bank
   Source Location: Flight Warning 12
   Verification Notes: ''
