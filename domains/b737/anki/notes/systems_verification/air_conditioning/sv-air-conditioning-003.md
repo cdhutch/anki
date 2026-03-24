@@ -13,8 +13,8 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: The mix manifold receives air from the {{c1::left pack, right pack, recirculation
-    fan, and pre-conditioned ai}}.
+  Text: The mix manifold receives air from the {{c1::left pack, right pack, recirculatio fan,
+    and pre-conditioned air only}}.
   Source Document: Systems Validation Question Bank
   Source Location: Air Conditioning 3
   Verification Notes: ''
