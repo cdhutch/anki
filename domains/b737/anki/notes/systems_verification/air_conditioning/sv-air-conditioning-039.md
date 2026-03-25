@@ -14,7 +14,7 @@ tags:
 - status:verified
 fields:
   Text: What effect will an AFT CAB ZONE TEMP caution light have on the left pack? {{c1::Output
-    temperatures is controlled by Cont.Cab temperature selector}}
+    temperatures is controlled by CONT CAB temperature selector}}
   Source Document: Systems Validation Question Bank
   Source Location: Air Conditioning 39
   Verification Notes: ''

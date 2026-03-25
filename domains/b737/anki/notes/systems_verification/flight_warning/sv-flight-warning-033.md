@@ -14,7 +14,7 @@ tags:
 - status:verified
 fields:
   Text: 'The SMYD computers receive input from {{c1::all of the above: anti-ice controls;
-    ADIRUs; FMCs.}}.'
+    ADIRUs; FMCs}}.'
   Source Document: Systems Validation Question Bank
   Source Location: Flight Warning 33
   Verification Notes: ''

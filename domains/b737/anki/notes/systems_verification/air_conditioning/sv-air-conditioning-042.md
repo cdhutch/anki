@@ -13,7 +13,7 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: If the CONT CAG ZONE TEMP caution light illuminated due to an overheat condition in
+  Text: If the CONT CAB ZONE TEMP caution light illuminated due to an overheat condition in
     the applicable zone supply duct, the Master Caution Lights will also illuminate; and {{c1::the
     CONT CAB trim air modulating valve closes}}.
   Source Document: Systems Validation Question Bank
