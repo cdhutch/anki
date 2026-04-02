@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: flight-warning-035
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:flight-warning
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: Deviations from the altitude selected on the mode control panel will cause a {{c1::momentary
+    altitude horn at 200 feet off altitude and an amber flashing box around the current altitude}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Flight Warning 35
   Verification Notes: ''
-system: general
+system: flight-warning
 source_type: question-bank
 prompt_style: cloze
 notes: ''

@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: communications-002
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:communications
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: In the degraded mode, the Observer's Audio Control Panel transmits and receives on
+    which radio? {{c1::VHF-1}}
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Communications 2
   Verification Notes: ''
-system: general
+system: communications
 source_type: question-bank
 prompt_style: cloze
 notes: ''

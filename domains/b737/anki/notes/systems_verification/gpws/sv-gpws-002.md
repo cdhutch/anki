@@ -2,23 +2,24 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: gpws-002
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:gpws
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: 'Look ahead terrain alerts are based on {{c1::All the above: the airplane`s GPS position;
+    barometric altitude, ground speed, and vertical flight path; terrain information stored
+    in the database}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: GPWS 2
   Verification Notes: ''
-system: general
+system: gpws
 source_type: question-bank
 prompt_style: cloze
 notes: ''

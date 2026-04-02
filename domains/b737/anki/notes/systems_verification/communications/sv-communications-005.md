@@ -2,23 +2,22 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: communications-005
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:communications
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: Which PA system announcements will override all others? {{c1::Flight deck announcements}}
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Communications 5
   Verification Notes: ''
-system: general
+system: communications
 source_type: question-bank
 prompt_style: cloze
 notes: ''

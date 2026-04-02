@@ -2,23 +2,24 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: autoflight-25
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:autoflight
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: What are the indications when deviating from a selected altitude by more than 200
+    feet? {{c1::An aural alert sounds and the current altitude box turns amber and begins
+    to flash.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Autoflight 25
   Verification Notes: ''
-system: general
+system: autoflight
 source_type: question-bank
 prompt_style: cloze
 notes: ''

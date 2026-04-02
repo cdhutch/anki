@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: autoflight-35
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:autoflight
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: 'The right FMC becomes the Primary FMC when {{c1::Both 2 and 3 are correct: 2) The
+    FMC Source Select Switch is BOTH ON R and 3) The left FMC fails.}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Autoflight 35
   Verification Notes: ''
-system: general
+system: autoflight
 source_type: question-bank
 prompt_style: cloze
 notes: ''

@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: pressurization-22
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:pressurization
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: 'The pressurization outflow VALVE position indicator operates in {{c1::all of the
+    above: AUTO, ALTN, and MANUAL}} mode(s).'
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Pressurization 22
   Verification Notes: ''
-system: general
+system: pressurization
 source_type: question-bank
 prompt_style: cloze
 notes: ''

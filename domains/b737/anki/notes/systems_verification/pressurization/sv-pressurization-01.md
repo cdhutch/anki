@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: pressurization-01
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:pressurization
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: The automatic cabin pressure control system descent mode is activated when {{c1::the
+    aircraft descends 0.25 psi below the selected value in the Flight Altitude (FLT ALT) Indicator.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Pressurization 1
   Verification Notes: ''
-system: general
+system: pressurization
 source_type: question-bank
 prompt_style: cloze
 notes: ''

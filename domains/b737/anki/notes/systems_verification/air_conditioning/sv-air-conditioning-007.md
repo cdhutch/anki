@@ -2,23 +2,22 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: air-conditioning-007
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:air-conditioning
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: The equipment cooling system has {{c1::2 supply and 2 exhaust}} fan(s).
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Air Conditioning 7
   Verification Notes: ''
-system: general
+system: air-conditioning
 source_type: question-bank
 prompt_style: cloze
 notes: ''

@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: flight-warning-034
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:flight-warning
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: A momentary altitude alert tone will activate {{c1::approaching 900 feet of the altitude
+    selected on the mode control panel}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Flight Warning 34
   Verification Notes: ''
-system: general
+system: flight-warning
 source_type: question-bank
 prompt_style: cloze
 notes: ''

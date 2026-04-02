@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: autoflight-24
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:autoflight
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: 'LNAV will automatically disconnect if {{c1::any of the above occurs: the end of an
+    active route is reached; a route discontinuity is reached; another roll mode is selected}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Autoflight 24
   Verification Notes: ''
-system: general
+system: autoflight
 source_type: question-bank
 prompt_style: cloze
 notes: ''

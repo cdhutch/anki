@@ -2,23 +2,24 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: flight-warning-010
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:flight-warning
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: An illuminated amber light on the System Annunciator Panel is on because of a malfunction
+    outside of the primary viewing area of the pilots. To extinguish it, {{c1::push either
+    MASTER CAUTION light}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Flight Warning 10
   Verification Notes: ''
-system: general
+system: flight-warning
 source_type: question-bank
 prompt_style: cloze
 notes: ''

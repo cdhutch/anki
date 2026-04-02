@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: air-conditioning-013
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:air-conditioning
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: The APU will supply bleed air for {{c1::1}} pack(s) {{c1::only in flight}} and {{c1::both}}
+    pack(s) {{c1::on the ground}} {{c1::The answer is "both 1 & 2"}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Air Conditioning 13
   Verification Notes: ''
-system: general
+system: air-conditioning
 source_type: question-bank
 prompt_style: cloze
 notes: ''

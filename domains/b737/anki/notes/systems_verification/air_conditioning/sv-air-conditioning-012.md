@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: sv-general-002
+note_id: air-conditioning-012
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:general
+- system:air-conditioning
 - source:question-bank
 - status:verified
 fields:
-  Text: What are the thrust ratings of the CFM 56-7B26 engine? {{c1::All of the above. 27K
-    Bump; 26K & 24K; 22K.}}
+  Text: In the event of a single pack failure at altitude, the remaining pack is capable of
+    maintaining cabin pressure and comfort at an airplane altitude of {{c1::41,000 feet}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Aircraft General Q2
+  Source Location: Air Conditioning 12
   Verification Notes: ''
-system: general
+system: air-conditioning
 source_type: question-bank
 prompt_style: cloze
 notes: ''
