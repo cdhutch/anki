@@ -47,19 +47,21 @@ sv-fix:
 sv-clean:
 	rm -f $(SV_BUILD)/sv-*.tsv
 
-sv:
+sv: sv-check
 	@echo "=== Building Systems Verification decks ==="
-	@mkdir -p $(SV_BUILD)
-	@for s in $(SV_SYSTEMS); do \
+	@set -e; \
+	mkdir -p $(SV_BUILD); \
+	for s in $(SV_SYSTEMS); do \
 		if [ -d "$(SV_ROOT)/$$s" ]; then \
 			echo "--- $$s ---"; \
 			python tools/anki/export/sv_md_to_tsv.py \
 				--in "$(SV_ROOT)/$$s" \
-				--out "$(SV_BUILD)/sv-$$s.tsv"; \
+				--out "$(SV_BUILD)/sv-$$s.tsv" && \
 			python tools/anki/export/sv_import_to_anki.py \
 				"$(SV_BUILD)/sv-$$s.tsv"; \
 		fi; \
 	done
+
 sv-%:
 	mkdir -p $(SV_BUILD)
 	python tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/$*/*.md
