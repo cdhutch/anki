@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: pressurization-16
+note_id: autoflight-15
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:pressurization
+- system:autoflight
 - source:question-bank
 - status:verified
 fields:
-  Text: If an OFF SCHEDULE DESCENT light comes on the Cabin Pressurization Panel, the pressurization
-    system will {{c1::pressurize the cabin back to the takeoff airport altitude}}.
+  Text: A boxed A/T LIM annunciation indicates that the FMC is not providing {{c1::N1}} limit
+    values to the A/T system.
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 16
+  Source Location: Autoflight 15
   Verification Notes: ''
-system: pressurization
+system: autoflight
 source_type: question-bank
 prompt_style: cloze
 notes: ''
