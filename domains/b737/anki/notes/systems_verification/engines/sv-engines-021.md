@@ -2,24 +2,24 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: apu-14
+note_id: engines-021
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:apu
+- system:engines
 - source:question-bank
 - status:verified
-- model:b737-max
 fields:
-  Text: 'MAX: The blue APU MAINT light: {{c1::DOOR light has replaced the MAINT light on the
-    control panel.}}'
+  Text: If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above 80 knots
+    and below 400 feet RA, {{c1::only the Oil Filter Bypass light illuminates, and it will
+    be steady}}.
   Source Document: Systems Validation Question Bank
-  Source Location: APU 14
+  Source Location: Engines 21
   Verification Notes: ''
-system: apu
+system: engines
 source_type: question-bank
 prompt_style: cloze
 notes: ''

@@ -2,24 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: apu-14
+note_id: engines-002
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:apu
+- system:engines
 - source:question-bank
 - status:verified
-- model:b737-max
 fields:
-  Text: 'MAX: The blue APU MAINT light: {{c1::DOOR light has replaced the MAINT light on the
-    control panel.}}'
+  Text: During landing rollout, with this light *(Engine 1 REVERSER caution light on ENGINE
+    panel)* illuminated, the reverser {{c1::should operate normally}}.
   Source Document: Systems Validation Question Bank
-  Source Location: APU 14
+  Source Location: Engines 2
   Verification Notes: ''
-system: apu
+system: engines
 source_type: question-bank
 prompt_style: cloze
 notes: ''

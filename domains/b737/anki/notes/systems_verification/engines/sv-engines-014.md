@@ -2,24 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: apu-14
+note_id: engines-014
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:apu
+- system:engines
 - source:question-bank
 - status:verified
-- model:b737-max
 fields:
-  Text: 'MAX: The blue APU MAINT light: {{c1::DOOR light has replaced the MAINT light on the
-    control panel.}}'
+  Text: What type of data is the EEC using to control the engine while in the Hard ALTN Mode?
+    {{c1::A Preprogrammed alternate mode thrust schedule.}}
   Source Document: Systems Validation Question Bank
-  Source Location: APU 14
+  Source Location: Engines 14
   Verification Notes: ''
-system: apu
+system: engines
 source_type: question-bank
 prompt_style: cloze
 notes: ''
