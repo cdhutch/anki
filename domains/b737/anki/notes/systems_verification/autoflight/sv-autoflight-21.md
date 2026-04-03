@@ -14,7 +14,7 @@ tags:
 - status:verified
 fields:
   Text: 'Activating the APP Switch {{c1::does all of the above: illuminates the APP switch
-    light; arms AFDS for LOC & GS capture; amrs the VOR/LOC and GS annunciators on the FMA}}.'
+    light; arms AFDS for LOC & GS capture; arms the VOR/LOC and GS annunciators on the FMA}}.'
   Source Document: Systems Validation Question Bank
   Source Location: Autoflight 21
   Verification Notes: ''

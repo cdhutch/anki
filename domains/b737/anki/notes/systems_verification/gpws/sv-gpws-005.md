@@ -13,7 +13,7 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: 'If windshear is predicted within 1.5 NM, {{c1::All the above: he red word WINDSHEAR
+  Text: 'If windshear is predicted within 1.5 NM, {{c1::All the above: the red word WINDSHEAR
     appears on both PFD/ND; the red visual windshear symbol appears on the ND (mode permitting);
     an aural voice alert is heard}}.'
   Source Document: Systems Validation Question Bank
