@@ -13,7 +13,7 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: he A/P automatically disengages {{c1::when activating either pilot`s Control Wheel
+  Text: The A/P automatically disengages {{c1::when activating either pilot`s Control Wheel
     Trim Switch}}.
   Source Document: Systems Validation Question Bank
   Source Location: Autoflight 11
