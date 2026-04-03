@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "During normal operations with these two FLT CONTROL switches *(FLT CONTROL A & FLT CONTROL B)in the ON position, they control pressure to the respective {{c1::rudder, aileron, and elevator}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 38"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: During normal operations with these two FLT CONTROL switches *(FLT CONTROL A & FLT
+    CONTROL B)in the ON position, they control pressure to the respective {{c1::rudder, aileron,
+    and elevator}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 38
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "Placing the B FLT CONTROL switch to STBY RUD will cause the YAW DAMPER switch to {{c1::trip OFF and illuminate the Yaw Damper Light}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 9"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: Placing the B FLT CONTROL switch to STBY RUD will cause the YAW DAMPER switch to {{c1::trip
+    OFF and illuminate the Yaw Damper Light}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 9
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

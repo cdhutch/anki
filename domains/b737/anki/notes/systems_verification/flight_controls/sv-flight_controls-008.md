@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "With the loss of B Hydraulic System, the yaw damper will {{c1::be inoperative, but the Yaw Damper Light will not be illuminated until the Flt control B switch is moved to STBY RUD}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 8"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: With the loss of B Hydraulic System, the yaw damper will {{c1::be inoperative, but
+    the Yaw Damper Light will not be illuminated until the Flt control B switch is moved to
+    STBY RUD}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 8
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

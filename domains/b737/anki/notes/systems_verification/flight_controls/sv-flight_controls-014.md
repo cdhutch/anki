@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "In the event hydraulic systems A and B fail, the ailerons and elevators can be operated {{c1::mechanically (manually)}} and the rudder must be operated by the {{c1::standby}} system."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 14"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: In the event hydraulic systems A and B fail, the ailerons and elevators can be operated
+    {{c1::mechanically (manually)}} and the rudder must be operated by the {{c1::standby}}
+    system.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 14
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

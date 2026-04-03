@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "If the aileron control system is jammed, the {{c1::FO}} can still fly the aircraft using the {{c1::spoilers}} after force is applied to the control wheels and they break free."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 1"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: If the aileron control system is jammed, the {{c1::FO}} can still fly the aircraft
+    using the {{c1::spoilers}} after force is applied to the control wheels and they break
+    free.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 1
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

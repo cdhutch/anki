@@ -14,11 +14,14 @@ tags:
 - status:verified
 - model:b737-max
 fields:
-  Text: "MAX 8: Fly-by-wire Spoiler system provides the following new features. {{c1::Both 2 and 3 above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist System.}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 19"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: 'MAX 8: Fly-by-wire Spoiler system provides the following new features. {{c1::Both
+    2 and 3 above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist System.}}'
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 19
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

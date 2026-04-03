@@ -13,11 +13,13 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "The FSEU protects the flaps during {{c1::Normal Flap}} operation."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 4"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: The FSEU protects the flaps during {{c1::Normal Flap}} operation.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 4
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

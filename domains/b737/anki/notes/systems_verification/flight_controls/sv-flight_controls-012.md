@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "This light *(SPEED TRIM FAIL caution)*, and the Master Caution Lights, illuminate during initial taxi-out. {{c1::Check the MEL or call Maintenance. There is a dual channel failure of the Speed Trim System.}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 12"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: This light *(SPEED TRIM FAIL caution)*, and the Master Caution Lights, illuminate
+    during initial taxi-out. {{c1::Check the MEL or call Maintenance. There is a dual channel
+    failure of the Speed Trim System.}}
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 12
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

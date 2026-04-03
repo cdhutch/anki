@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided for flaps {{c1::30 and 40}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 31"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided for
+    flaps {{c1::30 and 40}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 31
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

@@ -13,11 +13,13 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "Roll control is normally provided by the ailerons, assisted by {{c1::flight spoilers}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 20"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: Roll control is normally provided by the ailerons, assisted by {{c1::flight spoilers}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 20
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

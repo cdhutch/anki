@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "After loss of system A, the QRH directs you to move the A FLT CONTROL switch to STBY RUD. This action will pressurize the {{c1::Standby hydraulic pump and Standby rudder PCU}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 39"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: After loss of system A, the QRH directs you to move the A FLT CONTROL switch to STBY
+    RUD. This action will pressurize the {{c1::Standby hydraulic pump and Standby rudder PCU}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 39
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

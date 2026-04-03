@@ -13,11 +13,13 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "The maximum altitude for extension of flaps is {{c1::20,000}} feet."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 33"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: The maximum altitude for extension of flaps is {{c1::20,000}} feet.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 33
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

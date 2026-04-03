@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "If a FEEL DIFF PRESS light illuminates, {{c1::no crew action is required in flight. Continue normal operations.}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 16"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: If a FEEL DIFF PRESS light illuminates, {{c1::no crew action is required in flight.
+    Continue normal operations.}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 16
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

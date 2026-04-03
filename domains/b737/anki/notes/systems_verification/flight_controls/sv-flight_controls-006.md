@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "If the trim was set to 10 units nose up *(outside of the green band)* and then the throttles are advanced for takeoff, what alert would occur? {{c1::An intermittent warning horn and takeoff config lights}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 6"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: If the trim was set to 10 units nose up *(outside of the green band)* and then the
+    throttles are advanced for takeoff, what alert would occur? {{c1::An intermittent warning
+    horn and takeoff config lights}}
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 6
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

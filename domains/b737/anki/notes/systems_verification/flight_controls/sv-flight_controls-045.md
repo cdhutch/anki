@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "The horizontal stabilizer is normally powered {{c1::electrically}}, but may also be operated {{c1::manually}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 45"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: The horizontal stabilizer is normally powered {{c1::electrically}}, but may also be
+    operated {{c1::manually}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 45
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

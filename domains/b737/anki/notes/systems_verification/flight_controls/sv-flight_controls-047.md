@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "Hydraulic System A and B pressure to the Main Rudder PCU is reduced at airspeeds above approximately {{c1::135}} knots."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 47"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: Hydraulic System A and B pressure to the Main Rudder PCU is reduced at airspeeds above
+    approximately {{c1::135}} knots.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 47
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

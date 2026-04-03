@@ -14,11 +14,13 @@ tags:
 - status:verified
 - model:b737-max
 fields:
-  Text: "MAX 8: The Elevator Jam Landing Assist Switch is located on: {{c1::Aft Overhead Panel}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 41"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: {{c1::Aft Overhead Panel}}'
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 41
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

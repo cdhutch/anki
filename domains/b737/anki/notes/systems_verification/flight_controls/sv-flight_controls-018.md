@@ -13,11 +13,13 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "Leading edge devices are normally operated by {{c1::Hydraulic System B only}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 18"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: Leading edge devices are normally operated by {{c1::Hydraulic System B only}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 18
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

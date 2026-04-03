@@ -13,11 +13,13 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "The primary flight controls consist of {{c1::ailerons, elevators, and rudder}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 43"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: The primary flight controls consist of {{c1::ailerons, elevators, and rudder}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 43
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

@@ -14,11 +14,13 @@ tags:
 - status:verified
 - model:b737-max
 fields:
-  Text: "MAX 8: The Spoiler light indicates: A fault in the spoiler system."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 52"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: 'MAX 8: The Spoiler light indicates: A fault in the spoiler system.'
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 52
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

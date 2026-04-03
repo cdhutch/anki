@@ -13,11 +13,13 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "The {{c1::FSEU}} protects the flaps in this condition."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 3"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: The {{c1::FSEU}} protects the flaps in this condition.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 3
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "During the origination preflight, this light *(SPEED TRIM FAIL)* illuminates after the IRS Mode Selectors are moved to NAV. The “Flight Control Panel . . . CHECK” item is accomplished by {{c1::doing nothing. This is a normal indication while the IRUs are aligning}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 11"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: During the origination preflight, this light *(SPEED TRIM FAIL)* illuminates after
+    the IRS Mode Selectors are moved to NAV. The “Flight Control Panel . . . CHECK” item is
+    accomplished by {{c1::doing nothing. This is a normal indication while the IRUs are aligning}}
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 11
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

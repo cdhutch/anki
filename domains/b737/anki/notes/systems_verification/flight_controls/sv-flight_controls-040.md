@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "{{c1::Leading edge flaps/slats}} can be extended by the Standby Hydraulic System in Alternate mode."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 40"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: '{{c1::Leading edge flaps/slats}} can be extended by the Standby Hydraulic System
+    in Alternate mode.'
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 40
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

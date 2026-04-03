@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "Normally, the ailerons, elevators, and rudder are powered by the {{c1::A & B hydraulic systems}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 32"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: Normally, the ailerons, elevators, and rudder are powered by the {{c1::A & B hydraulic
+    systems}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 32
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

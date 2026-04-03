@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "With the trailing edge flaps at 1, the leading edge slats are {{c1::in the extend position}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 22"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: With the trailing edge flaps at 1, the leading edge slats are {{c1::in the extend
+    position}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 22
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

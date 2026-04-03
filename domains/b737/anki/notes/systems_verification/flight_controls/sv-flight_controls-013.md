@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "If, instead, this light *(SPEED TRIM FAIL caution)* illuminates once you are in flight, the autopilot {{c1::is still fully operational}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 13"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: If, instead, this light *(SPEED TRIM FAIL caution)* illuminates once you are in flight,
+    the autopilot {{c1::is still fully operational}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 13
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

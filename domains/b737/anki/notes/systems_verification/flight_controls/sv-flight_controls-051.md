@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "During alternate flap operation, the TE flaps are positioned using {{c1::electrical}} power."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 51"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: During alternate flap operation, the TE flaps are positioned using {{c1::electrical}}
+    power.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 51
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

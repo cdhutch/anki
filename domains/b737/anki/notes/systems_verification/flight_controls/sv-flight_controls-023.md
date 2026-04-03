@@ -13,11 +13,15 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "As you advance the thrust lever for takeoff, would you get an intermittent horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)? {{c1::Yes. The LEDs are not in the proper position.}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 23"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: As you advance the thrust lever for takeoff, would you get an intermittent horn with
+    the LEDs positioned as indicated *(LE DEVICES in TRANSIT)? {{c1::Yes. The LEDs are not
+    in the proper position.}}
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 23
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "On aircraft 3AA - 3LB, the autoslat feature is available in flight {{c1::with trailing edge flaps selected to 1, 2, or 5}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 15"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: On aircraft 3AA - 3LB, the autoslat feature is available in flight {{c1::with trailing
+    edge flaps selected to 1, 2, or 5}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 15
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

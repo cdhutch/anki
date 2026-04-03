@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "While applying nose down trim, the electric trim stops. How can you continue to trim if you need more nose down trim? {{c1::Trim manually, using the manual trim wheel.}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 7"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: While applying nose down trim, the electric trim stops. How can you continue to trim
+    if you need more nose down trim? {{c1::Trim manually, using the manual trim wheel.}}
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 7
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

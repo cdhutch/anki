@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "When using the SPEED BRAKE in flight, the speedbrake lever should {{c1::not be moved beyond the flight detent}}."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 46"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: When using the SPEED BRAKE in flight, the speedbrake lever should {{c1::not be moved
+    beyond the flight detent}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 46
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

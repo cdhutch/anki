@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "The {{c1::green ban}} of the Stab Trim Indicator corresponds to the allowable range of trim settings for takeoff."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 21"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: The {{c1::green ban}} of the Stab Trim Indicator corresponds to the allowable range
+    of trim settings for takeoff.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 21
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "When positioning the flaps for takeoff from UP to 1, the crew noticed this condition. What could have caused this malfunction? {{c1::Skewed T.E. Flap}}"
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 2"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: When positioning the flaps for takeoff from UP to 1, the crew noticed this condition.
+    What could have caused this malfunction? {{c1::Skewed T.E. Flap}}
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 2
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+

@@ -13,11 +13,14 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: "If we move the flap lever from 5 to 10, but the leading edge devices all stay in the extend position, the {{c1::LE FLAPS TRANSIT}} Light will be illuminated."
-  Source Document: "Systems Validation Question Bank"
-  Source Location: "Flight Controls 34"
-system: "flight_controls"
-source_type: "question-bank"
-prompt_style: "cloze"
-notes: ""
+  Text: If we move the flap lever from 5 to 10, but the leading edge devices all stay in the
+    extend position, the {{c1::LE FLAPS TRANSIT}} Light will be illuminated.
+  Source Document: Systems Validation Question Bank
+  Source Location: Flight Controls 34
+  Verification Notes: ''
+system: flight_controls
+source_type: question-bank
+prompt_style: cloze
+notes: ''
 ---
+
