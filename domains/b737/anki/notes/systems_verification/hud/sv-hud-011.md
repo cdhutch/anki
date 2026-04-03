@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: flight_controls-052
+note_id: hud-011
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:flight_controls
+- system:hud
 - source:question-bank
 - status:verified
-- model:b737-max
 fields:
-  Text: 'MAX 8: The Spoiler light indicates: {{c1::A fault in the spoiler system}}.'
+  Text: The HUD AIII mode must be selected up to approximately 7 seconds prior to reaching
+    {{c1::500}} feet AGL.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 52
+  Source Location: HUD 11
   Verification Notes: ''
-system: flight_controls
+system: hud
 source_type: question-bank
 prompt_style: cloze
 notes: ''

@@ -2,23 +2,23 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: flight_controls-052
+note_id: hud-004
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:flight_controls
+- system:hud
 - source:question-bank
 - status:verified
-- model:b737-max
 fields:
-  Text: 'MAX 8: The Spoiler light indicates: {{c1::A fault in the spoiler system}}.'
+  Text: In addition to normal flight and navigation guidance, the HUD can also provide all
+    of the following EXCEPT for {{c1::RNP and ANP values}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 52
+  Source Location: HUD 4
   Verification Notes: ''
-system: flight_controls
+system: hud
 source_type: question-bank
 prompt_style: cloze
 notes: ''

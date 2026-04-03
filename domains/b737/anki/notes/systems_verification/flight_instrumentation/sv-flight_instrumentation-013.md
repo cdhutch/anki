@@ -2,23 +2,22 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification
-note_id: flight_controls-052
+note_id: flight_instrumentation-013
 anki:
   model: B737_SV_Cloze
   deck: B737::SV
 tags:
 - domain:b737
 - topic:systems-verification
-- system:flight_controls
+- system:flight_instrumentation
 - source:question-bank
 - status:verified
-- model:b737-max
 fields:
-  Text: 'MAX 8: The Spoiler light indicates: {{c1::A fault in the spoiler system}}.'
+  Text: Maximum airspeed is displayed on the airspeed tape by a {{c1::black and red}} bar.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 52
+  Source Location: Flight Instrumentation 13
   Verification Notes: ''
-system: flight_controls
+system: flight_instrumentation
 source_type: question-bank
 prompt_style: cloze
 notes: ''
