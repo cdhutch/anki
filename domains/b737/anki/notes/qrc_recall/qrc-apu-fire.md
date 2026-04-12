@@ -5,7 +5,7 @@ note_type: qrc_recall
 note_id: qrc-apu-fire
 anki:
   model: B737_Structured
-  deck: B737::QRC::Recall
+  deck: B737::QRC
 tags:
 - domain:b737
 - topic:qrc
@@ -15,6 +15,7 @@ tags:
 fields:
   Source Document: B737 QRC
   Source Location: APU FIRE
+  Note Type: qrc_recall
   Verification Notes: ''
 ---
 
@@ -25,8 +26,6 @@ fields:
 Recall items?
 
 # back_md
-
-**APU FIRE**
 
 1. APU Fire switch ... Confirm ... Pull, rotate to the stop, and hold for 1 second
 2. APU switch ... OFF

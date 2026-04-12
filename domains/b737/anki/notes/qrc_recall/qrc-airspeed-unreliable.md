@@ -5,7 +5,7 @@ note_type: qrc_recall
 note_id: qrc-airspeed-unreliable
 anki:
   model: B737_Structured
-  deck: B737::QRC::Recall
+  deck: B737::QRC
 tags:
 - domain:b737
 - topic:qrc
@@ -15,6 +15,7 @@ tags:
 fields:
   Source Document: B737 QRC
   Source Location: Airspeed Unreliable
+  Note Type: qrc_recall
   Verification Notes: ''
 ---
 
@@ -25,8 +26,6 @@ fields:
 Recall items?
 
 # back_md
-
-**Airspeed Unreliable**
 
 1. Autopilot (if engaged) ... Disengage
 2. Autothrottle (if engaged) ... Disengage

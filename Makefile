@@ -70,3 +70,28 @@ sv-%:
 		--out "$(SV_BUILD)/sv-$*.tsv"
 	$(PYTHON) tools/anki/export/sv_import_to_anki.py \
 		"$(SV_BUILD)/sv-$*.tsv"
+
+# -------------------------------------------------------------------
+# QRC Recall
+# -------------------------------------------------------------------
+QRC_ROOT := domains/b737/anki/notes/qrc_recall
+QRC_TSV := $(SV_BUILD)/qrc-recall.tsv
+
+.PHONY: qrc qrc-check qrc-fix qrc-clean
+
+qrc-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(QRC_ROOT)/*.md
+
+qrc-fix:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(QRC_ROOT)/*.md
+
+qrc-clean:
+	rm -f $(QRC_TSV)
+
+qrc: qrc-check
+	mkdir -p $(SV_BUILD)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(QRC_ROOT) \
+		--out $(QRC_TSV) \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(QRC_TSV)

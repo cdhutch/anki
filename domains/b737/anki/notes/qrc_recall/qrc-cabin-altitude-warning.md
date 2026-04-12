@@ -5,7 +5,7 @@ note_type: qrc_recall
 note_id: qrc-cabin-altitude-warning
 anki:
   model: B737_Structured
-  deck: B737::QRC::Recall
+  deck: B737::QRC
 tags:
 - domain:b737
 - topic:qrc
@@ -15,6 +15,7 @@ tags:
 fields:
   Source Document: B737 QRC
   Source Location: CABIN ALTITUDE WARNING or Rapid Depressurization
+  Note Type: qrc_recall
   Verification Notes: ''
 ---
 
@@ -25,8 +26,6 @@ fields:
 Recall items?
 
 # back_md
-
-**CABIN ALTITUDE WARNING or Rapid Depressurization**
 
 1. Don oxygen masks and set regulators to 100%
 2. Establish crew communications
