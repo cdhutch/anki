@@ -32,7 +32,7 @@ What is your flow?
 **Preflight — Overhead Panel (2nd Column)**
 
 Electrical panel:
-- 5 switches: guarded; 3 black / 2 red
+- 5 switches: GUARDED; 3 black / 2 red
 - AC switches: ON × 2
 - DRIVE caution lights × 2
 - 3 dim blue lights (starting with G)

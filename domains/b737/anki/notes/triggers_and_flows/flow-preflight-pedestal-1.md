@@ -35,7 +35,7 @@ What is your flow?
 - Thrust reversers: DOWN
 - Thrust levers: CLOSED
 - Flap lever: AGREES WITH FLAP POSITION
-- Parking brake: SET; light on
+- Parking brake: SET; light ON
 - Start levers: CUTOFF
 
 *Previous: Above Displays (Instruments)*  

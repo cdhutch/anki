@@ -32,7 +32,7 @@ What is your flow?
 **Preflight — Overhead Panel (1st Column)**
 
 Flight control panel:
-- All switches: OFF and guarded except YAW DAMPER
+- All switches: OFF and GUARDED except YAW DAMPER
 - YAW DAMPER: ON; caution light out
 - Flight control low pressure cautions × 2
 
@@ -44,7 +44,7 @@ Displays:
 
 Fuel panel:
 - 4 dim blue lights
-- All switches: OFF or closed
+- All switches: OFF or CLOSED
 - Main tank low pressure cautions × 4
 
 *Next: Overhead Panel (2nd Column)*

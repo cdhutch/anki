@@ -32,7 +32,7 @@ What is your flow?
 **Preflight — Overhead Panel (3rd–5th Columns)**
 
 3rd column:
-- All switches: aft or guarded
+- All switches: AFT or GUARDED
 - Wipers: PARKED
 
 4th column:

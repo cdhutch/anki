@@ -31,8 +31,8 @@ What is your flow?
 **IRS Alignment**
 
 - L and R IRS mode selectors OFF, then NAV
-- ON DC lights: on, then off
-- ALIGN lights: on
+- ON DC lights: ON, then OFF
+- ALIGN lights: ON
 
 *Previous: Electrical Power Up Procedure*  
 *Next: Origination Flow*
