@@ -20,13 +20,13 @@ fields:
   Verification Notes: null
 ---
 
-# Front
+# front_md
 
 **Electrical Power Up Procedure**
 
 What is your flow?
 
-# Back
+# back_md
 
 **Electrical Power Up Procedure**
 
