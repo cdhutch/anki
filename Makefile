@@ -102,7 +102,7 @@ qrc: qrc-check
 TRIGGERS_ROOT := domains/b737/anki/notes/triggers_and_flows
 TRIGGERS_TSV := $(SV_BUILD)/triggers-and-flows.tsv
 
-.PHONY: triggers triggers-check triggers-fix triggers-clean
+.PHONY: triggers triggers-check triggers-fix triggers-clean triggers-lint triggers-fmt
 
 triggers-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(TRIGGERS_ROOT)/*.md
@@ -120,3 +120,8 @@ triggers: triggers-check
 		--out $(TRIGGERS_TSV) \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(TRIGGERS_TSV)
+
+triggers-lint:
+	$(PYTHON) tools/anki/lint_flows.py
+
+triggers-fmt: triggers-fix triggers-lint
