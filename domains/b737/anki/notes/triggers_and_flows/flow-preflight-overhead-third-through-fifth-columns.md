@@ -16,7 +16,7 @@ tags:
 - source:flows
 - status:unverified
 fields:
-  Source Document: American Airlines B737 Flows
+  Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Preflight — Overhead Panel (3rd–5th Columns)
   Verification Notes: null
 ---

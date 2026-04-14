@@ -15,7 +15,7 @@ tags:
 - source:aom
 - status:unverified
 fields:
-  Source Document: American Airlines B737 AOM
+  Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Ignition
   Verification Notes: null
 ---
