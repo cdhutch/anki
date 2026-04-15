@@ -125,3 +125,31 @@ triggers-lint:
 	$(PYTHON) tools/anki/lint_flows.py
 
 triggers-fmt: triggers-fix triggers-lint
+
+# -------------------------------------------------------------------
+# Generic Cloze Notes
+# -------------------------------------------------------------------
+CLOZE_BUILD := $(SV_BUILD)
+
+.PHONY: cloze-clean cloze-systems cloze-normal
+
+cloze-clean:
+	rm -f $(CLOZE_BUILD)/cloze-*.tsv
+
+cloze-systems:
+	mkdir -p $(CLOZE_BUILD)
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write domains/b737/anki/notes/systems_verification/*/*.md
+	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
+		--in domains/b737/anki/notes/systems_verification \
+		--out $(CLOZE_BUILD)/cloze-systems.tsv
+	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
+		$(CLOZE_BUILD)/cloze-systems.tsv
+
+cloze-normal:
+	mkdir -p $(CLOZE_BUILD)
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write domains/b737/anki/notes/normal_procedures/*.md
+	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
+		--in domains/b737/anki/notes/normal_procedures \
+		--out $(CLOZE_BUILD)/cloze-normal.tsv
+	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
+		$(CLOZE_BUILD)/cloze-normal.tsv
