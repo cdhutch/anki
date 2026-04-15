@@ -133,22 +133,18 @@ triggers-fmt: triggers-fix triggers-lint
 # -------------------------------------------------------------------
 PROCEDURES_ROOT := domains/b737/anki/notes/procedures
 PROCEDURES_NORMAL_ROOT := $(PROCEDURES_ROOT)/normal
+PROCEDURES_NORMAL_STRUCTURED_ROOT := $(PROCEDURES_NORMAL_ROOT)/structured
+PROCEDURES_NORMAL_CLOZE_ROOT := $(PROCEDURES_NORMAL_ROOT)/cloze
 PROCEDURES_BUILD := $(BUILD_DIR)
 
 .PHONY: proc-normal-check proc-normal-fix proc-normal-clean proc-normal
 .PHONY: proc-normal-cloze-check proc-normal-cloze-clean proc-normal-cloze
 
 proc-normal-check:
-	@test -d "$(PROCEDURES_NORMAL_ROOT)" || (echo "Not found: $(PROCEDURES_NORMAL_ROOT)" && exit 1)
-	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
-	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
-	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $$files
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NORMAL_STRUCTURED_ROOT)/*.md
 
 proc-normal-fix:
-	@test -d "$(PROCEDURES_NORMAL_ROOT)" || (echo "Not found: $(PROCEDURES_NORMAL_ROOT)" && exit 1)
-	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
-	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
-	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $$files
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(PROCEDURES_NORMAL_STRUCTURED_ROOT)/*.md
 
 proc-normal-clean:
 	rm -f $(PROCEDURES_BUILD)/procedures-normal.tsv
@@ -156,28 +152,23 @@ proc-normal-clean:
 proc-normal: proc-normal-check
 	mkdir -p $(PROCEDURES_BUILD)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
-		--in $(PROCEDURES_NORMAL_ROOT) \
+		--in $(PROCEDURES_NORMAL_STRUCTURED_ROOT) \
 		--out $(PROCEDURES_BUILD)/procedures-normal.tsv \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
 		--tsv $(PROCEDURES_BUILD)/procedures-normal.tsv
 
 proc-normal-cloze-check:
-	@test -d "$(PROCEDURES_NORMAL_ROOT)" || (echo "Not found: $(PROCEDURES_NORMAL_ROOT)" && exit 1)
-	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
-	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
-	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $$files
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NORMAL_CLOZE_ROOT)/*.md
 
 proc-normal-cloze-clean:
 	rm -f $(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
 
 proc-normal-cloze:
 	mkdir -p $(PROCEDURES_BUILD)
-	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
-	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
-	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $$files
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(PROCEDURES_NORMAL_CLOZE_ROOT)/*.md
 	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
-		--in $(PROCEDURES_NORMAL_ROOT) \
+		--in $(PROCEDURES_NORMAL_CLOZE_ROOT) \
 		--out $(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
 	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
 		$(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
