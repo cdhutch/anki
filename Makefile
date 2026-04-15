@@ -2,8 +2,10 @@
 # Systems Verification (SV)
 # -------------------------------------------------------------------
 PYTHON := /Users/craig/miniforge3/envs/craigdev/bin/python
+BUILD_DIR := build
+
 SV_ROOT := domains/b737/anki/notes/systems_verification
-SV_BUILD := build
+SV_BUILD := $(BUILD_DIR)
 
 SV_SYSTEMS := \
 general \
@@ -75,7 +77,7 @@ sv-%:
 # QRC Recall
 # -------------------------------------------------------------------
 QRC_ROOT := domains/b737/anki/notes/qrc_recall
-QRC_TSV := $(SV_BUILD)/qrc-recall.tsv
+QRC_TSV := $(BUILD_DIR)/qrc-recall.tsv
 
 .PHONY: qrc qrc-check qrc-fix qrc-clean
 
@@ -89,7 +91,7 @@ qrc-clean:
 	rm -f $(QRC_TSV)
 
 qrc: qrc-check
-	mkdir -p $(SV_BUILD)
+	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(QRC_ROOT) \
 		--out $(QRC_TSV) \
@@ -97,10 +99,10 @@ qrc: qrc-check
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(QRC_TSV)
 
 # -------------------------------------------------------------------
-# Triggers and Flows — Triggers
+# Triggers and Flows
 # -------------------------------------------------------------------
 TRIGGERS_ROOT := domains/b737/anki/notes/triggers_and_flows
-TRIGGERS_TSV := $(SV_BUILD)/triggers-and-flows.tsv
+TRIGGERS_TSV := $(BUILD_DIR)/triggers-and-flows.tsv
 
 .PHONY: triggers triggers-check triggers-fix triggers-clean triggers-lint triggers-fmt
 
@@ -114,7 +116,7 @@ triggers-clean:
 	rm -f $(TRIGGERS_TSV)
 
 triggers: triggers-check
-	mkdir -p $(SV_BUILD)
+	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(TRIGGERS_ROOT) \
 		--out $(TRIGGERS_TSV) \
@@ -127,29 +129,82 @@ triggers-lint:
 triggers-fmt: triggers-fix triggers-lint
 
 # -------------------------------------------------------------------
-# Generic Cloze Notes
+# Procedures
 # -------------------------------------------------------------------
-CLOZE_BUILD := $(SV_BUILD)
+PROCEDURES_ROOT := domains/b737/anki/notes/procedures
+PROCEDURES_NORMAL_ROOT := $(PROCEDURES_ROOT)/normal
+PROCEDURES_BUILD := $(BUILD_DIR)
 
-.PHONY: cloze-clean cloze-systems cloze-normal
+.PHONY: proc-normal-check proc-normal-fix proc-normal-clean proc-normal
+.PHONY: proc-normal-cloze-check proc-normal-cloze-clean proc-normal-cloze
 
-cloze-clean:
-	rm -f $(CLOZE_BUILD)/cloze-*.tsv
+proc-normal-check:
+	@test -d "$(PROCEDURES_NORMAL_ROOT)" || (echo "Not found: $(PROCEDURES_NORMAL_ROOT)" && exit 1)
+	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
+	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $$files
 
-cloze-systems:
-	mkdir -p $(CLOZE_BUILD)
-	$(PYTHON) tools/anki/cnsf_canonicalize.py --write domains/b737/anki/notes/systems_verification/*/*.md
+proc-normal-fix:
+	@test -d "$(PROCEDURES_NORMAL_ROOT)" || (echo "Not found: $(PROCEDURES_NORMAL_ROOT)" && exit 1)
+	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
+	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $$files
+
+proc-normal-clean:
+	rm -f $(PROCEDURES_BUILD)/procedures-normal.tsv
+
+proc-normal: proc-normal-check
+	mkdir -p $(PROCEDURES_BUILD)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(PROCEDURES_NORMAL_ROOT) \
+		--out $(PROCEDURES_BUILD)/procedures-normal.tsv \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
+		--tsv $(PROCEDURES_BUILD)/procedures-normal.tsv
+
+proc-normal-cloze-check:
+	@test -d "$(PROCEDURES_NORMAL_ROOT)" || (echo "Not found: $(PROCEDURES_NORMAL_ROOT)" && exit 1)
+	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
+	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $$files
+
+proc-normal-cloze-clean:
+	rm -f $(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
+
+proc-normal-cloze:
+	mkdir -p $(PROCEDURES_BUILD)
+	@files="$$(find $(PROCEDURES_NORMAL_ROOT) -type f -name '*.md')"; \
+	test -n "$$files" || (echo "No markdown files found under $(PROCEDURES_NORMAL_ROOT)" && exit 1); \
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $$files
 	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
-		--in domains/b737/anki/notes/systems_verification \
-		--out $(CLOZE_BUILD)/cloze-systems.tsv
+		--in $(PROCEDURES_NORMAL_ROOT) \
+		--out $(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
 	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
-		$(CLOZE_BUILD)/cloze-systems.tsv
+		$(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
 
-cloze-normal:
-	mkdir -p $(CLOZE_BUILD)
-	$(PYTHON) tools/anki/cnsf_canonicalize.py --write domains/b737/anki/notes/normal_procedures/*.md
-	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
-		--in domains/b737/anki/notes/normal_procedures \
-		--out $(CLOZE_BUILD)/cloze-normal.tsv
-	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
-		$(CLOZE_BUILD)/cloze-normal.tsv
+
+# -------------------------------------------------------------------
+# Limits
+# -------------------------------------------------------------------
+LIMITS_ROOT := domains/b737/anki/notes/limits
+LIMITS_TSV := $(BUILD_DIR)/limits.tsv
+
+.PHONY: limits-check limits-fix limits-clean limits
+
+limits-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(LIMITS_ROOT)/*/*.md
+
+limits-fix:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(LIMITS_ROOT)/*/*.md
+
+limits-clean:
+	rm -f $(LIMITS_TSV)
+
+limits: limits-check
+	mkdir -p $(BUILD_DIR)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(LIMITS_ROOT) \
+		--out $(LIMITS_TSV) \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
+		--tsv $(LIMITS_TSV)
