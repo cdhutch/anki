@@ -34,7 +34,7 @@ What are the PF actions and responses at 80 knots?
 
 - Hold light forward pressure on the control column
 - Maintain directional control with rudder pedals
-- “Checked.”
+- "Checked."
 
 *Previous: Takeoff — PM Takeoff Roll*  
 *Next: Takeoff — PM 80 Knots*

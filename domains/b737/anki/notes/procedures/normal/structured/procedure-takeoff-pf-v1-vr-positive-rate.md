@@ -35,7 +35,7 @@ What are the PF actions and callouts from V1 through positive rate?
 - At V1: continue the takeoff
 - At VR: Rotate at 2° to 3° per second to reach the 10° pitch line on the PFD
 - After liftoff and positive rate:
-  - “Gear up.”
+  - "Gear up."
 - Target speed: V2 + 20 knots
 
 *Previous: Takeoff — PM 80 Knots*  

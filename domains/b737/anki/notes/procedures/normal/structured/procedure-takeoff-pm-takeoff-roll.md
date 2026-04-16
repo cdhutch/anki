@@ -32,11 +32,11 @@ What are the PM actions and callouts commencing the takeoff roll?
 
 **Takeoff — PM Takeoff Roll**
 
-- After hearing “TOGA.”:
+- After hearing "TOGA.":
   - Guard the flight controls
   - Verify symmetric acceleration and ensure N1 thrust matches target N1 on FMC Takeoff page
   - If necessary, adjust the thrust levers before reaching 80 knots
-- “Thrust set <required N1>”
+- "Thrust set <required N1>"
 - Check engine instruments stabilized and normal
 - Captain assumes / maintains control of thrust levers
 

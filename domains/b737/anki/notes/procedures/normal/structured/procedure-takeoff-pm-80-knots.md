@@ -34,8 +34,8 @@ What are the PM actions and callouts at 80 knots?
 
 - Monitor engine instruments
 - Cross-check airspeed indications
-- “80.”
-- Verify PF response: “Checked.”
+- "80."
+- Verify PF response: "Checked."
 
 *Previous: Takeoff — PF 80 Knots*  
 *Next: Takeoff — PF V1 / VR / Positive Rate*

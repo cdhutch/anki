@@ -34,7 +34,7 @@ What are the PF actions at acceleration height?
 
 - If VNAV is not available:
   - Select or request LVL CHG and set speed
-  - “LVL CHG, set speed ___.”
+  - "LVL CHG, set speed ___."
 - Reduce pitch and accelerate
 - Begin flap retraction on schedule
 

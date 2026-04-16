@@ -26,7 +26,7 @@ fields:
 
 **Takeoff — PM Cleanup Complete**
 
-What are the PM actions after “Flaps up, after takeoff checklist.”?
+What are the PM actions after "Flaps up, after takeoff checklist."?
 
 # back_md
 

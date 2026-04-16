@@ -33,11 +33,11 @@ What are the PM actions and callouts from 90 knots through positive rate?
 **Takeoff — PM V1 / VR / Positive Rate**
 
 - By 90 knots: verify A/T annunciation changes to THR HLD
-- “V1.”
-- “Rotate.”
+- "V1."
+- "Rotate."
 - Monitor airspeed and flight instruments during rotation
 - After liftoff, verify positive rate:
-  - “Positive rate.”
+  - "Positive rate."
 - On PF command, select landing gear up
 
 *Previous: Takeoff — PF V1 / VR / Positive Rate*  

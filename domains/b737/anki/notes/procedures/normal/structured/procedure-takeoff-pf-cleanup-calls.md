@@ -32,8 +32,8 @@ What flap-related calls does the PF make during cleanup?
 
 **Takeoff — PF Cleanup Calls**
 
-- “Flaps ___.”
-- “Flaps up, after takeoff checklist.”
+- "Flaps ___."
+- "Flaps up, after takeoff checklist."
 
 *Previous: Takeoff — PF Acceleration Height*  
 *Next: Takeoff — PF Cleanup Complete*

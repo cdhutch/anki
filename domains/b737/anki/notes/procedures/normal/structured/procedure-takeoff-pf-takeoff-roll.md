@@ -33,12 +33,12 @@ What are the PF actions commencing the takeoff roll?
 **Takeoff — PF Takeoff Roll**
 
 - Advance thrust levers and verify both engines stabilize at approximately 40% N1
-- “TOGA.”
+- "TOGA."
 - TO/GA switch: PRESS
 - Ensure thrust levers continue to advance toward target N1
 - Verify mode annunciation
 - Verify correct takeoff thrust is set
-- After hearing “Thrust set ___,” check engine instruments stabilized and normal
+- After hearing "Thrust set ___," check engine instruments stabilized and normal
 - Captain assumes/maintains control of thrust levers
 
 *Previous: Normal / Noise Abatement Takeoff — Overview*  
