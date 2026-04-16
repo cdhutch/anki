@@ -132,13 +132,21 @@ triggers-fmt: triggers-fix triggers-lint
 # Procedures
 # -------------------------------------------------------------------
 PROCEDURES_ROOT := domains/b737/anki/notes/procedures
+
 PROCEDURES_NORMAL_ROOT := $(PROCEDURES_ROOT)/normal
 PROCEDURES_NORMAL_STRUCTURED_ROOT := $(PROCEDURES_NORMAL_ROOT)/structured
 PROCEDURES_NORMAL_CLOZE_ROOT := $(PROCEDURES_NORMAL_ROOT)/cloze
+
+PROCEDURES_NON_NORMAL_ROOT := $(PROCEDURES_ROOT)/non_normal
+PROCEDURES_NON_NORMAL_STRUCTURED_ROOT := $(PROCEDURES_NON_NORMAL_ROOT)/structured
+PROCEDURES_NON_NORMAL_CLOZE_ROOT := $(PROCEDURES_NON_NORMAL_ROOT)/cloze
+
 PROCEDURES_BUILD := $(BUILD_DIR)
 
 .PHONY: proc-normal-check proc-normal-fix proc-normal-clean proc-normal
 .PHONY: proc-normal-cloze-check proc-normal-cloze-clean proc-normal-cloze
+.PHONY: proc-non-normal-check proc-non-normal-fix proc-non-normal-clean proc-non-normal
+.PHONY: proc-non-normal-cloze-check proc-non-normal-cloze-clean proc-non-normal-cloze
 
 proc-normal-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NORMAL_STRUCTURED_ROOT)/*.md
@@ -173,6 +181,38 @@ proc-normal-cloze:
 	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
 		$(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
 
+proc-non-normal-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NON_NORMAL_STRUCTURED_ROOT)/*.md
+
+proc-non-normal-fix:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(PROCEDURES_NON_NORMAL_STRUCTURED_ROOT)/*.md
+
+proc-non-normal-clean:
+	rm -f $(PROCEDURES_BUILD)/procedures-non-normal.tsv
+
+proc-non-normal: proc-non-normal-check
+	mkdir -p $(PROCEDURES_BUILD)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(PROCEDURES_NON_NORMAL_STRUCTURED_ROOT) \
+		--out $(PROCEDURES_BUILD)/procedures-non-normal.tsv \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
+		--tsv $(PROCEDURES_BUILD)/procedures-non-normal.tsv
+
+proc-non-normal-cloze-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NON_NORMAL_CLOZE_ROOT)/*.md
+
+proc-non-normal-cloze-clean:
+	rm -f $(PROCEDURES_BUILD)/procedures-non-normal-cloze.tsv
+
+proc-non-normal-cloze:
+	mkdir -p $(PROCEDURES_BUILD)
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(PROCEDURES_NON_NORMAL_CLOZE_ROOT)/*.md
+	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
+		--in $(PROCEDURES_NON_NORMAL_CLOZE_ROOT) \
+		--out $(PROCEDURES_BUILD)/procedures-non-normal-cloze.tsv
+	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
+		$(PROCEDURES_BUILD)/procedures-non-normal-cloze.tsv
 
 # -------------------------------------------------------------------
 # Limits
