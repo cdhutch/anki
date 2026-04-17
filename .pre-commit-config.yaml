@@ -8,3 +8,9 @@ repos:
         additional_dependencies:
           - pyyaml
         files: ^domains/.*/anki/notes/.*\.md$
+
+      - id: flow-lint
+        name: B737 flow linter
+        entry: python tools/anki/lint_flows.py
+        language: system
+        files: ^domains/b737/anki/notes/triggers_and_flows/.*\.md$
