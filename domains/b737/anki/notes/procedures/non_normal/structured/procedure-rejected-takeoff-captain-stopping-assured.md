@@ -10,9 +10,9 @@ tags:
 - domain:b737
 - topic:procedures
 - type:procedure
-- procedure:rto
+- procedure:rejected_takeoff
 - phase:stopping_assured
-- crew:captain
+- role:captain
 - source:aom
 - status:unverified
 fields:

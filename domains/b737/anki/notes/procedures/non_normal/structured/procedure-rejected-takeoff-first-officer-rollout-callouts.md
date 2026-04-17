@@ -10,9 +10,8 @@ tags:
 - domain:b737
 - topic:procedures
 - type:procedure
-- category:non_normal
 - procedure:rejected_takeoff
-- crew:first_officer
+- role:first_officer
 - phase:rollout
 - source:aom
 - status:unverified

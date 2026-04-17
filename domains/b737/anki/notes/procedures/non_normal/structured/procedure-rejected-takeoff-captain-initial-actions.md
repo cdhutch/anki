@@ -9,8 +9,9 @@ anki:
 tags:
 - domain:b737
 - topic:procedures
-- category:non_normal
+- type:procedure
 - procedure:rejected_takeoff
+- phase:initial_actions
 - role:captain
 - source:aom
 - status:unverified

@@ -10,10 +10,9 @@ tags:
 - domain:b737
 - topic:procedures
 - type:procedure
-- category:non_normal
 - procedure:rejected_takeoff
-- crew:first_officer
-- phase:stopped
+- role:first_officer
+- phase:aircraft_stopped
 - source:aom
 - status:unverified
 fields:
