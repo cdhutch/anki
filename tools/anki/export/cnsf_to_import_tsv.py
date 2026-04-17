@@ -9,12 +9,54 @@ import argparse
 import csv
 import glob
 import sys
+import yaml
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List
 
 from tools.anki.cnsf_parse import load_cnsf_note
 from tools.anki.md_to_html_mmd import render_cnsf_note_to_html
+
+
+def load_export_profile(model: str) -> dict:
+    """
+    Load export profile YAML for an Anki model.
+    """
+    repo_root = Path(__file__).resolve().parents[3]
+    profile_path = repo_root / "tools" / "anki" / "export_profiles" / f"{model}.yml"
+
+    if not profile_path.exists():
+        raise FileNotFoundError(f"No export profile for model: {model}")
+
+    with profile_path.open("r", encoding="utf-8") as f:
+        return yaml.safe_load(f)
+
+def resolve_profile_value(env: "CnsfEnvelope", key: str, rendered: dict[str, str]) -> str:
+    """
+    Resolve a profile mapping value for one exported field.
+    Supported sources:
+      - note_id
+      - noteId
+      - tags_joined
+      - front_html
+      - back_html
+      - fields.<Name>
+      - direct top-level envelope fields (if present in env.fields)
+    """
+    if key == "note_id":
+        return env.note_id
+    if key == "noteId":
+        return env.noteId
+    if key == "tags_joined":
+        return " ".join(env.tags)
+    if key == "front_html":
+        return rendered["front_html"]
+    if key == "back_html":
+        return rendered["back_html"]
+    if key.startswith("fields."):
+        subkey = key[len("fields."):]
+        return env.fields.get(subkey, "")
+    return env.fields.get(key, "")
 
 
 def eprint(*args: Any) -> None:
@@ -71,6 +113,13 @@ def load_envelope(path: Path, noteid_map: Dict[str, str] | None) -> CnsfEnvelope
 
     fields = meta.get("fields") or {}
     fields_str = {str(k): "" if v is None else str(v) for k, v in fields.items()}
+
+    # Preserve top-level semantic CNSF keys too, so export profiles can map them.
+    reserved = {"schema", "domain", "note_type", "note_id", "anki", "tags", "fields"}
+    for k, v in meta.items():
+        if k in reserved:
+            continue
+        fields_str[str(k)] = "" if v is None else str(v)
 
     noteId = ""
     if noteid_map and note_id in noteid_map:
@@ -129,7 +178,8 @@ def write_tsv(out_path: Path, notes: List[CnsfEnvelope], extra_field_names: List
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    header = ["note_id", "noteId", "model", "deck", "tags", "front_html", "back_html"] + extra_field_names
+    profile = load_export_profile(notes[0].model)
+    header = ["model", "deck"] + list(profile["fields"].keys())
 
     with out_path.open("w", encoding="utf-8", newline="") as f:
         w = csv.DictWriter(f, fieldnames=header, delimiter="\t", quoting=csv.QUOTE_MINIMAL)
@@ -143,23 +193,17 @@ def write_tsv(out_path: Path, notes: List[CnsfEnvelope], extra_field_names: List
             return v
 
         for env in notes:
+            profile = load_export_profile(env.model)
             rendered = render_cnsf_note_to_html(str(env.path))
-            front_html = _tsv_safe(rendered["front_html"])
-            back_html  = _tsv_safe(rendered["back_html"])
-
             row = {
-                "note_id": env.note_id,
-                "noteId": env.noteId,
                 "model": env.model,
                 "deck": env.deck,
-                "tags": " ".join(env.tags),
-                "front_html": front_html,
-                "back_html": back_html,
             }
-            for k in extra_field_names:
-                row[k] = _tsv_safe(env.fields.get(k, "") or "")
+            for anki_field, source in profile["fields"].items():
+                val = resolve_profile_value(env, source, rendered)
+                val = _tsv_safe(val)
+                row[anki_field] = val
             w.writerow(row)
-
 
 def main() -> int:
     ap = argparse.ArgumentParser()

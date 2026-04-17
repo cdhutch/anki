@@ -11,6 +11,10 @@ Desktop.ini
 # Linux
 *~
 
+# Generated archives
+*_md.zip
+*_tsv.zip
+
 # Temporary files
 *.tmp
 *.temp
@@ -76,3 +80,6 @@ domains/**/anki/exports/
 
 # Reverse pipeline inbox artifacts
 domains/**/anki/inbox/
+
+# Ignore build files
+build/*

@@ -77,6 +77,18 @@ def _top_level_key_order(yaml_text: str) -> list[str]:
     return keys
 
 
+def _reject_blank_lines_in_yaml(yaml_text: str, path: Path) -> None:
+    """
+    CNSF front matter must not contain blank lines.
+    This keeps YAML deterministic and avoids non-semantic formatting drift.
+    """
+    for i, line in enumerate(yaml_text.splitlines(), start=1):
+        if not line.strip():
+            raise ValueError(
+                f"{path}: blank lines are not allowed inside YAML front matter (line {i})."
+            )
+
+
 def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     """
     Normalize known CNSF keys and coerce obvious legacy variants.
@@ -104,12 +116,14 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     if schema != "cnsf/v0":
         raise ValueError(f"{path}: schema must be 'cnsf/v0' (found: {schema!r}).")
 
-    # Enforce underscore note_id grammar
+    # Enforce note_id grammar: lowercase tokens separated by hyphens or underscores
     note_id = (meta.get("note_id") or "").strip()
     if not note_id:
         raise ValueError(f"{path}: YAML must include note_id.")
-    if "-" in note_id:
-        raise ValueError(f"{path}: note_id must use underscores only (no hyphens): {note_id!r}")
+    if not re.fullmatch(r"[a-z0-9]+(?:[-_][a-z0-9]+)*", note_id):
+        raise ValueError(
+            f"{path}: note_id must use lowercase letters/numbers with hyphens or underscores only: {note_id!r}"
+        )
 
     # Normalize anki mapping
     anki = meta.get("anki")
@@ -188,6 +202,7 @@ def dump_yaml(meta: dict[str, Any]) -> str:
 def canonicalized_file_text(path: Path) -> tuple[str, dict[str, Any]]:
     text = path.read_text(encoding="utf-8")
     fm = split_frontmatter(text, path)
+    _reject_blank_lines_in_yaml(fm.yaml_text, path)
     meta = yaml.safe_load(fm.yaml_text) or {}
     meta_c = canonicalize_meta(meta, path)
     y = dump_yaml(meta_c)

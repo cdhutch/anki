@@ -74,54 +74,86 @@ class TsvRow:
     extra_fields: Dict[str, str]
 
 
+def _tsv_unescape(v: str) -> str:
+    """
+    Reverse the L3 TSV escaping performed by cnsf_to_import_tsv.py.
+    Order matters: unescape tabs first, then newlines.
+    """
+    return v.replace("\\t", "\t").replace("\\n", "\n")
+
+
 def parse_tsv(path: Path) -> Tuple[List[str], List[TsvRow]]:
     with path.open("r", encoding="utf-8", newline="") as f:
         reader = csv.DictReader(f, delimiter="\t")
         header = list(reader.fieldnames or [])
-        required = {"note_id", "noteId", "model", "deck", "tags", "front_html", "back_html"}
+        required = {"model", "deck"}
         missing = required - set(header)
         if missing:
             raise ValueError(f"Missing required TSV columns: {sorted(missing)}")
-
         rows: List[TsvRow] = []
         for r in reader:
-            note_id = (r.get("note_id") or "").strip()
+            note_id = (r.get("note_id") or r.get("NoteID") or "").strip()
             if not note_id:
-                continue
+                note_id = (r.get("note_id") or "").strip()
 
             tags_raw = (r.get("tags") or "").strip()
             tags = [t for t in tags_raw.split() if t]
 
-            extra = {k: tsv_unescape_cell(r.get(k) or "") for k in header if k not in required}
+            note_id_col = (r.get("noteId") or "").strip()
+            model = (r.get("model") or "").strip()
+            deck = (r.get("deck") or "").strip()
+
+            front_html = _tsv_unescape(r.get("front_html") or r.get("Front") or "")
+            back_html = _tsv_unescape(r.get("back_html") or r.get("Back") or "")
+
+            excluded = {
+                "model",
+                "deck",
+                "note_id",
+                "NoteID",
+                "noteId",
+                "tags",
+                "front_html",
+                "back_html",
+                "Front",
+                "Back",
+            }
+            extra = {k: _tsv_unescape(r.get(k) or "") for k in header if k not in excluded}
 
             rows.append(
                 TsvRow(
                     note_id=note_id,
-                    noteId=(r.get("noteId") or "").strip(),
-                    model=(r.get("model") or "").strip(),
-                    deck=(r.get("deck") or "").strip(),
+                    noteId=note_id_col,
+                    model=model,
+                    deck=deck,
                     tags=tags,
-                    front_html=tsv_unescape_cell(r.get("front_html") or ""),
-                    back_html=tsv_unescape_cell(r.get("back_html") or ""),
+                    front_html=front_html,
+                    back_html=back_html,
                     extra_fields=extra,
                 )
             )
-
     return header, rows
 
 
-def build_fields_payload(row: TsvRow) -> Dict[str, str]:
-    # For our current B737_Structured model, we assume:
-    # NoteID, Front, Back are the canonical base fields.
-    # Extra fields map by header name (e.g., Source Document).
+def build_fields_payload(row: TsvRow, model_fields: List[str] | None = None) -> Dict[str, str]:
+    """
+    Build the Anki fields payload, with light remapping for model-specific field names.
+    """
+    model_field_set = set(model_fields or [])
+
+    note_id_field = "NoteID"
+    if model_fields and "NoteID" not in model_field_set and "note_id" in model_field_set:
+        note_id_field = "note_id"
+
     fields: Dict[str, str] = {
-        "NoteID": row.note_id,
+        note_id_field: row.note_id,
         "Front": row.front_html,
         "Back": row.back_html,
     }
+
     for k, v in row.extra_fields.items():
-        # Keep exact Anki field names as columns.
         fields[k] = v
+
     return fields
 
 
@@ -131,7 +163,7 @@ def model_field_names(model_name: str, url: str) -> List[str]:
 
 
 def validate_fields_against_model(row: TsvRow, model_fields: List[str]) -> None:
-    payload_fields = build_fields_payload(row)
+    payload_fields = build_fields_payload(row, model_fields)
     unknown = sorted([k for k in payload_fields.keys() if k not in set(model_fields)])
     if unknown:
         raise SystemExit(
@@ -145,7 +177,8 @@ def validate_fields_against_model(row: TsvRow, model_fields: List[str]) -> None:
 
 def update_note(row: TsvRow, url: str) -> None:
     note_id_num = int(row.noteId)
-    fields = build_fields_payload(row)
+    model_fields = model_field_names(row.model, url)
+    fields = build_fields_payload(row, model_fields)
 
     anki_request("updateNoteFields", {"note": {"id": note_id_num, "fields": fields}}, url=url)
 
@@ -159,7 +192,8 @@ def update_note(row: TsvRow, url: str) -> None:
 
 
 def create_note(row: TsvRow, url: str) -> int:
-    fields = build_fields_payload(row)
+    model_fields = model_field_names(row.model, url)
+    fields = build_fields_payload(row, model_fields)
     note = {
         "deckName": row.deck,
         "modelName": row.model,
