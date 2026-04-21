@@ -13,8 +13,9 @@ tags:
 - source:question-bank
 - status:verified
 fields:
-  Text: The illuminated amber AUTO FAIL light on the Cabin Pressurization Panel indicates
-    that {{c1::both auto pressure controllers have failed}}.
+  Text: The illuminated amber AUTO FAIL light on the Cabin Pressurization Panel *(without
+    an illuminated green ALT light) indicates that {{c1::both auto pressure controllers have
+    failed}}.
   Source Document: Systems Validation Question Bank
   Source Location: Pressurization 14
   Verification Notes: ''
