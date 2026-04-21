@@ -1,0 +1,16 @@
+repos:
+  - repo: local
+    hooks:
+      - id: cnsf-canonical
+        name: CNSF canonical YAML order
+        entry: python -m tools.anki.cnsf_canonicalize --check
+        language: python
+        additional_dependencies:
+          - pyyaml
+        files: ^domains/.*/anki/notes/.*\.md$
+
+      - id: flow-lint
+        name: B737 flow linter
+        entry: python tools/anki/lint_flows.py
+        language: system
+        files: ^domains/b737/anki/notes/triggers_and_flows/.*\.md$

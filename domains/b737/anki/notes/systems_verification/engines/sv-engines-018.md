@@ -1,0 +1,27 @@
+---
+schema: cnsf/v0
+domain: b737
+note_type: systems_verification
+note_id: engines-018
+anki:
+  model: B737_SV_Cloze
+  deck: B737::SV
+tags:
+- domain:b737
+- topic:systems-verification
+- system:engines
+- source:question-bank
+- status:verified
+- model:b737-max
+fields:
+  Text: 'MAX: Bowed Rotor Motoring (BRM): {{c1::Designed to straighten the rotor shaft which
+    will naturally “bow” due to thermal buildup after the engine is shutdown.}}'
+  Source Document: Systems Validation Question Bank
+  Source Location: Engines 18
+  Verification Notes: ''
+system: engines
+source_type: question-bank
+prompt_style: cloze
+notes: ''
+---
+

@@ -1,0 +1,34 @@
+# Mapping for Anki model: B737_Systems
+model: B737_Systems
+
+identity_fields:
+  - note_id
+  - NoteID
+
+front_field: prompt
+back_field: answer
+
+domain: b737
+note_type: inferred_from_anki
+
+# Preserve these fields into CNSF YAML `fields:` block (if present)
+preserve_fields:
+  - system
+  - subsystem
+  - panel_group
+  - panel_name
+  - function_type
+  - normal_state
+  - failure_logic
+  - affects_bus
+  - powered_by
+  - interacts_with
+  - source
+  - ref_section
+  - tags
+  - notes
+
+include_anki_tags: true
+add_tags:
+  - status:unverified
+  - source:anki

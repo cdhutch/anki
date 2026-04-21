@@ -1,0 +1,30 @@
+# Mapping for Anki model: B737_Structured
+# Used by tools/anki/extract/anki_to_cnsf.py
+model: B737_Structured
+
+# Canonical identity field(s) to search in this order
+identity_fields:
+  - note_id
+  - NoteID
+
+# Which Anki fields become CNSF card sections
+front_field: Front
+back_field: Back
+
+# CNSF domain + note_type for reconstructed notes
+domain: b737
+note_type: inferred_from_anki
+
+# Fields to preserve into CNSF YAML `fields:` block
+preserve_fields:
+  - Source Document
+  - Source Location
+  - Verification Notes
+
+# Tags policy:
+# - include_anki_tags: carry Anki tags into CNSF YAML tags list
+# - add_tags: always add these tags
+include_anki_tags: true
+add_tags:
+  - status:unverified
+  - source:anki

@@ -1,209 +1,177 @@
-# B737 Anki Training Deck
+# Anki Knowledge Repository
 
-Structured, source-controlled Anki deck for B737 training.
+This repository is the **source of truth for structured knowledge used
+in Anki decks**.
 
----
+All notes are stored as **canonical CNSF Markdown files** and are
+converted into Anki notes through a reproducible pipeline.
 
-# Core Philosophy
+The design goals are:
 
-- No AI trust.
-- New AI-generated notes start with the tag: `unverified`.
-- Manual verification happens **in the TSV file** (before importing into Anki).
-- Only after manual review is content merged from `draft` → `main`.
-- **Section numbers (not page numbers)** are used for source references.
-- Git repository is the single source of truth.
-- Anki is only the delivery mechanism.
+-   Git-controlled knowledge
+-   reproducible deck builds
+-   clean separation between **content**, **rendering**, and **Anki
+    synchronization**
+-   support for multiple note models
 
-Primary goals:
-- Sim survival
-- Long-term line proficiency
+------------------------------------------------------------------------
 
----
+# Quick Start (30‑second summary)
 
-# Deck Architecture (Anki)
+To rebuild the B737 Electrical systems deck from canonical notes:
 
-## Physical Decks (recommended)
+``` bash
+tools/anki/cnsf_to_anki.sh domains/b737/anki/notes/systems/electrical
+```
 
-- `B737::Limits`
-- `B737::Systems`
+Pipeline:
 
-(You can add more later, e.g., `B737::Flows`, `B737::Callouts`.)
+CNSF Markdown → TSV export → AnkiConnect import
 
-## Filtered Decks (dynamic)
+------------------------------------------------------------------------
 
-### Boldface (portfolio-wide)
-Name: `B737::BOLDFACE`
+# Repository Philosophy
 
-Filtered search:
-`tag:boldface`
+This repo treats **Anki as a rendering target, not the source of
+truth**.
 
-### Lights & Switches (portfolio-wide)
-Name: `B737::LIGHTS-SWITCHES`
+  Component         Role
+  ----------------- ------------------------------------
+  Git repository    canonical knowledge store
+  CNSF Markdown     structured note format
+  Export pipeline   transforms notes into Anki format
+  Anki              spaced‑repetition review interface
 
-Filtered search:
-`tag:lights-switches`
+Benefits:
 
-These decks are dynamically built in Anki. No duplicate notes are created.
+-   version control for knowledge
+-   deterministic deck rebuilds
+-   large‑scale refactoring
+-   automated validation
 
----
+------------------------------------------------------------------------
 
-# Repository Structure
+# Pipeline Architecture
 
-Typical folders:
+CNSF notes are transformed into Anki notes using a simple three‑stage
+pipeline.
 
-- `limits/`
-- `systems/`
-- `flows/`
-- `callouts/`
-- `maneuvers/`
-- `recall-items/`
+CNSF Markdown\
+↓\
+TSV export\
+↓\
+AnkiConnect import
 
-Each TSV file represents one logical unit (e.g., `§18.2.1 Altitude Limits`, `Electrical System`).
+------------------------------------------------------------------------
 
----
+# Makefile Commands
 
-# TSV Column Format (B737 Structured)
+The repository includes a **Makefile workflow for building and importing
+B737 Systems Verification (SV) decks**.
 
-All TSV files must use this exact column order:
+Systems Verification notes live here:
 
-1. `NoteID`
-2. `Front`
-3. `Back`
-4. `Source Document`
-5. `Source Location`
-6. `Verification Notes`
-7. `Tags`
+    domains/b737/anki/notes/systems_verification/
 
-**Important:** TSV files in this repo are stored **without a header row** so they can be imported directly into Anki without accidentally creating a “header note”.
+------------------------------------------------------------------------
 
-Tabs must be used as delimiters.
+## Validate notes
 
----
+Validate canonical CNSF formatting without modifying files.
 
-# NoteID Rules
+``` bash
+make sv-check
+```
 
-- Must be globally unique.
-- Must be stable (do not renumber once imported).
-- Use human-readable prefixes by category:
-  - Limits: `lim-...`
-  - Systems (electrical): `sys-elec-...`
+This runs:
 
----
+    tools/anki/cnsf_canonicalize.py --check
 
-# Tag Taxonomy (tight)
+Checks include:
 
-## 1) Verification
-- `unverified` — present until manually validated in TSV, then removed.
+-   YAML key ordering
+-   required metadata
+-   canonical CNSF formatting
 
-(We do **not** use a `verified` tag; “verified” is the absence of `unverified`.)
+If violations exist, the command exits with an error.
 
-## 2) Aircraft Variant (exactly one required)
-Exactly one of:
-- `common`
-- `b737-800`
-- `b737-max8`
+------------------------------------------------------------------------
 
-Rules:
-- Do not combine variant tags.
-- If a value differs between aircraft, create separate NoteIDs.
+## Build and import all Systems Verification decks
 
-## 3) Content Type (at least one required)
+``` bash
+make sv
+```
+
+Pipeline executed by this command:
+
+CNSF Markdown\
+↓\
+Canonical validation\
+↓\
+Fresh TSV generation\
+↓\
+AnkiConnect import
+
+Important behavior:
+
+-   **TSV files are rebuilt every time `make sv` runs**
+-   This ensures **changes in `.md` files always overwrite cards in
+    Anki**
+-   Previously generated TSV files are overwritten automatically
+
+Generated TSV files are written to:
+
+    build/
+
 Examples:
-- `limits`
-- `systems`
-- `flow`
-- `callouts`
-- `maneuver`
-- `recall`
 
-## 4) Memory Classification (only if applicable)
-- `boldface` — only if it is truly a required memory-script item.
+    build/sv-general.tsv
+    build/sv-air_conditioning.tsv
+    build/sv-hydraulics.tsv
+    build/sv-electrical.tsv
 
-## Optional Context Tags (use sparingly)
-- `verbatim` — wording/number must be exact.
-- `structural` — hard red-line / structural limitation (mostly used in limitations).
-- `company-specific` — references company alerts, ops advisory pages, special company data.
-- `rvsm` — RVSM-specific tolerances/logic.
-- `lights-switches` — switch semantics + indications/annunciations.
+These files are **temporary build artifacts and should not be
+committed**.
 
----
+------------------------------------------------------------------------
 
-# Systems Notes Schema
+# Typical Workflow
 
-Systems cards are built to support:
-A) **What powers / supplies / controls this?**
-B) **If X fails, what changes / what is lost / what powers it now?**
+Edit notes:
 
-## Card patterns
+    edit Markdown files
+          ↓
+    make sv
+          ↓
+    Anki updated
 
-### 1) Power / Supply / Control (PSC)
-Front:
-- “What powers **[bus/component]** normally?”
-- “What supplies **[system]** under **[condition]**?”
-- “What controls **[function]**?”
+Optional validation step:
 
-Back:
-- One concise relationship (optionally with a condition).
+    make sv-check
+    make sv
 
-Tags:
-- `systems` + variant tag + `unverified` (until validated)
-- Add `verbatim` if precision matters
+------------------------------------------------------------------------
 
-### 2) Failure Effects (X fails → downstream)
-Front:
-- “If **[source/component]** fails, what changes / what is lost?”
-- “With **[condition]**, what powers **[bus]**?”
+# Key Scripts
 
-Back:
-- Tight operational consequences, typically 1–3 bullets.
-- Include “major loads lost” when the manual clearly lists them (avoid oral-exam essays).
+  Script                   Purpose
+  ------------------------ -------------------------
+  `cnsf_canonicalize.py`   enforce canonical YAML
+  `sv_md_to_tsv.py`        convert CNSF → TSV
+  `sv_import_to_anki.py`   import TSV to Anki
+  `cnsf_to_anki.sh`        legacy wrapper pipeline
 
-Tags:
-- `systems` + variant tag + `unverified`
+------------------------------------------------------------------------
 
-### 3) Lights & Switches (switch semantics + annunciations)
-Front:
-- “What does **[switch]** do in **OFF/AUTO/ON/BAT**?”
-- “When does **[light/annunciation]** illuminate (GND vs FLT)?”
+# Long‑Term Direction
 
-Back:
-- Exact behavior/logic.
+Planned extensions:
 
-Tags:
-- `systems` + `lights-switches` + variant tag + `unverified`
+-   flows deck
+-   memory items deck
+-   maneuver cards
+-   automated validation of note completeness
 
-### 4) Cluster Cards (allowed)
-Use clusters when:
-- The source presents a list/table **or**
-- The set is logically stable and typically learned as a group.
-
-Keep clusters small and stable.
-
----
-
-# Branch Policy
-
-- Work happens on `draft`.
-- Only verified TSV content is merged to `main`.
-- `main` should remain import-ready.
-
----
-
-# Import Discipline (Anki)
-
-- Always confirm the correct **Note Type** (`B737 Structured`) before import.
-- Always confirm the correct **Deck** before import.
-- Since TSVs have **no header row**, you do not need a “first row is headers” option.
-
-## 8. Note Formatting Standards
-
-We use standardized HTML formatting for structured recall.
-
-### Boolean Logic Template
-...
-
-### Phase-of-Flight Template
-...
-
-### Failure Logic Template
-...
+The goal is a **fully reproducible aviation knowledge system built on
+Git**.
