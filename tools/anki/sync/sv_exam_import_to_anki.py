@@ -93,6 +93,11 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
 # TSV import
 # ---------------------------------------------------------------------------
 
+def _ensure_deck(deck_name: str, url: str) -> None:
+    """Create the deck if it does not already exist. createDeck is idempotent."""
+    anki_request("createDeck", {"deck": deck_name}, url=url)
+
+
 def _import_tsv(tsv_path: Path, model_name: str, field_names: list[str], url: str) -> None:
     with tsv_path.open(encoding="utf-8") as f:
         rows = list(csv.DictReader(f, delimiter="\t"))
@@ -100,6 +105,9 @@ def _import_tsv(tsv_path: Path, model_name: str, field_names: list[str], url: st
     if not rows:
         print(f"{model_name}: {tsv_path.name} has no data rows — skipping.")
         return
+
+    deck = DECK_MCQ if model_name == MODEL_MCQ else DECK_TF
+    _ensure_deck(deck, url)
 
     print(f"Importing {len(rows)} {model_name} note(s) from {tsv_path.name} ...")
     for row in rows:
