@@ -31,10 +31,10 @@ ANKI_CONNECT_DEFAULT = "http://127.0.0.1:8765"
 # Fields written to the Anki note (Tags excluded — sent as native Anki tags).
 MCQ_FIELDS = [
     "NoteID", "Text", "Choice1", "Choice2", "Choice3", "Choice4",
-    "CorrectChoice", "SourceDocument", "OriginalNoteID",
+    "CorrectChoice", "Source Document", "OriginalNoteID",
 ]
 TF_FIELDS = [
-    "NoteID", "Text", "CorrectAnswer", "SourceDocument", "OriginalNoteID",
+    "NoteID", "Text", "CorrectAnswer", "Source Document", "OriginalNoteID",
 ]
 
 

@@ -26,10 +26,10 @@ NOTE_TYPE = "systems_verification_exam_draft"
 
 MCQ_FIELDNAMES = [
     "NoteID", "Text", "Choice1", "Choice2", "Choice3", "Choice4",
-    "CorrectChoice", "SourceDocument", "OriginalNoteID", "Tags",
+    "CorrectChoice", "Source Document", "OriginalNoteID", "Tags",
 ]
 TF_FIELDNAMES = [
-    "NoteID", "Text", "CorrectAnswer", "SourceDocument", "OriginalNoteID", "Tags",
+    "NoteID", "Text", "CorrectAnswer", "Source Document", "OriginalNoteID", "Tags",
 ]
 
 _LETTER_IDX: dict[str, int] = {"A": 0, "B": 1, "C": 2, "D": 3}
@@ -134,7 +134,7 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
         "Choice3": ordered[2],
         "Choice4": ordered[3],
         "CorrectChoice": f"{correct_pos} — {correct_text}",
-        "SourceDocument": _s(fields, "Source Document"),
+        "Source Document": _s(fields, "Source Document"),
         "OriginalNoteID": _s(fields, "Original Note ID"),
         "Tags": _normalize_tags(meta.get("tags")),
     }
@@ -160,7 +160,7 @@ def _build_tf_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
         "NoteID": note_id,
         "Text": stem,
         "CorrectAnswer": correct,
-        "SourceDocument": _s(fields, "Source Document"),
+        "Source Document": _s(fields, "Source Document"),
         "OriginalNoteID": _s(fields, "Original Note ID"),
         "Tags": _normalize_tags(meta.get("tags")),
     }
