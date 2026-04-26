@@ -1,4 +1,14 @@
 # -------------------------------------------------------------------
+# Git Utilities
+# -------------------------------------------------------------------
+.PHONY: git-unlock
+
+git-unlock:
+	@echo "Removing stale git lock files..."
+	@find .git -name "*.lock" -type f -print -delete
+	@echo "Done."
+
+# -------------------------------------------------------------------
 # Systems Verification (SV)
 # -------------------------------------------------------------------
 PYTHON := /Users/craig/miniforge3/envs/craigdev/bin/python
