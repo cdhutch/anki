@@ -1,0 +1,26 @@
+---
+schema: cnsf/v0
+domain: b737
+note_type: systems_verification
+note_id: autoflight-02
+anki:
+  model: B737_SV_Cloze
+  deck: B737::SV
+tags:
+- domain:b737
+- topic:systems-verification
+- system:autoflight
+- source:question-bank
+- status:verified
+fields:
+  Text: With the PFD showing a green CMD discrete, the Autopilot is operating in the {{c1::CMD}}
+    mode.
+  Source Document: Systems Validation Question Bank
+  Source Location: Autoflight 2
+  Verification Notes: ''
+system: autoflight
+source_type: question-bank
+prompt_style: cloze
+notes: ''
+---
+
