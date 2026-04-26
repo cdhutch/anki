@@ -143,7 +143,7 @@ triggers-fmt: triggers-fix triggers-lint
 # sve-check and sve-fix delegate to sv-check / sv-fix (same files, same
 # canonicalizer) so there is no duplication.
 # -------------------------------------------------------------------
-.PHONY: sve sve-check sve-fix sve-clean $(addprefix sve-,$(SV_SYSTEMS))
+.PHONY: sve sve-check sve-fix sve-clean
 
 sve-check: sv-check
 
