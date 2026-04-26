@@ -22,7 +22,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
 from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
-DECK = "B737::Systems_Verification"
+DECK_MCQ = "B737::Systems_Verification::MCQ"
+DECK_TF = "B737::Systems_Verification::TF"
 MODEL_MCQ = "B737_SV_MCQ"
 MODEL_TF = "B737_SV_TF"
 ANKI_CONNECT_DEFAULT = "http://127.0.0.1:8765"
@@ -71,11 +72,12 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
         _set_tags(existing, tags, url)
         print(f"  Updated : {note_id}")
     else:
+        deck = DECK_MCQ if model_name == MODEL_MCQ else DECK_TF
         nid = anki_request(
             "addNote",
             {
                 "note": {
-                    "deckName": DECK,
+                    "deckName": deck,
                     "modelName": model_name,
                     "fields": fields,
                     "tags": tags,
