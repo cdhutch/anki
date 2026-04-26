@@ -692,6 +692,41 @@ Ready For Transform: true
 14. Run canonicalization before staging.
 15. Stage and commit at strategic checkpoints.
 
+## AI Proofing Checklist
+
+For each converted note, verify:
+
+1. The question stem is clear, concise, and exam-like.
+2. Multiple-choice choices are mutually exclusive, except where the true answer is a union of multiple answers (e.g. "all of the above", or "answers B and D").
+3. Only one answer is correct unless explicitly marked multi-select.
+4. Distractors are plausible, relevant, and not ambiguously correct.
+5. True/False statements avoid double negatives, trick wording, or overly broad claims.
+6. The original cloze answer/content is preserved in the explanation or rationale.
+7. Source Document and Source Location are retained exactly when known.
+8. Conversion Status remains unchanged unless explicitly instructed by the user.
+9. Do not invent aircraft facts, limitations, or procedures.
+10. If wording is uncertain, flag the note for human review instead of guessing.
+11. Preserve note_id unless explicitly performing a final transformation.
+12. Maintain valid YAML syntax and field ordering per project standards.
+
+## Conversion Status Lifecycle
+
+Use the following values consistently:
+
+```yaml
+Conversion Status: draft | human_ready | transform_ready | imported
+
+### Definitions
+
+  - draft — Initial converted note; requires human review.
+  - human_ready — Human reviewed for wording/content; ready for final inspection.
+  - transform_ready — Approved for automated conversion into final svmcq or svtf notes.
+  - imported — Final note created and successfully synced into Anki.
+
+### Safety Rule
+
+If uncertain, preserve the source wording, add a review note, and defer to human validation.
+
 ## Strategic Git checkpoints
 
 Recommended commits:
