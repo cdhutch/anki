@@ -135,3 +135,47 @@ triggers-lint:
 	$(PYTHON) tools/anki/lint_flows.py
 
 triggers-fmt: triggers-fix triggers-lint
+
+# -------------------------------------------------------------------
+# Systems Verification Exam (SVE) — exam-mode MCQ / T/F pipeline
+#
+# Reuses SV_ROOT, SV_BUILD, and SV_SYSTEMS from the SV section above.
+# sve-check and sve-fix delegate to sv-check / sv-fix (same files, same
+# canonicalizer) so there is no duplication.
+# -------------------------------------------------------------------
+.PHONY: sve sve-check sve-fix sve-clean $(addprefix sve-,$(SV_SYSTEMS))
+
+sve-check: sv-check
+
+sve-fix: sv-fix
+
+sve-clean:
+	rm -f $(SV_BUILD)/sve-*.tsv
+
+sve: sve-check
+	@echo "=== Building Systems Verification Exam decks ==="
+	@set -e; \
+	mkdir -p $(SV_BUILD); \
+	for s in $(SV_SYSTEMS); do \
+		if [ -d "$(SV_ROOT)/$$s" ]; then \
+			echo "--- $$s ---"; \
+			$(PYTHON) tools/anki/export/sv_exam_md_to_tsv.py \
+				--in "$(SV_ROOT)/$$s" \
+				--out-mcq "$(SV_BUILD)/sve-mcq-$$s.tsv" \
+				--out-tf "$(SV_BUILD)/sve-tf-$$s.tsv" && \
+			$(PYTHON) tools/anki/sync/sv_exam_import_to_anki.py \
+				--mcq "$(SV_BUILD)/sve-mcq-$$s.tsv" \
+				--tf "$(SV_BUILD)/sve-tf-$$s.tsv"; \
+		fi; \
+	done
+
+sve-%:
+	mkdir -p $(SV_BUILD)
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/$*/*.md
+	$(PYTHON) tools/anki/export/sv_exam_md_to_tsv.py \
+		--in "$(SV_ROOT)/$*" \
+		--out-mcq "$(SV_BUILD)/sve-mcq-$*.tsv" \
+		--out-tf "$(SV_BUILD)/sve-tf-$*.tsv"
+	$(PYTHON) tools/anki/sync/sv_exam_import_to_anki.py \
+		--mcq "$(SV_BUILD)/sve-mcq-$*.tsv" \
+		--tf "$(SV_BUILD)/sve-tf-$*.tsv"
