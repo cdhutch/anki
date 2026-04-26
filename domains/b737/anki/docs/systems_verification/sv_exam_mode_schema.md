@@ -86,7 +86,6 @@ The transformation tool or AI helper should generate card text from structured f
 Preferred manually authored fields:
 
 - Source Document
-- Source Location
 - Exam Format
 - Conversion Status
 - Original Note ID
@@ -127,7 +126,6 @@ tags:
   - status:draft
 fields:
   Source Document: <source document name>
-  Source Location: <stable source reference>
   Exam Format: mcq | tf | unset
   Conversion Status: draft | human_ready | ready_for_transform | transformed | imported | hold
   Original Note ID: <legacy note id>
@@ -151,7 +149,6 @@ fields:
 | Field | Purpose |
 |---|---|
 | Source Document | Provenance |
-| Source Location | Stable source reference |
 | Exam Format | mcq / tf / unset |
 | Conversion Status | Workflow state |
 | Original Note ID | Legacy source note |
@@ -197,7 +194,6 @@ tags:
   - status:unverified
 fields:
   Source Document: <source document name>
-  Source Location: <stable source reference>
   Legacy Note ID: <original note id>
   Question Type: multiple_choice
   Shuffle Choices: true
@@ -250,7 +246,6 @@ tags:
   - status:unverified
 fields:
   Source Document: <source document name>
-  Source Location: <stable source reference>
   Legacy Note ID: <original note id>
   Question Type: true_false
   Correct Choice: True | False
@@ -430,7 +425,6 @@ Recommended commits:
 - [ ] Exam Format set
 - [ ] Conversion Status = ready_for_transform
 - [ ] Source Document present
-- [ ] Source Location present
 - [ ] Question Stem complete
 - [ ] Correct answer unambiguous
 - [ ] MCQ has four choices

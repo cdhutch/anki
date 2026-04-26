@@ -10,12 +10,11 @@ tags:
 - domain:b737
 - topic:systems_verification
 - system:acars
-- format:draft
+- format:mcq
 - source:question_bank
 - status:draft
 fields:
   Source Document: Systems Validation Question Bank
-  Source Location: ACARS 2
   Exam Format: mcq
   Conversion Status: draft
   Original Note ID: acars-002

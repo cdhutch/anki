@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: svdraft-acars-003
+note_id: svdraft-acars-002
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -10,12 +10,11 @@ tags:
 - domain:b737
 - topic:systems_verification
 - system:acars
-- format:draft
+- format:mcq
 - source:question_bank
 - status:draft
 fields:
   Source Document: Systems Validation Question Bank
-  Source Location: ACARS 2
   Exam Format: mcq
   Conversion Status: draft
   Updated Draft Note ID: acars-002
