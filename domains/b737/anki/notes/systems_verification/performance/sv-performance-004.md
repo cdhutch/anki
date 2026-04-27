@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: performance-004
+note_type: systems_verification_exam_draft
+note_id: sv-performance-004
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:performance
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Authorized flap settings for takeoff are {{c1::1, 5, 15, 25}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Performance 4
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: performance-004
+  Original Prompt Style: cloze
+  Original Text: Authorized flap settings for takeoff are {{c1::1, 5, 15, 25}}.
+  Question Stem: What are the authorized flap settings for takeoff?
+  Choice A: 1, 5, 10, 15
+  Choice B: 5, 10, 15, 25
+  Choice C: 1, 5, 15, 25
+  Choice D: 1, 10, 15, 30
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: performance
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

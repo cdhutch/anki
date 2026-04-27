@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: performance-003
+note_type: systems_verification_exam_draft
+note_id: sv-performance-003
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:performance
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Under the Thrust/V-speed section runway designators, up to a maximum of {{c1::5}}
-    runways may be shown on the TPS.
   Source Document: Systems Validation Question Bank
-  Source Location: Performance 3
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: performance-003
+  Original Prompt Style: cloze
+  Original Text: Under the Thrust/V-speed section runway designators, up to a maximum of {{c1::5}}
+    runways may be shown on the TPS.
+  Question Stem: Under the Thrust/V-speed section runway designators, what is the maximum
+    number of runways that may be shown on the TPS?
+  Choice A: 3
+  Choice B: 4
+  Choice C: 5
+  Choice D: 6
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: performance
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
