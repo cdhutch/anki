@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: communications-004
+note_type: systems_verification_exam_draft
+note_id: sv-communications-004
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:communications
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Volume controls for the overhead speakers on the audio control panel {{c1::cannot
-    control the volume of audio warnings}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Communications 4
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: communications-004
+  Original Prompt Style: cloze
+  Original Text: Volume controls for the overhead speakers on the audio control panel {{c1::cannot
+    control the volume of audio warnings}}.
+  Question Stem: What limitation applies to the overhead speaker volume controls on the audio
+    control panel?
+  Choice A: They can only be adjusted when the PA system is active
+  Choice B: They control both communications audio and audio warnings equally
+  Choice C: They cannot control the volume of audio warnings
+  Choice D: They are inoperative when the aircraft is airborne
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: communications
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

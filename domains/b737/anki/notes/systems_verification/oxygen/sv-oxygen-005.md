@@ -1,25 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: oxygen-005
+note_type: systems_verification_exam_draft
+note_id: sv-oxygen-005
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:oxygen
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The Flight Crew Oxygen Pressure Indicator is located on the {{c1::Aft Overhead Panel}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Oxygen 5
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: oxygen-005
+  Original Prompt Style: cloze
+  Original Text: The Flight Crew Oxygen Pressure Indicator is located on the {{c1::Aft Overhead
+    Panel}}.
+  Question Stem: Where is the Flight Crew Oxygen Pressure Indicator located?
+  Choice A: Forward Overhead Panel
+  Choice B: Cockpit Center Pedestal
+  Choice C: Forward Flight Attendant Panel
+  Choice D: Aft Overhead Panel
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: oxygen
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

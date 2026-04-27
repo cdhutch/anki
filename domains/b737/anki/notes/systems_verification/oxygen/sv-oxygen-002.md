@@ -1,25 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: oxygen-002
+note_type: systems_verification_exam_draft
+note_id: sv-oxygen-002
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:oxygen
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The flow options on the crew oxygen mask regulator are {{c1::Emerg, Normal, and 100%}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Oxygen 2
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: oxygen-002
+  Original Prompt Style: cloze
+  Original Text: The flow options on the crew oxygen mask regulator are {{c1::Emerg, Normal,
+    and 100%}}.
+  Question Stem: What are the flow options on the crew oxygen mask regulator?
+  Choice A: Low, Medium, and High
+  Choice B: Normal, 100%, and Dilute
+  Choice C: Emerg, Normal, and 100%
+  Choice D: Dilute, Normal, and Emerg
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: oxygen
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

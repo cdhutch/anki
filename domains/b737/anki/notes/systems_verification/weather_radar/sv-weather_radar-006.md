@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: weather_radar-006
+note_type: systems_verification_exam_draft
+note_id: sv-weather_radar-006
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:weather_radar
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: In the WX/T (turbulence) mode, a turbulence display is available on displays of {{c1::40}}
-    nm or less.
   Source Document: Systems Validation Question Bank
-  Source Location: Weather Radar 6
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: weather_radar-006
+  Original Prompt Style: cloze
+  Original Text: In the WX/T (turbulence) mode, a turbulence display is available on displays
+    of {{c1::40}} nm or less.
+  Question Stem: In WX/T (turbulence) mode, at what maximum display range is turbulence available?
+  Choice A: 80 nm
+  Choice B: 20 nm
+  Choice C: 60 nm
+  Choice D: 40 nm
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: weather_radar
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

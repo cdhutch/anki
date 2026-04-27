@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: atc_tcas_trans-006
+note_type: systems_verification_exam_draft
+note_id: sv-atc_tcas_trans-006
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:atc_tcas_trans
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: When the RA encounter is terminated and the guidance is no longer required, the TCAS
-    system will issue the aural advisory {{c1::"Clear of Conflict"}}.
   Source Document: Systems Validation Question Bank
-  Source Location: ATC TCAS Transponder 6
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: atc_tcas_trans-006
+  Original Prompt Style: cloze
+  Original Text: When the RA encounter is terminated and the guidance is no longer required,
+    the TCAS system will issue the aural advisory {{c1::"Clear of Conflict"}}.
+  Question Stem: When an RA encounter is terminated and guidance is no longer required, what
+    aural advisory does TCAS issue?
+  Choice A: Traffic clear
+  Choice B: Monitor vertical speed
+  Choice C: Clear of conflict
+  Choice D: Conflict resolved
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: atc_tcas_trans
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

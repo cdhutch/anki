@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: weather_radar-008
+note_type: systems_verification_exam_draft
+note_id: sv-weather_radar-008
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:weather_radar
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Magenta color radar returns indicate {{c1::turbulence}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Weather Radar 8
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: weather_radar-008
+  Original Prompt Style: cloze
+  Original Text: Magenta color radar returns indicate {{c1::turbulence}}.
+  Question Stem: On the weather radar display, what do magenta color returns indicate?
+  Choice A: Extreme rainfall / highest reflectivity
+  Choice B: Wet hail
+  Choice C: Ground clutter
+  Choice D: Turbulence
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: weather_radar
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

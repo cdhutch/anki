@@ -1,25 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: atc_tcas_trans-003
+note_type: systems_verification_exam_draft
+note_id: sv-atc_tcas_trans-003
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:atc_tcas_trans
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: An RA is indicated by an aural alert for corrective action and a {{c1::red square}}.
   Source Document: Systems Validation Question Bank
-  Source Location: ATC TCAS Transponder 3
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: atc_tcas_trans-003
+  Original Prompt Style: cloze
+  Original Text: An RA is indicated by an aural alert for corrective action and a {{c1::red
+    square}}.
+  Question Stem: An RA (Resolution Advisory) is indicated by an aural alert for corrective
+    action and what visual symbol?
+  Choice A: Amber circle
+  Choice B: Yellow diamond
+  Choice C: Red square
+  Choice D: Flashing white arc
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: atc_tcas_trans
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
