@@ -1,8 +1,8 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification_exam_draft
-note_id: svdraft-acars-002
+note_type: systems_verification_exam
+note_id: sv-acars-002
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -12,11 +12,11 @@ tags:
 - system:acars
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
-  Conversion Status: draft
+  Conversion Status: verified
   Updated Draft Note ID: acars-002
   Original Note ID: acars-001
   Original Prompt Style: cloze

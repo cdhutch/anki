@@ -1,8 +1,8 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification_exam_draft
-note_id: svdraft-adverse-001
+note_type: systems_verification_exam
+note_id: sv-adverse-001
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -12,11 +12,11 @@ tags:
 - system:adverse-environs
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
-  Conversion Status: draft
+  Conversion Status: verified
   Original Note ID: sv-adverse-001
   Original Prompt Style: cloze
   Original Text: Takeoff with frost on the fuel tank underside of the wing surfaces is permitted

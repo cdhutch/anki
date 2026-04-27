@@ -8,7 +8,7 @@ Produces two TSV files per invocation:
 Choice shuffling (when Shuffle Choices: true) is deterministic, seeded by note_id.
 Both TSV files are always written; an empty input produces a header-only TSV.
 
-Only processes notes with note_type: systems_verification_exam_draft.
+Processes notes with note_type: systems_verification_exam_draft OR systems_verification_exam.
 """
 from __future__ import annotations
 
@@ -22,7 +22,10 @@ from typing import Any
 
 import yaml
 
-NOTE_TYPE = "systems_verification_exam_draft"
+NOTE_TYPES = {
+    "systems_verification_exam_draft",
+    "systems_verification_exam",
+}
 
 MCQ_FIELDNAMES = [
     "NoteID", "Text", "Choice1", "Choice2", "Choice3", "Choice4",
@@ -176,7 +179,7 @@ def collect_rows(root: Path) -> tuple[list[dict], list[dict]]:
 
     for path in sorted(root.rglob("*.md")):
         meta = _load_note(path)
-        if meta.get("note_type") != NOTE_TYPE:
+        if meta.get("note_type") not in NOTE_TYPES:
             continue
 
         fields = meta.get("fields") or {}

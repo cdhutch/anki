@@ -1,8 +1,8 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification_exam_draft
-note_id: svdraft-acars-001
+note_type: systems_verification_exam
+note_id: sv-acars-001
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -12,11 +12,11 @@ tags:
 - system:acars
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
-  Conversion Status: draft
+  Conversion Status: verified
   Original Note ID: acars-004
   Original Prompt Style: cloze
   Original Text: The initial load closeout will be sent to the ACARS printer. The only data

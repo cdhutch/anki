@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: lighting-002
+note_type: systems_verification_exam_draft
+note_id: svdraft-lighting-002
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:lighting
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: On aircraft with retractable landing lights (3AA-3MU) {{c1::can be extended at any
-    air speed}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Lighting 2
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: lighting-002
+  Original Prompt Style: cloze
+  Original Text: On aircraft with retractable landing lights (3AA-3MU) {{c1::can be extended
+    at any air speed}}.
+  Question Stem: 'Complete the following sentence: On aircraft with retractable landing lights
+    (3AA-3MU) __'
+  Choice A: Retract automatically with gear retraction.
+  Choice B: Have an extension airspeed limit of 230 knots.
+  Choice C: Are located on the wing.
+  Choice D: Can be extended at any speed.
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: lighting
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
