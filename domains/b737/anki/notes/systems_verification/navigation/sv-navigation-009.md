@@ -1,27 +1,37 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: navigation-009
+note_type: systems_verification_exam_draft
+note_id: sv-navigation-009
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:navigation
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: In 3RH – 3VM, in-flight loss of alignment due to power interruption or inadvertent
-    shut down requires the pilot to {{c1::Do nothing. When power is restored, attitude reference
-    information is restored after approximately 30 seconds due to AIM (Align In Motion) capability}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Navigation 9
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: navigation-009
+  Original Prompt Style: cloze
+  Original Text: In 3RH – 3VM, in-flight loss of alignment due to power interruption or inadvertent\n    shut
+    down requires the pilot to {{c1::Do nothing. When power is restored, attitude reference\n    information
+    is restored after approximately 30 seconds due to AIM (Align In Motion) capability}}.
+  Question Stem: In a 3RH-3VM airplane, in-flight IRS loss of alignment due to power interruption
+    requires what pilot action?
+  Choice A: ''
+  Choice B: No action; when power is restored, attitude reference is restored after approximately
+    30 seconds due to AIM (Align In Motion) capability
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: navigation
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

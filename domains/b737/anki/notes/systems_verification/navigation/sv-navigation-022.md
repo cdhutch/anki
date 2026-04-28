@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: sv-navigation-003
+note_id: sv-navigation-022
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -17,16 +17,16 @@ fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
   Conversion Status: draft
-  Original Note ID: navigation-003
+  Original Note ID: navigation-022
   Original Prompt Style: cloze
-  Original Text: If the amber FAULT light illuminates on the IRS Display Unit, it indicates
-    the {{c1::related\n    IRS system has detected a fault}}.
-  Question Stem: What does an illuminated amber FAULT light on the IRS Display Unit indicate?
+  Original Text: DME frequencies are normally {{c1::automatically}} tuned by the {{c1::FMC}}
+    as necessary\n    for aircraft position updating.
+  Question Stem: How are DME frequencies normally tuned, and by what system?
   Choice A: ''
   Choice B: ''
-  Choice C: ''
-  Choice D: The related IRS system has detected a fault
-  Correct Choice: D
+  Choice C: Automatically tuned by the FMC
+  Choice D: ''
+  Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
