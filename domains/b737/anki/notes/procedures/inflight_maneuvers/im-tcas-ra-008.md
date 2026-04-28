@@ -5,7 +5,7 @@ note_type: procedure_structured
 note_id: im-tcas-ra-008
 anki:
   model: B737_Structured
-  deck: B737::Procedures::Inflight_Maneuvers
+  deck: B737::Triggers_and_Flows::Procedures::Inflight_Maneuvers
 tags:
 - domain:b737
 - topic:procedures
@@ -26,7 +26,7 @@ During a **Climb RA in landing configuration**, what happens after a positive ra
 
 # back_md
 
-After positive rate is verified:
+After positive rate is verified and PF calls **Gear Up**:
 
 PF calls **Gear Up.**
 

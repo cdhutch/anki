@@ -5,7 +5,7 @@ note_type: procedure_structured
 note_id: im-stall-004
 anki:
   model: B737_Structured
-  deck: B737::Procedures::Inflight_Maneuvers
+  deck: B737::Triggers_and_Flows::Procedures::Inflight_Maneuvers
 tags:
 - domain:b737
 - topic:procedures
@@ -30,8 +30,8 @@ What are the PM duties during stall recovery?
 
 ## PM Duties
 
-- Monitor attitude, airspeed, and altitude
-- Verify actions are completed
-- Call out:
-  - Omissions
-  - AGL Altitude whether climbing or descending
+1. Monitor attitude, airspeed, and altitude
+2. Verify actions are completed
+3. Call out:
+    - Omissions
+    - AGL Altitude and whether climbing or descending

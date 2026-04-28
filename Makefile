@@ -224,6 +224,29 @@ proc-non-normal-cloze:
 	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
 		$(PROCEDURES_BUILD)/procedures-non-normal-cloze.tsv
 
+PROCEDURES_INFLIGHT_ROOT := $(PROCEDURES_ROOT)/inflight_maneuvers
+
+.PHONY: proc-inflight-check proc-inflight-fix proc-inflight-clean proc-inflight
+
+proc-inflight-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_INFLIGHT_ROOT)/*.md
+
+proc-inflight-fix:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(PROCEDURES_INFLIGHT_ROOT)/*.md
+
+proc-inflight-clean:
+	rm -f $(PROCEDURES_BUILD)/procedures-inflight-maneuvers.tsv
+
+proc-inflight: proc-inflight-check
+	mkdir -p $(PROCEDURES_BUILD)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(PROCEDURES_INFLIGHT_ROOT) \
+		--out $(PROCEDURES_BUILD)/procedures-inflight-maneuvers.tsv \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
+		--tsv $(PROCEDURES_BUILD)/procedures-inflight-maneuvers.tsv
+
+
 # -------------------------------------------------------------------
 # Limits
 # -------------------------------------------------------------------

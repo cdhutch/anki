@@ -5,17 +5,17 @@ note_type: procedure_structured
 note_id: im-driftdown-001
 anki:
   model: B737_Structured
-  deck: B737::Procedures::Inflight_Maneuvers
+  deck: B737::Triggers_and_Flows::Procedures::Inflight_Maneuvers
 tags:
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
 fields:
-  Title: im-driftdown-001
-  Trigger: Refer to procedure
-  Objective: Recall driftdown procedure actions
-  MemoryItems: ''
+  Title: Driftdown Trigger Conditions
+  Trigger: Engine failure with inability to maintain altitude
+  Objective: Recall when to use Driftdown and One Engine Cruise
+  MemoryItems: Engine fails + cannot maintain altitude + minimum descent desired
   Source: B737 AOM Inflight Maneuvers
   Verification Notes: ''
 ---
@@ -28,50 +28,6 @@ When is the Driftdown and One Engine Cruise procedure used?
 
 When:
 
-- An engine fails
-- Current altitude cannot be maintained
+- An engine fails AND
+- Current altitude cannot be maintained AND 
 - A minimum descent rate is desired
-anki:
-  model: B737_Structured
-  deck: B737::Procedures::Inflight_Maneuvers
-tags:
-- domain:b737
-- topic:procedures
-- category:inflight_maneuvers
-- maneuver:driftdown
-fields:
-  Title: 
-  Trigger: Refer to procedure
-  Objective: Recall driftdown procedure actions
-  MemoryItems: ''
-  Source: B737 AOM Inflight Maneuvers
-  Verification Notes: ''
----
-
-# front_md
-
-
-
-# back_md
-anki:
-  model: B737_Structured
-  deck: B737::Procedures::Inflight_Maneuvers
-tags:
-- domain:b737
-- topic:procedures
-- category:inflight_maneuvers
-- maneuver:driftdown
-fields:
-  Title: 
-  Trigger: Refer to procedure
-  Objective: Recall driftdown procedure actions
-  MemoryItems: ''
-  Source: B737 AOM Inflight Maneuvers
-  Verification Notes: ''
----
-
-# front_md
-
-
-
-# back_md

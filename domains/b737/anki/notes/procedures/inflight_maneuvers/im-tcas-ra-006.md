@@ -5,7 +5,7 @@ note_type: procedure_structured
 note_id: im-tcas-ra-006
 anki:
   model: B737_Structured
-  deck: B737::Procedures::Inflight_Maneuvers
+  deck: B737::Triggers_and_Flows::Procedures::Inflight_Maneuvers
 tags:
 - domain:b737
 - topic:procedures
@@ -33,3 +33,4 @@ Immediately:
 - Disconnect autopilot
 - Disconnect autothrottle
 - Advance thrust levers forward to ensure maximum thrust is attained
+- After thrust is advanced, PF calls **Flaps 15**

@@ -5,7 +5,7 @@ note_type: procedure_structured
 note_id: im-tcas-ra-007
 anki:
   model: B737_Structured
-  deck: B737::Procedures::Inflight_Maneuvers
+  deck: B737::Triggers_and_Flows::Procedures::Inflight_Maneuvers
 tags:
 - domain:b737
 - topic:procedures
@@ -27,9 +27,11 @@ During a **Climb RA in landing configuration**, what occurs when the PF calls **
 # back_md
 
 PF:
+After PF calls **Flaps 15**:
 
 - Smoothly adjusts pitch to satisfy the RA
 - Continues planned lateral path unless visual traffic avoidance requires otherwise
+- After positive rate is verified, PF calls **Gear Up**
 
 PM:
 
