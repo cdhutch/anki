@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-011
   Original Prompt Style: cloze
-  Original Text: 'Turning Engine 1 or Engine 2 Hydraulic Pump Switches OFF {{c1::blocks pump pressure output to the components}}.'
-  Question Stem: 'Turning Engine 1 or Engine 2 Hydraulic Pump Switches OFF what?'
+  Original Text: Turning Engine 1 or Engine 2 Hydraulic Pump Switches OFF {{c1::blocks pump
+    pressure output to the components}}.
+  Question Stem: Turning Engine 1 or Engine 2 Hydraulic Pump Switches OFF what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

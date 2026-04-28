@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-044
   Original Prompt Style: cloze
-  Original Text: 'With System A fluid level at the top of the standpipe, the reservoir quantity displayed indicates approximately {{c1::20}}% full.'
-  Question Stem: 'With System A fluid level at the top of the standpipe, the reservoir quantity displayed indicates approximately what?% full?'
+  Original Text: With System A fluid level at the top of the standpipe, the reservoir quantity
+    displayed indicates approximately {{c1::20}}% full.
+  Question Stem: With System A fluid level at the top of the standpipe, the reservoir quantity
+    displayed indicates approximately what?% full?
   Choice A: 20
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

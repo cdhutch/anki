@@ -19,8 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-020
   Original Prompt Style: cloze
-  Original Text: 'These four lights are illuminated at the same time *(Hydraulic A LOW PRESSURE x 2; Hydraulic B LOW PRESSURE x 2 )*. Choose the answer below that most accurately describes which hydraulic system(s) is/are lost. {{c1::Both Hydraulic System A and Hydraulic System B}}'
-  Question Stem: 'These four lights are illuminated at the same time *(Hydraulic A LOW PRESSURE x 2; Hydraulic B LOW PRESSURE x 2 )*. Choose the answer below that most accurately describes which hydraulic system(s) is/are lost what?'
+  Original Text: These four lights are illuminated at the same time *(Hydraulic A LOW PRESSURE
+    x 2; Hydraulic B LOW PRESSURE x 2 )*. Choose the answer below that most accurately describes
+    which hydraulic system(s) is/are lost. {{c1::Both Hydraulic System A and Hydraulic System
+    B}}
+  Question Stem: These four lights are illuminated at the same time *(Hydraulic A LOW PRESSURE
+    x 2; Hydraulic B LOW PRESSURE x 2 )*. Choose the answer below that most accurately describes
+    which hydraulic system(s) is/are lost what?
   Choice A: Both Hydraulic System A and Hydraulic System B
   Choice B: ''
   Choice C: ''
@@ -30,3 +35,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

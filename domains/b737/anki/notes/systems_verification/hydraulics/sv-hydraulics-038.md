@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-038
   Original Prompt Style: cloze
-  Original Text: 'The Landing Gear Transfer Unit operates when {{c1::both of the above occur: airborne and No. 1 engine RPM drops below a limit value; the landing gear lever is positioned UP and a main gear is not up and locked}}'
-  Question Stem: 'The Landing Gear Transfer Unit operates when what?'
+  Original Text: 'The Landing Gear Transfer Unit operates when {{c1::both of the above occur:
+    airborne and No. 1 engine RPM drops below a limit value; the landing gear lever is positioned
+    UP and a main gear is not up and locked}}'
+  Question Stem: The Landing Gear Transfer Unit operates when what?
   Choice A: ''
   Choice B: ''
-  Choice C: 'Both of the above occur: airborne and No. 1 engine RPM drops below a limit value; the landing gear lever is positioned UP and a main gear is not up and locked'
+  Choice C: 'Both of the above occur: airborne and No. 1 engine RPM drops below a limit value;
+    the landing gear lever is positioned UP and a main gear is not up and locked'
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

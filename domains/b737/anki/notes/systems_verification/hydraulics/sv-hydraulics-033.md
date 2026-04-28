@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-033
   Original Prompt Style: cloze
-  Original Text: 'With Hydraulic System B quantity near 0, what do these lights *(ELEC 1 LOW PRESSURE and ENG 2 LOW PRESSURE)* indicate? {{c1::System B is lost with some fluid trapped in the reservoir.}}'
-  Question Stem: 'With Hydraulic System B quantity near 0, what do these lights *(ELEC 1 LOW PRESSURE and ENG 2 LOW PRESSURE)* indicate?'
+  Original Text: With Hydraulic System B quantity near 0, what do these lights *(ELEC 1 LOW
+    PRESSURE and ENG 2 LOW PRESSURE)* indicate? {{c1::System B is lost with some fluid trapped
+    in the reservoir.}}
+  Question Stem: With Hydraulic System B quantity near 0, what do these lights *(ELEC 1 LOW
+    PRESSURE and ENG 2 LOW PRESSURE)* indicate?
   Choice A: ''
   Choice B: System B is lost with some fluid trapped in the reservoir
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

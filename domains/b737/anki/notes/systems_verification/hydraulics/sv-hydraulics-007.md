@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-007
   Original Prompt Style: cloze
-  Original Text: 'The system A engine pump failure is indicated by the low pressure light illuminated on the overhead panel. With this light on, can the gear be extended? {{c1::es, by using normal gear extension.}}'
-  Question Stem: 'The system A engine pump failure is indicated by the low pressure light illuminated on the overhead panel. With this light on, can the gear be extended?'
+  Original Text: The system A engine pump failure is indicated by the low pressure light illuminated
+    on the overhead panel. With this light on, can the gear be extended? {{c1::es, by using
+    normal gear extension.}}
+  Question Stem: The system A engine pump failure is indicated by the low pressure light illuminated
+    on the overhead panel. With this light on, can the gear be extended?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Es, by using normal gear extension'
+  Choice D: Es, by using normal gear extension
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

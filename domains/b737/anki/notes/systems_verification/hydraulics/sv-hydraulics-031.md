@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-031
   Original Prompt Style: cloze
-  Original Text: 'The hydraulic systems on the 737 are designated as {{c1::System A, System B, and Standby}}.'
-  Question Stem: 'The hydraulic systems on the 737 are designated as what?'
+  Original Text: The hydraulic systems on the 737 are designated as {{c1::System A, System
+    B, and Standby}}.
+  Question Stem: The hydraulic systems on the 737 are designated as what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'System A, System B, and Standby'
+  Choice D: System A, System B, and Standby
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

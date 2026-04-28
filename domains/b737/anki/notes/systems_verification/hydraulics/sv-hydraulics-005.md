@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-005
   Original Prompt Style: cloze
-  Original Text: 'After a few minutes, the crew notices that both Hydraulic Systems A and B are now unavailable as shown above. How can the landing gear be extended prior to landing? {{c1::Only by using manual landing gear extension.}}'
-  Question Stem: 'After a few minutes, the crew notices that both Hydraulic Systems A and B are now unavailable as shown above. How can the landing gear be extended prior to landing?'
+  Original Text: After a few minutes, the crew notices that both Hydraulic Systems A and B
+    are now unavailable as shown above. How can the landing gear be extended prior to landing?
+    {{c1::Only by using manual landing gear extension.}}
+  Question Stem: After a few minutes, the crew notices that both Hydraulic Systems A and B
+    are now unavailable as shown above. How can the landing gear be extended prior to landing?
   Choice A: ''
   Choice B: Only by using manual landing gear extension
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

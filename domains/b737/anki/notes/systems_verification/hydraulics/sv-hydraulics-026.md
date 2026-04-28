@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-026
   Original Prompt Style: cloze
-  Original Text: 'With fluid level at the top of the standpipe, fluid remaining in the System B reservoir is sufficient for operation of the {{c1::Power Transfer Unit}}.'
-  Question Stem: 'With fluid level at the top of the standpipe, fluid remaining in the System B reservoir is sufficient for operation of the what?'
+  Original Text: With fluid level at the top of the standpipe, fluid remaining in the System
+    B reservoir is sufficient for operation of the {{c1::Power Transfer Unit}}.
+  Question Stem: With fluid level at the top of the standpipe, fluid remaining in the System
+    B reservoir is sufficient for operation of the what?
   Choice A: ''
   Choice B: ''
   Choice C: Power Transfer Unit
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

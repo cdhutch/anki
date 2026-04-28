@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-049
   Original Prompt Style: cloze
-  Original Text: 'An engine-driven hydraulic pump supplies approximately {{c1::6}} times the fluid of an electric motor-driven pump.'
-  Question Stem: 'An engine-driven hydraulic pump supplies approximately what? times the fluid of an electric motor-driven pump?'
+  Original Text: An engine-driven hydraulic pump supplies approximately {{c1::6}} times the
+    fluid of an electric motor-driven pump.
+  Question Stem: An engine-driven hydraulic pump supplies approximately what? times the fluid
+    of an electric motor-driven pump?
   Choice A: ''
   Choice B: 6
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

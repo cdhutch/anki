@@ -19,8 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-004
   Original Prompt Style: cloze
-  Original Text: 'The crew suspects a leak in Hydraulic Systems B as indicated above. *(ELEC 1 Pump Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the trailing edge (TE) flaps be extended in flight under these conditions? {{c1::The TE flaps can be extended electrically via the ALTERNATE FLAP Position Switch.}}'
-  Question Stem: 'The crew suspects a leak in Hydraulic Systems B as indicated above. *(ELEC 1 Pump Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the trailing edge (TE) flaps be extended in flight under these conditions?'
+  Original Text: The crew suspects a leak in Hydraulic Systems B as indicated above. *(ELEC
+    1 Pump Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the
+    trailing edge (TE) flaps be extended in flight under these conditions? {{c1::The TE flaps
+    can be extended electrically via the ALTERNATE FLAP Position Switch.}}
+  Question Stem: The crew suspects a leak in Hydraulic Systems B as indicated above. *(ELEC
+    1 Pump Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the
+    trailing edge (TE) flaps be extended in flight under these conditions?
   Choice A: The TE flaps can be extended electrically via the ALTERNATE FLAP Position Switch
   Choice B: ''
   Choice C: ''
@@ -30,3 +35,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

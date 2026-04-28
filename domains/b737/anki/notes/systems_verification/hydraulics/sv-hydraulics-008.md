@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-008
   Original Prompt Style: cloze
-  Original Text: 'With the A hydraulic system engine driven pump low pressure light on and indicating 20% of volume in the A reservoir, {{c1::gear will retract at a slower rate}}.'
-  Question Stem: 'With the A hydraulic system engine driven pump low pressure light on and indicating 20% of volume in the A reservoir, what?'
+  Original Text: With the A hydraulic system engine driven pump low pressure light on and
+    indicating 20% of volume in the A reservoir, {{c1::gear will retract at a slower rate}}.
+  Question Stem: With the A hydraulic system engine driven pump low pressure light on and
+    indicating 20% of volume in the A reservoir, what?
   Choice A: Gear will retract at a slower rate
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

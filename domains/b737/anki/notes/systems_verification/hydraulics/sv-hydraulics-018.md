@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-018
   Original Prompt Style: cloze
-  Original Text: 'What is not available with no pressure in Hydraulic System A? {{c1::Half of the flight spoilers & all of the ground spoilers}}'
-  Question Stem: 'What is not available with no pressure in Hydraulic System A?'
+  Original Text: What is not available with no pressure in Hydraulic System A? {{c1::Half
+    of the flight spoilers & all of the ground spoilers}}
+  Question Stem: What is not available with no pressure in Hydraulic System A?
   Choice A: ''
   Choice B: ''
-  Choice C: 'Half of the flight spoilers & all of the ground spoilers'
+  Choice C: Half of the flight spoilers & all of the ground spoilers
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

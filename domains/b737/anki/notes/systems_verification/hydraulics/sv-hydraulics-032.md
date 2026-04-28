@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-032
   Original Prompt Style: cloze
-  Original Text: 'If either System A or System B is lost, the remaining system can power {{c1::the primary flight controls}} with no decrease in airplane controllability.'
-  Question Stem: 'If either System A or System B is lost, the remaining system can power what? with no decrease in airplane controllability?'
+  Original Text: If either System A or System B is lost, the remaining system can power {{c1::the
+    primary flight controls}} with no decrease in airplane controllability.
+  Question Stem: If either System A or System B is lost, the remaining system can power what?
+    with no decrease in airplane controllability?
   Choice A: The primary flight controls
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

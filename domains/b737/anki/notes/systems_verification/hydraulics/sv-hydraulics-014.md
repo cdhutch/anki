@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-014
   Original Prompt Style: cloze
-  Original Text: 'With this light *(STANDBY HYD LOW QUANTITY)* illuminated, Hydraulic System B quantity should read approximately {{c1::70}}%.'
-  Question Stem: 'With this light *(STANDBY HYD LOW QUANTITY)* illuminated, Hydraulic System B quantity should read approximately what?%?'
+  Original Text: With this light *(STANDBY HYD LOW QUANTITY)* illuminated, Hydraulic System
+    B quantity should read approximately {{c1::70}}%.
+  Question Stem: With this light *(STANDBY HYD LOW QUANTITY)* illuminated, Hydraulic System
+    B quantity should read approximately what?%?
   Choice A: ''
   Choice B: ''
   Choice C: 70
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

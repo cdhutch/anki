@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-022
   Original Prompt Style: cloze
-  Original Text: 'With the same conditions *(All four LOW PRESSURE lights illuminated on Hydraulics panel)*, which primary flight control(s) will still be pressurized? {{c1::The rudder using the Standby Hydraulic System.}}'
-  Question Stem: 'With the same conditions *(All four LOW PRESSURE lights illuminated on Hydraulics panel)*, which primary flight control(s) will still be pressurized?'
+  Original Text: With the same conditions *(All four LOW PRESSURE lights illuminated on Hydraulics
+    panel)*, which primary flight control(s) will still be pressurized? {{c1::The rudder using
+    the Standby Hydraulic System.}}
+  Question Stem: With the same conditions *(All four LOW PRESSURE lights illuminated on Hydraulics
+    panel)*, which primary flight control(s) will still be pressurized?
   Choice A: ''
   Choice B: ''
   Choice C: The rudder using the Standby Hydraulic System
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,15 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-035
   Original Prompt Style: cloze
-  Original Text: 'In addition to both lights *(ELEC 1 LOW PRESSURE and ENG 2 LOW PRESSURE)* being illuminated, the airplane is airborne, flaps are extended, and the FLT CONTROL B Hydraulic System Switch hydraulic system switch is in the normal position. Which of the following conditions is also true? {{c1::Automatic operation of the Standby Hydraulic System will occur.}}'
-  Question Stem: 'In addition to both lights *(ELEC 1 LOW PRESSURE and ENG 2 LOW PRESSURE)* being illuminated, the airplane is airborne, flaps are extended, and the FLT CONTROL B Hydraulic System Switch hydraulic system switch is in the normal position. Which of the following conditions is also true?'
+  Original Text: In addition to both lights *(ELEC 1 LOW PRESSURE and ENG 2 LOW PRESSURE)*
+    being illuminated, the airplane is airborne, flaps are extended, and the FLT CONTROL B
+    Hydraulic System Switch hydraulic system switch is in the normal position. Which of the
+    following conditions is also true? {{c1::Automatic operation of the Standby Hydraulic
+    System will occur.}}
+  Question Stem: In addition to both lights *(ELEC 1 LOW PRESSURE and ENG 2 LOW PRESSURE)*
+    being illuminated, the airplane is airborne, flaps are extended, and the FLT CONTROL B
+    Hydraulic System Switch hydraulic system switch is in the normal position. Which of the
+    following conditions is also true?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +37,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

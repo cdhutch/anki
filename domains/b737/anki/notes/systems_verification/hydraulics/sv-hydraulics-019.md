@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-019
   Original Prompt Style: cloze
-  Original Text: 'If on descent, how would the landing gear be lowered with this condition (*Hyrdaulic System A offline*)? {{c1::The gear will have to be lowered manually.}}'
-  Question Stem: 'If on descent, how would the landing gear be lowered with this condition (*Hyrdaulic System A offline*)?'
+  Original Text: If on descent, how would the landing gear be lowered with this condition
+    (*Hyrdaulic System A offline*)? {{c1::The gear will have to be lowered manually.}}
+  Question Stem: If on descent, how would the landing gear be lowered with this condition
+    (*Hyrdaulic System A offline*)?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

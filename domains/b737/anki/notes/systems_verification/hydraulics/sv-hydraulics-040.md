@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-040
   Original Prompt Style: cloze
-  Original Text: 'How are System A & B reservoirs pressurized? {{c1::Bleed Air}}'
-  Question Stem: 'How are System A & B reservoirs pressurized?'
+  Original Text: How are System A & B reservoirs pressurized? {{c1::Bleed Air}}
+  Question Stem: How are System A & B reservoirs pressurized?
   Choice A: Bleed Air
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-029
   Original Prompt Style: cloze
-  Original Text: 'To block hydraulic fluid flow to the engine driven pump, {{c1::pull the respective engine Fire Handle}}.'
-  Question Stem: 'To block hydraulic fluid flow to the engine driven pump, what?'
+  Original Text: To block hydraulic fluid flow to the engine driven pump, {{c1::pull the respective
+    engine Fire Handle}}.
+  Question Stem: To block hydraulic fluid flow to the engine driven pump, what?
   Choice A: ''
   Choice B: Pull the respective engine Fire Handle
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

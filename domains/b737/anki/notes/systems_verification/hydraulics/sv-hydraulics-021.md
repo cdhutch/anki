@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-021
   Original Prompt Style: cloze
-  Original Text: 'Hydraulic Systems A and B are unavailable. How does this affect the Brake System? {{c1::Braking is available via trapped hydraulic pressure in the brake accumulator.}}'
-  Question Stem: 'Hydraulic Systems A and B are unavailable. How does this affect the Brake System?'
+  Original Text: Hydraulic Systems A and B are unavailable. How does this affect the Brake
+    System? {{c1::Braking is available via trapped hydraulic pressure in the brake accumulator.}}
+  Question Stem: Hydraulic Systems A and B are unavailable. How does this affect the Brake
+    System?
   Choice A: ''
   Choice B: Braking is available via trapped hydraulic pressure in the brake accumulator
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,9 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-028
   Original Prompt Style: cloze
-  Original Text: 'Moving a FLT CONTROL switch to the STBY RUD position {{c1::accomplishes both 1 and 3 above: activates the Standby Pump and extinguishes the Flight Control LOW PRESSURE light when the Standby Rudder Shutoff Valve opens}}.'
-  Question Stem: 'Moving a FLT CONTROL switch to the STBY RUD position what?'
-  Choice A: 'Accomplishes both 1 and 3 above: activates the Standby Pump and extinguishes the Flight Control LOW PRESSURE light when the Standby Rudder Shutoff Valve opens'
+  Original Text: 'Moving a FLT CONTROL switch to the STBY RUD position {{c1::accomplishes
+    both 1 and 3 above: activates the Standby Pump and extinguishes the Flight Control LOW
+    PRESSURE light when the Standby Rudder Shutoff Valve opens}}.'
+  Question Stem: Moving a FLT CONTROL switch to the STBY RUD position what?
+  Choice A: 'Accomplishes both 1 and 3 above: activates the Standby Pump and extinguishes
+    the Flight Control LOW PRESSURE light when the Standby Rudder Shutoff Valve opens'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

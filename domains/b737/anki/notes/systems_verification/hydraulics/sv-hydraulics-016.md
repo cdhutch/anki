@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-016
   Original Prompt Style: cloze
-  Original Text: 'Which of the following components are normally powered by Hydraulic System A? {{c1::Nosewheel steering (normal)}}'
-  Question Stem: 'Which of the following components are normally powered by Hydraulic System A?'
+  Original Text: Which of the following components are normally powered by Hydraulic System
+    A? {{c1::Nosewheel steering (normal)}}
+  Question Stem: Which of the following components are normally powered by Hydraulic System
+    A?
   Choice A: Nosewheel steering (normal)
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

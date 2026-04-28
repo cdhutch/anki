@@ -19,9 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-036
   Original Prompt Style: cloze
-  Original Text: 'Mod: 290 | Scen: 0 | Q#: 17 The Power Transfer Unit (PTU) in A/C 3AA-3LB operates automatically when {{c1::all of the above occur: System B engine-driven pump pressure drops below limits; airborne; flaps are less than 15 degrees but not up}}'
-  Question Stem: 'Mod: 290 | Scen: 0 | Q#: 17 The Power Transfer Unit (PTU) in A/C 3AA-3LB operates automatically when what?'
-  Choice A: 'All of the above occur: System B engine-driven pump pressure drops below limits; airborne; flaps are less than 15 degrees but not up'
+  Original Text: 'Mod: 290 | Scen: 0 | Q#: 17 The Power Transfer Unit (PTU) in A/C 3AA-3LB
+    operates automatically when {{c1::all of the above occur: System B engine-driven pump
+    pressure drops below limits; airborne; flaps are less than 15 degrees but not up}}'
+  Question Stem: 'Mod: 290 | Scen: 0 | Q#: 17 The Power Transfer Unit (PTU) in A/C 3AA-3LB
+    operates automatically when what?'
+  Choice A: 'All of the above occur: System B engine-driven pump pressure drops below limits;
+    airborne; flaps are less than 15 degrees but not up'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

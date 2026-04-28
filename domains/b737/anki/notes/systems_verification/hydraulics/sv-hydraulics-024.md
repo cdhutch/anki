@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-024
   Original Prompt Style: cloze
-  Original Text: 'When the overheat was detected in Hydraulic System B, what happens to the corresponding electric motor driven pump? {{c1::The pump shuts off automatically.}}'
-  Question Stem: 'When the overheat was detected in Hydraulic System B, what happens to the corresponding electric motor driven pump?'
+  Original Text: When the overheat was detected in Hydraulic System B, what happens to the
+    corresponding electric motor driven pump? {{c1::The pump shuts off automatically.}}
+  Question Stem: When the overheat was detected in Hydraulic System B, what happens to the
+    corresponding electric motor driven pump?
   Choice A: The pump shuts off automatically
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-017
   Original Prompt Style: cloze
-  Original Text: 'With these lights illuminated (*ENG 1 hydraulic LOW PRESSURE and ELEC 2 hydraulic LOW spressure*) and switches positioned as shown on the Hydraulic Panel above (*Both System A switches OFF*), the pressure in Hydraulic System A should read {{c1::0}} psi.'
-  Question Stem: 'With these lights illuminated (*ENG 1 hydraulic LOW PRESSURE and ELEC 2 hydraulic LOW spressure*) and switches positioned as shown on the Hydraulic Panel above (*Both System A switches OFF*), the pressure in Hydraulic System A should read what? psi?'
+  Original Text: With these lights illuminated (*ENG 1 hydraulic LOW PRESSURE and ELEC 2 hydraulic
+    LOW spressure*) and switches positioned as shown on the Hydraulic Panel above (*Both System
+    A switches OFF*), the pressure in Hydraulic System A should read {{c1::0}} psi.
+  Question Stem: With these lights illuminated (*ENG 1 hydraulic LOW PRESSURE and ELEC 2 hydraulic
+    LOW spressure*) and switches positioned as shown on the Hydraulic Panel above (*Both System
+    A switches OFF*), the pressure in Hydraulic System A should read what? psi?
   Choice A: ''
   Choice B: 0
   Choice C: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

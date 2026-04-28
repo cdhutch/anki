@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-012
   Original Prompt Style: cloze
-  Original Text: 'If the standby hydraulic low quantity light is illuminated, {{c1::at least half of the standb fluid has been depleted.}}'
-  Question Stem: 'If the standby hydraulic low quantity light is illuminated, what?'
+  Original Text: If the standby hydraulic low quantity light is illuminated, {{c1::at least
+    half of the standb fluid has been depleted.}}
+  Question Stem: If the standby hydraulic low quantity light is illuminated, what?
   Choice A: At least half of the standb fluid has been depleted
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

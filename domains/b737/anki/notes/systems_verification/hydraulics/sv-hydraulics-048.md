@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-048
   Original Prompt Style: cloze
-  Original Text: 'Both engines are still operating. Turning OFF the #1 Engine Hydraulic Pump Switch {{c1::does not affect the rotation of the pump}}.'
-  Question Stem: 'Both engines are still operating. Turning OFF the #1 Engine Hydraulic Pump Switch what?'
+  Original Text: 'Both engines are still operating. Turning OFF the #1 Engine Hydraulic Pump
+    Switch {{c1::does not affect the rotation of the pump}}.'
+  Question Stem: 'Both engines are still operating. Turning OFF the #1 Engine Hydraulic Pump
+    Switch what?'
   Choice A: Does not affect the rotation of the pump
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

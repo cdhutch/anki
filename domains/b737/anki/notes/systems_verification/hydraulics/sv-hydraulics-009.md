@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-009
   Original Prompt Style: cloze
-  Original Text: 'With this light on during gear retraction, the landing gear transfer unit will activate with {{c1::low RPM on the #1 Engine}}'
-  Question Stem: 'With this light on during gear retraction, the landing gear transfer unit will activate with what?'
+  Original Text: 'With this light on during gear retraction, the landing gear transfer unit
+    will activate with {{c1::low RPM on the #1 Engine}}'
+  Question Stem: With this light on during gear retraction, the landing gear transfer unit
+    will activate with what?
   Choice A: ''
   Choice B: 'Low RPM on the #1 Engine'
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

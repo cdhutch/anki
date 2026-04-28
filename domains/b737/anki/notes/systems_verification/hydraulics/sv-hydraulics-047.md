@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-047
   Original Prompt Style: cloze
-  Original Text: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to a leak in the #1 (System A) engine-driven pump, then System A quantity will {{c1::drop to approximately 20%.}}.'
-  Question Stem: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to a leak in the #1 (System A) engine-driven pump, then System A quantity will what?'
+  Original Text: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to
+    a leak in the #1 (System A) engine-driven pump, then System A quantity will {{c1::drop
+    to approximately 20%.}}.'
+  Question Stem: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to
+    a leak in the #1 (System A) engine-driven pump, then System A quantity will what?'
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-039
   Original Prompt Style: cloze
-  Original Text: 'The Standby Hydraulic System LOW QUANTITY Light illuminates when the reservoir is {{c1::approximately 1/2 empty}}.'
-  Question Stem: 'The Standby Hydraulic System LOW QUANTITY Light illuminates when the reservoir is what?'
+  Original Text: The Standby Hydraulic System LOW QUANTITY Light illuminates when the reservoir
+    is {{c1::approximately 1/2 empty}}.
+  Question Stem: The Standby Hydraulic System LOW QUANTITY Light illuminates when the reservoir
+    is what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

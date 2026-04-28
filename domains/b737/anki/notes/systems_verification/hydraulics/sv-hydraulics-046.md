@@ -19,14 +19,20 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-046
   Original Prompt Style: cloze
-  Original Text: 'What happens if this light *(ENG 1 LOW PRESSURE on Hydraulic Panel)* illuminates on takeoff, prior to gear retraction, without engine failure? {{c1::The landing gear should retract at a slower rate since the electric motor-driven pump’s fluid volume is 1/6 of the engine-driven pump output.}}'
-  Question Stem: 'What happens if this light *(ENG 1 LOW PRESSURE on Hydraulic Panel)* illuminates on takeoff, prior to gear retraction, without engine failure?'
+  Original Text: What happens if this light *(ENG 1 LOW PRESSURE on Hydraulic Panel)* illuminates
+    on takeoff, prior to gear retraction, without engine failure? {{c1::The landing gear should
+    retract at a slower rate since the electric motor-driven pump’s fluid volume is 1/6 of
+    the engine-driven pump output.}}
+  Question Stem: What happens if this light *(ENG 1 LOW PRESSURE on Hydraulic Panel)* illuminates
+    on takeoff, prior to gear retraction, without engine failure?
   Choice A: ''
   Choice B: ''
-  Choice C: The landing gear should retract at a slower rate since the electric motor-driven pump’s fluid volume is 1/6 of the engine-driven pump output
+  Choice C: The landing gear should retract at a slower rate since the electric motor-driven
+    pump’s fluid volume is 1/6 of the engine-driven pump output
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

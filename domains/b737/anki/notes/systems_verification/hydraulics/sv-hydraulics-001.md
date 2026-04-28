@@ -19,10 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-001
   Original Prompt Style: cloze
-  Original Text: 'Which of the following statements is true if the *(ENG 2 hydraulic)* LOW PRESSURE light (above) illuminates in flight? {{c1::If the light is on steady, output pressure of System B engine driven pump is low}}'
-  Question Stem: 'Which of the following statements is true if the *(ENG 2 hydraulic)* LOW PRESSURE light (above) illuminates in flight?'
+  Original Text: Which of the following statements is true if the *(ENG 2 hydraulic)* LOW
+    PRESSURE light (above) illuminates in flight? {{c1::If the light is on steady, output
+    pressure of System B engine driven pump is low}}
+  Question Stem: Which of the following statements is true if the *(ENG 2 hydraulic)* LOW
+    PRESSURE light (above) illuminates in flight?
   Choice A: ''
-  Choice B: 'If the light is on steady, output pressure of System B engine driven pump is low'
+  Choice B: If the light is on steady, output pressure of System B engine driven pump is low
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

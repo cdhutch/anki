@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-030
   Original Prompt Style: cloze
-  Original Text: 'The purpose of the Power Transfer Unit (PTU) is to {{c1::supply hydraulic fluid volume needed to operate autoslats and leading edge flaps and slats}}.'
-  Question Stem: 'The purpose of the Power Transfer Unit (PTU) is to what?'
+  Original Text: The purpose of the Power Transfer Unit (PTU) is to {{c1::supply hydraulic
+    fluid volume needed to operate autoslats and leading edge flaps and slats}}.
+  Question Stem: The purpose of the Power Transfer Unit (PTU) is to what?
   Choice A: ''
   Choice B: ''
-  Choice C: Supply hydraulic fluid volume needed to operate autoslats and leading edge flaps and slats
+  Choice C: Supply hydraulic fluid volume needed to operate autoslats and leading edge flaps
+    and slats
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

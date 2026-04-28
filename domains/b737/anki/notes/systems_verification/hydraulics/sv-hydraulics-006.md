@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-006
   Original Prompt Style: cloze
-  Original Text: 'Both Hydraulic Systems A and B are still unavailable after landing. Select the answer below which best describes the operation of the nose wheel steering in this condition. {{c1::t does not work without pressure from Hydraulic Systems A and B.}}'
-  Question Stem: 'Both Hydraulic Systems A and B are still unavailable after landing. Select the answer below which best describes the operation of the nose wheel steering in this condition what?'
+  Original Text: Both Hydraulic Systems A and B are still unavailable after landing. Select
+    the answer below which best describes the operation of the nose wheel steering in this
+    condition. {{c1::t does not work without pressure from Hydraulic Systems A and B.}}
+  Question Stem: Both Hydraulic Systems A and B are still unavailable after landing. Select
+    the answer below which best describes the operation of the nose wheel steering in this
+    condition what?
   Choice A: ''
   Choice B: ''
   Choice C: T does not work without pressure from Hydraulic Systems A and B
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

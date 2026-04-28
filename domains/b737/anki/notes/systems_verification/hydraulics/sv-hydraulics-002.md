@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-002
   Original Prompt Style: cloze
-  Original Text: 'This light *(ENG 2 hydraulic LOW PRESSURE caution light)* illuminates during takeoff, climbing through 1,000 feet AGL, and during flap retraction. {{c1::The leading edge devices will retract at a normal rate through the PTU.}}'
-  Question Stem: 'This light *(ENG 2 hydraulic LOW PRESSURE caution light)* illuminates during takeoff, climbing through 1,000 feet AGL, and during flap retraction what?'
+  Original Text: This light *(ENG 2 hydraulic LOW PRESSURE caution light)* illuminates during
+    takeoff, climbing through 1,000 feet AGL, and during flap retraction. {{c1::The leading
+    edge devices will retract at a normal rate through the PTU.}}
+  Question Stem: This light *(ENG 2 hydraulic LOW PRESSURE caution light)* illuminates during
+    takeoff, climbing through 1,000 feet AGL, and during flap retraction what?
   Choice A: ''
   Choice B: ''
   Choice C: The leading edge devices will retract at a normal rate through the PTU
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

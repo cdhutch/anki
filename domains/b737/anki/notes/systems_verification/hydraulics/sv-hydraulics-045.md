@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-045
   Original Prompt Style: cloze
-  Original Text: 'The minimum hydraulic System A and B pressure is {{c1::2800}} psi for preflight.'
-  Question Stem: 'The minimum hydraulic System A and B pressure is what? psi for preflight?'
+  Original Text: The minimum hydraulic System A and B pressure is {{c1::2800}} psi for preflight.
+  Question Stem: The minimum hydraulic System A and B pressure is what? psi for preflight?
   Choice A: ''
   Choice B: 2800
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

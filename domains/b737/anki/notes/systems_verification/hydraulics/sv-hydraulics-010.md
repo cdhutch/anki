@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-010
   Original Prompt Style: cloze
-  Original Text: 'Which of the following components are normally powered by System B? {{c1::Trailing Edge Flaps}}'
-  Question Stem: 'Which of the following components are normally powered by System B?'
+  Original Text: Which of the following components are normally powered by System B? {{c1::Trailing
+    Edge Flaps}}
+  Question Stem: Which of the following components are normally powered by System B?
   Choice A: ''
   Choice B: ''
   Choice C: Trailing Edge Flaps
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

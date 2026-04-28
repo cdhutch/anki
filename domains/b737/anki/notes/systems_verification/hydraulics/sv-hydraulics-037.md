@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-037
   Original Prompt Style: cloze
-  Original Text: 'Normal hydraulic system pressure is {{c1::}} psi.'
-  Question Stem: 'Normal hydraulic system pressure is what? psi?'
+  Original Text: Normal hydraulic system pressure is {{c1::}} psi.
+  Question Stem: Normal hydraulic system pressure is what? psi?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

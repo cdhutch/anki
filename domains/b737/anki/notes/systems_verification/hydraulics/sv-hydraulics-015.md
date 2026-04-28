@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-015
   Original Prompt Style: cloze
-  Original Text: 'The Power Transfer Unit (PTU) uses {{c1::System A}} pressure to power a hydraulic motor-driven pump which pressurizes {{c1::System B}} fluid for use in operating leading edge flaps and slats'
-  Question Stem: 'The Power Transfer Unit (PTU) uses what? pressure to power a hydraulic motor-driven pump which pressurizes what? fluid for use in operating leading edge flaps and slats?'
+  Original Text: The Power Transfer Unit (PTU) uses {{c1::System A}} pressure to power a hydraulic
+    motor-driven pump which pressurizes {{c1::System B}} fluid for use in operating leading
+    edge flaps and slats
+  Question Stem: The Power Transfer Unit (PTU) uses what? pressure to power a hydraulic motor-driven
+    pump which pressurizes what? fluid for use in operating leading edge flaps and slats?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

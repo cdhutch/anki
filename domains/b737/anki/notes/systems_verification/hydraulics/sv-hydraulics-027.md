@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: hydraulics-027
   Original Prompt Style: cloze
-  Original Text: 'If a leak develops in Hydraulic System A engine-driven pump or its related lines, a {{c1::standpipe}} in the reservoir prevents a total system fluid loss.'
-  Question Stem: 'If a leak develops in Hydraulic System A engine-driven pump or its related lines, a what? in the reservoir prevents a total system fluid loss?'
+  Original Text: If a leak develops in Hydraulic System A engine-driven pump or its related
+    lines, a {{c1::standpipe}} in the reservoir prevents a total system fluid loss.
+  Question Stem: If a leak develops in Hydraulic System A engine-driven pump or its related
+    lines, a what? in the reservoir prevents a total system fluid loss?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
