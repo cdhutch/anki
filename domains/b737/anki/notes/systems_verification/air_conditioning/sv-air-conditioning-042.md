@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-042
   Original Prompt Style: cloze
-  Original Text: 'If the CONT CAB ZONE TEMP caution light illuminated due to an overheat condition in the applicable zone supply duct, the Master Caution Lights will also illuminate; and {{c1::the CONT CAB trim air modulating valve closes}}.'
-  Question Stem: 'If the CONT CAB ZONE TEMP caution light illuminated due to an overheat condition in the applicable zone supply duct, the Master Caution Lights will also illuminate; and what?'
+  Original Text: If the CONT CAB ZONE TEMP caution light illuminated due to an overheat condition
+    in the applicable zone supply duct, the Master Caution Lights will also illuminate; and
+    {{c1::the CONT CAB trim air modulating valve closes}}.
+  Question Stem: If the CONT CAB ZONE TEMP caution light illuminated due to an overheat condition
+    in the applicable zone supply duct, the Master Caution Lights will also illuminate; and
+    what?
   Choice A: ''
   Choice B: ''
   Choice C: The CONT CAB trim air modulating valve closes
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

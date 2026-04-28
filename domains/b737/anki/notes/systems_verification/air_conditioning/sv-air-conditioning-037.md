@@ -19,10 +19,14 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-037
   Original Prompt Style: cloze
-  Original Text: 'On the NG, both the left PACK caution light and the Master Caution lights are illuminated. What might happen to the left pack next under these circumstances? {{c1::The left pack valve will close if sensors have detected excessive temperature in that pack}}'
-  Question Stem: 'On the NG, both the left PACK caution light and the Master Caution lights are illuminated. What might happen to the left pack next under these circumstances?'
+  Original Text: On the NG, both the left PACK caution light and the Master Caution lights
+    are illuminated. What might happen to the left pack next under these circumstances? {{c1::The
+    left pack valve will close if sensors have detected excessive temperature in that pack}}
+  Question Stem: On the NG, both the left PACK caution light and the Master Caution lights
+    are illuminated. What might happen to the left pack next under these circumstances?
   Choice A: ''
-  Choice B: The left pack valve will close if sensors have detected excessive temperature in that pack
+  Choice B: The left pack valve will close if sensors have detected excessive temperature
+    in that pack
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

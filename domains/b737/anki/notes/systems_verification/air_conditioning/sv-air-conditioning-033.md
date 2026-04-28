@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-033
   Original Prompt Style: cloze
-  Original Text: 'If a PACK light illuminates while performing a before taxi check, and resets with master caution reset, you should: {{c1::Consult the PACK MEL procedure for single channel fault}}'
-  Question Stem: 'If a PACK light illuminates while performing a before taxi check, and resets with master caution reset, you should: what?'
+  Original Text: 'If a PACK light illuminates while performing a before taxi check, and resets
+    with master caution reset, you should: {{c1::Consult the PACK MEL procedure for single
+    channel fault}}'
+  Question Stem: 'If a PACK light illuminates while performing a before taxi check, and resets
+    with master caution reset, you should: what?'
   Choice A: ''
   Choice B: Consult the PACK MEL procedure for single channel fault
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

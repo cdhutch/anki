@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-002
   Original Prompt Style: cloze
-  Original Text: 'The APU can supply bleed air for the pack up to {{c1::17,000 feet or 10,000 feet if the APU is also providing electricity}}.'
-  Question Stem: 'The APU can supply bleed air for the pack up to what?'
+  Original Text: The APU can supply bleed air for the pack up to {{c1::17,000 feet or 10,000
+    feet if the APU is also providing electricity}}.
+  Question Stem: The APU can supply bleed air for the pack up to what?
   Choice A: ''
   Choice B: ''
-  Choice C: '17,000 feet or 10,000 feet if the APU is also providing electricity'
+  Choice C: 17,000 feet or 10,000 feet if the APU is also providing electricity
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

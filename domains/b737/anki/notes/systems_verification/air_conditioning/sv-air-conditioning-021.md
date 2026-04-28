@@ -19,10 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-021
   Original Prompt Style: cloze
-  Original Text: 'Failure of the primary and standby flight deck zone temperature controls will cause the {{c1::ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights}} to illuminate.'
-  Question Stem: 'Failure of the primary and standby flight deck zone temperature controls will cause the what? to illuminate?'
+  Original Text: Failure of the primary and standby flight deck zone temperature controls
+    will cause the {{c1::ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights}} to illuminate.
+  Question Stem: Failure of the primary and standby flight deck zone temperature controls
+    will cause the what? to illuminate?
   Choice A: ''
-  Choice B: 'ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights'
+  Choice B: ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-022
   Original Prompt Style: cloze
-  Original Text: 'Inflight, the forward cargo compartment is heated by air drawn around it by the {{c1::both 2 & 3: recirculation fan system and equipment cooling system}}.'
-  Question Stem: 'Inflight, the forward cargo compartment is heated by air drawn around it by the what?'
+  Original Text: 'Inflight, the forward cargo compartment is heated by air drawn around it
+    by the {{c1::both 2 & 3: recirculation fan system and equipment cooling system}}.'
+  Question Stem: Inflight, the forward cargo compartment is heated by air drawn around it
+    by the what?
   Choice A: ''
   Choice B: ''
   Choice C: 'Both 2 & 3: recirculation fan system and equipment cooling system'
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

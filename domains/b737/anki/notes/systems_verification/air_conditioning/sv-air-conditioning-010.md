@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-010
   Original Prompt Style: cloze
-  Original Text: 'Each A/C pack has {{c1::2}} controllers for pack temperature control.'
-  Question Stem: 'Each A/C pack has what? controllers for pack temperature control?'
+  Original Text: Each A/C pack has {{c1::2}} controllers for pack temperature control.
+  Question Stem: Each A/C pack has what? controllers for pack temperature control?
   Choice A: ''
   Choice B: ''
   Choice C: 2
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-039
   Original Prompt Style: cloze
-  Original Text: 'What effect will an AFT CAB ZONE TEMP caution light have on the left pack? {{c1::Output temperatures is controlled by CONT CAB temperature selector}}'
-  Question Stem: 'What effect will an AFT CAB ZONE TEMP caution light have on the left pack?'
+  Original Text: What effect will an AFT CAB ZONE TEMP caution light have on the left pack?
+    {{c1::Output temperatures is controlled by CONT CAB temperature selector}}
+  Question Stem: What effect will an AFT CAB ZONE TEMP caution light have on the left pack?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

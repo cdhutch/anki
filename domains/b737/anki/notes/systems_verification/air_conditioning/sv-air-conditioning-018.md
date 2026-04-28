@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-018
   Original Prompt Style: cloze
-  Original Text: 'Deflector doors on the ram air system are used on the ground to {{c1::prevent slush ingestion on takeoff or landing}}.'
-  Question Stem: 'Deflector doors on the ram air system are used on the ground to what?'
+  Original Text: Deflector doors on the ram air system are used on the ground to {{c1::prevent
+    slush ingestion on takeoff or landing}}.
+  Question Stem: Deflector doors on the ram air system are used on the ground to what?
   Choice A: ''
   Choice B: ''
   Choice C: Prevent slush ingestion on takeoff or landing
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

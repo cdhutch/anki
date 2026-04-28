@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-027
   Original Prompt Style: cloze
-  Original Text: 'What fault indication(s) cannot be reset with the trip reset button? {{c1::Wing body overheat}}.'
-  Question Stem: 'What fault indication(s) cannot be reset with the trip reset button?'
+  Original Text: What fault indication(s) cannot be reset with the trip reset button? {{c1::Wing
+    body overheat}}.
+  Question Stem: What fault indication(s) cannot be reset with the trip reset button?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

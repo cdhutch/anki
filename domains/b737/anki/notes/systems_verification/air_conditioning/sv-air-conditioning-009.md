@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-009
   Original Prompt Style: cloze
-  Original Text: 'Engine low pressure bleed air is provided by the {{c1::5th}} stage, and engine high pressure bleed air is provided by the {{c1::9th}} stage air.'
-  Question Stem: 'Engine low pressure bleed air is provided by the what? stage, and engine high pressure bleed air is provided by the what? stage air?'
+  Original Text: Engine low pressure bleed air is provided by the {{c1::5th}} stage, and engine
+    high pressure bleed air is provided by the {{c1::9th}} stage air.
+  Question Stem: Engine low pressure bleed air is provided by the what? stage, and engine
+    high pressure bleed air is provided by the what? stage air?
   Choice A: ''
   Choice B: 5th
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

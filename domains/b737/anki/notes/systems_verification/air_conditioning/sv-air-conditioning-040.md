@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-040
   Original Prompt Style: cloze
-  Original Text: 'If the CONT CAB ZONE TEMP caution light is illuminated only on Recall, {{c1::only one of the CONT CAB Zone Temperature Controllers has failed}}.'
-  Question Stem: 'If the CONT CAB ZONE TEMP caution light is illuminated only on Recall, what?'
+  Original Text: If the CONT CAB ZONE TEMP caution light is illuminated only on Recall, {{c1::only
+    one of the CONT CAB Zone Temperature Controllers has failed}}.
+  Question Stem: If the CONT CAB ZONE TEMP caution light is illuminated only on Recall, what?
   Choice A: Only one of the CONT CAB Zone Temperature Controllers has failed
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

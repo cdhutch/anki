@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-005
   Original Prompt Style: cloze
-  Original Text: 'The primary purpose of the recirculation fans is to {{c1::reduce air conditioning pack load}}.'
-  Question Stem: 'The primary purpose of the recirculation fans is to what?'
+  Original Text: The primary purpose of the recirculation fans is to {{c1::reduce air conditioning
+    pack load}}.
+  Question Stem: The primary purpose of the recirculation fans is to what?
   Choice A: ''
   Choice B: Reduce air conditioning pack load
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

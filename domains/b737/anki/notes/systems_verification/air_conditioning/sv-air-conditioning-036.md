@@ -19,9 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-036
   Original Prompt Style: cloze
-  Original Text: 'At the same time the Left PACK caution light illuminates, what other indications do you get? {{c1::The Master Caution lights illuminate and the right System Annunicator Panel shows AIR COND.}}'
-  Question Stem: 'At the same time the Left PACK caution light illuminates, what other indications do you get?'
-  Choice A: The Master Caution lights illuminate and the right System Annunicator Panel shows AIR COND
+  Original Text: At the same time the Left PACK caution light illuminates, what other indications
+    do you get? {{c1::The Master Caution lights illuminate and the right System Annunicator
+    Panel shows AIR COND.}}
+  Question Stem: At the same time the Left PACK caution light illuminates, what other indications
+    do you get?
+  Choice A: The Master Caution lights illuminate and the right System Annunicator Panel shows
+    AIR COND
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

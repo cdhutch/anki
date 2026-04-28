@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-013
   Original Prompt Style: cloze
-  Original Text: 'The APU will supply bleed air for {{c1::1}} pack(s) {{c1::only in flight}} and {{c1::both}} pack(s) {{c1::on the ground}} {{c1::The answer is "both 1 & 2"}}.'
-  Question Stem: 'The APU will supply bleed air for what? pack(s) what? and what? pack(s) what? what?'
+  Original Text: The APU will supply bleed air for {{c1::1}} pack(s) {{c1::only in flight}}
+    and {{c1::both}} pack(s) {{c1::on the ground}} {{c1::The answer is "both 1 & 2"}}.
+  Question Stem: The APU will supply bleed air for what? pack(s) what? and what? pack(s) what?
+    what?
   Choice A: ''
   Choice B: 1
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-004
   Original Prompt Style: cloze
-  Original Text: 'What is the primary source of conditioned air for the cockpit? {{c1::Left pack}}'
-  Question Stem: 'What is the primary source of conditioned air for the cockpit?'
+  Original Text: What is the primary source of conditioned air for the cockpit? {{c1::Left
+    pack}}
+  Question Stem: What is the primary source of conditioned air for the cockpit?
   Choice A: Left pack
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

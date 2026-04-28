@@ -19,9 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-024
   Original Prompt Style: cloze
-  Original Text: 'When either the primary or standby pack temperature controller fails, what indications will be displayed? {{c1::PACK, MASTER CAUTION, and AIR COND SYSTEM ANNUNCIATOR lights on recall}}'
-  Question Stem: 'When either the primary or standby pack temperature controller fails, what indications will be displayed?'
-  Choice A: 'PACK, MASTER CAUTION, and AIR COND SYSTEM ANNUNCIATOR lights on recall'
+  Original Text: When either the primary or standby pack temperature controller fails, what
+    indications will be displayed? {{c1::PACK, MASTER CAUTION, and AIR COND SYSTEM ANNUNCIATOR
+    lights on recall}}
+  Question Stem: When either the primary or standby pack temperature controller fails, what
+    indications will be displayed?
+  Choice A: PACK, MASTER CAUTION, and AIR COND SYSTEM ANNUNCIATOR lights on recall
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-038
   Original Prompt Style: cloze
-  Original Text: 'Inflight, with the left pack valve closed due to excessive temperature, what other actions automatically occur in the Air Conditioning System? {{c1::The right pack switches to high air flow if flaps are up.}}'
-  Question Stem: 'Inflight, with the left pack valve closed due to excessive temperature, what other actions automatically occur in the Air Conditioning System?'
+  Original Text: Inflight, with the left pack valve closed due to excessive temperature, what
+    other actions automatically occur in the Air Conditioning System? {{c1::The right pack
+    switches to high air flow if flaps are up.}}
+  Question Stem: Inflight, with the left pack valve closed due to excessive temperature, what
+    other actions automatically occur in the Air Conditioning System?
   Choice A: ''
   Choice B: ''
   Choice C: The right pack switches to high air flow if flaps are up
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-006
   Original Prompt Style: cloze
-  Original Text: 'Equipment cooling is provided for electronic equipment in the {{c1::E & E bay and flight deck area}}.'
-  Question Stem: 'Equipment cooling is provided for electronic equipment in the what?'
+  Original Text: Equipment cooling is provided for electronic equipment in the {{c1::E & E
+    bay and flight deck area}}.
+  Question Stem: Equipment cooling is provided for electronic equipment in the what?
   Choice A: ''
   Choice B: ''
-  Choice C: 'E & E bay and flight deck area'
+  Choice C: E & E bay and flight deck area
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

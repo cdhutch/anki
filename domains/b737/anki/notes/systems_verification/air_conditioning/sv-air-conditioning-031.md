@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-031
   Original Prompt Style: cloze
-  Original Text: 'While accomplishing the QRH procedure for a PACK light illuminated, why do you select a warmer temperature on all three temperature selectors? {{c1::Reduce the workload on the affected air conditioning pack}}'
-  Question Stem: 'While accomplishing the QRH procedure for a PACK light illuminated, why do you select a warmer temperature on all three temperature selectors?'
+  Original Text: While accomplishing the QRH procedure for a PACK light illuminated, why do
+    you select a warmer temperature on all three temperature selectors? {{c1::Reduce the workload
+    on the affected air conditioning pack}}
+  Question Stem: While accomplishing the QRH procedure for a PACK light illuminated, why do
+    you select a warmer temperature on all three temperature selectors?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-015
   Original Prompt Style: cloze
-  Original Text: 'Which single bleed source is permitted to supply air to both packs on the ground? {{c1::The APU only.}}'
-  Question Stem: 'Which single bleed source is permitted to supply air to both packs on the ground?'
+  Original Text: Which single bleed source is permitted to supply air to both packs on the
+    ground? {{c1::The APU only.}}
+  Question Stem: Which single bleed source is permitted to supply air to both packs on the
+    ground?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

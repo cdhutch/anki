@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-001
   Original Prompt Style: cloze
-  Original Text: 'The ram air doors normally modulate to full OPEN when the aircraft is {{c1::in flight with flaps not fully retracted or on the ground}}.'
-  Question Stem: 'The ram air doors normally modulate to full OPEN when the aircraft is what?'
+  Original Text: The ram air doors normally modulate to full OPEN when the aircraft is {{c1::in
+    flight with flaps not fully retracted or on the ground}}.
+  Question Stem: The ram air doors normally modulate to full OPEN when the aircraft is what?
   Choice A: ''
   Choice B: In flight with flaps not fully retracted or on the ground
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

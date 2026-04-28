@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-026
   Original Prompt Style: cloze
-  Original Text: 'The associated PACK light, Master Caution, and AIR COND annunciator will illuminate when {{c1::pack overheats or dual pack controller failure}}.'
-  Question Stem: 'The associated PACK light, Master Caution, and AIR COND annunciator will illuminate when what?'
+  Original Text: The associated PACK light, Master Caution, and AIR COND annunciator will
+    illuminate when {{c1::pack overheats or dual pack controller failure}}.
+  Question Stem: The associated PACK light, Master Caution, and AIR COND annunciator will
+    illuminate when what?
   Choice A: ''
   Choice B: ''
   Choice C: Pack overheats or dual pack controller failure
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

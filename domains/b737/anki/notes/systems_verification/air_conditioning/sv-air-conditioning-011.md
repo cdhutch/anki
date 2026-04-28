@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-011
   Original Prompt Style: cloze
-  Original Text: 'If the primary equipment cooling fan fails, what indications would be displayed? {{c1::Master Caution light, the related equipment cooling OFF light, and the OVERHEAD annunciator light on the System Annunciator Pane}}'
-  Question Stem: 'If the primary equipment cooling fan fails, what indications would be displayed?'
+  Original Text: If the primary equipment cooling fan fails, what indications would be displayed?
+    {{c1::Master Caution light, the related equipment cooling OFF light, and the OVERHEAD
+    annunciator light on the System Annunciator Pane}}
+  Question Stem: If the primary equipment cooling fan fails, what indications would be displayed?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Master Caution light, the related equipment cooling OFF light, and the OVERHEAD annunciator light on the System Annunciator Pane'
+  Choice D: Master Caution light, the related equipment cooling OFF light, and the OVERHEAD
+    annunciator light on the System Annunciator Pane
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

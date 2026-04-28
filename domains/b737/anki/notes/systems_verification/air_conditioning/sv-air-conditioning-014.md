@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-014
   Original Prompt Style: cloze
-  Original Text: 'Inflight, normal air conditioning system operation would be {{c1::each pack from its associated engine bleed source}}.'
-  Question Stem: 'Inflight, normal air conditioning system operation would be what?'
+  Original Text: Inflight, normal air conditioning system operation would be {{c1::each pack
+    from its associated engine bleed source}}.
+  Question Stem: Inflight, normal air conditioning system operation would be what?
   Choice A: ''
   Choice B: ''
   Choice C: Each pack from its associated engine bleed source
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

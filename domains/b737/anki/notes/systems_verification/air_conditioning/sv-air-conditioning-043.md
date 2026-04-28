@@ -19,14 +19,21 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-043
   Original Prompt Style: cloze
-  Original Text: 'With all the temperature selectors positioned in the OFF position, the packs will adjust for cabin demand. In this case, which statement is most correct? {{c1::The left pack controls will cause the left pack to maintain a fixed temperature of 75 degrees, and the right pack to maintain 65 degrees as measured at the pack temperature sensor.}}'
-  Question Stem: 'With all the temperature selectors positioned in the OFF position, the packs will adjust for cabin demand. In this case, which statement is most correct?'
+  Original Text: With all the temperature selectors positioned in the OFF position, the packs
+    will adjust for cabin demand. In this case, which statement is most correct? {{c1::The
+    left pack controls will cause the left pack to maintain a fixed temperature of 75 degrees,
+    and the right pack to maintain 65 degrees as measured at the pack temperature sensor.}}
+  Question Stem: With all the temperature selectors positioned in the OFF position, the packs
+    will adjust for cabin demand. In this case, which statement is most correct?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'The left pack controls will cause the left pack to maintain a fixed temperature of 75 degrees, and the right pack to maintain 65 degrees as measured at the pack temperature sensor'
+  Choice D: The left pack controls will cause the left pack to maintain a fixed temperature
+    of 75 degrees, and the right pack to maintain 65 degrees as measured at the pack temperature
+    sensor
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

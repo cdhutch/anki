@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-008
   Original Prompt Style: cloze
-  Original Text: 'Air from the preconditioned ground source enters the air conditioning system through the {{c1::mix manifold}}.'
-  Question Stem: 'Air from the preconditioned ground source enters the air conditioning system through the what?'
+  Original Text: Air from the preconditioned ground source enters the air conditioning system
+    through the {{c1::mix manifold}}.
+  Question Stem: Air from the preconditioned ground source enters the air conditioning system
+    through the what?
   Choice A: Mix manifold
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

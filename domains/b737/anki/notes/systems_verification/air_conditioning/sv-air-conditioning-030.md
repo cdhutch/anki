@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-030
   Original Prompt Style: cloze
-  Original Text: 'Is taking off with one or both PACK switches in HIGH is allowed with the engine bleed air switches on. {{c1::False}}'
-  Question Stem: 'Is taking off with one or both PACK switches in HIGH is allowed with the engine bleed air switches on what?'
+  Original Text: Is taking off with one or both PACK switches in HIGH is allowed with the
+    engine bleed air switches on. {{c1::False}}
+  Question Stem: Is taking off with one or both PACK switches in HIGH is allowed with the
+    engine bleed air switches on what?
   Choice A: ''
   Choice B: ''
   Choice C: 'False'
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

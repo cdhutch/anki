@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-016
   Original Prompt Style: cloze
-  Original Text: 'The ram air system operates automatically to provide cooling for {{c1::the PACK heat exchangers}}.'
-  Question Stem: 'The ram air system operates automatically to provide cooling for what?'
+  Original Text: The ram air system operates automatically to provide cooling for {{c1::the
+    PACK heat exchangers}}.
+  Question Stem: The ram air system operates automatically to provide cooling for what?
   Choice A: The PACK heat exchangers
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

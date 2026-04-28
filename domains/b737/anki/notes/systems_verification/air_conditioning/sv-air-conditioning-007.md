@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-007
   Original Prompt Style: cloze
-  Original Text: 'The equipment cooling system has {{c1::2 supply and 2 exhaust}} fan(s).'
-  Question Stem: 'The equipment cooling system has what? fan(s)?'
+  Original Text: The equipment cooling system has {{c1::2 supply and 2 exhaust}} fan(s).
+  Question Stem: The equipment cooling system has what? fan(s)?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

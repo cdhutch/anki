@@ -19,9 +19,15 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-028
   Original Prompt Style: cloze
-  Original Text: 'The ZONE TEMP light, Master Caution, and AIR COND annunciator lights will illuminate for {{c1::any of the above: an overheat in the duct leading to any of the three zones; a dual temperature controller failure in the CONT CAB zone; any single temperature controller failure in any zone during a RECALL test}}.'
-  Question Stem: 'The ZONE TEMP light, Master Caution, and AIR COND annunciator lights will illuminate for what?'
-  Choice A: 'Any of the above: an overheat in the duct leading to any of the three zones; a dual temperature controller failure in the CONT CAB zone; any single temperature controller failure in any zone during a RECALL test'
+  Original Text: 'The ZONE TEMP light, Master Caution, and AIR COND annunciator lights will
+    illuminate for {{c1::any of the above: an overheat in the duct leading to any of the three
+    zones; a dual temperature controller failure in the CONT CAB zone; any single temperature
+    controller failure in any zone during a RECALL test}}.'
+  Question Stem: The ZONE TEMP light, Master Caution, and AIR COND annunciator lights will
+    illuminate for what?
+  Choice A: 'Any of the above: an overheat in the duct leading to any of the three zones;
+    a dual temperature controller failure in the CONT CAB zone; any single temperature controller
+    failure in any zone during a RECALL test'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +36,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

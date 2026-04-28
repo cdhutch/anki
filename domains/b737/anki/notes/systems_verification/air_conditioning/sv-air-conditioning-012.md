@@ -19,9 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-012
   Original Prompt Style: cloze
-  Original Text: 'In the event of a single pack failure at altitude, the remaining pack is capable of maintaining cabin pressure and comfort at an airplane altitude of {{c1::41,000 feet}}.'
-  Question Stem: 'In the event of a single pack failure at altitude, the remaining pack is capable of maintaining cabin pressure and comfort at an airplane altitude of what?'
-  Choice A: '41,000 feet'
+  Original Text: In the event of a single pack failure at altitude, the remaining pack is
+    capable of maintaining cabin pressure and comfort at an airplane altitude of {{c1::41,000
+    feet}}.
+  Question Stem: In the event of a single pack failure at altitude, the remaining pack is
+    capable of maintaining cabin pressure and comfort at an airplane altitude of what?
+  Choice A: 41,000 feet
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,10 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-029
   Original Prompt Style: cloze
-  Original Text: 'What will cause the left Wing-Body Overheat light to illuminate? {{c1::A bleed air duct leak in the left engine strut, left inboard wing leading edge, left air conditioning bay, keel beam or APU bleed air duct}}'
-  Question Stem: 'What will cause the left Wing-Body Overheat light to illuminate?'
+  Original Text: What will cause the left Wing-Body Overheat light to illuminate? {{c1::A
+    bleed air duct leak in the left engine strut, left inboard wing leading edge, left air
+    conditioning bay, keel beam or APU bleed air duct}}
+  Question Stem: What will cause the left Wing-Body Overheat light to illuminate?
   Choice A: ''
-  Choice B: 'A bleed air duct leak in the left engine strut, left inboard wing leading edge, left air conditioning bay, keel beam or APU bleed air duct'
+  Choice B: A bleed air duct leak in the left engine strut, left inboard wing leading edge,
+    left air conditioning bay, keel beam or APU bleed air duct
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

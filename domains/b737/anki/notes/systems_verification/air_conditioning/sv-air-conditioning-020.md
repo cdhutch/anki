@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-020
   Original Prompt Style: cloze
-  Original Text: 'Zone temperature is controlled by introducing the proper amount of trim air into the {{c1::individual zone supply duct}}.'
-  Question Stem: 'Zone temperature is controlled by introducing the proper amount of trim air into the what?'
+  Original Text: Zone temperature is controlled by introducing the proper amount of trim air
+    into the {{c1::individual zone supply duct}}.
+  Question Stem: Zone temperature is controlled by introducing the proper amount of trim air
+    into the what?
   Choice A: Individual zone supply duct
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

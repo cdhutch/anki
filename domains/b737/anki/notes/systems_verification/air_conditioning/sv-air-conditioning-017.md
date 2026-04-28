@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-017
   Original Prompt Style: cloze
-  Original Text: 'For maximum cooling (of the pack) the ram air inlet doors modulate toward the {{c1::full open position}}.'
-  Question Stem: 'For maximum cooling (of the pack) the ram air inlet doors modulate toward the what?'
+  Original Text: For maximum cooling (of the pack) the ram air inlet doors modulate toward
+    the {{c1::full open position}}.
+  Question Stem: For maximum cooling (of the pack) the ram air inlet doors modulate toward
+    the what?
   Choice A: ''
   Choice B: Full open position
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

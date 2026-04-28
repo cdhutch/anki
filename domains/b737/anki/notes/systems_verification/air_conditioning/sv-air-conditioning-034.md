@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-034
   Original Prompt Style: cloze
-  Original Text: 'Landing with PACK switches in HIGH: {{c1::Both two and three are correct. Is not authorized with engine bleeds on and Is authorized if a QRH checklist calls for it}}'
+  Original Text: 'Landing with PACK switches in HIGH: {{c1::Both two and three are correct.
+    Is not authorized with engine bleeds on and Is authorized if a QRH checklist calls for
+    it}}'
   Question Stem: 'Landing with PACK switches in HIGH: what?'
   Choice A: ''
   Choice B: ''
-  Choice C: Both two and three are correct. Is not authorized with engine bleeds on and Is authorized if a QRH checklist calls for it
+  Choice C: Both two and three are correct. Is not authorized with engine bleeds on and Is
+    authorized if a QRH checklist calls for it
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

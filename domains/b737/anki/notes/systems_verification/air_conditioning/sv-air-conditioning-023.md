@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-023
   Original Prompt Style: cloze
-  Original Text: 'The temperature selector adjusts the desired zone temperature between a range of approximately {{c1::65-85}} degrees.'
-  Question Stem: 'The temperature selector adjusts the desired zone temperature between a range of approximately what? degrees?'
+  Original Text: The temperature selector adjusts the desired zone temperature between a range
+    of approximately {{c1::65-85}} degrees.
+  Question Stem: The temperature selector adjusts the desired zone temperature between a range
+    of approximately what? degrees?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

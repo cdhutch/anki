@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-019
   Original Prompt Style: cloze
-  Original Text: 'The deflector doors on the ram air system are fully extended {{c1::on the ground only}}.'
-  Question Stem: 'The deflector doors on the ram air system are fully extended what?'
+  Original Text: The deflector doors on the ram air system are fully extended {{c1::on the
+    ground only}}.
+  Question Stem: The deflector doors on the ram air system are fully extended what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

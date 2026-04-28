@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-041
   Original Prompt Style: cloze
-  Original Text: 'If the CONT CAB ZONE TEMP light extinguishes when the master caution light is pressed: {{c1::the system will operate normally.}}'
-  Question Stem: 'If the CONT CAB ZONE TEMP light extinguishes when the master caution light is pressed: what?'
+  Original Text: 'If the CONT CAB ZONE TEMP light extinguishes when the master caution light
+    is pressed: {{c1::the system will operate normally.}}'
+  Question Stem: 'If the CONT CAB ZONE TEMP light extinguishes when the master caution light
+    is pressed: what?'
   Choice A: ''
   Choice B: The system will operate normally
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

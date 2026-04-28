@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-025
   Original Prompt Style: cloze
-  Original Text: 'If the FWD or AFT Cab ZONE TEMP lights illuminate indicating an overheat, this will cause the associated {{c1::trim air modulating}} valve to close.'
-  Question Stem: 'If the FWD or AFT Cab ZONE TEMP lights illuminate indicating an overheat, this will cause the associated what? valve to close?'
+  Original Text: If the FWD or AFT Cab ZONE TEMP lights illuminate indicating an overheat,
+    this will cause the associated {{c1::trim air modulating}} valve to close.
+  Question Stem: If the FWD or AFT Cab ZONE TEMP lights illuminate indicating an overheat,
+    this will cause the associated what? valve to close?
   Choice A: ''
   Choice B: Trim air modulating
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
