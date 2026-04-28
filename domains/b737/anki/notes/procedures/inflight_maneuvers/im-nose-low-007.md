@@ -1,0 +1,34 @@
+---
+schema: cnsf/v0
+domain: b737
+note_type: procedure_structured
+note_id: im-nose-low-007
+anki:
+  model: B737_Structured
+  deck: B737::Triggers_and_Flows::Procedures::Inflight_Maneuvers
+tags:
+- domain:b737
+- topic:procedures
+- category:inflight_maneuvers
+- maneuver:nose_low_recovery
+- warning
+fields:
+  Title: Nose Low Recovery - Control Input Warning
+  Trigger: Recovery control inputs
+  Objective: Avoid aggravating the upset
+  MemoryItems: Avoid excessive pitch trim or rudder
+  Source: B737 AOM 17.2.2
+  Verification Notes: ''
+---
+
+# front_md
+
+## Warning
+
+What control input warning applies during nose low recovery?
+
+# back_md
+
+## Warning
+
+Excessive use of **pitch trim** or **rudder** can aggravate the upset, result in loss of control, or cause high structural loads.
