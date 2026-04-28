@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-007
   Original Prompt Style: cloze
-  Original Text: 'The illuminated amber lights, at right, confirm the existence of a bleed air leak. The Wing Anti-Ice Switch is ON. What is the first corrective action step in this circumstance? {{c1::Close the Isolation Valve.}}'
-  Question Stem: 'The illuminated amber lights, at right, confirm the existence of a bleed air leak. The Wing Anti-Ice Switch is ON. What is the first corrective action step in this circumstance?'
+  Original Text: The illuminated amber lights, at right, confirm the existence of a bleed
+    air leak. The Wing Anti-Ice Switch is ON. What is the first corrective action step in
+    this circumstance? {{c1::Close the Isolation Valve.}}
+  Question Stem: The illuminated amber lights, at right, confirm the existence of a bleed
+    air leak. The Wing Anti-Ice Switch is ON. What is the first corrective action step in
+    this circumstance?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-009
   Original Prompt Style: cloze
-  Original Text: 'The APU bleed air valve will close if {{c1::the APU Bleed Air Switch is placed OFF or if the APU is shutdown}}.'
-  Question Stem: 'The APU bleed air valve will close if what?'
+  Original Text: The APU bleed air valve will close if {{c1::the APU Bleed Air Switch is placed
+    OFF or if the APU is shutdown}}.
+  Question Stem: The APU bleed air valve will close if what?
   Choice A: ''
   Choice B: The APU Bleed Air Switch is placed OFF or if the APU is shutdown
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

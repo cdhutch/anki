@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-018
   Original Prompt Style: cloze
-  Original Text: 'Illumination of the amber BLEED TRIP OFF light indicates what valve has automatically closed? {{c1::Engine bleed air valve}}'
-  Question Stem: 'Illumination of the amber BLEED TRIP OFF light indicates what valve has automatically closed?'
+  Original Text: Illumination of the amber BLEED TRIP OFF light indicates what valve has automatically
+    closed? {{c1::Engine bleed air valve}}
+  Question Stem: Illumination of the amber BLEED TRIP OFF light indicates what valve has automatically
+    closed?
   Choice A: ''
   Choice B: ''
   Choice C: Engine bleed air valve
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

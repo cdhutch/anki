@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-011
   Original Prompt Style: cloze
-  Original Text: 'How can the light *(right BLEED TRIP OFF caution)* be extinguished? {{c1::Only by pushing the Trip Reset Switch if it was an over-temp malfunction.}}'
-  Question Stem: 'How can the light *(right BLEED TRIP OFF caution)* be extinguished?'
+  Original Text: How can the light *(right BLEED TRIP OFF caution)* be extinguished? {{c1::Only
+    by pushing the Trip Reset Switch if it was an over-temp malfunction.}}
+  Question Stem: How can the light *(right BLEED TRIP OFF caution)* be extinguished?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

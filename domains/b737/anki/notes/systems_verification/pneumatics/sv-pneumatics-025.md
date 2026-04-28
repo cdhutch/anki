@@ -19,10 +19,14 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-025
   Original Prompt Style: cloze
-  Original Text: 'A DUAL BLEED light will illuminate when {{c1::either 1 or 2 occurs: the APU bleed air valve is open and Engine 1 Bleed Switch is ON; the APU bleed air valve is open, Engine 2 Bleed Switch is ON, and the isolation valve is open}}.'
-  Question Stem: 'A DUAL BLEED light will illuminate when what?'
+  Original Text: 'A DUAL BLEED light will illuminate when {{c1::either 1 or 2 occurs: the
+    APU bleed air valve is open and Engine 1 Bleed Switch is ON; the APU bleed air valve is
+    open, Engine 2 Bleed Switch is ON, and the isolation valve is open}}.'
+  Question Stem: A DUAL BLEED light will illuminate when what?
   Choice A: ''
-  Choice B: 'Either 1 or 2 occurs: the APU bleed air valve is open and Engine 1 Bleed Switch is ON; the APU bleed air valve is open, Engine 2 Bleed Switch is ON, and the isolation valve is open'
+  Choice B: 'Either 1 or 2 occurs: the APU bleed air valve is open and Engine 1 Bleed Switch
+    is ON; the APU bleed air valve is open, Engine 2 Bleed Switch is ON, and the isolation
+    valve is open'
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

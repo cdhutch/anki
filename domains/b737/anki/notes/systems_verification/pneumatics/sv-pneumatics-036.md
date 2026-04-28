@@ -19,9 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-036
   Original Prompt Style: cloze
-  Original Text: 'The {{c1::engine starting, air conditioning/pressurization, wing and engine anti-ice, hydraulic, water tank pressurization, and TAT probe}} systems rely on pneumatic pressure for operation.'
-  Question Stem: 'The what? systems rely on pneumatic pressure for operation?'
-  Choice A: 'Engine starting, air conditioning/pressurization, wing and engine anti-ice, hydraulic, water tank pressurization, and TAT probe'
+  Original Text: The {{c1::engine starting, air conditioning/pressurization, wing and engine
+    anti-ice, hydraulic, water tank pressurization, and TAT probe}} systems rely on pneumatic
+    pressure for operation.
+  Question Stem: The what? systems rely on pneumatic pressure for operation?
+  Choice A: Engine starting, air conditioning/pressurization, wing and engine anti-ice, hydraulic,
+    water tank pressurization, and TAT probe
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-004
   Original Prompt Style: cloze
-  Original Text: 'The Boeing 737-800 uses pneumatic air from which of the following sources? {{c1::Engine bleed air, external air, APU bleed air}}'
-  Question Stem: 'The Boeing 737-800 uses pneumatic air from which of the following sources?'
+  Original Text: The Boeing 737-800 uses pneumatic air from which of the following sources?
+    {{c1::Engine bleed air, external air, APU bleed air}}
+  Question Stem: The Boeing 737-800 uses pneumatic air from which of the following sources?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Engine bleed air, external air, APU bleed air'
+  Choice D: Engine bleed air, external air, APU bleed air
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

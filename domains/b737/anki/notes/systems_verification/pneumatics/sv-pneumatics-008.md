@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-008
   Original Prompt Style: cloze
-  Original Text: 'Which statement below most accurately describes what will happen when the you press the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY OVERHEAT caution light; AIR COND light illuminated)*? {{c1::Nothing}}'
-  Question Stem: 'Which statement below most accurately describes what will happen when the you press the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY OVERHEAT caution light; AIR COND light illuminated)*?'
+  Original Text: Which statement below most accurately describes what will happen when the
+    you press the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY
+    OVERHEAT caution light; AIR COND light illuminated)*? {{c1::Nothing}}
+  Question Stem: Which statement below most accurately describes what will happen when the
+    you press the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY
+    OVERHEAT caution light; AIR COND light illuminated)*?
   Choice A: Nothing
   Choice B: ''
   Choice C: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

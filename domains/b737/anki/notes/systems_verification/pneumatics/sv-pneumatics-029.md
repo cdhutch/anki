@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-029
   Original Prompt Style: cloze
-  Original Text: 'What will make the light *(Left WING BODY OVERHEAT caution )* extinguish? {{c1::Remove air source from APU by either turning off APU bleed or shutting APU down.}}'
-  Question Stem: 'What will make the light *(Left WING BODY OVERHEAT caution )* extinguish?'
+  Original Text: What will make the light *(Left WING BODY OVERHEAT caution )* extinguish?
+    {{c1::Remove air source from APU by either turning off APU bleed or shutting APU down.}}
+  Question Stem: What will make the light *(Left WING BODY OVERHEAT caution )* extinguish?
   Choice A: ''
   Choice B: Remove air source from APU by either turning off APU bleed or shutting APU down
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

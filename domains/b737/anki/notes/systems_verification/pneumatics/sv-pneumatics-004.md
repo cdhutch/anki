@@ -19,9 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-004
   Original Prompt Style: cloze
-  Original Text: 'What are the restrictions when this light *(DUAL BLEED)* is ON? {{c1::Thrust levers at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation Valve Open.}}'
-  Question Stem: 'What are the restrictions when this light *(DUAL BLEED)* is ON?'
-  Choice A: 'Thrust levers at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation Valve Open'
+  Original Text: 'What are the restrictions when this light *(DUAL BLEED)* is ON? {{c1::Thrust
+    levers at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation Valve Open.}}'
+  Question Stem: What are the restrictions when this light *(DUAL BLEED)* is ON?
+  Choice A: 'Thrust levers at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation
+    Valve Open'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

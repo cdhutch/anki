@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-035
   Original Prompt Style: cloze
-  Original Text: 'The right WING BODY OVERHEAT light indicates a duct leak in the {{c1::right engine strut, right wing inboard leading edge, or right air conditioning bay}}.'
-  Question Stem: 'The right WING BODY OVERHEAT light indicates a duct leak in the what?'
+  Original Text: The right WING BODY OVERHEAT light indicates a duct leak in the {{c1::right
+    engine strut, right wing inboard leading edge, or right air conditioning bay}}.
+  Question Stem: The right WING BODY OVERHEAT light indicates a duct leak in the what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Right engine strut, right wing inboard leading edge, or right air conditioning bay'
+  Choice D: Right engine strut, right wing inboard leading edge, or right air conditioning
+    bay
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

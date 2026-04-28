@@ -19,8 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-021
   Original Prompt Style: cloze
-  Original Text: 'The flaps were retracted in flight when this light illuminated. The QRH directs the crew to RESET the tripped bleed. The BLEED TRIP OFF Light remains illuminated. The QRH then directs the crew to turn OFF the Right A/C Pack Switch. Therefore, the {{c1::right pack remains shut down and the left pack switches to high air flow mode}}.'
-  Question Stem: 'The flaps were retracted in flight when this light illuminated. The QRH directs the crew to RESET the tripped bleed. The BLEED TRIP OFF Light remains illuminated. The QRH then directs the crew to turn OFF the Right A/C Pack Switch. Therefore, the what?'
+  Original Text: The flaps were retracted in flight when this light illuminated. The QRH directs
+    the crew to RESET the tripped bleed. The BLEED TRIP OFF Light remains illuminated. The
+    QRH then directs the crew to turn OFF the Right A/C Pack Switch. Therefore, the {{c1::right
+    pack remains shut down and the left pack switches to high air flow mode}}.
+  Question Stem: The flaps were retracted in flight when this light illuminated. The QRH directs
+    the crew to RESET the tripped bleed. The BLEED TRIP OFF Light remains illuminated. The
+    QRH then directs the crew to turn OFF the Right A/C Pack Switch. Therefore, the what?
   Choice A: ''
   Choice B: Right pack remains shut down and the left pack switches to high air flow mode
   Choice C: ''
@@ -30,3 +35,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

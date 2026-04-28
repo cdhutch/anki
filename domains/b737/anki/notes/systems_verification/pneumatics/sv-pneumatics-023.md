@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-023
   Original Prompt Style: cloze
-  Original Text: 'When starting engines with a ground air source, external air pressure should be {{c1::minimum of 30}} psi.'
-  Question Stem: 'When starting engines with a ground air source, external air pressure should be what? psi?'
+  Original Text: When starting engines with a ground air source, external air pressure should
+    be {{c1::minimum of 30}} psi.
+  Question Stem: When starting engines with a ground air source, external air pressure should
+    be what? psi?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

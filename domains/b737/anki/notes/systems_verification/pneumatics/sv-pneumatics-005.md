@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-005
   Original Prompt Style: cloze
-  Original Text: 'We can operate a single engine taxi (On #2 Engine) with a dual bleed light on by {{c1::closing the isolation valve}}.'
-  Question Stem: 'We can operate a single engine taxi (On #2 Engine) with a dual bleed light on by what?'
+  Original Text: 'We can operate a single engine taxi (On #2 Engine) with a dual bleed light
+    on by {{c1::closing the isolation valve}}.'
+  Question Stem: 'We can operate a single engine taxi (On #2 Engine) with a dual bleed light
+    on by what?'
   Choice A: ''
   Choice B: Closing the isolation valve
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

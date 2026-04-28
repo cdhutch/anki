@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-002
   Original Prompt Style: cloze
-  Original Text: 'MAX: PACK Light Illuminates for: {{c1::Both 1 and 3 above: Over-temperature; Both pack switches are in the OFF position 45 seconds after flap retraction on takeoff.}}'
+  Original Text: 'MAX: PACK Light Illuminates for: {{c1::Both 1 and 3 above: Over-temperature;
+    Both pack switches are in the OFF position 45 seconds after flap retraction on takeoff.}}'
   Question Stem: 'MAX: PACK Light Illuminates for: what?'
   Choice A: ''
   Choice B: ''
-  Choice C: 'Both 1 and 3 above: Over-temperature; Both pack switches are in the OFF position 45 seconds after flap retraction on takeoff'
+  Choice C: 'Both 1 and 3 above: Over-temperature; Both pack switches are in the OFF position
+    45 seconds after flap retraction on takeoff'
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

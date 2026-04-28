@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-032
   Original Prompt Style: cloze
-  Original Text: 'During normal operations, if the Isolation Valve Switch is in AUTO, then the valve {{c1::is closed}}.'
-  Question Stem: 'During normal operations, if the Isolation Valve Switch is in AUTO, then the valve what?'
+  Original Text: During normal operations, if the Isolation Valve Switch is in AUTO, then
+    the valve {{c1::is closed}}.
+  Question Stem: During normal operations, if the Isolation Valve Switch is in AUTO, then
+    the valve what?
   Choice A: Is closed
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-030
   Original Prompt Style: cloze
-  Original Text: 'The QRH Non-Normal checklist directs you to close the ISOLATION VALVE as a first step *(for a left WING BODY OVERHEAT caution light)*. This is done to {{c1::prevent air from the opposite side to enter the side with a bleed air leak}}.'
-  Question Stem: 'The QRH Non-Normal checklist directs you to close the ISOLATION VALVE as a first step *(for a left WING BODY OVERHEAT caution light)*. This is done to what?'
+  Original Text: The QRH Non-Normal checklist directs you to close the ISOLATION VALVE as
+    a first step *(for a left WING BODY OVERHEAT caution light)*. This is done to {{c1::prevent
+    air from the opposite side to enter the side with a bleed air leak}}.
+  Question Stem: The QRH Non-Normal checklist directs you to close the ISOLATION VALVE as
+    a first step *(for a left WING BODY OVERHEAT caution light)*. This is done to what?
   Choice A: ''
   Choice B: ''
   Choice C: Prevent air from the opposite side to enter the side with a bleed air leak
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

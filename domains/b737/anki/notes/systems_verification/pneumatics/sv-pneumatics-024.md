@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-024
   Original Prompt Style: cloze
-  Original Text: '{{c1::Either over pressure or over temperature}} cause(s) the engine bleed valve to automatically close.'
-  Question Stem: 'What? cause(s) the engine bleed valve to automatically close?'
+  Original Text: '{{c1::Either over pressure or over temperature}} cause(s) the engine bleed
+    valve to automatically close.'
+  Question Stem: What? cause(s) the engine bleed valve to automatically close?
   Choice A: Either over pressure or over temperature
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

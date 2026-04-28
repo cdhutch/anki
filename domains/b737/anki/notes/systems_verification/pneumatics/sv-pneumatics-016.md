@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-016
   Original Prompt Style: cloze
-  Original Text: 'The left WING BODY OVERHEAT light indicates a duct leak in the left engine strut, left wing leading edge, left air conditioning bay, and {{c1::APU duct and keel beam ducting}}.'
-  Question Stem: 'The left WING BODY OVERHEAT light indicates a duct leak in the left engine strut, left wing leading edge, left air conditioning bay, and what?'
+  Original Text: The left WING BODY OVERHEAT light indicates a duct leak in the left engine
+    strut, left wing leading edge, left air conditioning bay, and {{c1::APU duct and keel
+    beam ducting}}.
+  Question Stem: The left WING BODY OVERHEAT light indicates a duct leak in the left engine
+    strut, left wing leading edge, left air conditioning bay, and what?
   Choice A: APU duct and keel beam ducting
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

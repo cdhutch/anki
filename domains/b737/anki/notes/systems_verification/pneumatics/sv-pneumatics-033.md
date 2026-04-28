@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-005
   Original Prompt Style: cloze
-  Original Text: 'When the APU is shut down, the APU bleed valve {{c1::closes automatically regardless of APU bleed air switch position}}.'
-  Question Stem: 'When the APU is shut down, the APU bleed valve what?'
+  Original Text: When the APU is shut down, the APU bleed valve {{c1::closes automatically
+    regardless of APU bleed air switch position}}.
+  Question Stem: When the APU is shut down, the APU bleed valve what?
   Choice A: ''
   Choice B: Closes automatically regardless of APU bleed air switch position
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

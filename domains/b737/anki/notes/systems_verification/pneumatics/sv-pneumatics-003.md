@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-003
   Original Prompt Style: cloze
-  Original Text: 'What would cause this light *(DUAL BLEED caution)* to illuminate? {{c1::#1 & #2 Bleed Switches ON, APU Valve Open, and Isolation Valve Open}}'
-  Question Stem: 'What would cause this light *(DUAL BLEED caution)* to illuminate?'
+  Original Text: 'What would cause this light *(DUAL BLEED caution)* to illuminate? {{c1::#1
+    & #2 Bleed Switches ON, APU Valve Open, and Isolation Valve Open}}'
+  Question Stem: What would cause this light *(DUAL BLEED caution)* to illuminate?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

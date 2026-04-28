@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-017
   Original Prompt Style: cloze
-  Original Text: 'MAX: If smoke is detected within the equipment cooling system, what amber caution light(s) will illuminate? {{c1::Equip Smoke and Master Caution}}'
-  Question Stem: 'MAX: If smoke is detected within the equipment cooling system, what amber caution light(s) will illuminate?'
+  Original Text: 'MAX: If smoke is detected within the equipment cooling system, what amber
+    caution light(s) will illuminate? {{c1::Equip Smoke and Master Caution}}'
+  Question Stem: 'MAX: If smoke is detected within the equipment cooling system, what amber
+    caution light(s) will illuminate?'
   Choice A: ''
   Choice B: Equip Smoke and Master Caution
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

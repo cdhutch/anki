@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-026
   Original Prompt Style: cloze
-  Original Text: 'When the Isolation Valve Switch is in AUTO, the valve will open automatically if {{c1::either 1 or 2 occur: a pack switch is placed OFF; an engine bleed switch is placed OFF}}.'
-  Question Stem: 'When the Isolation Valve Switch is in AUTO, the valve will open automatically if what?'
+  Original Text: 'When the Isolation Valve Switch is in AUTO, the valve will open automatically
+    if {{c1::either 1 or 2 occur: a pack switch is placed OFF; an engine bleed switch is placed
+    OFF}}.'
+  Question Stem: When the Isolation Valve Switch is in AUTO, the valve will open automatically
+    if what?
   Choice A: ''
   Choice B: ''
-  Choice C: 'Either 1 or 2 occur: a pack switch is placed OFF; an engine bleed switch is placed OFF'
+  Choice C: 'Either 1 or 2 occur: a pack switch is placed OFF; an engine bleed switch is placed
+    OFF'
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

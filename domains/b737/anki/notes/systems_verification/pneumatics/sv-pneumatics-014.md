@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-014
   Original Prompt Style: cloze
-  Original Text: 'Pushing the TRIP RESET switch will reset the WING-BODY OVERHEAT light {{c1::this light cannot be reset with the TRIP RESET Switch}}.'
-  Question Stem: 'Pushing the TRIP RESET switch will reset the WING-BODY OVERHEAT light what?'
+  Original Text: Pushing the TRIP RESET switch will reset the WING-BODY OVERHEAT light {{c1::this
+    light cannot be reset with the TRIP RESET Switch}}.
+  Question Stem: Pushing the TRIP RESET switch will reset the WING-BODY OVERHEAT light what?
   Choice A: ''
   Choice B: ''
   Choice C: This light cannot be reset with the TRIP RESET Switch
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-031
   Original Prompt Style: cloze
-  Original Text: 'BLEED TRIP OFF light would illuminate for {{c1::excessive temperature or pressure}}.'
-  Question Stem: 'BLEED TRIP OFF light would illuminate for what?'
+  Original Text: BLEED TRIP OFF light would illuminate for {{c1::excessive temperature or
+    pressure}}.
+  Question Stem: BLEED TRIP OFF light would illuminate for what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

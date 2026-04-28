@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-010
   Original Prompt Style: cloze
-  Original Text: 'What caused this light *(right BLEED TRIP OFF caution)* to illuminate? {{c1::Overheat or over pressure in the right engine bleed}}'
-  Question Stem: 'What caused this light *(right BLEED TRIP OFF caution)* to illuminate?'
+  Original Text: What caused this light *(right BLEED TRIP OFF caution)* to illuminate? {{c1::Overheat
+    or over pressure in the right engine bleed}}
+  Question Stem: What caused this light *(right BLEED TRIP OFF caution)* to illuminate?
   Choice A: ''
   Choice B: ''
   Choice C: Overheat or over pressure in the right engine bleed
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

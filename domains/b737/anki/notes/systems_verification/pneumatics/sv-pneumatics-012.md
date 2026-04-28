@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-012
   Original Prompt Style: cloze
-  Original Text: 'If this light *(right BLEED TRIP OFF caution )* cannot be reset after several minutes, what is the problem? {{c1::The engine supply bleed pressure is too high.}}'
-  Question Stem: 'If this light *(right BLEED TRIP OFF caution )* cannot be reset after several minutes, what is the problem?'
+  Original Text: If this light *(right BLEED TRIP OFF caution )* cannot be reset after several
+    minutes, what is the problem? {{c1::The engine supply bleed pressure is too high.}}
+  Question Stem: If this light *(right BLEED TRIP OFF caution )* cannot be reset after several
+    minutes, what is the problem?
   Choice A: The engine supply bleed pressure is too high
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

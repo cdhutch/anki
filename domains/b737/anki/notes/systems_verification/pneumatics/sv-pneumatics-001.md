@@ -19,10 +19,14 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-001
   Original Prompt Style: cloze
-  Original Text: 'MAX: Features of MAX Bleed Air System: {{c1::Both 1. and 2. above: System allows operation of both packs from a single bleed air source; System has been upgraded to a Digital Bleed Air Supply which automatically detects and isolates faults.}}'
+  Original Text: 'MAX: Features of MAX Bleed Air System: {{c1::Both 1. and 2. above: System
+    allows operation of both packs from a single bleed air source; System has been upgraded
+    to a Digital Bleed Air Supply which automatically detects and isolates faults.}}'
   Question Stem: 'MAX: Features of MAX Bleed Air System: what?'
   Choice A: ''
-  Choice B: 'Both 1. and 2. above: System allows operation of both packs from a single bleed air source; System has been upgraded to a Digital Bleed Air Supply which automatically detects and isolates faults'
+  Choice B: 'Both 1. and 2. above: System allows operation of both packs from a single bleed
+    air source; System has been upgraded to a Digital Bleed Air Supply which automatically
+    detects and isolates faults'
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,10 +19,14 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-006
   Original Prompt Style: cloze
-  Original Text: 'A bleed air duct leak in the {{c1::left engine strut, left inboard wing leading edge, left air conditioning bay, keel beam, or the APU bleed air duct}} will cause this light *(Left WIND-BODY OVERHEAT)* to illuminate.'
-  Question Stem: 'A bleed air duct leak in the what? will cause this light *(Left WIND-BODY OVERHEAT)* to illuminate?'
+  Original Text: A bleed air duct leak in the {{c1::left engine strut, left inboard wing leading
+    edge, left air conditioning bay, keel beam, or the APU bleed air duct}} will cause this
+    light *(Left WIND-BODY OVERHEAT)* to illuminate.
+  Question Stem: A bleed air duct leak in the what? will cause this light *(Left WIND-BODY
+    OVERHEAT)* to illuminate?
   Choice A: ''
-  Choice B: 'Left engine strut, left inboard wing leading edge, left air conditioning bay, keel beam, or the APU bleed air duct'
+  Choice B: Left engine strut, left inboard wing leading edge, left air conditioning bay,
+    keel beam, or the APU bleed air duct
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-022
   Original Prompt Style: cloze
-  Original Text: 'A bleed air duct leak is indicated by a {{c1::WING-BODY OVERHEAT}} Light.'
-  Question Stem: 'A bleed air duct leak is indicated by a what? Light?'
+  Original Text: A bleed air duct leak is indicated by a {{c1::WING-BODY OVERHEAT}} Light.
+  Question Stem: A bleed air duct leak is indicated by a what? Light?
   Choice A: ''
   Choice B: ''
   Choice C: WING-BODY OVERHEAT
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

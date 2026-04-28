@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-020
   Original Prompt Style: cloze
-  Original Text: 'What also happened when this light *(right BLEED TRIP OFF caution)* illuminated in flight? {{c1::The #2 engine bleed air valve closes automatically.}}'
-  Question Stem: 'What also happened when this light *(right BLEED TRIP OFF caution)* illuminated in flight?'
+  Original Text: 'What also happened when this light *(right BLEED TRIP OFF caution)* illuminated
+    in flight? {{c1::The #2 engine bleed air valve closes automatically.}}'
+  Question Stem: What also happened when this light *(right BLEED TRIP OFF caution)* illuminated
+    in flight?
   Choice A: 'The #2 engine bleed air valve closes automatically'
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

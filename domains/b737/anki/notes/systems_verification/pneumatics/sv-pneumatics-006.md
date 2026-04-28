@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-006
   Original Prompt Style: cloze
-  Original Text: 'While in level flight at FL350 with the WING ANTI-ICE Switch ON, the amber lights shown on the right illuminate. The lights illuminated due to a bleed air leak in which location? {{c1::Right-Hand Air Conditioning Bay}}'
-  Question Stem: 'While in level flight at FL350 with the WING ANTI-ICE Switch ON, the amber lights shown on the right illuminate. The lights illuminated due to a bleed air leak in which location?'
+  Original Text: While in level flight at FL350 with the WING ANTI-ICE Switch ON, the amber
+    lights shown on the right illuminate. The lights illuminated due to a bleed air leak in
+    which location? {{c1::Right-Hand Air Conditioning Bay}}
+  Question Stem: While in level flight at FL350 with the WING ANTI-ICE Switch ON, the amber
+    lights shown on the right illuminate. The lights illuminated due to a bleed air leak in
+    which location?
   Choice A: ''
   Choice B: ''
   Choice C: Right-Hand Air Conditioning Bay
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

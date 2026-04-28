@@ -19,7 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-038
   Original Prompt Style: cloze
-  Original Text: 'MAX: How is the operation of the bleed air system managed? {{c1::Electronically controlled}}'
+  Original Text: 'MAX: How is the operation of the bleed air system managed? {{c1::Electronically
+    controlled}}'
   Question Stem: 'MAX: How is the operation of the bleed air system managed?'
   Choice A: ''
   Choice B: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
