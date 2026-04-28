@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pressurization-17
+note_type: systems_verification_exam_draft
+note_id: sv-pressurization-17
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pressurization
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: When the pressurization AUTO FAIL light illuminates and the ALTN light does not, which
-    statement is true? {{c1::Both auto channels have failed.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 17
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pressurization-17
+  Original Prompt Style: cloze
+  Original Text: When the pressurization AUTO FAIL light illuminates and the ALTN light does
+    not, which\n    statement is true? {{c1::Both auto channels have failed.}}
+  Question Stem: The pressurization AUTO FAIL light illuminates without the ALTN light. Which
+    statement is true?
+  Choice A: ''
+  Choice B: Both auto channels have failed
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pressurization
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

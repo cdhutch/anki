@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pressurization-21
+note_type: systems_verification_exam_draft
+note_id: sv-pressurization-21
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pressurization
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: When operating on standby electrical power (battery only), the {{c1::manual}} cabin
-    pressure controller is available.
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 21
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pressurization-21
+  Original Prompt Style: cloze
+  Original Text: When operating on standby electrical power (battery only), the {{c1::manual}}
+    cabin\n    pressure controller is available.
+  Question Stem: When operating on standby electrical power (battery only), which cabin pressure
+    controller is available?
+  Choice A: ''
+  Choice B: Manual
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pressurization
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

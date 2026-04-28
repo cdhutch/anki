@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pressurization-09
+note_type: systems_verification_exam_draft
+note_id: sv-pressurization-09
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pressurization
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: For the pressurization auto controller to function properly, {{c1::landing altitude
-    and cruise altitude}} is required to be preset.
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 9
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pressurization-09
+  Original Prompt Style: cloze
+  Original Text: For the pressurization auto controller to function properly, {{c1::landing
+    altitude\n    and cruise altitude}} is required to be preset.
+  Question Stem: For the pressurization auto controller to function properly, what must be
+    preset?
+  Choice A: ''
+  Choice B: Landing altitude and cruise altitude
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pressurization
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
