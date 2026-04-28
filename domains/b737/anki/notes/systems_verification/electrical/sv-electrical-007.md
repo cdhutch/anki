@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-007
   Original Prompt Style: cloze
-  Original Text: 'When illuminated, the ELEC light on the Overhead panel indicates {{c1::a fault exists in the DC or standby power systems}}.'
-  Question Stem: 'When illuminated, the ELEC light on the Overhead panel indicates what?'
+  Original Text: When illuminated, the ELEC light on the Overhead panel indicates {{c1::a
+    fault exists in the DC or standby power systems}}.
+  Question Stem: When illuminated, the ELEC light on the Overhead panel indicates what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

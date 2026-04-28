@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-024
   Original Prompt Style: cloze
-  Original Text: 'The APU is now started and AC power is applied to both Transfer Busses. The BAT DISCHARGE light should {{c1::extinguish indicating there is no longer a high draw on the battery}}.'
-  Question Stem: 'The APU is now started and AC power is applied to both Transfer Busses. The BAT DISCHARGE light should what?'
+  Original Text: The APU is now started and AC power is applied to both Transfer Busses. The
+    BAT DISCHARGE light should {{c1::extinguish indicating there is no longer a high draw
+    on the battery}}.
+  Question Stem: The APU is now started and AC power is applied to both Transfer Busses. The
+    BAT DISCHARGE light should what?
   Choice A: Extinguish indicating there is no longer a high draw on the battery
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

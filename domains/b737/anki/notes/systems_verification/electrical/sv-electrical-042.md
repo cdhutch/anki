@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-042
   Original Prompt Style: cloze
-  Original Text: 'In a normally operating AC electrical system, if the Bus Transfer Switch is moved to OFF, {{c1::and if a generator subsequently fails, the bus ties will not close to transfer power}}.'
-  Question Stem: 'In a normally operating AC electrical system, if the Bus Transfer Switch is moved to OFF, what?'
+  Original Text: In a normally operating AC electrical system, if the Bus Transfer Switch
+    is moved to OFF, {{c1::and if a generator subsequently fails, the bus ties will not close
+    to transfer power}}.
+  Question Stem: In a normally operating AC electrical system, if the Bus Transfer Switch
+    is moved to OFF, what?
   Choice A: ''
   Choice B: ''
-  Choice C: 'And if a generator subsequently fails, the bus ties will not close to transfer power'
+  Choice C: And if a generator subsequently fails, the bus ties will not close to transfer
+    power
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

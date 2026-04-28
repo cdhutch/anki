@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-021
   Original Prompt Style: cloze
-  Original Text: 'The QRH directs the crew to attempt a start of the APU. If the aircraft is below 25,000 ft, the APU {{c1::should start with battery power and fuel suction feed}}.'
-  Question Stem: 'The QRH directs the crew to attempt a start of the APU. If the aircraft is below 25,000 ft, the APU what?'
+  Original Text: The QRH directs the crew to attempt a start of the APU. If the aircraft is
+    below 25,000 ft, the APU {{c1::should start with battery power and fuel suction feed}}.
+  Question Stem: The QRH directs the crew to attempt a start of the APU. If the aircraft is
+    below 25,000 ft, the APU what?
   Choice A: ''
   Choice B: Should start with battery power and fuel suction feed
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

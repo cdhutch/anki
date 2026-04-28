@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-012
   Original Prompt Style: cloze
-  Original Text: 'With a normally operating electrical system, placing the Battery Switch OFF {{c1::removes power to the Battery Bus and the Switched Hot Battery Bus}}.'
-  Question Stem: 'With a normally operating electrical system, placing the Battery Switch OFF what?'
+  Original Text: With a normally operating electrical system, placing the Battery Switch OFF
+    {{c1::removes power to the Battery Bus and the Switched Hot Battery Bus}}.
+  Question Stem: With a normally operating electrical system, placing the Battery Switch OFF
+    what?
   Choice A: Removes power to the Battery Bus and the Switched Hot Battery Bus
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

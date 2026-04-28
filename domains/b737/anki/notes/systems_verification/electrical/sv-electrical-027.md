@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-027
   Original Prompt Style: cloze
-  Original Text: 'Circuit breakers are allowed to be pulled and reset {{c1::only if specified in a QRH procedure}}.'
-  Question Stem: 'Circuit breakers are allowed to be pulled and reset what?'
+  Original Text: Circuit breakers are allowed to be pulled and reset {{c1::only if specified
+    in a QRH procedure}}.
+  Question Stem: Circuit breakers are allowed to be pulled and reset what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

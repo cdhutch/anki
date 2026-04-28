@@ -19,14 +19,15 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-039
   Original Prompt Style: cloze
-  Original Text: 'The DC Standby Bus can be powered by {{c1::TR1, TR2, TR3, and the battery}}.'
-  Question Stem: 'The DC Standby Bus can be powered by what?'
+  Original Text: The DC Standby Bus can be powered by {{c1::TR1, TR2, TR3, and the battery}}.
+  Question Stem: The DC Standby Bus can be powered by what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'TR1, TR2, TR3, and the battery'
+  Choice D: TR1, TR2, TR3, and the battery
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

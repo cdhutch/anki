@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-008
   Original Prompt Style: cloze
-  Original Text: 'This ELEC light (on the overhead panel) illuminates {{c1::only with the airplane on the ground}}.'
-  Question Stem: 'This ELEC light (on the overhead panel) illuminates what?'
+  Original Text: This ELEC light (on the overhead panel) illuminates {{c1::only with the airplane
+    on the ground}}.
+  Question Stem: This ELEC light (on the overhead panel) illuminates what?
   Choice A: Only with the airplane on the ground
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

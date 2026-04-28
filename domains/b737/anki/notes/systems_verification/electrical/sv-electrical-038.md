@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-038
   Original Prompt Style: cloze
-  Original Text: 'What does an illuminated ELEC light, on the AC and DC Metering Panel, mean? {{c1::A Standby Power or DC system fault has occurred.}}'
-  Question Stem: 'What does an illuminated ELEC light, on the AC and DC Metering Panel, mean?'
+  Original Text: What does an illuminated ELEC light, on the AC and DC Metering Panel, mean?
+    {{c1::A Standby Power or DC system fault has occurred.}}
+  Question Stem: What does an illuminated ELEC light, on the AC and DC Metering Panel, mean?
   Choice A: ''
   Choice B: ''
   Choice C: A Standby Power or DC system fault has occurred
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

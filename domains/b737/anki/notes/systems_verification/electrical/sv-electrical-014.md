@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-014
   Original Prompt Style: cloze
-  Original Text: 'With the GEN 1 SOURCE OFF and GEN 1 GEN OFF BUS lights illuminated, which statement is true? {{c1::IDG 2 is powering both AC Transfer Busses.}}'
-  Question Stem: 'With the GEN 1 SOURCE OFF and GEN 1 GEN OFF BUS lights illuminated, which statement is true?'
+  Original Text: With the GEN 1 SOURCE OFF and GEN 1 GEN OFF BUS lights illuminated, which
+    statement is true? {{c1::IDG 2 is powering both AC Transfer Busses.}}
+  Question Stem: With the GEN 1 SOURCE OFF and GEN 1 GEN OFF BUS lights illuminated, which
+    statement is true?
   Choice A: ''
   Choice B: ''
   Choice C: IDG 2 is powering both AC Transfer Busses
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

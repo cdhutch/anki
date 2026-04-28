@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-025
   Original Prompt Style: cloze
-  Original Text: 'If during flight, the master caution light and the electric annunciater alert you to the BAT DISCHARGE light being on, {{c1::the battery is indicating excessive discharge}}.'
-  Question Stem: 'If during flight, the master caution light and the electric annunciater alert you to the BAT DISCHARGE light being on, what?'
+  Original Text: If during flight, the master caution light and the electric annunciater alert
+    you to the BAT DISCHARGE light being on, {{c1::the battery is indicating excessive discharge}}.
+  Question Stem: If during flight, the master caution light and the electric annunciater alert
+    you to the BAT DISCHARGE light being on, what?
   Choice A: ''
   Choice B: The battery is indicating excessive discharge
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

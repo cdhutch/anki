@@ -19,10 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-001
   Original Prompt Style: cloze
-  Original Text: 'On the ground with the APU powering the electrical systems, the APU GEN OFF BUS light will be {{c1::OFF}}.'
-  Question Stem: 'On the ground with the APU powering the electrical systems, the APU GEN OFF BUS light will be what?'
+  Original Text: On the ground with the APU powering the electrical systems, the APU GEN OFF
+    BUS light will be {{c1::OFF}}.
+  Question Stem: On the ground with the APU powering the electrical systems, the APU GEN OFF
+    BUS light will be what?
   Choice A: ''
-  Choice B: OFF
+  Choice B: false
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

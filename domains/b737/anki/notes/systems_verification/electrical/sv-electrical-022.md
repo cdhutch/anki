@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-022
   Original Prompt Style: cloze
-  Original Text: 'APU power is not available. Since we are on emergency power, the Right IRS is on DC power and will remain on DC for {{c1::5}} minutes.'
-  Question Stem: 'APU power is not available. Since we are on emergency power, the Right IRS is on DC power and will remain on DC for what? minutes?'
+  Original Text: APU power is not available. Since we are on emergency power, the Right IRS
+    is on DC power and will remain on DC for {{c1::5}} minutes.
+  Question Stem: APU power is not available. Since we are on emergency power, the Right IRS
+    is on DC power and will remain on DC for what? minutes?
   Choice A: ''
   Choice B: ''
   Choice C: 5
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

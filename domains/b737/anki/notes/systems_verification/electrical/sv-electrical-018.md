@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-018
   Original Prompt Style: cloze
-  Original Text: 'The DC Cross Bus Tie Relay will open {{c1::at glideslope capture during a flight director or autopilot ILS approach}}.'
-  Question Stem: 'The DC Cross Bus Tie Relay will open what?'
+  Original Text: The DC Cross Bus Tie Relay will open {{c1::at glideslope capture during a
+    flight director or autopilot ILS approach}}.
+  Question Stem: The DC Cross Bus Tie Relay will open what?
   Choice A: ''
   Choice B: ''
   Choice C: At glideslope capture during a flight director or autopilot ILS approach
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

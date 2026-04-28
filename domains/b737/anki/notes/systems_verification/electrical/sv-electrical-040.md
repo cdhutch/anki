@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-040
   Original Prompt Style: cloze
-  Original Text: 'The BAT DISCHARGE Light illuminated indicates excessive battery discharge is detected with the battery switch on. How long will the battery provide power? A fully charged battery provides a minimum of {{c1::30}} minutes of standby power.'
-  Question Stem: 'The BAT DISCHARGE Light illuminated indicates excessive battery discharge is detected with the battery switch on. How long will the battery provide power? A fully charged battery provides a minimum of what? minutes of standby power?'
+  Original Text: The BAT DISCHARGE Light illuminated indicates excessive battery discharge
+    is detected with the battery switch on. How long will the battery provide power? A fully
+    charged battery provides a minimum of {{c1::30}} minutes of standby power.
+  Question Stem: The BAT DISCHARGE Light illuminated indicates excessive battery discharge
+    is detected with the battery switch on. How long will the battery provide power? A fully
+    charged battery provides a minimum of what? minutes of standby power?
   Choice A: 30
   Choice B: ''
   Choice C: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

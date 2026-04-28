@@ -19,14 +19,21 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-015
   Original Prompt Style: cloze
-  Original Text: 'Since IDG 1 is not powering AC Transfer Bus 1, the SOURCE OFF light remains illuminated. The QRH directs a start of the APU and a connection to the affected Bus. Once this step is accomplished, what happens on the left side? {{c1::SOURCE OFF light and APU GEN OFF BUS light would extinguish, and the GEN OFF BUS light would remain illuminated.}}'
-  Question Stem: 'Since IDG 1 is not powering AC Transfer Bus 1, the SOURCE OFF light remains illuminated. The QRH directs a start of the APU and a connection to the affected Bus. Once this step is accomplished, what happens on the left side?'
+  Original Text: Since IDG 1 is not powering AC Transfer Bus 1, the SOURCE OFF light remains
+    illuminated. The QRH directs a start of the APU and a connection to the affected Bus.
+    Once this step is accomplished, what happens on the left side? {{c1::SOURCE OFF light
+    and APU GEN OFF BUS light would extinguish, and the GEN OFF BUS light would remain illuminated.}}
+  Question Stem: Since IDG 1 is not powering AC Transfer Bus 1, the SOURCE OFF light remains
+    illuminated. The QRH directs a start of the APU and a connection to the affected Bus.
+    Once this step is accomplished, what happens on the left side?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'SOURCE OFF light and APU GEN OFF BUS light would extinguish, and the GEN OFF BUS light would remain illuminated'
+  Choice D: SOURCE OFF light and APU GEN OFF BUS light would extinguish, and the GEN OFF BUS
+    light would remain illuminated
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

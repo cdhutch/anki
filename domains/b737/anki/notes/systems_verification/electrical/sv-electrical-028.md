@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-028
   Original Prompt Style: cloze
-  Original Text: 'Normally, the AC electrical system is run {{c1::isolated}}.'
-  Question Stem: 'Normally, the AC electrical system is run what?'
+  Original Text: Normally, the AC electrical system is run {{c1::isolated}}.
+  Question Stem: Normally, the AC electrical system is run what?
   Choice A: Isolated
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

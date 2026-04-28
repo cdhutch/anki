@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-004
   Original Prompt Style: cloze
-  Original Text: 'During landing with a loss of both generators, you check the QRH additional information. Auto Brakes and Auto Speed Brakes are available. {{c1::False}}'
-  Question Stem: 'During landing with a loss of both generators, you check the QRH additional information. Auto Brakes and Auto Speed Brakes are available what?'
+  Original Text: During landing with a loss of both generators, you check the QRH additional
+    information. Auto Brakes and Auto Speed Brakes are available. {{c1::False}}
+  Question Stem: During landing with a loss of both generators, you check the QRH additional
+    information. Auto Brakes and Auto Speed Brakes are available what?
   Choice A: 'False'
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

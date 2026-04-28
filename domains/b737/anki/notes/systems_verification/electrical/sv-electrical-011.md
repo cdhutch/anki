@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-011
   Original Prompt Style: cloze
-  Original Text: 'You have confirmed that the #1 Engine and IDG have failed. The QRH will direct the crew to start the APU. If the APU was used for just an electrical source, the maximum altitude for APU operation is {{c1::41,000}} feet MSL.'
-  Question Stem: 'You have confirmed that the #1 Engine and IDG have failed. The QRH will direct the crew to start the APU. If the APU was used for just an electrical source, the maximum altitude for APU operation is what? feet MSL?'
+  Original Text: 'You have confirmed that the #1 Engine and IDG have failed. The QRH will
+    direct the crew to start the APU. If the APU was used for just an electrical source, the
+    maximum altitude for APU operation is {{c1::41,000}} feet MSL.'
+  Question Stem: 'You have confirmed that the #1 Engine and IDG have failed. The QRH will
+    direct the crew to start the APU. If the APU was used for just an electrical source, the
+    maximum altitude for APU operation is what? feet MSL?'
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: '41,000'
+  Choice D: 41,000
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

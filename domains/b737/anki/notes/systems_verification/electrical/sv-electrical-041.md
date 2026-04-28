@@ -19,10 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-041
   Original Prompt Style: cloze
-  Original Text: 'When moved to OFF, the BUS TRANSFER switch will {{c1::isolate the AC and DC Busses on Electrical System 1 from the AC and DC Busses on Electrical System 2}}.'
-  Question Stem: 'When moved to OFF, the BUS TRANSFER switch will what?'
+  Original Text: When moved to OFF, the BUS TRANSFER switch will {{c1::isolate the AC and
+    DC Busses on Electrical System 1 from the AC and DC Busses on Electrical System 2}}.
+  Question Stem: When moved to OFF, the BUS TRANSFER switch will what?
   Choice A: ''
-  Choice B: Isolate the AC and DC Busses on Electrical System 1 from the AC and DC Busses on Electrical System 2
+  Choice B: Isolate the AC and DC Busses on Electrical System 1 from the AC and DC Busses
+    on Electrical System 2
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

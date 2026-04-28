@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-029
   Original Prompt Style: cloze
-  Original Text: 'With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF BUS for GEN 1)*, {{c1::the AC Transfer Bus 1 is no longer powered}}.'
-  Question Stem: 'With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF BUS for GEN 1)*, what?'
+  Original Text: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
+    BUS for GEN 1)*, {{c1::the AC Transfer Bus 1 is no longer powered}}.
+  Question Stem: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
+    BUS for GEN 1)*, what?
   Choice A: ''
   Choice B: The AC Transfer Bus 1 is no longer powered
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

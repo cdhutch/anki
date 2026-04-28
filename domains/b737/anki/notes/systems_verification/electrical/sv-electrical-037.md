@@ -19,10 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-037
   Original Prompt Style: cloze
-  Original Text: 'DC power is supplied by {{c1::transformer rectifier units, the battery charger, and the battery}}.'
-  Question Stem: 'DC power is supplied by what?'
+  Original Text: DC power is supplied by {{c1::transformer rectifier units, the battery charger,
+    and the battery}}.
+  Question Stem: DC power is supplied by what?
   Choice A: ''
-  Choice B: 'Transformer rectifier units, the battery charger, and the battery'
+  Choice B: Transformer rectifier units, the battery charger, and the battery
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

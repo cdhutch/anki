@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-046
   Original Prompt Style: cloze
-  Original Text: 'If the TR Unit light illuminates on the ground, it means {{c1::any TR unit}} has/have failed.'
-  Question Stem: 'If the TR Unit light illuminates on the ground, it means what? has/have failed?'
+  Original Text: If the TR Unit light illuminates on the ground, it means {{c1::any TR unit}}
+    has/have failed.
+  Question Stem: If the TR Unit light illuminates on the ground, it means what? has/have failed?
   Choice A: ''
   Choice B: ''
   Choice C: Any TR unit
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

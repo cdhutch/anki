@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-020
   Original Prompt Style: cloze
-  Original Text: 'If you see these lights in flight (*both pairs of TRANFER BUS OFF, SOURCE OFF, and GEN OFF BUS*), what do they indicate? {{c1::Power has been lost to both AC Transfer Busses.}}'
-  Question Stem: 'If you see these lights in flight (*both pairs of TRANFER BUS OFF, SOURCE OFF, and GEN OFF BUS*), what do they indicate?'
+  Original Text: If you see these lights in flight (*both pairs of TRANFER BUS OFF, SOURCE
+    OFF, and GEN OFF BUS*), what do they indicate? {{c1::Power has been lost to both AC Transfer
+    Busses.}}
+  Question Stem: If you see these lights in flight (*both pairs of TRANFER BUS OFF, SOURCE
+    OFF, and GEN OFF BUS*), what do they indicate?
   Choice A: Power has been lost to both AC Transfer Busses
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

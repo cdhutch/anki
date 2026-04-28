@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-031
   Original Prompt Style: cloze
-  Original Text: 'Since AC Transfer Bus 1 is dead, {{c1::the battery charger is being powered by AC Ground Service Bus 2}}.'
-  Question Stem: 'Since AC Transfer Bus 1 is dead, what?'
+  Original Text: Since AC Transfer Bus 1 is dead, {{c1::the battery charger is being powered
+    by AC Ground Service Bus 2}}.
+  Question Stem: Since AC Transfer Bus 1 is dead, what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

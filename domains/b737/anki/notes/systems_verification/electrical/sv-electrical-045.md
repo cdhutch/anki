@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-045
   Original Prompt Style: cloze
-  Original Text: 'If the Standby Power "OFF" light illuminates, it means {{c1::one or more of the above: AC Standby Bus, DC Standby Bus, Battery Bus}} is/are not powered.'
-  Question Stem: 'If the Standby Power "OFF" light illuminates, it means what? is/are not powered?'
+  Original Text: 'If the Standby Power "OFF" light illuminates, it means {{c1::one or more
+    of the above: AC Standby Bus, DC Standby Bus, Battery Bus}} is/are not powered.'
+  Question Stem: If the Standby Power "OFF" light illuminates, it means what? is/are not powered?
   Choice A: ''
   Choice B: 'One or more of the above: AC Standby Bus, DC Standby Bus, Battery Bus'
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

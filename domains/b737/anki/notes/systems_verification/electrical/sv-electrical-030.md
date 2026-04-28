@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-030
   Original Prompt Style: cloze
-  Original Text: 'With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF BUS for GEN 1)*, which of the following is also true? {{c1::AC Standby Bus is being powered by the static inverter.}}'
-  Question Stem: 'With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF BUS for GEN 1)*, which of the following is also true?'
+  Original Text: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
+    BUS for GEN 1)*, which of the following is also true? {{c1::AC Standby Bus is being powered
+    by the static inverter.}}
+  Question Stem: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
+    BUS for GEN 1)*, which of the following is also true?
   Choice A: ''
   Choice B: ''
   Choice C: AC Standby Bus is being powered by the static inverter
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

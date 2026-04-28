@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-010
   Original Prompt Style: cloze
-  Original Text: 'In this scenario *with the IDG disconnect switch guarded down*, the illumination of the #1 DRIVE light is the result of low {{c1::low IDG oil pressure}}.'
-  Question Stem: 'In this scenario *with the IDG disconnect switch guarded down*, the illumination of the #1 DRIVE light is the result of low what?'
+  Original Text: 'In this scenario *with the IDG disconnect switch guarded down*, the illumination
+    of the #1 DRIVE light is the result of low {{c1::low IDG oil pressure}}.'
+  Question Stem: 'In this scenario *with the IDG disconnect switch guarded down*, the illumination
+    of the #1 DRIVE light is the result of low what?'
   Choice A: ''
   Choice B: ''
   Choice C: Low IDG oil pressure
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

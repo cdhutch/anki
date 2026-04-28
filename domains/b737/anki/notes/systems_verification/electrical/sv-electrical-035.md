@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-035
   Original Prompt Style: cloze
-  Original Text: 'The static inverter is powered by {{c1::the battery}}.'
-  Question Stem: 'The static inverter is powered by what?'
+  Original Text: The static inverter is powered by {{c1::the battery}}.
+  Question Stem: The static inverter is powered by what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

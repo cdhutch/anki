@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-032
   Original Prompt Style: cloze
-  Original Text: 'The Ground Service Switch is located {{c1::on the forward attendant panel}}.'
-  Question Stem: 'The Ground Service Switch is located what?'
+  Original Text: The Ground Service Switch is located {{c1::on the forward attendant panel}}.
+  Question Stem: The Ground Service Switch is located what?
   Choice A: On the forward attendant panel
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

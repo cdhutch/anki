@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-026
   Original Prompt Style: cloze
-  Original Text: 'If AC Transfer Bus 1 fails, the AC Standby Bus is powered by the {{c1::battery / battery charger}}.'
-  Question Stem: 'If AC Transfer Bus 1 fails, the AC Standby Bus is powered by the what?'
+  Original Text: If AC Transfer Bus 1 fails, the AC Standby Bus is powered by the {{c1::battery
+    / battery charger}}.
+  Question Stem: If AC Transfer Bus 1 fails, the AC Standby Bus is powered by the what?
   Choice A: ''
   Choice B: ''
   Choice C: Battery / battery charger
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

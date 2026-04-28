@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-043
   Original Prompt Style: cloze
-  Original Text: 'With Standby Power OFF Light illuminated , you could power the standby busses directly from the battery by {{c1::placing the standby power switch to BAT}}.'
-  Question Stem: 'With Standby Power OFF Light illuminated , you could power the standby busses directly from the battery by what?'
+  Original Text: With Standby Power OFF Light illuminated , you could power the standby busses
+    directly from the battery by {{c1::placing the standby power switch to BAT}}.
+  Question Stem: With Standby Power OFF Light illuminated , you could power the standby busses
+    directly from the battery by what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

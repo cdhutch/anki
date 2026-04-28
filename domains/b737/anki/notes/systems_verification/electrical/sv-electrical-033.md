@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-033
   Original Prompt Style: cloze
-  Original Text: 'With standby electrical power only, the Captain will be able to fly {{c1::All of the above: LOC only; VOR; ILS}} instrument approaches'
-  Question Stem: 'With standby electrical power only, the Captain will be able to fly what? instrument approaches?'
+  Original Text: 'With standby electrical power only, the Captain will be able to fly {{c1::All
+    of the above: LOC only; VOR; ILS}} instrument approaches'
+  Question Stem: With standby electrical power only, the Captain will be able to fly what?
+    instrument approaches?
   Choice A: ''
   Choice B: 'All of the above: LOC only; VOR; ILS'
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

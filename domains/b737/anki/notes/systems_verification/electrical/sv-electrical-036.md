@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-036
   Original Prompt Style: cloze
-  Original Text: 'After engine start, the crew forgets to put the generators on line and uses the APU to power the Transfer Busses for takeoff. If the APU fails, the {{c1::generators are automatically placed on line}}.'
-  Question Stem: 'After engine start, the crew forgets to put the generators on line and uses the APU to power the Transfer Busses for takeoff. If the APU fails, the what?'
+  Original Text: After engine start, the crew forgets to put the generators on line and uses
+    the APU to power the Transfer Busses for takeoff. If the APU fails, the {{c1::generators
+    are automatically placed on line}}.
+  Question Stem: After engine start, the crew forgets to put the generators on line and uses
+    the APU to power the Transfer Busses for takeoff. If the APU fails, the what?
   Choice A: Generators are automatically placed on line
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-005
   Original Prompt Style: cloze
-  Original Text: 'If the TR Unit light illuminates, inflight, it means ____ have failed. {{c1::TR1 has failed or TR2 and TR3}}'
-  Question Stem: 'If the TR Unit light illuminates, inflight, it means ____ have failed what?'
+  Original Text: If the TR Unit light illuminates, inflight, it means ____ have failed. {{c1::TR1
+    has failed or TR2 and TR3}}
+  Question Stem: If the TR Unit light illuminates, inflight, it means ____ have failed what?
   Choice A: ''
   Choice B: TR1 has failed or TR2 and TR3
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

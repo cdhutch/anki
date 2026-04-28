@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-019
   Original Prompt Style: cloze
-  Original Text: 'The AC standby bus can be powered by {{c1::the battery (through the static inverter)}} if its normal power source fails.'
-  Question Stem: 'The AC standby bus can be powered by what? if its normal power source fails?'
+  Original Text: The AC standby bus can be powered by {{c1::the battery (through the static
+    inverter)}} if its normal power source fails.
+  Question Stem: The AC standby bus can be powered by what? if its normal power source fails?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

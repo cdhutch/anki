@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-023
   Original Prompt Style: cloze
-  Original Text: 'During APU Start, without AC power available, this light *BAT DISCHARGE* illuminates and {{c1::is a temporary situation that should resolve itself when AC power is connected}}.'
-  Question Stem: 'During APU Start, without AC power available, this light *BAT DISCHARGE* illuminates and what?'
+  Original Text: During APU Start, without AC power available, this light *BAT DISCHARGE*
+    illuminates and {{c1::is a temporary situation that should resolve itself when AC power
+    is connected}}.
+  Question Stem: During APU Start, without AC power available, this light *BAT DISCHARGE*
+    illuminates and what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-044
   Original Prompt Style: cloze
-  Original Text: 'Under what conditions can External power power one AC Transfer Bus, and the APU the other Transfer Bus ? {{c1::No condition. The electrical system will not allow it.}}'
-  Question Stem: 'Under what conditions can External power power one AC Transfer Bus, and the APU the other Transfer Bus ?'
+  Original Text: Under what conditions can External power power one AC Transfer Bus, and the
+    APU the other Transfer Bus ? {{c1::No condition. The electrical system will not allow
+    it.}}
+  Question Stem: Under what conditions can External power power one AC Transfer Bus, and the
+    APU the other Transfer Bus ?
   Choice A: No condition. The electrical system will not allow it
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

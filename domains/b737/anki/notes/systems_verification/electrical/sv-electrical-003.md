@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-003
   Original Prompt Style: cloze
-  Original Text: 'How long can you expect Standby Power to last following a loss of both generators? {{c1::A minimum of 30 min}}'
-  Question Stem: 'How long can you expect Standby Power to last following a loss of both generators?'
+  Original Text: How long can you expect Standby Power to last following a loss of both generators?
+    {{c1::A minimum of 30 min}}
+  Question Stem: How long can you expect Standby Power to last following a loss of both generators?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

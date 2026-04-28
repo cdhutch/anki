@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: electrical-047
   Original Prompt Style: cloze
-  Original Text: 'In flight, if an engine generator fails, load shedding {{c1::is designed to shed electrical load incrementally}}.'
-  Question Stem: 'In flight, if an engine generator fails, load shedding what?'
+  Original Text: In flight, if an engine generator fails, load shedding {{c1::is designed
+    to shed electrical load incrementally}}.
+  Question Stem: In flight, if an engine generator fails, load shedding what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
