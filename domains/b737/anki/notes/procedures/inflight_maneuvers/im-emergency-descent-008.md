@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure_structured
-note_id: im-tcas-ra-003
+note_id: im-emergency-descent-008
 anki:
   model: B737_Structured
   deck: B737::Procedures::Inflight_Maneuvers
@@ -10,11 +10,11 @@ tags:
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
-- maneuver:tcas_ra
+- maneuver:emergency_descent
 fields:
-  Title: TCAS General RA PM duties
+  Title: im-emergency-descent-008
   Trigger: Refer to procedure
-  Objective: Recall TCAS TA/RA procedure actions
+  Objective: Recall emergency descent procedure actions
   MemoryItems: ''
   Source: B737 AOM Inflight Maneuvers
   Verification Notes: ''
@@ -22,11 +22,8 @@ fields:
 
 # front_md
 
-What are the PM duties during a **general TCAS RA**?
+What is the landing gear note for rapid emergency descents?
 
 # back_md
 
-- Attempt to establish visual contact
-- Call out conflicting traffic
-- Monitor RA compliance
-- Verify required actions are completed
+Rapid descents are normally made with the **landing gear up**.

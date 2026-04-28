@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure_structured
-note_id: im-tcas-ra-003
+note_id: im-egpws-004
 anki:
   model: B737_Structured
   deck: B737::Procedures::Inflight_Maneuvers
@@ -10,11 +10,11 @@ tags:
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
-- maneuver:tcas_ra
+- maneuver:egpws
 fields:
-  Title: TCAS General RA PM duties
+  Title: EGPWS warning maneuver configuration rule
   Trigger: Refer to procedure
-  Objective: Recall TCAS TA/RA procedure actions
+  Objective: Recall EGPWS / GPWS procedure actions
   MemoryItems: ''
   Source: B737 AOM Inflight Maneuvers
   Verification Notes: ''
@@ -22,11 +22,8 @@ fields:
 
 # front_md
 
-What are the PM duties during a **general TCAS RA**?
+During the EGPWS warning maneuver, what is the gear / flap configuration rule?
 
 # back_md
 
-- Attempt to establish visual contact
-- Call out conflicting traffic
-- Monitor RA compliance
-- Verify required actions are completed
+Do **not** alter gear or flap configuration until terrain clearance is assured.

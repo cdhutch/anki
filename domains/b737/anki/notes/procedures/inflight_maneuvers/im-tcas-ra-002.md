@@ -10,29 +10,27 @@ tags:
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
-- system:tcas
-- maneuver:ra
+- maneuver:tcas_ra
 fields:
-  Title: TCAS RA in Landing Configuration - PF Actions
-  Trigger: TCAS resolution advisory (RA)
-  Condition: Maneuvering required
-  Objective: Satisfy RA command safely
-  MemoryItems: AP off; AT off; adjust pitch/thrust; maintain lateral path unless traffic requires
-    otherwise
-  Source: B737 AOM 17.5.2
+  Title: TCAS General RA PF immediate actions
+  Trigger: Refer to procedure
+  Objective: Recall TCAS TA/RA procedure actions
+  MemoryItems: ''
+  Source: B737 AOM Inflight Maneuvers
   Verification Notes: ''
 ---
 
 # front_md
 
-## Pilot Flying
-
-If maneuvering is required, what actions are taken?
+When a **general TCAS Resolution Advisory (RA)** occurs, what are the PF immediate actions?
 
 # back_md
 
-## PF Actions
-1. Disengage autopilot  
-2. Disengage autothrottle  
-3. Smoothly adjust pitch and thrust to satisfy the RA command  
-4. Follow planned lateral flight path unless visual contact with conflicting traffic requires other action
+PF calls **My aircraft.**
+
+If maneuvering is required:
+
+- Disconnect autopilot
+- Disconnect autothrottle
+- Smoothly adjust pitch and thrust to satisfy the RA
+- Continue planned lateral flight path unless visual traffic avoidance requires otherwise

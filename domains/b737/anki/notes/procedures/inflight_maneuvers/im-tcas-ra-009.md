@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure_structured
-note_id: im-tcas-ra-001
+note_id: im-tcas-ra-009
 anki:
   model: B737_Structured
   deck: B737::Procedures::Inflight_Maneuvers
@@ -12,7 +12,7 @@ tags:
 - category:inflight_maneuvers
 - maneuver:tcas_ra
 fields:
-  Title: TCAS Traffic Advisory crew response
+  Title: Landing config climb RA PM support duties
   Trigger: Refer to procedure
   Objective: Recall TCAS TA/RA procedure actions
   MemoryItems: ''
@@ -22,13 +22,11 @@ fields:
 
 # front_md
 
-What is the proper crew response to a **TCAS Traffic Advisory (TA)**?
+What are the PM support duties during a **Climb RA in landing configuration**?
 
 # back_md
 
-- Use the traffic display as a guide
-- Look for the traffic
+- Verify maximum thrust set
+- Verify positive rate
+- Attempt to establish visual contact
 - Call out conflicting traffic
-- If traffic is visually acquired, maneuver if needed
-
-Do **not** maneuver based solely on a TA.

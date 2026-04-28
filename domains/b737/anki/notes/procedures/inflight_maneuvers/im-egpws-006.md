@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure_structured
-note_id: im-tcas-ra-003
+note_id: im-egpws-006
 anki:
   model: B737_Structured
   deck: B737::Procedures::Inflight_Maneuvers
@@ -10,11 +10,11 @@ tags:
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
-- maneuver:tcas_ra
+- maneuver:egpws
 fields:
-  Title: TCAS General RA PM duties
+  Title: When clear of terrain after EGPWS warning
   Trigger: Refer to procedure
-  Objective: Recall TCAS TA/RA procedure actions
+  Objective: Recall EGPWS / GPWS procedure actions
   MemoryItems: ''
   Source: B737 AOM Inflight Maneuvers
   Verification Notes: ''
@@ -22,11 +22,11 @@ fields:
 
 # front_md
 
-What are the PM duties during a **general TCAS RA**?
+Once clear of terrain, how is the EGPWS warning maneuver completed?
 
 # back_md
 
-- Attempt to establish visual contact
-- Call out conflicting traffic
-- Monitor RA compliance
-- Verify required actions are completed
+- Slowly reduce pitch and accelerate
+- Retract gear / flaps as required
+- Climb to a safe altitude
+- Resume normal flight

@@ -10,25 +10,20 @@ tags:
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
-- system:tcas
-- maneuver:ra
-- warning
+- maneuver:tcas_ra
 fields:
-  Title: TCAS RA - Descend Warning Below 1000 AGL
-  Trigger: DESCEND RA below 1000 feet AGL
-  Objective: Avoid improper maneuver
-  MemoryItems: Do not follow DESCEND RA below 1000 AGL
-  Source: B737 AOM 17.5.2
+  Title: General RA below 1000 feet AGL descend limitation
+  Trigger: Refer to procedure
+  Objective: Recall TCAS TA/RA procedure actions
+  MemoryItems: ''
+  Source: B737 AOM Inflight Maneuvers
   Verification Notes: ''
 ---
 
 # front_md
 
-## Warning
-
-What is the TCAS DESCEND RA limitation below 1000 feet AGL?
+During a **general TCAS RA**, what descend RA should not be followed below 1000 feet AGL?
 
 # back_md
 
-## Warning
-A **DESCEND** (fly down) RA issued below **1000 feet AGL** should **not** be followed.
+A **DESCEND (fly down)** RA issued below **1000 feet AGL** should **not** be followed.

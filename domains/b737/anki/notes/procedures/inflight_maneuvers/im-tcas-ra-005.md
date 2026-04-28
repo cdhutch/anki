@@ -10,26 +10,22 @@ tags:
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
-- system:tcas
-- maneuver:ra
-- caution
+- maneuver:tcas_ra
 fields:
-  Title: TCAS RA - Visual Contact Footnote
-  Trigger: Traffic visually acquired during RA
-  Objective: Avoid fixation on wrong aircraft
-  MemoryItems: Visual traffic may not be RA traffic; night perception may mislead
-  Source: B737 AOM 17.5.2
+  Title: Why unnecessary vertical changes after RA are dangerous
+  Trigger: Refer to procedure
+  Objective: Recall TCAS TA/RA procedure actions
+  MemoryItems: ''
+  Source: B737 AOM Inflight Maneuvers
   Verification Notes: ''
 ---
 
 # front_md
 
-## Footnote
-
-Why should visual traffic acquisition be treated cautiously during an RA?
+Why should pilots avoid changing vertical speed after a **general RA**, except to comply with the RA?
 
 # back_md
 
-## Reason
-- The traffic you see may not be the aircraft causing the RA.  
-- Visual perception may be misleading, especially at night.
+Because TCAS coordination may be in progress between aircraft.
+
+A vertical maneuver not commanded by the RA can reduce or negate separation.
