@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: apu-17
+note_type: systems_verification_exam_draft
+note_id: sv-apu-17
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:apu
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The shut down/cool down cycle on the APU {{c1::Lasts for 3 minutes}}
   Source Document: Systems Validation Question Bank
-  Source Location: APU 17
+  Exam Format: mcq
+  Conversion Status: ready_for_transform
+  Original Note ID: apu-17
+  Original Prompt Style: cloze
+  Original Text: The shut down/cool down cycle on the APU {{c1::Lasts for 3 minutes}}
+  Question Stem: How long is the APU shutdown/cool-down cycle?
+  Choice A: 1 minute
+  Choice B: 5 minutes
+  Choice C: 2 minutes
+  Choice D: 3 minutes
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: apu
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

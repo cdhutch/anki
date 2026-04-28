@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: apu-12
+note_type: systems_verification_exam_draft
+note_id: sv-apu-12
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:apu
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The APU can be started with electrical power from {{c1::AC Transfer Bus 1 or the airplane
-    battery}}.
   Source Document: Systems Validation Question Bank
-  Source Location: APU 12
+  Exam Format: mcq
+  Conversion Status: ready_for_transform
+  Original Note ID: apu-12
+  Original Prompt Style: cloze
+  Original Text: The APU can be started with electrical power from {{c1::AC Transfer Bus 1
+    or the airplane battery}}.
+  Question Stem: What power sources can be used to start the APU?
+  Choice A: External AC power or the airplane battery
+  Choice B: DC Bus 1 or external AC power
+  Choice C: AC Transfer Bus 1 or the airplane battery
+  Choice D: Any available AC power source
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: apu
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

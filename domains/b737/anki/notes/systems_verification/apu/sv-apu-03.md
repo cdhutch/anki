@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: apu-03
+note_type: systems_verification_exam_draft
+note_id: sv-apu-03
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:apu
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The APU has shut down with an illuminated Overspeed light. The light will {{c1::extinguish
-    5 minutes after the start switch is moved to OFF}}.
   Source Document: Systems Validation Question Bank
-  Source Location: APU 3
+  Exam Format: mcq
+  Conversion Status: ready_for_transform
+  Original Note ID: apu-03
+  Original Prompt Style: cloze
+  Original Text: The APU has shut down with an illuminated Overspeed light. The light will
+    {{c1::extinguish 5 minutes after the start switch is moved to OFF}}.
+  Question Stem: The APU shuts down with the Overspeed light illuminated. When will the light
+    extinguish?
+  Choice A: Immediately when the start switch is moved to OFF
+  Choice B: After a 3-minute cool-down cycle
+  Choice C: 5 minutes after the start switch is moved to OFF
+  Choice D: Only after a maintenance reset
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: apu
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

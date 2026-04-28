@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: apu-06
+note_type: systems_verification_exam_draft
+note_id: sv-apu-06
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:apu
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The APU Start Switch has {{c1::OFF, ON, and START}} positions labeled.
   Source Document: Systems Validation Question Bank
-  Source Location: APU 6
+  Exam Format: mcq
+  Conversion Status: ready_for_transform
+  Original Note ID: apu-06
+  Original Prompt Style: cloze
+  Original Text: The APU Start Switch has {{c1::OFF, ON, and START}} positions labeled.
+  Question Stem: What positions are labeled on the APU Start Switch?
+  Choice A: OFF, ARM, and START
+  Choice B: OFF, READY, and START
+  Choice C: OFF, ON, and START
+  Choice D: CLOSE, OPEN, and START
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: apu
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

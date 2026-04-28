@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hud-009
+note_type: systems_verification_exam_draft
+note_id: sv-hud-009
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hud
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The HUD is activated by {{c1::unstowing the combiner}}.
   Source Document: Systems Validation Question Bank
-  Source Location: HUD 9
+  Exam Format: mcq
+  Conversion Status: ready_for_transform
+  Original Note ID: hud-009
+  Original Prompt Style: cloze
+  Original Text: The HUD is activated by {{c1::unstowing the combiner}}.
+  Question Stem: How is the HUD activated?
+  Choice A: Pressing the PWR button on the HAP
+  Choice B: Selecting HUD on the CDU HUD menu
+  Choice C: Unstowing the combiner
+  Choice D: Setting the NORM/MAN switch to NORM
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hud
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

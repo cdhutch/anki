@@ -1,25 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: apu-13
+note_type: systems_verification_exam_draft
+note_id: sv-apu-13
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:apu
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The maximum altitude for use of APU bleed air and electrical power is {{c1::}} feet.
   Source Document: Systems Validation Question Bank
-  Source Location: APU 13
+  Exam Format: mcq
+  Conversion Status: hold
+  Original Note ID: apu-13
+  Original Prompt Style: cloze
+  Original Text: The maximum altitude for use of APU bleed air and electrical power is {{c1::}}
+    feet.
+  Question Stem: What is the maximum altitude for use of APU bleed air and electrical power
+    combined?
+  Choice A: 10,000 feet
+  Choice B: 25,000 feet
+  Choice C: 41,000 feet
+  Choice D: 17,000 feet
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: Original cloze answer was blank (malformed). Value 17,000 ft inferred from
+    apu-08 (bleed air limit). Verify against source document before promoting.
   Verification Notes: ''
-system: apu
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
