@@ -19,13 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: air-conditioning-003
   Original Prompt Style: cloze
-  Original Text: The mix manifold receives air from the {{c1::left pack, right pack, recirculatio
+  Original Text: The mix manifold receives air from the {{c1::left pack, right pack, recirculation
     fan, and pre-conditioned air only}}.
   Question Stem: The mix manifold receives air from the what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: Left pack, right pack, recirculatio fan, and pre-conditioned air only
+  Choice D: Left pack, right pack, recirculation fan, and pre-conditioned air only
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null

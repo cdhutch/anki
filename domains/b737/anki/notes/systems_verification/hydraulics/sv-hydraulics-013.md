@@ -20,10 +20,10 @@ fields:
   Original Note ID: hydraulics-013
   Original Prompt Style: cloze
   Original Text: This *(STANDBY HYD LOW QUANTITY caution )*light is armed {{c1::anytime there
-    is power on the aircraf}}.
+    is power on the aircraft}}.
   Question Stem: This *(STANDBY HYD LOW QUANTITY caution )*light is armed what?
   Choice A: ''
-  Choice B: Anytime there is power on the aircraf
+  Choice B: Anytime there is power on the aircraft
   Choice C: ''
   Choice D: ''
   Correct Choice: B

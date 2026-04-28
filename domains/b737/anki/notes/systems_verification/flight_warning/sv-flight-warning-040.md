@@ -20,10 +20,10 @@ fields:
   Original Note ID: flight-warning-040
   Original Prompt Style: cloze
   Original Text: A start valve failed to close on engine start. Which of the following will
-    alert the crew? {{c1::Blinking start valve open alert for 10 second}}
+    alert the crew? {{c1::Blinking start valve open alert for 10 seconds}}
   Question Stem: A start valve failed to close on engine start. Which of the following will
     alert the crew?
-  Choice A: Blinking start valve open alert for 10 second
+  Choice A: Blinking start valve open alert for 10 seconds
   Choice B: ''
   Choice C: ''
   Choice D: ''

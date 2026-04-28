@@ -20,10 +20,10 @@ fields:
   Original Note ID: flight-warning-013
   Original Prompt Style: cloze
   Original Text: Generally, aural warnings will silence {{c1::automatically when the associated
-    non-normal condition no longer exist}}.
+    non-normal condition no longer exists}}.
   Question Stem: Generally, aural warnings will silence what?
   Choice A: ''
-  Choice B: Automatically when the associated non-normal condition no longer exist
+  Choice B: Automatically when the associated non-normal condition no longer exists
   Choice C: ''
   Choice D: ''
   Correct Choice: B

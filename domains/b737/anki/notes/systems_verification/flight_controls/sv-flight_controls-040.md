@@ -21,7 +21,7 @@ fields:
   Original Prompt Style: cloze
   Original Text: '{{c1::Leading edge flaps/slats}} can be extended by the Standby Hydraulic
     System in Alternate mode.'
-  Question Stem: What? can be extended by the Standby Hydraulic System in Alternate mode?
+  Question Stem: What can be extended by the Standby Hydraulic System in Alternate mode?
   Choice A: Leading edge flaps/slats
   Choice B: ''
   Choice C: ''

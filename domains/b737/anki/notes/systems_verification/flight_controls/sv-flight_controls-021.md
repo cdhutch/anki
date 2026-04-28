@@ -19,12 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-021
   Original Prompt Style: cloze
-  Original Text: The {{c1::green ban}} of the Stab Trim Indicator corresponds to the allowable
+  Original Text: The {{c1::green band}} of the Stab Trim Indicator corresponds to the allowable
     range of trim settings for takeoff.
   Question Stem: The what? of the Stab Trim Indicator corresponds to the allowable range of
     trim settings for takeoff?
   Choice A: ''
-  Choice B: Green ban
+  Choice B: Green band
   Choice C: ''
   Choice D: ''
   Correct Choice: B

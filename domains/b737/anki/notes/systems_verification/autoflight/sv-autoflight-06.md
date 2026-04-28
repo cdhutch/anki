@@ -21,13 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'After LOC and G/S are both captured, the APP mode can be disengaged by {{c1::Any
     of the above actions: pressing the TOGA switch; retuning both nav radios; turning both
-    F/Ds OFF and disengating the A/P}}. Select the most correct answer.'
-  Question Stem: After LOC and G/S are both captured, the APP mode can be disengaged by what?.
-    Select the most correct answer?
+    F/Ds OFF and disengaging the A/P}}. Select the most correct answer.'
+  Question Stem: After LOC and G/S are both captured, the APP mode can be disengaged by what?
   Choice A: ''
   Choice B: ''
   Choice C: 'Any of the above actions: pressing the TOGA switch; retuning both nav radios;
-    turning both F/Ds OFF and disengating the A/P'
+    turning both F/Ds OFF and disengaging the A/P'
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true

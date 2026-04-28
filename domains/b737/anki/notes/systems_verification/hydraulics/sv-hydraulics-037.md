@@ -20,14 +20,14 @@ fields:
   Original Note ID: hydraulics-037
   Original Prompt Style: cloze
   Original Text: Normal hydraulic system pressure is {{c1::}} psi.
-  Question Stem: Normal hydraulic system pressure is what? psi?
+  Question Stem: Normal hydraulic system pressure is what? psi
   Choice A: ''
   Choice B: ''
   Choice C: ''
   Choice D: ''
   Correct Choice: B
   Shuffle Choices: true
-  Review Notes: null
+  Review Notes: Source cloze had blank answer — needs manual completion (answer is 3000 psi)
   Verification Notes: ''
 ---
 

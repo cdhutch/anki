@@ -24,7 +24,7 @@ fields:
   Question Stem: On the ground with the APU powering the electrical systems, the APU GEN OFF
     BUS light will be what?
   Choice A: ''
-  Choice B: false
+  Choice B: 'OFF'
   Choice C: ''
   Choice D: ''
   Correct Choice: B
