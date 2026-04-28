@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-014
   Original Prompt Style: cloze
-  Original Text: 'The System Annunciator Light Panels monitor system indications located on {{c1::the Overhead and Fire Control panels}}.'
-  Question Stem: 'The System Annunciator Light Panels monitor system indications located on what?'
+  Original Text: The System Annunciator Light Panels monitor system indications located on
+    {{c1::the Overhead and Fire Control panels}}.
+  Question Stem: The System Annunciator Light Panels monitor system indications located on
+    what?
   Choice A: ''
   Choice B: ''
   Choice C: The Overhead and Fire Control panels
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

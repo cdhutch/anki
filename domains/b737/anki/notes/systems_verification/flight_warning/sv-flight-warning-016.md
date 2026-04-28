@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-016
   Original Prompt Style: cloze
-  Original Text: 'The {{c1::right}} annunciator panel monitors the following systems: anti-ice, hydraulics, doors, engines, overhead panel, and air conditioning.'
-  Question Stem: 'The what? annunciator panel monitors the following systems: anti-ice, hydraulics, doors, engines, overhead panel, and air conditioning?'
+  Original Text: 'The {{c1::right}} annunciator panel monitors the following systems: anti-ice,
+    hydraulics, doors, engines, overhead panel, and air conditioning.'
+  Question Stem: 'The what? annunciator panel monitors the following systems: anti-ice, hydraulics,
+    doors, engines, overhead panel, and air conditioning?'
   Choice A: Right
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-021
   Original Prompt Style: cloze
-  Original Text: 'The PSEU light is inhibited {{c1::in flight}}.'
-  Question Stem: 'The PSEU light is inhibited what?'
+  Original Text: The PSEU light is inhibited {{c1::in flight}}.
+  Question Stem: The PSEU light is inhibited what?
   Choice A: ''
   Choice B: In flight
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

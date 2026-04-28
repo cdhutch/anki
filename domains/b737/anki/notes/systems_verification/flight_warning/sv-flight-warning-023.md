@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-023
   Original Prompt Style: cloze
-  Original Text: 'The stick shakers are designed to alert the pilots {{c1::just before a stall develops}}.'
-  Question Stem: 'The stick shakers are designed to alert the pilots what?'
+  Original Text: The stick shakers are designed to alert the pilots {{c1::just before a stall
+    develops}}.
+  Question Stem: The stick shakers are designed to alert the pilots what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-034
   Original Prompt Style: cloze
-  Original Text: 'A momentary altitude alert tone will activate {{c1::approaching 900 feet of the altitude selected on the mode control panel}}.'
-  Question Stem: 'A momentary altitude alert tone will activate what?'
+  Original Text: A momentary altitude alert tone will activate {{c1::approaching 900 feet
+    of the altitude selected on the mode control panel}}.
+  Question Stem: A momentary altitude alert tone will activate what?
   Choice A: ''
   Choice B: ''
   Choice C: Approaching 900 feet of the altitude selected on the mode control panel
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

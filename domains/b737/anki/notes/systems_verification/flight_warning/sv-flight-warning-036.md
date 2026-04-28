@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-036
   Original Prompt Style: cloze
-  Original Text: 'A flashing amber box around the current altitude signifies {{c1::an altitude deviation of 200 feet or more}}.'
-  Question Stem: 'A flashing amber box around the current altitude signifies what?'
+  Original Text: A flashing amber box around the current altitude signifies {{c1::an altitude
+    deviation of 200 feet or more}}.
+  Question Stem: A flashing amber box around the current altitude signifies what?
   Choice A: An altitude deviation of 200 feet or more
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

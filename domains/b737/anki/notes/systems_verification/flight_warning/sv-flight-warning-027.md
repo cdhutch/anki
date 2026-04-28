@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-027
   Original Prompt Style: cloze
-  Original Text: 'Single faults in certain redundant systems or some simple faults do not illuminate the MASTER CAUTION or the System Annunciator Light until {{c1::recall of the system}}.'
-  Question Stem: 'Single faults in certain redundant systems or some simple faults do not illuminate the MASTER CAUTION or the System Annunciator Light until what?'
+  Original Text: Single faults in certain redundant systems or some simple faults do not illuminate
+    the MASTER CAUTION or the System Annunciator Light until {{c1::recall of the system}}.
+  Question Stem: Single faults in certain redundant systems or some simple faults do not illuminate
+    the MASTER CAUTION or the System Annunciator Light until what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

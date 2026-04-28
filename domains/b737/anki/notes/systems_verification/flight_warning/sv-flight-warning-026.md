@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-026
   Original Prompt Style: cloze
-  Original Text: 'The MASTER CAUTION Lights will remain illuminated {{c1::until reset or as long as the caution condition exists}}.'
-  Question Stem: 'The MASTER CAUTION Lights will remain illuminated what?'
+  Original Text: The MASTER CAUTION Lights will remain illuminated {{c1::until reset or as
+    long as the caution condition exists}}.
+  Question Stem: The MASTER CAUTION Lights will remain illuminated what?
   Choice A: ''
   Choice B: ''
   Choice C: Until reset or as long as the caution condition exists
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

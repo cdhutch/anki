@@ -19,9 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-024
   Original Prompt Style: cloze
-  Original Text: 'On the fire test panel, we can test for {{c1::all of the above: APU, engines, and wheel well fire; engine overheat; operational fire bottle squibs}}'
-  Question Stem: 'On the fire test panel, we can test for what?'
-  Choice A: 'All of the above: APU, engines, and wheel well fire; engine overheat; operational fire bottle squibs'
+  Original Text: 'On the fire test panel, we can test for {{c1::all of the above: APU, engines,
+    and wheel well fire; engine overheat; operational fire bottle squibs}}'
+  Question Stem: On the fire test panel, we can test for what?
+  Choice A: 'All of the above: APU, engines, and wheel well fire; engine overheat; operational
+    fire bottle squibs'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

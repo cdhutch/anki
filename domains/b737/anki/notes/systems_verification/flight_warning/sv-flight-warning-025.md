@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-025
   Original Prompt Style: cloze
-  Original Text: 'A valve that is not in its selected position will show up as a(an) {{c1::bright blue}} light.'
-  Question Stem: 'A valve that is not in its selected position will show up as a(an) what? light?'
+  Original Text: A valve that is not in its selected position will show up as a(an) {{c1::bright
+    blue}} light.
+  Question Stem: A valve that is not in its selected position will show up as a(an) what?
+    light?
   Choice A: ''
   Choice B: Bright blue
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

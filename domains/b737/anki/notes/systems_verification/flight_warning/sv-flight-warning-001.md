@@ -19,10 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-001
   Original Prompt Style: cloze
-  Original Text: 'Warnings and information about the nature of a situation are provided by {{c1::visual, aural, and tactile}} signals.'
-  Question Stem: 'Warnings and information about the nature of a situation are provided by what? signals?'
+  Original Text: Warnings and information about the nature of a situation are provided by
+    {{c1::visual, aural, and tactile}} signals.
+  Question Stem: Warnings and information about the nature of a situation are provided by
+    what? signals?
   Choice A: ''
-  Choice B: 'Visual, aural, and tactile'
+  Choice B: Visual, aural, and tactile
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

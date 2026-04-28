@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-009
   Original Prompt Style: cloze
-  Original Text: 'Pushing a MASTER CAUTION light after it illuminates {{c1::resets the system for additional master caution conditions}}.'
-  Question Stem: 'Pushing a MASTER CAUTION light after it illuminates what?'
+  Original Text: Pushing a MASTER CAUTION light after it illuminates {{c1::resets the system
+    for additional master caution conditions}}.
+  Question Stem: Pushing a MASTER CAUTION light after it illuminates what?
   Choice A: ''
   Choice B: Resets the system for additional master caution conditions
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

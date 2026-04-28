@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-039
   Original Prompt Style: cloze
-  Original Text: 'Upon engine shutdown on the ground at the end of the flight, an inflight exceedence will be {{c1::shown by a red box}}.'
-  Question Stem: 'Upon engine shutdown on the ground at the end of the flight, an inflight exceedence will be what?'
+  Original Text: Upon engine shutdown on the ground at the end of the flight, an inflight
+    exceedence will be {{c1::shown by a red box}}.
+  Question Stem: Upon engine shutdown on the ground at the end of the flight, an inflight
+    exceedence will be what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

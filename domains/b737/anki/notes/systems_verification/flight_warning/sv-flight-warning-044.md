@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-044
   Original Prompt Style: cloze
-  Original Text: 'During an AIII approach, an amber NO AIII light is illuminated below 1,000 feet. You should {{c1::execute a missed approach}}.'
-  Question Stem: 'During an AIII approach, an amber NO AIII light is illuminated below 1,000 feet. You should what?'
+  Original Text: During an AIII approach, an amber NO AIII light is illuminated below 1,000
+    feet. You should {{c1::execute a missed approach}}.
+  Question Stem: During an AIII approach, an amber NO AIII light is illuminated below 1,000
+    feet. You should what?
   Choice A: Execute a missed approach
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

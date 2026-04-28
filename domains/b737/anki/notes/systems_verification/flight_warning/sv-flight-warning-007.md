@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-007
   Original Prompt Style: cloze
-  Original Text: 'Green lights indicate an extended configuration of {{c1::both landing gear and leading edge devices}}.'
-  Question Stem: 'Green lights indicate an extended configuration of what?'
+  Original Text: Green lights indicate an extended configuration of {{c1::both landing gear
+    and leading edge devices}}.
+  Question Stem: Green lights indicate an extended configuration of what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

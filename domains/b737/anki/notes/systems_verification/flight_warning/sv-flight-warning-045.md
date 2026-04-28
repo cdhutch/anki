@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-045
   Original Prompt Style: cloze
-  Original Text: 'When the NO AIII light is illuminated on the HAP, AIII {{c1::operations are not permitted}}.'
-  Question Stem: 'When the NO AIII light is illuminated on the HAP, AIII what?'
+  Original Text: When the NO AIII light is illuminated on the HAP, AIII {{c1::operations are
+    not permitted}}.
+  Question Stem: When the NO AIII light is illuminated on the HAP, AIII what?
   Choice A: ''
   Choice B: Operations are not permitted
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

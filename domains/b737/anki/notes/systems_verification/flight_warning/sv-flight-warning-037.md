@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-037
   Original Prompt Style: cloze
-  Original Text: 'Normal engine indications on the upper engine display are {{c1::white}} in color.'
-  Question Stem: 'Normal engine indications on the upper engine display are what? in color?'
+  Original Text: Normal engine indications on the upper engine display are {{c1::white}} in
+    color.
+  Question Stem: Normal engine indications on the upper engine display are what? in color?
   Choice A: ''
   Choice B: White
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

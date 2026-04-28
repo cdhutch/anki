@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-028
   Original Prompt Style: cloze
-  Original Text: 'When performing the After Start checklist, the PSEU light illumination on recall indicates {{c1::a simple fault exists in the PSEU system}}.'
-  Question Stem: 'When performing the After Start checklist, the PSEU light illumination on recall indicates what?'
+  Original Text: When performing the After Start checklist, the PSEU light illumination on
+    recall indicates {{c1::a simple fault exists in the PSEU system}}.
+  Question Stem: When performing the After Start checklist, the PSEU light illumination on
+    recall indicates what?
   Choice A: A simple fault exists in the PSEU system
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

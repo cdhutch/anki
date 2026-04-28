@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-002
   Original Prompt Style: cloze
-  Original Text: 'Immediate attention warning lights are {{c1::red}}.'
-  Question Stem: 'Immediate attention warning lights are what?'
+  Original Text: Immediate attention warning lights are {{c1::red}}.
+  Question Stem: Immediate attention warning lights are what?
   Choice A: ''
   Choice B: ''
   Choice C: Red
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

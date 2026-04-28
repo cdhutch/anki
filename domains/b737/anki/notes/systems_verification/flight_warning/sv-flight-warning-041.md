@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-041
   Original Prompt Style: cloze
-  Original Text: 'Some minor cautions or faults do not illuminate the MASTER CAUTION lights or system annunciator lights but are stored and presented later during {{c1::RECALL}}.'
-  Question Stem: 'Some minor cautions or faults do not illuminate the MASTER CAUTION lights or system annunciator lights but are stored and presented later during what?'
+  Original Text: Some minor cautions or faults do not illuminate the MASTER CAUTION lights
+    or system annunciator lights but are stored and presented later during {{c1::RECALL}}.
+  Question Stem: Some minor cautions or faults do not illuminate the MASTER CAUTION lights
+    or system annunciator lights but are stored and presented later during what?
   Choice A: ''
   Choice B: RECALL
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

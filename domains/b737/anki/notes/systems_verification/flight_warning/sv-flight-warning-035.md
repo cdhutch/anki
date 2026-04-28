@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-035
   Original Prompt Style: cloze
-  Original Text: 'Deviations from the altitude selected on the mode control panel will cause a {{c1::momentary altitude horn at 200 feet off altitude and an amber flashing box around the current altitude}}.'
-  Question Stem: 'Deviations from the altitude selected on the mode control panel will cause a what?'
+  Original Text: Deviations from the altitude selected on the mode control panel will cause
+    a {{c1::momentary altitude horn at 200 feet off altitude and an amber flashing box around
+    the current altitude}}.
+  Question Stem: Deviations from the altitude selected on the mode control panel will cause
+    a what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: Momentary altitude horn at 200 feet off altitude and an amber flashing box around the current altitude
+  Choice D: Momentary altitude horn at 200 feet off altitude and an amber flashing box around
+    the current altitude
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-032
   Original Prompt Style: cloze
-  Original Text: 'The Mach/airspeed warning will sound the clacker anytime {{c1::Vmo/Mmo}} is exceeded.'
-  Question Stem: 'The Mach/airspeed warning will sound the clacker anytime what? is exceeded?'
+  Original Text: The Mach/airspeed warning will sound the clacker anytime {{c1::Vmo/Mmo}}
+    is exceeded.
+  Question Stem: The Mach/airspeed warning will sound the clacker anytime what? is exceeded?
   Choice A: Vmo/Mmo
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

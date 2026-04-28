@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-012
   Original Prompt Style: cloze
-  Original Text: 'The GPWS Inoperative (INOP) Light illuminates amber for {{c1::all of the above: a GPWS malfunction; a power loss; invalid inputs}}.'
-  Question Stem: 'The GPWS Inoperative (INOP) Light illuminates amber for what?'
+  Original Text: 'The GPWS Inoperative (INOP) Light illuminates amber for {{c1::all of the
+    above: a GPWS malfunction; a power loss; invalid inputs}}.'
+  Question Stem: The GPWS Inoperative (INOP) Light illuminates amber for what?
   Choice A: 'All of the above: a GPWS malfunction; a power loss; invalid inputs'
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

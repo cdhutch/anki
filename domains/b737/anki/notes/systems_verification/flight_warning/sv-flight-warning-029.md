@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-029
   Original Prompt Style: cloze
-  Original Text: '{{c1::SPEED BRAKE lever is not in the DOWN position}} will activate the takeoff warning system.'
-  Question Stem: 'What? will activate the takeoff warning system?'
+  Original Text: '{{c1::SPEED BRAKE lever is not in the DOWN position}} will activate the
+    takeoff warning system.'
+  Question Stem: What? will activate the takeoff warning system?
   Choice A: ''
   Choice B: SPEED BRAKE lever is not in the DOWN position
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

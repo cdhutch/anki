@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-010
   Original Prompt Style: cloze
-  Original Text: 'An illuminated amber light on the System Annunciator Panel is on because of a malfunction outside of the primary viewing area of the pilots. To extinguish it, {{c1::push either MASTER CAUTION light}}.'
-  Question Stem: 'An illuminated amber light on the System Annunciator Panel is on because of a malfunction outside of the primary viewing area of the pilots. To extinguish it, what?'
+  Original Text: An illuminated amber light on the System Annunciator Panel is on because
+    of a malfunction outside of the primary viewing area of the pilots. To extinguish it,
+    {{c1::push either MASTER CAUTION light}}.
+  Question Stem: An illuminated amber light on the System Annunciator Panel is on because
+    of a malfunction outside of the primary viewing area of the pilots. To extinguish it,
+    what?
   Choice A: ''
   Choice B: ''
   Choice C: Push either MASTER CAUTION light
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

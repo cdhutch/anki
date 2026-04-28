@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-020
   Original Prompt Style: cloze
-  Original Text: 'Two independent Mach/airspeed warning systems sound a clacker when maximum speed is exceeded. The clacker will only be silenced when {{c1::airspeed is reduced below Vmo/Mmo}}.'
-  Question Stem: 'Two independent Mach/airspeed warning systems sound a clacker when maximum speed is exceeded. The clacker will only be silenced when what?'
+  Original Text: Two independent Mach/airspeed warning systems sound a clacker when maximum
+    speed is exceeded. The clacker will only be silenced when {{c1::airspeed is reduced below
+    Vmo/Mmo}}.
+  Question Stem: Two independent Mach/airspeed warning systems sound a clacker when maximum
+    speed is exceeded. The clacker will only be silenced when what?
   Choice A: Airspeed is reduced below Vmo/Mmo
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

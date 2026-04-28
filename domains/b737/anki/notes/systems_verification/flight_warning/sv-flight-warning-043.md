@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-043
   Original Prompt Style: cloze
-  Original Text: 'When illuminated on the HAP, the green AIII light means {{c1::AIII mode is active}}.'
-  Question Stem: 'When illuminated on the HAP, the green AIII light means what?'
+  Original Text: When illuminated on the HAP, the green AIII light means {{c1::AIII mode is
+    active}}.
+  Question Stem: When illuminated on the HAP, the green AIII light means what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

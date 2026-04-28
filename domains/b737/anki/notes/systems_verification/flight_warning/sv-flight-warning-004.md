@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-004
   Original Prompt Style: cloze
-  Original Text: 'Amber annunciator lights alert the flight crew of conditions which {{c1::require timely attention}}.'
-  Question Stem: 'Amber annunciator lights alert the flight crew of conditions which what?'
+  Original Text: Amber annunciator lights alert the flight crew of conditions which {{c1::require
+    timely attention}}.
+  Question Stem: Amber annunciator lights alert the flight crew of conditions which what?
   Choice A: Require timely attention
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

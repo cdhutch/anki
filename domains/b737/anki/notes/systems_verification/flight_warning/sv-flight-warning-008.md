@@ -19,9 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-008
   Original Prompt Style: cloze
-  Original Text: 'Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine fire {{c1::accomplishes all of the above: extinguishes both FIRE WARN lights; silences the Fire Warning Bell; resets the system for additional warnings}}.'
-  Question Stem: 'Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine fire what?'
-  Choice A: 'Accomplishes all of the above: extinguishes both FIRE WARN lights; silences the Fire Warning Bell; resets the system for additional warnings'
+  Original Text: 'Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine
+    fire {{c1::accomplishes all of the above: extinguishes both FIRE WARN lights; silences
+    the Fire Warning Bell; resets the system for additional warnings}}.'
+  Question Stem: Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine
+    fire what?
+  Choice A: 'Accomplishes all of the above: extinguishes both FIRE WARN lights; silences the
+    Fire Warning Bell; resets the system for additional warnings'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

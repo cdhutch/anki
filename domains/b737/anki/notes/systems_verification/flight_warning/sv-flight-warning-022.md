@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-022
   Original Prompt Style: cloze
-  Original Text: 'The stall warning stick shaker consists of {{c1::two separate motors, one on each control column}}.'
-  Question Stem: 'The stall warning stick shaker consists of what?'
+  Original Text: The stall warning stick shaker consists of {{c1::two separate motors, one
+    on each control column}}.
+  Question Stem: The stall warning stick shaker consists of what?
   Choice A: ''
   Choice B: ''
-  Choice C: 'Two separate motors, one on each control column'
+  Choice C: Two separate motors, one on each control column
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

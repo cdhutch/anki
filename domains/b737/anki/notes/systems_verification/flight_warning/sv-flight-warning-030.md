@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-030
   Original Prompt Style: cloze
-  Original Text: 'The red gear indicator light will be illuminated for {{c1::landing gear in transit}}.'
-  Question Stem: 'The red gear indicator light will be illuminated for what?'
+  Original Text: The red gear indicator light will be illuminated for {{c1::landing gear in
+    transit}}.
+  Question Stem: The red gear indicator light will be illuminated for what?
   Choice A: ''
   Choice B: ''
   Choice C: Landing gear in transit
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

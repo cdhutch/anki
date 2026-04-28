@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-011
   Original Prompt Style: cloze
-  Original Text: 'The Landing Gear Warning Cutout Switch silences the landing gear configuration warning at flaps UP through {{c1::10}} degrees.'
-  Question Stem: 'The Landing Gear Warning Cutout Switch silences the landing gear configuration warning at flaps UP through what? degrees?'
+  Original Text: The Landing Gear Warning Cutout Switch silences the landing gear configuration
+    warning at flaps UP through {{c1::10}} degrees.
+  Question Stem: The Landing Gear Warning Cutout Switch silences the landing gear configuration
+    warning at flaps UP through what? degrees?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

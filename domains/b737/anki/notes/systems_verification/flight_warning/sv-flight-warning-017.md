@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-017
   Original Prompt Style: cloze
-  Original Text: 'The takeoff configuration intermittent warning can be cancelled only {{c1::when the configuration is corrected}}.'
-  Question Stem: 'The takeoff configuration intermittent warning can be cancelled only what?'
+  Original Text: The takeoff configuration intermittent warning can be cancelled only {{c1::when
+    the configuration is corrected}}.
+  Question Stem: The takeoff configuration intermittent warning can be cancelled only what?
   Choice A: ''
   Choice B: When the configuration is corrected
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-019
   Original Prompt Style: cloze
-  Original Text: 'The Proximity Switch Electronic Unit (PSEU) monitors {{c1::all of the above: takeoff and landing configuration warnings; air/ground sensing; landing gear}}.'
-  Question Stem: 'The Proximity Switch Electronic Unit (PSEU) monitors what?'
+  Original Text: 'The Proximity Switch Electronic Unit (PSEU) monitors {{c1::all of the above:
+    takeoff and landing configuration warnings; air/ground sensing; landing gear}}.'
+  Question Stem: The Proximity Switch Electronic Unit (PSEU) monitors what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'All of the above: takeoff and landing configuration warnings; air/ground sensing; landing gear'
+  Choice D: 'All of the above: takeoff and landing configuration warnings; air/ground sensing;
+    landing gear'
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

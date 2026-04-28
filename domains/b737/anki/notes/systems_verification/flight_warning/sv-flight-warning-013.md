@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-013
   Original Prompt Style: cloze
-  Original Text: 'Generally, aural warnings will silence {{c1::automatically when the associated non-normal condition no longer exist}}.'
-  Question Stem: 'Generally, aural warnings will silence what?'
+  Original Text: Generally, aural warnings will silence {{c1::automatically when the associated
+    non-normal condition no longer exist}}.
+  Question Stem: Generally, aural warnings will silence what?
   Choice A: ''
   Choice B: Automatically when the associated non-normal condition no longer exist
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

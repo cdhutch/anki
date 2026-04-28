@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-005
   Original Prompt Style: cloze
-  Original Text: 'Informational alerts such as electrical power availability, valve position, equipment status, and flight attendant or ground communications are indicated by lights that are {{c1::blue}} in color.'
-  Question Stem: 'Informational alerts such as electrical power availability, valve position, equipment status, and flight attendant or ground communications are indicated by lights that are what? in color?'
+  Original Text: Informational alerts such as electrical power availability, valve position,
+    equipment status, and flight attendant or ground communications are indicated by lights
+    that are {{c1::blue}} in color.
+  Question Stem: Informational alerts such as electrical power availability, valve position,
+    equipment status, and flight attendant or ground communications are indicated by lights
+    that are what? in color?
   Choice A: ''
   Choice B: Blue
   Choice C: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

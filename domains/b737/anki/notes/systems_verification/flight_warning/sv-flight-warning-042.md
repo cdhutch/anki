@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-042
   Original Prompt Style: cloze
-  Original Text: 'The landing gear configuration warning horn will activate at any altitude and cannot be silenced if a gear is not down and locked with the flaps set to {{c1::15}} degrees with one or both throttles set to idle.'
-  Question Stem: 'The landing gear configuration warning horn will activate at any altitude and cannot be silenced if a gear is not down and locked with the flaps set to what? degrees with one or both throttles set to idle?'
+  Original Text: The landing gear configuration warning horn will activate at any altitude
+    and cannot be silenced if a gear is not down and locked with the flaps set to {{c1::15}}
+    degrees with one or both throttles set to idle.
+  Question Stem: The landing gear configuration warning horn will activate at any altitude
+    and cannot be silenced if a gear is not down and locked with the flaps set to what? degrees
+    with one or both throttles set to idle?
   Choice A: ''
   Choice B: ''
   Choice C: 15
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

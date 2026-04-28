@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-033
   Original Prompt Style: cloze
-  Original Text: 'The SMYD computers receive input from {{c1::all of the above: anti-ice controls; ADIRUs; FMCs}}.'
-  Question Stem: 'The SMYD computers receive input from what?'
+  Original Text: 'The SMYD computers receive input from {{c1::all of the above: anti-ice controls;
+    ADIRUs; FMCs}}.'
+  Question Stem: The SMYD computers receive input from what?
   Choice A: ''
   Choice B: 'All of the above: anti-ice controls; ADIRUs; FMCs'
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

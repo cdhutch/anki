@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-031
   Original Prompt Style: cloze
-  Original Text: 'The flaps are set at 10 degrees, the landing gear is up, and you are above 800 feet RA. Which of the following statements is true about the landing gear horn? {{c1::The horn will not sound.}}'
-  Question Stem: 'The flaps are set at 10 degrees, the landing gear is up, and you are above 800 feet RA. Which of the following statements is true about the landing gear horn?'
+  Original Text: The flaps are set at 10 degrees, the landing gear is up, and you are above
+    800 feet RA. Which of the following statements is true about the landing gear horn? {{c1::The
+    horn will not sound.}}
+  Question Stem: The flaps are set at 10 degrees, the landing gear is up, and you are above
+    800 feet RA. Which of the following statements is true about the landing gear horn?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-038
   Original Prompt Style: cloze
-  Original Text: 'Maximum engine limits are displayed in {{c1::red}}.'
-  Question Stem: 'Maximum engine limits are displayed in what?'
+  Original Text: Maximum engine limits are displayed in {{c1::red}}.
+  Question Stem: Maximum engine limits are displayed in what?
   Choice A: ''
   Choice B: ''
   Choice C: Red
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

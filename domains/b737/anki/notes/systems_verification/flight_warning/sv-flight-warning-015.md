@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight-warning-015
   Original Prompt Style: cloze
-  Original Text: 'The {{c1::left}} annunciator panel monitors the following systems: flight controls, IRS, fuel, electrical, APU, and overheat/detection.'
-  Question Stem: 'The what? annunciator panel monitors the following systems: flight controls, IRS, fuel, electrical, APU, and overheat/detection?'
+  Original Text: 'The {{c1::left}} annunciator panel monitors the following systems: flight
+    controls, IRS, fuel, electrical, APU, and overheat/detection.'
+  Question Stem: 'The what? annunciator panel monitors the following systems: flight controls,
+    IRS, fuel, electrical, APU, and overheat/detection?'
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
