@@ -29,7 +29,8 @@ fields:
   Choice D: ''
   Correct Choice: B
   Shuffle Choices: true
-  Review Notes: Verify answer — source says "10 degrees nose down" but TO/GA typically commands nose UP on takeoff; confirm against QRH/FCOM
+  Review Notes: Verify answer — source says "10 degrees nose down" but TO/GA typically commands
+    nose UP on takeoff; confirm against QRH/FCOM
   Verification Notes: ''
 ---
 
