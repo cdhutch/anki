@@ -19,9 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-028
   Original Prompt Style: cloze
-  Original Text: 'While extending the flaps electrically through the 5 degree flap position, if you still observe these lights *(All LE DEVICES in FULL EXT)*, {{c1::the flaps have not approached the flaps 10 degree position or beyond in aircraft 3AA-3LB}}.'
-  Question Stem: 'While extending the flaps electrically through the 5 degree flap position, if you still observe these lights *(All LE DEVICES in FULL EXT)*, what?'
-  Choice A: The flaps have not approached the flaps 10 degree position or beyond in aircraft 3AA-3LB
+  Original Text: While extending the flaps electrically through the 5 degree flap position,
+    if you still observe these lights *(All LE DEVICES in FULL EXT)*, {{c1::the flaps have
+    not approached the flaps 10 degree position or beyond in aircraft 3AA-3LB}}.
+  Question Stem: While extending the flaps electrically through the 5 degree flap position,
+    if you still observe these lights *(All LE DEVICES in FULL EXT)*, what?
+  Choice A: The flaps have not approached the flaps 10 degree position or beyond in aircraft
+    3AA-3LB
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

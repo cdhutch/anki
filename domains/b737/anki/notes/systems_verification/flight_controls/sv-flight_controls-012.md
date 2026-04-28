@@ -19,9 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-012
   Original Prompt Style: cloze
-  Original Text: 'This light *(SPEED TRIM FAIL caution)*, and the Master Caution Lights, illuminate during initial taxi-out. {{c1::Check the MEL or call Maintenance. There is a dual channel failure of the Speed Trim System.}}'
-  Question Stem: 'This light *(SPEED TRIM FAIL caution)*, and the Master Caution Lights, illuminate during initial taxi-out what?'
-  Choice A: Check the MEL or call Maintenance. There is a dual channel failure of the Speed Trim System
+  Original Text: This light *(SPEED TRIM FAIL caution)*, and the Master Caution Lights, illuminate
+    during initial taxi-out. {{c1::Check the MEL or call Maintenance. There is a dual channel
+    failure of the Speed Trim System.}}
+  Question Stem: This light *(SPEED TRIM FAIL caution)*, and the Master Caution Lights, illuminate
+    during initial taxi-out what?
+  Choice A: Check the MEL or call Maintenance. There is a dual channel failure of the Speed
+    Trim System
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

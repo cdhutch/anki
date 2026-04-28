@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-009
   Original Prompt Style: cloze
-  Original Text: 'Placing the B FLT CONTROL switch to STBY RUD will cause the YAW DAMPER switch to {{c1::trip OFF and illuminate the Yaw Damper Light}}.'
-  Question Stem: 'Placing the B FLT CONTROL switch to STBY RUD will cause the YAW DAMPER switch to what?'
+  Original Text: Placing the B FLT CONTROL switch to STBY RUD will cause the YAW DAMPER switch
+    to {{c1::trip OFF and illuminate the Yaw Damper Light}}.
+  Question Stem: Placing the B FLT CONTROL switch to STBY RUD will cause the YAW DAMPER switch
+    to what?
   Choice A: ''
   Choice B: Trip OFF and illuminate the Yaw Damper Light
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

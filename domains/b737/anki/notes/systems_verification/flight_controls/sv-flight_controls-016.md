@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-016
   Original Prompt Style: cloze
-  Original Text: 'If a FEEL DIFF PRESS light illuminates, {{c1::no crew action is required in flight. Continue normal operations.}}.'
-  Question Stem: 'If a FEEL DIFF PRESS light illuminates, what?'
+  Original Text: If a FEEL DIFF PRESS light illuminates, {{c1::no crew action is required
+    in flight. Continue normal operations.}}.
+  Question Stem: If a FEEL DIFF PRESS light illuminates, what?
   Choice A: No crew action is required in flight. Continue normal operations
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

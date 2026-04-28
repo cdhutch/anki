@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-050
   Original Prompt Style: cloze
-  Original Text: 'MAX 8: The Spoiler Control Electronics Unit (SCE): {{c1::Translates signals from the speedbrake lever position sensor, the First Officer’s control wheel and other airplane data inputs.}}'
+  Original Text: 'MAX 8: The Spoiler Control Electronics Unit (SCE): {{c1::Translates signals
+    from the speedbrake lever position sensor, the First Officer’s control wheel and other
+    airplane data inputs.}}'
   Question Stem: 'MAX 8: The Spoiler Control Electronics Unit (SCE): what?'
   Choice A: ''
   Choice B: ''
-  Choice C: 'Translates signals from the speedbrake lever position sensor, the First Officer’s control wheel and other airplane data inputs'
+  Choice C: Translates signals from the speedbrake lever position sensor, the First Officer’s
+    control wheel and other airplane data inputs
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

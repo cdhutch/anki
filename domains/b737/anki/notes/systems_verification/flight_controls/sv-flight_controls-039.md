@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-039
   Original Prompt Style: cloze
-  Original Text: 'After loss of system A, the QRH directs you to move the A FLT CONTROL switch to STBY RUD. This action will pressurize the {{c1::Standby hydraulic pump and Standby rudder PCU}}.'
-  Question Stem: 'After loss of system A, the QRH directs you to move the A FLT CONTROL switch to STBY RUD. This action will pressurize the what?'
+  Original Text: After loss of system A, the QRH directs you to move the A FLT CONTROL switch
+    to STBY RUD. This action will pressurize the {{c1::Standby hydraulic pump and Standby
+    rudder PCU}}.
+  Question Stem: After loss of system A, the QRH directs you to move the A FLT CONTROL switch
+    to STBY RUD. This action will pressurize the what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

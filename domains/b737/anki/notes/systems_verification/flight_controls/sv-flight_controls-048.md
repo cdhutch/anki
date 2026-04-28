@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-048
   Original Prompt Style: cloze
-  Original Text: 'If wheel spin-up is not detected by the air/ground sensors, the flight spoilers will deploy when {{c1::any main gear strut compresses}}.'
-  Question Stem: 'If wheel spin-up is not detected by the air/ground sensors, the flight spoilers will deploy when what?'
+  Original Text: If wheel spin-up is not detected by the air/ground sensors, the flight spoilers
+    will deploy when {{c1::any main gear strut compresses}}.
+  Question Stem: If wheel spin-up is not detected by the air/ground sensors, the flight spoilers
+    will deploy when what?
   Choice A: Any main gear strut compresses
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

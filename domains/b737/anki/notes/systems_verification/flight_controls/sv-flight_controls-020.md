@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-020
   Original Prompt Style: cloze
-  Original Text: 'Roll control is normally provided by the ailerons, assisted by {{c1::flight spoilers}}.'
-  Question Stem: 'Roll control is normally provided by the ailerons, assisted by what?'
+  Original Text: Roll control is normally provided by the ailerons, assisted by {{c1::flight
+    spoilers}}.
+  Question Stem: Roll control is normally provided by the ailerons, assisted by what?
   Choice A: Flight spoilers
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

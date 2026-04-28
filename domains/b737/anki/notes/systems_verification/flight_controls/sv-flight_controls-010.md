@@ -19,14 +19,21 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-010
   Original Prompt Style: cloze
-  Original Text: 'Subsequently (to the B Hydraulic System failing and placing the B FLT CONTROL to STBY RUD, the A Hydraulic System also fails. How would you gain control of the Standby Yaw Damper? {{c1::Ensure both A and B Flight Control Switches are in the Standby Rudder Position and then place the Yaw Damper Switch ON.}}'
-  Question Stem: 'Subsequently (to the B Hydraulic System failing and placing the B FLT CONTROL to STBY RUD, the A Hydraulic System also fails. How would you gain control of the Standby Yaw Damper?'
+  Original Text: Subsequently (to the B Hydraulic System failing and placing the B FLT CONTROL
+    to STBY RUD, the A Hydraulic System also fails. How would you gain control of the Standby
+    Yaw Damper? {{c1::Ensure both A and B Flight Control Switches are in the Standby Rudder
+    Position and then place the Yaw Damper Switch ON.}}
+  Question Stem: Subsequently (to the B Hydraulic System failing and placing the B FLT CONTROL
+    to STBY RUD, the A Hydraulic System also fails. How would you gain control of the Standby
+    Yaw Damper?
   Choice A: ''
   Choice B: ''
-  Choice C: Ensure both A and B Flight Control Switches are in the Standby Rudder Position and then place the Yaw Damper Switch ON
+  Choice C: Ensure both A and B Flight Control Switches are in the Standby Rudder Position
+    and then place the Yaw Damper Switch ON
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

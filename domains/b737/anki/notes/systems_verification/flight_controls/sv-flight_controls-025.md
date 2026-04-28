@@ -19,8 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-025
   Original Prompt Style: cloze
-  Original Text: 'With the TE Flaps and Leading Edge Devices in the correct position, the Stab Trim set in the green band, the parking brake released, and the speed brake handle stowed you still have a Takeoff Warning Horn. What other scenario(s) could be causing this? {{c1::Spoiler(s) are not fully down.}}'
-  Question Stem: 'With the TE Flaps and Leading Edge Devices in the correct position, the Stab Trim set in the green band, the parking brake released, and the speed brake handle stowed you still have a Takeoff Warning Horn. What other scenario(s) could be causing this?'
+  Original Text: With the TE Flaps and Leading Edge Devices in the correct position, the Stab
+    Trim set in the green band, the parking brake released, and the speed brake handle stowed
+    you still have a Takeoff Warning Horn. What other scenario(s) could be causing this? {{c1::Spoiler(s)
+    are not fully down.}}
+  Question Stem: With the TE Flaps and Leading Edge Devices in the correct position, the Stab
+    Trim set in the green band, the parking brake released, and the speed brake handle stowed
+    you still have a Takeoff Warning Horn. What other scenario(s) could be causing this?
   Choice A: ''
   Choice B: Spoiler(s) are not fully down
   Choice C: ''
@@ -30,3 +35,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

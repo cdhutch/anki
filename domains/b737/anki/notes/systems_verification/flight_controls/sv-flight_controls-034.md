@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-034
   Original Prompt Style: cloze
-  Original Text: 'If we move the flap lever from 5 to 10, but the leading edge devices all stay in the extend position, the {{c1::LE FLAPS TRANSIT}} Light will be illuminated.'
-  Question Stem: 'If we move the flap lever from 5 to 10, but the leading edge devices all stay in the extend position, the what? Light will be illuminated?'
+  Original Text: If we move the flap lever from 5 to 10, but the leading edge devices all
+    stay in the extend position, the {{c1::LE FLAPS TRANSIT}} Light will be illuminated.
+  Question Stem: If we move the flap lever from 5 to 10, but the leading edge devices all
+    stay in the extend position, the what? Light will be illuminated?
   Choice A: ''
   Choice B: ''
   Choice C: LE FLAPS TRANSIT
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

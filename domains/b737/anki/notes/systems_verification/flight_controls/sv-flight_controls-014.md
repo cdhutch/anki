@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-014
   Original Prompt Style: cloze
-  Original Text: 'In the event hydraulic systems A and B fail, the ailerons and elevators can be operated {{c1::mechanically (manually)}} and the rudder must be operated by the {{c1::standby}} system.'
-  Question Stem: 'In the event hydraulic systems A and B fail, the ailerons and elevators can be operated what? and the rudder must be operated by the what? system?'
+  Original Text: In the event hydraulic systems A and B fail, the ailerons and elevators can
+    be operated {{c1::mechanically (manually)}} and the rudder must be operated by the {{c1::standby}}
+    system.
+  Question Stem: In the event hydraulic systems A and B fail, the ailerons and elevators can
+    be operated what? and the rudder must be operated by the what? system?
   Choice A: ''
   Choice B: ''
   Choice C: Mechanically (manually)
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

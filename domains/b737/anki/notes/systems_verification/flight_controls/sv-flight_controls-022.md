@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-022
   Original Prompt Style: cloze
-  Original Text: 'With the trailing edge flaps at 1, the leading edge slats are {{c1::in the extend position}}.'
-  Question Stem: 'With the trailing edge flaps at 1, the leading edge slats are what?'
+  Original Text: With the trailing edge flaps at 1, the leading edge slats are {{c1::in the
+    extend position}}.
+  Question Stem: With the trailing edge flaps at 1, the leading edge slats are what?
   Choice A: ''
   Choice B: ''
   Choice C: In the extend position
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-024
   Original Prompt Style: cloze
-  Original Text: 'The previous condition has now been corrected *(now the LE DEVICES are properly configured). The takeoff warning sounds again. Why? {{c1::Stab Trim not in green band or parking brake lever set.}}'
-  Question Stem: 'The previous condition has now been corrected *(now the LE DEVICES are properly configured). The takeoff warning sounds again. Why?'
+  Original Text: The previous condition has now been corrected *(now the LE DEVICES are properly
+    configured). The takeoff warning sounds again. Why? {{c1::Stab Trim not in green band
+    or parking brake lever set.}}
+  Question Stem: The previous condition has now been corrected *(now the LE DEVICES are properly
+    configured). The takeoff warning sounds again. Why?
   Choice A: Stab Trim not in green band or parking brake lever set
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

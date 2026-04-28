@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-049
   Original Prompt Style: cloze
-  Original Text: 'The SPEED BRAKE lever will automatically move to the down detent, and all spoilers will retract, if {{c1::either throttle is advanced after landing}}.'
-  Question Stem: 'The SPEED BRAKE lever will automatically move to the down detent, and all spoilers will retract, if what?'
+  Original Text: The SPEED BRAKE lever will automatically move to the down detent, and all
+    spoilers will retract, if {{c1::either throttle is advanced after landing}}.
+  Question Stem: The SPEED BRAKE lever will automatically move to the down detent, and all
+    spoilers will retract, if what?
   Choice A: ''
   Choice B: Either throttle is advanced after landing
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

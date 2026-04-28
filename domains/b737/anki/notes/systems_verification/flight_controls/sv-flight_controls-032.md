@@ -19,9 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-032
   Original Prompt Style: cloze
-  Original Text: 'Normally, the ailerons, elevators, and rudder are powered by the {{c1::A & B hydraulic systems}}.'
-  Question Stem: 'Normally, the ailerons, elevators, and rudder are powered by the what?'
-  Choice A: 'A & B hydraulic systems'
+  Original Text: Normally, the ailerons, elevators, and rudder are powered by the {{c1::A
+    & B hydraulic systems}}.
+  Question Stem: Normally, the ailerons, elevators, and rudder are powered by the what?
+  Choice A: A & B hydraulic systems
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-003
   Original Prompt Style: cloze
-  Original Text: 'The {{c1::FSEU}} protects the flaps in this condition.'
-  Question Stem: 'The what? protects the flaps in this condition?'
+  Original Text: The {{c1::FSEU}} protects the flaps in this condition.
+  Question Stem: The what? protects the flaps in this condition?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

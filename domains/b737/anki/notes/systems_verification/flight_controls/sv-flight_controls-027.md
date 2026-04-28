@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-027
   Original Prompt Style: cloze
-  Original Text: 'Prior to what altitude should the Speed Brakes be Down or Armed? {{c1::1000 FT AGL}}'
-  Question Stem: 'Prior to what altitude should the Speed Brakes be Down or Armed?'
+  Original Text: Prior to what altitude should the Speed Brakes be Down or Armed? {{c1::1000
+    FT AGL}}
+  Question Stem: Prior to what altitude should the Speed Brakes be Down or Armed?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

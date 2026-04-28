@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-001
   Original Prompt Style: cloze
-  Original Text: 'If the aileron control system is jammed, the {{c1::FO}} can still fly the aircraft using the {{c1::spoilers}} after force is applied to the control wheels and they break free.'
-  Question Stem: 'If the aileron control system is jammed, the what? can still fly the aircraft using the what? after force is applied to the control wheels and they break free?'
+  Original Text: If the aileron control system is jammed, the {{c1::FO}} can still fly the
+    aircraft using the {{c1::spoilers}} after force is applied to the control wheels and they
+    break free.
+  Question Stem: If the aileron control system is jammed, the what? can still fly the aircraft
+    using the what? after force is applied to the control wheels and they break free?
   Choice A: ''
   Choice B: FO
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

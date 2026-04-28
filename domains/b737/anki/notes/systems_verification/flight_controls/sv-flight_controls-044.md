@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-044
   Original Prompt Style: cloze
-  Original Text: 'When the Flaps/Slats Electronics Unit (FSEU) detects a trailing edge asymmetry or skew condition, the FSEU closes the TE Flap Bypass Valve, {{c1::and displays a needle split on the Flap Position Indicator}}.'
-  Question Stem: 'When the Flaps/Slats Electronics Unit (FSEU) detects a trailing edge asymmetry or skew condition, the FSEU closes the TE Flap Bypass Valve, what?'
+  Original Text: When the Flaps/Slats Electronics Unit (FSEU) detects a trailing edge asymmetry
+    or skew condition, the FSEU closes the TE Flap Bypass Valve, {{c1::and displays a needle
+    split on the Flap Position Indicator}}.
+  Question Stem: When the Flaps/Slats Electronics Unit (FSEU) detects a trailing edge asymmetry
+    or skew condition, the FSEU closes the TE Flap Bypass Valve, what?
   Choice A: And displays a needle split on the Flap Position Indicator
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

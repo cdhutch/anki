@@ -19,10 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-017
   Original Prompt Style: cloze
-  Original Text: 'The primary flight controls are normally powered by hydraulic system(s) {{c1::A & B}}.'
-  Question Stem: 'The primary flight controls are normally powered by hydraulic system(s) what?'
+  Original Text: The primary flight controls are normally powered by hydraulic system(s) {{c1::A
+    & B}}.
+  Question Stem: The primary flight controls are normally powered by hydraulic system(s) what?
   Choice A: ''
-  Choice B: 'A & B'
+  Choice B: A & B
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

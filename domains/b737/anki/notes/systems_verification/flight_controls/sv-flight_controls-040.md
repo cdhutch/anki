@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-040
   Original Prompt Style: cloze
-  Original Text: '{{c1::Leading edge flaps/slats}} can be extended by the Standby Hydraulic System in Alternate mode.'
-  Question Stem: 'What? can be extended by the Standby Hydraulic System in Alternate mode?'
+  Original Text: '{{c1::Leading edge flaps/slats}} can be extended by the Standby Hydraulic
+    System in Alternate mode.'
+  Question Stem: What? can be extended by the Standby Hydraulic System in Alternate mode?
   Choice A: Leading edge flaps/slats
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,10 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-033
   Original Prompt Style: cloze
-  Original Text: 'The maximum altitude for extension of flaps is {{c1::20,000}} feet.'
-  Question Stem: 'The maximum altitude for extension of flaps is what? feet?'
+  Original Text: The maximum altitude for extension of flaps is {{c1::20,000}} feet.
+  Question Stem: The maximum altitude for extension of flaps is what? feet?
   Choice A: ''
-  Choice B: '20,000'
+  Choice B: 20,000
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,15 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-043
   Original Prompt Style: cloze
-  Original Text: 'The primary flight controls consist of {{c1::ailerons, elevators, and rudder}}.'
-  Question Stem: 'The primary flight controls consist of what?'
+  Original Text: The primary flight controls consist of {{c1::ailerons, elevators, and rudder}}.
+  Question Stem: The primary flight controls consist of what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Ailerons, elevators, and rudder'
+  Choice D: Ailerons, elevators, and rudder
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

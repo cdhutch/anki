@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-036
   Original Prompt Style: cloze
-  Original Text: 'On the ground, speed brakes normally use {{c1::both flight and ground spoilers}} to destroy lift and make braking more effective.'
-  Question Stem: 'On the ground, speed brakes normally use what? to destroy lift and make braking more effective?'
+  Original Text: On the ground, speed brakes normally use {{c1::both flight and ground spoilers}}
+    to destroy lift and make braking more effective.
+  Question Stem: On the ground, speed brakes normally use what? to destroy lift and make braking
+    more effective?
   Choice A: Both flight and ground spoilers
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

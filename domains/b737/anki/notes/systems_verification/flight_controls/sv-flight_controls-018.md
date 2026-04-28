@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-018
   Original Prompt Style: cloze
-  Original Text: 'Leading edge devices are normally operated by {{c1::Hydraulic System B only}}.'
-  Question Stem: 'Leading edge devices are normally operated by what?'
+  Original Text: Leading edge devices are normally operated by {{c1::Hydraulic System B only}}.
+  Question Stem: Leading edge devices are normally operated by what?
   Choice A: ''
   Choice B: ''
   Choice C: Hydraulic System B only
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

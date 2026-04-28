@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-006
   Original Prompt Style: cloze
-  Original Text: 'If the trim was set to 10 units nose up *(outside of the green band)* and then the throttles are advanced for takeoff, what alert would occur? {{c1::An intermittent warning horn and takeoff config lights}}'
-  Question Stem: 'If the trim was set to 10 units nose up *(outside of the green band)* and then the throttles are advanced for takeoff, what alert would occur?'
+  Original Text: If the trim was set to 10 units nose up *(outside of the green band)* and
+    then the throttles are advanced for takeoff, what alert would occur? {{c1::An intermittent
+    warning horn and takeoff config lights}}
+  Question Stem: If the trim was set to 10 units nose up *(outside of the green band)* and
+    then the throttles are advanced for takeoff, what alert would occur?
   Choice A: ''
   Choice B: ''
   Choice C: An intermittent warning horn and takeoff config lights
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

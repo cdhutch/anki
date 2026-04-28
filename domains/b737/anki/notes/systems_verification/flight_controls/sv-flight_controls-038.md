@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-038
   Original Prompt Style: cloze
-  Original Text: 'During normal operations with these two FLT CONTROL switches *(FLT CONTROL A & FLT CONTROL B)in the ON position, they control pressure to the respective {{c1::rudder, aileron, and elevator}}.'
-  Question Stem: 'During normal operations with these two FLT CONTROL switches *(FLT CONTROL A & FLT CONTROL B)in the ON position, they control pressure to the respective what?'
+  Original Text: During normal operations with these two FLT CONTROL switches *(FLT CONTROL
+    A & FLT CONTROL B)in the ON position, they control pressure to the respective {{c1::rudder,
+    aileron, and elevator}}.
+  Question Stem: During normal operations with these two FLT CONTROL switches *(FLT CONTROL
+    A & FLT CONTROL B)in the ON position, they control pressure to the respective what?
   Choice A: ''
   Choice B: ''
-  Choice C: 'Rudder, aileron, and elevator'
+  Choice C: Rudder, aileron, and elevator
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

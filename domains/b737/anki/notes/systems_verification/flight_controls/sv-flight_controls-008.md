@@ -19,9 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-008
   Original Prompt Style: cloze
-  Original Text: 'With the loss of B Hydraulic System, the yaw damper will {{c1::be inoperative, but the Yaw Damper Light will not be illuminated until the Flt control B switch is moved to STBY RUD}}.'
-  Question Stem: 'With the loss of B Hydraulic System, the yaw damper will what?'
-  Choice A: 'Be inoperative, but the Yaw Damper Light will not be illuminated until the Flt control B switch is moved to STBY RUD'
+  Original Text: With the loss of B Hydraulic System, the yaw damper will {{c1::be inoperative,
+    but the Yaw Damper Light will not be illuminated until the Flt control B switch is moved
+    to STBY RUD}}.
+  Question Stem: With the loss of B Hydraulic System, the yaw damper will what?
+  Choice A: Be inoperative, but the Yaw Damper Light will not be illuminated until the Flt
+    control B switch is moved to STBY RUD
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

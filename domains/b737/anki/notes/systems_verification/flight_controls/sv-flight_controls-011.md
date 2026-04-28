@@ -19,8 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-011
   Original Prompt Style: cloze
-  Original Text: 'During the origination preflight, this light *(SPEED TRIM FAIL)* illuminates after the IRS Mode Selectors are moved to NAV. The “Flight Control Panel . . . CHECK” item is accomplished by {{c1::doing nothing. This is a normal indication while the IRUs are aligning}}'
-  Question Stem: 'During the origination preflight, this light *(SPEED TRIM FAIL)* illuminates after the IRS Mode Selectors are moved to NAV. The “Flight Control Panel . . . CHECK” item is accomplished by what?'
+  Original Text: During the origination preflight, this light *(SPEED TRIM FAIL)* illuminates
+    after the IRS Mode Selectors are moved to NAV. The “Flight Control Panel . . . CHECK”
+    item is accomplished by {{c1::doing nothing. This is a normal indication while the IRUs
+    are aligning}}
+  Question Stem: During the origination preflight, this light *(SPEED TRIM FAIL)* illuminates
+    after the IRS Mode Selectors are moved to NAV. The “Flight Control Panel . . . CHECK”
+    item is accomplished by what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +35,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

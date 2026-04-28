@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-037
   Original Prompt Style: cloze
-  Original Text: 'In aircraft 3AA-3LB, the LE devices will go to the full extend position when you select {{c1::10}} or greater with the flap handle.'
-  Question Stem: 'In aircraft 3AA-3LB, the LE devices will go to the full extend position when you select what? or greater with the flap handle?'
+  Original Text: In aircraft 3AA-3LB, the LE devices will go to the full extend position when
+    you select {{c1::10}} or greater with the flap handle.
+  Question Stem: In aircraft 3AA-3LB, the LE devices will go to the full extend position when
+    you select what? or greater with the flap handle?
   Choice A: ''
   Choice B: 10
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,7 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-041
   Original Prompt Style: cloze
-  Original Text: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: {{c1::Aft Overhead Panel}}'
+  Original Text: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: {{c1::Aft Overhead
+    Panel}}'
   Question Stem: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: what?'
   Choice A: ''
   Choice B: Aft Overhead Panel
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

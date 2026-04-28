@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-031
   Original Prompt Style: cloze
-  Original Text: 'On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided for flaps {{c1::30 and 40}}.'
-  Question Stem: 'On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided for flaps what?'
+  Original Text: On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided
+    for flaps {{c1::30 and 40}}.
+  Question Stem: On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided
+    for flaps what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

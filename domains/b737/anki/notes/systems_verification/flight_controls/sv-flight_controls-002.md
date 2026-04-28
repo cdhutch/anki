@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-002
   Original Prompt Style: cloze
-  Original Text: 'When positioning the flaps for takeoff from UP to 1, the crew noticed this condition. What could have caused this malfunction? {{c1::Skewed T.E. Flap}}'
-  Question Stem: 'When positioning the flaps for takeoff from UP to 1, the crew noticed this condition. What could have caused this malfunction?'
+  Original Text: When positioning the flaps for takeoff from UP to 1, the crew noticed this
+    condition. What could have caused this malfunction? {{c1::Skewed T.E. Flap}}
+  Question Stem: When positioning the flaps for takeoff from UP to 1, the crew noticed this
+    condition. What could have caused this malfunction?
   Choice A: ''
   Choice B: ''
   Choice C: Skewed T.E. Flap
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

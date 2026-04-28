@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-026
   Original Prompt Style: cloze
-  Original Text: 'MAX 8: Emergency Descent Speed Brakes system (EDS): {{c1::Both 2 and 3 above: Armed when the airplane is above 30,000 feet and the cabin altitude warning is active; Fully automatic with operation transparent to the crew.}}'
+  Original Text: 'MAX 8: Emergency Descent Speed Brakes system (EDS): {{c1::Both 2 and 3 above:
+    Armed when the airplane is above 30,000 feet and the cabin altitude warning is active;
+    Fully automatic with operation transparent to the crew.}}'
   Question Stem: 'MAX 8: Emergency Descent Speed Brakes system (EDS): what?'
   Choice A: ''
   Choice B: ''
-  Choice C: 'Both 2 and 3 above: Armed when the airplane is above 30,000 feet and the cabin altitude warning is active; Fully automatic with operation transparent to the crew'
+  Choice C: 'Both 2 and 3 above: Armed when the airplane is above 30,000 feet and the cabin
+    altitude warning is active; Fully automatic with operation transparent to the crew'
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

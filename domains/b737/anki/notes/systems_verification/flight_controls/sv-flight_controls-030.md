@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-030
   Original Prompt Style: cloze
-  Original Text: 'Leading edge devices can be {{c1::extended}} by the Standby Hydraulic System if System B fails.'
-  Question Stem: 'Leading edge devices can be what? by the Standby Hydraulic System if System B fails?'
+  Original Text: Leading edge devices can be {{c1::extended}} by the Standby Hydraulic System
+    if System B fails.
+  Question Stem: Leading edge devices can be what? by the Standby Hydraulic System if System
+    B fails?
   Choice A: ''
   Choice B: ''
   Choice C: Extended
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

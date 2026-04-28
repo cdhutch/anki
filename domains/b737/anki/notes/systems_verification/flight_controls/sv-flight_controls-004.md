@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-004
   Original Prompt Style: cloze
-  Original Text: 'The FSEU protects the flaps during {{c1::Normal Flap}} operation.'
-  Question Stem: 'The FSEU protects the flaps during what? operation?'
+  Original Text: The FSEU protects the flaps during {{c1::Normal Flap}} operation.
+  Question Stem: The FSEU protects the flaps during what? operation?
   Choice A: Normal Flap
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-029
   Original Prompt Style: cloze
-  Original Text: 'When the flaps have been lowered to 15 degrees with the ALT system and a missed approach has been executed, the {{c1::TE flaps can be retracted with the ALT system but not the LE devices}}.'
-  Question Stem: 'When the flaps have been lowered to 15 degrees with the ALT system and a missed approach has been executed, the what?'
+  Original Text: When the flaps have been lowered to 15 degrees with the ALT system and a
+    missed approach has been executed, the {{c1::TE flaps can be retracted with the ALT system
+    but not the LE devices}}.
+  Question Stem: When the flaps have been lowered to 15 degrees with the ALT system and a
+    missed approach has been executed, the what?
   Choice A: ''
   Choice B: TE flaps can be retracted with the ALT system but not the LE devices
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

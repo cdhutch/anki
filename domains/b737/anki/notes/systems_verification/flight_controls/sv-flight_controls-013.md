@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-013
   Original Prompt Style: cloze
-  Original Text: 'If, instead, this light *(SPEED TRIM FAIL caution)* illuminates once you are in flight, the autopilot {{c1::is still fully operational}}.'
-  Question Stem: 'If, instead, this light *(SPEED TRIM FAIL caution)* illuminates once you are in flight, the autopilot what?'
+  Original Text: If, instead, this light *(SPEED TRIM FAIL caution)* illuminates once you
+    are in flight, the autopilot {{c1::is still fully operational}}.
+  Question Stem: If, instead, this light *(SPEED TRIM FAIL caution)* illuminates once you
+    are in flight, the autopilot what?
   Choice A: ''
   Choice B: Is still fully operational
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

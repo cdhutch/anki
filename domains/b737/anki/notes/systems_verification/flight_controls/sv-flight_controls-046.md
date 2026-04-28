@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-046
   Original Prompt Style: cloze
-  Original Text: 'When using the SPEED BRAKE in flight, the speedbrake lever should {{c1::not be moved beyond the flight detent}}.'
-  Question Stem: 'When using the SPEED BRAKE in flight, the speedbrake lever should what?'
+  Original Text: When using the SPEED BRAKE in flight, the speedbrake lever should {{c1::not
+    be moved beyond the flight detent}}.
+  Question Stem: When using the SPEED BRAKE in flight, the speedbrake lever should what?
   Choice A: ''
   Choice B: ''
   Choice C: Not be moved beyond the flight detent
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

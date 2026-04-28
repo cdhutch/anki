@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-045
   Original Prompt Style: cloze
-  Original Text: 'The horizontal stabilizer is normally powered {{c1::electrically}}, but may also be operated {{c1::manually}}.'
-  Question Stem: 'The horizontal stabilizer is normally powered what?, but may also be operated what?'
+  Original Text: The horizontal stabilizer is normally powered {{c1::electrically}}, but may
+    also be operated {{c1::manually}}.
+  Question Stem: The horizontal stabilizer is normally powered what?, but may also be operated
+    what?
   Choice A: ''
   Choice B: Electrically
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

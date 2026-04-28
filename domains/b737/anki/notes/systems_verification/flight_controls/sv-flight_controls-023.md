@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-023
   Original Prompt Style: cloze
-  Original Text: 'As you advance the thrust lever for takeoff, would you get an intermittent horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)? {{c1::Yes. The LEDs are not in the proper position.}}'
-  Question Stem: 'As you advance the thrust lever for takeoff, would you get an intermittent horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)?'
+  Original Text: As you advance the thrust lever for takeoff, would you get an intermittent
+    horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)? {{c1::Yes. The LEDs
+    are not in the proper position.}}
+  Question Stem: As you advance the thrust lever for takeoff, would you get an intermittent
+    horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

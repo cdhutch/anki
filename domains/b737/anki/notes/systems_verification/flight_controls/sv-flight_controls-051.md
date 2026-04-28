@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-051
   Original Prompt Style: cloze
-  Original Text: 'During alternate flap operation, the TE flaps are positioned using {{c1::electrical}} power.'
-  Question Stem: 'During alternate flap operation, the TE flaps are positioned using what? power?'
+  Original Text: During alternate flap operation, the TE flaps are positioned using {{c1::electrical}}
+    power.
+  Question Stem: During alternate flap operation, the TE flaps are positioned using what?
+    power?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

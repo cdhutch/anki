@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-047
   Original Prompt Style: cloze
-  Original Text: 'Hydraulic System A and B pressure to the Main Rudder PCU is reduced at airspeeds above approximately {{c1::135}} knots.'
-  Question Stem: 'Hydraulic System A and B pressure to the Main Rudder PCU is reduced at airspeeds above approximately what? knots?'
+  Original Text: Hydraulic System A and B pressure to the Main Rudder PCU is reduced at airspeeds
+    above approximately {{c1::135}} knots.
+  Question Stem: Hydraulic System A and B pressure to the Main Rudder PCU is reduced at airspeeds
+    above approximately what? knots?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

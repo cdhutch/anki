@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: flight_controls-005
   Original Prompt Style: cloze
-  Original Text: 'With the STAB TRIM positioned as indicated *(in the green band)*, what would happen when the throttles are advanced for TO with all other systems set properly? {{c1::There would be no alert since this is the proper setting for TO.}}'
-  Question Stem: 'With the STAB TRIM positioned as indicated *(in the green band)*, what would happen when the throttles are advanced for TO with all other systems set properly?'
+  Original Text: With the STAB TRIM positioned as indicated *(in the green band)*, what would
+    happen when the throttles are advanced for TO with all other systems set properly? {{c1::There
+    would be no alert since this is the proper setting for TO.}}
+  Question Stem: With the STAB TRIM positioned as indicated *(in the green band)*, what would
+    happen when the throttles are advanced for TO with all other systems set properly?
   Choice A: ''
   Choice B: There would be no alert since this is the proper setting for TO
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
