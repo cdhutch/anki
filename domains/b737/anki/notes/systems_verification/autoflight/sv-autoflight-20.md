@@ -19,9 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-20
   Original Prompt Style: cloze
-  Original Text: 'A/P engagement is inhibited when {{c1::any of the above occur: the Stab Trim Auto Pilot cutout switch is in cutout; force is applied to the control wheel; the A/P disengage bar is down.}}'
-  Question Stem: 'A/P engagement is inhibited when what?'
-  Choice A: 'Any of the above occur: the Stab Trim Auto Pilot cutout switch is in cutout; force is applied to the control wheel; the A/P disengage bar is down'
+  Original Text: 'A/P engagement is inhibited when {{c1::any of the above occur: the Stab
+    Trim Auto Pilot cutout switch is in cutout; force is applied to the control wheel; the
+    A/P disengage bar is down.}}'
+  Question Stem: A/P engagement is inhibited when what?
+  Choice A: 'Any of the above occur: the Stab Trim Auto Pilot cutout switch is in cutout;
+    force is applied to the control wheel; the A/P disengage bar is down'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

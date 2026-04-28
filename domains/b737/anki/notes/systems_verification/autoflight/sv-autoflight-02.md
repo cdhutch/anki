@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-02
   Original Prompt Style: cloze
-  Original Text: 'With the PFD showing a green CMD discrete, the Autopilot is operating in the {{c1::CMD}} mode.'
-  Question Stem: 'With the PFD showing a green CMD discrete, the Autopilot is operating in the what? mode?'
+  Original Text: With the PFD showing a green CMD discrete, the Autopilot is operating in
+    the {{c1::CMD}} mode.
+  Question Stem: With the PFD showing a green CMD discrete, the Autopilot is operating in
+    the what? mode?
   Choice A: ''
   Choice B: ''
   Choice C: CMD
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

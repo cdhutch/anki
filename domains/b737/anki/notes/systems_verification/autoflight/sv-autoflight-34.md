@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-34
   Original Prompt Style: cloze
-  Original Text: 'At cruise altitude, you’ve been cleared for descent. After resetting the altitude window on the MCP, you select a vertical speed of 1000 Ft/Min. What will control the Autothrottle? {{c1::It will respond to MCP Speed.}}'
-  Question Stem: 'At cruise altitude, you’ve been cleared for descent. After resetting the altitude window on the MCP, you select a vertical speed of 1000 Ft/Min. What will control the Autothrottle?'
+  Original Text: At cruise altitude, you’ve been cleared for descent. After resetting the
+    altitude window on the MCP, you select a vertical speed of 1000 Ft/Min. What will control
+    the Autothrottle? {{c1::It will respond to MCP Speed.}}
+  Question Stem: At cruise altitude, you’ve been cleared for descent. After resetting the
+    altitude window on the MCP, you select a vertical speed of 1000 Ft/Min. What will control
+    the Autothrottle?
   Choice A: ''
   Choice B: ''
   Choice C: It will respond to MCP Speed
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

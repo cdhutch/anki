@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-09
   Original Prompt Style: cloze
-  Original Text: 'A Mode Control Panel switch illuminates to indicate mode {{c1::selection}} and that mode can be {{c1::deselected}} by pressing the switch again.'
-  Question Stem: 'A Mode Control Panel switch illuminates to indicate mode what? and that mode can be what? by pressing the switch again?'
+  Original Text: A Mode Control Panel switch illuminates to indicate mode {{c1::selection}}
+    and that mode can be {{c1::deselected}} by pressing the switch again.
+  Question Stem: A Mode Control Panel switch illuminates to indicate mode what? and that mode
+    can be what? by pressing the switch again?
   Choice A: ''
   Choice B: Selection
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

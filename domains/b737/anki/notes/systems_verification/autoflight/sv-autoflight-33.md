@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-33
   Original Prompt Style: cloze
-  Original Text: 'With the VNAV Mode selected, the autothrottles will {{c1::engage in FMC Speed mode}}.'
-  Question Stem: 'With the VNAV Mode selected, the autothrottles will what?'
+  Original Text: With the VNAV Mode selected, the autothrottles will {{c1::engage in FMC Speed
+    mode}}.
+  Question Stem: With the VNAV Mode selected, the autothrottles will what?
   Choice A: ''
   Choice B: Engage in FMC Speed mode
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-11
   Original Prompt Style: cloze
-  Original Text: 'The A/P automatically disengages {{c1::when activating either pilot`s Control Wheel Trim Switch}}.'
-  Question Stem: 'The A/P automatically disengages what?'
+  Original Text: The A/P automatically disengages {{c1::when activating either pilot`s Control
+    Wheel Trim Switch}}.
+  Question Stem: The A/P automatically disengages what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'When activating either pilot`s Control Wheel Trim Switch'
+  Choice D: When activating either pilot`s Control Wheel Trim Switch
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-42
   Original Prompt Style: cloze
-  Original Text: 'If during a windshear encounter, the vertical speed decreases to 600 feet/min or less, an attitude of {{c1::15}} degrees is commanded by the pitch command bars.'
-  Question Stem: 'If during a windshear encounter, the vertical speed decreases to 600 feet/min or less, an attitude of what? degrees is commanded by the pitch command bars?'
+  Original Text: If during a windshear encounter, the vertical speed decreases to 600 feet/min
+    or less, an attitude of {{c1::15}} degrees is commanded by the pitch command bars.
+  Question Stem: If during a windshear encounter, the vertical speed decreases to 600 feet/min
+    or less, an attitude of what? degrees is commanded by the pitch command bars?
   Choice A: ''
   Choice B: ''
   Choice C: 15
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

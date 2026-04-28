@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-28
   Original Prompt Style: cloze
-  Original Text: 'After switching from one Autopilot to the other, {{c1::the previous selected modes should remain engaged}}.'
-  Question Stem: 'After switching from one Autopilot to the other, what?'
+  Original Text: After switching from one Autopilot to the other, {{c1::the previous selected
+    modes should remain engaged}}.
+  Question Stem: After switching from one Autopilot to the other, what?
   Choice A: The previous selected modes should remain engaged
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

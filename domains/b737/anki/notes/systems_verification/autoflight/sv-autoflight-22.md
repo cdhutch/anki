@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-22
   Original Prompt Style: cloze
-  Original Text: 'After the Localizer and Glideslope capture, {{c1::disengaging auto throttles}} will not work to get out of the approach mode.'
-  Question Stem: 'After the Localizer and Glideslope capture, what? will not work to get out of the approach mode?'
+  Original Text: After the Localizer and Glideslope capture, {{c1::disengaging auto throttles}}
+    will not work to get out of the approach mode.
+  Question Stem: After the Localizer and Glideslope capture, what? will not work to get out
+    of the approach mode?
   Choice A: ''
   Choice B: ''
   Choice C: Disengaging auto throttles
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

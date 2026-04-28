@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-07
   Original Prompt Style: cloze
-  Original Text: 'Turning a F/D switch ON displays command bars on the respective pilots PFD if {{c1::command pitch or roll modes are engaged}}.'
-  Question Stem: 'Turning a F/D switch ON displays command bars on the respective pilots PFD if what?'
+  Original Text: Turning a F/D switch ON displays command bars on the respective pilots PFD
+    if {{c1::command pitch or roll modes are engaged}}.
+  Question Stem: Turning a F/D switch ON displays command bars on the respective pilots PFD
+    if what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-40
   Original Prompt Style: cloze
-  Original Text: 'Altitude alerting is inhibited {{c1::while G/S is captured}}.'
-  Question Stem: 'Altitude alerting is inhibited what?'
+  Original Text: Altitude alerting is inhibited {{c1::while G/S is captured}}.
+  Question Stem: Altitude alerting is inhibited what?
   Choice A: While G/S is captured
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

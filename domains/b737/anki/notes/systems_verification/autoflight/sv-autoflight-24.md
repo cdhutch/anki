@@ -19,9 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-24
   Original Prompt Style: cloze
-  Original Text: 'LNAV will automatically disconnect if {{c1::any of the above occurs: the end of an active route is reached; a route discontinuity is reached; another roll mode is selected}}.'
-  Question Stem: 'LNAV will automatically disconnect if what?'
-  Choice A: 'Any of the above occurs: the end of an active route is reached; a route discontinuity is reached; another roll mode is selected'
+  Original Text: 'LNAV will automatically disconnect if {{c1::any of the above occurs: the
+    end of an active route is reached; a route discontinuity is reached; another roll mode
+    is selected}}.'
+  Question Stem: LNAV will automatically disconnect if what?
+  Choice A: 'Any of the above occurs: the end of an active route is reached; a route discontinuity
+    is reached; another roll mode is selected'
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-10
   Original Prompt Style: cloze
-  Original Text: 'Independent FD operation is annunciated by {{c1::illumination of both MA lights}}.'
-  Question Stem: 'Independent FD operation is annunciated by what?'
+  Original Text: Independent FD operation is annunciated by {{c1::illumination of both MA
+    lights}}.
+  Question Stem: Independent FD operation is annunciated by what?
   Choice A: ''
   Choice B: ''
   Choice C: Illumination of both MA lights
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

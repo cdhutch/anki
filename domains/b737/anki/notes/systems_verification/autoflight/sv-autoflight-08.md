@@ -19,9 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-08
   Original Prompt Style: cloze
-  Original Text: 'The three flight mode annunciator displays above the attitude indicator are {{c1::autothrottle, roll, pitch}}.'
-  Question Stem: 'The three flight mode annunciator displays above the attitude indicator are what?'
-  Choice A: 'Autothrottle, roll, pitch'
+  Original Text: The three flight mode annunciator displays above the attitude indicator are
+    {{c1::autothrottle, roll, pitch}}.
+  Question Stem: The three flight mode annunciator displays above the attitude indicator are
+    what?
+  Choice A: Autothrottle, roll, pitch
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

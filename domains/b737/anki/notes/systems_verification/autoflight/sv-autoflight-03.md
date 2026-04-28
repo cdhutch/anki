@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-03
   Original Prompt Style: cloze
-  Original Text: 'With the FMAs reading ''MCP SPD | HDG SEL | ALT HOLD'', the pitch mode is being controlled by {{c1::ALT HOLD}}.'
-  Question Stem: 'With the FMAs reading ''MCP SPD | HDG SEL | ALT HOLD'', the pitch mode is being controlled by what?'
+  Original Text: With the FMAs reading 'MCP SPD | HDG SEL | ALT HOLD', the pitch mode is being
+    controlled by {{c1::ALT HOLD}}.
+  Question Stem: With the FMAs reading 'MCP SPD | HDG SEL | ALT HOLD', the pitch mode is being
+    controlled by what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

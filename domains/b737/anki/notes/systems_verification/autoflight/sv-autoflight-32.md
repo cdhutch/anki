@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-32
   Original Prompt Style: cloze
-  Original Text: 'In this scenario with the SPEED mode engaged and the speed window open, the {{c1::MCP Speed}} mode is controlling the Autothrottle.'
-  Question Stem: 'In this scenario with the SPEED mode engaged and the speed window open, the what? mode is controlling the Autothrottle?'
+  Original Text: In this scenario with the SPEED mode engaged and the speed window open, the
+    {{c1::MCP Speed}} mode is controlling the Autothrottle.
+  Question Stem: In this scenario with the SPEED mode engaged and the speed window open, the
+    what? mode is controlling the Autothrottle?
   Choice A: MCP Speed
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

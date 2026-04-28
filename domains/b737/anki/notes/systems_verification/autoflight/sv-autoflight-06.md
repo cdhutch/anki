@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-06
   Original Prompt Style: cloze
-  Original Text: 'After LOC and G/S are both captured, the APP mode can be disengaged by {{c1::Any of the above actions: pressing the TOGA switch; retuning both nav radios; turning both F/Ds OFF and disengating the A/P}}. Select the most correct answer.'
-  Question Stem: 'After LOC and G/S are both captured, the APP mode can be disengaged by what?. Select the most correct answer?'
+  Original Text: 'After LOC and G/S are both captured, the APP mode can be disengaged by {{c1::Any
+    of the above actions: pressing the TOGA switch; retuning both nav radios; turning both
+    F/Ds OFF and disengating the A/P}}. Select the most correct answer.'
+  Question Stem: After LOC and G/S are both captured, the APP mode can be disengaged by what?.
+    Select the most correct answer?
   Choice A: ''
   Choice B: ''
-  Choice C: 'Any of the above actions: pressing the TOGA switch; retuning both nav radios; turning both F/Ds OFF and disengating the A/P'
+  Choice C: 'Any of the above actions: pressing the TOGA switch; retuning both nav radios;
+    turning both F/Ds OFF and disengating the A/P'
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

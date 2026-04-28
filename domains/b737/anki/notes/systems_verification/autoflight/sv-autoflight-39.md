@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-39
   Original Prompt Style: cloze
-  Original Text: 'What does an amber CWS R above the attitude indicator mean? {{c1::Control wheel steering, roll, is engaged}}'
-  Question Stem: 'What does an amber CWS R above the attitude indicator mean?'
+  Original Text: What does an amber CWS R above the attitude indicator mean? {{c1::Control
+    wheel steering, roll, is engaged}}
+  Question Stem: What does an amber CWS R above the attitude indicator mean?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Control wheel steering, roll, is engaged'
+  Choice D: Control wheel steering, roll, is engaged
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

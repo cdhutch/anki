@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-30
   Original Prompt Style: cloze
-  Original Text: 'After TO/GA is selected on a go around, the FD will command an initial pitch attitude of approximately {{c1::15}} degrees.'
-  Question Stem: 'After TO/GA is selected on a go around, the FD will command an initial pitch attitude of approximately what? degrees?'
+  Original Text: After TO/GA is selected on a go around, the FD will command an initial pitch
+    attitude of approximately {{c1::15}} degrees.
+  Question Stem: After TO/GA is selected on a go around, the FD will command an initial pitch
+    attitude of approximately what? degrees?
   Choice A: ''
   Choice B: ''
   Choice C: 15
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

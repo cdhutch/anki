@@ -19,14 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-19
   Original Prompt Style: cloze
-  Original Text: 'An altitude deviation will continue to warn the crew until {{c1::deviation is less than 200 feet, more than 900 feet, or a new altitude is selected}}.'
-  Question Stem: 'An altitude deviation will continue to warn the crew until what?'
+  Original Text: An altitude deviation will continue to warn the crew until {{c1::deviation
+    is less than 200 feet, more than 900 feet, or a new altitude is selected}}.
+  Question Stem: An altitude deviation will continue to warn the crew until what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Deviation is less than 200 feet, more than 900 feet, or a new altitude is selected'
+  Choice D: Deviation is less than 200 feet, more than 900 feet, or a new altitude is selected
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

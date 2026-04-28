@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-05
   Original Prompt Style: cloze
-  Original Text: 'What system provides N1 limits and target N1 for the A/T? {{c1::FMC}}'
-  Question Stem: 'What system provides N1 limits and target N1 for the A/T?'
+  Original Text: What system provides N1 limits and target N1 for the A/T? {{c1::FMC}}
+  Question Stem: What system provides N1 limits and target N1 for the A/T?
   Choice A: ''
   Choice B: FMC
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

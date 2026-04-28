@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-29
   Original Prompt Style: cloze
-  Original Text: 'If a speed selected on the MCP is lower than the minimum speed allowed by the AFDS and A/T, {{c1::a flashing A}} appear(s) in the MCP speed display?'
-  Question Stem: 'If a speed selected on the MCP is lower than the minimum speed allowed by the AFDS and A/T, what? appear(s) in the MCP speed display?'
+  Original Text: If a speed selected on the MCP is lower than the minimum speed allowed by
+    the AFDS and A/T, {{c1::a flashing A}} appear(s) in the MCP speed display?
+  Question Stem: If a speed selected on the MCP is lower than the minimum speed allowed by
+    the AFDS and A/T, what? appear(s) in the MCP speed display?
   Choice A: ''
   Choice B: A flashing A
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

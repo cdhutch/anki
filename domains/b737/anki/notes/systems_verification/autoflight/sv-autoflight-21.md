@@ -19,10 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-21
   Original Prompt Style: cloze
-  Original Text: 'Activating the APP Switch {{c1::does all of the above: illuminates the APP switch light; arms AFDS for LOC & GS capture; arms the VOR/LOC and GS annunciators on the FMA}}.'
-  Question Stem: 'Activating the APP Switch what?'
+  Original Text: 'Activating the APP Switch {{c1::does all of the above: illuminates the APP
+    switch light; arms AFDS for LOC & GS capture; arms the VOR/LOC and GS annunciators on
+    the FMA}}.'
+  Question Stem: Activating the APP Switch what?
   Choice A: ''
-  Choice B: 'Does all of the above: illuminates the APP switch light; arms AFDS for LOC & GS capture; arms the VOR/LOC and GS annunciators on the FMA'
+  Choice B: 'Does all of the above: illuminates the APP switch light; arms AFDS for LOC &
+    GS capture; arms the VOR/LOC and GS annunciators on the FMA'
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

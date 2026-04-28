@@ -19,10 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-37
   Original Prompt Style: cloze
-  Original Text: 'What does an amber CWS P above the attitude indicator mean? {{c1::Control wheel steering, pitch, is engaged.}}'
-  Question Stem: 'What does an amber CWS P above the attitude indicator mean?'
+  Original Text: What does an amber CWS P above the attitude indicator mean? {{c1::Control
+    wheel steering, pitch, is engaged.}}
+  Question Stem: What does an amber CWS P above the attitude indicator mean?
   Choice A: ''
-  Choice B: 'Control wheel steering, pitch, is engaged'
+  Choice B: Control wheel steering, pitch, is engaged
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

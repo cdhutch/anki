@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-23
   Original Prompt Style: cloze
-  Original Text: 'During a go-around, pressing the TOGA switch two times will {{c1::command autothrottles to full go-around thrust}}.'
-  Question Stem: 'During a go-around, pressing the TOGA switch two times will what?'
+  Original Text: During a go-around, pressing the TOGA switch two times will {{c1::command
+    autothrottles to full go-around thrust}}.
+  Question Stem: During a go-around, pressing the TOGA switch two times will what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

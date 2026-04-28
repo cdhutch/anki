@@ -19,8 +19,12 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-36
   Original Prompt Style: cloze
-  Original Text: 'MAX: When roll attitude exceeds {{c1::45 - Regardless of autopilot engagement}} degrees of bank, the MAX Roll Command Alerting System (RCAS) a guidance cue is displayed on the PFD and HUD, indicating the correct upset roll recovery direction:'
-  Question Stem: 'MAX: When roll attitude exceeds what? degrees of bank, the MAX Roll Command Alerting System (RCAS) a guidance cue is displayed on the PFD and HUD, indicating the correct upset roll recovery direction:?'
+  Original Text: 'MAX: When roll attitude exceeds {{c1::45 - Regardless of autopilot engagement}}
+    degrees of bank, the MAX Roll Command Alerting System (RCAS) a guidance cue is displayed
+    on the PFD and HUD, indicating the correct upset roll recovery direction:'
+  Question Stem: 'MAX: When roll attitude exceeds what? degrees of bank, the MAX Roll Command
+    Alerting System (RCAS) a guidance cue is displayed on the PFD and HUD, indicating the
+    correct upset roll recovery direction:?'
   Choice A: 45 - Regardless of autopilot engagement
   Choice B: ''
   Choice C: ''
@@ -30,3 +34,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

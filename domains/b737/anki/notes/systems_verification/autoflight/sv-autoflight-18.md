@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-18
   Original Prompt Style: cloze
-  Original Text: 'On a go around after the first push of either TO/GA switch, the thrust levers advance to reduced go around N1 to produce {{c1::1000}} fpm to {{c1::2000}} fpm rate of climb.'
-  Question Stem: 'On a go around after the first push of either TO/GA switch, the thrust levers advance to reduced go around N1 to produce what? fpm to what? fpm rate of climb?'
+  Original Text: On a go around after the first push of either TO/GA switch, the thrust levers
+    advance to reduced go around N1 to produce {{c1::1000}} fpm to {{c1::2000}} fpm rate of
+    climb.
+  Question Stem: On a go around after the first push of either TO/GA switch, the thrust levers
+    advance to reduced go around N1 to produce what? fpm to what? fpm rate of climb?
   Choice A: ''
   Choice B: ''
   Choice C: 1000
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

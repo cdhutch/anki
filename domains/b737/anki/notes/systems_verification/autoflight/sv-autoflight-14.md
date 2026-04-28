@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-14
   Original Prompt Style: cloze
-  Original Text: 'The crew is alerted to an altitude deviation when {{c1::200}} feet from the selected MCP altitude.'
-  Question Stem: 'The crew is alerted to an altitude deviation when what? feet from the selected MCP altitude?'
+  Original Text: The crew is alerted to an altitude deviation when {{c1::200}} feet from the
+    selected MCP altitude.
+  Question Stem: The crew is alerted to an altitude deviation when what? feet from the selected
+    MCP altitude?
   Choice A: ''
   Choice B: ''
   Choice C: 200
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

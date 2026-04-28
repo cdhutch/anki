@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-17
   Original Prompt Style: cloze
-  Original Text: 'When TO/GA is engaged for takeoff, where are the pitch command bars positioned initially? {{c1::10 degrees nose down.}}'
-  Question Stem: 'When TO/GA is engaged for takeoff, where are the pitch command bars positioned initially?'
+  Original Text: When TO/GA is engaged for takeoff, where are the pitch command bars positioned
+    initially? {{c1::10 degrees nose down.}}
+  Question Stem: When TO/GA is engaged for takeoff, where are the pitch command bars positioned
+    initially?
   Choice A: ''
   Choice B: 10 degrees nose down
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

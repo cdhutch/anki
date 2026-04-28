@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-15
   Original Prompt Style: cloze
-  Original Text: 'A boxed A/T LIM annunciation indicates that the FMC is not providing {{c1::N1}} limit values to the A/T system.'
-  Question Stem: 'A boxed A/T LIM annunciation indicates that the FMC is not providing what? limit values to the A/T system?'
+  Original Text: A boxed A/T LIM annunciation indicates that the FMC is not providing {{c1::N1}}
+    limit values to the A/T system.
+  Question Stem: A boxed A/T LIM annunciation indicates that the FMC is not providing what?
+    limit values to the A/T system?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

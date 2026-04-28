@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-38
   Original Prompt Style: cloze
-  Original Text: 'On a single-engine go around, a push of either TO/GA switch will command an initial pitch attitude of {{c1::13}} degrees nose up.'
-  Question Stem: 'On a single-engine go around, a push of either TO/GA switch will command an initial pitch attitude of what? degrees nose up?'
+  Original Text: On a single-engine go around, a push of either TO/GA switch will command
+    an initial pitch attitude of {{c1::13}} degrees nose up.
+  Question Stem: On a single-engine go around, a push of either TO/GA switch will command
+    an initial pitch attitude of what? degrees nose up?
   Choice A: ''
   Choice B: ''
   Choice C: 13
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

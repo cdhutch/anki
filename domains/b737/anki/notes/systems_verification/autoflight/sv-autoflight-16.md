@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-16
   Original Prompt Style: cloze
-  Original Text: 'Engaged flight modes are displayed in what color? {{c1::Green}}'
-  Question Stem: 'Engaged flight modes are displayed in what color?'
+  Original Text: Engaged flight modes are displayed in what color? {{c1::Green}}
+  Question Stem: Engaged flight modes are displayed in what color?
   Choice A: Green
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

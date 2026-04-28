@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-12
   Original Prompt Style: cloze
-  Original Text: 'If a speed selected on the MCP is greater than the maximum speed allowed, {{c1::a flashing B}} appear(s) on the display?'
-  Question Stem: 'If a speed selected on the MCP is greater than the maximum speed allowed, what? appear(s) on the display?'
+  Original Text: If a speed selected on the MCP is greater than the maximum speed allowed,
+    {{c1::a flashing B}} appear(s) on the display?
+  Question Stem: If a speed selected on the MCP is greater than the maximum speed allowed,
+    what? appear(s) on the display?
   Choice A: A flashing B
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-35
   Original Prompt Style: cloze
-  Original Text: 'The right FMC becomes the Primary FMC when {{c1::Both 2 and 3 are correct: 2) The FMC Source Select Switch is BOTH ON R and 3) The left FMC fails.}}.'
-  Question Stem: 'The right FMC becomes the Primary FMC when what?'
+  Original Text: 'The right FMC becomes the Primary FMC when {{c1::Both 2 and 3 are correct:
+    2) The FMC Source Select Switch is BOTH ON R and 3) The left FMC fails.}}.'
+  Question Stem: The right FMC becomes the Primary FMC when what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Both 2 and 3 are correct: 2) The FMC Source Select Switch is BOTH ON R and 3) The left FMC fails'
+  Choice D: 'Both 2 and 3 are correct: 2) The FMC Source Select Switch is BOTH ON R and 3)
+    The left FMC fails'
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

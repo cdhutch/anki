@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-27
   Original Prompt Style: cloze
-  Original Text: 'As you switch to the B Autopilot, what must be done to switch the Master FCC to the Right Side? {{c1::Do nothing; it will switch when Autopilot B is selected.}}'
-  Question Stem: 'As you switch to the B Autopilot, what must be done to switch the Master FCC to the Right Side?'
+  Original Text: As you switch to the B Autopilot, what must be done to switch the Master
+    FCC to the Right Side? {{c1::Do nothing; it will switch when Autopilot B is selected.}}
+  Question Stem: As you switch to the B Autopilot, what must be done to switch the Master
+    FCC to the Right Side?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

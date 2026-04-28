@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: autoflight-25
   Original Prompt Style: cloze
-  Original Text: 'What are the indications when deviating from a selected altitude by more than 200 feet? {{c1::An aural alert sounds and the current altitude box turns amber and begins to flash.}}'
-  Question Stem: 'What are the indications when deviating from a selected altitude by more than 200 feet?'
+  Original Text: What are the indications when deviating from a selected altitude by more
+    than 200 feet? {{c1::An aural alert sounds and the current altitude box turns amber and
+    begins to flash.}}
+  Question Stem: What are the indications when deviating from a selected altitude by more
+    than 200 feet?
   Choice A: ''
   Choice B: An aural alert sounds and the current altitude box turns amber and begins to flash
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
