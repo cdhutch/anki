@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: landing_gear-018
+note_type: systems_verification_exam_draft
+note_id: sv-landing_gear-018
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:landing_gear
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'In the event the #1 engine fails, normal retraction of the landing gear is not available;
-    however, the gear will be retracted by {{c1::the Landing Gear Transfer Unit}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Landing Gear 18
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: landing_gear-018
+  Original Prompt Style: cloze
+  Original Text: 'In the event the #1 engine fails, normal retraction of the landing gear
+    is not available; however, the gear will be retracted by {{c1::the Landing Gear Transfer
+    Unit}}.'
+  Question Stem: If the
+  Choice A: ''
+  Choice B: ''
+  Choice C: The Landing Gear Transfer Unit
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: landing_gear
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

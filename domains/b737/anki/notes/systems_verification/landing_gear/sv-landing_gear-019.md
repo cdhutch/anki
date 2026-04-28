@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: landing_gear-019
+note_type: systems_verification_exam_draft
+note_id: sv-landing_gear-019
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:landing_gear
-- source:question-bank
-- status:verified
+- format:tf
+- source:question_bank
+- status:draft
 fields:
-  Text: 'Operation with assumed temperature reduced takeoff thrust is not permitted with antiskid
-    inoperative: {{c1::TRUE}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Landing Gear 19
+  Exam Format: tf
+  Conversion Status: draft
+  Original Note ID: landing_gear-019
+  Original Prompt Style: cloze
+  Original Text: 'Operation with assumed temperature reduced takeoff thrust is not permitted
+    with antiskid inoperative: {{c1::TRUE}}'
+  Question Stem: 'True or False: Operation with assumed temperature reduced takeoff thrust
+    is not permitted with antiskid inoperative.'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: true
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: landing_gear
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
