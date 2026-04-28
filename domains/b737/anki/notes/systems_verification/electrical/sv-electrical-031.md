@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-031
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-031
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Since AC Transfer Bus 1 is dead, {{c1::the battery charger is being powered by AC
-    Ground Service Bus 2}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 31
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-031
+  Original Prompt Style: cloze
+  Original Text: 'Since AC Transfer Bus 1 is dead, {{c1::the battery charger is being powered by AC Ground Service Bus 2}}.'
+  Question Stem: 'Since AC Transfer Bus 1 is dead, what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: The battery charger is being powered by AC Ground Service Bus 2
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

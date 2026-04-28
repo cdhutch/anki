@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-017
+note_type: systems_verification_exam_draft
+note_id: sv-engines-017
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
-- model:b737-max
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: {{c1::28K with a 10% and
-    20% de-rate option.}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 17
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-017
+  Original Prompt Style: cloze
+  Original Text: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: {{c1::28K with a 10% and 20% de-rate option.}}'
+  Question Stem: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: what?'
+  Choice A: ''
+  Choice B: 28K with a 10% and 20% de-rate option
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

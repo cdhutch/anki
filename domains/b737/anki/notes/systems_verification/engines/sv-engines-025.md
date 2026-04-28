@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-025
+note_type: systems_verification_exam_draft
+note_id: sv-engines-025
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: You will see an ENG FAIL alert {{c1::when N2 drops below 50% and the start lever is
-    in IDLE}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 25
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-025
+  Original Prompt Style: cloze
+  Original Text: 'You will see an ENG FAIL alert {{c1::when N2 drops below 50% and the start lever is in IDLE}}.'
+  Question Stem: 'You will see an ENG FAIL alert what?'
+  Choice A: ''
+  Choice B: When N2 drops below 50% and the start lever is in IDLE
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

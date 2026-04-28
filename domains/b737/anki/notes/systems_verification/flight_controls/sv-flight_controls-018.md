@@ -1,25 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-018
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-018
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Leading edge devices are normally operated by {{c1::Hydraulic System B only}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 18
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-018
+  Original Prompt Style: cloze
+  Original Text: 'Leading edge devices are normally operated by {{c1::Hydraulic System B only}}.'
+  Question Stem: 'Leading edge devices are normally operated by what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: Hydraulic System B only
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

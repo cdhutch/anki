@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: autoflight-26
+note_type: systems_verification_exam_draft
+note_id: sv-autoflight-26
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:autoflight
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The Captain is flying the aircraft with Autopilot A engaged. To switch the Autopilot
-    from A to B {{c1::select Autopilot B}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Autoflight 26
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: autoflight-26
+  Original Prompt Style: cloze
+  Original Text: 'The Captain is flying the aircraft with Autopilot A engaged. To switch the Autopilot from A to B {{c1::select Autopilot B}}.'
+  Question Stem: 'The Captain is flying the aircraft with Autopilot A engaged. To switch the Autopilot from A to B what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: Select Autopilot B
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: autoflight
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

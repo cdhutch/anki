@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-008
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-008
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: With the loss of B Hydraulic System, the yaw damper will {{c1::be inoperative, but
-    the Yaw Damper Light will not be illuminated until the Flt control B switch is moved to
-    STBY RUD}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 8
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-008
+  Original Prompt Style: cloze
+  Original Text: 'With the loss of B Hydraulic System, the yaw damper will {{c1::be inoperative, but the Yaw Damper Light will not be illuminated until the Flt control B switch is moved to STBY RUD}}.'
+  Question Stem: 'With the loss of B Hydraulic System, the yaw damper will what?'
+  Choice A: 'Be inoperative, but the Yaw Damper Light will not be illuminated until the Flt control B switch is moved to STBY RUD'
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

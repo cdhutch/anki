@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pneumatics-008
+note_type: systems_verification_exam_draft
+note_id: sv-pneumatics-008
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pneumatics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Which statement below most accurately describes what will happen when the you press
-    the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY OVERHEAT
-    caution light; AIR COND light illuminated)*? {{c1::Nothing}}
   Source Document: Systems Validation Question Bank
-  Source Location: Pneumatics 8
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pneumatics-008
+  Original Prompt Style: cloze
+  Original Text: 'Which statement below most accurately describes what will happen when the you press the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY OVERHEAT caution light; AIR COND light illuminated)*? {{c1::Nothing}}'
+  Question Stem: 'Which statement below most accurately describes what will happen when the you press the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY OVERHEAT caution light; AIR COND light illuminated)*?'
+  Choice A: Nothing
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pneumatics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

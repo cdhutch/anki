@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-045
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-045
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'If the Standby Power "OFF" light illuminates, it means {{c1::one or more of the above:
-    AC Standby Bus, DC Standby Bus, Battery Bus}} is/are not powered.'
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 45
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-045
+  Original Prompt Style: cloze
+  Original Text: 'If the Standby Power "OFF" light illuminates, it means {{c1::one or more of the above: AC Standby Bus, DC Standby Bus, Battery Bus}} is/are not powered.'
+  Question Stem: 'If the Standby Power "OFF" light illuminates, it means what? is/are not powered?'
+  Choice A: ''
+  Choice B: 'One or more of the above: AC Standby Bus, DC Standby Bus, Battery Bus'
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

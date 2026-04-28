@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pneumatics-007
+note_type: systems_verification_exam_draft
+note_id: sv-pneumatics-007
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pneumatics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The illuminated amber lights, at right, confirm the existence of a bleed air leak.
-    The Wing Anti-Ice Switch is ON. What is the first corrective action step in this circumstance?
-    {{c1::Close the Isolation Valve.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Pneumatics 7
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pneumatics-007
+  Original Prompt Style: cloze
+  Original Text: 'The illuminated amber lights, at right, confirm the existence of a bleed air leak. The Wing Anti-Ice Switch is ON. What is the first corrective action step in this circumstance? {{c1::Close the Isolation Valve.}}'
+  Question Stem: 'The illuminated amber lights, at right, confirm the existence of a bleed air leak. The Wing Anti-Ice Switch is ON. What is the first corrective action step in this circumstance?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: Close the Isolation Valve
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pneumatics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

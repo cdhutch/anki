@@ -1,28 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-031
+note_type: systems_verification_exam_draft
+note_id: sv-engines-031
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
-- model:b737-max
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'MAX: The EECs will shut down the engine for: {{c1::Both 2. and 3. above: Overspeed
-    from exceeding engine structural design limits, both in flight and on the ground; High
-    Thrust event on the ground.}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 31
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-031
+  Original Prompt Style: cloze
+  Original Text: 'MAX: The EECs will shut down the engine for: {{c1::Both 2. and 3. above: Overspeed from exceeding engine structural design limits, both in flight and on the ground; High Thrust event on the ground.}}'
+  Question Stem: 'MAX: The EECs will shut down the engine for: what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: 'Both 2. and 3. above: Overspeed from exceeding engine structural design limits, both in flight and on the ground; High Thrust event on the ground'
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

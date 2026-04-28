@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-002
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-002
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: When positioning the flaps for takeoff from UP to 1, the crew noticed this condition.
-    What could have caused this malfunction? {{c1::Skewed T.E. Flap}}
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 2
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-002
+  Original Prompt Style: cloze
+  Original Text: 'When positioning the flaps for takeoff from UP to 1, the crew noticed this condition. What could have caused this malfunction? {{c1::Skewed T.E. Flap}}'
+  Question Stem: 'When positioning the flaps for takeoff from UP to 1, the crew noticed this condition. What could have caused this malfunction?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: Skewed T.E. Flap
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

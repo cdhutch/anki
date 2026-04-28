@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-027
+note_type: systems_verification_exam_draft
+note_id: sv-engines-027
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'The EEC will abort the engine start on the ground for {{c1::either 1 or 3 above:
-    a wet start; an impending hot start}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 27
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-027
+  Original Prompt Style: cloze
+  Original Text: 'The EEC will abort the engine start on the ground for {{c1::either 1 or 3 above: a wet start; an impending hot start}}.'
+  Question Stem: 'The EEC will abort the engine start on the ground for what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: 'Either 1 or 3 above: a wet start; an impending hot start'
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

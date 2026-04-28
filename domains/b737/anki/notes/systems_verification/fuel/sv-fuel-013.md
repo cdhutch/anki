@@ -1,26 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-013
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-013
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: What action should the crew take *(with a ENG VALVE CLOSED light illumiated, presumably
-    during start*)? {{c1::Move the start lever to cutoff and motor the engine for sixty seconds.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 13
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-013
+  Original Prompt Style: cloze
+  Original Text: What action should the crew take *(with a ENG VALVE CLOSED light illumiated,
+    presumably during start*)? {{c1::Move the start lever to cutoff and motor the engine for
+    sixty seconds.}}
+  Question Stem: What action should the crew take *(with a ENG VALVE CLOSED light illumiated,
+    presumably during start*)?
+  Choice A: ''
+  Choice B: Move the start lever to cutoff and motor the engine for sixty seconds
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

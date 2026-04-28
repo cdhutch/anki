@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-019
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-019
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
-- status:verified
-- model:b737-max
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'MAX 8: Fly-by-wire Spoiler system provides the following new features. {{c1::Both
-    2 and 3 above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist System.}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 19
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-019
+  Original Prompt Style: cloze
+  Original Text: 'MAX 8: Fly-by-wire Spoiler system provides the following new features. {{c1::Both 2 and 3 above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist System.}}'
+  Question Stem: 'MAX 8: Fly-by-wire Spoiler system provides the following new features what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: 'Both 2 and 3 above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist System'
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

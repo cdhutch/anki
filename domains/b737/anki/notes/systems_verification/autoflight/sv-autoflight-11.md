@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: autoflight-11
+note_type: systems_verification_exam_draft
+note_id: sv-autoflight-11
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:autoflight
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The A/P automatically disengages {{c1::when activating either pilot`s Control Wheel
-    Trim Switch}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Autoflight 11
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: autoflight-11
+  Original Prompt Style: cloze
+  Original Text: 'The A/P automatically disengages {{c1::when activating either pilot`s Control Wheel Trim Switch}}.'
+  Question Stem: 'The A/P automatically disengages what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: 'When activating either pilot`s Control Wheel Trim Switch'
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: autoflight
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

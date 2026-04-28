@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: air-conditioning-021
+note_type: systems_verification_exam_draft
+note_id: sv-air-conditioning-021
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:air-conditioning
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Failure of the primary and standby flight deck zone temperature controls will cause
-    the {{c1::ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights}} to illuminate.
   Source Document: Systems Validation Question Bank
-  Source Location: Air Conditioning 21
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: air-conditioning-021
+  Original Prompt Style: cloze
+  Original Text: 'Failure of the primary and standby flight deck zone temperature controls will cause the {{c1::ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights}} to illuminate.'
+  Question Stem: 'Failure of the primary and standby flight deck zone temperature controls will cause the what? to illuminate?'
+  Choice A: ''
+  Choice B: 'ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights'
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: air-conditioning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

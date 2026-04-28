@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-002
+note_type: systems_verification_exam_draft
+note_id: sv-engines-002
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: During landing rollout, with this light *(Engine 1 REVERSER caution light on ENGINE
-    panel)* illuminated, the reverser {{c1::should operate normally}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 2
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-002
+  Original Prompt Style: cloze
+  Original Text: 'During landing rollout, with this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminated, the reverser {{c1::should operate normally}}.'
+  Question Stem: 'During landing rollout, with this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminated, the reverser what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: Should operate normally
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

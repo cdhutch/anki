@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: autoflight-09
+note_type: systems_verification_exam_draft
+note_id: sv-autoflight-09
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:autoflight
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: A Mode Control Panel switch illuminates to indicate mode {{c1::selection}} and that
-    mode can be {{c1::deselected}} by pressing the switch again.
   Source Document: Systems Validation Question Bank
-  Source Location: Autoflight 9
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: autoflight-09
+  Original Prompt Style: cloze
+  Original Text: 'A Mode Control Panel switch illuminates to indicate mode {{c1::selection}} and that mode can be {{c1::deselected}} by pressing the switch again.'
+  Question Stem: 'A Mode Control Panel switch illuminates to indicate mode what? and that mode can be what? by pressing the switch again?'
+  Choice A: ''
+  Choice B: Selection
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: autoflight
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

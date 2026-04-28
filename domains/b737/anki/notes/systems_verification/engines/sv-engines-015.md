@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-015
+note_type: systems_verification_exam_draft
+note_id: sv-engines-015
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
-- model:b737-max
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'MAX: The REVERSER AIR/GRD light is illuminated when: {{c1::Illuminated when reverser
-    air/ground protection is lost.}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 15
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-015
+  Original Prompt Style: cloze
+  Original Text: 'MAX: The REVERSER AIR/GRD light is illuminated when: {{c1::Illuminated when reverser air/ground protection is lost.}}'
+  Question Stem: 'MAX: The REVERSER AIR/GRD light is illuminated when: what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: Illuminated when reverser air/ground protection is lost
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

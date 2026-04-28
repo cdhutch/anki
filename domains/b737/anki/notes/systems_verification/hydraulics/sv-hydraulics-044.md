@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-044
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-044
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: With System A fluid level at the top of the standpipe, the reservoir quantity displayed
-    indicates approximately {{c1::20}}% full.
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 44
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-044
+  Original Prompt Style: cloze
+  Original Text: 'With System A fluid level at the top of the standpipe, the reservoir quantity displayed indicates approximately {{c1::20}}% full.'
+  Question Stem: 'With System A fluid level at the top of the standpipe, the reservoir quantity displayed indicates approximately what?% full?'
+  Choice A: 20
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

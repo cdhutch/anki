@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pneumatics-004
+note_type: systems_verification_exam_draft
+note_id: sv-pneumatics-004
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pneumatics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'What are the restrictions when this light *(DUAL BLEED)* is ON? {{c1::Thrust levers
-    at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation Valve Open.}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Pneumatics 4
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pneumatics-004
+  Original Prompt Style: cloze
+  Original Text: 'What are the restrictions when this light *(DUAL BLEED)* is ON? {{c1::Thrust levers at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation Valve Open.}}'
+  Question Stem: 'What are the restrictions when this light *(DUAL BLEED)* is ON?'
+  Choice A: 'Thrust levers at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation Valve Open'
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pneumatics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

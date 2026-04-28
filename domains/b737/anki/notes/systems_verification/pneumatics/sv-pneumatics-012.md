@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pneumatics-012
+note_type: systems_verification_exam_draft
+note_id: sv-pneumatics-012
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pneumatics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: If this light *(right BLEED TRIP OFF caution )* cannot be reset after several minutes,
-    what is the problem? {{c1::The engine supply bleed pressure is too high.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Pneumatics 12
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pneumatics-012
+  Original Prompt Style: cloze
+  Original Text: 'If this light *(right BLEED TRIP OFF caution )* cannot be reset after several minutes, what is the problem? {{c1::The engine supply bleed pressure is too high.}}'
+  Question Stem: 'If this light *(right BLEED TRIP OFF caution )* cannot be reset after several minutes, what is the problem?'
+  Choice A: The engine supply bleed pressure is too high
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pneumatics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

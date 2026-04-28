@@ -1,25 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: autoflight-10
+note_type: systems_verification_exam_draft
+note_id: sv-autoflight-10
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:autoflight
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Independent FD operation is annunciated by {{c1::illumination of both MA lights}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Autoflight 10
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: autoflight-10
+  Original Prompt Style: cloze
+  Original Text: 'Independent FD operation is annunciated by {{c1::illumination of both MA lights}}.'
+  Question Stem: 'Independent FD operation is annunciated by what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: Illumination of both MA lights
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: autoflight
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

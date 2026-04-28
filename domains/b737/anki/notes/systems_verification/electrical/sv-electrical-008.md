@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-008
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-008
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: This ELEC light (on the overhead panel) illuminates {{c1::only with the airplane on
-    the ground}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 8
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-008
+  Original Prompt Style: cloze
+  Original Text: 'This ELEC light (on the overhead panel) illuminates {{c1::only with the airplane on the ground}}.'
+  Question Stem: 'This ELEC light (on the overhead panel) illuminates what?'
+  Choice A: Only with the airplane on the ground
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

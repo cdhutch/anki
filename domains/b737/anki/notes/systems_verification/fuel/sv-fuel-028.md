@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-028
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-028
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: With all fuel pumps ON, why does the center tank provide the fuel to the engines?
-    {{c1::The center tank pumps provide more pressure.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 28
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-028
+  Original Prompt Style: cloze
+  Original Text: With all fuel pumps ON, why does the center tank provide the fuel to the
+    engines? {{c1::The center tank pumps provide more pressure.}}
+  Question Stem: With all fuel pumps ON, why does the center tank provide the fuel to the
+    engines?
+  Choice A: The center tank pumps provide more pressure
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-040
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-040
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: A start valve failed to close on engine start. Which of the following will alert the
-    crew? {{c1::Blinking start valve open alert for 10 second}}
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 40
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-040
+  Original Prompt Style: cloze
+  Original Text: 'A start valve failed to close on engine start. Which of the following will alert the crew? {{c1::Blinking start valve open alert for 10 second}}'
+  Question Stem: 'A start valve failed to close on engine start. Which of the following will alert the crew?'
+  Choice A: Blinking start valve open alert for 10 second
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

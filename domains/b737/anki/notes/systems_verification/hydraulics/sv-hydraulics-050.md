@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-050
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-050
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: If a leak develops in Hydraulic System A electric motor-driven pump or its related
-    lines, the hydraulic fluid quantity in the reservoir decreases to {{c1::0}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 50
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-050
+  Original Prompt Style: cloze
+  Original Text: 'If a leak develops in Hydraulic System A electric motor-driven pump or its related lines, the hydraulic fluid quantity in the reservoir decreases to {{c1::0}}.'
+  Question Stem: 'If a leak develops in Hydraulic System A electric motor-driven pump or its related lines, the hydraulic fluid quantity in the reservoir decreases to what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: 0
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

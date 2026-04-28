@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pneumatics-026
+note_type: systems_verification_exam_draft
+note_id: sv-pneumatics-026
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pneumatics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'When the Isolation Valve Switch is in AUTO, the valve will open automatically if
-    {{c1::either 1 or 2 occur: a pack switch is placed OFF; an engine bleed switch is placed
-    OFF}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Pneumatics 26
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pneumatics-026
+  Original Prompt Style: cloze
+  Original Text: 'When the Isolation Valve Switch is in AUTO, the valve will open automatically if {{c1::either 1 or 2 occur: a pack switch is placed OFF; an engine bleed switch is placed OFF}}.'
+  Question Stem: 'When the Isolation Valve Switch is in AUTO, the valve will open automatically if what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: 'Either 1 or 2 occur: a pack switch is placed OFF; an engine bleed switch is placed OFF'
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pneumatics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

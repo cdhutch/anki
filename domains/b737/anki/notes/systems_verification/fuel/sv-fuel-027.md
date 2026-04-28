@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-027
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-027
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: A bright blue Crossfeed VALVE OPEN Light means the Crossfeed Valve is {{c1::in transit
-    or the valve position and CROSSFEED Selector disagree}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 27
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-027
+  Original Prompt Style: cloze
+  Original Text: A bright blue Crossfeed VALVE OPEN Light means the Crossfeed Valve is {{c1::in
+    transit or the valve position and CROSSFEED Selector disagree}}.
+  Question Stem: A bright blue Crossfeed VALVE OPEN Light means the Crossfeed Valve is what?
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: In transit or the valve position and CROSSFEED Selector disagree
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-041
+note_type: systems_verification_exam_draft
+note_id: sv-engines-041
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: What component regulates the engine to keep it within operating parameters? {{c1::The
-    dual channel electronic engine control (EEC).}}
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 41
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-041
+  Original Prompt Style: cloze
+  Original Text: 'What component regulates the engine to keep it within operating parameters? {{c1::The dual channel electronic engine control (EEC).}}'
+  Question Stem: 'What component regulates the engine to keep it within operating parameters?'
+  Choice A: ''
+  Choice B: The dual channel electronic engine control (EEC)
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

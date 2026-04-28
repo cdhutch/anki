@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-029
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-029
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: To block hydraulic fluid flow to the engine driven pump, {{c1::pull the respective
-    engine Fire Handle}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 29
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-029
+  Original Prompt Style: cloze
+  Original Text: 'To block hydraulic fluid flow to the engine driven pump, {{c1::pull the respective engine Fire Handle}}.'
+  Question Stem: 'To block hydraulic fluid flow to the engine driven pump, what?'
+  Choice A: ''
+  Choice B: Pull the respective engine Fire Handle
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

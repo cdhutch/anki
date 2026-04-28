@@ -1,28 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-026
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-026
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
-- status:verified
-- model:b737-max
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'MAX 8: Emergency Descent Speed Brakes system (EDS): {{c1::Both 2 and 3 above: Armed
-    when the airplane is above 30,000 feet and the cabin altitude warning is active; Fully
-    automatic with operation transparent to the crew.}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 26
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-026
+  Original Prompt Style: cloze
+  Original Text: 'MAX 8: Emergency Descent Speed Brakes system (EDS): {{c1::Both 2 and 3 above: Armed when the airplane is above 30,000 feet and the cabin altitude warning is active; Fully automatic with operation transparent to the crew.}}'
+  Question Stem: 'MAX 8: Emergency Descent Speed Brakes system (EDS): what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: 'Both 2 and 3 above: Armed when the airplane is above 30,000 feet and the cabin altitude warning is active; Fully automatic with operation transparent to the crew'
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

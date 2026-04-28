@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-030
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-030
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The purpose of the Power Transfer Unit (PTU) is to {{c1::supply hydraulic fluid volume
-    needed to operate autoslats and leading edge flaps and slats}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 30
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-030
+  Original Prompt Style: cloze
+  Original Text: 'The purpose of the Power Transfer Unit (PTU) is to {{c1::supply hydraulic fluid volume needed to operate autoslats and leading edge flaps and slats}}.'
+  Question Stem: 'The purpose of the Power Transfer Unit (PTU) is to what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: Supply hydraulic fluid volume needed to operate autoslats and leading edge flaps and slats
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

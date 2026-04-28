@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-041
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-041
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
-- status:verified
-- model:b737-max
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: {{c1::Aft Overhead Panel}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 41
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-041
+  Original Prompt Style: cloze
+  Original Text: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: {{c1::Aft Overhead Panel}}'
+  Question Stem: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: what?'
+  Choice A: ''
+  Choice B: Aft Overhead Panel
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

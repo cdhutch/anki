@@ -1,25 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-024
+note_type: systems_verification_exam_draft
+note_id: sv-engines-024
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: Engine maximum and minimum limits are displayed in {{c1::red}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 24
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-024
+  Original Prompt Style: cloze
+  Original Text: 'Engine maximum and minimum limits are displayed in {{c1::red}}.'
+  Question Stem: 'Engine maximum and minimum limits are displayed in what?'
+  Choice A: Red
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-012
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-012
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: With a normally operating electrical system, placing the Battery Switch OFF {{c1::removes
-    power to the Battery Bus and the Switched Hot Battery Bus}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 12
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-012
+  Original Prompt Style: cloze
+  Original Text: 'With a normally operating electrical system, placing the Battery Switch OFF {{c1::removes power to the Battery Bus and the Switched Hot Battery Bus}}.'
+  Question Stem: 'With a normally operating electrical system, placing the Battery Switch OFF what?'
+  Choice A: Removes power to the Battery Bus and the Switched Hot Battery Bus
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

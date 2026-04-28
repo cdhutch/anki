@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-030
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-030
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The maximum fuel temperature is {{c1::49}} degrees C.
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 30
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-030
+  Original Prompt Style: cloze
+  Original Text: The maximum fuel temperature is {{c1::49}} degrees C.
+  Question Stem: The maximum fuel temperature is what? degrees C?
+  Choice A: ''
+  Choice B: ''
+  Choice C: 49
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

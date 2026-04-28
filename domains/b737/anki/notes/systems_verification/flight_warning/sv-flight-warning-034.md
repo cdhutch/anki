@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-034
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-034
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: A momentary altitude alert tone will activate {{c1::approaching 900 feet of the altitude
-    selected on the mode control panel}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 34
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-034
+  Original Prompt Style: cloze
+  Original Text: 'A momentary altitude alert tone will activate {{c1::approaching 900 feet of the altitude selected on the mode control panel}}.'
+  Question Stem: 'A momentary altitude alert tone will activate what?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: Approaching 900 feet of the altitude selected on the mode control panel
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

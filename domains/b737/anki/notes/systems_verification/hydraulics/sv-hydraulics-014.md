@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-014
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-014
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: With this light *(STANDBY HYD LOW QUANTITY)* illuminated, Hydraulic System B quantity
-    should read approximately {{c1::70}}%.
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 14
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-014
+  Original Prompt Style: cloze
+  Original Text: 'With this light *(STANDBY HYD LOW QUANTITY)* illuminated, Hydraulic System B quantity should read approximately {{c1::70}}%.'
+  Question Stem: 'With this light *(STANDBY HYD LOW QUANTITY)* illuminated, Hydraulic System B quantity should read approximately what?%?'
+  Choice A: ''
+  Choice B: ''
+  Choice C: 70
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

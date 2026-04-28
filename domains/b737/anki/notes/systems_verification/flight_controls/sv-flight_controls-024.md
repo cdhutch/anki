@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-024
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-024
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The previous condition has now been corrected *(now the LE DEVICES are properly configured).
-    The takeoff warning sounds again. Why? {{c1::Stab Trim not in green band or parking brake
-    lever set.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 24
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-024
+  Original Prompt Style: cloze
+  Original Text: 'The previous condition has now been corrected *(now the LE DEVICES are properly configured). The takeoff warning sounds again. Why? {{c1::Stab Trim not in green band or parking brake lever set.}}'
+  Question Stem: 'The previous condition has now been corrected *(now the LE DEVICES are properly configured). The takeoff warning sounds again. Why?'
+  Choice A: Stab Trim not in green band or parking brake lever set
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

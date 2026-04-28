@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-024
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-024
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The APU is now started and AC power is applied to both Transfer Busses. The BAT DISCHARGE
-    light should {{c1::extinguish indicating there is no longer a high draw on the battery}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 24
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-024
+  Original Prompt Style: cloze
+  Original Text: 'The APU is now started and AC power is applied to both Transfer Busses. The BAT DISCHARGE light should {{c1::extinguish indicating there is no longer a high draw on the battery}}.'
+  Question Stem: 'The APU is now started and AC power is applied to both Transfer Busses. The BAT DISCHARGE light should what?'
+  Choice A: Extinguish indicating there is no longer a high draw on the battery
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

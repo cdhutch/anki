@@ -1,27 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: engines-021
+note_type: systems_verification_exam_draft
+note_id: sv-engines-021
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:engines
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above 80 knots
-    and below 400 feet RA, {{c1::only the Oil Filter Bypass light illuminates, and it will
-    be steady}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Engines 21
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: engines-021
+  Original Prompt Style: cloze
+  Original Text: 'If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above 80 knots and below 400 feet RA, {{c1::only the Oil Filter Bypass light illuminates, and it will be steady}}.'
+  Question Stem: 'If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above 80 knots and below 400 feet RA, what?'
+  Choice A: ''
+  Choice B: 'Only the Oil Filter Bypass light illuminates, and it will be steady'
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: engines
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

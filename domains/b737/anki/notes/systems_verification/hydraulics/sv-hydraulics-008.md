@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-008
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-008
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: With the A hydraulic system engine driven pump low pressure light on and indicating
-    20% of volume in the A reservoir, {{c1::gear will retract at a slower rate}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 8
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-008
+  Original Prompt Style: cloze
+  Original Text: 'With the A hydraulic system engine driven pump low pressure light on and indicating 20% of volume in the A reservoir, {{c1::gear will retract at a slower rate}}.'
+  Question Stem: 'With the A hydraulic system engine driven pump low pressure light on and indicating 20% of volume in the A reservoir, what?'
+  Choice A: Gear will retract at a slower rate
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-

@@ -1,26 +1,32 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-029
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-029
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: '{{c1::SPEED BRAKE lever is not in the DOWN position}} will activate the takeoff warning
-    system.'
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 29
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-029
+  Original Prompt Style: cloze
+  Original Text: '{{c1::SPEED BRAKE lever is not in the DOWN position}} will activate the takeoff warning system.'
+  Question Stem: 'What? will activate the takeoff warning system?'
+  Choice A: ''
+  Choice B: SPEED BRAKE lever is not in the DOWN position
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
-
