@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fms-032
+note_type: systems_verification_exam_draft
+note_id: sv-fms-032
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fms
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: The FMC Alert Light illuminated Amber for what reason? {{c1::An alerting message exists
-    for both CDUs.}}
   Source Document: Systems Validation Question Bank
-  Source Location: FMS 32
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fms-032
+  Original Prompt Style: cloze
+  Original Text: The FMC Alert Light illuminated Amber for what reason? {{c1::An alerting
+    message exists\n    for both CDUs.}}
+  Question Stem: Why does the FMC Alert Light illuminate amber?
+  Choice A: An alerting message exists for both CDUs
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fms
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

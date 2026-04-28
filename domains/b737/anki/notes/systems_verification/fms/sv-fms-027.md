@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fms-027
+note_type: systems_verification_exam_draft
+note_id: sv-fms-027
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fms
-- source:question-bank
-- status:verified
+- format:tf
+- source:question_bank
+- status:draft
 fields:
-  Text: With only one FMC available, the system is capable of calculating data accurately.
-    {{c1::Yes}}
   Source Document: Systems Validation Question Bank
-  Source Location: FMS 27
+  Exam Format: tf
+  Conversion Status: draft
+  Original Note ID: fms-027
+  Original Prompt Style: cloze
+  Original Text: With only one FMC available, the system is capable of calculating data accurately.\n    {{c1::Yes}}
+  Question Stem: 'True or False: With only one FMC available, the system is capable of calculating
+    data accurately.'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: true
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: fms
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

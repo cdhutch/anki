@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fms-030
+note_type: systems_verification_exam_draft
+note_id: sv-fms-030
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fms
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: During a VNAV PATH descent, the FMC will calculate a descent path based on {{c1::altitude
-    constraints, airspeed, and end of descent point}}.
   Source Document: Systems Validation Question Bank
-  Source Location: FMS 30
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fms-030
+  Original Prompt Style: cloze
+  Original Text: During a VNAV PATH descent, the FMC will calculate a descent path based on
+    {{c1::altitude\n    constraints, airspeed, and end of descent point}}.
+  Question Stem: During a VNAV PATH descent, the FMC calculates a descent path based on what?
+  Choice A: ''
+  Choice B: ''
+  Choice C: Altitude constraints, airspeed, and end of descent point
+  Choice D: ''
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fms
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

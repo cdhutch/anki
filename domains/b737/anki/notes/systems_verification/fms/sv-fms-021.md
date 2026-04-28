@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fms-021
+note_type: systems_verification_exam_draft
+note_id: sv-fms-021
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fms
-- source:question-bank
-- status:verified
+- format:tf
+- source:question_bank
+- status:draft
 fields:
-  Text: The FMCs are completely independent and do not transfer or compare information between
-    each unit. {{c1::False}}
   Source Document: Systems Validation Question Bank
-  Source Location: FMS 21
+  Exam Format: tf
+  Conversion Status: draft
+  Original Note ID: fms-021
+  Original Prompt Style: cloze
+  Original Text: The FMCs are completely independent and do not transfer or compare information
+    between\n    each unit. {{c1::False}}
+  Question Stem: 'True or False: The FMCs are completely independent and do not transfer or
+    compare information between each unit.'
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: false
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: fms
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
