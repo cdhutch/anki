@@ -19,7 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-015
   Original Prompt Style: cloze
-  Original Text: 'MAX: The REVERSER AIR/GRD light is illuminated when: {{c1::Illuminated when reverser air/ground protection is lost.}}'
+  Original Text: 'MAX: The REVERSER AIR/GRD light is illuminated when: {{c1::Illuminated when
+    reverser air/ground protection is lost.}}'
   Question Stem: 'MAX: The REVERSER AIR/GRD light is illuminated when: what?'
   Choice A: ''
   Choice B: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-007
   Original Prompt Style: cloze
-  Original Text: 'What protection is the EEC providing the #1 engine in this mode with *(#1 EEC ALTN caution light illuminated)*? {{c1::Exceeding N1, N2 redline limits}}'
-  Question Stem: 'What protection is the EEC providing the #1 engine in this mode with *(#1 EEC ALTN caution light illuminated)*?'
+  Original Text: 'What protection is the EEC providing the #1 engine in this mode with *(#1
+    EEC ALTN caution light illuminated)*? {{c1::Exceeding N1, N2 redline limits}}'
+  Question Stem: 'What protection is the EEC providing the #1 engine in this mode with *(#1
+    EEC ALTN caution light illuminated)*?'
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Exceeding N1, N2 redline limits'
+  Choice D: Exceeding N1, N2 redline limits
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

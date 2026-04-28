@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-027
   Original Prompt Style: cloze
-  Original Text: 'The EEC will abort the engine start on the ground for {{c1::either 1 or 3 above: a wet start; an impending hot start}}.'
-  Question Stem: 'The EEC will abort the engine start on the ground for what?'
+  Original Text: 'The EEC will abort the engine start on the ground for {{c1::either 1 or
+    3 above: a wet start; an impending hot start}}.'
+  Question Stem: The EEC will abort the engine start on the ground for what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

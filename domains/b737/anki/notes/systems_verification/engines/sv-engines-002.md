@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-002
   Original Prompt Style: cloze
-  Original Text: 'During landing rollout, with this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminated, the reverser {{c1::should operate normally}}.'
-  Question Stem: 'During landing rollout, with this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminated, the reverser what?'
+  Original Text: During landing rollout, with this light *(Engine 1 REVERSER caution light
+    on ENGINE panel)* illuminated, the reverser {{c1::should operate normally}}.
+  Question Stem: During landing rollout, with this light *(Engine 1 REVERSER caution light
+    on ENGINE panel)* illuminated, the reverser what?
   Choice A: ''
   Choice B: ''
   Choice C: Should operate normally
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

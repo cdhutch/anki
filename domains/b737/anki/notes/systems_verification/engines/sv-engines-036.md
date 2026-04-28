@@ -19,9 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-036
   Original Prompt Style: cloze
-  Original Text: 'The EEC provides {{c1::N1 & N2}} protection in the normal mode.'
-  Question Stem: 'The EEC provides what? protection in the normal mode?'
-  Choice A: 'N1 & N2'
+  Original Text: The EEC provides {{c1::N1 & N2}} protection in the normal mode.
+  Question Stem: The EEC provides what? protection in the normal mode?
+  Choice A: N1 & N2
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

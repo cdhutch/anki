@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-012
   Original Prompt Style: cloze
-  Original Text: 'What action is required per the QRH to move the #1 EEC from the Soft to the Hard Alternate (ALTN) mode? {{c1::Press the #1 EEC switch}}'
-  Question Stem: 'What action is required per the QRH to move the #1 EEC from the Soft to the Hard Alternate (ALTN) mode?'
+  Original Text: 'What action is required per the QRH to move the #1 EEC from the Soft to
+    the Hard Alternate (ALTN) mode? {{c1::Press the #1 EEC switch}}'
+  Question Stem: 'What action is required per the QRH to move the #1 EEC from the Soft to
+    the Hard Alternate (ALTN) mode?'
   Choice A: 'Press the #1 EEC switch'
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

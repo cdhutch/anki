@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-024
   Original Prompt Style: cloze
-  Original Text: 'Engine maximum and minimum limits are displayed in {{c1::red}}.'
-  Question Stem: 'Engine maximum and minimum limits are displayed in what?'
+  Original Text: Engine maximum and minimum limits are displayed in {{c1::red}}.
+  Question Stem: Engine maximum and minimum limits are displayed in what?
   Choice A: Red
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

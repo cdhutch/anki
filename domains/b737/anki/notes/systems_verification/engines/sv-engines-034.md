@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-034
   Original Prompt Style: cloze
-  Original Text: 'What are the methods of inflight restarting? {{c1::Windmill and crossbleed}}'
-  Question Stem: 'What are the methods of inflight restarting?'
+  Original Text: What are the methods of inflight restarting? {{c1::Windmill and crossbleed}}
+  Question Stem: What are the methods of inflight restarting?
   Choice A: ''
   Choice B: ''
   Choice C: Windmill and crossbleed
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

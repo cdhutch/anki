@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-011
   Original Prompt Style: cloze
-  Original Text: 'The amber ENGINE CONTROL light functions on the ground below {{c1::80}} KIAS prior to takeoff, or approximately {{c1::30}} seconds after touchdown.'
-  Question Stem: 'The amber ENGINE CONTROL light functions on the ground below what? KIAS prior to takeoff, or approximately what? seconds after touchdown?'
+  Original Text: The amber ENGINE CONTROL light functions on the ground below {{c1::80}} KIAS
+    prior to takeoff, or approximately {{c1::30}} seconds after touchdown.
+  Question Stem: The amber ENGINE CONTROL light functions on the ground below what? KIAS prior
+    to takeoff, or approximately what? seconds after touchdown?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

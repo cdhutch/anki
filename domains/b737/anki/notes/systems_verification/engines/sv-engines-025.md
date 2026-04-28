@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-025
   Original Prompt Style: cloze
-  Original Text: 'You will see an ENG FAIL alert {{c1::when N2 drops below 50% and the start lever is in IDLE}}.'
-  Question Stem: 'You will see an ENG FAIL alert what?'
+  Original Text: You will see an ENG FAIL alert {{c1::when N2 drops below 50% and the start
+    lever is in IDLE}}.
+  Question Stem: You will see an ENG FAIL alert what?
   Choice A: ''
   Choice B: When N2 drops below 50% and the start lever is in IDLE
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

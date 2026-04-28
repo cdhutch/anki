@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-001
   Original Prompt Style: cloze
-  Original Text: 'If this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminates during flight, {{c1::the auto restow system has been activated}}.'
-  Question Stem: 'If this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminates during flight, what?'
+  Original Text: If this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminates
+    during flight, {{c1::the auto restow system has been activated}}.
+  Question Stem: If this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminates
+    during flight, what?
   Choice A: ''
   Choice B: The auto restow system has been activated
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

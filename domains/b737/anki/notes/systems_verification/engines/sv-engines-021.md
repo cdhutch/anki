@@ -19,10 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-021
   Original Prompt Style: cloze
-  Original Text: 'If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above 80 knots and below 400 feet RA, {{c1::only the Oil Filter Bypass light illuminates, and it will be steady}}.'
-  Question Stem: 'If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above 80 knots and below 400 feet RA, what?'
+  Original Text: If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above
+    80 knots and below 400 feet RA, {{c1::only the Oil Filter Bypass light illuminates, and
+    it will be steady}}.
+  Question Stem: If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above
+    80 knots and below 400 feet RA, what?
   Choice A: ''
-  Choice B: 'Only the Oil Filter Bypass light illuminates, and it will be steady'
+  Choice B: Only the Oil Filter Bypass light illuminates, and it will be steady
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

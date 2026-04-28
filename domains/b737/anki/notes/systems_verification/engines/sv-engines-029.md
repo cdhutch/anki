@@ -19,10 +19,13 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-029
   Original Prompt Style: cloze
-  Original Text: 'The approximate engine starter cutout speed and the indication of engine starter cutout is {{c1::56% N2, Engine Start Switch moves to AUTO and START VALVE OPEN light extinguishes}}.'
-  Question Stem: 'The approximate engine starter cutout speed and the indication of engine starter cutout is what?'
+  Original Text: The approximate engine starter cutout speed and the indication of engine
+    starter cutout is {{c1::56% N2, Engine Start Switch moves to AUTO and START VALVE OPEN
+    light extinguishes}}.
+  Question Stem: The approximate engine starter cutout speed and the indication of engine
+    starter cutout is what?
   Choice A: ''
-  Choice B: '56% N2, Engine Start Switch moves to AUTO and START VALVE OPEN light extinguishes'
+  Choice B: 56% N2, Engine Start Switch moves to AUTO and START VALVE OPEN light extinguishes
   Choice C: ''
   Choice D: ''
   Correct Choice: B
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

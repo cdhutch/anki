@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-008
   Original Prompt Style: cloze
-  Original Text: 'If this light *(#2 ENGINE CONTROL caution)* illuminates approximately 30 seconds after touchdown, {{c1::it should be written up in the log book}}.'
-  Question Stem: 'If this light *(#2 ENGINE CONTROL caution)* illuminates approximately 30 seconds after touchdown, what?'
+  Original Text: If this light *(#2 ENGINE CONTROL caution)* illuminates approximately 30
+    seconds after touchdown, {{c1::it should be written up in the log book}}.
+  Question Stem: If this light *(#2 ENGINE CONTROL caution)* illuminates approximately 30
+    seconds after touchdown, what?
   Choice A: It should be written up in the log book
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

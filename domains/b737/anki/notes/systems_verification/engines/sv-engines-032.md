@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-032
   Original Prompt Style: cloze
-  Original Text: 'The {{c1::AUTO}} position provides ignition to selected igniter(s) when the engine is running and flaps are not UP.'
-  Question Stem: 'The what? position provides ignition to selected igniter(s) when the engine is running and flaps are not UP?'
+  Original Text: The {{c1::AUTO}} position provides ignition to selected igniter(s) when the
+    engine is running and flaps are not UP.
+  Question Stem: The what? position provides ignition to selected igniter(s) when the engine
+    is running and flaps are not UP?
   Choice A: AUTO
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

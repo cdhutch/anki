@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-003
   Original Prompt Style: cloze
-  Original Text: 'When this light *(Engine 1 REVERSER caution light on ENGINE panel)* is illuminated during landing rollout while the reverse lever is commanded stowed, you should {{c1::expect this light to extinguish ten seconds after the thrust reverser is commanded to stow}}.'
-  Question Stem: 'When this light *(Engine 1 REVERSER caution light on ENGINE panel)* is illuminated during landing rollout while the reverse lever is commanded stowed, you should what?'
+  Original Text: When this light *(Engine 1 REVERSER caution light on ENGINE panel)* is illuminated
+    during landing rollout while the reverse lever is commanded stowed, you should {{c1::expect
+    this light to extinguish ten seconds after the thrust reverser is commanded to stow}}.
+  Question Stem: When this light *(Engine 1 REVERSER caution light on ENGINE panel)* is illuminated
+    during landing rollout while the reverse lever is commanded stowed, you should what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: Expect this light to extinguish ten seconds after the thrust reverser is commanded to stow
+  Choice D: Expect this light to extinguish ten seconds after the thrust reverser is commanded
+    to stow
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

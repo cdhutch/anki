@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-020
   Original Prompt Style: cloze
-  Original Text: 'Thrust reverser operation is available below {{c1::10 feet}} radio altitude or when the air/ground sensor is in the {{c1::ground}} mode.'
-  Question Stem: 'Thrust reverser operation is available below what? radio altitude or when the air/ground sensor is in the what? mode?'
+  Original Text: Thrust reverser operation is available below {{c1::10 feet}} radio altitude
+    or when the air/ground sensor is in the {{c1::ground}} mode.
+  Question Stem: Thrust reverser operation is available below what? radio altitude or when
+    the air/ground sensor is in the what? mode?
   Choice A: 10 feet
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-039
   Original Prompt Style: cloze
-  Original Text: 'The Fuel Used readout is displayed {{c1::when the Fuel Flow Switch is moved to Used or Reset}}.'
-  Question Stem: 'The Fuel Used readout is displayed what?'
+  Original Text: The Fuel Used readout is displayed {{c1::when the Fuel Flow Switch is moved
+    to Used or Reset}}.
+  Question Stem: The Fuel Used readout is displayed what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,7 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-017
   Original Prompt Style: cloze
-  Original Text: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: {{c1::28K with a 10% and 20% de-rate option.}}'
+  Original Text: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: {{c1::28K with
+    a 10% and 20% de-rate option.}}'
   Question Stem: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: what?'
   Choice A: ''
   Choice B: 28K with a 10% and 20% de-rate option
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

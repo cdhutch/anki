@@ -19,8 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-005
   Original Prompt Style: cloze
-  Original Text: 'When the EEC displays the above light *(#1 EEC ALTN caution light)* with thrust levers not in idle, it indicates that the #1 EEC is in the {{c1::Soft Alternate}} mode.'
-  Question Stem: 'When the EEC displays the above light *(#1 EEC ALTN caution light)* with thrust levers not in idle, it indicates that the #1 EEC is in the what? mode?'
+  Original Text: 'When the EEC displays the above light *(#1 EEC ALTN caution light)* with
+    thrust levers not in idle, it indicates that the #1 EEC is in the {{c1::Soft Alternate}}
+    mode.'
+  Question Stem: 'When the EEC displays the above light *(#1 EEC ALTN caution light)* with
+    thrust levers not in idle, it indicates that the #1 EEC is in the what? mode?'
   Choice A: ''
   Choice B: Soft Alternate
   Choice C: ''
@@ -30,3 +33,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

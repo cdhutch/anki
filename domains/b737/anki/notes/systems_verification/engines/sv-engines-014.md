@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-014
   Original Prompt Style: cloze
-  Original Text: 'What type of data is the EEC using to control the engine while in the Hard ALTN Mode? {{c1::A Preprogrammed alternate mode thrust schedule.}}'
-  Question Stem: 'What type of data is the EEC using to control the engine while in the Hard ALTN Mode?'
+  Original Text: What type of data is the EEC using to control the engine while in the Hard
+    ALTN Mode? {{c1::A Preprogrammed alternate mode thrust schedule.}}
+  Question Stem: What type of data is the EEC using to control the engine while in the Hard
+    ALTN Mode?
   Choice A: ''
   Choice B: ''
   Choice C: A Preprogrammed alternate mode thrust schedule
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

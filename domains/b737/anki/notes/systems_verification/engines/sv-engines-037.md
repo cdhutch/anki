@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-037
   Original Prompt Style: cloze
-  Original Text: 'Is it possible to use a reverser after landing with just the REVERSER light on? {{c1::Yes}}'
-  Question Stem: 'Is it possible to use a reverser after landing with just the REVERSER light on?'
+  Original Text: Is it possible to use a reverser after landing with just the REVERSER light
+    on? {{c1::Yes}}
+  Question Stem: Is it possible to use a reverser after landing with just the REVERSER light
+    on?
   Choice A: ''
   Choice B: 'Yes'
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

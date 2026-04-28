@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-006
   Original Prompt Style: cloze
-  Original Text: 'In this mode *(#1 EEC ALTN caution light)* illuminated, what parameters is the EEC using to control the #1 engine? {{c1::The last valid flight conditions that the EEC sensed before it went into the Soft Alternate mode.}}'
-  Question Stem: 'In this mode *(#1 EEC ALTN caution light)* illuminated, what parameters is the EEC using to control the #1 engine?'
+  Original Text: 'In this mode *(#1 EEC ALTN caution light)* illuminated, what parameters
+    is the EEC using to control the #1 engine? {{c1::The last valid flight conditions that
+    the EEC sensed before it went into the Soft Alternate mode.}}'
+  Question Stem: 'In this mode *(#1 EEC ALTN caution light)* illuminated, what parameters
+    is the EEC using to control the #1 engine?'
   Choice A: ''
   Choice B: ''
-  Choice C: The last valid flight conditions that the EEC sensed before it went into the Soft Alternate mode
+  Choice C: The last valid flight conditions that the EEC sensed before it went into the Soft
+    Alternate mode
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-023
   Original Prompt Style: cloze
-  Original Text: 'This light *(ENG 2 OIL FILTER BYPASS caution)* indicates {{c1::impending bypass of oil filter}}.'
-  Question Stem: 'This light *(ENG 2 OIL FILTER BYPASS caution)* indicates what?'
+  Original Text: This light *(ENG 2 OIL FILTER BYPASS caution)* indicates {{c1::impending
+    bypass of oil filter}}.
+  Question Stem: This light *(ENG 2 OIL FILTER BYPASS caution)* indicates what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

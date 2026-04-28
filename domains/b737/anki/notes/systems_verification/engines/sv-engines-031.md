@@ -19,14 +19,18 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-031
   Original Prompt Style: cloze
-  Original Text: 'MAX: The EECs will shut down the engine for: {{c1::Both 2. and 3. above: Overspeed from exceeding engine structural design limits, both in flight and on the ground; High Thrust event on the ground.}}'
+  Original Text: 'MAX: The EECs will shut down the engine for: {{c1::Both 2. and 3. above:
+    Overspeed from exceeding engine structural design limits, both in flight and on the ground;
+    High Thrust event on the ground.}}'
   Question Stem: 'MAX: The EECs will shut down the engine for: what?'
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Both 2. and 3. above: Overspeed from exceeding engine structural design limits, both in flight and on the ground; High Thrust event on the ground'
+  Choice D: 'Both 2. and 3. above: Overspeed from exceeding engine structural design limits,
+    both in flight and on the ground; High Thrust event on the ground'
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-009
   Original Prompt Style: cloze
-  Original Text: 'If the #2 Engine control light illuminates in flight, what steps should be taken? {{c1::The light is inhibited during flight.}}'
-  Question Stem: 'If the #2 Engine control light illuminates in flight, what steps should be taken?'
+  Original Text: 'If the #2 Engine control light illuminates in flight, what steps should
+    be taken? {{c1::The light is inhibited during flight.}}'
+  Question Stem: 'If the #2 Engine control light illuminates in flight, what steps should
+    be taken?'
   Choice A: ''
   Choice B: The light is inhibited during flight
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

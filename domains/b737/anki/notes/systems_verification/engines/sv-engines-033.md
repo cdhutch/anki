@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-033
   Original Prompt Style: cloze
-  Original Text: 'How is an EGT exceedance displayed after engine shutdown? {{c1::A red box}}'
-  Question Stem: 'How is an EGT exceedance displayed after engine shutdown?'
+  Original Text: How is an EGT exceedance displayed after engine shutdown? {{c1::A red box}}
+  Question Stem: How is an EGT exceedance displayed after engine shutdown?
   Choice A: ''
   Choice B: A red box
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-028
   Original Prompt Style: cloze
-  Original Text: 'The indication of a properly deployed thrust reverser after landing is a/an {{c1::green REV}}.'
-  Question Stem: 'The indication of a properly deployed thrust reverser after landing is a/an what?'
+  Original Text: The indication of a properly deployed thrust reverser after landing is a/an
+    {{c1::green REV}}.
+  Question Stem: The indication of a properly deployed thrust reverser after landing is a/an
+    what?
   Choice A: Green REV
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

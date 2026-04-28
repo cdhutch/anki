@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-004
   Original Prompt Style: cloze
-  Original Text: 'A green "Rev" light above N1 on the upper display indicates that the {{c1::thrust reverser is deployed}}.'
-  Question Stem: 'A green "Rev" light above N1 on the upper display indicates that the what?'
+  Original Text: A green "Rev" light above N1 on the upper display indicates that the {{c1::thrust
+    reverser is deployed}}.
+  Question Stem: A green "Rev" light above N1 on the upper display indicates that the what?
   Choice A: Thrust reverser is deployed
   Choice B: ''
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,14 +19,19 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-022
   Original Prompt Style: cloze
-  Original Text: 'If this light *(ENG 2 OIL FILTER BYPASS caution)* illuminates in flight above 400 feet RA, {{c1::all three indicators will flash for 10 seconds then the Oil Filter Bypass Light will remain illuminated}}.'
-  Question Stem: 'If this light *(ENG 2 OIL FILTER BYPASS caution)* illuminates in flight above 400 feet RA, what?'
+  Original Text: If this light *(ENG 2 OIL FILTER BYPASS caution)* illuminates in flight above
+    400 feet RA, {{c1::all three indicators will flash for 10 seconds then the Oil Filter
+    Bypass Light will remain illuminated}}.
+  Question Stem: If this light *(ENG 2 OIL FILTER BYPASS caution)* illuminates in flight above
+    400 feet RA, what?
   Choice A: ''
   Choice B: ''
-  Choice C: All three indicators will flash for 10 seconds then the Oil Filter Bypass Light will remain illuminated
+  Choice C: All three indicators will flash for 10 seconds then the Oil Filter Bypass Light
+    will remain illuminated
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

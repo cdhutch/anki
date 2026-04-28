@@ -19,9 +19,11 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-040
   Original Prompt Style: cloze
-  Original Text: 'The cockpit indications of a thrust reverser malfunction are a Master Caution, {{c1::ENG System Annunciator light, and REVERSER light}}.'
-  Question Stem: 'The cockpit indications of a thrust reverser malfunction are a Master Caution, what?'
-  Choice A: 'ENG System Annunciator light, and REVERSER light'
+  Original Text: The cockpit indications of a thrust reverser malfunction are a Master Caution,
+    {{c1::ENG System Annunciator light, and REVERSER light}}.
+  Question Stem: The cockpit indications of a thrust reverser malfunction are a Master Caution,
+    what?
+  Choice A: ENG System Annunciator light, and REVERSER light
   Choice B: ''
   Choice C: ''
   Choice D: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

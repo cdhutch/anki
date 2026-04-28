@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-010
   Original Prompt Style: cloze
-  Original Text: 'If this light *(ENG 2 ENGINE CONTROL caution)* illuminates during taxi, prior to takeoff, {{c1::return to the gate. Maintenance action is required}}.'
-  Question Stem: 'If this light *(ENG 2 ENGINE CONTROL caution)* illuminates during taxi, prior to takeoff, what?'
+  Original Text: If this light *(ENG 2 ENGINE CONTROL caution)* illuminates during taxi, prior
+    to takeoff, {{c1::return to the gate. Maintenance action is required}}.
+  Question Stem: If this light *(ENG 2 ENGINE CONTROL caution)* illuminates during taxi, prior
+    to takeoff, what?
   Choice A: ''
   Choice B: ''
   Choice C: Return to the gate. Maintenance action is required
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

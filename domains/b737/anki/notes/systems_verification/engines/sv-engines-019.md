@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-019
   Original Prompt Style: cloze
-  Original Text: 'If a wet start is detected, the EEC aborts the start {{c1::15}} seconds after the start lever is moved to IDLE.'
-  Question Stem: 'If a wet start is detected, the EEC aborts the start what? seconds after the start lever is moved to IDLE?'
+  Original Text: If a wet start is detected, the EEC aborts the start {{c1::15}} seconds after
+    the start lever is moved to IDLE.
+  Question Stem: If a wet start is detected, the EEC aborts the start what? seconds after
+    the start lever is moved to IDLE?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

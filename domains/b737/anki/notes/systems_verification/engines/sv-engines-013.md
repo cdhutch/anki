@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-013
   Original Prompt Style: cloze
-  Original Text: 'The number 1 engine EEC switch indicates "ALTN" and the ON indication is out of view. This light indicates that the #1 EEC is in the {{c1::Hard Alternate}} mode.'
-  Question Stem: 'The number 1 engine EEC switch indicates "ALTN" and the ON indication is out of view. This light indicates that the #1 EEC is in the what? mode?'
+  Original Text: 'The number 1 engine EEC switch indicates "ALTN" and the ON indication is
+    out of view. This light indicates that the #1 EEC is in the {{c1::Hard Alternate}} mode.'
+  Question Stem: 'The number 1 engine EEC switch indicates "ALTN" and the ON indication is
+    out of view. This light indicates that the #1 EEC is in the what? mode?'
   Choice A: ''
   Choice B: Hard Alternate
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-041
   Original Prompt Style: cloze
-  Original Text: 'What component regulates the engine to keep it within operating parameters? {{c1::The dual channel electronic engine control (EEC).}}'
-  Question Stem: 'What component regulates the engine to keep it within operating parameters?'
+  Original Text: What component regulates the engine to keep it within operating parameters?
+    {{c1::The dual channel electronic engine control (EEC).}}
+  Question Stem: What component regulates the engine to keep it within operating parameters?
   Choice A: ''
   Choice B: The dual channel electronic engine control (EEC)
   Choice C: ''
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

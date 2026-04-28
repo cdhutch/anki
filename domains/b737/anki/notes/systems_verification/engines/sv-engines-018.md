@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-018
   Original Prompt Style: cloze
-  Original Text: 'MAX: Bowed Rotor Motoring (BRM): {{c1::Designed to straighten the rotor shaft which will naturally “bow” due to thermal buildup after the engine is shutdown.}}'
+  Original Text: 'MAX: Bowed Rotor Motoring (BRM): {{c1::Designed to straighten the rotor
+    shaft which will naturally “bow” due to thermal buildup after the engine is shutdown.}}'
   Question Stem: 'MAX: Bowed Rotor Motoring (BRM): what?'
   Choice A: ''
   Choice B: ''
-  Choice C: Designed to straighten the rotor shaft which will naturally “bow” due to thermal buildup after the engine is shutdown
+  Choice C: Designed to straighten the rotor shaft which will naturally “bow” due to thermal
+    buildup after the engine is shutdown
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

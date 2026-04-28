@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-016
   Original Prompt Style: cloze
-  Original Text: 'The engine thrust reversers are operated {{c1::hydraulically}}.'
-  Question Stem: 'The engine thrust reversers are operated what?'
+  Original Text: The engine thrust reversers are operated {{c1::hydraulically}}.
+  Question Stem: The engine thrust reversers are operated what?
   Choice A: Hydraulically
   Choice B: ''
   Choice C: ''
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

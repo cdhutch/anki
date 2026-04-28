@@ -19,8 +19,8 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-038
   Original Prompt Style: cloze
-  Original Text: 'Each engine is equipped with {{c1::2}} ignitors.'
-  Question Stem: 'Each engine is equipped with what? ignitors?'
+  Original Text: Each engine is equipped with {{c1::2}} ignitors.
+  Question Stem: Each engine is equipped with what? ignitors?
   Choice A: ''
   Choice B: ''
   Choice C: 2
@@ -30,3 +30,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

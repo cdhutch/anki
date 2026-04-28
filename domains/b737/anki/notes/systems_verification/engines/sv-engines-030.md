@@ -19,14 +19,17 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-030
   Original Prompt Style: cloze
-  Original Text: 'The EEC selects approach idle {{c1::inflight when the flaps are in landing configuration or engine anti-ice is turned on for either engine}}.'
-  Question Stem: 'The EEC selects approach idle what?'
+  Original Text: The EEC selects approach idle {{c1::inflight when the flaps are in landing
+    configuration or engine anti-ice is turned on for either engine}}.
+  Question Stem: The EEC selects approach idle what?
   Choice A: ''
   Choice B: ''
-  Choice C: Inflight when the flaps are in landing configuration or engine anti-ice is turned on for either engine
+  Choice C: Inflight when the flaps are in landing configuration or engine anti-ice is turned
+    on for either engine
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---
+

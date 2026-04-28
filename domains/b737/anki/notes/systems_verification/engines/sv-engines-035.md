@@ -19,8 +19,10 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-035
   Original Prompt Style: cloze
-  Original Text: 'The engine EGT digital readout and EGT round dial indications are red, indicating what? {{c1::You have exceeded maximum EGT limits}}'
-  Question Stem: 'The engine EGT digital readout and EGT round dial indications are red, indicating what?'
+  Original Text: The engine EGT digital readout and EGT round dial indications are red, indicating
+    what? {{c1::You have exceeded maximum EGT limits}}
+  Question Stem: The engine EGT digital readout and EGT round dial indications are red, indicating
+    what?
   Choice A: ''
   Choice B: ''
   Choice C: ''
@@ -30,3 +32,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+

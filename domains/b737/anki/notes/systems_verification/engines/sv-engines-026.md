@@ -19,8 +19,9 @@ fields:
   Conversion Status: draft
   Original Note ID: engines-026
   Original Prompt Style: cloze
-  Original Text: 'How can you tell if the EECs are in the normal mode? {{c1::The white ON is in view.}}'
-  Question Stem: 'How can you tell if the EECs are in the normal mode?'
+  Original Text: How can you tell if the EECs are in the normal mode? {{c1::The white ON is
+    in view.}}
+  Question Stem: How can you tell if the EECs are in the normal mode?
   Choice A: ''
   Choice B: ''
   Choice C: The white ON is in view
@@ -30,3 +31,4 @@ fields:
   Review Notes: null
   Verification Notes: ''
 ---
+
