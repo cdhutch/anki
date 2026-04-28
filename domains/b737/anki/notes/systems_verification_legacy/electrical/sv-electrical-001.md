@@ -1,0 +1,26 @@
+---
+schema: cnsf/v0
+domain: b737
+note_type: systems_verification
+note_id: electrical-001
+anki:
+  model: B737_SV_Cloze
+  deck: B737::SV
+tags:
+- domain:b737
+- topic:systems-verification
+- system:electrical
+- source:question-bank
+- status:verified
+fields:
+  Text: On the ground with the APU powering the electrical systems, the APU GEN OFF BUS light
+    will be {{c1::OFF}}.
+  Source Document: Systems Validation Question Bank
+  Source Location: Electrical 1
+  Verification Notes: ''
+system: electrical
+source_type: question-bank
+prompt_style: cloze
+notes: ''
+---
+

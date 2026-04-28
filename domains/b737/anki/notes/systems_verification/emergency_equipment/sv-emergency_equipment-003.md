@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: emergency_equipment-003
+note_type: systems_verification_exam_draft
+note_id: svdraft-emergency_equipment-003
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:emergency_equipment
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: There are {{c1::3}} 56 person raft(s) installed in the ceiling of the aircraft.
   Source Document: Systems Validation Question Bank
-  Source Location: Emergency Equipment 3
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: emergency_equipment-003
+  Original Prompt Style: cloze
+  Original Text: There are {{c1::3}} 56 person raft(s) installed in the ceiling of the aircraft.
+  Question Stem: How many 56-person rafts are installed in the ceiling of the aircraft?
+  Choice A: 1
+  Choice B: 2
+  Choice C: 3
+  Choice D: 4
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: emergency_equipment
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

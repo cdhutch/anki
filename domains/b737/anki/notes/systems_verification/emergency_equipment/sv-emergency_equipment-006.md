@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: emergency_equipment-006
+note_type: systems_verification_exam_draft
+note_id: svdraft-emergency_equipment-006
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:emergency_equipment
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: There are {{c1::4}} overwing emergency exits on the B737.
   Source Document: Systems Validation Question Bank
-  Source Location: Emergency Equipment  6
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: emergency_equipment-006
+  Original Prompt Style: cloze
+  Original Text: There are {{c1::4}} overwing emergency exits on the B737.
+  Question Stem: How many overwing emergency exits are on the B737?
+  Choice A: 1
+  Choice B: 2
+  Choice C: 3
+  Choice D: 4
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: emergency_equipment
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
