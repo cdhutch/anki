@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fire_protection-019
+note_type: systems_verification_exam_draft
+note_id: sv-fire_protection-019
 anki:
-  model: B737_SV_Cloze
-  deck: B737::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fire_protection
-- source:question-bank
-- status:verified
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: When the Fire Protection FAULT light illuminates, it indicates {{c1::with both OVHT
-    DET switches in normal, both detector loops for an engine have failed}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Fire Protection 19
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fire_protection-019
+  Original Prompt Style: cloze
+  Original Text: When the Fire Protection FAULT light illuminates, it indicates {{c1::with
+    both OVHT\n    DET switches in normal, both detector loops for an engine have failed}}.
+  Question Stem: With both OVHT DET switches in NORMAL, what does illumination of the Fire
+    Protection FAULT light indicate?
+  Choice A: ''
+  Choice B: ''
+  Choice C: ''
+  Choice D: Both detector loops for an engine have failed
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fire_protection
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
