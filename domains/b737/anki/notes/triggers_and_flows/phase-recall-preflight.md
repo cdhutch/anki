@@ -33,5 +33,5 @@ Mnemonic: **POWER**
 - **P** — Power Up: Electrical Power Up Procedure, IRS Alignment
 - **O** — Originate: Origination Flow, FMS Preflight
 - **W** — Walk: Exterior Inspection
-- **E** — Evaluate: Route Verification, Leg Verification, Performance Verification, Departure Briefing
+- **E** — Evaluate: Route Verification, Leg Verification, Performance Verification, Performance Review, Departure Briefing
 - **R** — Run flows: Preflight Flow, Before Start Flow, Before Pushback Flow, Before Start Checklist

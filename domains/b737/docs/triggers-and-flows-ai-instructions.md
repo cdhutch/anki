@@ -58,6 +58,7 @@ Mnemonic:
 - Route Verification
 - Leg Verification
 - Performance Verification
+  Performance Review
 - Departure Briefing
 - Preflight Flow
 - Before Start Flow
