@@ -5,26 +5,28 @@ Works by suspending new (unseen) cards in inactive decks and unsuspending
 them in active decks. Does not touch review or learning cards.
 
 Usage:
-    python tools/anki/sync/set_stage.py --stage 1   # QRC + Limits only
-    python tools/anki/sync/set_stage.py --stage 2   # + Triggers + Supplemental
-    python tools/anki/sync/set_stage.py --stage 3   # all Core decks
+    python tools/anki/sync/set_stage.py --stage 1   # Limits + QRC + Triggers
+    python tools/anki/sync/set_stage.py --stage 2   # + Flows + Supplemental
+    python tools/anki/sync/set_stage.py --stage 3   # + Procedures::Normal
+    python tools/anki/sync/set_stage.py --stage 4   # + Procedures::Non_Normal + Inflight_Maneuvers
     python tools/anki/sync/set_stage.py --dry-run --stage 2
 
 Stage definitions
 -----------------
 Stage 1 — Foundation
-    Active  : B737::Core::QRC, B737::Core::Limits (+ sub-decks)
-    Inactive: B737::Core::Triggers_and_Flows (all sub-decks)
+    Active  : Limits (all sub-decks), QRC, Triggers_and_Flows::Triggers
+    Inactive: Flows, Supplemental, all Procedures
 
-Stage 2 — Procedures intake
-    Active  : Stage 1 + Triggers + Supplemental
-    Inactive: Flows (TBD — see NOTE below), Procedures
+Stage 2 — Flows + Supplemental
+    Active  : Stage 1 + Triggers_and_Flows::Flows + Triggers_and_Flows::Supplemental
+    Inactive: all Procedures
 
-Stage 3 — Full Core
+Stage 3 — Normal Procedures
+    Active  : Stage 2 + Procedures::Normal
+    Inactive: Procedures::Non_Normal, Procedures::Inflight_Maneuvers
+
+Stage 4 — Full Core
     Active  : all B737::Core decks
-
-NOTE: Flows deck placement (Stage 2 vs 3) is still undecided.
-      Edit FLOWS_STAGE below once confirmed. Currently set to 3.
 """
 
 from __future__ import annotations
@@ -33,7 +35,6 @@ import argparse
 import json
 import sys
 import urllib.request
-from pathlib import Path
 from typing import Any
 
 # ---------------------------------------------------------------------------
@@ -45,40 +46,34 @@ ANKI_URL = "http://127.0.0.1:8765"
 # Deck prefix for all Core pool decks.
 CORE_ROOT = "B737::Core"
 
-# *** Edit this once you decide where Flows sits. ***
-# FLOWS_STAGE = 2  # uncomment to activate Flows at Stage 2
-FLOWS_STAGE = 3
-
-# Each entry in STAGE_DECKS lists the *additional* decks activated at that stage.
-# Decks are matched by prefix: "B737::Core::Limits" also matches
+# Each entry lists the *additional* decks activated at that stage.
+# Matching is by prefix: "B737::Core::Limits" also covers
 # "B737::Core::Limits::Trivia", "B737::Core::Limits::Non-Trivia", etc.
-# Set FLOWS_STAGE above to control when Flows is activated.
-
-_STAGE_ADDITIONS: dict[int, list[str]] = {
+STAGE_ADDITIONS: dict[int, list[str]] = {
     1: [
-        "B737::Core::QRC",
         "B737::Core::Limits",
+        "B737::Core::QRC",
+        "B737::Core::Triggers_and_Flows::Triggers",
     ],
     2: [
-        "B737::Core::Triggers_and_Flows::Triggers",
+        "B737::Core::Triggers_and_Flows::Flows",
         "B737::Core::Triggers_and_Flows::Supplemental",
     ],
     3: [
-        "B737::Core::Procedures",
-        # Flows is injected dynamically below based on FLOWS_STAGE.
+        "B737::Core::Procedures::Normal",
+    ],
+    4: [
+        "B737::Core::Procedures::Non_Normal",
+        "B737::Core::Procedures::Inflight_Maneuvers",
     ],
 }
-
-# Inject Flows at the configured stage.
-_FLOWS_DECK = "B737::Core::Triggers_and_Flows::Flows"
-_STAGE_ADDITIONS.setdefault(FLOWS_STAGE, []).append(_FLOWS_DECK)
 
 
 def active_prefixes(stage: int) -> list[str]:
     """Return all deck prefixes that should be active at *stage*."""
     prefixes: list[str] = []
     for s in range(1, stage + 1):
-        prefixes.extend(_STAGE_ADDITIONS.get(s, []))
+        prefixes.extend(STAGE_ADDITIONS.get(s, []))
     return prefixes
 
 
@@ -127,20 +122,14 @@ def is_active(deck_name: str, active_pfx: list[str]) -> bool:
 # Card operations
 # ---------------------------------------------------------------------------
 
-def find_new_cards(deck_name: str, url: str) -> list[int]:
-    """Return IDs of all new (unseen, not yet learned) cards in a deck."""
-    query = f'"deck:{deck_name}" is:new'
-    return anki_request("findCards", {"query": query}, url=url) or []
-
-
 def find_suspended_new_cards(deck_name: str, url: str) -> list[int]:
-    """Return IDs of suspended cards that are new (never reviewed)."""
+    """Return IDs of suspended new (never reviewed) cards in a deck."""
     query = f'"deck:{deck_name}" is:new is:suspended'
     return anki_request("findCards", {"query": query}, url=url) or []
 
 
 def find_unsuspended_new_cards(deck_name: str, url: str) -> list[int]:
-    """Return IDs of new cards that are NOT suspended."""
+    """Return IDs of new cards that are not suspended."""
     query = f'"deck:{deck_name}" is:new -is:suspended'
     return anki_request("findCards", {"query": query}, url=url) or []
 
@@ -174,16 +163,16 @@ def set_stage(stage: int, dry_run: bool, url: str) -> None:
     total_unsuspended = 0
     unknown_decks: list[str] = []
 
+    all_known_pfx = [pfx for pfxs in STAGE_ADDITIONS.values() for pfx in pfxs]
+
     for deck_name in sorted(core_decks):
         if deck_name == CORE_ROOT:
-            # Root aggregator deck — skip (never study from root directly).
+            # Root aggregator — skip (never study from root directly).
             continue
 
         deck_active = is_active(deck_name, active_pfx)
 
-        # Check if any configured prefix accounts for this deck.
-        # Decks that don't match any known prefix are flagged.
-        all_known_pfx = [pfx for pfxs in _STAGE_ADDITIONS.values() for pfx in pfxs]
+        # Flag decks in Anki that aren't assigned to any stage.
         covered = any(
             deck_name == pfx or deck_name.startswith(pfx + "::")
             for pfx in all_known_pfx
@@ -192,7 +181,6 @@ def set_stage(stage: int, dry_run: bool, url: str) -> None:
             unknown_decks.append(deck_name)
 
         if deck_active:
-            # Activate: unsuspend any suspended new cards.
             suspended = find_suspended_new_cards(deck_name, url)
             status = "ACTIVATE"
             action_str = f"unsuspend {len(suspended)} new card(s)"
@@ -200,7 +188,6 @@ def set_stage(stage: int, dry_run: bool, url: str) -> None:
                 unsuspend_cards(suspended, url)
             total_unsuspended += len(suspended)
         else:
-            # Deactivate: suspend any unsuspended new cards.
             unsuspended = find_unsuspended_new_cards(deck_name, url)
             status = "DEACTIVATE"
             action_str = f"suspend {len(unsuspended)} new card(s)"
@@ -214,7 +201,7 @@ def set_stage(stage: int, dry_run: bool, url: str) -> None:
     print()
 
     if unknown_decks:
-        print("⚠  Decks found in Anki but not assigned to any stage — check STAGE_ADDITIONS:")
+        print("⚠  Decks in Anki not assigned to any stage — update STAGE_ADDITIONS:")
         for d in unknown_decks:
             print(f"     {d}")
         print()
@@ -238,8 +225,14 @@ def main() -> int:
         description="Activate/deactivate B737 Core decks by study stage."
     )
     ap.add_argument(
-        "--stage", type=int, choices=[1, 2, 3], required=True,
-        help="Study stage to apply (1 = QRC+Limits, 2 = +Triggers+Supplemental, 3 = all Core).",
+        "--stage", type=int, choices=[1, 2, 3, 4], required=True,
+        help=(
+            "Study stage to apply: "
+            "1=Limits+QRC+Triggers, "
+            "2=+Flows+Supplemental, "
+            "3=+Procedures::Normal, "
+            "4=+Procedures::Non_Normal+Inflight_Maneuvers"
+        ),
     )
     ap.add_argument(
         "--dry-run", action="store_true",
