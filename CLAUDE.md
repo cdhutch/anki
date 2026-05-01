@@ -124,7 +124,8 @@ Preset: **B737 FSRS Core** — 20 new/day
 |---|---|
 | `B737::Core::Limits` | Weight, speed, engine limits (+ Non-Trivia / Trivia sub-decks) |
 | `B737::Core::QRC` | QRC recall notes |
-| `B737::Core::Triggers_and_Flows` | Triggers, Flows, Procedures, Supplemental |
+| `B737::Core::Triggers_and_Flows` | Triggers, Flows, Supplemental (mnemonics, sequences, phase-recalls) |
+| `B737::Core::Procedures` | Normal, Non_Normal, Inflight_Maneuvers sub-decks |
 
 ### Pending: Supplemental deck
 
