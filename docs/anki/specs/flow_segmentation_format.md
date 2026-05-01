@@ -20,8 +20,8 @@ Flow items within the CNSF → Anki pipeline.
 
 Triggers and Flows MUST live in separate child decks under a common parent:
 
-- `B737::Triggers_and_Flows::Triggers`
-- `B737::Triggers_and_Flows::Flows`
+- `B737::Core::Triggers_and_Flows::Triggers`
+- `B737::Core::Triggers_and_Flows::Flows`
 
 Rules:
 - Trigger notes answer: **When do I do this?**
@@ -38,7 +38,7 @@ Each Flow note MUST include:
 - `note_type: flow`
 - `note_id: unique slug`
 - `anki.model: B737_Structured`
-- `anki.deck: B737::Triggers_and_Flows::Flows`
+- `anki.deck: B737::Core::Triggers_and_Flows::Flows`
 
 Recommended tags include:
 
