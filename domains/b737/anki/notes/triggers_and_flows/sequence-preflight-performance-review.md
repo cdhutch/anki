@@ -5,7 +5,7 @@ note_type: sequence
 note_id: sequence-preflight-performance-review
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Supplemental
+  deck: B737::Core::Triggers_and_Flows::Supplemental
 tags:
 - domain:b737
 - topic:triggers-and-flows

@@ -5,7 +5,7 @@ note_type: limits_numeric
 note_id: lim-18-14-3-center-pump-prohibited
 anki:
   model: B737_Structured
-  deck: B737::Limits
+  deck: B737::Core::Limits
 tags:
 - domain:b737
 - topic:limits

@@ -5,7 +5,7 @@ note_type: limits_rule
 note_id: lim-18-2-4-peak-gust
 anki:
   model: B737_Structured
-  deck: B737::Limits
+  deck: B737::Core::Limits
 tags:
 - domain:b737
 - topic:limits
