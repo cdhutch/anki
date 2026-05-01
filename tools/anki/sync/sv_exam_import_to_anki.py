@@ -22,8 +22,8 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 
 from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
-DECK_MCQ = "B737::Systems_Verification::MCQ"
-DECK_TF = "B737::Systems_Verification::TF"
+DECK_MCQ = "B737::Systems::SV::MCQ"
+DECK_TF = "B737::Systems::SV::TF"
 MODEL_MCQ = "B737_SV_MCQ"
 MODEL_TF = "B737_SV_TF"
 ANKI_CONNECT_DEFAULT = "http://127.0.0.1:8765"
