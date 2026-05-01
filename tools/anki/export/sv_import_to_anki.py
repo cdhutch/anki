@@ -45,7 +45,7 @@ def find_existing_note_id(note_id):
 
 def add_note(row):
     note = {
-        "deckName": "B737::SV",
+        "deckName": "B737::Systems::SV",
         "modelName": "B737_SV_Cloze",
         "fields": {
             "NoteID": row["NoteID"],
