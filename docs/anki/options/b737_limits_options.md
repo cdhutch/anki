@@ -1,4 +1,4 @@
-# B737::Limits — Option Preset
+# B737::Core::Limits — Option Preset
 
 ## Philosophy
 

@@ -5,7 +5,7 @@ note_type: limits_rule
 note_id: lim-18-8-broadband-switch-off
 anki:
   model: B737_Structured
-  deck: B737::Limits
+  deck: B737::Core::Limits
 tags:
 - domain:b737
 - topic:limits

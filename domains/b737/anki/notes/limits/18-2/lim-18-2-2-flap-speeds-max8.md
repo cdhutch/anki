@@ -5,7 +5,7 @@ note_type: limits_table
 note_id: lim-18-2-2-flap-speeds-max8
 anki:
   model: B737_Structured
-  deck: B737::Limits
+  deck: B737::Core::Limits
 tags:
 - domain:b737
 - topic:limits

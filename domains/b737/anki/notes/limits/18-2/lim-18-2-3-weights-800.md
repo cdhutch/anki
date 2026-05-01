@@ -5,7 +5,7 @@ note_type: limits_table
 note_id: lim-18-2-3-weights-800
 anki:
   model: B737_Structured
-  deck: B737::Limits
+  deck: B737::Core::Limits
 tags:
 - domain:b737
 - model:800

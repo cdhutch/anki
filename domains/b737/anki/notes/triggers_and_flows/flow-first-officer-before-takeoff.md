@@ -5,7 +5,7 @@ note_type: flow
 note_id: flow-first-officer-before-takeoff
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Flows
+  deck: B737::Core::Triggers_and_Flows::Flows
 tags:
 - domain:b737
 - topic:triggers_and_flows

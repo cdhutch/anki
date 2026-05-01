@@ -5,7 +5,7 @@ note_type: system_general
 note_id: sys-elec-swt-131
 anki:
   model: B737_Systems
-  deck: B737::Systems
+  deck: B737::Systems::Aircraft_Systems
 tags:
 - domain:b737
 - topic:systems

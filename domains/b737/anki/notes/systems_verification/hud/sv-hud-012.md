@@ -5,7 +5,7 @@ note_type: systems_verification
 note_id: hud-012
 anki:
   model: B737_SV_Cloze
-  deck: B737::SV
+  deck: B737::Systems::SV
 tags:
 - domain:b737
 - topic:systems-verification

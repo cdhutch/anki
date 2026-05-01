@@ -5,7 +5,7 @@ note_type: procedure
 note_id: procedure-non-ils-vnav-exceptions-loc-monitoring
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Triggers_and_Flows::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures
