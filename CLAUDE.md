@@ -124,29 +124,31 @@ Preset: **B737 FSRS Core** — 20 new/day
 |---|---|
 | `B737::Core::Limits` | Weight, speed, engine limits (+ Non-Trivia / Trivia sub-decks) |
 | `B737::Core::QRC` | QRC recall notes |
-| `B737::Core::Triggers_and_Flows` | Triggers, Flows, Procedures, Supplemental |
+| `B737::Core::Triggers_and_Flows` | Triggers, Flows, Supplemental (mnemonics, sequences, phase-recalls) |
+| `B737::Core::Procedures` | Normal, Non_Normal, Inflight_Maneuvers sub-decks |
 
-### Pending: Supplemental deck
+### Supplemental deck
 
-40 notes reference `B737::Core::Triggers_and_Flows::Supplemental` but that deck
-does not yet exist in Anki. Create it and assign the **B737 FSRS Core** preset
-before importing those notes.
+`B737::Core::Triggers_and_Flows::Supplemental` exists in Anki with B737 FSRS Core
+preset. 40 source notes (mnemonics, sequences, phase-recalls) synced via `make triggers`.
 
-### Pending: deck-reorganization branch
+### Staged new-card script
 
-Branch `feature/deck-reorganization` contains ~1,835 modified note files and
-updated tool scripts / docs reflecting the above architecture. Commit and merge
-before starting the next workstream.
+`tools/anki/sync/set_stage.py --stage N` activates/deactivates Core decks
+by suspending/unsuspending new cards — no preset changes needed.
 
+| Stage | Decks activated |
+|---|---|
+| 1 | Limits::Non-Trivia (all sub-decks), QRC, Triggers_and_Flows::Triggers |
+| 2 | + Triggers_and_Flows::Flows, Triggers_and_Flows::Supplemental |
+| 3 | + Procedures::Normal |
+| 4 | + Procedures::Non_Normal, Procedures::Inflight_Maneuvers |
+| 5 | + Limits::Trivia |
+
+Usage (with Anki open + AnkiConnect running):
 ```bash
-# Note: .git/index.lock may be present — remove if git add fails:
-# rm /Users/craig/Documents/GitHub/anki/.git/index.lock
-
-git add domains/b737/anki/notes/
-git commit -m "chore(b737): update deck paths for Core/Systems pool reorganization"
-
-git add tools/ docs/ CLAUDE.md
-git commit -m "chore: update tool scripts and docs for deck reorganization"
+python tools/anki/sync/set_stage.py --dry-run --stage 1
+python tools/anki/sync/set_stage.py --stage 1
 ```
 
 ---

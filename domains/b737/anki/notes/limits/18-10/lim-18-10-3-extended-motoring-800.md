@@ -5,7 +5,7 @@ note_type: limits_rule
 note_id: lim-18-10-3-extended-motoring-800
 anki:
   model: B737_Structured
-  deck: B737::Core::Limits
+  deck: B737::Core::Limits::Trivia
 tags:
 - domain:b737
 - topic:limits

@@ -5,7 +5,7 @@ note_type: procedure
 note_id: procedure-v1-cut-pm-400-feet
 anki:
   model: B737_Structured
-  deck: B737::Core::Triggers_and_Flows::Procedures::Non_Normal
+  deck: B737::Core::Procedures::Non_Normal
 tags:
 - domain:b737
 - topic:procedures

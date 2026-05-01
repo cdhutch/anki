@@ -5,7 +5,7 @@ note_type: procedure
 note_id: procedure-ils-cat2-3-first-officer-final-approach
 anki:
   model: B737_Structured
-  deck: B737::Core::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures

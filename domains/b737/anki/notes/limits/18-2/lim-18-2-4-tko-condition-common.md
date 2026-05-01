@@ -5,7 +5,7 @@ note_type: limits_table
 note_id: lim-18-2-4-tko-condition-common
 anki:
   model: B737_Structured
-  deck: B737::Core::Limits
+  deck: B737::Core::Limits::Non-Trivia::Good-to-Know
 tags:
 - domain:b737
 - topic:limits

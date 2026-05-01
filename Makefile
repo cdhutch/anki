@@ -110,6 +110,12 @@ qrc: qrc-check
 
 # -------------------------------------------------------------------
 # Triggers and Flows
+# Covers all three sub-decks in one pass (deck routing via frontmatter):
+#   B737::Core::Triggers_and_Flows::Triggers
+#   B737::Core::Triggers_and_Flows::Flows
+#   B737::Core::Triggers_and_Flows::Supplemental  ← mnemonics, sequences, phase-recalls
+# Note: Procedures notes live in domains/b737/anki/notes/procedures/ and
+#       are synced via proc-normal, proc-non-normal, proc-inflight targets.
 # -------------------------------------------------------------------
 TRIGGERS_ROOT := domains/b737/anki/notes/triggers_and_flows
 TRIGGERS_TSV := $(BUILD_DIR)/triggers-and-flows.tsv

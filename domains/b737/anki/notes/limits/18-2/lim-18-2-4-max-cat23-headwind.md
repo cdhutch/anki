@@ -5,7 +5,7 @@ note_type: limits_numeric
 note_id: lim-18-2-4-max-cat23-headwind
 anki:
   model: B737_Structured
-  deck: B737::Core::Limits
+  deck: B737::Core::Limits::Trivia
 tags:
 - domain:b737
 - topic:limits
