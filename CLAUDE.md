@@ -45,39 +45,7 @@ All 29 systems are converted. None remain in raw cloze format.
 
 ### Uncommitted changes
 
-The following 9 systems were converted in the last session and are **staged but not yet committed**
-(a stale `.git/index.lock` blocked the commit — remove it first):
-
-```bash
-rm /Users/craig/Documents/GitHub/anki/.git/index.lock   # if it still exists
-
-git add domains/b737/anki/notes/systems_verification/fuel/
-git commit -m "chore(b737): convert fuel SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/pneumatics/
-git commit -m "chore(b737): convert pneumatics SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/autoflight/
-git commit -m "chore(b737): convert autoflight SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/air_conditioning/
-git commit -m "chore(b737): convert air_conditioning SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/flight_warning/
-git commit -m "chore(b737): convert flight_warning SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/electrical/
-git commit -m "chore(b737): convert electrical SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/hydraulics/
-git commit -m "chore(b737): convert hydraulics SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/flight_controls/
-git commit -m "chore(b737): convert flight_controls SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/engines/
-git commit -m "chore(b737): convert engines SV notes to exam_draft (blank distractors)"
-```
+All 29 systems are committed on `feature/b737-sv-exam-mode`. Nothing pending here.
 
 ---
 
@@ -126,6 +94,63 @@ Correct choice cycles B → C → D → A → B... per note within each system.
 
 ---
 
+## Deck Architecture (as of 2026-05-01)
+
+The B737 decks are organised into two independent study pools, each with its own
+daily new-card budget. Never study from `B737` (root) directly — it bypasses the
+pool limits.
+
+### Pool 1 — Systems (study from `B737::Systems`)
+
+Preset: **B737 Systems (FSRS)** — 40 new/day
+
+| Deck | Content |
+|---|---|
+| `B737::Systems::Aircraft_Systems` | General systems knowledge (Electrical, Engines sub-decks) |
+| `B737::Systems::Aircraft_Systems::Electrical` | Electrical system cards |
+| `B737::Systems::Aircraft_Systems::Engines` | Engines cards |
+
+Preset: **B737 Systems SV (FSRS)** — 40 new/day (separate for now, tune later)
+
+| Deck | Content |
+|---|---|
+| `B737::Systems::SV` | Systems Verification cloze notes |
+
+### Pool 2 — Core (study from `B737::Core`)
+
+Preset: **B737 FSRS Core** — 20 new/day
+
+| Deck | Content |
+|---|---|
+| `B737::Core::Limits` | Weight, speed, engine limits (+ Non-Trivia / Trivia sub-decks) |
+| `B737::Core::QRC` | QRC recall notes |
+| `B737::Core::Triggers_and_Flows` | Triggers, Flows, Procedures, Supplemental |
+
+### Pending: Supplemental deck
+
+40 notes reference `B737::Core::Triggers_and_Flows::Supplemental` but that deck
+does not yet exist in Anki. Create it and assign the **B737 FSRS Core** preset
+before importing those notes.
+
+### Pending: deck-reorganization branch
+
+Branch `feature/deck-reorganization` contains ~1,835 modified note files and
+updated tool scripts / docs reflecting the above architecture. Commit and merge
+before starting the next workstream.
+
+```bash
+# Note: .git/index.lock may be present — remove if git add fails:
+# rm /Users/craig/Documents/GitHub/anki/.git/index.lock
+
+git add domains/b737/anki/notes/
+git commit -m "chore(b737): update deck paths for Core/Systems pool reorganization"
+
+git add tools/ docs/ CLAUDE.md
+git commit -m "chore: update tool scripts and docs for deck reorganization"
+```
+
+---
+
 ## Next Steps: Distractor Authoring
 
 Each exam_draft note has three blank choice slots. The next phase is filling in
@@ -137,13 +162,18 @@ Suggested order: work through systems alphabetically or by exam priority.
 
 ## Next Steps: AnkiConnect FSRS Settings
 
-Goal: use AnkiConnect to apply **consistent FSRS settings across all deck presets**
-rather than configuring each preset manually in the GUI.
+Goal: use AnkiConnect to enable FSRS and apply consistent settings across all
+four active presets rather than configuring each manually in the GUI.
+
+Target presets (all currently have `fsrs: false`):
+- **B737 FSRS Core** (id: 1773449586553) — Core pool, 20 new/day
+- **B737 Systems (FSRS)** (id: 1774213424514) — Aircraft_Systems pool, 40 new/day
+- **B737 Systems SV (FSRS)** (id: 1777637147023) — SV pool, 40 new/day
 
 Approach:
-1. Use `getDeckConfig` to read an existing preset
-2. Modify FSRS fields: `fsrs`, `fsrsWeights`, `desiredRetention`, `fsrsReschedule`
-3. Use `saveDeckConfig` to write back to each target preset
+1. Use `getDeckConfig` to read each preset by id
+2. Set `fsrs: true`, `desiredRetention`, `fsrsWeights`, `fsrsReschedule`
+3. Use `saveDeckConfig` to write back
 
 Anki version must be 2.1.55+ for FSRS fields to be present in config objects.
 The FSRS optimizer (computing weights from review history) is GUI-only and cannot
