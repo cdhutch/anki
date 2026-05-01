@@ -5,7 +5,7 @@ note_type: limits_numeric
 note_id: lim-18-7-2-apu-bleed-electrical-altitude
 anki:
   model: B737_Structured
-  deck: B737::Core::Limits
+  deck: B737::Core::Limits::Non-Trivia::Good-to-Know
 tags:
 - domain:b737
 - topic:limits

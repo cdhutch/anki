@@ -5,28 +5,33 @@ Works by suspending new (unseen) cards in inactive decks and unsuspending
 them in active decks. Does not touch review or learning cards.
 
 Usage:
-    python tools/anki/sync/set_stage.py --stage 1   # Limits + QRC + Triggers
+    python tools/anki/sync/set_stage.py --stage 1   # Limits::Non-Trivia + QRC + Triggers
     python tools/anki/sync/set_stage.py --stage 2   # + Flows + Supplemental
     python tools/anki/sync/set_stage.py --stage 3   # + Procedures::Normal
     python tools/anki/sync/set_stage.py --stage 4   # + Procedures::Non_Normal + Inflight_Maneuvers
+    python tools/anki/sync/set_stage.py --stage 5   # + Limits::Trivia
     python tools/anki/sync/set_stage.py --dry-run --stage 2
 
 Stage definitions
 -----------------
 Stage 1 — Foundation
-    Active  : Limits (all sub-decks), QRC, Triggers_and_Flows::Triggers
-    Inactive: Flows, Supplemental, all Procedures
+    Active  : Limits::Non-Trivia (all sub-decks), QRC, Triggers_and_Flows::Triggers
+    Inactive: Limits::Trivia, Flows, Supplemental, all Procedures
 
 Stage 2 — Flows + Supplemental
     Active  : Stage 1 + Triggers_and_Flows::Flows + Triggers_and_Flows::Supplemental
-    Inactive: all Procedures
+    Inactive: Limits::Trivia, all Procedures
 
 Stage 3 — Normal Procedures
     Active  : Stage 2 + Procedures::Normal
-    Inactive: Procedures::Non_Normal, Procedures::Inflight_Maneuvers
+    Inactive: Limits::Trivia, Procedures::Non_Normal, Procedures::Inflight_Maneuvers
 
-Stage 4 — Full Core
-    Active  : all B737::Core decks
+Stage 4 — Full Procedures
+    Active  : Stage 3 + Procedures::Non_Normal + Procedures::Inflight_Maneuvers
+    Inactive: Limits::Trivia
+
+Stage 5 — Full Core
+    Active  : all B737::Core decks (+ Limits::Trivia)
 """
 
 from __future__ import annotations
@@ -51,7 +56,7 @@ CORE_ROOT = "B737::Core"
 # "B737::Core::Limits::Trivia", "B737::Core::Limits::Non-Trivia", etc.
 STAGE_ADDITIONS: dict[int, list[str]] = {
     1: [
-        "B737::Core::Limits",
+        "B737::Core::Limits::Non-Trivia",
         "B737::Core::QRC",
         "B737::Core::Triggers_and_Flows::Triggers",
     ],
@@ -65,6 +70,9 @@ STAGE_ADDITIONS: dict[int, list[str]] = {
     4: [
         "B737::Core::Procedures::Non_Normal",
         "B737::Core::Procedures::Inflight_Maneuvers",
+    ],
+    5: [
+        "B737::Core::Limits::Trivia",
     ],
 }
 
@@ -231,13 +239,14 @@ def main() -> int:
         description="Activate/deactivate B737 Core decks by study stage."
     )
     ap.add_argument(
-        "--stage", type=int, choices=[1, 2, 3, 4], required=True,
+        "--stage", type=int, choices=[1, 2, 3, 4, 5], required=True,
         help=(
             "Study stage to apply: "
-            "1=Limits+QRC+Triggers, "
+            "1=Limits::Non-Trivia+QRC+Triggers, "
             "2=+Flows+Supplemental, "
             "3=+Procedures::Normal, "
-            "4=+Procedures::Non_Normal+Inflight_Maneuvers"
+            "4=+Procedures::Non_Normal+Inflight_Maneuvers, "
+            "5=+Limits::Trivia"
         ),
     )
     ap.add_argument(

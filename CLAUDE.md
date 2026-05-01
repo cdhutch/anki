@@ -139,10 +139,11 @@ by suspending/unsuspending new cards — no preset changes needed.
 
 | Stage | Decks activated |
 |---|---|
-| 1 | Limits (all sub-decks), QRC, Triggers_and_Flows::Triggers |
+| 1 | Limits::Non-Trivia (all sub-decks), QRC, Triggers_and_Flows::Triggers |
 | 2 | + Triggers_and_Flows::Flows, Triggers_and_Flows::Supplemental |
 | 3 | + Procedures::Normal |
 | 4 | + Procedures::Non_Normal, Procedures::Inflight_Maneuvers |
+| 5 | + Limits::Trivia |
 
 Usage (with Anki open + AnkiConnect running):
 ```bash

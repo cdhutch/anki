@@ -5,7 +5,7 @@ note_type: limits_rule
 note_id: lim-18-3-2-access-check
 anki:
   model: B737_Structured
-  deck: B737::Core::Limits
+  deck: B737::Core::Limits::Non-Trivia::Good-to-Know
 tags:
 - domain:b737
 - topic:limits
