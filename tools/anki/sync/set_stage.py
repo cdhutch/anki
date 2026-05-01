@@ -161,44 +161,50 @@ def set_stage(stage: int, dry_run: bool, url: str) -> None:
 
     total_suspended = 0
     total_unsuspended = 0
-    unknown_decks: list[str] = []
 
+    # Only operate on the explicit leaf prefixes defined in STAGE_ADDITIONS.
+    # Parent aggregator decks (e.g. B737::Core::Procedures) are skipped to
+    # avoid double-counting cards that also appear in their child decks.
     all_known_pfx = [pfx for pfxs in STAGE_ADDITIONS.values() for pfx in pfxs]
 
-    for deck_name in sorted(core_decks):
-        if deck_name == CORE_ROOT:
-            # Root aggregator — skip (never study from root directly).
-            continue
-
-        deck_active = is_active(deck_name, active_pfx)
-
-        # Flag decks in Anki that aren't assigned to any stage.
-        covered = any(
-            deck_name == pfx or deck_name.startswith(pfx + "::")
-            for pfx in all_known_pfx
-        )
-        if not covered:
-            unknown_decks.append(deck_name)
+    for pfx in sorted(all_known_pfx):
+        deck_active = pfx in active_pfx
 
         if deck_active:
-            suspended = find_suspended_new_cards(deck_name, url)
+            suspended = find_suspended_new_cards(pfx, url)
             status = "ACTIVATE"
             action_str = f"unsuspend {len(suspended)} new card(s)"
             if suspended and not dry_run:
                 unsuspend_cards(suspended, url)
             total_unsuspended += len(suspended)
         else:
-            unsuspended = find_unsuspended_new_cards(deck_name, url)
+            unsuspended = find_unsuspended_new_cards(pfx, url)
             status = "DEACTIVATE"
             action_str = f"suspend {len(unsuspended)} new card(s)"
             if unsuspended and not dry_run:
                 suspend_cards(unsuspended, url)
             total_suspended += len(unsuspended)
 
-        print(f"  [{status:>10}]  {deck_name}")
+        print(f"  [{status:>10}]  {pfx}")
         print(f"               → {action_str}")
 
     print()
+
+    # Flag any Anki decks not accounted for by any known prefix.
+    # A deck is covered if it is a known prefix, a sub-deck of one, or a
+    # parent aggregator of one.
+    unknown_decks: list[str] = []
+    for deck_name in sorted(core_decks):
+        if deck_name == CORE_ROOT:
+            continue
+        covered = any(
+            deck_name == pfx
+            or deck_name.startswith(pfx + "::")   # sub-deck of known prefix
+            or pfx.startswith(deck_name + "::")   # parent aggregator of known prefix
+            for pfx in all_known_pfx
+        )
+        if not covered:
+            unknown_decks.append(deck_name)
 
     if unknown_decks:
         print("⚠  Decks in Anki not assigned to any stage — update STAGE_ADDITIONS:")
