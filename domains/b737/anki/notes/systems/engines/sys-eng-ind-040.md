@@ -5,7 +5,7 @@ note_type: indication
 note_id: sys-eng-ind-040
 anki:
   model: B737_Systems
-  deck: B737::Systems
+  deck: B737::Systems::Aircraft_Systems
 tags:
 - domain:b737
 - topic:systems

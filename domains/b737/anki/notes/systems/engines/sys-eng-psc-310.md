@@ -5,7 +5,7 @@ note_type: system_concept
 note_id: sys-eng-psc-310
 anki:
   model: B737_Systems
-  deck: B737::Systems
+  deck: B737::Systems::Aircraft_Systems
 tags:
 - domain:b737
 - topic:systems

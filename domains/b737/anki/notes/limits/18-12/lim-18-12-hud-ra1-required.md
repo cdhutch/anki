@@ -5,7 +5,7 @@ note_type: limits_numeric
 note_id: lim-18-12-hud-ra1-required
 anki:
   model: B737_Structured
-  deck: B737::Limits
+  deck: B737::Core::Limits
 tags:
 - domain:b737
 - topic:limits

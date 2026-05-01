@@ -5,7 +5,7 @@ note_type: procedure_structured
 note_id: im-nose-low-003
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Inflight_Maneuvers
+  deck: B737::Core::Triggers_and_Flows::Procedures::Inflight_Maneuvers
 tags:
 - domain:b737
 - topic:procedures
