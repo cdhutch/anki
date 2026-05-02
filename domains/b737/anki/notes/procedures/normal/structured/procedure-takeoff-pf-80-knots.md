@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:pf
+- crew_role:pilot_flying
 - segment:80_knots
 - source:aom
 - status:unverified

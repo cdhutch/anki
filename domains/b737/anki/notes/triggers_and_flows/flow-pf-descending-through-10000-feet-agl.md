@@ -11,7 +11,7 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:descending_through_10000_feet_agl
-- crew_role:pf
+- crew_role:pilot_flying
 - sequence:26
 - source:flows
 - status:unverified

@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - type:procedure
 - procedure:landing_rollout
-- role:pf
+- crew_role:pilot_flying
 - phase:manual_braking
 - source:aom
 - status:unverified

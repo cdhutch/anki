@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:ils
 - category:cat1
-- role:pf
+- crew_role:pilot_flying
 - phase:initial_approach
 - source:aom
 - status:unverified

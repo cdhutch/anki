@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:ils
 - category:cat1
-- role:pm
+- crew_role:pilot_monitoring
 - phase:final_approach
 - subject:configuration
 - subject:stabilized_approach

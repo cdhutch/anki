@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - type:procedure
 - procedure:v1_cut
-- role:pf
+- crew_role:pilot_flying
 - phase:accel_height
 - source:aom
 - status:unverified

@@ -11,7 +11,7 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:before_takeoff
-- crew_role:fo
+- crew_role:first_officer
 - segment:first_officer
 - sequence:16
 - source:flows

@@ -12,7 +12,6 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:crew
 - source:aom
 - status:unverified
 fields:

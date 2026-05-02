@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:ils
 - category:cat1
-- role:pf
+- crew_role:pilot_flying
 - phase:final_approach
 - subject:configuration
 - subject:stabilized_approach

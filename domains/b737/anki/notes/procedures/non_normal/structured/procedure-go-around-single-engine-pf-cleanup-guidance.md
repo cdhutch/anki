@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:go_around
 - variant:single_engine
-- role:pf
+- crew_role:pilot_flying
 - phase:cleanup
 - source:aom
 - status:unverified

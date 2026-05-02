@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - type:procedure
 - procedure:rejected_takeoff
-- role:first_officer
+- crew_role:first_officer
 - phase:rollout
 - source:aom
 - status:unverified

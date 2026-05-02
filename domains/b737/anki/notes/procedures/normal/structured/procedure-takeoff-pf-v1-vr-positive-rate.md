@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:pf
+- crew_role:pilot_flying
 - segment:v1_vr_positive_rate
 - source:aom
 - status:unverified

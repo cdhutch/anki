@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - type:procedure
 - procedure:rejected_takeoff
-- role:first_officer
+- crew_role:first_officer
 - phase:initial
 - source:aom
 - status:unverified

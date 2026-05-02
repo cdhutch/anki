@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:approach
 - category:general
-- role:pm
+- crew_role:pilot_monitoring
 - phase:initial_approach
 - source:aom
 - status:unverified

@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:rejected_takeoff
 - phase:aircraft_stopped
-- role:captain
+- crew_role:captain
 - source:aom
 - status:unverified
 fields:
