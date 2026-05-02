@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:pm
+- crew_role:pilot_monitoring
 - segment:400_feet
 - source:aom
 - status:unverified

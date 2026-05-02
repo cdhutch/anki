@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:ils
 - category:cat1
-- role:pm
+- crew_role:pilot_monitoring
 - phase:initial_approach
 - source:aom
 - status:unverified

@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - type:procedure
 - procedure:non_ils
-- role:pm
+- crew_role:pilot_monitoring
 - phase:final_approach
 - subject:faf
 - subject:minimums

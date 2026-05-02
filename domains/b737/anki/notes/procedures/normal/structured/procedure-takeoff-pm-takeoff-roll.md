@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:pm
+- crew_role:pilot_monitoring
 - segment:takeoff_roll
 - source:aom
 - status:unverified

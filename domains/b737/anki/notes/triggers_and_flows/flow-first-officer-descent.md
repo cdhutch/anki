@@ -11,7 +11,7 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:descent
-- crew_role:fo
+- crew_role:first_officer
 - sequence:22
 - source:flows
 - status:unverified

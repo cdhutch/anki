@@ -11,7 +11,7 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:transition_level
-- crew_role:pf
+- crew_role:pilot_flying
 - sequence:24
 - source:flows
 - status:unverified

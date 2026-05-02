@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - type:procedure
 - procedure:landing_rollout
-- role:pm
+- crew_role:pilot_monitoring
 - phase:callouts_monitoring
 - source:aom
 - status:unverified

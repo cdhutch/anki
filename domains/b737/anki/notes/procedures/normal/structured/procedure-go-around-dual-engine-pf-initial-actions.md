@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:go_around
 - variant:dual_engine
-- role:pf
+- crew_role:pilot_flying
 - phase:initial_actions
 - source:aom
 - status:unverified

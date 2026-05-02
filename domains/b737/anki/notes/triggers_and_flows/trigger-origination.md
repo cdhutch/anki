@@ -10,7 +10,6 @@ tags:
 - domain:b737
 - topic:triggers_and_flows
 - type:trigger
-- crew_role:all
 - phase:origination
 - source:flows
 - status:unverified

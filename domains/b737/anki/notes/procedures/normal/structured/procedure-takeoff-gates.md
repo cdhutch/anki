@@ -12,7 +12,6 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:crew
 - segment:gates
 - source:aom
 - status:unverified

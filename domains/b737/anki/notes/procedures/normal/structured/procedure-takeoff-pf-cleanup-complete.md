@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:pf
+- crew_role:pilot_flying
 - segment:cleanup_complete
 - source:aom
 - status:unverified

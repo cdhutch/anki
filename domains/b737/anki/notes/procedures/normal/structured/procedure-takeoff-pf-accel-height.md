@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:pf
+- crew_role:pilot_flying
 - segment:accel_height
 - source:aom
 - status:unverified

@@ -43,10 +43,6 @@ All 29 systems are converted. None remain in raw cloze format.
 | `systems_verification_exam` (finalized) | acars, adverse, emergency_equipment |
 | `systems_verification_exam_draft` (blank distractors, needs review) | all others (26 systems) |
 
-### Uncommitted changes
-
-All 29 systems are committed on `feature/b737-sv-exam-mode`. Nothing pending here.
-
 ---
 
 ## Flags for Human Review
@@ -148,8 +144,54 @@ by suspending/unsuspending new cards — no preset changes needed.
 Usage (with Anki open + AnkiConnect running):
 ```bash
 python tools/anki/sync/set_stage.py --dry-run --stage 1
-python tools/anki/sync/set_stage.py --stage 1
+python tools/anki/sync/set_stage.py --stage 1           # FO seat (default)
+python tools/anki/sync/set_stage.py --stage 1 --seat captain
 ```
+
+---
+
+## Crew Role Tag Convention
+
+All seat- and role-specific notes carry a `crew_role:*` tag. Four canonical values:
+
+| Tag | Meaning |
+|---|---|
+| `crew_role:captain` | Captain-specific (never rotates to FO) |
+| `crew_role:first_officer` | FO-specific (never rotates to Captain) |
+| `crew_role:pilot_flying` | Applies to whoever is PF that leg |
+| `crew_role:pilot_monitoring` | Applies to whoever is PM that leg |
+
+Notes with no `crew_role` tag are seat-agnostic and are never suppressed.
+
+These tags appear only in `B737::Core::Procedures` and `B737::Core::Triggers_and_Flows`
+(and their children). Any `crew_role` tag found elsewhere is a tagging error —
+`set_stage.py` will warn about these at runtime.
+
+### Seat filter in set_stage.py
+
+`--seat fo` (default) suspends all `crew_role:captain` cards across all B737 decks.
+`--seat captain` suspends all `crew_role:first_officer` cards instead.
+`crew_role:pilot_flying` and `crew_role:pilot_monitoring` cards are never suppressed.
+
+The seat filter runs after staging and always has the final word.
+
+```bash
+python tools/anki/sync/set_stage.py --stage 2             # FO seat (default)
+python tools/anki/sync/set_stage.py --stage 2 --seat fo   # explicit
+python tools/anki/sync/set_stage.py --stage 2 --seat captain
+```
+
+---
+
+## Branch Map
+
+| Branch | Purpose | Status |
+|---|---|---|
+| `main` | Stable, deployable state | Active |
+| `feature/b737-sv-exam-mode` | Distractor authoring for 26 SV exam_draft systems | Active — next phase of work |
+| `feature/systems-electrical` | AI-generated systems-level MCQs from B737 general knowledge + ASM | Future work |
+
+Both feature branches should be kept in sync with main via periodic `git merge main`.
 
 ---
 
@@ -158,7 +200,20 @@ python tools/anki/sync/set_stage.py --stage 1
 Each exam_draft note has three blank choice slots. The next phase is filling in
 plausible distractors for each MCQ. This is a human + AI review task.
 
-Suggested order: work through systems alphabetically or by exam priority.
+Work is tracked on `feature/b737-sv-exam-mode`. Suggested order: alphabetically
+or by exam priority.
+
+---
+
+## Future Work: Systems Electrical MCQ Deck
+
+`feature/systems-electrical` will hold AI-generated systems-level MCQs for the
+`B737::Systems::Aircraft_Systems::Electrical` deck (and potentially other systems
+sub-decks). Questions will be generated from Claude's B737 knowledge combined with
+the Aircraft Systems Manual (ASM), rather than converted from an existing question bank.
+
+This is a distinct approach from the SV exam_draft conversion — questions are authored
+from scratch rather than adapted from cloze notes.
 
 ---
 

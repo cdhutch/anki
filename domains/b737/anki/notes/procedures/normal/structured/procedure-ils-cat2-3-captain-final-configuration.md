@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:ils
 - category:cat2_cat3
-- role:captain
+- crew_role:captain
 - duty:pf
 - phase:final_configuration
 - source:aom

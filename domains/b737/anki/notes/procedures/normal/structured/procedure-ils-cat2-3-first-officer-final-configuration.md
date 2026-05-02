@@ -12,7 +12,7 @@ tags:
 - type:procedure
 - procedure:ils
 - category:cat2_cat3
-- role:first_officer
+- crew_role:first_officer
 - duty:pm
 - phase:final_configuration
 - source:aom

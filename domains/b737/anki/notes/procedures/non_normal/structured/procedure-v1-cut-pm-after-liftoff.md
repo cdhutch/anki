@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - type:procedure
 - procedure:v1_cut
-- role:pm
+- crew_role:pilot_monitoring
 - phase:after_liftoff
 - source:aom
 - status:unverified

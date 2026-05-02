@@ -11,7 +11,6 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:origination
-- crew_role:all
 - phase:origination
 - segment:pedestal
 - sequence:04

@@ -11,7 +11,7 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:climbing_through_fl180
-- crew_role:fo
+- crew_role:first_officer
 - sequence:21
 - source:flows
 - status:unverified

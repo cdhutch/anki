@@ -4,12 +4,13 @@
 Works by suspending new (unseen) cards in inactive decks and unsuspending
 them in active decks. Does not touch review or learning cards.
 
+After staging, a seat filter suspends all cards tagged for the opposite
+crew seat across all B737 decks (including review/learning cards).
+
 Usage:
-    python tools/anki/sync/set_stage.py --stage 1   # Limits::Non-Trivia + QRC + Triggers
-    python tools/anki/sync/set_stage.py --stage 2   # + Flows + Supplemental
-    python tools/anki/sync/set_stage.py --stage 3   # + Procedures::Normal
-    python tools/anki/sync/set_stage.py --stage 4   # + Procedures::Non_Normal + Inflight_Maneuvers
-    python tools/anki/sync/set_stage.py --stage 5   # + Limits::Trivia
+    python tools/anki/sync/set_stage.py --stage 1            # FO seat (default)
+    python tools/anki/sync/set_stage.py --stage 2 --seat fo  # explicit FO
+    python tools/anki/sync/set_stage.py --stage 2 --seat captain
     python tools/anki/sync/set_stage.py --dry-run --stage 2
 
 Stage definitions
@@ -32,6 +33,15 @@ Stage 4 — Full Procedures
 
 Stage 5 — Full Core
     Active  : all B737::Core decks (+ Limits::Trivia)
+
+Seat filter
+-----------
+crew_role:captain and crew_role:first_officer tags drive seat-specific
+suspension. crew_role:pilot_flying and crew_role:pilot_monitoring are
+never suppressed — both seats need to know both roles.
+
+Cards with crew_role tags outside Procedures or Triggers_and_Flows are
+flagged as likely tagging mistakes.
 """
 
 from __future__ import annotations
@@ -50,6 +60,28 @@ ANKI_URL = "http://127.0.0.1:8765"
 
 # Deck prefix for all Core pool decks.
 CORE_ROOT = "B737::Core"
+
+# Root prefix for all B737 decks (used by seat filter queries).
+B737_ROOT = "B737"
+
+# Deck prefixes where crew_role tags are expected.
+# Cards with crew_role tags outside these prefixes are flagged as warnings.
+CREW_ROLE_EXPECTED_PREFIXES = [
+    "B737::Core::Procedures",
+    "B737::Core::Triggers_and_Flows",
+]
+
+# Seat filter: maps seat name to the tag that should be suppressed.
+# pilot_flying / pilot_monitoring are intentionally excluded — both seats
+# need to know both roles and they are never suppressed.
+SEAT_SUPPRESS_TAG: dict[str, str] = {
+    "fo":      "crew_role:captain",
+    "captain": "crew_role:first_officer",
+}
+SEAT_REVEAL_TAG: dict[str, str] = {
+    "fo":      "crew_role:first_officer",
+    "captain": "crew_role:captain",
+}
 
 # Each entry lists the *additional* decks activated at that stage.
 # Matching is by prefix: "B737::Core::Limits" also covers
@@ -152,11 +184,97 @@ def unsuspend_cards(card_ids: list[int], url: str) -> None:
         anki_request("unsuspend", {"cards": card_ids}, url=url)
 
 
+def find_cards_by_tag(tag: str, url: str) -> list[int]:
+    """Return all B737 card IDs carrying *tag* (any state)."""
+    query = f'tag:{tag} "deck:{B737_ROOT}"'
+    return anki_request("findCards", {"query": query}, url=url) or []
+
+
+def find_suspended_cards_by_tag_in_decks(
+    tag: str, deck_prefixes: list[str], url: str
+) -> list[int]:
+    """Return suspended cards with *tag* that live in any of *deck_prefixes*."""
+    if not deck_prefixes:
+        return []
+    deck_clause = " OR ".join(f'"deck:{p}"' for p in deck_prefixes)
+    query = f'tag:{tag} is:suspended ({deck_clause})'
+    return anki_request("findCards", {"query": query}, url=url) or []
+
+
+def find_crew_role_cards_outside_expected(url: str) -> list[int]:
+    """Return cards with any crew_role tag that are outside expected decks."""
+    tag_clause = (
+        "tag:crew_role:captain OR tag:crew_role:first_officer "
+        "OR tag:crew_role:pilot_flying OR tag:crew_role:pilot_monitoring"
+    )
+    exclude_clause = " ".join(
+        f'-"deck:{p}"' for p in CREW_ROLE_EXPECTED_PREFIXES
+    )
+    query = f'({tag_clause}) {exclude_clause} "deck:{B737_ROOT}"'
+    return anki_request("findCards", {"query": query}, url=url) or []
+
+
+# ---------------------------------------------------------------------------
+# Seat filter
+# ---------------------------------------------------------------------------
+
+def apply_seat_filter(
+    seat: str, active_pfx: list[str], dry_run: bool, url: str
+) -> None:
+    """Suspend opposite-seat cards; reveal active-seat cards in active decks.
+
+    Runs after staging so the seat filter always has the final word.
+    crew_role:pilot_flying and crew_role:pilot_monitoring are never touched.
+    """
+    suppress_tag = SEAT_SUPPRESS_TAG[seat]
+    reveal_tag   = SEAT_REVEAL_TAG[seat]
+
+    print(f"\n{'DRY RUN — ' if dry_run else ''}Seat filter: studying as {seat.upper()}")
+
+    # 1. Suspend ALL cards (any state) tagged for the opposite seat.
+    suppress_ids = find_cards_by_tag(suppress_tag, url)
+    print(f"  [SUPPRESS]  tag:{suppress_tag}")
+    print(f"               → suspend {len(suppress_ids)} card(s)")
+    if suppress_ids and not dry_run:
+        suspend_cards(suppress_ids, url)
+
+    # 2. Unsuspend active-seat cards that are suspended and in active stage decks.
+    reveal_ids = find_suspended_cards_by_tag_in_decks(reveal_tag, active_pfx, url)
+    print(f"  [REVEAL]    tag:{reveal_tag} in active stage decks")
+    print(f"               → unsuspend {len(reveal_ids)} card(s)")
+    if reveal_ids and not dry_run:
+        unsuspend_cards(reveal_ids, url)
+
+    # 3. Warn about crew_role tags on cards outside expected decks.
+    unexpected_ids = find_crew_role_cards_outside_expected(url)
+    if unexpected_ids:
+        print(
+            f"\n  ⚠  {len(unexpected_ids)} card(s) with crew_role tags found "
+            f"outside Procedures / Triggers_and_Flows — likely tagging errors:"
+        )
+        if not dry_run:
+            info = anki_request(
+                "cardsInfo", {"cards": unexpected_ids[:50]}, url=url
+            )
+            for card in (info or []):
+                note_id_field = card.get("fields", {}).get("Note ID", {})
+                note_id = (
+                    note_id_field.get("value", "")
+                    if isinstance(note_id_field, dict) else ""
+                )
+                print(f"     [{card['cardId']}]  {card.get('deckName', '?')}"
+                      + (f"  ({note_id})" if note_id else ""))
+            if len(unexpected_ids) > 50:
+                print(f"     … and {len(unexpected_ids) - 50} more")
+        else:
+            print("     (run without --dry-run to see card details)")
+
+
 # ---------------------------------------------------------------------------
 # Main logic
 # ---------------------------------------------------------------------------
 
-def set_stage(stage: int, dry_run: bool, url: str) -> None:
+def set_stage(stage: int, seat: str, dry_run: bool, url: str) -> None:
     active_pfx = active_prefixes(stage)
     core_decks = all_core_decks(url)
 
@@ -229,6 +347,9 @@ def set_stage(stage: int, dry_run: bool, url: str) -> None:
               f"Suspended {total_suspended} new card(s), "
               f"unsuspended {total_unsuspended} new card(s).")
 
+    # Apply seat filter after staging so it always has the final word.
+    apply_seat_filter(seat=seat, active_pfx=active_pfx, dry_run=dry_run, url=url)
+
 
 # ---------------------------------------------------------------------------
 # Entry point
@@ -250,6 +371,14 @@ def main() -> int:
         ),
     )
     ap.add_argument(
+        "--seat", choices=["fo", "captain"], default="fo",
+        help=(
+            "Crew seat being studied. The opposite seat's cards are suspended. "
+            "'fo' (default) suppresses crew_role:captain cards; "
+            "'captain' suppresses crew_role:first_officer cards."
+        ),
+    )
+    ap.add_argument(
         "--dry-run", action="store_true",
         help="Show what would change without modifying Anki.",
     )
@@ -260,7 +389,7 @@ def main() -> int:
     args = ap.parse_args()
 
     try:
-        set_stage(stage=args.stage, dry_run=args.dry_run, url=args.anki_url)
+        set_stage(stage=args.stage, seat=args.seat, dry_run=args.dry_run, url=args.anki_url)
     except OSError as e:
         print(f"\nCannot reach AnkiConnect at {args.anki_url}: {e}")
         print("Make sure Anki is open and the AnkiConnect add-on is active.")
