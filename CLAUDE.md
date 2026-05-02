@@ -43,10 +43,6 @@ All 29 systems are converted. None remain in raw cloze format.
 | `systems_verification_exam` (finalized) | acars, adverse, emergency_equipment |
 | `systems_verification_exam_draft` (blank distractors, needs review) | all others (26 systems) |
 
-### Uncommitted changes
-
-All 29 systems are committed on `feature/b737-sv-exam-mode`. Nothing pending here.
-
 ---
 
 ## Flags for Human Review
@@ -153,12 +149,37 @@ python tools/anki/sync/set_stage.py --stage 1
 
 ---
 
+## Branch Map
+
+| Branch | Purpose | Status |
+|---|---|---|
+| `main` | Stable, deployable state | Active |
+| `feature/b737-sv-exam-mode` | Distractor authoring for 26 SV exam_draft systems | Active — next phase of work |
+| `feature/systems-electrical` | AI-generated systems-level MCQs from B737 general knowledge + ASM | Future work |
+
+Both feature branches should be kept in sync with main via periodic `git merge main`.
+
+---
+
 ## Next Steps: Distractor Authoring
 
 Each exam_draft note has three blank choice slots. The next phase is filling in
 plausible distractors for each MCQ. This is a human + AI review task.
 
-Suggested order: work through systems alphabetically or by exam priority.
+Work is tracked on `feature/b737-sv-exam-mode`. Suggested order: alphabetically
+or by exam priority.
+
+---
+
+## Future Work: Systems Electrical MCQ Deck
+
+`feature/systems-electrical` will hold AI-generated systems-level MCQs for the
+`B737::Systems::Aircraft_Systems::Electrical` deck (and potentially other systems
+sub-decks). Questions will be generated from Claude's B737 knowledge combined with
+the Aircraft Systems Manual (ASM), rather than converted from an existing question bank.
+
+This is a distinct approach from the SV exam_draft conversion — questions are authored
+from scratch rather than adapted from cloze notes.
 
 ---
 
