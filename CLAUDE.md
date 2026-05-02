@@ -144,7 +144,41 @@ by suspending/unsuspending new cards — no preset changes needed.
 Usage (with Anki open + AnkiConnect running):
 ```bash
 python tools/anki/sync/set_stage.py --dry-run --stage 1
-python tools/anki/sync/set_stage.py --stage 1
+python tools/anki/sync/set_stage.py --stage 1           # FO seat (default)
+python tools/anki/sync/set_stage.py --stage 1 --seat captain
+```
+
+---
+
+## Crew Role Tag Convention
+
+All seat- and role-specific notes carry a `crew_role:*` tag. Four canonical values:
+
+| Tag | Meaning |
+|---|---|
+| `crew_role:captain` | Captain-specific (never rotates to FO) |
+| `crew_role:first_officer` | FO-specific (never rotates to Captain) |
+| `crew_role:pilot_flying` | Applies to whoever is PF that leg |
+| `crew_role:pilot_monitoring` | Applies to whoever is PM that leg |
+
+Notes with no `crew_role` tag are seat-agnostic and are never suppressed.
+
+These tags appear only in `B737::Core::Procedures` and `B737::Core::Triggers_and_Flows`
+(and their children). Any `crew_role` tag found elsewhere is a tagging error —
+`set_stage.py` will warn about these at runtime.
+
+### Seat filter in set_stage.py
+
+`--seat fo` (default) suspends all `crew_role:captain` cards across all B737 decks.
+`--seat captain` suspends all `crew_role:first_officer` cards instead.
+`crew_role:pilot_flying` and `crew_role:pilot_monitoring` cards are never suppressed.
+
+The seat filter runs after staging and always has the final word.
+
+```bash
+python tools/anki/sync/set_stage.py --stage 2             # FO seat (default)
+python tools/anki/sync/set_stage.py --stage 2 --seat fo   # explicit
+python tools/anki/sync/set_stage.py --stage 2 --seat captain
 ```
 
 ---
