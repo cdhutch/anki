@@ -34,8 +34,10 @@ What is your flow?
 
 - Fire Extinguisher / Crash Axe
 - Escape Ropes
-- PBE / Life Vests / Spare Bulb Kit
-- CB Panels (P6/18)
+- PBE / Life Vests
+- Spare Bulb Kit / CB Panels (P6/18)
 - QRCs
+
+*Mnemonic:* Fight your way out → flee down the rope → protect yourself → check the spares and panels → pull the QRCs
 
 *Next: Aft Overhead — Configuration*
