@@ -11,6 +11,7 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:preflight
+- flow_detail:keep
 - segment:overhead_second_column
 - sequence:02
 - source:flows

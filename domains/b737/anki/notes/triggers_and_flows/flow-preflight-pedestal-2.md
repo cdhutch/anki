@@ -11,6 +11,7 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:preflight
+- flow_detail:keep
 - segment:pedestal_2
 - sequence:10
 - source:flows
