@@ -16,7 +16,7 @@ tags:
 - status:unverified
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
-  Source Location: Ignition
+  Source Location: AOM §3f.2.3 General Preflight Flow (Expanded)
   Verification Notes: null
 ---
 
@@ -24,14 +24,14 @@ fields:
 
 **Ignition — BOTH**
 
-When is the ignition switch set to BOTH for engine start?
+When should one consider setting the ignition switch set to BOTH for engine start?
 
 # back_md
 
 **Ignition — BOTH**
 
-If any of the following:
+Consider BOTH when **all three** apply:
 
-- FFOD
-- OAT below 5°C
-- Above 2000' MSL
+- First flight of the day
+- Airport elevation **≥ 2000' MSL**
+- OAT **< 5°C / 41°F**
