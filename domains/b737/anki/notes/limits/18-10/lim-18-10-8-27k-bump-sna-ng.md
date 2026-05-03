@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: limits_rule
-note_id: lim-18-10-8-antiskid-inop-takeoff
+note_id: lim-18-10-8-27k-bump-sna-ng
 anki:
   model: B737_Structured
   deck: B737::Core::Limits::Non-Trivia::Good-to-Know
@@ -11,6 +11,8 @@ tags:
 - topic:limits
 - subtopic:thrust
 - source:aom
+- b737-800
+- status:verified
 - emphasis:good_to_know
 fields:
   Source Document: B737 AOM Rev 9.0
@@ -20,10 +22,11 @@ fields:
 
 # front_md
 
-**B737 LIMITS — THRUST**
+**B737 LIMITS — 27K BUMP THRUST**
 
-What thrust method is prohibited when **antiskid is inoperative** for takeoff?
+27K Bump at KSNA — what is the **-NG** policy?
 
 # back_md
 
-**Assumed temperature reduced takeoff thrust is not permitted.**
+- **26K is the default** — use 27K only when needed to carry the payload
+- **No TPS or dispatch authorization required** — KSNA is exempt from the standard 27K authorization limitation
