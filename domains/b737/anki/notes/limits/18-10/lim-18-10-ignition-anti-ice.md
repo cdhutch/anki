@@ -27,6 +27,4 @@ What engine ignition positions are authorized **during anti-ice use**?
 
 # back_md
 
-CONT
-
 AUTO or CONT

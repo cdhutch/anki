@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: limits_rule
-note_id: lim-18-10-8-antiskid-inop-takeoff
+note_id: lim-18-10-8-eec-alternate-thrust
 anki:
   model: B737_Structured
   deck: B737::Core::Limits::Non-Trivia::Good-to-Know
@@ -11,6 +11,9 @@ tags:
 - topic:limits
 - subtopic:thrust
 - source:aom
+- b737-800
+- b737-max8
+- status:verified
 - emphasis:good_to_know
 fields:
   Source Document: B737 AOM Rev 9.0
@@ -20,10 +23,14 @@ fields:
 
 # front_md
 
-**B737 LIMITS — THRUST**
+**B737 LIMITS — EEC ALTERNATE MODE TAKEOFF**
 
-What thrust method is prohibited when **antiskid is inoperative** for takeoff?
+Both EECs are in alternate mode. What thrust rating is required for the **-800** and the **-MAX 8**?
 
 # back_md
 
-**Assumed temperature reduced takeoff thrust is not permitted.**
+**-800 (3AA–3PX)**
+26K max takeoff thrust — or 27K max if planned
+
+**-MAX 8 (3RA–3VM)**
+TO takeoff thrust
