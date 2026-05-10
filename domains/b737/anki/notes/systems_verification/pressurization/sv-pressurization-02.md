@@ -25,11 +25,12 @@ fields:
     to the standby\n    auto controller (ALTN Mode).}}
   Question Stem: In flight at 29,000 ft, the amber AUTO FAIL and green ALTN lights illuminate.
     What is the status of the pressurization controllers?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Both the primary and standby auto pressure controllers have failed.
+  Choice B: The primary auto controller has failed and the system did not automatically switch
+    to ALTN mode.
   Choice C: The primary auto controller has failed and the system has automatically switched
     to the standby auto controller (ALTN Mode)
-  Choice D: ''
+  Choice D: The standby auto controller has failed and now crew action is required.
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

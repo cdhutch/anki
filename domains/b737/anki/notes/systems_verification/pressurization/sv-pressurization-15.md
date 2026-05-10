@@ -25,9 +25,9 @@ fields:
     moves the outflow\n    valve at a faster rate than the auto controllers.}}
   Question Stem: After selecting MAN per QRH with AUTO FAIL still illuminated after ALTN,
     what is the effect on the pressurization system?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: All three controllers use the same motor to operate the outflow valve.
+  Choice B: The manual controller moves the outflow valve at a slower rate than the auto controllers
+  Choice C: The manual controller moves the outflow valve at the same rate as the auto controllers
   Choice D: The manual controller moves the outflow valve at a faster rate than the auto controllers
   Correct Choice: D
   Shuffle Choices: true

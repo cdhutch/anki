@@ -23,10 +23,10 @@ fields:
     cabin\n    pressure controller is available.
   Question Stem: When operating on standby electrical power (battery only), which cabin pressure
     controller is available?
-  Choice A: ''
+  Choice A: None
   Choice B: Manual
-  Choice C: ''
-  Choice D: ''
+  Choice C: Primary Automatic
+  Choice D: Alternate Automatic
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

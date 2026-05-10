@@ -24,9 +24,10 @@ fields:
     {{c1::There\n    is no difference in operation when using the standby ALTN auto controller.}}
   Question Stem: The amber AUTO FAIL and green ALTN lights illuminate on the Cabin Pressurization
     Panel. How does this affect pressurization system operation?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The outflow valve will operate slower with the standby auto controller.
+  Choice B: The pressure differential is being maintained at the pressure relief valve limit.
+  Choice C: The maximum pressure differential is less since we are using the standby auto
+    controller.
   Choice D: There is no difference in operation when using the standby ALTN auto controller
   Correct Choice: D
   Shuffle Choices: true

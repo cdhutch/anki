@@ -25,9 +25,9 @@ fields:
   Question Stem: The Auto Pressurization System consists of how many identical controllers,
     with how many sequenced as primary for each new flight?
   Choice A: 2 identical controllers with 1 alternately sequenced as primary
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 2 identical controllers with 2 alternately sequenced as primary
+  Choice C: 3 identical controllers with 1 alternately sequenced as primary
+  Choice D: 3 identical controllers with 2 alternately sequenced as primary
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

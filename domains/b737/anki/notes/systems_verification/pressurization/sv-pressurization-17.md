@@ -23,10 +23,10 @@ fields:
     not, which\n    statement is true? {{c1::Both auto channels have failed.}}
   Question Stem: The pressurization AUTO FAIL light illuminates without the ALTN light. Which
     statement is true?
-  Choice A: ''
+  Choice A: An AC STBY BUS failure.
   Choice B: Both auto channels have failed
-  Choice C: ''
-  Choice D: ''
+  Choice C: Cabin altitude 14,000
+  Choice D: All of the above
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -24,9 +24,10 @@ fields:
     cruise altitude set in the FLT ALT window.}}
   Question Stem: What causes the amber OFF SCHED DESCENT light on the Cabin Pressurization
     Panel to illuminate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The aircraft started descent prior to flying 400 NM.
+  Choice B: The aircraft started descent prior to reaching the halfway point in the route.
+  Choice C: The aircraft started descent prior to reaching the altitude set in the LAND ALT
+    window.
   Choice D: The aircraft started descent prior to reaching the cruise altitude set in the
     FLT ALT window
   Correct Choice: D

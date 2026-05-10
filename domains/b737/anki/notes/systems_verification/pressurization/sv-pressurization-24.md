@@ -24,9 +24,9 @@ fields:
   Question Stem: The safety pressure relief valves open to keep differential pressure from
     exceeding what value?
   Choice A: 9.10 psi
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 8.35 psi
+  Choice C: 8.25 psi
+  Choice D: 8.45 psi
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

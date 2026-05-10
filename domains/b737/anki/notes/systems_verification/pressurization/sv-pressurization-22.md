@@ -22,10 +22,10 @@ fields:
   Original Text: 'The pressurization outflow VALVE position indicator operates in {{c1::all
     of the\n    above: AUTO, ALTN, and MANUAL}} mode(s).'
   Question Stem: In which modes does the pressurization outflow VALVE position indicator operate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'All of the above: AUTO, ALTN, and MANUAL'
+  Choice A: AUTO
+  Choice B: ALTN
+  Choice C: MANUAL
+  Choice D: All of the above
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

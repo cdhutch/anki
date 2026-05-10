@@ -23,11 +23,12 @@ fields:
     to {{c1::loss of DC power}}.
   Question Stem: What automatically causes the AUTO FAIL light on the Cabin Pressure Controller
     to illuminate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: Loss of DC power
-  Correct Choice: D
+  Choice A: Cabin altitude in excess of 10,000'
+  Choice B: Loss of DC power
+  Choice C: Cabin rate of change in excess of ± 1000 ft/min or cabin altitude in excess of
+    14,000 feet
+  Choice D: Any of the above occurring
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

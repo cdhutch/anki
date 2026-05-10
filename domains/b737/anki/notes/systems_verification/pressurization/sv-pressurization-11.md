@@ -22,9 +22,9 @@ fields:
   Original Text: If the external atmospheric pressure exceeds the internal cabin pressure,
     the {{c1::negative\n    pressure relief valve}} will open.
   Question Stem: If external atmospheric pressure exceeds internal cabin pressure, what opens?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Outflow Valve
+  Choice B: Overboard Exhaust Valve
+  Choice C: Positive pressure relief valve
   Choice D: Negative pressure relief valve
   Correct Choice: D
   Shuffle Choices: true

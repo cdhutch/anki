@@ -21,12 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: To switch the pressurization to the auto alternate controller, you {{c1::must
     select\n    ALTN on the Cabin Pressurization Panel}}.
-  Question Stem: To switch pressurization to the auto alternate controller, what must you
-    do?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Select ALTN on the Cabin Pressurization Panel
-  Choice D: ''
+  Question Stem: 'To switch pressurization to the auto alternate controller, you:'
+  Choice A: must select STBY, then back to AUTO on the Cabin Pressurization Panel
+  Choice B: cannot switch to alternate; pressurization controllers can only be sequenced automatically
+  Choice C: must select ALTN on the Cabin Pressurization Panel
+  Choice D: must select MAN, then back to AUTO on the Cabin Pressurization Panel
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

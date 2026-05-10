@@ -24,9 +24,9 @@ fields:
   Question Stem: At a normal pressure differential, what cabin altitude can be maintained
     with the aircraft at 41,000 ft?
   Choice A: 8,000 ft
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 7,000 ft
+  Choice C: 7,500 ft
+  Choice D: 9,900 ft
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

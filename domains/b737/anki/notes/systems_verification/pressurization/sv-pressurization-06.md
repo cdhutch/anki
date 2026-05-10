@@ -26,10 +26,10 @@ fields:
   Question Stem: The OFF SCHED DESCENT light is illuminated and the crew must divert to an
     alternate at a lower altitude. How is the light extinguished and the landing prepared
     for?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Leave the pressurization panel as it is
+  Choice B: Change the FLT ALT window but not the LAND ALT window
   Choice C: Change both the FLT ALT and LAND ALT windows
-  Choice D: ''
+  Choice D: Change the LAND ALT windows but not the FLT ALT window
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

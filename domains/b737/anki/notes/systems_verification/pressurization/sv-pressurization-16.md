@@ -25,9 +25,9 @@ fields:
   Question Stem: If an OFF SCHEDULE DESCENT light illuminates on the Cabin Pressurization
     Panel, what will the pressurization system do?
   Choice A: Pressurize the cabin back to the takeoff airport altitude
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Return the cabin to the last cruise altitude
+  Choice C: Recompute the new cruise altitude psi differential rate
+  Choice D: Reschedule the pressurization rate of change
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

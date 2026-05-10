@@ -26,11 +26,11 @@ fields:
     Field elevation.}}
   Question Stem: During a return to the departure airport, the OFF SCHED DESCENT amber light
     illuminates. What crew action is required?
-  Choice A: ''
+  Choice A: The crew must change landing altitude only.
   Choice B: No crew action is required; the controller will program the cabin to land at the
     takeoff field elevation
-  Choice C: ''
-  Choice D: ''
+  Choice C: The crew must change flight altitude only.
+  Choice D: The crew must change both flight altitude and landing altitude.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

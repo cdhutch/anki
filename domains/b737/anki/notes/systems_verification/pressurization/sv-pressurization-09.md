@@ -23,10 +23,10 @@ fields:
     altitude\n    and cruise altitude}} is required to be preset.
   Question Stem: For the pressurization auto controller to function properly, what must be
     preset?
-  Choice A: ''
+  Choice A: Cruise altitude
   Choice B: Landing altitude and cruise altitude
-  Choice C: ''
-  Choice D: ''
+  Choice C: Cruise altitude and takeoff altitude
+  Choice D: Landing altitude
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

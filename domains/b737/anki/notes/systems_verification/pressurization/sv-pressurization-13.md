@@ -24,11 +24,10 @@ fields:
     fault, or excessive\n    rate of cabin pressure change (± 2,000 sea level feet/minute)}}.'
   Question Stem: The amber AUTO FAIL light on the Cabin Pressurization Panel will illuminate
     for which of the following?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'All of the above: loss of DC power, controller or outflow valve control fault,
-    or excessive rate of cabin pressure change'
+  Choice A: Loss of DC Power
+  Choice B: Controller or Outflow Valve Control Fault
+  Choice C: Excessive rate of cabin pressure change +/- 2000 sea level feet / minute
+  Choice D: All of the above
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

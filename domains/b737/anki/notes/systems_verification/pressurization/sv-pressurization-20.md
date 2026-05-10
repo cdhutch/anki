@@ -25,9 +25,9 @@ fields:
   Question Stem: What causes the OFF SCHEDULE DESCENT light on the Cabin Pressurization Panel
     to illuminate?
   Choice A: Pilot starting a descent prior to reaching selected cruise altitude
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Auto controller allowing the cabin to climb/descend at an excessive rate
+  Choice C: Auto controller not keeping up with the pressurization demands
+  Choice D: Auto controller failing
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -23,10 +23,12 @@ fields:
     illuminated green ALT light) indicates that {{c1::both auto pressure controllers have\n    failed}}.
   Question Stem: The amber AUTO FAIL light is illuminated without a green ALTN light. What
     does this indicate?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The back-up auto controller (ALTN Mode) is unavailable if the primary controller
+    should fail.
+  Choice B: The Primary controller has failed and the system has switched to the other auto
+    controller (ALTN mode)
   Choice C: Both auto pressure controllers have failed
-  Choice D: ''
+  Choice D: Neither pressure controller has failed.
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -26,9 +26,9 @@ fields:
   Question Stem: After placing the pressurization mode to ALTN per the QRH (with AUTO FAIL
     and ALTN lights illuminated), what indications should result?
   Choice A: The AUTO FAIL light extinguishes and the ALTN light remains illuminated
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The AUTO FAIL and ALTN lights remain illuminated.
+  Choice C: Both the AUTO FAIL and ALTN lights extinguish.
+  Choice D: The AUTO FAIL light remains illuminated and the ALTN light extinguishes.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

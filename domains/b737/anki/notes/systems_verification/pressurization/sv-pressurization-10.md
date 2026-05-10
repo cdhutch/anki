@@ -23,10 +23,10 @@ fields:
     the {{c1::outflow\n    valve}}.
   Question Stem: Normally, air is discharged overboard to maintain cabin pressure through
     what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Negative pressure relief valve
+  Choice B: Cabin Pressure relief valves
   Choice C: Outflow valve
-  Choice D: ''
+  Choice D: Pressure regulator valve
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

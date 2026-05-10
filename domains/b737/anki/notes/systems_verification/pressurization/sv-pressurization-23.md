@@ -23,9 +23,9 @@ fields:
     system\n    operates {{c1::faster}}.
   Question Stem: When operating cabin pressure in MANUAL, how does the third motor (DC standby)
     operate compared to auto mode?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: On AC power, not DC
+  Choice B: The same speed
+  Choice C: Slower
   Choice D: Faster
   Correct Choice: D
   Shuffle Choices: true
