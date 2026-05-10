@@ -33,8 +33,8 @@ What is your flow?
 **Origination Flow — Pedestal**
 
 - HYD Quantity:
-  - Verify both less than 105%
-  - No RF
+    - Verify both less than 105%
+    - No RF
 - Parking Brake — Set
 
 *Previous: Aft Overhead — Tests*  

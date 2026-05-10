@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: flow
-note_id: flow-preflight-overhead-bottom-row
+note_id: flow-preflight-overhead-third-column
 anki:
   model: B737_Structured
   deck: B737::Core::Triggers_and_Flows::Flows
@@ -12,30 +12,28 @@ tags:
 - type:flow
 - flow:preflight
 - flow_detail:keep
-- segment:overhead_bottom_row
-- sequence:06
+- segment:overhead_third_column
+- sequence:03
 - source:flows
 - status:unverified
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
-  Source Location: Preflight — Overhead Panel (Bottom Row)
+  Source Location: Preflight — Overhead Panel (3rd Column)
   Verification Notes: null
 ---
 
 # front_md
 
-**Preflight — Overhead Panel (Bottom Row)**
+**Preflight — Overhead Panel (3rd Column)**
 
 What is your flow?
 
 # back_md
 
-**Preflight — Overhead Panel (Bottom Row)**
+**Preflight — Overhead Panel (3rd Column)**
 
-- All CA lights: OFF (aft)
-- Engine start switches: AUTO
-- IGN: L or R
-- FO lights: 2 ON (forward), 3 OFF (aft)
+- All switches: AFT or GUARDED
+- Wipers: PARKED
 
-*Previous: Overhead Panel (5th Column)*  
-*Next: EFIS / MCP*
+*Previous: Overhead Panel (2nd Column)*  
+*Next: Overhead Panel (4th Column)*

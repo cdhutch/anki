@@ -31,8 +31,7 @@ What is your flow?
 
 **PF — Transition Level**
 
-- BARO SET: PUSH AND SET
-- Altimeter setting: CROSSCHECK
+- Altimeter: Set QNH
 - "Descent Checklist"
 
 *Previous: PM — Transition Level*  

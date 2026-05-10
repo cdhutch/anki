@@ -32,14 +32,11 @@ What is your flow?
 
 **First Officer — Before Pushback**
 
-- DOOR POWER CUTOFF switch: GUARDED
-- DOOR LOCK FAIL light: NOT ILLUMINATED
-- PROBE HEAT switches: ALL ON; lights out
-- HYDRAULIC PUMPS: ALL ON; 2 HYD lights ON
-- Hydraulic pressure: 2800 PSI MINIMUM × 3
-- Exterior door annunciator lights: ALL OUT
-- Windows: CLOSED/LOCKED
-- ANTI-COLLISION light: ON
+1. Flight Deck Door: Secure x 3
+2. Overhead Work down Column 4: 2 ENG HYD lights remain
+3. Front Panel down the Center: Brakes and Hydraulic pressures
+5. Window: Closed
+6. Anti-smash: ON
 
 *Previous: First Officer — Before Start*  
 *Next: First Officer — Start*

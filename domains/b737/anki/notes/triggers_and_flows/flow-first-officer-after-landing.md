@@ -32,13 +32,10 @@ What is your flow?
 
 **First Officer — After Landing**
 
-- FLAPS: UP / NO LIGHTS
-- Stabilizer trim: 5 units
-- AUTO BRAKE: OFF
-- FLIGHT DIRECTORS: OFF
-- WX RADAR: OFF
-- Exterior lights: AS REQUIRED
-- ANTI-ICE switches: AS REQUIRED
+1. Flaps and Trim
+2. Autobrake
+3. F/D and WXR
+4. Lights and Anti-Ice
 
 *Previous: PF — Descending Through 10,000 Feet AGL*  
 *Next: First Officer — Shutdown*

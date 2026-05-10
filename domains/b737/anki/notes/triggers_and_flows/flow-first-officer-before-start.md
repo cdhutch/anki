@@ -32,10 +32,7 @@ What is your flow?
 
 **First Officer — Before Start**
 
-- Flight forms and AML: CHECK
-  - Security slip: IF REQUIRED
-  - International documents
-  - Yellow book
+- Required Documents and AML: CHECK
 
 *Previous: First Officer — Preflight*  
 *Next: First Officer — Before Pushback*

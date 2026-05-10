@@ -28,8 +28,8 @@ Walk the FO Before Taking the Runway flow. What panels/areas do you visit and in
 
 # back_md
 
-1. HUD — verify deployed
+1. HUD
 2. MCP / ND
-3. Exterior lights panel
-4. Fuel quantity — verify minimum takeoff fuel
-5. Wing lights / position lights (when cleared onto runway)
+3. Hold Short Lights
+4. Minimum takeoff fuel
+5. Takeoff Lights
