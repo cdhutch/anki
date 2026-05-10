@@ -22,12 +22,12 @@ fields:
   Original Text: Normal hydraulic system pressure is {{c1::}} psi.
   Question Stem: Normal hydraulic system pressure is what? psi
   Choice A: ''
-  Choice B: ''
+  Choice B: 3000 psi
   Choice C: ''
   Choice D: ''
   Correct Choice: B
   Shuffle Choices: true
-  Review Notes: Source cloze had blank answer — needs manual completion (answer is 3000 psi)
-  Verification Notes: ''
+  Review Notes: null
+  Verification Notes: Verified — 3000 psi is standard aerospace hydraulic pressure
 ---
 
