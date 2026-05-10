@@ -5,7 +5,7 @@ note_type: qrc_recall
 note_id: qrc-apu-fire
 anki:
   model: B737_Structured
-  deck: B737::QRC
+  deck: B737::Core::QRC
 tags:
 - domain:b737
 - topic:qrc

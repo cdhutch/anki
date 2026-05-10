@@ -5,14 +5,14 @@ note_type: procedure
 note_id: procedure-go-around-single-engine-pf-initial-actions
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Non_Normal
+  deck: B737::Core::Procedures::Non_Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:go_around
 - variant:single_engine
-- role:pf
+- crew_role:pilot_flying
 - phase:initial_actions
 - source:aom
 - status:unverified

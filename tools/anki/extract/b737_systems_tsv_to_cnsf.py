@@ -171,7 +171,7 @@ def row_to_markdown(row: dict[str, str]) -> str:
     lines.append(f"note_id: {note_id}")
     lines.append("anki:")
     lines.append("  model: B737_Systems")
-    lines.append("  deck: B737::Systems")
+    lines.append("  deck: B737::Systems::Aircraft_Systems")
     lines.append("tags:")
     for tag in tags:
         lines.append(f"- {tag}")

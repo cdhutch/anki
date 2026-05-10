@@ -5,14 +5,14 @@ note_type: procedure
 note_id: procedure-ils-cat2-3-first-officer-final-configuration
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:ils
 - category:cat2_cat3
-- role:first_officer
+- crew_role:first_officer
 - duty:pm
 - phase:final_configuration
 - source:aom

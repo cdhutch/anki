@@ -5,7 +5,7 @@ note_type: limits_rule
 note_id: lim-18-10-ignition-anti-ice
 anki:
   model: B737_Structured
-  deck: B737::Limits
+  deck: B737::Core::Limits::Non-Trivia::Good-to-Know
 tags:
 - domain:b737
 - topic:limits
@@ -26,7 +26,5 @@ fields:
 What engine ignition positions are authorized **during anti-ice use**?
 
 # back_md
-
-CONT
 
 AUTO or CONT

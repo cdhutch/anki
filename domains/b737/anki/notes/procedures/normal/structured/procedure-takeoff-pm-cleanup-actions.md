@@ -5,14 +5,14 @@ note_type: procedure
 note_id: procedure-takeoff-pm-cleanup-actions
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:normal_procedures
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:pm
+- crew_role:pilot_monitoring
 - segment:cleanup_actions
 - source:aom
 - status:unverified

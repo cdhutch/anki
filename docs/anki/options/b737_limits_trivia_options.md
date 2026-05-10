@@ -1,4 +1,4 @@
-# B737::Limits::Trivia — Option Preset
+# B737::Core::Limits::Trivia — Option Preset
 
 ## Philosophy
 

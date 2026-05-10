@@ -5,13 +5,13 @@ note_type: procedure
 note_id: procedure-non-ils-pf-initial-approach
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:non_ils
-- role:pf
+- crew_role:pilot_flying
 - phase:initial_approach
 - source:aom
 - status:unverified

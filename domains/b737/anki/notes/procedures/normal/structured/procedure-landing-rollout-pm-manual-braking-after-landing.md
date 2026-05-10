@@ -5,13 +5,13 @@ note_type: procedure
 note_id: procedure-landing-rollout-pm-manual-braking-after-landing
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:landing_rollout
-- role:pm
+- crew_role:pilot_monitoring
 - phase:manual_braking
 - source:aom
 - status:unverified

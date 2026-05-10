@@ -5,14 +5,14 @@ note_type: procedure
 note_id: procedure-rejected-takeoff-captain-stopping-assured
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Non_Normal
+  deck: B737::Core::Procedures::Non_Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:rejected_takeoff
 - phase:stopping_assured
-- role:captain
+- crew_role:captain
 - source:aom
 - status:unverified
 fields:

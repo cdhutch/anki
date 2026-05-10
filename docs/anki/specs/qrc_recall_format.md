@@ -24,7 +24,7 @@ Each note MUST include:
 - note_type: qrc_recall
 - note_id: unique slug
 - anki.model: B737_Structured
-- anki.deck: B737::QRC::Recall
+- anki.deck: B737::Core::QRC::Recall
 
 ---
 

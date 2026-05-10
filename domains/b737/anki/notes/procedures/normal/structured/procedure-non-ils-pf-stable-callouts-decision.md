@@ -5,13 +5,13 @@ note_type: procedure
 note_id: procedure-non-ils-pf-stable-callouts-decision
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:non_ils
-- role:pf
+- crew_role:pilot_flying
 - phase:final_approach
 - subject:stabilized_approach
 - subject:decision_altitude

@@ -5,12 +5,11 @@ note_type: trigger
 note_id: trigger-origination
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Triggers
+  deck: B737::Core::Triggers_and_Flows::Triggers
 tags:
 - domain:b737
 - topic:triggers_and_flows
 - type:trigger
-- crew_role:all
 - phase:origination
 - source:flows
 - status:unverified

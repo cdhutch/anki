@@ -5,13 +5,13 @@ note_type: flow
 note_id: flow-first-officer-climbing-through-fl180
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Flows
+  deck: B737::Core::Triggers_and_Flows::Flows
 tags:
 - domain:b737
 - topic:triggers_and_flows
 - type:flow
 - flow:climbing_through_fl180
-- crew_role:fo
+- crew_role:first_officer
 - sequence:21
 - source:flows
 - status:unverified

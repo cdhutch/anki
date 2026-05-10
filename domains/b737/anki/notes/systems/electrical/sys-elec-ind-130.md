@@ -5,7 +5,7 @@ note_type: system_panel_item
 note_id: sys-elec-ind-130
 anki:
   model: B737_Systems
-  deck: B737::Systems
+  deck: B737::Systems::Aircraft_Systems
 tags:
 - domain:b737
 - topic:systems

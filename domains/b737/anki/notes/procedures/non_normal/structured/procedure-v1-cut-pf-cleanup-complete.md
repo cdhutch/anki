@@ -5,13 +5,13 @@ note_type: procedure
 note_id: procedure-v1-cut-pf-cleanup-complete
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Non_Normal
+  deck: B737::Core::Procedures::Non_Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:v1_cut
-- role:pf
+- crew_role:pilot_flying
 - phase:cleanup_complete
 - source:aom
 - status:unverified

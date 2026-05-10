@@ -5,14 +5,13 @@ note_type: procedure
 note_id: procedure-takeoff-overview
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:normal_procedures
 - type:procedure
 - procedure:takeoff
 - phase:takeoff
-- role:crew
 - source:aom
 - status:unverified
 fields:

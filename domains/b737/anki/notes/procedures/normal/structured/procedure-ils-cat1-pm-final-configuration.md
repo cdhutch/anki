@@ -5,14 +5,14 @@ note_type: procedure
 note_id: procedure-ils-cat1-pm-final-configuration
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:ils
 - category:cat1
-- role:pm
+- crew_role:pilot_monitoring
 - phase:final_approach
 - subject:configuration
 - subject:stabilized_approach

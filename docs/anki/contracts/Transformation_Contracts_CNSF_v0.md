@@ -46,7 +46,7 @@ note_type: limits_weight_model
 note_id: b737-limits-weight-800
 anki:
   model: B737_Structured
-  deck: "B737::Limits"
+  deck: B737::Core::Limits
 tags:
   - domain:b737
   - model:800

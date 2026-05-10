@@ -58,7 +58,7 @@ Example:
 ```yaml
 anki:
   model: B737_Structured
-  deck: "B737::Limits"
+  deck: B737::Core::Limits
 ```
 
 No additional keys allowed in CNSF v0.

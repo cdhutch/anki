@@ -5,13 +5,12 @@ note_type: flow
 note_id: flow-origination-aft-overhead-configuration
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Flows
+  deck: B737::Core::Triggers_and_Flows::Flows
 tags:
 - domain:b737
 - topic:triggers_and_flows
 - type:flow
 - flow:origination
-- crew_role:all
 - phase:origination
 - segment:aft_overhead_configuration
 - sequence:02

@@ -5,13 +5,13 @@ note_type: flow
 note_id: flow-pm-descending-through-10000-feet-agl
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Flows
+  deck: B737::Core::Triggers_and_Flows::Flows
 tags:
 - domain:b737
 - topic:triggers_and_flows
 - type:flow
 - flow:descending_through_10000_feet_agl
-- crew_role:pm
+- crew_role:pilot_monitoring
 - sequence:25
 - source:flows
 - status:unverified

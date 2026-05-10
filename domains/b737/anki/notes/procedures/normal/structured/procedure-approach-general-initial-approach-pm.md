@@ -5,14 +5,14 @@ note_type: procedure
 note_id: procedure-approach-general-initial-approach-pm
 anki:
   model: B737_Structured
-  deck: B737::Triggers_and_Flows::Procedures::Normal
+  deck: B737::Core::Procedures::Normal
 tags:
 - domain:b737
 - topic:procedures
 - type:procedure
 - procedure:approach
 - category:general
-- role:pm
+- crew_role:pilot_monitoring
 - phase:initial_approach
 - source:aom
 - status:unverified
