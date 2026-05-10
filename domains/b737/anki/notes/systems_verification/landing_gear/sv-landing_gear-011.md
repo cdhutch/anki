@@ -22,9 +22,9 @@ fields:
   Original Text: Under normal operations, gear green lights illuminated means the {{c1::related
     gear is down and locked}}.
   Question Stem: Under normal operations, what does an illuminated gear green light indicate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Gear is not locked in the up position
+  Choice B: LANDING GEAR Lever is OFF, and the gear is not up and locked
+  Choice C: the gear is not up and locked, irrespective of the gear handle position.
   Choice D: Related gear is down and locked
   Correct Choice: D
   Shuffle Choices: true

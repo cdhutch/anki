@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: The maximum speed allowed while the gear is extended is {{c1::320}} KIAS.
   Question Stem: What is the maximum speed allowed while the landing gear is extended?
-  Choice A: ''
-  Choice B: ''
+  Choice A: 270 KIAS
+  Choice B: 340 KIAS
   Choice C: 320 KIAS
-  Choice D: ''
+  Choice D: 300 KIAS
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

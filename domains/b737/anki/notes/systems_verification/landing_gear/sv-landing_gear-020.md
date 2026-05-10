@@ -23,9 +23,9 @@ fields:
     to illuminate.
   Question Stem: A fault in the Parking Brake System may cause which light to illuminate?
   Choice A: ANTISKID INOP Light
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: red Landing Gear Indicator Lights
+  Choice C: AUTO BRAKE DISARM Light
+  Choice D: PSEU Light
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

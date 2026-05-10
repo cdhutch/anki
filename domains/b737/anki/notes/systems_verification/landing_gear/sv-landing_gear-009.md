@@ -23,10 +23,10 @@ fields:
     main is {{c1::down and locked}}.
   Question Stem: All gear lights on the overhead panel are green. What does this indicate
     about the left main gear?
-  Choice A: ''
+  Choice A: Up
   Choice B: Down and locked
-  Choice C: ''
-  Choice D: ''
+  Choice C: In Transit
+  Choice D: Not Down and Locked
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

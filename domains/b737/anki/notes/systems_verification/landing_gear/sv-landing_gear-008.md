@@ -24,10 +24,10 @@ fields:
     other procedures.}}
   Question Stem: On gear extension, the left red gear light remains on with no green light.
     What action should be taken first?
-  Choice A: Check the overhead panel for gear indication prior to other procedures
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice A: Check the overhead panel for gear indication prior to other procedures.
+  Choice B: Declare an emergency and land.
+  Choice C: Recycle the gear.
+  Choice D: Slow to 230 knots and recycle the gear.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

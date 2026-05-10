@@ -23,10 +23,10 @@ fields:
     ring opening, the right main gear {{c1::will not retract}}.
   Question Stem: When a spinning tire with loose tread impacts a fitting in the wheel well
     ring opening, what happens to the right main gear?
-  Choice A: ''
-  Choice B: ''
+  Choice A: will have to be raised with the aid of the PTU
+  Choice B: can be raised through the gear transfer unit
   Choice C: Will not retract
-  Choice D: ''
+  Choice D: can be retracted manually.
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

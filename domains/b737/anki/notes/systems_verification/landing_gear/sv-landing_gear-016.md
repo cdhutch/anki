@@ -22,9 +22,9 @@ fields:
   Original Text: Parking brakes can utilize pressure from {{c1::System B only}}.
   Question Stem: Parking brakes can utilize pressure from which hydraulic system?
   Choice A: System B only
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Standby system
+  Choice C: System A only
+  Choice D: System A or B
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

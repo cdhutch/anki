@@ -23,9 +23,9 @@ fields:
     {{c1::anti-skid protection is still available}}.
   Question Stem: With a loss of both hydraulic systems A and B, what is true regarding anti-skid
     protection?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Anti-skid will not operate correctly.
+  Choice B: Anti-skid protection will be available on outboard wheels only
+  Choice C: There is no anti-skid protection when braking with accumulator only
   Choice D: Anti-skid protection is still available
   Correct Choice: D
   Shuffle Choices: true

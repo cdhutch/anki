@@ -22,12 +22,12 @@ fields:
   Original Text: With the Gear Handle up after takeoff, these lights are illuminated. What
     is the most likely problem? {{c1::Tread separation, on a right tire, impacted a fitting
     on the wheel well ring.}}
-  Question Stem: With the gear handle up after takeoff and gear warning lights illuminated,
-    what is the most likely cause?
-  Choice A: ''
+  Question Stem: With the gear handle up after takeoff and a red RIGHT GEAR warning light
+    and a green RIGHT GEAR status light is illuminated, what is the most likely cause?
+  Choice A: The nose gear pin was left installed.
   Choice B: Tread separation on a right tire impacted a fitting on the wheel well ring
-  Choice C: ''
-  Choice D: ''
+  Choice C: Number one engine driven pump was lost
+  Choice D: The left gear pin was left installed.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

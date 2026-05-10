@@ -22,11 +22,12 @@ fields:
   Original Text: 'In the event the #1 engine fails, normal retraction of the landing gear
     is not available; however, the gear will be retracted by {{c1::the Landing Gear Transfer
     Unit}}.'
-  Question Stem: If the
-  Choice A: ''
-  Choice B: ''
+  Question Stem: 'In the event the #1 engine fails, normal retraction of the landing gear
+    is not available; in this situation, what will retract the gear?'
+  Choice A: Standby system
+  Choice B: the PTU
   Choice C: The Landing Gear Transfer Unit
-  Choice D: ''
+  Choice D: Manual crank
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

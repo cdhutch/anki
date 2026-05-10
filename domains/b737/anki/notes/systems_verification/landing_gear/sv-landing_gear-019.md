@@ -10,12 +10,12 @@ tags:
 - domain:b737
 - topic:systems_verification
 - system:landing_gear
-- format:tf
+- format:mcq
 - source:question_bank
 - status:draft
 fields:
   Source Document: Systems Validation Question Bank
-  Exam Format: tf
+  Exam Format: mcq
   Conversion Status: draft
   Original Note ID: landing_gear-019
   Original Prompt Style: cloze
@@ -23,11 +23,11 @@ fields:
     with antiskid inoperative: {{c1::TRUE}}'
   Question Stem: 'True or False: Operation with assumed temperature reduced takeoff thrust
     is not permitted with antiskid inoperative.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: true
+  Correct Choice: A
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

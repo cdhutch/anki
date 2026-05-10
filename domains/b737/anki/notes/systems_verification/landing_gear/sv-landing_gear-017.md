@@ -22,10 +22,10 @@ fields:
   Original Text: The landing gear is normally extended and retracted by which hydraulic system?
     {{c1::A}}
   Question Stem: By which hydraulic system is the landing gear normally extended and retracted?
-  Choice A: ''
-  Choice B: Hydraulic System A
-  Choice C: ''
-  Choice D: ''
+  Choice A: Standby
+  Choice B: A
+  Choice C: B
+  Choice D: LGTU
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

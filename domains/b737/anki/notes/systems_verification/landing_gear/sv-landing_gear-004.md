@@ -23,9 +23,9 @@ fields:
     work}}.
   Question Stem: What happens to the auto-brake system with the loss of hydraulic system B?
   Choice A: Will not work
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Works normally
+  Choice C: Works, but the anti-skid system is INOP
+  Choice D: Both auto-brake and anti-skid are INOP.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

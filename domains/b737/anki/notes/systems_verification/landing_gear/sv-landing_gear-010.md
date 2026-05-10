@@ -23,10 +23,10 @@ fields:
     is true? {{c1::The left main is not down and locked.}}
   Question Stem: The overhead panel does not show a green light for the left main gear. What
     is true?
-  Choice A: ''
-  Choice B: ''
-  Choice C: The left main is not down and locked
-  Choice D: ''
+  Choice A: The left main is down and locked.
+  Choice B: The right main is unsafe.
+  Choice C: The left main is not down and locked.
+  Choice D: The right main is not down and locked.
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

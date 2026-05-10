@@ -23,10 +23,10 @@ fields:
     of a failure of the {{c1::No. 1 engine}}.
   Question Stem: The Landing Gear Transfer Unit provides for gear retraction in the event
     of failure of what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: No. 2 engine
+  Choice B: Hydraulic System A
   Choice C: No. 1 engine
-  Choice D: ''
+  Choice D: Hydraulic System B
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -23,10 +23,10 @@ fields:
     used to override {{c1::the lever lock}}.
   Question Stem: The override trigger, located on the underside of the gear handle, can be
     used to override what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The mechanical uplocks in case the hydraulic system is unable
+  Choice B: A hydraulic lock which might prevent normal extension of the gear
   Choice C: The lever lock
-  Choice D: ''
+  Choice D: Electrical downlocks if they fail
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

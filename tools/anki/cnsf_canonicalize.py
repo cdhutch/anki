@@ -151,6 +151,14 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     # Optional: ensure the known field names exist (allow extensions)
     fields.setdefault("Verification Notes", "")
 
+    # Fix YAML boolean coercion in Choice fields: unquoted True/False in YAML is
+    # loaded as Python bool by yaml.safe_load, then dumped as lowercase true/false.
+    # Preserve the intended string value for all Choice slots.
+    for choice_key in ("Choice A", "Choice B", "Choice C", "Choice D"):
+        val = fields.get(choice_key)
+        if isinstance(val, bool):
+            fields[choice_key] = "True" if val else "False"
+
     return meta
 
 

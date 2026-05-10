@@ -22,9 +22,9 @@ fields:
   Original Text: What stops wheel rotation when the gear is raised? {{c1::A snubber on the
     nosewheel, and wheel brakes are applied to the main wheels.}}
   Question Stem: What stops wheel rotation when the gear is raised?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Wheel brakes are applied to all wheels.
+  Choice B: Snubbers stop the mains, and wheel brakes are applied to the nose wheels.
+  Choice C: Centrifugal force and friction stop all wheels.
   Choice D: A snubber on the nosewheel, and wheel brakes are applied to the main wheels
   Correct Choice: D
   Shuffle Choices: true

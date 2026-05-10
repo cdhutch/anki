@@ -22,10 +22,10 @@ fields:
   Original Text: In the event of system A loss and landing gear are up, the gear may be extended
     by {{c1::manual extension}}.
   Question Stem: If hydraulic system A is lost with landing gear up, how may the gear be extended?
-  Choice A: ''
+  Choice A: The Landing Gear Override switch
   Choice B: Manual extension
-  Choice C: ''
-  Choice D: ''
+  Choice C: Hydraulic Standby System
+  Choice D: Hydraulic B system
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

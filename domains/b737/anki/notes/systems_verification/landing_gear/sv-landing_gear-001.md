@@ -23,10 +23,10 @@ fields:
     {{c1::at or above 90 knots}}, maximum braking is applied.
   Question Stem: With RTO selected, if the takeoff is rejected and throttles reduced to idle,
     at what speed is maximum braking applied?
-  Choice A: ''
+  Choice A: Immediately following brake release
   Choice B: At or above 90 knots
-  Choice C: ''
-  Choice D: ''
+  Choice C: At or above 60 knots
+  Choice D: At or above 80 knots
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

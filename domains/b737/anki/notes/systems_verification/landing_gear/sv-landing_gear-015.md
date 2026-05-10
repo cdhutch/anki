@@ -24,9 +24,9 @@ fields:
     configuration}}.
   Question Stem: With a red RIGHT GEAR warning light and a green RIGHT GEAR light, if the
     crew returns to the departure field, how is the landing made?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Landing is made with anti-skid inoperative
+  Choice B: the right main will be retracted for landing
+  Choice C: landing is made with the gear-up
   Choice D: Landing is made with a normal gear configuration
   Correct Choice: D
   Shuffle Choices: true

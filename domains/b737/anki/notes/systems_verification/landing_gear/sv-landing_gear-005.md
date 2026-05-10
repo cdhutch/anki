@@ -24,10 +24,11 @@ fields:
     is normal.}}
   Question Stem: After loss of both Hydraulic Systems A and B, the brake pressure indicator
     reads 3000 psi. What does this indicate?
-  Choice A: ''
+  Choice A: The brake accumulator was not pre-charged correctly.
   Choice B: This indication is normal
-  Choice C: ''
-  Choice D: ''
+  Choice C: There is too much pressure to the brakes, and they should be bled to 1000 psi.
+  Choice D: The indicator should only indicate a pre-charged pressure of 1000 psi, and is
+    therefore inop.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
