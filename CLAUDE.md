@@ -12,83 +12,109 @@ exported to TSV, and imported into Anki via AnkiConnect or manual import.
 
 ---
 
-## Current Focus: Systems Verification (SV) Exam Mode Conversion
+## Current Focus: Distractor Authoring + Anki Migration
 
-### What the conversion does
+### Phase A: Distractor authoring (ongoing)
 
-Converts legacy B737 SV notes from **cloze** format (`note_type: systems_verification`)
-to **exam draft** MCQ format (`note_type: systems_verification_exam_draft`).
+All 29 SV systems are converted to `systems_verification_exam_draft` MCQ format.
+Distractors are being authored system-by-system. Workflow per system:
 
-Source notes live in:
-```
-domains/b737/anki/notes/systems_verification/<system>/
-```
+1. User authors distractors directly in the `.md` files
+2. User calls Claude back for review, grammar/typo fixes, and any clarifications
+3. Run `make sve-fix` to canonicalize
+4. Claude provides `git add` + `git commit` commands
+5. Move to next system
 
-The schema is documented in:
-```
-domains/b737/anki/docs/systems_verification/sv_exam_mode_schema.md
-```
-
-The conversion script is at:
-```
-outputs/cloze_to_exam_draft.py   ← temporary working dir, recreate if needed
-```
-
-### Conversion status (as of 2026-04-28)
-
-All 29 systems are converted. None remain in raw cloze format.
+**Distractor authoring status (as of 2026-05-10):**
 
 | Status | Systems |
 |---|---|
-| `systems_verification_exam` (finalized) | acars, adverse, emergency_equipment |
-| `systems_verification_exam_draft` (blank distractors, needs review) | all others (26 systems) |
+| Finalized (note_type: `systems_verification_exam`) | acars, adverse, emergency_equipment |
+| Distractors complete, committed | hud, landing_gear, pressurization |
+| Distractors pending | all others (see queue below) |
 
-### Uncommitted changes
+**Remaining distractor queue (smallest-first):**
 
-The following 9 systems were converted in the last session and are **staged but not yet committed**
-(a stale `.git/index.lock` blocked the commit — remove it first):
-
-```bash
-rm /Users/craig/Documents/GitHub/anki/.git/index.lock   # if it still exists
-
-git add domains/b737/anki/notes/systems_verification/fuel/
-git commit -m "chore(b737): convert fuel SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/pneumatics/
-git commit -m "chore(b737): convert pneumatics SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/autoflight/
-git commit -m "chore(b737): convert autoflight SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/air_conditioning/
-git commit -m "chore(b737): convert air_conditioning SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/flight_warning/
-git commit -m "chore(b737): convert flight_warning SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/electrical/
-git commit -m "chore(b737): convert electrical SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/hydraulics/
-git commit -m "chore(b737): convert hydraulics SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/flight_controls/
-git commit -m "chore(b737): convert flight_controls SV notes to exam_draft (blank distractors)"
-
-git add domains/b737/anki/notes/systems_verification/engines/
-git commit -m "chore(b737): convert engines SV notes to exam_draft (blank distractors)"
-```
+| System | ~Notes |
+|---|---|
+| navigation | 28 |
+| fms | 36 |
+| fuel | 38 |
+| pneumatics | 39 |
+| engines | 41 |
+| autoflight | 42 |
+| air_conditioning | 43 |
+| flight_warning | 45 |
+| electrical | 47 |
+| hydraulics | 50 |
+| flight_controls | 52 |
 
 ---
 
-## Flags for Human Review
+### Phase B: Anki migration (in progress — paused mid-execution)
 
-These notes were edited during the review pass and need a human decision:
+Goal: replace 688 legacy `B737_SV_Cloze` cards in Anki with new `B737_SV_MCQ` /
+`B737_SV_TF` cards, using a dedicated FSRS deck preset.
 
-| File | Issue |
-|---|---|
-| `hydraulics/sv-hydraulics-037.md` | Source cloze had blank answer `{{c1::}}` — answer is 3000 psi, needs manual entry |
-| `autoflight/sv-autoflight-17.md` | Source says "10 degrees nose down" on TO/GA takeoff — verify against FCOM (likely should be nose UP) |
+**Migration run order (Anki must be open, AnkiConnect active):**
+
+#### Step 1 — Create note types in Anki (COMPLETED by user this session)
+Fields and card templates for `B737_SV_MCQ` and `B737_SV_TF` were provided and
+manually created in Anki by the user.
+
+- `B737_SV_MCQ` fields: NoteID, Text, Source Document, OriginalNoteID, Choice1–4, CorrectChoice
+- `B737_SV_TF` fields: NoteID, Text, Source Document, OriginalNoteID, CorrectAnswer
+- Script (idempotent, for future reference): `tools/anki/setup/update_sv_exam_templates.py`
+
+#### Step 2 — Create "B737 SV Exam" deck preset (IN PROGRESS)
+
+Script: `tools/anki/setup/create_sv_exam_preset.py`
+
+Settings: 40 new/day · 9999 reviews/day · FSRS on · 90% desired retention
+
+**STATUS: Script was fixed this session (removed invalid `getDeckConfigs` call)
+but NOT yet successfully run. Run this first next session:**
+
+```bash
+python tools/anki/setup/create_sv_exam_preset.py
+```
+
+Applies preset to: `B737::Systems::SV::MCQ` and `B737::Systems::SV::TF`
+
+Note: if run multiple times, duplicate presets named "B737 SV Exam" will appear —
+remove extras via Tools → Manage Deck Presets in Anki.
+
+#### Step 3 — Delete legacy cloze notes
+
+```bash
+python tools/anki/setup/delete_sv_cloze.py --dry-run   # verify count first
+python tools/anki/setup/delete_sv_cloze.py              # type 'yes' to confirm
+```
+
+Deletes all `B737_SV_Cloze` notes and removes the empty `B737::Systems::SV` deck.
+
+#### Step 4 — Import new MCQ cards
+
+```bash
+make sve
+```
+
+Exports TSV from all system directories and pushes to Anki via AnkiConnect.
+Cards with blank distractors will import fine; they'll just be incomplete for study.
+
+#### Step 5 — Verify in Anki
+
+In Browse: search `note:B737_SV_MCQ` and confirm card count.
+Right-click `B737::Systems::SV::MCQ` → Options → confirm "B737 SV Exam" preset is applied.
+
+---
+
+## Flags for Human Review (RESOLVED)
+
+| File | Issue | Resolution |
+|---|---|---|
+| `hydraulics/sv-hydraulics-037.md` | Blank source answer | Filled: 3000 psi |
+| `autoflight/sv-autoflight-17.md` | "10 degrees nose down" — correct? | Confirmed correct (first ~90 kts of takeoff roll) |
 
 ---
 
@@ -124,32 +150,22 @@ fields:
 
 Correct choice cycles B → C → D → A → B... per note within each system.
 
----
-
-## Next Steps: Distractor Authoring
-
-Each exam_draft note has three blank choice slots. The next phase is filling in
-plausible distractors for each MCQ. This is a human + AI review task.
-
-Suggested order: work through systems alphabetically or by exam priority.
+T/F questions use format:mcq with Choice A: 'True', Choice B: 'False',
+Correct Choice: A or B, Shuffle Choices: false.
 
 ---
 
-## Next Steps: AnkiConnect FSRS Settings
+## Known Tooling Notes
 
-Goal: use AnkiConnect to apply **consistent FSRS settings across all deck presets**
-rather than configuring each preset manually in the GUI.
-
-Approach:
-1. Use `getDeckConfig` to read an existing preset
-2. Modify FSRS fields: `fsrs`, `fsrsWeights`, `desiredRetention`, `fsrsReschedule`
-3. Use `saveDeckConfig` to write back to each target preset
-
-Anki version must be 2.1.55+ for FSRS fields to be present in config objects.
-The FSRS optimizer (computing weights from review history) is GUI-only and cannot
-be driven via AnkiConnect.
-
-AnkiConnect must be running (Anki open, AnkiConnect add-on active, default port 8765).
+- `make sve-fix` runs `cnsf_canonicalize.py --write` — fixes YAML formatting
+- YAML boolean coercion bug (True/False → true/false): fixed in `_normalize_meta()`
+  in `tools/anki/cnsf_canonicalize.py`
+- YAML colon-at-end-of-value bug: any field value ending in `:` must be quoted
+  in single quotes, e.g. `Question Stem: 'You must select ALTN, then:'`
+- `tools/anki/setup/fix_conflict_markers.py`: strips git conflict markers from
+  working tree files, keeping HEAD (ours) content — created for post-merge cleanup
+- AnkiConnect action `getDeckConfigs` (plural) does NOT exist — use `createDeckConfig`
+  + `saveDeckConfig` + `setDeckConfigId` for preset management
 
 ---
 
@@ -159,7 +175,9 @@ AnkiConnect must be running (Anki open, AnkiConnect add-on active, default port 
 |---|---|
 | `domains/b737/anki/notes/systems_verification/` | SV note source files |
 | `domains/b737/anki/docs/systems_verification/sv_exam_mode_schema.md` | Full schema spec |
-| `domains/b737/anki/exports/` | TSV exports for Anki import |
 | `build/` | Generated TSV output files |
 | `tools/anki/export/sv_exam_md_to_tsv.py` | Converts exam_draft notes → TSV |
 | `tools/anki/sync/sv_exam_import_to_anki.py` | Imports TSV into Anki via AnkiConnect |
+| `tools/anki/setup/create_sv_exam_preset.py` | Creates "B737 SV Exam" deck preset |
+| `tools/anki/setup/delete_sv_cloze.py` | Deletes all legacy B737_SV_Cloze notes |
+| `tools/anki/setup/update_sv_exam_templates.py` | Creates B737_SV_MCQ / B737_SV_TF note types |
