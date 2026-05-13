@@ -10,25 +10,19 @@ tags:
 - domain:b737
 - topic:systems_verification
 - system:hud
-- format:mcq
+- format:tf
 - source:question_bank
 - status:draft
 fields:
   Source Document: Systems Validation Question Bank
-  Exam Format: mcq
+  Exam Format: tf
   Conversion Status: draft
   Original Note ID: hud-007
   Original Prompt Style: cloze
   Original Text: Use of the HUD with an inoperative number 1 radio altimeter is prohibited.
     {{c1::True}}
-  Question Stem: 'True or False: Use of the HUD with an inoperative number 1 radio altimeter
-    is prohibited.'
-  Choice A: 'True'
-  Choice B: 'False'
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: false
+  Question Stem: Use of the HUD with an inoperative number 1 radio altimeter is prohibited.
+  Correct Choice: true
   Review Notes: null
   Verification Notes: Source cloze confirmed correct — answer is True (HUD use with inoperative
     no. 1 radio altimeter is prohibited)
