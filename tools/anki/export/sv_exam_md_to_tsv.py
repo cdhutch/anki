@@ -2,13 +2,17 @@
 """Convert SV exam-draft CNSF markdown notes into Anki TSV files.
 
 Produces two TSV files per invocation:
-  --out-mcq  MCQ notes  → NoteID, Text, Choice1-4, CorrectChoice, SourceDocument, OriginalNoteID, Tags
-  --out-tf   T/F notes  → NoteID, Text, CorrectAnswer, SourceDocument, OriginalNoteID, Tags
+  --out-mcq  MCQ notes  → NoteID, Text, Choice1-4, CorrectLetter, CorrectText, SourceDocument, OriginalNoteID, Tags
+  --out-tf   T/F notes  → NoteID, Text, CorrectLetter, CorrectText, SourceDocument, OriginalNoteID, Tags
 
 Choice shuffling (when Shuffle Choices: true) is deterministic, seeded by note_id.
 Both TSV files are always written; an empty input produces a header-only TSV.
 
 Processes notes with note_type: systems_verification_exam_draft OR systems_verification_exam.
+
+T/F notes map True → A, False → B.
+MCQ notes with compound/union answers (e.g. "Both A and B above") must use
+Shuffle Choices: false so that choice labels remain stable.
 """
 from __future__ import annotations
 
@@ -29,13 +33,15 @@ NOTE_TYPES = {
 
 MCQ_FIELDNAMES = [
     "NoteID", "Text", "Choice1", "Choice2", "Choice3", "Choice4",
-    "CorrectChoice", "Source Document", "OriginalNoteID", "Tags",
+    "CorrectLetter", "CorrectText", "Source Document", "OriginalNoteID", "Tags",
 ]
 TF_FIELDNAMES = [
-    "NoteID", "Text", "CorrectAnswer", "Source Document", "OriginalNoteID", "Tags",
+    "NoteID", "Text", "CorrectLetter", "CorrectText", "Source Document", "OriginalNoteID", "Tags",
 ]
 
 _LETTER_IDX: dict[str, int] = {"A": 0, "B": 1, "C": 2, "D": 3}
+_IDX_LETTER: list[str] = ["A", "B", "C", "D"]
+_TF_LETTER: dict[str, str] = {"True": "A", "False": "B"}
 
 
 # ---------------------------------------------------------------------------
@@ -76,8 +82,8 @@ def _normalize_tags(tags: Any) -> str:
 
 def _deterministic_shuffle(
     note_id: str, choices: list[str], correct_letter: str
-) -> tuple[list[str], int]:
-    """Return (shuffled_choices, correct_1based_position).
+) -> tuple[list[str], str]:
+    """Return (shuffled_choices, correct_letter_after_shuffle).
 
     Seed is derived from note_id via MD5 for reproducibility across runs.
     """
@@ -88,7 +94,7 @@ def _deterministic_shuffle(
     shuffled = [text for _, text in indexed]
     orig_idx = _LETTER_IDX[correct_letter.upper()]
     new_pos = next(i for i, (oi, _) in enumerate(indexed) if oi == orig_idx)
-    return shuffled, new_pos + 1  # 1-based
+    return shuffled, _IDX_LETTER[new_pos]
 
 
 # ---------------------------------------------------------------------------
@@ -122,12 +128,12 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
         )
 
     if fields.get("Shuffle Choices", False):
-        ordered, correct_pos = _deterministic_shuffle(note_id, choices, correct_letter)
+        ordered, final_letter = _deterministic_shuffle(note_id, choices, correct_letter)
     else:
         ordered = choices
-        correct_pos = _LETTER_IDX[correct_letter.upper()] + 1  # 1-based
+        final_letter = correct_letter.upper()
 
-    correct_text = ordered[correct_pos - 1]
+    correct_text = ordered[_LETTER_IDX[final_letter]]
 
     return {
         "NoteID": note_id,
@@ -136,7 +142,8 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
         "Choice2": ordered[1],
         "Choice3": ordered[2],
         "Choice4": ordered[3],
-        "CorrectChoice": f"{correct_pos} — {correct_text}",
+        "CorrectLetter": final_letter,
+        "CorrectText": correct_text,
         "Source Document": _s(fields, "Source Document"),
         "OriginalNoteID": _s(fields, "Original Note ID"),
         "Tags": _normalize_tags(meta.get("tags")),
@@ -162,7 +169,8 @@ def _build_tf_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
     return {
         "NoteID": note_id,
         "Text": stem,
-        "CorrectAnswer": correct,
+        "CorrectLetter": _TF_LETTER[correct],
+        "CorrectText": correct,
         "Source Document": _s(fields, "Source Document"),
         "OriginalNoteID": _s(fields, "Original Note ID"),
         "Tags": _normalize_tags(meta.get("tags")),
