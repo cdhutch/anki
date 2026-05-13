@@ -21,13 +21,13 @@ fields:
   Original Note ID: flight_instrumentation-004
   Original Prompt Style: cloze
   Original Text: 'MAX: What are some of the major differences of the new MAX Display System
-    (MDS): {{c1::Both 1. and 2. above: Range selector can now be rotated continuously; The
-    heading display expanded to a 180 degree compass rose.}}'
+    (MDS): {{c1::Both A and B above: Range selector can now be rotated continuously; The heading
+    display expanded to a 180 degree compass rose.}}'
   Question Stem: Which of the following are major differences of the MAX Display System (MDS)?
   Choice A: The range selector can now be rotated continuously
   Choice B: The heading display expanded to a 180 degree compass rose
   Choice C: The MFD was replaced with a touchscreen interface
-  Choice D: Both 1 and 2 above
+  Choice D: Both A and B above
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

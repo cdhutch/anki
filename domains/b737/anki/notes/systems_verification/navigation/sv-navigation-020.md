@@ -25,7 +25,7 @@ fields:
   Choice A: ''
   Choice B: ''
   Choice C: ''
-  Choice D: 'Both 1 and 2: no present position entered; or unreasonable present position entry'
+  Choice D: 'Both A and B: no present position entered; or unreasonable present position entry'
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

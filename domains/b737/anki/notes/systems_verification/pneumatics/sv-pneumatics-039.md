@@ -19,16 +19,16 @@ fields:
   Conversion Status: draft
   Original Note ID: pneumatics-039
   Original Prompt Style: cloze
-  Original Text: 'MAX: BLEED Light illuminates for: {{c1::Both 2. and 3. above: Over-temperature
+  Original Text: 'MAX: BLEED Light illuminates for: {{c1::Both B and C above: Over-temperature
     or overpressure; System fault or failure.}}'
   Question Stem: 'MAX: BLEED Light illuminates for: what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'Both 2. and 3. above: Over-temperature or overpressure; System fault or failure'
+  Choice A: '[DISTRACTOR NEEDED]'
+  Choice B: Over-temperature or overpressure
+  Choice C: System fault or failure
+  Choice D: 'Both B and C above: Over-temperature or overpressure; System fault or failure'
   Correct Choice: D
-  Shuffle Choices: true
-  Review Notes: null
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice A
   Verification Notes: ''
 ---
 

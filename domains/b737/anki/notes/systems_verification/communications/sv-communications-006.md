@@ -27,7 +27,7 @@ fields:
   Choice A: 'The Captain is tuning VHF #2 from his/her panel'
   Choice B: 'The First Officer is tuning VHF #1 from his/her panel'
   Choice C: The standby frequency is being transmitted on the active channel
-  Choice D: Both 1 and 2 are correct
+  Choice D: Both A and B are correct
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

@@ -27,7 +27,7 @@ fields:
   Choice A: Automatically when cabin altitude reaches 14,000 ft
   Choice B: Manually when the Passenger Oxygen Switch is placed to ON
   Choice C: When the captain activates the emergency descent checklist
-  Choice D: Both 1 and 2 are correct
+  Choice D: Both A and B are correct
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

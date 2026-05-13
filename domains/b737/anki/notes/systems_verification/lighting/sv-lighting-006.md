@@ -26,7 +26,7 @@ fields:
   Choice A: AC power is turned off
   Choice B: DC Bus 2 fails
   Choice C: DC Bus 1 fails
-  Choice D: Both 1 and 3
+  Choice D: Both A and C
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: Choice C needs a distractor (a condition that does NOT trigger emergency lighting).

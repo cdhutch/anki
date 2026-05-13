@@ -26,7 +26,7 @@ fields:
   Choice A: Related cowl anti-ice valve is in transit
   Choice B: Cowl anti-ice valve position disagrees with the ENGINE ANTI-ICE switch position
   Choice C: Cowl anti-ice duct pressure exceeds normal limits
-  Choice D: Both 1 and 2 above
+  Choice D: Both A and B above
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

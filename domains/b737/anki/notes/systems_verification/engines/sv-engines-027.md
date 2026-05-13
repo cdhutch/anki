@@ -22,13 +22,13 @@ fields:
   Original Text: 'The EEC will abort the engine start on the ground for {{c1::either 1 or
     3 above: a wet start; an impending hot start}}.'
   Question Stem: The EEC will abort the engine start on the ground for what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'Either 1 or 3 above: a wet start; an impending hot start'
+  Choice A: A wet start
+  Choice B: '[DISTRACTOR NEEDED]'
+  Choice C: An impending hot start
+  Choice D: 'Either A or C above: a wet start; an impending hot start'
   Correct Choice: D
-  Shuffle Choices: true
-  Review Notes: null
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice B
   Verification Notes: ''
 ---
 

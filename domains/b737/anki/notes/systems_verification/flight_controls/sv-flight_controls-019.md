@@ -20,16 +20,16 @@ fields:
   Original Note ID: flight_controls-019
   Original Prompt Style: cloze
   Original Text: 'MAX 8: Fly-by-wire Spoiler system provides the following new features. {{c1::Both
-    2 and 3 above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist System.}}'
+    B and C above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist System.}}'
   Question Stem: 'MAX 8: Fly-by-wire Spoiler system provides the following new features what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'Both 2 and 3 above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist
+  Choice A: '[DISTRACTOR NEEDED]'
+  Choice B: Emergency Descent Spoilers (EDS)
+  Choice C: Elevator Jam Landing Assist System
+  Choice D: 'Both B and C above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist
     System'
   Correct Choice: D
-  Shuffle Choices: true
-  Review Notes: null
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice A
   Verification Notes: ''
 ---
 

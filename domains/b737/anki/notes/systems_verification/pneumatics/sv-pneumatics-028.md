@@ -23,14 +23,14 @@ fields:
     {{c1::Either 2 or 3 could be the cause: Air leak in the left engine strut; Air leak in
     the APU bleed duct.}}'
   Question Stem: What will cause this light *(left WING BODY OVERHEAT caution)* to illuminate?
-  Choice A: 'Either 2 or 3 could be the cause: Air leak in the left engine strut; Air leak
+  Choice A: '[DISTRACTOR NEEDED]'
+  Choice B: Air leak in the left engine strut
+  Choice C: Air leak in the APU bleed duct
+  Choice D: 'Either B or C could be the cause: Air leak in the left engine strut; Air leak
     in the APU bleed duct'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
-  Review Notes: null
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice A
   Verification Notes: ''
 ---
 

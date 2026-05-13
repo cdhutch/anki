@@ -24,14 +24,14 @@ fields:
     since: {{c1::There are no mechanical connections with the valve system; Pressure is automatically
     removed 10 seconds after all gear is up and locked.}}'
   Question Stem: 'MAX 8: Why is the OFF position on the Landing Gear Lever no longer required?'
-  Choice A: 1. The previous Hydraulic extend and retract system is now replaced with electric
+  Choice A: The previous Hydraulic extend and retract system is now replaced with electric
     motors.
-  Choice B: 2. There are no mechanical connections with the valve system; pressure is automatically
+  Choice B: There are no mechanical connections with the valve system; pressure is automatically
     removed 10 seconds after all gear is up and locked
-  Choice C: 3. Pressure is automatically removed 10 seconds after all gear is up and locked.
-  Choice D: Both 2 and 3 above.
+  Choice C: Pressure is automatically removed 10 seconds after all gear is up and locked.
+  Choice D: Both B and C above.
   Correct Choice: D
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

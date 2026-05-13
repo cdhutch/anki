@@ -26,7 +26,7 @@ fields:
   Choice A: Related wing anti-ice control valve is in transit
   Choice B: Wing anti-ice control valve position disagrees with the WING ANTI-ICE switch position
   Choice C: Wing anti-ice bleed air pressure exceeds normal limits
-  Choice D: Both 1 and 2 above
+  Choice D: Both A and B above
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

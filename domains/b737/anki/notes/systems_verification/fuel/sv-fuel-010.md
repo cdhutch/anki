@@ -19,20 +19,22 @@ fields:
   Conversion Status: draft
   Original Note ID: fuel-010
   Original Prompt Style: cloze
-  Original Text: 'MAX: An illuminated FUEL FLOW light alerts the crew of: {{c1::Both 1. and
-    3. above: Difference between the actual engine fuel flow rate and the FMC expected fuel
+  Original Text: 'MAX: An illuminated FUEL FLOW light alerts the crew of: {{c1::Both A and
+    C above: Difference between the actual engine fuel flow rate and the FMC expected fuel
     flow rate; FMC expected fuel flow rate exceeds a pre-determined threshold value for 5
     consecutive minutes.}}'
   Question Stem: 'MAX: An illuminated FUEL FLOW light alerts the crew of: what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: 'Both 1. and 3. above: Difference between the actual engine fuel flow rate and
-    the FMC expected fuel flow rate; FMC expected fuel flow rate exceeds a pre-determined
-    threshold value for 5 consecutive minutes'
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
-  Review Notes: null
+  Choice A: Difference between the actual engine fuel flow rate and the FMC expected fuel
+    flow rate
+  Choice B: '[DISTRACTOR NEEDED]'
+  Choice C: FMC expected fuel flow rate exceeds a pre-determined threshold value for 5 consecutive
+    minutes
+  Choice D: 'Both A and C above: Difference between the actual engine fuel flow rate and the
+    FMC expected fuel flow rate; FMC expected fuel flow rate exceeds a pre-determined threshold
+    value for 5 consecutive minutes'
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice B
   Verification Notes: ''
 ---
 

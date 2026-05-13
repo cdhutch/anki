@@ -23,14 +23,14 @@ fields:
     {{c1::the\n    aircraft descends 0.25 psi below the selected value in the Flight Altitude
     (FLT ALT) Indicator.}}
   Question Stem: When is the automatic cabin pressure control system descent mode activated?
-  Choice A: 1. The aircraft begins descent from the top of descent
-  Choice B: 2. The aircraft descends 0.25 psi below the selected value in the Flight Altitude
+  Choice A: The aircraft begins descent from the top of descent
+  Choice B: The aircraft descends 0.25 psi below the selected value in the Flight Altitude
     (FLT ALT) Indicator
-  Choice C: 3. Over halfway to the destination airport and the selected value in the Landing
+  Choice C: Over halfway to the destination airport and the selected value in the Landing
     Altitude (LAND ALT) indicator is changed.
-  Choice D: Either 1 or 2 occurs.
+  Choice D: Either A or B occurs.
   Correct Choice: B
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

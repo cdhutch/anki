@@ -24,14 +24,14 @@ fields:
     Tank #2 for System B }}.'
   Question Stem: Heat exchangers used for cooling the fluid going to the Electric Hydraulic
     pump are located what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'Both 1 & 2 are correct: in Main Fuel Tank #1 for System A; in Fuel Tank #2 for
+  Choice A: 'In Main Fuel Tank #1 for System A'
+  Choice B: 'In Fuel Tank #2 for System B'
+  Choice C: '[DISTRACTOR NEEDED]'
+  Choice D: 'Both A & B are correct: in Main Fuel Tank #1 for System A; in Fuel Tank #2 for
     System B'
   Correct Choice: D
-  Shuffle Choices: true
-  Review Notes: null
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice C
   Verification Notes: ''
 ---
 

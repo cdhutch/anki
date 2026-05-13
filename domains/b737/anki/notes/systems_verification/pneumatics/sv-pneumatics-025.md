@@ -23,15 +23,16 @@ fields:
     APU bleed air valve is open and Engine 1 Bleed Switch is ON; the APU bleed air valve is
     open, Engine 2 Bleed Switch is ON, and the isolation valve is open}}.'
   Question Stem: A DUAL BLEED light will illuminate when what?
-  Choice A: ''
-  Choice B: 'Either 1 or 2 occurs: the APU bleed air valve is open and Engine 1 Bleed Switch
+  Choice A: The APU bleed air valve is open and Engine 1 Bleed Switch is ON
+  Choice B: The APU bleed air valve is open, Engine 2 Bleed Switch is ON, and the isolation
+    valve is open
+  Choice C: '[DISTRACTOR NEEDED]'
+  Choice D: 'Either A or B occurs: the APU bleed air valve is open and Engine 1 Bleed Switch
     is ON; the APU bleed air valve is open, Engine 2 Bleed Switch is ON, and the isolation
     valve is open'
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
-  Review Notes: null
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice C
   Verification Notes: ''
 ---
 

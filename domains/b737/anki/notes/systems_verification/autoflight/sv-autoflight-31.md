@@ -22,14 +22,14 @@ fields:
   Original Text: 'THR HLD on the Flight Mode Annunciator means {{c1::both 1 & 3 are correct:
     autothrottle servos are inhibited and the pilot can set throttles manually}}.'
   Question Stem: THR HLD on the Flight Mode Annunciator means what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'Both 1 & 3 are correct: autothrottle servos are inhibited and the pilot can set
+  Choice A: Autothrottle servos are inhibited
+  Choice B: '[DISTRACTOR NEEDED]'
+  Choice C: The pilot can set throttles manually
+  Choice D: 'Both A & C are correct: autothrottle servos are inhibited; the pilot can set
     throttles manually'
   Correct Choice: D
-  Shuffle Choices: true
-  Review Notes: null
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice B
   Verification Notes: ''
 ---
 

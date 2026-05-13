@@ -26,7 +26,7 @@ fields:
   Choice A: The OFF position
   Choice B: The ON position
   Choice C: The ARMED position
-  Choice D: Both 1 and 2.
+  Choice D: Both A and B.
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: Choice C needs a distractor (e.g. the ARMED position).
