@@ -227,17 +227,31 @@ def sync_model(
 
     print(f"  UPDATE:  {model_name}")
     _sync_fields(model_name, fields)
+
+    # Discover the actual template name Anki is using (may differ from our
+    # desired name, e.g. Anki defaults to "Card 1" on first createModel).
+    model_info = anki_request("modelTemplates", {"modelName": model_name}, url=ANKI_URL) or {}
+    existing_template_names = list(model_info.keys())
+    if template_name in existing_template_names:
+        actual_template_name = template_name
+    elif existing_template_names:
+        actual_template_name = existing_template_names[0]
+        print(f"    template name in Anki is {actual_template_name!r}, not {template_name!r} — using existing name")
+    else:
+        actual_template_name = template_name
+        print(f"    warning: could not determine template name, trying {template_name!r}")
+
     anki_request(
         "updateModelTemplates",
         {
             "model": {
                 "name": model_name,
-                "templates": {template_name: {"Front": front, "Back": back}},
+                "templates": {actual_template_name: {"Front": front, "Back": back}},
             }
         },
         url=ANKI_URL,
     )
-    print(f"    templates: updated")
+    print(f"    templates: updated ({actual_template_name!r})")
     anki_request(
         "updateModelStyling",
         {"model": {"name": model_name, "css": css}},
