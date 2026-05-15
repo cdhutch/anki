@@ -22,10 +22,10 @@ fields:
   Original Text: The right VOR information can be displayed and flown on the left ND by changing
     the\n    {{c1::VHF NAV Transfer Switch on the FWD Overhead Panel}}.
   Question Stem: How can right VOR information be displayed and flown on the left ND?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Change the VOR Standby Switch on the Aft Electronics Panel
+  Choice B: Change the AUX NAV Switch on the Aft Overhead Panel
   Choice C: Change the VHF NAV Transfer Switch on the FWD Overhead Panel
-  Choice D: ''
+  Choice D: Change the IRS Switch on the FWD Overhead Panel
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

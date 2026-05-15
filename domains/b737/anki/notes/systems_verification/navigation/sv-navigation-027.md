@@ -21,9 +21,9 @@ fields:
   Original Prompt Style: cloze
   Original Text: How long can the Right IRS operate without AC electrical power? {{c1::5 minutes}}
   Question Stem: How long can the Right IRS operate without AC electrical power?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 30 seconds
+  Choice B: 5 seconds
+  Choice C: 30 minutes
   Choice D: 5 minutes
   Correct Choice: D
   Shuffle Choices: true

@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: '{{c1::2}} ILS receiver(s) is/are installed on the B737.'
   Question Stem: How many ILS receivers are installed on the B737?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: '2'
-  Correct Choice: D
+  Choice A: '1'
+  Choice B: '2'
+  Choice C: '3'
+  Choice D: '4'
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

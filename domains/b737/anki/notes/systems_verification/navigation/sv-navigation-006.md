@@ -25,10 +25,10 @@ fields:
     {{c1::It\n    alerts ground personnel that the IRS is on battery power.}}
   Question Stem: After external power is disconnected at the gate with the IRS ON DC light
     illuminated, what is the purpose of the horn in the nose wheel well?
-  Choice A: ''
-  Choice B: ''
+  Choice A: It indicates that battery power is running low
+  Choice B: It indicates that the right IRS is no longer powered
   Choice C: It alerts ground personnel that the IRS is on battery power
-  Choice D: ''
+  Choice D: It is a warning that both IRS are about to fail
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

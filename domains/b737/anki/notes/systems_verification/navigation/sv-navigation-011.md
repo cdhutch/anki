@@ -24,9 +24,10 @@ fields:
     caution light\n    illuminated)*? {{c1::AC power to the left IRS has failed.}}
   Question Stem: With external power confirmed connected at the gate and the left IRS ON DC
     caution light illuminated, what additional conclusion can be made?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The left IRS is powered by the AC Standby Bus.
+  Choice B: The ground-call horn in the nose wheel well will not activate since normal AC
+    power is on the busses
+  Choice C: The right IRS is unpowered
   Choice D: AC power to the left IRS has failed
   Correct Choice: D
   Shuffle Choices: true

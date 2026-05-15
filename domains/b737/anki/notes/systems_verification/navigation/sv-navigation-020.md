@@ -22,10 +22,10 @@ fields:
   Original Text: 'A flashing white ALIGN light means {{c1::both 1 and 2 are correct: no present
     position\n    entered; unreasonable present position entry}}.'
   Question Stem: A flashing white ALIGN light means which of the following?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'Both A and B: no present position entered; or unreasonable present position entry'
+  Choice A: no present position entered
+  Choice B: unreasonable present position entry
+  Choice C: alignment complete, ready for NAV
+  Choice D: 'Both A and B: no present position entered; unreasonable present position entry'
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

@@ -22,9 +22,9 @@ fields:
   Original Text: The IRS display unit is located on the {{c1::Aft Overhead Panel}}
   Question Stem: Where is the IRS display unit located?
   Choice A: Aft Overhead Panel
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Center Instrument Panel
+  Choice C: Captain's Side Panel
+  Choice D: Aft Electronics Panel
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

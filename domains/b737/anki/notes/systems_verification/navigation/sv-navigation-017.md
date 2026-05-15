@@ -22,10 +22,10 @@ fields:
   Original Text: The white ALIGN light will flash to indicate {{c1::an error in initial position
     information}}.
   Question Stem: What does a flashing white ALIGN light indicate?
-  Choice A: ''
+  Choice A: Normal alignment
   Choice B: An error in initial position information
-  Choice C: ''
-  Choice D: ''
+  Choice C: the IRS Mode Selector has been moved to OFF
+  Choice D: alignment complete, ready for NAV
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

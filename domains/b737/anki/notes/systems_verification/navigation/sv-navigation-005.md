@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'The right (IRS #2) ON DC light has illuminated. What is a possible cause?
     {{c1::The\n    right IRS is being powered by the switched hot battery bus.}}'
-  Question Stem: The right (IRS
-  Choice A: ''
+  Question Stem: 'The right (IRS #2) ON DC light has illuminated. What is a possible cause?'
+  Choice A: AC Main Bus 1 has failed.
   Choice B: The right IRS is being powered by the switched hot battery bus
-  Choice C: ''
-  Choice D: ''
+  Choice C: Alignment has been lost
+  Choice D: The left IRS is being powered by the DC Standby Bus.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

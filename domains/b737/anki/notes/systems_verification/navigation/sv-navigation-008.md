@@ -25,9 +25,9 @@ fields:
   Question Stem: If the IRS Selector is placed in ATT Mode, what information is no longer
     calculated by the FMS?
   Choice A: Acceleration, vertical speed, ground speed, track, position, heading and winds
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Position, acceleration and deceleration speeds.
+  Choice C: Position, ground speed, track, or winds
+  Choice D: None of the statements are correct
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

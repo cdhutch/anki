@@ -22,9 +22,10 @@ fields:
   Original Text: What is the back-up DC power source for the Left IRS? {{c1::The Switched
     Hot Battery\n    Bus}}
   Question Stem: What is the back-up DC power source for the Left IRS?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: A 24-volt DC battery separate of the aircraft battery that has a 30-minute life
+    span
+  Choice B: The Hot Battery Bus
+  Choice C: The DC Standby Bus
   Choice D: The Switched Hot Battery Bus
   Correct Choice: D
   Shuffle Choices: true

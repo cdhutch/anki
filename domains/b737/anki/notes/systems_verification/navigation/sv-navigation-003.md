@@ -22,9 +22,9 @@ fields:
   Original Text: If the amber FAULT light illuminates on the IRS Display Unit, it indicates
     the {{c1::related\n    IRS system has detected a fault}}.
   Question Stem: What does an illuminated amber FAULT light on the IRS Display Unit indicate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: IRS has switched to ATTITUDE automatically
+  Choice B: ADIRU is in a self-test mode
+  Choice C: airspeed has exceeded the Vmo/Mmo
   Choice D: The related IRS system has detected a fault
   Correct Choice: D
   Shuffle Choices: true

@@ -22,9 +22,9 @@ fields:
   Original Text: Marker beacon information is displayed on {{c1::the PFD only}}.
   Question Stem: Where is marker beacon information displayed?
   Choice A: The PFD only
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The PFD or ND
+  Choice C: The ND only
+  Choice D: Both the PFD and ND
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

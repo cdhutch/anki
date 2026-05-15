@@ -25,9 +25,9 @@ fields:
   Question Stem: When might you see the IRS ON DC caution light as a normal indication at
     the gate?
   Choice A: This is a normal momentary indication during an IRS alignment self-test
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The Battery Switch is OFF
+  Choice C: The STANDBY POWER Switch is in BAT
+  Choice D: The ELEC Light is also illuminated due to a fault in the DC power system
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

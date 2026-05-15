@@ -25,11 +25,11 @@ fields:
     the AC Standby Bus}}.
   Question Stem: In flight, with Master Caution and the IRS left DC FAIL annunciation illuminated,
     what does this indicate?
-  Choice A: ''
+  Choice A: Battery Bus has failed since it is the DC power source for the left IRS
   Choice B: The DC power source for the left IRS is not normal but the left IRS is still powered
     by the AC Standby Bus
-  Choice C: ''
-  Choice D: ''
+  Choice C: Left IRS should continue to operate for 5 minutes and then fail
+  Choice D: Left IRS has failed and the unit is inoperative
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: '{{c1::2}} GPS receivers are installed in the B737.'
   Question Stem: How many GPS receivers are installed in the B737?
-  Choice A: ''
-  Choice B: ''
-  Choice C: '2'
-  Choice D: ''
-  Correct Choice: C
+  Choice A: '1'
+  Choice B: '2'
+  Choice C: '3'
+  Choice D: '4'
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

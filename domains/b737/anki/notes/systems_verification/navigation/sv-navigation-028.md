@@ -22,9 +22,9 @@ fields:
   Original Text: GPS provides position updates to the {{c1::FMC}} and other aircraft systems.
   Question Stem: GPS provides position updates to what?
   Choice A: The FMC and other aircraft systems
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The ILS and other aircraft systems
+  Choice C: The IRS and other aircraft systems
+  Choice D: The VOR and other aircraft systems
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

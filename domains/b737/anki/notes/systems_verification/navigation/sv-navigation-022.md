@@ -22,10 +22,10 @@ fields:
   Original Text: DME frequencies are normally {{c1::automatically}} tuned by the {{c1::FMC}}
     as necessary\n    for aircraft position updating.
   Question Stem: How are DME frequencies normally tuned, and by what system?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Automatically tuned by the GMS
+  Choice B: Manually tuned by the pilot.
   Choice C: Automatically tuned by the FMC
-  Choice D: ''
+  Choice D: Manually tuned by the VOR.
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

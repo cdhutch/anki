@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: The VOR identification is displayed on the {{c1::Navigation Display}}.
   Question Stem: Where is the VOR identification displayed?
-  Choice A: ''
-  Choice B: ''
+  Choice A: PFD
+  Choice B: on-side FMC
   Choice C: Navigation Display
-  Choice D: ''
+  Choice D: VHF Navigation Control Panel
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

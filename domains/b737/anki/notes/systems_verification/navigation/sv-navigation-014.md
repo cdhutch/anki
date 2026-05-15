@@ -24,10 +24,11 @@ fields:
     The IRS is operating\n    normally}}.
   Question Stem: With only the left IRS DC FAIL light illuminated and no other IRS lights,
     how is normal IRS operation restored?
-  Choice A: ''
-  Choice B: ''
+  Choice A: No action is possible. The left IRS will fail after 5 minutes
+  Choice B: Moving the left IRS Mode Selector to ALIGN and then back to NAV after 30 seconds
   Choice C: No action is required; the IRS is operating normally
-  Choice D: ''
+  Choice D: Moving the left IRS Mode Selector to Att and update the aircraft heading in line
+    5R in POS INIT Page 1/3 of the CDU
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -25,9 +25,11 @@ fields:
     shut down in 5 minutes.}}
   Question Stem: The Right IRS ON DC indication occurs in flight with no corrective action
     available. What is true about the operation of each IRS?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The right IRS will operate for 30 minutes and the left IRS will shutdown in 5
+    minutes
+  Choice B: The left IRS is inoperative. The right IRS is operating on battery power.
+  Choice C: The left IRS will operate on battery power once the right IRS shuts down after
+    5 minutes.
   Choice D: The left IRS is operating normally. The right IRS will shut down in 5 minutes
   Correct Choice: D
   Shuffle Choices: true

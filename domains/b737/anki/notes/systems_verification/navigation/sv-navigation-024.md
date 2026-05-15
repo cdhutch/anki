@@ -23,9 +23,9 @@ fields:
     Attitude\n    Indicator}}.
   Question Stem: In addition to the pilots' PFDs, where is ILS course and glidepath displayed?
   Choice A: Standby Attitude Indicator
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Nav Display in MAP mode
+  Choice C: Upper Multi-Function Display
+  Choice D: Lower Multi-Function Display
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

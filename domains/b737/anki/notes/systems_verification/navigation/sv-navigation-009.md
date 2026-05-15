@@ -24,11 +24,11 @@ fields:
     is restored after approximately 30 seconds due to AIM (Align In Motion) capability}}.
   Question Stem: In a 3RH-3VM airplane, in-flight IRS loss of alignment due to power interruption
     requires what pilot action?
-  Choice A: ''
-  Choice B: No action; when power is restored, attitude reference is restored after approximately
+  Choice A: Use the ISFD. Primary attitude reference information is lost.
+  Choice B: Do nothing. When power is restored, attitude reference is restored after approximately
     30 seconds due to AIM (Align In Motion) capability
-  Choice C: ''
-  Choice D: ''
+  Choice C: None of the statements are correct
+  Choice D: Do nothing. The GPS receivers will provide attitude reference information
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

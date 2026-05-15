@@ -25,9 +25,9 @@ fields:
     for use on approach.}}.
   Question Stem: In flight on a 3DM airplane with the left IRS FAULT light illuminated in
     NAV mode, what options are available?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Reset MASTER CAUTION and wait 30 seconds for an IRS inflight restart.
+  Choice B: Position the IRS transfer switch to BOTH on L
+  Choice C: Partial capability may be restored by selecting ATT mode on the FO's IRU.
   Choice D: Position the IRS Transfer switch to BOTH ON R; autopilot will not be available
     for use on approach
   Correct Choice: D

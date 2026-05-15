@@ -22,10 +22,10 @@ fields:
   Original Text: 'How long does a full IRS alignment take?: {{c1::From 5-17 minutes depending
     on latitude.}}'
   Question Stem: How long does a full IRS alignment take?
-  Choice A: ''
+  Choice A: Approximately 15 minutes
   Choice B: From 5-17 minutes depending on latitude
-  Choice C: ''
-  Choice D: ''
+  Choice C: Approximately 5 minutes
+  Choice D: Approximately 10 minutes
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

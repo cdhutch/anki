@@ -22,10 +22,10 @@ fields:
   Original Text: A steady white ALIGN light on the IRS Display Unit means {{c1::alignment
     is progressing\n    normally}}.
   Question Stem: What does a steady white ALIGN light on the IRS Display Unit mean?
-  Choice A: ''
+  Choice A: The present position is inaccurate
   Choice B: Alignment is progressing normally
-  Choice C: ''
-  Choice D: ''
+  Choice C: The system is fully aligned
+  Choice D: An alignment fault is detected.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

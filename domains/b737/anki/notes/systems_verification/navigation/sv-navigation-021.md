@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: The VOR course is set on the {{c1::Mode Control Pane}}.
   Question Stem: Where is the VOR course set?
-  Choice A: ''
+  Choice A: EFIS Control Panel
   Choice B: Mode Control Panel
-  Choice C: ''
-  Choice D: ''
+  Choice C: FWD Overhead Panel
+  Choice D: Aft Electronics Panel
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: Original cloze truncated ('Mode Control Pane'); corrected to 'Mode Control
