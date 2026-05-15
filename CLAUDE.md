@@ -155,6 +155,67 @@ Correct Choice: A or B, Shuffle Choices: false.
 
 ---
 
+## Deck Architecture (as of 2026-05-01)
+
+The B737 decks are organised into two independent study pools, each with its own
+daily new-card budget. Never study from `B737` (root) directly — it bypasses the
+pool limits.
+
+### Pool 1 — Systems (study from `B737::Systems`)
+
+Preset: **B737 Systems (FSRS)** — 40 new/day
+
+| Deck | Content |
+|---|---|
+| `B737::Systems::Aircraft_Systems` | General systems knowledge (Electrical, Engines sub-decks) |
+| `B737::Systems::Aircraft_Systems::Electrical` | Electrical system cards |
+| `B737::Systems::Aircraft_Systems::Engines` | Engines cards |
+
+Preset: **B737 Systems SV (FSRS)** — 40 new/day (separate for now, tune later)
+
+| Deck | Content |
+|---|---|
+| `B737::Systems::SV` | Systems Verification cloze notes |
+
+### Pool 2 — Core (study from `B737::Core`)
+
+Preset: **B737 FSRS Core** — 20 new/day
+
+| Deck | Content |
+|---|---|
+| `B737::Core::Limits` | Weight, speed, engine limits (+ Non-Trivia / Trivia sub-decks) |
+| `B737::Core::QRC` | QRC recall notes |
+| `B737::Core::Triggers_and_Flows` | Triggers, Flows, Supplemental (mnemonics, sequences, phase-recalls) |
+| `B737::Core::Procedures` | Normal, Non_Normal, Inflight_Maneuvers sub-decks |
+
+### Supplemental deck
+
+`B737::Core::Triggers_and_Flows::Supplemental` exists in Anki with the **B737 FSRS Core**
+preset assigned. The 40 source notes (mnemonics, sequences, phase-recalls) have their
+deck paths corrected and are ready to sync via `make triggers`.
+
+### Staged new-card script (written, needs one decision)
+
+`tools/anki/sync/set_stage.py --stage N` is written. It works by
+**suspending/unsuspending new cards** per deck — no preset changes needed.
+
+Stage definitions:
+- Stage 1: QRC, Limits
+- Stage 2: Stage 1 + Triggers + Supplemental
+- Stage 3: Stage 2 + Procedures (+ Flows, see below)
+
+**Pending decision: Flows deck placement.**
+Currently defaulted to Stage 3 (`FLOWS_STAGE = 3` in the script).
+Change to `FLOWS_STAGE = 2` if Flows should be introduced with Triggers.
+
+Usage (with Anki open + AnkiConnect running):
+```bash
+python tools/anki/sync/set_stage.py --dry-run --stage 1
+python tools/anki/sync/set_stage.py --stage 1
+```
+
+---
+
 ## Known Tooling Notes
 
 - `make sve-fix` runs `cnsf_canonicalize.py --write` — fixes YAML formatting
