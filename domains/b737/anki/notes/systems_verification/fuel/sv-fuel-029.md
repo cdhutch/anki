@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: Each engine can be fed fuel from either or both main tanks through the fuel
     {{c1::crossfeed}} valve.
-  Question Stem: Each engine can be fed fuel from either or both main tanks through the fuel
-    what? valve?
-  Choice A: ''
+  Question Stem: Through which valve can each engine be fed fuel from either or both main
+    tanks?
+  Choice A: Bypass
   Choice B: Crossfeed
-  Choice C: ''
-  Choice D: ''
+  Choice C: Shutoff
+  Choice D: Transfer
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

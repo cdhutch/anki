@@ -25,9 +25,9 @@ fields:
   Question Stem: With the airplane in flight, what does it mean when this light *(FILTER BYPASS
     caution light on Engine 1 side)* illuminates?
   Choice A: 'An impending fuel filter bypass on #1 engine'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 'An impending fuel filter bypass on #2 engine'
+  Choice C: 'There is no fuel pump pressure to the #1 engine'
+  Choice D: The fuel pressure is too high
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -26,9 +26,10 @@ fields:
     Light is illuminated, the CROSS FEED Selector should be placed in open. Why is this action
     directed by the QRH?
   Choice A: To prevent a fuel quantity imbalance
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: An Airworthiness Directive mandates it
+  Choice C: The left center tank pump switch must be turned OFF, leaving insufficient pressure
+    to supply center tank fuel to both engines unless the CROSS FEED is open
+  Choice D: This will cause the Right Center Tank Fuel Pump Low Pressure light to illuminate
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

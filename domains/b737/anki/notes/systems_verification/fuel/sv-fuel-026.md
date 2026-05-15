@@ -21,12 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: The Fuel LOW Alert indicates fuel quantity in the related main tank is less
     than {{c1::2000}} pounds.
-  Question Stem: The Fuel LOW Alert indicates fuel quantity in the related main tank is less
-    than what? pounds?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: At what fuel quantity does the Fuel LOW Alert illuminate for a main tank?
+  Choice A: 1000
+  Choice B: 1600
   Choice C: 2000
-  Choice D: ''
+  Choice D: 800
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

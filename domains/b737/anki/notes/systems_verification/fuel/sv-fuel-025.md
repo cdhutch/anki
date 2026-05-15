@@ -20,11 +20,11 @@ fields:
   Original Note ID: fuel-025
   Original Prompt Style: cloze
   Original Text: IMBAL means that the main tanks differ by more than {{c1::1000}} pounds.
-  Question Stem: IMBAL means that the main tanks differ by more than what? pounds?
-  Choice A: ''
+  Question Stem: How many pounds must the main tanks differ by to trigger an IMBAL indication?
+  Choice A: 1500
   Choice B: 1000
-  Choice C: ''
-  Choice D: ''
+  Choice C: 2000
+  Choice D: 800
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

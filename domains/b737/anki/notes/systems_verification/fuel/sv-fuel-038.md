@@ -22,10 +22,11 @@ fields:
   Original Text: With fuel pumps turned OFF, the APU fuel is suction-fed from {{c1::the No.
     1 main tank}}.
   Question Stem: With fuel pumps turned OFF, the APU fuel is suction-fed from what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Only what remains in the fuel lines. The APU cannot be suction-fed from a fuel
+    tank
+  Choice B: The Center tank
   Choice C: The No. 1 main tank
-  Choice D: ''
+  Choice D: The No. 2 main tank
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

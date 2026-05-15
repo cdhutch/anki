@@ -23,11 +23,11 @@ fields:
     caution light on Engine 1 side)* {{c1::No crew action is required unless both Filter Bypass
     lights illuminate.}}
   Question Stem: What action is required in flight when this light illuminates? *(FILTER BYPASS
-    caution light on Engine 1 side)* what?
-  Choice A: ''
-  Choice B: ''
+    caution light on Engine 1 side)*
+  Choice A: Turn OFF the fuel pump pressure to the respective engine
+  Choice B: Turn ON the fuel heater
   Choice C: No crew action is required unless both Filter Bypass lights illuminate
-  Choice D: ''
+  Choice D: Perform a shutdown of the affected engine
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

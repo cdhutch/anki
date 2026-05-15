@@ -22,9 +22,9 @@ fields:
   Original Text: The main fuel tanks are serviced through {{c1::a single point refueling receptacle}}.
   Question Stem: The main fuel tanks are serviced through what?
   Choice A: A single point refueling receptacle
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Overwing fuel receptacles
+  Choice C: The aircraft fuel transfer system from the center tank only
+  Choice D: Either the overwing or single point refueling receptacles
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -25,12 +25,11 @@ fields:
     the number 1 engine.}}
   Question Stem: With the Left Center Tank pump switch off and the CROSS FEED valve closed,
     what effect will this condition have on the fuel burned? *There is 2.0 in the center tank.*
-    what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The right center tank pump will still feed both engines
+  Choice B: The number 2 main tank will feed both engines
   Choice C: The center tank will feed the number 2 engine and the number 1 main tank will
     feed the number 1 engine
-  Choice D: ''
+  Choice D: The main tanks will feed their respective engines
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

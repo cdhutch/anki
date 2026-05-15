@@ -23,11 +23,13 @@ fields:
     has 5.5, Center 0.1, and Right has 6.7)* {{c1::There is more than 1,000 lbs difference
     between the main tanks.}}
   Question Stem: Why is there an IMBAL indication under the number 1 fuel quantity? *(Left
-    has 5.5, Center 0.1, and Right has 6.7)* what?
-  Choice A: ''
+    has 5.5, Center 0.1, and Right has 6.7)*
+  Choice A: The number 1 main tank quantity is more than 200 lbs less than number 2 main tank
+    quantity
   Choice B: There is more than 1,000 lbs difference between the main tanks
-  Choice C: ''
-  Choice D: ''
+  Choice C: The number 1 main tank quantity is more than 200 lbs above the number 2 main tank
+    quantity
+  Choice D: The number 1 and 2 main tank quantity are equal
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

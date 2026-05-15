@@ -23,11 +23,11 @@ fields:
     is more than {{c1::1600}} pounds and both center tank pumps are producing {{c1::low}}
     pressure.
   Question Stem: CONFIG means that either engine is running and the fuel in the center tank
-    is more than what? pounds and both center tank pumps are producing what? pressure?
-  Choice A: ''
-  Choice B: 1600
-  Choice C: ''
-  Choice D: ''
+    is more than what? pounds and both center tank pumps are producing (high | low) pressure?
+  Choice A: 1000 / high
+  Choice B: 1600 / low
+  Choice C: 1000 / low
+  Choice D: 1600 / high
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

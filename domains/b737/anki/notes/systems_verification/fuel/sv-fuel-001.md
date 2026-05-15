@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: An amber FILTER BYPASS Light means {{c1::impending fuel filter bypass due
     to a contaminated filter}}.
-  Question Stem: An amber FILTER BYPASS Light means what?
-  Choice A: ''
-  Choice B: Impending fuel filter bypass due to a contaminated filter
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
+  Question Stem: What does an amber FILTER BYPASS Light mean?
+  Choice A: impending fuel filter bypass due to a contaminated filter
+  Choice B: Impending fuel filter bypass due to excessive pump pressure
+  Choice C: Impending fuel filter bypass due to low pump pressure
+  Choice D: impending fuel filter bypass due to ice
+  Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

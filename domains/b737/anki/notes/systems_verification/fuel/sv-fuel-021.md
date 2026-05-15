@@ -22,10 +22,10 @@ fields:
   Original Text: What could cause this light to illuminate? {{c1::Solid contaminants blocking
     the fuel filter.}}
   Question Stem: What could cause this light to illuminate?
-  Choice A: ''
+  Choice A: The EEC has moved to the alternate (ALTN) mode
   Choice B: Solid contaminants blocking the fuel filter
-  Choice C: ''
-  Choice D: ''
+  Choice C: Solid contaminants in the oil filter
+  Choice D: Ice formation on the Hydro Mechanical Unit (HMU)
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

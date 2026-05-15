@@ -22,11 +22,11 @@ fields:
   Original Text: How many positions are there on the fuel flow/rate used switch? {{c1::Three
     - RESET, RATE, USED}}
   Question Stem: How many positions are there on the fuel flow/rate used switch?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: Three - RESET, RATE, USED
-  Correct Choice: D
+  Choice A: Two - RATE, USED
+  Choice B: Three - RESET, RATE, USED
+  Choice C: Four - RATE, USED, RESET, REMAINING
+  Choice D: None of the above
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

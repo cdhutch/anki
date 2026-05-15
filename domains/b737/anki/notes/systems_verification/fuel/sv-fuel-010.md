@@ -23,10 +23,10 @@ fields:
     C above: Difference between the actual engine fuel flow rate and the FMC expected fuel
     flow rate; FMC expected fuel flow rate exceeds a pre-determined threshold value for 5
     consecutive minutes.}}'
-  Question Stem: 'MAX: An illuminated FUEL FLOW light alerts the crew of: what?'
+  Question Stem: 'MAX: What does an illuminated FUEL FLOW light alert the crew of?'
   Choice A: Difference between the actual engine fuel flow rate and the FMC expected fuel
     flow rate
-  Choice B: '[DISTRACTOR NEEDED]'
+  Choice B: Significant difference between tank quantities
   Choice C: FMC expected fuel flow rate exceeds a pre-determined threshold value for 5 consecutive
     minutes
   Choice D: 'Both A and C above: Difference between the actual engine fuel flow rate and the
@@ -34,7 +34,7 @@ fields:
     value for 5 consecutive minutes'
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice B
+  Review Notes: null
   Verification Notes: ''
 ---
 

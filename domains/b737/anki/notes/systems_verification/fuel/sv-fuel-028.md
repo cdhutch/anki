@@ -24,9 +24,9 @@ fields:
   Question Stem: With all fuel pumps ON, why does the center tank provide the fuel to the
     engines?
   Choice A: The center tank pumps provide more pressure
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The center tank pumps are closer to the engine feed pumps
+  Choice C: One-way check valves prevent wing tanks from feeding
+  Choice D: The fuel crossfeed valve is open
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

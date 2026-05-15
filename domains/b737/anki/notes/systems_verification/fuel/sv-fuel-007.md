@@ -23,10 +23,10 @@ fields:
     5.5 IMBAL, Center 0.1, and Right has 6.7)* {{c1::Open the cross feed valve and turn OFF
     number 1 main tank pumps.}}'
   Question Stem: 'How would the crew correct this imbalance condition? *(Fuel Qty: Left has
-    5.5 IMBAL, Center 0.1, and Right has 6.7)* what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+    5.5 IMBAL, Center 0.1, and Right has 6.7)*'
+  Choice A: Feed both engines from the center tank
+  Choice B: Turn the number 2 main pumps OFF and open the cross feed valve
+  Choice C: Open the cross feed valve only
   Choice D: Open the cross feed valve and turn OFF number 1 main tank pumps
   Correct Choice: D
   Shuffle Choices: true

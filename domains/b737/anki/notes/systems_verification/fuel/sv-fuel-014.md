@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: The Fuel Flow Used readout is updated for the next flight {{c1::by use of
     the FUEL FLOW Switch moved to RESET}}.
-  Question Stem: The Fuel Flow Used readout is updated for the next flight what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: How is the Fuel Flow Used readout updated for the next flight?
+  Choice A: Upon touchdown through the ground sensing switch
+  Choice B: At brake release prior to pushback
   Choice C: By use of the FUEL FLOW Switch moved to RESET
-  Choice D: ''
+  Choice D: Automatically whenever the airplane is refueled
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -23,9 +23,9 @@ fields:
     all boost pumps on, fuel is supplied to the engines from {{c1::the center tank}}.
   Question Stem: When fuel is stored in the center and main tanks, both engines operating,
     all boost pumps on, fuel is supplied to the engines from what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Both main tanks
+  Choice B: The No. 1 main tank
+  Choice C: The No. 2 main tank
   Choice D: The center tank
   Correct Choice: D
   Shuffle Choices: true

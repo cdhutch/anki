@@ -26,10 +26,10 @@ fields:
   Question Stem: The aircraft is in level cruise flight with *(the Engine 1 Fwd Pump Low Pressure
     caution)* light illuminated. Both main tanks are full, and usable center tank fuel is
     5000 lbs. All other conditions are normal. Which statement is valid?
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'The #2 engine will begin feeding from the #2 Main Fuel Tank'
+  Choice B: 'The #1 engine will automatically start feeding from the #2 Main Fuel Tank'
   Choice C: Both engines will continue to feed from the Center Fuel Tank
-  Choice D: ''
+  Choice D: 'The #1 engine will begin feeding from the #1 Main Fuel Tank'
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

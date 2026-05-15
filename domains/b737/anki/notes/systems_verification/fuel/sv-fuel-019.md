@@ -24,9 +24,9 @@ fields:
     tank pump back on or turn the right center tank pump off.}}
   Question Stem: With the Left Center Tank pump switch off and the CROSS FEED valve closed,
     what crew action will be required to prevent a fuel imbalance?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: No further action required
+  Choice B: Shut down engine number 1
+  Choice C: Turn off right main tank pumps
   Choice D: Turn the left center tank pump back on or turn the right center tank pump off
   Correct Choice: D
   Shuffle Choices: true

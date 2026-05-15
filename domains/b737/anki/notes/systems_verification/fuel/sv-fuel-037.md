@@ -23,10 +23,10 @@ fields:
     CAUTION lights to flash? {{c1::No}}
   Question Stem: Will the CONFIG, IMBAL or LOW annunciation on the fuel gauges cause the MASTER
     CAUTION lights to flash?
-  Choice A: ''
+  Choice A: 'Yes'
   Choice B: 'No'
-  Choice C: ''
-  Choice D: ''
+  Choice C: Yes, but only during RECALL
+  Choice D: Yes if 10% below the trigger values of the annunciation
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

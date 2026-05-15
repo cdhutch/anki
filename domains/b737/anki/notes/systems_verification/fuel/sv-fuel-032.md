@@ -23,9 +23,9 @@ fields:
     half full}}.
   Question Stem: The Center Tank Scavenge Pump will activate when what?
   Choice A: '#1 Main Tank is about half full'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: '#1 Main Tank has 5800 pounds'
+  Choice C: '#2 Main Tank has 4500 pounds'
+  Choice D: Center Tank quantity reaches 3000 pounds
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

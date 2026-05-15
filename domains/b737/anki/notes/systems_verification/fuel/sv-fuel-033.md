@@ -21,12 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'MAX: An amber FUEL DISAGREE message is: {{c1::Displayed when there is a
     disagreement between the FMS calculated and the measured fuel for 5 continuous minutes.}}'
-  Question Stem: 'MAX: An amber FUEL DISAGREE message is: what?'
-  Choice A: ''
+  Question Stem: 'MAX: When is an amber FUEL DISAGREE message displayed?'
+  Choice A: Only in the CDU scratchpad when there is a disagreement between the FMS calculated
+    and the measured fuel
   Choice B: Displayed when there is a disagreement between the FMS calculated and the measured
     fuel for 5 continuous minutes
-  Choice C: ''
-  Choice D: ''
+  Choice C: Displayed when there is a disagreement between the FMS calculated and the measured
+    fuel for 15 continuous minutes
+  Choice D: Displayed if the incorrect Fuel Pump Switches are selected off during Fuel Balancing
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

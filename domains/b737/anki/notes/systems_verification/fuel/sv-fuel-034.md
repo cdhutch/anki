@@ -28,10 +28,10 @@ fields:
     ON. Both main tanks are full, and useable center tank fuel is 7000 lbs. All other conditions
     are normal. Which statement is valid with this light *(Left Center Tank Low Pressure caution
     light with pump on)* illuminated?
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'The #1 engine is now being gravity (suction) fed.'
+  Choice B: 'You have lost all fuel pressure to the #1 engine.'
   Choice C: 'The #1 Main Fuel Tank is now supplying fuel to the #1 engine'
-  Choice D: ''
+  Choice D: Both engines are still receiving fuel from the Center Fuel Tank
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -28,9 +28,11 @@ fields:
     ON. Both main tanks are full, and useable center tank fuel is 7000 lbs. *(The Left Center
     Tank LOW PRESSURE caution light is on.)* If no action is taken, what will happen to the
     fuel quantity in each main tank?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 'The #1 Main Tank fuel quantity will remain constant and the #2 Main Tank fuel
+    quantity will decrease'
+  Choice B: 'The #2 Main Tank fuel quantity will remain constant and the #1 Main Tank fuel
+    quantity will increase'
+  Choice C: Both main tank fuel quantities will start to decrease
   Choice D: 'The #1 Main Tank fuel quantity will start to decrease and the #2 Main Tank fuel
     quantity will remain constant'
   Correct Choice: D

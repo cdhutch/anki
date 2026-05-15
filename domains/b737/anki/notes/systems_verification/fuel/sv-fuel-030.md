@@ -20,11 +20,11 @@ fields:
   Original Note ID: fuel-030
   Original Prompt Style: cloze
   Original Text: The maximum fuel temperature is {{c1::49}} degrees C.
-  Question Stem: The maximum fuel temperature is what? degrees C?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: What is the maximum fuel temperature in degrees C?
+  Choice A: 54
+  Choice B: 46
   Choice C: 49
-  Choice D: ''
+  Choice D: 43
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

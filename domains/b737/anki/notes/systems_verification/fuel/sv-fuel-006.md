@@ -23,11 +23,12 @@ fields:
     has 5.5 IMBAL, Center 0.1, and Right has 6.7)* {{c1::There is no Master Caution with this
     indication.}}'
   Question Stem: 'What effect would this have on the Master Caution system? *(Fuel Qty: Left
-    has 5.5 IMBAL, Center 0.1, and Right has 6.7)* what?'
-  Choice A: ''
-  Choice B: ''
+    has 5.5 IMBAL, Center 0.1, and Right has 6.7)*'
+  Choice A: The Master Caution Lights would illuminate with the IMBAL annunciation
+  Choice B: The Master Caution Lights would illuminate on recall
   Choice C: There is no Master Caution with this indication
-  Choice D: ''
+  Choice D: The Master Caution Lights would only illuminate for this problem with the airplane
+    on the ground
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -23,9 +23,9 @@ fields:
     the spar fuel shutoff valve and the engine fuel shutoff valve}}.
   Question Stem: Pulling a fire handle or placing an engine start lever in CUTOFF closes what?
   Choice A: Both the spar fuel shutoff valve and the engine fuel shutoff valve
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The engine fuel shutoff valve only
+  Choice C: The spar fuel shutoff valve only
+  Choice D: Both the spar fuel shutoff valve and the EEC shutoff valve
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

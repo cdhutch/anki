@@ -19,15 +19,15 @@ fields:
   Conversion Status: draft
   Original Note ID: fuel-013
   Original Prompt Style: cloze
-  Original Text: What action should the crew take *(with a ENG VALVE CLOSED light illumiated,
+  Original Text: What action should the crew take *(with a ENG VALVE CLOSED light illuminated,
     presumably during start*)? {{c1::Move the start lever to cutoff and motor the engine for
     sixty seconds.}}
-  Question Stem: What action should the crew take *(with a ENG VALVE CLOSED light illumiated,
+  Question Stem: What action should the crew take *(with a ENG VALVE CLOSED light illuminated,
     presumably during start*)?
-  Choice A: ''
+  Choice A: Push the thrust lever forward
   Choice B: Move the start lever to cutoff and motor the engine for sixty seconds
-  Choice C: ''
-  Choice D: ''
+  Choice C: Move the start lever to cutoff and motor the engine for 15 seconds
+  Choice D: No action required
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

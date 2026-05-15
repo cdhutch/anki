@@ -24,9 +24,9 @@ fields:
     system will no longer operate if needed.}}
   Question Stem: At the moment this *(Engine 1 Forward Fuel Pump)* Low Pressure light illuminated,
     which of the following statements is also true?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The Master Caution light will illuminate
+  Choice B: Fuel Crossfeed capability is not available
+  Choice C: 'Once the Center Fuel tank is empty, there is no fuel pump pressure to #1 engine'
   Choice D: The Center Tank Scavenge Jet Pump system will no longer operate if needed
   Correct Choice: D
   Shuffle Choices: true

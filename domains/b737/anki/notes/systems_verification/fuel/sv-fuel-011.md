@@ -24,9 +24,9 @@ fields:
     engine valve is closed.}}
   Question Stem: During engine start, with the number 1 engine start lever in the idle position,
     the ENG VALVE CLOSED light remained illuminated. Which statement is correct?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The engine valve is opened
+  Choice B: The spar valve is closed
+  Choice C: Both valves are closed
   Choice D: The engine valve is closed
   Correct Choice: D
   Shuffle Choices: true

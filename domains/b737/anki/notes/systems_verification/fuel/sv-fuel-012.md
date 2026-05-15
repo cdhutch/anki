@@ -22,11 +22,11 @@ fields:
   Original Text: Which of the following statements are true with this condition? *(Eng 1 ENG
     VALVE CLOSED light illuminated)* {{c1::The number 1 engine will not start.}}
   Question Stem: Which of the following statements are true with this condition? *(Eng 1 ENG
-    VALVE CLOSED light illuminated)* what?
+    VALVE CLOSED light illuminated)*
   Choice A: The number 1 engine will not start
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The number 1 engine will have an overspeed
+  Choice C: The number 1 engine will start normally
+  Choice D: The number 1 engine will have a hot start
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

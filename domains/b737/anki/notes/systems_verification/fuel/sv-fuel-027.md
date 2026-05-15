@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: A bright blue Crossfeed VALVE OPEN Light means the Crossfeed Valve is {{c1::in
     transit or the valve position and CROSSFEED Selector disagree}}.
-  Question Stem: A bright blue Crossfeed VALVE OPEN Light means the Crossfeed Valve is what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: What does a bright blue Crossfeed VALVE OPEN Light indicate?
+  Choice A: Open
+  Choice B: In agreement with the position commanded
+  Choice C: Closed
   Choice D: In transit or the valve position and CROSSFEED Selector disagree
   Correct Choice: D
   Shuffle Choices: true

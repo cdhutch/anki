@@ -20,19 +20,21 @@ fields:
   Original Note ID: fuel-004
   Original Prompt Style: cloze
   Original Text: 'The Fuel Control Panel is configured with all of the main fuel pumps on
-    and the center fuel pumps offer. There is a LOW PRESSURE caution in the Engine 1 Foward
+    and the center fuel pumps off. There is a LOW PRESSURE caution in the Engine 1 Forward
     Fuel Pump. The center tank is empty and both main tank fuel quantities are above 8000
     lbs. How does this affect the current operation of the fuel system? {{c1::No effect. The
     #1 Main Tank AFT pump pressure is sufficient to supply Engine #1.}}'
   Question Stem: The Fuel Control Panel is configured with all of the main fuel pumps on and
-    the center fuel pumps offer. There is a LOW PRESSURE caution in the Engine 1 Foward Fuel
+    the center fuel pumps off. There is a LOW PRESSURE caution in the Engine 1 Forward Fuel
     Pump. The center tank is empty and both main tank fuel quantities are above 8000 lbs.
     How does this affect the current operation of the fuel system?
   Choice A: 'No effect. The #1 Main Tank AFT pump pressure is sufficient to supply Engine
     #1'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 'Engine #1 must be shut down'
+  Choice C: 'Crossfeeding fuel from the #2 Right Main Tank is required to supply sufficient
+    pressure for normal operation of Engine #1'
+  Choice D: 'Descend to a lower altitude to assist engine suction feed and prevent flameout
+    of Engine #1'
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
