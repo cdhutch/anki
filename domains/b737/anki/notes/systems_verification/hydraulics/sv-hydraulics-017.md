@@ -24,9 +24,9 @@ fields:
     A switches OFF*), the pressure in Hydraulic System A should read {{c1::0}} psi.
   Question Stem: With these lights illuminated (*ENG 1 hydraulic LOW PRESSURE and ELEC 2 hydraulic
     LOW spressure*) and switches positioned as shown on the Hydraulic Panel above (*Both System
-    A switches OFF*), the pressure in Hydraulic System A should read what? psi?
+    A switches OFF*), what should the pressure in Hydraulic System A read in psi?
   Choice A: ''
-  Choice B: 0
+  Choice B: '0'
   Choice C: ''
   Choice D: ''
   Correct Choice: B

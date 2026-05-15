@@ -21,7 +21,7 @@ fields:
   Original Prompt Style: cloze
   Original Text: Use of the display terrain display is allowable for navigation? {{c1::False}}
   Question Stem: Use of the terrain display is allowable for navigation purposes.
-  Correct Choice: false
+  Correct Choice: 'False'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
