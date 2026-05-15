@@ -12,11 +12,11 @@ tags:
 - system:hud
 - format:mcq
 - source:question_bank
-- status:verified
+- status:draft
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
-  Conversion Status: ready_for_transform
+  Conversion Status: draft
   Original Note ID: hud-003
   Original Prompt Style: cloze
   Original Text: For routine operations, the HUD must be used on takeoff until at least {{c1::Final
