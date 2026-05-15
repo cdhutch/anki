@@ -25,7 +25,7 @@ fields:
   Choice A: Pitot and TAT probes
   Choice B: Alpha vanes
   Choice C: Engine cowl lip
-  Choice D: 1 and 2 above
+  Choice D: Pitot and TAT probes and alpha vanes
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

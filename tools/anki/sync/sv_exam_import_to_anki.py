@@ -58,6 +58,15 @@ def _set_tags(anki_id: int, tags: list[str], url: str) -> None:
         anki_request("addTags", {"notes": [anki_id], "tags": " ".join(tags)}, url=url)
 
 
+def _set_suspension(note_id: str, model_name: str, suspend: bool, url: str) -> None:
+    """Suspend or unsuspend all cards belonging to this note."""
+    query = f'note:"{model_name}" NoteID:"{note_id}"'
+    card_ids = anki_request("findCards", {"query": query}, url=url)
+    if card_ids:
+        action = "suspend" if suspend else "unsuspend"
+        anki_request(action, {"cards": card_ids}, url=url)
+
+
 def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: str) -> None:
     note_id = row.get("NoteID", "").strip()
     if not note_id:
@@ -65,12 +74,13 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
 
     fields = {k: row.get(k, "") for k in field_names}
     tags = [t for t in row.get("Tags", "").split() if t]
+    is_draft = "status:draft" in tags
 
     existing = _find_existing(note_id, model_name, url)
     if existing:
         anki_request("updateNoteFields", {"note": {"id": existing, "fields": fields}}, url=url)
         _set_tags(existing, tags, url)
-        print(f"  Updated : {note_id}")
+        print(f"  Updated : {note_id}{' (suspended — draft)' if is_draft else ''}")
     else:
         deck = DECK_MCQ if model_name == MODEL_MCQ else DECK_TF
         nid = anki_request(
@@ -86,7 +96,9 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
             },
             url=url,
         )
-        print(f"  Added   : {note_id} → {nid}")
+        print(f"  Added   : {note_id} → {nid}{' (suspended — draft)' if is_draft else ''}")
+
+    _set_suspension(note_id, model_name, suspend=is_draft, url=url)
 
 
 # ---------------------------------------------------------------------------
