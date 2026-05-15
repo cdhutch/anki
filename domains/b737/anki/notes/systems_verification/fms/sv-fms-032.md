@@ -23,9 +23,9 @@ fields:
     message exists\n    for both CDUs.}}
   Question Stem: Why does the FMC Alert Light illuminate amber?
   Choice A: An alerting message exists for both CDUs
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: FMC failure
+  Choice C: The FMC battery power is low
+  Choice D: The FMC has lost IRU alignment
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

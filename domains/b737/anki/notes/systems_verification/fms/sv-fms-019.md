@@ -23,9 +23,9 @@ fields:
     {{c1::All\n    of the above: GPS position; Reference airport, with or without specific
     gate; Manually\n    entered lat/long.}}'
   Question Stem: Initial position can be entered on the POS INIT page by which of the following?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: GPS position
+  Choice B: Reference airport with or without specific gate
+  Choice C: Manually entered lat/long
   Choice D: 'All of the above: GPS position; reference airport with or without specific gate;
     manually entered lat/long'
   Correct Choice: D

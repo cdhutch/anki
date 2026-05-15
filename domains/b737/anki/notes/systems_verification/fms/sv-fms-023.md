@@ -24,9 +24,9 @@ fields:
     waypoint up in sequence and thus removing all intervening waypoints}}.'
   Question Stem: Waypoints beyond the active leg can be removed from the LEGS page by which
     methods?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Pressing the DELETE key, then line selecting the waypoint to be removed
+  Choice B: Pressing the CLEAR key, then line selecting the waypoint to be removed
+  Choice C: Moving a subsequent waypoint up in sequence to remove all intervening waypoints
   Choice D: Either pressing the DELETE key then line selecting the waypoint, or moving a subsequent
     waypoint up in sequence to remove all intervening waypoints
   Correct Choice: D

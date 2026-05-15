@@ -24,7 +24,7 @@ fields:
   Question Stem: With multiple sources available, does the FMC use a combination or a single
     source to determine its position?
   Choice A: Combination
-  Choice B: ''
+  Choice B: Single source
   Choice C: ''
   Choice D: ''
   Correct Choice: A

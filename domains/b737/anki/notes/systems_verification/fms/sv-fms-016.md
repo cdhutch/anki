@@ -24,9 +24,9 @@ fields:
   Question Stem: If the entered route does not form a continuous path of linked legs, what
     is displayed?
   Choice A: A route discontinuity
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: DSPY message
+  Choice C: OFST message
+  Choice D: FAIL message
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -23,11 +23,11 @@ fields:
     the\n    FMC will automatically display all waypoints. {{c1::True}}
   Question Stem: 'True or False: When multiple waypoints or navaids with the same identifier
     are in the database, the FMC will automatically display all waypoints.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: true
+  Correct Choice: 'True'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

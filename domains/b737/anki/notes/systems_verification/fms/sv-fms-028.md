@@ -24,9 +24,9 @@ fields:
   Question Stem: To select a nonprecision approach procedure from the database, the pilot
     selects which page?
   Choice A: DEP/ARR
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: APPROACH
+  Choice C: ROUTE
+  Choice D: DESCENT
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

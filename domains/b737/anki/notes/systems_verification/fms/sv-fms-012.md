@@ -24,9 +24,9 @@ fields:
   Question Stem: During what circumstances can a VNAV SPD descent automatically revert to
     a PATH descent?
   Choice A: A STAR, approach transition, or approach leg with a vertical angle
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: All circumstances
+  Choice C: Engine out operations
+  Choice D: Initial descent from the T/D point if an altitude restriction will be violated
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

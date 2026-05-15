@@ -23,10 +23,10 @@ fields:
     reference\n    for {{c1::lat/long of selected airport}}.
   Question Stem: The alternate destinations page (ALT DEST) does not provide the pilot a quick
     reference for what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Fuel required
+  Choice B: Time en route
   Choice C: Lat/long of selected airport
-  Choice D: ''
+  Choice D: Distance
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

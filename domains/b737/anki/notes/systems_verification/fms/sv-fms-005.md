@@ -22,10 +22,10 @@ fields:
   Original Text: Following loss of an engine, MAX continuous Thrust can be selected {{c1::from
     the\n    N1 LIMIT page in flight}}.
   Question Stem: Following loss of an engine, from where can MAX continuous thrust be selected?
-  Choice A: ''
+  Choice A: Automatically
   Choice B: From the N1 LIMIT page in flight
-  Choice C: ''
-  Choice D: ''
+  Choice C: On the engine display control Panel
+  Choice D: On the FMC CLB/CRZ/DES pages
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

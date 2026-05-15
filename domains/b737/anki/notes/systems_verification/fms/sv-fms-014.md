@@ -23,10 +23,10 @@ fields:
     determine\n    the position estimate. Which input has the highest weighted priority? {{c1::GPS}}
   Question Stem: Which navigation input has the highest weighted priority for FMC position
     calculation?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Scanning DME
+  Choice B: VOR radial/DME
   Choice C: GPS
-  Choice D: ''
+  Choice D: IRU
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

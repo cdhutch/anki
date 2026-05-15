@@ -23,11 +23,11 @@ fields:
     between\n    each unit. {{c1::False}}
   Question Stem: 'True or False: The FMCs are completely independent and do not transfer or
     compare information between each unit.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: false
+  Correct Choice: 'False'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

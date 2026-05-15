@@ -22,10 +22,10 @@ fields:
   Original Text: A holding pattern is constructed by entering the holding waypoint in the
     {{c1::HOLD\n    AT box on LEGS page}}.
   Question Stem: Where is a holding pattern constructed by entering the holding waypoint?
-  Choice A: ''
+  Choice A: MENU page, then select HOLD
   Choice B: HOLD AT box on LEGS page
-  Choice C: ''
-  Choice D: ''
+  Choice C: LEGS page
+  Choice D: PROGRESS page 2
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

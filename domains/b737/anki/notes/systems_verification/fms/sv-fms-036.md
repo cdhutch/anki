@@ -24,9 +24,9 @@ fields:
   Question Stem: With loss of all radio navigational inputs to the FMC and no GPS data available,
     how will it determine position?
   Choice A: IRS inputs only
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Navigational position is lost
+  Choice C: Computed off its last known position until landing
+  Choice D: Will compute off its last known position for 5 minutes
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

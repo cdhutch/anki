@@ -24,9 +24,9 @@ fields:
     in feet;\n    Approach freq, ident, and course.}}'
   Question Stem: In addition to approach reference speed, which additional information is
     displayed on the APP/REF page?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Go-around N1
+  Choice B: Runway length in feet
+  Choice C: Approach frequency, ident, and course
   Choice D: '2 and 3 are correct: runway length in feet; approach frequency, ident, and course'
   Correct Choice: D
   Shuffle Choices: false

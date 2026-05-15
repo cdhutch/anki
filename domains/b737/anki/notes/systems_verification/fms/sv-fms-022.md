@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: Which page is used to display SIDs and STARs? {{c1::ARR/DEP}}
   Question Stem: Which page is used to display SIDs and STARs?
-  Choice A: ''
-  Choice B: ''
+  Choice A: ROUTE
+  Choice B: INDEX
   Choice C: ARR/DEP
-  Choice D: ''
+  Choice D: MENU
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

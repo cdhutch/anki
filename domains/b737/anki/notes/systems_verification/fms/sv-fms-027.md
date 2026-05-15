@@ -22,11 +22,11 @@ fields:
   Original Text: With only one FMC available, the system is capable of calculating data accurately.\n    {{c1::Yes}}
   Question Stem: 'True or False: With only one FMC available, the system is capable of calculating
     data accurately.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: true
+  Correct Choice: 'True'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

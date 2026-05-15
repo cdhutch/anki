@@ -121,8 +121,8 @@ MCQ_FRONT = """\
 <div class="choices">
   <div class="choice"><span class="choice-label">A.</span>{{Choice1}}</div>
   <div class="choice"><span class="choice-label">B.</span>{{Choice2}}</div>
-  <div class="choice"><span class="choice-label">C.</span>{{Choice3}}</div>
-  <div class="choice"><span class="choice-label">D.</span>{{Choice4}}</div>
+  {{#Choice3}}<div class="choice"><span class="choice-label">C.</span>{{Choice3}}</div>{{/Choice3}}
+  {{#Choice4}}<div class="choice"><span class="choice-label">D.</span>{{Choice4}}</div>{{/Choice4}}
 </div>
 """
 

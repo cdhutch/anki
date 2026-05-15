@@ -21,9 +21,9 @@ fields:
   Original Prompt Style: cloze
   Original Text: Which of the following is not used by the FMCs to determine position? {{c1::ADF}}
   Question Stem: Which of the following is NOT used by the FMCs to determine position?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: GPS
+  Choice B: IRU
+  Choice C: VOR/DME
   Choice D: ADF
   Correct Choice: D
   Shuffle Choices: true

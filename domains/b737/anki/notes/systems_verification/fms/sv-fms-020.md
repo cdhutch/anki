@@ -22,11 +22,11 @@ fields:
   Original Text: How many levels of Takeoff power are selectable on the N1 page of the FMC?
     {{c1::7\n    - (22k, 22k Derate, 24k, 24k Derate, 26k, 26k Derate and 27k Bump)}}
   Question Stem: How many levels of takeoff power are selectable on the N1 page of the FMC?
-  Choice A: 7 — (22k, 22k Derate, 24k, 24k Derate, 26k, 26k Derate, and 27k Bump)
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
+  Choice A: 4 — (22k, 24k, 26k, 27k)
+  Choice B: 6 — (22k, 24k, 26k, 26k Bleeds Off, 27k, 27k Bleeds Off)
+  Choice C: 7 — (22k, 22k Derate, 24k, 24k Derate, 26k, 26k Derate, and 27k Bump)
+  Choice D: 8 — (22k, 22k Derate, 24k, 24k Derate, 26k, 26k Derate, 27k and 27k Bump)
+  Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

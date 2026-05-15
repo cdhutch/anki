@@ -24,10 +24,10 @@ fields:
     that must be\n    input for the FMC to operate? {{c1::All boxed prompts}}
   Question Stem: What are the minimum parameters that must be input on the PERF INIT page
     for the FMC to operate?
-  Choice A: ''
+  Choice A: Cruise altitude
   Choice B: All boxed prompts
-  Choice C: ''
-  Choice D: ''
+  Choice C: All blank lines
+  Choice D: Aircraft weights
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

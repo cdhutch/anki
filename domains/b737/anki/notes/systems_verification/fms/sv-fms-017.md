@@ -22,10 +22,10 @@ fields:
   Original Text: The IDENT page is accessed from the {{c1::INIT/REF page, INDEX page, IDENT
     prompt,\n    or at ground power-up.}}.
   Question Stem: How is the IDENT page accessed?
-  Choice A: ''
+  Choice A: FIX key
   Choice B: From the INIT/REF page, INDEX page, IDENT prompt, or at ground power-up
-  Choice C: ''
-  Choice D: ''
+  Choice C: PROG key
+  Choice D: MENU page
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -23,11 +23,11 @@ fields:
     be taken.\n    {{c1::Yes}}
   Question Stem: 'True or False: During a derated takeoff, a further reduction by an assumed
     temperature can be taken.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: true
+  Correct Choice: 'True'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

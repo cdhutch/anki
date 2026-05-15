@@ -23,11 +23,11 @@ fields:
     to climb\n    limit occurs, is fixed at 1000 feet AGL, and cannot be changed. {{c1::False}}
   Question Stem: 'True or False: The thrust reduction altitude, where automatic thrust reduction
     from takeoff to climb limit occurs, is fixed at 1000 feet AGL and cannot be changed.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: false
+  Correct Choice: 'False'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

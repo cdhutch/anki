@@ -115,7 +115,7 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
     if not stem:
         raise ValueError(f"{path}: Question Stem is required")
 
-    choices = [
+    raw_choices = [
         _s(fields, "Choice A"),
         _s(fields, "Choice B"),
         _s(fields, "Choice C"),
@@ -126,11 +126,25 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
         raise ValueError(
             f"{path}: Correct Choice must be A, B, C, or D; got {correct_letter!r}"
         )
+    correct_idx = _LETTER_IDX[correct_letter.upper()]
+    if not raw_choices[correct_idx]:
+        raise ValueError(
+            f"{path}: Correct Choice {correct_letter!r} points to an empty choice"
+        )
 
     if fields.get("Shuffle Choices", False):
-        ordered, final_letter = _deterministic_shuffle(note_id, choices, correct_letter)
+        # Compact to non-empty choices before shuffling so that blank slots
+        # don't appear between real options in Anki (supports 2–4 choices).
+        active_with_idx = [(i, t) for i, t in enumerate(raw_choices) if t]
+        active_texts = [t for _, t in active_with_idx]
+        active_correct_pos = next(
+            j for j, (i, _) in enumerate(active_with_idx) if i == correct_idx
+        )
+        active_correct_letter = _IDX_LETTER[active_correct_pos]
+        shuffled, final_letter = _deterministic_shuffle(note_id, active_texts, active_correct_letter)
+        ordered = shuffled + [""] * (4 - len(shuffled))
     else:
-        ordered = choices
+        ordered = raw_choices
         final_letter = correct_letter.upper()
 
     correct_text = ordered[_LETTER_IDX[final_letter]]

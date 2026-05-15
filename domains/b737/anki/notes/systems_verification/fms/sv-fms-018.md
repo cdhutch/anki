@@ -23,11 +23,11 @@ fields:
     its navigational\n    position. {{c1::True}}
   Question Stem: 'True or False: When both FMCs are operating normally, each unit independently
     calculates its navigational position.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: true
+  Correct Choice: 'True'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

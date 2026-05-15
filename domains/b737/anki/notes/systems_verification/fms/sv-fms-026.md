@@ -23,11 +23,11 @@ fields:
     N1.\n    {{c1::True}}
   Question Stem: 'True or False: The ENG OUT prompt displays single-engine climb speeds and
     maximum continuous N1.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: true
+  Correct Choice: 'True'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

@@ -23,9 +23,9 @@ fields:
     are used?\n    {{c1::All of the above: ADIRU and GPS; VOR/DMEand ILS receivers; airplane
     systems}}'
   Question Stem: Which of the following inputs does the FMC use?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: ADIRU and GPS
+  Choice B: VOR/DME and ILS receivers
+  Choice C: airplane systems
   Choice D: 'All of the above: ADIRU and GPS; VOR/DME and ILS receivers; airplane systems'
   Correct Choice: D
   Shuffle Choices: false

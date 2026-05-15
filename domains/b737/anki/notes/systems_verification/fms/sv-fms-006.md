@@ -23,10 +23,10 @@ fields:
     been entered on the PERF page for FMC calculation.
   Question Stem: When the final load closeout is received, what must the pilot check is entered
     on the PERF page?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Fuel and ZFW
+  Choice B: gross weight
   Choice C: ZFW
-  Choice D: ''
+  Choice D: takeoff weight
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

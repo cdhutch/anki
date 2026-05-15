@@ -23,10 +23,10 @@ fields:
     on the\n    map {{c1::waypoint ETA and constraint altitude}}.
   Question Stem: The DATA optional display switch on the Displays Control Panel will display
     what on the map?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Waypoint ETA only
+  Choice B: Wind speed and direction
   Choice C: Waypoint ETA and constraint altitude
-  Choice D: ''
+  Choice D: Course and frequency for tuned NAVAIDs
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

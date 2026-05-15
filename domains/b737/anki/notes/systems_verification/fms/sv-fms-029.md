@@ -23,11 +23,11 @@ fields:
     selected.\n    {{c1::False}}
   Question Stem: 'True or False: When a STAR is selected for an airport, the transition is
     also automatically selected.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: false
+  Correct Choice: 'False'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

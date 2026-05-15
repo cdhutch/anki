@@ -27,9 +27,12 @@ fields:
     active route leg (or what intercept conditions)?
   Choice A: Within 3 nautical miles; or outside 3 miles if on an intercept heading of less
     than 90 degrees with intercept prior to the fix
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Within 5 nautical miles; or outside 5 miles if on an intercept heading of less
+    than 80 degrees with intercept prior to the fix
+  Choice C: Within 3 nautical miles; or outside 3 miles if on an intercept heading of less
+    than 45 degrees with intercept prior to the fix
+  Choice D: Within 1 nautical mile; or outside 5 miles if on an intercept heading of less
+    than 60 degrees with intercept prior to the fix
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

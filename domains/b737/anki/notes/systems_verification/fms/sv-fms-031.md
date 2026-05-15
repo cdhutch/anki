@@ -23,11 +23,11 @@ fields:
     respective\n    FMCs if the RNP value exceeds the ANP value. {{c1::False}}
   Question Stem: 'True or False: The two CDUs allow pilots to input data only to their respective
     FMCs if the RNP value exceeds the ANP value.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: false
+  Correct Choice: 'False'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

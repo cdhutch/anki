@@ -22,10 +22,10 @@ fields:
   Original Text: During a VNAV PATH descent, the FMC will calculate a descent path based on
     {{c1::altitude\n    constraints, airspeed, and end of descent point}}.
   Question Stem: During a VNAV PATH descent, the FMC calculates a descent path based on what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Airspeed only
+  Choice B: Airspeed and altitude constraints only
   Choice C: Altitude constraints, airspeed, and end of descent point
-  Choice D: ''
+  Choice D: Airspeed and end of descent point only
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

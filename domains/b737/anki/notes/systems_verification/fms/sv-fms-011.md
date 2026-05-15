@@ -23,11 +23,11 @@ fields:
     {{c1::False}}
   Question Stem: 'True or False: The selected approach REF speed cannot be updated as aircraft
     weight changes.'
-  Choice A: ''
-  Choice B: ''
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: false
+  Correct Choice: 'False'
   Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''

@@ -24,10 +24,10 @@ fields:
     display.
   Question Stem: The STA switch on the Displays Control Panel will display what on the nav
     display?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: All high and low altitude navaids if the range is selected to 40 miles or less
+  Choice A: Only high altitude NAVAIDs in database
+  Choice B: NAVAIDs except LOC and NDB
+  Choice C: Only low altitude NAVAIDs in database
+  Choice D: All high and low altitude NAVAIDs if the range is selected to 40 miles or less
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
