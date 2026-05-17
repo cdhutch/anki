@@ -25,29 +25,30 @@ Distractors are being authored system-by-system. Workflow per system:
 4. Claude provides `git add` + `git commit` commands
 5. Move to next system
 
-**Distractor authoring status (as of 2026-05-10):**
+**Distractor authoring status (as of 2026-05-16):**
 
 | Status | Systems |
 |---|---|
-| Finalized (note_type: `systems_verification_exam`) | acars, adverse, emergency_equipment |
-| Distractors complete, committed | hud, landing_gear, pressurization |
-| Distractors pending | all others (see queue below) |
+| Finalized (`note_type: systems_verification_exam`) | acars, adverse, emergency_equipment |
+| All distractors complete (`status:verified`) | acars, adverse, apu, atc_tcas_trans, communications, emergency_equipment, flight_instrumentation, fuel, general, gpws, hud, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar |
+| Partially complete — T/F/2-choice blanks only | fms (1 note: sv-fms-024 is intentional 2-choice) |
+| Distractors not yet authored (`status:draft`) | air_conditioning, autoflight, electrical, engines, fire_protection, flight_controls, flight_warning, hydraulics, pneumatics |
+
+Note: `status:draft` notes import into Anki as **suspended** cards. `status:verified` import as active.
 
 **Remaining distractor queue (smallest-first):**
 
-| System | ~Notes |
-|---|---|
-| navigation | 28 |
-| fms | 36 |
-| fuel | 38 |
-| pneumatics | 39 |
-| engines | 41 |
-| autoflight | 42 |
-| air_conditioning | 43 |
-| flight_warning | 45 |
-| electrical | 47 |
-| hydraulics | 50 |
-| flight_controls | 52 |
+| System | Total | Draft |
+|---|---|---|
+| fire_protection | 27 | 27 |
+| hydraulics | 50 | 48 |
+| flight_warning | 45 | 45 |
+| electrical | 47 | 46 |
+| flight_controls | 52 | 49 |
+| engines | 41 | 39 |
+| autoflight | 42 | 39 |
+| air_conditioning | 43 | 41 |
+| pneumatics | 39 | 39 |
 
 ---
 

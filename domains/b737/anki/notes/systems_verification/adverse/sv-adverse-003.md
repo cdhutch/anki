@@ -21,8 +21,8 @@ fields:
   Original Prompt Style: cloze
   Original Text: During flight in light to moderate turbulence, the autopilot and/or autothrottle
     may remain {{c1::engaged}} unless performance is objectionable.
-  Question Stem: During flight in light to moderate turbulence, what may the autopilot and/or
-    autothrottle do unless performance is objectionable?
+  Question Stem: During flight in light to moderate turbulence, the autopilot and/or autothrottle
+    may remain in which state, unless performance is objectionable?
   Choice A: disabled
   Choice B: disconnected
   Choice C: armed

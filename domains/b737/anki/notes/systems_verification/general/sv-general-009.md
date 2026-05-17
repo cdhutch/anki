@@ -12,7 +12,7 @@ tags:
 - system:general
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 - model:b737-max8
 fields:
   Source Document: Systems Validation Question Bank

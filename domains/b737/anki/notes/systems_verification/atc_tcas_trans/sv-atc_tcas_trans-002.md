@@ -12,7 +12,7 @@ tags:
 - system:atc_tcas_trans
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq

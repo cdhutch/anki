@@ -25,9 +25,9 @@ fields:
   Choice A: Windshield wipers
   Choice B: A chemical rain repellant spray system
   Choice C: A permanent rain repellant coating on the window
-  Choice D: 1 and 3 above
+  Choice D: Windshield wipers and a permanent rain repellant coating on the window
   Correct Choice: D
-  Shuffle Choices: false
+  Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
 ---

@@ -12,7 +12,7 @@ tags:
 - system:landing_gear
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 - model:b737-max
 fields:
   Source Document: Systems Validation Question Bank

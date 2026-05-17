@@ -12,7 +12,7 @@ tags:
 - system:gpws
 - format:tf
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: tf
