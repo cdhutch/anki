@@ -3,7 +3,7 @@
 
 Settings applied
 ----------------
-  new cards / day  : 40
+  new cards / day  : 50
   reviews / day    : 9999
   FSRS             : enabled
   desired retention: 0.90   (edit DESIRED_RETENTION below to taste)
@@ -13,8 +13,12 @@ Settings applied
 
 Decks targeted
 --------------
+  B737::Systems::SV
   B737::Systems::SV::MCQ
   B737::Systems::SV::TF
+
+Idempotent: if the first target deck already uses a preset named
+"B737 SV Exam", that preset is updated in place — no duplicate is created.
 
 Usage
 -----
@@ -32,7 +36,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
 PRESET_NAME       = "B737 SV Exam"
-TARGET_DECKS      = ["B737::Systems::SV::MCQ", "B737::Systems::SV::TF"]
+TARGET_DECKS      = ["B737::Systems::SV", "B737::Systems::SV::MCQ", "B737::Systems::SV::TF"]
 NEW_PER_DAY       = 50
 REV_PER_DAY       = 9999
 DESIRED_RETENTION = 0.90
@@ -43,19 +47,32 @@ FSRS_WEIGHTS: list[float] = []   # empty → Anki default weights
 # Helpers
 # ---------------------------------------------------------------------------
 
-def _create_preset(preset_name: str, url: str) -> dict:
-    """Clone the Default preset and return its config dict ready to modify and save.
+def _get_or_create_preset(preset_name: str, url: str) -> dict:
+    """Return the config dict for *preset_name*, creating it only if necessary.
 
-    AnkiConnect flow:
-      1. cloneDeckConfigId  → creates the new preset, returns its integer ID
-      2. Apply it to a temporary deck so getDeckConfig can fetch it by deck name
-      3. getDeckConfig      → returns the full config dict (id and name already set)
-      4. Delete the temporary deck
+    Strategy
+    --------
+    1. Call getDeckConfig on the first target deck.
+       • If its 'name' already matches preset_name → the deck is already on the
+         right preset; return that config for in-place update (no clone needed).
+    2. Otherwise clone the Default preset, apply it to a temp deck to fetch the
+       full config dict, then clean up the temp deck.
     """
+    # ── Try to reuse the existing preset from the first target deck ──────────
+    probe_deck = TARGET_DECKS[0]
+    try:
+        cfg = anki_request("getDeckConfig", {"deck": probe_deck}, url=url)
+        if isinstance(cfg, dict) and cfg.get("name") == preset_name:
+            print(f"Found existing preset '{preset_name}' (id={cfg['id']}) on '{probe_deck}' — updating in place.")
+            return cfg
+    except Exception:
+        pass  # deck may not exist yet; fall through to clone
+
+    # ── Preset not found on the target deck — clone from Default ─────────────
     new_id = anki_request("cloneDeckConfigId",
                           {"name": preset_name, "cloneFrom": 1},
                           url=url)
-    print(f"Cloned preset '{preset_name}' (id={new_id}).")
+    print(f"Cloned new preset '{preset_name}' (id={new_id}).")
 
     # Temporarily assign the new config to a throwaway deck so we can fetch it.
     tmp = "__tmp_preset_fetch__"
@@ -83,8 +100,8 @@ def main() -> int:
 
     url = args.url
 
-    # ── 1. Create the preset ────────────────────────────────────────────────
-    cfg = _create_preset(PRESET_NAME, url)
+    # ── 1. Get or create the preset ─────────────────────────────────────────
+    cfg = _get_or_create_preset(PRESET_NAME, url)
 
     # ── 2. Apply our settings ───────────────────────────────────────────────
     cfg["new"]["perDay"]      = args.new_per_day
