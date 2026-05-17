@@ -31,24 +31,24 @@ Distractors are being authored system-by-system. Workflow per system:
 |---|---|
 | Finalized (`note_type: systems_verification_exam`) | acars, adverse, emergency_equipment |
 | All distractors complete (`status:verified`) | acars, adverse, apu, atc_tcas_trans, communications, emergency_equipment, flight_instrumentation, fuel, general, gpws, hud, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar |
-| Partially complete — T/F/2-choice blanks only | fms (1 note: sv-fms-024 is intentional 2-choice) |
+| Partially complete — T/F/2-choice blanks only | fms (sv-fms-024 is intentional 2-choice; all others verified) |
 | Distractors not yet authored (`status:draft`) | air_conditioning, autoflight, electrical, engines, fire_protection, flight_controls, flight_warning, hydraulics, pneumatics |
 
 Note: `status:draft` notes import into Anki as **suspended** cards. `status:verified` import as active.
 
-**Remaining distractor queue (smallest-first):**
+**Remaining distractor queue (draft count, smallest-first):**
 
 | System | Total | Draft |
 |---|---|---|
 | fire_protection | 27 | 27 |
-| hydraulics | 50 | 48 |
-| flight_warning | 45 | 45 |
-| electrical | 47 | 46 |
-| flight_controls | 52 | 49 |
 | engines | 41 | 39 |
 | autoflight | 42 | 39 |
-| air_conditioning | 43 | 41 |
 | pneumatics | 39 | 39 |
+| air_conditioning | 43 | 41 |
+| flight_warning | 45 | 45 |
+| electrical | 47 | 46 |
+| hydraulics | 50 | 48 |
+| flight_controls | 52 | 49 |
 
 ---
 
@@ -67,20 +67,13 @@ manually created in Anki by the user.
 - `B737_SV_TF` fields: NoteID, Text, Source Document, OriginalNoteID, CorrectAnswer
 - Script (idempotent, for future reference): `tools/anki/setup/update_sv_exam_templates.py`
 
-#### Step 2 — Create "B737 SV Exam" deck preset (IN PROGRESS)
+#### Step 2 — Create "B737 SV Exam" deck preset (COMPLETED)
 
 Script: `tools/anki/setup/create_sv_exam_preset.py`
 
-Settings: 40 new/day · 9999 reviews/day · FSRS on · 90% desired retention
+Settings: 50 new/day · 9999 reviews/day · FSRS on · 90% desired retention
 
-**STATUS: Script was fixed this session (removed invalid `getDeckConfigs` call)
-but NOT yet successfully run. Run this first next session:**
-
-```bash
-python tools/anki/setup/create_sv_exam_preset.py
-```
-
-Applies preset to: `B737::Systems::SV::MCQ` and `B737::Systems::SV::TF`
+Preset created and applied to `B737::Systems::SV::MCQ` and `B737::Systems::SV::TF`.
 
 Note: if run multiple times, duplicate presets named "B737 SV Exam" will appear —
 remove extras via Tools → Manage Deck Presets in Anki.
@@ -94,19 +87,18 @@ python tools/anki/setup/delete_sv_cloze.py              # type 'yes' to confirm
 
 Deletes all `B737_SV_Cloze` notes and removes the empty `B737::Systems::SV` deck.
 
-#### Step 4 — Import new MCQ cards
+#### Step 4 — Import new MCQ cards (COMPLETED)
 
 ```bash
 make sve
 ```
 
-Exports TSV from all system directories and pushes to Anki via AnkiConnect.
-Cards with blank distractors will import fine; they'll just be incomplete for study.
+All systems imported. `status:draft` cards import suspended; `status:verified` import active.
+Use `make sve-<system>` after completing distractors for a single system.
 
-#### Step 5 — Verify in Anki
+#### Step 5 — Verify in Anki (COMPLETED)
 
-In Browse: search `note:B737_SV_MCQ` and confirm card count.
-Right-click `B737::Systems::SV::MCQ` → Options → confirm "B737 SV Exam" preset is applied.
+`note:B737_SV_MCQ` confirmed in Anki. "B737 SV Exam" preset applied to MCQ and TF decks.
 
 ---
 
@@ -246,8 +238,12 @@ python tools/anki/sync/set_flow_detail.py --flow preflight
   in single quotes, e.g. `Question Stem: 'You must select ALTN, then:'`
 - `tools/anki/setup/fix_conflict_markers.py`: strips git conflict markers from
   working tree files, keeping HEAD (ours) content — created for post-merge cleanup
-- AnkiConnect action `getDeckConfigs` (plural) does NOT exist — use `createDeckConfig`
-  + `saveDeckConfig` + `setDeckConfigId` for preset management
+- AnkiConnect action `getDeckConfigs` (plural) does NOT exist — use `cloneDeckConfigId`
+  + `setDeckConfigId` (apply to temp deck) + `getDeckConfig` + `saveDeckConfig`
+- `sv_exam_md_to_tsv.py`: per-note errors no longer crash the run; all failures reported
+  at end with note path and error message, exit code 1 if any errors occurred
+- `sv_exam_md_to_tsv.py`: `_s()` helper fixed to handle falsy non-None values (e.g. `0`)
+- `delete_sv_cloze.py`: generalised with `--model` flag (default: B737_SV_Cloze)
 
 ---
 

@@ -25,7 +25,7 @@ fields:
     related lines, the hydraulic fluid quantity in the reservoir decreases to what?
   Choice A: ''
   Choice B: ''
-  Choice C: 0
+  Choice C: '0'
   Choice D: ''
   Correct Choice: C
   Shuffle Choices: true

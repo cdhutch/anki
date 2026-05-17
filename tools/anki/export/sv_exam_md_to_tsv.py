@@ -102,7 +102,10 @@ def _deterministic_shuffle(
 # ---------------------------------------------------------------------------
 
 def _s(fields: dict[str, Any], key: str) -> str:
-    return str(fields.get(key) or "").strip()
+    val = fields.get(key)
+    if val is None:
+        return ""
+    return str(val).strip()
 
 
 def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
@@ -195,28 +198,32 @@ def _build_tf_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
 # Collection
 # ---------------------------------------------------------------------------
 
-def collect_rows(root: Path) -> tuple[list[dict], list[dict]]:
+def collect_rows(root: Path) -> tuple[list[dict], list[dict], list[tuple[Path, Exception]]]:
     mcq_rows: list[dict] = []
     tf_rows: list[dict] = []
+    errors: list[tuple[Path, Exception]] = []
 
     for path in sorted(root.rglob("*.md")):
-        meta = _load_note(path)
-        if meta.get("note_type") not in NOTE_TYPES:
-            continue
+        try:
+            meta = _load_note(path)
+            if meta.get("note_type") not in NOTE_TYPES:
+                continue
 
-        fields = meta.get("fields") or {}
-        exam_format = str(fields.get("Exam Format") or "").strip().lower()
+            fields = meta.get("fields") or {}
+            exam_format = str(fields.get("Exam Format") or "").strip().lower()
 
-        if exam_format == "mcq":
-            mcq_rows.append(_build_mcq_row(path, meta))
-        elif exam_format == "tf":
-            tf_rows.append(_build_tf_row(path, meta))
-        else:
-            raise ValueError(
-                f"{path}: Exam Format must be 'mcq' or 'tf'; got {exam_format!r}"
-            )
+            if exam_format == "mcq":
+                mcq_rows.append(_build_mcq_row(path, meta))
+            elif exam_format == "tf":
+                tf_rows.append(_build_tf_row(path, meta))
+            else:
+                raise ValueError(
+                    f"{path}: Exam Format must be 'mcq' or 'tf'; got {exam_format!r}"
+                )
+        except Exception as exc:  # noqa: BLE001
+            errors.append((path, exc))
 
-    return mcq_rows, tf_rows
+    return mcq_rows, tf_rows, errors
 
 
 # ---------------------------------------------------------------------------
@@ -257,13 +264,20 @@ def main() -> int:
     if not input_dir.exists():
         raise SystemExit(f"Input directory not found: {input_dir}")
 
-    mcq_rows, tf_rows = collect_rows(input_dir)
+    mcq_rows, tf_rows, errors = collect_rows(input_dir)
 
     _write_tsv(mcq_rows, MCQ_FIELDNAMES, Path(args.out_mcq))
     _write_tsv(tf_rows, TF_FIELDNAMES, Path(args.out_tf))
 
     print(f"MCQ rows : {len(mcq_rows):>4}  →  {args.out_mcq}")
     print(f"T/F rows : {len(tf_rows):>4}  →  {args.out_tf}")
+
+    if errors:
+        print(f"\nWARNING: {len(errors)} note(s) skipped due to errors:")
+        for path, exc in errors:
+            print(f"  {path.parent.name}/{path.name}: {exc}")
+        return 1
+
     return 0
 
 

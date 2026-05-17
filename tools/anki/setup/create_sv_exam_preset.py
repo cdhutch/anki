@@ -33,7 +33,7 @@ from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
 PRESET_NAME       = "B737 SV Exam"
 TARGET_DECKS      = ["B737::Systems::SV::MCQ", "B737::Systems::SV::TF"]
-NEW_PER_DAY       = 40
+NEW_PER_DAY       = 50
 REV_PER_DAY       = 9999
 DESIRED_RETENTION = 0.90
 FSRS_WEIGHTS: list[float] = []   # empty → Anki default weights
