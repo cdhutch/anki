@@ -23,13 +23,13 @@ fields:
     by the {{c1::both 2 & 3: recirculation fan system and equipment cooling system}}.'
   Question Stem: Inflight, the forward cargo compartment is heated by air drawn around it
     by the what?
-  Choice A: '[DISTRACTOR NEEDED]'
+  Choice A: Outflow valves
   Choice B: Recirculation fan system
   Choice C: Equipment cooling system
   Choice D: 'Both B & C: recirculation fan system and equipment cooling system'
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice A
+  Review Notes: null
   Verification Notes: ''
 ---
 

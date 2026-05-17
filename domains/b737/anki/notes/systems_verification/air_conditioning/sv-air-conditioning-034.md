@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,13 +23,12 @@ fields:
     Is not authorized with engine bleeds on and Is authorized if a QRH checklist calls for
     it}}'
   Question Stem: 'Landing with PACK switches in HIGH: what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: Both two and three are correct. Is not authorized with engine bleeds on and Is
-    authorized if a QRH checklist calls for it
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Choice A: Will automatically revert to normal flow with flaps extended
+  Choice B: Is not authorized with engine bleeds on
+  Choice C: Is authorized if a QRH checklist calls for it
+  Choice D: Both B and C are correct
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

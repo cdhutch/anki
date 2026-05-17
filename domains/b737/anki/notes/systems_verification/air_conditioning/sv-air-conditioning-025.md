@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     this will cause the associated {{c1::trim air modulating}} valve to close.
   Question Stem: If the FWD or AFT Cab ZONE TEMP lights illuminate indicating an overheat,
     this will cause the associated what? valve to close?
-  Choice A: ''
+  Choice A: Pressure regulating
   Choice B: Trim air modulating
-  Choice C: ''
-  Choice D: ''
+  Choice C: Pack
+  Choice D: Emergency relief
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

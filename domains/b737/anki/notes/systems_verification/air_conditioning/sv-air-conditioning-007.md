@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,9 +21,9 @@ fields:
   Original Prompt Style: cloze
   Original Text: The equipment cooling system has {{c1::2 supply and 2 exhaust}} fan(s).
   Question Stem: The equipment cooling system has what? fan(s)?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 1 supply and 1 exhaust
+  Choice B: 1 supply and 2 exhaust
+  Choice C: 2 supply and 1 exhaust
   Choice D: 2 supply and 2 exhaust
   Correct Choice: D
   Shuffle Choices: true

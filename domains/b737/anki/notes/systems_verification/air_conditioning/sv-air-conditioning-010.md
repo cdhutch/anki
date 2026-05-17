@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: Each A/C pack has {{c1::2}} controllers for pack temperature control.
   Question Stem: Each A/C pack has what? controllers for pack temperature control?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 2
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Choice A: 1
+  Choice B: 2
+  Choice C: 3
+  Choice D: 4
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

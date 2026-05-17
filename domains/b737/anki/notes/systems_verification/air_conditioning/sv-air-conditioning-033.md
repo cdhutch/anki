@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,12 +24,12 @@ fields:
     channel fault}}'
   Question Stem: 'If a PACK light illuminates while performing a before taxi check, and resets
     with master caution reset, you should: what?'
-  Choice A: ''
+  Choice A: Perform the PACK QRH procedure
   Choice B: Consult the PACK MEL procedure for single channel fault
-  Choice C: ''
-  Choice D: ''
+  Choice C: Contact load agent and perform a bleeds off takeoff
+  Choice D: Both A and B are correct.
   Correct Choice: B
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

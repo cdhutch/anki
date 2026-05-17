@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: The APU can supply bleed air for the pack up to {{c1::17,000 feet or 10,000
     feet if the APU is also providing electricity}}.
   Question Stem: The APU can supply bleed air for the pack up to what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: 20,000 feet or 8000 feet if the APU is also providing electricity
+  Choice B: 41,000 feet under all conditions
   Choice C: 17,000 feet or 10,000 feet if the APU is also providing electricity
-  Choice D: ''
+  Choice D: 20,000 feet or 12,000 feet if the APU is also providing electricity
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

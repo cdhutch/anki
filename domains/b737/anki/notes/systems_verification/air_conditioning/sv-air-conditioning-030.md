@@ -10,25 +10,23 @@ tags:
 - domain:b737
 - topic:systems_verification
 - system:air-conditioning
-- format:mcq
+- format:tf
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
-  Exam Format: mcq
+  Exam Format: tf
   Conversion Status: draft
   Original Note ID: air-conditioning-030
   Original Prompt Style: cloze
   Original Text: Is taking off with one or both PACK switches in HIGH is allowed with the
     engine bleed air switches on. {{c1::False}}
-  Question Stem: Is taking off with one or both PACK switches in HIGH is allowed with the
-    engine bleed air switches on what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 'False'
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Question Stem: Taking off with one or both PACK switches in HIGH is allowed with the engine
+    bleed air switches on.
+  Choice A: 'True'
+  Choice B: 'False'
+  Correct Choice: false
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

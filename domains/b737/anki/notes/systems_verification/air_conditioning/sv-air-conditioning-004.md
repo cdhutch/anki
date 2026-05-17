@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     pack}}
   Question Stem: What is the primary source of conditioned air for the cockpit?
   Choice A: Left pack
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Right pack
+  Choice C: Both packs
+  Choice D: Mix manifold
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     high pressure bleed air is provided by the {{c1::9th}} stage air.
   Question Stem: Engine low pressure bleed air is provided by the what? stage, and engine
     high pressure bleed air is provided by the what? stage air?
-  Choice A: ''
-  Choice B: 5th
-  Choice C: ''
-  Choice D: ''
+  Choice A: 9th / 13th
+  Choice B: 5th / 9th
+  Choice C: 5th / 12th
+  Choice D: 8th / 12th
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

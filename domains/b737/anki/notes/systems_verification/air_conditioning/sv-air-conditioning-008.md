@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: Air from the preconditioned ground source enters the air conditioning system
     through the what?
   Choice A: Mix manifold
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Left PACK valve
+  Choice C: Bleed valve
+  Choice D: Right PACK valve
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

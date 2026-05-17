@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     the {{c1::full open position}}.
   Question Stem: For maximum cooling (of the pack) the ram air inlet doors modulate toward
     the what?
-  Choice A: ''
+  Choice A: Full closed position
   Choice B: Full open position
-  Choice C: ''
-  Choice D: ''
+  Choice C: Ram air inlet doors do not modulate
+  Choice D: A mid position
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

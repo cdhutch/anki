@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: Zone temperature is controlled by introducing the proper amount of trim air
     into the what?
   Choice A: Individual zone supply duct
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Pack temp control valve
+  Choice C: Modulating the ram air inlet doors
+  Choice D: Mix manifold
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

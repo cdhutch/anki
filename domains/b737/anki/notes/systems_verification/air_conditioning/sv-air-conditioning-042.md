@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,10 +25,10 @@ fields:
   Question Stem: If the CONT CAB ZONE TEMP caution light illuminated due to an overheat condition
     in the applicable zone supply duct, the Master Caution Lights will also illuminate; and
     what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The AFT CAB trim air modulating valve closes
+  Choice B: The FWD CAB trim air modulating valve closes
   Choice C: The CONT CAB trim air modulating valve closes
-  Choice D: ''
+  Choice D: None of the trim air modulating valves close
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,9 +25,11 @@ fields:
     and the right pack to maintain 65 degrees as measured at the pack temperature sensor.}}
   Question Stem: With all the temperature selectors positioned in the OFF position, the packs
     will adjust for cabin demand. In this case, which statement is most correct?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The pack outputs will average
+  Choice B: System operation is normal
+  Choice C: The left pack controls will cause the left pack to maintain a fixed temperature
+    of 65 degrees, and the right pack to maintain 85 degrees as measured at the pack temperature
+    sensor
   Choice D: The left pack controls will cause the left pack to maintain a fixed temperature
     of 75 degrees, and the right pack to maintain 65 degrees as measured at the pack temperature
     sensor

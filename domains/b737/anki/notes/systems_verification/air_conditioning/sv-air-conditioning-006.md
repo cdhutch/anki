@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: Equipment cooling is provided for electronic equipment in the {{c1::E & E
     bay and flight deck area}}.
   Question Stem: Equipment cooling is provided for electronic equipment in the what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: E & E bay and aft cargo compartment
+  Choice B: E & E bay only
   Choice C: E & E bay and flight deck area
-  Choice D: ''
+  Choice D: E & E bay and forward cargo compartment
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

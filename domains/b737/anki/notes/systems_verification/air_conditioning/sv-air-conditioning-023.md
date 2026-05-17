@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     of approximately {{c1::65-85}} degrees.
   Question Stem: The temperature selector adjusts the desired zone temperature between a range
     of approximately what? degrees?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 60-80
+  Choice B: 70-80
+  Choice C: 75-85
   Choice D: 65-85
   Correct Choice: D
   Shuffle Choices: true

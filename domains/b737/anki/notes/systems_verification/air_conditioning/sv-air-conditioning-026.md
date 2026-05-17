@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     illuminate when {{c1::pack overheats or dual pack controller failure}}.
   Question Stem: The associated PACK light, Master Caution, and AIR COND annunciator will
     illuminate when what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Pack controller failure and all temperature selectors placed OFF
+  Choice B: Pack trips caused by primary controller failure
   Choice C: Pack overheats or dual pack controller failure
-  Choice D: ''
+  Choice D: All temperature selectors are placed OFF
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

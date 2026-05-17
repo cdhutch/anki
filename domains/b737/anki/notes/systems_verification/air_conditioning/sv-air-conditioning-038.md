@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,11 @@ fields:
     switches to high air flow if flaps are up.}}
   Question Stem: Inflight, with the left pack valve closed due to excessive temperature, what
     other actions automatically occur in the Air Conditioning System?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The right pack switches to high air flow only if flaps are extended
+  Choice B: The right pack switches to high air flow regardless of flap position
   Choice C: The right pack switches to high air flow if flaps are up
-  Choice D: ''
+  Choice D: The right pack stays at normal air flow rate until the left Engine Bleed Air Switch
+    is selected OFF
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

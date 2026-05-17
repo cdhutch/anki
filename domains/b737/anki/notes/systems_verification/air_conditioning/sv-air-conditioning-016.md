@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     PACK heat exchangers}}.
   Question Stem: The ram air system operates automatically to provide cooling for what?
   Choice A: The PACK heat exchangers
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The right PACK alternate air source
+  Choice C: Emergency cooling needs
+  Choice D: The E&E compartment on the ground
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

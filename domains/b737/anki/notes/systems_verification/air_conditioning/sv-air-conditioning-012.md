@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,9 +25,9 @@ fields:
   Question Stem: In the event of a single pack failure at altitude, the remaining pack is
     capable of maintaining cabin pressure and comfort at an airplane altitude of what?
   Choice A: 41,000 feet
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 37,000 feet
+  Choice C: 35,000 feet
+  Choice D: 25,000 feet
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

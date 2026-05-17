@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,14 +25,12 @@ fields:
     controller failure in any zone during a RECALL test}}.'
   Question Stem: The ZONE TEMP light, Master Caution, and AIR COND annunciator lights will
     illuminate for what?
-  Choice A: 'Any of the above: an overheat in the duct leading to any of the three zones;
-    a dual temperature controller failure in the CONT CAB zone; any single temperature controller
-    failure in any zone during a RECALL test'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
+  Choice A: An overheat in the duct leading to any of the three zones
+  Choice B: a dual temperature controller failure in the CONT CAB zone
+  Choice C: any single temperature controller failure in any zone during a RECALL test
+  Choice D: Any of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

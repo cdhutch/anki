@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
     on the affected air conditioning pack}}
   Question Stem: While accomplishing the QRH procedure for a PACK light illuminated, why do
     you select a warmer temperature on all three temperature selectors?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Open the pack valve
+  Choice B: to extinguish the Pack light
+  Choice C: This causes the pack to revert to high flow
   Choice D: Reduce the workload on the affected air conditioning pack
   Correct Choice: D
   Shuffle Choices: true

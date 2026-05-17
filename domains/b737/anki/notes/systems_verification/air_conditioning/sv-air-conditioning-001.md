@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: The ram air doors normally modulate to full OPEN when the aircraft is {{c1::in
     flight with flaps not fully retracted or on the ground}}.
   Question Stem: The ram air doors normally modulate to full OPEN when the aircraft is what?
-  Choice A: ''
+  Choice A: In flight with flaps retracted
   Choice B: In flight with flaps not fully retracted or on the ground
-  Choice C: ''
-  Choice D: ''
+  Choice C: On the ground only
+  Choice D: Operating both packs in high flow
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

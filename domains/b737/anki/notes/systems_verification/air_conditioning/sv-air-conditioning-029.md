@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,11 +23,11 @@ fields:
     bleed air duct leak in the left engine strut, left inboard wing leading edge, left air
     conditioning bay, keel beam or APU bleed air duct}}
   Question Stem: What will cause the left Wing-Body Overheat light to illuminate?
-  Choice A: ''
+  Choice A: A bleed air duct leak in the left wing anti-ice
   Choice B: A bleed air duct leak in the left engine strut, left inboard wing leading edge,
     left air conditioning bay, keel beam or APU bleed air duct
-  Choice C: ''
-  Choice D: ''
+  Choice C: Only a bleed air leak in the left air conditioning bay
+  Choice D: A bleed air leak in the Trim-Air Manifold
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

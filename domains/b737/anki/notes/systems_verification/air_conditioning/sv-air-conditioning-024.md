@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,9 +25,9 @@ fields:
   Question Stem: When either the primary or standby pack temperature controller fails, what
     indications will be displayed?
   Choice A: PACK, MASTER CAUTION, and AIR COND SYSTEM ANNUNCIATOR lights on recall
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: PACK and ZONE TEMP lights
+  Choice C: MASTER CAUTION, and AIR COND SYSTEM ANNUNCIATOR lights
+  Choice D: PACK and MASTER CAUTION lights only
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

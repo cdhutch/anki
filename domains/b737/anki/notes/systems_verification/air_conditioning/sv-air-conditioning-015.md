@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     ground? {{c1::The APU only.}}
   Question Stem: Which single bleed source is permitted to supply air to both packs on the
     ground?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Engine only
+  Choice B: None
+  Choice C: An engine bleed or APU
   Choice D: The APU only
   Correct Choice: D
   Shuffle Choices: true

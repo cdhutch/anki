@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     {{c1::Master Caution light, the related equipment cooling OFF light, and the OVERHEAD
     annunciator light on the System Annunciator Pane}}
   Question Stem: If the primary equipment cooling fan fails, what indications would be displayed?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: No indications - the standby fan turns on automatically
+  Choice B: Master Caution light and horn
+  Choice C: Warning horn only (Ground Ops)
   Choice D: Master Caution light, the related equipment cooling OFF light, and the OVERHEAD
     annunciator light on the System Annunciator Pane
   Correct Choice: D

@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     will cause the {{c1::ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights}} to illuminate.
   Question Stem: Failure of the primary and standby flight deck zone temperature controls
     will cause the what? to illuminate?
-  Choice A: ''
+  Choice A: ZONE TEMP light only
   Choice B: ZONE TEMP, MASTER CAUTION, and AIR COND annunciator lights
-  Choice C: ''
-  Choice D: ''
+  Choice C: MASTER CAUTION light only
+  Choice D: PACK light
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

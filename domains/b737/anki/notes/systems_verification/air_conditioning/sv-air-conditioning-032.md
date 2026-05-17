@@ -23,7 +23,7 @@ fields:
     the trim pressure regulating and shutoff valve; Cause the left pack temp to be controlled
     by the Cont Cab temp selector and the right pack by the Fwd and Aft temp selectors}}'
   Question Stem: 'Placing the trim air switch off will: what?'
-  Choice A: '[DISTRACTOR NEEDED]'
+  Choice A: Cause both packs switch to high flow
   Choice B: Close the trim pressure regulating and shutoff valve
   Choice C: Cause the left pack temp to be controlled by the Cont Cab temp selector and the
     right pack by the Fwd and Aft temp selectors
@@ -32,7 +32,7 @@ fields:
     pack by the Fwd and Aft temp selectors'
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice A
+  Review Notes: null
   Verification Notes: ''
 ---
 

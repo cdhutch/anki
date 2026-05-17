@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: The primary purpose of the recirculation fans is to {{c1::reduce air conditioning
     pack load}}.
   Question Stem: The primary purpose of the recirculation fans is to what?
-  Choice A: ''
+  Choice A: Increase airflow at greater cabin differential pressure
   Choice B: Reduce air conditioning pack load
-  Choice C: ''
-  Choice D: ''
+  Choice C: Provide overheat detection down stream of the packs
+  Choice D: Filter air for contaminants
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

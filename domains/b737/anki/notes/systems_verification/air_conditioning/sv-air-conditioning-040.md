@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     one of the CONT CAB Zone Temperature Controllers has failed}}.
   Question Stem: If the CONT CAB ZONE TEMP caution light is illuminated only on Recall, what?
   Choice A: Only one of the CONT CAB Zone Temperature Controllers has failed
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: An overheat has occurred in the CONT Cabin Trim Air Supply Duct
+  Choice C: Both the Primary and Back-Up Flight Deck Zone Temperature Controllers have failed
+  Choice D: Both the Right and Left primary Electronic Controllers have failed
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

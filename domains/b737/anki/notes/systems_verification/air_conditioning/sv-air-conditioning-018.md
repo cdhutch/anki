@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: Deflector doors on the ram air system are used on the ground to {{c1::prevent
     slush ingestion on takeoff or landing}}.
   Question Stem: Deflector doors on the ram air system are used on the ground to what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Allow for smooth air flow over the heat exchangers
+  Choice B: Prevent backflow of air over the heat exchangers
   Choice C: Prevent slush ingestion on takeoff or landing
-  Choice D: ''
+  Choice D: Increase airflow through the ram air doors
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

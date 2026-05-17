@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,11 +24,11 @@ fields:
     left pack valve will close if sensors have detected excessive temperature in that pack}}
   Question Stem: On the NG, both the left PACK caution light and the Master Caution lights
     are illuminated. What might happen to the left pack next under these circumstances?
-  Choice A: ''
+  Choice A: The left pack valve will close due to pack underpressure
   Choice B: The left pack valve will close if sensors have detected excessive temperature
     in that pack
-  Choice C: ''
-  Choice D: ''
+  Choice C: The left pack valve will stay open even if the left pack overheats
+  Choice D: The left pack valve will close due to pack overpressure
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

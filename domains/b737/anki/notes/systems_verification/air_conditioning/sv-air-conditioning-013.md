@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,13 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: The APU will supply bleed air for {{c1::1}} pack(s) {{c1::only in flight}}
     and {{c1::both}} pack(s) {{c1::on the ground}} {{c1::The answer is "both 1 & 2"}}.
-  Question Stem: In flight, how many pack(s) can the APU supply bleed air for?
-  Choice A: ''
-  Choice B: 1
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
+  Question Stem: In flight, how many pack(s) can the APU supply bleed air for? In which context
+    does this apply?
+  Choice A: One, only in flight
+  Choice B: Both, on the ground
+  Choice C: All three, in flight
+  Choice D: Both A and B
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

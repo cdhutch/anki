@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,9 +21,9 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'In order to do a bleeds off takeoff: {{c1::Put both PACK switches to AUTO}}'
   Question Stem: 'In order to do a bleeds off takeoff: what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Only the left PACK is switched to AUTO
+  Choice B: The right PACK switch must be turned OFF
+  Choice C: Put both PACK switches to HIGH
   Choice D: Put both PACK switches to AUTO
   Correct Choice: D
   Shuffle Choices: true

@@ -12,7 +12,7 @@ tags:
 - system:air-conditioning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: The deflector doors on the ram air system are fully extended {{c1::on the
     ground only}}.
   Question Stem: The deflector doors on the ram air system are fully extended what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: On the ground, or inflight with the flaps extended
+  Choice B: Inflight with the gear extended
+  Choice C: Inflight with the flaps extended
   Choice D: On the ground only
   Correct Choice: D
   Shuffle Choices: true
