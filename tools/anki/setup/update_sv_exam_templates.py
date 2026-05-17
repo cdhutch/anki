@@ -97,6 +97,13 @@ hr#answer {
   padding: 12px 16px;
   vertical-align: middle;
 }
+
+.note-id {
+  font-size: 11px;
+  color: #aaa;
+  text-align: right;
+  margin-top: 14px;
+}
 """
 
 # ---------------------------------------------------------------------------
@@ -135,6 +142,7 @@ MCQ_BACK = """\
     <td class="answer-text">{{CorrectText}}</td>
   </tr>
 </table>
+<div class="note-id">{{NoteID}}</div>
 """
 
 # ---------------------------------------------------------------------------
@@ -167,6 +175,7 @@ TF_BACK = """\
     <td class="answer-text">{{CorrectText}}</td>
   </tr>
 </table>
+<div class="note-id">{{NoteID}}</div>
 """
 
 # ---------------------------------------------------------------------------
