@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: svdraft-lighting-005
+note_id: sv-lighting-005
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -29,7 +29,7 @@ fields:
   Choice D: Both A and B.
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Choice C needs a distractor (e.g. the ARMED position).
+  Review Notes: null
   Verification Notes: ''
 ---
 

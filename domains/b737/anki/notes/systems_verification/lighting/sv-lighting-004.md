@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: svdraft-lighting-004
+note_id: sv-lighting-004
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -25,7 +25,7 @@ fields:
   Choice A: Forward flight attendant panel
   Choice B: Cockpit center pedestal
   Choice C: Aft flight attendant panel
-  Choice D: Captain's side panel.
+  Choice D: Captain's side panel
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

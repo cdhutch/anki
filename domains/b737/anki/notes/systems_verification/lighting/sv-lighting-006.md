@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: svdraft-lighting-006
+note_id: sv-lighting-006
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -29,7 +29,7 @@ fields:
   Choice D: Both A and C
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Choice C needs a distractor (a condition that does NOT trigger emergency lighting).
+  Review Notes: null
   Verification Notes: ''
 ---
 

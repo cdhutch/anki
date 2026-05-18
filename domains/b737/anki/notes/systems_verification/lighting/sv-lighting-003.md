@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: svdraft-lighting-003
+note_id: sv-lighting-003
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
