@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,10 @@ fields:
     the Standby Hydraulic System.}}
   Question Stem: With the same conditions *(All four LOW PRESSURE lights illuminated on Hydraulics
     panel)*, which primary flight control(s) will still be pressurized?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The ailerons using the Standby Hydraulic System
+  Choice B: The rudder, elevators, and ailerons using the Standby Hydraulic System
   Choice C: The rudder using the Standby Hydraulic System
-  Choice D: ''
+  Choice D: The elevators using the Standby Hydraulic System
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

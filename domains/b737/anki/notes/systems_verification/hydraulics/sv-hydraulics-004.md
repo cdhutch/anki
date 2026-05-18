@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -27,9 +27,10 @@ fields:
     1 Pump Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the
     trailing edge (TE) flaps be extended in flight under these conditions?
   Choice A: The TE flaps can be extended electrically via the ALTERNATE FLAP Position Switch
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The TE flaps can be extended normally via the Standby Hydraulic System
+  Choice C: The TE flaps can be extended hydraulically from System A via the ALTERNATE FLAPS
+    Position Switch
+  Choice D: The TE flaps cannot be extended when Hydraulic System B is lost.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

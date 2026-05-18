@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,13 +23,12 @@ fields:
     airborne and No. 1 engine RPM drops below a limit value; the landing gear lever is positioned
     UP and a main gear is not up and locked}}'
   Question Stem: The Landing Gear Transfer Unit operates when what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 'Both of the above occur: airborne and No. 1 engine RPM drops below a limit value;
-    the landing gear lever is positioned UP and a main gear is not up and locked'
-  Choice D: ''
+  Choice A: Airborne and No. 1 engine RPM drops below a limit value
+  Choice B: The landing gear lever is positioned UP and a main gear is not up and locked
+  Choice C: Both of the above occur
+  Choice D: None of the above occur
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

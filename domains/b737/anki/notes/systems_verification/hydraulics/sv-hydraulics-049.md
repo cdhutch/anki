@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     fluid of an electric motor-driven pump.
   Question Stem: An engine-driven hydraulic pump supplies approximately what? times the fluid
     of an electric motor-driven pump?
-  Choice A: ''
+  Choice A: 2
   Choice B: 6
-  Choice C: ''
-  Choice D: ''
+  Choice C: 10
+  Choice D: 12
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

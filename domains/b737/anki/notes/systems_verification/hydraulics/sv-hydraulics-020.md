@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -27,9 +27,9 @@ fields:
     x 2; Hydraulic B LOW PRESSURE x 2 )*. Choose the answer below that most accurately describes
     which hydraulic system(s) is/are lost what?
   Choice A: Both Hydraulic System A and Hydraulic System B
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Standby Hydraulics System only
+  Choice C: Hydraulic System A only
+  Choice D: Hydraulic System B only
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

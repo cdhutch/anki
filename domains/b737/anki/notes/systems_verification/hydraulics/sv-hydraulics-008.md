@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: With the A hydraulic system engine driven pump low pressure light on and
     indicating 20% of volume in the A reservoir, what?
   Choice A: Gear will retract at a slower rate
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: You must lower the landing gear manually
+  Choice C: You cannot retract the gear
+  Choice D: Only two spoilers on each wing work normally
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

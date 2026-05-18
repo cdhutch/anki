@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,12 @@ fields:
   Original Text: To block hydraulic fluid flow to the engine driven pump, {{c1::pull the respective
     engine Fire Handle}}.
   Question Stem: To block hydraulic fluid flow to the engine driven pump, what?
-  Choice A: ''
+  Choice A: Turn the respective Engine Hydraulic Pump Switch to OFF
   Choice B: Pull the respective engine Fire Handle
-  Choice C: ''
-  Choice D: ''
+  Choice C: Both A & B are Correct
+  Choice D: None of the above are correct
   Correct Choice: B
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

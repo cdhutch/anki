@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,10 @@ fields:
     leading edge devices with the trailing edge flaps less than 15 degrees, but not up.}}
   Question Stem: How would this condition *(ENG 2 hydraulic LOW PRESSURE caution light)* affect
     the flap operation prior to landing?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The PTU will not aid in extending the leading edge devices.
+  Choice B: The PTU automatically aids in extending the trailing edge devices
+  Choice C: The PTU should aid in extending the leading edge flaps and slats, but the autoslats
+    will be inoperative.
   Choice D: The PTU automatically aids in extending the leading edge devices with the trailing
     edge flaps less than 15 degrees, but not up
   Correct Choice: D

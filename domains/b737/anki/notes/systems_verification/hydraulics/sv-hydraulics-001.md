@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,11 @@ fields:
     pressure of System B engine driven pump is low}}
   Question Stem: Which of the following statements is true if the *(ENG 2 hydraulic)* LOW
     PRESSURE light (above) illuminates in flight?
-  Choice A: ''
+  Choice A: If the light is intermittent, then there is a heavy demand on System B
   Choice B: If the light is on steady, output pressure of System B engine driven pump is low
-  Choice C: ''
-  Choice D: ''
+  Choice C: If the light is on steady, output pressure of System B electric motor-driven pump
+    is low
+  Choice D: There is a leak in Hydraulic System B
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,9 +25,10 @@ fields:
     overheated.}}
   Question Stem: In flight, what conditions could cause these two lights *(Hydraulic ELEC
     1 Pump OVERHEAT and LOW PRESSURE)* to illuminate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: An overheat condition has been detected in Hydraulic System A
+  Choice B: The Hydraulic System B will not be available
+  Choice C: The fluid used to cool and lubricate the Hydraulic System B electric motor driven
+    pump has overheated, but the pump is still operating
   Choice D: The fluid used to cool and lubricate the Hydraulic System B electric motor driven
     pump has overheated, or the pump itself has overheated
   Correct Choice: D

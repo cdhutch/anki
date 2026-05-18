@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'With this light on during gear retraction, the landing gear transfer unit
     will activate with {{c1::low RPM on the #1 Engine}}'
-  Question Stem: With this light on during gear retraction, the landing gear transfer unit
-    will activate with what?
-  Choice A: ''
+  Question Stem: With the ENG 1 Hydraulic LOW PRESSURE light on during gear retraction, the
+    landing gear transfer unit will activate with what?
+  Choice A: The loss of Hydaulic System B
   Choice B: 'Low RPM on the #1 Engine'
-  Choice C: ''
-  Choice D: ''
+  Choice C: 'Low RPM on the #2 Engine'
+  Choice D: The loss of System A electric pump
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

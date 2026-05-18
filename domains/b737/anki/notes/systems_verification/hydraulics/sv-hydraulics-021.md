@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     System? {{c1::Braking is available via trapped hydraulic pressure in the brake accumulator.}}
   Question Stem: Hydraulic Systems A and B are unavailable. How does this affect the Brake
     System?
-  Choice A: ''
+  Choice A: Braking is not available
   Choice B: Braking is available via trapped hydraulic pressure in the brake accumulator
-  Choice C: ''
-  Choice D: ''
+  Choice C: Braking is available via the Normal Brake System pressure
+  Choice D: Braking is available via the Alternate Brake System pressure
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

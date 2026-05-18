@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,12 @@ fields:
   Original Text: Which of the following components are normally powered by System B? {{c1::Trailing
     Edge Flaps}}
   Question Stem: Which of the following components are normally powered by System B?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Alternate brakes
+  Choice B: Landing Gear
   Choice C: Trailing Edge Flaps
-  Choice D: ''
+  Choice D: All of the above
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

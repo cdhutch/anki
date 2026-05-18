@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: The minimum hydraulic System A and B pressure is {{c1::2800}} psi for preflight.
   Question Stem: The minimum hydraulic System A and B pressure is what? psi for preflight?
-  Choice A: null
+  Choice A: 3500
   Choice B: 2800
-  Choice C: null
-  Choice D: null
+  Choice C: 2900
+  Choice D: 3000
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -20,17 +20,17 @@ fields:
   Original Note ID: hydraulics-017
   Original Prompt Style: cloze
   Original Text: With these lights illuminated (*ENG 1 hydraulic LOW PRESSURE and ELEC 2 hydraulic
-    LOW spressure*) and switches positioned as shown on the Hydraulic Panel above (*Both System
+    LOW PRESSURE*) and switches positioned as shown on the Hydraulic Panel above (*Both System
     A switches OFF*), the pressure in Hydraulic System A should read {{c1::0}} psi.
   Question Stem: With these lights illuminated (*ENG 1 hydraulic LOW PRESSURE and ELEC 2 hydraulic
-    LOW spressure*) and switches positioned as shown on the Hydraulic Panel above (*Both System
+    LOW PRESSURE*) and switches positioned as shown on the Hydraulic Panel above (*Both System
     A switches OFF*), what should the pressure in Hydraulic System A read in psi?
-  Choice A: ''
-  Choice B: '0'
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
+  Choice A: '0'
+  Choice B: '1000'
+  Choice C: '1500'
+  Choice D: '3000'
+  Correct Choice: A
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

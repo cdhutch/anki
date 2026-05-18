@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: 'Both engines are still operating. Turning OFF the #1 Engine Hydraulic Pump
     Switch what?'
   Choice A: Does not affect the rotation of the pump
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Will stop the pump from rotating
+  Choice C: Will deactivate the pump Low Pressure light
+  Choice D: Will shut off fluid to the pump
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

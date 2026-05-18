@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,11 +24,11 @@ fields:
   Question Stem: With System A fluid level at the top of the standpipe, the reservoir quantity
     displayed indicates approximately what?% full?
   Choice A: 20
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 50
+  Choice C: 72
+  Choice D: 76
   Correct Choice: A
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

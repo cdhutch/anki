@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -28,9 +28,9 @@ fields:
     being illuminated, the airplane is airborne, flaps are extended, and the FLT CONTROL B
     Hydraulic System Switch hydraulic system switch is in the normal position. Which of the
     following conditions is also true?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The Landing Gear Transfer Unit will operate
+  Choice B: The Normal Brake System is available
+  Choice C: Autopilot A will be inoperative
   Choice D: Automatic operation of the Standby Hydraulic System will occur
   Correct Choice: D
   Shuffle Choices: true

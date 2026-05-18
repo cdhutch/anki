@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: How are System A & B reservoirs pressurized? {{c1::Bleed Air}}
   Question Stem: How are System A & B reservoirs pressurized?
   Choice A: Bleed Air
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Self-pressurized AC electric pumps
+  Choice C: Accumulators
+  Choice D: Engine-driven pumps
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

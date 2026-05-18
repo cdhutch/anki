@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,11 +24,14 @@ fields:
     switches A & B on, flaps extended, airborne, and wheel speed greater than 60 knots}}'
   Question Stem: 'The automatic operation of the Standby Hydraulic System is initiated when
     all the following conditions exist: what?'
-  Choice A: ''
-  Choice B: ''
+  Choice A: Loss of system A and B pressure, flaps retracted, airborne, and wheel speed greater
+    than 90 knots
+  Choice B: Loss of system A or B pressure, flaps extended, airborne, and wheel speed greater
+    than 90 knots
   Choice C: Loss of system A or B pressure, Flight Control switches A & B on, flaps extended,
     airborne, and wheel speed greater than 60 knots
-  Choice D: ''
+  Choice D: Loss of system A and B pressure, flaps retracted, airborne, and wheel speed greater
+    than 50 knots
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

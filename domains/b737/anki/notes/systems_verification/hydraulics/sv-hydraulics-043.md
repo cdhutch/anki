@@ -22,16 +22,16 @@ fields:
   Original Text: 'Heat exchangers used for cooling the fluid going to the Electric Hydraulic
     pump are located {{c1::Both 1 & 2 are correct: in Main Fuel Tank #1 for System A; in Fuel
     Tank #2 for System B }}.'
-  Question Stem: Heat exchangers used for cooling the fluid going to the Electric Hydraulic
-    pump are located what?
+  Question Stem: Where are the heat exchangers used for cooling the fluid going to the Electric
+    Hydraulic pump located?
   Choice A: 'In Main Fuel Tank #1 for System A'
   Choice B: 'In Fuel Tank #2 for System B'
-  Choice C: '[DISTRACTOR NEEDED]'
+  Choice C: In the Center Fuel Tank for both systems
   Choice D: 'Both A & B are correct: in Main Fuel Tank #1 for System A; in Fuel Tank #2 for
     System B'
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice C
+  Review Notes: null
   Verification Notes: ''
 ---
 

@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: When the overheat was detected in Hydraulic System B, what happens to the
     corresponding electric motor driven pump?
   Choice A: The pump shuts off automatically
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The pump continues to operate at a reduced pressure
+  Choice C: The pump will eventually destruct if not shut down by the crew manually
+  Choice D: The pump continues to operate with normal pressure
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

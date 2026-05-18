@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,11 +22,11 @@ fields:
   Original Text: The purpose of the Power Transfer Unit (PTU) is to {{c1::supply hydraulic
     fluid volume needed to operate autoslats and leading edge flaps and slats}}.
   Question Stem: The purpose of the Power Transfer Unit (PTU) is to what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Operate the alternate brakes after loss of System B
+  Choice B: Operate the alternate nosewheel steering after loss of System B
   Choice C: Supply hydraulic fluid volume needed to operate autoslats and leading edge flaps
     and slats
-  Choice D: ''
+  Choice D: Operate the landing gear after loss of System A
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

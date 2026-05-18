@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,12 +23,12 @@ fields:
     related lines, the hydraulic fluid quantity in the reservoir decreases to {{c1::0}}.
   Question Stem: If a leak develops in Hydraulic System A electric motor-driven pump or its
     related lines, the hydraulic fluid quantity in the reservoir decreases to what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: '0'
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Choice A: '0'
+  Choice B: '3'
+  Choice C: '6'
+  Choice D: '12'
+  Correct Choice: A
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

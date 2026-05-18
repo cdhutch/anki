@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,11 @@ fields:
     edge devices will retract at a normal rate through the PTU.}}
   Question Stem: This light *(ENG 2 hydraulic LOW PRESSURE caution light)* illuminates during
     takeoff, climbing through 1,000 feet AGL, and during flap retraction what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The leading edge devices will not retract
+  Choice B: The leading edge devices will retract slowly because of the low volume output
+    of the electric motor-driven pump
   Choice C: The leading edge devices will retract at a normal rate through the PTU
-  Choice D: ''
+  Choice D: The leading edge devices must be retracted using the Alternate Flap Switches
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

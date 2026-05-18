@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,10 @@ fields:
     normal gear extension.}}
   Question Stem: The system A engine pump failure is indicated by the low pressure light illuminated
     on the overhead panel. With this light on, can the gear be extended?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: No, the gear cannot be extended
+  Choice B: Yes, the landing gear transfer unit will deploy the gear when commanded by the
+    gear handle
+  Choice C: Yes, by using the manual gear extension procedures
   Choice D: Yes, by using normal gear extension
   Correct Choice: D
   Shuffle Choices: true

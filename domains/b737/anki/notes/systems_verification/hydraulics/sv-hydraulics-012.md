@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     half of the standby fluid has been depleted.}}
   Question Stem: If the standby hydraulic low quantity light is illuminated, what?
   Choice A: At least half of the standby fluid has been depleted
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The PTU has lost hydraulic fluid
+  Choice C: The B system has decreased to the 50% level
+  Choice D: This light only arms with the standby pump operating and indicates normal operation
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

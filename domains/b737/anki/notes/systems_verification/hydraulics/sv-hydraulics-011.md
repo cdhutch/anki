@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: Turning Engine 1 or Engine 2 Hydraulic Pump Switches OFF {{c1::blocks pump
     pressure output to the components}}.
   Question Stem: Turning Engine 1 or Engine 2 Hydraulic Pump Switches OFF what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: removes electrical power to the pump
+  Choice B: Disconnects the pump shaft from the engine accessory case
+  Choice C: Blocks fluid input to the pump
   Choice D: Blocks pump pressure output to the components
   Correct Choice: D
   Shuffle Choices: true

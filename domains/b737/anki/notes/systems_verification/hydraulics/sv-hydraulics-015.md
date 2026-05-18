@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,13 @@ fields:
   Original Text: The Power Transfer Unit (PTU) uses {{c1::System A}} pressure to power a hydraulic
     motor-driven pump which pressurizes {{c1::System B}} fluid for use in operating leading
     edge flaps and slats
-  Question Stem: The Power Transfer Unit (PTU) uses what? pressure to power a hydraulic motor-driven
-    pump which pressurizes what? fluid for use in operating leading edge flaps and slats?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: System A
+  Question Stem: The Power Transfer Unit (PTU) uses pressure from which system to power a
+    hydraulic motor-driven pump which pressurizes which system's fluid for use in operating
+    leading edge flaps and slats?
+  Choice A: From Standby System to System B
+  Choice B: From System B to System A
+  Choice C: From Standby System to System A
+  Choice D: From System A to System B
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null

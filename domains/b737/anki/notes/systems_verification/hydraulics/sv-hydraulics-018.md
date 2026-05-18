@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: What is not available with no pressure in Hydraulic System A? {{c1::Half
     of the flight spoilers & all of the ground spoilers}}
   Question Stem: What is not available with no pressure in Hydraulic System A?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The rudder
+  Choice B: All the spoilers
   Choice C: Half of the flight spoilers & all of the ground spoilers
-  Choice D: ''
+  Choice D: The elevator
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
     to approximately 20%.}}.'
   Question Stem: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to
     a leak in the #1 (System A) engine-driven pump, then System A quantity will what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Drop to approximately 72%
+  Choice B: Drop to approximately 76%
+  Choice C: Drop to approximately 0%
   Choice D: Drop to approximately 20%
   Correct Choice: D
   Shuffle Choices: true

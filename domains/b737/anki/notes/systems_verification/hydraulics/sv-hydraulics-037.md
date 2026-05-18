@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: Normal hydraulic system pressure is {{c1::}} psi.
   Question Stem: Normal hydraulic system pressure is what? psi
-  Choice A: ''
+  Choice A: 3600 psi
   Choice B: 3000 psi
-  Choice C: ''
-  Choice D: ''
+  Choice C: 2500 psi
+  Choice D: 2000 psi
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

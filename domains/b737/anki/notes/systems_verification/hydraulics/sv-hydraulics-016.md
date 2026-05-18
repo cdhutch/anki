@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,11 +24,11 @@ fields:
   Question Stem: Which of the following components are normally powered by Hydraulic System
     A?
   Choice A: Nosewheel steering (normal)
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Landing Gear Transfer Unit
+  Choice C: Yaw Damper
+  Choice D: All of the Above
   Correct Choice: A
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

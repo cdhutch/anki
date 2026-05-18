@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,11 +23,12 @@ fields:
     edge flaps will be lowered electrically and the leading edge flaps & slats will be extended
     by standby hydraulics}}.
   Question Stem: When lowering the flaps using the alternate flaps switch, what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The flaps will have to be lowered electrically with the aid of the PTU
+  Choice B: Landing must be made with the flaps up
   Choice C: The trailing edge flaps will be lowered electrically and the leading edge flaps
     & slats will be extended by standby hydraulics
-  Choice D: ''
+  Choice D: The trailing edge flaps and the leading edge devices will be extended using the
+    standby hydraulics
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

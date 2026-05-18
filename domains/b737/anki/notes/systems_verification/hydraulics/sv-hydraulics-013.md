@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: This *(STANDBY HYD LOW QUANTITY caution )*light is armed {{c1::anytime there
     is power on the aircraft}}.
   Question Stem: This *(STANDBY HYD LOW QUANTITY caution )*light is armed what?
-  Choice A: ''
+  Choice A: Only when the engines are running
   Choice B: Anytime there is power on the aircraft
-  Choice C: ''
-  Choice D: ''
+  Choice C: Only when the standby pump is running
+  Choice D: Only when system B is pressurized
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

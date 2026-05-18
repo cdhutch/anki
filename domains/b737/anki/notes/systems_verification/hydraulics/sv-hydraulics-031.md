@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: The hydraulic systems on the 737 are designated as {{c1::System A, System
     B, and Standby}}.
   Question Stem: The hydraulic systems on the 737 are designated as what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: System 1, System 2, and Alternate
+  Choice B: Main, Alternate, and Standby
+  Choice C: Left, Right, and Alternate
   Choice D: System A, System B, and Standby
   Correct Choice: D
   Shuffle Choices: true

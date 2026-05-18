@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,11 +25,12 @@ fields:
     PTU.}}
   Question Stem: The QRH directs the crew to switch the Hydraulic System B electric motor
     driven pump OFF. How will this affect the operation of the Power Transfer Unit (PTU)?
-  Choice A: ''
+  Choice A: The PTU would automatically operate if you are airborne
   Choice B: System B electric motor driven pump pressure does not determine operation of the
-    PTU
-  Choice C: ''
-  Choice D: ''
+    PTU.
+  Choice C: While in flight, the PTU assists in the operation of the autoslats and leading
+    edge flaps and slats at a reduced rate.
+  Choice D: The PTU would automatically operate with flaps less than 15 but not up.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

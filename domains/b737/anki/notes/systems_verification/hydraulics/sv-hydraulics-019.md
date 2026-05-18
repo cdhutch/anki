@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,10 @@ fields:
     (*Hyrdaulic System A offline*)? {{c1::The gear will have to be lowered manually.}}
   Question Stem: If on descent, how would the landing gear be lowered with this condition
     (*Hyrdaulic System A offline*)?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: The gear cannot be lowered
+  Choice B: The gear can be lowered by the Standby Hydraulic System
+  Choice C: The gear can be lowered using Hydraulic System B through the landing gear transfer
+    unit
   Choice D: The gear will have to be lowered manually
   Correct Choice: D
   Shuffle Choices: true

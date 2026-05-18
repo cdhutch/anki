@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,14 @@ fields:
   Original Text: Both Hydraulic Systems A and B are still unavailable after landing. Select
     the answer below which best describes the operation of the nose wheel steering in this
     condition. {{c1::It does not work without pressure from Hydraulic Systems A and B.}}
-  Question Stem: Both Hydraulic Systems A and B are still unavailable after landing. Which
-    best describes the operation of nose wheel steering in this condition?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: Both Hydraulic Systems A and B are still unavailable after landing *(All
+    four hydraulic LOW PRESSURE caution lights are on)*. Which best describes the operation
+    of nose wheel steering in this condition?
+  Choice A: It will work via the Nose Wheel Steering accumulator.
+  Choice B: It will work via the Landing Gear Transfer Unit but with limited displacement
+    in either direction
   Choice C: It does not work without pressure from Hydraulic Systems A and B
-  Choice D: ''
+  Choice D: It will work using the Alternate Nose Wheel Steering selection
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

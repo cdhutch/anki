@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     B reservoir is sufficient for operation of the {{c1::Power Transfer Unit}}.
   Question Stem: With fluid level at the top of the standpipe, fluid remaining in the System
     B reservoir is sufficient for operation of the what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Alternate flap extension
+  Choice B: Standby Hydraulic System
   Choice C: Power Transfer Unit
-  Choice D: ''
+  Choice D: Landing gear transfer unit
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

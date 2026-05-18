@@ -12,7 +12,7 @@ tags:
 - system:hydraulics
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,11 +24,11 @@ fields:
   Question Stem: If either System A or System B is lost, the remaining system can power what?
     with no decrease in airplane controllability?
   Choice A: The primary flight controls
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The flaps/slats
+  Choice C: The landing gear
+  Choice D: All of the above
   Correct Choice: A
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

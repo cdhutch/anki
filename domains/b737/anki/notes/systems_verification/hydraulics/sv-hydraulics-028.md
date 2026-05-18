@@ -24,14 +24,13 @@ fields:
     PRESSURE light when the Standby Rudder Shutoff Valve opens}}.'
   Question Stem: Moving a FLT CONTROL switch to the STBY RUD position what?
   Choice A: Activates the Standby Pump
-  Choice B: '[DISTRACTOR NEEDED]'
+  Choice B: Arms the ALTERNATE FLAPS Position Switch
   Choice C: Extinguishes the Flight Control LOW PRESSURE light when the Standby Rudder Shutoff
     Valve opens
-  Choice D: 'Accomplishes both A and C above: activates the Standby Pump and extinguishes
-    the Flight Control LOW PRESSURE light when the Standby Rudder Shutoff Valve opens'
+  Choice D: Accomplishes both A and C above
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice B
+  Review Notes: null
   Verification Notes: ''
 ---
 
