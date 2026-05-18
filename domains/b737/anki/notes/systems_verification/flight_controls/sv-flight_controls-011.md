@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -26,9 +26,9 @@ fields:
   Question Stem: During the origination preflight, this light *(SPEED TRIM FAIL)* illuminates
     after the IRS Mode Selectors are moved to NAV. The “Flight Control Panel . . . CHECK”
     item is accomplished by what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Calling Maintenance. The Speed Trim System has failed
+  Choice B: Resetting the Stab Trim to Zero
+  Choice C: Resetting the light with the Press-to-Test Switch
   Choice D: Doing nothing. This is a normal indication while the IRUs are aligning
   Correct Choice: D
   Shuffle Choices: true

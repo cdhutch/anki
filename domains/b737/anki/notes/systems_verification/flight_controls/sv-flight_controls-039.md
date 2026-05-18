@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
     rudder PCU}}.
   Question Stem: After loss of system A, the QRH directs you to move the A FLT CONTROL switch
     to STBY RUD. This action will pressurize the what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Landing gear transfer unit
+  Choice B: Aileron, elevator, and rudder systems
+  Choice C: A system PCU
   Choice D: Standby hydraulic pump and Standby rudder PCU
   Correct Choice: D
   Shuffle Choices: true

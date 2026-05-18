@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
     are not in the proper position.}}
   Question Stem: As you advance the thrust lever for takeoff, would you get an intermittent
     horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: No. The LEDs are not part of the takeoff warning system
+  Choice B: No. the TE Flaps are set at 5 Degrees
+  Choice C: No. If the parking brake is released
   Choice D: Yes. The LEDs are not in the proper position
   Correct Choice: D
   Shuffle Choices: true

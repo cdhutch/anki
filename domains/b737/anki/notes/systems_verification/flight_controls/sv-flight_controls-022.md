@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,12 @@ fields:
   Original Text: With the trailing edge flaps at 1, the leading edge slats are {{c1::in the
     extend position}}.
   Question Stem: With the trailing edge flaps at 1, the leading edge slats are what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: In the extend position
-  Choice D: ''
+  Choice A: In the Full Extend Position
+  Choice B: Retracted
+  Choice C: In the Extend position
+  Choice D: None of the Above
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

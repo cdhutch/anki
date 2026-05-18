@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     in flight. Continue normal operations.}}.
   Question Stem: If a FEEL DIFF PRESS light illuminates, what?
   Choice A: No crew action is required in flight. Continue normal operations
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Place both Flt Control switches to STBY RUDDER
+  Choice C: Immediately turn off the associated flight control switch
+  Choice D: Depressurize the A or B hydraulic system
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

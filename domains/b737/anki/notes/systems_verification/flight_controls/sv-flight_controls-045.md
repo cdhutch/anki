@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,14 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: The horizontal stabilizer is normally powered {{c1::electrically}}, but may
     also be operated {{c1::manually}}.
-  Question Stem: The horizontal stabilizer is normally powered what?, but may also be operated
+  Question Stem: How is the horizontal stabilizer normally powered? How else may it be operated?
     what?
-  Choice A: ''
-  Choice B: Electrically
-  Choice C: ''
-  Choice D: ''
+  Choice A: Manually; Electrically
+  Choice B: Electrically; Manually
+  Choice C: Automatically, Pneumatically
+  Choice D: None of the Above
   Correct Choice: B
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

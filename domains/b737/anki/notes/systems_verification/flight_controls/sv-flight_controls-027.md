@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: Prior to what altitude should the Speed Brakes be Down or Armed? {{c1::1000
     FT AGL}}
   Question Stem: Prior to what altitude should the Speed Brakes be Down or Armed?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 500 FT AGL
+  Choice B: 2500 FT AGL
+  Choice C: 5000 FT AGL
   Choice D: 1000 FT AGL
   Correct Choice: D
   Shuffle Choices: true

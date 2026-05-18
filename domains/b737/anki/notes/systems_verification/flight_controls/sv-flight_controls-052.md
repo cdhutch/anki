@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: 'MAX 8: The Spoiler light indicates: {{c1::A fault in the spoiler system}}.'
   Question Stem: 'MAX 8: The Spoiler light indicates: what?'
   Choice A: A fault in the spoiler system
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The ground spoilers are deployed
+  Choice C: The flight spoilers are deployed
+  Choice D: The ground spoilers are armed
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

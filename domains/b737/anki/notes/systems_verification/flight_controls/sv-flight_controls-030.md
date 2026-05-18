@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,12 +23,12 @@ fields:
     if System B fails.
   Question Stem: Leading edge devices can be what? by the Standby Hydraulic System if System
     B fails?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Extended and Retracted
+  Choice B: Retracted
   Choice C: Extended
-  Choice D: ''
+  Choice D: None of the Above
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

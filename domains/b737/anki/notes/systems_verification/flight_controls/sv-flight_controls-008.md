@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,9 +25,9 @@ fields:
   Question Stem: With the loss of B Hydraulic System, the yaw damper will what?
   Choice A: Be inoperative, but the Yaw Damper Light will not be illuminated until the Flt
     control B switch is moved to STBY RUD
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Cause the Yaw Damper Switch to trip off
+  Choice C: Remain operating from the A Hydraulic System
+  Choice D: Be inoperative causing the Yaw Damper Light to illuminate
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

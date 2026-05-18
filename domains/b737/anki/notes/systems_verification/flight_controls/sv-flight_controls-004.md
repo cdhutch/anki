@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: The FSEU protects the flaps during {{c1::Normal Flap}} operation.
   Question Stem: The FSEU protects the flaps during what? operation?
   Choice A: Normal Flap
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Both Normal and Alternate Flap
+  Choice C: Speed Trim operation
+  Choice D: Alternate Flap
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

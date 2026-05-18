@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,12 +23,13 @@ fields:
     from the speedbrake lever position sensor, the First Officer’s control wheel and other
     airplane data inputs.}}'
   Question Stem: 'MAX 8: The Spoiler Control Electronics Unit (SCE): what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: Translates signals from the speedbrake lever position sensor, the First Officer’s
+  Choice A: One sensor is applied to the Captain's yoke and provides input for Coordination
+    with the HUD FLARE Cue during landing.
+  Choice B: Translates signals from the speedbrake lever position sensor, the First Officer’s
     control wheel and other airplane data inputs
-  Choice D: ''
-  Correct Choice: C
+  Choice C: Must be selected on during intial FMC setup
+  Choice D: Both A and C are correct
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

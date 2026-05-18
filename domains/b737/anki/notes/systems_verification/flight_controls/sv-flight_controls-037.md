@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     you select {{c1::10}} or greater with the flap handle.
   Question Stem: In aircraft 3AA-3LB, the LE devices will go to the full extend position when
     you select what? or greater with the flap handle?
-  Choice A: ''
+  Choice A: 5
   Choice B: 10
-  Choice C: ''
-  Choice D: ''
+  Choice C: 2
+  Choice D: 1
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

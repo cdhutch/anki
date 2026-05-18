@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     System in Alternate mode.'
   Question Stem: What can be extended by the Standby Hydraulic System in Alternate mode?
   Choice A: Leading edge flaps/slats
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Elevators
+  Choice C: Ailerons
+  Choice D: Trailing edge flaps
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

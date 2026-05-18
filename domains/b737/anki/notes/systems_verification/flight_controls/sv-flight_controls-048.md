@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: If wheel spin-up is not detected by the air/ground sensors, the flight spoilers
     will deploy when what?
   Choice A: Any main gear strut compresses
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The right main gear strut compresses
+  Choice C: Thrust reverser extension occurs
+  Choice D: the left main gear strut compresses
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: On aircraft 3AA - 3LB, the autoslat feature is available in flight {{c1::with
     trailing edge flaps selected to 1, 2, or 5}}.
   Question Stem: On aircraft 3AA - 3LB, the autoslat feature is available in flight what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: At landing flap settings
+  Choice B: With trailing edge flaps selected to 30-40
+  Choice C: At all flap settings
   Choice D: With trailing edge flaps selected to 1, 2, or 5
   Correct Choice: D
   Shuffle Choices: true

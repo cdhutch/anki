@@ -23,15 +23,15 @@ fields:
     Armed when the airplane is above 30,000 feet and the cabin altitude warning is active;
     Fully automatic with operation transparent to the crew.}}'
   Question Stem: 'MAX 8: Emergency Descent Speed Brakes system (EDS): what?'
-  Choice A: '[DISTRACTOR NEEDED]'
+  Choice A: Generates additional drag to allow the Max to capture and maintain a glidepath
+    similar to the NG
   Choice B: Armed when the airplane is above 30,000 feet and the cabin altitude warning is
     active
   Choice C: Fully automatic with operation transparent to the crew
-  Choice D: 'Both B and C above: Armed when the airplane is above 30,000 feet and the cabin
-    altitude warning is active; Fully automatic with operation transparent to the crew'
+  Choice D: Both B and C above
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice A
+  Review Notes: null
   Verification Notes: ''
 ---
 

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: On the ground, speed brakes normally use what? to destroy lift and make braking
     more effective?
   Choice A: Both flight and ground spoilers
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Flight spoilers only
+  Choice C: Ground spoilers only
+  Choice D: Compression on the left main landing gear strut to deploy the ground spoilers
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     are in flight, the autopilot {{c1::is still fully operational}}.
   Question Stem: If, instead, this light *(SPEED TRIM FAIL caution)* illuminates once you
     are in flight, the autopilot what?
-  Choice A: ''
+  Choice A: If engaged, has now disengaged and cannot be re-engaged
   Choice B: Is still fully operational
-  Choice C: ''
-  Choice D: ''
+  Choice C: Can only be engaged in CWS P Mode
+  Choice D: Has lost the ability to trim the aircraft
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,9 +21,9 @@ fields:
   Original Prompt Style: cloze
   Original Text: The primary flight controls consist of {{c1::ailerons, elevators, and rudder}}.
   Question Stem: The primary flight controls consist of what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Stabilizer, rudder, and spoilers
+  Choice B: Elevators, yaw damper, and ailerons
+  Choice C: Ailerons, elevators, and spoilers
   Choice D: Ailerons, elevators, and rudder
   Correct Choice: D
   Shuffle Choices: true

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,13 @@ fields:
   Original Text: If the aileron control system is jammed, the {{c1::FO}} can still fly the
     aircraft using the {{c1::spoilers}} after force is applied to the control wheels and they
     break free.
-  Question Stem: If the aileron control system is jammed, the what? can still fly the aircraft
-    using the what? after force is applied to the control wheels and they break free?
-  Choice A: ''
-  Choice B: FO
-  Choice C: ''
-  Choice D: ''
+  Question Stem: If the aileron control system is jammed, **which pilot** can still fly the
+    aircraft using **which flight control** after force is applied to the control wheels and
+    they break free?
+  Choice A: FO using ailerons
+  Choice B: FO using spoilers
+  Choice C: CA using control tabs
+  Choice D: CA using spoilers
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

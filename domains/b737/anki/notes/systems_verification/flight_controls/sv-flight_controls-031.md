@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     for flaps {{c1::30 and 40}}.
   Question Stem: On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided
     for flaps what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 15
+  Choice B: 25 and 30
+  Choice C: 25, 30 and 40
   Choice D: 30 and 40
   Correct Choice: D
   Shuffle Choices: true

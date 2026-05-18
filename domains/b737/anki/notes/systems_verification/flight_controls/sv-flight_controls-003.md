@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,9 +21,9 @@ fields:
   Original Prompt Style: cloze
   Original Text: The {{c1::FSEU}} protects the flaps in this condition.
   Question Stem: The what? protects the flaps in this condition?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: EEC
+  Choice B: DEU
+  Choice C: FCC
   Choice D: FSEU
   Correct Choice: D
   Shuffle Choices: true

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     range of trim settings for takeoff.
   Question Stem: The what? of the Stab Trim Indicator corresponds to the allowable range of
     trim settings for takeoff?
-  Choice A: ''
+  Choice A: 5 to 10 unit range marks
   Choice B: Green band
-  Choice C: ''
-  Choice D: ''
+  Choice C: entire scale
+  Choice D: APL NOSE UP selection settings
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

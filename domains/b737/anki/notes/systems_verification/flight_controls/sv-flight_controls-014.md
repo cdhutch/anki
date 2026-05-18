@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,13 +22,13 @@ fields:
   Original Text: In the event hydraulic systems A and B fail, the ailerons and elevators can
     be operated {{c1::mechanically (manually)}} and the rudder must be operated by the {{c1::standby}}
     system.
-  Question Stem: In the event hydraulic systems A and B fail, the ailerons and elevators can
-    be operated what? and the rudder must be operated by the what? system?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Mechanically (manually)
-  Choice D: ''
-  Correct Choice: C
+  Question Stem: In the event hydraulic systems A and B fail, how can the ailerons and elevators
+    can be operated; which system must be used to operate the rudder?
+  Choice A: Mechanically (manually), Standby
+  Choice B: Automatically, Mechanical
+  Choice C: Mechanically (manually), Pneumatic
+  Choice D: Electrically, Alternate
+  Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     stay in the extend position, the {{c1::LE FLAPS TRANSIT}} Light will be illuminated.
   Question Stem: If we move the flap lever from 5 to 10, but the leading edge devices all
     stay in the extend position, the what? Light will be illuminated?
-  Choice A: ''
-  Choice B: ''
+  Choice A: LE FLAPS EXT
+  Choice B: AUTO SLAT FAIL
   Choice C: LE FLAPS TRANSIT
-  Choice D: ''
+  Choice D: SLATS EXTEND
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

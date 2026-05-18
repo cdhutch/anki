@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,9 +25,9 @@ fields:
   Question Stem: The previous condition has now been corrected *(now the LE DEVICES are properly
     configured). The takeoff warning sounds again. Why?
   Choice A: Stab Trim not in green band or parking brake lever set
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Stab trim in green band and auto throttle switch not armed
+  Choice C: Parking brake released and RTO not selected
+  Choice D: Stab Trim in green band and Stab Trim Cutout Switches in normal
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

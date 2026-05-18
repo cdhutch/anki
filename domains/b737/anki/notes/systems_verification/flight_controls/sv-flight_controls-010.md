@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -26,11 +26,11 @@ fields:
   Question Stem: Subsequently (to the B Hydraulic System failing and placing the B FLT CONTROL
     to STBY RUD, the A Hydraulic System also fails. How would you gain control of the Standby
     Yaw Damper?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Turn the Yaw Damper Switch ON
+  Choice B: Check the B System Low Pressure Light is illuminated
   Choice C: Ensure both A and B Flight Control Switches are in the Standby Rudder Position
     and then place the Yaw Damper Switch ON
-  Choice D: ''
+  Choice D: You cannot recover the Standby Yaw Damper with a Feel Diff Light illuminated
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

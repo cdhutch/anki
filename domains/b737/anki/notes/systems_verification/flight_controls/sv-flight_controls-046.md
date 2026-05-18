@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: When using the SPEED BRAKE in flight, the speedbrake lever should {{c1::not
     be moved beyond the flight detent}}.
   Question Stem: When using the SPEED BRAKE in flight, the speedbrake lever should what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Be moved to any setting
+  Choice B: Be moved to the UP position
   Choice C: Not be moved beyond the flight detent
-  Choice D: ''
+  Choice D: Be moved to the DOWN position
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

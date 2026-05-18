@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     to {{c1::trip OFF and illuminate the Yaw Damper Light}}.
   Question Stem: Placing the B FLT CONTROL switch to STBY RUD will cause the YAW DAMPER switch
     to what?
-  Choice A: ''
+  Choice A: Allow you to reconnect the Yaw Damper by selecting the Yaw Damper switch ON
   Choice B: Trip OFF and illuminate the Yaw Damper Light
-  Choice C: ''
-  Choice D: ''
+  Choice C: Operate the standby FSEU
+  Choice D: Pressurize the A Hydraulic system making it fully operational
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

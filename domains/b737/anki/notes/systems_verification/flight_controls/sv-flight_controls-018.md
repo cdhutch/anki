@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: Leading edge devices are normally operated by {{c1::Hydraulic System B only}}.
   Question Stem: Leading edge devices are normally operated by what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Hydraulic Systems A and B
+  Choice B: Hydraulic System A only
   Choice C: Hydraulic System B only
-  Choice D: ''
+  Choice D: Standby Hydraulic System
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

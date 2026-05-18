@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,11 +23,11 @@ fields:
     spoilers}}.
   Question Stem: Roll control is normally provided by the ailerons, assisted by what?
   Choice A: Flight spoilers
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Ground spoilers
+  Choice C: Autoslats
+  Choice D: Both A and B
   Correct Choice: A
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

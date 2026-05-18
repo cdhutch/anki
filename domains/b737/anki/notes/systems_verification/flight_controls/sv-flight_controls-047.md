@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,11 +23,11 @@ fields:
     above approximately {{c1::135}} knots.
   Question Stem: Hydraulic System A and B pressure to the Main Rudder PCU is reduced at airspeeds
     above approximately what? knots?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 135
-  Correct Choice: D
+  Choice A: 120
+  Choice B: 135
+  Choice C: 140
+  Choice D: 150
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

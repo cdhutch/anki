@@ -26,15 +26,13 @@ fields:
   Question Stem: With the SPEED BRAKE Lever in the DOWN detent, how can the speedbrakes be
     deployed on landing?
   Choice A: The pilot can raise the lever manually
-  Choice B: '[DISTRACTOR NEEDED]'
+  Choice B: The speedbrake is not available
   Choice C: The speedbrake lever will automatically move to full up position when the reverse
     thrust levers are moved to reverse when above 60 knots
-  Choice D: 'Both A and C are correct: The pilot can raise the lever manually; The speedbrake
-    lever will automatically move to full up position when the reverse thrust levers are moved
-    to reverse when above 60 knots'
+  Choice D: Both A and C are correct
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice B
+  Review Notes: null
   Verification Notes: ''
 ---
 

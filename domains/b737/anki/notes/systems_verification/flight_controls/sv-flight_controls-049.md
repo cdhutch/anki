@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     spoilers will retract, if {{c1::either throttle is advanced after landing}}.
   Question Stem: The SPEED BRAKE lever will automatically move to the down detent, and all
     spoilers will retract, if what?
-  Choice A: ''
+  Choice A: Wheel spinup drops below 50 knots
   Choice B: Either throttle is advanced after landing
-  Choice C: ''
-  Choice D: ''
+  Choice C: The TO/GA button is pressed
+  Choice D: Wheel spinup drops below 60 knots
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

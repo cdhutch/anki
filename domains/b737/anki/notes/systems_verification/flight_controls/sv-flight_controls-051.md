@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: During alternate flap operation, the TE flaps are positioned using {{c1::electrical}}
     power.
-  Question Stem: During alternate flap operation, the TE flaps are positioned using what?
-    power?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: During alternate flap operation, the TE flaps are positioned using what kind
+    of power?
+  Choice A: Manual
+  Choice B: Hydraulic
+  Choice C: Electrical or Hydraulic
   Choice D: Electrical
   Correct Choice: D
   Shuffle Choices: true

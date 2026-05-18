@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,10 @@ fields:
     would be no alert since this is the proper setting for TO.}}
   Question Stem: With the STAB TRIM positioned as indicated *(in the green band)*, what would
     happen when the throttles are advanced for TO with all other systems set properly?
-  Choice A: ''
+  Choice A: A steady horn would sound
   Choice B: There would be no alert since this is the proper setting for TO
-  Choice C: ''
-  Choice D: ''
+  Choice C: The trim would automatically go to the proper setting
+  Choice D: An intermittent horn would sound
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

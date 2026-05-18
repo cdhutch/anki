@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,11 +23,11 @@ fields:
     missed approach has been executed, the {{c1::TE flaps can be retracted with the ALT system
     but not the LE devices}}.
   Question Stem: When the flaps have been lowered to 15 degrees with the ALT system and a
-    missed approach has been executed, the what?
-  Choice A: ''
+    missed approach has been executed, which flight controls can be retracted?
+  Choice A: TE and LE flaps will retract with the ALT system
   Choice B: TE flaps can be retracted with the ALT system but not the LE devices
-  Choice C: ''
-  Choice D: ''
+  Choice C: Both TE and LE devices retract normally after a missed approach
+  Choice D: TE flaps cannot be retracted
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

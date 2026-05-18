@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,10 @@ fields:
     warning horn and takeoff config lights}}
   Question Stem: If the trim was set to 10 units nose up *(outside of the green band)* and
     then the throttles are advanced for takeoff, what alert would occur?
-  Choice A: ''
-  Choice B: ''
+  Choice A: A steady horn
+  Choice B: A flashing red light
   Choice C: An intermittent warning horn and takeoff config lights
-  Choice D: ''
+  Choice D: A Stab out of trim Light
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

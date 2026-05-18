@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     to trim if you need more nose down trim? {{c1::Trim manually, using the manual trim wheel.}}
   Question Stem: While applying nose down trim, the electric trim stops. How can you continue
     to trim if you need more nose down trim?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Speed trim system will activate and apply trim
+  Choice B: Have the other pilot push the yoke forward
+  Choice C: Engage autopilot and trim again
   Choice D: Trim manually, using the manual trim wheel
   Correct Choice: D
   Shuffle Choices: true

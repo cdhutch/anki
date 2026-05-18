@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -26,9 +26,9 @@ fields:
     if you still observe these lights *(All LE DEVICES in FULL EXT)*, what?
   Choice A: The flaps have not approached the flaps 10 degree position or beyond in aircraft
     3AA-3LB
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The LEDs are still in transit
+  Choice C: There is a disagreement between the flap handle and the LEDs
+  Choice D: The flap gage is indicating an erroneous position
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -26,9 +26,9 @@ fields:
     during initial taxi-out what?
   Choice A: Check the MEL or call Maintenance. There is a dual channel failure of the Speed
     Trim System
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Reset the SPEED TRIM FAIL light by setting the parking brake
+  Choice C: No action is required. The Speed Trim System only works with the autopilot engaged.
+  Choice D: No action is required. The Speed Trim System will operate 10 seconds after takeoff.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

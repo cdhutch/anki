@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,10 @@ fields:
     aileron, and elevator}}.
   Question Stem: During normal operations with these two FLT CONTROL switches *(FLT CONTROL
     A & FLT CONTROL B)in the ON position, they control pressure to the respective what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Rudder only
+  Choice B: Elevator only
   Choice C: Rudder, aileron, and elevator
-  Choice D: ''
+  Choice D: Aileron only
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

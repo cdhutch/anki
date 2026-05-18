@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: The primary flight controls are normally powered by hydraulic system(s) {{c1::A
     & B}}.
   Question Stem: The primary flight controls are normally powered by hydraulic system(s) what?
-  Choice A: ''
+  Choice A: A only
   Choice B: A & B
-  Choice C: ''
-  Choice D: ''
+  Choice C: B only
+  Choice D: A and Standby
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

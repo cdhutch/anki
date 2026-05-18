@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: {{c1::Aft Overhead
     Panel}}'
   Question Stem: 'MAX 8: The Elevator Jam Landing Assist Switch is located on: what?'
-  Choice A: ''
+  Choice A: First Class Seating Area
   Choice B: Aft Overhead Panel
-  Choice C: ''
-  Choice D: ''
+  Choice C: E/E Compartment
+  Choice D: Fwd Attendant Panel
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

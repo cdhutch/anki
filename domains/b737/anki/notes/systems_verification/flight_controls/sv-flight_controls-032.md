@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     & B hydraulic systems}}.
   Question Stem: Normally, the ailerons, elevators, and rudder are powered by the what?
   Choice A: A & B hydraulic systems
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Standby system
+  Choice C: A hydraulic system only
+  Choice D: B hydraulic system only
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

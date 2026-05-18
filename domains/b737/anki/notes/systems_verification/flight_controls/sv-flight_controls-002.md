@@ -12,7 +12,7 @@ tags:
 - system:flight_controls
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     condition. What could have caused this malfunction? {{c1::Skewed T.E. Flap}}
   Question Stem: When positioning the flaps for takeoff from UP to 1, the crew noticed this
     condition. What could have caused this malfunction?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Skewed L.E. Devices
+  Choice B: Jammed Rudder
   Choice C: Skewed T.E. Flap
-  Choice D: ''
+  Choice D: Jammed L.E. Devices
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
