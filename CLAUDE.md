@@ -30,9 +30,9 @@ Distractors are being authored system-by-system. Workflow per system:
 | Status | Systems |
 |---|---|
 | Finalized (`note_type: systems_verification_exam`) | acars, adverse, emergency_equipment |
-| All distractors complete (`status:verified`) | acars, adverse, apu, atc_tcas_trans, communications, emergency_equipment, flight_instrumentation, fuel, general, gpws, hud, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar |
+| All distractors complete (`status:verified`) | acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, emergency_equipment, flight_controls, flight_instrumentation, fuel, general, gpws, hud, hydraulics, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar |
 | Partially complete — T/F/2-choice blanks only | fms (sv-fms-024 is intentional 2-choice; all others verified) |
-| Distractors not yet authored (`status:draft`) | air_conditioning, autoflight, electrical, engines, fire_protection, flight_controls, flight_warning, hydraulics, pneumatics |
+| Distractors not yet authored (`status:draft`) | autoflight, electrical, engines, fire_protection, flight_warning, pneumatics |
 
 Note: `status:draft` notes import into Anki as **suspended** cards. `status:verified` import as active.
 
@@ -44,11 +44,8 @@ Note: `status:draft` notes import into Anki as **suspended** cards. `status:veri
 | engines | 41 | 39 |
 | autoflight | 42 | 39 |
 | pneumatics | 39 | 39 |
-| air_conditioning | 43 | 41 |
 | flight_warning | 45 | 45 |
 | electrical | 47 | 46 |
-| hydraulics | 50 | 48 |
-| flight_controls | 52 | 49 |
 
 ---
 
