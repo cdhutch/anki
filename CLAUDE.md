@@ -184,12 +184,22 @@ Preset: **B737 FSRS Core** — 20 new/day
 preset assigned. The 40 source notes (mnemonics, sequences, phase-recalls) have their
 deck paths corrected and are ready to sync via `make triggers`.
 
-### Staged new-card script
+### Staged card script
 
 `tools/anki/sync/set_stage.py` activates/deactivates Core decks by study stage.
-Works by suspending/unsuspending new (unseen) cards only — review/learning cards
-are never touched. A `--seat` filter then suspends all cards tagged for the
-opposite crew role across all B737 decks (including review/learning cards).
+
+- **Active decks**: suspended new cards are unsuspended.
+- **Inactive decks**: ALL unsuspended cards (any state — new, learning, review)
+  are suspended. FSRS history is preserved; cards resume from where they left off
+  when the deck is reactivated.
+- **Seat filter**: suspends all cards tagged for the opposite crew role across all
+  B737 decks (including review/learning cards).
+- **Flow sequence filter**: `type:flow_sequence` cards are always suspended
+  regardless of stage (unless tagged `always_show`).
+- **Override tags** (applied last, beat everything else):
+  - `always_show` — unsuspend card regardless of stage or seat
+  - `always_hide` — suspend card regardless of stage or seat
+  - If both tags present, `always_show` wins.
 
 Stage definitions:
 - Stage 1: Limits::Non-Trivia, QRC, Triggers_and_Flows::Triggers
@@ -209,20 +219,21 @@ python tools/anki/sync/set_stage.py --stage 2              # FO seat (default)
 python tools/anki/sync/set_stage.py --stage 2 --seat captain
 ```
 
-### Flow detail filter script
+### Flow bookend notes
 
-`tools/anki/sync/set_flow_detail.py` suspends detailed flow sub-cards while
-preserving cards tagged `flow_detail:keep`. Use it to reduce noise within a
-flow to only the cards you want to actively study.
+Each flow has a companion `*-bookends.md` note in `triggers_and_flows/` that
+asks for the first and last action only. These are tagged `always_show` so they
+remain active at all stages. Single-item flows use "Only action:" on the back.
 
-Currently supports `--flow preflight`. Extend `SUPPORTED_FLOWS` in the script
-to add other flows (e.g. `fo`, `captain`) once those tags are in use.
+Filename convention: `flow-fo-<name>-bookends.md` for FO flows,
+`flow-pm-<name>-bookends.md` / `flow-pf-<name>-bookends.md` for PM/PF flows,
+`flow-<name>-bookends.md` for joint (shared) flows.
 
-Usage:
-```bash
-python tools/anki/sync/set_flow_detail.py --flow preflight --dry-run
-python tools/anki/sync/set_flow_detail.py --flow preflight
-```
+### Flow detail filter script (retired)
+
+`tools/anki/sync/set_flow_detail.py` is superseded by `set_stage.py`.
+The `always_show` / `always_hide` override tags in `set_stage.py` replace
+its functionality. The file is kept for reference but should not be used.
 
 ---
 
@@ -256,5 +267,6 @@ python tools/anki/sync/set_flow_detail.py --flow preflight
 | `tools/anki/setup/create_sv_exam_preset.py` | Creates "B737 SV Exam" deck preset |
 | `tools/anki/setup/delete_sv_cloze.py` | Deletes all legacy B737_SV_Cloze notes |
 | `tools/anki/setup/update_sv_exam_templates.py` | Creates B737_SV_MCQ / B737_SV_TF note types |
-| `tools/anki/sync/set_stage.py` | Activate/deactivate Core decks by study stage; apply seat filter |
-| `tools/anki/sync/set_flow_detail.py` | Suspend detailed flow cards; exempt `flow_detail:keep` cards |
+| `tools/anki/sync/set_stage.py` | Activate/deactivate Core decks by study stage; seat filter; always_show/always_hide overrides |
+| `tools/anki/sync/set_flow_detail.py` | Retired — superseded by set_stage.py override tags |
+| `domains/b737/anki/notes/triggers_and_flows/*-bookends.md` | Flow bookend notes (first/last action per flow; always_show) |
