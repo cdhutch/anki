@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: flow
-note_id: flow-after-start-flight-controls
+note_id: flow-fo-preflight-bookends
 anki:
   model: B737_Structured
   deck: B737::Core::Triggers_and_Flows::Flows
@@ -10,26 +10,26 @@ tags:
 - domain:b737
 - topic:triggers_and_flows
 - type:flow
-- flow:after_start
-- subflow:flight_controls
+- flow:preflight
+- crew_role:first_officer
+- always_show
 - source:flows
 - status:unverified
-- always_show
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
-  Source Location: After Start Flight Control Sub-Flow
+  Source Location: First Officer Preflight
   Verification Notes: null
 ---
 
 # front_md
 
-**After Start — Flight Control Sub-Flow**
+**First Officer — Preflight**
 
-What is the flow?
+What is the first and last action in this flow?
 
 # back_md
 
-**After Start — Flight Control Sub-Flow**
+**First Officer — Preflight**
 
-- When commanded, FLAPS: SET
-- Flight control check: PERFORM
+First: Audio Control Panel  
+Last: EFB

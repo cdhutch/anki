@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: flow
-note_id: flow-after-start-flight-controls
+note_id: flow-fo-after-start-bookends
 anki:
   model: B737_Structured
   deck: B737::Core::Triggers_and_Flows::Flows
@@ -11,25 +11,25 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:after_start
-- subflow:flight_controls
+- crew_role:first_officer
+- always_show
 - source:flows
 - status:unverified
-- always_show
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
-  Source Location: After Start Flight Control Sub-Flow
+  Source Location: First Officer After Start
   Verification Notes: null
 ---
 
 # front_md
 
-**After Start — Flight Control Sub-Flow**
+**First Officer — After Start**
 
-What is the flow?
+What is the first and last action in this flow?
 
 # back_md
 
-**After Start — Flight Control Sub-Flow**
+**First Officer — After Start**
 
-- When commanded, FLAPS: SET
-- Flight control check: PERFORM
+First: Anti-ice  
+Last: A/C Panel
