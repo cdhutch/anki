@@ -60,6 +60,12 @@ help:
 	@echo "  limits-fix          Canonicalize CNSF formatting for Limits notes"
 	@echo "  limits-clean        Remove generated Limits TSV file"
 	@echo ""
+	@echo "Cats and Dogs"
+	@echo "  cats                Export and sync Cats and Dogs notes to Anki"
+	@echo "  cats-check          Check CNSF formatting for Cats and Dogs notes (no changes)"
+	@echo "  cats-fix            Canonicalize CNSF formatting for Cats and Dogs notes"
+	@echo "  cats-clean          Remove generated Cats and Dogs TSV file"
+	@echo ""
 
 # -------------------------------------------------------------------
 # Git Utilities
@@ -206,6 +212,32 @@ triggers-lint:
 	$(PYTHON) tools/anki/lint_flows.py
 
 triggers-fmt: triggers-fix triggers-lint
+
+# -------------------------------------------------------------------
+# Cats and Dogs
+# -------------------------------------------------------------------
+
+CATS_ROOT := domains/b737/anki/notes/cats_and_dogs
+CATS_TSV  := $(BUILD_DIR)/cats-and-dogs.tsv
+
+.PHONY: cats cats-check cats-fix cats-clean
+
+cats-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(CATS_ROOT)/*.md
+
+cats-fix:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(CATS_ROOT)/*.md
+
+cats-clean:
+	rm -f $(CATS_TSV)
+
+cats: cats-check
+	mkdir -p $(BUILD_DIR)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(CATS_ROOT) \
+		--out $(CATS_TSV) \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(CATS_TSV)
 
 # -------------------------------------------------------------------
 # Procedures
