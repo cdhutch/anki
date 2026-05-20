@@ -178,11 +178,22 @@ def write_tsv(out_path: Path, notes: List[CnsfEnvelope], extra_field_names: List
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    profile = load_export_profile(notes[0].model)
-    header = ["model", "deck"] + list(profile["fields"].keys())
+    # Build header from the union of all model profiles present in the notes,
+    # preserving first-seen order so each model's columns are contiguous.
+    seen_models: set[str] = set()
+    all_profile_fields: list[str] = []
+    for env in notes:
+        if env.model not in seen_models:
+            seen_models.add(env.model)
+            _p = load_export_profile(env.model)
+            for k in _p["fields"].keys():
+                if k not in all_profile_fields:
+                    all_profile_fields.append(k)
+    header = ["model", "deck"] + all_profile_fields
 
     with out_path.open("w", encoding="utf-8", newline="") as f:
-        w = csv.DictWriter(f, fieldnames=header, delimiter="\t", quoting=csv.QUOTE_MINIMAL)
+        w = csv.DictWriter(f, fieldnames=header, delimiter="\t", quoting=csv.QUOTE_MINIMAL,
+                           restval="")
         w.writeheader()
 
         def _tsv_safe(v: str) -> str:

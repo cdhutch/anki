@@ -138,6 +138,10 @@ def parse_tsv(path: Path) -> Tuple[List[str], List[TsvRow]]:
 def build_fields_payload(row: TsvRow, model_fields: List[str] | None = None) -> Dict[str, str]:
     """
     Build the Anki fields payload, with light remapping for model-specific field names.
+
+    When model_fields is provided, only fields that exist in the model are included.
+    This allows a multi-model TSV (union header) to be imported without spurious
+    unknown-field errors from columns that belong to other models.
     """
     model_field_set = set(model_fields or [])
 
@@ -145,13 +149,22 @@ def build_fields_payload(row: TsvRow, model_fields: List[str] | None = None) -> 
     if model_fields and "NoteID" not in model_field_set and "note_id" in model_field_set:
         note_id_field = "note_id"
 
-    fields: Dict[str, str] = {
-        note_id_field: row.note_id,
-        "Front": row.front_html,
-        "Back": row.back_html,
-    }
+    fields: Dict[str, str] = {}
+
+    # NoteID — always present in our models.
+    if not model_fields or note_id_field in model_field_set:
+        fields[note_id_field] = row.note_id
+
+    # Front / Back — only present in models that use inline card templates.
+    if not model_fields or "Front" in model_field_set:
+        fields["Front"] = row.front_html
+    if not model_fields or "Back" in model_field_set:
+        fields["Back"] = row.back_html
 
     for k, v in row.extra_fields.items():
+        # Skip columns that belong to a different model in a union-header TSV.
+        if model_fields and k not in model_field_set:
+            continue
         fields[k] = v
 
     return fields

@@ -261,6 +261,19 @@ def sync_model(
         url=ANKI_URL,
     )
     print(f"    templates: updated ({actual_template_name!r})")
+
+    # Remove any stray extra templates — a model with >1 template generates
+    # multiple cards per note (Card 1, Card 2, ...) which is never correct here.
+    stray = [t for t in existing_template_names if t != actual_template_name]
+    for stray_name in stray:
+        print(f"    ⚠  removing stray template {stray_name!r} ...")
+        anki_request(
+            "removeCardFromTemplate",
+            {"modelName": model_name, "templateName": stray_name},
+            url=ANKI_URL,
+        )
+        print(f"    ✓  removed {stray_name!r}")
+
     anki_request(
         "updateModelStyling",
         {"model": {"name": model_name, "css": css}},

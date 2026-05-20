@@ -4,11 +4,13 @@ CNSF v0 parser
 
 Parses a single CNSF note markdown file:
 - YAML front matter (required)
-- two required sections: "# front_md" and "# back_md"
+- optional sections: "# front_md" and "# back_md"
+  (both absent → note uses Anki model templates; both present → inline card content;
+   exactly one present → error)
 Returns:
 - meta: dict
-- front_md: str
-- back_md: str
+- front_md: str  (empty string if note uses model templates)
+- back_md: str   (empty string if note uses model templates)
 """
 
 from __future__ import annotations
@@ -59,8 +61,13 @@ def _split_sections(body: str, path: Path) -> tuple[str, str]:
     m_front = _FRONT_RE.search(body)
     m_back = _BACK_RE.search(body)
 
+    # Both absent — note uses model templates; front_md/back_md not required.
+    if not m_front and not m_back:
+        return "", ""
+    # Only one present — malformed.
     if not m_front or not m_back:
-        raise ValueError(f"{path}: must contain both '# front_md' and '# back_md' sections.")
+        missing = "# front_md" if not m_front else "# back_md"
+        raise ValueError(f"{path}: found one of front_md/back_md but not both (missing {missing}).")
     if m_back.start() < m_front.start():
         raise ValueError(f"{path}: '# back_md' must come after '# front_md'.")
 
