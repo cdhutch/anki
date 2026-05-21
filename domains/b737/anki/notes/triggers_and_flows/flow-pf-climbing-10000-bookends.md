@@ -12,9 +12,9 @@ tags:
 - type:flow
 - flow:climbing_10000
 - crew_role:pilot_flying
-- always_show
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: PF Climbing Through 10,000 ft AGL

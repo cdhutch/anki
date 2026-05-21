@@ -15,6 +15,7 @@ tags:
 - sequence:22
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: First Officer Descent

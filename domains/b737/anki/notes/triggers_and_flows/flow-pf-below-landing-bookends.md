@@ -12,9 +12,9 @@ tags:
 - type:flow
 - flow:below_landing
 - crew_role:pilot_flying
-- always_show
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: PF Below Landing

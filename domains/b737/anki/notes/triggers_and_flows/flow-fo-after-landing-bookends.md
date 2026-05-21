@@ -12,9 +12,9 @@ tags:
 - type:flow
 - flow:after_landing
 - crew_role:first_officer
-- always_show
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: After Landing

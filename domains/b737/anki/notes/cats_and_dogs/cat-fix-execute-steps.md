@@ -22,6 +22,6 @@ fields:
 
 # back_md
 
-- PM executes when stable
-- Assign PF
 - Communicate between PF/PM
+- Captain assigns PF and PM
+- PM executes when stable

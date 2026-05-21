@@ -14,7 +14,7 @@ tags:
 - subflow:engines_stabilized
 - source:flows
 - status:unverified
-- always_show
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: After Start Both Engines Stabilized
