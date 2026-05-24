@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: The AC standby bus can be powered by {{c1::the battery (through the static
     inverter)}} if its normal power source fails.
-  Question Stem: The AC standby bus can be powered by what? if its normal power source fails?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: What powers the AC standby bus if its normal power source fails?
+  Choice A: AC Transfer Bus No. 1
+  Choice B: Generator Bus No. 2
+  Choice C: The essential bus
   Choice D: The battery (through the static inverter)
   Correct Choice: D
   Shuffle Choices: true

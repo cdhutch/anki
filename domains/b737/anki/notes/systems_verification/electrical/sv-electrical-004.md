@@ -22,12 +22,12 @@ fields:
   Original Text: During landing with a loss of both generators, you check the QRH additional
     information. Auto Brakes and Auto Speed Brakes are available. {{c1::False}}
   Question Stem: During landing with a loss of both generators, you check the QRH additional
-    information. Auto Brakes and Auto Speed Brakes are available what?
-  Choice A: 'False'
-  Choice B: ''
+    information. Auto Brakes and Auto Speed Brakes are available.
+  Choice A: 'True'
+  Choice B: 'False'
   Choice C: ''
   Choice D: ''
-  Correct Choice: A
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

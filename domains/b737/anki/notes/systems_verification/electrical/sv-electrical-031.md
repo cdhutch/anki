@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: Since AC Transfer Bus 1 is dead, {{c1::the battery charger is being powered
     by AC Ground Service Bus 2}}.
-  Question Stem: Since AC Transfer Bus 1 is dead, what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: 'Fill in the blank: Since AC Transfer Bus 1 is dead, ____.'
+  Choice A: The battery is not being charged because AC Ground Service Bus 1 is also dead
+  Choice B: The battery is being charged through the static inverter
+  Choice C: TR3 is powering the Battery Bus and charging the battery
   Choice D: The battery charger is being powered by AC Ground Service Bus 2
   Correct Choice: D
   Shuffle Choices: true

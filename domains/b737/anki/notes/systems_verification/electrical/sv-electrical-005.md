@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: If the TR Unit light illuminates, inflight, it means ____ have failed. {{c1::TR1
     has failed or TR2 and TR3}}
-  Question Stem: If the TR Unit light illuminates inflight, what have failed?
-  Choice A: ''
+  Question Stem: If the TR Unit light illuminates in flight, what has failed?
+  Choice A: Any TR unit
   Choice B: TR1 has failed or TR2 and TR3
-  Choice C: ''
-  Choice D: ''
+  Choice C: TR2 has failed or TR1 and TR3
+  Choice D: TR3 has failed or TR1 and TR2
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

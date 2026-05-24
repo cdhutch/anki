@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: In flight, these two lights *(Gen 1 SOURCE OFF and Gen 1 GEN OFF BUS)* indicate
     that {{c1::either IDG 1 has failed or engine 1 has shut down}}.
-  Question Stem: In flight, these two lights *(Gen 1 SOURCE OFF and Gen 1 GEN OFF BUS)* indicate
-    that what?
-  Choice A: ''
+  Question Stem: In flight, what do these two lights *(Gen 1 SOURCE OFF and Gen 1 GEN OFF
+    BUS)* indicate?
+  Choice A: Bus tie breaker 1 is open
   Choice B: Either IDG 1 has failed or engine 1 has shut down
-  Choice C: ''
-  Choice D: ''
+  Choice C: Transfer Buses 1 and 2 have lost power
+  Choice D: Transfer Bus 1 has lost power
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

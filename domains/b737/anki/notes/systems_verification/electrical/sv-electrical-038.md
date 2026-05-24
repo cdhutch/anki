@@ -22,10 +22,10 @@ fields:
   Original Text: What does an illuminated ELEC light, on the AC and DC Metering Panel, mean?
     {{c1::A Standby Power or DC system fault has occurred.}}
   Question Stem: What does an illuminated ELEC light, on the AC and DC Metering Panel, mean?
-  Choice A: ''
-  Choice B: ''
+  Choice A: TR1 has failed
+  Choice B: TR2 and TR3 have failed
   Choice C: A Standby Power or DC system fault has occurred
-  Choice D: ''
+  Choice D: A fault exists in the AC or standby power system
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

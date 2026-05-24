@@ -25,11 +25,11 @@ fields:
     #1 GEN OFF BUS}}'
   Question Stem: 'In-flight, engine #1 experiences a loss of all thrust as shown on the Upper
     Display Unit above. This situation would also be accompanied by which of the following
-    electrical system lights on the overhead panel what?'
-  Choice A: ''
+    electrical system lights on the overhead panel?'
+  Choice A: '#1 ENGINE CONTROL light'
   Choice B: '# 1 SOURCE OFF, DRIVE lights and #1 GEN OFF BUS'
-  Choice C: ''
-  Choice D: ''
+  Choice C: 'A steady OIL FILTER BYPASS alert for Engine #1'
+  Choice D: '#1 EEC "ALTN" light'
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

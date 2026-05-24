@@ -22,11 +22,11 @@ fields:
   Original Text: Following the loss of both generators, which buses remain powered? {{c1::Battery
     Bus, Hot Battery Bus, Switched Hot Battery Bus, DC Standby Bus, AC Standby Bus}}
   Question Stem: Following the loss of both generators, which buses remain powered?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Only the Hot Battery Bus and Switched Hot Battery Bus
+  Choice B: All buses remain powered for 5 minutes, then the main buses are shed
   Choice C: Battery Bus, Hot Battery Bus, Switched Hot Battery Bus, DC Standby Bus, AC Standby
     Bus
-  Choice D: ''
+  Choice D: Only AC and DC Standby Buses
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

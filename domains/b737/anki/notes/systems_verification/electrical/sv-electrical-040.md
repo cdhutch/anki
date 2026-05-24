@@ -23,13 +23,13 @@ fields:
     is detected with the battery switch on. How long will the battery provide power? A fully
     charged battery provides a minimum of {{c1::30}} minutes of standby power.
   Question Stem: The BAT DISCHARGE Light illuminated indicates excessive battery discharge
-    is detected with the battery switch on. How long will the battery provide power? A fully
-    charged battery provides a minimum of what? minutes of standby power?
-  Choice A: 30
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
+    is detected with the battery switch on. How long will a fully charged battery provide
+    power?
+  Choice A: 15 minutes
+  Choice B: 30 minutes
+  Choice C: 35 minutes
+  Choice D: 45 minutes
+  Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

@@ -22,12 +22,12 @@ fields:
   Original Text: Under what conditions can External power power one AC Transfer Bus, and the
     APU the other Transfer Bus ? {{c1::No condition. The electrical system will not allow
     it.}}
-  Question Stem: Under what conditions can External power power one AC Transfer Bus, and the
-    APU the other Transfer Bus ?
+  Question Stem: Under what conditions can external power power one AC Transfer Bus, and the
+    APU the other Transfer Bus?
   Choice A: No condition. The electrical system will not allow it
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Only if you are on the ground
+  Choice C: If the Bus Transfer Switch is in AUTO
+  Choice D: If volts and frequencies check good
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

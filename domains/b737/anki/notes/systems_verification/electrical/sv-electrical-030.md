@@ -22,12 +22,12 @@ fields:
   Original Text: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
     BUS for GEN 1)*, which of the following is also true? {{c1::AC Standby Bus is being powered
     by the static inverter.}}
-  Question Stem: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
+  Question Stem: With these lights illuminated *(TRANSFER BUS OFF, SOURCE OFF, and GEN OFF
     BUS for GEN 1)*, which of the following is also true?
-  Choice A: ''
-  Choice B: ''
+  Choice A: All Galley Buses are still powered
+  Choice B: TR1 is powered
   Choice C: AC Standby Bus is being powered by the static inverter
-  Choice D: ''
+  Choice D: AC Main Bus 1 is still powered
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: On the ground with the APU powering the electrical systems, the APU GEN OFF
     BUS light will be {{c1::OFF}}.
-  Question Stem: On the ground with the APU powering the electrical systems, the APU GEN OFF
-    BUS light will be what?
-  Choice A: ''
+  Question Stem: 'Fill in the blank: On the ground with the APU powering the electrical systems,
+    the APU GEN OFF BUS light will be ____.'
+  Choice A: OFF until you turn off the APU when it comes back on
   Choice B: 'OFF'
-  Choice C: ''
-  Choice D: ''
+  Choice C: ON until you select GEN 1 or GEN 2 ON
+  Choice D: 'ON'
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

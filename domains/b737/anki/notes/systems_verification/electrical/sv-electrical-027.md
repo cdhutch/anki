@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: Circuit breakers are allowed to be pulled and reset {{c1::only if specified
     in a QRH procedure}}.
-  Question Stem: Circuit breakers are allowed to be pulled and reset what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: When are circuit breakers allowed to be pulled and reset?
+  Choice A: Only for galleys or the fuel quantity indicating system
+  Choice B: Anytime on the ground or in flight
+  Choice C: If necessary for flight, only after a one minute cooling period
   Choice D: Only if specified in a QRH procedure
   Correct Choice: D
   Shuffle Choices: true

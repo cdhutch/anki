@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: If AC Transfer Bus 1 fails, the AC Standby Bus is powered by the {{c1::battery
     / battery charger}}.
-  Question Stem: If AC Transfer Bus 1 fails, the AC Standby Bus is powered by the what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: If AC Transfer Bus 1 fails, what powers the AC Standby Bus?
+  Choice A: TR3
+  Choice B: AC Transfer Bus 2 with the Bus Transfer switch in Auto
   Choice C: Battery / battery charger
-  Choice D: ''
+  Choice D: AC and DC Standby Buses are not powered
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

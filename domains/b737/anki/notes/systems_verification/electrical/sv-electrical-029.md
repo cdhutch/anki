@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
     BUS for GEN 1)*, {{c1::the AC Transfer Bus 1 is no longer powered}}.
-  Question Stem: With these lights illuminated *(TRANFER BUS OFF, SOURCE OFF, and GEN OFF
-    BUS for GEN 1)*, what?
-  Choice A: ''
+  Question Stem: With these lights illuminated *(TRANSFER BUS OFF, SOURCE OFF, and GEN OFF
+    BUS for GEN 1)*, what does this indicate?
+  Choice A: The AC Transfer Bus 2 is no longer powered
   Choice B: The AC Transfer Bus 1 is no longer powered
-  Choice C: ''
-  Choice D: ''
+  Choice C: The AC Transfer Bus 1 is being powered by IDG 2
+  Choice D: All the buses are powered
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

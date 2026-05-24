@@ -20,10 +20,10 @@ fields:
   Original Note ID: electrical-039
   Original Prompt Style: cloze
   Original Text: The DC Standby Bus can be powered by {{c1::TR1, TR2, TR3, and the battery}}.
-  Question Stem: The DC Standby Bus can be powered by what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: What can power the DC Standby Bus?
+  Choice A: AC Transfer Bus 1 and the battery
+  Choice B: AC Transfer Bus 2 only
+  Choice C: the battery only
   Choice D: TR1, TR2, TR3, and the battery
   Correct Choice: D
   Shuffle Choices: true

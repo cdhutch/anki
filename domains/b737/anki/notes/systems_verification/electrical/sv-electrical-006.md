@@ -21,12 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: If MASTER CAUTION, ELEC light on System Annuciator, and ELEC light on the
     overhead panel; {{c1::If this light remains on, do not take off}}.
-  Question Stem: If MASTER CAUTION, ELEC light on System Annuciator, and ELEC light on the
-    overhead panel; what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: 'Fill in the blank: If MASTER CAUTION, ELEC light on System Annunciator,
+    and ELEC light on the overhead panel, ____.'
+  Choice A: If this light remains on, do not press the AFDS APP mode
+  Choice B: Resetting the Master Caution will not extinguish any of the lights
   Choice C: If this light remains on, do not take off
-  Choice D: ''
+  Choice D: Resetting the Master Caution will extinguish all of the lights, indicating a minor
+    fault
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

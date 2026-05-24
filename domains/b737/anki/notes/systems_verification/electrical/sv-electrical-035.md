@@ -20,10 +20,10 @@ fields:
   Original Note ID: electrical-035
   Original Prompt Style: cloze
   Original Text: The static inverter is powered by {{c1::the battery}}.
-  Question Stem: The static inverter is powered by what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: What powers the static inverter?
+  Choice A: 'DC Bus #1'
+  Choice B: 'DC Bus #2'
+  Choice C: TR3
   Choice D: The battery
   Correct Choice: D
   Shuffle Choices: true

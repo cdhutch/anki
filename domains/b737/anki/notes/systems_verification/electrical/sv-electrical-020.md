@@ -22,12 +22,12 @@ fields:
   Original Text: If you see these lights in flight (*both pairs of TRANFER BUS OFF, SOURCE
     OFF, and GEN OFF BUS*), what do they indicate? {{c1::Power has been lost to both AC Transfer
     Busses.}}
-  Question Stem: If you see these lights in flight (*both pairs of TRANFER BUS OFF, SOURCE
+  Question Stem: If you see these lights in flight (*both pairs of TRANSFER BUS OFF, SOURCE
     OFF, and GEN OFF BUS*), what do they indicate?
-  Choice A: Power has been lost to both AC Transfer Busses
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice A: Power has been lost to both AC Transfer Buses
+  Choice B: The Battery Bus and Switched Hot Battery Bus are not powered
+  Choice C: The Standby DC Bus is not powered
+  Choice D: The Standby AC Bus is not powered
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

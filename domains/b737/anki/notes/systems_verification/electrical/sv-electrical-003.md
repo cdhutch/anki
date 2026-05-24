@@ -22,12 +22,12 @@ fields:
   Original Text: How long can you expect Standby Power to last following a loss of both generators?
     {{c1::A minimum of 30 min}}
   Question Stem: How long can you expect Standby Power to last following a loss of both generators?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: A minimum of 30 min
-  Correct Choice: D
-  Shuffle Choices: true
+  Choice A: A minimum of 15 min
+  Choice B: A minimum of 30 min
+  Choice C: A minimum of 45 min
+  Choice D: A minimum of 60 min
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

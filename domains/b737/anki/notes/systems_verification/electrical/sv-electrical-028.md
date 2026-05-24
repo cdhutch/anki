@@ -20,11 +20,11 @@ fields:
   Original Note ID: electrical-028
   Original Prompt Style: cloze
   Original Text: Normally, the AC electrical system is run {{c1::isolated}}.
-  Question Stem: Normally, the AC electrical system is run what?
+  Question Stem: Normally, how is the AC electrical system run?
   Choice A: Isolated
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Paralleled
+  Choice C: In Sequence
+  Choice D: Alternately between AC Transfer Bus 1 and AC Transfer Bus 2
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

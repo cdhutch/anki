@@ -22,13 +22,13 @@ fields:
   Original Text: In a normally operating AC electrical system, if the Bus Transfer Switch
     is moved to OFF, {{c1::and if a generator subsequently fails, the bus ties will not close
     to transfer power}}.
-  Question Stem: In a normally operating AC electrical system, if the Bus Transfer Switch
-    is moved to OFF, what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: And if a generator subsequently fails, the bus ties will not close to transfer
+  Question Stem: 'Fill in the blank: In a normally operating AC electrical system, if the
+    Bus Transfer Switch is moved to OFF, ____.'
+  Choice A: Both Transfer Buses are unpowered
+  Choice B: The AC Standby Bus reverts to battery through the inverter
+  Choice C: and if a generator subsequently fails, the bus ties will not close to transfer
     power
-  Choice D: ''
+  Choice D: Power is removed from AC Transfer Bus 2 only
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

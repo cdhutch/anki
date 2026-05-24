@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: When illuminated, the ELEC light on the Overhead panel indicates {{c1::a
     fault exists in the DC or standby power systems}}.
-  Question Stem: When illuminated, the ELEC light on the Overhead panel indicates what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: A fault exists in the DC or standby power systems
+  Question Stem: When illuminated, what does the ELEC light on the Overhead panel indicate?
+  Choice A: a fault located in one or more of the AC main systems
+  Choice B: a fault exists in the DC or AC system
+  Choice C: a normal situation, and it will go out after the APU is started
+  Choice D: a fault exists in the DC or standby power systems
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null

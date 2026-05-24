@@ -22,11 +22,11 @@ fields:
   Original Text: The QRH directs the crew to attempt a start of the APU. If the aircraft is
     below 25,000 ft, the APU {{c1::should start with battery power and fuel suction feed}}.
   Question Stem: The QRH directs the crew to attempt a start of the APU. If the aircraft is
-    below 25,000 ft, the APU what?
-  Choice A: ''
+    below 25,000 ft, what should happen with the APU?
+  Choice A: Should start using power from TR1 and fuel suction feed
   Choice B: Should start with battery power and fuel suction feed
-  Choice C: ''
-  Choice D: ''
+  Choice C: Will not start because there is no fuel boost pump pressure
+  Choice D: Will not start since AC power is lost
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -21,12 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: If during flight, the master caution light and the electric annunciater alert
     you to the BAT DISCHARGE light being on, {{c1::the battery is indicating excessive discharge}}.
-  Question Stem: If during flight, the master caution light and the electric annunciater alert
-    you to the BAT DISCHARGE light being on, what?
-  Choice A: ''
+  Question Stem: 'Fill in the blank: If during flight, the master caution light and the electric
+    annunciator alert you to the BAT DISCHARGE light being on, ____.'
+  Choice A: The light should extinguish when the battery charger reconnects to ground service
+    bus 1
   Choice B: The battery is indicating excessive discharge
-  Choice C: ''
-  Choice D: ''
+  Choice C: The battery is discharging while the battery charger switches to the number one
+    ground service bus
+  Choice D: The battery charger is now charging the battery through the battery bus
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

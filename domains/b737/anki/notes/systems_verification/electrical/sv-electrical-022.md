@@ -21,14 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: APU power is not available. Since we are on emergency power, the Right IRS
     is on DC power and will remain on DC for {{c1::5}} minutes.
-  Question Stem: APU power is not available. Since we are on emergency power, the Right IRS
-    is on DC power and will remain on DC for what? minutes?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 5
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Question Stem: APU power is not available. Since we are on emergency power, for how many
+    minutes will the Right IRS remain on DC power?
+  Choice A: 2
+  Choice B: 5
+  Choice C: 10
+  Choice D: 12
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

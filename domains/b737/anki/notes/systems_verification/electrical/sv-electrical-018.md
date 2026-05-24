@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: The DC Cross Bus Tie Relay will open {{c1::at glideslope capture during a
     flight director or autopilot ILS approach}}.
-  Question Stem: The DC Cross Bus Tie Relay will open what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: When does the DC Cross Bus Tie Relay automatically open?
+  Choice A: When TR3 fails
+  Choice B: When power for one DC bus fails
   Choice C: At glideslope capture during a flight director or autopilot ILS approach
-  Choice D: ''
+  Choice D: When the Battery Switch is moved to BATT
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

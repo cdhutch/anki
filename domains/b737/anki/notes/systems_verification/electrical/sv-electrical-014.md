@@ -23,10 +23,11 @@ fields:
     statement is true? {{c1::IDG 2 is powering both AC Transfer Busses.}}
   Question Stem: With the GEN 1 SOURCE OFF and GEN 1 GEN OFF BUS lights illuminated, which
     statement is true?
-  Choice A: ''
-  Choice B: ''
-  Choice C: IDG 2 is powering both AC Transfer Busses
-  Choice D: ''
+  Choice A: Neither of the AC Transfer Buses are powered
+  Choice B: IDG 2 is powering AC Transfer Bus 2, while the APU is powering AC Transfer Bus
+    1
+  Choice C: IDG 2 is powering both AC Transfer Buses
+  Choice D: IDG 2 is powering AC Transfer Bus 2. AC Transfer Bus 1 is not powered
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

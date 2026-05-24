@@ -22,15 +22,15 @@ fields:
   Original Text: During an ILS approach, the cross bus tie relay automatically opens at glideslope
     capture to {{c1::prevent single bus failure from affecting both navigation receivers and
     flight control computers}}.
-  Question Stem: During an ILS approach, the cross bus tie relay automatically opens at glideslope
-    capture to what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Prevent single bus failure from affecting both navigation receivers and flight
+  Question Stem: During an ILS approach, why does the cross bus tie relay automatically open
+    at glideslope capture?
+  Choice A: To provide more power to the AC Standby bus
+  Choice B: to ensure that the Standby DC bus is powered
+  Choice C: To prevent single bus failure from affecting both navigation receivers and flight
     control computers
-  Choice D: ''
+  Choice D: All of the above
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

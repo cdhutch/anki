@@ -21,11 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: In flight, if an engine generator fails, load shedding {{c1::is designed
     to shed electrical load incrementally}}.
-  Question Stem: In flight, if an engine generator fails, load shedding what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: Is designed to shed electrical load incrementally
+  Question Stem: 'Fill in the blank: In flight, if an engine generator fails, load shedding
+    ____.'
+  Choice A: Would not occur if the Bus Transfer Switch is in AUTO
+  Choice B: Would occur in the main buses first, followed by all galleys
+  Choice C: Is designed to shed the main buses only
+  Choice D: is designed to shed electrical load incrementally
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null

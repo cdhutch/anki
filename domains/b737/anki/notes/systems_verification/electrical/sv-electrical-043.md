@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: With Standby Power OFF Light illuminated , you could power the standby busses
     directly from the battery by {{c1::placing the standby power switch to BAT}}.
-  Question Stem: With Standby Power OFF Light illuminated , you could power the standby busses
-    directly from the battery by what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: With the Standby Power OFF Light illuminated, how could you power the Standby
+    Buses directly from the battery?
+  Choice A: Turning the APU off
+  Choice B: Placing the battery switch to ON
+  Choice C: Leaving the transfer bus switch in AUTO
   Choice D: Placing the standby power switch to BAT
   Correct Choice: D
   Shuffle Choices: true

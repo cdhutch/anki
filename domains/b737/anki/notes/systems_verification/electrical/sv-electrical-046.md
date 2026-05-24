@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: If the TR Unit light illuminates on the ground, it means {{c1::any TR unit}}
     has/have failed.
-  Question Stem: If the TR Unit light illuminates on the ground, it means what? has/have failed?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: If the TR Unit light illuminates on the ground, what has/have failed?
+  Choice A: TR1 has failed or TR2 and TR3
+  Choice B: TR2 has failed or TR1 and TR3
   Choice C: Any TR unit
-  Choice D: ''
+  Choice D: TR3 has failed or TR1 and TR2
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

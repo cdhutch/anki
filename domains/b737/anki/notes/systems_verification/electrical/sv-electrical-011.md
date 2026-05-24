@@ -23,12 +23,12 @@ fields:
     direct the crew to start the APU. If the APU was used for just an electrical source, the
     maximum altitude for APU operation is {{c1::41,000}} feet MSL.'
   Question Stem: 'You have confirmed that the #1 Engine and IDG have failed. The QRH will
-    direct the crew to start the APU. If the APU was used for just an electrical source, the
-    maximum altitude for APU operation is what? feet MSL?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 41,000
+    direct the crew to start the APU. If the APU was used for just an electrical source, what
+    is the maximum altitude for APU operation?'
+  Choice A: 10,000' MSL
+  Choice B: 17,000' MSL
+  Choice C: 20,000' MSL
+  Choice D: 41,000' MSL
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null

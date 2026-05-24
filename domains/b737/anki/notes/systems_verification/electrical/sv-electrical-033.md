@@ -21,14 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'With standby electrical power only, the Captain will be able to fly {{c1::All
     of the above: LOC only; VOR; ILS}} instrument approaches'
-  Question Stem: With standby electrical power only, the Captain will be able to fly what?
-    instrument approaches?
-  Choice A: ''
-  Choice B: 'All of the above: LOC only; VOR; ILS'
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
+  Question Stem: With standby electrical power only, which instrument approaches will the
+    Captain be able to fly?
+  Choice A: LOC only
+  Choice B: VOR
+  Choice C: ILS
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

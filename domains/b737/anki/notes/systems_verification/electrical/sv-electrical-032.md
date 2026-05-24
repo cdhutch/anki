@@ -20,13 +20,13 @@ fields:
   Original Note ID: electrical-032
   Original Prompt Style: cloze
   Original Text: The Ground Service Switch is located {{c1::on the forward attendant panel}}.
-  Question Stem: The Ground Service Switch is located what?
-  Choice A: On the forward attendant panel
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
+  Question Stem: Where is the Ground Service Switch located?
+  Choice A: next to the Galley Power Switch
+  Choice B: On the forward attendant panel
+  Choice C: On the aft attendant panel
+  Choice D: Both A and C are correct
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: DC power is supplied by {{c1::transformer rectifier units, the battery charger,
     and the battery}}.
-  Question Stem: DC power is supplied by what?
-  Choice A: ''
+  Question Stem: What supplies DC power?
+  Choice A: voltage regulators and the transfer switch
   Choice B: Transformer rectifier units, the battery charger, and the battery
-  Choice C: ''
-  Choice D: ''
+  Choice C: DC generators
+  Choice D: the static inverter and the battery
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

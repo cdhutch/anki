@@ -21,12 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: When moved to OFF, the BUS TRANSFER switch will {{c1::isolate the AC and
     DC Busses on Electrical System 1 from the AC and DC Busses on Electrical System 2}}.
-  Question Stem: When moved to OFF, the BUS TRANSFER switch will what?
-  Choice A: ''
-  Choice B: Isolate the AC and DC Busses on Electrical System 1 from the AC and DC Busses
-    on Electrical System 2
-  Choice C: ''
-  Choice D: ''
+  Question Stem: What does the BUS TRANSFER switch do when it is moved to OFF?
+  Choice A: Disconnects the battery from the electrical system
+  Choice B: Isolates the AC and DC Buses on Electrical System 1 from the AC and DC Buses on
+    Electrical System 2
+  Choice C: Immediately shifts the primary source of power for the AC Standby Bus from AC
+    Transfer Bus 1 to AC Transfer Bus 2
+  Choice D: Isolates the AC system from the DC system
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

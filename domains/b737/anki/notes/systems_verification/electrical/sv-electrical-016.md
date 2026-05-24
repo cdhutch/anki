@@ -26,12 +26,12 @@ fields:
     EFIS Control Panel}}
   Question Stem: The aircraft has been struck by lightning. You observe these conditions on
     the Electrical Panel (*Both pairs of TRANSFER BUS OFF, SOURCE OFF, and GEN OFF BUS lights
-    illuminated*) and the MASTER CAUTION and ELEC Annunciator Lights illuminated . Before
-    any corrections are attempted, which of the following components is still available?
+    illuminated*) and the MASTER CAUTION and ELEC Annunciator Lights illuminated. Before any
+    corrections are attempted, which of the following components is still available?
   Choice A: Left EFIS Control Panel
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Right EFIS Control Panel
+  Choice C: Automatic cabin pressurization control
+  Choice D: VHF NAV No. 2
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
