@@ -27,8 +27,7 @@ fields:
   Choice A: Pressing the DELETE key, then line selecting the waypoint to be removed
   Choice B: Pressing the CLEAR key, then line selecting the waypoint to be removed
   Choice C: Moving a subsequent waypoint up in sequence to remove all intervening waypoints
-  Choice D: Either pressing the DELETE key then line selecting the waypoint, or moving a subsequent
-    waypoint up in sequence to remove all intervening waypoints
+  Choice D: Either A or C
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null

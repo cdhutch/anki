@@ -29,7 +29,7 @@ fields:
     14,000 feet
   Choice D: Any of the above occurring
   Correct Choice: B
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

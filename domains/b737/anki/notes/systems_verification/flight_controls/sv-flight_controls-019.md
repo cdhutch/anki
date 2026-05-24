@@ -26,8 +26,7 @@ fields:
     Flare Cue landing assistance
   Choice B: Emergency Descent Spoilers (EDS)
   Choice C: Elevator Jam Landing Assist System
-  Choice D: 'Both B and C above: Emergency Descent Spoilers (EDS); Elevator Jam Landing Assist
-    System'
+  Choice D: Both B and C above
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

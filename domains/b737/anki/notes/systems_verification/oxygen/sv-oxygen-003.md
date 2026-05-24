@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: The minimum recommended oxygen pressure for flight is {{c1::850}} psi.
   Question Stem: What is the minimum recommended oxygen pressure for flight?
-  Choice A: 750 psi
+  Choice A: 850 psi
   Choice B: 1,000 psi
-  Choice C: 1,100 psi
-  Choice D: 850 psi
-  Correct Choice: D
+  Choice C: 1,250 psi
+  Choice D: 2,000 psi
+  Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

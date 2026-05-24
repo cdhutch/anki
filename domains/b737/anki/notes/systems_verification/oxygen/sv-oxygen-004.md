@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: Passenger oxygen provides a continous flow for approximately {{c1::12}} minutes.
   Question Stem: Passenger oxygen provides a continuous flow for approximately how many minutes?
-  Choice A: 20 minutes
-  Choice B: 15 minutes
-  Choice C: 22 minutes
-  Choice D: 12 minutes
-  Correct Choice: D
-  Shuffle Choices: true
+  Choice A: 10 minutes
+  Choice B: 12 minutes
+  Choice C: 25 minutes
+  Choice D: 20 minutes
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

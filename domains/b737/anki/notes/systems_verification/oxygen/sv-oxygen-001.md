@@ -22,12 +22,12 @@ fields:
   Original Text: '{{c1::Manual activation of the passenger oxygen masks}} will cause the PASS
     OXY ON light to illuminate in the cockpit.'
   Question Stem: What will cause the PASS OXY ON light to illuminate in the cockpit?
-  Choice A: Automatic deployment at 14,000 ft cabin altitude
-  Choice B: Pressing the Emergency Descent button
-  Choice C: Manual activation of the passenger oxygen masks
-  Choice D: Loss of AC power to the passenger service units
+  Choice A: Cabin altitude above 10,000 ft
+  Choice B: Manual activation of the passenger oxygen masks
+  Choice C: Both A and B
+  Choice D: None of the above
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

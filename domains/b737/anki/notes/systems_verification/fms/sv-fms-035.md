@@ -27,7 +27,7 @@ fields:
   Choice A: Go-around N1
   Choice B: Runway length in feet
   Choice C: Approach frequency, ident, and course
-  Choice D: '2 and 3 are correct: runway length in feet; approach frequency, ident, and course'
+  Choice D: B and C
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null
