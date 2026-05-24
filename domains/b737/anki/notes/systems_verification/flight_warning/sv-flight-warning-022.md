@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: The stall warning stick shaker consists of {{c1::two separate motors, one
     on each control column}}.
-  Question Stem: The stall warning stick shaker consists of what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: What does the stall warning stick shaker consist of?
+  Choice A: An electro-mechanical device receiving data from the SWC (Stall Warning Computer)
+  Choice B: A single motor, serving both control columns
   Choice C: Two separate motors, one on each control column
-  Choice D: ''
+  Choice D: A dual motor, serving both control columns
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

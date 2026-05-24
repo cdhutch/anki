@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,12 @@ fields:
   Original Text: 'The GPWS Inoperative (INOP) Light illuminates amber for {{c1::all of the
     above: a GPWS malfunction; a power loss; invalid inputs}}.'
   Question Stem: The GPWS Inoperative (INOP) Light illuminates amber for what?
-  Choice A: 'All of the above: a GPWS malfunction; a power loss; invalid inputs'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
+  Choice A: a GPWS malfunction
+  Choice B: a power loss
+  Choice C: invalid inputs
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

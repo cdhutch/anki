@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,14 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: The System Annunciator Light Panels monitor system indications located on
     {{c1::the Overhead and Fire Control panels}}.
-  Question Stem: The System Annunciator Light Panels monitor system indications located on
-    what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: Where do the System Annunciator Light Panels monitor system indications?
+  Choice A: The Cabin Control Panels
+  Choice B: The EFIS displays
   Choice C: The Overhead and Fire Control panels
-  Choice D: ''
+  Choice D: All of the above
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

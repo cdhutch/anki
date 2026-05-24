@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,11 +24,11 @@ fields:
     horn will not sound.}}
   Question Stem: The flaps are set at 10 degrees, the landing gear is up, and you are above
     800 feet RA. Which of the following statements is true about the landing gear horn?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: The horn will not sound
-  Correct Choice: D
+  Choice A: The horn cutout button can silence the landing gear horn.
+  Choice B: The gear horn cannot be silenced.
+  Choice C: The horn will not sound.
+  Choice D: None of the above
+  Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

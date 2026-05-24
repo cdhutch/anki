@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,13 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: Generally, aural warnings will silence {{c1::automatically when the associated
     non-normal condition no longer exists}}.
-  Question Stem: Generally, aural warnings will silence what?
-  Choice A: ''
-  Choice B: Automatically when the associated non-normal condition no longer exists
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
+  Question Stem: When do aural warnings generally silence themselves?
+  Choice A: Automatically when the associated non-normal condition no longer exists
+  Choice B: When the System Annunciator or Master Caution lights are pressed
+  Choice C: When the battery switch is cycled on and off
+  Choice D: Both A and B
+  Correct Choice: A
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

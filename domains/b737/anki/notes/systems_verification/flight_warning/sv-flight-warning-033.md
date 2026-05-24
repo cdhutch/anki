@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,12 @@ fields:
   Original Text: 'The SMYD computers receive input from {{c1::all of the above: anti-ice controls;
     ADIRUs; FMCs}}.'
   Question Stem: The SMYD computers receive input from what?
-  Choice A: ''
-  Choice B: 'All of the above: anti-ice controls; ADIRUs; FMCs'
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
+  Choice A: anti-ice controls
+  Choice B: ADIRUs
+  Choice C: FMCs
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

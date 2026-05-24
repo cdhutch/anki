@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: A start valve failed to close on engine start. Which of the following will
     alert the crew?
   Choice A: Blinking start valve open alert for 10 seconds
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Steady start valve open alert for 10 seconds
+  Choice C: Master Warning light
+  Choice D: Master Caution light
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

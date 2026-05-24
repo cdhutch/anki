@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     or system annunciator lights but are stored and presented later during {{c1::RECALL}}.
   Question Stem: Some minor cautions or faults do not illuminate the MASTER CAUTION lights
     or system annunciator lights but are stored and presented later during what?
-  Choice A: ''
+  Choice A: During the completion of the electronic checklist
   Choice B: RECALL
-  Choice C: ''
-  Choice D: ''
+  Choice C: The lights TEST procedure
+  Choice D: A change in electrical power
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

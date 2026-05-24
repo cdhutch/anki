@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: Single faults in certain redundant systems or some simple faults do not illuminate
     the MASTER CAUTION or the System Annunciator Light until {{c1::recall of the system}}.
   Question Stem: Single faults in certain redundant systems or some simple faults do not illuminate
-    the MASTER CAUTION or the System Annunciator Light until what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+    the MASTER CAUTION or the System Annunciator Light until when?
+  Choice A: during a maintenance BITE check only
+  Choice B: after landing and shutdown of the engines
+  Choice C: after landing with the flaps up
   Choice D: Recall of the system
   Correct Choice: D
   Shuffle Choices: true

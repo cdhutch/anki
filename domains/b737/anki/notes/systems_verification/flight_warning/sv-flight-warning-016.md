@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'The {{c1::right}} annunciator panel monitors the following systems: anti-ice,
     hydraulics, doors, engines, overhead panel, and air conditioning.'
-  Question Stem: 'The what? annunciator panel monitors the following systems: anti-ice, hydraulics,
+  Question Stem: 'Which annunciator panel monitors the following systems: anti-ice, hydraulics,
     doors, engines, overhead panel, and air conditioning?'
   Choice A: Right
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Center
+  Choice C: Overhead
+  Choice D: Left
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

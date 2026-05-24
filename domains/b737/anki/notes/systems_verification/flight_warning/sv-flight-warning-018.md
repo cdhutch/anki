@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,14 +24,13 @@ fields:
     not down and locked (below 800 ft RA and a thrust lever at idle); extinguished - gear
     up and locked}}.'
   Question Stem: Landing gear light indications are what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 'All of the above: green light - gear is down and locked; red light - gear in
-    disagreement with lever position, gear is not down and locked (below 800 ft RA and a thrust
-    lever at idle); extinguished - gear up and locked'
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Choice A: Green light - gear is down and locked
+  Choice B: Red light - gear in disagreement with lever position, gear is not down and locked
+    (below 800 ft RA and a thrust lever at idle)
+  Choice C: Extinguished - gear up and locked
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,13 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: The Mach/airspeed warning will sound the clacker anytime {{c1::Vmo/Mmo}}
     is exceeded.
-  Question Stem: The Mach/airspeed warning will sound the clacker anytime what? is exceeded?
+  Question Stem: The Mach/airspeed warning will sound the clacker anytime what is exceeded?
   Choice A: Vmo/Mmo
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Maximum configuration speed
+  Choice C: Maximum maneuver speed, the amber band
+  Choice D: Any of the above
   Correct Choice: A
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

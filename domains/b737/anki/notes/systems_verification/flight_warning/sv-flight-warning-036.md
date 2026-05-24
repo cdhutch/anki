@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: A flashing amber box around the current altitude signifies {{c1::an altitude
     deviation of 200 feet or more}}.
-  Question Stem: A flashing amber box around the current altitude signifies what?
+  Question Stem: What does a flashing amber box around the current altitude signify?
   Choice A: An altitude deviation of 200 feet or more
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: A new altitude is set in the mode control panel
+  Choice C: That you are in the altitude capture mode
+  Choice D: An altitude deviation of 900 feet or more
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

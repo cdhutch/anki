@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,13 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: Pushing a MASTER CAUTION light after it illuminates {{c1::resets the system
     for additional master caution conditions}}.
-  Question Stem: Pushing a MASTER CAUTION light after it illuminates what?
-  Choice A: ''
+  Question Stem: What does pushing a MASTER CAUTION light after it illuminates do?
+  Choice A: Extinguishes that MASTER CAUTION light only
   Choice B: Resets the system for additional master caution conditions
-  Choice C: ''
-  Choice D: ''
+  Choice C: Dims the system annunciator light(s)
+  Choice D: All of the above
   Correct Choice: B
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

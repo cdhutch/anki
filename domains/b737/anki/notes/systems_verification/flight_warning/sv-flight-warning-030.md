@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,13 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: The red gear indicator light will be illuminated for {{c1::landing gear in
     transit}}.
-  Question Stem: The red gear indicator light will be illuminated for what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Landing gear in transit
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Question Stem: The red gear indicator light will be illuminated for which conditions?
+  Choice A: Landing gear in transit
+  Choice B: Landing gear not locked down with either throttle retarded to idle at any altitude
+  Choice C: Both of the above
+  Choice D: None of the above
+  Correct Choice: A
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

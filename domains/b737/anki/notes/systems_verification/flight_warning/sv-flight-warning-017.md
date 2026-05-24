@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: The takeoff configuration intermittent warning can be cancelled only {{c1::when
     the configuration is corrected}}.
-  Question Stem: The takeoff configuration intermittent warning can be cancelled only what?
-  Choice A: ''
+  Question Stem: What is the only situation in which the takeoff configuration intermittent
+    warning can be cancelled?
+  Choice A: By pushing the landing gear horn cutout
   Choice B: When the configuration is corrected
-  Choice C: ''
-  Choice D: ''
+  Choice C: When the MASTER CAUTION light is pushed
+  Choice D: By pulling the master warning circuit breaker
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

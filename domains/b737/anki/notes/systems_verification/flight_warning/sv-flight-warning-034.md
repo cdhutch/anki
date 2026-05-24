@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: A momentary altitude alert tone will activate {{c1::approaching 900 feet
     of the altitude selected on the mode control panel}}.
-  Question Stem: A momentary altitude alert tone will activate what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: When does the momentary altitude alert tone activate?
+  Choice A: Approaching 200 feet of the altitude selected on the mode control panel
+  Choice B: Approaching 300 feet of the altitude selected on the mode control panel
   Choice C: Approaching 900 feet of the altitude selected on the mode control panel
-  Choice D: ''
+  Choice D: On glideslope approaching 900 feet of the selected altitude on the mode control
+    panel
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,13 +22,13 @@ fields:
   Original Text: An illuminated amber light on the System Annunciator Panel is on because
     of a malfunction outside of the primary viewing area of the pilots. To extinguish it,
     {{c1::push either MASTER CAUTION light}}.
-  Question Stem: An illuminated amber light on the System Annunciator Panel is on because
-    of a malfunction outside of the primary viewing area of the pilots. To extinguish it,
-    what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: 'Fill in the blank: An illuminated amber light on the System Annunciator
+    Panel is on because of a malfunction outside of the primary viewing area of the pilots.
+    To extinguish it, ____.'
+  Choice A: You can do nothing. It cannot be extinguished.
+  Choice B: Push and release either system annunciator panel
   Choice C: Push either MASTER CAUTION light
-  Choice D: ''
+  Choice D: Push the lights reset switch
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

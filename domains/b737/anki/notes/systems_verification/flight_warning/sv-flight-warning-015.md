@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'The {{c1::left}} annunciator panel monitors the following systems: flight
     controls, IRS, fuel, electrical, APU, and overheat/detection.'
-  Question Stem: 'The what? annunciator panel monitors the following systems: flight controls,
+  Question Stem: 'Which annunciator panel monitors the following systems: flight controls,
     IRS, fuel, electrical, APU, and overheat/detection?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Right
+  Choice B: Center
+  Choice C: Overhead
   Choice D: Left
   Correct Choice: D
   Shuffle Choices: true

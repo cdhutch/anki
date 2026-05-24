@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: Amber annunciator lights alert the flight crew of conditions which {{c1::require
     timely attention}}.
-  Question Stem: Amber annunciator lights alert the flight crew of conditions which what?
+  Question Stem: 'Fill in the blank: Amber annunciator lights alert the flight crew of conditions
+    which ____.'
   Choice A: Require timely attention
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Are advisory in nature
+  Choice C: Need no attention until RECALL is pressed
+  Choice D: Require immediate attention
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

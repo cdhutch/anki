@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,12 @@ fields:
   Original Text: Some lights have a bright blue and a dim blue setting. The bright blue indicates
     a {{c1::valve moving to its selected position}} and the dim blue indicates a valve {{c1::in
     the selected position}}.
-  Question Stem: Some lights have a bright blue and a dim blue setting. The bright blue indicates
-    a what? and the dim blue indicates a valve what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Valve moving to its selected position
-  Choice D: ''
+  Question Stem: 'Fill in the blank: Some lights have a bright blue and a dim blue setting.
+    The bright blue indicates a valve ____ and the dim blue indicates a valve ____.'
+  Choice A: In the selected position/stopped in-transit
+  Choice B: In the selected position/moving to its selected position
+  Choice C: Moving to its selected position/in the selected position
+  Choice D: Moving to its selected position/stopped in-transit
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

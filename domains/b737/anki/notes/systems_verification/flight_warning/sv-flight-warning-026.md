@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: The MASTER CAUTION Lights will remain illuminated {{c1::until reset or as
     long as the caution condition exists}}.
-  Question Stem: The MASTER CAUTION Lights will remain illuminated what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: The MASTER CAUTION Lights will remain illuminated until when?
+  Choice A: as long as the problem exists
+  Choice B: for 30 seconds
   Choice C: Until reset or as long as the caution condition exists
-  Choice D: ''
+  Choice D: for 10 seconds
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

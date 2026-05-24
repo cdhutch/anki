@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: Normal engine indications on the upper engine display are {{c1::white}} in
     color.
-  Question Stem: Normal engine indications on the upper engine display are what? in color?
-  Choice A: ''
+  Question Stem: What color are normal engine indications on the upper engine display?
+  Choice A: Blue
   Choice B: White
-  Choice C: ''
-  Choice D: ''
+  Choice C: Green
+  Choice D: Amber
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

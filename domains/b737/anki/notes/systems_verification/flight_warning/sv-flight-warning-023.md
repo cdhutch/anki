@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: The stick shakers are designed to alert the pilots {{c1::just before a stall
     develops}}.
-  Question Stem: The stick shakers are designed to alert the pilots what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: The stick shakers are designed to alert the pilots of what?
+  Choice A: After a stall occurs
+  Choice B: When a stall occurs
+  Choice C: That angle of attack is approaching positive 10.0 degrees
   Choice D: Just before a stall develops
   Correct Choice: D
   Shuffle Choices: true

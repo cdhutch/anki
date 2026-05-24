@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,14 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'The Proximity Switch Electronic Unit (PSEU) monitors {{c1::all of the above:
     takeoff and landing configuration warnings; air/ground sensing; landing gear}}.'
-  Question Stem: The Proximity Switch Electronic Unit (PSEU) monitors what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'All of the above: takeoff and landing configuration warnings; air/ground sensing;
-    landing gear'
+  Question Stem: What does the Proximity Switch Electronic Unit (PSEU) monitor?
+  Choice A: Takeoff and landing configuration warnings
+  Choice B: Air/ground sensing
+  Choice C: Landing gear
+  Choice D: All of the above
   Correct Choice: D
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

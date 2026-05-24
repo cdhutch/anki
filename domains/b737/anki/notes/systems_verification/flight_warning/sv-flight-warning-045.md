@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: When the NO AIII light is illuminated on the HAP, AIII {{c1::operations are
     not permitted}}.
-  Question Stem: When the NO AIII light is illuminated on the HAP, AIII what?
-  Choice A: ''
+  Question Stem: When the NO AIII light is illuminated on the HAP, what is the status of AIII?
+  Choice A: Mode is armed, but not yet engaged
   Choice B: Operations are not permitted
-  Choice C: ''
-  Choice D: ''
+  Choice C: Mode is available and should be selected
+  Choice D: Mode has armed
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

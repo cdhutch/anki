@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: When illuminated on the HAP, the green AIII light means {{c1::AIII mode is
     active}}.
-  Question Stem: When illuminated on the HAP, the green AIII light means what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: What does the green AIII light mean when illuminated on the HAP?
+  Choice A: A fault exists precluding AIII status
+  Choice B: AIII mode is armed, but not yet engaged
+  Choice C: AIII mode is available
   Choice D: AIII mode is active
   Correct Choice: D
   Shuffle Choices: true

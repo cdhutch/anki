@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: Upon engine shutdown on the ground at the end of the flight, an inflight
     exceedence will be {{c1::shown by a red box}}.
-  Question Stem: Upon engine shutdown on the ground at the end of the flight, an inflight
-    exceedence will be what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: Upon engine shutdown on the ground at the end of the flight, how is an inflight
+    exceedence shown?
+  Choice A: A blinking alert
+  Choice B: Stored in the maintenance computer only
+  Choice C: Shown by the display flashing amber
   Choice D: Shown by a red box
   Correct Choice: D
   Shuffle Choices: true

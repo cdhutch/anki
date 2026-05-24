@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,11 +22,11 @@ fields:
   Original Text: Warnings and information about the nature of a situation are provided by
     {{c1::visual, aural, and tactile}} signals.
   Question Stem: Warnings and information about the nature of a situation are provided by
-    what? signals?
-  Choice A: ''
+    which kinds of signals?
+  Choice A: Visual only
   Choice B: Visual, aural, and tactile
-  Choice C: ''
-  Choice D: ''
+  Choice C: Visual and aural
+  Choice D: Visual and tactile
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

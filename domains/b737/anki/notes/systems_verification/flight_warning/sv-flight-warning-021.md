@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -20,11 +20,11 @@ fields:
   Original Note ID: flight-warning-021
   Original Prompt Style: cloze
   Original Text: The PSEU light is inhibited {{c1::in flight}}.
-  Question Stem: The PSEU light is inhibited what?
-  Choice A: ''
+  Question Stem: When is the PSEU light inhibited?
+  Choice A: Until 90 knots
   Choice B: In flight
-  Choice C: ''
-  Choice D: ''
+  Choice C: Until wheel spin-up
+  Choice D: When on the ground
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

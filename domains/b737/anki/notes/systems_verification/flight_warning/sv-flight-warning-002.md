@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -20,11 +20,11 @@ fields:
   Original Note ID: flight-warning-002
   Original Prompt Style: cloze
   Original Text: Immediate attention warning lights are {{c1::red}}.
-  Question Stem: Immediate attention warning lights are what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: What color are immediate attention warning lights?
+  Choice A: Amber
+  Choice B: Blue
   Choice C: Red
-  Choice D: ''
+  Choice D: Yellow
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

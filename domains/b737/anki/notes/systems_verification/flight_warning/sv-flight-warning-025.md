@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,12 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: A valve that is not in its selected position will show up as a(an) {{c1::bright
     blue}} light.
-  Question Stem: A valve that is not in its selected position will show up as a(an) what?
-    light?
-  Choice A: ''
+  Question Stem: What color light indicates a valve that is not in its selected position?
+  Choice A: White
   Choice B: Bright blue
-  Choice C: ''
-  Choice D: ''
+  Choice C: Amber
+  Choice D: Dim blue
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: The Landing Gear Warning Cutout Switch silences the landing gear configuration
     warning at flaps UP through {{c1::10}} degrees.
   Question Stem: The Landing Gear Warning Cutout Switch silences the landing gear configuration
-    warning at flaps UP through what? degrees?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+    warning at flaps UP through how many degrees?
+  Choice A: 5
+  Choice B: 30
+  Choice C: 25
   Choice D: 10
   Correct Choice: D
   Shuffle Choices: true

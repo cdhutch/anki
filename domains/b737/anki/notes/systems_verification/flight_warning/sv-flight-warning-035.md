@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,11 +22,10 @@ fields:
   Original Text: Deviations from the altitude selected on the mode control panel will cause
     a {{c1::momentary altitude horn at 200 feet off altitude and an amber flashing box around
     the current altitude}}.
-  Question Stem: Deviations from the altitude selected on the mode control panel will cause
-    a what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: What do deviations from the altitude selected on the mode control panel cause?
+  Choice A: Momentary altitude horn at 300 feet off altitude as set in the mode control panel
+  Choice B: Momentary altitude horn at 900 feet off altitude as set in the mode control panel
+  Choice C: Flashing amber display in the mode control panel altitude window
   Choice D: Momentary altitude horn at 200 feet off altitude and an amber flashing box around
     the current altitude
   Correct Choice: D

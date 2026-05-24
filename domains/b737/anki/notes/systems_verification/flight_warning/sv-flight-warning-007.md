@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: Green lights indicate an extended configuration of {{c1::both landing gear
     and leading edge devices}}.
   Question Stem: Green lights indicate an extended configuration of what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: landing gear
+  Choice B: leading edge devices
+  Choice C: takeoff trim in the proper range
   Choice D: Both landing gear and leading edge devices
   Correct Choice: D
   Shuffle Choices: true

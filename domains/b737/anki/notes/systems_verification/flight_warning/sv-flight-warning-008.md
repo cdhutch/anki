@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,15 +22,14 @@ fields:
   Original Text: 'Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine
     fire {{c1::accomplishes all of the above: extinguishes both FIRE WARN lights; silences
     the Fire Warning Bell; resets the system for additional warnings}}.'
-  Question Stem: Pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for an engine
-    fire what?
-  Choice A: 'Accomplishes all of the above: extinguishes both FIRE WARN lights; silences the
-    Fire Warning Bell; resets the system for additional warnings'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
+  Question Stem: What does pushing the fire warning (FIRE WARN) lights or BELL CUTOUT for
+    an engine fire do?
+  Choice A: Extinguishes both FIRE WARN lights
+  Choice B: Silences the Fire Warning Bell
+  Choice C: Resets the system for additional warnings
+  Choice D: Accomplishes all of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

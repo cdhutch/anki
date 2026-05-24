@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,11 +22,11 @@ fields:
   Original Text: During an AIII approach, an amber NO AIII light is illuminated below 1,000
     feet. You should {{c1::execute a missed approach}}.
   Question Stem: During an AIII approach, an amber NO AIII light is illuminated below 1,000
-    feet. You should what?
+    feet. What should you do?
   Choice A: Execute a missed approach
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Turn the aircraft over to the FO
+  Choice C: Continue the approach
+  Choice D: Turn on both A/Ps
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

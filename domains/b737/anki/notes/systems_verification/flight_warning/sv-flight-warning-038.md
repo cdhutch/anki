@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -20,11 +20,11 @@ fields:
   Original Note ID: flight-warning-038
   Original Prompt Style: cloze
   Original Text: Maximum engine limits are displayed in {{c1::red}}.
-  Question Stem: Maximum engine limits are displayed in what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: In which color are maximum engine limits displayed?
+  Choice A: White
+  Choice B: Amber
   Choice C: Red
-  Choice D: ''
+  Choice D: Magenta
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

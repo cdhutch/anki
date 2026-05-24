@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,14 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'On the fire test panel, we can test for {{c1::all of the above: APU, engines,
     and wheel well fire; engine overheat; operational fire bottle squibs}}'
-  Question Stem: On the fire test panel, we can test for what?
-  Choice A: 'All of the above: APU, engines, and wheel well fire; engine overheat; operational
-    fire bottle squibs'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
+  Question Stem: On the fire test panel, what can we test for?
+  Choice A: APU, engines, and wheel well fire
+  Choice B: Engine overheat
+  Choice C: Operational fire bottle squibs
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

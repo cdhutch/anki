@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,13 +22,12 @@ fields:
   Original Text: Informational alerts such as electrical power availability, valve position,
     equipment status, and flight attendant or ground communications are indicated by lights
     that are {{c1::blue}} in color.
-  Question Stem: Informational alerts such as electrical power availability, valve position,
-    equipment status, and flight attendant or ground communications are indicated by lights
-    that are what? in color?
-  Choice A: ''
+  Question Stem: What color are informational alerts, such as electrical power availability,
+    valve position, equipment status, and flight attendant or ground communications?
+  Choice A: White
   Choice B: Blue
-  Choice C: ''
-  Choice D: ''
+  Choice C: Green
+  Choice D: Amber
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

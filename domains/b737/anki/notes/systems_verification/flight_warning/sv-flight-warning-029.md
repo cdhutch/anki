@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: '{{c1::SPEED BRAKE lever is not in the DOWN position}} will activate the
     takeoff warning system.'
-  Question Stem: What? will activate the takeoff warning system?
-  Choice A: ''
+  Question Stem: Which will activate the takeoff warning system?
+  Choice A: Autobrakes in the RTO position
   Choice B: SPEED BRAKE lever is not in the DOWN position
-  Choice C: ''
-  Choice D: ''
+  Choice C: Only two available sources of electrical power
+  Choice D: Autothrottles not armed
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

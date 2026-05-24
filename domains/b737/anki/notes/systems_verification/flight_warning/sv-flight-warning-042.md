@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,14 +23,14 @@ fields:
     and cannot be silenced if a gear is not down and locked with the flaps set to {{c1::15}}
     degrees with one or both throttles set to idle.
   Question Stem: The landing gear configuration warning horn will activate at any altitude
-    and cannot be silenced if a gear is not down and locked with the flaps set to what? degrees
-    with one or both throttles set to idle?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 15
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+    and cannot be silenced if a gear is not down and locked, one or both throttles set to
+    idle, with the flaps set to which position?
+  Choice A: 0
+  Choice B: 1
+  Choice C: 5
+  Choice D: 15
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

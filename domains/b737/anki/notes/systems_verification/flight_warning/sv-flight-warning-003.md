@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,13 +22,12 @@ fields:
   Original Text: 'Red warning lights may indicate {{c1::all of the above: engine, wheel well,
     and APU fires; A/P, A/T disconnects; landing gear unsafe conditions}}.'
   Question Stem: Red warning lights may indicate what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'All of the above: engine, wheel well, and APU fires; A/P, A/T disconnects; landing
-    gear unsafe conditions'
+  Choice A: engine, wheel well, and APU fires
+  Choice B: A/P, A/T disconnects
+  Choice C: Landing gear unsafe conditions
+  Choice D: All of the above
   Correct Choice: D
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

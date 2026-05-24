@@ -12,7 +12,7 @@ tags:
 - system:flight-warning
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,11 +23,11 @@ fields:
     speed is exceeded. The clacker will only be silenced when {{c1::airspeed is reduced below
     Vmo/Mmo}}.
   Question Stem: Two independent Mach/airspeed warning systems sound a clacker when maximum
-    speed is exceeded. The clacker will only be silenced when what?
+    speed is exceeded. The clacker will only be silenced when what happens?
   Choice A: Airspeed is reduced below Vmo/Mmo
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: the MASTER WARNING light is pushed
+  Choice C: the autothrottle is disconnected
+  Choice D: the MASTER CAUTION light is pushed
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
