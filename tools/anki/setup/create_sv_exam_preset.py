@@ -3,7 +3,7 @@
 
 Settings applied
 ----------------
-  new cards / day  : 50
+  new cards / day  : 100
   reviews / day    : 9999
   FSRS             : enabled
   desired retention: 0.90   (edit DESIRED_RETENTION below to taste)
@@ -37,7 +37,7 @@ from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
 PRESET_NAME       = "B737 SV Exam"
 TARGET_DECKS      = ["B737::Systems::SV", "B737::Systems::SV::MCQ", "B737::Systems::SV::TF"]
-NEW_PER_DAY       = 50
+NEW_PER_DAY       = 100
 REV_PER_DAY       = 9999
 DESIRED_RETENTION = 0.90
 FSRS_WEIGHTS: list[float] = []   # empty → Anki default weights
