@@ -49,13 +49,14 @@ def _find_existing(note_id: str, model_name: str, url: str) -> int | None:
     return int(result[0]) if result else None
 
 
-def _set_tags(anki_id: int, tags: list[str], url: str) -> None:
-    """Replace the tag set on an existing note."""
+def _set_tags(anki_id: int, tags: list[str], url: str) -> list[str]:
+    """Replace the tag set on an existing note. Returns the previous tag list."""
     current = anki_request("getNoteTags", {"note": anki_id}, url=url) or []
     if current:
         anki_request("removeTags", {"notes": [anki_id], "tags": " ".join(current)}, url=url)
     if tags:
         anki_request("addTags", {"notes": [anki_id], "tags": " ".join(tags)}, url=url)
+    return current
 
 
 def _set_suspension(note_id: str, model_name: str, suspend: bool, url: str) -> None:
@@ -79,8 +80,16 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
     existing = _find_existing(note_id, model_name, url)
     if existing:
         anki_request("updateNoteFields", {"note": {"id": existing, "fields": fields}}, url=url)
-        _set_tags(existing, tags, url)
-        print(f"  Updated : {note_id}{' (suspended — draft)' if is_draft else ''}")
+        prev_tags = _set_tags(existing, tags, url)
+        was_draft = "status:draft" in prev_tags
+
+        # Only touch suspension on a draft→verified transition (auto-unsuspend).
+        # Manual suspension of verified cards is preserved across syncs.
+        if was_draft and not is_draft:
+            _set_suspension(note_id, model_name, suspend=False, url=url)
+            print(f"  Updated : {note_id} (unsuspended — now verified)")
+        else:
+            print(f"  Updated : {note_id}{' (draft)' if is_draft else ''}")
     else:
         deck = DECK_MCQ if model_name == MODEL_MCQ else DECK_TF
         nid = anki_request(
@@ -97,8 +106,8 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
             url=url,
         )
         print(f"  Added   : {note_id} → {nid}{' (suspended — draft)' if is_draft else ''}")
-
-    _set_suspension(note_id, model_name, suspend=is_draft, url=url)
+        # New notes: set initial suspension state based on status tag.
+        _set_suspension(note_id, model_name, suspend=is_draft, url=url)
 
 
 # ---------------------------------------------------------------------------
