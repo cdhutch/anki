@@ -25,14 +25,14 @@ Distractors are being authored system-by-system. Workflow per system:
 4. Claude provides `git add` + `git commit` commands
 5. Move to next system
 
-**Distractor authoring status (as of 2026-05-16):**
+**Distractor authoring status (as of 2026-05-25):**
 
 | Status | Systems |
 |---|---|
 | Finalized (`note_type: systems_verification_exam`) | acars, adverse, emergency_equipment |
-| All distractors complete (`status:verified`) | acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, emergency_equipment, flight_controls, flight_instrumentation, fuel, general, gpws, hud, hydraulics, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar |
+| All distractors complete (`status:verified`) | acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, electrical, emergency_equipment, fire_protection, flight_controls, flight_instrumentation, flight_warning, fuel, general, gpws, hud, hydraulics, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar |
 | Partially complete — T/F/2-choice blanks only | fms (sv-fms-024 is intentional 2-choice; all others verified) |
-| Distractors not yet authored (`status:draft`) | autoflight, electrical, engines, fire_protection, flight_warning, pneumatics |
+| Distractors not yet authored (`status:draft`) | autoflight, engines, pneumatics |
 
 Note: `status:draft` notes import into Anki as **suspended** cards. `status:verified` import as active.
 
@@ -40,12 +40,9 @@ Note: `status:draft` notes import into Anki as **suspended** cards. `status:veri
 
 | System | Total | Draft |
 |---|---|---|
-| fire_protection | 27 | 27 |
 | engines | 41 | 39 |
 | autoflight | 42 | 39 |
 | pneumatics | 39 | 39 |
-| flight_warning | 45 | 45 |
-| electrical | 47 | 46 |
 
 ---
 
@@ -68,7 +65,7 @@ manually created in Anki by the user.
 
 Script: `tools/anki/setup/create_sv_exam_preset.py`
 
-Settings: 50 new/day · 9999 reviews/day · FSRS on · 90% desired retention
+Settings: 100 new/day · 9999 reviews/day · FSRS on · 90% desired retention
 
 Preset created and applied to `B737::Systems::SV::MCQ` and `B737::Systems::SV::TF`.
 
