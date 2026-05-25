@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     switch\n    {{c1::ON}}.
   Question Stem: The APU wheel well fire warning horn operates on the ground with the battery
     switch in what position?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Either ON or OFF
+  Choice B: In the OVERRIDE position
   Choice C: 'ON'
-  Choice D: ''
+  Choice D: 'OFF'
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

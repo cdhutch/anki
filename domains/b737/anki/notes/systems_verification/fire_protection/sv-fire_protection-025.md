@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: If the Cargo Fire Detector Fault light is illuminated {{c1::fire detection
     is inoperative\n    in one of both cargo compartments}}.
   Question Stem: What does an illuminated Cargo Fire Detector Fault light indicate?
-  Choice A: ''
-  Choice B: Fire detection is inoperative in one or both cargo compartments
-  Choice C: ''
-  Choice D: ''
+  Choice A: The Hot Battery bus is not powered.
+  Choice B: Fire detection is inoperative in one or both cargo compartments.
+  Choice C: The Battery bus is not powered.
+  Choice D: The cargo fire extinguisher pressure is low.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

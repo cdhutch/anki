@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: The engine fire extinguishing bottles are discharged {{c1::by pressing the
     discharge\n    button next to the fire switch}}.
   Question Stem: How are the engine fire extinguishing bottles discharged?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: By pressing the discharge button next to the fire switch
+  Choice A: By pulling and manually turning the fire switch.
+  Choice B: Automatically for the engine on fire.
+  Choice C: By pulling the fire switch twice.
+  Choice D: By pressing the discharge button next to the fire switch.
   Correct Choice: D
   Shuffle Choices: true
   Review Notes: null

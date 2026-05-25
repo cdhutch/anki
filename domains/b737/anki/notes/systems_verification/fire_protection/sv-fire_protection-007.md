@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: Placing the Test Switch in the FAULT/INOP position tests the {{c1::fault
     detection\n    circuits for both engines and the APU}}.
   Question Stem: Placing the Test Switch in the FAULT/INOP position tests what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Fire bottle squib discharge circuits
+  Choice B: Fire detection loops on both engines and the APU
+  Choice C: Engine overheat detectors
   Choice D: The fault detection circuits for both engines and the APU
   Correct Choice: D
   Shuffle Choices: true

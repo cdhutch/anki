@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     Caution\n    light to illuminate? {{c1::Engine Overheat lights or APU Det Inop}}
   Question Stem: Which lights on the Overheat/Fire Protection Panel will cause the Master
     Caution light to illuminate?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Engine Fire Warning
+  Choice B: APU Fire Warning
   Choice C: Engine Overheat lights or APU Det Inop
-  Choice D: ''
+  Choice D: Wheel Well Fire
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

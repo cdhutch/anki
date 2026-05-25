@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,13 +25,16 @@ fields:
     or either FIRE WARN\n    Light. Which of the following indications will now occur? {{c1::The
     Fire Warning Bell\n    will silence and the FIRE WARN lights on the glareshield will extinguish
     and reset.}}
-  Question Stem: After pressing the Fire Warning BELL CUTOUT Switch (or either FIRE WARN Light)
-    to reset the Fire Warning System, which indications will occur?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: Before consulting the QRH procedure, the crew elects to reset the Fire Warning
+    System by pressing the Fire Warning BELL CUTOUT Switch or either FIRE WARN Light. Which
+    of the following indications will now occur? The current illuminated lights are FIRE WARN
+    x 2, MASTER CAUTION x 2, and OVHT/DET system annunciator.
+  Choice A: The Fire Warning Bell and the Fire Horn in the Main Wheel Well will silence. The
+    ENG 1 OVERHEAT light will extinguish.
+  Choice B: The FIRE WARNING light, MASTER CAUTION, and OVHT/DET annunciator lights will extinguish.
   Choice C: The Fire Warning Bell will silence and the FIRE WARN lights on the glareshield
-    will extinguish and reset
-  Choice D: ''
+    will extinguish and reset.
+  Choice D: The Fire Warning Bell will silence and the
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

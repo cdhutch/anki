@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -26,10 +26,10 @@ fields:
   Question Stem: Both engines are operating in flight. ENG 1 Overheat and ENG 1 Fire Switch
     are illuminated, Master FIRE WARN lights are on, and the Fire Warning Bell is sounding.
     Which statement is correct?
-  Choice A: 'Engine #1 Fire Switch automatically unlocks'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice A: 'Engine #1 Fire Switch automatically unlocks.'
+  Choice B: 'Engine #2 Overheat has been detected.'
+  Choice C: 'Both of the Engine #1 Overheat / Fire Detector Loops are inoperative.'
+  Choice D: Engine fire detection is now powered by the Hot Battery Bus.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

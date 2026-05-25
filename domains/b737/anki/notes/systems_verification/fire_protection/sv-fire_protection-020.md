@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,12 +22,13 @@ fields:
   Original Text: With these indications *(FAULT caution light, ENG 1 Fire Switch, ENG 1 Overheat
     caution\n    light off)* during an OVHT/Fire Test, which statement is true? {{c1::This
     is not a normal\n    test.}}
-  Question Stem: During an OVHT/Fire Test, the FAULT caution light and ENG 1 Fire Switch illuminate
+  Question Stem: During an OVHT/Fire Test, the FAULT caution light and ENG 2 Fire Switch illuminate
     but the ENG 1 Overheat light does NOT. Which statement is true?
-  Choice A: This is not a normal test
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice A: This is not a normal test.
+  Choice B: Engine 1 has an electrical problem in the fire switch.
+  Choice C: Press to test the FIRE handle light.
+  Choice D: All engine 1 fire detection is lost but if the overheat detector works you can
+    depart with dispatch approval.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

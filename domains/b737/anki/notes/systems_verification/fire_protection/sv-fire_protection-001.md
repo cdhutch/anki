@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -27,10 +27,10 @@ fields:
   Question Stem: During the pre-flight Fire/Overheat warning test, Eng 1, Eng 2, and APU Fire
     Switches illuminate along with ENG1/ENG2 Overheat caution lights, Fire Bell, OVHT/DET
     Annunciator, FIRE WARN, and MASTER CAUTION. Which statement is most correct?
-  Choice A: ''
-  Choice B: This is a proper test with the AC Busses powered
-  Choice C: ''
-  Choice D: ''
+  Choice A: The WHEEL WELL Light does not illuminate with the test switch in OVHT/FIRE position.
+  Choice B: This is a proper test with the AC Busses powered.
+  Choice C: This is a proper test if AC power has not yet been applied.
+  Choice D: The ENG 1 and ENG 2 OVERHEAT Lights should not be illuminated during this test.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

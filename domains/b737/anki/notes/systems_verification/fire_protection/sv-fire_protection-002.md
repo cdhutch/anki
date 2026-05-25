@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: How do you extinguish a wheel well fire? {{c1::Lower the landing gear.}}
   Question Stem: How do you extinguish a wheel well fire?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Lower the landing gear
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Choice A: Discharge the fire bottle.
+  Choice B: Lower the landing gear.
+  Choice C: Both of the above.
+  Choice D: None of the above.
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

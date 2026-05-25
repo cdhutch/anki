@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,11 +23,10 @@ fields:
     the APU Inlet\n    Door; deactivates the fuel solenoid and closes the APU Fuel Shutoff
     Valve; closes the\n    APU Bleed Air Valve}}.'
   Question Stem: Pulling the APU fire switch accomplishes which of the following?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: 'All of the above: closes the APU Inlet Door; deactivates the fuel solenoid and
-    closes the APU Fuel Shutoff Valve; closes the APU Bleed Air Valve'
+  Choice A: Closes the APU Inlet Door
+  Choice B: Deactivates the fuel solenoid and closes the APU Fuel Shutoff Valve
+  Choice C: Closes the APU Bleed Air Valve
+  Choice D: All of the above
   Correct Choice: D
   Shuffle Choices: false
   Review Notes: null

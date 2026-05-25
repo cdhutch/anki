@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: In flight, what happens if a single cargo compartment smoke detector loop
     fails?
   Choice A: It will not be indicated unless both loops fail
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Cause a Master Caution/overheat detection alert
+  Choice C: Illuminate the Cargo Detector Fault light on recall
+  Choice D: Illuminate the Cargo Detector Inop Light
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

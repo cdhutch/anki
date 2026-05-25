@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: The APU fire bottle is discharged {{c1::by pulling and rotating the APU fire
     switch}}.
   Question Stem: How is the APU fire bottle discharged?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: By pressing the discharge button.
+  Choice B: Automatically, manually, or thermally.
+  Choice C: Automatically or manually only.
   Choice D: By pulling and rotating the APU fire switch
   Correct Choice: D
   Shuffle Choices: true

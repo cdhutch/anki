@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -21,14 +21,15 @@ fields:
   Original Prompt Style: cloze
   Original Text: When the Fire Protection FAULT light illuminates, it indicates {{c1::with
     both OVHT\n    DET switches in normal, both detector loops for an engine have failed}}.
-  Question Stem: With both OVHT DET switches in NORMAL, what does illumination of the Fire
-    Protection FAULT light indicate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
-  Choice D: Both detector loops for an engine have failed
-  Correct Choice: D
-  Shuffle Choices: true
+  Question Stem: What does an illuminated FAULT light on the Overheat/Fire Detect Panel indicate?
+  Choice A: Both fire detector loops test OK in engine 1 and 2
+  Choice B: Only a single fire detector loop on engine 1 or 2 failed as a result of a Master
+    Caution recall
+  Choice C: With both OVHT DET switches in normal, both detector loops for an engine have
+    failed
+  Choice D: All of the above
+  Correct Choice: C
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

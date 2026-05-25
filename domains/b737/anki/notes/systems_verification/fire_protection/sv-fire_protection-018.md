@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,10 +23,10 @@ fields:
     {{c1::continue\n    to operate}}.
   Question Stem: If the APU fire detection system is inoperative (APU DET INOP), what happens
     to the APU?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Continue to operate
-  Choice D: ''
+  Choice A: Shutdown automatically for a fire if only one loop is inoperative.
+  Choice B: Shutdown automatically if both loops are inoperative.
+  Choice C: Continue to operate.
+  Choice D: Shutdown automatically for a fire if battery power is available.
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

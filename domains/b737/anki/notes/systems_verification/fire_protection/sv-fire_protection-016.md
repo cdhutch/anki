@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: What indicates the engine fire extinguishing agent has been discharged? {{c1::An
     amber\n    L or R BOTTLE DISCHARGE light}}
   Question Stem: What indicates the engine fire extinguishing agent has been discharged?
-  Choice A: An amber L or R BOTTLE DISCHARGE light
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice A: An amber L or R BOTTLE DISCHARGE light.
+  Choice B: A green extinguisher test light comes on for the respective engine.
+  Choice C: An amber LOW PRESSURE light.
+  Choice D: An FMC message.
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

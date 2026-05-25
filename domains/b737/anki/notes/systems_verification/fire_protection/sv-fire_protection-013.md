@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,10 +24,10 @@ fields:
     {{c1::The\n    Number 1 engine indicates a fire condition.}}
   Question Stem: In flight, with Eng 1 Fire Switch illuminated, ENG 1 Overheat caution light
     on, and Fire Bell sounding, what is the conclusion?
-  Choice A: ''
-  Choice B: The Number 1 engine indicates a fire condition
-  Choice C: ''
-  Choice D: ''
+  Choice A: The other crew member is performing an independent loop test.
+  Choice B: The Number 1 engine indicates a fire condition.
+  Choice C: The Number 1 engine indicates an overheat condition only.
+  Choice D: The Number 1 engine has a single loop detection failure.
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: Following a dual loop failure on an engine, you would expect to see {{c1::a
     FAULT\n    light}}.
   Question Stem: Following a dual loop failure on an engine, what indication would you expect?
-  Choice A: ''
-  Choice B: ''
+  Choice A: An APU DET INOP light
+  Choice B: A left BOTTLE DISCHARGE light
   Choice C: A FAULT light
-  Choice D: ''
+  Choice D: A right BOTTLE DISCHARGE light
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

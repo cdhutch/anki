@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,10 +22,10 @@ fields:
   Original Text: If the battery switch is OFF, the APU has {{c1::fire extinguishing}}.
   Question Stem: If the battery switch is OFF, what fire protection capability does the APU
     retain?
-  Choice A: ''
+  Choice A: Both fire extinguishing and detection
   Choice B: Fire extinguishing
-  Choice C: ''
-  Choice D: ''
+  Choice C: Fire detection
+  Choice D: No fire extinguishing or detection
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

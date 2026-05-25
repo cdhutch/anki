@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -25,10 +25,10 @@ fields:
   Question Stem: In addition to Master Caution, OVHT/DET annunciator, Engine OVERHEAT light,
     Master FIRE WARN light, and red Fire Switch light, what is another engine fire warning
     indication?
-  Choice A: ''
+  Choice A: Red Engine Overheat light
   Choice B: The Fire Warning Bell
-  Choice C: ''
-  Choice D: ''
+  Choice C: The APU Det INOP light
+  Choice D: Bottle Discharge light
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

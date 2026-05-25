@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -23,9 +23,9 @@ fields:
     is {{c1::ON}}.
   Question Stem: Fire detection for the engines and APU is available when the battery switch
     is in what position?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 'OFF'
+  Choice B: ON or OFF
+  Choice C: Inoperative
   Choice D: 'ON'
   Correct Choice: D
   Shuffle Choices: true

@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -22,9 +22,9 @@ fields:
   Original Text: The {{c1::lavatories}} are equipped with smoke detection equipment.
   Question Stem: Which areas of the aircraft are equipped with smoke detection equipment?
   Choice A: Lavatories
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Aft Cabin
+  Choice C: Forward Cabin
+  Choice D: Galleys
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

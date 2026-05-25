@@ -12,7 +12,7 @@ tags:
 - system:fire_protection
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
@@ -24,9 +24,9 @@ fields:
   Question Stem: The Fault light on the Overheat/Fire Protection Panel illuminates if what
     condition exists?
   Choice A: Both detector loops for one or both engines have failed
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The APU detection is inoperative
+  Choice C: The fault detection circuits for both engines and the APU are inoperative
+  Choice D: Both engine and cargo fire detection is inoperative
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
