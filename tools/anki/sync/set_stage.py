@@ -22,8 +22,8 @@ Stage 1 — Foundation
     Active  : Limits::Non-Trivia (all sub-decks), QRC, Triggers_and_Flows::Triggers
     Inactive: Limits::Trivia, Flows, Supplemental, all Procedures
 
-Stage 2 — Flows + Supplemental
-    Active  : Stage 1 + Triggers_and_Flows::Flows + Triggers_and_Flows::Supplemental
+Stage 2 — Flows + Supplemental + Mnemonics + Cats and Dogs
+    Active  : Stage 1 + Cats_and_Dogs + Mnemonics + Triggers_and_Flows::Flows + Triggers_and_Flows::Supplemental
     Inactive: Limits::Trivia, all Procedures
 
 Stage 3 — Normal Procedures
@@ -78,6 +78,7 @@ B737_ROOT = "B737"
 # Deck prefixes where crew_role tags are expected.
 # Cards with crew_role tags outside these prefixes are flagged as warnings.
 CREW_ROLE_EXPECTED_PREFIXES = [
+    "B737::Core::Mnemonics",
     "B737::Core::Procedures",
     "B737::Core::Triggers_and_Flows",
 ]
@@ -108,6 +109,8 @@ STAGE_ADDITIONS: dict[int, list[str]] = {
         "B737::Core::Triggers_and_Flows::Triggers",
     ],
     2: [
+        "B737::Core::Cats_and_Dogs",
+        "B737::Core::Mnemonics",
         "B737::Core::Triggers_and_Flows::Flows",
         "B737::Core::Triggers_and_Flows::Supplemental",
     ],
@@ -439,7 +442,7 @@ def main() -> int:
         help=(
             "Study stage to apply: "
             "1=Limits::Non-Trivia+QRC+Triggers, "
-            "2=+Flows+Supplemental, "
+            "2=+Cats_and_Dogs+Mnemonics+Flows+Supplemental, "
             "3=+Procedures::Normal, "
             "4=+Procedures::Non_Normal+Inflight_Maneuvers, "
             "5=+Limits::Trivia"
