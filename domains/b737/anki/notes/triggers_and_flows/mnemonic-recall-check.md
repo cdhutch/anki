@@ -16,9 +16,9 @@ tags:
 fields:
   NoteID: mnemonic-recall-check
   Name: Recall Check
-  Mnemonic: Six and six; no sticks
+  Mnemonic: Six and six; nothing sticks
   Words: <li>Six and six — 6 systems annunciate on both left and right sides</li><li>No sticks
-    — none remain illuminated (all extinguish)</li>
+    — no systems remain illuminated (all extinguish)</li>
   Notes: ''
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Verification Notes: ''

@@ -17,8 +17,8 @@ tags:
 fields:
   NoteID: mnemonic-origination-flow
   Name: Origination Flow
-  Mnemonic: Drink, Stop, Door
-  Words: '<li>Drink: O2, Oil Qty, Hyd Qty</li><li>Stop: Parking Brake</li><li>Door: Gear Extension
+  Mnemonic: Drink, Stop, Gear
+  Words: '<li>Drink: O2, Oil Qty, Hyd Qty</li><li>Stop: Parking Brake</li><li>Gear: Gear Extension
     Door</li>'
   Notes: ''
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0

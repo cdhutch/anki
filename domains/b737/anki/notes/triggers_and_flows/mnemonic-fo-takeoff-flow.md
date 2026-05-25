@@ -18,9 +18,9 @@ tags:
 fields:
   NoteID: mnemonic-fo-takeoff-flow
   Name: FO Takeoff Flow
-  Mnemonic: FSAT
-  Words: '<li>F: Flaps</li><li>S: Stab Trim</li><li>A: A/C and Bleeds</li><li>T: T/O Config
-    Check</li>'
+  Mnemonic: FSATT
+  Words: '<li>F: Flaps</li><li>S: Stab Trim</li><li>A: A/C and Bleeds</li><li>T: Takeoff Data
+    Updated</li><li>T: T/O Config Check</li>'
   Notes: ''
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Verification Notes: ''
