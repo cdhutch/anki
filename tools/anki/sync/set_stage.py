@@ -7,6 +7,9 @@ them in active decks. Does not touch review or learning cards.
 After staging, a seat filter suspends all cards tagged for the opposite
 crew seat across all B737 decks (including review/learning cards).
 
+Finally, override tags (always_show / always_hide) are applied last and
+have the final word over stage and seat logic.
+
 Usage:
     python tools/anki/sync/set_stage.py --stage 1            # FO seat (default)
     python tools/anki/sync/set_stage.py --stage 2 --seat fo  # explicit FO
@@ -19,8 +22,8 @@ Stage 1 — Foundation
     Active  : Limits::Non-Trivia (all sub-decks), QRC, Triggers_and_Flows::Triggers
     Inactive: Limits::Trivia, Flows, Supplemental, all Procedures
 
-Stage 2 — Flows + Supplemental
-    Active  : Stage 1 + Triggers_and_Flows::Flows + Triggers_and_Flows::Supplemental
+Stage 2 — Flows + Supplemental + Mnemonics + Cats and Dogs
+    Active  : Stage 1 + Cats_and_Dogs + Mnemonics + Triggers_and_Flows::Flows + Triggers_and_Flows::Supplemental
     Inactive: Limits::Trivia, all Procedures
 
 Stage 3 — Normal Procedures
@@ -42,6 +45,14 @@ never suppressed — both seats need to know both roles.
 
 Cards with crew_role tags outside Procedures or Triggers_and_Flows are
 flagged as likely tagging mistakes.
+
+Override tags
+-------------
+always_show  — unsuspend ALL cards with this tag, regardless of stage or
+               seat. Applied last so it overrides everything else.
+always_hide  — suspend ALL cards with this tag, regardless of stage or
+               seat. Applied after staging and seat filter, but before
+               always_show (so always_show wins if both tags are present).
 """
 
 from __future__ import annotations
@@ -67,9 +78,14 @@ B737_ROOT = "B737"
 # Deck prefixes where crew_role tags are expected.
 # Cards with crew_role tags outside these prefixes are flagged as warnings.
 CREW_ROLE_EXPECTED_PREFIXES = [
+    "B737::Core::Mnemonics",
     "B737::Core::Procedures",
     "B737::Core::Triggers_and_Flows",
 ]
+
+# Override tags — applied last, after staging and seat filter.
+ALWAYS_SHOW_TAG = "always_show"
+ALWAYS_HIDE_TAG = "always_hide"
 
 # Seat filter: maps seat name to the tag that should be suppressed.
 # pilot_flying / pilot_monitoring are intentionally excluded — both seats
@@ -93,6 +109,8 @@ STAGE_ADDITIONS: dict[int, list[str]] = {
         "B737::Core::Triggers_and_Flows::Triggers",
     ],
     2: [
+        "B737::Core::Cats_and_Dogs",
+        "B737::Core::Mnemonics",
         "B737::Core::Triggers_and_Flows::Flows",
         "B737::Core::Triggers_and_Flows::Supplemental",
     ],
@@ -171,6 +189,12 @@ def find_suspended_new_cards(deck_name: str, url: str) -> list[int]:
 def find_unsuspended_new_cards(deck_name: str, url: str) -> list[int]:
     """Return IDs of new cards that are not suspended."""
     query = f'"deck:{deck_name}" is:new -is:suspended'
+    return anki_request("findCards", {"query": query}, url=url) or []
+
+
+def find_unsuspended_cards(deck_name: str, url: str) -> list[int]:
+    """Return IDs of all cards (any state) that are not suspended."""
+    query = f'"deck:{deck_name}" -is:suspended'
     return anki_request("findCards", {"query": query}, url=url) or []
 
 
@@ -271,6 +295,54 @@ def apply_seat_filter(
 
 
 # ---------------------------------------------------------------------------
+# Flow sequence filter
+# ---------------------------------------------------------------------------
+
+def apply_flow_sequence_filter(dry_run: bool, url: str) -> None:
+    """Suspend all type:flow_sequence cards across all B737 decks.
+
+    These cards are always suspended regardless of stage. Cards tagged
+    always_show are excluded here and handled by the override pass.
+    """
+    query = f'tag:type:flow_sequence "deck:{B737_ROOT}" -tag:{ALWAYS_SHOW_TAG}'
+    to_suspend = anki_request("findCards", {"query": query}, url=url) or []
+
+    print(f"\n{'DRY RUN — ' if dry_run else ''}Flow sequence filter")
+    print(f"  [SUSPEND]  tag:type:flow_sequence")
+    print(f"              → suspend {len(to_suspend)} card(s)")
+    if to_suspend and not dry_run:
+        suspend_cards(to_suspend, url)
+
+
+# ---------------------------------------------------------------------------
+# Override tags
+# ---------------------------------------------------------------------------
+
+def apply_overrides(dry_run: bool, url: str) -> None:
+    """Apply always_hide / always_show overrides across all B737 decks.
+
+    Runs after staging and seat filter so these tags have the final word.
+    always_hide is applied first; always_show is applied second so it wins
+    if a card carries both tags.
+    """
+    print(f"\n{'DRY RUN — ' if dry_run else ''}Override tags")
+
+    # always_hide — suspend regardless of stage / seat
+    hide_ids = find_cards_by_tag(ALWAYS_HIDE_TAG, url)
+    print(f"  [ALWAYS HIDE]  tag:{ALWAYS_HIDE_TAG}")
+    print(f"                  → suspend {len(hide_ids)} card(s)")
+    if hide_ids and not dry_run:
+        suspend_cards(hide_ids, url)
+
+    # always_show — unsuspend regardless of stage / seat
+    show_ids = find_cards_by_tag(ALWAYS_SHOW_TAG, url)
+    print(f"  [ALWAYS SHOW]  tag:{ALWAYS_SHOW_TAG}")
+    print(f"                  → unsuspend {len(show_ids)} card(s)")
+    if show_ids and not dry_run:
+        unsuspend_cards(show_ids, url)
+
+
+# ---------------------------------------------------------------------------
 # Main logic
 # ---------------------------------------------------------------------------
 
@@ -304,9 +376,9 @@ def set_stage(stage: int, seat: str, dry_run: bool, url: str) -> None:
                 unsuspend_cards(suspended, url)
             total_unsuspended += len(suspended)
         else:
-            unsuspended = find_unsuspended_new_cards(pfx, url)
+            unsuspended = find_unsuspended_cards(pfx, url)
             status = "DEACTIVATE"
-            action_str = f"suspend {len(unsuspended)} new card(s)"
+            action_str = f"suspend {len(unsuspended)} card(s) (any state)"
             if unsuspended and not dry_run:
                 suspend_cards(unsuspended, url)
             total_suspended += len(unsuspended)
@@ -347,8 +419,14 @@ def set_stage(stage: int, seat: str, dry_run: bool, url: str) -> None:
               f"Suspended {total_suspended} new card(s), "
               f"unsuspended {total_unsuspended} new card(s).")
 
-    # Apply seat filter after staging so it always has the final word.
+    # Apply seat filter after staging so it has priority over stage logic.
     apply_seat_filter(seat=seat, active_pfx=active_pfx, dry_run=dry_run, url=url)
+
+    # Suspend flow_sequence cards — always hidden unless always_show overrides.
+    apply_flow_sequence_filter(dry_run=dry_run, url=url)
+
+    # Apply override tags last — always_show / always_hide beat everything.
+    apply_overrides(dry_run=dry_run, url=url)
 
 
 # ---------------------------------------------------------------------------
@@ -364,7 +442,7 @@ def main() -> int:
         help=(
             "Study stage to apply: "
             "1=Limits::Non-Trivia+QRC+Triggers, "
-            "2=+Flows+Supplemental, "
+            "2=+Cats_and_Dogs+Mnemonics+Flows+Supplemental, "
             "3=+Procedures::Normal, "
             "4=+Procedures::Non_Normal+Inflight_Maneuvers, "
             "5=+Limits::Trivia"

@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: lighting-005
+note_type: systems_verification_exam_draft
+note_id: sv-lighting-005
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:lighting
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'The amber emergency light NOT ARMED illuminates when the EMER EXIT LIGHTS switch
-    is in {{c1::both 1 and 2: the OFF position; the ON positio}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Lighting 5
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: lighting-005
+  Original Prompt Style: cloze
+  Original Text: 'The amber emergency light NOT ARMED illuminates when the EMER EXIT LIGHTS
+    switch is in {{c1::both 1 and 2: the OFF position; the ON positio}}.'
+  Question Stem: The amber emergency light NOT ARMED illuminates when the EMER EXIT LIGHTS
+    switch is in which position(s)?
+  Choice A: The OFF position
+  Choice B: The ON position
+  Choice C: The ARMED position
+  Choice D: Both A and B.
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: lighting
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

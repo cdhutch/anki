@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
-"""Create B737_SV_MCQ and B737_SV_TF note types in Anki as Standard (non-Cloze) types.
+"""Create or update B737_SV_MCQ and B737_SV_TF note types in Anki.
 
-Creates each model with the correct fields, card template, and CSS styling in a
-single createModel call. Idempotent: skips creation if the model already exists.
+If the model does not exist: creates it with the correct fields, card template,
+and CSS styling in a single createModel call.
+
+If the model already exists: updates templates, CSS, and syncs fields
+(adds missing fields, removes obsolete fields). Existing note data in fields
+that are being removed is discarded — re-import from TSV after running this.
 
 Usage:
     python tools/anki/setup/update_sv_exam_templates.py
@@ -41,7 +45,7 @@ SHARED_CSS = """\
   margin-bottom: 20px;
 }
 
-/* MCQ choices */
+/* MCQ / T/F choices */
 .choices {
   display: flex;
   flex-direction: column;
@@ -55,18 +59,9 @@ SHARED_CSS = """\
   line-height: 1.4;
 }
 
-.choice-num {
+.choice-label {
   font-weight: bold;
   margin-right: 6px;
-}
-
-/* T/F prompt */
-.tf-prompt {
-  font-size: 15px;
-  color: #555;
-  font-style: italic;
-  margin-top: -8px;
-  margin-bottom: 4px;
 }
 
 /* Answer reveal (back of card) */
@@ -76,14 +71,38 @@ hr#answer {
   margin: 22px 0;
 }
 
-.correct-answer {
-  font-size: 18px;
+.answer-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.answer-letter {
+  font-size: 20px;
   font-weight: bold;
   color: #1a6e1a;
   background-color: #eaf5ea;
-  border-radius: 5px;
+  border-radius: 5px 0 0 5px;
   padding: 12px 16px;
   text-align: center;
+  width: 48px;
+  vertical-align: middle;
+}
+
+.answer-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #1a6e1a;
+  background-color: #eaf5ea;
+  border-radius: 0 5px 5px 0;
+  padding: 12px 16px;
+  vertical-align: middle;
+}
+
+.note-id {
+  font-size: 11px;
+  color: #aaa;
+  text-align: right;
+  margin-top: 14px;
 }
 """
 
@@ -100,23 +119,30 @@ MCQ_FIELDS = [
     "Choice2",
     "Choice3",
     "Choice4",
-    "CorrectChoice",
+    "CorrectLetter",
+    "CorrectText",
 ]
 
 MCQ_FRONT = """\
 <div class="question">{{Text}}</div>
 <div class="choices">
-  <div class="choice"><span class="choice-num">1.</span>{{Choice1}}</div>
-  <div class="choice"><span class="choice-num">2.</span>{{Choice2}}</div>
-  <div class="choice"><span class="choice-num">3.</span>{{Choice3}}</div>
-  <div class="choice"><span class="choice-num">4.</span>{{Choice4}}</div>
+  <div class="choice"><span class="choice-label">A.</span>{{Choice1}}</div>
+  <div class="choice"><span class="choice-label">B.</span>{{Choice2}}</div>
+  {{#Choice3}}<div class="choice"><span class="choice-label">C.</span>{{Choice3}}</div>{{/Choice3}}
+  {{#Choice4}}<div class="choice"><span class="choice-label">D.</span>{{Choice4}}</div>{{/Choice4}}
 </div>
 """
 
 MCQ_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<div class="correct-answer">{{CorrectChoice}}</div>
+<table class="answer-table">
+  <tr>
+    <td class="answer-letter">{{CorrectLetter}}</td>
+    <td class="answer-text">{{CorrectText}}</td>
+  </tr>
+</table>
+<div class="note-id">{{NoteID}}</div>
 """
 
 # ---------------------------------------------------------------------------
@@ -128,25 +154,56 @@ TF_FIELDS = [
     "Text",
     "Source Document",
     "OriginalNoteID",
-    "CorrectAnswer",
+    "CorrectLetter",
+    "CorrectText",
 ]
 
 TF_FRONT = """\
 <div class="statement">{{Text}}</div>
-<div class="tf-prompt">True or False?</div>
+<div class="choices">
+  <div class="choice"><span class="choice-label">A.</span>True</div>
+  <div class="choice"><span class="choice-label">B.</span>False</div>
+</div>
 """
 
 TF_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<div class="correct-answer">{{CorrectAnswer}}</div>
+<table class="answer-table">
+  <tr>
+    <td class="answer-letter">{{CorrectLetter}}</td>
+    <td class="answer-text">{{CorrectText}}</td>
+  </tr>
+</table>
+<div class="note-id">{{NoteID}}</div>
 """
 
 # ---------------------------------------------------------------------------
 # Create
 # ---------------------------------------------------------------------------
 
-def create_model(
+def _sync_fields(model_name: str, desired: list[str]) -> None:
+    """Add fields missing from the model; remove fields no longer needed."""
+    current = anki_request("modelFieldNames", {"modelName": model_name}, url=ANKI_URL) or []
+    current_set = set(current)
+    desired_set = set(desired)
+
+    to_add = [f for f in desired if f not in current_set]
+    to_remove = [f for f in current if f not in desired_set]
+
+    for field in to_add:
+        anki_request("modelFieldAdd", {"modelName": model_name, "fieldName": field}, url=ANKI_URL)
+        print(f"    + field: {field}")
+
+    for field in to_remove:
+        anki_request("modelFieldRemove", {"modelName": model_name, "fieldName": field}, url=ANKI_URL)
+        print(f"    - field: {field}")
+
+    if not to_add and not to_remove:
+        print("    fields: no changes")
+
+
+def sync_model(
     model_name: str,
     fields: list[str],
     template_name: str,
@@ -154,38 +211,83 @@ def create_model(
     back: str,
     css: str,
 ) -> None:
-    # Check if model already exists
     existing = anki_request("modelNames", {}, url=ANKI_URL) or []
-    if model_name in existing:
-        print(f"  SKIP: {model_name} already exists.")
+
+    if model_name not in existing:
+        anki_request(
+            "createModel",
+            {
+                "modelName": model_name,
+                "inOrderFields": fields,
+                "css": css,
+                "isCloze": False,
+                "cardTemplates": [
+                    {
+                        "Name": template_name,
+                        "Front": front,
+                        "Back": back,
+                    }
+                ],
+            },
+            url=ANKI_URL,
+        )
+        print(f"  CREATED: {model_name}")
         return
 
+    print(f"  UPDATE:  {model_name}")
+    _sync_fields(model_name, fields)
+
+    # Discover the actual template name Anki is using (may differ from our
+    # desired name, e.g. Anki defaults to "Card 1" on first createModel).
+    model_info = anki_request("modelTemplates", {"modelName": model_name}, url=ANKI_URL) or {}
+    existing_template_names = list(model_info.keys())
+    if template_name in existing_template_names:
+        actual_template_name = template_name
+    elif existing_template_names:
+        actual_template_name = existing_template_names[0]
+        print(f"    template name in Anki is {actual_template_name!r}, not {template_name!r} — using existing name")
+    else:
+        actual_template_name = template_name
+        print(f"    warning: could not determine template name, trying {template_name!r}")
+
     anki_request(
-        "createModel",
+        "updateModelTemplates",
         {
-            "modelName": model_name,
-            "inOrderFields": fields,
-            "css": css,
-            "isCloze": False,
-            "cardTemplates": [
-                {
-                    "Name": template_name,
-                    "Front": front,
-                    "Back": back,
-                }
-            ],
+            "model": {
+                "name": model_name,
+                "templates": {actual_template_name: {"Front": front, "Back": back}},
+            }
         },
         url=ANKI_URL,
     )
-    print(f"  OK: {model_name} created.")
+    print(f"    templates: updated ({actual_template_name!r})")
+
+    # Remove any stray extra templates — a model with >1 template generates
+    # multiple cards per note (Card 1, Card 2, ...) which is never correct here.
+    stray = [t for t in existing_template_names if t != actual_template_name]
+    for stray_name in stray:
+        print(f"    ⚠  removing stray template {stray_name!r} ...")
+        anki_request(
+            "removeCardFromTemplate",
+            {"modelName": model_name, "templateName": stray_name},
+            url=ANKI_URL,
+        )
+        print(f"    ✓  removed {stray_name!r}")
+
+    anki_request(
+        "updateModelStyling",
+        {"model": {"name": model_name, "css": css}},
+        url=ANKI_URL,
+    )
+    print(f"    css: updated")
 
 
 def main() -> int:
     version = anki_request("version", {}, url=ANKI_URL)
     print(f"AnkiConnect version: {version}\n")
 
-    print("Creating B737_SV_MCQ ...")
-    create_model(
+    print("Syncing B737_SV_MCQ ...")
+    sync_model(
         model_name="B737_SV_MCQ",
         fields=MCQ_FIELDS,
         template_name="MCQ Card",
@@ -194,8 +296,8 @@ def main() -> int:
         css=SHARED_CSS,
     )
 
-    print("Creating B737_SV_TF ...")
-    create_model(
+    print("Syncing B737_SV_TF ...")
+    sync_model(
         model_name="B737_SV_TF",
         fields=TF_FIELDS,
         template_name="TF Card",

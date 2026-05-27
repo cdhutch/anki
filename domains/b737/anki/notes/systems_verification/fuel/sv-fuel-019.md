@@ -1,27 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-019
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-019
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: With the Left Center Tank pump switch off and the CROSS FEED valve closed, what crew
-    action will be required to prevent a fuel imbalance? {{c1::Turn the left center tank pump
-    back on or turn the right center tank pump off.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 19
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-019
+  Original Prompt Style: cloze
+  Original Text: With the Left Center Tank pump switch off and the CROSS FEED valve closed,
+    what crew action will be required to prevent a fuel imbalance? {{c1::Turn the left center
+    tank pump back on or turn the right center tank pump off.}}
+  Question Stem: With the Left Center Tank pump switch off and the CROSS FEED valve closed,
+    what crew action will be required to prevent a fuel imbalance?
+  Choice A: No further action required
+  Choice B: Shut down engine number 1
+  Choice C: Turn off right main tank pumps
+  Choice D: Turn the left center tank pump back on or turn the right center tank pump off
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

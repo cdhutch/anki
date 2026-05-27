@@ -11,10 +11,12 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:preflight
+- flow_detail:keep
 - segment:overhead_first_column
 - sequence:01
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Preflight — Overhead Panel (1st Column)
@@ -31,20 +33,10 @@ What is your flow?
 
 **Preflight — Overhead Panel (1st Column)**
 
-Flight control panel:
-- All switches: OFF and GUARDED except YAW DAMPER
-- YAW DAMPER: ON; caution light out
-- Flight control low pressure cautions × 2
-
-Navigation:
-- All normal
-
-Displays:
-- AUTO / NORMAL
-
-Fuel panel:
-- 4 dim blue lights
-- All switches: OFF or CLOSED
-- Main tank low pressure cautions × 4
+- All switches OFF, GUARDED, AUTO, CLOSED or NORMAL, except YAW DAMPER
+- 6 Amber Caution Lights
+    - Flight Control Low Pressure x 2
+    - Main tank Low Pressure Caution x 4
+- 4 Dim Blue Lights
 
 *Next: Overhead Panel (2nd Column)*

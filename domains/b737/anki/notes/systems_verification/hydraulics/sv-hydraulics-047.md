@@ -1,27 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-047
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-047
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to a leak
-    in the #1 (System A) engine-driven pump, then System A quantity will {{c1::drop to approximately
-    20%.}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 47
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-047
+  Original Prompt Style: cloze
+  Original Text: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to
+    a leak in the #1 (System A) engine-driven pump, then System A quantity will {{c1::drop
+    to approximately 20%.}}.'
+  Question Stem: 'If the light *(ENG 1 Hydraulic Pump LOW PRESSURE )* is illuminated due to
+    a leak in the #1 (System A) engine-driven pump, then System A quantity will what?'
+  Choice A: Drop to approximately 72%
+  Choice B: Drop to approximately 76%
+  Choice C: Drop to approximately 0%
+  Choice D: Drop to approximately 20%
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

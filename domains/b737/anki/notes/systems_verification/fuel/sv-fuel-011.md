@@ -1,27 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-011
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-011
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: During engine start, with the number 1 engine start lever in the idle position, the
-    ENG VALVE CLOSED light remained illuminated. Which statement is correct? {{c1::The engine
-    valve is closed.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 11
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-011
+  Original Prompt Style: cloze
+  Original Text: During engine start, with the number 1 engine start lever in the idle position,
+    the ENG VALVE CLOSED light remained illuminated. Which statement is correct? {{c1::The
+    engine valve is closed.}}
+  Question Stem: During engine start, with the number 1 engine start lever in the idle position,
+    the ENG VALVE CLOSED light remained illuminated. Which statement is correct?
+  Choice A: The engine valve is opened
+  Choice B: The spar valve is closed
+  Choice C: Both valves are closed
+  Choice D: The engine valve is closed
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

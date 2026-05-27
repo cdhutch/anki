@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: landing_gear-002
+note_type: systems_verification_exam_draft
+note_id: sv-landing_gear-002
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:landing_gear
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The override trigger, located on the underside of the gear handle, can be used to
-    override {{c1::the lever lock}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Landing Gear 2
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: landing_gear-002
+  Original Prompt Style: cloze
+  Original Text: The override trigger, located on the underside of the gear handle, can be
+    used to override {{c1::the lever lock}}.
+  Question Stem: The override trigger, located on the underside of the gear handle, can be
+    used to override what?
+  Choice A: The mechanical uplocks in case the hydraulic system is unable
+  Choice B: A hydraulic lock which might prevent normal extension of the gear
+  Choice C: The lever lock
+  Choice D: Electrical downlocks if they fail
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: landing_gear
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

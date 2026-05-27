@@ -1,0 +1,9 @@
+fields:
+  NoteID: note_id
+  tags: tags_joined
+  Name: fields.Name
+  Mnemonic: fields.Mnemonic
+  Words: fields.Words
+  Notes: fields.Notes
+  Source Document: fields.Source Document
+  Verification Notes: fields.Verification Notes

@@ -11,10 +11,12 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:preflight
+- flow_detail:keep
 - segment:overhead_second_column
 - sequence:02
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Preflight — Overhead Panel (2nd Column)
@@ -32,13 +34,14 @@ What is your flow?
 **Preflight — Overhead Panel (2nd Column)**
 
 Electrical panel:
-- 5 switches: GUARDED; 3 black / 2 red
-- AC switches: ON × 2
-- DRIVE caution lights × 2
-- 3 dim blue lights (starting with G)
+- All switches OFF/GUARDED except:
+    - AC switches x 2
+- All lights off except:
+    - DRIVE caution lights × 2
+    - 3 dim blue lights (starting with G)
 
 APU:
 - Start APU: if required — FFOD fire tests complete
 
 *Previous: Overhead Panel (1st Column)*  
-*Next: Overhead Panel (3rd–5th Columns)*
+*Next: Overhead Panel (3rd Column)*

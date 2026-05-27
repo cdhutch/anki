@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: landing_gear-014
+note_type: systems_verification_exam_draft
+note_id: sv-landing_gear-014
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:landing_gear
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: When a spinning tire with loose tread impacts a fitting in the wheel well ring opening,
-    the right main gear {{c1::will not retract}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Landing Gear 14
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: landing_gear-014
+  Original Prompt Style: cloze
+  Original Text: When a spinning tire with loose tread impacts a fitting in the wheel well
+    ring opening, the right main gear {{c1::will not retract}}.
+  Question Stem: When a spinning tire with loose tread impacts a fitting in the wheel well
+    ring opening, what happens to the right main gear?
+  Choice A: will have to be raised with the aid of the PTU
+  Choice B: can be raised through the gear transfer unit
+  Choice C: Will not retract
+  Choice D: can be retracted manually.
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: landing_gear
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

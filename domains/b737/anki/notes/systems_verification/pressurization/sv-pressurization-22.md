@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pressurization-22
+note_type: systems_verification_exam_draft
+note_id: sv-pressurization-22
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pressurization
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'The pressurization outflow VALVE position indicator operates in {{c1::all of the
-    above: AUTO, ALTN, and MANUAL}} mode(s).'
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 22
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pressurization-22
+  Original Prompt Style: cloze
+  Original Text: 'The pressurization outflow VALVE position indicator operates in {{c1::all
+    of the\n    above: AUTO, ALTN, and MANUAL}} mode(s).'
+  Question Stem: In which modes does the pressurization outflow VALVE position indicator operate?
+  Choice A: AUTO
+  Choice B: ALTN
+  Choice C: MANUAL
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: pressurization
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

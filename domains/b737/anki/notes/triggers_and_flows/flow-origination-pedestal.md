@@ -16,6 +16,7 @@ tags:
 - sequence:04
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Origination Flow — Pedestal
@@ -33,8 +34,8 @@ What is your flow?
 **Origination Flow — Pedestal**
 
 - HYD Quantity:
-  - Verify both less than 105%
-  - No RF
+    - Verify both less than 105%
+    - No RF
 - Parking Brake — Set
 
 *Previous: Aft Overhead — Tests*  

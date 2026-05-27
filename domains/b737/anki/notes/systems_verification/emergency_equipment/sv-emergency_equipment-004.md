@@ -1,8 +1,8 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification_exam_draft
-note_id: svdraft-emergency_equipment-004
+note_type: systems_verification_exam
+note_id: sv-emergency_equipment-004
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -12,11 +12,11 @@ tags:
 - system:emergency_equipment
 - format:mcq
 - source:question_bank
-- status:draft
+- status:verified
 fields:
   Source Document: Systems Validation Question Bank
   Exam Format: mcq
-  Conversion Status: draft
+  Conversion Status: verified
   Original Note ID: emergency_equipment-004
   Original Prompt Style: cloze
   Original Text: On the B737, the nearest megaphone to the cockpit is located in the {{c1::forward

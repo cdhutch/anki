@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: landing_gear-010
+note_type: systems_verification_exam_draft
+note_id: sv-landing_gear-010
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:landing_gear
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The overhead panel does not show a green light for the left main. What statement is
-    true? {{c1::The left main is not down and locked.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Landing Gear 10
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: landing_gear-010
+  Original Prompt Style: cloze
+  Original Text: The overhead panel does not show a green light for the left main. What statement
+    is true? {{c1::The left main is not down and locked.}}
+  Question Stem: The overhead panel does not show a green light for the left main gear. What
+    is true?
+  Choice A: The left main is down and locked.
+  Choice B: The right main is unsafe.
+  Choice C: The left main is not down and locked.
+  Choice D: The right main is not down and locked.
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: landing_gear
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -16,6 +16,7 @@ tags:
 - sequence:01
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Origination Flow — Emergency Equipment
@@ -34,8 +35,10 @@ What is your flow?
 
 - Fire Extinguisher / Crash Axe
 - Escape Ropes
-- PBE / Life Vests / Spare Bulb Kit
-- CB Panels (P6/18)
+- PBE / Life Vests
+- Spare Bulb Kit / CB Panels (P6/18)
 - QRCs
+
+*Mnemonic:* Fight your way out → flee down the rope → protect yourself → check the spares and panels → pull the QRCs
 
 *Next: Aft Overhead — Configuration*

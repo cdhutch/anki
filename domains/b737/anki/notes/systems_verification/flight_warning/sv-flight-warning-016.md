@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-016
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-016
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'The {{c1::right}} annunciator panel monitors the following systems: anti-ice, hydraulics,
-    doors, engines, overhead panel, and air conditioning.'
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 16
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-016
+  Original Prompt Style: cloze
+  Original Text: 'The {{c1::right}} annunciator panel monitors the following systems: anti-ice,
+    hydraulics, doors, engines, overhead panel, and air conditioning.'
+  Question Stem: 'Which annunciator panel monitors the following systems: anti-ice, hydraulics,
+    doors, engines, overhead panel, and air conditioning?'
+  Choice A: Right
+  Choice B: Center
+  Choice C: Overhead
+  Choice D: Left
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

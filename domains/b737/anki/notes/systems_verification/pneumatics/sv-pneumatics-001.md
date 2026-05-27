@@ -1,28 +1,38 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pneumatics-001
+note_type: systems_verification_exam_draft
+note_id: sv-pneumatics-001
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pneumatics
-- source:question-bank
-- status:verified
-- model:b737-max
+- format:mcq
+- source:question_bank
+- status:draft
 fields:
-  Text: 'MAX: Features of MAX Bleed Air System: {{c1::Both 1. and 2. above: System allows
-    operation of both packs from a single bleed air source; System has been upgraded to a
-    Digital Bleed Air Supply which automatically detects and isolates faults.}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Pneumatics 1
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pneumatics-001
+  Original Prompt Style: cloze
+  Original Text: 'MAX: Features of MAX Bleed Air System: {{c1::Both A and B above: System
+    allows operation of both packs from a single bleed air source; System has been upgraded
+    to a Digital Bleed Air Supply which automatically detects and isolates faults.}}'
+  Question Stem: 'MAX: Features of MAX Bleed Air System: what?'
+  Choice A: System allows operation of both packs from a single bleed air source
+  Choice B: System has been upgraded to a Digital Bleed Air Supply which automatically detects
+    and isolates faults
+  Choice C: '[DISTRACTOR NEEDED]'
+  Choice D: 'Both A and B above: System allows operation of both packs from a single bleed
+    air source; System has been upgraded to a Digital Bleed Air Supply which automatically
+    detects and isolates faults'
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: Distractor needed at Choice C
   Verification Notes: ''
-system: pneumatics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -1,28 +1,38 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-002
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-002
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The aircraft is in level cruise flight with *(the Engine 1 Fwd Pump Low Pressure caution)*
-    light illuminated. Both main tanks are full, and usable center tank fuel is 5000 lbs.
-    All other conditions are normal. Which statement is valid? {{c1::Both engines will continue
-    to feed from the Center Fuel Tank.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 2
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-002
+  Original Prompt Style: cloze
+  Original Text: The aircraft is in level cruise flight with *(the Engine 1 Fwd Pump Low Pressure
+    caution)* light illuminated. Both main tanks are full, and usable center tank fuel is
+    5000 lbs. All other conditions are normal. Which statement is valid? {{c1::Both engines
+    will continue to feed from the Center Fuel Tank.}}
+  Question Stem: The aircraft is in level cruise flight with *(the Engine 1 Fwd Pump Low Pressure
+    caution)* light illuminated. Both main tanks are full, and usable center tank fuel is
+    5000 lbs. All other conditions are normal. Which statement is valid?
+  Choice A: 'The #2 engine will begin feeding from the #2 Main Fuel Tank'
+  Choice B: 'The #1 engine will automatically start feeding from the #2 Main Fuel Tank'
+  Choice C: Both engines will continue to feed from the Center Fuel Tank
+  Choice D: 'The #1 engine will begin feeding from the #1 Main Fuel Tank'
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-025
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-025
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: IMBAL means that the main tanks differ by more than {{c1::1000}} pounds.
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 25
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-025
+  Original Prompt Style: cloze
+  Original Text: IMBAL means that the main tanks differ by more than {{c1::1000}} pounds.
+  Question Stem: How many pounds must the main tanks differ by to trigger an IMBAL indication?
+  Choice A: 1500
+  Choice B: 1000
+  Choice C: 2000
+  Choice D: 800
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

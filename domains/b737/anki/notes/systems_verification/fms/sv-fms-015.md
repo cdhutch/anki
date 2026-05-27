@@ -1,26 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fms-015
+note_type: systems_verification_exam_draft
+note_id: sv-fms-015
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fms
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The STA switch on the Displays Control Panel will display all {{c1::high and low altitude
-    navaids if the range is selected to 40 miles or less}} on the nav display.
   Source Document: Systems Validation Question Bank
-  Source Location: FMS 15
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fms-015
+  Original Prompt Style: cloze
+  Original Text: The STA switch on the Displays Control Panel will display all {{c1::high
+    and low altitude\n    navaids if the range is selected to 40 miles or less}} on the nav
+    display.
+  Question Stem: The STA switch on the Displays Control Panel will display what on the nav
+    display?
+  Choice A: Only high altitude NAVAIDs in database
+  Choice B: NAVAIDs except LOC and NDB
+  Choice C: Only low altitude NAVAIDs in database
+  Choice D: All high and low altitude NAVAIDs if the range is selected to 40 miles or less
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fms
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

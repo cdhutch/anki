@@ -16,6 +16,7 @@ tags:
 - sequence:13
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: First Officer Before Start
@@ -32,10 +33,7 @@ What is your flow?
 
 **First Officer — Before Start**
 
-- Flight forms and AML: CHECK
-  - Security slip: IF REQUIRED
-  - International documents
-  - Yellow book
+- Required Documents and AML: CHECK
 
 *Previous: First Officer — Preflight*  
 *Next: First Officer — Before Pushback*

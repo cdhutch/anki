@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: air-conditioning-002
+note_type: systems_verification_exam_draft
+note_id: sv-air-conditioning-002
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:air-conditioning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The APU can supply bleed air for the pack up to {{c1::17,000 feet or 10,000 feet if
-    the APU is also providing electricity}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Air Conditioning 2
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: air-conditioning-002
+  Original Prompt Style: cloze
+  Original Text: The APU can supply bleed air for the pack up to {{c1::17,000 feet or 10,000
+    feet if the APU is also providing electricity}}.
+  Question Stem: The APU can supply bleed air for the pack up to what?
+  Choice A: 20,000 feet or 8000 feet if the APU is also providing electricity
+  Choice B: 41,000 feet under all conditions
+  Choice C: 17,000 feet or 10,000 feet if the APU is also providing electricity
+  Choice D: 20,000 feet or 12,000 feet if the APU is also providing electricity
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: air-conditioning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

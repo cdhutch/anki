@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-003
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-003
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The {{c1::FSEU}} protects the flaps in this condition.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 3
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-003
+  Original Prompt Style: cloze
+  Original Text: The {{c1::FSEU}} protects the flaps in this condition.
+  Question Stem: The what? protects the flaps in this condition?
+  Choice A: EEC
+  Choice B: DEU
+  Choice C: FCC
+  Choice D: FSEU
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

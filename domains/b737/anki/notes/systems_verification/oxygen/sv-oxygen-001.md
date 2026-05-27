@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: oxygen-001
+note_type: systems_verification_exam_draft
+note_id: sv-oxygen-001
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:oxygen
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: '{{c1::Manual activation of the passenger oxygen masks}} will cause the PASS OXY ON
-    light to illuminate in the cockpit.'
   Source Document: Systems Validation Question Bank
-  Source Location: Oxygen 1
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: oxygen-001
+  Original Prompt Style: cloze
+  Original Text: '{{c1::Manual activation of the passenger oxygen masks}} will cause the PASS
+    OXY ON light to illuminate in the cockpit.'
+  Question Stem: What will cause the PASS OXY ON light to illuminate in the cockpit?
+  Choice A: Cabin altitude above 10,000 ft
+  Choice B: Manual activation of the passenger oxygen masks
+  Choice C: Both A and B
+  Choice D: None of the above
+  Correct Choice: C
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: oxygen
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

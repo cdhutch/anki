@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-038
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-038
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: With fuel pumps turned OFF, the APU fuel is suction-fed from {{c1::the No. 1 main
-    tank}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 38
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-038
+  Original Prompt Style: cloze
+  Original Text: With fuel pumps turned OFF, the APU fuel is suction-fed from {{c1::the No.
+    1 main tank}}.
+  Question Stem: With fuel pumps turned OFF, the APU fuel is suction-fed from what?
+  Choice A: Only what remains in the fuel lines. The APU cannot be suction-fed from a fuel
+    tank
+  Choice B: The Center tank
+  Choice C: The No. 1 main tank
+  Choice D: The No. 2 main tank
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

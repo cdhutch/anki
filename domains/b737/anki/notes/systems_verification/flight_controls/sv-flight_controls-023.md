@@ -1,27 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-023
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-023
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: As you advance the thrust lever for takeoff, would you get an intermittent horn with
-    the LEDs positioned as indicated *(LE DEVICES in TRANSIT)? {{c1::Yes. The LEDs are not
-    in the proper position.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 23
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-023
+  Original Prompt Style: cloze
+  Original Text: As you advance the thrust lever for takeoff, would you get an intermittent
+    horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)? {{c1::Yes. The LEDs
+    are not in the proper position.}}
+  Question Stem: As you advance the thrust lever for takeoff, would you get an intermittent
+    horn with the LEDs positioned as indicated *(LE DEVICES in TRANSIT)?
+  Choice A: No. The LEDs are not part of the takeoff warning system
+  Choice B: No. the TE Flaps are set at 5 Degrees
+  Choice C: No. If the parking brake is released
+  Choice D: Yes. The LEDs are not in the proper position
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

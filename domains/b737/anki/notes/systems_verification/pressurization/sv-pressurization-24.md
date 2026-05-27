@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pressurization-24
+note_type: systems_verification_exam_draft
+note_id: sv-pressurization-24
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pressurization
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The safety pressure relief valves open to keep differential pressure from exceeding
-    {{c1::9.10}} psi.
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 24
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pressurization-24
+  Original Prompt Style: cloze
+  Original Text: The safety pressure relief valves open to keep differential pressure from
+    exceeding\n    {{c1::9.10}} psi.
+  Question Stem: The safety pressure relief valves open to keep differential pressure from
+    exceeding what value?
+  Choice A: 9.10 psi
+  Choice B: 8.35 psi
+  Choice C: 8.25 psi
+  Choice D: 8.45 psi
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pressurization
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

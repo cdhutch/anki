@@ -13,6 +13,7 @@ tags:
 - phase:after_landing
 - phase:shutdown
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Triggers and Flows Outline

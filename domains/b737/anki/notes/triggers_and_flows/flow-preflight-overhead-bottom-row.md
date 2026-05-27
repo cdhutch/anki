@@ -11,10 +11,12 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:preflight
+- flow_detail:keep
 - segment:overhead_bottom_row
-- sequence:04
+- sequence:06
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Preflight — Overhead Panel (Bottom Row)
@@ -36,5 +38,5 @@ What is your flow?
 - IGN: L or R
 - FO lights: 2 ON (forward), 3 OFF (aft)
 
-*Previous: Overhead Panel (3rd–5th Columns)*  
+*Previous: Overhead Panel (5th Column)*  
 *Next: EFIS / MCP*

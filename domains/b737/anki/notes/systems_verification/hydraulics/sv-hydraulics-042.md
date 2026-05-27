@@ -1,27 +1,40 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-042
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-042
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'The automatic operation of the Standby Hydraulic System is initiated when all the
-    following conditions exist: {{c1::Loss of system A or B pressure, Flight Control switches
-    A & B on, flaps extended, airborne, and wheel speed greater than 60 knots}}'
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 42
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-042
+  Original Prompt Style: cloze
+  Original Text: 'The automatic operation of the Standby Hydraulic System is initiated when
+    all the following conditions exist: {{c1::Loss of system A or B pressure, Flight Control
+    switches A & B on, flaps extended, airborne, and wheel speed greater than 60 knots}}'
+  Question Stem: 'The automatic operation of the Standby Hydraulic System is initiated when
+    all the following conditions exist: what?'
+  Choice A: Loss of system A and B pressure, flaps retracted, airborne, and wheel speed greater
+    than 90 knots
+  Choice B: Loss of system A or B pressure, flaps extended, airborne, and wheel speed greater
+    than 90 knots
+  Choice C: Loss of system A or B pressure, Flight Control switches A & B on, flaps extended,
+    airborne, and wheel speed greater than 60 knots
+  Choice D: Loss of system A and B pressure, flaps retracted, airborne, and wheel speed greater
+    than 50 knots
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -2,13 +2,17 @@
 """Convert SV exam-draft CNSF markdown notes into Anki TSV files.
 
 Produces two TSV files per invocation:
-  --out-mcq  MCQ notes  → NoteID, Text, Choice1-4, CorrectChoice, SourceDocument, OriginalNoteID, Tags
-  --out-tf   T/F notes  → NoteID, Text, CorrectAnswer, SourceDocument, OriginalNoteID, Tags
+  --out-mcq  MCQ notes  → NoteID, Text, Choice1-4, CorrectLetter, CorrectText, SourceDocument, OriginalNoteID, Tags
+  --out-tf   T/F notes  → NoteID, Text, CorrectLetter, CorrectText, SourceDocument, OriginalNoteID, Tags
 
 Choice shuffling (when Shuffle Choices: true) is deterministic, seeded by note_id.
 Both TSV files are always written; an empty input produces a header-only TSV.
 
-Only processes notes with note_type: systems_verification_exam_draft.
+Processes notes with note_type: systems_verification_exam_draft OR systems_verification_exam.
+
+T/F notes map True → A, False → B.
+MCQ notes with compound/union answers (e.g. "Both A and B above") must use
+Shuffle Choices: false so that choice labels remain stable.
 """
 from __future__ import annotations
 
@@ -22,17 +26,22 @@ from typing import Any
 
 import yaml
 
-NOTE_TYPE = "systems_verification_exam_draft"
+NOTE_TYPES = {
+    "systems_verification_exam_draft",
+    "systems_verification_exam",
+}
 
 MCQ_FIELDNAMES = [
     "NoteID", "Text", "Choice1", "Choice2", "Choice3", "Choice4",
-    "CorrectChoice", "Source Document", "OriginalNoteID", "Tags",
+    "CorrectLetter", "CorrectText", "Source Document", "OriginalNoteID", "Tags",
 ]
 TF_FIELDNAMES = [
-    "NoteID", "Text", "CorrectAnswer", "Source Document", "OriginalNoteID", "Tags",
+    "NoteID", "Text", "CorrectLetter", "CorrectText", "Source Document", "OriginalNoteID", "Tags",
 ]
 
 _LETTER_IDX: dict[str, int] = {"A": 0, "B": 1, "C": 2, "D": 3}
+_IDX_LETTER: list[str] = ["A", "B", "C", "D"]
+_TF_LETTER: dict[str, str] = {"True": "A", "False": "B"}
 
 
 # ---------------------------------------------------------------------------
@@ -73,8 +82,8 @@ def _normalize_tags(tags: Any) -> str:
 
 def _deterministic_shuffle(
     note_id: str, choices: list[str], correct_letter: str
-) -> tuple[list[str], int]:
-    """Return (shuffled_choices, correct_1based_position).
+) -> tuple[list[str], str]:
+    """Return (shuffled_choices, correct_letter_after_shuffle).
 
     Seed is derived from note_id via MD5 for reproducibility across runs.
     """
@@ -85,7 +94,7 @@ def _deterministic_shuffle(
     shuffled = [text for _, text in indexed]
     orig_idx = _LETTER_IDX[correct_letter.upper()]
     new_pos = next(i for i, (oi, _) in enumerate(indexed) if oi == orig_idx)
-    return shuffled, new_pos + 1  # 1-based
+    return shuffled, _IDX_LETTER[new_pos]
 
 
 # ---------------------------------------------------------------------------
@@ -93,7 +102,10 @@ def _deterministic_shuffle(
 # ---------------------------------------------------------------------------
 
 def _s(fields: dict[str, Any], key: str) -> str:
-    return str(fields.get(key) or "").strip()
+    val = fields.get(key)
+    if val is None:
+        return ""
+    return str(val).strip()
 
 
 def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
@@ -106,7 +118,7 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
     if not stem:
         raise ValueError(f"{path}: Question Stem is required")
 
-    choices = [
+    raw_choices = [
         _s(fields, "Choice A"),
         _s(fields, "Choice B"),
         _s(fields, "Choice C"),
@@ -117,14 +129,28 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
         raise ValueError(
             f"{path}: Correct Choice must be A, B, C, or D; got {correct_letter!r}"
         )
+    correct_idx = _LETTER_IDX[correct_letter.upper()]
+    if not raw_choices[correct_idx]:
+        raise ValueError(
+            f"{path}: Correct Choice {correct_letter!r} points to an empty choice"
+        )
 
     if fields.get("Shuffle Choices", False):
-        ordered, correct_pos = _deterministic_shuffle(note_id, choices, correct_letter)
+        # Compact to non-empty choices before shuffling so that blank slots
+        # don't appear between real options in Anki (supports 2–4 choices).
+        active_with_idx = [(i, t) for i, t in enumerate(raw_choices) if t]
+        active_texts = [t for _, t in active_with_idx]
+        active_correct_pos = next(
+            j for j, (i, _) in enumerate(active_with_idx) if i == correct_idx
+        )
+        active_correct_letter = _IDX_LETTER[active_correct_pos]
+        shuffled, final_letter = _deterministic_shuffle(note_id, active_texts, active_correct_letter)
+        ordered = shuffled + [""] * (4 - len(shuffled))
     else:
-        ordered = choices
-        correct_pos = _LETTER_IDX[correct_letter.upper()] + 1  # 1-based
+        ordered = raw_choices
+        final_letter = correct_letter.upper()
 
-    correct_text = ordered[correct_pos - 1]
+    correct_text = ordered[_LETTER_IDX[final_letter]]
 
     return {
         "NoteID": note_id,
@@ -133,7 +159,8 @@ def _build_mcq_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
         "Choice2": ordered[1],
         "Choice3": ordered[2],
         "Choice4": ordered[3],
-        "CorrectChoice": f"{correct_pos} — {correct_text}",
+        "CorrectLetter": final_letter,
+        "CorrectText": correct_text,
         "Source Document": _s(fields, "Source Document"),
         "OriginalNoteID": _s(fields, "Original Note ID"),
         "Tags": _normalize_tags(meta.get("tags")),
@@ -159,7 +186,8 @@ def _build_tf_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
     return {
         "NoteID": note_id,
         "Text": stem,
-        "CorrectAnswer": correct,
+        "CorrectLetter": _TF_LETTER[correct],
+        "CorrectText": correct,
         "Source Document": _s(fields, "Source Document"),
         "OriginalNoteID": _s(fields, "Original Note ID"),
         "Tags": _normalize_tags(meta.get("tags")),
@@ -170,28 +198,32 @@ def _build_tf_row(path: Path, meta: dict[str, Any]) -> dict[str, str]:
 # Collection
 # ---------------------------------------------------------------------------
 
-def collect_rows(root: Path) -> tuple[list[dict], list[dict]]:
+def collect_rows(root: Path) -> tuple[list[dict], list[dict], list[tuple[Path, Exception]]]:
     mcq_rows: list[dict] = []
     tf_rows: list[dict] = []
+    errors: list[tuple[Path, Exception]] = []
 
     for path in sorted(root.rglob("*.md")):
-        meta = _load_note(path)
-        if meta.get("note_type") != NOTE_TYPE:
-            continue
+        try:
+            meta = _load_note(path)
+            if meta.get("note_type") not in NOTE_TYPES:
+                continue
 
-        fields = meta.get("fields") or {}
-        exam_format = str(fields.get("Exam Format") or "").strip().lower()
+            fields = meta.get("fields") or {}
+            exam_format = str(fields.get("Exam Format") or "").strip().lower()
 
-        if exam_format == "mcq":
-            mcq_rows.append(_build_mcq_row(path, meta))
-        elif exam_format == "tf":
-            tf_rows.append(_build_tf_row(path, meta))
-        else:
-            raise ValueError(
-                f"{path}: Exam Format must be 'mcq' or 'tf'; got {exam_format!r}"
-            )
+            if exam_format == "mcq":
+                mcq_rows.append(_build_mcq_row(path, meta))
+            elif exam_format == "tf":
+                tf_rows.append(_build_tf_row(path, meta))
+            else:
+                raise ValueError(
+                    f"{path}: Exam Format must be 'mcq' or 'tf'; got {exam_format!r}"
+                )
+        except Exception as exc:  # noqa: BLE001
+            errors.append((path, exc))
 
-    return mcq_rows, tf_rows
+    return mcq_rows, tf_rows, errors
 
 
 # ---------------------------------------------------------------------------
@@ -232,13 +264,20 @@ def main() -> int:
     if not input_dir.exists():
         raise SystemExit(f"Input directory not found: {input_dir}")
 
-    mcq_rows, tf_rows = collect_rows(input_dir)
+    mcq_rows, tf_rows, errors = collect_rows(input_dir)
 
     _write_tsv(mcq_rows, MCQ_FIELDNAMES, Path(args.out_mcq))
     _write_tsv(tf_rows, TF_FIELDNAMES, Path(args.out_tf))
 
     print(f"MCQ rows : {len(mcq_rows):>4}  →  {args.out_mcq}")
     print(f"T/F rows : {len(tf_rows):>4}  →  {args.out_tf}")
+
+    if errors:
+        print(f"\nWARNING: {len(errors)} note(s) skipped due to errors:")
+        for path, exc in errors:
+            print(f"  {path.parent.name}/{path.name}: {exc}")
+        return 1
+
     return 0
 
 

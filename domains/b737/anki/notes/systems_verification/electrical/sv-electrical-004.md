@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-004
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-004
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: During landing with a loss of both generators, you check the QRH additional information.
-    Auto Brakes and Auto Speed Brakes are available. {{c1::False}}
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 4
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-004
+  Original Prompt Style: cloze
+  Original Text: During landing with a loss of both generators, you check the QRH additional
+    information. Auto Brakes and Auto Speed Brakes are available. {{c1::False}}
+  Question Stem: During landing with a loss of both generators, you check the QRH additional
+    information. Auto Brakes and Auto Speed Brakes are available.
+  Choice A: 'True'
+  Choice B: 'False'
+  Choice C: ''
+  Choice D: ''
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

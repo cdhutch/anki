@@ -1,25 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-037
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-037
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Normal engine indications on the upper engine display are {{c1::white}} in color.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 37
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-037
+  Original Prompt Style: cloze
+  Original Text: Normal engine indications on the upper engine display are {{c1::white}} in
+    color.
+  Question Stem: What color are normal engine indications on the upper engine display?
+  Choice A: Blue
+  Choice B: White
+  Choice C: Green
+  Choice D: Amber
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

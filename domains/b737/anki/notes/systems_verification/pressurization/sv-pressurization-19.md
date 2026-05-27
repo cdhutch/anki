@@ -1,26 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pressurization-19
+note_type: systems_verification_exam_draft
+note_id: sv-pressurization-19
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pressurization
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The AUTO FAIL light on the Cabin Pressure Controller will illuminate automatically
-    due to {{c1::loss of DC power}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 19
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pressurization-19
+  Original Prompt Style: cloze
+  Original Text: The AUTO FAIL light on the Cabin Pressure Controller will illuminate automatically\n    due
+    to {{c1::loss of DC power}}.
+  Question Stem: What automatically causes the AUTO FAIL light on the Cabin Pressure Controller
+    to illuminate?
+  Choice A: Cabin altitude in excess of 10,000'
+  Choice B: Loss of DC power
+  Choice C: Cabin rate of change in excess of ± 1000 ft/min or cabin altitude in excess of
+    14,000 feet
+  Choice D: Any of the above occurring
+  Correct Choice: B
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: pressurization
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

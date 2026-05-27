@@ -1,27 +1,37 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-018
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-018
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'Landing gear light indications are {{c1::all of the above: green light - gear is
-    down and locked; red light - gear in disagreement with lever position, gear is not down
-    and locked (below 800 ft RA and a thrust lever at idle); extinguished - gear up and locked}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 18
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-018
+  Original Prompt Style: cloze
+  Original Text: 'Landing gear light indications are {{c1::all of the above: green light -
+    gear is down and locked; red light - gear in disagreement with lever position, gear is
+    not down and locked (below 800 ft RA and a thrust lever at idle); extinguished - gear
+    up and locked}}.'
+  Question Stem: Landing gear light indications are what?
+  Choice A: Green light - gear is down and locked
+  Choice B: Red light - gear in disagreement with lever position, gear is not down and locked
+    (below 800 ft RA and a thrust lever at idle)
+  Choice C: Extinguished - gear up and locked
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

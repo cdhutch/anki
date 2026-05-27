@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-034
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-034
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: If we move the flap lever from 5 to 10, but the leading edge devices all stay in the
-    extend position, the {{c1::LE FLAPS TRANSIT}} Light will be illuminated.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 34
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-034
+  Original Prompt Style: cloze
+  Original Text: If we move the flap lever from 5 to 10, but the leading edge devices all
+    stay in the extend position, the {{c1::LE FLAPS TRANSIT}} Light will be illuminated.
+  Question Stem: If we move the flap lever from 5 to 10, but the leading edge devices all
+    stay in the extend position, the what? Light will be illuminated?
+  Choice A: LE FLAPS EXT
+  Choice B: AUTO SLAT FAIL
+  Choice C: LE FLAPS TRANSIT
+  Choice D: SLATS EXTEND
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

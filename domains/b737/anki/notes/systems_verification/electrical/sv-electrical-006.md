@@ -1,26 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-006
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-006
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: If MASTER CAUTION, ELEC light on System Annuciator, and ELEC light on the overhead
-    panel; {{c1::If this light remains on, do not take off}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 6
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-006
+  Original Prompt Style: cloze
+  Original Text: If MASTER CAUTION, ELEC light on System Annuciator, and ELEC light on the
+    overhead panel; {{c1::If this light remains on, do not take off}}.
+  Question Stem: 'Fill in the blank: If MASTER CAUTION, ELEC light on System Annunciator,
+    and ELEC light on the overhead panel, ____.'
+  Choice A: If this light remains on, do not press the AFDS APP mode
+  Choice B: Resetting the Master Caution will not extinguish any of the lights
+  Choice C: If this light remains on, do not take off
+  Choice D: Resetting the Master Caution will extinguish all of the lights, indicating a minor
+    fault
+  Correct Choice: C
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

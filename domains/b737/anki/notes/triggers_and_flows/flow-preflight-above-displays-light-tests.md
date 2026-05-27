@@ -11,10 +11,12 @@ tags:
 - topic:triggers_and_flows
 - type:flow
 - flow:preflight
+- flow_detail:keep
 - segment:above_displays_light_tests
 - sequence:07
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Preflight — Above Displays (Light Tests)
@@ -32,8 +34,8 @@ What is your flow?
 **Preflight — Above Displays (Light Tests)**
 
 Disengage light test:
-- Position 1: 3 steady amber
-- Position 2: 2 steady red, 1 amber
+- Position 1: 3 amber
+- Position 2: 2 red, 1 amber
 
 Master lights test: TEST
 

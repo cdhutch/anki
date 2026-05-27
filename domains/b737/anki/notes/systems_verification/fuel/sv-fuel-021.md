@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-021
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-021
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: What could cause this light to illuminate? {{c1::Solid contaminants blocking the fuel
-    filter.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 21
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-021
+  Original Prompt Style: cloze
+  Original Text: What could cause this light to illuminate? {{c1::Solid contaminants blocking
+    the fuel filter.}}
+  Question Stem: What could cause this light to illuminate?
+  Choice A: The EEC has moved to the alternate (ALTN) mode
+  Choice B: Solid contaminants blocking the fuel filter
+  Choice C: Solid contaminants in the oil filter
+  Choice D: Ice formation on the Hydro Mechanical Unit (HMU)
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -31,10 +31,10 @@ ANKI_CONNECT_DEFAULT = "http://127.0.0.1:8765"
 # Fields written to the Anki note (Tags excluded — sent as native Anki tags).
 MCQ_FIELDS = [
     "NoteID", "Text", "Choice1", "Choice2", "Choice3", "Choice4",
-    "CorrectChoice", "Source Document", "OriginalNoteID",
+    "CorrectLetter", "CorrectText", "Source Document", "OriginalNoteID",
 ]
 TF_FIELDS = [
-    "NoteID", "Text", "CorrectAnswer", "Source Document", "OriginalNoteID",
+    "NoteID", "Text", "CorrectLetter", "CorrectText", "Source Document", "OriginalNoteID",
 ]
 
 
@@ -49,13 +49,23 @@ def _find_existing(note_id: str, model_name: str, url: str) -> int | None:
     return int(result[0]) if result else None
 
 
-def _set_tags(anki_id: int, tags: list[str], url: str) -> None:
-    """Replace the tag set on an existing note."""
+def _set_tags(anki_id: int, tags: list[str], url: str) -> list[str]:
+    """Replace the tag set on an existing note. Returns the previous tag list."""
     current = anki_request("getNoteTags", {"note": anki_id}, url=url) or []
     if current:
         anki_request("removeTags", {"notes": [anki_id], "tags": " ".join(current)}, url=url)
     if tags:
         anki_request("addTags", {"notes": [anki_id], "tags": " ".join(tags)}, url=url)
+    return current
+
+
+def _set_suspension(note_id: str, model_name: str, suspend: bool, url: str) -> None:
+    """Suspend or unsuspend all cards belonging to this note."""
+    query = f'note:"{model_name}" NoteID:"{note_id}"'
+    card_ids = anki_request("findCards", {"query": query}, url=url)
+    if card_ids:
+        action = "suspend" if suspend else "unsuspend"
+        anki_request(action, {"cards": card_ids}, url=url)
 
 
 def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: str) -> None:
@@ -65,12 +75,21 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
 
     fields = {k: row.get(k, "") for k in field_names}
     tags = [t for t in row.get("Tags", "").split() if t]
+    is_draft = "status:draft" in tags
 
     existing = _find_existing(note_id, model_name, url)
     if existing:
         anki_request("updateNoteFields", {"note": {"id": existing, "fields": fields}}, url=url)
-        _set_tags(existing, tags, url)
-        print(f"  Updated : {note_id}")
+        prev_tags = _set_tags(existing, tags, url)
+        was_draft = "status:draft" in prev_tags
+
+        # Only touch suspension on a draft→verified transition (auto-unsuspend).
+        # Manual suspension of verified cards is preserved across syncs.
+        if was_draft and not is_draft:
+            _set_suspension(note_id, model_name, suspend=False, url=url)
+            print(f"  Updated : {note_id} (unsuspended — now verified)")
+        else:
+            print(f"  Updated : {note_id}{' (draft)' if is_draft else ''}")
     else:
         deck = DECK_MCQ if model_name == MODEL_MCQ else DECK_TF
         nid = anki_request(
@@ -86,7 +105,9 @@ def _upsert(row: dict[str, str], model_name: str, field_names: list[str], url: s
             },
             url=url,
         )
-        print(f"  Added   : {note_id} → {nid}")
+        print(f"  Added   : {note_id} → {nid}{' (suspended — draft)' if is_draft else ''}")
+        # New notes: set initial suspension state based on status tag.
+        _set_suspension(note_id, model_name, suspend=is_draft, url=url)
 
 
 # ---------------------------------------------------------------------------

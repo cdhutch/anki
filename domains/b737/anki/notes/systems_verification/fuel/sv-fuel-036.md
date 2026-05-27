@@ -1,27 +1,38 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fuel-036
+note_type: systems_verification_exam_draft
+note_id: sv-fuel-036
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fuel
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Review the appropriate QRH procedure. It states if one center tank Low Pressure Light
-    is illuminated, the CROSS FEED Selector should be placed in open. Why is this action directed
-    by the QRH? {{c1::To prevent a fuel quantity imbalance.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Fuel 36
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fuel-036
+  Original Prompt Style: cloze
+  Original Text: Review the appropriate QRH procedure. It states if one center tank Low Pressure
+    Light is illuminated, the CROSS FEED Selector should be placed in open. Why is this action
+    directed by the QRH? {{c1::To prevent a fuel quantity imbalance.}}
+  Question Stem: Review the appropriate QRH procedure. It states if one center tank Low Pressure
+    Light is illuminated, the CROSS FEED Selector should be placed in open. Why is this action
+    directed by the QRH?
+  Choice A: To prevent a fuel quantity imbalance
+  Choice B: An Airworthiness Directive mandates it
+  Choice C: The left center tank pump switch must be turned OFF, leaving insufficient pressure
+    to supply center tank fuel to both engines unless the CROSS FEED is open
+  Choice D: This will cause the Right Center Tank Fuel Pump Low Pressure light to illuminate
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: fuel
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

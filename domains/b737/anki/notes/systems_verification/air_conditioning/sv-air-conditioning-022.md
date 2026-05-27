@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: air-conditioning-022
+note_type: systems_verification_exam_draft
+note_id: sv-air-conditioning-022
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:air-conditioning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'Inflight, the forward cargo compartment is heated by air drawn around it by the {{c1::both
-    2 & 3: recirculation fan system and equipment cooling system}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Air Conditioning 22
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: air-conditioning-022
+  Original Prompt Style: cloze
+  Original Text: 'Inflight, the forward cargo compartment is heated by air drawn around it
+    by the {{c1::both 2 & 3: recirculation fan system and equipment cooling system}}.'
+  Question Stem: Inflight, the forward cargo compartment is heated by air drawn around it
+    by the what?
+  Choice A: Outflow valves
+  Choice B: Recirculation fan system
+  Choice C: Equipment cooling system
+  Choice D: 'Both B & C: recirculation fan system and equipment cooling system'
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: air-conditioning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -15,6 +15,7 @@ tags:
 - sequence:23
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: PM Transition Level
@@ -31,8 +32,8 @@ What is your flow?
 
 **PM — Transition Level**
 
-- BARO SET: PUSH AND SET
-- Altimeter setting: CROSSCHECK
+- Altimeter: Set QNH
+- When requested, Descent Checklist
 
 *Previous: First Officer — Descent*  
 *Next: PF — Transition Level*

@@ -1,27 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: air-conditioning-029
+note_type: systems_verification_exam_draft
+note_id: sv-air-conditioning-029
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:air-conditioning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: What will cause the left Wing-Body Overheat light to illuminate? {{c1::A bleed air
-    duct leak in the left engine strut, left inboard wing leading edge, left air conditioning
-    bay, keel beam or APU bleed air duct}}
   Source Document: Systems Validation Question Bank
-  Source Location: Air Conditioning 29
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: air-conditioning-029
+  Original Prompt Style: cloze
+  Original Text: What will cause the left Wing-Body Overheat light to illuminate? {{c1::A
+    bleed air duct leak in the left engine strut, left inboard wing leading edge, left air
+    conditioning bay, keel beam or APU bleed air duct}}
+  Question Stem: What will cause the left Wing-Body Overheat light to illuminate?
+  Choice A: A bleed air duct leak in the left wing anti-ice
+  Choice B: A bleed air duct leak in the left engine strut, left inboard wing leading edge,
+    left air conditioning bay, keel beam or APU bleed air duct
+  Choice C: Only a bleed air leak in the left air conditioning bay
+  Choice D: A bleed air leak in the Trim-Air Manifold
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: air-conditioning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

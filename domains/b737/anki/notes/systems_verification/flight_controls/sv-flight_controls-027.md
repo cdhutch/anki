@@ -1,25 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-027
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-027
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Prior to what altitude should the Speed Brakes be Down or Armed? {{c1::1000 FT AGL}}
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 27
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-027
+  Original Prompt Style: cloze
+  Original Text: Prior to what altitude should the Speed Brakes be Down or Armed? {{c1::1000
+    FT AGL}}
+  Question Stem: Prior to what altitude should the Speed Brakes be Down or Armed?
+  Choice A: 500 FT AGL
+  Choice B: 2500 FT AGL
+  Choice C: 5000 FT AGL
+  Choice D: 1000 FT AGL
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

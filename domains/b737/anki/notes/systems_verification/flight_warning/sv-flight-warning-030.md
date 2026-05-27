@@ -1,25 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-030
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-030
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The red gear indicator light will be illuminated for {{c1::landing gear in transit}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 30
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-030
+  Original Prompt Style: cloze
+  Original Text: The red gear indicator light will be illuminated for {{c1::landing gear in
+    transit}}.
+  Question Stem: The red gear indicator light will be illuminated for which conditions?
+  Choice A: Landing gear in transit
+  Choice B: Landing gear not locked down with either throttle retarded to idle at any altitude
+  Choice C: Both of the above
+  Choice D: None of the above
+  Correct Choice: A
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

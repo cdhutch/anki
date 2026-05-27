@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-032
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-032
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Normally, the ailerons, elevators, and rudder are powered by the {{c1::A & B hydraulic
-    systems}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 32
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-032
+  Original Prompt Style: cloze
+  Original Text: Normally, the ailerons, elevators, and rudder are powered by the {{c1::A
+    & B hydraulic systems}}.
+  Question Stem: Normally, the ailerons, elevators, and rudder are powered by the what?
+  Choice A: A & B hydraulic systems
+  Choice B: Standby system
+  Choice C: A hydraulic system only
+  Choice D: B hydraulic system only
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

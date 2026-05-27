@@ -16,6 +16,7 @@ tags:
 - sequence:16
 - source:flows
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: First Officer Before Takeoff
@@ -32,11 +33,10 @@ What is your flow?
 
 **First Officer — Before Takeoff**
 
-- Stab trim: SET
-- Flaps: SET AND GREEN LIGHT
-- Takeoff data and bugs: CHECK
-- Air conditioning and bleeds: AUTO and SET
-- T/O CONFIG switch: PRESS (if installed)
+- Trim and Flaps
+- After load closeout, update performance
+- Packs and Bleeds: AUTO and SET
+- T/O Button
 
 *Previous: First Officer — After Start*  
 *Next: First Officer — Before Taking the Runway Flow*

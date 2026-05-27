@@ -1,27 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: fire_protection-022
+note_type: systems_verification_exam_draft
+note_id: sv-fire_protection-022
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:fire_protection
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: 'Pulling the APU fire switch {{c1::accomplishes all of the above: closes the APU Inlet
-    Door; deactivates the fuel solenoid and closes the APU Fuel Shutoff Valve; closes the
-    APU Bleed Air Valve}}.'
   Source Document: Systems Validation Question Bank
-  Source Location: Fire Protection 22
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: fire_protection-022
+  Original Prompt Style: cloze
+  Original Text: 'Pulling the APU fire switch {{c1::accomplishes all of the above: closes
+    the APU Inlet\n    Door; deactivates the fuel solenoid and closes the APU Fuel Shutoff
+    Valve; closes the\n    APU Bleed Air Valve}}.'
+  Question Stem: Pulling the APU fire switch accomplishes which of the following?
+  Choice A: Closes the APU Inlet Door
+  Choice B: Deactivates the fuel solenoid and closes the APU Fuel Shutoff Valve
+  Choice C: Closes the APU Bleed Air Valve
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: fire_protection
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

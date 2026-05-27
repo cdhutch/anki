@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-036
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-036
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: On the ground, speed brakes normally use {{c1::both flight and ground spoilers}} to
-    destroy lift and make braking more effective.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 36
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-036
+  Original Prompt Style: cloze
+  Original Text: On the ground, speed brakes normally use {{c1::both flight and ground spoilers}}
+    to destroy lift and make braking more effective.
+  Question Stem: On the ground, speed brakes normally use what? to destroy lift and make braking
+    more effective?
+  Choice A: Both flight and ground spoilers
+  Choice B: Flight spoilers only
+  Choice C: Ground spoilers only
+  Choice D: Compression on the left main landing gear strut to deploy the ground spoilers
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

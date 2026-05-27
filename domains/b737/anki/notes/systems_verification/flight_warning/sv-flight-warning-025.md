@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-025
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-025
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: A valve that is not in its selected position will show up as a(an) {{c1::bright blue}}
-    light.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 25
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-025
+  Original Prompt Style: cloze
+  Original Text: A valve that is not in its selected position will show up as a(an) {{c1::bright
+    blue}} light.
+  Question Stem: What color light indicates a valve that is not in its selected position?
+  Choice A: White
+  Choice B: Bright blue
+  Choice C: Amber
+  Choice D: Dim blue
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-031
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-031
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided for
-    flaps {{c1::30 and 40}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 31
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-031
+  Original Prompt Style: cloze
+  Original Text: On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided
+    for flaps {{c1::30 and 40}}.
+  Question Stem: On aircraft 3AA - 3LB, load relief for the Trailing edge flaps is only provided
+    for flaps what?
+  Choice A: 15
+  Choice B: 25 and 30
+  Choice C: 25, 30 and 40
+  Choice D: 30 and 40
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

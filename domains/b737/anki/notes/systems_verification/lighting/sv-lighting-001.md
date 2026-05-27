@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: lighting-001
+note_type: systems_verification_exam_draft
+note_id: sv-lighting-001
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:lighting
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Wing illumination lights {{c1::are installed on the fuselage and illuminate the leading
-    edge of the wing}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Lighting 1
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: lighting-001
+  Original Prompt Style: cloze
+  Original Text: Wing illumination lights {{c1::are installed on the fuselage and illuminate
+    the leading edge of the wing}}.
+  Question Stem: Which of the following is correct regarding wing illumination lights?
+  Choice A: Are required "ON" when using wing anti-ice
+  Choice B: Are installed on the fuselage and illuminate the leading edge of the wing
+  Choice C: Are not installed on AA aircraft
+  Choice D: Have been deactivated
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: lighting
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

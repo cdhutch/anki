@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: electrical-001
+note_type: systems_verification_exam_draft
+note_id: sv-electrical-001
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:electrical
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: On the ground with the APU powering the electrical systems, the APU GEN OFF BUS light
-    will be {{c1::OFF}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Electrical 1
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: electrical-001
+  Original Prompt Style: cloze
+  Original Text: On the ground with the APU powering the electrical systems, the APU GEN OFF
+    BUS light will be {{c1::OFF}}.
+  Question Stem: 'Fill in the blank: On the ground with the APU powering the electrical systems,
+    the APU GEN OFF BUS light will be ____.'
+  Choice A: OFF until you turn off the APU when it comes back on
+  Choice B: 'OFF'
+  Choice C: ON until you select GEN 1 or GEN 2 ON
+  Choice D: 'ON'
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: electrical
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

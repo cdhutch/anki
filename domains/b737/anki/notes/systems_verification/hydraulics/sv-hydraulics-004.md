@@ -1,28 +1,39 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-004
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-004
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The crew suspects a leak in Hydraulic Systems B as indicated above. *(ELEC 1 Pump
-    Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the trailing
-    edge (TE) flaps be extended in flight under these conditions? {{c1::The TE flaps can be
-    extended electrically via the ALTERNATE FLAP Position Switch.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 4
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-004
+  Original Prompt Style: cloze
+  Original Text: The crew suspects a leak in Hydraulic Systems B as indicated above. *(ELEC
+    1 Pump Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the
+    trailing edge (TE) flaps be extended in flight under these conditions? {{c1::The TE flaps
+    can be extended electrically via the ALTERNATE FLAP Position Switch.}}
+  Question Stem: The crew suspects a leak in Hydraulic Systems B as indicated above. *(ELEC
+    1 Pump Low Pressure, ENG 2 Pump Low Pressure, and ELEC 1 Pump OVERHEAT)* How would the
+    trailing edge (TE) flaps be extended in flight under these conditions?
+  Choice A: The TE flaps can be extended electrically via the ALTERNATE FLAP Position Switch
+  Choice B: The TE flaps can be extended normally via the Standby Hydraulic System
+  Choice C: The TE flaps can be extended hydraulically from System A via the ALTERNATE FLAPS
+    Position Switch
+  Choice D: The TE flaps cannot be extended when Hydraulic System B is lost.
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

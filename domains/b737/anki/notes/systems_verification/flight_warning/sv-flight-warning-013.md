@@ -1,26 +1,34 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight-warning-013
+note_type: systems_verification_exam_draft
+note_id: sv-flight-warning-013
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight-warning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Generally, aural warnings will silence {{c1::automatically when the associated non-normal
-    condition no longer exist}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Warning 13
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight-warning-013
+  Original Prompt Style: cloze
+  Original Text: Generally, aural warnings will silence {{c1::automatically when the associated
+    non-normal condition no longer exists}}.
+  Question Stem: When do aural warnings generally silence themselves?
+  Choice A: Automatically when the associated non-normal condition no longer exists
+  Choice B: When the System Annunciator or Master Caution lights are pressed
+  Choice C: When the battery switch is cycled on and off
+  Choice D: Both A and B
+  Correct Choice: A
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: flight-warning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

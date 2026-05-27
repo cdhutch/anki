@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: air-conditioning-017
+note_type: systems_verification_exam_draft
+note_id: sv-air-conditioning-017
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:air-conditioning
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: For maximum cooling (of the pack) the ram air inlet doors modulate toward the {{c1::full
-    open position}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Air Conditioning 17
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: air-conditioning-017
+  Original Prompt Style: cloze
+  Original Text: For maximum cooling (of the pack) the ram air inlet doors modulate toward
+    the {{c1::full open position}}.
+  Question Stem: For maximum cooling (of the pack) the ram air inlet doors modulate toward
+    the what?
+  Choice A: Full closed position
+  Choice B: Full open position
+  Choice C: Ram air inlet doors do not modulate
+  Choice D: A mid position
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: air-conditioning
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

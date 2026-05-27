@@ -1,26 +1,36 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: pressurization-16
+note_type: systems_verification_exam_draft
+note_id: sv-pressurization-16
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:pressurization
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: If an OFF SCHEDULE DESCENT light comes on the Cabin Pressurization Panel, the pressurization
-    system will {{c1::pressurize the cabin back to the takeoff airport altitude}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Pressurization 16
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: pressurization-16
+  Original Prompt Style: cloze
+  Original Text: If an OFF SCHEDULE DESCENT light comes on the Cabin Pressurization Panel,
+    the pressurization\n    system will {{c1::pressurize the cabin back to the takeoff airport
+    altitude}}.
+  Question Stem: If an OFF SCHEDULE DESCENT light illuminates on the Cabin Pressurization
+    Panel, what will the pressurization system do?
+  Choice A: Pressurize the cabin back to the takeoff airport altitude
+  Choice B: Return the cabin to the last cruise altitude
+  Choice C: Recompute the new cruise altitude psi differential rate
+  Choice D: Reschedule the pressurization rate of change
+  Correct Choice: A
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: pressurization
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

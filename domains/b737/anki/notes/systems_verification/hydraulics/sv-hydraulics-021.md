@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: hydraulics-021
+note_type: systems_verification_exam_draft
+note_id: sv-hydraulics-021
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:hydraulics
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Hydraulic Systems A and B are unavailable. How does this affect the Brake System?
-    {{c1::Braking is available via trapped hydraulic pressure in the brake accumulator.}}
   Source Document: Systems Validation Question Bank
-  Source Location: Hydraulics 21
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: hydraulics-021
+  Original Prompt Style: cloze
+  Original Text: Hydraulic Systems A and B are unavailable. How does this affect the Brake
+    System? {{c1::Braking is available via trapped hydraulic pressure in the brake accumulator.}}
+  Question Stem: Hydraulic Systems A and B are unavailable. How does this affect the Brake
+    System?
+  Choice A: Braking is not available
+  Choice B: Braking is available via trapped hydraulic pressure in the brake accumulator
+  Choice C: Braking is available via the Normal Brake System pressure
+  Choice D: Braking is available via the Alternate Brake System pressure
+  Correct Choice: B
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: hydraulics
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-043
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-043
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: The primary flight controls consist of {{c1::ailerons, elevators, and rudder}}.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 43
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-043
+  Original Prompt Style: cloze
+  Original Text: The primary flight controls consist of {{c1::ailerons, elevators, and rudder}}.
+  Question Stem: The primary flight controls consist of what?
+  Choice A: Stabilizer, rudder, and spoilers
+  Choice B: Elevators, yaw damper, and ailerons
+  Choice C: Ailerons, elevators, and spoilers
+  Choice D: Ailerons, elevators, and rudder
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

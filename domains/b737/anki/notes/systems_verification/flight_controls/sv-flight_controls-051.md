@@ -1,26 +1,35 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: flight_controls-051
+note_type: systems_verification_exam_draft
+note_id: sv-flight_controls-051
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:flight_controls
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: During alternate flap operation, the TE flaps are positioned using {{c1::electrical}}
-    power.
   Source Document: Systems Validation Question Bank
-  Source Location: Flight Controls 51
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: flight_controls-051
+  Original Prompt Style: cloze
+  Original Text: During alternate flap operation, the TE flaps are positioned using {{c1::electrical}}
+    power.
+  Question Stem: During alternate flap operation, the TE flaps are positioned using what kind
+    of power?
+  Choice A: Manual
+  Choice B: Hydraulic
+  Choice C: Electrical or Hydraulic
+  Choice D: Electrical
+  Correct Choice: D
+  Shuffle Choices: true
+  Review Notes: null
   Verification Notes: ''
-system: flight_controls
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 

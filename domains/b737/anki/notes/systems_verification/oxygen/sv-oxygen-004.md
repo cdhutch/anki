@@ -1,25 +1,33 @@
 ---
 schema: cnsf/v0
 domain: b737
-note_type: systems_verification
-note_id: oxygen-004
+note_type: systems_verification_exam_draft
+note_id: sv-oxygen-004
 anki:
-  model: B737_SV_Cloze
-  deck: B737::Systems::SV
+  model: B737_SV_Exam_Draft
+  deck: B737::Systems_Verification::Draft
 tags:
 - domain:b737
-- topic:systems-verification
+- topic:systems_verification
 - system:oxygen
-- source:question-bank
+- format:mcq
+- source:question_bank
 - status:verified
 fields:
-  Text: Passenger oxygen provides a continous flow for approximately {{c1::12}} minutes.
   Source Document: Systems Validation Question Bank
-  Source Location: Oxygen 4
+  Exam Format: mcq
+  Conversion Status: draft
+  Original Note ID: oxygen-004
+  Original Prompt Style: cloze
+  Original Text: Passenger oxygen provides a continous flow for approximately {{c1::12}} minutes.
+  Question Stem: Passenger oxygen provides a continuous flow for approximately how many minutes?
+  Choice A: 10 minutes
+  Choice B: 12 minutes
+  Choice C: 25 minutes
+  Choice D: 20 minutes
+  Correct Choice: B
+  Shuffle Choices: false
+  Review Notes: null
   Verification Notes: ''
-system: oxygen
-source_type: question-bank
-prompt_style: cloze
-notes: ''
 ---
 
