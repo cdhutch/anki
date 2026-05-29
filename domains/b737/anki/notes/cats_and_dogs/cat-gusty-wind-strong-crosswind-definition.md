@@ -2,13 +2,13 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-mcp-altitude-da-dda
+note_id: cat-gusty-wind-strong-crosswind-definition
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:approach
+- topic:performance
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -18,8 +18,9 @@ fields:
 
 # front_md
 
-**Non-ILS Approaches with a DA/DDA** — what altitude is the MCP set to?
+What constitutes a **Gusty Wind or Strong Crosswind Condition** for takeoff?
 
 # back_md
 
-**DA/DDA rounded up** to the next 100' increment
+- Gust increment **greater than 10 knots**, OR
+- Steady direct crosswind **faster than 15 knots**
