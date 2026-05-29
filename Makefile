@@ -69,6 +69,12 @@ help:
 	@echo "  cats-fix            Canonicalize CNSF formatting for Cats and Dogs notes"
 	@echo "  cats-clean          Remove generated Cats and Dogs TSV file"
 	@echo ""
+	@echo "Checklists"
+	@echo "  checklists          Export and sync Checklist notes to Anki"
+	@echo "  checklists-check    Check CNSF formatting for Checklist notes (no changes)"
+	@echo "  checklists-fix      Canonicalize CNSF formatting for Checklist notes"
+	@echo "  checklists-clean    Remove generated Checklists TSV file"
+	@echo ""
 
 # -------------------------------------------------------------------
 # Git Utilities
@@ -241,6 +247,32 @@ cats: cats-check
 		--out $(CATS_TSV) \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(CATS_TSV)
+
+# -------------------------------------------------------------------
+# Checklists
+# -------------------------------------------------------------------
+
+CHECKLISTS_ROOT := domains/b737/anki/notes/checklists
+CHECKLISTS_TSV  := $(BUILD_DIR)/checklists.tsv
+
+.PHONY: checklists checklists-check checklists-fix checklists-clean
+
+checklists-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(shell find $(CHECKLISTS_ROOT) -name "*.md" ! -name "_*")
+
+checklists-fix:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(shell find $(CHECKLISTS_ROOT) -name "*.md" ! -name "_*")
+
+checklists-clean:
+	rm -f $(CHECKLISTS_TSV)
+
+checklists: checklists-check
+	mkdir -p $(BUILD_DIR)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(CHECKLISTS_ROOT) \
+		--out $(CHECKLISTS_TSV) \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(CHECKLISTS_TSV)
 
 # -------------------------------------------------------------------
 # Procedures

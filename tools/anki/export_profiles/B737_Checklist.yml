@@ -1,0 +1,8 @@
+fields:
+  NoteID: note_id
+  tags: tags_joined
+  ChecklistName: fields.Checklist Name
+  Front: front_html
+  Back: back_html
+  Source Document: fields.Source Document
+  Verification Notes: fields.Verification Notes

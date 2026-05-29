@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-**Non-ILS approaches** — what are the non-mandatory exceptions for lateral guidance?
+**Non-ILS approaches** — what are the alternate authorized lateral guidance modes?
 
 # back_md
 
