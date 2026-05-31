@@ -1,4 +1,4 @@
-# CLAUDE.md — B737 Anki Project Context
+# CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
 Read this file at the start of every session to restore working context.
 
@@ -6,9 +6,13 @@ Read this file at the start of every session to restore working context.
 
 ## Project Overview
 
-This repo builds and maintains Anki flashcard decks for B737 type rating study.
-The primary domain is `domains/b737/`. Cards are authored as CNSF markdown notes,
-exported to TSV, and imported into Anki via AnkiConnect or manual import.
+This repo builds and maintains Anki flashcard decks for two domains:
+
+- **B737** (`domains/b737/`) — type rating study. CNSF markdown notes exported
+  to TSV and imported via AnkiConnect.
+- **Ukrainian** (`domains/ua/`) — formal language learning (Galician/Lviv
+  register, Яблуко textbook). In early design phase on branch `feature/ua-domain`.
+  See `domains/ua/anki/docs/design.md` for full schema and migration plan.
 
 ---
 
@@ -267,3 +271,51 @@ its functionality. The file is kept for reference but should not be used.
 | `tools/anki/sync/set_stage.py` | Activate/deactivate Core decks by study stage; seat filter; always_show/always_hide overrides |
 | `tools/anki/sync/set_flow_detail.py` | Retired — superseded by set_stage.py override tags |
 | `domains/b737/anki/notes/triggers_and_flows/*-bookends.md` | Flow bookend notes (first/last action per flow; always_show) |
+
+---
+
+## Ukrainian Domain (`domains/ua/`) — Design Phase
+
+**Branch:** `feature/ua-domain` (based off `main`)
+
+**Status (as of 2026-05-30):** Schema designed, no notes authored yet.
+Tooling (TSV export/import, Anki note type setup) not yet written.
+
+### Current Anki state
+- 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
+- 788 leeches (20%) — triage before bulk migration
+- Active deck hierarchy: `UA::Recognition::*` / `UA::Production::*`
+- Legacy decks: `Ukrainian Active::Яблуко`, `Inactive::Ukrainian Inactive::*`
+- Tags in use: `textbook:яблуко`, `ch:2.8.x` (= Level 2, Ch. 8, §x), `leech`, `converted`, `to_convert`
+
+### Primary note type: `UA_Lexeme`
+Fields: `NoteID`, `Lemma`, `AspectPair_IPFV`, `AspectPair_PFV`, `EN_Gloss`,
+`Govt_Case`, `Morphology_Note`, `VerbMotion_Pair`, `ConfusableSet`,
+`CrossLang_Analog`, `EuphonyNote`, `TypingAnswer`, `UA_Example`, `EN_Example`,
+`Verb_Conj_Table`, `Tags_Ch`
+
+### Language conventions (critical)
+- Dialect: modern Ukrainian, **Galician/Lviv** register
+- Apostrophe: **U+02BC `ʼ`** — never ASCII `'`
+- Stress marks: **never guess** — verify against ULIF (lcorp.ulif.org.ua/dictua/)
+  or Горох (goroh.pp.ua) before including. Tag unverified with `stress:unverified`.
+- `сь` after vowels preferred (дивлюсь, вчусь) — preserve unless correcting
+- Grammar explanations always in English
+
+### Planned tooling (not yet written)
+| Path | Purpose |
+|---|---|
+| `tools/anki/setup/setup_ua_note_types.py` | Create UA_Lexeme / UA_Grammar in Anki |
+| `tools/anki/export/ua_lexeme_md_to_tsv.py` | Canonical notes → TSV |
+| `tools/anki/sync/ua_lexeme_import.py` | TSV → Anki via AnkiConnect |
+| `tools/anki/extract/export_ua_legacy.py` | Pull existing cards → skeleton CNSF files |
+
+### Source materials
+| Path | Purpose |
+|---|---|
+| `domains/ua/anki/sources/yabluko/level-1/` | Яблуко Level 1 PDF (good copy available) |
+| `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 PDF (most existing cards are ch:2.x.x — PDF not yet available) |
+| `domains/ua/anki/notes/lexemes/` | ua_lexeme canonical notes (not yet populated) |
+| `domains/ua/anki/notes/grammar/` | ua_grammar canonical notes (not yet populated) |
+| `domains/ua/anki/docs/design.md` | Full schema, deck architecture, migration plan |
+| `tools/anki/inspect/survey_ukrainian.py` | AnkiConnect survey script |
