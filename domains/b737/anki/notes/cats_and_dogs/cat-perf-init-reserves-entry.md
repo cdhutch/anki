@@ -2,13 +2,13 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-mcp-altitude-da-dda
+note_id: cat-perf-init-reserves-entry
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:approach
+- topic:performance
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -18,8 +18,12 @@ fields:
 
 # front_md
 
-**Non-ILS Approaches with a DA/DDA** — what altitude is the MCP set to?
+What is entered into the **RESERVES** block on PERF INIT Page 1?
+
+What is the alternative way to calculate this?
 
 # back_md
 
-**DA/DDA rounded up** to the next 100' increment
+**RSV + MAF + highest ALT**
+
+**MIN T/O − ENRT BRN**

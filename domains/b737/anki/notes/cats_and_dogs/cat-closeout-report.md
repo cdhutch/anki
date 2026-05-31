@@ -29,6 +29,6 @@ fields:
 
 # back_md
 
-- "Gross Weight is &lt;GW&gt; which is {above | below | between} our ATOW &lt;ATOW&gt; and MTOW &lt;MTOW&gt;."
-- "Winds is &lt;MMM&gt; at &lt;VV&gt;. That's a {headwind | tailwind}."
-- "N1 is &lt;FMC N1&gt;, within 0.5% of TPS &lt;TPS N1&gt;."
+- "Gross Weight is <code>&lt;GW&gt;</code> which is {above | below | between} our ATOW <code>&lt;ATOW&gt;</code> and MTOW <code>&lt;MTOW&gt;</code>."
+- "Winds is <code>&lt;MMM&gt;</code> at <code>&lt;VV&gt;</code>. That's a {headwind | tailwind}."
+- "N1 is <code>&lt;FMC N1&gt;</code>, within 0.5% of TPS <code>&lt;TPS N1&gt;</code>."

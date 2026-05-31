@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-**Updated Load Closeout** — what gets briefed for a runway change?
+**Load Closeout Brief** — what gets briefed if anything changes?
 
 # back_md
 

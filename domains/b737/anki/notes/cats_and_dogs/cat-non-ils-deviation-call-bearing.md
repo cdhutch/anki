@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-**Non-ILS approach** — what is the deviation callout for a **bearing** deviation?
+**Non-ILS approach** — what is the deviation callout for a **bearing** deviation in excess of one dot?
 
 # back_md
 

@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-**Navigation deviation callouts** — when during the approach are they made?
+**Navigation deviation callouts** — during which portion of the approach are they made?
 
 # back_md
 

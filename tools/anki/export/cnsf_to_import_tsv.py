@@ -150,17 +150,22 @@ def read_noteid_map(map_path: Path) -> Dict[str, str]:
     return m
 
 
+def _is_skipped(p: Path) -> bool:
+    """Files whose name starts with '_' are documentation/templates — skip them."""
+    return p.name.startswith("_")
+
+
 def expand_inputs(inputs: List[str]) -> List[Path]:
     out: List[Path] = []
     for inp in inputs:
         p = Path(inp)
         if p.is_dir():
-            out.extend(sorted(p.glob("**/*.md")))
+            out.extend(sorted(q for q in p.glob("**/*.md") if not _is_skipped(q)))
         else:
             matches = glob.glob(inp, recursive=True)
             if matches:
-                out.extend(sorted(Path(x) for x in matches))
-            elif p.suffix == ".md" and p.exists():
+                out.extend(sorted(Path(x) for x in matches if not _is_skipped(Path(x))))
+            elif p.suffix == ".md" and p.exists() and not _is_skipped(p):
                 out.append(p)
     seen = set()
     uniq = []
