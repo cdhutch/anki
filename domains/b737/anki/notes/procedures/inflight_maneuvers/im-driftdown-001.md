@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
+- always_show
 fields:
   Title: Driftdown Trigger Conditions
   Trigger: Engine failure with inability to maintain altitude

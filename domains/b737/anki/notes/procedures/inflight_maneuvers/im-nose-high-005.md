@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:nose_high_recovery
+- always_show
 fields:
   Title: Nose High Recovery - Transition Trigger
   Trigger: Recovery in progress

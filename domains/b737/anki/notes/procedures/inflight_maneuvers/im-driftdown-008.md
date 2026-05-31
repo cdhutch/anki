@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
+- always_show
 fields:
   Title: Driftdown Speed Note for Overwater Operations
   Trigger: Long Overwater Flight driftdown speed note

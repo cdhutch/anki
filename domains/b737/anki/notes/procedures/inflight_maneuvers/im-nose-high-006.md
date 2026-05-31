@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:nose_high_recovery
+- always_show
 fields:
   Title: Nose High Recovery - PF Complete Recovery
   Trigger: Airspeed sufficiently increasing

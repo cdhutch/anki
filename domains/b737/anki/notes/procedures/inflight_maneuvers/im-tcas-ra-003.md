@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:tcas_ra
+- always_show
 fields:
   Title: TCAS General RA PM duties
   Trigger: Refer to procedure

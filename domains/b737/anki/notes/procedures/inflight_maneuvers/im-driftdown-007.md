@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
+- always_show
 fields:
   Title: Bottom of Driftdown Overwater Operations
   Trigger: Bottom of driftdown during long overwater flight

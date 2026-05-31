@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
+- always_show
 fields:
   Title: Driftdown PM Duties
   Trigger: Driftdown and One Engine Cruise in progress

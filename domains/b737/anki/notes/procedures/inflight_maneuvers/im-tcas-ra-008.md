@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:tcas_ra
+- always_show
 fields:
   Title: Landing config climb RA positive rate gear up sequence
   Trigger: Refer to procedure

@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:emergency_descent
+- always_show
 fields:
   Title: im-emergency-descent-008
   Trigger: Refer to procedure
