@@ -75,6 +75,12 @@ help:
 	@echo "  checklists-fix      Canonicalize CNSF formatting for Checklist notes"
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
+	@echo "Ukrainian Lexeme (UA)"
+	@echo "  ua-lexeme           Canonicalize and sync all UA lexeme notes to Anki"
+	@echo "  ua-lexeme-check     Check CNSF formatting for UA lexeme notes (no changes)"
+	@echo "  ua-lexeme-fix       Canonicalize CNSF formatting for UA lexeme notes"
+	@echo "  ua-lexeme-<batch>   Canonicalize and sync a single batch (e.g. yabluko-l1/vstup)"
+	@echo ""
 
 # -------------------------------------------------------------------
 # Git Utilities
@@ -452,3 +458,22 @@ sve-%:
 	$(PYTHON) tools/anki/sync/sv_exam_import_to_anki.py \
 		--mcq "$(SV_BUILD)/sve-mcq-$*.tsv" \
 		--tf "$(SV_BUILD)/sve-tf-$*.tsv"
+
+# -------------------------------------------------------------------
+# Ukrainian Lexeme (UA)
+# -------------------------------------------------------------------
+UA_LEXEME_ROOT := domains/ua/anki/notes/lexemes
+
+.PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
+
+ua-lexeme-check:
+	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-lexeme-fix:
+	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-lexeme: ua-lexeme-fix
+	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/
+
+ua-lexeme-%: ua-lexeme-fix
+	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$*/

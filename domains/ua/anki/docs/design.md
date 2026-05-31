@@ -97,6 +97,8 @@ Generates UA→EN recognition and EN→UA production cards.
 |---|---|---|
 | `NoteID` | Canonical ID | `ua-lexeme-0042` |
 | `Lemma` | Primary Ukrainian form (stress verified) | `ми́ти` |
+| `PartOfSpeech` | noun / verb / adjective / adverb / phrase / proper-noun | `verb` |
+| `Gender` | m / f / n / indecl / '' (blank for non-nouns) | `` |
 | `AspectPair_IPFV` | Imperfective infinitive | `ми́ти` |
 | `AspectPair_PFV` | Perfective infinitive | `поми́ти` |
 | `EN_Gloss` | English gloss | `to wash, clean (transitive)` |

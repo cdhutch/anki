@@ -274,48 +274,103 @@ its functionality. The file is kept for reference but should not be used.
 
 ---
 
-## Ukrainian Domain (`domains/ua/`) — Design Phase
+## Ukrainian Domain (`domains/ua/`)
 
 **Branch:** `feature/ua-domain` (based off `main`)
 
-**Status (as of 2026-05-30):** Schema designed, no notes authored yet.
-Tooling (TSV export/import, Anki note type setup) not yet written.
+**Status (as of 2026-05-31):** Вступ lexeme batch complete. 113 notes live in Anki
+(`UA::Canonical::Recognition::UA→EN` and `UA::Canonical::Production::EN→UA`).
+Stress marks verified against Горох; 9 corrections applied. All notes still tagged
+`stress:unverified` pending a full re-import after user review of outstanding edge cases.
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
 - 788 leeches (20%) — triage before bulk migration
 - Active deck hierarchy: `UA::Recognition::*` / `UA::Production::*`
+- New canonical decks: `UA::Canonical::Recognition::UA→EN` / `UA::Canonical::Production::EN→UA`
 - Legacy decks: `Ukrainian Active::Яблуко`, `Inactive::Ukrainian Inactive::*`
 - Tags in use: `textbook:яблуко`, `ch:2.8.x` (= Level 2, Ch. 8, §x), `leech`, `converted`, `to_convert`
 
 ### Primary note type: `UA_Lexeme`
-Fields: `NoteID`, `Lemma`, `AspectPair_IPFV`, `AspectPair_PFV`, `EN_Gloss`,
-`Govt_Case`, `Morphology_Note`, `VerbMotion_Pair`, `ConfusableSet`,
-`CrossLang_Analog`, `EuphonyNote`, `TypingAnswer`, `UA_Example`, `EN_Example`,
-`Verb_Conj_Table`, `Tags_Ch`
+
+**Actual fields (as implemented — differs slightly from design.md v1):**
+`NoteID`, `Lemma`, `PartOfSpeech`, `Gender`, `Perfective`, `EN_Gloss`,
+`Govt_Case`, `CounterpartForm`, `IrregularForms`, `VerbMotion_Pair`,
+`ConfusableSet`, `CrossLang_Analog`, `EuphonyNote`, `TypingAnswer`,
+`UA_Example`, `EN_Example`, `Verb_Conj_Table`, `Tags_Ch`
+
+Key field notes:
+- `Perfective` — PFV infinitive for verbs (blank for non-verbs)
+- `CounterpartForm` — cross-gender pair, e.g. `f: акто́рка`
+- `IrregularForms` — gen/pl irregularities, indeclinability
+- `TypingAnswer` — Lemma stripped of stress marks (U+0301); student types without accents
 
 ### Language conventions (critical)
 - Dialect: modern Ukrainian, **Galician/Lviv** register
 - Apostrophe: **U+02BC `ʼ`** — never ASCII `'`
-- Stress marks: **never guess** — verify against ULIF (lcorp.ulif.org.ua/dictua/)
-  or Горох (goroh.pp.ua) before including. Tag unverified with `stress:unverified`.
+- Stress marks: **never guess** — verify against Горох (goroh.pp.ua) via Claude in Chrome.
+  Tag unverified with `stress:unverified`. Remove tag only after Горох confirms.
+- Stress disambiguation: some words have stress-dependent meanings (e.g. му́зика = music,
+  музи́ка = musician). Always check before "correcting" based on Горох alone.
 - `сь` after vowels preferred (дивлюсь, вчусь) — preserve unless correcting
 - Grammar explanations always in English
 
-### Planned tooling (not yet written)
-| Path | Purpose |
-|---|---|
-| `tools/anki/setup/setup_ua_note_types.py` | Create UA_Lexeme / UA_Grammar in Anki |
-| `tools/anki/export/ua_lexeme_md_to_tsv.py` | Canonical notes → TSV |
-| `tools/anki/sync/ua_lexeme_import.py` | TSV → Anki via AnkiConnect |
-| `tools/anki/extract/export_ua_legacy.py` | Pull existing cards → skeleton CNSF files |
+### Stress verification workflow (established)
+
+Горох Транскрипція (`goroh.pp.ua/Транскрипція/<word>`) returns phonetic transcription
+with stress marks. Accessible via Claude in Chrome (not via web_fetch — blocked).
+
+Batch verification process:
+1. Extract lemmas from notes (Python, strip stress to get bare form)
+2. Fetch Горох pages in batch via Chrome JS `Promise.all` (30 at a time to avoid truncation)
+3. Strip phonetic markers from Горох output: remove `<sup>...</sup>` WITH content,
+   backtick, apostrophe, colons, `{дз}`/`{дж}` → keep content, `ў` stays as non-vowel
+4. Compare vowel-index of stress in lemma vs Горох form; flag mismatches
+5. Apply corrections; keep `stress:unverified` tag until user confirms
+
+Important: Горох returns the **masculine adjective** form for adjectives (e.g. `-ський`
+instead of `-ська`). The vowel-index comparison handles this correctly since the stressed
+syllable is the same. The script is embedded in session context — rebuild from the pattern
+in `tools/anki/inspect/` when needed as a standalone tool.
+
+### Tooling status
+| Path | Status | Purpose |
+|---|---|---|
+| `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme in Anki |
+| `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
+| `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
+| `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
+| `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
+
+### Future work
+
+**LLM example sentence generation** — highest value next step for card quality.
+Use Claude API (Haiku for cost) to populate `UA_Example` and `EN_Example` for notes
+where these are blank. Inputs per note: `Lemma`, `PartOfSpeech`, `EN_Gloss`, `Govt_Case`.
+Prompt must include: Galician/Lviv dialect constraint, apostrophe = U+02BC (ʼ),
+no stress marks in output (students type without accents). One natural sentence +
+English translation per note. Tag generated examples `example:generated` until reviewed.
+Script: `tools/anki/generate/ua_generate_examples.py`.
+
+**Stress verification script** (productionise the session workflow above).
+`tools/anki/inspect/verify_stress_goroh.py` — reads all notes tagged `stress:unverified`,
+drives Горох via Claude in Chrome, outputs `(note_id, lemma_current, lemma_goroh)` for
+mismatches only. After user review and correction, remove `stress:unverified` tags and
+re-import with `ua_lexeme_import.py`.
+
+**Unit 1–12 lexeme generation** — follow the pattern of `gen_ua_lexemes_vstup.py`,
+extracting vocab from Яблуко appendix pages 220–237 unit by unit.
+
+**Legacy card migration** — write `export_ua_legacy.py` to pull existing Basic/Cloze
+cards from Anki and generate CNSF skeletons. Enrich with PoS, gender, stress marks
+before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Яблуко ch-by-ch.
 
 ### Source materials
 | Path | Purpose |
 |---|---|
 | `domains/ua/anki/sources/yabluko/level-1/` | Яблуко Level 1 PDF (good copy available) |
 | `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 PDF (most existing cards are ch:2.x.x — PDF not yet available) |
-| `domains/ua/anki/notes/lexemes/` | ua_lexeme canonical notes (not yet populated) |
+| `domains/ua/anki/notes/lexemes/yabluko-l1/vstup/` | 113 ua_lexeme notes — Вступ batch |
 | `domains/ua/anki/notes/grammar/` | ua_grammar canonical notes (not yet populated) |
 | `domains/ua/anki/docs/design.md` | Full schema, deck architecture, migration plan |
 | `tools/anki/inspect/survey_ukrainian.py` | AnkiConnect survey script |
