@@ -20,7 +20,7 @@ fields:
 
 What is entered into the **RESERVES** block on PERF INIT Page 1?
 
-What is the alternative wave to calculate this?
+What is the alternative way to calculate this?
 
 # back_md
 
