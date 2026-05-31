@@ -23,7 +23,7 @@ fields:
 
 **B737 LIMITS — APU**
 
-Maximum altitude when the **APU supplies bleed air**?
+Maximum altitude when the **APU supplies bleed air, but not electrical load**?
 
 # back_md
 

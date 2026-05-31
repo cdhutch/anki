@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-When must **raw ground-based navigation data** be monitored during an approach?
+During which types of approaches must **raw ground-based navigation data** be monitored?
 
 # back_md
 

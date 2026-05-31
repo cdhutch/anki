@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-mcp-altitude-da-dda
+note_id: cat-go-around-speed-window-opens-scenario
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
@@ -18,8 +18,8 @@ fields:
 
 # front_md
 
-**Non-ILS Approaches with a DA/DDA** — what altitude is the MCP set to?
+Name a scenario where the **speed window opens** following a go-around.
 
 # back_md
 
-**DA/DDA rounded up** to the next 100' increment
+**Altitude Acquisition**

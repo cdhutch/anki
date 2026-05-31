@@ -18,7 +18,7 @@ tags:
 fields:
   NoteID: mnemonic-fo-before-start-below-the-line
   Name: FO Before Start — Below the Line
-  Mnemonic: Door, Column 3 to Anti-Smash, Pressures
+  Mnemonic: Door, Column 4 to Anti-Smash, Pressures
   Words: '<li>Door: Flight Deck Door</li><li>Column 3 to Anti-Smash: Probe Heat, Hydraulic
     Panel, Door Lights, Anti-Collision Light</li><li>Pressures: Brake and Hydraulic Pressures</li>'
   Notes: ''

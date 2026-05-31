@@ -2,13 +2,13 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-mcp-altitude-da-dda
+note_id: cat-le-flaps-lights-vs-rotary-gauge
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:approach
+- topic:flight_controls
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -18,8 +18,9 @@ fields:
 
 # front_md
 
-**Non-ILS Approaches with a DA/DDA** — what altitude is the MCP set to?
+What is the difference between the **LE FLAPS TRANSIT / LE FLAPS EXT** lights and the **rotary flap gauge**?
 
 # back_md
 
-**DA/DDA rounded up** to the next 100' increment
+- **LE FLAPS lights** (amber/green) → **leading edge** device position
+- **Rotary flap gauge** → **trailing edge** device position

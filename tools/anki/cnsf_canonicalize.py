@@ -259,7 +259,7 @@ def main() -> None:
     if args.check == args.write:
         raise SystemExit("Choose exactly one of --check or --write.")
 
-    paths = [Path(p) for p in args.paths]
+    paths = [Path(p) for p in args.paths if not Path(p).name.startswith("_")]
     for p in paths:
         if not p.exists():
             raise SystemExit(f"Not found: {p}")

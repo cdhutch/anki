@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-**Updated Load Closeout** — what gets briefed for a tailwind?
+**Load Closeout Brief** — what gets briefed if nothing changes?
 
 # back_md
 

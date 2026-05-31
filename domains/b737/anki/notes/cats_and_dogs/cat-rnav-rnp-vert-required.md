@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-mcp-altitude-da-dda
+note_id: cat-rnav-rnp-vert-required
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
@@ -18,8 +18,8 @@ fields:
 
 # front_md
 
-**Non-ILS Approaches with a DA/DDA** — what altitude is the MCP set to?
+Which RNAV approaches require setting the **RNP VERT**?
 
 # back_md
 
-**DA/DDA rounded up** to the next 100' increment
+**All of them**
