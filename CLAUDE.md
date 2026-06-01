@@ -1,11 +1,16 @@
+<<<<<<< HEAD
 # CLAUDE.md — Anki Project Context (B737 + Ukrainian)
+=======
+# CLAUDE.md — B737 Anki Project (Active Work)
+>>>>>>> origin/main
 
-Read this file at the start of every session to restore working context.
+Restore working context here. Reference files archived separately.
 
 ---
 
 ## Project Overview
 
+<<<<<<< HEAD
 This repo builds and maintains Anki flashcard decks for two domains:
 
 - **B737** (`domains/b737/`) — type rating study. CNSF markdown notes exported
@@ -13,45 +18,36 @@ This repo builds and maintains Anki flashcard decks for two domains:
 - **Ukrainian** (`domains/ua/`) — formal language learning (Galician/Lviv
   register, Яблуко textbook). In early design phase on branch `feature/ua-domain`.
   See `domains/ua/anki/docs/design.md` for full schema and migration plan.
+=======
+Anki flashcard decks for B737 type rating study. Source: CNSF markdown notes in `domains/b737/`.
+Export: TSV via `sv_exam_md_to_tsv.py`. Import: AnkiConnect.
+>>>>>>> origin/main
 
 ---
 
-## Current Focus: Distractor Authoring + Anki Migration
+## Current Work: Distractor Authoring (Phase A)
 
-### Phase A: Distractor authoring (ongoing)
+**Status**: 26 of 29 systems verified; 3 remaining.
 
-All 29 SV systems are converted to `systems_verification_exam_draft` MCQ format.
-Distractors are being authored system-by-system. Workflow per system:
-
-1. User authors distractors directly in the `.md` files
-2. User calls Claude back for review, grammar/typo fixes, and any clarifications
+**Workflow per system:**
+1. Author distractors in `.md` files
+2. Call Claude for review, grammar, typo fixes
 3. Run `make sve-fix` to canonicalize
-4. Claude provides `git add` + `git commit` commands
+4. Claude provides `git add` + `git commit`
 5. Move to next system
 
-**Distractor authoring status (as of 2026-05-25):**
+**Queue (smallest first):**
+- engines: 41 total, 39 draft
+- autoflight: 42 total, 39 draft
+- pneumatics: 39 total, 39 draft
 
-| Status | Systems |
-|---|---|
-| Finalized (`note_type: systems_verification_exam`) | acars, adverse, emergency_equipment |
-| All distractors complete (`status:verified`) | acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, electrical, emergency_equipment, fire_protection, flight_controls, flight_instrumentation, flight_warning, fuel, general, gpws, hud, hydraulics, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar |
-| Partially complete — T/F/2-choice blanks only | fms (sv-fms-024 is intentional 2-choice; all others verified) |
-| Distractors not yet authored (`status:draft`) | autoflight, engines, pneumatics |
-
-Note: `status:draft` notes import into Anki as **suspended** cards. `status:verified` import as active.
-
-**Remaining distractor queue (draft count, smallest-first):**
-
-| System | Total | Draft |
-|---|---|---|
-| engines | 41 | 39 |
-| autoflight | 42 | 39 |
-| pneumatics | 39 | 39 |
+**Note**: `status:draft` imports as suspended; `status:verified` imports active.
 
 ---
 
-### Phase B: Anki migration (in progress — paused mid-execution)
+## Reference Files
 
+<<<<<<< HEAD
 Goal: replace 688 legacy `B737_SV_Cloze` cards in Anki with new `B737_SV_MCQ` /
 `B737_SV_TF` cards, using a dedicated FSRS deck preset.
 
@@ -374,3 +370,8 @@ before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Ябл�
 | `domains/ua/anki/notes/grammar/` | ua_grammar canonical notes (not yet populated) |
 | `domains/ua/anki/docs/design.md` | Full schema, deck architecture, migration plan |
 | `tools/anki/inspect/survey_ukrainian.py` | AnkiConnect survey script |
+=======
+- **[CLAUDE-migration-log.md](CLAUDE-migration-log.md)** — Phase B migration steps (mostly completed)
+- **[CLAUDE-deck-schema.md](CLAUDE-deck-schema.md)** — SV field conventions, deck architecture, study stages
+- **[CLAUDE-tooling-notes.md](CLAUDE-tooling-notes.md)** — Known issues, workarounds, key paths
+>>>>>>> origin/main

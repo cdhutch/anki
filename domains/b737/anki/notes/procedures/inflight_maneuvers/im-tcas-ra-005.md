@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:tcas_ra
+- always_show
 fields:
   Title: Why unnecessary vertical changes after RA are dangerous
   Trigger: Refer to procedure

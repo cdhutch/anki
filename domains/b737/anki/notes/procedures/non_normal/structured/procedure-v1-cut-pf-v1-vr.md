@@ -36,7 +36,7 @@ What are the PF actions from engine failure at or above V1 through VR?
 - “My aircraft.”
 - Continue the takeoff
 - At VR:
-  - Rotate toward 12° to 13° pitch attitude
+    - Rotate toward 12° to 13° pitch attitude
 
 **Memory rule:**  
 *Control → Command → Continue → Rotate*

@@ -34,10 +34,10 @@ What are the B737 reject decision gates by speed?
 
 - **Prior to 80 knots:** reject for most significant abnormalities
 - **80 knots to prior V1:** reject only for major threats
-  - Fire / fire warning
-  - Engine failure
-  - Predictive windshear warning
-  - Unsafe or unable to fly
+    - Fire / fire warning
+    - Engine failure
+    - Predictive windshear warning
+    - Unsafe or unable to fly
 - **V1 and above:** continue unless aircraft is incapable of flight
 
 **Memory rule:**  

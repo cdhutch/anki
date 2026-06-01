@@ -32,9 +32,9 @@ What are the RVR equipment requirements for lower RVR ILS approaches?
 **ILS / HUD — RVR Requirements**
 
 - Below RVR 1800:
-  - AIII required if available
+    - AIII required if available
 - If AIII unavailable:
-  - AII / IMC may be used to RVR 1200
+    - AII / IMC may be used to RVR 1200
 
 *Previous: ILS CAT I — PF — Initial Approach*  
 *Next: ILS CAT I — PM — Initial Approach*

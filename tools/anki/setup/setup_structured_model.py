@@ -34,11 +34,12 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
+/* Light mode (Solarized light) */
 .card {
   font-family: Arial, sans-serif;
   font-size: 26px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #586e75;
+  background-color: #fdf6e3;
   max-width: 640px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -47,15 +48,29 @@ CSS = """\
 
 hr#answer {
   border: none;
-  border-top: 2px solid #d0d0d0;
+  border-top: 1px solid #93a1a1;
   margin: 22px 0;
 }
 
 .note-id {
   font-size: 11px;
-  color: #aaa;
+  color: #93a1a1;
   text-align: right;
   margin-top: 14px;
+}
+
+/* Dark mode (Solarized dark) */
+.nightMode .card {
+  color: rgb(101, 123, 131);
+  background-color: rgb(3, 32, 41);
+}
+
+.nightMode hr#answer {
+  border-top-color: rgb(88, 110, 117);
+}
+
+.nightMode .note-id {
+  color: rgb(88, 110, 117);
 }
 """
 

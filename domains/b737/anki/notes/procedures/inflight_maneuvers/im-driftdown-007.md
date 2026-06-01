@@ -7,10 +7,12 @@ anki:
   model: B737_Structured
   deck: B737::Core::Procedures::Inflight_Maneuvers
 tags:
+- always_hide
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
+- always_hide
 fields:
   Title: Bottom of Driftdown Overwater Operations
   Trigger: Bottom of driftdown during long overwater flight

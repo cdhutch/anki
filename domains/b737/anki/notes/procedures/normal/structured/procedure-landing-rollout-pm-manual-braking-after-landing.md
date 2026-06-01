@@ -32,7 +32,7 @@ What are the PM duties from transition to manual braking through runway exit?
 **Landing Rollout — PM — Manual Braking / After Landing**
 
 - After PF call, "Manual braking."
-  - If AUTO BRAKE DISARM light illuminates:
+    - If AUTO BRAKE DISARM light illuminates:
     - Call, "Autobrakes off."
 - 
 *Previous: Landing Rollout — PM — Callouts / Monitoring*  

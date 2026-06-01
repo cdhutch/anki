@@ -34,10 +34,10 @@ What are the PM actions from passing FAF/GP intercept until missed approach alti
 **Non-ILS — PM — FAF / Minimums Segment**
 
 - Passing FAF / GP INTCPT:
-  - Verify Final Approach Verification Altitude
-  - Crosscheck altimeters ±100 feet
+    - Verify Final Approach Verification Altitude
+    - Crosscheck altimeters ±100 feet
 - When PF calls for missed approach altitude:
-  - Set missed approach altitude on MCP, if requested
+    - Set missed approach altitude on MCP, if requested
 - Continue monitoring altitude, path, and configuration
 
 *Previous: Non-ILS — PM — Initial Approach*  

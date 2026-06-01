@@ -33,10 +33,10 @@ What are the PM actions at acceleration height?
 **Takeoff — PM Acceleration Height**
 
 - At thrust reduction height:
-  - Verify desired CLB 1 / CLB 2
+    - Verify desired CLB 1 / CLB 2
 - If requested:
-  - Select LVL CHG
-  - Set speed to UP bug
+    - Select LVL CHG
+    - Set speed to UP bug
 
 *Previous: Takeoff — PF Cleanup Complete*  
 *Next: Takeoff — PM Cleanup Actions*

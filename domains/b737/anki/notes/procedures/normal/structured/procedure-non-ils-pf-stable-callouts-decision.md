@@ -34,14 +34,14 @@ What are the PF actions from 1000 AGL through minimums on a Non-ILS approach?
 **Non-ILS — PF — Stable Callouts / Decision Segment**
 
 - At 1000 AGL:
-  - Verify stabilized approach
+    - Verify stabilized approach
 - At 500 AGL:
-  - Verify altitude, speed, and sink rate
+    - Verify altitude, speed, and sink rate
 - At DA or DDA, choose one:
-  - PM: "No contact."
+    - PM: "No contact."
     - Execute go-around
-  - PM: "Approach lights."
-  - PM: "Runway."
+    - PM: "Approach lights."
+    - PM: "Runway."
     - "Continuing."
     - Disengage autopilot
 

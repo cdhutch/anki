@@ -31,8 +31,8 @@ fields:
 <table>
 <thead><tr><th>Challenge</th><th>Response</th></tr></thead>
 <tbody>
-<tr style="background-color:#d6e4f7;"><td>SPEEDBRAKES</td><td>ARMED, Green Light ☨</td></tr>
-<tr style="background-color:#d6e4f7;"><td>GEAR</td><td>DOWN and Green ☨</td></tr>
-<tr style="background-color:#d6e4f7;"><td>FLAPS</td><td>___, Green Light ☨</td></tr>
+<tr class="sol-hi"><td>SPEEDBRAKES</td><td>ARMED, Green Light ☨</td></tr>
+<tr class="sol-hi"><td>GEAR</td><td>DOWN and Green ☨</td></tr>
+<tr class="sol-hi"><td>FLAPS</td><td>___, Green Light ☨</td></tr>
 </tbody>
 </table>

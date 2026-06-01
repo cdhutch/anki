@@ -34,10 +34,10 @@ What are the PF actions from passing FAF/GP intercept until missed approach alti
 **Non-ILS — PF — FAF / Minimums Segment**
 
 - Passing FAF / GP INTCPT:
-  - Verify Final Approach Verification Altitude
-  - Descend to minimums via VNAV PTH or V/S
+    - Verify Final Approach Verification Altitude
+    - Descend to minimums via VNAV PTH or V/S
 - More than 300 feet below missed approach altitude:
-  - "Set missed approach altitude."
-  - Set / request missed approach altitude
+    - "Set missed approach altitude."
+    - Set / request missed approach altitude
 
 *Previous: Non-ILS — PF — Initial Approach*

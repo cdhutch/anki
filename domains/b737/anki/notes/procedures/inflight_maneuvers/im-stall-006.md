@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:stall_recovery
+- always_hide
 fields:
   Title: Stall Recovery - PF Complete Recovery
   Trigger: Stall indications stopped

@@ -32,22 +32,22 @@ What are the PF actions from touchdown through reverse thrust deceleration?
 **Landing Rollout — PF — Touchdown / Reverse**
 
 - Touchdown:
-  - Verify thrust levers are closed
-  - Verify SPEEDBRAKE lever is FULL UP
+    - Verify thrust levers are closed
+    - Verify SPEEDBRAKE lever is FULL UP
 - If PM calls, "No Speedbrakes."
-  - Captain: Manually deploy SPEEDBRAKE lever
-  - First Officer: If Captain does not deploy speedbrakes:
+    - Captain: Manually deploy SPEEDBRAKE lever
+    - First Officer: If Captain does not deploy speedbrakes:
     - Manually deploy SPEEDBRAKE lever
 - Directional control:
-  - Maintain runway centerline with rudder / nosewheel steering
+    - Maintain runway centerline with rudder / nosewheel steering
 - Reverse thrust:
-  - Raise reverse thrust levers to interlocks and hold light pressure until release
-  - Apply reverse thrust as needed
-  - Comply with PM advisory:
+    - Raise reverse thrust levers to interlocks and hold light pressure until release
+    - Apply reverse thrust as needed
+    - Comply with PM advisory:
     - "Single reverse." or
     - "No reverse."
 - At 60 knots:
-  - Reduce reverse thrust to reach IDLE reverse by taxi speed
+    - Reduce reverse thrust to reach IDLE reverse by taxi speed
 
 *Previous: Go-Around — Single Engine — PM — Cleanup / Guidance*  
 *Next: Landing Rollout — PF — Manual Braking / Completion*

@@ -33,14 +33,14 @@ What are the PF actions from initiating a single-engine go-around through gear u
 **Go-Around — Single Engine — PF — Initial Actions**
 
 - Initiate go-around:
-  - "Go around, TOGA."
-  - Press TO/GA switch
-  - Advance thrust levers to go-around thrust
+    - "Go around, TOGA."
+    - Press TO/GA switch
+    - Advance thrust levers to go-around thrust
 - Initial flap setting:
-  - "Flaps 1."
+    - "Flaps 1."
 - Rotate smoothly to 13 degrees nose up
 - After PM callout "Positive rate.":
-  - "Gear up."
+    - "Gear up."
 - Fly published missed approach or comply with ATC instructions
 - "Set missed approach altitude."
 

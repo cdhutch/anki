@@ -32,22 +32,22 @@ What are the PM duties during landing rollout through the 60-knot callout?
 **Landing Rollout — PM — Callouts / Monitoring**
 
 - Touchdown:
-  - Verify spoiler deployment
+    - Verify spoiler deployment
     - Call, "Deployed."
-  - If spoilers do not deploy:
+    - If spoilers do not deploy:
     - Call, "No Speedbrakes."
     - Captain: Manually deploy SPEEDBRAKE lever
     - First Officer: If Captain does not deploy speedbrakes:
       - Manually deploy SPEEDBRAKE lever
 - Reverse thrust status:
-  - If operationally required:
+    - If operationally required:
     - Call, "Single reverse." or
     - Call, "No reverse."
 - Monitor deceleration and runway tracking
 - At 80 knots:
-  - Call, "80."
+    - Call, "80."
 - At 60 knots:
-  - Call, "60."
+    - Call, "60."
 
 *Previous: Landing Rollout — PF — Manual Braking / Completion*  
 *Next: Landing Rollout — PM — Manual Braking / After Landing*

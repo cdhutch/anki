@@ -33,11 +33,11 @@ When is VNAV required, when may V/S be used, and what applies to localizer-based
 
 - **VNAV must be used for all RNAV approaches if available.**
 - Use **V/S** instead when:
-  - No coded GP angle on the LEGS page, or
-  - VNAV cannot or will not engage
+    - No coded GP angle on the LEGS page, or
+    - VNAV cannot or will not engage
 - **VOR/LOC roll guidance** may be used on:
-  - VOR approaches
-  - Front-course localizer approaches
+    - VOR approaches
+    - Front-course localizer approaches
 - **All localizer-based approaches:** monitor LOC raw data.
 
 *Previous: RNAV / RNP Rules*

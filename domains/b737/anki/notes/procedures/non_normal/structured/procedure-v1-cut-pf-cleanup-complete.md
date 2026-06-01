@@ -32,7 +32,7 @@ What is the PF action at flaps up maneuvering speed following a V1 cut?
 **V1 Cut — PF — Flap Retraction Complete**
 
 - At flaps up maneuvering speed:
-  - “MCT, ____ checklist.”
+    - “MCT, ____ checklist.”
 
 **Memory rule:**  
 *Flaps up maneuvering speed = MCT and checklist call.*

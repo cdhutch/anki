@@ -34,18 +34,18 @@ What are the PM actions from cleared for approach through glideslope capture on 
 
 - Arm APP, if requested
 - After "LOC capture":
-  - Verify VOR/LOC on FMA
+    - Verify VOR/LOC on FMA
 - After "Gear down":
-  - Select gear down
-  - Set speed, if requested
+    - Select gear down
+    - Set speed, if requested
 - After "Flaps 15":
-  - "Speed verified."
-  - Set flaps 15
-  - Set speed, if requested
+    - "Speed verified."
+    - Set flaps 15
+    - Set speed, if requested
 - After "Glideslope capture. Set missed approach altitude":
-  - Set missed approach altitude, if requested
+    - Set missed approach altitude, if requested
 - At final approach fix:
-  - Verify Final Approach Verification Altitude
+    - Verify Final Approach Verification Altitude
 
 *Previous: ILS CAT I — PF — Initial Approach*  
 *Next: ILS CAT I — Final Approach Configuration*

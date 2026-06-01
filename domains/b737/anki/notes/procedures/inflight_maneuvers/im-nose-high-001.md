@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:nose_high_recovery
+- always_hide
 fields:
   Title: Nose High Recovery - Recognition and Callout
   Trigger: First indication of nose high upset
