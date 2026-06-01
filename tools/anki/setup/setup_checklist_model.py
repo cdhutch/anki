@@ -37,11 +37,35 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
+/* Solarized palette */
+:root {
+  --sol-bg:      #fdf6e3;
+  --sol-bg-alt:  #eee8d5;
+  --sol-text:    #586e75;
+  --sol-sub:     #93a1a1;
+  --sol-border:  #93a1a1;
+  --sol-accent:  #2aa198;
+  --sol-acc-fg:  #fdf6e3;
+  --sol-hi-bg:   #cce9e7;  /* ☨ row highlight — light cyan tint */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sol-bg:      #002b36;
+    --sol-bg-alt:  #073642;
+    --sol-text:    #839496;
+    --sol-sub:     #586e75;
+    --sol-border:  #586e75;
+    --sol-accent:  #2aa198;
+    --sol-acc-fg:  #002b36;
+    --sol-hi-bg:   #0d3d45;  /* ☨ row highlight — dark cyan tint */
+  }
+}
+
 .card {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: var(--sol-text);
+  background-color: var(--sol-bg);
   max-width: 680px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -51,7 +75,7 @@ CSS = """\
 .checklist-name {
   font-size: 18px;
   font-weight: bold;
-  color: #1a4a8a;
+  color: var(--sol-accent);
   margin-bottom: 16px;
 }
 
@@ -64,8 +88,8 @@ table {
 }
 
 th {
-  background-color: #1a4a8a;
-  color: #ffffff;
+  background-color: var(--sol-accent);
+  color: var(--sol-acc-fg);
   padding: 8px 14px;
   text-align: left;
   font-weight: bold;
@@ -74,28 +98,33 @@ th {
 
 td {
   padding: 7px 14px;
-  border-bottom: 1px solid #dde3ef;
+  border-bottom: 1px solid var(--sol-border);
   vertical-align: top;
 }
 
 tr:nth-child(even) td {
-  background-color: #f0f4fb;
+  background-color: var(--sol-bg-alt);
 }
 
-/* Response column (2nd td) — slightly de-emphasised on back so eye
-   goes to challenge first */
+/* Challenge column */
 td:first-child {
   font-weight: 600;
   width: 50%;
 }
 
+/* Response column */
 td:last-child {
-  color: #1a4a1a;
+  color: var(--sol-accent);
+}
+
+/* Both-pilots-respond rows (☨) */
+tr.sol-hi td {
+  background-color: var(--sol-hi-bg);
 }
 
 .note-id {
   font-size: 11px;
-  color: #aaa;
+  color: var(--sol-sub);
   text-align: right;
   margin-top: 14px;
 }

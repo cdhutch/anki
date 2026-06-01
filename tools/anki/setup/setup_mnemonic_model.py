@@ -48,11 +48,37 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
+/* Solarized palette */
+:root {
+  --sol-bg:      #fdf6e3;
+  --sol-bg-alt:  #eee8d5;
+  --sol-text:    #586e75;
+  --sol-sub:     #93a1a1;
+  --sol-border:  #93a1a1;
+  --sol-accent:  #2aa198;
+  --sol-acc-fg:  #fdf6e3;
+  --sol-green:   #859900;
+  --sol-green-bg:#eee8d5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sol-bg:      #002b36;
+    --sol-bg-alt:  #073642;
+    --sol-text:    #839496;
+    --sol-sub:     #586e75;
+    --sol-border:  #586e75;
+    --sol-accent:  #2aa198;
+    --sol-acc-fg:  #002b36;
+    --sol-green:   #859900;
+    --sol-green-bg:#073642;
+  }
+}
+
 .card {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: var(--sol-text);
+  background-color: var(--sol-bg);
   max-width: 640px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -69,28 +95,28 @@ CSS = """\
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 0.12em;
-  color: #1a4a8a;
+  color: var(--sol-accent);
   margin-bottom: 16px;
 }
 
 .mnemonic-words {
   font-size: 15px;
-  color: #333;
+  color: var(--sol-text);
   line-height: 1.6;
   margin-bottom: 16px;
 }
 
 hr#answer {
   border: none;
-  border-top: 2px solid #d0d0d0;
+  border-top: 1px solid var(--sol-border);
   margin: 22px 0;
 }
 
 .reveal {
   font-size: 16px;
   font-weight: bold;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
+  color: var(--sol-green);
+  background-color: var(--sol-green-bg);
   border-radius: 5px;
   padding: 12px 16px;
   margin-bottom: 12px;
@@ -98,10 +124,9 @@ hr#answer {
 
 .reveal-list {
   list-style-type: disc;
-  padding-left: 24px;
   margin: 0 0 12px 0;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
+  color: var(--sol-green);
+  background-color: var(--sol-green-bg);
   border-radius: 5px;
   padding: 12px 12px 12px 32px;
 }
@@ -117,8 +142,8 @@ hr#answer {
   list-style-type: disc;
   padding: 10px 10px 10px 30px;
   margin: 0 0 12px 0;
-  color: #333;
-  background-color: #f5f5f5;
+  color: var(--sol-text);
+  background-color: var(--sol-bg-alt);
   border-radius: 5px;
 }
 
@@ -126,8 +151,8 @@ hr#answer {
   font-size: 22px;
   font-weight: bold;
   letter-spacing: 0.12em;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
+  color: var(--sol-green);
+  background-color: var(--sol-green-bg);
   border-radius: 5px;
   padding: 12px 16px;
   margin-bottom: 12px;
@@ -135,8 +160,8 @@ hr#answer {
 
 .context {
   font-size: 14px;
-  color: #555;
-  background-color: #f5f5f5;
+  color: var(--sol-sub);
+  background-color: var(--sol-bg-alt);
   border-radius: 5px;
   padding: 10px 14px;
   margin-top: 8px;
@@ -145,7 +170,7 @@ hr#answer {
 
 .note-id {
   font-size: 11px;
-  color: #aaa;
+  color: var(--sol-sub);
   text-align: right;
   margin-top: 14px;
 }

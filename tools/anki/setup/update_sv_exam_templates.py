@@ -26,11 +26,37 @@ ANKI_URL = "http://127.0.0.1:8765"
 # ---------------------------------------------------------------------------
 
 SHARED_CSS = """\
+/* Solarized palette */
+:root {
+  --sol-bg:      #fdf6e3;
+  --sol-bg-alt:  #eee8d5;
+  --sol-text:    #586e75;
+  --sol-sub:     #93a1a1;
+  --sol-border:  #93a1a1;
+  --sol-accent:  #2aa198;
+  --sol-acc-fg:  #fdf6e3;
+  --sol-green:   #859900;
+  --sol-green-bg:#eee8d5;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sol-bg:      #002b36;
+    --sol-bg-alt:  #073642;
+    --sol-text:    #839496;
+    --sol-sub:     #586e75;
+    --sol-border:  #586e75;
+    --sol-accent:  #2aa198;
+    --sol-acc-fg:  #002b36;
+    --sol-green:   #859900;
+    --sol-green-bg:#073642;
+  }
+}
+
 .card {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: var(--sol-text);
+  background-color: var(--sol-bg);
   max-width: 640px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -54,7 +80,7 @@ SHARED_CSS = """\
 
 .choice {
   padding: 9px 14px;
-  background-color: #f2f4f6;
+  background-color: var(--sol-bg-alt);
   border-radius: 5px;
   line-height: 1.4;
 }
@@ -67,7 +93,7 @@ SHARED_CSS = """\
 /* Answer reveal (back of card) */
 hr#answer {
   border: none;
-  border-top: 2px solid #d0d0d0;
+  border-top: 1px solid var(--sol-border);
   margin: 22px 0;
 }
 
@@ -79,8 +105,8 @@ hr#answer {
 .answer-letter {
   font-size: 20px;
   font-weight: bold;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
+  color: var(--sol-green);
+  background-color: var(--sol-green-bg);
   border-radius: 5px 0 0 5px;
   padding: 12px 16px;
   text-align: center;
@@ -91,8 +117,8 @@ hr#answer {
 .answer-text {
   font-size: 16px;
   font-weight: bold;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
+  color: var(--sol-green);
+  background-color: var(--sol-green-bg);
   border-radius: 0 5px 5px 0;
   padding: 12px 16px;
   vertical-align: middle;
@@ -100,7 +126,7 @@ hr#answer {
 
 .note-id {
   font-size: 11px;
-  color: #aaa;
+  color: var(--sol-sub);
   text-align: right;
   margin-top: 14px;
 }

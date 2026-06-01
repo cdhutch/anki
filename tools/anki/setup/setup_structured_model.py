@@ -34,11 +34,33 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
+/* Solarized palette */
+:root {
+  --sol-bg:     #fdf6e3;
+  --sol-bg-alt: #eee8d5;
+  --sol-text:   #586e75;
+  --sol-sub:    #93a1a1;
+  --sol-border: #93a1a1;
+  --sol-accent: #2aa198;
+  --sol-acc-fg: #fdf6e3;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sol-bg:     #002b36;
+    --sol-bg-alt: #073642;
+    --sol-text:   #839496;
+    --sol-sub:    #586e75;
+    --sol-border: #586e75;
+    --sol-accent: #2aa198;
+    --sol-acc-fg: #002b36;
+  }
+}
+
 .card {
   font-family: Arial, sans-serif;
   font-size: 26px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: var(--sol-text);
+  background-color: var(--sol-bg);
   max-width: 640px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -47,13 +69,13 @@ CSS = """\
 
 hr#answer {
   border: none;
-  border-top: 2px solid #d0d0d0;
+  border-top: 1px solid var(--sol-border);
   margin: 22px 0;
 }
 
 .note-id {
   font-size: 11px;
-  color: #aaa;
+  color: var(--sol-sub);
   text-align: right;
   margin-top: 14px;
 }
