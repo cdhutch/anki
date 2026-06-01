@@ -35,4 +35,4 @@ Action?
 
 Trigger: Leveled off and established on heading
 
-- Reconfigure aircraft as desired
+- Reconfigure aircraft as directed

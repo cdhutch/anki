@@ -32,5 +32,5 @@ What are the PM actions approaching level-off during an emergency descent?
 
 - When cabin altitude < 10,000 ft: Notify flight attendants
 - Callout:
-  - **2000 feet above level-off**
-  - **1000 feet above level-off**
+    - **2000 feet above level-off**
+    - **1000 feet above level-off**
