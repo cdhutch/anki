@@ -69,7 +69,7 @@ tr.sol-hi td { background-color: #cce9e7; }
 .note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .card { color: #839496; background-color: #073642; }
 .nightMode .checklist-name { color: #2aa198; }
 .nightMode th { background-color: #2aa198; color: #002b36; }
 .nightMode td { border-bottom-color: #586e75; }

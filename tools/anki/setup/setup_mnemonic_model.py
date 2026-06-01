@@ -63,7 +63,7 @@ hr#answer { border: none; border-top: 1px solid #93a1a1; margin: 22px 0; }
 .note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .card { color: #839496; background-color: #073642; }
 .nightMode .mnemonic { color: #2aa198; }
 .nightMode .mnemonic-words { color: #839496; }
 .nightMode hr#answer { border-top-color: #586e75; }

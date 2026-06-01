@@ -50,7 +50,7 @@ SV_CLOZE_CSS = """\
 /* Dark mode (Solarized dark) */
 .nightMode .card {
     color: #839496;
-    background-color: #002b36;
+    background-color: #073642;
 }
 
 .nightMode .cloze {
@@ -101,7 +101,7 @@ th, td { border: 1px solid #93a1a1; padding: 6px 8px; vertical-align: top; }
 th { font-weight: 700; background-color: #eee8d5; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .card { color: #839496; background-color: #073642; }
 .nightMode .sys-kicker { color: #586e75; }
 .nightMode .sys-subsystem { color: #2aa198; }
 .nightMode .sys-topic { color: #586e75; }
@@ -146,7 +146,7 @@ UA_CONJUGATION_CSS = """\
 .note { margin-top: 12px; font-size: 16px; color: #93a1a1; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .card { color: #839496; background-color: #073642; }
 .nightMode .lemma { color: #2aa198; }
 .nightMode .subtitle { color: #586e75; }
 .nightMode .section { color: #839496; }
@@ -169,7 +169,7 @@ UA_GRAMMAR_CSS = """\
 /* Dark mode (Solarized dark) */
 .nightMode .card {
     color: #839496;
-    background-color: #002b36;
+    background-color: #073642;
 }
 """
 
@@ -206,7 +206,7 @@ hr#answer { border: none; border-top: 2px solid #93a1a1; margin: 20px 0; }
 input#typeans { font-size: 20px; font-family: system-ui, -apple-system, sans-serif; width: 80%; text-align: center; color: #586e75; background-color: #eee8d5; border: 1px solid #93a1a1; padding: 6px; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .card { color: #839496; background-color: #073642; }
 .nightMode .lemma { color: #2aa198; }
 .nightMode .perfective { color: #586e75; }
 .nightMode .pos { color: #586e75; }
@@ -236,7 +236,7 @@ UA_LEXEME_LEGACY_CSS = """\
 /* Dark mode (Solarized dark) */
 .nightMode .card {
     color: #839496;
-    background-color: #002b36;
+    background-color: #073642;
 }
 """
 
@@ -254,7 +254,7 @@ UA_VERB_CSS = """\
 /* Dark mode (Solarized dark) */
 .nightMode .card {
     color: #839496;
-    background-color: #002b36;
+    background-color: #073642;
 }
 """
 
