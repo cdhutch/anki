@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:tcas_ra
-- always_show
+- always_hide
 fields:
   Title: TCAS Traffic Advisory crew response
   Trigger: Refer to procedure

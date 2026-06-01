@@ -12,7 +12,7 @@ tags:
 - category:inflight_maneuvers
 - maneuver:nose_high_recovery
 - warning
-- always_show
+- always_hide
 fields:
   Title: Nose High Recovery - Control Input Warning
   Trigger: Recovery control inputs

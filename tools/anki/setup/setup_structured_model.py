@@ -61,16 +61,16 @@ hr#answer {
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
-  color: #657b83;
-  background-color: #032029;
+  color: rgb(101, 123, 131);
+  background-color: rgb(3, 32, 41);
 }
 
 .nightMode hr#answer {
-  border-top-color: #586e75;
+  border-top-color: rgb(88, 110, 117);
 }
 
 .nightMode .note-id {
-  color: #586e75;
+  color: rgb(88, 110, 117);
 }
 """
 

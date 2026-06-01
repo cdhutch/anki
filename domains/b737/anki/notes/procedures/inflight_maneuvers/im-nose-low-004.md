@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:nose_low_recovery
-- always_show
+- always_hide
 fields:
   Title: Nose Low Recovery - PM Duties
   Trigger: Nose low recovery in progress

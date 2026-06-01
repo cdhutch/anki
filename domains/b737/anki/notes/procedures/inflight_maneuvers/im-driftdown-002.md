@@ -7,11 +7,12 @@ anki:
   model: B737_Structured
   deck: B737::Core::Procedures::Inflight_Maneuvers
 tags:
+- always_hide
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
-- always_show
+- always_hide
 fields:
   Title: Driftdown Initial PF Actions
   Trigger: Driftdown and One Engine Cruise required

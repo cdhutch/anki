@@ -11,7 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:tcas_ra
-- always_show
+- always_hide
 fields:
   Title: Landing config climb RA PM support duties
   Trigger: Refer to procedure

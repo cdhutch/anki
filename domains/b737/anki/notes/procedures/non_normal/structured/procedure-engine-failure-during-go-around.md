@@ -15,6 +15,7 @@ tags:
 - phase:engine_failure
 - source:aom
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Go-Around Procedures 11.2 — Engine Failure During Go-Around and Missed

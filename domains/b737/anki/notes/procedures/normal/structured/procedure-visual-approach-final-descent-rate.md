@@ -14,6 +14,7 @@ tags:
 - phase:final
 - source:aom
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Approach Procedures 10.7.3 — Pattern Setup, On Final
