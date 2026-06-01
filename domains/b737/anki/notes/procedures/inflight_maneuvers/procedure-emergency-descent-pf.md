@@ -14,6 +14,7 @@ tags:
 - variant:pf_actions
 - source:aom
 - status:unverified
+- never_show
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Inflight Maneuvers - Emergency Descent
