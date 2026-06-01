@@ -13,7 +13,7 @@ tags:
 - procedure:discontinued_approach
 - source:aom
 - status:unverified
-- always_show
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Go-Around Procedures 11.1.4 — Discontinued Approach

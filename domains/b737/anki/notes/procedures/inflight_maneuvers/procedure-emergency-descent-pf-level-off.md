@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure
-note_id: procedure-emergency-descent-pm-initial
+note_id: procedure-emergency-descent-pf-level-off
 anki:
   model: B737_Structured
   deck: B737::Core::Procedures::Inflight_Maneuvers
@@ -11,10 +11,9 @@ tags:
 - topic:procedures
 - type:procedure
 - procedure:emergency_descent
-- variant:pm_initial_descent
+- variant:pf_level_off
 - source:aom
 - status:unverified
-- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Inflight Maneuvers - Emergency Descent
@@ -23,16 +22,12 @@ fields:
 
 # front_md
 
-**Emergency Descent — PM Initial Actions**
+**Emergency Descent — PF Level-Off**
 
-What are the PM initial actions during an emergency descent?
+At what point does the PF retract the speedbrakes?
 
 # back_md
 
-**Emergency Descent**
+**Emergency Descent — PF Level-Off**
 
-- ATC: Notify and request altimeter setting
-- PA
-- **Fasten Belts** — ON
-- **Engine Start** switches — CONT
-- Verify safe altitude (MEA, MOCA, MORA, MSA)
+At 1,000 ft above the level-off altitude: **Boards In**
