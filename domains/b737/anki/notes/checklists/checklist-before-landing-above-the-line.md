@@ -36,11 +36,11 @@ fields:
 <thead><tr><th>Challenge</th><th>Response</th></tr></thead>
 <tbody>
 <tr><td>APPROACH BRIEF</td><td>COMPLETED</td></tr>
-<tr style="background-color:#f0f4fb;"><td>SEAT BELTS</td><td>ON</td></tr>
+<tr><td>SEAT BELTS</td><td>ON</td></tr>
 <tr><td>PA</td><td>COMPLETED</td></tr>
-<tr style="background-color:#f0f4fb;"><td>RECALL</td><td>CHECKED</td></tr>
+<tr><td>RECALL</td><td>CHECKED</td></tr>
 <tr><td>AUTOBRAKES</td><td>AS REQUIRED</td></tr>
-<tr style="background-color:#f0f4fb;"><td>HUD</td><td>SET</td></tr>
-<tr style="background-color:#d6e4f7;"><td>RADIOS &amp; DISPLAYS</td><td>Set and Crosschecked ☨</td></tr>
+<tr><td>HUD</td><td>SET</td></tr>
+<tr class="sol-hi"><td>RADIOS &amp; DISPLAYS</td><td>Set and Crosschecked ☨</td></tr>
 </tbody>
 </table>
