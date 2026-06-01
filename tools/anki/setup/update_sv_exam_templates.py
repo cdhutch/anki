@@ -26,110 +26,29 @@ ANKI_URL = "http://127.0.0.1:8765"
 # ---------------------------------------------------------------------------
 
 SHARED_CSS = """\
-/* Solarized palette */
-:root {
-  --sol-bg:      #fdf6e3;
-  --sol-bg-alt:  #eee8d5;
-  --sol-text:    #586e75;
-  --sol-sub:     #93a1a1;
-  --sol-border:  #93a1a1;
-  --sol-accent:  #2aa198;
-  --sol-acc-fg:  #fdf6e3;
-  --sol-green:   #859900;
-  --sol-green-bg:#eee8d5;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sol-bg:      #002b36;
-    --sol-bg-alt:  #073642;
-    --sol-text:    #839496;
-    --sol-sub:     #586e75;
-    --sol-border:  #586e75;
-    --sol-accent:  #2aa198;
-    --sol-acc-fg:  #002b36;
-    --sol-green:   #859900;
-    --sol-green-bg:#073642;
-  }
-}
+/* Light mode (Solarized light) */
+.card { font-family: Arial, sans-serif; font-size: 16px; color: #586e75; background-color: #fdf6e3; max-width: 640px; margin: 0 auto; padding: 24px 20px; text-align: left; }
+.question, .statement { font-size: 18px; font-weight: bold; line-height: 1.5; margin-bottom: 20px; }
 
-.card {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: var(--sol-text);
-  background-color: var(--sol-bg);
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 24px 20px;
-  text-align: left;
-}
+.choices { display: flex; flex-direction: column; gap: 8px; }
+.choice { padding: 9px 14px; background-color: #eee8d5; border-radius: 5px; line-height: 1.4; }
+.choice-label { font-weight: bold; margin-right: 6px; }
 
-.question,
-.statement {
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 1.5;
-  margin-bottom: 20px;
-}
+hr#answer { border: none; border-top: 1px solid #93a1a1; margin: 22px 0; }
 
-/* MCQ / T/F choices */
-.choices {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
+.answer-table { width: 100%; border-collapse: collapse; }
+.answer-letter { font-size: 20px; font-weight: bold; color: #859900; background-color: #eee8d5; border-radius: 5px 0 0 5px; padding: 12px 16px; text-align: center; width: 48px; vertical-align: middle; }
+.answer-text { font-size: 16px; font-weight: bold; color: #859900; background-color: #eee8d5; border-radius: 0 5px 5px 0; padding: 12px 16px; vertical-align: middle; }
 
-.choice {
-  padding: 9px 14px;
-  background-color: var(--sol-bg-alt);
-  border-radius: 5px;
-  line-height: 1.4;
-}
+.note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
-.choice-label {
-  font-weight: bold;
-  margin-right: 6px;
-}
-
-/* Answer reveal (back of card) */
-hr#answer {
-  border: none;
-  border-top: 1px solid var(--sol-border);
-  margin: 22px 0;
-}
-
-.answer-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.answer-letter {
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--sol-green);
-  background-color: var(--sol-green-bg);
-  border-radius: 5px 0 0 5px;
-  padding: 12px 16px;
-  text-align: center;
-  width: 48px;
-  vertical-align: middle;
-}
-
-.answer-text {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--sol-green);
-  background-color: var(--sol-green-bg);
-  border-radius: 0 5px 5px 0;
-  padding: 12px 16px;
-  vertical-align: middle;
-}
-
-.note-id {
-  font-size: 11px;
-  color: var(--sol-sub);
-  text-align: right;
-  margin-top: 14px;
-}
+/* Dark mode (Solarized dark) */
+.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .choice { background-color: #073642; }
+.nightMode hr#answer { border-top-color: #586e75; }
+.nightMode .answer-letter { color: #859900; background-color: #073642; }
+.nightMode .answer-text { color: #859900; background-color: #073642; }
+.nightMode .note-id { color: #586e75; }
 """
 
 # ---------------------------------------------------------------------------

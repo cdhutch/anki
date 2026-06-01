@@ -34,33 +34,12 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
-/* Solarized palette */
-:root {
-  --sol-bg:     #fdf6e3;
-  --sol-bg-alt: #eee8d5;
-  --sol-text:   #586e75;
-  --sol-sub:    #93a1a1;
-  --sol-border: #93a1a1;
-  --sol-accent: #2aa198;
-  --sol-acc-fg: #fdf6e3;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sol-bg:     #002b36;
-    --sol-bg-alt: #073642;
-    --sol-text:   #839496;
-    --sol-sub:    #586e75;
-    --sol-border: #586e75;
-    --sol-accent: #2aa198;
-    --sol-acc-fg: #002b36;
-  }
-}
-
+/* Light mode (Solarized light) */
 .card {
   font-family: Arial, sans-serif;
   font-size: 26px;
-  color: var(--sol-text);
-  background-color: var(--sol-bg);
+  color: #586e75;
+  background-color: #fdf6e3;
   max-width: 640px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -69,15 +48,29 @@ CSS = """\
 
 hr#answer {
   border: none;
-  border-top: 1px solid var(--sol-border);
+  border-top: 1px solid #93a1a1;
   margin: 22px 0;
 }
 
 .note-id {
   font-size: 11px;
-  color: var(--sol-sub);
+  color: #93a1a1;
   text-align: right;
   margin-top: 14px;
+}
+
+/* Dark mode (Solarized dark) */
+.nightMode .card {
+  color: #839496;
+  background-color: #002b36;
+}
+
+.nightMode hr#answer {
+  border-top-color: #586e75;
+}
+
+.nightMode .note-id {
+  color: #586e75;
 }
 """
 

@@ -48,132 +48,31 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
-/* Solarized palette */
-:root {
-  --sol-bg:      #fdf6e3;
-  --sol-bg-alt:  #eee8d5;
-  --sol-text:    #586e75;
-  --sol-sub:     #93a1a1;
-  --sol-border:  #93a1a1;
-  --sol-accent:  #2aa198;
-  --sol-acc-fg:  #fdf6e3;
-  --sol-green:   #859900;
-  --sol-green-bg:#eee8d5;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sol-bg:      #002b36;
-    --sol-bg-alt:  #073642;
-    --sol-text:    #839496;
-    --sol-sub:     #586e75;
-    --sol-border:  #586e75;
-    --sol-accent:  #2aa198;
-    --sol-acc-fg:  #002b36;
-    --sol-green:   #859900;
-    --sol-green-bg:#073642;
-  }
-}
+/* Light mode (Solarized light) */
+.card { font-family: Arial, sans-serif; font-size: 16px; color: #586e75; background-color: #fdf6e3; max-width: 640px; margin: 0 auto; padding: 24px 20px; text-align: left; }
+.flow-name { font-size: 18px; font-weight: bold; margin-bottom: 20px; }
+.mnemonic { font-size: 22px; font-weight: bold; letter-spacing: 0.12em; color: #2aa198; margin-bottom: 16px; }
+.mnemonic-words { font-size: 15px; color: #586e75; line-height: 1.6; margin-bottom: 16px; }
+hr#answer { border: none; border-top: 1px solid #93a1a1; margin: 22px 0; }
+.reveal { font-size: 16px; font-weight: bold; color: #859900; background-color: #eee8d5; border-radius: 5px; padding: 12px 16px; margin-bottom: 12px; }
+.reveal-list { list-style-type: disc; margin: 0 0 12px 0; color: #859900; background-color: #eee8d5; border-radius: 5px; padding: 12px 12px 12px 32px; }
+.reveal-list li, .mnemonic-words-list li { font-size: 15px; font-weight: bold; line-height: 1.7; }
+.mnemonic-words-list { list-style-type: disc; padding: 10px 10px 10px 30px; margin: 0 0 12px 0; color: #586e75; background-color: #eee8d5; border-radius: 5px; }
+.reveal-mnemonic { font-size: 22px; font-weight: bold; letter-spacing: 0.12em; color: #859900; background-color: #eee8d5; border-radius: 5px; padding: 12px 16px; margin-bottom: 12px; }
+.context { font-size: 14px; color: #93a1a1; background-color: #eee8d5; border-radius: 5px; padding: 10px 14px; margin-top: 8px; line-height: 1.5; }
+.note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
-.card {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: var(--sol-text);
-  background-color: var(--sol-bg);
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 24px 20px;
-  text-align: left;
-}
-
-.flow-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.mnemonic {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 0.12em;
-  color: var(--sol-accent);
-  margin-bottom: 16px;
-}
-
-.mnemonic-words {
-  font-size: 15px;
-  color: var(--sol-text);
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-hr#answer {
-  border: none;
-  border-top: 1px solid var(--sol-border);
-  margin: 22px 0;
-}
-
-.reveal {
-  font-size: 16px;
-  font-weight: bold;
-  color: var(--sol-green);
-  background-color: var(--sol-green-bg);
-  border-radius: 5px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-}
-
-.reveal-list {
-  list-style-type: disc;
-  margin: 0 0 12px 0;
-  color: var(--sol-green);
-  background-color: var(--sol-green-bg);
-  border-radius: 5px;
-  padding: 12px 12px 12px 32px;
-}
-
-.reveal-list li,
-.mnemonic-words-list li {
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 1.7;
-}
-
-.mnemonic-words-list {
-  list-style-type: disc;
-  padding: 10px 10px 10px 30px;
-  margin: 0 0 12px 0;
-  color: var(--sol-text);
-  background-color: var(--sol-bg-alt);
-  border-radius: 5px;
-}
-
-.reveal-mnemonic {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 0.12em;
-  color: var(--sol-green);
-  background-color: var(--sol-green-bg);
-  border-radius: 5px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-}
-
-.context {
-  font-size: 14px;
-  color: var(--sol-sub);
-  background-color: var(--sol-bg-alt);
-  border-radius: 5px;
-  padding: 10px 14px;
-  margin-top: 8px;
-  line-height: 1.5;
-}
-
-.note-id {
-  font-size: 11px;
-  color: var(--sol-sub);
-  text-align: right;
-  margin-top: 14px;
-}
+/* Dark mode (Solarized dark) */
+.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .mnemonic { color: #2aa198; }
+.nightMode .mnemonic-words { color: #839496; }
+.nightMode hr#answer { border-top-color: #586e75; }
+.nightMode .reveal { color: #859900; background-color: #073642; }
+.nightMode .reveal-list { color: #859900; background-color: #073642; }
+.nightMode .mnemonic-words-list { color: #839496; background-color: #073642; }
+.nightMode .reveal-mnemonic { color: #859900; background-color: #073642; }
+.nightMode .context { color: #586e75; background-color: #073642; }
+.nightMode .note-id { color: #586e75; }
 """
 
 # ---------------------------------------------------------------------------

@@ -37,35 +37,12 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
-/* Solarized palette */
-:root {
-  --sol-bg:      #fdf6e3;
-  --sol-bg-alt:  #eee8d5;
-  --sol-text:    #586e75;
-  --sol-sub:     #93a1a1;
-  --sol-border:  #93a1a1;
-  --sol-accent:  #2aa198;
-  --sol-acc-fg:  #fdf6e3;
-  --sol-hi-bg:   #cce9e7;  /* ☨ row highlight — light cyan tint */
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --sol-bg:      #002b36;
-    --sol-bg-alt:  #073642;
-    --sol-text:    #839496;
-    --sol-sub:     #586e75;
-    --sol-border:  #586e75;
-    --sol-accent:  #2aa198;
-    --sol-acc-fg:  #002b36;
-    --sol-hi-bg:   #0d3d45;  /* ☨ row highlight — dark cyan tint */
-  }
-}
-
+/* Light mode (Solarized light) */
 .card {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: var(--sol-text);
-  background-color: var(--sol-bg);
+  color: #586e75;
+  background-color: #fdf6e3;
   max-width: 680px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -75,59 +52,31 @@ CSS = """\
 .checklist-name {
   font-size: 18px;
   font-weight: bold;
-  color: var(--sol-accent);
+  color: #2aa198;
   margin-bottom: 16px;
 }
 
-/* ---- Table styling ---- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-  margin-top: 4px;
-}
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 4px; }
+th { background-color: #2aa198; color: #fdf6e3; padding: 8px 14px; text-align: left; font-weight: bold; letter-spacing: 0.03em; }
+td { padding: 7px 14px; border-bottom: 1px solid #93a1a1; vertical-align: top; }
+tr:nth-child(even) td { background-color: #eee8d5; }
 
-th {
-  background-color: var(--sol-accent);
-  color: var(--sol-acc-fg);
-  padding: 8px 14px;
-  text-align: left;
-  font-weight: bold;
-  letter-spacing: 0.03em;
-}
+td:first-child { font-weight: 600; width: 50%; }
+td:last-child { color: #2aa198; }
 
-td {
-  padding: 7px 14px;
-  border-bottom: 1px solid var(--sol-border);
-  vertical-align: top;
-}
+tr.sol-hi td { background-color: #cce9e7; }
 
-tr:nth-child(even) td {
-  background-color: var(--sol-bg-alt);
-}
+.note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
-/* Challenge column */
-td:first-child {
-  font-weight: 600;
-  width: 50%;
-}
-
-/* Response column */
-td:last-child {
-  color: var(--sol-accent);
-}
-
-/* Both-pilots-respond rows (☨) */
-tr.sol-hi td {
-  background-color: var(--sol-hi-bg);
-}
-
-.note-id {
-  font-size: 11px;
-  color: var(--sol-sub);
-  text-align: right;
-  margin-top: 14px;
-}
+/* Dark mode (Solarized dark) */
+.nightMode .card { color: #839496; background-color: #002b36; }
+.nightMode .checklist-name { color: #2aa198; }
+.nightMode th { background-color: #2aa198; color: #002b36; }
+.nightMode td { border-bottom-color: #586e75; }
+.nightMode tr:nth-child(even) td { background-color: #073642; }
+.nightMode td:last-child { color: #2aa198; }
+.nightMode tr.sol-hi td { background-color: #0d3d45; }
+.nightMode .note-id { color: #586e75; }
 """
 
 # ---------------------------------------------------------------------------
