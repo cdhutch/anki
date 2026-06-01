@@ -35,21 +35,21 @@ What are the First Officer (PM) actions from cleared for approach through glides
 
 - Arm APP, if requested
 - After "LOC capture":
-  - Verify VOR/LOC on FMA
+    - Verify VOR/LOC on FMA
 - After "Gear down":
-  - Select gear down
-  - Set speed, if requested
+    - Select gear down
+    - Set speed, if requested
 - After "Flaps 15":
-  - "Speed verified."
-  - Set flaps 15
-  - Set speed, if requested
+    - "Speed verified."
+    - Set flaps 15
+    - Set speed, if requested
 - After "Glideslope capture. Set missed approach altitude":
-  - Set missed approach altitude, if requested
+    - Set missed approach altitude, if requested
 - At final approach fix:
-  - Verify Final Approach Verification Altitude
-  - Monitor HUD Annunciator Panel for amber/red caution or warning annunciations while IMC
-  - Remain on instruments throughout approach and rollout
-  - Call **"Go around"** anytime amber/red caution or warning annunciates on HUD Annunciator Panel while IMC
+    - Verify Final Approach Verification Altitude
+    - Monitor HUD Annunciator Panel for amber/red caution or warning annunciations while IMC
+    - Remain on instruments throughout approach and rollout
+    - Call **"Go around"** anytime amber/red caution or warning annunciates on HUD Annunciator Panel while IMC
 
 *Previous: ILS CAT II/III — Captain (PF) — Initial Approach*  
 *Next: ILS CAT II/III — Captain (PF) — Final Configuration*

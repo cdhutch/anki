@@ -33,19 +33,19 @@ What are the PM actions from above 400 feet RA through cleanup on a single-engin
 **Go-Around — Single Engine — PM — Cleanup / Guidance**
 
 - Above 400 feet RA (or as required by Engine-Out SID / missed approach):
-  - If requested, select HDG or LNAV
-  - Verify FMA
-  - Monitor missed approach track
+    - If requested, select HDG or LNAV
+    - Verify FMA
+    - Monitor missed approach track
 - After "LVL CHG, set speed.":
-  - Set speed as commanded for LVL CHG
+    - Set speed as commanded for LVL CHG
 - After "Flaps up.":
-  - Select flaps up
-  - Monitor flap and slat retraction
+    - Select flaps up
+    - Monitor flap and slat retraction
 - After "MCT, ___ checklist.":
-  - Set MCT
-  - Accomplish commanded checklist
-  - Accomplish After Takeoff Flow
-  - Accomplish After Takeoff Checklist
+    - Set MCT
+    - Accomplish commanded checklist
+    - Accomplish After Takeoff Flow
+    - Accomplish After Takeoff Checklist
 
 *Previous: Go-Around — Single Engine — PF — Cleanup / Guidance*  
 *Next: Landing Rollout — PF — Initial Actions*

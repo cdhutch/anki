@@ -37,7 +37,7 @@ What are the PM actions and callouts from 90 knots through positive rate?
 - "Rotate."
 - Monitor airspeed and flight instruments during rotation
 - After liftoff, verify positive rate:
-  - "Positive rate."
+    - "Positive rate."
 - On PF command, select landing gear up
 
 *Previous: Takeoff — PF V1 / VR / Positive Rate*  

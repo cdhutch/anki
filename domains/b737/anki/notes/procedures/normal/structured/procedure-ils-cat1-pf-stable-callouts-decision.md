@@ -35,14 +35,14 @@ What are the PF actions from 1000 AGL through minimums on an ILS CAT I?
 **ILS CAT I — PF — Stable Callouts / Decision Segment**
 
 - At 1000 AGL:
-  - Verify stabilized approach
+    - Verify stabilized approach
 - At 500 AGL:
-  - Verify altitude, speed, and sink rate
+    - Verify altitude, speed, and sink rate
 - At DA(H), choose one:
-  - PM: "No contact."
+    - PM: "No contact."
     - Execute go-around
-  - PM: "Approach lights."
-  - PM: "Runway."
+    - PM: "Approach lights."
+    - PM: "Runway."
     - "Continuing."
     - Disengage autopilot NLT 50 feet AGL
 

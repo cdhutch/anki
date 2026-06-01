@@ -18,8 +18,8 @@ fields:
 
 # front_md
 
-**Non-ILS approaches** — what are the alternate authorized lateral guidance modes?
+**Non-ILS approaches** — which approaches may use lateral guidance other than LNAV?
 
 # back_md
 
-**VOR** and **front course Localizer-type** approaches may be flown in **VOR/NAV**
+**VOR** and **front course Localizer-type** approaches may be flown in **VOR/LOC**

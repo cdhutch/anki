@@ -33,13 +33,13 @@ What are the PF actions from above 400 feet RA through cleanup on a single-engin
 **Go-Around — Single Engine — PF — Cleanup / Guidance**
 
 - Above 400 feet RA (or as required by Engine-Out SID / missed approach):
-  - Verify or call for appropriate roll mode and FMA
+    - Verify or call for appropriate roll mode and FMA
 - At or above 1000 feet AFE (or as otherwise specified):
-  - "LVL CHG, set speed."
+    - "LVL CHG, set speed."
 - At flap retraction speed:
-  - "Flaps up."
+    - "Flaps up."
 - At flaps up maneuvering speed (UP bug):
-  - "MCT, ___ checklist."
+    - "MCT, ___ checklist."
 
 *Previous: Go-Around — Single Engine — PM — Initial Actions*  
 *Next: Go-Around — Single Engine — PM — Cleanup / Guidance*

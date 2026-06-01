@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:tcas_ra
+- always_show
 fields:
   Title: General RA below 1000 feet AGL descend limitation
   Trigger: Refer to procedure

@@ -35,12 +35,12 @@ fields:
 <table>
 <thead><tr><th>Challenge</th><th>Response</th></tr></thead>
 <tbody>
-<tr style="background-color:#d6e4f7;"><td>TO DATA &amp; Bugs</td><td>Closeout Received and Checked ☨</td></tr>
-<tr style="background-color:#d6e4f7;"><td>FLAPS</td><td>___ Green Light ☨</td></tr>
+<tr class="sol-hi"><td>TO DATA &amp; Bugs</td><td>Closeout Received and Checked ☨</td></tr>
+<tr class="sol-hi"><td>FLAPS</td><td>___ Green Light ☨</td></tr>
 <tr><td>STAB TRIM</td><td>___ Units</td></tr>
-<tr style="background-color:#f0f4fb;"><td>T.O. BRIEF</td><td>COMPLETED</td></tr>
+<tr><td>T.O. BRIEF</td><td>COMPLETED</td></tr>
 <tr><td>HUD</td><td>Set</td></tr>
-<tr style="background-color:#f0f4fb;"><td>GENERATORS</td><td>ON</td></tr>
-<tr style="background-color:#d6e4f7;"><td>A/C &amp; BLEEDS</td><td>AUTO and SET ☨</td></tr>
+<tr><td>GENERATORS</td><td>ON</td></tr>
+<tr class="sol-hi"><td>A/C &amp; BLEEDS</td><td>AUTO and SET ☨</td></tr>
 </tbody>
 </table>

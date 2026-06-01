@@ -32,16 +32,16 @@ What are the PM actions from cleared for approach to FAF/GP intercept?
 **Non-ILS — PM — Initial Approach**
 
 - Cleared for approach:
-  - Select LNAV, if requested
-  - Select VNAV, if requested
-  - Set minimums on MCP, if requested
+    - Select LNAV, if requested
+    - Select VNAV, if requested
+    - Set minimums on MCP, if requested
 - After "Gear down":
-  - Select gear down
-  - Set speed, if requested
+    - Select gear down
+    - Set speed, if requested
 - After "Flaps 15":
-  - "Speed verified."
-  - Select flaps 15
-  - Set speed, if requested
+    - "Speed verified."
+    - Select flaps 15
+    - Set speed, if requested
 
 *Previous: Non-ILS — PF — Initial Approach*  
 *Next: Non-ILS — PM — FAF / Minimums Segment*

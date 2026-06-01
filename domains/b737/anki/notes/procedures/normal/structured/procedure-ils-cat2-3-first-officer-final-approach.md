@@ -38,24 +38,24 @@ What are the First Officer (PM) actions from 1000 feet AFL through minimums and 
 **ILS CAT II/III — First Officer (PM) — Stable Callouts / Minimums / Rollout**
 
 - At 1000 feet AFL:
-  - Auto callout: **"1000."**
-  - Verify altitude
-  - **"Stable."**
+    - Auto callout: **"1000."**
+    - Verify altitude
+    - **"Stable."**
 - At 500 feet AFL:
-  - Auto callout: **"500."**
+    - Auto callout: **"500."**
     - **"Stable, target, sink ___."**
-  - or
+    - or
     - **"Stable, ± ___, sink ___."**
 - At +100 above DA(H):
-  - Auto callout: **"Plus hundred."**
+    - Auto callout: **"Plus hundred."**
 - At DA(H):
-  - Auto callout: **"Minimums."**
+    - Auto callout: **"Minimums."**
 - If Captain executes go-around:
-  - Monitor go-around and perform PM duties
+    - Monitor go-around and perform PM duties
 - If landing continues:
-  - Remain on instruments throughout rollout
+    - Remain on instruments throughout rollout
 - If aircraft is not tracking the localizer:
-  - **"Centerline."**
+    - **"Centerline."**
 
 *Previous: ILS CAT II/III — Captain (PF) — Final Approach / Minimums / Rollout*  
 *Next: End of ILS CAT II/III Sequence*

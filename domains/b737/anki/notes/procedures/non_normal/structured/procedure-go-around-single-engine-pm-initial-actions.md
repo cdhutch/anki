@@ -33,18 +33,18 @@ What are the PM actions from initiation of a single-engine go-around through gea
 **Go-Around — Single Engine — PM — Initial Actions**
 
 - After PF callout "Go around, TOGA.":
-  - Verify go-around thrust
+    - Verify go-around thrust
 - After PF command "Flaps 1.":
-  - Select flaps 1
-  - Verify FMA
-  - Verify thrust
+    - Select flaps 1
+    - Verify FMA
+    - Verify thrust
 - Positive rate of climb:
-  - "Positive rate."
+    - "Positive rate."
 - After PF command "Gear up.":
-  - Select gear up
+    - Select gear up
 - After PF command "Set missed approach altitude.":
-  - Set missed approach altitude
-  - Advise ATC
+    - Set missed approach altitude
+    - Advise ATC
 
 *Previous: Go-Around — Single Engine — PF — Initial Actions*  
 *Next: Go-Around — Single Engine — PF — Cleanup / Guidance*

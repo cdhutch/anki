@@ -37,12 +37,12 @@ What are the PM actions from landing configuration to the 1000 AGL stable gate o
 **ILS CAT I — PM — Final Configuration**
 
 - Configured by 1000 AGL:
-  - Dual engine:
+    - Dual engine:
     - "Speed verified."
     - Set requested flaps
     - set speed, if requested
     - Complete Below the Line checklist
-  - Engine out:
+    - Engine out:
     - Complete Below the Line checklist
 - Confirm mechanical checklist complete
 

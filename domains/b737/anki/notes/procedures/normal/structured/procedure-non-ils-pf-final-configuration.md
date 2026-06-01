@@ -32,10 +32,10 @@ What are the PF actions from landing configuration through 1000 AGL on a Non-ILS
 **Non-ILS — PF — Final Configuration**
 
 - Configured by 1000 AGL:
-  - Dual engine:
+    - Dual engine:
     - "Flaps ___, below the line."
     - Set/request speed
-  - Engine out:
+    - Engine out:
     - Maintain flaps 15
     - "Below the line."
 - Confirm mechanical checklist complete

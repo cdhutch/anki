@@ -34,23 +34,23 @@ What are the Captain (PF) actions from cleared for approach through glideslope c
 **ILS CAT II/III — Captain (PF) — Initial Approach**
 
 - Cleared for approach:
-  - Select/Request APP
-  - If available, **AIII** must be used below **RVR 1800**
-  - If AIII is not available, **AII/IMC** may be used to **RVR 1200**
+    - Select/Request APP
+    - If available, **AIII** must be used below **RVR 1800**
+    - If AIII is not available, **AII/IMC** may be used to **RVR 1200**
 - LOC capture:
-  - Verify VOR/LOC annunciated on FMA
-  - **"LOC capture."**
+    - Verify VOR/LOC annunciated on FMA
+    - **"LOC capture."**
 - Approaching 1-dot G/S or NLT 2000 feet AFL (recommended):
-  - **"Gear down."**
-  - Set/request speed
-  - **"Flaps 15."**
-  - Arm SPEEDBRAKE
-  - Set/request speed
+    - **"Gear down."**
+    - Set/request speed
+    - **"Flaps 15."**
+    - Arm SPEEDBRAKE
+    - Set/request speed
 - G/S capture:
-  - **"Glideslope capture. Set missed approach altitude."**
-  - Set/request missed approach altitude on MCP
+    - **"Glideslope capture. Set missed approach altitude."**
+    - Set/request missed approach altitude on MCP
 - At final approach fix:
-  - Verify Final Approach Verification Altitude
+    - Verify Final Approach Verification Altitude
 
 
 *Next: ILS CAT II/III — First Officer (PM) — Initial Approach*

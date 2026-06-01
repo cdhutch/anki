@@ -32,15 +32,15 @@ What are the PF actions from cleared for approach to FAF/GP intercept?
 **Non-ILS — PF — Initial Approach**
 
 - Cleared for approach:
-  - Select / request LNAV then VNAV
-  - Verify VNAV PTH on FMA when applicable
-  - Set / request approach minimums on MCP
+    - Select / request LNAV then VNAV
+    - Verify VNAV PTH on FMA when applicable
+    - Set / request approach minimums on MCP
 - Approaching FAF / GP INTCPT:
-  - Verify VNAV PTH / VNAV ALT / ALT HLD
-  - Verify FAF/GP INTCPT is active waypoint
-  - "Gear down."
-  - Set / request speed
-  - "Flaps 15."
-  - Arm SPEEDBRAKE
+    - Verify VNAV PTH / VNAV ALT / ALT HLD
+    - Verify FAF/GP INTCPT is active waypoint
+    - "Gear down."
+    - Set / request speed
+    - "Flaps 15."
+    - Arm SPEEDBRAKE
 
 *Next: Non-ILS — PF — FAF / Minimums Segment*

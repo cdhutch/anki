@@ -33,21 +33,21 @@ What are the PM actions from above 400 feet RA through cleanup on a dual-engine 
 **Go-Around — Dual Engine — PM — Cleanup / Guidance**
 
 - Above 400 feet RA:
-  - If requested, select HDG or LNAV
-  - Verify FMA
+    - If requested, select HDG or LNAV
+    - Verify FMA
 - After PF command "Flaps ___.":
-  - Check airspeed
-  - Select commanded flaps
-  - Monitor flaps and slats retraction
+    - Check airspeed
+    - Select commanded flaps
+    - Monitor flaps and slats retraction
 - After PF command "Flaps up, after takeoff checklist.":
-  - Check airspeed
-  - Select flaps up
-  - Monitor flaps and slats retraction
+    - Check airspeed
+    - Select flaps up
+    - Monitor flaps and slats retraction
 - After flap retraction or planned flaps set:
-  - Set speed as commanded if LVL CHG selected
-  - Monitor vertical and lateral path
-  - Accomplish After Takeoff Flow
-  - Accomplish After Takeoff Checklist
+    - Set speed as commanded if LVL CHG selected
+    - Monitor vertical and lateral path
+    - Accomplish After Takeoff Flow
+    - Accomplish After Takeoff Checklist
 
 *Previous: Go-Around — Dual Engine — PF — Cleanup / Guidance*  
 *Next: Go-Around — Single Engine — PF — Initial Actions*

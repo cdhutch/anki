@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:tcas_ra
+- always_show
 fields:
   Title: Landing config climb RA maneuvering philosophy
   Trigger: Refer to procedure

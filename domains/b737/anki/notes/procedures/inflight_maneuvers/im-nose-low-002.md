@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:nose_low_recovery
+- always_hide
 fields:
   Title: Nose Low Recovery - PF Immediate Actions
   Trigger: Nose low upset

@@ -83,3 +83,4 @@ domains/**/anki/inbox/
 
 # Ignore build files
 build/*
+.claude/

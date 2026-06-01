@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:stall_recovery
+- always_show
 fields:
   Title: Stall Recovery - Liftoff Configuration Exception
   Trigger: Stall warning during liftoff

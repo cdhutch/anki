@@ -37,11 +37,12 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
+/* Light mode (Solarized light) */
 .card {
   font-family: Arial, sans-serif;
   font-size: 16px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #586e75;
+  background-color: #fdf6e3;
   max-width: 680px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -51,54 +52,31 @@ CSS = """\
 .checklist-name {
   font-size: 18px;
   font-weight: bold;
-  color: #1a4a8a;
+  color: #2aa198;
   margin-bottom: 16px;
 }
 
-/* ---- Table styling ---- */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-  margin-top: 4px;
-}
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 4px; }
+th { background-color: #2aa198; color: #fdf6e3; padding: 8px 14px; text-align: left; font-weight: bold; letter-spacing: 0.03em; }
+td { padding: 7px 14px; border-bottom: 1px solid #93a1a1; vertical-align: top; }
+tr:nth-child(even) td { background-color: #eee8d5; }
 
-th {
-  background-color: #1a4a8a;
-  color: #ffffff;
-  padding: 8px 14px;
-  text-align: left;
-  font-weight: bold;
-  letter-spacing: 0.03em;
-}
+td:first-child { font-weight: 600; width: 50%; }
+td:last-child { color: #2aa198; }
 
-td {
-  padding: 7px 14px;
-  border-bottom: 1px solid #dde3ef;
-  vertical-align: top;
-}
+tr.sol-hi td { background-color: #cce9e7; }
 
-tr:nth-child(even) td {
-  background-color: #f0f4fb;
-}
+.note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
-/* Response column (2nd td) — slightly de-emphasised on back so eye
-   goes to challenge first */
-td:first-child {
-  font-weight: 600;
-  width: 50%;
-}
-
-td:last-child {
-  color: #1a4a1a;
-}
-
-.note-id {
-  font-size: 11px;
-  color: #aaa;
-  text-align: right;
-  margin-top: 14px;
-}
+/* Dark mode (Solarized dark) */
+.nightMode .card { color: #657b83; background-color: #032029; }
+.nightMode .checklist-name { color: #2aa198; }
+.nightMode th { background-color: #2aa198; color: #002b36; }
+.nightMode td { border-bottom-color: #586e75; }
+.nightMode tr:nth-child(even) td { background-color: #032029; }
+.nightMode td:last-child { color: #2aa198; }
+.nightMode tr.sol-hi td { background-color: #0d3d45; }
+.nightMode .note-id { color: #586e75; }
 """
 
 # ---------------------------------------------------------------------------

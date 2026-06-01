@@ -36,27 +36,27 @@ What are the PM actions from 1000 AGL through minimums on an ILS CAT I?
 **ILS CAT I — PM — Stable Callouts / Decision Segment**
 
 - At 1000 AGL:
-  - Auto callout: "1000."
-  - Verify altitude
-  - "Stable."
+    - Auto callout: "1000."
+    - Verify altitude
+    - "Stable."
 - At 500 AGL:
-  - Auto callout: "500."
-  - "Stable, target, sink ___."
-  - or
-  - "Stable, ± ___, sink ___."
+    - Auto callout: "500."
+    - "Stable, target, sink ___."
+    - or
+    - "Stable, ± ___, sink ___."
 - At +100:
-  - Auto callout: "Plus hundred."
+    - Auto callout: "Plus hundred."
 - At DA(H):
-  - Auto callout: "Minimums."
+    - Auto callout: "Minimums."
 - If no runway environment:
-  - "No contact."
-  - Monitor go-around and perform PM duties
+    - "No contact."
+    - Monitor go-around and perform PM duties
 - If approach lights only:
-  - "Approach lights."
+    - "Approach lights."
 - If runway environment in sight:
-  - "Runway."
+    - "Runway."
 - If PF continues:
-  - Monitor landing / rollout
+    - Monitor landing / rollout
 
 *Previous: ILS CAT I — PF — Stable Callouts / Decision Segment*  
 *Next: End of ILS CAT I Sequence*

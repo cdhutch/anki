@@ -7,10 +7,12 @@ anki:
   model: B737_Structured
   deck: B737::Core::Procedures::Inflight_Maneuvers
 tags:
+- always_hide
 - domain:b737
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:emergency_descent
+- always_show
 fields:
   Title: im-emergency-descent-008
   Trigger: Refer to procedure

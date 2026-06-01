@@ -48,107 +48,31 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
-.card {
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  color: #1a1a1a;
-  background-color: #ffffff;
-  max-width: 640px;
-  margin: 0 auto;
-  padding: 24px 20px;
-  text-align: left;
-}
+/* Light mode (Solarized light) */
+.card { font-family: Arial, sans-serif; font-size: 16px; color: #586e75; background-color: #fdf6e3; max-width: 640px; margin: 0 auto; padding: 24px 20px; text-align: left; }
+.flow-name { font-size: 18px; font-weight: bold; margin-bottom: 20px; }
+.mnemonic { font-size: 22px; font-weight: bold; letter-spacing: 0.12em; color: #2aa198; margin-bottom: 16px; }
+.mnemonic-words { font-size: 15px; color: #586e75; line-height: 1.6; margin-bottom: 16px; }
+hr#answer { border: none; border-top: 1px solid #93a1a1; margin: 22px 0; }
+.reveal { font-size: 16px; font-weight: bold; color: #859900; background-color: #eee8d5; border-radius: 5px; padding: 12px 16px; margin-bottom: 12px; }
+.reveal-list { list-style-type: disc; margin: 0 0 12px 0; color: #859900; background-color: #eee8d5; border-radius: 5px; padding: 12px 12px 12px 32px; }
+.reveal-list li, .mnemonic-words-list li { font-size: 15px; font-weight: bold; line-height: 1.7; }
+.mnemonic-words-list { list-style-type: disc; padding: 10px 10px 10px 30px; margin: 0 0 12px 0; color: #586e75; background-color: #eee8d5; border-radius: 5px; }
+.reveal-mnemonic { font-size: 22px; font-weight: bold; letter-spacing: 0.12em; color: #859900; background-color: #eee8d5; border-radius: 5px; padding: 12px 16px; margin-bottom: 12px; }
+.context { font-size: 14px; color: #93a1a1; background-color: #eee8d5; border-radius: 5px; padding: 10px 14px; margin-top: 8px; line-height: 1.5; }
+.note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
-.flow-name {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.mnemonic {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 0.12em;
-  color: #1a4a8a;
-  margin-bottom: 16px;
-}
-
-.mnemonic-words {
-  font-size: 15px;
-  color: #333;
-  line-height: 1.6;
-  margin-bottom: 16px;
-}
-
-hr#answer {
-  border: none;
-  border-top: 2px solid #d0d0d0;
-  margin: 22px 0;
-}
-
-.reveal {
-  font-size: 16px;
-  font-weight: bold;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
-  border-radius: 5px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-}
-
-.reveal-list {
-  list-style-type: disc;
-  padding-left: 24px;
-  margin: 0 0 12px 0;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
-  border-radius: 5px;
-  padding: 12px 12px 12px 32px;
-}
-
-.reveal-list li,
-.mnemonic-words-list li {
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 1.7;
-}
-
-.mnemonic-words-list {
-  list-style-type: disc;
-  padding: 10px 10px 10px 30px;
-  margin: 0 0 12px 0;
-  color: #333;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-}
-
-.reveal-mnemonic {
-  font-size: 22px;
-  font-weight: bold;
-  letter-spacing: 0.12em;
-  color: #1a6e1a;
-  background-color: #eaf5ea;
-  border-radius: 5px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-}
-
-.context {
-  font-size: 14px;
-  color: #555;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-  padding: 10px 14px;
-  margin-top: 8px;
-  line-height: 1.5;
-}
-
-.note-id {
-  font-size: 11px;
-  color: #aaa;
-  text-align: right;
-  margin-top: 14px;
-}
+/* Dark mode (Solarized dark) */
+.nightMode .card { color: #657b83; background-color: #032029; }
+.nightMode .mnemonic { color: #2aa198; }
+.nightMode .mnemonic-words { color: #657b83; }
+.nightMode hr#answer { border-top-color: #586e75; }
+.nightMode .reveal { color: #859900; background-color: #032029; }
+.nightMode .reveal-list { color: #859900; background-color: #032029; }
+.nightMode .mnemonic-words-list { color: #657b83; background-color: #032029; }
+.nightMode .reveal-mnemonic { color: #859900; background-color: #032029; }
+.nightMode .context { color: #586e75; background-color: #032029; }
+.nightMode .note-id { color: #586e75; }
 """
 
 # ---------------------------------------------------------------------------
