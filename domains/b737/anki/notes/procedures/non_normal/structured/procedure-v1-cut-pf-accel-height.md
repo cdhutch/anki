@@ -32,10 +32,10 @@ What are the PF actions at Engine-Out acceleration height following a V1 cut?
 **V1 Cut — PF — Engine-Out Acceleration Height**
 
 - At Engine-Out acceleration height:
-  - Verify or request VNAV
-  - If VNAV is N/A, request LVL CHG and set speed.
-  - Reduce pitch and accelerate
-  - Command flap retraction on schedule
+    - Verify or request VNAV
+    - If VNAV is N/A, request LVL CHG and set speed.
+    - Reduce pitch and accelerate
+    - Command flap retraction on schedule
 - Maintain engine-out profile during cleanup
 
 **Memory rule:**  

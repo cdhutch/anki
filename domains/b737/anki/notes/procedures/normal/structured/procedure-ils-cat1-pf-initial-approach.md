@@ -33,21 +33,21 @@ What are the PF actions from cleared for approach through glideslope capture on 
 **ILS CAT I — PF — Initial Approach**
 
 - Cleared for approach:
-  - Select/Request APP
+    - Select/Request APP
 - LOC capture:
-  - Verify VOR/LOC annunciates on FMA
-  - "LOC capture."
+    - Verify VOR/LOC annunciates on FMA
+    - "LOC capture."
 - Approaching 1-dot G/S or NLT 2000 AFL:
-  - "Gear down."
-  - Set/request speed
-  - "Flaps 15."
-  - Arm SPEEDBRAKE
-  - Set/request speed
+    - "Gear down."
+    - Set/request speed
+    - "Flaps 15."
+    - Arm SPEEDBRAKE
+    - Set/request speed
 - G/S capture:
-  - "Glideslope capture. Set missed approach altitude."
-  - Set/request missed approach altitude
+    - "Glideslope capture. Set missed approach altitude."
+    - Set/request missed approach altitude
 - At final approach fix:
-  - Verify Final Approach Verification Altitude
+    - Verify Final Approach Verification Altitude
 
 *Previous: Arrival — Landing Flap Selection*  
 *Next: ILS CAT I — PM — Initial Approach*

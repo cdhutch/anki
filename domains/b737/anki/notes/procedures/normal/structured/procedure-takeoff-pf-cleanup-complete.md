@@ -33,9 +33,9 @@ What are the PF actions when flap retraction is complete?
 **Takeoff — PF Cleanup Complete**
 
 - If VNAV is not available:
-  - Select or request speed
+    - Select or request speed
 - If terrain is a factor:
-  - Maintain UP bug until:
+    - Maintain UP bug until:
     - Clear of all obstacles
     - Above minimum crossing altitudes
 - Monitor acceleration to the appropriate speed

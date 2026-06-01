@@ -30,6 +30,6 @@ What altitude, thrust and speed are used when terrain clearance is not a concern
 
 **At Driftdown Altitude — No Terrain Concern**
 
-- Altitude: One Engine Long Range Cruise chart
 - Thrust: Enough to maintain level cruise
+- Altitude: One Engine LRC
 - Speed: One Engine LRC

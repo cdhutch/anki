@@ -33,18 +33,18 @@ What are the PM actions from initiation of a dual-engine go-around through gear 
 **Go-Around — Dual Engine — PM — Initial Actions**
 
 - After PF callout "Go around, TOGA.":
-  - Verify go-around thrust
+    - Verify go-around thrust
 - After flap command:
-  - Select commanded flaps
-  - Verify pitch FMA indicates TO/GA
-  - Verify desired thrust set
+    - Select commanded flaps
+    - Verify pitch FMA indicates TO/GA
+    - Verify desired thrust set
 - Positive rate of climb:
-  - "Positive rate."
+    - "Positive rate."
 - After PF command "Gear up.":
-  - Select gear up
+    - Select gear up
 - After PF command "Set missed approach altitude.":
-  - Set missed approach altitude
-  - Advise ATC
+    - Set missed approach altitude
+    - Advise ATC
 
 *Previous: Go-Around — Dual Engine — PF — Cleanup / Guidance*  
 *Next: Go-Around — Dual Engine — PM — Cleanup / Guidance*

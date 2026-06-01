@@ -31,7 +31,7 @@ What are the actions when receiving a Climb RA in landing configuration?
 **Climb RA in Landing Configuration**
 
 - PF: **"My Aircraft"**
-  - Autopilot and Autothrottle - OFF
-  - Max thrust then Flaps 15
+    - Autopilot and Autothrottle - OFF
+    - Max thrust then Flaps 15
 - PM: **"Positive Rate"**
 - PF: **"Gear Up"**

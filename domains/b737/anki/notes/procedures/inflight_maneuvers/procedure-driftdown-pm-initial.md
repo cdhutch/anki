@@ -30,5 +30,6 @@ What are the PM initial actions for Driftdown and One Engine Cruise?
 
 **Driftdown and One Engine Cruise — PM Initial**
 
-- Notify ATC and request altimeter setting
-- Refer to QRH: **ENGINES, APU > Driftdown and One Engine Cruise**
+- Notify ATC
+- Request altimeter setting
+- QRH: **ENGINES, APU > Driftdown and One Engine Cruise**

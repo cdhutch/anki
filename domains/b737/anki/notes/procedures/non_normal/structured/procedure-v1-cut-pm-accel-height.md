@@ -32,8 +32,8 @@ What are the PM actions at engine-out acceleration height following a V1 cut?
 **V1 Cut — PM — Engine Out Acceleration Height**
 
 - If requested:
-  - Select VNAV, or
-  - Select LVL CHG
+    - Select VNAV, or
+    - Select LVL CHG
     - Set speed to UP bug
 - Accomplish commanded flap retraction on schedule
 

@@ -30,5 +30,5 @@ What thrust and speed are used when terrain clearance is a concern?
 
 **At Driftdown Altitude — Terrain Concern**
 
-- Thrust: MCT
+- Thrust: CON
 - Speed: Driftdown speed

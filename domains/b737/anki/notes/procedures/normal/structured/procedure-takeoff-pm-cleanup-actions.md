@@ -33,9 +33,9 @@ What are the PM actions during flap retraction?
 **Takeoff — PM Cleanup Actions**
 
 - When "Flaps ___" is commanded:
-  - Check airspeed
-  - Select proper flap setting
-  - Monitor flap/slat retraction
+    - Check airspeed
+    - Select proper flap setting
+    - Monitor flap/slat retraction
 
 *Previous: Takeoff — PM Acceleration Height*  
 *Next: Takeoff — PM Cleanup Complete*

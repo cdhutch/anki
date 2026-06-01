@@ -32,14 +32,14 @@ What are the PF actions from approaching taxi speed through manual braking trans
 **Landing Rollout — PF — Manual Braking / Completion**
 
 - Approaching taxi speed:
-  - Move reverse thrust levers full down
+    - Move reverse thrust levers full down
 - Transition to manual braking:
-  - "Manual braking."
-  - Apply manual braking as required
+    - "Manual braking."
+    - Apply manual braking as required
 - Maintain directional control
 - Exit runway when instructed or able
 - For fist officer landing:
-  - Captain states: "My aircraft."
-  - FO statesL: "Your aircraft."
+    - Captain states: "My aircraft."
+    - FO statesL: "Your aircraft."
 *Previous: Landing Rollout — PF — Touchdown / Reverse*  
 *Next: Landing Rollout — PM — Callouts / Monitoring*

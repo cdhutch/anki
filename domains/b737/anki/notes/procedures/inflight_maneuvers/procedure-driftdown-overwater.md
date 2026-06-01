@@ -30,6 +30,6 @@ What altitude, thrust, and speed are used for Long Overwater Flights
 
 **At Driftdown Altitude — Overwater**
 
-- Altitude: One Engine High Speed Cruise chart
 - Thrust: MCT
+- Altitude: One Engine High Speed Cruise
 - Speed: **335 KIAS / .79 Mach**

@@ -30,9 +30,10 @@ What are the PF actions during an emergency descent?
 
 **Emergency Descent — PF Actions**
 
-- **Emergency Descent** — callout
-- **My aircraft** — recognition
-- Altitude: Higher of MSA or 10,000 ft MSL
-- Airspeed: LVL CHG, idle thrust, boards out, Mmo/Vmo
-- Heading: Turn if needed or straight ahead
+- **"Emergency Descent"**
+- **"My aircraft"**
+- MCP Altitude: Higher of MSA or 10,000 ft MSL
+- LVL CHG, idle thrust, boards out
+- MCP Airspeed: Mmo/Vmo
+- Heading: As required
 - At 1000 ft above level-off: **Boards In**

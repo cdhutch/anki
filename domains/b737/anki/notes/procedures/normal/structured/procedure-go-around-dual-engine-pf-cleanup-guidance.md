@@ -33,14 +33,14 @@ What are the PF actions from above 400 feet RA through cleanup on a dual-engine 
 **Go-Around — Dual Engine — PF — Cleanup / Guidance**
 
 - Above 400 feet RA:
-  - Verify or call for appropriate roll mode and FMA
+    - Verify or call for appropriate roll mode and FMA
 - Intermediate flap retraction:
-  - "Flaps ___."
+    - "Flaps ___."
 - Final cleanup command:
-  - "Flaps up, after takeoff checklist."
+    - "Flaps up, after takeoff checklist."
 - After flap retraction or planned flaps set:
-  - "VNAV." or
-  - "LVL CHG, set speed."
+    - "VNAV." or
+    - "LVL CHG, set speed."
 
 *Previous: Go-Around — Dual Engine — PM — Initial Actions*  
 *Next: Go-Around — Dual Engine — PM — Cleanup / Guidance*

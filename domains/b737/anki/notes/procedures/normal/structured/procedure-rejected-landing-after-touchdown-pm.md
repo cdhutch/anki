@@ -38,4 +38,4 @@ What are the PM actions for a go-around initiated after touchdown but before thr
 - Verify desired thrust is set
 - At V_REF, call out: **"Rotate."**
 - When safely airborne:
-  - Verify positive rate of climb on altimeter
+    - Verify positive rate of climb on altimeter

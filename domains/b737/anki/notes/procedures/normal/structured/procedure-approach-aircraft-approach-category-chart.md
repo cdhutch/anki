@@ -32,7 +32,7 @@ Which B737 aircraft are normally **Category D**, which nose numbers may be **Cat
 
 - The B737 is normally **Category D**.
 - **B737-NG SFP** (Short Field Package), nose numbers **3LC-3PX**, may use **Category C** for qualifying straight-in approaches.
-  - Straight-in approaches must use **Flaps 40**.
-  - Circle-to-land approaches must use **Category D**.
-  - If **Vapp > 140 KIAS**, use **Category D** minimums if available.
-  - If **Vapp > 140 KIAS** and **Category D** minimums are unavailable, **Category C** minimums may be used for a straight-in approach with **Flaps 40**.
+    - Straight-in approaches must use **Flaps 40**.
+    - Circle-to-land approaches must use **Category D**.
+    - If **Vapp > 140 KIAS**, use **Category D** minimums if available.
+    - If **Vapp > 140 KIAS** and **Category D** minimums are unavailable, **Category C** minimums may be used for a straight-in approach with **Flaps 40**.

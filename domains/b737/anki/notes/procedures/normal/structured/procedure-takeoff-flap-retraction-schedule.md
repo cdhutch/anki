@@ -32,7 +32,7 @@ What is the shortest accurate way to remember the 737 takeoff flap retraction sc
 **Takeoff — Flap Retraction Schedule**
 
 - Begin at **V2 + 15**  
-  - Except Flaps 1 takeoff: begin at **1 bug**
+    - Except Flaps 1 takeoff: begin at **1 bug**
 - Then retract one step at each bug for the current flap setting
 
 **Sequence**

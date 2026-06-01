@@ -37,13 +37,13 @@ What are the PF actions for a go-around initiated after touchdown but before thr
 
 - "Go around."
 - Simultaneously:
-  - Smoothly advance thrust levers to go-around thrust
-  - Maintain landing flap configuration
+    - Smoothly advance thrust levers to go-around thrust
+    - Maintain landing flap configuration
 - At V_REF:
-  - Smoothly rotate toward 15° pitch attitude
+    - Smoothly rotate toward 15° pitch attitude
 - When safely airborne:
-  - Verify positive rate of climb on altimeter
-  - Select TO/GA to attain FD go-around mode
+    - Verify positive rate of climb on altimeter
+    - Select TO/GA to attain FD go-around mode
 - Continue Normal Go-Around
 
 *Next: Go-Around — Dual Engine — PF — Cleanup / Guidance*

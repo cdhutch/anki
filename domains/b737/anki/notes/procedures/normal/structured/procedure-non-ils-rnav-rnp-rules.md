@@ -32,10 +32,10 @@ What special guidance rules apply to RNAV (GPS) and RNAV (RNP) approaches?
 **Non-ILS Approaches — RNAV / RNP Rules**
 
 - **RNAV (GPS):**  
-  - Roll mode: **LNAV required**
+    - Roll mode: **LNAV required**
 - **RNAV (RNP):**  
-  - Roll mode: **LNAV required**
-  - Pitch mode: **VNAV required**
+    - Roll mode: **LNAV required**
+    - Pitch mode: **VNAV required**
 
 *Previous: Core Guidance Summary*  
 *Next: VNAV Exceptions / LOC Monitoring*

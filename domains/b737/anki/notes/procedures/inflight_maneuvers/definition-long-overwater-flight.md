@@ -31,7 +31,4 @@ What is a Long Overwater Flight?
 
 A Long Overwater Flight is one where the diversion speed must be increased to remain within 60 minutes of a suitable airport.
 
-**Applies to:**
-- New York Oceanic FIRE
-- Western Atlantic
-- Gulf of Mexico
+

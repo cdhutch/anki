@@ -32,7 +32,7 @@ What is the shortest accurate way to remember the 737 arrival flap extension sch
 **Arrival — Flap Extension Schedule**
 
 - When decelerating through the PFD bug for the current configuration:
-  - Select the next flap setting
+    - Select the next flap setting
 
 **Sequence**
 - UP → 1 → 5 → 15 → 25 → 30/40

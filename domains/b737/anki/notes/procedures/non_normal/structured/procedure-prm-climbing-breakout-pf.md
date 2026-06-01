@@ -36,14 +36,14 @@ Trigger: ATC advises "Traffic alert"
 
 - **"Breakout."**
 - Simultaneously:
-  - Disengage the autopilot
-  - Disengage the autothrottle
-  - *Immediately* turn to assigned heading as directed by ATC
-  - *Immediately* climb to assigned altitude as directed by ATC
-  - Follow TCAS RA vertical guidance, *if* received
+    - Disengage the autopilot
+    - Disengage the autothrottle
+    - *Immediately* turn to assigned heading as directed by ATC
+    - *Immediately* climb to assigned altitude as directed by ATC
+    - Follow TCAS RA vertical guidance, *if* received
 - **"Set speed ___."**
 - Leveled off and established on heading:
-  - Reestablish automation
-  - Reconfigure aircraft as desired
+    - Reestablish automation
+    - Reconfigure aircraft as desired
 
 *Note: If conflicting RA/ATC vertical guidance, follow RA vertical guidance while complying with ATC lateral instructions.*

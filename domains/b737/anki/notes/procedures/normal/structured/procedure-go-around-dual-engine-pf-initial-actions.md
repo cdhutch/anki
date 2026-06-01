@@ -33,17 +33,17 @@ What are the PF actions from initiating a dual-engine go-around through gear up 
 **Go-Around — Dual Engine — PF — Initial Actions**
 
 - Initiate go-around:
-  - "Go around, TOGA."
-  - Press TO/GA switch
-  - Verify thrust increase
+    - "Go around, TOGA."
+    - Press TO/GA switch
+    - Verify thrust increase
 - Select initial flap setting:
-  - If landing flaps 30 or 40:
+    - If landing flaps 30 or 40:
     - "Flaps 15."
-  - If landing flaps 15:
+    - If landing flaps 15:
     - "Flaps 1."
 - Rotate to 15 degrees Nose Up
 - After PM callout "Positive rate."
-  - "Gear up."
+    - "Gear up."
 - Fly published missed approach or comply with ATC instructions
 - "Set missed approach altitude."
 

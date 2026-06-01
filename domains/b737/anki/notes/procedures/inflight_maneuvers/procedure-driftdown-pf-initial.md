@@ -31,7 +31,8 @@ What are the PF initial actions for Driftdown and One Engine Cruise?
 **Driftdown and One Engine Cruise — PF Initial**
 
 - Autothrottle — OFF
-- Operating engine thrust lever — Set MCT
-- MCP IAS/MACH window — Set engine-out driftdown speed
-- MCP ALTITUDE window — Set maximum engine-out altitude
-- When aircraft reaches driftdown speed: Select **LVL CHG**
+- Thrust Lever -  MCT (CON N1)
+- MCP speed window — ENG OUT SPD
+- MCP ALTITUDE window — MAX ALT
+- When aircraft reaches driftdown speed
+    - Select **LVL CHG**

@@ -34,12 +34,12 @@ What are the Captain (PF) actions from the Final Approach Verification Altitude 
 **ILS CAT II/III — Captain (PF) — Final Configuration**
 
 - Configured by 1000 AGL:
-  - Dual engine:
+    - Dual engine:
     - "Flaps ___, below the line."
     - Set/request speed
-  - Engine out:
+    - Engine out:
     - Maintain flaps 15
-  - "Below the line."
+    - "Below the line."
 - Confirm mechanical checklist complete
 
 *Previous: ILS CAT II/III — First Officer (PM) — Initial Approach*  

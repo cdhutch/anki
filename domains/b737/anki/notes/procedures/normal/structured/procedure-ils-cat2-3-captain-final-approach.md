@@ -37,18 +37,18 @@ What are the Captain (PF) actions from 1000 feet AFL through minimums and rollou
 **ILS CAT II/III — Captain (PF) — Final Approach / Minimums / Rollout**
 
 - At 1000 feet AFL:
-  - Disconnect autopilot
+    - Disconnect autopilot
 - At 500 feet AFL:
-  - BAE2020: Verify **AIII/AII active** and **FLARE armed**
-  - HGS-4000/6000: Verify **AIII/IMC active** and **RO armed** (AIII only)
-  - **"Continuing."**
+    - BAE2020: Verify **AIII/AII active** and **FLARE armed**
+    - HGS-4000/6000: Verify **AIII/IMC active** and **RO armed** (AIII only)
+    - **"Continuing."**
 - At DA(H):
-  - If DH runway environment not in sight:
+    - If DH runway environment not in sight:
     - Execute go-around maneuver
-  - If DH runway environment in sight:
+    - If DH runway environment in sight:
     - Maintain stabilized approach to touchdown
 - Rollout:
-  - Monitor runway centerline lights to assure runway alignment
+    - Monitor runway centerline lights to assure runway alignment
 
 *Previous: ILS CAT II/III — First Officer (PM) — Final Configuration*  
 *Next: ILS CAT II/III — First Officer (PM) — Final Approach / Minimums / Rollout*
