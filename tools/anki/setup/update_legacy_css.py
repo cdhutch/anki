@@ -49,8 +49,8 @@ SV_CLOZE_CSS = """\
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
-    color: #839496;
-    background-color: #073642;
+    color: #657b83;
+    background-color: #032029;
 }
 
 .nightMode .cloze {
@@ -101,19 +101,19 @@ th, td { border: 1px solid #93a1a1; padding: 6px 8px; vertical-align: top; }
 th { font-weight: 700; background-color: #eee8d5; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #073642; }
+.nightMode .card { color: #657b83; background-color: #032029; }
 .nightMode .sys-kicker { color: #586e75; }
 .nightMode .sys-subsystem { color: #2aa198; }
 .nightMode .sys-topic { color: #586e75; }
 .nightMode .sys-panel { color: #586e75; }
 .nightMode .sep { border-top-color: #586e75; }
-.nightMode .block .h { color: #839496; }
-.nightMode .block .body { color: #839496; }
+.nightMode .block .h { color: #657b83; }
+.nightMode .block .body { color: #657b83; }
 .nightMode .lbl { color: #586e75; }
-.nightMode .val { color: #839496; }
+.nightMode .val { color: #657b83; }
 .nightMode .muted { color: #586e75; }
 .nightMode th, .nightMode td { border-color: #586e75; }
-.nightMode th { background-color: #073642; }
+.nightMode th { background-color: #032029; }
 """
 
 # ---------------------------------------------------------------------------
@@ -146,11 +146,11 @@ UA_CONJUGATION_CSS = """\
 .note { margin-top: 12px; font-size: 16px; color: #93a1a1; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #073642; }
+.nightMode .card { color: #657b83; background-color: #032029; }
 .nightMode .lemma { color: #2aa198; }
 .nightMode .subtitle { color: #586e75; }
-.nightMode .section { color: #839496; }
-.nightMode .conj-table th, .nightMode .conj-table td { border-color: #586e75; color: #839496; }
+.nightMode .section { color: #657b83; }
+.nightMode .conj-table th, .nightMode .conj-table td { border-color: #586e75; color: #657b83; }
 .nightMode .conj-table th { background: #073642; }
 .nightMode .note { color: #586e75; }
 """
@@ -168,8 +168,8 @@ UA_GRAMMAR_CSS = """\
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
-    color: #839496;
-    background-color: #073642;
+    color: #657b83;
+    background-color: #032029;
 }
 """
 
@@ -206,20 +206,20 @@ hr#answer { border: none; border-top: 2px solid #93a1a1; margin: 20px 0; }
 input#typeans { font-size: 20px; font-family: system-ui, -apple-system, sans-serif; width: 80%; text-align: center; color: #586e75; background-color: #eee8d5; border: 1px solid #93a1a1; padding: 6px; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #073642; }
+.nightMode .card { color: #657b83; background-color: #032029; }
 .nightMode .lemma { color: #2aa198; }
 .nightMode .perfective { color: #586e75; }
 .nightMode .pos { color: #586e75; }
 .nightMode .gender { color: #586e75; }
 .nightMode hr#answer { border-top-color: #586e75; }
-.nightMode .gloss { color: #839496; }
+.nightMode .gloss { color: #657b83; }
 .nightMode .counterpart { color: #586e75; }
 .nightMode .irregular { color: #586e75; }
 .nightMode .confusable { color: #859900; }
-.nightMode .example-ua { color: #839496; }
+.nightMode .example-ua { color: #657b83; }
 .nightMode .example-en { color: #586e75; }
 .nightMode .note-id { color: #586e75; }
-.nightMode input#typeans { color: #839496; background-color: #073642; border-color: #586e75; }
+.nightMode input#typeans { color: #657b83; background-color: #032029; border-color: #586e75; }
 """
 
 UA_LEXEME_LEGACY_CSS = """\
@@ -235,8 +235,8 @@ UA_LEXEME_LEGACY_CSS = """\
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
-    color: #839496;
-    background-color: #073642;
+    color: #657b83;
+    background-color: #032029;
 }
 """
 
@@ -253,8 +253,8 @@ UA_VERB_CSS = """\
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
-    color: #839496;
-    background-color: #073642;
+    color: #657b83;
+    background-color: #032029;
 }
 """
 

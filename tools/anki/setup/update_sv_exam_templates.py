@@ -43,11 +43,11 @@ hr#answer { border: none; border-top: 1px solid #93a1a1; margin: 22px 0; }
 .note-id { font-size: 11px; color: #93a1a1; text-align: right; margin-top: 14px; }
 
 /* Dark mode (Solarized dark) */
-.nightMode .card { color: #839496; background-color: #073642; }
-.nightMode .choice { background-color: #073642; }
+.nightMode .card { color: #657b83; background-color: #032029; }
+.nightMode .choice { background-color: #032029; }
 .nightMode hr#answer { border-top-color: #586e75; }
-.nightMode .answer-letter { color: #859900; background-color: #073642; }
-.nightMode .answer-text { color: #859900; background-color: #073642; }
+.nightMode .answer-letter { color: #859900; background-color: #032029; }
+.nightMode .answer-text { color: #859900; background-color: #032029; }
 .nightMode .note-id { color: #586e75; }
 """
 

@@ -61,8 +61,8 @@ hr#answer {
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
-  color: #839496;
-  background-color: #073642;
+  color: #657b83;
+  background-color: #032029;
 }
 
 .nightMode hr#answer {
