@@ -58,7 +58,7 @@ CSS = """\
 }
 
 /* Tables */
-table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 4px; }
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 4px; border: 1px solid #93a1a1; }
 th { background-color: #2aa198; color: #fdf6e3; padding: 8px 14px; text-align: left; font-weight: bold; letter-spacing: 0.03em; }
 th + th { border-left: 1px solid #1a8a80; }
 td { padding: 7px 14px; border-bottom: 1px solid #93a1a1; vertical-align: top; }
