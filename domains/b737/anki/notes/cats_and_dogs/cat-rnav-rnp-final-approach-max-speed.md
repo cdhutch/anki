@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-go-around-vnav-lvl-chg-callout
+note_id: cat-rnav-rnp-final-approach-max-speed
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
@@ -18,8 +18,8 @@ fields:
 
 # front_md
 
-**Go-Around** — in which situation does the PM call out "VNAV" or "LVL CHG, set speed \_\_\_"?
+What is the maximum airspeed on the final approach segment of an RNAV(RNP) approach?
 
 # back_md
 
-When diverting to a different airport.
+180 knots

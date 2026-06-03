@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-go-around-vnav-lvl-chg-callout
+note_id: cat-engine-failure-checklist-timing
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
@@ -13,13 +13,18 @@ tags:
 - status:unverified
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
+  Source Location: 16.2.3
   Verification Notes: ''
 ---
 
 # front_md
 
-**Go-Around** — in which situation does the PM call out "VNAV" or "LVL CHG, set speed \_\_\_"?
+When is the non-normal checklist for engine failure usually accomplished?
 
 # back_md
 
-When diverting to a different airport.
+After:
+
+- Gear and flap retraction
+- Desired climb speed attained
+- Conditions permit

@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-go-around-vnav-lvl-chg-callout
+note_id: cat-eo-sid-priority-lateral-vs-altitude
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
@@ -18,8 +18,10 @@ fields:
 
 # front_md
 
-**Go-Around** — in which situation does the PM call out "VNAV" or "LVL CHG, set speed \_\_\_"?
+**E/O SID** — what takes priority: reaching 400' or joining the first point of the E/O SID? Why?
 
 # back_md
 
-When diverting to a different airport.
+**Joining the E/O SID** takes priority.
+
+Lateral navigation ensures compliance with airspace and terrain avoidance requirements.

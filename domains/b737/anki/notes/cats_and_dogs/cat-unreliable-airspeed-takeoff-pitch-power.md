@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-go-around-vnav-lvl-chg-callout
+note_id: cat-unreliable-airspeed-takeoff-pitch-power
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
@@ -18,8 +18,8 @@ fields:
 
 # front_md
 
-**Go-Around** — in which situation does the PM call out "VNAV" or "LVL CHG, set speed \_\_\_"?
+If unreliable airspeed is suspected on takeoff, what pitch and power should be set?
 
 # back_md
 
-When diverting to a different airport.
+15° nose up, takeoff thrust — maintain configuration until at safe altitude.

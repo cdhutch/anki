@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-go-around-vnav-lvl-chg-callout
+note_id: cat-autobrakes-required-74cbt
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
@@ -18,8 +18,14 @@ fields:
 
 # front_md
 
-**Go-Around** — in which situation does the PM call out "VNAV" or "LVL CHG, set speed \_\_\_"?
+**74CBT** — when are autobrakes required on landing?
 
 # back_md
 
-When diverting to a different airport.
+**74CBT**
+
+- **7** — Runway length &lt; 7,500'
+- **4** — RVR &lt; 4,000'
+- **C** — Contaminated or wet surface
+- **B** — Braking action less than Good
+- **T** — Tailwind
