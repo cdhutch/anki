@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure_structured
-note_id: im-egpws-004
+note_id: im-egpws-009
 anki:
   model: B737_Structured
   deck: B737::Core::Procedures::Inflight_Maneuvers
@@ -12,7 +12,7 @@ tags:
 - category:inflight_maneuvers
 - maneuver:egpws
 fields:
-  Title: EGPWS warning maneuver configuration rule
+  Title: EGPWS — continued pull if terrain remains a threat
   Trigger: Refer to procedure
   Objective: Recall EGPWS / GPWS procedure actions
   MemoryItems: ''
@@ -22,8 +22,8 @@ fields:
 
 # front_md
 
-Following an EGPWS maneuver, when may the PF alter gear / flap configuration?
+Following an EGPWS maneuver, what does the PF do if terrain remains a threat?
 
 # back_md
 
-When terrain clearance is assured.
+Keep pulling — up to the **PLI**, **stick shaker**, or **initial buffet**.

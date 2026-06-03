@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure_structured
-note_id: im-egpws-004
+note_id: im-egpws-008
 anki:
   model: B737_Structured
   deck: B737::Core::Procedures::Inflight_Maneuvers
@@ -12,7 +12,7 @@ tags:
 - category:inflight_maneuvers
 - maneuver:egpws
 fields:
-  Title: EGPWS warning maneuver configuration rule
+  Title: EGPWS PULL UP — PF immediate actions (memorable)
   Trigger: Refer to procedure
   Objective: Recall EGPWS / GPWS procedure actions
   MemoryItems: ''
@@ -22,8 +22,12 @@ fields:
 
 # front_md
 
-Following an EGPWS maneuver, when may the PF alter gear / flap configuration?
+What are the PF actions following a Ground Proximity Warning Alert?
 
 # back_md
 
-When terrain clearance is assured.
+- **My Aircraft**
+- Autopilot, autothrottles — OFF
+- Max thrust
+- Wings level pull to 20° NU
+- Speedbrakes — IN

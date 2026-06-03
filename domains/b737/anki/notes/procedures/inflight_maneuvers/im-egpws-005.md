@@ -26,10 +26,5 @@ What are the PM priorities during an EGPWS warning maneuver?
 
 # back_md
 
-PM should:
-
-- Ensure maximum thrust is set
-- Verify required actions are completed
-- Call out omissions
-- Monitor vertical speed and altitude
-- Call out any continued trend toward terrain
+- Verify max thrust and speedbrakes IN
+- Call out RADALT and climbing / descending

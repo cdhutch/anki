@@ -26,6 +26,4 @@ When may a terrain / obstacle caution or warning be considered unreliable or non
 
 # back_md
 
-If positive visual verification confirms no terrain or obstacle hazard exists (typically daylight VMC), the crew may treat the alert as cautionary and continue as appropriate.
-
-Use sound judgment and company policy.
+If positive visual verification confirms no terrain or obstacle hazard exists.

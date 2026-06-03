@@ -12,7 +12,7 @@ tags:
 - category:inflight_maneuvers
 - maneuver:egpws
 fields:
-  Title: EGPWS warning maneuver immediate PF actions
+  Title: EGPWS caution alert on approach — go-around criteria
   Trigger: Refer to procedure
   Objective: Recall EGPWS / GPWS procedure actions
   MemoryItems: ''
@@ -22,16 +22,8 @@ fields:
 
 # front_md
 
-After a terrain warning alert, what are the PF immediate actions?
+What should the crew do following an EGPWS caution alert on approach?
 
 # back_md
 
-PF calls **My aircraft** and immediately:
-
-- Disconnect autopilot
-- Disconnect autothrottle
-- Apply maximum thrust
-- Roll wings level
-- Rotate initially to about 20° pitch
-- Retract speedbrakes
-- Continue pitch increase as needed to avoid terrain
+Go around if not stable.
