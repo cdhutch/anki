@@ -19,9 +19,13 @@ fields:
 
 # front_md
 
-Inflight engine shutdown — what is the callout script for closing the thrust lever?
+**Thrust Lever (affected engine) … Confirm … CLOSE**
+
+What is the callout script?
 
 # back_md
+
+**Thrust Lever (affected engine) … Confirm … CLOSE**
 
 <table>
 <colgroup><col style="width:50%"><col style="width:50%"></colgroup>

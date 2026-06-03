@@ -19,9 +19,13 @@ fields:
 
 # front_md
 
-Inflight engine shutdown — what is the callout script for pulling the engine fire switch?
+**Engine Fire Switch (affected engine) … Confirm … PULL**
+
+What is the callout script?
 
 # back_md
+
+**Engine Fire Switch (affected engine) … Confirm … PULL**
 
 <table>
 <colgroup><col style="width:50%"><col style="width:50%"></colgroup>

@@ -18,6 +18,8 @@ fields:
 
 # front_md
 
+**Acceleration / Clean Up Height — By Scenario**
+
 <table>
 <colgroup><col style="width:45%"><col style="width:55%"></colgroup>
 <thead><tr><th>Scenario</th><th>Height</th></tr></thead>
@@ -30,6 +32,8 @@ fields:
 </table>
 
 # back_md
+
+**Acceleration / Clean Up Height — By Scenario**
 
 <table>
 <colgroup><col style="width:45%"><col style="width:55%"></colgroup>

@@ -19,9 +19,13 @@ fields:
 
 # front_md
 
-Inflight engine shutdown — what is the callout script for moving the start lever to cutoff?
+**Engine Start Lever (affected engine) … Confirm … CUTOFF**
+
+What is the callout script?
 
 # back_md
+
+**Engine Start Lever (affected engine) … Confirm … CUTOFF**
 
 <table>
 <colgroup><col style="width:50%"><col style="width:50%"></colgroup>
