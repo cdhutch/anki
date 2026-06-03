@@ -1,0 +1,8 @@
+fields:
+  NoteID: note_id
+  tags: tags_joined
+  Front: front_html
+  Back: back_html
+  Source Document: fields.Source Document
+  Source Location: fields.Source Location
+  Verification Notes: fields.Verification Notes

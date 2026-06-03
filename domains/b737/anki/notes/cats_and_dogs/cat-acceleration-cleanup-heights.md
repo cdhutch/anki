@@ -4,7 +4,7 @@ domain: b737
 note_type: cats_and_dogs
 note_id: cat-acceleration-cleanup-heights
 anki:
-  model: B737_Structured
+  model: B737_Table
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
