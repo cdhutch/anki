@@ -22,7 +22,7 @@ fields:
 
 <table>
 <colgroup><col style="width:45%"><col style="width:55%"></colgroup>
-<thead><tr><th>Position</th><th></th></tr></thead>
+<thead><tr><th>Position</th><th>Configuration</th></tr></thead>
 <tbody>
 <tr><td>Radar Vectors</td><td></td></tr>
 <tr><td>Base Leg</td><td></td></tr>

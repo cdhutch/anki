@@ -20,7 +20,7 @@ fields:
 
 <table>
 <colgroup><col style="width:45%"><col style="width:55%"></colgroup>
-<thead><tr><th>Scenario</th><th></th></tr></thead>
+<thead><tr><th>Scenario</th><th>Height</th></tr></thead>
 <tbody>
 <tr><td>Normal T/O</td><td></td></tr>
 <tr><td>Engine Out T/O</td><td></td></tr>
