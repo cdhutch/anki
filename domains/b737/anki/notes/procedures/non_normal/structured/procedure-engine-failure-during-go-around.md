@@ -4,7 +4,7 @@ domain: b737
 note_type: procedure
 note_id: procedure-engine-failure-during-go-around
 anki:
-  model: B737_Structured
+  model: B737_Table
   deck: B737::Core::Procedures::Non_Normal
 tags:
 - domain:b737
@@ -20,7 +20,7 @@ fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Go-Around Procedures 11.2 — Engine Failure During Go-Around and Missed
     Approach
-  Verification Notes: null
+  Verification Notes: ''
 ---
 
 # front_md
@@ -29,13 +29,30 @@ fields:
 
 What are the key parameters when an engine fails during a go-around or missed approach?
 
+<table>
+<colgroup><col style="width:35%"><col style="width:65%"></colgroup>
+<thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Thrust</td><td></td></tr>
+<tr><td>Flaps</td><td></td></tr>
+<tr><td>Speed</td><td></td></tr>
+<tr><td>Bank Angle</td><td></td></tr>
+</tbody>
+</table>
+
 # back_md
 
 **Engine Failure During Go-Around and Missed Approach**
 
-Perform Engine-Out Go-Around procedures, then:
+What are the key parameters when an engine fails during a go-around or missed approach?
 
-- Verify maximum go-around thrust is set
-- Maintain **Flaps 15**
-- Maintain **V_REF 30 or 40 + wind correction** (5 knots minimum)
-- Limit bank angle to **15°** until maneuvering is complete and a safe altitude is reached
+<table>
+<colgroup><col style="width:35%"><col style="width:65%"></colgroup>
+<thead><tr><th>Parameter</th><th>Value</th></tr></thead>
+<tbody>
+<tr><td>Thrust</td><td>Maximum go-around thrust</td></tr>
+<tr><td>Flaps</td><td>Flaps 15</td></tr>
+<tr><td>Speed</td><td>V<sub>REF</sub> 30 or 40 + wind correction (5 kts min)</td></tr>
+<tr><td>Bank Angle</td><td>15° until maneuvering complete and safe altitude reached</td></tr>
+</tbody>
+</table>
