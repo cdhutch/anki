@@ -11,7 +11,6 @@ tags:
 - topic:procedures
 - type:cats_and_dogs
 - status:unverified
-- flag:3
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Verification Notes: ''

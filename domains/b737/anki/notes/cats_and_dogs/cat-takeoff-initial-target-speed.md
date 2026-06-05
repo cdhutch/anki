@@ -19,7 +19,7 @@ fields:
 
 # front_md
 
-During a normal takeoff, what is the initial target speed?
+During a normal takeoff, what is the initial target speed after rotation?
 
 # back_md
 

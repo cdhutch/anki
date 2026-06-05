@@ -25,17 +25,9 @@ fields:
 
 Recall the landing crosswind limits by RCC and model:
 
-| RCC   | 737-800 | 737 MAX 8 |
-| :---: | :---:   | :---:     |
-|       |         |           |
-|       |         |           |
-|       |         |           |
-|       |         |           |
-|       |         |           |
-|       |         |           |
-
-
 # back_md
+
+**B737 LIMITS — LANDING CROSSWIND BY RCC**
 
 | RCC   | 737-800 | 737 MAX 8 |
 | :---: | :---:   | :---:     |

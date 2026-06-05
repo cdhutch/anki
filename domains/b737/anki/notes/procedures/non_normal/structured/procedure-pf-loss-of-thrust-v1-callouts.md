@@ -23,11 +23,11 @@ fields:
 
 # front_md
 
-**Loss of Thrust at or Above V1 — PF Callouts**
+**Loss of Thrust at or Above V1 — PF Actions or Callouts**
 
 <table>
 <colgroup><col style="width:55%"><col style="width:45%"></colgroup>
-<thead><tr><th>Trigger</th><th>Callout</th></tr></thead>
+<thead><tr><th>Trigger</th><th>Action or Callout</th></tr></thead>
 <tbody>
 <tr><td>400' RA</td><td></td></tr>
 <tr><td>Higher of TPS E/O ACCEL Height or EO procedure</td><td></td></tr>
@@ -38,11 +38,11 @@ fields:
 
 # back_md
 
-**Loss of Thrust at or Above V1 — PF Callouts**
+**Loss of Thrust at or Above V1 — PF Actions or Callouts**
 
 <table>
 <colgroup><col style="width:55%"><col style="width:45%"></colgroup>
-<thead><tr><th>Trigger</th><th>Callout</th></tr></thead>
+<thead><tr><th>Trigger</th><th>Action or Callout</th></tr></thead>
 <tbody>
 <tr><td>400' RA</td><td>"Verify roll mode"</td></tr>
 <tr><td>Higher of TPS E/O ACCEL Height or EO procedure</td><td>"Verify VNAV"</td></tr>

@@ -25,7 +25,7 @@ fields:
 
 ## Windshear Alert Recognition
 
-What level of windshear alert is the following, and what is your response?
+What level of windshear alert is the following, and what is your response if on takeoff roll?
 
 **"Windshear ahead"**
 
@@ -33,4 +33,6 @@ What level of windshear alert is the following, and what is your response?
 
 ## Answer
 
-**WARNING — takeoff.** Before V1: reject or delay. At or above V1: Windshear Escape Maneuver.
+**WARNING — takeoff.**
+- Before V1: reject or delay.
+- At or above V1: Windshear Escape Maneuver.

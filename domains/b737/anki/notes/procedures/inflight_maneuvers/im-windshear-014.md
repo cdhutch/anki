@@ -11,28 +11,25 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:predictive_windshear_approach
+- alert_level:caution
 - training:sim5
 fields:
-  Title: Predictive Windshear - On Approach
-  Trigger: Predictive windshear caution or warning on approach
-  Objective: Decide between continuation, go-around, or escape maneuver
-  MemoryItems: Caution continue if able otherwise go-around; warning normal go-around or escape
+  Title: Predictive Windshear Caution - On Approach
+  Trigger: Predictive windshear caution on approach
+  Objective: Decide whether to continue or go around
+  MemoryItems: Continue if able to avoid windshear; otherwise go around
   Source: B737 AOM 17-20
   Verification Notes: ''
 ---
 
 # front_md
 
-## Predictive Windshear on Approach
+## Predictive Windshear Caution on Approach
 
-What actions apply if a predictive windshear caution or warning is received on approach?
+What actions apply if a predictive windshear **caution** is received on approach?
 
 # back_md
 
-## On Approach
+## On Approach — Caution
 
-### Caution
 Continue if able to avoid windshear; otherwise go around.
-
-### Warning
-Perform either a normal go-around or the Windshear Escape Maneuver.

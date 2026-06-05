@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-**Go-Around** — in which situation does the PM call out "VNAV" or "LVL CHG, set speed \_\_\_"?
+**Normal (Two Engine) Go-Around** — in which situation does the PF call out "VNAV" or "LVL CHG, set speed \_\_\_"?
 
 # back_md
 
