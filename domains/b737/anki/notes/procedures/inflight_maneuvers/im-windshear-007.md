@@ -12,6 +12,8 @@ tags:
 - category:inflight_maneuvers
 - maneuver:windshear_escape
 - note
+- always_hide
+- training:sim5
 fields:
   Title: Windshear Escape Maneuver - Maximum Thrust Note
   Trigger: Maximum thrust required
@@ -23,12 +25,8 @@ fields:
 
 # front_md
 
-## Note
-
-How can maximum thrust be obtained during a windshear escape maneuver?
+How is maximum thrust obtained during a windshear escape maneuver?
 
 # back_md
 
-## Note
-
-Maximum thrust can be obtained by advancing the thrust levers full forward if the EECs are in normal mode. If terrain contact is imminent, advance thrust levers full forward.
+With EECs in normal mode, thrust levers full forward = maximum thrust. If terrain contact is imminent, go full forward regardless.

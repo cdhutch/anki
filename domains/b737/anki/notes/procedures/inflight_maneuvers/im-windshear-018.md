@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_alerts
+- training:sim5
 fields:
   Title: Windshear Alert - Go Around Windsshear Ahead
   Trigger: Windshear alert recognition
@@ -24,7 +25,7 @@ fields:
 
 ## Windshear Alert Recognition
 
-What level of windshear alert is:
+What level of windshear alert is the following, and what is your response?
 
 **"Go around. Windshear ahead."**
 
@@ -32,10 +33,4 @@ What level of windshear alert is:
 
 ## Answer
 
-This is a **WARNING** level approach alert.
-
-Perform either:
-
-- Normal go-around  
-or  
-- Windshear Escape Maneuver
+**WARNING — approach.** Perform either a normal go-around or the Windshear Escape Maneuver.

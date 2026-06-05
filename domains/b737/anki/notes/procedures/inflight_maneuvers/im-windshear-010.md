@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_precautions
+- training:sim5
 fields:
   Title: Windshear Precautions - Landing Configuration
   Trigger: Windshear suspected or reported for landing
@@ -31,11 +32,4 @@ What landing precautions apply when windshear is suspected or reported?
 ## Landing Precautions
 
 - Use longest suitable runway
-- Use ILS or VASI for glidepath monitoring
-- Use flaps 30, consistent with field length
-- Establish a stabilized approach no later than 1000 feet AGL
-- Minimize thrust reductions
-
-## Memory Items
-
-Longest runway; ILS/VASI; flaps 30; stabilized by 1000; minimize thrust reductions
+- Use flaps 30 if performance allows

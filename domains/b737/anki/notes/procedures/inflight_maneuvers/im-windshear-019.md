@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_alerts
+- training:sim5
 fields:
   Title: Windshear Alert - Windshear Ahead
   Trigger: Windshear alert recognition
@@ -24,7 +25,7 @@ fields:
 
 ## Windshear Alert Recognition
 
-What level of windshear alert is:
+What level of windshear alert is the following, and what is your response?
 
 **"Windshear ahead"**
 
@@ -32,7 +33,4 @@ What level of windshear alert is:
 
 ## Answer
 
-This is a **WARNING** level takeoff alert.
-
-Before V1: reject/delay  
-At or above V1: Windshear Escape Maneuver
+**WARNING — takeoff.** Before V1: reject or delay. At or above V1: Windshear Escape Maneuver.

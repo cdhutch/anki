@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:predictive_windshear_takeoff
+- training:sim5
 fields:
   Title: Predictive Windshear - At or Above V1
   Trigger: Predictive windshear caution or warning at or above V1
@@ -37,6 +38,3 @@ What actions apply if a predictive windshear caution or warning is received at o
 ### Warning
 - Perform the Windshear Escape Maneuver
 
-## Memory Items
-
-Maneuver as required; consider max thrust; warning = escape maneuver

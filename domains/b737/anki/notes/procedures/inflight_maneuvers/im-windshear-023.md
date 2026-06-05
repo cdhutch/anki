@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: procedure_structured
-note_id: im-windshear-001
+note_id: im-windshear-023
 anki:
   model: B737_Structured
   deck: B737::Core::Procedures::Inflight_Maneuvers
@@ -13,23 +13,22 @@ tags:
 - maneuver:windshear_escape
 - training:sim5
 fields:
-  Title: Windshear Escape Maneuver - Recognition and Callout
-  Trigger: Encountering a windshear
-  Objective: Establish PF control and begin escape maneuver
-  MemoryItems: Escape; My aircraft
+  Title: Windshear Escape Maneuver - PM Post-Escape Action
+  Trigger: Escape successful
+  Objective: Notify ATC of windshear encounter
+  MemoryItems: PIREP to ATC
   Source: B737 AOM 17.3.1
   Verification Notes: ''
 ---
 
 # front_md
 
-## Recognition
+## Pilot Monitoring
 
-When encountering a windshear, what are the initial callouts?
+After a successful windshear escape, what does the PM do?
 
 # back_md
 
-## Answer
+## PM Post-Escape Action
 
-- **Escape**
-- **My aircraft**
+Issue PIREP to ATC.

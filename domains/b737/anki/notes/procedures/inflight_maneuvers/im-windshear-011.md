@@ -11,6 +11,8 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:severe_weather_windshear
+- always_hide
+- training:sim5
 fields:
   Title: Severe Weather / Windshear - Standard Operating Emphasis
   Trigger: Severe weather or windshear conditions

@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:predictive_windshear_takeoff
+- training:sim5
 fields:
   Title: Predictive Windshear - Prior to V1
   Trigger: Predictive windshear caution or warning before V1
@@ -32,6 +33,3 @@ What action is required if a predictive windshear caution or warning is received
 
 Delay or reject takeoff.
 
-## Memory Items
-
-Prior to V1 delay/reject takeoff

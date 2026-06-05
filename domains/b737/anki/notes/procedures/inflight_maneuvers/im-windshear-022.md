@@ -11,6 +11,8 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_alerts
+- always_hide
+- training:sim5
 fields:
   Title: Windshear Alerts - Inhibit Ranges
   Trigger: Windshear system knowledge

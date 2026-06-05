@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:predictive_windshear_approach
+- training:sim5
 fields:
   Title: Predictive Windshear - On Approach
   Trigger: Predictive windshear caution or warning on approach
@@ -31,12 +32,7 @@ What actions apply if a predictive windshear caution or warning is received on a
 ## On Approach
 
 ### Caution
-- Continue the approach if able to avoid windshear
-- Otherwise execute a normal go-around and maneuver as required to avoid the windshear
+Continue if able to avoid windshear; otherwise go around.
 
 ### Warning
-- Perform either a normal go-around or the Windshear Escape Maneuver
-
-## Memory Items
-
-Caution continue if able otherwise go-around; warning normal go-around or escape
+Perform either a normal go-around or the Windshear Escape Maneuver.

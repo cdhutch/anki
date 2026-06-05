@@ -15,6 +15,7 @@ tags:
 - crew_role:pilot_flying
 - source:aom
 - status:unverified
+- training:sim5
 fields:
   NoteID: mnemonic-prm-climbing-breakout-pf-1
   Name: 'PRM Climbing Breakout — PF (Trigger: "Traffic Alert")'
