@@ -15,6 +15,7 @@ tags:
 - crew_role:pilot_flying
 - source:aom
 - status:unverified
+- training:sim5
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: ''

@@ -12,6 +12,7 @@ tags:
 - type:mnemonic
 - source:aom
 - status:unverified
+- training:sim5
 fields:
   Name: PM Actions at 400' AFL — Engine Out Climb
   Mnemonic: AHA

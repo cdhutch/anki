@@ -12,6 +12,7 @@ tags:
 - type:recall
 - source:qrc
 - status:verified
+- training:sim5
 fields:
   Source Document: B737 QRC
   Source Location: Runaway Stabilizer
