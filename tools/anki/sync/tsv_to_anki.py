@@ -188,6 +188,16 @@ def validate_fields_against_model(row: TsvRow, model_fields: List[str]) -> None:
         )
 
 
+ALWAYS_HIDE_TAG = "always_hide"
+
+
+def _suspend_note_cards(anki_note_id: int, url: str) -> None:
+    """Suspend all cards belonging to the given Anki note ID."""
+    card_ids = anki_request("findCards", {"query": f"nid:{anki_note_id}"}, url=url) or []
+    if card_ids:
+        anki_request("suspend", {"cards": card_ids}, url=url)
+
+
 def update_note(row: TsvRow, url: str) -> None:
     note_id_num = int(row.noteId)
     model_fields = model_field_names(row.model, url)
@@ -203,6 +213,10 @@ def update_note(row: TsvRow, url: str) -> None:
     if row.tags:
         anki_request("addTags", {"notes": [note_id_num], "tags": " ".join(row.tags)}, url=url)
 
+    # Honour always_hide: suspend cards if the tag is present.
+    if ALWAYS_HIDE_TAG in row.tags:
+        _suspend_note_cards(note_id_num, url)
+
 
 def create_note(row: TsvRow, url: str) -> int:
     model_fields = model_field_names(row.model, url)
@@ -215,6 +229,9 @@ def create_note(row: TsvRow, url: str) -> int:
         "options": {"allowDuplicate": False, "duplicateScope": "deck"},
     }
     new_id = anki_request("addNote", {"note": note}, url=url)
+    # Honour always_hide: new notes with this tag start suspended.
+    if ALWAYS_HIDE_TAG in row.tags:
+        _suspend_note_cards(int(new_id), url)
     return int(new_id)
 
 

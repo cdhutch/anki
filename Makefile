@@ -75,6 +75,10 @@ help:
 	@echo "  checklists-fix      Canonicalize CNSF formatting for Checklist notes"
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
+	@echo "Core (aggregate)"
+	@echo "  core                Export and sync all B737::Core decks to Anki"
+	@echo "  core-fix            Canonicalize all B737::Core note files"
+	@echo ""
 
 # -------------------------------------------------------------------
 # Git Utilities
@@ -441,6 +445,30 @@ sve: sve-check
 				--tf "$(SV_BUILD)/sve-tf-$$s.tsv"; \
 		fi; \
 	done
+
+# -------------------------------------------------------------------
+# Core (aggregate — all B737::Core decks)
+# -------------------------------------------------------------------
+.PHONY: core core-fix
+
+core-fix:
+	$(MAKE) limits-fix
+	$(MAKE) qrc-fix
+	$(MAKE) triggers-fix
+	$(MAKE) cats-fix
+	$(MAKE) checklists-fix
+	$(MAKE) proc-normal-fix
+	$(MAKE) proc-non-normal-fix
+	$(MAKE) proc-inflight-fix
+
+core:
+	@TARGETS="limits qrc triggers cats checklists proc-normal proc-normal-cloze proc-non-normal proc-inflight"; \
+	for t in $$TARGETS; do \
+		printf "\033[1;34m→ $$t...\033[0m\n"; \
+		$(MAKE) $$t || { printf "\033[1;31m✗  Core sync failed at: $$t\033[0m\n"; exit 1; }; \
+		printf "\033[0;32m✓  $$t\033[0m\n"; \
+	done; \
+	printf "\n\033[1;32m✓  All B737::Core decks synced successfully.\033[0m\n"
 
 sve-%:
 	mkdir -p $(SV_BUILD)

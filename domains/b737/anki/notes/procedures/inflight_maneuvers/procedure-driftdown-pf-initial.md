@@ -14,6 +14,7 @@ tags:
 - variant:pf_initial
 - source:aom
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Inflight Maneuvers - Driftdown and One Engine Cruise

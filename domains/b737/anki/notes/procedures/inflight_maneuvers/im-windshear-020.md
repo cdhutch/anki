@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_alerts
+- training:sim5
 fields:
   Title: Windshear Alert - Windshear Windshear Windshear
   Trigger: Windshear alert recognition
@@ -24,7 +25,7 @@ fields:
 
 ## Windshear Alert Recognition
 
-What level of windshear alert is:
+What level of windshear alert is the following, and what is your response?
 
 **"Windshear, Windshear, Windshear"**
 
@@ -32,6 +33,4 @@ What level of windshear alert is:
 
 ## Answer
 
-This is a **WARNING** level immediate action alert.
-
-Perform the **Windshear Escape Maneuver**.
+**WARNING — immediate action.** Perform the Windshear Escape Maneuver.

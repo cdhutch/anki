@@ -1,38 +1,19 @@
-# CLAUDE.md — B737 Anki Project (Active Work)
+# CLAUDE.md — B737 Anki Project
 
-Restore working context here. Reference files archived separately.
+**Current work**: Distractor authoring (Phase A), 26/29 systems verified.
 
----
+See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
-## Project Overview
+## Workflow Notes
 
-Anki flashcard decks for B737 type rating study. Source: CNSF markdown notes in `domains/b737/`.
-Export: TSV via `sv_exam_md_to_tsv.py`. Import: AnkiConnect.
-
----
-
-## Current Work: Distractor Authoring (Phase A)
-
-**Status**: 26 of 29 systems verified; 3 remaining.
-
-**Workflow per system:**
-1. Author distractors in `.md` files
-2. Call Claude for review, grammar, typo fixes
-3. Run `make sve-fix` to canonicalize
-4. Claude provides `git add` + `git commit`
-5. Move to next system
-
-**Queue (smallest first):**
-- engines: 41 total, 39 draft
-- autoflight: 42 total, 39 draft
-- pneumatics: 39 total, 39 draft
-
-**Note**: `status:draft` imports as suspended; `status:verified` imports active.
-
----
+- **Shell commands are run by Craig**, not Claude. Claude provides commands to copy/paste; it does not execute git, make, or Python commands directly. (Claude's sandbox lacks access to the required conda env and git hooks will fail.)
 
 ## Reference Files
 
-- **[CLAUDE-migration-log.md](CLAUDE-migration-log.md)** — Phase B migration steps (mostly completed)
-- **[CLAUDE-deck-schema.md](CLAUDE-deck-schema.md)** — SV field conventions, deck architecture, study stages
-- **[CLAUDE-tooling-notes.md](CLAUDE-tooling-notes.md)** — Known issues, workarounds, key paths
+| Topic | File |
+|-------|------|
+| **SV field spec** | [CLAUDE-sv-field-conventions.md](CLAUDE-sv-field-conventions.md) |
+| **Deck architecture** | [CLAUDE-deck-architecture.md](CLAUDE-deck-architecture.md) |
+| **Known issues** | [CLAUDE-known-issues.md](CLAUDE-known-issues.md) |
+| **Key paths** | [CLAUDE-key-paths.md](CLAUDE-key-paths.md) |
+| **Migration progress** | [CLAUDE-migration-log.md](CLAUDE-migration-log.md) |

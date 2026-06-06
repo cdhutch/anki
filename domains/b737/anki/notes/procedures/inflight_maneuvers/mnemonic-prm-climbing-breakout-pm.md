@@ -15,6 +15,7 @@ tags:
 - crew_role:pilot_monitoring
 - source:aom
 - status:unverified
+- training:sim5
 fields:
   NoteID: mnemonic-prm-climbing-breakout-pm
   Name: PRM Climbing Breakout — PM

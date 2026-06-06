@@ -14,14 +14,25 @@ tags:
 - source:aom
 - status:unverified
 fields:
-  NoteID: mnemonic-discontinued-approach
   Name: Discontinued Approach
   Mnemonic: DAVS
-  Words: '<li>D: Detune — deselect ILS frequency (NAV 1 and NAV 2)</li><li>A: Altitude — check/set</li><li>V:
-    Vertical Speed — select/set V/S</li><li>S: Steer — heading check/set, then select HDG
-    or LNAV</li>'
+  Words: <li><b>D:</b> Detune — deselect ILS frequency (NAV 1 and NAV 2)</li><li><b>A:</b>
+    Altitude — check/set</li><li><b>V:</b> Vertical Speed — select/set V/S</li><li><b>S:</b>
+    Steer — heading check/set, then select HDG or LNAV</li>
   Notes: May be used in lieu of normal go-around procedures to utilize the autopilot.
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Verification Notes: ''
 ---
 
+# front_md
+
+What is the mnemonic for Discontinued Approach?
+
+# back_md
+
+**Discontinued Approach — DAVS**
+
+- **D:** Detune — deselect ILS frequency (NAV 1 and NAV 2)
+- **A:** Altitude — check/set
+- **V:** Vertical Speed — select/set V/S
+- **S:** Steer — heading check/set, then select HDG or LNAV

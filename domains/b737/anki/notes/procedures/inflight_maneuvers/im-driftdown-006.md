@@ -12,7 +12,6 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
-- always_hide
 fields:
   Title: Bottom of Driftdown No Terrain Concern
   Trigger: Bottom of driftdown and terrain clearance is not a concern

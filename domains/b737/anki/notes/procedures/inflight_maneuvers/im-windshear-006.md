@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_escape
+- training:sim5
 fields:
   Title: Windshear Escape Maneuver - Successful Escape Trigger
   Trigger: Escape successful
@@ -22,17 +23,13 @@ fields:
 
 # front_md
 
-## Trigger
+## Pilot Flying
 
-After a successful windshear escape, what actions follow?
+After a successful windshear escape, what does the PF do?
 
 # back_md
 
 ## After Escape Is Successful
 
-### Pilot Flying
 1. Resume normal flight
 2. Retract gear and flaps as required
-
-### Pilot Monitoring
-3. Issue PIREP to ATC

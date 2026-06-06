@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_escape
+- training:sim5
 fields:
   Title: Windshear Escape Maneuver - PM Monitoring Duties
   Trigger: Escape maneuver continuing
@@ -30,7 +31,5 @@ As the windshear escape maneuver continues, what must the PM monitor and call ou
 
 ## PM Monitoring Duties
 
-1. Monitor vertical speed and altitude
-2. Call out any trend toward terrain contact
-3. Call out descending flight path
-4. Call out significant airspeed changes
+- Verify max thrust
+- Call out V/S, terrain trends, and airspeed deviations

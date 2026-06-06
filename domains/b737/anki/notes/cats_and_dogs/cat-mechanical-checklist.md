@@ -22,4 +22,4 @@ fields:
 
 # back_md
 
-Verify its completion with your flying partner.
+Both pilots will visually confirm all the tabs on the checklist are closed out.

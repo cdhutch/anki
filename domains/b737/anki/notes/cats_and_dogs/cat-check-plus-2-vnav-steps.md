@@ -22,5 +22,5 @@ fields:
 
 # back_md
 
-1. Verify **CRZ AKT**
+1. Verify **CRZ ALT**
 2. Verify **descent speed profile**, including below 10,000'

@@ -11,6 +11,8 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:inflight_windshear
+- always_hide
+- training:sim5
 fields:
   Title: Windshear Encountered Inflight
   Trigger: Windshear encountered inflight
@@ -31,7 +33,3 @@ What action is required if windshear is encountered inflight?
 ## Action Required
 
 Perform the **Windshear Escape Maneuver**.
-
-## Memory Items
-
-Perform Windshear Escape Maneuver

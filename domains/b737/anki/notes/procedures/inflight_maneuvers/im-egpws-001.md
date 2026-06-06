@@ -34,6 +34,4 @@ Correct the:
 - aircraft configuration
 - airspeed
 
-If on approach and stabilized approach criteria cannot be met, execute a **go-around**.
-
 Key distinction: **No PULL UP = correct the problem.**

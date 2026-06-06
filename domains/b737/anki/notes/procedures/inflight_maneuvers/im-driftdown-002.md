@@ -12,7 +12,6 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:driftdown
-- always_hide
 fields:
   Title: Driftdown Initial PF Actions
   Trigger: Driftdown and One Engine Cruise required
