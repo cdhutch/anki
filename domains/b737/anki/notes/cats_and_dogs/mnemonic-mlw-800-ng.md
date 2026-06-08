@@ -18,9 +18,10 @@ fields:
   NoteID: mnemonic-mlw-800-ng
   Name: MLW — 737-800 NG (146.3)
   Mnemonic: Puking Dogs + Rolling Rock
-  Words: '<li>VF-<b>143</b> = Puking Dogs</li><li>Rolling Rock = <b>33</b> → 3.3</li><li>143
-    + 3.3 = <b>146.3</b></li>'
+  Words: <li>VF-<b>143</b> = Puking Dogs</li><li>Rolling Rock = <b>33</b> → 3.3</li><li>143
+    + 3.3 = <b>146.3</b></li>
   Notes: ''
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Verification Notes: ''
 ---
+
