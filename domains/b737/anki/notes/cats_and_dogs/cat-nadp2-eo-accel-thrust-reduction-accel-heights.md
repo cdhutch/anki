@@ -2,15 +2,14 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-flaps-15-landing-gpws-flap-inhibit
+note_id: cat-nadp2-eo-accel-thrust-reduction-accel-heights
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:gpws
-- topic:approach
-- topic:flaps
+- topic:performance
+- topic:nadp
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -20,11 +19,8 @@ fields:
 
 # front_md
 
-- In a flaps 15 landing, which normally guarded switch must you reconfigure
-- What constraint applies to selecting that switch?
+For **NADP 2**, what is set in the **EO ACCEL**, **THRUST REDUCTION**, and **ACCELERATION** heights?
 
 # back_md
 
-- **Ground Proximity FLAP INHIBIT switch → INHIBIT**
-
-- Do not select above **250 KIAS**
+All three are set to the **TPS Engine Out Acceleration Height (AGL)**

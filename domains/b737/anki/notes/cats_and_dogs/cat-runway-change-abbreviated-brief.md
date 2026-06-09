@@ -2,15 +2,14 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-flaps-15-landing-gpws-flap-inhibit
+note_id: cat-runway-change-abbreviated-brief
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:gpws
 - topic:approach
-- topic:flaps
+- topic:briefing
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -20,11 +19,8 @@ fields:
 
 # front_md
 
-- In a flaps 15 landing, which normally guarded switch must you reconfigure
-- What constraint applies to selecting that switch?
+During a runway change, which navigation briefing may be abbreviated by only briefing the changes?
 
 # back_md
 
-- **Ground Proximity FLAP INHIBIT switch → INHIBIT**
-
-- Do not select above **250 KIAS**
+**Legs Brief**

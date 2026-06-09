@@ -2,15 +2,14 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-flaps-15-landing-gpws-flap-inhibit
+note_id: cat-qrh-vspeed-wet-runway-condition
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:gpws
-- topic:approach
-- topic:flaps
+- topic:performance
+- topic:vspeeds
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -20,11 +19,10 @@ fields:
 
 # front_md
 
-- In a flaps 15 landing, which normally guarded switch must you reconfigure
-- What constraint applies to selecting that switch?
+QRH V-speed runway condition for a **wet** runway — what is the general setting, and what is the CONUS exception?
 
 # back_md
 
-- **Ground Proximity FLAP INHIBIT switch → INHIBIT**
+**WET SR** (Wet Skid Resistant)
 
-- Do not select above **250 KIAS**
+Exception — **RDU**: use **WET** (not WET SR)

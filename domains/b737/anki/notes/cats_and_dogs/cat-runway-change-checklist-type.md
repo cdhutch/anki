@@ -2,15 +2,14 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-flaps-15-landing-gpws-flap-inhibit
+note_id: cat-runway-change-checklist-type
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:gpws
-- topic:approach
-- topic:flaps
+- topic:procedures
+- topic:checklists
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -20,11 +19,8 @@ fields:
 
 # front_md
 
-- In a flaps 15 landing, which normally guarded switch must you reconfigure
-- What constraint applies to selecting that switch?
+For training purposes, is the **Runway Change** checklist a Read & Do or a Do & Verify checklist?
 
 # back_md
 
-- **Ground Proximity FLAP INHIBIT switch → INHIBIT**
-
-- Do not select above **250 KIAS**
+**Read & Do**

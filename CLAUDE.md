@@ -7,6 +7,7 @@ See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last se
 ## Workflow Notes
 
 - **Shell commands are run by Craig**, not Claude. Claude provides commands to copy/paste; it does not execute git, make, or Python commands directly. (Claude's sandbox lacks access to the required conda env and git hooks will fail.)
+- **Pull requests**: Claude provides the `gh pr create` command; Craig runs it and completes the PR on the GitHub website.
 
 ## Reference Files
 

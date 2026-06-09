@@ -2,15 +2,14 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-flaps-15-landing-gpws-flap-inhibit
+note_id: cat-departure-climb-gradient-verification
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:gpws
-- topic:approach
-- topic:flaps
+- topic:performance
+- topic:departure
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -20,11 +19,8 @@ fields:
 
 # front_md
 
-- In a flaps 15 landing, which normally guarded switch must you reconfigure
-- What constraint applies to selecting that switch?
+How do you know if your aircraft can meet the required **climb gradient** on departure?
 
 # back_md
 
-- **Ground Proximity FLAP INHIBIT switch → INHIBIT**
-
-- Do not select above **250 KIAS**
+**Assume it can** — unless the **Company Pages** specify otherwise

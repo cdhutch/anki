@@ -2,15 +2,14 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-flaps-15-landing-gpws-flap-inhibit
+note_id: cat-non-routine-landing-checklist-triggers
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:gpws
-- topic:approach
-- topic:flaps
+- topic:procedures
+- topic:checklists
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -20,11 +19,10 @@ fields:
 
 # front_md
 
-- In a flaps 15 landing, which normally guarded switch must you reconfigure
-- What constraint applies to selecting that switch?
+What are the three primary situations that lead to running the **Non-Routine Landing** checklist?
 
 # back_md
 
-- **Ground Proximity FLAP INHIBIT switch → INHIBIT**
-
-- Do not select above **250 KIAS**
+- Landing **not at the scheduled destination**
+- Do **not** expect to taxi to the **gate**
+- Expect to interact with **ARFF**
