@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_escape
+- training:sim5
 fields:
   Title: Windshear Escape Maneuver - Recognition and Callout
   Trigger: Encountering a windshear

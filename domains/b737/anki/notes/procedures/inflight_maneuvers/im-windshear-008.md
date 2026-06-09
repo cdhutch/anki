@@ -12,6 +12,7 @@ tags:
 - category:inflight_maneuvers
 - maneuver:windshear_escape
 - note
+- training:sim5
 fields:
   Title: Windshear Escape Maneuver - Pitch Limit Note
   Trigger: Airspeed decreasing during recovery
@@ -23,12 +24,8 @@ fields:
 
 # front_md
 
-## Note
-
-As airspeed decreases during a windshear escape maneuver, what defines the upper pitch attitude limit?
+What defines the upper pitch attitude limit during the windshear escape maneuver?
 
 # back_md
 
-## Note
-
-The pitch attitude that results in intermittent stick shaker or initial buffet is the upper pitch attitude limit.
+The pitch attitude that results in intermittent stick shaker or initial buffet.

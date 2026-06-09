@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_alerts
+- training:sim5
 fields:
   Title: Windshear Alert - Unacceptable Airspeed Deviations
   Trigger: Windshear cue recognition
@@ -31,5 +32,3 @@ How are **unacceptable airspeed deviations** treated in the windshear tables?
 ## Answer
 
 Treat as a windshear warning condition.
-
-Use the applicable escape / reject / rotate response for the flight phase.

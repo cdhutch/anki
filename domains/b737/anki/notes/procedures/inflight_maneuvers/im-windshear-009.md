@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_precautions
+- training:sim5
 fields:
   Title: Windshear Precautions - Takeoff Common Actions
   Trigger: Windshear suspected or reported before takeoff
@@ -31,9 +32,5 @@ Which takeoff windshear precautions apply regardless of fleet type?
 ## Common Actions
 
 - Use longest suitable runway
-- Consider increasing **Vr** to performance-limited gross weight rotation speed
+- Increase **Vr** to performance-limited gross weight rotation speed
 - Do **not** delay rotation beyond **2000 feet** of runway remaining
-
-## Memory Items
-
-Longest runway; consider higher Vr; do not delay rotation

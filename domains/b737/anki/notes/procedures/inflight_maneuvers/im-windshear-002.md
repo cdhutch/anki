@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_escape
+- training:sim5
 fields:
   Title: Windshear Escape Maneuver - PF Immediate Actions
   Trigger: Windshear encounter
@@ -24,16 +25,14 @@ fields:
 
 ## Pilot Flying
 
-What immediate and simultaneous PF actions are required for a windshear escape maneuver?
+What are the PF immediate actions for a windshear escape maneuver?
 
 # back_md
 
 ## PF Immediate Actions
 
-1. Disengage autopilot
-2. Push either TO/GA switch
-3. Aggressively apply maximum thrust
-4. Disengage autothrottle
-5. Simultaneously roll wings level and rotate toward an initial pitch attitude of 15°
-6. Retract speedbrakes
-7. Follow flight director TO/GA guidance (if available) without exceeding pitch limit indication (PLI)
+1. Autopilot OFF
+2. TO/GA; Max Thrust; A/T Off
+3. Wings level, then 15° pull up
+4. Retract speedbrakes
+5. Follow flight director, not to exceed PLI

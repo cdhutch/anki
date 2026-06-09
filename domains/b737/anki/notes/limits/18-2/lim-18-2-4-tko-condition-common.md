@@ -12,6 +12,7 @@ tags:
 - subtopic:wind
 - source:aom
 - status:verified
+- always_hide
 - emphasis:good_to_know
 fields:
   Source Document: B737 AOM Rev 9.0

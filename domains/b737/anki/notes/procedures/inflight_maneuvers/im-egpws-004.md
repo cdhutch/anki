@@ -22,8 +22,8 @@ fields:
 
 # front_md
 
-During the EGPWS warning maneuver, what is the gear / flap configuration rule?
+Following an EGPWS maneuver, when may the PF alter gear / flap configuration?
 
 # back_md
 
-Do **not** alter gear or flap configuration until terrain clearance is assured.
+When terrain clearance is assured.

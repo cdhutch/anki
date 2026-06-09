@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_escape
+- training:sim5
 fields:
   Title: Windshear Escape Maneuver - Continue Recovery PF Actions
   Trigger: Escape maneuver continuing
@@ -24,13 +25,11 @@ fields:
 
 ## Pilot Flying
 
-As the windshear escape maneuver continues, what must the PF do and avoid?
+As the windshear escape maneuver continues, what must the PF avoid?
 
 # back_md
 
 ## PF Continue Recovery
 
-1. Monitor vertical speed and altitude
-2. Maintain wings level to maximize climb gradient, unless a turn is required for obstacle clearance
-3. Do **not** change gear/flap configuration until windshear is no longer a factor
-4. Do **not** attempt to regain lost airspeed until windshear is no longer a factor
+1. Do **not** change gear/flap configuration until windshear is no longer a factor
+2. Do **not** attempt to regain lost airspeed until windshear is no longer a factor

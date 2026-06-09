@@ -6,16 +6,15 @@
 
 All 29 SV systems converted to `systems_verification_exam_draft` MCQ format.
 
-**Remaining queue** (3 systems, all status:draft):
-- engines: 41 total, 39 draft
-- autoflight: 42 total, 39 draft
-- pneumatics: 39 total, 39 draft
+**See [CLAUDE-active-status.md](CLAUDE-active-status.md) for current queue.**
 
-**Completed** (all status:verified): acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, electrical, emergency_equipment, fire_protection, flight_controls, flight_instrumentation, flight_warning, fuel, general, gpws, hud, hydraulics, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar
+### Completed (all status:verified)
 
-**Partially complete**: fms (sv-fms-024 intentional 2-choice; all others verified)
+acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, electrical, emergency_equipment, fire_protection, flight_controls, flight_instrumentation, flight_warning, fuel, general, gpws, hud, hydraulics, ice_and_rain_protection, landing_gear, lighting, navigation, oxygen, performance, pressurization, weather_radar
 
-Note: `status:draft` imports as suspended; `status:verified` imports as active.
+### Partially complete
+
+**fms**: sv-fms-024 intentional 2-choice; all others verified
 
 ## Phase B: Anki Migration Steps
 

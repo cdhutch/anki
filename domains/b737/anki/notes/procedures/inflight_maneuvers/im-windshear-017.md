@@ -11,6 +11,7 @@ tags:
 - topic:procedures
 - category:inflight_maneuvers
 - maneuver:windshear_alerts
+- training:sim5
 fields:
   Title: Windshear Alert - Monitor Radar Display
   Trigger: Windshear alert recognition
@@ -24,7 +25,7 @@ fields:
 
 ## Windshear Alert Recognition
 
-What level of windshear alert is:
+What level of windshear alert is the following, and what is your response?
 
 **"Monitor radar display"**
 
@@ -32,6 +33,4 @@ What level of windshear alert is:
 
 ## Answer
 
-This is a **CAUTION** level windshear alert.
-
-Use the caution response appropriate to takeoff or approach.
+**CAUTION** — use caution precautions for the applicable phase (takeoff or approach).

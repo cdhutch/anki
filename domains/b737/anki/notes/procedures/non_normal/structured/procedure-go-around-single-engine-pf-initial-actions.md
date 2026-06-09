@@ -16,6 +16,7 @@ tags:
 - phase:initial_actions
 - source:aom
 - status:unverified
+- training:sim5
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Source Location: Go-Around Procedures — Engine-Out Go-Around Actions & Callouts

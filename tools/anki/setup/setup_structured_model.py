@@ -59,6 +59,15 @@ hr#answer {
   margin-top: 14px;
 }
 
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: 15px; margin-top: 4px; border: 1px solid #93a1a1; }
+th { background-color: #2aa198; color: #fdf6e3; padding: 8px 14px; text-align: left; font-weight: bold; letter-spacing: 0.03em; }
+th + th { border-left: 1px solid #1a8a80; }
+td { padding: 7px 14px; border-bottom: 1px solid #93a1a1; vertical-align: top; }
+td + td { border-left: 1px solid #93a1a1; }
+tr:nth-child(even) td { background-color: #eee8d5; }
+tr.sol-hi td { background-color: #cce9e7; }
+
 /* Dark mode (Solarized dark) */
 .nightMode .card {
   color: rgb(101, 123, 131);
@@ -72,6 +81,13 @@ hr#answer {
 .nightMode .note-id {
   color: rgb(88, 110, 117);
 }
+
+.nightMode th { background-color: #2aa198; color: #002b36; }
+.nightMode th + th { border-left-color: #1a8a80; }
+.nightMode td { border-bottom-color: #586e75; }
+.nightMode td + td { border-left-color: #586e75; }
+.nightMode tr:nth-child(even) td { background-color: #032029; }
+.nightMode tr.sol-hi td { background-color: #0d3d45; }
 """
 
 # ---------------------------------------------------------------------------
