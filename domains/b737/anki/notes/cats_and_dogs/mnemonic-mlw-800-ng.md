@@ -16,7 +16,7 @@ tags:
 - status:unverified
 fields:
   NoteID: mnemonic-mlw-800-ng
-  Name: MLW — 737-800 NG (146.3)
+  Name: 737-800 NG Maximum Landing Weight
   Mnemonic: Puking Dogs + Rolling Rock
   Words: <li>VF-<b>143</b> = Puking Dogs</li><li>Rolling Rock = <b>33</b> → 3.3</li><li>143
     + 3.3 = <b>146.3</b></li>
