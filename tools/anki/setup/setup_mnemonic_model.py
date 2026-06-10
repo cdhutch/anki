@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
 """Create or update the B737_Mnemonic note type in Anki.
 
-Generates 3 cards per note via progressive reveal:
+Generates 2 cards per note via progressive reveal:
 
-  Card 1 — "Recall Letters"
+  Card 1 — "Recall Mnemonic"
     Front : Flow/topic name
     Back  : + mnemonic letters
 
   Card 2 — "Recall Words"
     Front : Name + letters
     Back  : + word expansion
-
-  Card 3 — "Recall Context"  (only generated when Notes field is non-empty)
-    Front : Name + letters + words
-    Back  : + notes / context
+            + context note at bottom (if Notes field is non-empty)
 
 If the model does not exist: creates it.
 If the model already exists: updates templates, CSS, and syncs fields.
@@ -91,7 +88,7 @@ CARD1_BACK = """\
 <div class="note-id">{{NoteID}}</div>
 """
 
-# Card 2 only generates when Words is non-empty.
+# Card 2 only generates when Words is non-empty. Notes (if present) appended to back.
 CARD2_FRONT = """\
 {{#Words}}
 <div class="flow-name">{{Name}}</div>
@@ -104,30 +101,13 @@ CARD2_BACK = """\
 {{FrontSide}}
 <hr id="answer">
 <ul class="reveal-list">{{Words}}</ul>
-<div class="note-id">{{NoteID}}</div>
-"""
-
-# Card 3 only generates when Notes is non-empty.
-CARD3_FRONT = """\
-{{#Notes}}
-<div class="flow-name">{{Name}}</div>
-<div class="mnemonic">{{Mnemonic}}</div>
-<ul class="mnemonic-words-list">{{Words}}</ul>
-<div style="color:#888; font-size:13px;">Any additional context?</div>
-{{/Notes}}
-"""
-
-CARD3_BACK = """\
-{{FrontSide}}
-<hr id="answer">
-<div class="context">{{Notes}}</div>
+{{#Notes}}<div class="context">{{Notes}}</div>{{/Notes}}
 <div class="note-id">{{NoteID}}</div>
 """
 
 TEMPLATES = [
     ("Recall Mnemonic", CARD1_FRONT, CARD1_BACK),
     ("Recall Words",    CARD2_FRONT, CARD2_BACK),
-    ("Recall Context",  CARD3_FRONT, CARD3_BACK),
 ]
 
 # ---------------------------------------------------------------------------
@@ -195,15 +175,11 @@ def _sync_templates(model_name: str,
             print(f"    templates: added {name!r}")
 
     # Remove stray templates not in desired list.
+    # AnkiConnect does not support removeCardFromTemplate — instruct the user.
     stray = [n for n in existing_names if n not in desired_names]
     for stray_name in stray:
-        print(f"    ⚠  removing stray template {stray_name!r} ...")
-        anki_request(
-            "removeCardFromTemplate",
-            {"modelName": model_name, "templateName": stray_name},
-            url=ANKI_URL,
-        )
-        print(f"    ✓  removed {stray_name!r}")
+        print(f"    ⚠  stray template {stray_name!r} must be removed manually:")
+        print(f"       Anki → Tools → Manage Note Types → {model_name} → Cards → delete {stray_name!r}")
 
 
 # ---------------------------------------------------------------------------

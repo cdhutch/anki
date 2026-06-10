@@ -16,7 +16,7 @@ tags:
 - status:unverified
 fields:
   NoteID: mnemonic-mlw-max8
-  Name: MLW — 737 MAX 8 (152.8)
+  Name: 737 MAX 8 Max Landing Weight
   Mnemonic: Half-unlucky MAX
   Words: '<li>MAX 8 is "half-unlucky": 13 ÷ 2 = <b>6.5</b></li><li>NG MLW + 6.5 = 146.3 +
     6.5 = <b>152.8</b></li>'
