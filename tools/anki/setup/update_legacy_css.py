@@ -52,8 +52,15 @@ SV_CLOZE_CSS = """\
     color: #657b83;
     background-color: #032029;
 }
+.night_mode .card {
+    color: #657b83;
+    background-color: #032029;
+}
 
 .nightMode .cloze {
+    color: #2aa198;
+}
+.night_mode .cloze {
     color: #2aa198;
 }
 """
@@ -102,18 +109,31 @@ th { font-weight: 700; background-color: #eee8d5; }
 
 /* Dark mode (Solarized dark) */
 .nightMode .card { color: #657b83; background-color: #032029; }
+.night_mode .card { color: #657b83; background-color: #032029; }
 .nightMode .sys-kicker { color: #586e75; }
+.night_mode .sys-kicker { color: #586e75; }
 .nightMode .sys-subsystem { color: #2aa198; }
+.night_mode .sys-subsystem { color: #2aa198; }
 .nightMode .sys-topic { color: #586e75; }
+.night_mode .sys-topic { color: #586e75; }
 .nightMode .sys-panel { color: #586e75; }
+.night_mode .sys-panel { color: #586e75; }
 .nightMode .sep { border-top-color: #586e75; }
+.night_mode .sep { border-top-color: #586e75; }
 .nightMode .block .h { color: #657b83; }
+.night_mode .block .h { color: #657b83; }
 .nightMode .block .body { color: #657b83; }
+.night_mode .block .body { color: #657b83; }
 .nightMode .lbl { color: #586e75; }
+.night_mode .lbl { color: #586e75; }
 .nightMode .val { color: #657b83; }
+.night_mode .val { color: #657b83; }
 .nightMode .muted { color: #586e75; }
+.night_mode .muted { color: #586e75; }
 .nightMode th, .nightMode td { border-color: #586e75; }
+.night_mode th, .night_mode td { border-color: #586e75; }
 .nightMode th { background-color: #032029; }
+.night_mode th { background-color: #032029; }
 """
 
 # ---------------------------------------------------------------------------
@@ -147,12 +167,19 @@ UA_CONJUGATION_CSS = """\
 
 /* Dark mode (Solarized dark) */
 .nightMode .card { color: #657b83; background-color: #032029; }
+.night_mode .card { color: #657b83; background-color: #032029; }
 .nightMode .lemma { color: #2aa198; }
+.night_mode .lemma { color: #2aa198; }
 .nightMode .subtitle { color: #586e75; }
+.night_mode .subtitle { color: #586e75; }
 .nightMode .section { color: #657b83; }
+.night_mode .section { color: #657b83; }
 .nightMode .conj-table th, .nightMode .conj-table td { border-color: #586e75; color: #657b83; }
+.night_mode .conj-table th, .night_mode .conj-table td { border-color: #586e75; color: #657b83; }
 .nightMode .conj-table th { background: #073642; }
+.night_mode .conj-table th { background: #073642; }
 .nightMode .note { color: #586e75; }
+.night_mode .note { color: #586e75; }
 """
 
 UA_GRAMMAR_CSS = """\
@@ -168,6 +195,10 @@ UA_GRAMMAR_CSS = """\
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
+    color: #657b83;
+    background-color: #032029;
+}
+.night_mode .card {
     color: #657b83;
     background-color: #032029;
 }
@@ -207,19 +238,33 @@ input#typeans { font-size: 20px; font-family: system-ui, -apple-system, sans-ser
 
 /* Dark mode (Solarized dark) */
 .nightMode .card { color: #657b83; background-color: #032029; }
+.night_mode .card { color: #657b83; background-color: #032029; }
 .nightMode .lemma { color: #2aa198; }
+.night_mode .lemma { color: #2aa198; }
 .nightMode .perfective { color: #586e75; }
+.night_mode .perfective { color: #586e75; }
 .nightMode .pos { color: #586e75; }
+.night_mode .pos { color: #586e75; }
 .nightMode .gender { color: #586e75; }
+.night_mode .gender { color: #586e75; }
 .nightMode hr#answer { border-top-color: #586e75; }
+.night_mode hr#answer { border-top-color: #586e75; }
 .nightMode .gloss { color: #657b83; }
+.night_mode .gloss { color: #657b83; }
 .nightMode .counterpart { color: #586e75; }
+.night_mode .counterpart { color: #586e75; }
 .nightMode .irregular { color: #586e75; }
+.night_mode .irregular { color: #586e75; }
 .nightMode .confusable { color: #859900; }
+.night_mode .confusable { color: #859900; }
 .nightMode .example-ua { color: #657b83; }
+.night_mode .example-ua { color: #657b83; }
 .nightMode .example-en { color: #586e75; }
+.night_mode .example-en { color: #586e75; }
 .nightMode .note-id { color: #586e75; }
+.night_mode .note-id { color: #586e75; }
 .nightMode input#typeans { color: #657b83; background-color: #032029; border-color: #586e75; }
+.night_mode input#typeans { color: #657b83; background-color: #032029; border-color: #586e75; }
 """
 
 UA_LEXEME_LEGACY_CSS = """\
@@ -238,6 +283,10 @@ UA_LEXEME_LEGACY_CSS = """\
     color: #657b83;
     background-color: #032029;
 }
+.night_mode .card {
+    color: #657b83;
+    background-color: #032029;
+}
 """
 
 UA_VERB_CSS = """\
@@ -253,6 +302,10 @@ UA_VERB_CSS = """\
 
 /* Dark mode (Solarized dark) */
 .nightMode .card {
+    color: #657b83;
+    background-color: #032029;
+}
+.night_mode .card {
     color: #657b83;
     background-color: #032029;
 }

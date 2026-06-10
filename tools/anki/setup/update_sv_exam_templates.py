@@ -44,11 +44,17 @@ hr#answer { border: none; border-top: 1px solid #93a1a1; margin: 22px 0; }
 
 /* Dark mode (Solarized dark) */
 .nightMode .card { color: #657b83; background-color: #032029; }
+.night_mode .card { color: #657b83; background-color: #032029; }
 .nightMode .choice { background-color: #032029; }
+.night_mode .choice { background-color: #032029; }
 .nightMode hr#answer { border-top-color: #586e75; }
+.night_mode hr#answer { border-top-color: #586e75; }
 .nightMode .answer-letter { color: #859900; background-color: #032029; }
+.night_mode .answer-letter { color: #859900; background-color: #032029; }
 .nightMode .answer-text { color: #859900; background-color: #032029; }
+.night_mode .answer-text { color: #859900; background-color: #032029; }
 .nightMode .note-id { color: #586e75; }
+.night_mode .note-id { color: #586e75; }
 """
 
 # ---------------------------------------------------------------------------

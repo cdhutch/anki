@@ -73,21 +73,37 @@ tr.sol-hi td { background-color: #cce9e7; }
   color: rgb(101, 123, 131);
   background-color: rgb(3, 32, 41);
 }
+.night_mode .card {
+  color: rgb(101, 123, 131);
+  background-color: rgb(3, 32, 41);
+}
 
 .nightMode hr#answer {
+  border-top-color: rgb(88, 110, 117);
+}
+.night_mode hr#answer {
   border-top-color: rgb(88, 110, 117);
 }
 
 .nightMode .note-id {
   color: rgb(88, 110, 117);
 }
+.night_mode .note-id {
+  color: rgb(88, 110, 117);
+}
 
 .nightMode th { background-color: #2aa198; color: #002b36; }
+.night_mode th { background-color: #2aa198; color: #002b36; }
 .nightMode th + th { border-left-color: #1a8a80; }
+.night_mode th + th { border-left-color: #1a8a80; }
 .nightMode td { border-bottom-color: #586e75; }
+.night_mode td { border-bottom-color: #586e75; }
 .nightMode td + td { border-left-color: #586e75; }
+.night_mode td + td { border-left-color: #586e75; }
 .nightMode tr:nth-child(even) td { background-color: #032029; }
+.night_mode tr:nth-child(even) td { background-color: #032029; }
 .nightMode tr.sol-hi td { background-color: #0d3d45; }
+.night_mode tr.sol-hi td { background-color: #0d3d45; }
 """
 
 # ---------------------------------------------------------------------------
