@@ -24,9 +24,9 @@ fields:
   Question Stem: If this light *(right BLEED TRIP OFF caution )* cannot be reset after several
     minutes, what is the problem?
   Choice A: The engine supply bleed pressure is too high
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The Trip Reset switch is INOP
+  Choice C: Temperature in the duct is too high
+  Choice D: 5th stage air is too hot
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

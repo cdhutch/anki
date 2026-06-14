@@ -23,11 +23,11 @@ fields:
     caution light(s) will illuminate? {{c1::Equip Smoke and Master Caution}}'
   Question Stem: 'MAX: If smoke is detected within the equipment cooling system, what amber
     caution light(s) will illuminate?'
-  Choice A: ''
-  Choice B: Equip Smoke and Master Caution
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
+  Choice A: Equip Smoke and Master Caution
+  Choice B: Smoke and Master Caution
+  Choice C: Overheat and Master Caution
+  Choice D: Smoke on Recall
+  Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

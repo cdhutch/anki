@@ -23,9 +23,9 @@ fields:
     be {{c1::minimum of 30}} psi.
   Question Stem: When starting engines with a ground air source, external air pressure should
     be what? psi?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Minimum of 25
+  Choice B: Maximum of 25
+  Choice C: Maximum of 30
   Choice D: Minimum of 30
   Correct Choice: D
   Shuffle Choices: true

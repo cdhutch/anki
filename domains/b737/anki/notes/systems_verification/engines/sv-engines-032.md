@@ -24,9 +24,9 @@ fields:
   Question Stem: The what? position provides ignition to selected igniter(s) when the engine
     is running and flaps are not UP?
   Choice A: AUTO
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: GRD
+  Choice C: 'False'
+  Choice D: FLT
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

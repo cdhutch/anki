@@ -23,12 +23,12 @@ fields:
     closed? {{c1::Engine bleed air valve}}
   Question Stem: Illumination of the amber BLEED TRIP OFF light indicates what valve has automatically
     closed?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Isolation valve
+  Choice B: Corresponding APU shutoff valve
   Choice C: Engine bleed air valve
-  Choice D: ''
+  Choice D: All the above
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

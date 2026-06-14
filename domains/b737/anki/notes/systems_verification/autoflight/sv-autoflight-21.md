@@ -23,13 +23,12 @@ fields:
     switch light; arms AFDS for LOC & GS capture; arms the VOR/LOC and GS annunciators on
     the FMA}}.'
   Question Stem: Activating the APP Switch what?
-  Choice A: ''
-  Choice B: 'Does all of the above: illuminates the APP switch light; arms AFDS for LOC &
-    GS capture; arms the VOR/LOC and GS annunciators on the FMA'
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
+  Choice A: Illuminates the APP switch light
+  Choice B: Arms AFDS for LOC & GS capture
+  Choice C: Arms the VOR/LOC and GS annunciators on the FMA
+  Choice D: Does all of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

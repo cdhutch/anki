@@ -22,9 +22,9 @@ fields:
   Original Text: How can the light *(right BLEED TRIP OFF caution)* be extinguished? {{c1::Only
     by pushing the Trip Reset Switch if it was an over-temp malfunction.}}
   Question Stem: How can the light *(right BLEED TRIP OFF caution)* be extinguished?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: By retarding the right Thrust Lever
+  Choice B: By reducing the AC temp on the right side
+  Choice C: By doing nothing; it will go out on its own
   Choice D: Only by pushing the Trip Reset Switch if it was an over-temp malfunction
   Correct Choice: D
   Shuffle Choices: true

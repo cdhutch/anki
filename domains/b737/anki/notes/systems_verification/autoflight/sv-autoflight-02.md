@@ -23,10 +23,10 @@ fields:
     the {{c1::CMD}} mode.
   Question Stem: With the PFD showing a green CMD discrete, the Autopilot is operating in
     the what? mode?
-  Choice A: ''
-  Choice B: ''
+  Choice A: CWS R
+  Choice B: CWS P
   Choice C: CMD
-  Choice D: ''
+  Choice D: FD
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

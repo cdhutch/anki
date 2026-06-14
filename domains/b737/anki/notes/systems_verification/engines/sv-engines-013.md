@@ -23,10 +23,10 @@ fields:
     out of view. This light indicates that the #1 EEC is in the {{c1::Hard Alternate}} mode.'
   Question Stem: 'The number 1 engine EEC switch indicates "ALTN" and the ON indication is
     out of view. This light indicates that the #1 EEC is in the what? mode?'
-  Choice A: ''
+  Choice A: Backup
   Choice B: Hard Alternate
-  Choice C: ''
-  Choice D: ''
+  Choice C: Normal
+  Choice D: Soft Alternate
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

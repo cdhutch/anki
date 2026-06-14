@@ -23,9 +23,9 @@ fields:
     controlled by {{c1::ALT HOLD}}.
   Question Stem: With the FMAs reading 'MCP SPD | HDG SEL | ALT HOLD', the pitch mode is being
     controlled by what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: LVL CHG
+  Choice B: HDG SEL
+  Choice C: MCP SPD
   Choice D: ALT HOLD
   Correct Choice: D
   Shuffle Choices: true

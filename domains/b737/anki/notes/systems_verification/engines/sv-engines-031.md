@@ -23,7 +23,7 @@ fields:
     from exceeding engine structural design limits, both in flight and on the ground; High
     Thrust event on the ground.}}'
   Question Stem: 'MAX: The EECs will shut down the engine for: what?'
-  Choice A: '[DISTRACTOR NEEDED]'
+  Choice A: Overspeed from exceeding engine structural design limits, only on the ground
   Choice B: Overspeed from exceeding engine structural design limits, both in flight and on
     the ground
   Choice C: High Thrust event on the ground
@@ -31,7 +31,7 @@ fields:
     both in flight and on the ground; High Thrust event on the ground'
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice A
+  Review Notes: ''
   Verification Notes: ''
 ---
 

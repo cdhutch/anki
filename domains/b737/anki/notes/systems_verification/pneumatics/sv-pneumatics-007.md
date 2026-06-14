@@ -25,9 +25,9 @@ fields:
   Question Stem: The illuminated amber lights, at right, confirm the existence of a bleed
     air leak. The Wing Anti-Ice Switch is ON. What is the first corrective action step in
     this circumstance?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Turn OFF the BLEED Air Switch on the affected side
+  Choice B: Select the WING ANTI-ICE Switch to OFF
+  Choice C: Turn OFF the Air Conditioning PACK Switch on the affected side
   Choice D: Close the Isolation Valve
   Correct Choice: D
   Shuffle Choices: true

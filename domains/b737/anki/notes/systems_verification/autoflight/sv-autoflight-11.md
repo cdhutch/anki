@@ -22,9 +22,9 @@ fields:
   Original Text: The A/P automatically disengages {{c1::when activating either pilot`s Control
     Wheel Trim Switch}}.
   Question Stem: The A/P automatically disengages what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: When moving the STAB TRIM AUTOPILOT Cutout Switch to NORM
+  Choice B: At the minimum selected on the Captain''s EFIS panel
+  Choice C: With loss of Standby Hydraulic System pressure only
   Choice D: When activating either pilot`s Control Wheel Trim Switch
   Correct Choice: D
   Shuffle Choices: true

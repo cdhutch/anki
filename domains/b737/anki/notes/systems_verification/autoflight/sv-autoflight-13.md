@@ -21,11 +21,11 @@ fields:
   Original Prompt Style: cloze
   Original Text: The A/P status display is located {{c1::near the top of the PFD below the
     FMA}}.
-  Question Stem: The A/P status display is located what?
-  Choice A: ''
+  Question Stem: Where is the A/P status display located?
+  Choice A: On the FMA
   Choice B: Near the top of the PFD below the FMA
-  Choice C: ''
-  Choice D: ''
+  Choice C: At the top of the ND
+  Choice D: At the bottom of the PFD
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

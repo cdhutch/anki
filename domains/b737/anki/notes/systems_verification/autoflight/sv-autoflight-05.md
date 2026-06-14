@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: What system provides N1 limits and target N1 for the A/T? {{c1::FMC}}
   Question Stem: What system provides N1 limits and target N1 for the A/T?
-  Choice A: ''
+  Choice A: AP
   Choice B: FMC
-  Choice C: ''
-  Choice D: ''
+  Choice C: AFDS
+  Choice D: DCP
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

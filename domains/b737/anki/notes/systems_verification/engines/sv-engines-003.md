@@ -24,9 +24,9 @@ fields:
     this light to extinguish ten seconds after the thrust reverser is commanded to stow}}.
   Question Stem: When this light *(Engine 1 REVERSER caution light on ENGINE panel)* is illuminated
     during landing rollout while the reverse lever is commanded stowed, you should what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Shut down the
+  Choice B: Expect this light to extinguish when the thrust reverser is commanded to stow
+  Choice C: Expect this light to stay on for 16 seconds after the reversers are stowed
   Choice D: Expect this light to extinguish ten seconds after the thrust reverser is commanded
     to stow
   Correct Choice: D

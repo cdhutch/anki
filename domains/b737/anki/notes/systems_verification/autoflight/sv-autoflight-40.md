@@ -20,13 +20,13 @@ fields:
   Original Note ID: autoflight-40
   Original Prompt Style: cloze
   Original Text: Altitude alerting is inhibited {{c1::while G/S is captured}}.
-  Question Stem: Altitude alerting is inhibited what?
+  Question Stem: When is altitude alerting inhibited?
   Choice A: While G/S is captured
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: When level change is selected for landing
+  Choice C: With the gear down
+  Choice D: When A and/or B above occur
   Correct Choice: A
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

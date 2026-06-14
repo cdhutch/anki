@@ -23,12 +23,12 @@ fields:
     or less, an attitude of {{c1::15}} degrees is commanded by the pitch command bars.
   Question Stem: If during a windshear encounter, the vertical speed decreases to 600 feet/min
     or less, an attitude of what? degrees is commanded by the pitch command bars?
-  Choice A: ''
-  Choice B: ''
+  Choice A: 10
+  Choice B: 12
   Choice C: 15
-  Choice D: ''
+  Choice D: 20
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

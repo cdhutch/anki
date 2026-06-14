@@ -20,11 +20,11 @@ fields:
   Original Note ID: pneumatics-022
   Original Prompt Style: cloze
   Original Text: A bleed air duct leak is indicated by a {{c1::WING-BODY OVERHEAT}} Light.
-  Question Stem: A bleed air duct leak is indicated by a what? Light?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: A bleed air duct leak is indicated by which light?
+  Choice A: PACK
+  Choice B: ZONE TEMP
   Choice C: WING-BODY OVERHEAT
-  Choice D: ''
+  Choice D: BLEED TRIP OFF
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

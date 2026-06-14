@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: What are the methods of inflight restarting? {{c1::Windmill and crossbleed}}
   Question Stem: What are the methods of inflight restarting?
-  Choice A: ''
-  Choice B: ''
+  Choice A: APU and External Air
+  Choice B: Air and crossbleed
   Choice C: Windmill and crossbleed
-  Choice D: ''
+  Choice D: Windmill and air
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

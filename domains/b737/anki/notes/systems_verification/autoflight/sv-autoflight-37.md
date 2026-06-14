@@ -22,10 +22,10 @@ fields:
   Original Text: What does an amber CWS P above the attitude indicator mean? {{c1::Control
     wheel steering, pitch, is engaged.}}
   Question Stem: What does an amber CWS P above the attitude indicator mean?
-  Choice A: ''
+  Choice A: A fault exists in the autopilot system
   Choice B: Control wheel steering, pitch, is engaged
-  Choice C: ''
-  Choice D: ''
+  Choice C: A fault exists in the pitch mode
+  Choice D: A flight director mode is limited to pitch only
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

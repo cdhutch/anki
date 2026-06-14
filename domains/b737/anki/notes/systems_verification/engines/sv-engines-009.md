@@ -23,10 +23,10 @@ fields:
     be taken? {{c1::The light is inhibited during flight.}}'
   Question Stem: 'If the #2 Engine control light illuminates in flight, what steps should
     be taken?'
-  Choice A: ''
+  Choice A: Place the
   Choice B: The light is inhibited during flight
-  Choice C: ''
-  Choice D: ''
+  Choice C: Shut down the
+  Choice D: Place both EECs in the hard mode
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -22,10 +22,10 @@ fields:
   Original Text: Bleed air from the engines comes from what compressor stages? {{c1::5th and
     9th}}
   Question Stem: Bleed air from the engines comes from what compressor stages?
-  Choice A: ''
+  Choice A: 7th and 13th
   Choice B: 5th and 9th
-  Choice C: ''
-  Choice D: ''
+  Choice C: Fan and 9th
+  Choice D: 5th and 10th
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

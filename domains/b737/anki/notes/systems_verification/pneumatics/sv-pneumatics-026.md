@@ -26,12 +26,11 @@ fields:
     if what?
   Choice A: A pack switch is placed OFF
   Choice B: An engine bleed switch is placed OFF
-  Choice C: '[DISTRACTOR NEEDED]'
-  Choice D: 'Either A or B occur: a pack switch is placed OFF; an engine bleed switch is placed
-    OFF'
+  Choice C: A pack moves to high flow
+  Choice D: Either A or B occur
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice C
+  Review Notes: ''
   Verification Notes: ''
 ---
 

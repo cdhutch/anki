@@ -26,9 +26,10 @@ fields:
     you press the TRIP RESET Switch in this scenario *(Master Caution light; Right WING-BODY
     OVERHEAT caution light; AIR COND light illuminated)*?
   Choice A: Nothing
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The Left Air Conditioning Pack will regulate to high flow if the flaps are up
+  Choice C: The Right WING-BODY OVERHEAT Light will extinguish momentarily, then re-illuminate
+    if the problem still exists
+  Choice D: The Right WING-BODY OVERHEAT Light will extinguish if the problem has been corrected
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
