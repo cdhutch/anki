@@ -24,9 +24,9 @@ fields:
   Question Stem: If this light *(#2 ENGINE CONTROL caution)* illuminates approximately 30
     seconds after touchdown, what?
   Choice A: It should be written up in the log book
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The light will stay on after
+  Choice C: It should be ignored, it is normal
+  Choice D: If the light extinguishes, no action is required
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

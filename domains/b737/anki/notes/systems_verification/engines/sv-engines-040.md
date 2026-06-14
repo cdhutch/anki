@@ -24,9 +24,9 @@ fields:
   Question Stem: The cockpit indications of a thrust reverser malfunction are a Master Caution,
     what?
   Choice A: ENG System Annunciator light, and REVERSER light
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Severe yaw, and an auto-restow light
+  Choice C: A horn, and an auto-restow light
+  Choice D: A bell, and severe yaw
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

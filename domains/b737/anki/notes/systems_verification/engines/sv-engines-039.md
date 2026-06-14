@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: The Fuel Used readout is displayed {{c1::when the Fuel Flow Switch is moved
     to Used or Reset}}.
-  Question Stem: The Fuel Used readout is displayed what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: When is the Fuel Used readout displayed?
+  Choice A: At brake release just prior to pushback
+  Choice B: Upon touchdown through the ground sensing switch
+  Choice C: Automatically whenever the airplane is refueled
   Choice D: When the Fuel Flow Switch is moved to Used or Reset
   Correct Choice: D
   Shuffle Choices: true

@@ -22,12 +22,12 @@ fields:
   Original Text: The approximate engine starter cutout speed and the indication of engine
     starter cutout is {{c1::56% N2, Engine Start Switch moves to AUTO and START VALVE OPEN
     light extinguishes}}.
-  Question Stem: The approximate engine starter cutout speed and the indication of engine
-    starter cutout is what?
-  Choice A: ''
+  Question Stem: What are the approximate engine starter cutout speed and the indication of
+    engine starter cutout?
+  Choice A: 50% N2 and starter trips to OFF position
   Choice B: 56% N2, Engine Start Switch moves to AUTO and START VALVE OPEN light extinguishes
-  Choice C: ''
-  Choice D: ''
+  Choice C: 57% N2 and ENGINE FAIL light extinguishes
+  Choice D: 60% N2 and the starter trips to OFF
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

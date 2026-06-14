@@ -21,13 +21,13 @@ fields:
   Original Prompt Style: cloze
   Original Text: Thrust reverser operation is available below {{c1::10 feet}} radio altitude
     or when the air/ground sensor is in the {{c1::ground}} mode.
-  Question Stem: Thrust reverser operation is available below what? radio altitude or when
-    the air/ground sensor is in the what? mode?
-  Choice A: 10 feet
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
+  Question Stem: There are two independent conditions in which thrust reverser operation is
+    available. Below which radio altitude?  When the air/ground sensor is in which mode?
+  Choice A: 5 feet/air
+  Choice B: 5 feet/ground
+  Choice C: 10 feet/air
+  Choice D: 10 feet/ground
+  Correct Choice: D
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''

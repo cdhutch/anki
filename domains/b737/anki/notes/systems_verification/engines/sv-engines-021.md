@@ -24,10 +24,11 @@ fields:
     it will be steady}}.
   Question Stem: If this condition *(ENG 2 OIL FILTER BYPASS)* occurs during takeoff, above
     80 knots and below 400 feet RA, what?
-  Choice A: ''
+  Choice A: The three light capsules will flash for 10 seconds, then only the Oil Filter Bypass
+    light will remain illuminated
   Choice B: Only the Oil Filter Bypass light illuminates, and it will be steady
-  Choice C: ''
-  Choice D: ''
+  Choice C: All three indicators illuminate steady
+  Choice D: Only the Low Oil Pressure light illuminates during takeoff above 80 knots
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

@@ -22,10 +22,10 @@ fields:
   Original Text: You will see an ENG FAIL alert {{c1::when N2 drops below 50% and the start
     lever is in IDLE}}.
   Question Stem: You will see an ENG FAIL alert what?
-  Choice A: ''
+  Choice A: When the applicable start selector switch fault
   Choice B: When N2 drops below 50% and the start lever is in IDLE
-  Choice C: ''
-  Choice D: ''
+  Choice C: On the ground only - it is not dispatchable
+  Choice D: In flight with the start lever in CLOSED
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

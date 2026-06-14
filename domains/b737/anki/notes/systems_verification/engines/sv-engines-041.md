@@ -22,10 +22,10 @@ fields:
   Original Text: What component regulates the engine to keep it within operating parameters?
     {{c1::The dual channel electronic engine control (EEC).}}
   Question Stem: What component regulates the engine to keep it within operating parameters?
-  Choice A: ''
+  Choice A: N1 and N2
   Choice B: The dual channel electronic engine control (EEC)
-  Choice C: ''
-  Choice D: ''
+  Choice C: Flight Management Computer (FMC)
+  Choice D: N1, N2, and EGT
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

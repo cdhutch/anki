@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'MAX: The REVERSER AIR/GRD light is illuminated when: {{c1::Illuminated when
     reverser air/ground protection is lost.}}'
-  Question Stem: 'MAX: The REVERSER AIR/GRD light is illuminated when: what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: 'MAX: When is the REVERSER AIR/GRD light is illuminated?'
+  Choice A: When a reverser is commanded to deploy in flight by the pilot
+  Choice B: Operates the same as on NG aircraft
+  Choice C: When reverse thrust for the respective engine is unavailable
   Choice D: Illuminated when reverser air/ground protection is lost
   Correct Choice: D
   Shuffle Choices: true

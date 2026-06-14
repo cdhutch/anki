@@ -23,9 +23,9 @@ fields:
     what? {{c1::You have exceeded maximum EGT limits}}
   Question Stem: The engine EGT digital readout and EGT round dial indications are red, indicating
     what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: MAX go around thrust has been selected
+  Choice B: MAX takeoff thrust has been selected
+  Choice C: MAX continuous thrust EGT has been selected
   Choice D: You have exceeded maximum EGT limits
   Correct Choice: D
   Shuffle Choices: true

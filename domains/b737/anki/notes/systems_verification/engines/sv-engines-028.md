@@ -24,9 +24,9 @@ fields:
   Question Stem: The indication of a properly deployed thrust reverser after landing is a/an
     what?
   Choice A: Green REV
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: White REV
+  Choice C: Blue REV
+  Choice D: Amber REV
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
