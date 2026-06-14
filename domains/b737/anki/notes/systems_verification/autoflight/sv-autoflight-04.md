@@ -22,11 +22,11 @@ fields:
   Original Text: If windshear is encountered on takeoff or go-around, the F/D pitch bar commands
     a pitch attitude with an initial target airspeed of {{c1::V2+20}} kts.
   Question Stem: If windshear is encountered on takeoff or go-around, the F/D pitch bar commands
-    a pitch attitude with an initial target airspeed of what? kts?
+    a pitch attitude with an initial target airspeed of what?
   Choice A: V2+20
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: V2
+  Choice C: MCP SPD
+  Choice D: 210 knots
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

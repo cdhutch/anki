@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: After the Localizer and Glideslope capture, {{c1::disengaging auto throttles}}
     will not work to get out of the approach mode.
-  Question Stem: After the Localizer and Glideslope capture, what? will not work to get out
-    of the approach mode?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: After the Localizer and Glideslope capture, what will **not** work to get
+    out of the approach mode?
+  Choice A: Pressing a TO/GA switch
+  Choice B: Retuning the VHF Receiver
   Choice C: Disengaging auto throttles
-  Choice D: ''
+  Choice D: Disengaging autopilots and turning off both FD switches
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

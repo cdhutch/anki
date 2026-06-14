@@ -23,9 +23,9 @@ fields:
     modes should remain engaged}}.
   Question Stem: After switching from one Autopilot to the other, what?
   Choice A: The previous selected modes should remain engaged
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The pitch mode will revert to CWS P
+  Choice C: All the MCP modes will disengage
+  Choice D: The roll mode will revert to CWS R
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

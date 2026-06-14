@@ -23,12 +23,12 @@ fields:
     attitude of approximately {{c1::15}} degrees.
   Question Stem: After TO/GA is selected on a go around, the FD will command an initial pitch
     attitude of approximately what? degrees?
-  Choice A: ''
-  Choice B: ''
+  Choice A: 10
+  Choice B: 13
   Choice C: 15
-  Choice D: ''
+  Choice D: 20
   Correct Choice: C
-  Shuffle Choices: true
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

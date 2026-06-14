@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: During a go-around, pressing the TOGA switch two times will {{c1::command
     autothrottles to full go-around thrust}}.
-  Question Stem: During a go-around, pressing the TOGA switch two times will what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: During a go-around, what will pressing the TOGA switch two times do?
+  Choice A: Disengage one autopilot and autothrottles
+  Choice B: Command maximum takeoff thrust
+  Choice C: Disengage both autopilots and autothrottles
   Choice D: Command autothrottles to full go-around thrust
   Correct Choice: D
   Shuffle Choices: true

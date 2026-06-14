@@ -24,9 +24,9 @@ fields:
   Question Stem: The three flight mode annunciator displays above the attitude indicator are
     what?
   Choice A: Autothrottle, roll, pitch
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: F/D, A/T, and A/P
+  Choice C: Lateral navigation, vertical navigation, autopilot status
+  Choice D: Autopilot, speed, engaged status
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: An altitude deviation will continue to warn the crew until {{c1::deviation
     is less than 200 feet, more than 900 feet, or a new altitude is selected}}.
-  Question Stem: An altitude deviation will continue to warn the crew until what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Question Stem: An altitude deviation will continue to warn the crew until when?
+  Choice A: The MASTER CAUTION light is reset
+  Choice B: The RECALL button is pushed
+  Choice C: The A/P is disconnected
   Choice D: Deviation is less than 200 feet, more than 900 feet, or a new altitude is selected
   Correct Choice: D
   Shuffle Choices: true

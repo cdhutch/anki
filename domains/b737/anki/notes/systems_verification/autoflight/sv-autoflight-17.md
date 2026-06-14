@@ -23,10 +23,10 @@ fields:
     initially? {{c1::10 degrees nose down.}}
   Question Stem: When TO/GA is engaged for takeoff, where are the pitch command bars positioned
     initially?
-  Choice A: ''
+  Choice A: Pitch bars are not in view until 60 knots
   Choice B: 10 degrees nose down
-  Choice C: ''
-  Choice D: ''
+  Choice C: 10 degrees nose up
+  Choice D: 12 degrees nose down
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

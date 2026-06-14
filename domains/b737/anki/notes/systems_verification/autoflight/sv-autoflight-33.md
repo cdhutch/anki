@@ -22,10 +22,10 @@ fields:
   Original Text: With the VNAV Mode selected, the autothrottles will {{c1::engage in FMC Speed
     mode}}.
   Question Stem: With the VNAV Mode selected, the autothrottles will what?
-  Choice A: ''
+  Choice A: Engage in MCP Speed mode
   Choice B: Engage in FMC Speed mode
-  Choice C: ''
-  Choice D: ''
+  Choice C: Disengage
+  Choice D: Engage in TO/GA Mode
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

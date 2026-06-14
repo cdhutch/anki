@@ -24,12 +24,12 @@ fields:
     wing flap placard speeds.}}'
   Question Stem: The AFDS/AT provides speed, pitch, and thrust commands to avoid exceeding
     which of the following speeds?
-  Choice A: ''
-  Choice B: 'All of the above: VMO/MMO; landing gear placard speeds; wing flap placard speeds'
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: B
-  Shuffle Choices: true
+  Choice A: VMO/MMO
+  Choice B: Landing gear placard speeds
+  Choice C: Wing flap placard speeds
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

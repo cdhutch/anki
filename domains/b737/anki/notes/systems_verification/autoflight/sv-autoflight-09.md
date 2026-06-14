@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: A Mode Control Panel switch illuminates to indicate mode {{c1::selection}}
     and that mode can be {{c1::deselected}} by pressing the switch again.
-  Question Stem: A Mode Control Panel switch illuminates to indicate mode what? and that mode
-    can be what? by pressing the switch again?
-  Choice A: ''
-  Choice B: Selection
-  Choice C: ''
-  Choice D: ''
+  Question Stem: What does a Mode Control Panel switch illuminating indicate? What happens
+    when the switch is pressed again?
+  Choice A: Selection of that mode; Deselection of that mode
+  Choice B: Selection of that mode; Deselection of that mode
+  Choice C: Deselectioo of that mode; Selection of that mode
+  Choice D: Selection of that mode; Selection of that mode
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null
