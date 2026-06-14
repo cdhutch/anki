@@ -20,11 +20,11 @@ fields:
   Original Note ID: engines-016
   Original Prompt Style: cloze
   Original Text: The engine thrust reversers are operated {{c1::hydraulically}}.
-  Question Stem: The engine thrust reversers are operated what?
+  Question Stem: How are the engine thrust reversers operated?
   Choice A: Hydraulically
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Electrically
+  Choice C: Mechanically
+  Choice D: Pneumatically
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

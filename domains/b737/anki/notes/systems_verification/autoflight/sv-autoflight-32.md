@@ -24,9 +24,9 @@ fields:
   Question Stem: In this scenario with the SPEED mode engaged and the speed window open, the
     what? mode is controlling the Autothrottle?
   Choice A: MCP Speed
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: FMS Speed
+  Choice C: N1 Limit
+  Choice D: VNAV
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

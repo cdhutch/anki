@@ -21,10 +21,10 @@ fields:
   Original Prompt Style: cloze
   Original Text: How is an EGT exceedance displayed after engine shutdown? {{c1::A red box}}
   Question Stem: How is an EGT exceedance displayed after engine shutdown?
-  Choice A: ''
+  Choice A: Flashing white box
   Choice B: A red box
-  Choice C: ''
-  Choice D: ''
+  Choice C: Flashing red display
+  Choice D: An amber box
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

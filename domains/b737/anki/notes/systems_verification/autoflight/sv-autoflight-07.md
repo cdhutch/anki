@@ -23,9 +23,9 @@ fields:
     if {{c1::command pitch or roll modes are engaged}}.
   Question Stem: Turning a F/D switch ON displays command bars on the respective pilots PFD
     if what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Both A/Ps are engaged below 1500 feet RA
+  Choice B: At least one A/P is engaged
+  Choice C: Airborne below 2000 feet RA
   Choice D: Command pitch or roll modes are engaged
   Correct Choice: D
   Shuffle Choices: true

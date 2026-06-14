@@ -24,14 +24,13 @@ fields:
     bleed air valve is open, and the isolation valve is open; external air is connected with
     the isolation valve open}}.'
   Question Stem: The APU bleed valve must be closed if what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 'All of the above: Engine 1 is running above idle and its bleed air valve is open;
-    Engine 2 is running above idle, its bleed air valve is open, and the isolation valve is
-    open; external air is connected with the isolation valve open'
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Choice A: Engine 1 is running above idle and its bleed air valve is open
+  Choice B: Engine 2 is running above idle, its bleed air valve is open, and the isolation
+    valve is open
+  Choice C: External air is connected with the isolation valve open
+  Choice D: All of the above
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

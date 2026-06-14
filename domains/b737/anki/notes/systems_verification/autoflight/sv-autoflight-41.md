@@ -23,17 +23,15 @@ fields:
     criteria for either 1 or 2 above are met: on any heading and within 3 NM of the active
     route segment or outside 3 NM of the active route, the airplane on an intercept course
     of 90 degrees or less, and intercepting the route prior to the active waypoint}}.'
-  Question Stem: In LNAV, the AFDS intercepts and tracks the active FMC route if what?
+  Question Stem: In LNAV, the AFDS intercepts and tracks the active FMC route if what happens?
   Choice A: On any heading and within 3 NM of the active route segment
   Choice B: Outside 3 NM of the active route, the airplane on an intercept course of 90 degrees
     or less, and intercepting the route prior to the active waypoint
-  Choice C: '[DISTRACTOR NEEDED]'
-  Choice D: 'The criteria for either A or B above are met: on any heading and within 3 NM
-    of the active route segment; or outside 3 NM of the active route, the airplane on an intercept
-    course of 90 degrees or less, and intercepting the route prior to the active waypoint'
+  Choice C: On any heading and outside 3 NM of an active route segment
+  Choice D: The criteria for either A or B above are met
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice C
+  Review Notes: ''
   Verification Notes: ''
 ---
 

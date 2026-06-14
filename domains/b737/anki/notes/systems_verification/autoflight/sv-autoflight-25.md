@@ -24,10 +24,10 @@ fields:
     begins to flash.}}
   Question Stem: What are the indications when deviating from a selected altitude by more
     than 200 feet?
-  Choice A: ''
+  Choice A: The altitude scale turns red
   Choice B: An aural alert sounds and the current altitude box turns amber and begins to flash
-  Choice C: ''
-  Choice D: ''
+  Choice C: An aural alert sounds and the altitude alert turns red and begins to flash
+  Choice D: The altitude scale turns amber
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

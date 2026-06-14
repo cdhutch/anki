@@ -26,10 +26,10 @@ fields:
   Question Stem: The flaps were retracted in flight when this light illuminated. The QRH directs
     the crew to RESET the tripped bleed. The BLEED TRIP OFF Light remains illuminated. The
     QRH then directs the crew to turn OFF the Right A/C Pack Switch. Therefore, the what?
-  Choice A: ''
+  Choice A: Left pack remains shut down and the right pack switches to high air flow mode
   Choice B: Right pack remains shut down and the left pack switches to high air flow mode
-  Choice C: ''
-  Choice D: ''
+  Choice C: Right pack switches to high air flow mode after the isolation valve opens
+  Choice D: Left pack switches to high air flow mode after the isolation valve closes
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

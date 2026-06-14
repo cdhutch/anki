@@ -22,13 +22,13 @@ fields:
   Original Text: On a single-engine go around, a push of either TO/GA switch will command
     an initial pitch attitude of {{c1::13}} degrees nose up.
   Question Stem: On a single-engine go around, a push of either TO/GA switch will command
-    an initial pitch attitude of what? degrees nose up?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 13
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+    which initial pitch attitude?
+  Choice A: 10 deg NU
+  Choice B: 13 degNU
+  Choice C: 15 deg NU
+  Choice D: 20 deg NU
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

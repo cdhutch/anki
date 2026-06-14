@@ -22,10 +22,10 @@ fields:
   Original Text: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: {{c1::28K with
     a 10% and 20% de-rate option.}}'
   Question Stem: 'MAX: Available N1 Thrust Ratings for LEAP-1B Engines are: what?'
-  Choice A: ''
+  Choice A: New EEC automatically selects correct thrust rating
   Choice B: 28K with a 10% and 20% de-rate option
-  Choice C: ''
-  Choice D: ''
+  Choice C: 22K, 24K, 26K, 27K and 28K BUMP
+  Choice D: 24K, 26K and 28K BUMP
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

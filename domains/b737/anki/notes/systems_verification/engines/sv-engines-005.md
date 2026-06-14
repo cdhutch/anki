@@ -24,10 +24,10 @@ fields:
     mode.'
   Question Stem: 'When the EEC displays the above light *(#1 EEC ALTN caution light)* with
     thrust levers not in idle, it indicates that the #1 EEC is in the what? mode?'
-  Choice A: ''
+  Choice A: Hard Alternate
   Choice B: Soft Alternate
-  Choice C: ''
-  Choice D: ''
+  Choice C: Backup
+  Choice D: Normal
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

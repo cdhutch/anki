@@ -23,10 +23,10 @@ fields:
     to takeoff, {{c1::return to the gate. Maintenance action is required}}.
   Question Stem: If this light *(ENG 2 ENGINE CONTROL caution)* illuminates during taxi, prior
     to takeoff, what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: It indicates the EEC is switched to the Hard ALTN mode
+  Choice B: It indicates that the EEC is switched to the Soft ALTN mode
   Choice C: Return to the gate. Maintenance action is required
-  Choice D: ''
+  Choice D: Continue with flight. No maintenance action required
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

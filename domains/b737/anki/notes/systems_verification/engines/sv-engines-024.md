@@ -20,11 +20,11 @@ fields:
   Original Note ID: engines-024
   Original Prompt Style: cloze
   Original Text: Engine maximum and minimum limits are displayed in {{c1::red}}.
-  Question Stem: Engine maximum and minimum limits are displayed in what?
+  Question Stem: In which color are engine maximum and minimum limits displayed?
   Choice A: Red
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Blue
+  Choice C: White text numbers
+  Choice D: Amber when RESET is pressed
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

@@ -22,10 +22,10 @@ fields:
   Original Text: Independent FD operation is annunciated by {{c1::illumination of both MA
     lights}}.
   Question Stem: Independent FD operation is annunciated by what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Dual FDs being annunciated on the FMA
+  Choice B: A single FD annunciated on FMA
   Choice C: Illumination of both MA lights
-  Choice D: ''
+  Choice D: Both MA lights being extinguished
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

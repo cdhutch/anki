@@ -22,13 +22,13 @@ fields:
   Original Text: 'MAX: BLEED Light illuminates for: {{c1::Both B and C above: Over-temperature
     or overpressure; System fault or failure.}}'
   Question Stem: 'MAX: BLEED Light illuminates for: what?'
-  Choice A: '[DISTRACTOR NEEDED]'
+  Choice A: Dual controller failure
   Choice B: Over-temperature or overpressure
   Choice C: System fault or failure
-  Choice D: 'Both B and C above: Over-temperature or overpressure; System fault or failure'
+  Choice D: Both B and C above
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice A
+  Review Notes: ''
   Verification Notes: ''
 ---
 

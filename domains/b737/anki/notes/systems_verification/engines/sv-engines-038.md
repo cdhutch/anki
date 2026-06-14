@@ -20,13 +20,13 @@ fields:
   Original Note ID: engines-038
   Original Prompt Style: cloze
   Original Text: Each engine is equipped with {{c1::2}} ignitors.
-  Question Stem: Each engine is equipped with what? ignitors?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 2
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Question Stem: How many ignitors is each engine is equipped with?
+  Choice A: 1
+  Choice B: 2
+  Choice C: 3
+  Choice D: Emergency
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

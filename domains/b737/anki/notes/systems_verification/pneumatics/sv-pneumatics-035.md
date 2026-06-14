@@ -22,9 +22,10 @@ fields:
   Original Text: The right WING BODY OVERHEAT light indicates a duct leak in the {{c1::right
     engine strut, right wing inboard leading edge, or right air conditioning bay}}.
   Question Stem: The right WING BODY OVERHEAT light indicates a duct leak in the what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Right engine strut, right wing outboard leading edge, keel beam, or right air
+    conditioning bay
+  Choice B: Right engine strut, right wing outboard leading edge, or right forward cargo bay
+  Choice C: Right wing inboard leading edge, right forward cargo bay, or keel beam
   Choice D: Right engine strut, right wing inboard leading edge, or right air conditioning
     bay
   Correct Choice: D

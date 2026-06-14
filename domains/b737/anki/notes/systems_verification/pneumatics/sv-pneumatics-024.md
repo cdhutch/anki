@@ -22,10 +22,10 @@ fields:
   Original Text: '{{c1::Either over pressure or over temperature}} cause(s) the engine bleed
     valve to automatically close.'
   Question Stem: What? cause(s) the engine bleed valve to automatically close?
-  Choice A: Either over pressure or over temperature
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice A: Either overpressure or over-temperature
+  Choice B: Overpressure only
+  Choice C: Neither overpressure nor over-temperature will
+  Choice D: Over-temperature only
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

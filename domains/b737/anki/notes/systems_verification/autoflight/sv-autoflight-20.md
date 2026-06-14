@@ -23,13 +23,12 @@ fields:
     Trim Auto Pilot cutout switch is in cutout; force is applied to the control wheel; the
     A/P disengage bar is down.}}'
   Question Stem: A/P engagement is inhibited when what?
-  Choice A: 'Any of the above occur: the Stab Trim Auto Pilot cutout switch is in cutout;
-    force is applied to the control wheel; the A/P disengage bar is down'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
+  Choice A: The Stab Trim Auto Pilot cutout switch is in cutout
+  Choice B: Force is applied to the control wheel
+  Choice C: The A/P disengage bar is down
+  Choice D: Any of the above occur
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

@@ -27,7 +27,7 @@ fields:
 Regarding FMS entries:
 - Who makes them?
 - Who verifies them?
-- When may CDU preflight begin?
+- By when must the CDU preflight begin?
 - When must CDU preflight be complete?
 
 # back_md

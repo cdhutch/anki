@@ -23,10 +23,10 @@ fields:
     on by {{c1::closing the isolation valve}}.'
   Question Stem: 'We can operate a single engine taxi (On #2 Engine) with a dual bleed light
     on by what?'
-  Choice A: ''
+  Choice A: Closing the
   Choice B: Closing the isolation valve
-  Choice C: ''
-  Choice D: ''
+  Choice C: Remaining parked. Single Engine Taxi is not allowed
+  Choice D: Ensuring duct pressure is less than 30 psi
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

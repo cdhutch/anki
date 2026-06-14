@@ -23,9 +23,9 @@ fields:
     EEC ALTN caution light illuminated)*? {{c1::Exceeding N1, N2 redline limits}}'
   Question Stem: 'What protection is the EEC providing the #1 engine in this mode with *(#1
     EEC ALTN caution light illuminated)*?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Low oil pressure redline limits
+  Choice B: Exceeding engine vibration limits
+  Choice C: Exceeding EGT redline limits
   Choice D: Exceeding N1, N2 redline limits
   Correct Choice: D
   Shuffle Choices: true
