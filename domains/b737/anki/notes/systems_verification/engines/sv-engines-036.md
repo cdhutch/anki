@@ -22,9 +22,9 @@ fields:
   Original Text: The EEC provides {{c1::N1 & N2}} protection in the normal mode.
   Question Stem: The EEC provides what? protection in the normal mode?
   Choice A: N1 & N2
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: N1 & EGT
+  Choice C: N1, N2, & N3
+  Choice D: EGT only
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

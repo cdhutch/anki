@@ -22,10 +22,10 @@ fields:
   Original Text: The APU bleed air valve will close if {{c1::the APU Bleed Air Switch is placed
     OFF or if the APU is shutdown}}.
   Question Stem: The APU bleed air valve will close if what?
-  Choice A: ''
+  Choice A: APU overheat or overpressure occur
   Choice B: The APU Bleed Air Switch is placed OFF or if the APU is shutdown
-  Choice C: ''
-  Choice D: ''
+  Choice C: Engine bleed air is available
+  Choice D: Engine bleed air is supplying the wing anti-ice system
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

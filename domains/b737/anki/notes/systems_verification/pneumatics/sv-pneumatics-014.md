@@ -22,10 +22,10 @@ fields:
   Original Text: Pushing the TRIP RESET switch will reset the WING-BODY OVERHEAT light {{c1::this
     light cannot be reset with the TRIP RESET Switch}}.
   Question Stem: Pushing the TRIP RESET switch will reset the WING-BODY OVERHEAT light what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: If the light was caused by high temperature
+  Choice B: If the light was caused by either high temperature or high pressure
   Choice C: This light cannot be reset with the TRIP RESET Switch
-  Choice D: ''
+  Choice D: If the light was caused by high pressure
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -22,9 +22,9 @@ fields:
   Original Text: 'What would cause this light *(DUAL BLEED caution)* to illuminate? {{c1::#1
     & #2 Bleed Switches ON, APU Valve Open, and Isolation Valve Open}}'
   Question Stem: What would cause this light *(DUAL BLEED caution)* to illuminate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: null
+  Choice B: Isolation Valve Open and APU Bleed Valve Closed
+  Choice C: null
   Choice D: '#1 & #2 Bleed Switches ON, APU Valve Open, and Isolation Valve Open'
   Correct Choice: D
   Shuffle Choices: true

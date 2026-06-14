@@ -18,7 +18,7 @@ fields:
 
 # front_md
 
-**Check + 2 setup** — what are the additional steps for a **non-ILS** approach compared to an ILS approach?
+**Check + 2 setup** — what are the three additional steps for a **non-ILS** approach compared to an ILS approach?
 
 # back_md
 

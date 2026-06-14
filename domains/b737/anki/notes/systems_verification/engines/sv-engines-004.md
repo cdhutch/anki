@@ -23,9 +23,9 @@ fields:
     reverser is deployed}}.
   Question Stem: A green "Rev" light above N1 on the upper display indicates that the what?
   Choice A: Thrust reverser is deployed
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Thrust reverser is in transit
+  Choice C: Auto stow circuitry has activated
+  Choice D: Reverser sleeve has not moved from stowed position
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

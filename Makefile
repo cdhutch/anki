@@ -69,6 +69,12 @@ help:
 	@echo "  cats-fix            Canonicalize CNSF formatting for Cats and Dogs notes"
 	@echo "  cats-clean          Remove generated Cats and Dogs TSV file"
 	@echo ""
+	@echo "Mnemonics"
+	@echo "  mnemonic            Export and sync Mnemonic notes to Anki"
+	@echo "  mnemonic-check      Check CNSF formatting for Mnemonic notes (no changes)"
+	@echo "  mnemonic-fix        Canonicalize CNSF formatting for Mnemonic notes"
+	@echo "  mnemonic-clean      Remove generated Mnemonics TSV file"
+	@echo ""
 	@echo "Checklists"
 	@echo "  checklists          Export and sync Checklist notes to Anki"
 	@echo "  checklists-check    Check CNSF formatting for Checklist notes (no changes)"
@@ -257,6 +263,31 @@ cats: cats-check
 		--out $(CATS_TSV) \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(CATS_TSV)
+
+# -------------------------------------------------------------------
+# Mnemonics
+# -------------------------------------------------------------------
+MNEMONIC_ROOT := domains/b737/anki/notes/mnemonics
+MNEMONIC_TSV  := $(BUILD_DIR)/mnemonics.tsv
+
+.PHONY: mnemonic mnemonic-check mnemonic-fix mnemonic-clean
+
+mnemonic-check:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(MNEMONIC_ROOT)/*.md
+
+mnemonic-fix:
+	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(MNEMONIC_ROOT)/*.md
+
+mnemonic-clean:
+	rm -f $(MNEMONIC_TSV)
+
+mnemonic: mnemonic-check
+	mkdir -p $(BUILD_DIR)
+	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
+		--in $(MNEMONIC_ROOT) \
+		--out $(MNEMONIC_TSV) \
+		--overwrite
+	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(MNEMONIC_TSV)
 
 # -------------------------------------------------------------------
 # Checklists
@@ -462,13 +493,14 @@ core-fix:
 	$(MAKE) qrc-fix
 	$(MAKE) triggers-fix
 	$(MAKE) cats-fix
+	$(MAKE) mnemonic-fix
 	$(MAKE) checklists-fix
 	$(MAKE) proc-normal-fix
 	$(MAKE) proc-non-normal-fix
 	$(MAKE) proc-inflight-fix
 
 core:
-	@TARGETS="limits qrc triggers cats checklists proc-normal proc-normal-cloze proc-non-normal proc-inflight"; \
+	@TARGETS="limits qrc triggers cats mnemonic checklists proc-normal proc-normal-cloze proc-non-normal proc-inflight"; \
 	for t in $$TARGETS; do \
 		printf "\033[1;34m→ $$t...\033[0m\n"; \
 		$(MAKE) $$t || { printf "\033[1;31m✗  Core sync failed at: $$t\033[0m\n"; exit 1; }; \

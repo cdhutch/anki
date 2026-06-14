@@ -27,9 +27,11 @@ fields:
   Question Stem: In a situation with the left WING-BODY OVERHEAT illuminated, the QRH directs
     the crew to close the isolation valve, turn off the pack, close the engine bleed on the
     affected side, and turn off the wing anti-ice. Accomplishing these procedures will what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: 'Prevent air from the #1 engine entering the left bleed air duct but still allows
+    air to the left pack'
+  Choice B: Isolate bleed air to the left pack while still allowing air to flow to the left
+    wing anti-ice duct
+  Choice C: Stop all bleed air from flowing to the right side
   Choice D: 'Prevent air from the #1 engine entering the left bleed air duct and to shutoff
     all bleed air to the left side'
   Correct Choice: D

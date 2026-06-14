@@ -24,9 +24,9 @@ fields:
   Question Stem: During normal operations, if the Isolation Valve Switch is in AUTO, then
     the valve what?
   Choice A: Is closed
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Is open
+  Choice C: Varies due to pressure demands
+  Choice D: Varies due to temperature fluctuations
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

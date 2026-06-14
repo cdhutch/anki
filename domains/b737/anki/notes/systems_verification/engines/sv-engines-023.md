@@ -22,9 +22,9 @@ fields:
   Original Text: This light *(ENG 2 OIL FILTER BYPASS caution)* indicates {{c1::impending
     bypass of oil filter}}.
   Question Stem: This light *(ENG 2 OIL FILTER BYPASS caution)* indicates what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Fuel filter clogged due to ice
+  Choice B: Start valve stuck open
+  Choice C: Impending fuel filter bypass
   Choice D: Impending bypass of oil filter
   Correct Choice: D
   Shuffle Choices: true

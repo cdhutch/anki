@@ -23,11 +23,11 @@ fields:
     advance to reduced go around N1 to produce {{c1::1000}} fpm to {{c1::2000}} fpm rate of
     climb.
   Question Stem: On a go around after the first push of either TO/GA switch, the thrust levers
-    advance to reduced go around N1 to produce what? fpm to what? fpm rate of climb?
-  Choice A: ''
-  Choice B: ''
-  Choice C: 1000
-  Choice D: ''
+    advance to reduced go around N1 to produce a rate of climb over which range?
+  Choice A: 2000-4000 fpm
+  Choice B: 500-1000 fpm
+  Choice C: 1000-2000 fpm
+  Choice D: 1000-1500 fpm
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -23,10 +23,10 @@ fields:
     during flight, {{c1::the auto restow system has been activated}}.
   Question Stem: If this light *(Engine 1 REVERSER caution light on ENGINE panel)* illuminates
     during flight, what?
-  Choice A: ''
+  Choice A: Operate the
   Choice B: The auto restow system has been activated
-  Choice C: ''
-  Choice D: ''
+  Choice C: Shut down the
+  Choice D: Do not use the
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

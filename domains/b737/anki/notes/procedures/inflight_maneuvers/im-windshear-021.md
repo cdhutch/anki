@@ -25,7 +25,7 @@ fields:
 
 ## Windshear Alert Recognition
 
-How are **unacceptable airspeed deviations** treated in the windshear tables?
+What class of windshear event would an  **unacceptable airspeed deviations** be classified as?
 
 # back_md
 

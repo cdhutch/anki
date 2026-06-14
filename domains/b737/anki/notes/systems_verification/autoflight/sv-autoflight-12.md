@@ -24,9 +24,9 @@ fields:
   Question Stem: If a speed selected on the MCP is greater than the maximum speed allowed,
     what? appear(s) on the display?
   Choice A: A flashing B
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: A flashing A
+  Choice C: A flashing O
+  Choice D: Flashing Blanks
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

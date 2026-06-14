@@ -21,15 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'The right FMC becomes the Primary FMC when {{c1::Both 2 and 3 are correct:
     2) The FMC Source Select Switch is BOTH ON R and 3) The left FMC fails.}}.'
-  Question Stem: The right FMC becomes the Primary FMC when what?
-  Choice A: '[DISTRACTOR NEEDED]'
+  Question Stem: When does the right FMC become the Primary FMC?
+  Choice A: The B Autopilot is selected
   Choice B: The FMC Source Select Switch is BOTH ON R
   Choice C: The left FMC fails
-  Choice D: 'Both B and C are correct: The FMC Source Select Switch is BOTH ON R; The left
-    FMC fails'
+  Choice D: Both B and C are correct
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice A
+  Review Notes: ''
   Verification Notes: ''
 ---
 

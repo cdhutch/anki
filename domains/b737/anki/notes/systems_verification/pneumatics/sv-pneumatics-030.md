@@ -24,10 +24,11 @@ fields:
     air from the opposite side to enter the side with a bleed air leak}}.
   Question Stem: The QRH Non-Normal checklist directs you to close the ISOLATION VALVE as
     a first step *(for a left WING BODY OVERHEAT caution light)*. This is done to what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Prevent asymmetrical ice building up on the wings
+  Choice B: Back up the automatic closing of the isolation valve when pack or bleed switches
+    are turned off
   Choice C: Prevent air from the opposite side to enter the side with a bleed air leak
-  Choice D: ''
+  Choice D: Prevent a dual bleed light from illuminating
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -21,14 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'The EEC will abort the engine start on the ground for {{c1::either 1 or
     3 above: a wet start; an impending hot start}}.'
-  Question Stem: The EEC will abort the engine start on the ground for what?
+  Question Stem: In which conditions will the EEC abort the engine start on the ground?
   Choice A: A wet start
-  Choice B: '[DISTRACTOR NEEDED]'
+  Choice B: No oil pressure
   Choice C: An impending hot start
-  Choice D: 'Either A or C above: a wet start; an impending hot start'
+  Choice D: Either A or C above
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice B
+  Review Notes: ''
   Verification Notes: ''
 ---
 

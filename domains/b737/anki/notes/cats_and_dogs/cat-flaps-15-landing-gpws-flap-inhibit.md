@@ -20,10 +20,11 @@ fields:
 
 # front_md
 
-In a flaps 15 landing, which normally guarded switch must you reconfigure, and what constraint applies to selecting it?
+- In a flaps 15 landing, which normally guarded switch must you reconfigure
+- What constraint applies to selecting that switch?
 
 # back_md
 
-**Ground Proximity FLAP INHIBIT switch → INHIBIT**
+- **Ground Proximity FLAP INHIBIT switch → INHIBIT**
 
 - Do not select above **250 KIAS**

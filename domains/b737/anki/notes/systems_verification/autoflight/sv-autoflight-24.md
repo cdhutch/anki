@@ -23,13 +23,12 @@ fields:
     end of an active route is reached; a route discontinuity is reached; another roll mode
     is selected}}.'
   Question Stem: LNAV will automatically disconnect if what?
-  Choice A: 'Any of the above occurs: the end of an active route is reached; a route discontinuity
-    is reached; another roll mode is selected'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
-  Correct Choice: A
-  Shuffle Choices: true
+  Choice A: The end of an active route is reached
+  Choice B: A route discontinuity is reached
+  Choice C: Another roll mode is selected
+  Choice D: Any of the above occurs
+  Correct Choice: D
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

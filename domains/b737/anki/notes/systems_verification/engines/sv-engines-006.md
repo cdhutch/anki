@@ -24,11 +24,11 @@ fields:
     the EEC sensed before it went into the Soft Alternate mode.}}'
   Question Stem: 'In this mode *(#1 EEC ALTN caution light)* illuminated, what parameters
     is the EEC using to control the #1 engine?'
-  Choice A: ''
-  Choice B: ''
+  Choice A: The atmospheric data from the altitude set in the pressurization FLT ALT window
+  Choice B: The atmospheric condition sensed when the engine was started
   Choice C: The last valid flight conditions that the EEC sensed before it went into the Soft
     Alternate mode
-  Choice D: ''
+  Choice D: Preprogrammed data
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

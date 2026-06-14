@@ -23,10 +23,10 @@ fields:
     ALTN Mode? {{c1::A Preprogrammed alternate mode thrust schedule.}}
   Question Stem: What type of data is the EEC using to control the engine while in the Hard
     ALTN Mode?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The last valid flight conditions sensed
+  Choice B: Current altitude data supplied by the ADIRUs
   Choice C: A Preprogrammed alternate mode thrust schedule
-  Choice D: ''
+  Choice D: Standard day temperature and pressure data
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

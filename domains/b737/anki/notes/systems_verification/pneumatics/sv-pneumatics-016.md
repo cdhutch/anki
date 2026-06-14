@@ -25,9 +25,9 @@ fields:
   Question Stem: The left WING BODY OVERHEAT light indicates a duct leak in the left engine
     strut, left wing leading edge, left air conditioning bay, and what?
   Choice A: APU duct and keel beam ducting
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Left wing anti-ice system
+  Choice C: APU duct and mix manifold
+  Choice D: Keel beam duct and forward cargo area
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
