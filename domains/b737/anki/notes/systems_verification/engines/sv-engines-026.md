@@ -22,10 +22,10 @@ fields:
   Original Text: How can you tell if the EECs are in the normal mode? {{c1::The white ON is
     in view.}}
   Question Stem: How can you tell if the EECs are in the normal mode?
-  Choice A: ''
-  Choice B: ''
+  Choice A: The amber OFF is in view
+  Choice B: The amber ON is in view
   Choice C: The white ON is in view
-  Choice D: ''
+  Choice D: The white OFF is in view
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

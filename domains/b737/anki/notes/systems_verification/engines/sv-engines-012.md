@@ -24,9 +24,9 @@ fields:
   Question Stem: 'What action is required per the QRH to move the #1 EEC from the Soft to
     the Hard Alternate (ALTN) mode?'
   Choice A: 'Press the #1 EEC switch'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: 'Press the #2 EEC switch'
+  Choice C: Move the start switch to Cutoff
+  Choice D: 'Advance the #1 engine throttle'
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

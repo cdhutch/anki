@@ -22,9 +22,9 @@ fields:
   Original Text: Engaged flight modes are displayed in what color? {{c1::Green}}
   Question Stem: Engaged flight modes are displayed in what color?
   Choice A: Green
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Blue
+  Choice C: Magenta
+  Choice D: White
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

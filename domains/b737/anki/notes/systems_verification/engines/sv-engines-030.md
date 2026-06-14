@@ -21,12 +21,12 @@ fields:
   Original Prompt Style: cloze
   Original Text: The EEC selects approach idle {{c1::inflight when the flaps are in landing
     configuration or engine anti-ice is turned on for either engine}}.
-  Question Stem: The EEC selects approach idle what?
-  Choice A: ''
-  Choice B: ''
+  Question Stem: When does the EEC select approach idle?
+  Choice A: When the engine start switches are moved to FLIGHT position
+  Choice B: When N1 and N2 fall below preset limits
   Choice C: Inflight when the flaps are in landing configuration or engine anti-ice is turned
     on for either engine
-  Choice D: ''
+  Choice D: Automatically below 18,000 feet
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

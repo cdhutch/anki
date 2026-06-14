@@ -24,9 +24,9 @@ fields:
   Question Stem: What are the restrictions when this light *(DUAL BLEED)* is ON?
   Choice A: 'Thrust levers at idle, if #1 Engine Bleed Open, or #2 Engine Bleed Open and Isolation
     Valve Open'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: There are no restrictions
+  Choice C: The APU and either engine cannot be run at the same time
+  Choice D: Two packs and one bleed source cannot be operated simultaneously
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

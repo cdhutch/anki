@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: sv-pneumatics-005
+note_id: sv-pneumatics-033
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -22,10 +22,10 @@ fields:
   Original Text: When the APU is shut down, the APU bleed valve {{c1::closes automatically
     regardless of APU bleed air switch position}}.
   Question Stem: When the APU is shut down, the APU bleed valve what?
-  Choice A: ''
+  Choice A: Will close when the second engine is started
   Choice B: Closes automatically regardless of APU bleed air switch position
-  Choice C: ''
-  Choice D: ''
+  Choice C: Must be closed manually by placing the APU bleed air switch to OFF
+  Choice D: Remains open
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

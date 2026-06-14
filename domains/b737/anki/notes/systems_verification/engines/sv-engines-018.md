@@ -21,14 +21,14 @@ fields:
   Original Prompt Style: cloze
   Original Text: 'MAX: Bowed Rotor Motoring (BRM): {{c1::Designed to straighten the rotor
     shaft which will naturally “bow” due to thermal buildup after the engine is shutdown.}}'
-  Question Stem: 'MAX: Bowed Rotor Motoring (BRM): what?'
-  Choice A: ''
-  Choice B: ''
-  Choice C: Designed to straighten the rotor shaft which will naturally “bow” due to thermal
+  Question Stem: Which of these is applicable to Bowed Rotor Motoring (BRM)?
+  Choice A: Selected by pushing the BRM switch on the Overhead Panel
+  Choice B: Designed to straighten the rotor shaft which will naturally “bow” due to thermal
     buildup after the engine is shutdown
-  Choice D: ''
-  Correct Choice: C
-  Shuffle Choices: true
+  Choice C: There is no starter usage limit when MOTORING
+  Choice D: Both A and B above
+  Correct Choice: B
+  Shuffle Choices: false
   Review Notes: null
   Verification Notes: ''
 ---

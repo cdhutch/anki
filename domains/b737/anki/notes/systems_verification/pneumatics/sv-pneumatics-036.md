@@ -22,12 +22,12 @@ fields:
   Original Text: The {{c1::engine starting, air conditioning/pressurization, wing and engine
     anti-ice, hydraulic, water tank pressurization, and TAT probe}} systems rely on pneumatic
     pressure for operation.
-  Question Stem: The what? systems rely on pneumatic pressure for operation?
+  Question Stem: Which systems rely on pneumatic pressure for operation?
   Choice A: Engine starting, air conditioning/pressurization, wing and engine anti-ice, hydraulic,
     water tank pressurization, and TAT probe
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: Wing anti-ice, APU, engine starting, air conditioning
+  Choice C: APU, engine starting, air conditioning, and aspirated TAT probe
+  Choice D: Air conditioning/pressurization, wing anti-ice, APU
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

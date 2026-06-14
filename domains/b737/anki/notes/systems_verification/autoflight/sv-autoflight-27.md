@@ -23,9 +23,9 @@ fields:
     FCC to the Right Side? {{c1::Do nothing; it will switch when Autopilot B is selected.}}
   Question Stem: As you switch to the B Autopilot, what must be done to switch the Master
     FCC to the Right Side?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Turn the left Flight Director switch OFF and then ON
+  Choice B: Turn the right Flight Director switch OFF and then ON
+  Choice C: Turn off both Flight Director switches and reset the right one first
   Choice D: Do nothing; it will switch when Autopilot B is selected
   Correct Choice: D
   Shuffle Choices: true

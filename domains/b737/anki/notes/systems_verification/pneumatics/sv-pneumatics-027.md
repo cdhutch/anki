@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: systems_verification_exam_draft
-note_id: sv-pneumatics-004
+note_id: sv-pneumatics-027
 anki:
   model: B737_SV_Exam_Draft
   deck: B737::Systems_Verification::Draft
@@ -22,9 +22,9 @@ fields:
   Original Text: The Boeing 737-800 uses pneumatic air from which of the following sources?
     {{c1::Engine bleed air, external air, APU bleed air}}
   Question Stem: The Boeing 737-800 uses pneumatic air from which of the following sources?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Engine bleed air, accumulator air, APU bleed air
+  Choice B: Ram air, external air, accumulator air
+  Choice C: Ram air, engine bleed air, APU bleed air
   Choice D: Engine bleed air, external air, APU bleed air
   Correct Choice: D
   Shuffle Choices: true

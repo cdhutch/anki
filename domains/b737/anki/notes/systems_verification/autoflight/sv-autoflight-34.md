@@ -25,10 +25,10 @@ fields:
   Question Stem: At cruise altitude, you’ve been cleared for descent. After resetting the
     altitude window on the MCP, you select a vertical speed of 1000 Ft/Min. What will control
     the Autothrottle?
-  Choice A: ''
-  Choice B: ''
+  Choice A: It will revert to FMS Speed
+  Choice B: It will retard to idle and stay there
   Choice C: It will respond to MCP Speed
-  Choice D: ''
+  Choice D: It will go to the N1 Mode
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -23,9 +23,9 @@ fields:
     limit values to the A/T system.
   Question Stem: A boxed A/T LIM annunciation indicates that the FMC is not providing what?
     limit values to the A/T system?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: TAI
+  Choice B: N2
+  Choice C: EGT
   Choice D: N1
   Correct Choice: D
   Shuffle Choices: true

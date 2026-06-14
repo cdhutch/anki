@@ -23,10 +23,10 @@ fields:
     on? {{c1::Yes}}
   Question Stem: Is it possible to use a reverser after landing with just the REVERSER light
     on?
-  Choice A: ''
+  Choice A: In REVERSE IDLE only
   Choice B: 'Yes'
-  Choice C: ''
-  Choice D: ''
+  Choice C: 'No'
+  Choice D: Only if the standby rudder system powers the reversers
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

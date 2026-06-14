@@ -23,10 +23,10 @@ fields:
     the AFDS and A/T, {{c1::a flashing A}} appear(s) in the MCP speed display?
   Question Stem: If a speed selected on the MCP is lower than the minimum speed allowed by
     the AFDS and A/T, what? appear(s) in the MCP speed display?
-  Choice A: ''
+  Choice A: Flashing blanks
   Choice B: A flashing A
-  Choice C: ''
-  Choice D: ''
+  Choice C: A flashing B
+  Choice D: A flashing O
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

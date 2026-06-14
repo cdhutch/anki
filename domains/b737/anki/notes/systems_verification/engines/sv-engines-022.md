@@ -24,11 +24,11 @@ fields:
     Bypass Light will remain illuminated}}.
   Question Stem: If this light *(ENG 2 OIL FILTER BYPASS caution)* illuminates in flight above
     400 feet RA, what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Retard the
+  Choice B: Select Continuous Ignition
   Choice C: All three indicators will flash for 10 seconds then the Oil Filter Bypass Light
     will remain illuminated
-  Choice D: ''
+  Choice D: Shut down the
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

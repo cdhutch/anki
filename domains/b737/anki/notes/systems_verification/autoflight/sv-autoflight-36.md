@@ -22,13 +22,13 @@ fields:
   Original Text: 'MAX: When roll attitude exceeds {{c1::45 - Regardless of autopilot engagement}}
     degrees of bank, the MAX Roll Command Alerting System (RCAS) a guidance cue is displayed
     on the PFD and HUD, indicating the correct upset roll recovery direction:'
-  Question Stem: 'MAX: When roll attitude exceeds what? degrees of bank, the MAX Roll Command
-    Alerting System (RCAS) a guidance cue is displayed on the PFD and HUD, indicating the
-    correct upset roll recovery direction:?'
-  Choice A: 45 - Regardless of autopilot engagement
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Question Stem: 'MAX: In which condition when roll attitude exceeds 45 degrees of bank does
+    the MAX Roll Command Alerting System (RCAS) display a guidance cue on the PFD and HUD,
+    indicating the correct upset roll recovery direction?'
+  Choice A: Regardless of autopilot engagement
+  Choice B: But an aural warnings is only generated with autopilot engaged
+  Choice C: With 70 % autopilot roll saturation
+  Choice D: Only if single Autopilot is engaged
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null

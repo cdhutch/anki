@@ -22,9 +22,9 @@ fields:
   Original Text: What does an amber CWS R above the attitude indicator mean? {{c1::Control
     wheel steering, roll, is engaged}}
   Question Stem: What does an amber CWS R above the attitude indicator mean?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: A fault exists in the autopilot system
+  Choice B: A flight director designated as MASTER has faulted
+  Choice C: A fault exists in the roll mode
   Choice D: Control wheel steering, roll, is engaged
   Correct Choice: D
   Shuffle Choices: true

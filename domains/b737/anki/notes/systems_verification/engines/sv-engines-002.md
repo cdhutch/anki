@@ -23,10 +23,10 @@ fields:
     on ENGINE panel)* illuminated, the reverser {{c1::should operate normally}}.
   Question Stem: During landing rollout, with this light *(Engine 1 REVERSER caution light
     on ENGINE panel)* illuminated, the reverser what?
-  Choice A: ''
-  Choice B: ''
+  Choice A: Will not deploy
+  Choice B: Will not stow after deployment
   Choice C: Should operate normally
-  Choice D: ''
+  Choice D: Will deploy partially
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null
