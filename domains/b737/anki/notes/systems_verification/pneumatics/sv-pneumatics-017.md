@@ -27,7 +27,7 @@ fields:
   Choice B: Smoke and Master Caution
   Choice C: Overheat and Master Caution
   Choice D: Smoke on Recall
-  Correct Choice: B
+  Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
   Verification Notes: ''
