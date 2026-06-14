@@ -22,10 +22,10 @@ fields:
   Original Text: 'MAX: How is the operation of the bleed air system managed? {{c1::Electronically
     controlled}}'
   Question Stem: 'MAX: How is the operation of the bleed air system managed?'
-  Choice A: ''
-  Choice B: ''
+  Choice A: Air temperature flow shutoff valves
+  Choice B: Pneumatically controlled
   Choice C: Electronically controlled
-  Choice D: ''
+  Choice D: Pressure controllers
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

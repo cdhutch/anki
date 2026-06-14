@@ -22,10 +22,10 @@ fields:
   Original Text: What will make the light *(Left WING BODY OVERHEAT caution )* extinguish?
     {{c1::Remove air source from APU by either turning off APU bleed or shutting APU down.}}
   Question Stem: What will make the light *(Left WING BODY OVERHEAT caution )* extinguish?
-  Choice A: ''
+  Choice A: Push the reset button
   Choice B: Remove air source from APU by either turning off APU bleed or shutting APU down
-  Choice C: ''
-  Choice D: ''
+  Choice C: Remove air source from right side
+  Choice D: Check isolation valve in AUTO
   Correct Choice: B
   Shuffle Choices: true
   Review Notes: null

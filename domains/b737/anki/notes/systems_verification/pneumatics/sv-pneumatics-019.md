@@ -24,9 +24,10 @@ fields:
     or an overpressure condition has occurred in the #2 engine bleed air duct.}}'
   Question Stem: The aircraft is climbing through 5,000 ft when this light *(right BLEED TRIP
     OFF caution)* illuminated. What caused this light to illuminate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Engine
+  Choice B: The left pack has overheated. The right pack was unable to meet pressure demands
+    and tripped off
+  Choice C: Wing anti-ice is ON and an overheat condition has occurred in the wing
   Choice D: 'An overheat or an overpressure condition has occurred in the #2 engine bleed
     air duct'
   Correct Choice: D

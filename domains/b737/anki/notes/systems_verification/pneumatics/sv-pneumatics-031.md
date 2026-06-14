@@ -22,9 +22,9 @@ fields:
   Original Text: BLEED TRIP OFF light would illuminate for {{c1::excessive temperature or
     pressure}}.
   Question Stem: BLEED TRIP OFF light would illuminate for what?
-  Choice A: ''
-  Choice B: ''
-  Choice C: ''
+  Choice A: Excessive temperature only
+  Choice B: Excessive pressure only
+  Choice C: 5th stage valve stuck open
   Choice D: Excessive temperature or pressure
   Correct Choice: D
   Shuffle Choices: true

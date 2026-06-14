@@ -22,10 +22,10 @@ fields:
   Original Text: What caused this light *(right BLEED TRIP OFF caution)* to illuminate? {{c1::Overheat
     or over pressure in the right engine bleed}}
   Question Stem: What caused this light *(right BLEED TRIP OFF caution)* to illuminate?
-  Choice A: ''
-  Choice B: ''
-  Choice C: Overheat or over pressure in the right engine bleed
-  Choice D: ''
+  Choice A: Overheat in the right air conditioning bay
+  Choice B: Normal if number 2 Bleed Air Switch is OFF
+  Choice C: Overheat or overpressure in the right engine bleed
+  Choice D: Failure of the right bleed valve
   Correct Choice: C
   Shuffle Choices: true
   Review Notes: null

@@ -26,13 +26,11 @@ fields:
   Choice A: The APU bleed air valve is open and Engine 1 Bleed Switch is ON
   Choice B: The APU bleed air valve is open, Engine 2 Bleed Switch is ON, and the isolation
     valve is open
-  Choice C: '[DISTRACTOR NEEDED]'
-  Choice D: 'Either A or B occurs: the APU bleed air valve is open and Engine 1 Bleed Switch
-    is ON; the APU bleed air valve is open, Engine 2 Bleed Switch is ON, and the isolation
-    valve is open'
+  Choice C: External air is connected and the isolation valve is open
+  Choice D: Either A or B occurs
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice C
+  Review Notes: ''
   Verification Notes: ''
 ---
 

@@ -26,13 +26,12 @@ fields:
   Choice A: System allows operation of both packs from a single bleed air source
   Choice B: System has been upgraded to a Digital Bleed Air Supply which automatically detects
     and isolates faults
-  Choice C: '[DISTRACTOR NEEDED]'
-  Choice D: 'Both A and B above: System allows operation of both packs from a single bleed
-    air source; System has been upgraded to a Digital Bleed Air Supply which automatically
-    detects and isolates faults'
+  Choice C: Engine bleed air is only required if the new, more powerful APU is not operating
+    while airborne
+  Choice D: Both A and B above
   Correct Choice: D
   Shuffle Choices: false
-  Review Notes: Distractor needed at Choice C
+  Review Notes: ''
   Verification Notes: ''
 ---
 

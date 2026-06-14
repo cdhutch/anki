@@ -24,9 +24,9 @@ fields:
   Question Stem: What also happened when this light *(right BLEED TRIP OFF caution)* illuminated
     in flight?
   Choice A: 'The #2 engine bleed air valve closes automatically'
-  Choice B: ''
-  Choice C: ''
-  Choice D: ''
+  Choice B: The
+  Choice C: The Isolation valve was open but will now close automatically
+  Choice D: The bleed air valve does not close with a bleed trip
   Correct Choice: A
   Shuffle Choices: true
   Review Notes: null
