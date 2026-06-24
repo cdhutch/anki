@@ -2,13 +2,13 @@
 schema: cnsf/v0
 domain: b737
 note_type: cats_and_dogs
-note_id: cat-perf-verification-takeoff-ref-1-items
+note_id: cat-bleed-config-additional-cooling-1
 anki:
   model: B737_Structured
   deck: B737::Core::Cats_and_Dogs
 tags:
 - domain:b737
-- topic:performance
+- topic:air_conditioning
 - type:cats_and_dogs
 - status:unverified
 fields:
@@ -18,12 +18,12 @@ fields:
 
 # front_md
 
-**Performance Verification — TAKEOFF REF 1** — which 5 items are briefed?
+**Bleed/Pack/ISO — Deviations from Standard**
+
+Additional Cooling Procedure Level 1 — which switches differ from standard?
 
 # back_md
 
-1. Flaps
-2. Runway
-3. V1
-4. VR
-5. V2
+| Switch   | Position   |
+| -------- | ---------- |
+| Packs    | Both HIGH  |
