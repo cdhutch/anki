@@ -11,6 +11,7 @@ tags:
 - topic:air_conditioning
 - type:cats_and_dogs
 - status:unverified
+- always_hide
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
   Verification Notes: ''
