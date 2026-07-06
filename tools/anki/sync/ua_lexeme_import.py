@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """Import ua_lexeme CNSF notes into Anki via AnkiConnect.
 
-Cards land in UA::Canonical::* decks, fully separate from legacy UA cards.
 Upsert logic: adds new notes, updates fields on existing notes (matched by NoteID).
+Run rename_ua_legacy.py first to move legacy cards out of the UA:: namespace.
 
 Deck layout:
-    UA::Canonical::Recognition::UA→EN    ← UA→EN recognition card
-    UA::Canonical::Production::EN→UA     ← EN→UA typing card
+    UA::Recognition::UA→EN    ← UA→EN recognition card
+    UA::Production::EN→UA     ← EN→UA typing card
 
 Usage (with Anki open + AnkiConnect running):
     # Dry run — show what would be added/updated, touch nothing
@@ -32,8 +32,8 @@ from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Lexeme"
 
-DECK_RECOGNITION = "UA::Canonical::Recognition::UA→EN"
-DECK_PRODUCTION  = "UA::Canonical::Production::EN→UA"
+DECK_RECOGNITION = "UA::Recognition::UA→EN"
+DECK_PRODUCTION  = "UA::Production::EN→UA"
 
 # Cards that go to the production deck (by template name).
 # All others land in the recognition deck.
@@ -86,8 +86,12 @@ def update_note(anki_id: int, fields: dict, tags: list[str], dry_run: bool):
         anki_request("addTags", {"notes": [anki_id], "tags": " ".join(tags)}, url=ANKI_URL)
 
 
-def move_card_to_production_deck(anki_note_id: int, dry_run: bool):
-    """Move EN→UA cards to the production deck."""
+def route_cards_to_decks(anki_note_id: int, dry_run: bool):
+    """Move each card to its canonical deck based on template name.
+
+    EN→UA cards → DECK_PRODUCTION
+    All other cards (UA→EN) → DECK_RECOGNITION
+    """
     if dry_run:
         return
     card_ids = anki_request("findCards", {"query": f"nid:{anki_note_id}"}, url=ANKI_URL)
@@ -95,14 +99,13 @@ def move_card_to_production_deck(anki_note_id: int, dry_run: bool):
         return
     cards_info = anki_request("cardsInfo", {"cards": card_ids}, url=ANKI_URL)
     for card in cards_info:
-        if card.get("templateOrd") is not None:
-            template_name = card.get("cardType", "")
-            if template_name in PRODUCTION_TEMPLATES:
-                anki_request(
-                    "changeDeck",
-                    {"cards": [card["cardId"]], "deck": DECK_PRODUCTION},
-                    url=ANKI_URL,
-                )
+        template_name = card.get("cardType", "")
+        target_deck = DECK_PRODUCTION if template_name in PRODUCTION_TEMPLATES else DECK_RECOGNITION
+        anki_request(
+            "changeDeck",
+            {"cards": [card["cardId"]], "deck": target_deck},
+            url=ANKI_URL,
+        )
 
 
 def set_suspended(anki_note_id: int, suspend: bool, dry_run: bool):
@@ -168,14 +171,14 @@ def import_note(data: dict, dry_run: bool) -> str:
     if existing_id is None:
         anki_id = add_note(fields, tags, dry_run)
         if anki_id and not dry_run:
-            move_card_to_production_deck(anki_id, dry_run)
+            route_cards_to_decks(anki_id, dry_run)
             if suspend:
                 set_suspended(anki_id, True, dry_run)
         return "added"
     else:
         update_note(existing_id, fields, tags, dry_run)
         if not dry_run:
-            move_card_to_production_deck(existing_id, dry_run)
+            route_cards_to_decks(existing_id, dry_run)
             set_suspended(existing_id, suspend, dry_run)
         return "updated"
 

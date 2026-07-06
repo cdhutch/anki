@@ -34,5 +34,7 @@ fields:
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
+  Source_URL: https://goroh.pp.ua/Словозміна/ніч
+  Source_Note: ''
 ---
 

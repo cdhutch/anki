@@ -33,32 +33,36 @@ This repo builds and maintains Anki flashcard decks for two domains:
 
 **Branch:** `feature/ua-domain` (based off `main`)
 
-**Status (as of 2026-05-31):** Вступ lexeme batch complete. 113 notes live in Anki
-(`UA::Canonical::Recognition::UA→EN` and `UA::Canonical::Production::EN→UA`).
+**Status (as of 2026-07-06):** Вступ lexeme batch complete. 113 notes live in Anki.
 Stress marks verified against Горох; 9 corrections applied. All notes still tagged
 `stress:unverified` pending a full re-import after user review of outstanding edge cases.
+`Source_URL` / `Source_Note` fields added to schema; backfill script needed for existing 113 notes.
+Phase 2 note types (`UA_Grammar`, `UA_Verb`) fully specified in design.md — ready to author.
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
 - 788 leeches (20%) — triage before bulk migration
 - Active deck hierarchy: `UA::Recognition::*` / `UA::Production::*`
-- New canonical decks: `UA::Canonical::Recognition::UA→EN` / `UA::Canonical::Production::EN→UA`
+- New canonical decks: `UA::Recognition::UA→EN` / `UA::Production::EN→UA`
 - Legacy decks: `Ukrainian Active::Яблуко`, `Inactive::Ukrainian Inactive::*`
 - Tags in use: `textbook:яблуко`, `ch:2.8.x` (= Level 2, Ch. 8, §x), `leech`, `converted`, `to_convert`
 
 ### Primary note type: `UA_Lexeme`
 
-**Actual fields (as implemented — differs slightly from design.md v1):**
+**Fields (authoritative):**
 `NoteID`, `Lemma`, `PartOfSpeech`, `Gender`, `Perfective`, `EN_Gloss`,
 `Govt_Case`, `CounterpartForm`, `IrregularForms`, `VerbMotion_Pair`,
 `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote`, `TypingAnswer`,
-`UA_Example`, `EN_Example`, `Verb_Conj_Table`, `Tags_Ch`
+`UA_Example`, `EN_Example`, `Verb_Conj_Table`, `Tags_Ch`,
+`Source_URL`, `Source_Note`, `Verification Notes`
 
 Key field notes:
 - `Perfective` — PFV infinitive for verbs (blank for non-verbs)
 - `CounterpartForm` — cross-gender pair, e.g. `f: акто́рка`
 - `IrregularForms` — gen/pl irregularities, indeclinability
 - `TypingAnswer` — Lemma stripped of stress marks (U+0301); student types without accents
+- `Source_URL` — goroh.pp.ua URL for the bare lemma: `https://goroh.pp.ua/Словозміна/<lemma_no_stress>`
+- `Source_Note` — free text: verification date, disambiguation notes, corrections applied
 
 ### Language conventions (critical)
 - Dialect: modern Ukrainian, **Galician/Lviv** register
@@ -72,7 +76,7 @@ Key field notes:
 
 ### Stress verification workflow (established)
 
-Горох Транскрипція (`goroh.pp.ua/Транскрипція/<word>`) returns phonetic transcription
+Горох Словозміна (`goroh.pp.ua/Словозміна/<word>`) returns the full inflection paradigm
 with stress marks. Accessible via Claude in Chrome (not via web_fetch — blocked).
 
 Batch verification process:
@@ -91,13 +95,20 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 ### Tooling status
 | Path | Status | Purpose |
 |---|---|---|
+| Rename `UA` → `UA_Legacy` in Anki GUI | ✓ done | One-time manual rename; frees UA:: namespace |
 | `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme in Anki |
 | `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
 | `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
+| `tools/anki/inspect/backfill_source_url.py` | ✓ done | Add Source_URL + Source_Note to all lexeme notes |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 
 ### Future work
+
+**Source URL backfill** — run `tools/anki/inspect/backfill_source_url.py` to inject
+`Source_URL: https://goroh.pp.ua/Словозміна/<bare_lemma>` into all 113 Вступ notes.
+After backfill, update `setup_ua_note_types.py` to include the two new fields, then
+re-run the stress verification + import pipeline.
 
 **LLM example sentence generation** — highest value next step for card quality.
 Use Claude API (Haiku for cost) to populate `UA_Example` and `EN_Example` for notes

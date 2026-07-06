@@ -33,5 +33,7 @@ fields:
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
+  Source_URL: ''
+  Source_Note: ''
 ---
 

@@ -42,6 +42,9 @@ FIELDS = [
     "EN_Example",
     "Verb_Conj_Table",
     "Tags_Ch",
+    "Source_URL",
+    "Source_Note",
+    "Verification Notes",
 ]
 
 # ---------------------------------------------------------------------------
