@@ -2,7 +2,7 @@
 schema: cnsf/v0
 domain: b737
 note_type: limits_rule
-note_id: lim-18-7-2-apu-bleed-valve-close
+note_id: lim-18-7-2-apu-bleed-valve-engine-start
 anki:
   model: B737_Structured
   deck: B737::Core::Limits::Non-Trivia::Good-to-Know
@@ -23,12 +23,8 @@ fields:
 
 **B737 LIMITS — APU**
 
-Name the three specific Air Conditioning Panel bleed configurations when must the **APU bleed valve be CLOSED**?
+Under what specific condition may the **APU bleed valve remain open** during engine start?
 
 # back_md
 
-APU bleed valve must be **closed** when:
-
-- Ground air is connected **AND** the isolation valve is open  
-- Engine No. 1 bleed valve is open  
-- Isolation valve **AND** engine No. 2 bleed valves are open  
+The APU bleed valve may remain open during engine start, provided engine power is limited to **idle**.
