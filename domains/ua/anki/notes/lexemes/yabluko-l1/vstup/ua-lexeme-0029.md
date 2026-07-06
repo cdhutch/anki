@@ -23,7 +23,7 @@ fields:
   EN_Gloss: evening
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: ''
+  IrregularForms: gen.sg. вечора (stem vowel і→о in oblique cases)
   VerbMotion_Pair: ''
   ConfusableSet: ра́нок
   CrossLang_Analog: ''

@@ -16,9 +16,9 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0089
-  Lemma: іспа́нська
+  Lemma: іспа́нський
   PartOfSpeech: adjective
-  Gender: ''
+  Gender: m
   Perfective: ''
   EN_Gloss: Spanish (adj.)
   Govt_Case: ''
@@ -28,13 +28,13 @@ fields:
   ConfusableSet: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: іспанська
+  TypingAnswer: іспанський
   UA_Example: ''
   EN_Example: ''
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
-  Source_URL: https://goroh.pp.ua/Словозміна/іспанська
+  Source_URL: https://goroh.pp.ua/Словозміна/іспанський
   Source_Note: ''
 ---
 

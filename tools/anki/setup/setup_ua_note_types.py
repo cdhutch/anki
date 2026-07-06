@@ -138,6 +138,17 @@ hr#answer {
   margin-top: 16px;
 }
 
+.source-link {
+  font-size: 11px;
+  margin-top: 10px;
+  text-align: right;
+}
+
+.source-link a {
+  color: #aaa;
+  text-decoration: none;
+}
+
 /* Typing card input */
 input#typeans {
   font-size: 20px;
@@ -169,6 +180,7 @@ UA_EN_BACK = """\
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
+{{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
 
 # Template 2: EN → UA  (Production: see English, type Ukrainian without stress marks)
@@ -186,6 +198,7 @@ EN_UA_BACK = """\
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
+{{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
 
 CARD_TEMPLATES = [

@@ -23,7 +23,7 @@ fields:
   EN_Gloss: number
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: ''
+  IrregularForms: gen.pl. чисел (fleeting е, stress shifts)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''

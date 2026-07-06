@@ -24,7 +24,7 @@ fields:
   EN_Gloss: teacher
   Govt_Case: ''
   CounterpartForm: 'f: вчи́телька / учи́телька'
-  IrregularForms: ''
+  IrregularForms: gen.pl. вчителів (stress shifts)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''

@@ -23,7 +23,7 @@ fields:
   EN_Gloss: city, town
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: ''
+  IrregularForms: gen.pl. міст (zero ending)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''

@@ -16,9 +16,9 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0094
-  Lemma: росі́йська
+  Lemma: росі́йський
   PartOfSpeech: adjective
-  Gender: ''
+  Gender: m
   Perfective: ''
   EN_Gloss: Russian (adj.)
   Govt_Case: ''
@@ -28,13 +28,13 @@ fields:
   ConfusableSet: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: російська
+  TypingAnswer: російський
   UA_Example: ''
   EN_Example: ''
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
-  Source_URL: https://goroh.pp.ua/Словозміна/російська
+  Source_URL: https://goroh.pp.ua/Словозміна/російський
   Source_Note: ''
 ---
 

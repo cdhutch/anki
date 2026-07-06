@@ -23,8 +23,8 @@ fields:
   Perfective: ''
   EN_Gloss: driver
   Govt_Case: ''
-  CounterpartForm: ''
-  IrregularForms: ''
+  CounterpartForm: 'f: воді́йка'
+  IrregularForms: gen.pl. воді́їв
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''

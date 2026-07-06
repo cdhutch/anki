@@ -23,7 +23,7 @@ fields:
   EN_Gloss: attention!
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: used as exclamation
+  IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''

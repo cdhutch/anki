@@ -16,9 +16,9 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0092
-  Lemma: німе́цька
+  Lemma: німе́цький
   PartOfSpeech: adjective
-  Gender: ''
+  Gender: m
   Perfective: ''
   EN_Gloss: German (adj.)
   Govt_Case: ''
@@ -28,13 +28,13 @@ fields:
   ConfusableSet: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: німецька
+  TypingAnswer: німецький
   UA_Example: ''
   EN_Example: ''
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
-  Source_URL: https://goroh.pp.ua/Словозміна/німецька
+  Source_URL: https://goroh.pp.ua/Словозміна/німецький
   Source_Note: ''
 ---
 

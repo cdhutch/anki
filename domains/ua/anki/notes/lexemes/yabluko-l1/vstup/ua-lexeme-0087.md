@@ -16,9 +16,9 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0087
-  Lemma: англі́йська
+  Lemma: англі́йський
   PartOfSpeech: adjective
-  Gender: ''
+  Gender: m
   Perfective: ''
   EN_Gloss: English (adj.)
   Govt_Case: ''
@@ -28,13 +28,13 @@ fields:
   ConfusableSet: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: англійська
+  TypingAnswer: англійський
   UA_Example: ''
   EN_Example: ''
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
-  Source_URL: https://goroh.pp.ua/Словозміна/англійська
+  Source_URL: https://goroh.pp.ua/Словозміна/англійський
   Source_Note: ''
 ---
 

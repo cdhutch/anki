@@ -16,9 +16,9 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0091
-  Lemma: кита́йська
+  Lemma: кита́йський
   PartOfSpeech: adjective
-  Gender: ''
+  Gender: m
   Perfective: ''
   EN_Gloss: Chinese (adj.)
   Govt_Case: ''
@@ -28,13 +28,13 @@ fields:
   ConfusableSet: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: китайська
+  TypingAnswer: китайський
   UA_Example: ''
   EN_Example: ''
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
-  Source_URL: https://goroh.pp.ua/Словозміна/китайська
+  Source_URL: https://goroh.pp.ua/Словозміна/китайський
   Source_Note: ''
 ---
 

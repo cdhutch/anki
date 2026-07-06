@@ -23,7 +23,7 @@ fields:
   EN_Gloss: window
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: ''
+  IrregularForms: gen.pl. вікон (zero ending)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''

@@ -23,7 +23,7 @@ fields:
   EN_Gloss: family
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: ''
+  IrregularForms: gen.pl. сімей
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''

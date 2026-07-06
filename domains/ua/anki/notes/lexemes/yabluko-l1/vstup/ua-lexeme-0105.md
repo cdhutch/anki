@@ -10,13 +10,13 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
-- pos:phrase
+- pos:interjection
 - stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0105
   Lemma: приві́т
-  PartOfSpeech: phrase
+  PartOfSpeech: interjection
   Gender: ''
   Perfective: ''
   EN_Gloss: hi, hello (informal)
