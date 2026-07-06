@@ -81,11 +81,30 @@ help:
 	@echo "  checklists-fix      Canonicalize CNSF formatting for Checklist notes"
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
-	@echo "Ukrainian Lexeme (UA)"
-	@echo "  ua-lexeme           Canonicalize and sync all UA lexeme notes to Anki"
-	@echo "  ua-lexeme-check     Check CNSF formatting for UA lexeme notes (no changes)"
-	@echo "  ua-lexeme-fix       Canonicalize CNSF formatting for UA lexeme notes"
-	@echo "  ua-lexeme-<batch>   Canonicalize and sync a single batch (e.g. yabluko-l1/vstup)"
+	@echo "Ukrainian (UA) — lexeme pipeline"
+	@echo "  ua-setup                  Create/update UA_Lexeme note type in Anki"
+	@echo "  ua-batch BATCH=<b>/<ch>   Canonicalize + sync one chapter  (e.g. BATCH=yabluko-l1/ch-00)"
+	@echo "  ua-batch-check BATCH=…    Check CNSF formatting for one chapter (no changes)"
+	@echo "  ua-batch-fix BATCH=…      Canonicalize one chapter"
+	@echo "  ua-book BOOK=<book>       Canonicalize + sync whole textbook (e.g. BOOK=yabluko-l1)"
+	@echo "  ua-book-check BOOK=…      Check whole textbook"
+	@echo "  ua-book-fix BOOK=…        Canonicalize whole textbook"
+	@echo "  ua-lexeme                 Canonicalize + sync all UA lexeme notes"
+	@echo "  ua-lexeme-check           Check all UA lexeme notes"
+	@echo "  ua-lexeme-fix             Canonicalize all UA lexeme notes"
+	@echo ""
+	@echo "  Batch path convention:  <textbook>/ch-<NN>"
+	@echo "    yabluko-l1/ch-00  =  Вступ"
+	@echo "    yabluko-l1/ch-01  =  Chapter 1, etc."
+	@echo ""
+	@echo "Ukrainian (UA) — stress verification"
+	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
+	@echo "                      Writes /tmp/goroh/goroh_mismatches.tsv for review"
+	@echo "  ua-stress-extract   Generate goroh_input.json + goroh_fetch.js"
+	@echo "  ua-stress-fetch     Fetch Горох pages via Python (no Chrome needed)"
+	@echo "  ua-stress-compare   Compare stored forms vs cached Горох data"
+	@echo "  ua-stress-apply     Apply corrections from goroh_mismatches.tsv"
+	@echo "  ua-stress-wizard    Interactive guided wizard (extract→fetch→compare→apply)"
 	@echo ""
 	@echo "Core (aggregate)"
 	@echo "  core                Export and sync all B737::Core decks to Anki"
@@ -520,20 +539,105 @@ sve-%:
 		--tf "$(SV_BUILD)/sve-tf-$*.tsv"
 
 # -------------------------------------------------------------------
-# Ukrainian Lexeme (UA)
+# Ukrainian (UA) — lexeme pipeline
+#
+# Batch path convention:  <textbook>/ch-<NN>
+#   yabluko-l1/ch-00  =  Вступ (introductory chapter)
+#   yabluko-l1/ch-01  =  Chapter 1, and so on
+#   yabluko-l2/ch-01  =  Level 2, Chapter 1
+#
+# Single-chapter usage:  make ua-batch BATCH=yabluko-l1/ch-00
+# Whole-book usage:      make ua-book  BOOK=yabluko-l1
+# All UA notes:          make ua-lexeme
 # -------------------------------------------------------------------
-UA_LEXEME_ROOT := domains/ua/anki/notes/lexemes
+UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
+UA_INSPECT      := tools/anki/inspect
+UA_GOROH_DIR    := /tmp/goroh
 
+.PHONY: ua-setup
+.PHONY: ua-batch ua-batch-check ua-batch-fix
+.PHONY: ua-book  ua-book-check  ua-book-fix
 .PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
+.PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
+
+# ── Note type setup ──────────────────────────────────────────────────────────
+
+ua-setup:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py
+
+# ── Single chapter:  make ua-batch BATCH=yabluko-l1/ch-00 ────────────────────
+
+ua-batch-check:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-batch-check BATCH=<book>/ch-<NN>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BATCH)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BATCH)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BATCH) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-batch-fix:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-batch-fix BATCH=<book>/ch-<NN>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BATCH)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BATCH)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BATCH) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-batch: ua-batch-fix
+	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$(BATCH)/
+
+# ── Whole textbook:  make ua-book BOOK=yabluko-l1 ────────────────────────────
+
+ua-book-check:
+	@test -n "$(BOOK)" || { echo "Usage: make ua-book-check BOOK=<book>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BOOK)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BOOK)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BOOK) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-book-fix:
+	@test -n "$(BOOK)" || { echo "Usage: make ua-book-fix BOOK=<book>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BOOK)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BOOK)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BOOK) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-book: ua-book-fix
+	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$(BOOK)/
+
+# ── All UA lexeme notes ──────────────────────────────────────────────────────
 
 ua-lexeme-check:
-	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
 
 ua-lexeme-fix:
-	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 ua-lexeme: ua-lexeme-fix
 	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/
 
-ua-lexeme-%: ua-lexeme-fix
-	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$*/
+# ── Stress verification ──────────────────────────────────────────────────────
+
+ua-stress-extract:
+	@mkdir -p $(UA_GOROH_DIR)
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --extract --out-dir $(UA_GOROH_DIR)
+
+ua-stress-fetch:
+	@mkdir -p $(UA_GOROH_DIR)
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --fetch --out-dir $(UA_GOROH_DIR)
+
+ua-stress-compare:
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --compare $(UA_GOROH_DIR)/goroh_cache.json \
+	    --out-dir $(UA_GOROH_DIR)
+
+ua-stress-apply:
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --apply $(UA_GOROH_DIR)/goroh_mismatches.tsv
+
+ua-stress: ua-stress-extract ua-stress-fetch ua-stress-compare
+	@echo ""
+	@echo "Review $(UA_GOROH_DIR)/goroh_mismatches.tsv"
+	@echo "Fill in the 'correction' column, then run: make ua-stress-apply"
+
+ua-stress-wizard:
+	$(PYTHON) $(UA_INSPECT)/run_stress_verification.py \
+	    --out-dir $(UA_GOROH_DIR)

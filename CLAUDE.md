@@ -136,7 +136,7 @@ before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Ябл�
 |---|---|
 | `domains/ua/anki/sources/yabluko/level-1/` | Яблуко Level 1 PDF (good copy available) |
 | `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 PDF (most existing cards are ch:2.x.x — PDF not yet available) |
-| `domains/ua/anki/notes/lexemes/yabluko-l1/vstup/` | 113 ua_lexeme notes — Вступ batch |
+| `domains/ua/anki/notes/lexemes/yabluko-l1/ch-00/` | 113 ua_lexeme notes — Вступ (= ch-00) |
 | `domains/ua/anki/notes/grammar/` | ua_grammar canonical notes (not yet populated) |
 | `domains/ua/anki/docs/design.md` | Full schema, deck architecture, migration plan |
 | `tools/anki/inspect/survey_ukrainian.py` | AnkiConnect survey script |
