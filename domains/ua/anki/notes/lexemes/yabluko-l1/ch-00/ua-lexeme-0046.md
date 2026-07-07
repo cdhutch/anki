@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0046
   Lemma: му́зика

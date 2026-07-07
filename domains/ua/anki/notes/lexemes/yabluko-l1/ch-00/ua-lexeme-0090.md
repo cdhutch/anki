@@ -13,7 +13,6 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0090
   Lemma: італі́йський

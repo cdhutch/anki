@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0067
   Lemma: фільм

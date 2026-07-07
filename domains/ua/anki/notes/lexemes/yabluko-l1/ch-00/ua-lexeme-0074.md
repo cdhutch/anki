@@ -14,7 +14,6 @@ tags:
 - gender:f
 - pos:country
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0074
   Lemma: Великобрита́нія

@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0036
   Lemma: імʼя́

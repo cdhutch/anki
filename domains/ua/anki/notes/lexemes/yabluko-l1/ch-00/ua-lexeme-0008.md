@@ -14,7 +14,6 @@ tags:
 - gender:f
 - pos:profession
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0008
   Lemma: офіціа́нтка

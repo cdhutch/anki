@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0109
   Lemma: Як Вас зва́ти?

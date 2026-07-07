@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0111
   Lemma: Яка́ Ваша профе́сія?

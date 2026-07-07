@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:interjection
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0105
   Lemma: приві́т

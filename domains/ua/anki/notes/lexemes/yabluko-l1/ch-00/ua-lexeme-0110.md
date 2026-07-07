@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0110
   Lemma: Як спра́ви?

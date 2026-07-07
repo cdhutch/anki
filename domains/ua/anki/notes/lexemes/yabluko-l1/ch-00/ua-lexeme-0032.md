@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0032
   Lemma: впра́ва

@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0064
   Lemma: стіле́ць

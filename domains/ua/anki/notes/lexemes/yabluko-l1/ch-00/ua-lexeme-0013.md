@@ -14,7 +14,6 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0013
   Lemma: співа́к

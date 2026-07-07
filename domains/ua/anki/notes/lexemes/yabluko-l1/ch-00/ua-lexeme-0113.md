@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0113
   Lemma: Скі́льки Вам ро́ків?

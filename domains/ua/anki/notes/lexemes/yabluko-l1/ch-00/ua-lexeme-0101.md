@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:adverb
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0101
   Lemma: норма́льно

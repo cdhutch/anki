@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
-- example:generated
 fields:
   NoteID: ua-lexeme-0056
   Lemma: пра́пор
