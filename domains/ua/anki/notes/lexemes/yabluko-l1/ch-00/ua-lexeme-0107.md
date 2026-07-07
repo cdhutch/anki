@@ -11,7 +11,6 @@ tags:
 - textbook:яблуко
 - ch:1.0
 - pos:phrase
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0107

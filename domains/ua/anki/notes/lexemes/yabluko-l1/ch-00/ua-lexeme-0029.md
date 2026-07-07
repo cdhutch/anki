@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:noun
 - gender:m
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0029
@@ -23,7 +22,7 @@ fields:
   EN_Gloss: evening
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: gen.sg. вечора (stem vowel і→о in oblique cases)
+  IrregularForms: gen.sg. ве́чора (stem vowel і→о in oblique cases)
   VerbMotion_Pair: ''
   ConfusableSet: ра́нок
   CrossLang_Analog: ''
@@ -35,6 +34,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/вечір
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

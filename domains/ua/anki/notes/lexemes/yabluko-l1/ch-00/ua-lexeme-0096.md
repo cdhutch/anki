@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:adjective
 - pos:nationality-adj
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0096
@@ -35,6 +34,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/український
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

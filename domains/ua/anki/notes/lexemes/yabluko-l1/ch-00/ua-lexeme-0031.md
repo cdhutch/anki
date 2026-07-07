@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:noun
 - gender:n
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0031
@@ -23,7 +22,7 @@ fields:
   EN_Gloss: window
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: gen.pl. вікон (zero ending)
+  IrregularForms: gen.pl. ві́кон (zero ending)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''
@@ -35,6 +34,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/вікно
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

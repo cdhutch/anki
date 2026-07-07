@@ -106,8 +106,15 @@ def stressed_vowel_index(word: str) -> int | None:
 
 
 def normalize_bare(s: str) -> str:
-    """Strip stress marks and lowercase for bare comparison."""
-    return strip_stress(s).lower().strip()
+    """Strip stress marks, apostrophes, and lowercase for bare comparison.
+
+    Strips both U+02BC (MODIFIER LETTER APOSTROPHE, used in our notes) and
+    ASCII apostrophe (used by Горох and left after _clean_form processing) so
+    that e.g. stored ``компʼютер`` matches Горох's ``компютер``.
+    """
+    s = strip_stress(s)
+    s = s.replace(APOSTROPHE, "").replace("'", "")
+    return s.lower().strip()
 
 
 def compare_stress(stored: str, goroh_candidates: list[str]) -> tuple[str, str]:
@@ -138,6 +145,12 @@ def compare_stress(stored: str, goroh_candidates: list[str]) -> tuple[str, str]:
 
     if matches_idx:
         if len(matching) > 1:
+            # Check whether all candidates share the same stress position.
+            # Горох often lists both a capitalised and a lowercase form
+            # (Ку́хар / ку́хар) — that is not genuine variable stress.
+            unique_positions = {stressed_vowel_index(g) for g in matching}
+            if len(unique_positions) == 1:
+                return "ok", matches_idx[0]
             # Multiple valid positions in Горох; ours is one of them —
             # surface as 'variable' so the user can confirm the choice
             return "variable", " / ".join(matching)
@@ -388,11 +401,39 @@ def parse_goroh_html(html: str) -> dict:
                     all_forms.append(tok)
                     seen_forms.add(tok)
 
+    # ── Full-page scan ────────────────────────────────────────────────────────
+    # Strip all HTML tags and collect every Ukrainian token with U+0301.
+    # This catches invariable words (adverbs, particles) whose stressed form
+    # appears in the page heading or intro text but not in a declension table.
+    body = re.sub(r"<[^>]+>", " ", html)
+    body = html_module.unescape(body)
+    for tok in re.split(r"[\s,/()\[\]«»\"'`]+", body):
+        tok = tok.strip(".;:!?—–")
+        if STRESS in tok and tok not in seen_forms and re.search(r"[а-яА-ЯіІїЇєЄ]", tok):
+            all_forms.append(tok)
+            seen_forms.add(tok)
+
     return {
         "rows": rows,
         "allForms": all_forms,
         "notFound": len(rows) == 0 and len(all_forms) == 0,
     }
+
+
+def goroh_url(bare_lemma: str, section: str = "Словозміна") -> str:
+    """
+    Build a Горох URL for a bare (unstressed) lemma.
+
+    section: "Словозміна" (default, declension table) or "Тлумачення" (definition,
+             used as fallback for invariable/compound words absent from Словозміна).
+
+    Converts U+02BC (MODIFIER LETTER APOSTROPHE) to ASCII apostrophe so that
+    words like компʼютер and сімʼя resolve correctly on goroh.pp.ua.
+    """
+    from urllib.parse import quote
+    _path = quote(section, safe="")
+    lemma_for_url = bare_lemma.replace(APOSTROPHE, "'")
+    return f"https://goroh.pp.ua/{_path}/{quote(lemma_for_url, safe='')}"
 
 
 def cmd_fetch(lemmas: list[str], out_dir: Path, delay: float = 0.15):
@@ -402,10 +443,15 @@ def cmd_fetch(lemmas: list[str], out_dir: Path, delay: float = 0.15):
     """
     import time
     import urllib.request
-    from urllib.parse import quote
 
-    # Percent-encode the Cyrillic path segment and lemma
-    _path = quote("Словозміна", safe="")
+    # ANSI colours (no external deps; degrade gracefully if not a tty)
+    _tty = sys.stdout.isatty()
+    def _c(text: str, code: str) -> str:
+        return f"\033[{code}m{text}\033[0m" if _tty else text
+    GREEN  = "32"
+    YELLOW = "33"
+    RED    = "31"
+    DIM    = "2"
 
     results: dict = {}
     headers = {
@@ -414,20 +460,68 @@ def cmd_fetch(lemmas: list[str], out_dir: Path, delay: float = 0.15):
         "Accept-Language": "uk,en-US;q=0.9",
     }
 
-    print(f"Fetching {len(lemmas)} Горох pages…")
+    counts = {"ok": 0, "not_found": 0, "error": 0}
+    not_found_lemmas: list[str] = []
+    error_lemmas: list[tuple[str, str]] = []
+    width = len(str(len(lemmas)))
+    print(f"Fetching {len(lemmas)} Горох pages…\n")
+
     for i, lemma in enumerate(lemmas):
-        url = f"https://goroh.pp.ua/{_path}/{quote(lemma)}"
+        url = goroh_url(lemma)
+        n = f"{i + 1:{width}}/{len(lemmas)}"
+
         try:
             req = urllib.request.Request(url, headers=headers)
             with urllib.request.urlopen(req, timeout=12) as resp:
                 html = resp.read().decode("utf-8", errors="replace")
-            results[lemma] = {"data": parse_goroh_html(html), "error": None}
+            parsed = parse_goroh_html(html)
+            results[lemma] = {"data": parsed, "error": None}
+
+            if parsed.get("notFound"):
+                # Тлумачення fallback: covers invariable/compound words absent
+                # from Словозміна (e.g. медбрат, some adverbs)
+                tlum_url = goroh_url(lemma, section="Тлумачення")
+                try:
+                    req2 = urllib.request.Request(tlum_url, headers=headers)
+                    with urllib.request.urlopen(req2, timeout=12) as resp2:
+                        html2 = resp2.read().decode("utf-8", errors="replace")
+                    parsed2 = parse_goroh_html(html2)
+                except Exception:
+                    parsed2 = {"rows": [], "allForms": [], "notFound": True}
+
+                if not parsed2.get("notFound"):
+                    results[lemma] = {"data": parsed2, "error": None,
+                                      "source": "Тлумачення"}
+                    counts["ok"] += 1
+                    paradigm2 = parse_goroh_paradigm(parsed2.get("rows", []),
+                                                     parsed2.get("allForms", []))
+                    nom_sg2 = paradigm2.get("nom.sg", [])
+                    preview2 = " / ".join(nom_sg2[:2]) if nom_sg2 else \
+                               (paradigm2.get("all_forms", [""])[0])
+                    hint2 = f"→ {preview2}" if preview2 else "(via Тлумачення)"
+                    CYAN = "36"
+                    print(f"  {n}  {_c('~', CYAN)}  {lemma}  "
+                          f"{_c(hint2, DIM)}  {_c('(Тлумачення)', CYAN)}")
+                else:
+                    counts["not_found"] += 1
+                    not_found_lemmas.append(lemma)
+                    print(f"  {n}  {_c('?', YELLOW)}  {lemma}  {_c('(not found)', DIM)}")
+            else:
+                counts["ok"] += 1
+                paradigm = parse_goroh_paradigm(parsed.get("rows", []),
+                                                parsed.get("allForms", []))
+                # Show nom.sg (primary citation form), or first allForms token
+                nom_sg = paradigm.get("nom.sg", [])
+                preview = " / ".join(nom_sg[:2]) if nom_sg else \
+                          (paradigm.get("all_forms", [""])[0])
+                hint = f"→ {preview}" if preview else f"({len(parsed.get('allForms', []))} forms)"
+                print(f"  {n}  {_c('✓', GREEN)}  {lemma}  {_c(hint, DIM)}")
+
         except Exception as e:
             results[lemma] = {"data": None, "error": str(e)}
-            print(f"  WARN: {lemma} — {e}", file=sys.stderr)
-
-        if (i + 1) % 25 == 0 or (i + 1) == len(lemmas):
-            print(f"  {i + 1}/{len(lemmas)} done")
+            counts["error"] += 1
+            error_lemmas.append((lemma, str(e)))
+            print(f"  {n}  {_c('✗', RED)}  {lemma}  {_c(str(e), RED)}")
 
         if delay and i < len(lemmas) - 1:
             time.sleep(delay)
@@ -436,10 +530,23 @@ def cmd_fetch(lemmas: list[str], out_dir: Path, delay: float = 0.15):
     cache_path.write_text(
         json.dumps(results, ensure_ascii=False, indent=2), encoding="utf-8"
     )
-    errors = sum(1 for v in results.values() if v.get("error"))
-    not_found = sum(1 for v in results.values()
-                    if v.get("data") and v["data"].get("notFound"))
-    print(f"\nFetched: {len(results)} lemmas, {errors} errors, {not_found} not found")
+
+    n_ok  = counts["ok"]
+    n_nf  = counts["not_found"]
+    n_err = counts["error"]
+    bar   = "─" * 50
+    print()
+    print(bar)
+    print(f"  {_c(f'✓ {n_ok:>3} fetched', GREEN)}")
+    if n_nf:
+        print(f"  {_c(f'? {n_nf:>3} not found', YELLOW)}")
+        for w in not_found_lemmas:
+            print(f"      {_c(w, YELLOW)}")
+    if n_err:
+        print(f"  {_c(f'✗ {n_err:>3} errors', RED)}")
+        for w, msg in error_lemmas:
+            print(f"      {_c(w, RED)}  {_c(msg, DIM)}")
+    print(bar)
     print(f"Wrote: {cache_path}")
     return cache_path
 
@@ -595,6 +702,7 @@ def cmd_compare(cache_path: Path, out_dir: Path):
     # Build paradigm index: bare_lemma → slot → [stressed_form, ...]
     paradigm_index: dict[str, dict[str, list[str]]] = {}
     fetch_errors: set[str] = set()
+    goroh_not_found: set[str] = set()   # successfully fetched but Горох has no entry
 
     for bare, entry in raw_cache.items():
         if entry.get("error"):
@@ -603,6 +711,7 @@ def cmd_compare(cache_path: Path, out_dir: Path):
             continue
         data = entry.get("data") or {}
         if data.get("notFound"):
+            goroh_not_found.add(bare)
             paradigm_index[bare] = {}
             continue
         paradigm_index[bare] = parse_goroh_paradigm(
@@ -631,6 +740,15 @@ def cmd_compare(cache_path: Path, out_dir: Path):
                 status, goroh_detail = "fetch_error", ""
             elif lookup not in paradigm_index:
                 status, goroh_detail = "no_cache", ""
+            elif vowel_count(stored) <= 1:
+                # Monosyllables: Горох omits stress marks from the base form, so
+                # it never appears in allForms and compare_stress would return
+                # not_found falsely.  If the page was fetched successfully, stress
+                # of a monosyllabic form is trivially correct.
+                if lookup in goroh_not_found:
+                    status, goroh_detail = "not_found", ""
+                else:
+                    status, goroh_detail = "monosyllable", ""
             else:
                 paradigm = paradigm_index[lookup]
                 # Try exact slot, fall back to all_forms
@@ -750,8 +868,19 @@ def cmd_apply(mismatches_path: Path, dry_run: bool):
         # Remove stress:unverified and update Source_Note if all forms resolved
         if info["all_ok"]:
             text = _remove_tag(text, "stress:unverified")
-            text = _set_field(text, "Source_Note",
-                              f"verified {today} via Горох")
+            # Distinguish notes where some forms were confirmed-as-is (not in Горох)
+            confirmed_not_found = [
+                r for r in info["rows"]
+                if r["status"] == "not_found"
+                and r.get("correction", "").strip() == r["stored"].strip()
+            ]
+            if confirmed_not_found:
+                forms_str = ", ".join(r["stored"] for r in confirmed_not_found)
+                source_note = (f"verified {today} via Горох "
+                               f"(stress confirmed by derivation: {forms_str})")
+            else:
+                source_note = f"verified {today} via Горох"
+            text = _set_field(text, "Source_Note", source_note)
             changed = True
 
         if changed:
@@ -770,10 +899,8 @@ def cmd_apply(mismatches_path: Path, dry_run: bool):
         print(f"\nPatched {applied_notes} notes.")
         if applied_notes:
             print("Next:")
-            print("  python -m tools.anki.cnsf_canonicalize --write "
-                  "domains/ua/anki/notes/lexemes/yabluko-l1/vstup/*.md")
-            print("  python tools/anki/sync/ua_lexeme_import.py "
-                  "domains/ua/anki/notes/lexemes/yabluko-l1/vstup/")
+            print("  make ua-batch-fix BATCH=yabluko-l1/ch-00")
+            print("  make ua-batch     BATCH=yabluko-l1/ch-00")
 
 
 # ── Low-level text patching ───────────────────────────────────────────────────

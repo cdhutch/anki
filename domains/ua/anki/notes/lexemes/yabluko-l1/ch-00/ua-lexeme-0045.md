@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:noun
 - gender:f
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0045
@@ -35,6 +34,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/мова
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

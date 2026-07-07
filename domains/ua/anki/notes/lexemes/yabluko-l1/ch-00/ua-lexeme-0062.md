@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:noun
 - gender:f
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0062
@@ -23,7 +22,7 @@ fields:
   EN_Gloss: family
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: gen.pl. сімей
+  IrregularForms: gen.pl. сіме́й
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''
@@ -35,6 +34,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/сімʼя
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

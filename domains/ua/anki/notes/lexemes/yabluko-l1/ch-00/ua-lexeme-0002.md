@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - pos:profession
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0002
@@ -23,7 +22,7 @@ fields:
   Perfective: ''
   EN_Gloss: businessman
   Govt_Case: ''
-  CounterpartForm: 'f: бізнесме́нка'
+  CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
@@ -36,6 +35,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/бізнесмен
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

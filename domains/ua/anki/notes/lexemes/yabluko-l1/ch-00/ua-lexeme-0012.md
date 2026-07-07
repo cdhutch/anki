@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - pos:profession
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0012
@@ -36,6 +35,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/продавець
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - pos:profession
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0020
@@ -24,7 +23,7 @@ fields:
   EN_Gloss: teacher
   Govt_Case: ''
   CounterpartForm: 'f: вчи́телька / учи́телька'
-  IrregularForms: gen.pl. вчителів (stress shifts)
+  IrregularForms: gen.pl. вчителі́в (stress shifts)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''
@@ -36,6 +35,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/вчитель
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

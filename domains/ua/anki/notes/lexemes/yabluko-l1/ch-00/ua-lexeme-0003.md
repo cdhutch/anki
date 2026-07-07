@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - pos:profession
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0003
@@ -24,7 +23,7 @@ fields:
   EN_Gloss: driver
   Govt_Case: ''
   CounterpartForm: 'f: воді́йка'
-  IrregularForms: gen.pl. воді́їв
+  IrregularForms: gen.pl. водії́в
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''
@@ -36,6 +35,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/водій
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

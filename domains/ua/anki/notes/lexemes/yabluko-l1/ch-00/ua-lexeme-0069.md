@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:noun
 - gender:n
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0069
@@ -23,7 +22,7 @@ fields:
   EN_Gloss: number
   Govt_Case: ''
   CounterpartForm: ''
-  IrregularForms: gen.pl. чисел (fleeting е, stress shifts)
+  IrregularForms: gen.pl. чи́сел (fleeting е, stress shifts)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   CrossLang_Analog: ''
@@ -35,6 +34,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/число
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

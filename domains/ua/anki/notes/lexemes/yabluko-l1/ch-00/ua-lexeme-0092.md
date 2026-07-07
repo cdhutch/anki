@@ -12,7 +12,6 @@ tags:
 - ch:1.0
 - pos:adjective
 - pos:nationality-adj
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0092
@@ -22,7 +21,7 @@ fields:
   Perfective: ''
   EN_Gloss: German (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: ні́мецький'
+  CounterpartForm: 'm: німе́цький'
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
@@ -35,6 +34,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/німецький
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

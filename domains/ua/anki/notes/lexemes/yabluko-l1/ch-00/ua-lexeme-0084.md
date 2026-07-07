@@ -13,7 +13,6 @@ tags:
 - pos:proper-noun
 - gender:f
 - pos:country
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0084
@@ -36,6 +35,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/Україна
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 

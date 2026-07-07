@@ -106,6 +106,13 @@ help:
 	@echo "  ua-stress-apply     Apply corrections from goroh_mismatches.tsv"
 	@echo "  ua-stress-wizard    Interactive guided wizard (extract→fetch→compare→apply)"
 	@echo ""
+	@echo "Ukrainian (UA) — example generation"
+	@echo "  ua-generate-examples BATCH=…  Generate UA_Example/EN_Example via Anthropic API"
+	@echo "                                 Optional: LIMIT=N (default 10)"
+	@echo ""
+	@echo "Ukrainian (UA) — tests"
+	@echo "  ua-test             Run pytest suite for UA inspect scripts"
+	@echo ""
 	@echo "Core (aggregate)"
 	@echo "  core                Export and sync all B737::Core decks to Anki"
 	@echo "  core-fix            Canonicalize all B737::Core note files"
@@ -552,13 +559,16 @@ sve-%:
 # -------------------------------------------------------------------
 UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
 UA_INSPECT      := tools/anki/inspect
+UA_GENERATE     := tools/anki/generate
 UA_GOROH_DIR    := /tmp/goroh
+UA_EXAMPLES_LIMIT ?= 10
 
 .PHONY: ua-setup
 .PHONY: ua-batch ua-batch-check ua-batch-fix
 .PHONY: ua-book  ua-book-check  ua-book-fix
 .PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
+.PHONY: ua-generate-examples
 
 # ── Note type setup ──────────────────────────────────────────────────────────
 
@@ -641,3 +651,20 @@ ua-stress: ua-stress-extract ua-stress-fetch ua-stress-compare
 ua-stress-wizard:
 	$(PYTHON) $(UA_INSPECT)/run_stress_verification.py \
 	    --out-dir $(UA_GOROH_DIR)
+
+# ── Tests ────────────────────────────────────────────────────────────────────
+
+.PHONY: ua-test
+
+ua-test:
+	$(PYTHON) -m pytest tests/ua/ -v
+
+# ── Example generation ────────────────────────────────────────────────────────
+# Requires: ANTHROPIC_API_KEY env var + `pip install anthropic`
+# Usage:    make ua-generate-examples BATCH=yabluko-l1/ch-00 [LIMIT=10]
+
+ua-generate-examples:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-generate-examples BATCH=<book>/ch-<NN> [LIMIT=10]"; exit 1; }
+	$(PYTHON) $(UA_GENERATE)/ua_generate_examples.py \
+	    --batch $(UA_LEXEME_ROOT)/$(BATCH) \
+	    --limit $(UA_EXAMPLES_LIMIT)

@@ -34,9 +34,10 @@ This repo builds and maintains Anki flashcard decks for two domains:
 **Branch:** `feature/ua-domain` (based off `main`)
 
 **Status (as of 2026-07-06):** Вступ lexeme batch complete. 113 notes live in Anki.
-Stress marks verified against Горох; 9 corrections applied. All notes still tagged
-`stress:unverified` pending a full re-import after user review of outstanding edge cases.
-`Source_URL` / `Source_Note` fields added to schema; backfill script needed for existing 113 notes.
+Stress verification pass complete: all 113 notes verified against Горох; 9 stress corrections
+applied (воді́їв, письме́нниця, вчителів, вечора, вікон, сімей, чисел, іта́лійський, ні́мецький);
+`stress:unverified` tag removed from all notes; reimported.
+`Source_URL` / `Source_Note` fields added to schema and backfilled on all 113 notes.
 Phase 2 note types (`UA_Grammar`, `UA_Verb`) fully specified in design.md — ready to author.
 
 ### Current Anki state
@@ -100,29 +101,23 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 | `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
 | `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
 | `tools/anki/inspect/backfill_source_url.py` | ✓ done | Add Source_URL + Source_Note to all lexeme notes |
+| `tools/anki/inspect/verify_stress_goroh.py` | ✓ done | Stress verification vs Горох; Вступ pass complete |
+| `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 
 ### Future work
 
-**Source URL backfill** — run `tools/anki/inspect/backfill_source_url.py` to inject
-`Source_URL: https://goroh.pp.ua/Словозміна/<bare_lemma>` into all 113 Вступ notes.
-After backfill, update `setup_ua_note_types.py` to include the two new fields, then
-re-run the stress verification + import pipeline.
+**LLM example sentence generation** — `tools/anki/generate/ua_generate_examples.py` ✓ written.
+Run with `make ua-generate-examples BATCH=yabluko-l1/ch-00 [LIMIT=10]`.
+Requires `ANTHROPIC_API_KEY` env var and `pip install anthropic`.
+Generated examples tagged `example:generated` until reviewed; then remove tag.
 
-**LLM example sentence generation** — highest value next step for card quality.
-Use Claude API (Haiku for cost) to populate `UA_Example` and `EN_Example` for notes
-where these are blank. Inputs per note: `Lemma`, `PartOfSpeech`, `EN_Gloss`, `Govt_Case`.
-Prompt must include: Galician/Lviv dialect constraint, apostrophe = U+02BC (ʼ),
-no stress marks in output (students type without accents). One natural sentence +
-English translation per note. Tag generated examples `example:generated` until reviewed.
-Script: `tools/anki/generate/ua_generate_examples.py`.
-
-**Stress verification script** (productionise the session workflow above).
-`tools/anki/inspect/verify_stress_goroh.py` — reads all notes tagged `stress:unverified`,
-drives Горох via Claude in Chrome, outputs `(note_id, lemma_current, lemma_goroh)` for
-mismatches only. After user review and correction, remove `stress:unverified` tags and
-re-import with `ua_lexeme_import.py`.
+Alternative: **extract examples from the Яблуко textbook PDF directly** — higher
+authenticity than generated examples and no hallucination risk. The Level 1 PDF is
+at `domains/ua/anki/sources/yabluko/level-1/`. Would require OCR/extraction tooling
+and per-lemma lookup; feasible as a future enrichment pass to replace or supplement
+generated examples.
 
 **Unit 1–12 lexeme generation** — follow the pattern of `gen_ua_lexemes_vstup.py`,
 extracting vocab from Яблуко appendix pages 220–237 unit by unit.

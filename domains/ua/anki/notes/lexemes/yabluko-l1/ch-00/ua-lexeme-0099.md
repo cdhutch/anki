@@ -11,7 +11,6 @@ tags:
 - textbook:яблуко
 - ch:1.0
 - pos:adverb
-- stress:unverified
 - status:verified
 fields:
   NoteID: ua-lexeme-0099
@@ -34,6 +33,6 @@ fields:
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/добре
-  Source_Note: ''
+  Source_Note: verified 2026-07-06 via Горох
 ---
 
