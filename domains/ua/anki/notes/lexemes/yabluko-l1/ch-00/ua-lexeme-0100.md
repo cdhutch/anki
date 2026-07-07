@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:adverb
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0100
   Lemma: непога́но
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: непогано
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вона непогано малює, але хоче вчитися більше.
+  EN_Example: She draws not badly, but wants to study more.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

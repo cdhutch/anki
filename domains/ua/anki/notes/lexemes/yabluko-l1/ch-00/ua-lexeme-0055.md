@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0055
   Lemma: підру́чник
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: підручник
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Відкрийте підручник на сторінці десять.
+  EN_Example: Open the textbook to page ten.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0029
   Lemma: ве́чір
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вечір
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Увечері ми любимо гуляти у парку.
+  EN_Example: In the evening we like to walk in the park.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

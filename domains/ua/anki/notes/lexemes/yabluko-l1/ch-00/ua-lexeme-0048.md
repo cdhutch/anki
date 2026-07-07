@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0048
   Lemma: ніч
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: ніч
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вночі вулиці міста стають тихими.
+  EN_Example: At night the city streets become quiet.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

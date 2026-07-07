@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0088
   Lemma: брази́льський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: бразильський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вони танцюють бразильський танець самбу.
+  EN_Example: They dance the Brazilian dance samba.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

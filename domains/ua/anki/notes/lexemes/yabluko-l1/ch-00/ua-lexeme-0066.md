@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0066
   Lemma: ува́га
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: увага
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Увага! Зараз починається урок.
+  EN_Example: Attention! The lesson is about to begin.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

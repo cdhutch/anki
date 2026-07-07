@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0071
   Lemma: Австра́лія
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Австралія
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Мій друг живе в Австралії вже три роки.
+  EN_Example: My friend has been living in Australia for three years.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

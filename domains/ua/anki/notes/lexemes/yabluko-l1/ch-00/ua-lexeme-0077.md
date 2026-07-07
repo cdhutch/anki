@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0077
   Lemma: Іта́лія
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Італія
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він мріє побувати в Італії й побачити Рим.
+  EN_Example: He dreams of visiting Italy and seeing Rome.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0065
   Lemma: сторі́нка
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: сторінка
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Відкрийте підручник на сторінці двадцять.
+  EN_Example: Open the textbook to page twenty.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

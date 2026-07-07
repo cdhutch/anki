@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:adverb
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0101
   Lemma: норма́льно
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: нормально
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Як справи? — Нормально, дякую.
+  EN_Example: — How are things? — Fine, thanks.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

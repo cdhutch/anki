@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0054
   Lemma: піані́но
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: піаніно
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Моя сестра грає на піаніно щовечора.
+  EN_Example: My sister plays the piano every evening.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

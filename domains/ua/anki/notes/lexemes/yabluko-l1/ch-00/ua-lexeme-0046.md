@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0046
   Lemma: му́зика
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: музика
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він слухає музику кожного вечора.
+  EN_Example: He listens to music every evening.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

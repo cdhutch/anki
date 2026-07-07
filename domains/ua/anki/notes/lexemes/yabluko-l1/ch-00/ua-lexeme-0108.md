@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0108
   Lemma: На добра́ніч
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: На добраніч
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — На добраніч! — Солодких снів!
+  EN_Example: — Good night! — Sweet dreams!
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

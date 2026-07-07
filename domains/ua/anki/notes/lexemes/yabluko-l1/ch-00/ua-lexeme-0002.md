@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0002
   Lemma: бізнесме́н
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: бізнесмен
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Мій батько — успішний бізнесмен.
+  EN_Example: My father is a successful businessman.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

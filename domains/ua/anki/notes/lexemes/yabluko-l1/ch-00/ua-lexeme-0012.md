@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0012
   Lemma: продаве́ць
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: продавець
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Продавець показує мені нові товари.
+  EN_Example: The salesperson is showing me new goods.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

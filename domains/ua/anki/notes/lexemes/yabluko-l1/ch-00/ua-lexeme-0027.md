@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0027
   Lemma: буди́нок
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: будинок
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми живемо у великому будинку на цій вулиці.
+  EN_Example: We live in a large building on this street.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

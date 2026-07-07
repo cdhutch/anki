@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0041
   Lemma: краї́на
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: країна
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Україна — велика і красива країна.
+  EN_Example: Ukraine is a large and beautiful country.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

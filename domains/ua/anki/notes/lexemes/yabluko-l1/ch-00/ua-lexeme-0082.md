@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0082
   Lemma: Росі́я
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Росія
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Москва є столицею Росії.
+  EN_Example: Moscow is the capital of Russia.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

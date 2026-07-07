@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0070
   Lemma: цирк
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: цирк
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми з дітьми ходили до цирку у суботу.
+  EN_Example: We went to the circus with the children on Saturday.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

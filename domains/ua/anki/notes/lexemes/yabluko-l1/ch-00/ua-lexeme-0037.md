@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0037
   Lemma: кварти́ра
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: квартира
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми знімаємо квартиру у центрі міста.
+  EN_Example: We rent an apartment in the city centre.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

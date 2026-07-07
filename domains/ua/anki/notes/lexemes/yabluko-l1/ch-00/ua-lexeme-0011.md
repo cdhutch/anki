@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0011
   Lemma: полі́тик
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: політик
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Молодий політик виступає по телебаченню.
+  EN_Example: The young politician speaks on television.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

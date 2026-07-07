@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0084
   Lemma: Украї́на
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Україна
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Україна — незалежна держава у серці Європи.
+  EN_Example: Ukraine is an independent state in the heart of Europe.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

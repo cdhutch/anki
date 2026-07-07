@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0090
   Lemma: італі́йський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: італійський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він любить італійське кіно та музику.
+  EN_Example: He loves Italian cinema and music.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

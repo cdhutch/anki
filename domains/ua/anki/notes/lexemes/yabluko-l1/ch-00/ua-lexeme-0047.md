@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0047
   Lemma: ніж
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: ніж
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Кухар ріже хліб гострим ножем.
+  EN_Example: The cook cuts bread with a sharp knife.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0112
   Lemma: Яки́й Ваш телефо́н?
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Який Ваш телефон?
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Який Ваш телефон? — 050-123-45-67.
+  EN_Example: — What is your phone number? — 050-123-45-67.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

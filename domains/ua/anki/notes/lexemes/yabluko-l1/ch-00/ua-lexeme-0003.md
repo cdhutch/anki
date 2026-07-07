@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0003
   Lemma: воді́й
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: водій
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Наш водій добре знає це місто.
+  EN_Example: Our driver knows this city well.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

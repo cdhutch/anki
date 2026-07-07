@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0049
   Lemma: оліве́ць
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: олівець
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Напишіть своє прізвище олівцем на першій сторінці.
+  EN_Example: Write your surname in pencil on the first page.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0067
   Lemma: фільм
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: фільм
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Учора ввечері ми дивилися цікавий фільм.
+  EN_Example: Yesterday evening we watched an interesting film.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

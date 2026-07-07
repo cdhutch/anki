@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0078
   Lemma: Кана́да
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Канада
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Її сестра переїхала до Канади два роки тому.
+  EN_Example: Her sister moved to Canada two years ago.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0022
   Lemma: абе́тка
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: абетка
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Діти вчать абетку вже у першому класі.
+  EN_Example: Children learn the alphabet as early as first grade.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

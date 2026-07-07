@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0069
   Lemma: число́
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: число
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Напишіть число, місяць і рік свого народження.
+  EN_Example: Write the number, month and year of your birth.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

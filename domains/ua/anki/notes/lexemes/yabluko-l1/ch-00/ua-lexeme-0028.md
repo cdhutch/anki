@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0028
   Lemma: бу́ква
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: буква
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Напишіть першу букву свого імені тут.
+  EN_Example: Write the first letter of your name here.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0110
   Lemma: Як спра́ви?
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Як справи?
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Привіт! Як справи? — Все добре, дякую.
+  EN_Example: — Hi! How are things? — Everything is fine, thanks.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

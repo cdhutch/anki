@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0030
   Lemma: вік
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вік
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: У якому віці діти йдуть до школи?
+  EN_Example: At what age do children go to school?
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0087
   Lemma: англі́йський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: англійський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Англійська мова дуже поширена у світі.
+  EN_Example: The English language is very widespread in the world.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

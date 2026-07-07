@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0092
   Lemma: німе́цький
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: німецький
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він їде на навчання у німецький університет.
+  EN_Example: He is going to study at a German university.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

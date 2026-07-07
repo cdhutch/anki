@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0050
   Lemma: о́пера
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: опера
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми були на опері у Львівському театрі.
+  EN_Example: We were at the opera at the Lviv theatre.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

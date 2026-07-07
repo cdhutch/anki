@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0052
   Lemma: парасо́ля
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: парасоля
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вона взяла парасолю, бо надворі дощ.
+  EN_Example: She took an umbrella because it is raining outside.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

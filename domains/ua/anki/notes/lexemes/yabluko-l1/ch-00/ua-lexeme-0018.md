@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0018
   Lemma: худо́жник
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: художник
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Художник малює красивий краєвид у парку.
+  EN_Example: The artist is painting a beautiful landscape in the park.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

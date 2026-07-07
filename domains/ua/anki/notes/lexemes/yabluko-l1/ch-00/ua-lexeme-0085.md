@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0085
   Lemma: Фра́нція
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Франція
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми хочемо поїхати до Франції і побачити Париж.
+  EN_Example: We want to go to France and see Paris.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

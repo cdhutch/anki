@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0106
   Lemma: До поба́чення
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: До побачення
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — До побачення! — До побачення, до завтра!
+  EN_Example: — Goodbye! — Goodbye, see you tomorrow!
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

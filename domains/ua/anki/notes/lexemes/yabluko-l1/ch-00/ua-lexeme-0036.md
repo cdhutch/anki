@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0036
   Lemma: імʼя́
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: імʼя
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Моє імʼя — Тарас, я з Львова.
+  EN_Example: My name is Taras, I am from Lviv.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

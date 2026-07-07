@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0095
   Lemma: туре́цький
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: турецький
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Нам подарували красивий турецький килим.
+  EN_Example: We were given a beautiful Turkish carpet.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

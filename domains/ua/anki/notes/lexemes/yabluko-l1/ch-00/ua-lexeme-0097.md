@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0097
   Lemma: францу́зький
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: французький
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Я вчу французьку мову вже два роки.
+  EN_Example: I have been learning the French language for two years.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

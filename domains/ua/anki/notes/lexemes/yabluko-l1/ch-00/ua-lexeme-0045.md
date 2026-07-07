@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0045
   Lemma: мо́ва
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: мова
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Я вивчаю українську мову вже рік.
+  EN_Example: I have been studying the Ukrainian language for a year already.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

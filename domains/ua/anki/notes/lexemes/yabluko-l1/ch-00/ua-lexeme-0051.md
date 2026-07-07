@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0051
   Lemma: о́фіс
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: офіс
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Їхній офіс знаходиться у центрі міста.
+  EN_Example: Their office is located in the city centre.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

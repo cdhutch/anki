@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0091
   Lemma: кита́йський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: китайський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: У нашому місті є китайський ресторан.
+  EN_Example: In our city there is a Chinese restaurant.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0042
   Lemma: малю́нок
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: малюнок
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Дитина намалювала гарний малюнок олівцями.
+  EN_Example: The child drew a beautiful picture with pencils.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

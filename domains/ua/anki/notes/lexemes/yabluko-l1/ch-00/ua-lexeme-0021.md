@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0021
   Lemma: школя́р
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: школяр
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Школяр іде до школи з великим портфелем.
+  EN_Example: The schoolboy goes to school with a large schoolbag.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

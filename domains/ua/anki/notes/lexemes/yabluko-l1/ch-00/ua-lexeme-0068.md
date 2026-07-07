@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0068
   Lemma: фі́рма
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: фірма
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він працює у великій міжнародній фірмі.
+  EN_Example: He works at a large international company.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

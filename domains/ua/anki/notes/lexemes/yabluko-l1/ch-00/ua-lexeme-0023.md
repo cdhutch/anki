@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0023
   Lemma: алфа́віт
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: алфавіт
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: В українському алфавіті тридцять три букви.
+  EN_Example: The Ukrainian alphabet has thirty-three letters.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

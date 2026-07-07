@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0025
   Lemma: анке́та
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: анкета
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Треба заповнити анкету і принести її завтра.
+  EN_Example: You need to fill out the form and bring it tomorrow.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

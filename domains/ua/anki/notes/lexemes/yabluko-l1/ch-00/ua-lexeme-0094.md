@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0094
   Lemma: росі́йський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: російський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він вивчає російську мову в університеті.
+  EN_Example: He studies the Russian language at university.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

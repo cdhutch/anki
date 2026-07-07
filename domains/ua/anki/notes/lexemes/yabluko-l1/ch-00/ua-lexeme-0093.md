@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0093
   Lemma: по́льський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: польський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вона добре розуміє польську мову.
+  EN_Example: She understands the Polish language well.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

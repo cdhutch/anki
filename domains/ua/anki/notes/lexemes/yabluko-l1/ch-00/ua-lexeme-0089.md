@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0089
   Lemma: іспа́нський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: іспанський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Іспанська кухня дуже смачна і різноманітна.
+  EN_Example: Spanish cuisine is very tasty and varied.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0013
   Lemma: співа́к
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: співак
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Цей співак має дуже гарний голос.
+  EN_Example: This singer has a very beautiful voice.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

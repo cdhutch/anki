@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0113
   Lemma: Скі́льки Вам ро́ків?
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Скільки Вам років?
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Скільки Вам років? — Мені тридцять.
+  EN_Example: — How old are you? — I am thirty.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

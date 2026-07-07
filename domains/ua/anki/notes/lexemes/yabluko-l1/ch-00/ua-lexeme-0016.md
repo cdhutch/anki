@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0016
   Lemma: студе́нтка
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: студентка
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Студентка живе в гуртожитку недалеко від університету.
+  EN_Example: The female student lives in a dormitory not far from the university.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

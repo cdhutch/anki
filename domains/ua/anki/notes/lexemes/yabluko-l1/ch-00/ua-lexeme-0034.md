@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0034
   Lemma: завда́ння
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: завдання
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Учитель дає нам нове завдання додому.
+  EN_Example: The teacher gives us a new assignment for homework.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

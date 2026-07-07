@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:interjection
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0105
   Lemma: приві́т
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: привіт
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Привіт! Як твої справи?
+  EN_Example: — Hi! How are you?
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

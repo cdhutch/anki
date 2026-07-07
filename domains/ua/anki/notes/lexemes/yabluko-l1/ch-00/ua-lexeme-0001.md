@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0001
   Lemma: акто́р
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: актор
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Цей актор грає головну роль у новому фільмі.
+  EN_Example: This actor plays the main role in the new film.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0073
   Lemma: Брази́лія
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Бразилія
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Карнавал у Бразилії відомий у всьому світі.
+  EN_Example: The carnival in Brazil is known throughout the world.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

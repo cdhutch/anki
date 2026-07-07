@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:adverb
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0103
   Lemma: ціка́во
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: цікаво
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Цікаво, звідки він так добре знає українську.
+  EN_Example: I wonder where he learned Ukrainian so well.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

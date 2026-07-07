@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:adverb
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0104
   Lemma: чудо́во
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: чудово
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Ти чудово зіграв цю роль!
+  EN_Example: — You played that role wonderfully!
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

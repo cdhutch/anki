@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0072
   Lemma: Аме́рика
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Америка
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вони мріють поїхати до Америки.
+  EN_Example: They dream of going to America.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

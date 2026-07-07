@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0038
   Lemma: кни́жка
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: книжка
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ця книжка дуже цікава і корисна.
+  EN_Example: This book is very interesting and useful.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

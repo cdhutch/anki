@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0061
   Lemma: ру́чка
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: ручка
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Дай мені, будь ласка, ручку написати адресу.
+  EN_Example: Give me a pen, please, to write the address.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

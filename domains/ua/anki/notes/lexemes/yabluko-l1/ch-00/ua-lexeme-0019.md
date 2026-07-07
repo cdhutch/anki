@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0019
   Lemma: юри́ст
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: юрист
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Юрист допоможе вам вирішити цю проблему.
+  EN_Example: The lawyer will help you solve this problem.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

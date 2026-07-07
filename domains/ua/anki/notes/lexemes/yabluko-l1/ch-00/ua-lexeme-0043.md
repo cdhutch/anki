@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0043
   Lemma: метро́
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: метро
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми їдемо до центру на метро.
+  EN_Example: We go to the centre by metro.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

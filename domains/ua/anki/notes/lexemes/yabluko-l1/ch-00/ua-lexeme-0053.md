@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0053
   Lemma: па́рта
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: парта
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Учень сидить за партою біля вікна.
+  EN_Example: The pupil sits at a desk near the window.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

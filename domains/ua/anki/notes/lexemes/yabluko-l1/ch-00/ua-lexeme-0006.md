@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0006
   Lemma: лі́кар
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: лікар
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Лікар каже, що я цілком здоровий.
+  EN_Example: The doctor says I am completely healthy.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

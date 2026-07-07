@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0063
   Lemma: стаття́
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: стаття
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Я прочитав цікаву статтю у газеті.
+  EN_Example: I read an interesting article in the newspaper.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

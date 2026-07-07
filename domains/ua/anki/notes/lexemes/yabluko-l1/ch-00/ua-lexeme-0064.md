@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0064
   Lemma: стіле́ць
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: стілець
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Сядьте, будь ласка, на стілець коло столу.
+  EN_Example: Please sit down on the chair near the table.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

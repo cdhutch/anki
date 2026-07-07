@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0009
   Lemma: пенсіоне́р
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: пенсіонер
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Пенсіонер живе у невеликому будинку біля парку.
+  EN_Example: The retiree lives in a small house near the park.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

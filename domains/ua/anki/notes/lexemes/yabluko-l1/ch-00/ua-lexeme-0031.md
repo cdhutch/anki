@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0031
   Lemma: вікно́
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вікно
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він дивиться у вікно і бачить вулицю.
+  EN_Example: He looks out the window and sees the street.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

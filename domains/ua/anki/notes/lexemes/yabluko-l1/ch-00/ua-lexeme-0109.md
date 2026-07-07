@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0109
   Lemma: Як Вас зва́ти?
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Як Вас звати?
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Як Вас звати? — Мене звати Іван.
+  EN_Example: — What is your name? — My name is Ivan.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0024
   Lemma: адре́са
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: адреса
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Будь ласка, напишіть свою адресу в анкеті.
+  EN_Example: Please write your address in the form.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0039
   Lemma: компʼю́тер
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: компʼютер
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Я працюю на компʼютері цілий день.
+  EN_Example: I work on the computer all day.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0079
   Lemma: Кита́й
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Китай
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Цей товар зроблений у Китаї.
+  EN_Example: This product is made in China.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

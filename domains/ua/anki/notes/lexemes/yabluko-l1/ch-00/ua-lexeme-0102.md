@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:adverb
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0102
   Lemma: пра́вильно
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: правильно
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ти написав усі слова правильно.
+  EN_Example: You wrote all the words correctly.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

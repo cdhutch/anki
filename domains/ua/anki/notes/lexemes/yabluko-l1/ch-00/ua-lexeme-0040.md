@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0040
   Lemma: конве́рт
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: конверт
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він кладе листа в конверт і відправляє.
+  EN_Example: He puts the letter in an envelope and sends it.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

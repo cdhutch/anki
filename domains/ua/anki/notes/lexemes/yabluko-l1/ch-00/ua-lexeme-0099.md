@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:adverb
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0099
   Lemma: до́бре
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: добре
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він добре знає свою роботу.
+  EN_Example: He knows his work well.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

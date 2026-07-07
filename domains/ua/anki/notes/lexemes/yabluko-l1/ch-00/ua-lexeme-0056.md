@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0056
   Lemma: пра́пор
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: прапор
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: На будівлі висить синьо-жовтий прапор.
+  EN_Example: A blue-and-yellow flag hangs on the building.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

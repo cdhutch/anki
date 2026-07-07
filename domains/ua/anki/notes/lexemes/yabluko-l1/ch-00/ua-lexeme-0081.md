@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0081
   Lemma: По́льща
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Польща
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: З Польщі до Львова їхати дуже близько.
+  EN_Example: From Poland to Lviv it is very close.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

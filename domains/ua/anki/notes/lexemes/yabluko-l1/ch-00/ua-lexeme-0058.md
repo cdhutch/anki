@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0058
   Lemma: профе́сія
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: професія
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Яка ваша професія? Я лікар.
+  EN_Example: What is your profession? I am a doctor.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

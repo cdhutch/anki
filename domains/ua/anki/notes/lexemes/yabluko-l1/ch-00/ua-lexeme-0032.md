@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0032
   Lemma: впра́ва
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вправа
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Зробіть вправу номер шість у зошиті.
+  EN_Example: Do exercise number six in your notebook.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

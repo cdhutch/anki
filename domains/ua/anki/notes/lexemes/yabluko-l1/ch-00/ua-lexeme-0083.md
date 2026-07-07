@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0083
   Lemma: Туре́ччина
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Туреччина
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вони відпочивали в Туреччині минулого літа.
+  EN_Example: They vacationed in Turkey last summer.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

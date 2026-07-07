@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0075
   Lemma: Євро́па
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Європа
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Багато українців працюють у різних країнах Європи.
+  EN_Example: Many Ukrainians work in various countries of Europe.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

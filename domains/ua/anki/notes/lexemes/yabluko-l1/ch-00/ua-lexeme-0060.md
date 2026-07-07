@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0060
   Lemma: рік
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: рік
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Цього року він почав вивчати українську мову.
+  EN_Example: This year he started learning the Ukrainian language.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0044
   Lemma: мі́сто
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: місто
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Наше місто велике і дуже красиве.
+  EN_Example: Our city is large and very beautiful.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

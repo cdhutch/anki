@@ -12,6 +12,7 @@ tags:
 - ch:1.0
 - pos:phrase
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0107
   Lemma: Ду́же прие́мно
@@ -27,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Дуже приемно
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: — Мене звати Оля. — Дуже приємно, я Тарас.
+  EN_Example: — My name is Olya. — Very pleased to meet you, I'm Taras.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

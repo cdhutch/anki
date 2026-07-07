@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0007
   Lemma: медсестра́
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: медсестра
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Медсестра допомагає лікарю в лікарні.
+  EN_Example: The nurse helps the doctor in the hospital.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

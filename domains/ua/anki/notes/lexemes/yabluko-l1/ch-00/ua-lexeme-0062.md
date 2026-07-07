@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0062
   Lemma: сімʼя́
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: сімʼя
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Наша сімʼя живе у великій квартирі.
+  EN_Example: Our family lives in a large apartment.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

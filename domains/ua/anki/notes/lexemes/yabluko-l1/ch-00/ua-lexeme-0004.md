@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0004
   Lemma: журналі́ст
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: журналіст
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Журналіст пише статтю для газети.
+  EN_Example: The journalist is writing an article for the newspaper.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

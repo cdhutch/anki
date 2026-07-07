@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0033
   Lemma: ву́лиця
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вулиця
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: На нашій вулиці є гарний маленький парк.
+  EN_Example: On our street there is a lovely little park.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

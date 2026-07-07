@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0096
   Lemma: украї́нський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: український
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він пише пісні українською мовою.
+  EN_Example: He writes songs in the Ukrainian language.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

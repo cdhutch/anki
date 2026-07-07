@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0098
   Lemma: япо́нський
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: японський
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Японська кухня дуже популярна в Україні.
+  EN_Example: Japanese cuisine is very popular in Ukraine.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

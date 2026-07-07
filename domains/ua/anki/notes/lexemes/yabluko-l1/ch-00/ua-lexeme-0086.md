@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0086
   Lemma: Япо́нія
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Японія
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Мій колега приїхав з Японії.
+  EN_Example: My colleague arrived from Japan.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

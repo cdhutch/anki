@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0035
   Lemma: зо́шит
@@ -28,8 +29,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: зошит
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Я пишу відповіді в зошиті олівцем.
+  EN_Example: I write the answers in my notebook with a pencil.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

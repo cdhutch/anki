@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0008
   Lemma: офіціа́нтка
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: офіціантка
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Офіціантка приносить нам меню і посміхається.
+  EN_Example: The waitress brings us the menu and smiles.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

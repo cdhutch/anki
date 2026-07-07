@@ -109,6 +109,8 @@ help:
 	@echo "Ukrainian (UA) — example generation"
 	@echo "  ua-generate-examples BATCH=…  Generate UA_Example/EN_Example via Anthropic API"
 	@echo "                                 Optional: LIMIT=N (default 10)"
+	@echo "  ua-inject-examples BATCH=…    Inject pre-generated examples from JSON file"
+	@echo "                                 Optional: JSON=<path> (default: BATCH/generated_examples.json)"
 	@echo ""
 	@echo "Ukrainian (UA) — tests"
 	@echo "  ua-test             Run pytest suite for UA inspect scripts"
@@ -568,7 +570,7 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-book  ua-book-check  ua-book-fix
 .PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
-.PHONY: ua-generate-examples
+.PHONY: ua-generate-examples ua-inject-examples
 
 # ── Note type setup ──────────────────────────────────────────────────────────
 
@@ -668,3 +670,11 @@ ua-generate-examples:
 	$(PYTHON) $(UA_GENERATE)/ua_generate_examples.py \
 	    --batch $(UA_LEXEME_ROOT)/$(BATCH) \
 	    --limit $(UA_EXAMPLES_LIMIT)
+
+UA_EXAMPLES_JSON ?=
+ua-inject-examples:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-inject-examples BATCH=<book>/ch-<NN> [JSON=<path>]"; exit 1; }
+	$(PYTHON) $(UA_GENERATE)/ua_generate_examples.py \
+	    --batch $(UA_LEXEME_ROOT)/$(BATCH) \
+	    --limit 0 \
+	    --from-json $(if $(UA_EXAMPLES_JSON),$(UA_EXAMPLES_JSON),$(UA_LEXEME_ROOT)/$(BATCH)/generated_examples.json)

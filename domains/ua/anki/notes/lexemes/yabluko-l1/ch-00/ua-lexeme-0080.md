@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0080
   Lemma: Німе́ччина
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: Німеччина
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми вивчаємо німецьку, бо хочемо жити в Німеччині.
+  EN_Example: We are studying German because we want to live in Germany.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

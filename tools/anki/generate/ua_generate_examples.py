@@ -2,19 +2,22 @@
 """
 tools/anki/generate/ua_generate_examples.py
 
-Populate UA_Example / EN_Example fields for UA_Lexeme notes via the Anthropic API.
+Populate UA_Example / EN_Example fields for UA_Lexeme notes.
 
-Usage:
+API mode (default):
     python tools/anki/generate/ua_generate_examples.py \\
         --batch domains/ua/anki/notes/lexemes/yabluko-l1/ch-00 \\
         [--limit 10] [--dry-run] [--model claude-haiku-4-5-20251001]
+    Requirements: pip install anthropic, export ANTHROPIC_API_KEY=sk-ant-...
+
+JSON mode (pre-generated sentences):
+    python tools/anki/generate/ua_generate_examples.py \\
+        --batch domains/ua/anki/notes/lexemes/yabluko-l1/ch-00 \\
+        --from-json domains/ua/anki/notes/lexemes/yabluko-l1/ch-00/generated_examples.json
+    JSON format: {"ua-lexeme-NNNN": {"ua": "...", "en": "..."}, ...}
 
 Writes directly into the note .md files and adds the 'example:generated' tag.
 Notes that already have UA_Example filled are skipped automatically.
-
-Requirements:
-    pip install anthropic --break-system-packages
-    export ANTHROPIC_API_KEY=sk-ant-...
 """
 from __future__ import annotations
 
@@ -204,6 +207,11 @@ def main() -> None:
         "--model", default=DEFAULT_MODEL,
         help=f"Anthropic model (default: {DEFAULT_MODEL})",
     )
+    ap.add_argument(
+        "--from-json", metavar="PATH",
+        help="Path to pre-generated examples JSON (skips API calls). "
+             'Format: {"ua-lexeme-NNNN": {"ua": "...", "en": "..."}, ...}',
+    )
     args = ap.parse_args()
 
     # ── Resolve batch directory ──────────────────────────────────────────────
@@ -226,6 +234,57 @@ def main() -> None:
 
     if not to_process:
         print("Nothing to do.")
+        return
+
+    # ── JSON mode (no API) ───────────────────────────────────────────────────
+    if args.from_json:
+        json_path = Path(args.from_json)
+        if not json_path.is_absolute():
+            json_path = REPO_ROOT / json_path
+        if not json_path.exists():
+            sys.exit(f"ERROR: JSON file not found: {json_path}")
+        examples = json.loads(json_path.read_text(encoding="utf-8"))
+
+        n_ok = n_err = n_skip = 0
+        width = len(str(len(to_process)))
+
+        for i, path in enumerate(to_process, 1):
+            stem    = path.stem                        # "ua-lexeme-0001"
+            content = path.read_text(encoding="utf-8")
+            fields  = parse_note_fields(content)
+            note_id = fields.get("NoteID", stem)
+            lemma   = fields.get("Lemma", "?")
+
+            print(f"[{i:{width}}/{len(to_process)}] {note_id}  {lemma}")
+
+            if stem not in examples:
+                print(f"  WARNING: {stem} not in JSON — skipping")
+                n_skip += 1
+                continue
+
+            ua = examples[stem].get("ua", "").strip()
+            en = examples[stem].get("en", "").strip()
+            if not ua or not en:
+                print(f"  WARNING: empty ua/en for {stem} — skipping")
+                n_skip += 1
+                continue
+
+            print(f"  UA: {ua}")
+            print(f"  EN: {en}")
+
+            if args.dry_run:
+                n_ok += 1
+                continue
+
+            updated = inject_examples(content, ua, en)
+            path.write_text(updated, encoding="utf-8")
+            n_ok += 1
+
+        label = "dry-run" if args.dry_run else "written"
+        print(f"\nDone: {n_ok} {label}, {n_skip} skipped (not in JSON), {n_err} errors")
+        if n_ok and not args.dry_run:
+            rel = batch.relative_to(REPO_ROOT / "domains/ua/anki/notes/lexemes")
+            print(f"\nNext: reimport\n  make ua-batch BATCH={rel}")
         return
 
     # ── Set up Anthropic client ──────────────────────────────────────────────

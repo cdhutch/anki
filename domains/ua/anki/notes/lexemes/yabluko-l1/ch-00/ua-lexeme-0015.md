@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0015
   Lemma: студе́нт
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: студент
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Студент читає підручник у бібліотеці.
+  EN_Example: The student is reading a textbook in the library.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''

@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- example:generated
 fields:
   NoteID: ua-lexeme-0017
   Lemma: фе́рмер
@@ -29,8 +30,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: фермер
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Фермер працює на полі від ранку до вечора.
+  EN_Example: The farmer works in the field from morning to evening.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
