@@ -1,0 +1,39 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0093
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.0
+- pos:adjective
+- pos:nationality-adj
+- status:verified
+fields:
+  NoteID: ua-lexeme-0093
+  Lemma: по́льський
+  PartOfSpeech: adjective
+  Gender: m
+  Perfective: ''
+  EN_Gloss: Polish (adj.)
+  Govt_Case: ''
+  CounterpartForm: 'm: по́льський'
+  IrregularForms: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  CrossLang_Analog: ''
+  EuphonyNote: ''
+  TypingAnswer: польський
+  UA_Example: Вона добре розуміє польську мову.
+  EN_Example: She understands the Polish language well.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:1.0
+  Source_URL: https://goroh.pp.ua/Словозміна/польський
+  Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
+---
+

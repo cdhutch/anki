@@ -1,0 +1,39 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0044
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.0
+- pos:noun
+- gender:n
+- status:verified
+fields:
+  NoteID: ua-lexeme-0044
+  Lemma: мі́сто
+  PartOfSpeech: noun
+  Gender: n
+  Perfective: ''
+  EN_Gloss: city, town
+  Govt_Case: ''
+  CounterpartForm: ''
+  IrregularForms: gen.pl. міст (zero ending)
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  CrossLang_Analog: '≠ RU: город'
+  EuphonyNote: ''
+  TypingAnswer: місто
+  UA_Example: Наше місто велике і дуже красиве.
+  EN_Example: Our city is large and very beautiful.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:1.0
+  Source_URL: https://goroh.pp.ua/Словозміна/місто
+  Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
+---
+

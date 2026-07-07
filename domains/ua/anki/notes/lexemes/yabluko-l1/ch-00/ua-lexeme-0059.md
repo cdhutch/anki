@@ -1,0 +1,39 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0059
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.0
+- pos:noun
+- gender:m
+- status:verified
+fields:
+  NoteID: ua-lexeme-0059
+  Lemma: ра́нок
+  PartOfSpeech: noun
+  Gender: m
+  Perfective: ''
+  EN_Gloss: morning
+  Govt_Case: ''
+  CounterpartForm: ''
+  IrregularForms: 'gen: ра́нку'
+  VerbMotion_Pair: ''
+  ConfusableSet: ве́чір
+  CrossLang_Analog: '≠ RU: утро'
+  EuphonyNote: ''
+  TypingAnswer: ранок
+  UA_Example: Уранці ми снідаємо разом і говоримо про плани.
+  EN_Example: In the morning we have breakfast together and talk about plans.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:1.0
+  Source_URL: https://goroh.pp.ua/Словозміна/ранок
+  Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
+---
+
