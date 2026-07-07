@@ -55,7 +55,7 @@ Phase 2 note types (`UA_Grammar`, `UA_Verb`) fully specified in design.md — re
 `Govt_Case`, `CounterpartForm`, `IrregularForms`, `VerbMotion_Pair`,
 `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote`, `TypingAnswer`,
 `UA_Example`, `EN_Example`, `Verb_Conj_Table`, `Tags_Ch`,
-`Source_URL`, `Source_Note`, `Verification Notes`
+`Source_URL`, `Source_Note`
 
 Key field notes:
 - `Perfective` — PFV infinitive for verbs (blank for non-verbs)

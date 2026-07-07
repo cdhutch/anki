@@ -115,7 +115,6 @@ Generates UA→EN recognition and EN→UA production cards.
 | `Tags_Ch` | Chapter tag string for Anki | `ch:2.8.2` (= Level 2, Ch. 8, §2) |
 | `Source_URL` | Primary reference URL (goroh.pp.ua or ULIF) | `https://goroh.pp.ua/Словозміна/мити` |
 | `Source_Note` | Verification note: date, edge cases, disambiguation | `Verified 2026-07-06. PFV поми́ти confirmed.` |
-| `Verification Notes` | Free-form notes field (legacy; keep for now) | `` |
 
 > **Stress marks:** Only enter after verification against ULIF or Горох.
 > Leave unstressed if unverified; flag with a `stress:unverified` tag.
@@ -173,7 +172,6 @@ fields:
   Tags_Ch: ch:2.8.2
   Source_URL: 'https://goroh.pp.ua/Словозміна/мити'
   Source_Note: ''
-  Verification Notes: ''
 ---
 ```
 

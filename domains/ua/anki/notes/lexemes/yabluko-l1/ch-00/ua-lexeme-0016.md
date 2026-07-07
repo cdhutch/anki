@@ -27,15 +27,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: студе́нт
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'RU: студентка · DE: Studentin'
   EuphonyNote: ''
   TypingAnswer: студентка
   UA_Example: Студентка живе в гуртожитку недалеко від університету.
   EN_Example: The female student lives in a dormitory not far from the university.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/студентка
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

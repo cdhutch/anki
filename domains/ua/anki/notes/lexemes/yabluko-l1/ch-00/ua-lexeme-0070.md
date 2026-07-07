@@ -26,15 +26,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN: circus · RU: цирк · DE: Zirkus · FR: cirque ← Lat: circus'
   EuphonyNote: ''
   TypingAnswer: цирк
   UA_Example: Ми з дітьми ходили до цирку у суботу.
   EN_Example: We went to the circus with the children on Saturday.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/цирк
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

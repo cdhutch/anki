@@ -26,15 +26,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN/FR: parasol ← IT: parasole'
   EuphonyNote: ''
   TypingAnswer: парасоля
   UA_Example: Вона взяла парасолю, бо надворі дощ.
   EN_Example: She took an umbrella because it is raining outside.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/парасоля
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

@@ -26,15 +26,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: '← DE: Heft'
   EuphonyNote: ''
   TypingAnswer: зошит
   UA_Example: Я пишу відповіді в зошиті олівцем.
   EN_Example: I write the answers in my notebook with a pencil.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/зошит
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

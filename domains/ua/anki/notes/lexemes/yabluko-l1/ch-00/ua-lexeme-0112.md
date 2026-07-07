@@ -32,8 +32,8 @@ fields:
   EN_Example: — What is your phone number? — 050-123-45-67.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: ''
   Source_Note: ''
+  Verification Notes: ''
 ---
 

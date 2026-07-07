@@ -32,8 +32,8 @@ fields:
   EN_Example: — Hi! How are things? — Everything is fine, thanks.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: ''
   Source_Note: ''
+  Verification Notes: ''
 ---
 

@@ -27,15 +27,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: '≠ RU: врач'
   EuphonyNote: ''
   TypingAnswer: лікар
   UA_Example: Лікар каже, що я цілком здоровий.
   EN_Example: The doctor says I am completely healthy.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/лікар
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

@@ -33,8 +33,8 @@ fields:
   EN_Example: The teacher gives us a new assignment for homework.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/завдання
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

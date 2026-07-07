@@ -34,8 +34,8 @@ fields:
   EN_Example: The carnival in Brazil is known throughout the world.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/Бразилія
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

@@ -26,15 +26,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'RU: анкета · ← FR: enquête'
   EuphonyNote: ''
   TypingAnswer: анкета
   UA_Example: Треба заповнити анкету і принести її завтра.
   EN_Example: You need to fill out the form and bring it tomorrow.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/анкета
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

@@ -34,8 +34,8 @@ fields:
   EN_Example: Ukraine is an independent state in the heart of Europe.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/Україна
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

@@ -33,8 +33,8 @@ fields:
   EN_Example: We live in a large building on this street.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/будинок
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

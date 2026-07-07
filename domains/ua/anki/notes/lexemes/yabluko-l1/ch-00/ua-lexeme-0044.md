@@ -26,15 +26,15 @@ fields:
   IrregularForms: gen.pl. міст (zero ending)
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: '≠ RU: город'
   EuphonyNote: ''
   TypingAnswer: місто
   UA_Example: Наше місто велике і дуже красиве.
   EN_Example: Our city is large and very beautiful.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/місто
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

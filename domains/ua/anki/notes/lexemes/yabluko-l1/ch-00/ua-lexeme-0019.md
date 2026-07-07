@@ -27,15 +27,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN: jurist · RU: юрист · FR: juriste · DE: Jurist'
   EuphonyNote: ''
   TypingAnswer: юрист
   UA_Example: Юрист допоможе вам вирішити цю проблему.
   EN_Example: The lawyer will help you solve this problem.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/юрист
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

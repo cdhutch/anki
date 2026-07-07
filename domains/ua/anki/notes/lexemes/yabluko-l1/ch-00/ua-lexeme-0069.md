@@ -33,8 +33,8 @@ fields:
   EN_Example: Write the number, month and year of your birth.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/число
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

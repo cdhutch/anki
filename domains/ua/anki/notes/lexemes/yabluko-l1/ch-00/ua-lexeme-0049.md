@@ -26,15 +26,15 @@ fields:
   IrregularForms: 'gen: олі́вця (loses -е-)'
   VerbMotion_Pair: ''
   ConfusableSet: ру́чка
-  CrossLang_Analog: ''
+  CrossLang_Analog: '← DE: Bleiweiß · ≠ RU: карандаш ← Turkic'
   EuphonyNote: ''
   TypingAnswer: олівець
   UA_Example: Напишіть своє прізвище олівцем на першій сторінці.
   EN_Example: Write your surname in pencil on the first page.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/олівець
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

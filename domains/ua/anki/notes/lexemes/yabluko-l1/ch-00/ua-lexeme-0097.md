@@ -33,8 +33,8 @@ fields:
   EN_Example: I have been learning the French language for two years.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/французький
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

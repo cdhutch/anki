@@ -34,8 +34,8 @@ fields:
   EN_Example: They dream of going to America.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/Америка
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

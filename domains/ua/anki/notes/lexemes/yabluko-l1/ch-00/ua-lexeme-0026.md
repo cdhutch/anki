@@ -26,15 +26,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN: ballet · RU: балет · DE: Ballett · ← FR: ballet'
   EuphonyNote: ''
   TypingAnswer: балет
   UA_Example: Учора ввечері ми дивилися чудовий балет.
   EN_Example: Yesterday evening we watched a wonderful ballet.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/балет
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

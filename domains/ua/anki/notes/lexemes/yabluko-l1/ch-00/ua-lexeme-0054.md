@@ -26,15 +26,15 @@ fields:
   IrregularForms: indeclinable
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN: piano · RU: пианино · DE: Pianino ← IT: pianoforte'
   EuphonyNote: ''
   TypingAnswer: піаніно
   UA_Example: Моя сестра грає на піаніно щовечора.
   EN_Example: My sister plays the piano every evening.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/піаніно
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

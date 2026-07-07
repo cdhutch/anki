@@ -44,7 +44,6 @@ FIELDS = [
     "Tags_Ch",
     "Source_URL",
     "Source_Note",
-    "Verification Notes",
 ]
 
 # ---------------------------------------------------------------------------

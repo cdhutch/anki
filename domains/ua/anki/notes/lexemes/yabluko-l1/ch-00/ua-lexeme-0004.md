@@ -27,15 +27,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN: journalist · RU: журналист · FR: journaliste · DE: Journalist'
   EuphonyNote: ''
   TypingAnswer: журналіст
   UA_Example: Журналіст пише статтю для газети.
   EN_Example: The journalist is writing an article for the newspaper.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/журналіст
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

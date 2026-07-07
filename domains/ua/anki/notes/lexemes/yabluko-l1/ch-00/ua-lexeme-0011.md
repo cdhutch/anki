@@ -27,15 +27,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN: politician · RU: политик · FR: politicien · DE: Politiker'
   EuphonyNote: ''
   TypingAnswer: політик
   UA_Example: Молодий політик виступає по телебаченню.
   EN_Example: The young politician speaks on television.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/політик
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

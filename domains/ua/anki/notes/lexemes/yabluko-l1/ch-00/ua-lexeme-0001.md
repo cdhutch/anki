@@ -27,15 +27,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: 'EN: actor · RU: актёр · FR: acteur · DE: Akteur'
   EuphonyNote: ''
   TypingAnswer: актор
   UA_Example: Цей актор грає головну роль у новому фільмі.
   EN_Example: This actor plays the main role in the new film.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/актор
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

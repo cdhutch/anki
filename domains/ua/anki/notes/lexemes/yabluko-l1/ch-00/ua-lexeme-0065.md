@@ -33,8 +33,8 @@ fields:
   EN_Example: Open the textbook to page twenty.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/сторінка
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

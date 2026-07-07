@@ -32,8 +32,8 @@ fields:
   EN_Example: — My name is Olya. — Very pleased to meet you, I'm Taras.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: ''
   Source_Note: ''
+  Verification Notes: ''
 ---
 

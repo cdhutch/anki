@@ -26,15 +26,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  CrossLang_Analog: ''
+  CrossLang_Analog: '≠ RU: страна'
   EuphonyNote: ''
   TypingAnswer: країна
   UA_Example: Україна — велика і красива країна.
   EN_Example: Ukraine is a large and beautiful country.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
-  Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/країна
   Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
 ---
 

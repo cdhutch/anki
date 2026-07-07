@@ -68,20 +68,12 @@ def already_has_source_url(content: str) -> bool:
 
 def inject_source_fields(content: str, url: str) -> str:
     """
-    Insert Source_URL and Source_Note after 'Verification Notes:' line,
-    or before the closing --- of the front matter if that line is absent.
+    Insert Source_URL and Source_Note before the closing --- of the front matter.
     """
     url_line = f"  Source_URL: '{url}'\n"
     note_line = "  Source_Note: ''\n"
 
-    # Try to insert after "Verification Notes:" line
-    pattern = r"(^  Verification Notes:.*\n)"
-    m = re.search(pattern, content, re.MULTILINE)
-    if m:
-        insert_pos = m.end()
-        return content[:insert_pos] + url_line + note_line + content[insert_pos:]
-
-    # Fallback: insert before the closing --- of the front matter
+    # Insert before the closing --- of the front matter
     # Front matter ends at the second occurrence of ---
     fm_end = content.index("---", 3)  # skip opening ---
     return content[:fm_end] + url_line + note_line + content[fm_end:]
