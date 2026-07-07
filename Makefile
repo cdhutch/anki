@@ -81,8 +81,12 @@ help:
 	@echo "  checklists-fix      Canonicalize CNSF formatting for Checklist notes"
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
+	@echo "Ukrainian (UA) — note type setup"
+	@echo "  ua-setup                  Create/update both UA_Lexeme + UA_Grammar in Anki"
+	@echo "  ua-setup-lexeme           Create/update UA_Lexeme only"
+	@echo "  ua-setup-grammar          Create/update UA_Grammar only"
+	@echo ""
 	@echo "Ukrainian (UA) — lexeme pipeline"
-	@echo "  ua-setup                  Create/update UA_Lexeme note type in Anki"
 	@echo "  ua-batch BATCH=<b>/<ch>   Canonicalize + sync one chapter  (e.g. BATCH=yabluko-l1/ch-00)"
 	@echo "  ua-batch-check BATCH=…    Check CNSF formatting for one chapter (no changes)"
 	@echo "  ua-batch-fix BATCH=…      Canonicalize one chapter"
@@ -96,6 +100,12 @@ help:
 	@echo "  Batch path convention:  <textbook>/ch-<NN>"
 	@echo "    yabluko-l1/ch-00  =  Вступ"
 	@echo "    yabluko-l1/ch-01  =  Chapter 1, etc."
+	@echo "    yabluko-l2/ch-09  =  Book 2, Chapter 9 (prefixed motion verbs)"
+	@echo ""
+	@echo "Ukrainian (UA) — grammar pipeline"
+	@echo "  ua-grammar                Canonicalize + sync all UA grammar notes"
+	@echo "  ua-grammar-check          Check CNSF formatting (no changes)"
+	@echo "  ua-grammar-fix            Canonicalize all UA grammar notes"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
@@ -560,15 +570,17 @@ sve-%:
 # All UA notes:          make ua-lexeme
 # -------------------------------------------------------------------
 UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
+UA_GRAMMAR_ROOT := domains/ua/anki/notes/grammar
 UA_INSPECT      := tools/anki/inspect
 UA_GENERATE     := tools/anki/generate
 UA_GOROH_DIR    := /tmp/goroh
 UA_EXAMPLES_LIMIT ?= 10
 
-.PHONY: ua-setup
+.PHONY: ua-setup ua-setup-lexeme ua-setup-grammar
 .PHONY: ua-batch ua-batch-check ua-batch-fix
 .PHONY: ua-book  ua-book-check  ua-book-fix
 .PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
+.PHONY: ua-grammar ua-grammar-check ua-grammar-fix
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
 .PHONY: ua-generate-examples ua-inject-examples
 
@@ -576,6 +588,12 @@ UA_EXAMPLES_LIMIT ?= 10
 
 ua-setup:
 	$(PYTHON) tools/anki/setup/setup_ua_note_types.py
+
+ua-setup-lexeme:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Lexeme
+
+ua-setup-grammar:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Grammar
 
 # ── Single chapter:  make ua-batch BATCH=yabluko-l1/ch-00 ────────────────────
 
@@ -623,6 +641,19 @@ ua-lexeme-fix:
 
 ua-lexeme: ua-lexeme-fix
 	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/
+
+# ── Grammar notes:  make ua-grammar ──────────────────────────────────────────
+
+ua-grammar-check:
+	find $(UA_GRAMMAR_ROOT) -name "ua-grammar-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-grammar-fix:
+	find $(UA_GRAMMAR_ROOT) -name "ua-grammar-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-grammar: ua-grammar-fix
+	$(PYTHON) tools/anki/sync/ua_grammar_import.py $(UA_GRAMMAR_ROOT)/
 
 # ── Stress verification ──────────────────────────────────────────────────────
 
