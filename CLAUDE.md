@@ -33,23 +33,24 @@ This repo builds and maintains Anki flashcard decks for two domains:
 
 **Branch:** `feature/ua-domain` (based off `main`)
 
-**Status (as of 2026-07-06):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
+**Status (as of 2026-07-08):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
 Book 2 Ch. 9 in progress on branch `feature/ua-l2-ch09-motion-verbs`:
   - 18 UA_Lexeme notes authored (ua-lexeme-0114–0131): prefixed walking + vehicle motion verbs.
   - 7 UA_Grammar cloze notes authored (ua-grammar-0001–0007): two-group rule, aspect formation,
     prefix meanings, phonetic changes, apostrophe rule, піти and ходити meanings.
-  - All new notes: `status:draft`. Stresses Горох-verified (2026-07-06); `stress:unverified` tag removed.
-  - UA_Grammar note type added to setup script (includes `Verification Notes` field — added by CNSF canonicalizer).
-    Grammar importer: `tools/anki/sync/ua_grammar_import.py`.
-  - `Verb_Conj_Table` partially populated: 0114 (приходити/прийти), 0115 (входити/увійти),
-    0116 (виходити/вийти), 0123 (приїжджати/приїхати). Remaining 14 verb pairs pending.
+  - 9 UA_Visual notes authored (ua-visual-0001–0009): one per prefix, inline SVG diagrams,
+    spatial meaning + prepositional government. Two cards each (Visual→Prefix, Prefix→Govt).
+    Notes in `domains/ua/anki/notes/visual/`.
+  - All new notes: `status:draft`. Stresses Горох-verified; `stress:unverified` tag removed.
+  - `Verb_Conj_Table` fully populated for all 18 verb pairs (0114–0131).
 
 **Pending before import:**
   1. Run: `git checkout -b feature/ua-l2-ch09-motion-verbs`
-  2. Run: `make ua-setup-grammar` (creates UA_Grammar note type in Anki)
+  2. Run: `make ua-setup` (creates/updates UA_Lexeme + UA_Grammar + UA_Visual in Anki)
   3. Flip `status:draft` → `status:verified` after review
   4. Import lexemes: `make ua-batch BATCH=yabluko-l2/ch-09`
   5. Import grammar: `make ua-grammar`
+  6. Import visual prefix cards: `make ua-visual`
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -108,12 +109,15 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 | Path | Status | Purpose |
 |---|---|---|
 | Rename `UA` → `UA_Legacy` in Anki GUI | ✓ done | One-time manual rename; frees UA:: namespace |
-| `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme in Anki |
+| `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme + UA_Grammar + UA_Visual |
 | `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
+| `tools/anki/sync/ua_grammar_import.py` | ✓ done | UA_Grammar CNSF notes → Anki (upsert) |
+| `tools/anki/sync/ua_visual_import.py` | ✓ done | UA_Visual CNSF notes → Anki (upsert) |
 | `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
 | `tools/anki/inspect/backfill_source_url.py` | ✓ done | Add Source_URL + Source_Note to all lexeme notes |
 | `tools/anki/inspect/verify_stress_goroh.py` | ✓ done | Stress verification vs Горох; Вступ pass complete |
 | `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
+| `tools/anki/inspect/patch_ch09_conj_tables.py` | ✓ done | One-shot: Verb_Conj_Table for notes 0117–0131 |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 

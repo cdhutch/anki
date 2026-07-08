@@ -346,6 +346,88 @@ fields:
 
 ---
 
+### 3.4 `ua_visual` — Prefix Spatial Diagram Cards *(ch-09)*
+
+One note per motion-verb prefix. Encodes the spatial meaning and prepositional
+government as an inline SVG diagram. Two cards per note.
+
+**Anki note type:** `UA_Visual`
+
+**Fields:**
+
+| Field | Description | Example |
+|---|---|---|
+| `NoteID` | Canonical ID | `ua-visual-0001` |
+| `Prefix` | Prefix label | `при-` |
+| `Meaning_EN` | English meaning | `arrival (coming to a place to stay)` |
+| `Govt` | Government construction | `до + Р.в.` |
+| `Walking_Pair` | IPFV / PFV walking verbs | `приходи́ти / прийти́` |
+| `Vehicle_Pair` | IPFV / PFV vehicle verbs | `приїжджа́ти / приї́хати` |
+| `Example_UA` | Ukrainian example sentence | `Вона прийшла до нас.` |
+| `Example_EN` | English translation | `She came to our place.` |
+| `Diagram_SVG` | Inline SVG spatial diagram | `<svg ...>...</svg>` |
+| `Tags_Ch` | Chapter tag | `ch:2.9.4` |
+| `Source_Note` | Verification notes | `` |
+
+**Card templates:**
+
+*Visual→Prefix (deck: `UA::Recognition::Visual`)*
+- Front: `{{Diagram_SVG}}` + "What prefix? What government?"
+- Back: prefix label, meaning, government (highlighted), verb pairs, example
+
+*Prefix→Govt (deck: `UA::Recognition::Visual`)*
+- Front: prefix label, meaning, verb pairs, "What government?"
+- Back: government (highlighted), diagram, example
+
+**Notes authored:**
+
+| NoteID | Prefix | Meaning | Govt |
+|---|---|---|---|
+| ua-visual-0001 | при- | arrival | до + Р.в. |
+| ua-visual-0002 | в-/у- | entering | у/в + Зн.в. |
+| ua-visual-0003 | ви- | exiting | з + Р.в. |
+| ua-visual-0004 | під- | approaching | до + Р.в. |
+| ua-visual-0005 | від- | moving away | від + Р.в. |
+| ua-visual-0006 | до- | reaching | до + Р.в. |
+| ua-visual-0007 | про- | passing by/through | через + Зн.в. / повз + Зн.в. |
+| ua-visual-0008 | пере- | crossing | через + Зн.в. |
+| ua-visual-0009 | за- | stopping by briefly | до + Р.в. / в + Зн.в. |
+
+**CNSF frontmatter example:**
+
+```yaml
+---
+schema: cnsf/v0
+note_type: ua_visual
+note_id: ua-visual-0001
+anki:
+  model: UA_Visual
+  deck: UA::Recognition::Visual
+tags:
+  - domain:ua
+  - topic:grammar
+  - textbook:яблуко
+  - ch:2.9.4
+  - grammar:verb_motion
+  - grammar:prefix
+  - status:draft
+fields:
+  NoteID: ua-visual-0001
+  Prefix: при-
+  Meaning_EN: arrival (coming to a place to stay)
+  Govt: до + Р.в.
+  Walking_Pair: приходи́ти / прийти́
+  Vehicle_Pair: приїжджа́ти / приї́хати
+  Example_UA: Вона прийшла до нас.
+  Example_EN: She came to our place.
+  Diagram_SVG: <svg ...>...</svg>
+  Tags_Ch: ch:2.9.4
+  Source_Note: ''
+---
+```
+
+---
+
 ## 4. Deck Architecture
 
 The existing `UA::` hierarchy is preserved and extended:
@@ -354,6 +436,7 @@ The existing `UA::` hierarchy is preserved and extended:
 UA::Recognition::UA→EN          ← ua_lexeme  (card: UA→EN)
 UA::Recognition::Lexeme         ← ua_lexeme  (future: inflected form → lemma)
 UA::Recognition::Grammar        ← ua_grammar (cloze)
+UA::Recognition::Visual         ← ua_visual  (prefix diagrams, 2 cards each)
 UA::Recognition::Conjugation    ← ua_verb    (Phase 2)
 UA::Production::EN→UA::Typing   ← ua_lexeme  (card: EN→UA Typing)
 UA::Production::EN→UA::Mobile   ← ua_lexeme  (card: EN→UA MCQ — Phase 2)

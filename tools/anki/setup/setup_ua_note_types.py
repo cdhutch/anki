@@ -465,12 +465,206 @@ def setup_grammar(existing: list[str]):
     print(f"Note type '{GRAMMAR_MODEL_NAME}' is ready.")
 
 
+# ---------------------------------------------------------------------------
+# UA_Visual — prefix spatial diagram cards
+# ---------------------------------------------------------------------------
+
+VISUAL_MODEL_NAME = "UA_Visual"
+
+VISUAL_FIELDS = [
+    "NoteID",
+    "Prefix",
+    "Meaning_EN",
+    "Govt",
+    "Walking_Pair",
+    "Vehicle_Pair",
+    "Example_UA",
+    "Example_EN",
+    "Diagram_SVG",
+    "Tags_Ch",
+    "Source_Note",
+]
+
+VISUAL_CSS = """\
+.card {
+  font-family: 'Noto Sans', Arial, sans-serif;
+  font-size: 18px;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  max-width: 580px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.vis-prefix {
+  font-size: 36px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin: 10px 0 4px;
+  letter-spacing: 1px;
+}
+
+.vis-meaning {
+  font-size: 17px;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+.vis-govt {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1565c0;
+  background: #e3f2fd;
+  border-radius: 6px;
+  padding: 4px 14px;
+  display: inline-block;
+  margin: 8px 0;
+}
+
+.vis-pairs {
+  font-size: 15px;
+  color: #555;
+  margin: 6px 0;
+  line-height: 1.6;
+}
+
+.vis-example {
+  font-size: 16px;
+  font-style: italic;
+  color: #333;
+  margin-top: 10px;
+}
+
+.vis-example-en {
+  font-size: 13px;
+  color: #777;
+  margin-top: 2px;
+}
+
+.vis-prompt {
+  font-size: 13px;
+  color: #bbb;
+  margin-top: 10px;
+  font-style: italic;
+}
+
+.note-id {
+  font-size: 10px;
+  color: #ccc;
+  text-align: right;
+  margin-top: 14px;
+}
+
+hr#answer {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 16px 0;
+}
+"""
+
+VISUAL_FRONT_1 = """\
+<div>{{Diagram_SVG}}</div>
+<div class="vis-prompt">What prefix? What government?</div>
+"""
+
+VISUAL_BACK_1 = """\
+{{FrontSide}}
+<hr id="answer">
+<div class="vis-prefix">{{Prefix}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
+<div class="vis-govt">{{Govt}}</div>
+<div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
+{{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
+{{#Example_EN}}<div class="vis-example-en">{{Example_EN}}</div>{{/Example_EN}}
+<div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
+"""
+
+VISUAL_FRONT_2 = """\
+<div class="vis-prefix">{{Prefix}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
+<div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
+<div class="vis-prompt">What government?</div>
+"""
+
+VISUAL_BACK_2 = """\
+{{FrontSide}}
+<hr id="answer">
+<div class="vis-govt">{{Govt}}</div>
+<div style="margin-top:12px">{{Diagram_SVG}}</div>
+{{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
+{{#Example_EN}}<div class="vis-example-en">{{Example_EN}}</div>{{/Example_EN}}
+<div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
+"""
+
+VISUAL_CARD_TEMPLATES = [
+    {"Name": "Visual→Prefix", "Front": VISUAL_FRONT_1, "Back": VISUAL_BACK_1},
+    {"Name": "Prefix→Govt",   "Front": VISUAL_FRONT_2, "Back": VISUAL_BACK_2},
+]
+
+
+def create_visual_model():
+    print(f"Creating note type '{VISUAL_MODEL_NAME}'...")
+    anki_request(
+        "createModel",
+        {
+            "modelName": VISUAL_MODEL_NAME,
+            "inOrderFields": VISUAL_FIELDS,
+            "css": VISUAL_CSS,
+            "cardTemplates": VISUAL_CARD_TEMPLATES,
+        },
+        url=ANKI_URL,
+    )
+    print("  Created.")
+
+
+def update_visual_model():
+    print(f"Updating note type '{VISUAL_MODEL_NAME}'...")
+
+    for tmpl in VISUAL_CARD_TEMPLATES:
+        anki_request(
+            "updateModelTemplates",
+            {"model": {"name": VISUAL_MODEL_NAME, "templates": {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]}}}},
+            url=ANKI_URL,
+        )
+
+    anki_request(
+        "updateModelStyling",
+        {"model": {"name": VISUAL_MODEL_NAME, "css": VISUAL_CSS}},
+        url=ANKI_URL,
+    )
+
+    existing_fields = anki_request("modelFieldNames", {"modelName": VISUAL_MODEL_NAME}, url=ANKI_URL)
+    existing_set = set(existing_fields)
+    desired_set = set(VISUAL_FIELDS)
+
+    for field in VISUAL_FIELDS:
+        if field not in existing_set:
+            print(f"  Adding field: {field}")
+            anki_request("modelFieldAdd", {"modelName": VISUAL_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    for field in existing_fields:
+        if field not in desired_set:
+            print(f"  Removing field: {field}  (data lost)")
+            anki_request("modelFieldRemove", {"modelName": VISUAL_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    print("  Updated.")
+
+
+def setup_visual(existing: list[str]):
+    if VISUAL_MODEL_NAME in existing:
+        update_visual_model()
+    else:
+        create_visual_model()
+    print(f"Note type '{VISUAL_MODEL_NAME}' is ready.")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--model",
-        choices=["UA_Lexeme", "UA_Grammar"],
-        help="Set up only this model (default: both)",
+        choices=["UA_Lexeme", "UA_Grammar", "UA_Visual"],
+        help="Set up only this model (default: all three)",
     )
     args = parser.parse_args()
 
@@ -480,9 +674,12 @@ def main():
         setup_lexeme(existing)
     elif args.model == "UA_Grammar":
         setup_grammar(existing)
+    elif args.model == "UA_Visual":
+        setup_visual(existing)
     else:
         setup_lexeme(existing)
         setup_grammar(existing)
+        setup_visual(existing)
 
     print("\nDone.")
 

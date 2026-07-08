@@ -82,9 +82,10 @@ help:
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
 	@echo "Ukrainian (UA) — note type setup"
-	@echo "  ua-setup                  Create/update both UA_Lexeme + UA_Grammar in Anki"
+	@echo "  ua-setup                  Create/update UA_Lexeme + UA_Grammar + UA_Visual in Anki"
 	@echo "  ua-setup-lexeme           Create/update UA_Lexeme only"
 	@echo "  ua-setup-grammar          Create/update UA_Grammar only"
+	@echo "  ua-setup-visual           Create/update UA_Visual only"
 	@echo ""
 	@echo "Ukrainian (UA) — lexeme pipeline"
 	@echo "  ua-batch BATCH=<b>/<ch>   Canonicalize + sync one chapter  (e.g. BATCH=yabluko-l1/ch-00)"
@@ -106,6 +107,11 @@ help:
 	@echo "  ua-grammar                Canonicalize + sync all UA grammar notes"
 	@echo "  ua-grammar-check          Check CNSF formatting (no changes)"
 	@echo "  ua-grammar-fix            Canonicalize all UA grammar notes"
+	@echo ""
+	@echo "Ukrainian (UA) — visual prefix cards"
+	@echo "  ua-visual                 Canonicalize + sync all UA visual notes"
+	@echo "  ua-visual-check           Check CNSF formatting (no changes)"
+	@echo "  ua-visual-fix             Canonicalize all UA visual notes"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
@@ -571,12 +577,14 @@ sve-%:
 # -------------------------------------------------------------------
 UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
 UA_GRAMMAR_ROOT := domains/ua/anki/notes/grammar
+UA_VISUAL_ROOT  := domains/ua/anki/notes/visual
 UA_INSPECT      := tools/anki/inspect
 UA_GENERATE     := tools/anki/generate
 UA_GOROH_DIR    := /tmp/goroh
 UA_EXAMPLES_LIMIT ?= 10
 
-.PHONY: ua-setup ua-setup-lexeme ua-setup-grammar
+.PHONY: ua-setup ua-setup-lexeme ua-setup-grammar ua-setup-visual
+.PHONY: ua-visual ua-visual-check ua-visual-fix
 .PHONY: ua-batch ua-batch-check ua-batch-fix
 .PHONY: ua-book  ua-book-check  ua-book-fix
 .PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
@@ -594,6 +602,9 @@ ua-setup-lexeme:
 
 ua-setup-grammar:
 	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Grammar
+
+ua-setup-visual:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Visual
 
 # ── Single chapter:  make ua-batch BATCH=yabluko-l1/ch-00 ────────────────────
 
@@ -654,6 +665,19 @@ ua-grammar-fix:
 
 ua-grammar: ua-grammar-fix
 	$(PYTHON) tools/anki/sync/ua_grammar_import.py $(UA_GRAMMAR_ROOT)/
+
+# ── Visual prefix cards:  make ua-visual ─────────────────────────────────────
+
+ua-visual-check:
+	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-visual-fix:
+	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-visual: ua-visual-fix
+	$(PYTHON) tools/anki/sync/ua_visual_import.py $(UA_VISUAL_ROOT)/
 
 # ── Stress verification ──────────────────────────────────────────────────────
 
