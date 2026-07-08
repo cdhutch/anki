@@ -563,8 +563,10 @@ hr#answer {
 }
 """
 
+# Card 1 (Spatial→UA): diagram + English meaning on front; Ukrainian on back
 VISUAL_FRONT_1 = """\
 <div>{{Diagram_SVG}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
 <div class="vis-prompt">What prefix? What government?</div>
 """
 
@@ -572,7 +574,6 @@ VISUAL_BACK_1 = """\
 {{FrontSide}}
 <hr id="answer">
 <div class="vis-prefix">{{Prefix}}</div>
-<div class="vis-meaning">{{Meaning_EN}}</div>
 <div class="vis-govt">{{Govt}}</div>
 <div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
 {{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
@@ -580,26 +581,27 @@ VISUAL_BACK_1 = """\
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 """
 
+# Card 2 (UA→Spatial): Ukrainian prefix + verbs on front; diagram + English on back
 VISUAL_FRONT_2 = """\
 <div class="vis-prefix">{{Prefix}}</div>
-<div class="vis-meaning">{{Meaning_EN}}</div>
 <div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
-<div class="vis-prompt">What government?</div>
+<div class="vis-prompt">What does this prefix mean? What government?</div>
 """
 
 VISUAL_BACK_2 = """\
 {{FrontSide}}
 <hr id="answer">
+<div style="margin-top:4px">{{Diagram_SVG}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
 <div class="vis-govt">{{Govt}}</div>
-<div style="margin-top:12px">{{Diagram_SVG}}</div>
 {{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
 {{#Example_EN}}<div class="vis-example-en">{{Example_EN}}</div>{{/Example_EN}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 """
 
 VISUAL_CARD_TEMPLATES = [
-    {"Name": "Visual→Prefix", "Front": VISUAL_FRONT_1, "Back": VISUAL_BACK_1},
-    {"Name": "Prefix→Govt",   "Front": VISUAL_FRONT_2, "Back": VISUAL_BACK_2},
+    {"Name": "Spatial→UA", "Front": VISUAL_FRONT_1, "Back": VISUAL_BACK_1},
+    {"Name": "UA→Spatial", "Front": VISUAL_FRONT_2, "Back": VISUAL_BACK_2},
 ]
 
 
