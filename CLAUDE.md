@@ -126,19 +126,37 @@ Separate `UA_Verb` note type for active conjugation drill. Key decisions:
   every prefixed variant individually has diminishing returns once the class pattern
   is internalized. The `<details>` collapsible on the lexeme card back (Verb_Conj_Table)
   covers reference lookup for all verbs.
+- **Option B architecture:** individual conjugation forms stored as YAML fields on
+  UA_Verb notes (not as an HTML blob). The UA_Verb importer generates the
+  `Verb_Conj_Table` HTML and pushes it to the linked UA_Lexeme note. Canonical
+  data lives in structured YAML; HTML is a generated cache. `LexemeRef` field on
+  UA_Verb links back bidirectionally.
 - **Suspended by default on import** (`conj:suspended` tag); active drill is opt-in.
-- **~70–90 cards unsuspended total**, across three tiers:
+- **~90–100 cards unsuspended total**, across three tiers:
   1. *Class model leaders* (~20–25): one representative per conjugation pattern
      (ходити, іти, писати, читати, класти, стояти, їхати, казати, …). These teach
      the patterns everything else inherits.
-  2. *Irregular verbs* (~15–20): forms that can't be derived from the class pattern
+  2. *Irregular verbs* (~30–40): forms that can't be derived from the class pattern
      (бути, дати, їсти, взяти, піти, стати, лягти, сісти, …).
   3. *High-frequency regulars* (~30–50): frequent verbs where active production
-     practice earns its keep regardless of regularity; driven by a frequency list.
-- **`LexemeRef` field** on UA_Verb links back to the companion lexeme note for
-  bidirectional tooling and AnkiConnect browse-button navigation from the lexeme card.
+     practice earns its keep regardless of regularity; driven by Ukrainian National
+     Corpus frequency list intersected with Яблуко vocabulary.
 - **`conj:drill` tag** marks intentionally unsuspended cards.
 - See `domains/ua/anki/docs/design.md` §3.3 for full schema and template spec.
+
+**UA_Verb scope and sequencing** (decided 2026-07-08) —
+*501 Ukrainian Verbs* (book) used as breadth/coverage map, not a to-do list.
+
+- **Phase 2a** — Author all irregulars + class model leaders (~60–70 notes). These
+  are the structural skeleton of Ukrainian conjugation; unsuspend all of them.
+- **Phase 2b** — Cross-reference Яблуко vocabulary against Ukrainian National Corpus
+  frequency list; author the high-frequency intersection (~60–100 additional notes).
+  Unsuspend selectively.
+- **Phase 2c (ongoing)** — Add from *501 Ukrainian Verbs* as curriculum demands,
+  using the book as a checklist for conjugation class coverage. Target total:
+  ~160–220 authored notes, ~90–100 unsuspended.
+- Verb_Conj_Table HTML on UA_Lexeme notes without a UA_Verb companion remains
+  hand-authored (as in ch-09) until Phase 2a/2b coverage reaches those verbs.
 
 **LLM example sentence generation** — `tools/anki/generate/ua_generate_examples.py` ✓ written.
 Run with `make ua-generate-examples BATCH=yabluko-l1/ch-00 [LIMIT=10]`.
