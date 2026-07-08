@@ -158,6 +158,49 @@ input#typeans {
   width: 80%;
   text-align: center;
 }
+
+/* Conjugation table */
+.conj {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 6px;
+  font-size: 14px;
+  text-align: left;
+}
+.conj th, .conj td {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+}
+.conj th {
+  background-color: #f0f0f0;
+  font-weight: 600;
+  color: #444;
+}
+.conj td:first-child {
+  color: #888;
+  font-size: 12px;
+  width: 6em;
+}
+
+/* Collapsible wrapper */
+details.conj-wrap {
+  margin-top: 16px;
+  text-align: left;
+}
+details.conj-wrap summary {
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+details.conj-wrap summary::before {
+  content: '▶ ';
+  font-size: 10px;
+}
+details.conj-wrap[open] summary::before {
+  content: '▼ ';
+}
 """
 
 # ---------------------------------------------------------------------------
@@ -181,6 +224,7 @@ UA_EN_BACK = """\
 {{#ConfusableSet}}<div class="confusable">cf. {{ConfusableSet}}</div>{{/ConfusableSet}}
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
+{{#Verb_Conj_Table}}<details class="conj-wrap"><summary>Conjugation</summary>{{Verb_Conj_Table}}</details>{{/Verb_Conj_Table}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
@@ -199,6 +243,7 @@ EN_UA_BACK = """\
 {{#Perfective}}<div class="perfective">/ {{Perfective}}</div>{{/Perfective}}
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
+{{#Verb_Conj_Table}}<details class="conj-wrap"><summary>Conjugation</summary>{{Verb_Conj_Table}}</details>{{/Verb_Conj_Table}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """

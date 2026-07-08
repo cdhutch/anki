@@ -236,6 +236,32 @@ Full conjugation paradigm for a single verb pair. One note per IPFV/PFV pair.
 Designed for `UA::Recognition::Conjugation` and `UA::Production::Conjugation`.
 Start authoring once the lexeme pipeline (Phase 1) is complete.
 
+#### Revised architecture (decided 2026-07-07)
+
+**Suspension policy:** All `UA_Verb` cards are **suspended on import** by default.
+Active drill cards are a deliberate opt-in, not the default. Unsuspend selectively for:
+- Class representatives (ходити, іти, писати, читати, стати, класти, …)
+- Irregular verbs (бути, їсти, дати, …)
+- Any verb where active conjugation recall is a current study goal
+
+**Lexeme card integration (hybrid approach):**
+
+1. **`<details>` collapsible on the lexeme card back** — the `Verb_Conj_Table` HTML
+   field (already present on `UA_Lexeme`) wraps its content in a `<details>` element
+   so the table is hidden by default and expands on click. Works offline and on mobile.
+
+2. **AnkiConnect browse button (desktop)** — a small "📋" button calls
+   `localhost:8765` (`guiBrowse` action, query `note:UA_Verb LexemeRef:ua-lexeme-XXXX`)
+   to open the browser pane directly on the corresponding conjugation card.
+   Requires AnkiConnect; gracefully absent on mobile.
+
+**`LexemeRef` field:** `UA_Verb` notes carry a `LexemeRef` field (e.g.
+`ua-lexeme-0114`) so the AnkiConnect query and future tooling can navigate
+bidirectionally between the lexeme and its conjugation card.
+
+**`conj:drill` tag:** When unsuspending a conjugation card for active study, add
+the `conj:drill` tag so the unsuspension is intentional and filterable.
+
 **Anki note type:** `UA_Verb`
 
 **Fields:**
@@ -491,3 +517,6 @@ Priority order for migration:
 
 ### Phase 3 — Verb conjugation
 Design and implement `ua_verb` note type and conjugation card templates.
+Architecture decided (see §3.3): suspended-by-default, hybrid `<details>` collapsible
++ AnkiConnect browse button on lexeme card back, `LexemeRef` field for bidirectional
+linking, `conj:drill` tag for intentional unsuspensions.

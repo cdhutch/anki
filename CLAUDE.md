@@ -119,6 +119,27 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 
 ### Future work
 
+**UA_Verb dedicated conjugation cards** (Phase 2, design decided 2026-07-07) —
+Separate `UA_Verb` note type for active conjugation drill. Key decisions:
+
+- **Not 1:1 with lexeme notes.** Ukrainian conjugation is a pattern skill; drilling
+  every prefixed variant individually has diminishing returns once the class pattern
+  is internalized. The `<details>` collapsible on the lexeme card back (Verb_Conj_Table)
+  covers reference lookup for all verbs.
+- **Suspended by default on import** (`conj:suspended` tag); active drill is opt-in.
+- **~70–90 cards unsuspended total**, across three tiers:
+  1. *Class model leaders* (~20–25): one representative per conjugation pattern
+     (ходити, іти, писати, читати, класти, стояти, їхати, казати, …). These teach
+     the patterns everything else inherits.
+  2. *Irregular verbs* (~15–20): forms that can't be derived from the class pattern
+     (бути, дати, їсти, взяти, піти, стати, лягти, сісти, …).
+  3. *High-frequency regulars* (~30–50): frequent verbs where active production
+     practice earns its keep regardless of regularity; driven by a frequency list.
+- **`LexemeRef` field** on UA_Verb links back to the companion lexeme note for
+  bidirectional tooling and AnkiConnect browse-button navigation from the lexeme card.
+- **`conj:drill` tag** marks intentionally unsuspended cards.
+- See `domains/ua/anki/docs/design.md` §3.3 for full schema and template spec.
+
 **LLM example sentence generation** — `tools/anki/generate/ua_generate_examples.py` ✓ written.
 Run with `make ua-generate-examples BATCH=yabluko-l1/ch-00 [LIMIT=10]`.
 Requires `ANTHROPIC_API_KEY` env var and `pip install anthropic`.
