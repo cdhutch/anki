@@ -281,13 +281,13 @@ def update_model():
     """Update templates and CSS; sync fields."""
     print(f"Updating note type '{MODEL_NAME}'...")
 
-    # Update templates
-    for tmpl in CARD_TEMPLATES:
-        anki_request(
-            "updateModelTemplates",
-            {"model": {"name": MODEL_NAME, "templates": {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]}}}},
-            url=ANKI_URL,
-        )
+    # Update templates — build single dict with all templates, then call once
+    templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in CARD_TEMPLATES}
+    anki_request(
+        "updateModelTemplates",
+        {"model": {"name": MODEL_NAME, "templates": templates_dict}},
+        url=ANKI_URL,
+    )
 
     # Update CSS
     anki_request(
@@ -414,12 +414,13 @@ def create_grammar_model():
 def update_grammar_model():
     print(f"Updating note type '{GRAMMAR_MODEL_NAME}'...")
 
-    for tmpl in GRAMMAR_CARD_TEMPLATES:
-        anki_request(
-            "updateModelTemplates",
-            {"model": {"name": GRAMMAR_MODEL_NAME, "templates": {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]}}}},
-            url=ANKI_URL,
-        )
+    # Update templates — build single dict with all templates, then call once
+    templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in GRAMMAR_CARD_TEMPLATES}
+    anki_request(
+        "updateModelTemplates",
+        {"model": {"name": GRAMMAR_MODEL_NAME, "templates": templates_dict}},
+        url=ANKI_URL,
+    )
 
     anki_request(
         "updateModelStyling",
@@ -623,12 +624,13 @@ def create_visual_model():
 def update_visual_model():
     print(f"Updating note type '{VISUAL_MODEL_NAME}'...")
 
-    for tmpl in VISUAL_CARD_TEMPLATES:
-        anki_request(
-            "updateModelTemplates",
-            {"model": {"name": VISUAL_MODEL_NAME, "templates": {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]}}}},
-            url=ANKI_URL,
-        )
+    # Update templates — build single dict with all templates, then call once
+    templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in VISUAL_CARD_TEMPLATES}
+    anki_request(
+        "updateModelTemplates",
+        {"model": {"name": VISUAL_MODEL_NAME, "templates": templates_dict}},
+        url=ANKI_URL,
+    )
 
     anki_request(
         "updateModelStyling",
