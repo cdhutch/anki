@@ -33,20 +33,26 @@ This repo builds and maintains Anki flashcard decks for two domains:
 
 **Branch:** `feature/ua-domain` (based off `main`)
 
-**Status (as of 2026-07-08):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
+**Status (as of 2026-07-10):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
 Book 2 Ch. 9 in progress on branch `feature/ua-l2-ch09-motion-verbs`:
   - 18 UA_Lexeme notes authored (ua-lexeme-0114–0131): prefixed walking + vehicle motion verbs.
   - 7 UA_Grammar cloze notes authored (ua-grammar-0001–0007): two-group rule, aspect formation,
     prefix meanings, phonetic changes, apostrophe rule, піти and ходити meanings.
   - 9 UA_Visual notes authored (ua-visual-0001–0009): one per prefix, inline SVG diagrams,
-    spatial meaning + prepositional government. Two cards each (Visual→Prefix, Prefix→Govt).
+    spatial meaning + prepositional government. Two cards each (Spatial→UA, UA→Spatial).
     Notes in `domains/ua/anki/notes/visual/`.
   - All new notes: `status:draft`. Stresses Горох-verified; `stress:unverified` tag removed.
   - `Verb_Conj_Table` fully populated for all 18 verb pairs (0114–0131).
 
+**UA_Visual card template design (2026-07-10):**
+  - Card 1 (Spatial→UA): front = diagram + English meaning; back = Ukrainian prefix, government, verb pairs, example.
+  - Card 2 (UA→Spatial): front = Ukrainian prefix + verb pairs; back = diagram + English meaning + government + example.
+  - Template redesign fixed & deployed ✅ — `setup_ua_note_types.py` now calls `updateModelTemplates` with all templates in single call (not per-template loop).
+  - Templates update correctly via `make ua-setup-visual`.
+
 **Pending before import:**
-  1. Run: `git checkout -b feature/ua-l2-ch09-motion-verbs`
-  2. Run: `make ua-setup` (creates/updates UA_Lexeme + UA_Grammar + UA_Visual in Anki)
+  1. ✓ Template fix committed & verified
+  2. Run: `make ua-setup` (updates UA_Lexeme + UA_Grammar + UA_Visual in Anki with fixed templates)
   3. Flip `status:draft` → `status:verified` after review
   4. Import lexemes: `make ua-batch BATCH=yabluko-l2/ch-09`
   5. Import grammar: `make ua-grammar`
