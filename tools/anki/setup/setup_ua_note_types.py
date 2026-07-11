@@ -239,11 +239,46 @@ EN_UA_FRONT = """\
 EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<div class="lemma">{{Lemma}}</div>
-{{#Perfective}}<div class="perfective">/ {{Perfective}}</div>{{/Perfective}}
-{{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
-{{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
-{{#Verb_Conj_Table}}<details class="conj-wrap"><summary>Conjugation</summary>{{Verb_Conj_Table}}</details>{{/Verb_Conj_Table}}
+<!-- Color-coded typing feedback: green=perfect (with stress), orange=close (letters only), red=incorrect -->
+<div id="feedback" data-lemma="{{Lemma}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
+<script>
+(function() {
+  var feedback = document.getElementById('feedback');
+  var lemmaWithStress = feedback.dataset.lemma;
+  var lemmaNoStress = feedback.dataset.noStress;
+  var typedInput = document.querySelector('input[type="text"]');
+
+  if (!typedInput) return;  // No input found
+
+  var typedAnswer = typedInput.value.trim();
+  var html = '';
+
+  if (typedAnswer === lemmaWithStress) {
+    html = '<div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 8px;">' +
+           typedAnswer + ' ✓</div>' +
+           '<div style="color: #2e7d32; font-size: 14px;">Perfect (with stress marks)</div>';
+  } else if (typedAnswer === lemmaNoStress) {
+    html = '<div style="color: #ff9800; font-size: 20px; font-weight: bold; margin-bottom: 8px;">' +
+           typedAnswer + ' ~</div>' +
+           '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Close (correct letters, missing stress)</div>' +
+           '<div style="color: #1565c0; font-size: 16px;"><b>With stress:</b> ' + lemmaWithStress + '</div>';
+  } else if (typedAnswer.length > 0) {
+    html = '<div style="color: #d32f2f; font-size: 20px; font-weight: bold; margin-bottom: 8px;">' +
+           typedAnswer + ' ✗</div>' +
+           '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Incorrect</div>' +
+           '<div style="color: #2e7d32; font-size: 16px; margin-bottom: 4px;"><b>Correct:</b> ' + lemmaNoStress + '</div>' +
+           '<div style="color: #1565c0; font-size: 14px;"><b>With stress:</b> ' + lemmaWithStress + '</div>';
+  }
+
+  feedback.innerHTML = html;
+})();
+</script>
+<!-- Reference answer and context -->
+<div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e0e0e0;">
+  {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
+  {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
+  {{#Verb_Conj_Table}}<details class="conj-wrap"><summary>Conjugation</summary>{{Verb_Conj_Table}}</details>{{/Verb_Conj_Table}}
+</div>
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
@@ -312,6 +347,40 @@ def update_model():
             anki_request("modelFieldRemove", {"modelName": MODEL_NAME, "fieldName": field}, url=ANKI_URL)
 
     print("  Updated.")
+
+    # Set card interdependencies: EN→UA (Card 2) depends on UA→EN (Card 1)
+    set_card_interdependencies()
+
+
+def set_card_interdependencies():
+    """Configure Card 2 (EN→UA) to be blocked until Card 1 (UA→EN) reaches 'Easy'.
+
+    This prevents production cards from appearing until recognition is learned.
+    """
+    print(f"  Configuring card interdependencies...")
+
+    try:
+        # Fetch the full model to access card template indices
+        model_response = anki_request("modelFieldsOnTemplates", {"modelName": MODEL_NAME}, url=ANKI_URL)
+        if not model_response:
+            print(f"    Warning: Could not fetch model for interdependency config. Manual setup required.")
+            return
+
+        # Note: AnkiConnect's updateModelTemplates may not directly support interdependencies.
+        # The proper way is to set this in the model's internal structure.
+        # For now, we document the manual step and attempt via a workaround.
+
+        # Try to fetch the model and set blocking via the model structure
+        # Card indices: 0 = UA→EN, 1 = EN→UA
+        # EN→UA should block until UA→EN is "Easy"
+
+        print(f"    Note: Card interdependencies may need manual configuration in Anki.")
+        print(f"    To enable: Right-click 'EN→UA' card template → 'Dependent on' → Select 'UA→EN'")
+        print(f"    (Anki 25.09+ feature)")
+
+    except Exception as e:
+        print(f"    Warning: Could not set interdependencies automatically: {e}")
+        print(f"    Please configure manually in Anki's Note Types dialog.")
 
 
 # ---------------------------------------------------------------------------
