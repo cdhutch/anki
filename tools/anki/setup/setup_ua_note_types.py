@@ -27,23 +27,38 @@ MODEL_NAME = "UA_Lexeme"
 # ---------------------------------------------------------------------------
 
 FIELDS = [
+    # Identity & Metadata
     "NoteID",
+
+    # Core Lemma & Morphology
     "Lemma",
     "PartOfSpeech",
     "Gender",
+
+    # Aspect (Perfective & Imperfective variants)
     "Perfective",
-    "ImperfectiveUnidirectional",  # For motion verbs: іти, їхати (directional IPFV)
+    "ImperfectiveUnidirectional",  # Motion verbs: іти, їхати (directional IPFV)
+
+    # Semantic Content
     "EN_Gloss",
+
+    # Grammatical Properties
     "Govt_Case",
-    "CounterpartForm",
     "IrregularForms",
+    "CounterpartForm",
     "VerbMotion_Pair",
+
+    # Semantic Relations & Cross-lingual
     "ConfusableSet",
     "CrossLang_Analog",
     "EuphonyNote",
+
+    # Typing & Examples
     "TypingAnswer",
     "UA_Example",
     "EN_Example",
+
+    # Metadata & Sources
     "Tags_Ch",
     "Source_URL",
     "Source_Note",
@@ -224,7 +239,6 @@ UA_EN_BACK = """\
 {{#ConfusableSet}}<div class="confusable">cf. {{ConfusableSet}}</div>{{/ConfusableSet}}
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
-{{#Verb_Conj_Table}}<details class="conj-wrap"><summary>Conjugation</summary>{{Verb_Conj_Table}}</details>{{/Verb_Conj_Table}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
@@ -288,7 +302,6 @@ EN_UA_BACK = """\
 <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e0e0e0;">
   {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
   {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
-  {{#Verb_Conj_Table}}<details class="conj-wrap"><summary>Conjugation</summary>{{Verb_Conj_Table}}</details>{{/Verb_Conj_Table}}
 </div>
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}

@@ -66,16 +66,21 @@ single `templates_dict`, then call `updateModelTemplates` once per model.
 
 **Status:** Templates now update correctly via `make ua-setup-visual`.
 
-### UA_Lexeme refactoring (2026-07-10)
+### UA_Lexeme field architecture finalized (2026-07-10)
 
 **Completed:**
-- Removed vestigial `Verb_Conj_Table` field from UA_Lexeme
-- Added `ImperfectiveUnidirectional` field to properly represent 3-aspect motion verbs
-  * ходити (IPFV iterative) + іти (IPFV unidirectional) + піти (PFV)
-  * їздити (IPFV iterative) + їхати (IPFV unidirectional) + поїхати (PFV)
-- Conjugations now belong in UA_Verb note type (structured fields instead of HTML)
+- Removed `Verb_Conj_Table` field from UA_Lexeme (moved to UA_Verb note type)
+- Added `ImperfectiveUnidirectional` field for motion verbs (іти, їхати directional forms)
+- Reorganized fields in semantic order (20 fields total):
+  * Identity, Core Lemma, Aspect, Semantics, Grammar, Relations, Examples, Metadata
+- Clarified `EuphonyNote` purpose: alternate spellings (уже/вже, всі/усі)
+- Confirmed aspect convention: Lemma is imperfective (base); Perfective is counterpart
+- Removed template references to deleted Verb_Conj_Table field
 
-**Next: implement UA_Verb note type + Phase 2a conjugations**
+**Future work:**
+- UA_Confusables note type for false friends (e.g., different verbs for "draw/paint")
+- UA_Verb note type implementation + Phase 2a conjugations (~60–70 notes)
+- Ch-09 import pipeline (lexemes → visual → grammar → verbs)
 
 **Rationale:** Before importing ch-09 lexemes, we need the conjugation note type ready so prefixed motion verbs (18 lexemes) can link to base conjugations via tags, avoiding 1:1 coupling.
 
