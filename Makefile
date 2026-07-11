@@ -135,6 +135,12 @@ help:
 	@echo "  core                Export and sync all B737::Core decks to Anki"
 	@echo "  core-fix            Canonicalize all B737::Core note files"
 	@echo ""
+	@echo "Deck Configuration"
+	@echo "  line-flying         Configure decks for line flying (non-training mode)"
+	@echo "                      Enables: Core::Limits::*, Core::Mnemonics, Core::QRC,"
+	@echo "                                Core::Procedures::Inflight_Maneuvers"
+	@echo "                      Suspends all other decks + notes tagged 'always_hide'"
+	@echo ""
 
 # -------------------------------------------------------------------
 # Git Utilities
@@ -562,6 +568,14 @@ sve-%:
 	$(PYTHON) tools/anki/sync/sv_exam_import_to_anki.py \
 		--mcq "$(SV_BUILD)/sve-mcq-$*.tsv" \
 		--tf "$(SV_BUILD)/sve-tf-$*.tsv"
+
+# -------------------------------------------------------------------
+# Deck Configuration — Line Flying Mode
+# -------------------------------------------------------------------
+.PHONY: line-flying
+
+line-flying:
+	$(PYTHON) tools/anki/setup/configure_line_flying_decks.py
 
 # -------------------------------------------------------------------
 # Ukrainian (UA) — lexeme pipeline
