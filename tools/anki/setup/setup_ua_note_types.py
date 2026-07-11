@@ -229,17 +229,22 @@ UA_EN_BACK = """\
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
 
-# Template 2: EN → UA  (Production: see English, type Ukrainian without stress marks)
+# Template 2: EN → UA  (Production: see English, type Ukrainian)
+# Accepts both {{Lemma}} (with stress) and {{TypingAnswer}} (without stress)
 EN_UA_FRONT = """\
 <div class="gloss">{{EN_Gloss}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
+<!-- Accept both forms: with stress (Lemma) and without (TypingAnswer) -->
 {{type:TypingAnswer}}
+<div id="type-hint" style="font-size: 12px; color: #999; margin-top: 8px;">
+  (Type without stress, or with stress marks for bonus credit)
+</div>
 """
 
 EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<!-- Color-coded typing feedback: green=perfect (with stress), orange=close (letters only), red=incorrect -->
+<!-- Color-coded typing feedback with dual validation -->
 <div id="feedback" data-lemma="{{Lemma}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
 <script>
 (function() {
@@ -248,26 +253,32 @@ EN_UA_BACK = """\
   var lemmaNoStress = feedback.dataset.noStress;
   var typedInput = document.querySelector('input[type="text"]');
 
-  if (!typedInput) return;  // No input found
+  if (!typedInput) return;
 
   var typedAnswer = typedInput.value.trim();
   var html = '';
 
   if (typedAnswer === lemmaWithStress) {
-    html = '<div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 8px;">' +
-           typedAnswer + ' ✓</div>' +
-           '<div style="color: #2e7d32; font-size: 14px;">Perfect (with stress marks)</div>';
+    // Perfect: with stress marks
+    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           typedAnswer + ' ✓ PERFECT</div>' +
+           '<div style="color: #2e7d32; font-size: 14px;">Correct with stress marks (bonus!)</div>';
   } else if (typedAnswer === lemmaNoStress) {
-    html = '<div style="color: #ff9800; font-size: 20px; font-weight: bold; margin-bottom: 8px;">' +
-           typedAnswer + ' ~</div>' +
-           '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Close (correct letters, missing stress)</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>With stress:</b> ' + lemmaWithStress + '</div>';
+    // Close: correct letters, missing stress
+    html = '<div style="color: #ff9800; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           typedAnswer + ' ~ CORRECT</div>' +
+           '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, but missing stress marks</div>' +
+           '<div style="color: #2e7d32; font-size: 16px; font-weight: bold;">Bonus answer:</div>' +
+           '<div style="color: #1565c0; font-size: 16px;"><b>' + lemmaWithStress + '</b></div>';
   } else if (typedAnswer.length > 0) {
-    html = '<div style="color: #d32f2f; font-size: 20px; font-weight: bold; margin-bottom: 8px;">' +
-           typedAnswer + ' ✗</div>' +
-           '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Incorrect</div>' +
-           '<div style="color: #2e7d32; font-size: 16px; margin-bottom: 4px;"><b>Correct:</b> ' + lemmaNoStress + '</div>' +
-           '<div style="color: #1565c0; font-size: 14px;"><b>With stress:</b> ' + lemmaWithStress + '</div>';
+    // Incorrect
+    html = '<div style="color: #d32f2f; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           typedAnswer + ' ✗ INCORRECT</div>' +
+           '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Not quite right</div>' +
+           '<div style="color: #2e7d32; font-size: 16px; font-weight: bold; margin-bottom: 4px;">Correct (no stress):</div>' +
+           '<div style="color: #2e7d32; font-size: 16px; margin-bottom: 8px;"><b>' + lemmaNoStress + '</b></div>' +
+           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Correct (with stress):</div>' +
+           '<div style="color: #1565c0; font-size: 16px;"><b>' + lemmaWithStress + '</b></div>';
   }
 
   feedback.innerHTML = html;
