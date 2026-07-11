@@ -307,9 +307,40 @@ EN_UA_BACK = """\
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
 
+# Template 3: Confusable Comparison (scenario-based, bidirectional)
+# Optional, only shown when ConfusableSet is populated
+# Design: Forces semantic discrimination, not pattern memorization
+# Front: Scenario/context requiring choice between lemma and confusable
+# Back: Correct answer + explanation of why it fits this context
+
+COMPARISON_FRONT = """\
+{{#ConfusableSet}}<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
+<div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
+  Scenario: {{EN_Gloss}}
+  <br><span style="font-size: 13px; color: #666; font-weight: normal; font-style: italic;">Which fits better — {{Lemma}} or the alternative?</span>
+</div>
+<div style="font-size: 14px; color: #555; padding: 12px; background: #f9f9f9; border-left: 3px solid #1565c0; margin-top: 12px;">
+{{ConfusableSet}}
+</div>{{/ConfusableSet}}
+"""
+
+COMPARISON_BACK = """\
+{{FrontSide}}
+<hr id="answer">
+{{#ConfusableSet}}<div style="margin-top: 16px; font-size: 16px;">
+<div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 4px;">✓ {{Lemma}}</div>
+<div style="color: #2e7d32; font-size: 13px; margin-bottom: 12px;">This scenario emphasizes {{EN_Gloss}}</div>
+<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
+<strong>Why not the alternative?</strong><br>
+The other word fits different contexts (see below) — not this one.
+</div>
+</div>{{/ConfusableSet}}
+"""
+
 CARD_TEMPLATES = [
     {"Name": "UA→EN",  "Front": UA_EN_FRONT, "Back": UA_EN_BACK},
     {"Name": "EN→UA",  "Front": EN_UA_FRONT, "Back": EN_UA_BACK},
+    {"Name": "Compare", "Front": COMPARISON_FRONT, "Back": COMPARISON_BACK},
 ]
 
 # ---------------------------------------------------------------------------

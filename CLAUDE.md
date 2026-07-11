@@ -97,6 +97,55 @@ Book 2 Ch. 9 in progress on branch `feature/ua-l2-ch09-motion-verbs`:
 
 **Verb conjugations:** Removed `Verb_Conj_Table` field from UA_Lexeme; conjugation morphology now belongs in UA_Verb note type as structured fields.
 
+### Card Template Techniques
+
+**Polysemous word examples (multiple meanings)**
+
+When a UA word has multiple distinct meanings, demonstrate semantic range in the example fields:
+
+```yaml
+UA_Example: |
+  Example showing meaning 1
+  Example showing meaning 2
+EN_Example: |
+  Translation for meaning 1
+  Translation for meaning 2
+```
+
+Example: вік (age as measure of time; era/epoch as historical period)
+```
+UA_Example: У якому віці діти йдуть до школи? | Вони жили в добу Середніх віків.
+EN_Example: At what age do children go to school? | They lived during the Middle Ages.
+```
+
+This shows the learner that the same Ukrainian word spans multiple semantic domains.
+
+**Comparison card (scenario-based confusable discrimination)**
+
+UA_Lexeme generates a 3rd optional "Compare" card template when `ConfusableSet` is populated:
+
+- **Front:** Scenario/context requiring semantic discrimination (not pattern recognition)
+- **Back:** Correct word + explanation of why it fits this specific context
+- **Design principle:** Scenario-based + bidirectional (forces understanding of *when* each word fits, not just *that* one is correct)
+- **Avoids memorization trap:** Multiple scenarios with different contexts prevent learner from simply memorizing "gloss → word"
+
+**ConfusableSet format** (structured for scenario generation):
+```yaml
+ConfusableSet: |
+  фах (alternative word + brief definition)
+  Scenario A: Context where lemma fits
+  → Use: lemma (when/why)
+  Scenario B: Context where confusable fits
+  → Use: confusable (when/why)
+  Key distinction: Explicit semantic/contextual difference
+```
+
+Example: професія vs. фах
+- Scenario A: "Asking someone about their job formally" → професія (formal career identity)
+- Scenario B: "Discussing a plumber's expertise" → фах (skilled trade/craft)
+
+The "Compare" card only renders when `ConfusableSet` is populated, making it lightweight.
+
 ### Language conventions (critical)
 - Dialect: modern Ukrainian, **Galician/Lviv** register
 - Apostrophe: **U+02BC `ʼ`** — never ASCII `'`

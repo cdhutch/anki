@@ -24,7 +24,11 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: "фах (alternative: trade, craft, skilled expertise)\nScenario A: \"Asking\
+    \ someone about their job formally at a dinner party\"\n→ Use: професія (formal career\
+    \ identity)\nScenario B: \"Discussing a plumber's or carpenter's skills and expertise\"\
+    \  \n→ Use: фах (skilled trade/craft)\nKey distinction: професія = formal career + credentials;\
+    \ фах = skilled expertise + craft\n"
   CrossLang_Analog: 'EN: profession · RU: профессия · FR: profession · DE: Profession'
   EuphonyNote: ''
   TypingAnswer: професія
