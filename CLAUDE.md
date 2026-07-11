@@ -76,19 +76,20 @@ Book 2 Ch. 9 in progress on branch `feature/ua-l2-ch09-motion-verbs`:
 ### Primary note type: `UA_Lexeme`
 
 **Fields (authoritative):**
-`NoteID`, `Lemma`, `PartOfSpeech`, `Gender`, `Perfective`, `EN_Gloss`,
-`Govt_Case`, `CounterpartForm`, `IrregularForms`, `VerbMotion_Pair`,
+`NoteID`, `Lemma`, `PartOfSpeech`, `Gender`, `Perfective`, `ImperfectiveUnidirectional`,
+`EN_Gloss`, `Govt_Case`, `CounterpartForm`, `IrregularForms`, `VerbMotion_Pair`,
 `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote`, `TypingAnswer`,
-`UA_Example`, `EN_Example`, `Verb_Conj_Table`, `Tags_Ch`,
-`Source_URL`, `Source_Note`
+`UA_Example`, `EN_Example`, `Tags_Ch`, `Source_URL`, `Source_Note`
 
 Key field notes:
 - `Perfective` — PFV infinitive for verbs (blank for non-verbs)
+- `ImperfectiveUnidirectional` — directional/unidirectional IPFV for motion verbs (іти, їхати); blank for non-motion verbs
 - `CounterpartForm` — cross-gender pair, e.g. `f: акто́рка`
 - `IrregularForms` — gen/pl irregularities, indeclinability
 - `TypingAnswer` — Lemma stripped of stress marks (U+0301); student types without accents
 - `Source_URL` — goroh.pp.ua URL for the bare lemma: `https://goroh.pp.ua/Словозміна/<lemma_no_stress>`
 - `Source_Note` — free text: verification date, disambiguation notes, corrections applied
+- **Note:** `Verb_Conj_Table` removed; verb conjugations now belong in UA_Verb note type (structured fields, not HTML)
 
 ### Language conventions (critical)
 - Dialect: modern Ukrainian, **Galician/Lviv** register

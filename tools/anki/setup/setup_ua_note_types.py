@@ -32,6 +32,7 @@ FIELDS = [
     "PartOfSpeech",
     "Gender",
     "Perfective",
+    "ImperfectiveUnidirectional",  # For motion verbs: іти, їхати (directional IPFV)
     "EN_Gloss",
     "Govt_Case",
     "CounterpartForm",
@@ -43,7 +44,6 @@ FIELDS = [
     "TypingAnswer",
     "UA_Example",
     "EN_Example",
-    "Verb_Conj_Table",
     "Tags_Ch",
     "Source_URL",
     "Source_Note",

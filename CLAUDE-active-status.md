@@ -66,7 +66,16 @@ single `templates_dict`, then call `updateModelTemplates` once per model.
 
 **Status:** Templates now update correctly via `make ua-setup-visual`.
 
-### Immediate next task: implement UA_Verb note type + Phase 2a conjugations
+### UA_Lexeme refactoring (2026-07-10)
+
+**Completed:**
+- Removed vestigial `Verb_Conj_Table` field from UA_Lexeme
+- Added `ImperfectiveUnidirectional` field to properly represent 3-aspect motion verbs
+  * ходити (IPFV iterative) + іти (IPFV unidirectional) + піти (PFV)
+  * їздити (IPFV iterative) + їхати (IPFV unidirectional) + поїхати (PFV)
+- Conjugations now belong in UA_Verb note type (structured fields instead of HTML)
+
+**Next: implement UA_Verb note type + Phase 2a conjugations**
 
 **Rationale:** Before importing ch-09 lexemes, we need the conjugation note type ready so prefixed motion verbs (18 lexemes) can link to base conjugations via tags, avoiding 1:1 coupling.
 
