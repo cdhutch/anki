@@ -6,13 +6,18 @@ See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last se
 
 ## Workflow Notes
 
-This repo builds and maintains Anki flashcard decks for two domains:
+This repo builds and maintains Anki flashcard decks across three top-level decks:
 
 - **B737** (`domains/b737/`) — type rating study. CNSF markdown notes exported
-  to TSV and imported via AnkiConnect.
-- **Ukrainian** (`domains/ua/`) — formal language learning (Galician/Lviv
-  register, Яблуко textbook). In early design phase on branch `feature/ua-domain`.
+  to TSV and imported via AnkiConnect. High-stakes professional content.
+- **UA** (`domains/ua/`) — formal language learning (Galician/Lviv
+  register, Яблуко textbook). Active branch `feature/ua-domain`.
   See `domains/ua/anki/docs/design.md` for full schema and migration plan.
+- **Legacy** — archive of older decks. Being systematically migrated or archived.
+
+**FSRS Isolation:** Each top-level deck has completely separate FSRS configuration 
+and card history. Cards in B737 do not influence UA scheduling and vice versa.
+See [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) for parameters.
 
 - **Shell commands are run by Craig**, not Claude. Claude provides commands to copy/paste; it does not execute git, make, or Python commands directly. (Claude's sandbox lacks access to the required conda env and git hooks will fail.)
 - **Pull requests**: Claude provides the `gh pr create` command; Craig runs it and completes the PR on the GitHub website.
@@ -27,6 +32,7 @@ This repo builds and maintains Anki flashcard decks for two domains:
 | **Key paths** | [CLAUDE-key-paths.md](CLAUDE-key-paths.md) |
 | **Migration progress** | [CLAUDE-migration-log.md](CLAUDE-migration-log.md) |
 | **UA_Verb design** | [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) |
+| **FSRS deck configs** | [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) |
 
 ---
 

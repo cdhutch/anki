@@ -35,6 +35,22 @@ acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, electrica
 
 ---
 
+## FSRS Deck Configuration (2026-07-10)
+
+**Status:** Recommended parameters drafted for all three decks.
+
+**Next:** Implement in Anki:
+1. Create three deck configs: "B737 FSRS", "UA FSRS", "Legacy FSRS"
+2. Assign to top-level decks (deck tree inherits config)
+3. Verify isolation: card history completely disjoint across trees
+4. Monitor actual retention after 2–3 weeks; adjust if needed
+
+**Focus:** UA FSRS (0.85–0.90 desired retention) for language learning.
+
+See **[CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md)** for specifications and implementation steps.
+
+---
+
 ## Ukrainian Domain — Active Work (2026-07-10)
 
 **Branch:** `feature/ua-l2-ch09-motion-verbs` (off `feature/ua-domain`)
