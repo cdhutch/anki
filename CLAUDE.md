@@ -33,6 +33,7 @@ See [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) for parameters.
 | **Migration progress** | [CLAUDE-migration-log.md](CLAUDE-migration-log.md) |
 | **UA_Verb design** | [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) |
 | **FSRS deck configs** | [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) |
+| **Flag audit workflow** | [CLAUDE-flag-audit.md](CLAUDE-flag-audit.md) |
 
 ---
 
@@ -258,6 +259,30 @@ extracting vocab from Яблуко appendix pages 220–237 unit by unit.
 **Legacy card migration** — write `export_ua_legacy.py` to pull existing Basic/Cloze
 cards from Anki and generate CNSF skeletons. Enrich with PoS, gender, stress marks
 before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Яблуко ch-by-ch.
+
+### Flagged Card Fix Workflow (Future)
+
+**Purpose:** Periodic review and correction of flagged cards (red=errors, orange=confusing).
+After each study session, fix all flagged cards and remove flags.
+
+**Workflow:**
+1. Query Anki for flagged cards in UA domain → extract NoteIDs
+2. For each flagged NoteID:
+   - Read canonical CNSF file from repo
+   - Show to Claude: full note (fields)
+   - Claude asks: "Why flagged?" (with flag color context)
+   - You respond with issue/fix
+   - Claude suggests if unclear
+   - Update CNSF file with correction
+3. Batch re-import corrected notes to Anki (via `ua_lexeme_import.py`, `ua_verb_import.py`, etc.)
+4. Remove flags from all cards in one query
+5. Commit corrected CNSF files to git
+
+**Tools needed:**
+- `ua_flag_audit.py` — Query flagged cards, extract NoteIDs, map to canonical file paths
+- Integration with existing import scripts (ua_lexeme_import.py, ua_verb_import.py, ua_grammar_import.py, ua_visual_import.py)
+
+**Status:** Planned. End of queue after Phase 2a completion.
 
 ### Source materials
 | Path | Purpose |
