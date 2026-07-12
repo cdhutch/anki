@@ -14,7 +14,7 @@ tags:
 - conj:drill
 fields:
   NoteID: ua-verb-0002
-  Lemma: їха́ти
+  Lemma: ї́хати
   Aspect: imperfective
   VerbClass: motion-vehicle-leader
   FreqSource: class-leader ch:2.9
