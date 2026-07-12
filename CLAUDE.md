@@ -199,6 +199,7 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 - ✅ Recognition card template deployed (collapsible details for imperatives, past, participles)
 - ✅ ua_verb_import.py + `make ua-verb` target operational
 - ✅ 2 base motion verbs authored & imported (ходити ua-verb-0001, їхати ua-verb-0002) — Горох verified
+- ✅ ua_verb_export.py created; 69 legacy UA_Verb + 5 UA_Conjugation exported to CNSF, canonicalized
 - ⏳ Production template (randomized conjugation drilling): design decision pending
 
 **Key principles:**
@@ -208,9 +209,9 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 - **Tag-based linking.** UA_Lexeme and UA_Verb share tags (e.g., `conj:motion-walking-ходити`) for bidirectional reference without foreign keys.
 - **Suspended by default, unsuspend selectively.** Import with `conj:suspended` tag; unsuspend class leaders + irregulars tagged `conj:drill` (~90–100 cards active).
 
-**Phase 2a execution plan (12 steps, starting 2026-07-12):**
-1. Create `ua_verb_export.py` — Export 69 existing UA_Verb + 5 UA_Conjugation notes to CNSF (backup + version control)
-2. Export all legacy notes to canonical .md files in `domains/ua/anki/notes/verbs/exported/`
+**Phase 2a execution plan (12 steps, in progress 2026-07-12):**
+1. ✅ Create `ua_verb_export.py` — Export 69 existing UA_Verb + 5 UA_Conjugation notes to CNSF (backup + version control)
+2. ✅ Export all legacy notes to canonical .md files in `domains/ua/anki/notes/verbs/exported/` — 74 notes canonicalized, ready for migration
 3. Build & test Recognition card template for ходити/їхати — verify collapsible rendering in Anki
 4. Design decision: Production template needed (randomized conjugation drilling) or recognition-only sufficient?
 5. Finish ch-09 verbs (Phase 2a) — target 35–50 canonical CNSF notes:
