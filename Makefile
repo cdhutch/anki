@@ -82,10 +82,11 @@ help:
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
 	@echo "Ukrainian (UA) — note type setup"
-	@echo "  ua-setup                  Create/update UA_Lexeme + UA_Grammar + UA_Visual in Anki"
+	@echo "  ua-setup                  Create/update all UA note types in Anki"
 	@echo "  ua-setup-lexeme           Create/update UA_Lexeme only"
 	@echo "  ua-setup-grammar          Create/update UA_Grammar only"
 	@echo "  ua-setup-visual           Create/update UA_Visual only"
+	@echo "  ua-setup-verb             Create/update UA_Verb only"
 	@echo ""
 	@echo "Ukrainian (UA) — lexeme pipeline"
 	@echo "  ua-batch BATCH=<b>/<ch>   Canonicalize + sync one chapter  (e.g. BATCH=yabluko-l1/ch-00)"
@@ -619,6 +620,9 @@ ua-setup-grammar:
 
 ua-setup-visual:
 	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Visual
+
+ua-setup-verb:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Verb
 
 # ── Single chapter:  make ua-batch BATCH=yabluko-l1/ch-00 ────────────────────
 

@@ -1,14 +1,18 @@
 #!/usr/bin/env python3
-"""Create or update UA_Lexeme and UA_Grammar note types in Anki via AnkiConnect.
+"""Create or update UA note types in Anki via AnkiConnect.
+
+Note types: UA_Lexeme, UA_Grammar, UA_Visual, UA_Verb
 
 If a model does not exist: creates it with all fields, card templates, and CSS.
 If a model already exists: updates templates and CSS; syncs fields (adds missing,
 removes obsolete). Existing data in removed fields is discarded.
 
 Usage (with Anki open + AnkiConnect running):
-    python tools/anki/setup/setup_ua_note_types.py              # both models
+    python tools/anki/setup/setup_ua_note_types.py              # all four models
     python tools/anki/setup/setup_ua_note_types.py --model UA_Lexeme
     python tools/anki/setup/setup_ua_note_types.py --model UA_Grammar
+    python tools/anki/setup/setup_ua_note_types.py --model UA_Visual
+    python tools/anki/setup/setup_ua_note_types.py --model UA_Verb
 """
 from __future__ import annotations
 
@@ -787,12 +791,247 @@ def setup_visual(existing: list[str]):
     print(f"Note type '{VISUAL_MODEL_NAME}' is ready.")
 
 
+# ---------------------------------------------------------------------------
+# UA_Verb — Verb conjugation paradigm note type
+# ---------------------------------------------------------------------------
+
+VERB_MODEL_NAME = "UA_Verb"
+
+VERB_FIELDS = [
+    # Identity & Metadata
+    "NoteID",
+    "Lemma",
+    "Aspect",
+    "VerbClass",
+    "FreqSource",
+    # Present tense (6 pronouns)
+    "Pres_1sg",
+    "Pres_2sg",
+    "Pres_3sg",
+    "Pres_1pl",
+    "Pres_2pl",
+    "Pres_3pl",
+    # Imperatives (3 forms)
+    "Imperative_2sg",
+    "Imperative_1pl",
+    "Imperative_2pl",
+    # Past tense (4 forms)
+    "Past_1sg_m",
+    "Past_1sg_f",
+    "Past_1sg_n",
+    "Past_1pl",
+    # Participles (6 forms)
+    "Participle_Active_Present",
+    "Participle_Adverbial_Present",
+    "Participle_Passive_Past_m",
+    "Participle_Passive_Past_f",
+    "Participle_Impersonal_Past",
+    "Participle_Adverbial_Past",
+    # Metadata
+    "Tags_Conj",
+    "Source_Note",
+    "Verification_Notes",
+]
+
+VERB_CSS = """\
+.card {
+  font-family: 'Noto Sans', Arial, sans-serif;
+  font-size: 16px;
+  color: #1a1a1a;
+  background-color: #ffffff;
+  max-width: 650px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.verb-lemma {
+  font-size: 32px;
+  font-weight: bold;
+  color: #2e7d32;
+  margin: 10px 0;
+}
+
+.verb-aspect {
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.verb-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.verb-table th {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-weight: 600;
+}
+
+.verb-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.section-title {
+  font-weight: 700;
+  color: #1565c0;
+  background-color: #e3f2fd;
+  padding: 6px 10px;
+  margin-top: 12px;
+  margin-bottom: 6px;
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.verb-prompt {
+  font-size: 13px;
+  color: #666;
+  margin-top: 8px;
+}
+
+.note-id {
+  font-size: 10px;
+  color: #ccc;
+  text-align: right;
+  margin-top: 14px;
+}
+
+hr#answer {
+  border: none;
+  border-top: 2px solid #e0e0e0;
+  margin: 16px 0;
+}
+"""
+
+VERB_FRONT_RECOGNITION = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-aspect">{{Aspect}}</div>
+<div class="verb-prompt">What is the full conjugation paradigm?</div>
+"""
+
+VERB_BACK_RECOGNITION = """\
+{{FrontSide}}
+<hr id="answer">
+<table class="verb-table">
+  <tr>
+    <th colspan="2">Present</th>
+  </tr>
+  <tr><td>я</td><td>{{Pres_1sg}}</td></tr>
+  <tr><td>ти</td><td>{{Pres_2sg}}</td></tr>
+  <tr><td>він/вона/воно</td><td>{{Pres_3sg}}</td></tr>
+  <tr><td>ми</td><td>{{Pres_1pl}}</td></tr>
+  <tr><td>ви</td><td>{{Pres_2pl}}</td></tr>
+  <tr><td>вони</td><td>{{Pres_3pl}}</td></tr>
+</table>
+
+<details>
+  <summary class="section-title">Imperatives</summary>
+  <table class="verb-table">
+    <tr><td>ти</td><td>{{Imperative_2sg}}</td></tr>
+    <tr><td>ми</td><td>{{Imperative_1pl}}</td></tr>
+    <tr><td>ви</td><td>{{Imperative_2pl}}</td></tr>
+  </table>
+</details>
+
+<details>
+  <summary class="section-title">Past</summary>
+  <table class="verb-table">
+    <tr><td>м.</td><td>{{Past_1sg_m}}</td></tr>
+    <tr><td>ж.</td><td>{{Past_1sg_f}}</td></tr>
+    <tr><td>с.</td><td>{{Past_1sg_n}}</td></tr>
+    <tr><td>множ.</td><td>{{Past_1pl}}</td></tr>
+  </table>
+</details>
+
+<details>
+  <summary class="section-title">Participles (6)</summary>
+  <table class="verb-table">
+    <tr><td>Act. Pres.</td><td>{{Participle_Active_Present}}</td></tr>
+    <tr><td>Adv. Pres.</td><td>{{Participle_Adverbial_Present}}</td></tr>
+    <tr><td>Pass. Past (м.)</td><td>{{Participle_Passive_Past_m}}</td></tr>
+    <tr><td>Pass. Past (ж.)</td><td>{{Participle_Passive_Past_f}}</td></tr>
+    <tr><td>Impersonal</td><td>{{Participle_Impersonal_Past}}</td></tr>
+    <tr><td>Adv. Past</td><td>{{Participle_Adverbial_Past}}</td></tr>
+  </table>
+</details>
+
+{{#Source_Note}}<div style="margin-top:12px; font-size:13px; color:#777;">{{Source_Note}}</div>{{/Source_Note}}
+<div class="note-id">{{NoteID}} · {{Tags_Conj}}</div>
+"""
+
+VERB_CARD_TEMPLATES = [
+    {"Name": "Recognition", "Front": VERB_FRONT_RECOGNITION, "Back": VERB_BACK_RECOGNITION},
+]
+
+
+def create_verb_model():
+    print(f"Creating note type '{VERB_MODEL_NAME}'...")
+    anki_request(
+        "createModel",
+        {
+            "modelName": VERB_MODEL_NAME,
+            "inOrderFields": VERB_FIELDS,
+            "css": VERB_CSS,
+            "cardTemplates": VERB_CARD_TEMPLATES,
+        },
+        url=ANKI_URL,
+    )
+    print("  Created.")
+
+
+def update_verb_model():
+    print(f"Updating note type '{VERB_MODEL_NAME}'...")
+    templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in VERB_CARD_TEMPLATES}
+    anki_request(
+        "updateModelTemplates",
+        {"model": {"name": VERB_MODEL_NAME, "templates": templates_dict}},
+        url=ANKI_URL,
+    )
+
+    anki_request(
+        "updateModelStyling",
+        {"model": {"name": VERB_MODEL_NAME, "css": VERB_CSS}},
+        url=ANKI_URL,
+    )
+
+    existing_fields = anki_request("modelFieldNames", {"modelName": VERB_MODEL_NAME}, url=ANKI_URL)
+    existing_set = set(existing_fields)
+    desired_set = set(VERB_FIELDS)
+
+    for field in VERB_FIELDS:
+        if field not in existing_set:
+            print(f"  Adding field: {field}")
+            anki_request("modelFieldAdd", {"modelName": VERB_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    for field in existing_fields:
+        if field not in desired_set:
+            print(f"  Removing field: {field}  (data lost)")
+            anki_request("modelFieldRemove", {"modelName": VERB_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    print("  Updated.")
+
+
+def setup_verb(existing: list[str]):
+    if VERB_MODEL_NAME in existing:
+        update_verb_model()
+    else:
+        create_verb_model()
+    print(f"Note type '{VERB_MODEL_NAME}' is ready.")
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--model",
-        choices=["UA_Lexeme", "UA_Grammar", "UA_Visual"],
-        help="Set up only this model (default: all three)",
+        choices=["UA_Lexeme", "UA_Grammar", "UA_Visual", "UA_Verb"],
+        help="Set up only this model (default: all four)",
     )
     args = parser.parse_args()
 
@@ -804,10 +1043,13 @@ def main():
         setup_grammar(existing)
     elif args.model == "UA_Visual":
         setup_visual(existing)
+    elif args.model == "UA_Verb":
+        setup_verb(existing)
     else:
         setup_lexeme(existing)
         setup_grammar(existing)
         setup_visual(existing)
+        setup_verb(existing)
 
     print("\nDone.")
 
