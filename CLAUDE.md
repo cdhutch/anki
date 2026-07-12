@@ -190,24 +190,44 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 
-### UA_Verb Note Type (Phase 2a, starting 2026-07-10)
+### UA_Verb Note Type (Phase 2a, committed 2026-07-12)
 
 **Design:** See [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) for complete specification.
 
+**Implementation status (2026-07-12):**
+- ✅ UA_Verb note type created in Anki (27 fields: identity, present 6, imperatives 3, past 4, participles 6, metadata)
+- ✅ Recognition card template deployed (collapsible details for imperatives, past, participles)
+- ✅ ua_verb_import.py + `make ua-verb` target operational
+- ✅ 2 base motion verbs authored & imported (ходити ua-verb-0001, їхати ua-verb-0002) — Горох verified
+- ⏳ Production template (randomized conjugation drilling): design decision pending
+
 **Key principles:**
 - **Separate morphology from vocabulary.** One UA_Verb note (ходити) serves multiple lexemes (ходити, походити, заходити, etc.) via tag linking, not 1:1 coupling.
-- **Structured fields, not HTML.** 20 fields store individual conjugation forms (6 pronouns, 3 imperatives, 3 past, 2 participles) + metadata. Templates render as tables. HTML is generated cache, not canonical.
+- **Structured fields, not HTML.** 26 fields store individual conjugation forms (6 pronouns, 3 imperatives, 4 past, 6 participles) + metadata. Templates render as tables. HTML is generated cache, not canonical.
+- **CNSF canonical format.** All UA_Verb notes version-controlled as markdown with YAML front matter, imported via AnkiConnect.
 - **Tag-based linking.** UA_Lexeme and UA_Verb share tags (e.g., `conj:motion-walking-ходити`) for bidirectional reference without foreign keys.
-- **Suspended by default, unsuspend selectively.** Import all with `conj:suspended` tag; unsuspend only class leaders + irregulars + high-freq verbs tagged `conj:drill` (~90–100 cards).
+- **Suspended by default, unsuspend selectively.** Import with `conj:suspended` tag; unsuspend class leaders + irregulars tagged `conj:drill` (~90–100 cards active).
 
-**Phase 2a scope** (~60–70 notes):
-- ~25 class model leaders (ходити, їхати, писати, читати, класти, стояти, казати, робити, жити, говорити, слухати, гуляти, хотіти, etc.)
-- ~30–40 irregulars (бути, дати/давати, їсти/з'їсти, брати/взяти, ставати/стати, лежати/лягти, сидіти/сісти, etc.)
-
-**Ch-09 interim approach:**
-- Create 2 base verb notes (ходити, їхати) marked `class:leader`, `ch:2.9`, `conj:drill`
-- Tag all 18 ch-09 lexemes with `conj:motion-walking-ходити` or `conj:motion-vehicle-їхати`
-- Lexemes inherit conjugation reference via tag; students drill base patterns once, not per-prefix variant
+**Phase 2a execution plan (12 steps, starting 2026-07-12):**
+1. Create `ua_verb_export.py` — Export 69 existing UA_Verb + 5 UA_Conjugation notes to CNSF (backup + version control)
+2. Export all legacy notes to canonical .md files in `domains/ua/anki/notes/verbs/exported/`
+3. Build & test Recognition card template for ходити/їхати — verify collapsible rendering in Anki
+4. Design decision: Production template needed (randomized conjugation drilling) or recognition-only sufficient?
+5. Finish ch-09 verbs (Phase 2a) — target 35–50 canonical CNSF notes:
+   - **Prefixed motion verbs** (10–14): походити, заходити, виходити, перейходити (ходити base); поїхати, заїхати, виїхати (їхати base). Tag: `conj:motion-walking-ходити` / `conj:motion-vehicle-їхати`
+   - **Class leaders** (5–10): писати, читати, казати, робити, жити, говорити, слухати, гуляти, хотіти, etc. Tag: `class:leader, phase:2a, conj:drill`
+   - **Irregulars** (8–12): бути, дати/давати, їсти/з'їсти, брати/взяти, ставати/стати, лежати/лягти, сідіти/сісти, etc. Tag: `class:irregular, phase:2a, conj:drill`
+6. Create `ua_conjugation_to_verb.py` migration script — Automate 5 UA_Conjugation → UA_Verb CNSF conversion (field mapping: Pres_1S→Pres_1sg, ActPart_Pres→Participle_Active_Present, Gerund→Participle_Adverbial)
+7. Run migration — Generate CNSF files in `domains/ua/anki/notes/verbs/migrated/`
+8. Field-coverage audit — Compare old vs new structure; flag data loss before sync
+9. Verify tags & metadata — Standardize legacy tags to new scheme (phase:2a, conj:drill, conj:suspended)
+10. Stage sync in batches:
+    - Batch A: 2 new verbs (ходити, їхати) ✓ complete
+    - Batch B: New Phase 2a verbs (prefixed, class leaders, irregulars)
+    - Batch C: 69 legacy UA_Verb reimported from exported CNSF
+    - Batch D: 5 migrated UA_Conjugation → UA_Verb format
+11. Final QA — Spot-check in Anki: verify conjugations, tags, deck placement
+12. Update CLAUDE.md — Document completion, tools, tagging conventions
 
 **Participles policy:**
 - **Adverbial past participle** (е.g., робивши) — *required*; useful for reading comprehension
