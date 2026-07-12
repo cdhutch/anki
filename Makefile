@@ -114,6 +114,11 @@ help:
 	@echo "  ua-visual-check           Check CNSF formatting (no changes)"
 	@echo "  ua-visual-fix             Canonicalize all UA visual notes"
 	@echo ""
+	@echo "Ukrainian (UA) — verb conjugation paradigms"
+	@echo "  ua-verb                   Canonicalize + sync all UA verb notes"
+	@echo "  ua-verb-check             Check CNSF formatting (no changes)"
+	@echo "  ua-verb-fix               Canonicalize all UA verb notes"
+	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
 	@echo "                      Writes /tmp/goroh/goroh_mismatches.tsv for review"
@@ -591,6 +596,7 @@ line-flying:
 # All UA notes:          make ua-lexeme
 # -------------------------------------------------------------------
 UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
+UA_VERB_ROOT    := domains/ua/anki/notes/verbs
 UA_GRAMMAR_ROOT := domains/ua/anki/notes/grammar
 UA_VISUAL_ROOT  := domains/ua/anki/notes/visual
 UA_INSPECT      := tools/anki/inspect
@@ -696,6 +702,19 @@ ua-visual-fix:
 
 ua-visual: ua-visual-fix
 	$(PYTHON) tools/anki/sync/ua_visual_import.py $(UA_VISUAL_ROOT)/
+
+# ── Verb conjugation paradigms:  make ua-verb ──────────────────────────────────
+
+ua-verb-check:
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-verb-fix:
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-verb: ua-verb-fix
+	$(PYTHON) tools/anki/sync/ua_verb_import.py $(UA_VERB_ROOT)/
 
 # ── Stress verification ──────────────────────────────────────────────────────
 
