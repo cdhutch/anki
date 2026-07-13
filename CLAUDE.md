@@ -210,10 +210,10 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 - **Tag-based linking.** UA_Lexeme and UA_Verb share tags (e.g., `conj:motion-walking-ходити`) for bidirectional reference without foreign keys.
 - **Suspended by default, unsuspend selectively.** Import with `conj:suspended` tag; unsuspend class leaders + irregulars tagged `conj:drill` (~90–100 cards active).
 
-**Phase 2a execution plan (12 steps, in progress 2026-07-12):**
+**Phase 2a execution plan (12 steps, in progress 2026-07-13):**
 1. ✅ Create `ua_verb_export.py` — Export 69 existing UA_Verb + 5 UA_Conjugation notes to CNSF (backup + version control)
 2. ✅ Export all legacy notes to canonical .md files in `domains/ua/anki/notes/verbs/exported/` — 74 notes canonicalized, ready for migration
-3. Build & test Recognition card template for ходити/їхати — verify collapsible rendering in Anki
+3. ✅ Build & test Recognition card template for ходити/їхати — Updated canonical files with proper field names (Imperative_2sg/2pl/1pl, Past_1sg_m/f/n, Participle_Passive_Past_m/f). Fixed canonicalizer to handle ua_verb Verification_Notes field (remove space variant). Both notes re-imported to Anki with complete conjugation data.
 4. Design decision: Production template needed (randomized conjugation drilling) or recognition-only sufficient?
 5. Finish ch-09 verbs (Phase 2a) — target 35–50 canonical CNSF notes:
    - **Prefixed motion verbs** (10–14): походити, заходити, виходити, перейходити (ходити base); поїхати, заїхати, виїхати (їхати base). Tag: `conj:motion-walking-ходити` / `conj:motion-vehicle-їхати`
@@ -230,6 +230,9 @@ in `tools/anki/inspect/` when needed as a standalone tool.
     - Batch D: 5 migrated UA_Conjugation → UA_Verb format
 11. Final QA — Spot-check in Anki: verify conjugations, tags, deck placement
 12. Update CLAUDE.md — Document completion, tools, tagging conventions
+
+**CNSF canonicalization note (2026-07-13):**
+- UA_Verb notes use `Verification_Notes` (underscore) not `Verification Notes` (space). The canonicalizer (`tools/anki/cnsf_canonicalize.py`) has been fixed to remove the space variant when processing ua_verb note_type. This prevents duplicate fields in canonical files.
 
 **Participles policy:**
 - **Adverbial past participle** (е.g., робивши) — *required*; useful for reading comprehension

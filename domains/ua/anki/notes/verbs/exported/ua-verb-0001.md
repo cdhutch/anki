@@ -42,6 +42,5 @@ fields:
   Source_Note: Class leader for motion walking prefix pattern. Base for ходити, походити,
     заходити, виходити, перейходити. Verify all forms against Горох.
   Verification_Notes: ''
-  Verification Notes: ''
 ---
 

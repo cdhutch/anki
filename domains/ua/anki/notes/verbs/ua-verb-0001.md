@@ -24,22 +24,22 @@ fields:
   Pres_1pl: хо́димо
   Pres_2pl: хо́дите
   Pres_3pl: хо́дять
-  Impr_2sg: ходи́
-  Impr_2sg_Formal: ході́ть
-  Impr_2pl: ході́мо
-  Past_m: ходи́в
-  Past_f: ходи́ла
-  Past_n: ходи́ло
-  Past_pl: ходи́ли
-  Participle_Active_Present: null
+  Imperative_2sg: ходи́
+  Imperative_1pl: ході́мо
+  Imperative_2pl: ході́ть
+  Past_1sg_m: ходи́в
+  Past_1sg_f: ходи́ла
+  Past_1sg_n: ходи́ло
+  Past_1pl: ходи́ли
+  Participle_Active_Present: ''
   Participle_Adverbial_Present: ходя́чи
-  Participle_Active_Past: null
-  Participle_Passive_Past: х́оджений
+  Participle_Passive_Past_m: х́оджений
+  Participle_Passive_Past_f: ''
   Participle_Impersonal_Past: хо́джено
   Participle_Adverbial_Past: ходи́вши
   Tags_Conj: class:leader motion:walking phase:2a ch:2.9 conj:drill
   Source_Note: Class leader for motion walking prefix pattern. Base for ходити, походити,
     заходити, виходити, перейходити. Verify all forms against Горох.
-  Verification Notes: null
+  Verification_Notes: ''
 ---
 

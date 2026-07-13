@@ -42,6 +42,5 @@ fields:
   Source_Note: Class leader for motion vehicle prefix pattern. Base for їхати, поїхати, заїхати,
     виїхати. Verify all forms against Горох.
   Verification_Notes: ''
-  Verification Notes: ''
 ---
 
