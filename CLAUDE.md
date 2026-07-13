@@ -213,7 +213,12 @@ in `tools/anki/inspect/` when needed as a standalone tool.
 **Phase 2a execution plan (12 steps, in progress 2026-07-13):**
 1. ✅ Create `ua_verb_export.py` — Export 69 existing UA_Verb + 5 UA_Conjugation notes to CNSF (backup + version control)
 2. ✅ Export all legacy notes to canonical .md files in `domains/ua/anki/notes/verbs/exported/` — 74 notes canonicalized, ready for migration
-3. ✅ Build & test Recognition card template for ходити/їхати — Updated canonical files with proper field names (Imperative_2sg/2pl/1pl, Past_1sg_m/f/n, Participle_Passive_Past_m/f). Fixed canonicalizer to handle ua_verb Verification_Notes field (remove space variant). Both notes re-imported to Anki with complete conjugation data.
+3. ✅ Build & test Recognition card template for ходити/їхати — Card template designed with block-based layout:
+   - **Present tense:** 2-column grid (я/ми, ти/ви, він,вона,воно/вони)
+   - **Past tense:** Full-width 4 rows (ч.р., ж.р., с.р., мн.)
+   - **Imperative:** Full-width 3 rows (ти, ми, ви)
+   - **Participles:** Collapsible section (Act. Pres., Adv. Pres., Pass. Past m/f, Impersonal, Adv. Past)
+   - Both ua-verb-0001 (ходити) and ua-verb-0002 (їздити) synced to Anki with correct conjugation data. Template deployed via setup_ua_note_types.py. Created survey_ua_verb.py tool for card verification.
 4. Design decision: Production template needed (randomized conjugation drilling) or recognition-only sufficient?
 5. Finish ch-09 verbs (Phase 2a) — target 35–50 canonical CNSF notes:
    - **Prefixed motion verbs** (10–14): походити, заходити, виходити, перейходити (ходити base); поїхати, заїхати, виїхати (їхати base). Tag: `conj:motion-walking-ходити` / `conj:motion-vehicle-їхати`

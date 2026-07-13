@@ -908,6 +908,50 @@ hr#answer {
   border-top: 2px solid #e0e0e0;
   margin: 16px 0;
 }
+
+.verb-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.person-block {
+  border: 1px solid #ccc;
+  padding: 0.8em;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.pronoun {
+  font-weight: bold;
+  color: #0066cc;
+  font-size: 0.9em;
+  margin-bottom: 0.4em;
+}
+
+.form {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.tense-header {
+  grid-column: 1 / -1;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #555;
+  border-bottom: 2px solid #666;
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  margin-top: 1em;
+}
+
+.verb-block-single {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1em;
+  margin: 1em 0;
+}
 """
 
 VERB_FRONT_RECOGNITION = """\
@@ -919,39 +963,73 @@ VERB_FRONT_RECOGNITION = """\
 VERB_BACK_RECOGNITION = """\
 {{FrontSide}}
 <hr id="answer">
-<table class="verb-table">
-  <tr>
-    <th colspan="2">Present</th>
-  </tr>
-  <tr><td>я</td><td>{{Pres_1sg}}</td></tr>
-  <tr><td>ти</td><td>{{Pres_2sg}}</td></tr>
-  <tr><td>він/вона/воно</td><td>{{Pres_3sg}}</td></tr>
-  <tr><td>ми</td><td>{{Pres_1pl}}</td></tr>
-  <tr><td>ви</td><td>{{Pres_2pl}}</td></tr>
-  <tr><td>вони</td><td>{{Pres_3pl}}</td></tr>
-</table>
+
+<div class="verb-block">
+  <div class="tense-header">Теперішній час (Present)</div>
+  <div class="person-block">
+    <div class="pronoun">я</div>
+    <div class="form">{{Pres_1sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ми</div>
+    <div class="form">{{Pres_1pl}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ти</div>
+    <div class="form">{{Pres_2sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ви</div>
+    <div class="form">{{Pres_2pl}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">він/вона/воно</div>
+    <div class="form">{{Pres_3sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">вони</div>
+    <div class="form">{{Pres_3pl}}</div>
+  </div>
+</div>
+
+<div class="verb-block-single">
+  <div class="tense-header">Минулий час (Past)</div>
+  <div class="person-block">
+    <div class="pronoun">ч.р. (я/ти/він)</div>
+    <div class="form">{{Past_1sg_m}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ж.р. (я/ти/вона)</div>
+    <div class="form">{{Past_1sg_f}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">с.р. (воно)</div>
+    <div class="form">{{Past_1sg_n}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">мн. (ми/ви/вони)</div>
+    <div class="form">{{Past_1pl}}</div>
+  </div>
+</div>
+
+<div class="verb-block-single">
+  <div class="tense-header">Наказовий спосіб (Imperative)</div>
+  <div class="person-block">
+    <div class="pronoun">ти</div>
+    <div class="form">{{Imperative_2sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ми</div>
+    <div class="form">{{Imperative_1pl}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ви</div>
+    <div class="form">{{Imperative_2pl}}</div>
+  </div>
+</div>
 
 <details>
-  <summary class="section-title">Imperatives</summary>
-  <table class="verb-table">
-    <tr><td>ти</td><td>{{Imperative_2sg}}</td></tr>
-    <tr><td>ми</td><td>{{Imperative_1pl}}</td></tr>
-    <tr><td>ви</td><td>{{Imperative_2pl}}</td></tr>
-  </table>
-</details>
-
-<details>
-  <summary class="section-title">Past</summary>
-  <table class="verb-table">
-    <tr><td>м.</td><td>{{Past_1sg_m}}</td></tr>
-    <tr><td>ж.</td><td>{{Past_1sg_f}}</td></tr>
-    <tr><td>с.</td><td>{{Past_1sg_n}}</td></tr>
-    <tr><td>множ.</td><td>{{Past_1pl}}</td></tr>
-  </table>
-</details>
-
-<details>
-  <summary class="section-title">Participles (6)</summary>
+  <summary class="section-title">Participles</summary>
   <table class="verb-table">
     <tr><td>Act. Pres.</td><td>{{Participle_Active_Present}}</td></tr>
     <tr><td>Adv. Pres.</td><td>{{Participle_Adverbial_Present}}</td></tr>
