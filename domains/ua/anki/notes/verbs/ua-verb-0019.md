@@ -12,25 +12,26 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
+- stress:unverified
 fields:
   NoteID: ua-verb-0019
   Lemma: підходити
   Aspect: imperfective
   VerbClass: motion-walking-prefixed
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: підходжу́
+  Pres_2sg: підхо́диш
+  Pres_3sg: підхо́дить
+  Pres_1pl: підхо́дим
+  Pres_2pl: підхо́дите
+  Pres_3pl: підхо́дять
+  Imperative_2sg: підходи́
+  Imperative_1pl: підході́м
+  Imperative_2pl: підході́ть
+  Past_1sg_m: підходи́в
+  Past_1sg_f: підходи́ла
+  Past_1sg_n: підходи́ло
+  Past_3pl: підходи́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

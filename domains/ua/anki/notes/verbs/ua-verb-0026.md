@@ -12,25 +12,26 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
+- stress:unverified
 fields:
   NoteID: ua-verb-0026
   Lemma: виїхати
   Aspect: perfective
   VerbClass: motion-vehicle-prefixed
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: виї́ду
+  Pres_2sg: виїде́ш
+  Pres_3sg: виїде́
+  Pres_1pl: виїде́м
+  Pres_2pl: виїдете́
+  Pres_3pl: виї́дуть
+  Imperative_2sg: виїдь
+  Imperative_1pl: виїдімте́
+  Imperative_2pl: виїдіть
+  Past_1sg_m: виїхав
+  Past_1sg_f: виїха́ла
+  Past_1sg_n: виїха́ло
+  Past_3pl: виїха́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

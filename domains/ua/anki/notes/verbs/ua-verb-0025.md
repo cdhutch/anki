@@ -12,25 +12,26 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
+- stress:unverified
 fields:
   NoteID: ua-verb-0025
   Lemma: приїхати
   Aspect: perfective
   VerbClass: motion-vehicle-prefixed
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: приї́ду
+  Pres_2sg: приїде́ш
+  Pres_3sg: приїде́
+  Pres_1pl: приїде́м
+  Pres_2pl: приїдете́
+  Pres_3pl: приї́дуть
+  Imperative_2sg: приїдь
+  Imperative_1pl: приїдімте́
+  Imperative_2pl: приїдіть
+  Past_1sg_m: приїхав
+  Past_1sg_f: приїха́ла
+  Past_1sg_n: приїха́ло
+  Past_3pl: приїха́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

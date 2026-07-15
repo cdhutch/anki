@@ -12,25 +12,26 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
+- stress:unverified
 fields:
   NoteID: ua-verb-0018
   Lemma: виходити
   Aspect: imperfective
   VerbClass: motion-walking-prefixed
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: виходжу́
+  Pres_2sg: вихо́диш
+  Pres_3sg: вихо́дить
+  Pres_1pl: вихо́дим
+  Pres_2pl: вихо́дите
+  Pres_3pl: вихо́дять
+  Imperative_2sg: виходи́
+  Imperative_1pl: виході́м
+  Imperative_2pl: виході́ть
+  Past_1sg_m: виходи́в
+  Past_1sg_f: виходи́ла
+  Past_1sg_n: виходи́ло
+  Past_3pl: виходи́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

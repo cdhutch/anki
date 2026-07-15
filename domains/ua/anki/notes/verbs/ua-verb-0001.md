@@ -12,6 +12,7 @@ tags:
 - phase:2a
 - conj:drill
 - ch:2.9.2
+- stress:unverified
 fields:
   NoteID: ua-verb-0001
   Lemma: ходи́ти

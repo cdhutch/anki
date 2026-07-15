@@ -12,25 +12,26 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
+- stress:unverified
 fields:
   NoteID: ua-verb-0027
   Lemma: підїхати
   Aspect: perfective
   VerbClass: motion-vehicle-prefixed
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: підї́ду
+  Pres_2sg: підїде́ш
+  Pres_3sg: підїде́
+  Pres_1pl: підїде́м
+  Pres_2pl: підїдете́
+  Pres_3pl: підї́дуть
+  Imperative_2sg: підїдь
+  Imperative_1pl: підїдімте́
+  Imperative_2pl: підїдіть
+  Past_1sg_m: підїхав
+  Past_1sg_f: підїха́ла
+  Past_1sg_n: підїха́ло
+  Past_3pl: підїха́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

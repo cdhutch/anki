@@ -12,25 +12,26 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
+- stress:unverified
 fields:
   NoteID: ua-verb-0022
   Lemma: переходити
   Aspect: imperfective
   VerbClass: motion-walking-prefixed
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: переходжу́
+  Pres_2sg: перехо́диш
+  Pres_3sg: перехо́дить
+  Pres_1pl: перехо́дим
+  Pres_2pl: перехо́дите
+  Pres_3pl: перехо́дять
+  Imperative_2sg: переходи́
+  Imperative_1pl: переході́м
+  Imperative_2pl: переході́ть
+  Past_1sg_m: переходи́в
+  Past_1sg_f: переходи́ла
+  Past_1sg_n: переходи́ло
+  Past_3pl: переходи́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''
