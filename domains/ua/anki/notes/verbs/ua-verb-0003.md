@@ -1,7 +1,7 @@
 ---
 schema: cnsf/v0
 note_type: ua_verb
-note_id: ua-verb-0002
+note_id: ua-verb-0003
 anki:
   model: UA_Verb
   deck: UA::Verbs
@@ -10,10 +10,11 @@ tags:
 - motion:walking
 - phase:2a
 - ch:2.9
+- phonetic-variant
 - conj:drill
 fields:
-  NoteID: ua-verb-0002
-  Lemma: іти
+  NoteID: ua-verb-0003
+  Lemma: йти
   Aspect: imperfective
   VerbClass: motion-walking-new
   FreqSource: ch:2.9

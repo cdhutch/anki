@@ -1,21 +1,21 @@
 ---
 schema: cnsf/v0
 note_type: ua_verb
-note_id: ua-verb-0002
+note_id: ua-verb-0010
 anki:
   model: UA_Verb
   deck: UA::Verbs
 tags:
 - domain:ua
-- motion:walking
+- motion:swimming
 - phase:2a
 - ch:2.9
 - conj:drill
 fields:
-  NoteID: ua-verb-0002
-  Lemma: іти
-  Aspect: imperfective
-  VerbClass: motion-walking-new
+  NoteID: ua-verb-0010
+  Lemma: поплисти
+  Aspect: perfective
+  VerbClass: motion-swimming-new
   FreqSource: ch:2.9
   Pres_1sg: ''
   Pres_2sg: ''

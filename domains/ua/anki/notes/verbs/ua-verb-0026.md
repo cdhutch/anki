@@ -1,21 +1,21 @@
 ---
 schema: cnsf/v0
 note_type: ua_verb
-note_id: ua-verb-0002
+note_id: ua-verb-0026
 anki:
   model: UA_Verb
   deck: UA::Verbs
 tags:
 - domain:ua
-- motion:walking
+- motion:vehicle
 - phase:2a
 - ch:2.9
-- conj:drill
+- class:prefixed
 fields:
-  NoteID: ua-verb-0002
-  Lemma: іти
+  NoteID: ua-verb-0026
+  Lemma: виїхати
   Aspect: imperfective
-  VerbClass: motion-walking-new
+  VerbClass: motion-vehicle-new
   FreqSource: ch:2.9
   Pres_1sg: ''
   Pres_2sg: ''

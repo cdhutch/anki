@@ -1,21 +1,21 @@
 ---
 schema: cnsf/v0
 note_type: ua_verb
-note_id: ua-verb-0002
+note_id: ua-verb-0012
 anki:
   model: UA_Verb
   deck: UA::Verbs
 tags:
 - domain:ua
-- motion:walking
+- motion:running
 - phase:2a
 - ch:2.9
 - conj:drill
 fields:
-  NoteID: ua-verb-0002
-  Lemma: іти
+  NoteID: ua-verb-0012
+  Lemma: бігти
   Aspect: imperfective
-  VerbClass: motion-walking-new
+  VerbClass: motion-running-new
   FreqSource: ch:2.9
   Pres_1sg: ''
   Pres_2sg: ''

@@ -1,7 +1,7 @@
 ---
 schema: cnsf/v0
 note_type: ua_verb
-note_id: ua-verb-0002
+note_id: ua-verb-0004
 anki:
   model: UA_Verb
   deck: UA::Verbs
@@ -12,9 +12,9 @@ tags:
 - ch:2.9
 - conj:drill
 fields:
-  NoteID: ua-verb-0002
-  Lemma: іти
-  Aspect: imperfective
+  NoteID: ua-verb-0004
+  Lemma: піти
+  Aspect: perfective
   VerbClass: motion-walking-new
   FreqSource: ch:2.9
   Pres_1sg: ''
