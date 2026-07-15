@@ -8,6 +8,7 @@ anki:
 tags:
 - domain:ua
 - motion:walking
+- prefixed
 - phase:2a
 - ch:2.9
 - class:prefixed
@@ -15,7 +16,7 @@ fields:
   NoteID: ua-verb-0019
   Lemma: підходити
   Aspect: imperfective
-  VerbClass: motion-walking-new
+  VerbClass: motion-walking-prefixed
   FreqSource: ch:2.9
   Pres_1sg: ''
   Pres_2sg: ''

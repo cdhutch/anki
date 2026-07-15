@@ -8,14 +8,15 @@ anki:
 tags:
 - domain:ua
 - motion:vehicle
+- prefixed
 - phase:2a
 - ch:2.9
 - class:prefixed
 fields:
   NoteID: ua-verb-0028
   Lemma: доїхати
-  Aspect: imperfective
-  VerbClass: motion-vehicle-new
+  Aspect: perfective
+  VerbClass: motion-vehicle-prefixed
   FreqSource: ch:2.9
   Pres_1sg: ''
   Pres_2sg: ''
