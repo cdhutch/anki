@@ -17,19 +17,19 @@ fields:
   Aspect: imperfective
   VerbClass: motion-vehicle-habitual
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: їжджу́
+  Pres_2sg: їзди́ш
+  Pres_3sg: їзди́ть
+  Pres_1pl: їзди́м
+  Pres_2pl: їзди́те
+  Pres_3pl: їзді́ть
+  Imperative_2sg: їзди́
+  Imperative_1pl: їзди́мо
+  Imperative_2pl: їзди́те
+  Past_1sg_m: їзди́в
+  Past_1sg_f: їзди́ла
+  Past_1sg_n: їзди́ло
+  Past_3pl: їзди́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

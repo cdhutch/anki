@@ -17,19 +17,19 @@ fields:
   Aspect: perfective
   VerbClass: motion-vehicle-new
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: поїду́
+  Pres_2sg: поїде́ш
+  Pres_3sg: поїде́
+  Pres_1pl: поїде́м
+  Pres_2pl: поїдете́
+  Pres_3pl: поїду́ть
+  Imperative_2sg: поїдь
+  Imperative_1pl: поїдімо
+  Imperative_2pl: поїдіть
+  Past_1sg_m: поїха́в
+  Past_1sg_f: поїха́ла
+  Past_1sg_n: поїха́ло
+  Past_3pl: поїха́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

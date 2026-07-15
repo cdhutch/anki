@@ -18,19 +18,19 @@ fields:
   Aspect: imperfective
   VerbClass: motion-walking-new
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: йду́
+  Pres_2sg: йде́ш
+  Pres_3sg: йде́
+  Pres_1pl: йде́м
+  Pres_2pl: йдете́
+  Pres_3pl: йду́ть
+  Imperative_2sg: йди́
+  Imperative_1pl: йді́м
+  Imperative_2pl: йді́ть
+  Past_1sg_m: йшо́в
+  Past_1sg_f: йшла́
+  Past_1sg_n: йшло́
+  Past_3pl: йшли́
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

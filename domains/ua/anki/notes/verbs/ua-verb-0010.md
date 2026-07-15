@@ -17,19 +17,19 @@ fields:
   Aspect: perfective
   VerbClass: motion-swimming-new
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: попину́
+  Pres_2sg: попи́неш
+  Pres_3sg: попи́не
+  Pres_1pl: попи́нем
+  Pres_2pl: попи́нете
+  Pres_3pl: попину́ть
+  Imperative_2sg: попи́ни
+  Imperative_1pl: попи́німе
+  Imperative_2pl: попи́ніте
+  Past_1sg_m: попи́в
+  Past_1sg_f: попи́ла
+  Past_1sg_n: попи́ло
+  Past_3pl: попи́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

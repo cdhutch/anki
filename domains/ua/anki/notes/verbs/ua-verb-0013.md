@@ -17,19 +17,19 @@ fields:
   Aspect: perfective
   VerbClass: motion-running-new
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: побіжу́
+  Pres_2sg: побіжи́ш
+  Pres_3sg: побіжи́ть
+  Pres_1pl: побіжи́м
+  Pres_2pl: побіжи́те
+  Pres_3pl: побіжа́ть
+  Imperative_2sg: побіжи́
+  Imperative_1pl: побіжи́мо
+  Imperative_2pl: побіжи́те
+  Past_1sg_m: побіг
+  Past_1sg_f: побіга́ла
+  Past_1sg_n: побіга́ло
+  Past_3pl: побіга́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

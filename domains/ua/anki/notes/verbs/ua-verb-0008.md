@@ -17,19 +17,19 @@ fields:
   Aspect: imperfective
   VerbClass: motion-swimming-new
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: пла́ю
+  Pres_2sg: пла́єш
+  Pres_3sg: пла́є
+  Pres_1pl: пла́єм
+  Pres_2pl: пла́єте
+  Pres_3pl: пла́ють
+  Imperative_2sg: пла́й
+  Imperative_1pl: пла́йме
+  Imperative_2pl: пла́йте
+  Past_1sg_m: плава́в
+  Past_1sg_f: плава́ла
+  Past_1sg_n: плава́ло
+  Past_3pl: плава́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

@@ -17,19 +17,19 @@ fields:
   Aspect: imperfective
   VerbClass: motion-running-new
   FreqSource: ch:2.9
-  Pres_1sg: ''
-  Pres_2sg: ''
-  Pres_3sg: ''
-  Pres_1pl: ''
-  Pres_2pl: ''
-  Pres_3pl: ''
-  Imperative_2sg: ''
-  Imperative_1pl: ''
-  Imperative_2pl: ''
-  Past_1sg_m: ''
-  Past_1sg_f: ''
-  Past_1sg_n: ''
-  Past_3pl: ''
+  Pres_1sg: біжу́
+  Pres_2sg: біжи́ш
+  Pres_3sg: біжи́ть
+  Pres_1pl: біжи́м
+  Pres_2pl: біжи́те
+  Pres_3pl: біжа́ть
+  Imperative_2sg: біжи́
+  Imperative_1pl: біжи́мо
+  Imperative_2pl: біжи́те
+  Past_1sg_m: біг
+  Past_1sg_f: біга́ла
+  Past_1sg_n: біга́ло
+  Past_3pl: біга́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past_m: ''

@@ -21,11 +21,11 @@ fields:
   Pres_1sg: ходжу́
   Pres_2sg: хо́диш
   Pres_3sg: хо́дить
-  Pres_1pl: хо́димо
+  Pres_1pl: хо́дим
   Pres_2pl: хо́дите
   Pres_3pl: хо́дять
   Imperative_2sg: ходи́
-  Imperative_1pl: ході́мо
+  Imperative_1pl: ході́м
   Imperative_2pl: ході́ть
   Past_1sg_m: ходи́в
   Past_1sg_f: ходи́ла
