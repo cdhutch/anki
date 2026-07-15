@@ -1044,8 +1044,263 @@ VERB_BACK_RECOGNITION = """\
 <div class="note-id">{{NoteID}} · {{Tags_Conj}}</div>
 """
 
+VERB_FRONT_PRODUCTION_PRESENT = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Present (1sg→3pl): Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block">
+  <div class="tense-header">Теперішній час (Present)</div>
+  <div class="person-block">
+    <div class="pronoun">я</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ми</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ти</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ви</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">він/вона/воно</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">вони</div>
+    <div class="form">_______</div>
+  </div>
+</div>
+"""
+
+VERB_BACK_PRODUCTION_PRESENT = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Present (1sg→3pl): Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block">
+  <div class="tense-header">Теперішній час (Present)</div>
+  <div class="person-block">
+    <div class="pronoun">я</div>
+    <div class="form">{{Pres_1sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ми</div>
+    <div class="form">{{Pres_1pl}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ти</div>
+    <div class="form">{{Pres_2sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ви</div>
+    <div class="form">{{Pres_2pl}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">він/вона/воно</div>
+    <div class="form">{{Pres_3sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">вони</div>
+    <div class="form">{{Pres_3pl}}</div>
+  </div>
+</div>
+<div class="note-id">{{NoteID}}</div>
+"""
+
+VERB_FRONT_PRODUCTION_PAST = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Past (м/ж/с/мн): Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block-single">
+  <div class="tense-header">Минулий час (Past)</div>
+  <div class="person-block">
+    <div class="pronoun">ч.р. (я/ти/він)</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ж.р. (я/ти/вона)</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">с.р. (воно)</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">мн. (ми/ви/вони)</div>
+    <div class="form">_______</div>
+  </div>
+</div>
+"""
+
+VERB_BACK_PRODUCTION_PAST = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Past (м/ж/с/мн): Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block-single">
+  <div class="tense-header">Минулий час (Past)</div>
+  <div class="person-block">
+    <div class="pronoun">ч.р. (я/ти/він)</div>
+    <div class="form">{{Past_1sg_m}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ж.р. (я/ти/вона)</div>
+    <div class="form">{{Past_1sg_f}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">с.р. (воно)</div>
+    <div class="form">{{Past_1sg_n}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">мн. (ми/ви/вони)</div>
+    <div class="form">{{Past_1pl}}</div>
+  </div>
+</div>
+<div class="note-id">{{NoteID}}</div>
+"""
+
+VERB_FRONT_PRODUCTION_IMPERATIVE = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Imperative (ти/ми/ви): Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block-single">
+  <div class="tense-header">Наказовий спосіб (Imperative)</div>
+  <div class="person-block">
+    <div class="pronoun">ти</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ми</div>
+    <div class="form">_______</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ви</div>
+    <div class="form">_______</div>
+  </div>
+</div>
+"""
+
+VERB_BACK_PRODUCTION_IMPERATIVE = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Imperative (ти/ми/ви): Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block-single">
+  <div class="tense-header">Наказовий спосіб (Imperative)</div>
+  <div class="person-block">
+    <div class="pronoun">ти</div>
+    <div class="form">{{Imperative_2sg}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ми</div>
+    <div class="form">{{Imperative_1pl}}</div>
+  </div>
+  <div class="person-block">
+    <div class="pronoun">ви</div>
+    <div class="form">{{Imperative_2pl}}</div>
+  </div>
+</div>
+<div class="note-id">{{NoteID}}</div>
+"""
+
+VERB_FRONT_PRODUCTION_PARTICIPLES = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Participles: Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block-single">
+  <div class="tense-header">Participles</div>
+  {{#Participle_Active_Present}}
+  <div class="person-block">
+    <div class="pronoun">Act. Pres.</div>
+    <div class="form">_______</div>
+  </div>
+  {{/Participle_Active_Present}}
+  {{#Participle_Adverbial_Present}}
+  <div class="person-block">
+    <div class="pronoun">Adv. Pres.</div>
+    <div class="form">_______</div>
+  </div>
+  {{/Participle_Adverbial_Present}}
+  {{#Participle_Passive_Past_m}}
+  <div class="person-block">
+    <div class="pronoun">Pass. Past (м.)</div>
+    <div class="form">_______</div>
+  </div>
+  {{/Participle_Passive_Past_m}}
+  {{#Participle_Passive_Past_f}}
+  <div class="person-block">
+    <div class="pronoun">Pass. Past (ж.)</div>
+    <div class="form">_______</div>
+  </div>
+  {{/Participle_Passive_Past_f}}
+  {{#Participle_Impersonal_Past}}
+  <div class="person-block">
+    <div class="pronoun">Impersonal</div>
+    <div class="form">_______</div>
+  </div>
+  {{/Participle_Impersonal_Past}}
+  {{#Participle_Adverbial_Past}}
+  <div class="person-block">
+    <div class="pronoun">Adv. Past</div>
+    <div class="form">_______</div>
+  </div>
+  {{/Participle_Adverbial_Past}}
+</div>
+"""
+
+VERB_BACK_PRODUCTION_PARTICIPLES = """\
+<div class="verb-lemma">{{Lemma}}</div>
+<div class="verb-prompt">Participles: Conjugate all forms</div>
+<hr id="answer">
+<div class="verb-block-single">
+  <div class="tense-header">Participles</div>
+  {{#Participle_Active_Present}}
+  <div class="person-block">
+    <div class="pronoun">Act. Pres.</div>
+    <div class="form">{{Participle_Active_Present}}</div>
+  </div>
+  {{/Participle_Active_Present}}
+  {{#Participle_Adverbial_Present}}
+  <div class="person-block">
+    <div class="pronoun">Adv. Pres.</div>
+    <div class="form">{{Participle_Adverbial_Present}}</div>
+  </div>
+  {{/Participle_Adverbial_Present}}
+  {{#Participle_Passive_Past_m}}
+  <div class="person-block">
+    <div class="pronoun">Pass. Past (м.)</div>
+    <div class="form">{{Participle_Passive_Past_m}}</div>
+  </div>
+  {{/Participle_Passive_Past_m}}
+  {{#Participle_Passive_Past_f}}
+  <div class="person-block">
+    <div class="pronoun">Pass. Past (ж.)</div>
+    <div class="form">{{Participle_Passive_Past_f}}</div>
+  </div>
+  {{/Participle_Passive_Past_f}}
+  {{#Participle_Impersonal_Past}}
+  <div class="person-block">
+    <div class="pronoun">Impersonal</div>
+    <div class="form">{{Participle_Impersonal_Past}}</div>
+  </div>
+  {{/Participle_Impersonal_Past}}
+  {{#Participle_Adverbial_Past}}
+  <div class="person-block">
+    <div class="pronoun">Adv. Past</div>
+    <div class="form">{{Participle_Adverbial_Past}}</div>
+  </div>
+  {{/Participle_Adverbial_Past}}
+</div>
+<div class="note-id">{{NoteID}}</div>
+"""
+
 VERB_CARD_TEMPLATES = [
-    {"Name": "Recognition", "Front": VERB_FRONT_RECOGNITION, "Back": VERB_BACK_RECOGNITION},
+    {"Name": "Production (Present)", "Front": VERB_FRONT_PRODUCTION_PRESENT, "Back": VERB_BACK_PRODUCTION_PRESENT},
+    {"Name": "Production (Past)", "Front": VERB_FRONT_PRODUCTION_PAST, "Back": VERB_BACK_PRODUCTION_PAST},
+    {"Name": "Production (Imperative)", "Front": VERB_FRONT_PRODUCTION_IMPERATIVE, "Back": VERB_BACK_PRODUCTION_IMPERATIVE},
+    {"Name": "Production (Participles)", "Front": VERB_FRONT_PRODUCTION_PARTICIPLES, "Back": VERB_BACK_PRODUCTION_PARTICIPLES},
 ]
 
 

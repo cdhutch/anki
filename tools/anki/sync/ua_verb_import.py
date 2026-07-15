@@ -93,6 +93,18 @@ def set_suspended(anki_note_id: int, suspend: bool, dry_run: bool):
     anki_request(action, {"cards": card_ids}, url=ANKI_URL)
 
 
+def suspend_participles_card(anki_note_id: int, dry_run: bool):
+    """Suspend only the participles card (4th card, index 3) for a note."""
+    if dry_run:
+        return
+    card_ids = anki_request("findCards", {"query": f"nid:{anki_note_id}"}, url=ANKI_URL)
+    if not card_ids or len(card_ids) < 4:
+        return
+    # Card index 3 is the participles card (4th card created)
+    participles_card = card_ids[3]
+    anki_request("suspend", {"cards": [participles_card]}, url=ANKI_URL)
+
+
 # ---------------------------------------------------------------------------
 # CNSF parsing
 # ---------------------------------------------------------------------------
@@ -151,11 +163,17 @@ def import_note(data: dict, dry_run: bool) -> str:
         if anki_id and not dry_run:
             if suspend:
                 set_suspended(anki_id, True, dry_run)
+            else:
+                # Suspend only the participles card (5th card) by default
+                suspend_participles_card(anki_id, dry_run)
         return "added"
     else:
         update_note(existing_id, fields, tags, dry_run)
         if not dry_run:
             set_suspended(existing_id, suspend, dry_run)
+            if not suspend:
+                # Suspend only the participles card (5th card) by default
+                suspend_participles_card(existing_id, dry_run)
         return "updated"
 
 
