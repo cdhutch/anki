@@ -10,8 +10,8 @@ tags:
 - motion:vehicle
 - prefixed
 - phase:2a
-- ch:2.9
 - class:prefixed
+- ch:2.9.4
 fields:
   NoteID: ua-verb-0028
   Lemma: доїхати

@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - motion:walking
 - phase:2a
-- ch:2.9
 - conj:drill
+- ch:2.9.2
 fields:
   NoteID: ua-verb-0004
   Lemma: піти

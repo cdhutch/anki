@@ -9,11 +9,11 @@ tags:
 - domain:ua
 - motion:swimming
 - phase:2a
-- ch:2.9
 - conj:drill
+- ch:2.9.2
 fields:
   NoteID: ua-verb-0010
-  Lemma: поплисти
+  Lemma: попливти
   Aspect: perfective
   VerbClass: motion-swimming-new
   FreqSource: ch:2.9
