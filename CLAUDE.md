@@ -268,6 +268,8 @@ extracting vocab from Яблуко appendix pages 220–237 unit by unit.
 cards from Anki and generate CNSF skeletons. Enrich with PoS, gender, stress marks
 before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Яблуко ch-by-ch.
 
+**EN translation variant guidance** — When developing UA_Lexeme cards, for English words with multiple UA translations, provide the literal EN translation in addition to the common meaning. This helps learners understand why a single English word might map to different Ukrainian equivalents, showing semantic nuance rather than just glosses.
+
 ### Flagged Card Fix Workflow (Future)
 
 **Purpose:** Periodic review and correction of flagged cards (red=errors, orange=confusing).
