@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:prefix
-- status:draft
+- status:verified
 fields:
   NoteID: ua-visual-0007
   Prefix: про-
@@ -22,15 +22,17 @@ fields:
   Vehicle_Pair: проїжджа́ти / прої́хати
   Example_UA: Він пройшов через парк.
   Example_EN: He walked through the park.
-  Diagram_SVG: <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="a-pro" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><circle cx="16" cy="45" r="7" fill="#1565c0"/><line
-    x1="24" y1="45" x2="74" y2="45" stroke="#2e7d32" stroke-width="2.5"/><rect x="74" y="22"
-    width="52" height="46" rx="2" fill="#f0f0f0" stroke="#555" stroke-width="2"/><line x1="78"
-    y1="45" x2="122" y2="45" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,3"/><line
-    x1="126" y1="45" x2="180" y2="45" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#a-pro)"/></svg>
+  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><!-- Legend --><text x="5" y="12"
+    font-size="10" font-weight="bold" fill="#333">Legend:</text><rect x="10" y="20" width="10"
+    height="10" fill="#d32f2f"/><text x="24" y="28" font-size="9" fill="#333">Object passed</text><!--
+    Main: arrow passes through/along, with point offset --><circle cx="30" cy="75" r="5" fill="#1565c0"/><line
+    x1="40" y1="75" x2="220" y2="75" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arr)"/><rect
+    x="150" y="55" width="12" height="12" fill="#d32f2f"/><text x="168" y="63" font-size="10"
+    fill="#999">(along path)</text></svg>'
   Tags_Ch: ch:2.9.4
-  Source_Note: ''
+  Source_Note: про- — through/along/past
   Verification Notes: ''
 ---
 

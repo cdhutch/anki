@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:prefix
-- status:draft
+- status:verified
 fields:
   NoteID: ua-visual-0006
   Prefix: до-
@@ -22,14 +22,17 @@ fields:
   Vehicle_Pair: доїжджа́ти / дої́хати
   Example_UA: Ми дійшли до зупинки.
   Example_EN: We reached the bus stop.
-  Diagram_SVG: <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="a-do" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><line x1="158" y1="32" x2="178" y2="58"
-    stroke="#c62828" stroke-width="3"/><line x1="178" y1="32" x2="158" y2="58" stroke="#c62828"
-    stroke-width="3"/><circle cx="16" cy="45" r="7" fill="#1565c0"/><line x1="24" y1="45"
-    x2="152" y2="45" stroke="#2e7d32" stroke-width="2.5" stroke-dasharray="9,4" marker-end="url(#a-do)"/></svg>
+  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><!-- Legend --><text x="5" y="12"
+    font-size="10" font-weight="bold" fill="#333">Legend:</text><polygon points="10,20 15,25
+    10,30 5,25" fill="#d32f2f"/><text x="20" y="28" font-size="9" fill="#333">Destination
+    reached</text><!-- Main: arrow reaches and stops at destination point --><circle cx="30"
+    cy="75" r="5" fill="#1565c0"/><line x1="40" y1="75" x2="200" y2="75" stroke="#2e7d32"
+    stroke-width="2.5" marker-end="url(#arr)"/><polygon points="220,65 230,75 220,85 210,75"
+    fill="#d32f2f"/></svg>'
   Tags_Ch: ch:2.9.4
-  Source_Note: ''
+  Source_Note: до- — reach/get to destination
   Verification Notes: ''
 ---
 

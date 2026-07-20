@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:prefix
-- status:draft
+- status:verified
 fields:
   NoteID: ua-visual-0005
   Prefix: від-
@@ -22,15 +22,16 @@ fields:
   Vehicle_Pair: відʼїжджа́ти / відʼї́хати
   Example_UA: Вона відійшла від дверей.
   Example_EN: She moved away from the door.
-  Diagram_SVG: <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="a-vid" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker><pattern id="hvid" patternUnits="userSpaceOnUse"
-    width="8" height="8" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="8" stroke="#888"
-    stroke-width="2.5"/></pattern></defs><rect x="18" y="28" width="50" height="40" fill="url(#hvid)"
-    stroke="#555" stroke-width="2"/><circle cx="84" cy="48" r="7" fill="#1565c0"/><line x1="92"
-    y1="48" x2="180" y2="48" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#a-vid)"/></svg>
+  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#d32f2f"/></marker></defs><!-- Legend --><text x="5" y="12"
+    font-size="10" font-weight="bold" fill="#333">Legend:</text><circle cx="10" cy="25" r="4"
+    fill="#d32f2f"/><text x="20" y="28" font-size="9" fill="#333">Location</text><!-- Main:
+    arrow starts at dashed line, moves away --><circle cx="30" cy="75" r="6" fill="#d32f2f"/><line
+    x1="60" y1="60" x2="60" y2="90" stroke="#999" stroke-width="1.5" stroke-dasharray="3,3"/><line
+    x1="65" y1="75" x2="220" y2="75" stroke="#d32f2f" stroke-width="2.5" marker-end="url(#arr)"/></svg>'
   Tags_Ch: ch:2.9.4
-  Source_Note: ''
+  Source_Note: від- — motion away from
   Verification Notes: ''
 ---
 

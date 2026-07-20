@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:prefix
-- status:draft
+- status:verified
 fields:
   NoteID: ua-visual-0001
   Prefix: при-
@@ -22,17 +22,18 @@ fields:
   Vehicle_Pair: приїжджа́ти / приї́хати
   Example_UA: Вона прийшла до нас.
   Example_EN: She came to our place.
-  Diagram_SVG: <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="a-pri" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><line x1="100" y1="18" x2="176" y2="18"
-    stroke="#555" stroke-width="2"/><line x1="176" y1="18" x2="176" y2="76" stroke="#555"
-    stroke-width="2"/><line x1="100" y1="76" x2="176" y2="76" stroke="#555" stroke-width="2"/><line
-    x1="100" y1="18" x2="100" y2="76" stroke="#555" stroke-width="2"/><rect x="124" y="56"
-    width="14" height="20" fill="#ddd" stroke="#888" stroke-width="1"/><circle cx="16" cy="68"
-    r="7" fill="#1565c0"/><line x1="24" y1="68" x2="96" y2="68" stroke="#2e7d32" stroke-width="2.5"
-    marker-end="url(#a-pri)"/><circle cx="138" cy="44" r="5" fill="#1565c0" opacity="0.5"/></svg>
+  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><!-- Legend --><text x="5" y="12"
+    font-size="10" font-weight="bold" fill="#333">Legend:</text><line x1="10" y1="20" x2="20"
+    y2="30" stroke="#d32f2f" stroke-width="2"/><line x1="20" y1="20" x2="10" y2="30" stroke="#d32f2f"
+    stroke-width="2"/><text x="25" y="28" font-size="9" fill="#333">Place</text><!-- Main:
+    arrow crosses through X boundary --><circle cx="30" cy="75" r="5" fill="#1565c0"/><line
+    x1="40" y1="75" x2="220" y2="75" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#arr)"/><line
+    x1="210" y1="60" x2="230" y2="90" stroke="#d32f2f" stroke-width="3"/><line x1="230" y1="60"
+    x2="210" y2="90" stroke="#d32f2f" stroke-width="3"/></svg>'
   Tags_Ch: ch:2.9.4
-  Source_Note: ''
+  Source_Note: при- — arrival at place
   Verification Notes: ''
 ---
 

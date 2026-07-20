@@ -298,7 +298,7 @@ After each study session, fix all flagged cards and remove flags.
 | Path | Purpose |
 |---|---|
 | `domains/ua/anki/sources/yabluko/level-1/` | Яблуко Level 1 PDF (good copy available) |
-| `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 PDF (most existing cards are ch:2.x.x — PDF not yet available) |
+| `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 OCR'd excerpts: `yabluko-l2-vocabulary.pdf`, `yabluko-l2-grammar-guide.pdf`, `yabluko-l2-verb-dictionary.pdf` |
 | `domains/ua/anki/notes/lexemes/yabluko-l1/ch-00/` | 113 ua_lexeme notes — Вступ (= ch-00) |
 | `domains/ua/anki/notes/grammar/` | ua_grammar canonical notes (not yet populated) |
 | `domains/ua/anki/docs/design.md` | Full schema, deck architecture, migration plan |

@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:prefix
-- status:draft
+- status:verified
 fields:
   NoteID: ua-visual-0002
   Prefix: в-/у-
@@ -22,16 +22,17 @@ fields:
   Vehicle_Pair: вʼїжджа́ти / вʼї́хати
   Example_UA: Він увійшов у будинок.
   Example_EN: He entered the building.
-  Diagram_SVG: <svg viewBox="0 0 200 90" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="a-v" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><line x1="82" y1="18" x2="176" y2="18"
-    stroke="#555" stroke-width="2"/><line x1="176" y1="18" x2="176" y2="76" stroke="#555"
-    stroke-width="2"/><line x1="82" y1="76" x2="176" y2="76" stroke="#555" stroke-width="2"/><line
-    x1="82" y1="18" x2="82" y2="33" stroke="#555" stroke-width="2"/><line x1="82" y1="57"
-    x2="82" y2="76" stroke="#555" stroke-width="2"/><circle cx="16" cy="47" r="7" fill="#1565c0"/><line
-    x1="24" y1="47" x2="118" y2="47" stroke="#2e7d32" stroke-width="2.5" marker-end="url(#a-v)"/></svg>
+  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#2e7d32"/></marker></defs><!-- Legend --><text x="5" y="12"
+    font-size="10" font-weight="bold" fill="#333">Legend:</text><rect x="10" y="21" width="12"
+    height="12" fill="none" stroke="#1565c0" stroke-width="1"/><text x="26" y="28" font-size="9"
+    fill="#333">Enclosed space</text><!-- Main: arrow enters box --><circle cx="30" cy="75"
+    r="5" fill="#1565c0"/><line x1="40" y1="75" x2="180" y2="75" stroke="#2e7d32" stroke-width="2.5"
+    marker-end="url(#arr)"/><rect x="170" y="55" width="50" height="40" fill="none" stroke="#1565c0"
+    stroke-width="2.5"/></svg>'
   Tags_Ch: ch:2.9.4
-  Source_Note: ''
+  Source_Note: в-/у- — enter inside
   Verification Notes: ''
 ---
 

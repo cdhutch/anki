@@ -697,6 +697,7 @@ ua-visual-check:
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
 
 ua-visual-fix:
+	$(PYTHON) tools/anki/fix_visual_svg_yaml.py $(UA_VISUAL_ROOT)
 	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
