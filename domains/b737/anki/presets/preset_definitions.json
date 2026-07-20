@@ -1,0 +1,13 @@
+{
+  "presets": [
+    {
+      "name": "B737",
+      "description": "B737 type rating deck - review only, no new cards",
+      "new_per_day": 0,
+      "review_per_day": 200,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["B737", "B737::FO Procedures", "B737::FO Systems", "B737::FO Challenges"]
+    }
+  ],
+  "notes": "This file defines deck presets for B737 domain. Each preset is created if it doesn't exist, then assigned to the specified decks. The preset name should match the 'name' field exactly."
+}
