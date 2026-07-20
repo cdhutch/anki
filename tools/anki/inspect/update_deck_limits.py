@@ -11,7 +11,8 @@ import yaml
 from pathlib import Path
 
 ANKI_URL = "http://127.0.0.1:8765"
-CONFIG_FILE = Path(__file__).parent.parent.parent / "domains/ua/anki/config/deck_limits.yaml"
+# Path: tools/anki/inspect/update_deck_limits.py → repo root is 4 levels up
+CONFIG_FILE = Path(__file__).parent.parent.parent.parent / "domains/ua/anki/config/deck_limits.yaml"
 
 
 def anki_request(action, params=None):
@@ -87,7 +88,16 @@ def update_deck_limits():
         save_result = anki_request("saveDeckConfig", {"config": config})
 
         if save_result and not save_result.get("error"):
-            print(f"  ✓ Updated successfully")
+            config_id = save_result.get("result")
+            print(f"  ✓ Config saved (ID: {config_id})")
+
+            # Apply the config to this deck
+            apply_result = anki_request("setDeckConfigId", {"decks": [deck_name], "configId": config_id})
+            if apply_result and not apply_result.get("error"):
+                print(f"  ✓ Applied to deck")
+            else:
+                error = apply_result.get("error") if apply_result else "No response"
+                print(f"  ⚠ Failed to apply config to deck: {error}")
         else:
             error = save_result.get("error") if save_result else "No response"
             print(f"  ✗ Failed to save: {error}")

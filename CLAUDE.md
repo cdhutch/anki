@@ -175,17 +175,55 @@ instead of `-ська`). The vowel-index comparison handles this correctly since
 syllable is the same. The script is embedded in session context — rebuild from the pattern
 in `tools/anki/inspect/` when needed as a standalone tool.
 
+### Deck Presets and Limit Configuration (2026-07-20)
+
+**Strategy:** Differentiated daily limits by cognitive load tier + data-driven preset creation.
+
+**Preset configuration files:**
+- `domains/ua/anki/presets/preset_definitions.json` — UA domain presets (6 presets: parent + 5 child tiers)
+- `domains/b737/anki/presets/preset_definitions.json` — B737 domain preset (1 preset: review-only)
+
+**Limit configuration files:**
+- `domains/ua/anki/config/deck_limits.yaml` — UA domain limit strategy with commentary
+- `domains/b737/anki/config/deck_limits.yaml` — B737 domain limit strategy with role-based suspension
+
+**Key concepts:**
+- **Parent limit:** 50 new / 100 review per day (UA domain). Child decks cannot exceed this.
+- **Cognitive load tiers:**
+  - High (PVOM, Lexeme EN→UA): 15–18 new/day (typing/production)
+  - Medium (Grammar, Verbs): 20 new/day (recognition + recall)
+  - Low (Visual): 25 new/day (recognition)
+- **Total child capacity:** 98 new/day (98 > 50 parent), but balanced by selective activation
+- **B737 limits:** 0 new / 200 review (review-only, no new cards for type-rating study)
+- **Suspension tagging:** Decks suspended with tags documenting reason (role:captain, scope:out-of-scope, etc.)
+
+**Preset creation workflow:**
+1. `tools/anki/setup/create_deck_presets.py` — Reads JSON preset definitions, creates/updates presets via AnkiConnect
+2. `tools/anki/inspect/update_deck_limits.py` — Reads YAML limits, updates existing deck configs, applies to UA decks
+3. `tools/anki/inspect/update_b737_deck_limits.py` — Same pattern for B737 (honors suspension flags)
+
+**Execution order (Craig runs these):**
+```bash
+python tools/anki/setup/create_deck_presets.py      # Create all presets
+python tools/anki/inspect/update_deck_limits.py     # Apply UA limits
+python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
+```
+
 ### Tooling status
 | Path | Status | Purpose |
 |---|---|---|
 | Rename `UA` → `UA_Legacy` in Anki GUI | ✓ done | One-time manual rename; frees UA:: namespace |
 | `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme + UA_Grammar + UA_Visual |
+| `tools/anki/setup/create_deck_presets.py` | ✓ new (2026-07-20) | Data-driven preset creation from JSON definitions |
 | `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
 | `tools/anki/sync/ua_grammar_import.py` | ✓ done | UA_Grammar CNSF notes → Anki (upsert) |
 | `tools/anki/sync/ua_visual_import.py` | ✓ done | UA_Visual CNSF notes → Anki (upsert) |
 | `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
+| `tools/anki/inspect/update_deck_limits.py` | ✓ new (2026-07-20) | Apply UA domain limits from YAML config |
+| `tools/anki/inspect/update_b737_deck_limits.py` | ✓ new (2026-07-20) | Apply B737 domain limits, honor suspension tags |
 | `tools/anki/inspect/backfill_source_url.py` | ✓ done | Add Source_URL + Source_Note to all lexeme notes |
 | `tools/anki/inspect/verify_stress_goroh.py` | ✓ done | Stress verification vs Горох; Вступ pass complete |
+| `tools/anki/inspect/test_preset_creation.py` | ✓ new (2026-07-20) | Diagnostic tool for testing preset creation approaches |
 | `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
 | `tools/anki/inspect/patch_ch09_conj_tables.py` | ✓ done | One-shot: Verb_Conj_Table for notes 0117–0131 |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |

@@ -18,17 +18,34 @@ decks:
     review: 100
     reason: "Parent deck - accommodates all UA child decks"
 
+  # Parent pass-through (does not limit children)
+  UA::Recognition:
+    new: 9999
+    review: 9999
+    reason: "Parent pass-through - children have explicit configs"
+
+  UA::Production:
+    new: 9999
+    review: 9999
+    reason: "Parent pass-through - children have explicit configs"
+
+  # High cognitive load (typing/production)
+  UA::Production::EN→UA:
+    new: 15
+    review: 8
+    reason: "Lexeme production typing (EN→UA) - high cognitive load"
+
   # High cognitive load (typing/production)
   UA::Recognition::PVOM:
     new: 18
     review: 6
     reason: "Infinitive typing - requires recall + spelling"
 
-  # Medium-High cognitive load (production/typing)
+  # Medium cognitive load (recognition)
   UA::Recognition::UA→EN:
-    new: 15
-    review: 8
-    reason: "Lexeme production typing (EN→UA)"
+    new: 20
+    review: 9999
+    reason: "Lexeme recognition (UA→EN) - medium cognitive load, unlimited reviews"
 
   # Low cognitive load (visual/recognition)
   UA::Recognition::Visual:
