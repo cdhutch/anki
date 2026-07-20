@@ -119,6 +119,11 @@ help:
 	@echo "  ua-verb-check             Check CNSF formatting (no changes)"
 	@echo "  ua-verb-fix               Canonicalize all UA verb notes"
 	@echo ""
+	@echo "Ukrainian (UA) — PVOM infinitive drilling"
+	@echo "  ua-pvom                   Canonicalize + sync all PVOM infinitive notes"
+	@echo "  ua-pvom-check             Check CNSF formatting (no changes)"
+	@echo "  ua-pvom-fix               Canonicalize all PVOM infinitive notes"
+	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
 	@echo "                      Writes /tmp/goroh/goroh_mismatches.tsv for review"
@@ -599,13 +604,15 @@ UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
 UA_VERB_ROOT    := domains/ua/anki/notes/verbs
 UA_GRAMMAR_ROOT := domains/ua/anki/notes/grammar
 UA_VISUAL_ROOT  := domains/ua/anki/notes/visual
+UA_PVOM_ROOT    := domains/ua/anki/notes/pvom
 UA_INSPECT      := tools/anki/inspect
 UA_GENERATE     := tools/anki/generate
 UA_GOROH_DIR    := /tmp/goroh
 UA_EXAMPLES_LIMIT ?= 10
 
-.PHONY: ua-setup ua-setup-lexeme ua-setup-grammar ua-setup-visual
+.PHONY: ua-setup ua-setup-lexeme ua-setup-grammar ua-setup-visual ua-setup-pvom
 .PHONY: ua-visual ua-visual-check ua-visual-fix
+.PHONY: ua-pvom ua-pvom-check ua-pvom-fix
 .PHONY: ua-batch ua-batch-check ua-batch-fix
 .PHONY: ua-book  ua-book-check  ua-book-fix
 .PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
@@ -629,6 +636,9 @@ ua-setup-visual:
 
 ua-setup-verb:
 	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Verb
+
+ua-setup-pvom:
+	$(PYTHON) tools/anki/setup/setup_ua_pvom_note_type.py
 
 # ── Single chapter:  make ua-batch BATCH=yabluko-l1/ch-00 ────────────────────
 
@@ -716,6 +726,19 @@ ua-verb-fix:
 
 ua-verb: ua-verb-fix
 	$(PYTHON) tools/anki/sync/ua_verb_import.py $(UA_VERB_ROOT)/
+
+# ── PVOM infinitive drilling cards:  make ua-pvom ──────────────────────────────
+
+ua-pvom-check:
+	find $(UA_PVOM_ROOT) -name "ua-pvom-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-pvom-fix:
+	find $(UA_PVOM_ROOT) -name "ua-pvom-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-pvom: ua-setup-pvom ua-pvom-fix
+	$(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/
 
 # ── Stress verification ──────────────────────────────────────────────────────
 
