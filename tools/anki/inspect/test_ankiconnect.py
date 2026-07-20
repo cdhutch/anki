@@ -1,89 +1,56 @@
 #!/usr/bin/env python3
-"""Test AnkiConnect connectivity and configure sibling burying for UA FSRS.
+"""Test AnkiConnect connectivity and config API."""
 
-Usage
------
-  python tools/anki/inspect/test_ankiconnect.py
-  python tools/anki/inspect/test_ankiconnect.py --url http://127.0.0.1:8765
-"""
-from __future__ import annotations
+import json
+import urllib.request
 
-import argparse
-import sys
-from pathlib import Path
+ANKI_URL = "http://127.0.0.1:8765"
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
+def anki_request(action, params=None):
+    """Send request to AnkiConnect."""
+    request_body = {"action": action, "version": 6}
+    if params:
+        request_body["params"] = params
 
+    print(f"Request: {action}")
+    print(f"  Params: {params}")
 
-def main() -> int:
-    ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--url", default="http://127.0.0.1:8765", help="AnkiConnect URL")
-    args = ap.parse_args()
-
-    url = args.url
-    print(f"Testing AnkiConnect at {url}...\n")
-
-    # 1. Test connectivity
     try:
-        version = anki_request("version", {}, url=url)
-        print(f"✓ AnkiConnect is running")
-        print(f"  AnkiConnect API version: {version}\n")
+        response = urllib.request.urlopen(
+            urllib.request.Request(
+                ANKI_URL,
+                data=json.dumps(request_body).encode("utf-8"),
+            )
+        )
+        result = json.loads(response.read())
+        print(f"  Response: {result}\n")
+        return result
     except Exception as e:
-        print(f"✗ AnkiConnect connection failed: {e}", file=sys.stderr)
-        print(f"\n  Make sure:")
-        print(f"    1. Anki is open")
-        print(f"    2. AnkiConnect add-on is installed")
-        print(f"    3. AnkiConnect is enabled (Tools → Add-ons → AnkiConnect → Check)")
-        print(f"    4. AnkiConnect URL matches (default: {url})")
-        return 1
+        print(f"  ERROR: {e}\n")
+        return None
 
-    # 2. Get UA FSRS config
-    print("Fetching UA FSRS config...\n")
-    try:
-        config = anki_request("getDeckConfig", {"deck": "UA"}, url=url)
-        if not config:
-            print("✗ Could not fetch UA deck config", file=sys.stderr)
-            return 1
+print("Testing AnkiConnect\n")
 
-        config_name = config.get("name", "?")
-        config_id = config.get("id", "?")
-        print(f"✓ Found config: '{config_name}' (id={config_id})")
-        print(f"  Desired retention: {config.get('desiredRetention', '?')}\n")
-    except Exception as e:
-        print(f"✗ Error fetching config: {e}", file=sys.stderr)
-        return 1
+# Test 1: Check version
+print("1. Testing version...")
+anki_request("version")
 
-    # 3. Check and enable sibling burying
-    print("Checking sibling burying settings...\n")
-    try:
-        # In FSRS configs, sibling burying is typically under 'sched' or similar
-        # Let's check what's in the config
-        bury_siblings = config.get("burySiblingsOnAnswer", None)
-        print(f"  burySiblingsOnAnswer: {bury_siblings}")
+# Test 2: Get all deck names
+print("2. Getting all deck names...")
+result = anki_request("deckNames")
+deck_names = result.get("result", []) if result and not result.get("error") else []
 
-        if bury_siblings is False:
-            print(f"\n  Enabling sibling burying...")
-            config["burySiblingsOnAnswer"] = True
-            anki_request("saveDeckConfig", {"config": config}, url=url)
-            print(f"  ✓ Sibling burying enabled")
-        elif bury_siblings is True:
-            print(f"  ✓ Sibling burying already enabled")
-        else:
-            print(f"  ? Sibling burying setting unclear (value: {bury_siblings})")
-            print(f"  Consider checking in Anki: Tools → Preferences → Scheduling")
+# Test 3: Get config for UA deck
+if "UA" in deck_names:
+    print("3. Getting config for UA deck...")
+    result = anki_request("getDeckConfig", {"deck": "UA"})
+    if result and not result.get("error"):
+        config = result.get("result")
+        print(f"UA deck config structure:")
+        print(json.dumps(config, indent=2))
 
-    except Exception as e:
-        print(f"✗ Error configuring sibling burying: {e}", file=sys.stderr)
-        return 1
-
-    print(f"\n✓ AnkiConnect is working and UA FSRS is configured.")
-    print(f"\nNext step:")
-    print(f"  1. Run: python tools/anki/setup/setup_ua_note_types.py --model UA_Lexeme")
-    print(f"  2. Then study a UA→EN card and mark it 'Easy'")
-    print(f"  3. EN→UA sibling should be buried for that day, reappearing next cycle")
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+# Test 4: List all UA decks
+print("4. All UA-related decks:")
+ua_decks = sorted([d for d in deck_names if d.startswith("UA")])
+for deck in ua_decks:
+    print(f"  - {deck}")
