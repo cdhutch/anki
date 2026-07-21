@@ -615,122 +615,159 @@ VISUAL_FIELDS = [
 ]
 
 VISUAL_CSS = """\
+/* Solarized palette (ethanschoonover.com/solarized) throughout.
+   Accents (green/blue/red) are identical in both modes by design;
+   base01/base1 deliberately swap roles between light and dark mode. */
 .card {
   font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 18px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #657b83; /* base00 */
+  background-color: #fdf6e3; /* base3 */
   max-width: 580px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
 
+.night_mode .card {
+  color: #839496; /* base0 */
+  background-color: #002b36; /* base03 */
+}
+
 .vis-prefix {
   font-size: 36px;
   font-weight: bold;
-  color: #2e7d32;
+  color: #859900; /* green */
   margin: 10px 0 4px;
   letter-spacing: 1px;
 }
 
 .vis-meaning {
   font-size: 17px;
-  color: #555;
+  color: #586e75; /* base01 */
   margin-bottom: 8px;
 }
+.night_mode .vis-meaning { color: #93a1a1; } /* base1 */
 
 .vis-govt {
   font-size: 20px;
   font-weight: 600;
-  color: #1565c0;
-  background: #e3f2fd;
+  color: #268bd2; /* blue */
+  background: #eee8d5; /* base2 */
   border-radius: 6px;
   padding: 4px 14px;
   display: inline-block;
   margin: 8px 0;
 }
+.night_mode .vis-govt { background: #073642; } /* base02 */
 
 .vis-pairs {
   font-size: 15px;
-  color: #555;
+  color: #586e75; /* base01 */
   margin: 6px 0;
   line-height: 1.6;
 }
+.night_mode .vis-pairs { color: #93a1a1; } /* base1 */
 
 .vis-example {
   font-size: 16px;
   font-style: italic;
-  color: #333;
+  color: #586e75; /* base01 */
   margin-top: 10px;
 }
+.night_mode .vis-example { color: #93a1a1; } /* base1 */
 
 .vis-example-en {
   font-size: 13px;
-  color: #777;
+  color: #93a1a1; /* base1 */
   margin-top: 2px;
 }
+.night_mode .vis-example-en { color: #839496; } /* base0 */
 
-.vis-prompt {
-  font-size: 13px;
-  color: #bbb;
-  margin-top: 10px;
-  font-style: italic;
+/* Fixed table + column widths so the table renders at the SAME size on
+   front (blank "?" placeholders) and back (real, longer answer text) --
+   otherwise the narrower front content lets the table shrink and it visibly
+   grows wider when flipped. Sized for the deck's longest Govt value
+   (про-: "через + Зн.в. / повз + Зн.в.", ~29 chars), which wraps to 2 lines
+   at this width rather than forcing the table wider. */
+.vis-prompt-table {
+  margin: 10px auto;
+  border-collapse: collapse;
+  font-size: 15px;
+  width: 320px;
+  table-layout: fixed;
+}
+.vis-prompt-table td {
+  padding: 4px 12px;
+  border-bottom: 1px solid #eee8d5; /* base2 */
+  text-align: left;
+  word-wrap: break-word;
+}
+.night_mode .vis-prompt-table td {
+  border-bottom: 1px solid #073642; /* base02 */
+}
+.vis-prompt-table td:first-child {
+  width: 130px;
+  color: #93a1a1; /* base1 */
+}
+.night_mode .vis-prompt-table td:first-child {
+  color: #586e75; /* base01 */
+}
+.vis-prompt-table td:last-child {
+  width: 190px;
+  font-weight: 600;
+  color: #268bd2; /* blue */
 }
 
 .note-id {
   font-size: 10px;
-  color: #ccc;
+  color: #93a1a1; /* base1 */
   text-align: right;
   margin-top: 14px;
 }
 
 hr#answer {
   border: none;
-  border-top: 2px solid #e0e0e0;
+  border-top: 2px solid #eee8d5; /* base2 */
   margin: 16px 0;
 }
+.night_mode hr#answer { border-top-color: #073642; } /* base02 */
+
+/* Diagram SVGs: base01/base1 role-flip for night mode. Accent colors
+   (green #859900, blue #268bd2, red #dc322f) are unchanged in both modes. */
+.night_mode .card svg [fill="#586e75"] { fill: #93a1a1; }
+.night_mode .card svg [stroke="#586e75"] { stroke: #93a1a1; }
+.night_mode .card svg [fill="#93a1a1"] { fill: #586e75; }
+.night_mode .card svg [stroke="#93a1a1"] { stroke: #586e75; }
 """
 
-# Card 1 (Spatial→UA): diagram + English meaning on front; Ukrainian on back
+# Single card: diagram + a 2-column table (prompt labels, blanks) on front.
+# Back re-renders the SAME table in place with the answer column filled in --
+# no {{FrontSide}} reproduction, no second table, no hr divider -- so it reads
+# as one table getting filled in rather than a duplicate answer block below.
 VISUAL_FRONT_1 = """\
 <div>{{Diagram_SVG}}</div>
-<div class="vis-meaning">{{Meaning_EN}}</div>
-<div class="vis-prompt">What prefix? What government?</div>
+<table class="vis-prompt-table">
+<tr><td>Verbal prefix?</td><td>?</td></tr>
+<tr><td>Preposition + case?</td><td>?</td></tr>
+</table>
 """
 
 VISUAL_BACK_1 = """\
-{{FrontSide}}
-<hr id="answer">
-<div class="vis-prefix">{{Prefix}}</div>
-<div class="vis-govt">{{Govt}}</div>
-<div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
-{{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
-{{#Example_EN}}<div class="vis-example-en">{{Example_EN}}</div>{{/Example_EN}}
-<div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
-"""
-
-# Card 2 (UA→Spatial): Ukrainian prefix + verbs on front; diagram + English on back
-VISUAL_FRONT_2 = """\
-<div class="vis-prefix">{{Prefix}}</div>
-<div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
-<div class="vis-prompt">What does this prefix mean? What government?</div>
-"""
-
-VISUAL_BACK_2 = """\
-{{FrontSide}}
-<hr id="answer">
-<div style="margin-top:4px">{{Diagram_SVG}}</div>
+<div>{{Diagram_SVG}}</div>
+<table class="vis-prompt-table">
+<tr><td>Verbal prefix?</td><td>{{Prefix}}</td></tr>
+<tr><td>Preposition + case?</td><td>{{Govt}}</td></tr>
+</table>
 <div class="vis-meaning">{{Meaning_EN}}</div>
-<div class="vis-govt">{{Govt}}</div>
+<div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
 {{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
 {{#Example_EN}}<div class="vis-example-en">{{Example_EN}}</div>{{/Example_EN}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 """
 
 VISUAL_CARD_TEMPLATES = [
-    {"Name": "Spatial→UA", "Front": VISUAL_FRONT_1, "Back": VISUAL_BACK_1},
-    {"Name": "UA→Spatial", "Front": VISUAL_FRONT_2, "Back": VISUAL_BACK_2},
+    {"Name": "Prefix + Government", "Front": VISUAL_FRONT_1, "Back": VISUAL_BACK_1},
 ]
 
 
@@ -752,7 +789,34 @@ def create_visual_model():
 def update_visual_model():
     print(f"Updating note type '{VISUAL_MODEL_NAME}'...")
 
-    # Update templates — build single dict with all templates, then call once
+    # NOTE: anki_request() here (tools/anki/sync/tsv_to_anki.py) already raises
+    # RuntimeError on any AnkiConnect error -- it never returns an error dict to
+    # check. For updateModelTemplates/updateModelStyling/modelTemplateAdd,
+    # AnkiConnect's normal SUCCESS response is "result": null, i.e. Python
+    # None -- that is not a failure signal, just these actions' empty return
+    # value. If something actually goes wrong, this function raises and the
+    # caller sees a full traceback instead of silently reporting "Updated".
+
+    # updateModelTemplates only refreshes Front/Back for template NAMES that
+    # already exist on the model -- it silently no-ops for unrecognized new
+    # names (see the identical bug class fixed in setup_ua_pvom_note_type.py).
+    # A genuinely new template name needs modelTemplateAdd, which also
+    # generates that card for every existing note of the model.
+    existing_templates_resp = anki_request("modelTemplates", {"modelName": VISUAL_MODEL_NAME}, url=ANKI_URL)
+    existing_template_names = list(existing_templates_resp.keys()) if existing_templates_resp else []
+
+    for tmpl in VISUAL_CARD_TEMPLATES:
+        if tmpl["Name"] not in existing_template_names:
+            print(f"  Adding new template: {tmpl['Name']}")
+            anki_request(
+                "modelTemplateAdd",
+                {
+                    "modelName": VISUAL_MODEL_NAME,
+                    "template": {"Name": tmpl["Name"], "Front": tmpl["Front"], "Back": tmpl["Back"]},
+                },
+                url=ANKI_URL,
+            )
+
     templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in VISUAL_CARD_TEMPLATES}
     anki_request(
         "updateModelTemplates",
@@ -780,15 +844,30 @@ def update_visual_model():
             print(f"  Removing field: {field}  (data lost)")
             anki_request("modelFieldRemove", {"modelName": VISUAL_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
 
+    obsolete_templates = [n for n in existing_template_names if n not in templates_dict]
+    if obsolete_templates:
+        print(
+            f"  NOTE: old template(s) still on the model, not removed automatically "
+            f"(removing a template deletes every card that uses it): {obsolete_templates}"
+        )
+        print(
+            "  Decide whether to keep them or remove manually in Anki: "
+            "Tools > Manage Note Types > Cards > Delete."
+        )
+
     print("  Updated.")
+    return True
 
 
 def setup_visual(existing: list[str]):
     if VISUAL_MODEL_NAME in existing:
-        update_visual_model()
+        ok = update_visual_model()
     else:
         create_visual_model()
-    print(f"Note type '{VISUAL_MODEL_NAME}' is ready.")
+        ok = True
+    if ok:
+        print(f"Note type '{VISUAL_MODEL_NAME}' is ready.")
+    return ok
 
 
 # ---------------------------------------------------------------------------
