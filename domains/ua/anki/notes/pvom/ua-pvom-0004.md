@@ -15,11 +15,17 @@ tags:
 - stress:unverified
 fields:
   NoteID: ua-pvom-0004
-  Prefix: пере-
-  Base_Form_Label: їхати
-  Infinitive_UA: переї́хати
+  Prefix: при
+  Walking_Multi_UA: прихо́дити
+  Walking_Multi_Typing: приходити
+  Walking_Uni_UA: прийти́
+  Walking_Uni_Typing: прийти
+  Vehicle_Multi_UA: приїжджа́ти
+  Vehicle_Multi_Typing: приїжджати
+  Vehicle_Uni_UA: приї́хати
+  Vehicle_Uni_Typing: приїхати
   Tags_Ch: ch:2.9.4
-  Source_Note: 'PVOM infinitive: пере- + їхати'
+  Source_Note: Verified via Горох (Тлумачення) 2026-07-21.
   Verification_Notes: ''
   Verification Notes: ''
 ---

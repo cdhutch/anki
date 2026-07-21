@@ -15,11 +15,17 @@ tags:
 - stress:unverified
 fields:
   NoteID: ua-pvom-0006
-  Prefix: за-
-  Base_Form_Label: їхати
-  Infinitive_UA: заї́хати
+  Prefix: під
+  Walking_Multi_UA: підхо́дити
+  Walking_Multi_Typing: підходити
+  Walking_Uni_UA: підійти́
+  Walking_Uni_Typing: підійти
+  Vehicle_Multi_UA: підʼїжджа́ти
+  Vehicle_Multi_Typing: підʼїжджати
+  Vehicle_Uni_UA: підʼї́хати
+  Vehicle_Uni_Typing: підʼїхати
   Tags_Ch: ch:2.9.4
-  Source_Note: 'PVOM infinitive: за- + їхати'
+  Source_Note: Verified via Горох (Тлумачення) 2026-07-21.
   Verification_Notes: ''
   Verification Notes: ''
 ---

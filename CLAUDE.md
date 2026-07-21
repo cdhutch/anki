@@ -147,6 +147,45 @@ Example: професія vs. фах
 
 The "Compare" card only renders when `ConfusableSet` is populated, making it lightweight.
 
+**PVOM prefix drilling (multi-form typing cards)**
+
+`UA_PVOM_Infinitive` (one note per prefix, `domains/ua/anki/notes/pvom/`) drills all four
+verb-of-motion base forms a prefix combines with, as four separate card templates rather
+than one card with four blanks:
+
+- **Walking (Multi)** — multidirectional, imperfective (ходити-family)
+- **Walking (Uni)** — unidirectional, perfective (іти-family)
+- **Vehicle (Multi)** — multidirectional, imperfective; labeled "їздити" on the card, but
+  the typed answer is the dictionary-primary **-їжджати** surface form (Горох consistently
+  redirects "-їздити" entries to "-їжджати" as the canonical headword — both are real, but
+  -їжджати is the one attested as primary)
+- **Vehicle (Uni)** — unidirectional, perfective (їхати-family)
+
+**Why four separate templates, not one card:** each base form gets independent FSRS
+scheduling and leech tracking. The four forms are not equally hard — mutations
+(apostrophe insertion: підʼїхати, відʼїхати, надʼїхати, обʼїхати, зʼїхати; epenthetic
+-ій-: підійти, відійти, надійти, обійти, зійти; з→с assimilation before voiceless х:
+з- + ходити → сходити, not "зходити") make some prefixes much harder to produce than
+others, and a student can be solid on the walking forms while still missing vehicle
+forms. Separate templates let each be suspended/re-weighted independently without
+touching the others.
+
+**Card design — no hints on the front.** Front is just `{{Prefix}} + <base label>` (e.g.
+"ви + іти", "під + їздити") — no aspect labels, no mutation hints. The point is for the
+student to internalize the prefixation patterns through repeated production, not to be
+told the answer's shape in advance.
+
+**Field pattern:** each base has a stressed field (`*_UA`) and an unstressed field
+(`*_Typing`) used for Anki's `{{type:...}}` comparison; the back-side script compares the
+typed answer against both to give tiered feedback (perfect-with-stress / correct-no-stress
+/ incorrect), same pattern as `UA_Lexeme`'s typing cards.
+
+**Verification caveat:** the з- prefix (схо́дити/зійти́) is the one form in this set where
+Горох's dictionary entry doesn't cleanly label the aspectual pair the way it does for the
+other ten prefixes — its primary listed sense is "ascend," not explicitly "get off/descend."
+Treat it as slightly lower-confidence than the rest until cross-checked against the
+textbook.
+
 ### Language conventions (critical)
 - Dialect: modern Ukrainian, **Galician/Lviv** register
 - Apostrophe: **U+02BC `ʼ`** — never ASCII `'`

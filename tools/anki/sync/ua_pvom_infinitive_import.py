@@ -1,12 +1,34 @@
 #!/usr/bin/env python3
-"""Import UA_PVOM_Infinitive CNSF notes to Anki via AnkiConnect."""
+"""Import UA_PVOM_Infinitive CNSF notes to Anki via AnkiConnect.
+
+Each note carries one prefix and all four verb-of-motion base forms:
+Walking_Multi_{UA,Typing}, Walking_Uni_{UA,Typing}, Vehicle_Multi_{UA,Typing},
+Vehicle_Uni_{UA,Typing}, plus NoteID/Prefix/Tags_Ch/Source_Note/Verification_Notes.
+CNSF field names match the Anki field names exactly -- no renaming/derivation
+needed, unlike the old single-form schema this replaced.
+"""
 
 import json
 import urllib.request
 import sys
 from pathlib import Path
 import yaml
-import re
+
+ANKI_FIELDS = [
+    "NoteID",
+    "Prefix",
+    "Walking_Multi_UA",
+    "Walking_Multi_Typing",
+    "Walking_Uni_UA",
+    "Walking_Uni_Typing",
+    "Vehicle_Multi_UA",
+    "Vehicle_Multi_Typing",
+    "Vehicle_Uni_UA",
+    "Vehicle_Uni_Typing",
+    "Tags_Ch",
+    "Source_Note",
+    "Verification_Notes",
+]
 
 
 def anki_connect(action, params=None):
@@ -28,20 +50,11 @@ def anki_connect(action, params=None):
         return None
 
 
-def strip_stress_marks(text):
-    """Remove stress marks from Ukrainian text."""
-    if not text:
-        return text
-    # Remove combining acute accent (́ U+0301)
-    return re.sub(r'́', '', text)
-
-
 def load_note_from_cnsf(filepath):
     """Load note from CNSF markdown file."""
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
-    # Split YAML front matter
     if content.startswith("---"):
         parts = content.split("---", 2)
         if len(parts) >= 2:
@@ -55,28 +68,21 @@ def load_note_from_cnsf(filepath):
     return None
 
 
+def anki_fields_from(fields):
+    """Map CNSF fields dict straight through to the Anki field set."""
+    return {name: fields.get(name, "") for name in ANKI_FIELDS}
+
+
 def build_anki_note(note_data):
     """Build Anki note from CNSF data."""
     fields = note_data.get("fields", {})
     anki_config = note_data.get("anki", {})
     tags = note_data.get("tags", [])
 
-    infinitive_ua = fields.get("Infinitive_UA", "")
-    typing_answer = strip_stress_marks(infinitive_ua)
-
     return {
         "deckName": anki_config.get("deck", "UA::Recognition::PVOM"),
         "modelName": anki_config.get("model", "UA_PVOM_Infinitive"),
-        "fields": {
-            "NoteID": fields.get("NoteID", ""),
-            "Prefix": fields.get("Prefix", ""),
-            "Base_Form_Label": fields.get("Base_Form_Label", ""),
-            "Infinitive_UA": infinitive_ua,
-            "TypingAnswer": typing_answer,
-            "Tags_Ch": fields.get("Tags_Ch", ""),
-            "Source_Note": fields.get("Source_Note", ""),
-            "Verification_Notes": fields.get("Verification_Notes", ""),
-        },
+        "fields": anki_fields_from(fields),
         "tags": tags,
         "options": {"allowDuplicate": False, "duplicateScope": "deck"},
     }
@@ -114,32 +120,16 @@ def upsert_notes(pvom_dir):
         fields = note_data.get("fields", {})
         noteid = fields.get("NoteID", "")
 
-        # Check if note already exists
         existing_note_id = find_note_by_noteid(noteid)
 
         if existing_note_id:
-            # Update existing note
-            infinitive_ua = fields.get("Infinitive_UA", "")
-            typing_answer = strip_stress_marks(infinitive_ua)
             updates.append({
                 "id": existing_note_id,
-                "fields": {
-                    "NoteID": fields.get("NoteID", ""),
-                    "Prefix": fields.get("Prefix", ""),
-                    "Base_Form_Label": fields.get("Base_Form_Label", ""),
-                    "Infinitive_UA": infinitive_ua,
-                    "TypingAnswer": typing_answer,
-                    "Tags_Ch": fields.get("Tags_Ch", ""),
-                    "Source_Note": fields.get("Source_Note", ""),
-                    "Verification_Notes": fields.get("Verification_Notes", ""),
-                }
+                "fields": anki_fields_from(fields),
             })
         else:
-            # Create new note
-            anki_note = build_anki_note(note_data)
-            notes_to_create.append(anki_note)
+            notes_to_create.append(build_anki_note(note_data))
 
-    # Create new notes
     created = 0
     if notes_to_create:
         result = anki_connect("addNotes", {"notes": notes_to_create})
@@ -150,7 +140,6 @@ def upsert_notes(pvom_dir):
             print(f"✗ Create failed: {result}", file=sys.stderr)
             return False
 
-    # Update existing notes
     updated = 0
     if updates:
         for update in updates:

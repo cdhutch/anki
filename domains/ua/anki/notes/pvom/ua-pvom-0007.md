@@ -15,11 +15,17 @@ tags:
 - stress:unverified
 fields:
   NoteID: ua-pvom-0007
-  Prefix: при-
-  Base_Form_Label: іти
-  Infinitive_UA: прийти́
+  Prefix: від
+  Walking_Multi_UA: відхо́дити
+  Walking_Multi_Typing: відходити
+  Walking_Uni_UA: відійти́
+  Walking_Uni_Typing: відійти
+  Vehicle_Multi_UA: відʼїжджа́ти
+  Vehicle_Multi_Typing: відʼїжджати
+  Vehicle_Uni_UA: відʼї́хати
+  Vehicle_Uni_Typing: відʼїхати
   Tags_Ch: ch:2.9.4
-  Source_Note: 'PVOM infinitive: при- + йти'
+  Source_Note: Verified via Горох (Тлумачення) 2026-07-21.
   Verification_Notes: ''
   Verification Notes: ''
 ---

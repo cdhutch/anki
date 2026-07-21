@@ -15,11 +15,17 @@ tags:
 - stress:unverified
 fields:
   NoteID: ua-pvom-0001
-  Prefix: про-
-  Base_Form_Label: іти
-  Infinitive_UA: пройти́
+  Prefix: про
+  Walking_Multi_UA: прохо́дити
+  Walking_Multi_Typing: проходити
+  Walking_Uni_UA: пройти́
+  Walking_Uni_Typing: пройти
+  Vehicle_Multi_UA: проїжджа́ти
+  Vehicle_Multi_Typing: проїжджати
+  Vehicle_Uni_UA: прої́хати
+  Vehicle_Uni_Typing: проїхати
   Tags_Ch: ch:2.9.4
-  Source_Note: 'PVOM infinitive: про- + йти'
+  Source_Note: Verified via Горох (Тлумачення) 2026-07-21.
   Verification_Notes: ''
   Verification Notes: ''
 ---
