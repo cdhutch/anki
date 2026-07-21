@@ -20,8 +20,8 @@ fields:
   Govt: з + Р.в.
   Walking_Pair: виходи́ти / вийти́
   Vehicle_Pair: виїжджа́ти / ви́їхати
-  Example_UA: Вона вийшла з університету.
-  Example_EN: She left the university.
+  Example_UA: Вона вийшла з магазину.
+  Example_EN: She exited the store.
   Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
     auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
     d="M0,0 L0,6 L8,3 z" fill="#dc322f"/></marker></defs><!-- Legend --><text x="5" y="12"
