@@ -25,6 +25,7 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: переїжджа́ти
+  Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
   CrossLang_Analog: '≈ RU: проезжать / проехать'
   EuphonyNote: ''
   TypingAnswer: проїжджати

@@ -25,6 +25,7 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: перехо́дити
+  Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
   CrossLang_Analog: '≈ RU: проходить / пройти'
   EuphonyNote: ''
   TypingAnswer: проходити

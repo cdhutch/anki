@@ -25,6 +25,7 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: прохо́дити
+  Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
   CrossLang_Analog: '≈ RU: переходить / перейти'
   EuphonyNote: ''
   TypingAnswer: переходити

@@ -163,6 +163,26 @@ def parse_note_file(path: Path) -> dict | None:
 # ---------------------------------------------------------------------------
 
 
+def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[str, str]:
+    """Decide display order for the Compare card's "X or Y?" prompt.
+
+    Deterministically varies which word -- this note's own Lemma vs its
+    ConfusableSet alternative -- appears first (CompareA) vs second
+    (CompareB), based on the note ID's parity. Without this, the Compare
+    template always named Lemma explicitly in the prompt text ("...or the
+    alternative?"), which gave away the correct answer every time. Per
+    Craig 2026-07-22: phrase it as "<a> or <b>?" with both real words shown,
+    order varied by even/odd ID so the wording itself can't be gamed.
+    """
+    if not confusable:
+        return "", ""
+    digits = "".join(ch for ch in note_id if ch.isdigit())
+    num = int(digits) if digits else 0
+    if num % 2 == 0:
+        return lemma, confusable
+    return confusable, lemma
+
+
 def import_note(data: dict, dry_run: bool) -> str:
     """Import a single parsed note. Returns 'added', 'updated', or 'skipped'."""
     note_id = data.get("note_id", "")
@@ -175,6 +195,14 @@ def import_note(data: dict, dry_run: bool) -> str:
 
     # Coerce all field values to strings (YAML may parse numbers/booleans)
     fields = {k: ("" if v is None else str(v)) for k, v in raw_fields.items()}
+
+    # Compare card prompt: vary which word (Lemma vs ConfusableSet) is
+    # named first, so the prompt text alone doesn't give away the answer.
+    compare_a, compare_b = compute_compare_options(
+        note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
+    )
+    fields["CompareA"] = compare_a
+    fields["CompareB"] = compare_b
 
     # Tags: from CNSF frontmatter
     tags = data.get("tags", [])

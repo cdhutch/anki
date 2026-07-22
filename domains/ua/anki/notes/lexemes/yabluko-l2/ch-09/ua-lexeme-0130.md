@@ -25,6 +25,7 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: проїжджа́ти
+  Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
   CrossLang_Analog: '≈ RU: переезжать / переехать'
   EuphonyNote: ''
   TypingAnswer: переїжджати

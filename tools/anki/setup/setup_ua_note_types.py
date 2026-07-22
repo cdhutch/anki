@@ -54,6 +54,9 @@ FIELDS = [
 
     # Semantic Relations & Cross-lingual
     "ConfusableSet",
+    "Mnemonic_EN",
+    "CompareA",
+    "CompareB",
     "CrossLang_Analog",
     "EuphonyNote",
 
@@ -321,10 +324,9 @@ COMPARISON_FRONT = """\
 {{#ConfusableSet}}<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
   Scenario: {{EN_Gloss}}
-  <br><span style="font-size: 13px; color: #666; font-weight: normal; font-style: italic;">Which fits better — {{Lemma}} or the alternative?</span>
 </div>
-<div style="font-size: 14px; color: #555; padding: 12px; background: #f9f9f9; border-left: 3px solid #1565c0; margin-top: 12px;">
-{{ConfusableSet}}
+<div style="font-size: 20px; font-weight: bold; text-align: center; color: #1a1a1a; padding: 16px; background: #f9f9f9; border-left: 3px solid #1565c0; margin-top: 12px;">
+{{CompareA}} <span style="color: #999; font-weight: normal;">or</span> {{CompareB}}?
 </div>{{/ConfusableSet}}
 """
 
@@ -334,10 +336,9 @@ COMPARISON_BACK = """\
 {{#ConfusableSet}}<div style="margin-top: 16px; font-size: 16px;">
 <div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 4px;">✓ {{Lemma}}</div>
 <div style="color: #2e7d32; font-size: 13px; margin-bottom: 12px;">This scenario emphasizes {{EN_Gloss}}</div>
-<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
-<strong>Why not the alternative?</strong><br>
-The other word fits different contexts (see below) — not this one.
-</div>
+{{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
+<strong>Remember:</strong> {{Mnemonic_EN}}
+</div>{{/Mnemonic_EN}}
 </div>{{/ConfusableSet}}
 """
 
@@ -375,6 +376,45 @@ def update_model():
     """Update templates and CSS; sync fields."""
     print(f"Updating note type '{MODEL_NAME}'...")
 
+    # Sync fields FIRST (add only) -- updateModelTemplates / modelTemplateAdd
+    # validate that every {{Field}} referenced in a template already exists
+    # on the model, so a brand-new field referenced by an updated template
+    # must be added before the template call or AnkiConnect rejects the
+    # whole thing ("Field 'X' not found"). Found 2026-07-22 when CompareA/
+    # CompareB were added to the Compare template at the same time as the
+    # fields -- field-add was running AFTER the template update.
+    existing_fields = anki_request("modelFieldNames", {"modelName": MODEL_NAME}, url=ANKI_URL)
+    existing_set = set(existing_fields)
+    desired_set = set(FIELDS)
+
+    for field in FIELDS:
+        if field not in existing_set:
+            print(f"  Adding field: {field}")
+            anki_request("modelFieldAdd", {"modelName": MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    # updateModelTemplates only refreshes Front/Back for template NAMES that
+    # already exist on the model -- it silently no-ops for unrecognized new
+    # names (same bug class as setup_ua_pvom_note_type.py and
+    # update_visual_model() below). A genuinely new template name needs
+    # modelTemplateAdd first, which also generates that card for every
+    # existing note of the model. Found 2026-07-22: "Compare" had been in
+    # CARD_TEMPLATES for a while but was never actually created in Anki
+    # because of this exact gap.
+    existing_templates_resp = anki_request("modelTemplates", {"modelName": MODEL_NAME}, url=ANKI_URL)
+    existing_template_names = list(existing_templates_resp.keys()) if existing_templates_resp else []
+
+    for tmpl in CARD_TEMPLATES:
+        if tmpl["Name"] not in existing_template_names:
+            print(f"  Adding new template: {tmpl['Name']}")
+            anki_request(
+                "modelTemplateAdd",
+                {
+                    "modelName": MODEL_NAME,
+                    "template": {"Name": tmpl["Name"], "Front": tmpl["Front"], "Back": tmpl["Back"]},
+                },
+                url=ANKI_URL,
+            )
+
     # Update templates — build single dict with all templates, then call once
     templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in CARD_TEMPLATES}
     anki_request(
@@ -390,16 +430,7 @@ def update_model():
         url=ANKI_URL,
     )
 
-    # Sync fields: add missing, remove obsolete
-    existing_fields = anki_request("modelFieldNames", {"modelName": MODEL_NAME}, url=ANKI_URL)
-    existing_set = set(existing_fields)
-    desired_set = set(FIELDS)
-
-    for field in FIELDS:
-        if field not in existing_set:
-            print(f"  Adding field: {field}")
-            anki_request("modelFieldAdd", {"modelName": MODEL_NAME, "fieldName": field}, url=ANKI_URL)
-
+    # Remove obsolete fields last (after templates/CSS are already synced)
     for field in existing_fields:
         if field not in desired_set:
             print(f"  Removing field: {field}  (data lost)")
@@ -542,6 +573,19 @@ def create_grammar_model():
 def update_grammar_model():
     print(f"Updating note type '{GRAMMAR_MODEL_NAME}'...")
 
+    # Sync fields BEFORE templates -- see the comment in update_model() for
+    # why (updateModelTemplates rejects templates referencing fields that
+    # don't exist on the model yet). Fixed here 2026-07-22 preventively,
+    # same bug class, not yet actually triggered in this model.
+    existing_fields = anki_request("modelFieldNames", {"modelName": GRAMMAR_MODEL_NAME}, url=ANKI_URL)
+    existing_set = set(existing_fields)
+    desired_set = set(GRAMMAR_FIELDS)
+
+    for field in GRAMMAR_FIELDS:
+        if field not in existing_set:
+            print(f"  Adding field: {field}")
+            anki_request("modelFieldAdd", {"modelName": GRAMMAR_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
     # Update templates — build single dict with all templates, then call once
     templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in GRAMMAR_CARD_TEMPLATES}
     anki_request(
@@ -555,15 +599,6 @@ def update_grammar_model():
         {"model": {"name": GRAMMAR_MODEL_NAME, "css": GRAMMAR_CSS}},
         url=ANKI_URL,
     )
-
-    existing_fields = anki_request("modelFieldNames", {"modelName": GRAMMAR_MODEL_NAME}, url=ANKI_URL)
-    existing_set = set(existing_fields)
-    desired_set = set(GRAMMAR_FIELDS)
-
-    for field in GRAMMAR_FIELDS:
-        if field not in existing_set:
-            print(f"  Adding field: {field}")
-            anki_request("modelFieldAdd", {"modelName": GRAMMAR_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
 
     for field in existing_fields:
         if field not in desired_set:
@@ -797,6 +832,19 @@ def update_visual_model():
     # value. If something actually goes wrong, this function raises and the
     # caller sees a full traceback instead of silently reporting "Updated".
 
+    # Sync fields FIRST (add only) -- updateModelTemplates / modelTemplateAdd
+    # validate that every {{Field}} referenced in a template already exists
+    # on the model. Fixed here 2026-07-22 preventively, same bug class as
+    # update_model() (UA_Lexeme), not yet actually triggered in this model.
+    existing_fields = anki_request("modelFieldNames", {"modelName": VISUAL_MODEL_NAME}, url=ANKI_URL)
+    existing_set = set(existing_fields)
+    desired_set = set(VISUAL_FIELDS)
+
+    for field in VISUAL_FIELDS:
+        if field not in existing_set:
+            print(f"  Adding field: {field}")
+            anki_request("modelFieldAdd", {"modelName": VISUAL_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
     # updateModelTemplates only refreshes Front/Back for template NAMES that
     # already exist on the model -- it silently no-ops for unrecognized new
     # names (see the identical bug class fixed in setup_ua_pvom_note_type.py).
@@ -829,15 +877,6 @@ def update_visual_model():
         {"model": {"name": VISUAL_MODEL_NAME, "css": VISUAL_CSS}},
         url=ANKI_URL,
     )
-
-    existing_fields = anki_request("modelFieldNames", {"modelName": VISUAL_MODEL_NAME}, url=ANKI_URL)
-    existing_set = set(existing_fields)
-    desired_set = set(VISUAL_FIELDS)
-
-    for field in VISUAL_FIELDS:
-        if field not in existing_set:
-            print(f"  Adding field: {field}")
-            anki_request("modelFieldAdd", {"modelName": VISUAL_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
 
     for field in existing_fields:
         if field not in desired_set:
@@ -1400,6 +1439,20 @@ def create_verb_model():
 
 def update_verb_model():
     print(f"Updating note type '{VERB_MODEL_NAME}'...")
+
+    # Sync fields BEFORE templates -- see the comment in update_model() for
+    # why (updateModelTemplates rejects templates referencing fields that
+    # don't exist on the model yet). Fixed here 2026-07-22 preventively,
+    # same bug class, not yet actually triggered in this model.
+    existing_fields = anki_request("modelFieldNames", {"modelName": VERB_MODEL_NAME}, url=ANKI_URL)
+    existing_set = set(existing_fields)
+    desired_set = set(VERB_FIELDS)
+
+    for field in VERB_FIELDS:
+        if field not in existing_set:
+            print(f"  Adding field: {field}")
+            anki_request("modelFieldAdd", {"modelName": VERB_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
     templates_dict = {tmpl["Name"]: {"Front": tmpl["Front"], "Back": tmpl["Back"]} for tmpl in VERB_CARD_TEMPLATES}
     anki_request(
         "updateModelTemplates",
@@ -1412,15 +1465,6 @@ def update_verb_model():
         {"model": {"name": VERB_MODEL_NAME, "css": VERB_CSS}},
         url=ANKI_URL,
     )
-
-    existing_fields = anki_request("modelFieldNames", {"modelName": VERB_MODEL_NAME}, url=ANKI_URL)
-    existing_set = set(existing_fields)
-    desired_set = set(VERB_FIELDS)
-
-    for field in VERB_FIELDS:
-        if field not in existing_set:
-            print(f"  Adding field: {field}")
-            anki_request("modelFieldAdd", {"modelName": VERB_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
 
     for field in existing_fields:
         if field not in desired_set:
