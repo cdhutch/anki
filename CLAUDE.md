@@ -1,6 +1,8 @@
 # CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
-**Current work**: Distractor authoring (Phase A), 26/29 systems verified.
+**Current work**: UA domain -- Ch-09 motion-verb polish punch list (7/7 items) complete as of
+2026-07-22; push + PR to main pending Craig's go-ahead. B737 Phase A distractor authoring
+paused (26/29 systems verified).
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -18,6 +20,25 @@ This repo builds and maintains Anki flashcard decks across three top-level decks
 **FSRS Isolation:** Each top-level deck has completely separate FSRS configuration 
 and card history. Cards in B737 do not influence UA scheduling and vice versa.
 See [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) for parameters.
+
+### The Big 3 Rules (recite verbatim at session start if asked)
+
+1. **Only Craig runs git commands, which Claude provides.** Claude never executes `git`
+   itself -- including read-only commands like `status`/`diff`/`log`, even for quick
+   investigation. Claude writes the exact command(s); Craig runs them and pastes back the
+   output. (A violation on 2026-07-22 -- Claude ran `git status`/`git diff` directly via
+   `device_bash` -- left a stale `.git/index.lock` that blocked Craig's own git commands
+   until he manually removed it. See CLAUDE-known-issues.md.)
+2. **Only Craig deletes files on his computer.** Claude does not delete files via any
+   mechanism, even where technically possible. (In practice `device_bash` can't delete
+   anyway -- `rm`/`rmdir`/`unlink` fail with "Operation not permitted," only `mv` works --
+   but the rule holds regardless of mechanism.)
+3. **After each set of commands, Claude waits for Craig to respond before providing
+   additional commands.** No stacking multiple rounds of git/shell commands speculatively
+   ahead of confirmation.
+
+These extend to `make`, Python scripts that touch AnkiConnect, and any other shell command
+in this repo -- all run by Craig, not Claude:
 
 - **Shell commands are run by Craig**, not Claude. Claude provides commands to copy/paste; it does not execute git, make, or Python commands directly. (Claude's sandbox lacks access to the required conda env and git hooks will fail.)
 - **Pull requests**: Claude provides the `gh pr create` command; Craig runs it and completes the PR on the GitHub website.
@@ -41,16 +62,29 @@ See [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) for parameters.
 
 **Branch:** `feature/ua-domain` (based off `main`)
 
-**Status (as of 2026-07-10):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
-Book 2 Ch. 9 in progress on branch `feature/ua-l2-ch09-motion-verbs`:
-  - 18 UA_Lexeme notes authored (ua-lexeme-0114–0131): prefixed walking + vehicle motion verbs.
-  - 7 UA_Grammar cloze notes authored (ua-grammar-0001–0007): two-group rule, aspect formation,
-    prefix meanings, phonetic changes, apostrophe rule, піти and ходити meanings.
-  - 9 UA_Visual notes authored (ua-visual-0001–0009): one per prefix, inline SVG diagrams,
-    spatial meaning + prepositional government. Two cards each (Spatial→UA, UA→Spatial).
-    Notes in `domains/ua/anki/notes/visual/`.
-  - All new notes: `status:draft`. Stresses Горох-verified; `stress:unverified` tag removed.
-  - `Verb_Conj_Table` fully populated for all 18 verb pairs (0114–0131).
+**Status (as of 2026-07-22):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
+Book 2 Ch. 9 (`feature/ua-verb-phase2a` branch) imported and polished — 7-item punch list
+complete:
+  - **18 UA_Lexeme notes** (ua-lexeme-0114–0131, prefixed walking + vehicle motion verbs)
+    imported via `make ua-batch BATCH=yabluko-l2/ch-09`. `status:verified`; both UA→EN and
+    EN→UA cards active (36 cards). `Compare` card template active for confusable pairs
+    (про-/пере- pairs 0120/0121, 0129/0130, plus 0059 from ch-00) via `ConfusableSet` +
+    new `Mnemonic_EN`/`CompareA`/`CompareB` fields (see Comparison card section below).
+  - **UA_Grammar**: rebuilt from scratch as a real Cloze model (the live model had been a
+    stale non-cloze legacy model — see CLAUDE-known-issues.md footgun #5). 9 notes
+    (ua-grammar-0001–0009), all `status:draft`/suspended. 0008 (до/в–у/на destination
+    prepositions) and 0009 (від/з–із–зі source/departure prepositions) are new, atomically
+    clozed and leak-checked — see Cloze design principles below. 0001–0007 still use the
+    older "busy" multi-fact-per-cloze pattern and have empty `Source_URL`/`Source_Note`;
+    not yet revisited.
+  - **UA_Visual**: redesigned from 2 templates (Spatial→UA / UA→Spatial) to a single
+    "Prefix + Government" card (front = diagram + blank table, back = same table filled in
+    place). 9 notes, 9 cards, `status:verified`, active in `UA::Recognition::Visual`.
+  - **UA_PVOM_Infinitive**: reworked from 22 single-form notes to 11 notes × 4 card
+    templates (Walking Multi/Uni, Vehicle Multi/Uni) — 44 cards total, each base form
+    independently suspendable/leech-trackable.
+  - All lexeme + grammar stresses Горох-verified. `Verb_Conj_Table` fully populated for
+    all 18 verb pairs (0114–0131).
 
 **UA_Visual card template design (2026-07-10):**
   - Card 1 (Spatial→UA): front = diagram + English meaning; back = Ukrainian prefix, government, verb pairs, example.
@@ -58,13 +92,14 @@ Book 2 Ch. 9 in progress on branch `feature/ua-l2-ch09-motion-verbs`:
   - Template redesign fixed & deployed ✅ — `setup_ua_note_types.py` now calls `updateModelTemplates` with all templates in single call (not per-template loop).
   - Templates update correctly via `make ua-setup-visual`.
 
-**Pending before import:**
-  1. ✓ Template fix committed & verified
-  2. Run: `make ua-setup` (updates UA_Lexeme + UA_Grammar + UA_Visual in Anki with fixed templates)
-  3. Flip `status:draft` → `status:verified` after review
-  4. Import lexemes: `make ua-batch BATCH=yabluko-l2/ch-09`
-  5. Import grammar: `make ua-grammar`
-  6. Import visual prefix cards: `make ua-visual`
+**Pending (next phase, after push + PR to main):**
+  1. Push `feature/ua-verb-phase2a` + open PR to main (commands provided by Claude, run by
+     Craig, per Big 3 Rule #1)
+  2. Check whether `UA::Production::EN→UA` deck-routing gap for ch-00 is resolved (likely
+     fixed as a side effect of the 2026-07-22 ch-00 re-import; not yet verified)
+  3. Decide on flipping the 9 UA_Grammar notes from `status:draft` to `status:verified`
+     (0008/0009 already have real sourced citations; 0001–0007 need a review pass first)
+  4. Re-run `list_deck_presets.py` / `survey_card_states.py` to confirm counts
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -185,6 +220,27 @@ typed answer against both to give tiered feedback (perfect-with-stress / correct
 other ten prefixes — its primary listed sense is "ascend," not explicitly "get off/descend."
 Treat it as slightly lower-confidence than the rest until cross-checked against the
 textbook.
+
+**Cloze note design principles (UA_Grammar, established 2026-07-22)**
+
+- **Atomicity:** each distinct cloze number (`{{c1::}}`, `{{c2::}}`, ...) should test exactly
+  one isolated fact. Reusing the same cloze number for multiple unrelated facts in one note
+  (the pattern in `ua-grammar-0001`–`0007`) makes a single card "busy" — it forces recall of
+  several things at once instead of one clean fact.
+- **No self-leak:** nothing outside a cloze span may name the answer being tested inside that
+  span. Concrete examples belong in `Extra` (back-side only), not in `Text` next to the
+  cloze — a parenthetical like "(зайти до друга)" sitting outside a
+  `{{c1::до + genitive}}` span gives the answer away on the very card testing it.
+- **No cross-cloze substring leak:** one cloze's answer text must not be a literal substring
+  of another cloze's visible answer text on the same note (e.g. "зі" as its own cloze target
+  when "з/із/зі" is also shown plainly elsewhere on the card).
+- **Don't pad to hit a card-count target.** Atomicity means one card per fact that earns
+  independent recall, not maximizing cloze numbers — see `ua-grammar-0009`, trimmed from an
+  initial 4-fact draft down to 2 after the extra facts turned out to be low-value trivia.
+- **Cloze cards aren't retroactively deleted when a `{{cN::}}` tag is removed from Text.**
+  If a stale extra card persists after trimming a note's cloze count, delete the note in
+  Anki and let the next sync recreate it with the correct card count — this is expected
+  Anki behavior, not a bug to chase.
 
 ### Language conventions (critical)
 - Dialect: modern Ukrainian, **Galician/Lviv** register

@@ -117,3 +117,59 @@ All lexeme stresses Горох-verified. `Verb_Conj_Table` populated for all 18 
 8. make ua-visual
 9. make ua-verb  (import conjugation notes)
 ```
+
+
+---
+
+## 2026-07-22 update — ch-09 punch list complete, ready for push + PR
+
+Everything below the "Updated import pipeline (post-UA_Verb)" block above is now historical
+context for HOW ch-09 got imported; here's where it landed.
+
+### ch-09 content status (current)
+
+| Type | Count | IDs | Status |
+|------|-------|-----|--------|
+| UA_Lexeme | 18 | ua-lexeme-0114–0131 | `status:verified`, imported, both UA→EN + EN→UA active |
+| UA_Grammar | 9 | ua-grammar-0001–0009 | `status:draft`/suspended; 0008/0009 new (2026-07-22) |
+| UA_Visual | 9 | ua-visual-0001–0009 | `status:verified`, imported, 1 template ("Prefix + Government") |
+| UA_PVOM_Infinitive | 11 | ua-pvom-0001–0011 | imported, 4 templates/note = 44 cards |
+| UA_Verb (base motion) | 32 | ua-verb-0001–0032 | imported (see project memory `project_ua_verb_phase2a`) |
+
+### Import pipeline — all steps done
+
+```
+1. Implement UA_Verb note type          ✓ done
+2. Import Phase 2a base conjugations    ✓ done (32 files in domains/ua/anki/notes/verbs/)
+3. Create 2 ch-09 motion verb notes     ✓ done (ходити, їхати)
+4. Tag ch-09 lexemes conj:motion-*      ✗ still not done — checked, 0/18 have the tag
+5. make ua-setup                        ✓ done (all 4 note types synced, all footguns above fixed)
+6. make ua-batch BATCH=yabluko-l2/ch-09 ✓ done 2026-07-22
+7. make ua-grammar                      ✓ done 2026-07-22 (model rebuilt as real Cloze, footgun #5)
+8. make ua-visual                       ✓ done — single-template redesign live
+9. make ua-verb                         ✓ done
+```
+
+### 7-item PVOM polish punch list — all done
+
+Full write-up with commit hashes lives in project memory (`project_ua_verb_phase2a.md`).
+Summary: (1) PVOM reworked to 4 templates/note; (2/6) UA_Visual redesigned to single
+template + Solarized palette; (3) UA_Visual↔UA_Lexeme EN_Gloss cross-check; (4) EN→UA
+motion-verb suspend logic tried, found not to actually suspend in live Anki, reverted —
+both directions active by design; (5) про-/пере- mnemonic via new `Mnemonic_EN` +
+`CompareA`/`CompareB` fields, found and fixed 2 AnkiConnect bugs along the way; (7)
+до/в-у/на + від/з-із-зі grammar notes (0008/0009), found and fixed the model-cloze-type
+footgun (#5 above) along the way.
+
+### Next steps (in order)
+
+1. Push `feature/ua-verb-phase2a` + PR to main (Craig runs; Claude provides commands)
+2. Check `UA::Production::EN→UA` deck-routing count for ch-00 (likely fixed as a side
+   effect of the 2026-07-22 ch-00 re-import; not yet verified)
+3. Decide on flipping UA_Grammar notes 0001–0009 from `status:draft` to `status:verified`
+   (0008/0009 have real sourced citations already; 0001–0007 need a review pass)
+4. Re-run `list_deck_presets.py` / `survey_card_states.py` to confirm counts
+
+**New branch after this:** ch-09 vocabulary appendix parsing (Яблуко 2, chapter "9 Рух -
+це життя") — separate from the motion-verb grammar work above; see
+`domains/ua/anki/sources/yabluko/level-2/yabluko-l2-vocabulary.pdf`.
