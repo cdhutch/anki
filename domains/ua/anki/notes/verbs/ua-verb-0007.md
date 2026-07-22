@@ -1,0 +1,44 @@
+---
+schema: cnsf/v0
+note_type: ua_verb
+note_id: ua-verb-0007
+anki:
+  model: UA_Verb
+  deck: UA::Verbs
+tags:
+- domain:ua
+- motion:vehicle
+- phase:2a
+- conj:drill
+- ch:2.9.2
+- stress:unverified
+fields:
+  NoteID: ua-verb-0007
+  Lemma: поїхати
+  Aspect: perfective
+  VerbClass: motion-vehicle-new
+  FreqSource: ch:2.9
+  Pres_1sg: поїду́
+  Pres_2sg: поїде́ш
+  Pres_3sg: поїде́
+  Pres_1pl: поїде́м
+  Pres_2pl: поїдете́
+  Pres_3pl: поїду́ть
+  Imperative_2sg: поїдь
+  Imperative_1pl: поїдімо
+  Imperative_2pl: поїдіть
+  Past_1sg_m: поїха́в
+  Past_1sg_f: поїха́ла
+  Past_1sg_n: поїха́ло
+  Past_3pl: поїха́ли
+  Participle_Active_Present: ''
+  Participle_Adverbial_Present: ''
+  Participle_Passive_Past_m: ''
+  Participle_Passive_Past_f: ''
+  Participle_Impersonal_Past: ''
+  Participle_Adverbial_Past: ''
+  UA_Example: ''
+  EN_Example: ''
+  Verification_Notes: ''
+---
+

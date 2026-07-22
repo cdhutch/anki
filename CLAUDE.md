@@ -1,18 +1,44 @@
 # CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
-**Current work**: Distractor authoring (Phase A), 26/29 systems verified.
+**Current work**: UA domain -- Ch-09 motion-verb polish punch list (7/7 items) complete as of
+2026-07-22; push + PR to main pending Craig's go-ahead. B737 Phase A distractor authoring
+paused (26/29 systems verified).
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
 ## Workflow Notes
 
-This repo builds and maintains Anki flashcard decks for two domains:
+This repo builds and maintains Anki flashcard decks across three top-level decks:
 
 - **B737** (`domains/b737/`) — type rating study. CNSF markdown notes exported
-  to TSV and imported via AnkiConnect.
-- **Ukrainian** (`domains/ua/`) — formal language learning (Galician/Lviv
-  register, Яблуко textbook). In early design phase on branch `feature/ua-domain`.
+  to TSV and imported via AnkiConnect. High-stakes professional content.
+- **UA** (`domains/ua/`) — formal language learning (Galician/Lviv
+  register, Яблуко textbook). Active branch `feature/ua-domain`.
   See `domains/ua/anki/docs/design.md` for full schema and migration plan.
+- **Legacy** — archive of older decks. Being systematically migrated or archived.
+
+**FSRS Isolation:** Each top-level deck has completely separate FSRS configuration 
+and card history. Cards in B737 do not influence UA scheduling and vice versa.
+See [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) for parameters.
+
+### The Big 3 Rules (recite verbatim at session start if asked)
+
+1. **Only Craig runs git commands, which Claude provides.** Claude never executes `git`
+   itself -- including read-only commands like `status`/`diff`/`log`, even for quick
+   investigation. Claude writes the exact command(s); Craig runs them and pastes back the
+   output. (A violation on 2026-07-22 -- Claude ran `git status`/`git diff` directly via
+   `device_bash` -- left a stale `.git/index.lock` that blocked Craig's own git commands
+   until he manually removed it. See CLAUDE-known-issues.md.)
+2. **Only Craig deletes files on his computer.** Claude does not delete files via any
+   mechanism, even where technically possible. (In practice `device_bash` can't delete
+   anyway -- `rm`/`rmdir`/`unlink` fail with "Operation not permitted," only `mv` works --
+   but the rule holds regardless of mechanism.)
+3. **After each set of commands, Claude waits for Craig to respond before providing
+   additional commands.** No stacking multiple rounds of git/shell commands speculatively
+   ahead of confirmation.
+
+These extend to `make`, Python scripts that touch AnkiConnect, and any other shell command
+in this repo -- all run by Craig, not Claude:
 
 - **Shell commands are run by Craig**, not Claude. Claude provides commands to copy/paste; it does not execute git, make, or Python commands directly. (Claude's sandbox lacks access to the required conda env and git hooks will fail.)
 - **Pull requests**: Claude provides the `gh pr create` command; Craig runs it and completes the PR on the GitHub website.
@@ -26,6 +52,9 @@ This repo builds and maintains Anki flashcard decks for two domains:
 | **Known issues** | [CLAUDE-known-issues.md](CLAUDE-known-issues.md) |
 | **Key paths** | [CLAUDE-key-paths.md](CLAUDE-key-paths.md) |
 | **Migration progress** | [CLAUDE-migration-log.md](CLAUDE-migration-log.md) |
+| **UA_Verb design** | [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) |
+| **FSRS deck configs** | [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) |
+| **Flag audit workflow** | [CLAUDE-flag-audit.md](CLAUDE-flag-audit.md) |
 
 ---
 
@@ -33,12 +62,44 @@ This repo builds and maintains Anki flashcard decks for two domains:
 
 **Branch:** `feature/ua-domain` (based off `main`)
 
-**Status (as of 2026-07-06):** Вступ lexeme batch complete. 113 notes live in Anki.
-Stress verification pass complete: all 113 notes verified against Горох; 9 stress corrections
-applied (воді́їв, письме́нниця, вчителів, вечора, вікон, сімей, чисел, іта́лійський, ні́мецький);
-`stress:unverified` tag removed from all notes; reimported.
-`Source_URL` / `Source_Note` fields added to schema and backfilled on all 113 notes.
-Phase 2 note types (`UA_Grammar`, `UA_Verb`) fully specified in design.md — ready to author.
+**Status (as of 2026-07-22):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
+Book 2 Ch. 9 (`feature/ua-verb-phase2a` branch) imported and polished — 7-item punch list
+complete:
+  - **18 UA_Lexeme notes** (ua-lexeme-0114–0131, prefixed walking + vehicle motion verbs)
+    imported via `make ua-batch BATCH=yabluko-l2/ch-09`. `status:verified`; both UA→EN and
+    EN→UA cards active (36 cards). `Compare` card template active for confusable pairs
+    (про-/пере- pairs 0120/0121, 0129/0130, plus 0059 from ch-00) via `ConfusableSet` +
+    new `Mnemonic_EN`/`CompareA`/`CompareB` fields (see Comparison card section below).
+  - **UA_Grammar**: rebuilt from scratch as a real Cloze model (the live model had been a
+    stale non-cloze legacy model — see CLAUDE-known-issues.md footgun #5). 9 notes
+    (ua-grammar-0001–0009), all `status:draft`/suspended. 0008 (до/в–у/на destination
+    prepositions) and 0009 (від/з–із–зі source/departure prepositions) are new, atomically
+    clozed and leak-checked — see Cloze design principles below. 0001–0007 still use the
+    older "busy" multi-fact-per-cloze pattern and have empty `Source_URL`/`Source_Note`;
+    not yet revisited.
+  - **UA_Visual**: redesigned from 2 templates (Spatial→UA / UA→Spatial) to a single
+    "Prefix + Government" card (front = diagram + blank table, back = same table filled in
+    place). 9 notes, 9 cards, `status:verified`, active in `UA::Recognition::Visual`.
+  - **UA_PVOM_Infinitive**: reworked from 22 single-form notes to 11 notes × 4 card
+    templates (Walking Multi/Uni, Vehicle Multi/Uni) — 44 cards total, each base form
+    independently suspendable/leech-trackable.
+  - All lexeme + grammar stresses Горох-verified. `Verb_Conj_Table` fully populated for
+    all 18 verb pairs (0114–0131).
+
+**UA_Visual card template design (2026-07-10):**
+  - Card 1 (Spatial→UA): front = diagram + English meaning; back = Ukrainian prefix, government, verb pairs, example.
+  - Card 2 (UA→Spatial): front = Ukrainian prefix + verb pairs; back = diagram + English meaning + government + example.
+  - Template redesign fixed & deployed ✅ — `setup_ua_note_types.py` now calls `updateModelTemplates` with all templates in single call (not per-template loop).
+  - Templates update correctly via `make ua-setup-visual`.
+
+**Pending (next phase, after push + PR to main):**
+  1. Push `feature/ua-verb-phase2a` + open PR to main (commands provided by Claude, run by
+     Craig, per Big 3 Rule #1)
+  2. Check whether `UA::Production::EN→UA` deck-routing gap for ch-00 is resolved (likely
+     fixed as a side effect of the 2026-07-22 ch-00 re-import; not yet verified)
+  3. Decide on flipping the 9 UA_Grammar notes from `status:draft` to `status:verified`
+     (0008/0009 already have real sourced citations; 0001–0007 need a review pass first)
+  4. Re-run `list_deck_presets.py` / `survey_card_states.py` to confirm counts
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -50,20 +111,136 @@ Phase 2 note types (`UA_Grammar`, `UA_Verb`) fully specified in design.md — re
 
 ### Primary note type: `UA_Lexeme`
 
-**Fields (authoritative):**
-`NoteID`, `Lemma`, `PartOfSpeech`, `Gender`, `Perfective`, `EN_Gloss`,
-`Govt_Case`, `CounterpartForm`, `IrregularForms`, `VerbMotion_Pair`,
-`ConfusableSet`, `CrossLang_Analog`, `EuphonyNote`, `TypingAnswer`,
-`UA_Example`, `EN_Example`, `Verb_Conj_Table`, `Tags_Ch`,
-`Source_URL`, `Source_Note`
+**Fields (20, in semantic order):**
 
-Key field notes:
-- `Perfective` — PFV infinitive for verbs (blank for non-verbs)
-- `CounterpartForm` — cross-gender pair, e.g. `f: акто́рка`
-- `IrregularForms` — gen/pl irregularities, indeclinability
-- `TypingAnswer` — Lemma stripped of stress marks (U+0301); student types without accents
-- `Source_URL` — goroh.pp.ua URL for the bare lemma: `https://goroh.pp.ua/Словозміна/<lemma_no_stress>`
-- `Source_Note` — free text: verification date, disambiguation notes, corrections applied
+*Identity & Metadata:* `NoteID`
+
+*Core Lemma & Morphology:* `Lemma`, `PartOfSpeech`, `Gender`
+
+*Aspect (verbs only):* `Perfective` (PFV counterpart), `ImperfectiveUnidirectional` (motion verb directional form)
+
+*Semantic Content:* `EN_Gloss`
+
+*Grammatical Properties:* `Govt_Case`, `IrregularForms`, `CounterpartForm` (gender pairs), `VerbMotion_Pair` (base unprefixed form)
+
+*Semantic Relations:* `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote` (alternate spellings: уже/вже, всі/усі)
+
+*Typing & Examples:* `TypingAnswer` (Lemma without stress marks), `UA_Example`, `EN_Example`
+
+*Metadata & Sources:* `Tags_Ch`, `Source_URL`, `Source_Note`
+
+**Aspect convention:** Lemma is always imperfective (base form). Perfective field contains PFV counterpart. Aspect is implicit in field structure (no explicit Aspect field needed).
+
+**Verb conjugations:** Removed `Verb_Conj_Table` field from UA_Lexeme; conjugation morphology now belongs in UA_Verb note type as structured fields.
+
+### Card Template Techniques
+
+**Polysemous word examples (multiple meanings)**
+
+When a UA word has multiple distinct meanings, demonstrate semantic range in the example fields:
+
+```yaml
+UA_Example: |
+  Example showing meaning 1
+  Example showing meaning 2
+EN_Example: |
+  Translation for meaning 1
+  Translation for meaning 2
+```
+
+Example: вік (age as measure of time; era/epoch as historical period)
+```
+UA_Example: У якому віці діти йдуть до школи? | Вони жили в добу Середніх віків.
+EN_Example: At what age do children go to school? | They lived during the Middle Ages.
+```
+
+This shows the learner that the same Ukrainian word spans multiple semantic domains.
+
+**Comparison card (scenario-based confusable discrimination)**
+
+UA_Lexeme generates a 3rd optional "Compare" card template when `ConfusableSet` is populated:
+
+- **Front:** Scenario/context requiring semantic discrimination (not pattern recognition)
+- **Back:** Correct word + explanation of why it fits this specific context
+- **Design principle:** Scenario-based + bidirectional (forces understanding of *when* each word fits, not just *that* one is correct)
+- **Avoids memorization trap:** Multiple scenarios with different contexts prevent learner from simply memorizing "gloss → word"
+
+**ConfusableSet format** (structured for scenario generation):
+```yaml
+ConfusableSet: |
+  фах (alternative word + brief definition)
+  Scenario A: Context where lemma fits
+  → Use: lemma (when/why)
+  Scenario B: Context where confusable fits
+  → Use: confusable (when/why)
+  Key distinction: Explicit semantic/contextual difference
+```
+
+Example: професія vs. фах
+- Scenario A: "Asking someone about their job formally" → професія (formal career identity)
+- Scenario B: "Discussing a plumber's expertise" → фах (skilled trade/craft)
+
+The "Compare" card only renders when `ConfusableSet` is populated, making it lightweight.
+
+**PVOM prefix drilling (multi-form typing cards)**
+
+`UA_PVOM_Infinitive` (one note per prefix, `domains/ua/anki/notes/pvom/`) drills all four
+verb-of-motion base forms a prefix combines with, as four separate card templates rather
+than one card with four blanks:
+
+- **Walking (Multi)** — multidirectional, imperfective (ходити-family)
+- **Walking (Uni)** — unidirectional, perfective (іти-family)
+- **Vehicle (Multi)** — multidirectional, imperfective; labeled "їздити" on the card, but
+  the typed answer is the dictionary-primary **-їжджати** surface form (Горох consistently
+  redirects "-їздити" entries to "-їжджати" as the canonical headword — both are real, but
+  -їжджати is the one attested as primary)
+- **Vehicle (Uni)** — unidirectional, perfective (їхати-family)
+
+**Why four separate templates, not one card:** each base form gets independent FSRS
+scheduling and leech tracking. The four forms are not equally hard — mutations
+(apostrophe insertion: підʼїхати, відʼїхати, надʼїхати, обʼїхати, зʼїхати; epenthetic
+-ій-: підійти, відійти, надійти, обійти, зійти; з→с assimilation before voiceless х:
+з- + ходити → сходити, not "зходити") make some prefixes much harder to produce than
+others, and a student can be solid on the walking forms while still missing vehicle
+forms. Separate templates let each be suspended/re-weighted independently without
+touching the others.
+
+**Card design — no hints on the front.** Front is just `{{Prefix}} + <base label>` (e.g.
+"ви + іти", "під + їздити") — no aspect labels, no mutation hints. The point is for the
+student to internalize the prefixation patterns through repeated production, not to be
+told the answer's shape in advance.
+
+**Field pattern:** each base has a stressed field (`*_UA`) and an unstressed field
+(`*_Typing`) used for Anki's `{{type:...}}` comparison; the back-side script compares the
+typed answer against both to give tiered feedback (perfect-with-stress / correct-no-stress
+/ incorrect), same pattern as `UA_Lexeme`'s typing cards.
+
+**Verification caveat:** the з- prefix (схо́дити/зійти́) is the one form in this set where
+Горох's dictionary entry doesn't cleanly label the aspectual pair the way it does for the
+other ten prefixes — its primary listed sense is "ascend," not explicitly "get off/descend."
+Treat it as slightly lower-confidence than the rest until cross-checked against the
+textbook.
+
+**Cloze note design principles (UA_Grammar, established 2026-07-22)**
+
+- **Atomicity:** each distinct cloze number (`{{c1::}}`, `{{c2::}}`, ...) should test exactly
+  one isolated fact. Reusing the same cloze number for multiple unrelated facts in one note
+  (the pattern in `ua-grammar-0001`–`0007`) makes a single card "busy" — it forces recall of
+  several things at once instead of one clean fact.
+- **No self-leak:** nothing outside a cloze span may name the answer being tested inside that
+  span. Concrete examples belong in `Extra` (back-side only), not in `Text` next to the
+  cloze — a parenthetical like "(зайти до друга)" sitting outside a
+  `{{c1::до + genitive}}` span gives the answer away on the very card testing it.
+- **No cross-cloze substring leak:** one cloze's answer text must not be a literal substring
+  of another cloze's visible answer text on the same note (e.g. "зі" as its own cloze target
+  when "з/із/зі" is also shown plainly elsewhere on the card).
+- **Don't pad to hit a card-count target.** Atomicity means one card per fact that earns
+  independent recall, not maximizing cloze numbers — see `ua-grammar-0009`, trimmed from an
+  initial 4-fact draft down to 2 after the extra facts turned out to be low-value trivia.
+- **Cloze cards aren't retroactively deleted when a `{{cN::}}` tag is removed from Text.**
+  If a stale extra card persists after trimming a note's cloze count, delete the note in
+  Anki and let the next sync recreate it with the correct card count — this is expected
+  Anki behavior, not a bug to chase.
 
 ### Language conventions (critical)
 - Dialect: modern Ukrainian, **Galician/Lviv** register
@@ -93,20 +270,118 @@ instead of `-ська`). The vowel-index comparison handles this correctly since
 syllable is the same. The script is embedded in session context — rebuild from the pattern
 in `tools/anki/inspect/` when needed as a standalone tool.
 
+### Deck Presets and Limit Configuration (2026-07-20)
+
+**Strategy:** Differentiated daily limits by cognitive load tier + data-driven preset creation.
+
+**Preset configuration files:**
+- `domains/ua/anki/presets/preset_definitions.json` — UA domain presets (6 presets: parent + 5 child tiers)
+- `domains/b737/anki/presets/preset_definitions.json` — B737 domain preset (1 preset: review-only)
+
+**Limit configuration files:**
+- `domains/ua/anki/config/deck_limits.yaml` — UA domain limit strategy with commentary
+- `domains/b737/anki/config/deck_limits.yaml` — B737 domain limit strategy with role-based suspension
+
+**Key concepts:**
+- **Parent limit:** 50 new / 100 review per day (UA domain). Child decks cannot exceed this.
+- **Cognitive load tiers:**
+  - High (PVOM, Lexeme EN→UA): 15–18 new/day (typing/production)
+  - Medium (Grammar, Verbs): 20 new/day (recognition + recall)
+  - Low (Visual): 25 new/day (recognition)
+- **Total child capacity:** 98 new/day (98 > 50 parent), but balanced by selective activation
+- **B737 limits:** 0 new / 200 review (review-only, no new cards for type-rating study)
+- **Suspension tagging:** Decks suspended with tags documenting reason (role:captain, scope:out-of-scope, etc.)
+
+**Preset creation workflow:**
+1. `tools/anki/setup/create_deck_presets.py` — Reads JSON preset definitions, creates/updates presets via AnkiConnect
+2. `tools/anki/inspect/update_deck_limits.py` — Reads YAML limits, updates existing deck configs, applies to UA decks
+3. `tools/anki/inspect/update_b737_deck_limits.py` — Same pattern for B737 (honors suspension flags)
+
+**Execution order (Craig runs these):**
+```bash
+python tools/anki/setup/create_deck_presets.py      # Create all presets
+python tools/anki/inspect/update_deck_limits.py     # Apply UA limits
+python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
+```
+
 ### Tooling status
 | Path | Status | Purpose |
 |---|---|---|
 | Rename `UA` → `UA_Legacy` in Anki GUI | ✓ done | One-time manual rename; frees UA:: namespace |
-| `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme in Anki |
+| `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme + UA_Grammar + UA_Visual |
+| `tools/anki/setup/create_deck_presets.py` | ✓ new (2026-07-20) | Data-driven preset creation from JSON definitions |
 | `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
+| `tools/anki/sync/ua_grammar_import.py` | ✓ done | UA_Grammar CNSF notes → Anki (upsert) |
+| `tools/anki/sync/ua_visual_import.py` | ✓ done | UA_Visual CNSF notes → Anki (upsert) |
 | `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
+| `tools/anki/inspect/update_deck_limits.py` | ✓ new (2026-07-20) | Apply UA domain limits from YAML config |
+| `tools/anki/inspect/update_b737_deck_limits.py` | ✓ new (2026-07-20) | Apply B737 domain limits, honor suspension tags |
 | `tools/anki/inspect/backfill_source_url.py` | ✓ done | Add Source_URL + Source_Note to all lexeme notes |
 | `tools/anki/inspect/verify_stress_goroh.py` | ✓ done | Stress verification vs Горох; Вступ pass complete |
+| `tools/anki/inspect/test_preset_creation.py` | ✓ new (2026-07-20) | Diagnostic tool for testing preset creation approaches |
 | `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
+| `tools/anki/inspect/patch_ch09_conj_tables.py` | ✓ done | One-shot: Verb_Conj_Table for notes 0117–0131 |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 
-### Future work
+### UA_Verb Note Type (Phase 2a, committed 2026-07-12)
+
+**Design:** See [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) for complete specification.
+
+**Implementation status (2026-07-12):**
+- ✅ UA_Verb note type created in Anki (27 fields: identity, present 6, imperatives 3, past 4, participles 6, metadata)
+- ✅ Recognition card template deployed (collapsible details for imperatives, past, participles)
+- ✅ ua_verb_import.py + `make ua-verb` target operational
+- ✅ 2 base motion verbs authored & imported (ходити ua-verb-0001, їхати ua-verb-0002) — Горох verified
+- ✅ ua_verb_export.py created; 69 legacy UA_Verb + 5 UA_Conjugation exported to CNSF, canonicalized
+- ⏳ Production template (randomized conjugation drilling): design decision pending
+
+**Key principles:**
+- **Separate morphology from vocabulary.** One UA_Verb note (ходити) serves multiple lexemes (ходити, походити, заходити, etc.) via tag linking, not 1:1 coupling.
+- **Structured fields, not HTML.** 26 fields store individual conjugation forms (6 pronouns, 3 imperatives, 4 past, 6 participles) + metadata. Templates render as tables. HTML is generated cache, not canonical.
+- **CNSF canonical format.** All UA_Verb notes version-controlled as markdown with YAML front matter, imported via AnkiConnect.
+- **Tag-based linking.** UA_Lexeme and UA_Verb share tags (e.g., `conj:motion-walking-ходити`) for bidirectional reference without foreign keys.
+- **Suspended by default, unsuspend selectively.** Import with `conj:suspended` tag; unsuspend class leaders + irregulars tagged `conj:drill` (~90–100 cards active).
+
+**Phase 2a execution plan (12 steps, in progress 2026-07-13):**
+1. ✅ Create `ua_verb_export.py` — Export 69 existing UA_Verb + 5 UA_Conjugation notes to CNSF (backup + version control)
+2. ✅ Export all legacy notes to canonical .md files in `domains/ua/anki/notes/verbs/exported/` — 74 notes canonicalized, ready for migration
+3. ✅ Build & test Recognition card template for ходити/їхати — Card template designed with block-based layout:
+   - **Present tense:** 2-column grid (я/ми, ти/ви, він,вона,воно/вони)
+   - **Past tense:** Full-width 4 rows (ч.р., ж.р., с.р., мн.)
+   - **Imperative:** Full-width 3 rows (ти, ми, ви)
+   - **Participles:** Collapsible section (Act. Pres., Adv. Pres., Pass. Past m/f, Impersonal, Adv. Past)
+   - Both ua-verb-0001 (ходити) and ua-verb-0002 (їздити) synced to Anki with correct conjugation data. Template deployed via setup_ua_note_types.py. Created survey_ua_verb.py tool for card verification.
+4. Design decision: Production template needed (randomized conjugation drilling) or recognition-only sufficient?
+5. Finish ch-09 verbs (Phase 2a) — target 35–50 canonical CNSF notes:
+   - **Prefixed motion verbs** (10–14): походити, заходити, виходити, перейходити (ходити base); поїхати, заїхати, виїхати (їхати base). Tag: `conj:motion-walking-ходити` / `conj:motion-vehicle-їхати`
+   - **Class leaders** (5–10): писати, читати, казати, робити, жити, говорити, слухати, гуляти, хотіти, etc. Tag: `class:leader, phase:2a, conj:drill`
+   - **Irregulars** (8–12): бути, дати/давати, їсти/з'їсти, брати/взяти, ставати/стати, лежати/лягти, сідіти/сісти, etc. Tag: `class:irregular, phase:2a, conj:drill`
+6. Create `ua_conjugation_to_verb.py` migration script — Automate 5 UA_Conjugation → UA_Verb CNSF conversion (field mapping: Pres_1S→Pres_1sg, ActPart_Pres→Participle_Active_Present, Gerund→Participle_Adverbial)
+7. Run migration — Generate CNSF files in `domains/ua/anki/notes/verbs/migrated/`
+8. Field-coverage audit — Compare old vs new structure; flag data loss before sync
+9. Verify tags & metadata — Standardize legacy tags to new scheme (phase:2a, conj:drill, conj:suspended)
+10. Stage sync in batches:
+    - Batch A: 2 new verbs (ходити, їхати) ✓ complete
+    - Batch B: New Phase 2a verbs (prefixed, class leaders, irregulars)
+    - Batch C: 69 legacy UA_Verb reimported from exported CNSF
+    - Batch D: 5 migrated UA_Conjugation → UA_Verb format
+11. Final QA — Spot-check in Anki: verify conjugations, tags, deck placement
+12. Update CLAUDE.md — Document completion, tools, tagging conventions
+
+**CNSF canonicalization note (2026-07-13):**
+- UA_Verb notes use `Verification_Notes` (underscore) not `Verification Notes` (space). The canonicalizer (`tools/anki/cnsf_canonicalize.py`) has been fixed to remove the space variant when processing ua_verb note_type. This prevents duplicate fields in canonical files.
+
+**Participles policy:**
+- **Adverbial past participle** (е.g., робивши) — *required*; useful for reading comprehension
+- **Passive participle** (e.g., робленный) — *optional*; include if standard/common, else blank
+
+**UA_Verb sequencing** — *501 Ukrainian Verbs* (book) used as breadth/coverage map, not a to-do list.
+
+- **Phase 2a** — Implement UA_Verb note type; author class leaders + irregulars (~60–70 notes). These are structural skeletons of Ukrainian conjugation.
+- **Phase 2b** — High-frequency regulars (~60–100 additional notes) from Яблуко + Ukrainian National Corpus frequency list.
+- **Phase 2c (ongoing)** — Expand via *501 Ukrainian Verbs* as curriculum demands. Target total: ~160–220 authored notes, ~90–100 marked for active drill.
+- **Prefixed verb variants** inherit base conjugation via tag linking; no separate conjugation notes per prefix.
 
 **LLM example sentence generation** — `tools/anki/generate/ua_generate_examples.py` ✓ written.
 Run with `make ua-generate-examples BATCH=yabluko-l1/ch-00 [LIMIT=10]`.
@@ -126,11 +401,37 @@ extracting vocab from Яблуко appendix pages 220–237 unit by unit.
 cards from Anki and generate CNSF skeletons. Enrich with PoS, gender, stress marks
 before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Яблуко ch-by-ch.
 
+**EN translation variant guidance** — When developing UA_Lexeme cards, for English words with multiple UA translations, provide the literal EN translation in addition to the common meaning. This helps learners understand why a single English word might map to different Ukrainian equivalents, showing semantic nuance rather than just glosses.
+
+### Flagged Card Fix Workflow (Future)
+
+**Purpose:** Periodic review and correction of flagged cards (red=errors, orange=confusing).
+After each study session, fix all flagged cards and remove flags.
+
+**Workflow:**
+1. Query Anki for flagged cards in UA domain → extract NoteIDs
+2. For each flagged NoteID:
+   - Read canonical CNSF file from repo
+   - Show to Claude: full note (fields)
+   - Claude asks: "Why flagged?" (with flag color context)
+   - You respond with issue/fix
+   - Claude suggests if unclear
+   - Update CNSF file with correction
+3. Batch re-import corrected notes to Anki (via `ua_lexeme_import.py`, `ua_verb_import.py`, etc.)
+4. Remove flags from all cards in one query
+5. Commit corrected CNSF files to git
+
+**Tools needed:**
+- `ua_flag_audit.py` — Query flagged cards, extract NoteIDs, map to canonical file paths
+- Integration with existing import scripts (ua_lexeme_import.py, ua_verb_import.py, ua_grammar_import.py, ua_visual_import.py)
+
+**Status:** Planned. End of queue after Phase 2a completion.
+
 ### Source materials
 | Path | Purpose |
 |---|---|
 | `domains/ua/anki/sources/yabluko/level-1/` | Яблуко Level 1 PDF (good copy available) |
-| `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 PDF (most existing cards are ch:2.x.x — PDF not yet available) |
+| `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 OCR'd excerpts: `yabluko-l2-vocabulary.pdf`, `yabluko-l2-grammar-guide.pdf`, `yabluko-l2-verb-dictionary.pdf` |
 | `domains/ua/anki/notes/lexemes/yabluko-l1/ch-00/` | 113 ua_lexeme notes — Вступ (= ch-00) |
 | `domains/ua/anki/notes/grammar/` | ua_grammar canonical notes (not yet populated) |
 | `domains/ua/anki/docs/design.md` | Full schema, deck architecture, migration plan |

@@ -81,8 +81,14 @@ help:
 	@echo "  checklists-fix      Canonicalize CNSF formatting for Checklist notes"
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
+	@echo "Ukrainian (UA) — note type setup"
+	@echo "  ua-setup                  Create/update all UA note types in Anki"
+	@echo "  ua-setup-lexeme           Create/update UA_Lexeme only"
+	@echo "  ua-setup-grammar          Create/update UA_Grammar only"
+	@echo "  ua-setup-visual           Create/update UA_Visual only"
+	@echo "  ua-setup-verb             Create/update UA_Verb only"
+	@echo ""
 	@echo "Ukrainian (UA) — lexeme pipeline"
-	@echo "  ua-setup                  Create/update UA_Lexeme note type in Anki"
 	@echo "  ua-batch BATCH=<b>/<ch>   Canonicalize + sync one chapter  (e.g. BATCH=yabluko-l1/ch-00)"
 	@echo "  ua-batch-check BATCH=…    Check CNSF formatting for one chapter (no changes)"
 	@echo "  ua-batch-fix BATCH=…      Canonicalize one chapter"
@@ -96,6 +102,27 @@ help:
 	@echo "  Batch path convention:  <textbook>/ch-<NN>"
 	@echo "    yabluko-l1/ch-00  =  Вступ"
 	@echo "    yabluko-l1/ch-01  =  Chapter 1, etc."
+	@echo "    yabluko-l2/ch-09  =  Book 2, Chapter 9 (prefixed motion verbs)"
+	@echo ""
+	@echo "Ukrainian (UA) — grammar pipeline"
+	@echo "  ua-grammar                Canonicalize + sync all UA grammar notes"
+	@echo "  ua-grammar-check          Check CNSF formatting (no changes)"
+	@echo "  ua-grammar-fix            Canonicalize all UA grammar notes"
+	@echo ""
+	@echo "Ukrainian (UA) — visual prefix cards"
+	@echo "  ua-visual                 Canonicalize + sync all UA visual notes"
+	@echo "  ua-visual-check           Check CNSF formatting (no changes)"
+	@echo "  ua-visual-fix             Canonicalize all UA visual notes"
+	@echo ""
+	@echo "Ukrainian (UA) — verb conjugation paradigms"
+	@echo "  ua-verb                   Canonicalize + sync all UA verb notes"
+	@echo "  ua-verb-check             Check CNSF formatting (no changes)"
+	@echo "  ua-verb-fix               Canonicalize all UA verb notes"
+	@echo ""
+	@echo "Ukrainian (UA) — PVOM infinitive drilling"
+	@echo "  ua-pvom                   Canonicalize + sync all PVOM infinitive notes"
+	@echo "  ua-pvom-check             Check CNSF formatting (no changes)"
+	@echo "  ua-pvom-fix               Canonicalize all PVOM infinitive notes"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
@@ -574,15 +601,22 @@ line-flying:
 # All UA notes:          make ua-lexeme
 # -------------------------------------------------------------------
 UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
+UA_VERB_ROOT    := domains/ua/anki/notes/verbs
+UA_GRAMMAR_ROOT := domains/ua/anki/notes/grammar
+UA_VISUAL_ROOT  := domains/ua/anki/notes/visual
+UA_PVOM_ROOT    := domains/ua/anki/notes/pvom
 UA_INSPECT      := tools/anki/inspect
 UA_GENERATE     := tools/anki/generate
 UA_GOROH_DIR    := /tmp/goroh
 UA_EXAMPLES_LIMIT ?= 10
 
-.PHONY: ua-setup
+.PHONY: ua-setup ua-setup-lexeme ua-setup-grammar ua-setup-visual ua-setup-pvom
+.PHONY: ua-visual ua-visual-check ua-visual-fix
+.PHONY: ua-pvom ua-pvom-check ua-pvom-fix
 .PHONY: ua-batch ua-batch-check ua-batch-fix
 .PHONY: ua-book  ua-book-check  ua-book-fix
 .PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
+.PHONY: ua-grammar ua-grammar-check ua-grammar-fix
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
 .PHONY: ua-generate-examples ua-inject-examples
 
@@ -590,6 +624,21 @@ UA_EXAMPLES_LIMIT ?= 10
 
 ua-setup:
 	$(PYTHON) tools/anki/setup/setup_ua_note_types.py
+
+ua-setup-lexeme:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Lexeme
+
+ua-setup-grammar:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Grammar
+
+ua-setup-visual:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Visual
+
+ua-setup-verb:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Verb
+
+ua-setup-pvom:
+	$(PYTHON) tools/anki/setup/setup_ua_pvom_note_type.py
 
 # ── Single chapter:  make ua-batch BATCH=yabluko-l1/ch-00 ────────────────────
 
@@ -637,6 +686,59 @@ ua-lexeme-fix:
 
 ua-lexeme: ua-lexeme-fix
 	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/
+
+# ── Grammar notes:  make ua-grammar ──────────────────────────────────────────
+
+ua-grammar-check:
+	find $(UA_GRAMMAR_ROOT) -name "ua-grammar-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-grammar-fix:
+	find $(UA_GRAMMAR_ROOT) -name "ua-grammar-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-grammar: ua-grammar-fix
+	$(PYTHON) tools/anki/sync/ua_grammar_import.py $(UA_GRAMMAR_ROOT)/
+
+# ── Visual prefix cards:  make ua-visual ─────────────────────────────────────
+
+ua-visual-check:
+	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-visual-fix:
+	$(PYTHON) tools/anki/fix_visual_svg_yaml.py $(UA_VISUAL_ROOT)
+	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-visual: ua-visual-fix
+	$(PYTHON) tools/anki/sync/ua_visual_import.py $(UA_VISUAL_ROOT)/
+
+# ── Verb conjugation paradigms:  make ua-verb ──────────────────────────────────
+
+ua-verb-check:
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-verb-fix:
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-verb: ua-verb-fix
+	$(PYTHON) tools/anki/sync/ua_verb_import.py $(UA_VERB_ROOT)/
+
+# ── PVOM infinitive drilling cards:  make ua-pvom ──────────────────────────────
+
+ua-pvom-check:
+	find $(UA_PVOM_ROOT) -name "ua-pvom-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-pvom-fix:
+	find $(UA_PVOM_ROOT) -name "ua-pvom-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-pvom: ua-setup-pvom ua-pvom-fix
+	$(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/
 
 # ── Stress verification ──────────────────────────────────────────────────────
 

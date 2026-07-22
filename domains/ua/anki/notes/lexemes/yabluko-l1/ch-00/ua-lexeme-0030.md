@@ -19,7 +19,7 @@ fields:
   PartOfSpeech: noun
   Gender: m
   Perfective: ''
-  EN_Gloss: age; century
+  EN_Gloss: age (how old someone/something is); era or epoch (a period in history)
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -28,8 +28,8 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вік
-  UA_Example: У якому віці діти йдуть до школи?
-  EN_Example: At what age do children go to school?
+  UA_Example: У якому віці діти йдуть до школи? | Вони жили в добу Середніх віків.
+  EN_Example: At what age do children go to school? | They lived during the Middle Ages.
   Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/вік

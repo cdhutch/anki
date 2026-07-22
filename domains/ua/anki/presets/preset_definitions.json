@@ -1,0 +1,77 @@
+{
+  "presets": [
+    {
+      "name": "UA",
+      "description": "UA parent preset - 50 new / 100 review",
+      "new_per_day": 50,
+      "review_per_day": 100,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA"]
+    },
+    {
+      "name": "UA PVOM",
+      "description": "PVOM (Passive Vocabulary, Oral Mastery) - high cognitive load",
+      "new_per_day": 18,
+      "review_per_day": 6,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Recognition::PVOM"]
+    },
+    {
+      "name": "UA Lexeme EN→UA",
+      "description": "Lexeme production (EN→UA) - high cognitive load",
+      "new_per_day": 15,
+      "review_per_day": 8,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Production::EN→UA"]
+    },
+    {
+      "name": "UA Visual",
+      "description": "Visual prefix diagrams - low cognitive load",
+      "new_per_day": 25,
+      "review_per_day": 10,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Recognition::Visual"]
+    },
+    {
+      "name": "UA Grammar",
+      "description": "Grammar cloze cards - medium cognitive load",
+      "new_per_day": 20,
+      "review_per_day": 8,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Recognition::Grammar"]
+    },
+    {
+      "name": "UA->EN",
+      "description": "Lexeme recognition (UA→EN) - medium cognitive load, unlimited reviews",
+      "new_per_day": 20,
+      "review_per_day": 9999,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Recognition::UA→EN"]
+    },
+    {
+      "name": "UA Verbs",
+      "description": "Verb conjugation - medium cognitive load",
+      "new_per_day": 20,
+      "review_per_day": 8,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Verbs"]
+    },
+    {
+      "name": "UA Production Pass-through",
+      "description": "Middle parent pass-through - no throttling, children handle limits",
+      "new_per_day": 9999,
+      "review_per_day": 9999,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Production"]
+    },
+    {
+      "name": "UA Recognition Pass-through",
+      "description": "Middle parent pass-through - no throttling, children handle limits",
+      "new_per_day": 9999,
+      "review_per_day": 9999,
+      "fsrs_enabled": true,
+      "decks_to_assign": ["UA::Recognition"]
+    }
+  ],
+  "notes": "This file defines deck presets for UA domain. Each preset is created if it doesn't exist, then assigned to the specified decks. Total new cards across all child presets (18 + 15 + 25 + 20 + 20 = 98) is balanced against parent limit (50 per day) by having only subset active at a time."
+}
