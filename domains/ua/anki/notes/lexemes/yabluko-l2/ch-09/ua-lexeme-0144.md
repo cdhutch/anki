@@ -12,7 +12,7 @@ tags:
 - ch:2.9.1
 - pos:noun
 - gender:pl
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0144
   Lemma: перего́ни

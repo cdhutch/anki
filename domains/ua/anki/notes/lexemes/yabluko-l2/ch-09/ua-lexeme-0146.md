@@ -12,7 +12,7 @@ tags:
 - ch:2.9.1
 - pos:noun
 - gender:m
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0146
   Lemma: тури́зм

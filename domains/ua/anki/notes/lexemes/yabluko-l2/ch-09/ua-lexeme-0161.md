@@ -12,7 +12,7 @@ tags:
 - ch:2.9.1
 - pos:phrase
 - phrase:noun
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0161
   Lemma: синхро́нне пла́вання

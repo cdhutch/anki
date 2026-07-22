@@ -12,7 +12,7 @@ tags:
 - ch:2.9.1
 - pos:noun
 - gender:n
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0152
   Lemma: тренува́ння

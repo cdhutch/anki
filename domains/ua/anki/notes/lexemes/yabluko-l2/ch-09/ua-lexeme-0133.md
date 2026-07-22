@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.1
 - pos:adjective
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0133
   Lemma: верхови́й

@@ -12,7 +12,7 @@ tags:
 - ch:2.9.1
 - pos:noun
 - gender:f
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0148
   Lemma: ходьба́
