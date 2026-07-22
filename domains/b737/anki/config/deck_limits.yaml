@@ -9,6 +9,7 @@
 #   - Limits::NonTrivia
 #   - Mnemonics
 #   - Inflight_Maneuvers
+#   - QRC
 #
 # Suspended: All other subdecks (including Captain-specific role decks)
 
@@ -51,6 +52,16 @@ decks:
       - "type:procedures"
     reason: "Active: Inflight Maneuvers (FO-applicable, review-only, shares parent pool)"
 
+  B737::Core::QRC:
+    new: 0
+    review: 200
+    suspended: false
+    tags:
+      - "role:fo"
+      - "scope:active"
+      - "type:reference"
+    reason: "Active: QRC reference material, in scope for review (FO-applicable, shares parent pool)"
+
   # ===== SUSPENDED SUBDECKS (Captain-specific or not applicable to FO) =====
   # Note: Suspended decks below retain their suspension status.
   # Update script honors the suspended: true flag and skips these.
@@ -71,15 +82,6 @@ decks:
       - "role:captain"
       - "scope:out-of-scope"
     reason: "Suspended: Captain-specific or out of scope"
-
-  B737::Core::QRC:
-    new: 0
-    review: 0
-    suspended: true
-    tags:
-      - "type:reference"
-      - "scope:out-of-scope"
-    reason: "Suspended: Reference material, not for drilling"
 
   B737::Core::Procedures::Normal:
     new: 0
