@@ -55,6 +55,8 @@ in this repo -- all run by Craig, not Claude:
 | **UA_Verb design** | [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) |
 | **FSRS deck configs** | [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) |
 | **Flag audit workflow** | [CLAUDE-flag-audit.md](CLAUDE-flag-audit.md) |
+| **Ch-09 vocabulary sourcing workflow** | [CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md) |
+| **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
 
 ---
 
