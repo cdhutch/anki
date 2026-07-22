@@ -8,6 +8,19 @@ Deck layout:
     UA::Recognition::UA→EN    ← UA→EN recognition card
     UA::Production::EN→UA     ← EN→UA typing card
 
+Suspension policy (applied on every import, add or update -- declarative and
+self-healing, so a re-import always converges to this state regardless of
+prior manual suspend/unsuspend actions taken outside this script):
+    - status:draft    → suspend every card on the note
+    - status:verified → unsuspend every card on the note
+
+(2026-07-22: this previously also suspended just the EN→UA card for
+motion:prefixed + status:verified notes, on the theory that PVOM's
+UA_PVOM_Infinitive templates already drill EN→UA production for these verbs.
+Dropped -- in practice the EN→UA cards were not ending up suspended in Anki,
+and Craig is fine with both directions staying active. See project memory
+for the fuller discussion.)
+
 Usage (with Anki open + AnkiConnect running):
     # Dry run — show what would be added/updated, touch nothing
     python tools/anki/sync/ua_lexeme_import.py --dry-run domains/ua/anki/notes/lexemes/yabluko-l1/vstup/
@@ -90,22 +103,27 @@ def route_cards_to_decks(anki_note_id: int, dry_run: bool):
     """Move each card to its canonical deck based on template name.
 
     EN→UA cards → DECK_PRODUCTION
-    All other cards (UA→EN) → DECK_RECOGNITION
+    All other cards (UA→EN, Compare) → DECK_RECOGNITION
+
+    Matched per template via Anki's own `card:"Name"` search filter, not a
+    cardsInfo field lookup -- card.get("cardType") was silently never
+    matching (empty/wrong field name), so every card including EN→UA was
+    landing in DECK_RECOGNITION regardless of template. Found + fixed
+    2026-07-22.
     """
     if dry_run:
         return
-    card_ids = anki_request("findCards", {"query": f"nid:{anki_note_id}"}, url=ANKI_URL)
-    if not card_ids:
-        return
-    cards_info = anki_request("cardsInfo", {"cards": card_ids}, url=ANKI_URL)
-    for card in cards_info:
-        template_name = card.get("cardType", "")
-        target_deck = DECK_PRODUCTION if template_name in PRODUCTION_TEMPLATES else DECK_RECOGNITION
-        anki_request(
-            "changeDeck",
-            {"cards": [card["cardId"]], "deck": target_deck},
-            url=ANKI_URL,
+    for template_name in PRODUCTION_TEMPLATES:
+        prod_ids = anki_request(
+            "findCards", {"query": f'nid:{anki_note_id} "card:{template_name}"'}, url=ANKI_URL
         )
+        if prod_ids:
+            anki_request("changeDeck", {"cards": prod_ids, "deck": DECK_PRODUCTION}, url=ANKI_URL)
+
+    prod_query = " OR ".join(f'"card:{t}"' for t in PRODUCTION_TEMPLATES)
+    non_prod_ids = anki_request("findCards", {"query": f"nid:{anki_note_id} -({prod_query})"}, url=ANKI_URL) or []
+    if non_prod_ids:
+        anki_request("changeDeck", {"cards": non_prod_ids, "deck": DECK_RECOGNITION}, url=ANKI_URL)
 
 
 def set_suspended(anki_note_id: int, suspend: bool, dry_run: bool):
@@ -163,7 +181,7 @@ def import_note(data: dict, dry_run: bool) -> str:
     if not isinstance(tags, list):
         tags = []
 
-    # status:draft → suspend cards after import
+    # Suspension policy -- see module docstring.
     suspend = "status:draft" in tags
 
     existing_id = find_note_by_id(note_id)

@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - pos:verb
 - motion:prefixed
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0128
   Lemma: доїжджа́ти
