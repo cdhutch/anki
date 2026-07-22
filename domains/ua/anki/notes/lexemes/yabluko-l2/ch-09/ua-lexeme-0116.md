@@ -30,11 +30,7 @@ fields:
   TypingAnswer: виходити
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: <table class="conj"><tr><th></th><th>IPFV (ви́ходити)</th><th>PFV (ви́йти)</th></tr><tr><th
-    colspan="3">Теп./Майб. (Present / Future)</th></tr><tr><td>я</td><td>ви́ходжу</td><td>ви́йду</td></tr><tr><td>ти</td><td>ви́ходиш</td><td>ви́йдеш</td></tr><tr><td>він/вона</td><td>ви́ходить</td><td>ви́йде</td></tr><tr><td>ми</td><td>ви́ходимо</td><td>ви́йдемо</td></tr><tr><td>ви</td><td>ви́ходите</td><td>ви́йдете</td></tr><tr><td>вони</td><td>ви́ходять</td><td>ви́йдуть</td></tr><tr><th
-    colspan="3">Минулий (Past)</th></tr><tr><td>він</td><td>ви́ходив</td><td>ви́йшов</td></tr><tr><td>вона</td><td>ви́ходила</td><td>ви́йшла</td></tr><tr><td>вони</td><td>ви́ходили</td><td>ви́йшли</td></tr><tr><th
-    colspan="3">Наказовий (Imperative)</th></tr><tr><td>2sg / 2pl</td><td>ви́ходи / ви́ходіть</td><td>ви́йди
-    / ви́йдіть</td></tr></table>
+  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/виходити
   Source_Note: Stress verified 2026-07-06 via Горох.
