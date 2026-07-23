@@ -95,6 +95,15 @@ complete:
   - Templates update correctly via `make ua-setup-visual`.
 
 **Pending / Next planned work (as of 2026-07-23):**
+  0. **TOP PRIORITY (set by Craig 2026-07-23):** Integrate the dedup/homograph-check logic
+     directly into the vocabulary-generation workflow, not just the standalone
+     `check_lexeme_dedup.py` tool. Today that tool has to be run manually before drafting a
+     batch; the goal is to wire the same check into the per-subchapter generator scripts
+     (the `gen_ch09_*.py`-style scripts used to draft each batch) so every candidate word is
+     checked against the corpus automatically before a new note is created, and the
+     new/homograph/duplicate outcome (see "Vocabulary dedup & homograph handling" above) is
+     handled inline as part of generation rather than as a separate manual step run after
+     the fact. Do this before continuing further ch.9.3+ sourcing.
   1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9 — subsections
      9.3 onward. (9.1 sourced, reviewed, verified, and synced. 9.2 sourced, drafted,
      canonicalized, and synced as `status:draft` — 18 lexemes ua-lexeme-0163–0180 + 5
