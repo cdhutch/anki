@@ -239,7 +239,7 @@ def collect_files(targets: list[str]) -> list[Path]:
     for t in targets:
         p = Path(t)
         if p.is_dir():
-            files.extend(sorted(p.glob("ua-lexeme-*.md")))
+            files.extend(sorted(p.rglob("ua-lexeme-*.md")))
         elif p.is_file():
             files.append(p)
         else:
