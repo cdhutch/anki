@@ -354,6 +354,50 @@ instead of `-ська`). The vowel-index comparison handles this correctly since
 syllable is the same. The script is embedded in session context — rebuild from the pattern
 in `tools/anki/inspect/` when needed as a standalone tool.
 
+### Vocabulary dedup & homograph handling (established 2026-07-23)
+
+As chapter-by-chapter sourcing continues, every new candidate word falls into one of three
+buckets. Triage deliberately — do not assume from spelling alone.
+
+1. **Brand new vocabulary.** No existing note has this spelling. Default behavior: Горох-
+   verify, create a new `ua-lexeme-NNNN` note per the standard process.
+
+2. **Homograph — same spelling, unrelated meaning** (e.g. EN "blue" the color vs "blue" the
+   mood; ГА "коса" braid / scythe / spit-of-land). Горох itself already surfaces this as
+   separate `.article-block` entries under distinct H2 labels on the same Словозміна page —
+   this is the same multi-homograph-page pattern the "біг"/"Бог" extraction bug taught us to
+   handle correctly (match the H2 label text, don't grab the first table). Handling:
+     - Create a normal new note (own NoteID/file) — do not merge into the existing one.
+     - Cross-link both notes via `ConfusableSet`, explicitly stating "homograph — unrelated
+       meaning" plus both glosses, matching the pattern used for алфавіт/абетка (ua-lexeme-
+       0022/0023 — note that pair is near-synonyms, not true homographs, but the field
+       mechanics are identical).
+     - Tag both notes `homograph:true` so the set is queryable later (e.g. for a dedicated
+       homograph-review pass or card set).
+     - Write `UA_Example` sentences where surrounding context makes the intended sense
+       unambiguous.
+     - Proposed but not yet built: extend the existing `Mnemonic_EN` / `CompareA` /
+       `CompareB` fields + Comparison card template (built for про-/пере- prefix pairs) to
+       lexical homographs generally, for explicit discrimination drilling. Needs Craig's
+       go-ahead before repurposing that template's scope.
+
+3. **True duplicate — same spelling AND same meaning**, encountered again in a later
+   chapter. Do NOT create a new note. Instead:
+     - Append the new `ch:2.9.X` tag to the note's `tags` list.
+     - Append the new chapter to `Tags_Ch` (comma-separated, e.g. `"ch:2.9.1, ch:2.9.2"`).
+     - Append a short dated note to `Verification Notes` documenting the reuse.
+   This is the exact pattern already used for перегони (ua-lexeme-0144, reused across
+   9.1/9.2) — now the standard procedure rather than ad hoc.
+
+**Tooling:** `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
+lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
+under `domains/ua/anki/notes/lexemes/` for an exact-spelling match. Reports NoteID, file
+path, current `EN_Gloss`, and `Tags_Ch` for any match, so the new/homograph/duplicate call
+gets made deliberately instead of by ad hoc grep (which produced false negatives earlier
+in this project — see the перегони/перемогти́/програ́ти dedup-check history). Meaning
+comparison (bucket 2 vs. 3) still requires human/Горох judgment — the tool only automates
+the "does this spelling already exist" lookup reliably.
+
 ### Deck Presets and Limit Configuration (2026-07-20)
 
 **Strategy:** Differentiated daily limits by cognitive load tier + data-driven preset creation.
