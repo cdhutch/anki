@@ -142,13 +142,9 @@ help:
 	@echo "Ukrainian (UA) — tests"
 	@echo "  ua-test             Run pytest suite for UA inspect scripts"
 	@echo ""
-	@echo "Ukrainian (UA) — aggregate"
-	@echo "  ua                  Canonicalize + sync all UA note types (lexeme, grammar, visual, verb, pvom)"
-	@echo "  ua-fix              Canonicalize all UA note types (no sync)"
-	@echo ""
-	@echo "Core (aggregate)"
-	@echo "  core                Export and sync all B737::Core decks to Anki"
-	@echo "  core-fix            Canonicalize all B737::Core note files"
+	@echo "B737 (aggregate)"
+	@echo "  b737                Export and sync all B737::Core decks to Anki"
+	@echo "  b737-fix            Canonicalize all B737::Core note files"
 	@echo ""
 	@echo "Deck Configuration"
 	@echo "  line-flying         Configure decks for line flying (non-training mode)"
@@ -549,11 +545,11 @@ sve: sve-check
 	done
 
 # -------------------------------------------------------------------
-# Core (aggregate — all B737::Core decks)
+# B737 (aggregate — all B737::Core decks)
 # -------------------------------------------------------------------
-.PHONY: core core-fix
+.PHONY: b737 b737-fix
 
-core-fix:
+b737-fix:
 	$(MAKE) limits-fix
 	$(MAKE) qrc-fix
 	$(MAKE) triggers-fix
@@ -564,11 +560,11 @@ core-fix:
 	$(MAKE) proc-non-normal-fix
 	$(MAKE) proc-inflight-fix
 
-core:
+b737:
 	@TARGETS="limits qrc triggers cats mnemonic checklists proc-normal proc-normal-cloze proc-non-normal proc-inflight"; \
 	for t in $$TARGETS; do \
 		printf "\033[1;34m→ $$t...\033[0m\n"; \
-		$(MAKE) $$t || { printf "\033[1;31m✗  Core sync failed at: $$t\033[0m\n"; exit 1; }; \
+		$(MAKE) $$t || { printf "\033[1;31m✗  B737 sync failed at: $$t\033[0m\n"; exit 1; }; \
 		printf "\033[0;32m✓  $$t\033[0m\n"; \
 	done; \
 	printf "\n\033[1;32m✓  All B737::Core decks synced successfully.\033[0m\n"
@@ -623,7 +619,6 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-grammar ua-grammar-check ua-grammar-fix
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
 .PHONY: ua-generate-examples ua-inject-examples
-.PHONY: ua ua-fix
 
 # ── Note type setup ──────────────────────────────────────────────────────────
 
@@ -744,24 +739,6 @@ ua-pvom-fix:
 
 ua-pvom: ua-setup-pvom ua-pvom-fix
 	$(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/
-
-# ── All UA note types (aggregate) ────────────────────────────────────────────
-
-ua-fix:
-	$(MAKE) ua-lexeme-fix
-	$(MAKE) ua-grammar-fix
-	$(MAKE) ua-visual-fix
-	$(MAKE) ua-verb-fix
-	$(MAKE) ua-pvom-fix
-
-ua:
-	@TARGETS="ua-lexeme ua-grammar ua-visual ua-verb ua-pvom"; \
-	for t in $$TARGETS; do \
-		printf "\033[1;34m→ $$t...\033[0m\n"; \
-		$(MAKE) $$t || { printf "\033[1;31m✗  UA sync failed at: $$t\033[0m\n"; exit 1; }; \
-		printf "\033[0;32m✓  $$t\033[0m\n"; \
-	done; \
-	printf "\n\033[1;32m✓  All UA note types synced successfully.\033[0m\n"
 
 # ── Stress verification ──────────────────────────────────────────────────────
 
