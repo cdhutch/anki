@@ -94,14 +94,29 @@ complete:
   - Template redesign fixed & deployed ✅ — `setup_ua_note_types.py` now calls `updateModelTemplates` with all templates in single call (not per-template loop).
   - Templates update correctly via `make ua-setup-visual`.
 
-**Pending (next phase, after push + PR to main):**
-  1. Push `feature/ua-verb-phase2a` + open PR to main (commands provided by Claude, run by
-     Craig, per Big 3 Rule #1)
-  2. Check whether `UA::Production::EN→UA` deck-routing gap for ch-00 is resolved (likely
-     fixed as a side effect of the 2026-07-22 ch-00 re-import; not yet verified)
-  3. Decide on flipping the 9 UA_Grammar notes from `status:draft` to `status:verified`
-     (0008/0009 already have real sourced citations; 0001–0007 need a review pass first)
-  4. Re-run `list_deck_presets.py` / `survey_card_states.py` to confirm counts
+**Pending / Next planned work (as of 2026-07-23):**
+  1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9 — subsections
+     9.3 onward. (9.1 sourced, reviewed, verified, and synced. 9.2 sourced, drafted,
+     canonicalized, and synced as `status:draft` — 18 lexemes ua-lexeme-0163–0180 + 5
+     conjugation notes ua-verb-0033–0037.) Keep following the 5 established sourcing rules
+     (Горох verification, verb pairing, phrase+component creation, autonomy, draft-until-
+     reviewed status).
+  2. Craig reviews/validates the ch.9.2 batch and flips `status:draft` → `status:verified`
+     once satisfied, same process used for ch.9.1. Re-sync afterward with `make ua-lexeme`
+     / `make ua-verb`, or the new `make ua` aggregate target (canonicalizes + syncs every
+     UA note type in one pass — see Reference Files).
+  3. Get the Solarized light/dark palette correct and consistent across both Anki domains
+     (B737 and Ukrainian). Concrete bug found 2026-07-23: `UA_Visual`'s CSS uses the
+     `.night_mode` (snake_case) selector instead of `.nightMode` (camelCase) — confirmed via
+     AnkiMobile's own docs that both desktop Anki and AnkiMobile key off `.nightMode`, so
+     `UA_Visual`'s dark-mode rules are currently dead on every platform, not just iOS. Most
+     other note types already carry Solarized CSS via `tools/anki/setup/update_legacy_css.py`
+     (7 legacy models: B737_SV_Cloze, B737_Systems, UA_Conjugation, UA_Grammar, UA_Lexeme,
+     UA_Lexeme_Legacy, UA_Verb) plus the individual `setup_*_model.py` scripts. Still need to
+     audit `B737_Checklist`, `B737_Mnemonic`, `B737_Structured`, `B737_SV_MCQ`, `B737_SV_TF`
+     for Solarized coverage and confirm none share the night-mode selector bug. See
+     `.claude/memory/b737-anki-solarized-theme.md` for the original project tracking note.
+     Craig wants this kept CSS-only — do not touch B737 note-type structure/fields.
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
