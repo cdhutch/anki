@@ -15,7 +15,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0023
-  Lemma: алфа́віт
+  Lemma: алфа́ві́т
   PartOfSpeech: noun
   Gender: m
   Perfective: ''
@@ -24,7 +24,9 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: абе́тка
+  ConfusableSet: абе́тка — near-synonym; абетка specifically evokes the context of learning
+    the alphabet (children, new-language learners; cf. "ABC book"), while алфавіт is the neutral,
+    linguistic term for the letter system itself.
   CrossLang_Analog: 'EN/RU: alphabet/алфавит ← Gk ἄλφα + βῆτα'
   EuphonyNote: ''
   TypingAnswer: алфавіт

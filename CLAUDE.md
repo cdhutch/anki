@@ -309,6 +309,15 @@ textbook.
   Tag unverified with `stress:unverified`. Remove tag only after Горох confirms.
 - Stress disambiguation: some words have stress-dependent meanings (e.g. му́зика = music,
   музи́ка = musician). Always check before "correcting" based on Горох alone.
+- **Two accent marks on one word is valid Горох output** — it means the word has free/variant
+  stress (either syllable may be stressed). Do NOT treat this as an extraction bug or garbled
+  data; do NOT collapse it to a single mark when transcribing. Record both marks in the Lemma
+  field as Горох shows them.
+- **Data-quality priority: a multisyllable word with ZERO stress marks is a stronger red flag
+  than one with two.** Double-stress is a legitimate linguistic outcome (see above); a missing
+  stress mark on a multisyllable lemma is not — that's the pattern that indicates a real
+  extraction bug (wrong homograph block, failed fetch, stripped markup) and should block on
+  re-verification before the note is trusted.
 - `сь` after vowels preferred (дивлюсь, вчусь) — preserve unless correcting
 - Grammar explanations always in English
 

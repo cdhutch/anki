@@ -24,7 +24,9 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: алфаві́т
+  ConfusableSet: алфа́ві́т — near-synonym; алфавіт is the neutral, linguistic term for the
+    letter system itself, while абетка specifically evokes the context of learning the alphabet
+    (children, new-language learners; cf. "ABC book").
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: абетка
