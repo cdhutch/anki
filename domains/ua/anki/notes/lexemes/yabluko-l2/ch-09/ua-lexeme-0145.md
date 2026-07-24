@@ -30,7 +30,12 @@ fields:
     \ non-running competition\n-> Use: перегони (general competitive racing, any mode)\nKey\
     \ distinction: біг narrows specifically to racing/running on foot; перегони is the general\
     \ word for competitive racing regardless of mode."
-  Mnemonic_EN: ''
+  Mnemonic_EN: перегони = racing, any mode; біг = racing specifically on foot (cf. бігти,
+    'to run').
+  CompareScenario: You're describing training for or watching a marathon or a school sprint
+    event -- a competition specifically involving running on foot.
+  CompareA: перего́ни
+  CompareB: біг
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: біг
@@ -49,6 +54,8 @@ fields:
     \ common-noun) entry, verified by exact-matching the section header text against the requested\
     \ lemma. Flagging so the catch is visible on review.\n2026-07-24: added ConfusableSet\
     \ cross-link with перегони (ua-lexeme-0144) — outcome-4 dedup audit found both EN_Gloss\
-    \ values overlapped on \"race\"."
+    \ values overlapped on \"race\".\n2026-07-24: added CompareScenario + CompareA/B for the\
+    \ redesigned Compare card (see compare-card-audit-findings.md) — this is one of the two\
+    \ notes you originally flagged as verbose/answer-leaking. Needs your review."
 ---
 

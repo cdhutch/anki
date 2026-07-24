@@ -26,6 +26,12 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: студе́нт
+  Mnemonic_EN: студент = male student; студентка = female student — the counterpart form,
+    not a different word.
+  CompareScenario: Introducing a female university student to a group of people who haven't
+    met her before.
+  CompareA: студент
+  CompareB: студентка
   CrossLang_Analog: 'RU: студентка · DE: Studentin'
   EuphonyNote: ''
   TypingAnswer: студентка
@@ -35,6 +41,7 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/студентка
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

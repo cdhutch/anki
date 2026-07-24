@@ -24,7 +24,13 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: їхати / їздити
-  ConfusableSet: доїжджа́ти
+  ConfusableSet: доїжджа́ти (approach vs. actually reach, by vehicle)
+  Mnemonic_EN: під- = approaching by vehicle, getting close; до- = actually reaching the destination
+    by vehicle (same під-/до- opposition as підходити/доходити, applied to vehicles).
+  CompareScenario: A taxi slowly pulls up next to the curb where you're waiting, not yet having
+    arrived at the final destination.
+  CompareA: підʼїжджати
+  CompareB: доїжджати
   CrossLang_Analog: '≈ RU: подъезжать / подъехать (ʼ corresponds to RU ъ)'
   EuphonyNote: 'apostrophe after під- before ї: підʼїхати'
   TypingAnswer: підʼїжджати
@@ -34,6 +40,7 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/під'їжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

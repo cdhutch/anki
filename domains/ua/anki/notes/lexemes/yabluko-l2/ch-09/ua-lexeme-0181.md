@@ -32,7 +32,12 @@ fields:
     \ insect seen in a garden or during a nature walk\n-> Use: метелик (butterfly - see ua-lexeme-0171)\n\
     Key distinction: same spelling, unrelated meanings - a true homograph, not a semantic\
     \ range of one word."
-  Mnemonic_EN: ''
+  Mnemonic_EN: Same spelling either way (метелик) — the card tests which SENSE fits, not which
+    word.
+  CompareScenario: He's getting dressed for a black-tie event and needs to fasten this accessory
+    around his collar before putting on the tuxedo jacket.
+  CompareA: butterfly (insect)
+  CompareB: bow-tie (menswear accessory)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: метелик
@@ -45,6 +50,9 @@ fields:
     - Горох lists this as a 2nd sense on the same 'мете́лик' headword page (see ua-lexeme-0171's
     Source_Note). Stress inherited from the primary (butterfly) sense; re-verify independently
     against Горох before flipping to status:verified.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
+    card (see compare-card-audit-findings.md). Since both senses share the same spelling,
+    CompareA/B hold the two English senses (not two UA spellings) — the card tests which meaning
+    fits the scenario, and the back reveals the correct sense via EN_Gloss. Needs your review.'
 ---
 

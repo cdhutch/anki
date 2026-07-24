@@ -24,7 +24,11 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: ви́ходити
+  ConfusableSet: ви́ходити (directional opposite)
+  Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
+  CompareScenario: Someone walks into a building through the front door, on foot.
+  CompareA: входити
+  CompareB: виходити
   CrossLang_Analog: '≈ RU: входить / войти'
   EuphonyNote: 'PFV: в- + іти → увійти (also ввійти); у- preferred before й'
   TypingAnswer: входити
@@ -34,6 +38,7 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/входити
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

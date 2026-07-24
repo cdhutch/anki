@@ -30,6 +30,14 @@ fields:
     \ interchangeable synonyms - each signals a different degree of enthusiasm. Answering\
     \ чудово to a routine day, or непогано to something genuinely excellent, misrepresents\
     \ how you feel."
+  Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
+    < добре (positive, unmarked) < чудово (enthusiastic).'
+  CompareScenario: A friend asks how your exam went. You did solidly and feel satisfied --
+    no fireworks, just a plain, straightforwardly positive result.
+  CompareA: непога́но
+  CompareB: норма́льно
+  CompareC: до́бре
+  CompareD: чудо́во
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: добре
@@ -39,8 +47,11 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/добре
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: '2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово
-    register scale (outcome-4 dedup audit — EN glosses overlapped enough to obscure the enthusiasm
-    gradient).'
+  Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\
+    \ register scale (outcome-4 dedup audit — EN glosses overlapped enough to obscure the\
+    \ enthusiasm gradient).\n2026-07-24: added CompareScenario + CompareA-D for the redesigned\
+    \ Compare card (see compare-card-audit-findings.md) — EN_Gloss alone was too close to\
+    \ this note's own answer to serve as the front-side scenario, so a dedicated situational\
+    \ prompt was authored instead. Needs your review."
 ---
 

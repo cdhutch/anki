@@ -25,6 +25,11 @@ fields:
   IrregularForms: 'gen: олі́вця (loses -е-)'
   VerbMotion_Pair: ''
   ConfusableSet: ру́чка
+  Mnemonic_EN: олівець = pencil (erasable, graphite); ручка = pen (permanent ink).
+  CompareScenario: Sketching a drawing you plan to revise, or filling in a standardized test
+    form that requires erasable marks.
+  CompareA: олівець
+  CompareB: ручка
   CrossLang_Analog: '← DE: Bleiweiß · ≠ RU: карандаш ← Turkic'
   EuphonyNote: ''
   TypingAnswer: олівець
@@ -34,6 +39,7 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/олівець
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

@@ -24,7 +24,14 @@ fields:
   CounterpartForm: ''
   IrregularForms: 'gen: ра́нку'
   VerbMotion_Pair: ''
-  ConfusableSet: ве́чір
+  ConfusableSet: ве́чір, ніч — time-of-day cluster (day/night cycle). See ua-lexeme-0029 (вечір),
+    ua-lexeme-0048 (ніч).
+  Mnemonic_EN: 'Time-of-day sequence: ранок (morning) → вечір (evening) → ніч (night).'
+  CompareScenario: The sun has just risen and people are having their first coffee or getting
+    ready for the day.
+  CompareA: вечір
+  CompareB: ніч
+  CompareC: ранок
   CrossLang_Analog: '≠ RU: утро'
   EuphonyNote: ''
   TypingAnswer: ранок
@@ -34,6 +41,8 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/ранок
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added cross-link to ніч by ID, Mnemonic_EN, CompareScenario
+    + CompareA/B/C (3-way time-of-day cluster) for the redesigned Compare card (see compare-card-audit-findings.md)
+    — previously ConfusableSet only pointed at вечір, not ніч. Needs your review.'
 ---
 

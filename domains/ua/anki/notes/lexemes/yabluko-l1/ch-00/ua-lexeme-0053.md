@@ -25,6 +25,12 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: стіле́ць
+  Mnemonic_EN: парта = school desk (classroom-specific, often a desk+bench unit); стілець
+    = a general standalone chair/seat.
+  CompareScenario: Describing the classroom furniture where a student sits and places their
+    notebook during a lesson.
+  CompareA: парта
+  CompareB: стілець
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: парта
@@ -34,6 +40,7 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/парта
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

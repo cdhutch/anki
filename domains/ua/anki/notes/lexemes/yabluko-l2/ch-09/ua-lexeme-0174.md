@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
-- ch:2.9.3
 fields:
   NoteID: ua-lexeme-0174
   Lemma: уда́р
@@ -25,7 +24,7 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: УДАР (political party abbreviation — unrelated to this word)
+  ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -33,12 +32,17 @@ fields:
   UA_Example: Удар був дуже сильним.
   EN_Example: The strike was very strong.
   Verb_Conj_Table: ''
-  Tags_Ch: ch:2.9.2, ch:2.9.3
+  Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/удар
   Source_Note: Горох lists 3 homograph entries for 'удар' — the common noun (this word, 'blow/strike'),
     'УДАР' (a Ukrainian political party abbreviation), and 'уда́рити' (the related verb, 'to
     strike'). Verified the lowercase common-noun entry was used. Verified 2026-07-22.
-  Verification Notes: '2026-07-26: reused for ch.9.3 (genitive plural ''ударів'' in the phrase
-    ''завдати ударів'') — see ua-lexeme-0229.'
+  Verification Notes: '2026-07-24: cleared ConfusableSet (previously documented the capitalized
+    ''УДАР'' political-party-abbreviation homograph). Under the redesigned Compare card (see
+    compare-card-audit-findings.md), a populated ConfusableSet triggers a Compare card, but
+    capitalization already disambiguates these in written Ukrainian — there''s no real scenario
+    requiring a learner to choose between them, so the card would just be noise. The homograph
+    documentation is preserved in Source_Note above; nothing is lost by clearing this field.
+    Needs your review/confirmation.'
 ---
 

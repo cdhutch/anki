@@ -24,7 +24,12 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: їхати / їздити
-  ConfusableSet: вʼїжджа́ти
+  ConfusableSet: вʼїжджа́ти (directional opposite)
+  Mnemonic_EN: вʼ- = driving into (same в-/ви- opposition as входити/виходити, applied to
+    vehicles); ви- = driving out of.
+  CompareScenario: A car pulls out of a parking garage or driveway onto the street.
+  CompareA: вʼїжджати
+  CompareB: виїжджати
   CrossLang_Analog: '≈ RU: выезжать / выехать'
   EuphonyNote: ''
   TypingAnswer: виїжджати
@@ -34,6 +39,7 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/виїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

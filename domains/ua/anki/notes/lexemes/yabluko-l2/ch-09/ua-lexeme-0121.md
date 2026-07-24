@@ -24,8 +24,12 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: прохо́дити
+  ConfusableSet: прохо́дити (pass by/through vs. cross to the far side)
   Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
+  CompareScenario: Someone is walking across a street at a crosswalk, from one side to the
+    other.
+  CompareA: проходити
+  CompareB: переходити
   CrossLang_Analog: '≈ RU: переходить / перейти'
   EuphonyNote: ''
   TypingAnswer: переходити
@@ -35,6 +39,8 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/переходити
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
+    card (see compare-card-audit-findings.md) — Mnemonic_EN already existed and is unchanged.
+    Needs your review.'
 ---
 

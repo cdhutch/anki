@@ -24,7 +24,11 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: вхо́дити
+  ConfusableSet: вхо́дити (directional opposite)
+  Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
+  CompareScenario: Someone walks out of a building through the front door, on foot.
+  CompareA: входити
+  CompareB: виходити
   CrossLang_Analog: '≈ RU: выходить / выйти'
   EuphonyNote: ''
   TypingAnswer: виходити
@@ -34,10 +38,9 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/виходити
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: '2026-07-26: also reused for the vocabulary-appendix subsection 9.4
-    (a different ''ch:2.9.4'' than the grammar-guide chapter this note was originally sourced
-    for -- see CLAUDE-ch09-vocab-workflow.md on the two overlapping ch:2.9.X tag schemes)
-    in the phrase ''виходити назустріч'' -- see ua-lexeme-0251. No tag change needed since
-    ''ch:2.9.4'' was already present.'
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review. (Carried
+    over from ch.9.4 delivery — this note was already touched once this session for the виходити
+    назустріч reuse tag; this is an independent, later edit.)'
 ---
 

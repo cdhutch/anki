@@ -24,7 +24,12 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: заїжджа́ти
+  ConfusableSet: заїжджа́ти (same за- "stop by" sense, different mode of motion)
+  Mnemonic_EN: 'Same за- prefix (''stop by''), different base verb for the mode of motion:
+    заходити = on foot; заїжджати = by vehicle.'
+  CompareScenario: Dropping by a friend's apartment on foot, on your way home from work.
+  CompareA: заходити
+  CompareB: заїжджати
   CrossLang_Analog: '≈ RU: заходить / зайти'
   EuphonyNote: ''
   TypingAnswer: заходити
@@ -34,6 +39,7 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/заходити
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

@@ -25,6 +25,11 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: олі́вець
+  Mnemonic_EN: олівець = pencil (erasable, graphite); ручка = pen (permanent ink).
+  CompareScenario: Signing an official document or writing a permanent note that shouldn't
+    be erased.
+  CompareA: олівець
+  CompareB: ручка
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: ручка
@@ -34,6 +39,7 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/ручка
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

@@ -24,7 +24,12 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: їхати / їздити
-  ConfusableSet: виїжджа́ти
+  ConfusableSet: виїжджа́ти (directional opposite)
+  Mnemonic_EN: вʼ- = driving into (same в-/ви- opposition as входити/виходити, applied to
+    vehicles); ви- = driving out of.
+  CompareScenario: A car turns into a parking garage or driveway.
+  CompareA: вʼїжджати
+  CompareB: виїжджати
   CrossLang_Analog: '≈ RU: въезжать / въехать (ʼ corresponds to RU ъ)'
   EuphonyNote: 'apostrophe after в- before ї: вʼїхати; cf. RU въехать'
   TypingAnswer: вʼїжджати
@@ -34,6 +39,7 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/в'їжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

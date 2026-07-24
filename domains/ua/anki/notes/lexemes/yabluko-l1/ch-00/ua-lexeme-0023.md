@@ -27,6 +27,12 @@ fields:
   ConfusableSet: абе́тка — near-synonym; абетка specifically evokes the context of learning
     the alphabet (children, new-language learners; cf. "ABC book"), while алфавіт is the neutral,
     linguistic term for the letter system itself.
+  Mnemonic_EN: абетка = the learner's ABC book/context (children, beginners); алфавіт = the
+    neutral term for the letter system itself.
+  CompareScenario: Stating a neutral linguistic fact, such as how many letters a language's
+    writing system has.
+  CompareA: абетка
+  CompareB: алфавіт
   CrossLang_Analog: 'EN/RU: alphabet/алфавит ← Gk ἄλφα + βῆτα'
   EuphonyNote: ''
   TypingAnswer: алфавіт
@@ -36,6 +42,8 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/алфавіт
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
+    card (see compare-card-audit-findings.md) — restructured from flat explanatory prose into
+    a scenario + two-way choice. Needs your review.'
 ---
 

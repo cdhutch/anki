@@ -24,8 +24,7 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: 'Лебідь (capitalized: surname / river name / constellation Cygnus / village
-    — see Горох page for this lemma)'
+  ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -38,6 +37,11 @@ fields:
   Source_Note: Горох lists 4 homograph entries for 'лебідь' — 3 capitalized proper nouns (a
     surname, a river name, the constellation Cygnus, a village+river) and this lowercase common
     noun ('swan'). Verified the lowercase entry was used. Verified 2026-07-22.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: cleared ConfusableSet (previously documented the capitalized
+    ''Лебідь'' proper-noun homographs). Under the redesigned Compare card (see compare-card-audit-findings.md),
+    a populated ConfusableSet triggers a Compare card, but capitalization already disambiguates
+    these in written Ukrainian — there''s no real scenario requiring a learner to choose between
+    them, so the card would just be noise. The homograph documentation is preserved in Source_Note
+    above; nothing is lost by clearing this field. Needs your review/confirmation.'
 ---
 

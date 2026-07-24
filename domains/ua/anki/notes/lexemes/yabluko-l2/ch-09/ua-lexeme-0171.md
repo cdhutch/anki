@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
-- homograph:true
 fields:
   NoteID: ua-lexeme-0171
   Lemma: мете́лик
@@ -25,13 +24,14 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: "мете́лик (2nd sense, homograph - unrelated meaning: bow-tie, a menswear\
-    \ accessory; informal 3rd sense: flyer/leaflet) - see ua-lexeme-0181\nScenario A: Describing\
-    \ an insect seen in a garden or during a nature walk\n-> Use: метелик (butterfly - this\
-    \ note's sense)\nScenario B: Describing formal menswear, e.g. a tuxedo accessory\n-> Use:\
-    \ метелик (bow-tie - same spelling, unrelated meaning; see ua-lexeme-0181)\nKey distinction:\
-    \ same spelling, unrelated meanings - a true homograph, not a semantic range of one word."
-  Mnemonic_EN: ''
+  ConfusableSet: 'метелик (2nd Горох sense, homograph - unrelated meaning, informal: bow-tie;
+    flyer/leaflet) - see ua-lexeme-0181'
+  Mnemonic_EN: Same spelling either way (метелик) — the card tests which SENSE fits, not which
+    word.
+  CompareScenario: You're walking through a garden in summer and see a colorful winged insect
+    land on a flower.
+  CompareA: butterfly (insect)
+  CompareB: bow-tie (menswear accessory)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: метелик
@@ -43,8 +43,9 @@ fields:
   Source_Note: 'Горох lists 2 senses for ''мете́лик'' (identical spelling): ''комаха'' (insect/butterfly,
     used here) and ''краватка; листівка - розм.'' (informal: bow-tie; flyer/leaflet). Verified
     2026-07-22.'
-  Verification Notes: '2026-07-24: split the bow-tie/flyer sense into its own note (ua-lexeme-0181,
-    status:draft) per the corpus''s homograph procedure, replacing the earlier inline ConfusableSet
-    aside.'
+  Verification Notes: '2026-07-24: added an explicit cross-link to ua-lexeme-0181 by ID (previously
+    this note''s ConfusableSet named the 2nd sense but didn''t reference the split-off note).
+    Also added CompareScenario + CompareA/B for the redesigned Compare card (see compare-card-audit-findings.md).
+    Needs your review.'
 ---
 

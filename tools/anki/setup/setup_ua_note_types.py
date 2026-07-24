@@ -55,8 +55,11 @@ FIELDS = [
     # Semantic Relations & Cross-lingual
     "ConfusableSet",
     "Mnemonic_EN",
+    "CompareScenario",
     "CompareA",
     "CompareB",
+    "CompareC",
+    "CompareD",
     "CrossLang_Analog",
     "EuphonyNote",
 
@@ -361,16 +364,34 @@ EN_UA_BACK = """\
 # Template 3: Confusable Comparison (scenario-based, bidirectional)
 # Optional, only shown when ConfusableSet is populated
 # Design: Forces semantic discrimination, not pattern memorization
-# Front: Scenario/context requiring choice between lemma and confusable
+# Front: Scenario/context requiring a choice among 2-4 confusable words
 # Back: Correct answer + explanation of why it fits this context
+#
+# CompareA is always required; CompareB/C/D are optional so the same template
+# serves 2-way (студент/студентка), 3-way, and 4-way (добре/непогано/нормально/
+# чудово) clusters without a separate template per arity. Each populated
+# Compare* renders as its own chip in a wrapping flex row rather than inline
+# "A or B" text, so a 4-way cluster doesn't overflow the card width.
+#
+# CompareScenario (added 2026-07-24) holds a real situational prompt, separate
+# from EN_Gloss. Found during the Compare-card verbosity audit: for near-
+# synonym clusters (e.g. добре/непогано/нормально/чудово) EN_Gloss essentially
+# *is* the answer -- "Scenario: not bad" for ua-lexeme-0100 gives away
+# "непогано" outright, the same leak this whole redesign exists to fix.
+# EN_Gloss remains the fallback for any note not yet authored with a real
+# scenario, so the card degrades instead of going blank -- but every note
+# with a populated ConfusableSet should get a real CompareScenario over time.
 
 COMPARISON_FRONT = """\
 {{#ConfusableSet}}<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
-  Scenario: {{EN_Gloss}}
+  Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
 </div>
-<div style="font-size: 20px; font-weight: bold; text-align: center; color: #1a1a1a; padding: 16px; background: #f9f9f9; border-left: 3px solid #1565c0; margin-top: 12px;">
-{{CompareA}} <span style="color: #999; font-weight: normal;">or</span> {{CompareB}}?
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;">
+<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareA}}</div>
+{{#CompareB}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareB}}</div>{{/CompareB}}
+{{#CompareC}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareC}}</div>{{/CompareC}}
+{{#CompareD}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareD}}</div>{{/CompareD}}
 </div>{{/ConfusableSet}}
 """
 
@@ -379,7 +400,7 @@ COMPARISON_BACK = """\
 <hr id="answer">
 {{#ConfusableSet}}<div style="margin-top: 16px; font-size: 16px;">
 <div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 4px;">✓ {{Lemma}}</div>
-<div style="color: #2e7d32; font-size: 13px; margin-bottom: 12px;">This scenario emphasizes {{EN_Gloss}}</div>
+<div style="color: #2e7d32; font-size: 13px; margin-bottom: 12px;">{{EN_Gloss}}</div>
 {{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
 <strong>Remember:</strong> {{Mnemonic_EN}}
 </div>{{/Mnemonic_EN}}
