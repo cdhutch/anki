@@ -270,13 +270,22 @@ EN_UA_BACK = """\
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
-  var lemmaWithStress = feedback.dataset.lemma;
-  var lemmaNoStress = feedback.dataset.noStress;
+  // Normalize to NFC before comparing. Combining stress marks (U+0301) can
+  // reach the typed input in a different Unicode normalization form than
+  // the field is stored in (OS keyboard/IME-dependent) even though the
+  // strings look visually identical, so a raw === comparison silently
+  // fails for otherwise-correct accented answers. NFC-normalizing both
+  // sides fixes this without changing the displayed text (Cyrillic base
+  // letter + combining acute has no precomposed Unicode form to collapse
+  // into, so NFC only fixes genuine encoding mismatches, e.g. и + combining
+  // breve vs precomposed й).
+  var lemmaWithStress = (feedback.dataset.lemma || '').normalize('NFC');
+  var lemmaNoStress = (feedback.dataset.noStress || '').normalize('NFC');
   var typedInput = document.querySelector('input[type="text"]');
 
   if (!typedInput) return;
 
-  var typedAnswer = typedInput.value.trim();
+  var typedAnswer = typedInput.value.trim().normalize('NFC');
   var html = '';
 
   if (typedAnswer === lemmaWithStress) {
