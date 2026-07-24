@@ -24,8 +24,12 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: їхати / їздити
-  ConfusableSet: переїжджа́ти
+  ConfusableSet: переїжджа́ти (pass by/through vs. cross to the far side, by vehicle)
   Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
+  CompareScenario: Driving along a highway, passing several towns without stopping, on a long
+    road trip.
+  CompareA: проїжджати
+  CompareB: переїжджати
   CrossLang_Analog: '≈ RU: проезжать / проехать'
   EuphonyNote: ''
   TypingAnswer: проїжджати
@@ -35,6 +39,8 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/проїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
+    card (see compare-card-audit-findings.md) — Mnemonic_EN already existed and is unchanged.
+    Needs your review.'
 ---
 

@@ -29,6 +29,12 @@ fields:
     \ identity)\nScenario B: \"Discussing a plumber's or carpenter's skills and expertise\"\
     \  \n→ Use: фах (skilled trade/craft)\nKey distinction: професія = formal career + credentials;\
     \ фах = skilled expertise + craft\n"
+  Mnemonic_EN: професія = formal career identity/credentials; фах = a specific skilled trade
+    or craft expertise.
+  CompareScenario: Filling out an official form that asks for your occupation, or introducing
+    yourself formally by career at a professional networking event.
+  CompareA: професія
+  CompareB: фах
   CrossLang_Analog: 'EN: profession · RU: профессия · FR: profession · DE: Profession'
   EuphonyNote: ''
   TypingAnswer: професія
@@ -38,6 +44,10 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/професія
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
+    card (see compare-card-audit-findings.md) — this note''s ConfusableSet already had good
+    scenario prose; CompareA/B/Scenario extract that same content into the fields the new
+    template actually reads. Needs your review. Note: фах has no lexeme note of its own in
+    the corpus, so this Compare card is one-directional (from професія only).'
 ---
 

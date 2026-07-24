@@ -24,7 +24,13 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: прихо́дити
+  ConfusableSet: прихо́дити (directional opposite)
+  Mnemonic_EN: при- = arrival (toward the speaker/reference point); від- = departure (away
+    from it).
+  CompareScenario: A guest says goodbye and walks away from your door, on foot, at the end
+    of the evening.
+  CompareA: приходити
+  CompareB: відходити
   CrossLang_Analog: '≈ RU: отходить / отойти (від- ≈ от-)'
   EuphonyNote: 'PFV: від- + іти → відійти (epenthetic и before й)'
   TypingAnswer: відходити
@@ -34,6 +40,7 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/відходити
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

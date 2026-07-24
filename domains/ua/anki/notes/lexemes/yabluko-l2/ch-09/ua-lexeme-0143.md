@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
-- homograph:true
 fields:
   NoteID: ua-lexeme-0143
   Lemma: вид
@@ -26,15 +25,14 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: "вид (2nd Горох sense: обличчя; вигляд, зовнішність — арх.; краєвид = face/appearance-archaic;\
-    \ view, landscape)\nвид (3rd sense - grammatical term: aspect, as in доко́наний вид 'perfective\
-    \ aspect' / недоко́наний вид 'imperfective aspect') - see ua-lexeme-0182\nScenario A:\
-    \ Describing what kind of sport someone does, e.g. вид спорту\n-> Use: вид (kind/type\
-    \ - this note's sense)\nScenario B: Describing whether a verb is perfective or imperfective,\
-    \ e.g. in a grammar explanation\n-> Use: вид (grammatical aspect - see ua-lexeme-0182)\n\
-    Key distinction: same spelling, three unrelated senses documented across this corpus -\
-    \ kind/type (this note), archaic face/appearance (noted above), and grammatical aspect\
-    \ (ua-lexeme-0182)."
-  Mnemonic_EN: ''
+    \ view, landscape)\nвид (3rd sense, homograph - unrelated meaning: grammatical aspect,\
+    \ perfective/imperfective) - see ua-lexeme-0182"
+  Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
+    word.
+  CompareScenario: Someone asks what kind of sport you play -- swimming, basketball, tennis,
+    and so on.
+  CompareA: kind, type (e.g. вид спорту)
+  CompareB: grammatical aspect (perfective/imperfective)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вид
@@ -48,8 +46,11 @@ fields:
     Verified 2026-07-22.
   Verification Notes: "Homograph caution: the Горох page for 'вид' has a second, unrelated\
     \ sense ('face/appearance, archaic; view/landscape'). This note is for the 'kind/type/subdivision'\
-    \ sense only. Confirm before use.\n2026-07-24 audit: a third sense - grammatical aspect\
-    \ (доконаний/недоконаний вид) - was identified (Craig) and split out as ua-lexeme-0182,\
-    \ status:draft, cross-linked via ConfusableSet."
+    \ sense only. Confirm before use.\n2026-07-24: added an explicit cross-link to ua-lexeme-0182\
+    \ (the grammatical-aspect sense, split out during the dedup/homograph audit) — this note's\
+    \ ConfusableSet previously only documented the archaic face/appearance sense and didn't\
+    \ reference 0182 by ID. Also added CompareScenario + CompareA/B for the redesigned Compare\
+    \ card (see compare-card-audit-findings.md); the archaic sense isn't part of the active\
+    \ card since it has no lexeme note of its own. Needs your review."
 ---
 

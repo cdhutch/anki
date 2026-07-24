@@ -24,7 +24,12 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: підхо́дити
+  ConfusableSet: підхо́дити (approach vs. actually reach)
+  Mnemonic_EN: під- = approaching, getting close but not necessarily arriving; до- = actually
+    reaching/arriving at the destination.
+  CompareScenario: Someone finally arrives at their destination, on foot, after a long walk.
+  CompareA: підходити
+  CompareB: доходити
   CrossLang_Analog: '≈ RU: доходить / дойти (до- + іти → дійти)'
   EuphonyNote: 'PFV: до- + іти → дійти (о drops before й)'
   TypingAnswer: доходити
@@ -34,6 +39,7 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/доходити
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
 ---
 

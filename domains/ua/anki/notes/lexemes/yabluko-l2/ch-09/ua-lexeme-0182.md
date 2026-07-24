@@ -32,7 +32,13 @@ fields:
     \ what kind of sport someone does, e.g. вид спорту\n-> Use: вид (kind/type - see ua-lexeme-0143)\n\
     Key distinction: same spelling, unrelated meanings - a true homograph. This sense is the\
     \ grammatical term underlying every Perfective/imperfective verb pair in this corpus."
-  Mnemonic_EN: ''
+  Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
+    word.
+  CompareScenario: A grammar textbook is explaining why "прочитати" is treated differently
+    from "читати" -- specifically, whether the action is being presented as completed or ongoing,
+    not what category of activity it is.
+  CompareA: kind, type (e.g. вид спорту)
+  CompareB: grammatical aspect (perfective/imperfective)
   CrossLang_Analog: 'EN: aspect (grammatical category) · RU: вид (same term, cognate) - English
     verbs don''t mark aspect morphologically the way Slavic languages do; this is often the
     single hardest grammatical concept for English-speaking learners of Ukrainian.'
@@ -49,6 +55,9 @@ fields:
     sense from both the 'kind/type' sense (sibling note ua-lexeme-0143) and the archaic 'face/appearance'
     sense noted there. Monosyllabic - no stress-mark ambiguity. Craig flagged this sense during
     review; content and examples need his check before flipping to status:verified.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
+    card (see compare-card-audit-findings.md). Both senses share the same spelling, so CompareA/B
+    hold the two English senses; the back reveals the correct one via EN_Gloss. Needs your
+    review.'
 ---
 

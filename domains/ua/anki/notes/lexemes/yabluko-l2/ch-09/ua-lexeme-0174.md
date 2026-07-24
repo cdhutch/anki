@@ -24,7 +24,7 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: УДАР (political party abbreviation — unrelated to this word)
+  ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -37,6 +37,12 @@ fields:
   Source_Note: Горох lists 3 homograph entries for 'удар' — the common noun (this word, 'blow/strike'),
     'УДАР' (a Ukrainian political party abbreviation), and 'уда́рити' (the related verb, 'to
     strike'). Verified the lowercase common-noun entry was used. Verified 2026-07-22.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: cleared ConfusableSet (previously documented the capitalized
+    ''УДАР'' political-party-abbreviation homograph). Under the redesigned Compare card (see
+    compare-card-audit-findings.md), a populated ConfusableSet triggers a Compare card, but
+    capitalization already disambiguates these in written Ukrainian — there''s no real scenario
+    requiring a learner to choose between them, so the card would just be noise. The homograph
+    documentation is preserved in Source_Note above; nothing is lost by clearing this field.
+    Needs your review/confirmation.'
 ---
 

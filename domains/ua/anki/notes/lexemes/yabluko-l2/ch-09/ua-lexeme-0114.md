@@ -24,7 +24,13 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: відхо́дити
+  ConfusableSet: відхо́дити (directional opposite); приїжджа́ти (same direction, different
+    mode of motion — see ua-lexeme-0123)
+  Mnemonic_EN: при- = arrival (toward the speaker/reference point); від- = departure (away
+    from it).
+  CompareScenario: A guest arrives at your door, on foot, for a party you're hosting.
+  CompareA: приходити
+  CompareB: відходити
   CrossLang_Analog: '≈ RU: приходить / прийти'
   EuphonyNote: ''
   TypingAnswer: приходити
@@ -34,6 +40,10 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/приходити
   Source_Note: Stress verified 2026-07-06 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
+    redesigned Compare card (see compare-card-audit-findings.md) — previously ConfusableSet
+    was just the bare paired word with no scenario. Also noted the same-direction/different-mode
+    relationship to приїжджати (ua-lexeme-0123), which gets its own separate Compare card
+    against this note. Needs your review.'
 ---
 

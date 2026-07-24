@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- ch:2.9.7
 fields:
   NoteID: ua-lexeme-0175
   Lemma: чо́вен
@@ -32,9 +33,9 @@ fields:
   UA_Example: Ми попливли на човні по річці.
   EN_Example: We sailed on a boat down the river.
   Verb_Conj_Table: ''
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/човен
   Source_Note: Stress verified 2026-07-22 via Горох.
-  Verification Notes: ''
+  Verification Notes: '2026-07-26: reused for ch.9.7 (''надувний човен'') — see ua-lexeme-0357.'
 ---
 
