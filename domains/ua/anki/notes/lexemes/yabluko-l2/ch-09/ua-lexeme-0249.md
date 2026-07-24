@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - phrase:noun
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0249
   Lemma: буке́т троя́нд

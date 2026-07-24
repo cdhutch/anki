@@ -12,8 +12,8 @@ tags:
 - ch:2.9.4
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0240
   Lemma: троя́нда
