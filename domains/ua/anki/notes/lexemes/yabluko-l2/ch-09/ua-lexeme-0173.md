@@ -12,7 +12,7 @@ tags:
 - ch:2.9.2
 - pos:noun
 - gender:f
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0173
   Lemma: поже́жа

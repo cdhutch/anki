@@ -12,7 +12,7 @@ tags:
 - ch:2.9.2
 - pos:noun
 - gender:n
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0167
   Lemma: змага́ння

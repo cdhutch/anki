@@ -12,7 +12,7 @@ tags:
 - ch:2.9.2
 - pos:noun
 - gender:m
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0174
   Lemma: уда́р

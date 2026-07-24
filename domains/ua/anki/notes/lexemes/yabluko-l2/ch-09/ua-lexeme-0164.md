@@ -12,7 +12,7 @@ tags:
 - ch:2.9.2
 - pos:noun
 - gender:pl
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0164
   Lemma: воро́та
