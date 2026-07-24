@@ -5,6 +5,16 @@
 built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see
 [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring
 (item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
+Ch-09 sourcing now extends through 9.7 (ua-lexeme-0114-0371, plus homograph companion note
+0372). 2026-07-26 review session (Горох stress/meaning check of ua-lexeme-0181-0372) found and
+fixed three data-integrity bugs -- 0283 (Latin characters mixed into Cyrillic Lemma/TypingAnswer),
+0361 ("як"+"тільки" fused into one non-word, no space), 0248 (`stress:uerified` tag typo) --
+and split лавка into a homograph companion note (0235/0372, bench vs. shop/stall). Craig's
+status/stress verification pass is complete through ch.9.4 and ch.9.5 0253-0260; ch.9.5
+0261-0303 and all of ch.9.6/9.7 are still `status:draft`/`stress:unverified`, pending review --
+blocked mid-session by the Chrome extension not connecting (device-bridge file access worked
+fine). Changes staged/committed subchapter-by-subchapter as of 2026-07-26; push pending Craig's
+go-ahead.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -115,16 +125,22 @@ complete:
      through `create_or_link_lexeme()` before it touches disk, so no note can land in the
      corpus by a hand-written-file path that skips the check. Not yet exercised against a
      real ch.9.3+ batch — that's the next actual use of it.
-  1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9 — subsections
-     9.3 onward. (9.1 sourced, reviewed, verified, and synced. 9.2 sourced, drafted,
-     canonicalized, and synced as `status:draft` — 18 lexemes ua-lexeme-0163–0180 + 5
-     conjugation notes ua-verb-0033–0037.) Keep following the 5 established sourcing rules
-     (Горох verification, verb pairing, phrase+component creation, autonomy, draft-until-
-     reviewed status).
-  2. Craig reviews/validates the ch.9.2 batch and flips `status:draft` → `status:verified`
-     once satisfied, same process used for ch.9.1. Re-sync afterward with `make ua-lexeme`
-     / `make ua-verb`, or the new `make ua` aggregate target (canonicalizes + syncs every
-     UA note type in one pass — see Reference Files).
+  1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9. Status as of
+     2026-07-26: 9.1 (ua-lexeme-0182) and 9.2 (ua-lexeme-0163–0181 + 5 conjugation notes
+     ua-verb-0033–0037) sourced, reviewed, verified, and synced. 9.3 (ua-lexeme-0183–0234)
+     and 9.4 (ua-lexeme-0235–0251, plus homograph companion note 0372) sourced, reviewed, and
+     flipped to `status:verified` (0189/0225/0230 still `status:draft`, not yet resolved).
+     9.5 (ua-lexeme-0252–0303) sourced; only 0253–0260 reviewed and verified so far, the
+     remainder (0261–0303) is still `status:draft`/`stress:unverified`. 9.6 (ua-lexeme-0304–0328)
+     and 9.7 (ua-lexeme-0329–0371) are sourced and drafted but not yet reviewed at all. Keep
+     following the 5 established sourcing rules (Горох verification, verb pairing,
+     phrase+component creation, autonomy, draft-until-reviewed status).
+  2. Craig reviews/validates the remaining batches -- ch.9.5 0261–0303, all of ch.9.6, all of
+     ch.9.7 -- against Горох and flips `status:draft` → `status:verified` once satisfied, same
+     process used for 9.1–9.4. (Needs the Chrome extension connected for live Горох lookups --
+     it didn't connect during the 2026-07-26 session, so this review is stalled on that.)
+     Re-sync afterward with `make ua-lexeme` / `make ua-verb`, or the new `make ua` aggregate
+     target (canonicalizes + syncs every UA note type in one pass — see Reference Files).
   3. Get the Solarized light/dark palette correct and consistent across both Anki domains
      (B737 and Ukrainian). Concrete bug found 2026-07-23: `UA_Visual`'s CSS uses the
      `.night_mode` (snake_case) selector instead of `.nightMode` (camelCase) — confirmed via
