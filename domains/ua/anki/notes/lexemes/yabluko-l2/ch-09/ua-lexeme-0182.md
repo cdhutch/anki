@@ -13,7 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - topic:grammar-term
-- status:draft
+- status:verified
 - homograph:true
 fields:
   NoteID: ua-lexeme-0182
