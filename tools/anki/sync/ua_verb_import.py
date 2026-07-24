@@ -10,6 +10,9 @@ Suspension policy:
     - status:draft → suspend cards after import (inactive verbs)
     - status:verified → unsuspend cards (active verbs, used in current chapters)
     - conj:suspended tag → keep suspended (reference only, not for drilling)
+    - stress:unverified tag → keep suspended (stress not yet confirmed against Горох,
+      2026-07-25) — takes precedence over status:verified; a verb isn't ready for
+      drilling if its stress marks haven't been confirmed, verified content or not
 
 Usage (with Anki open + AnkiConnect running):
     # Dry run — show what would be added/updated, touch nothing
@@ -132,6 +135,23 @@ def parse_note_file(path: Path) -> dict | None:
 # ---------------------------------------------------------------------------
 
 
+def should_suspend(tags: list[str]) -> bool:
+    """Suspension policy for UA_Verb cards (see module docstring):
+        - conj:suspended tag    → always suspend (reference verbs, not for drilling)
+        - status:draft tag      → suspend (inactive/unreviewed)
+        - stress:unverified tag → suspend (stress not yet confirmed against Горох,
+          2026-07-25) -- independent of status:draft/verified, since a verb can be
+          content-verified but still carry unconfirmed stress marks
+        - otherwise (status:verified, no unverified stress) → unsuspend, ready for
+          drilling
+    """
+    return (
+        "conj:suspended" in tags
+        or "status:draft" in tags
+        or "stress:unverified" in tags
+    )
+
+
 def import_note(data: dict, dry_run: bool) -> str:
     """Import a single parsed note. Returns 'added', 'updated', or 'skipped'."""
     note_id = data.get("note_id", "")
@@ -150,11 +170,7 @@ def import_note(data: dict, dry_run: bool) -> str:
     if not isinstance(tags, list):
         tags = []
 
-    # Suspension policy:
-    # - conj:suspended tag → always suspend (reference verbs, not for drilling)
-    # - status:draft tag → suspend (inactive/unreviewed)
-    # - status:verified tag → unsuspend (active, ready for drilling)
-    suspend = "conj:suspended" in tags or "status:draft" in tags
+    suspend = should_suspend(tags)
 
     existing_id = find_note_by_id(note_id)
 

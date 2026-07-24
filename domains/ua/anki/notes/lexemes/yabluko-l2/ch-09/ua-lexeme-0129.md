@@ -31,11 +31,7 @@ fields:
   TypingAnswer: проїжджати
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: <table class="conj"><tr><th></th><th>IPFV (проїжджа́ти)</th><th>PFV (прої́хати)</th></tr><tr><th
-    colspan="3">Теп./Майб. (Present / Future)</th></tr><tr><td>я</td><td>проїжджа́ю</td><td>прої́ду</td></tr><tr><td>ти</td><td>проїжджа́єш</td><td>прої́деш</td></tr><tr><td>він/вона</td><td>проїжджа́є</td><td>прої́де</td></tr><tr><td>ми</td><td>проїжджа́ємо</td><td>прої́демо</td></tr><tr><td>ви</td><td>проїжджа́єте</td><td>прої́дете</td></tr><tr><td>вони</td><td>проїжджа́ють</td><td>прої́дуть</td></tr><tr><th
-    colspan="3">Минулий (Past)</th></tr><tr><td>він</td><td>проїжджа́в</td><td>прої́хав</td></tr><tr><td>вона</td><td>проїжджа́ла</td><td>прої́хала</td></tr><tr><td>вони</td><td>проїжджа́ли</td><td>прої́хали</td></tr><tr><th
-    colspan="3">Наказовий (Imperative)</th></tr><tr><td>2sg / 2pl</td><td>проїжджа́й / проїжджа́йте</td><td>прої́дь
-    / прої́дьте</td></tr></table>
+  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/проїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

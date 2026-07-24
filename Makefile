@@ -124,6 +124,10 @@ help:
 	@echo "  ua-pvom-check             Check CNSF formatting (no changes)"
 	@echo "  ua-pvom-fix               Canonicalize all PVOM infinitive notes"
 	@echo ""
+	@echo "Ukrainian (UA) — aggregate"
+	@echo "  ua                  Canonicalize + sync all UA note types (lexeme, grammar, visual, verb, pvom)"
+	@echo "  ua-fix              Canonicalize all UA note types (no sync)"
+	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
 	@echo "                      Writes /tmp/goroh/goroh_mismatches.tsv for review"
@@ -619,6 +623,8 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-grammar ua-grammar-check ua-grammar-fix
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
 .PHONY: ua-generate-examples ua-inject-examples
+.PHONY: ua-unverified
+.PHONY: ua ua-fix
 
 # ── Note type setup ──────────────────────────────────────────────────────────
 
@@ -739,6 +745,37 @@ ua-pvom-fix:
 
 ua-pvom: ua-setup-pvom ua-pvom-fix
 	$(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/
+
+# ── Unverified notes report (stress or status) ───────────────────────────────
+# Bold + blink + bright yellow, deliberately obnoxious: printed at the end of
+# `make ua` and `make ua-fix` so leftover stress:unverified / status:draft /
+# no-status notes can't just scroll by unnoticed. Blink is ignored by some
+# terminals (accessibility-disabled by default in several) -- the bold bright
+# yellow + repeated warning glyphs still carry the "look at this" signal even
+# without it.
+ua-unverified:
+	@printf "\033[1;5;93m\n⚠ ⚠ ⚠  UNVERIFIED UA NOTES (stress or status) ⚠ ⚠ ⚠\033[0m\n"
+	@$(PYTHON) tools/anki/inspect/list_unverified.py
+
+# ── All UA note types (aggregate) ────────────────────────────────────────────
+
+ua-fix:
+	$(MAKE) ua-lexeme-fix
+	$(MAKE) ua-grammar-fix
+	$(MAKE) ua-visual-fix
+	$(MAKE) ua-verb-fix
+	$(MAKE) ua-pvom-fix
+	$(MAKE) ua-unverified
+
+ua:
+	@TARGETS="ua-lexeme ua-grammar ua-visual ua-verb ua-pvom"; \
+	for t in $$TARGETS; do \
+		printf "\033[1;34m→ $$t...\033[0m\n"; \
+		$(MAKE) $$t || { printf "\033[1;31m✗  UA sync failed at: $$t\033[0m\n"; exit 1; }; \
+		printf "\033[0;32m✓  $$t\033[0m\n"; \
+	done; \
+	printf "\n\033[1;32m✓  All UA note types synced successfully.\033[0m\n"
+	$(MAKE) ua-unverified
 
 # ── Stress verification ──────────────────────────────────────────────────────
 

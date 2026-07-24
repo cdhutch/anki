@@ -255,8 +255,16 @@ UA_EN_BACK = """\
 EN_UA_FRONT = """\
 <div class="gloss">{{EN_Gloss}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
-<!-- Accept both forms: with stress (Lemma) and without (TypingAnswer) -->
-{{type:TypingAnswer}}
+<!-- Typing target is the STRESSED field (Lemma), not TypingAnswer: typing it
+     correctly is then a clean exact match for Anki's diff (no insertion);
+     typing without stress becomes a clean omission instead. Both are
+     well-behaved for Anki's diff -- the reverse (unstressed target, stressed
+     insertion, the previous setup) is not: a typed stress mark shows as an
+     inserted character with no adjacent match, which Anki's per-character
+     span-wrapping renders visually detached from its base letter (looks like
+     a stray apostrophe next to the vowel). Same reasoning as
+     UA_PVOM_Infinitive's Walking/Vehicle templates -- see setup_ua_pvom_note_type.py. -->
+{{type:Lemma}}
 <div id="type-hint" style="font-size: 12px; color: #999; margin-top: 8px;">
   (Type without stress, or with stress marks for bonus credit)
 </div>
@@ -266,33 +274,63 @@ EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
 <!-- Color-coded typing feedback with dual validation -->
-<div id="feedback" data-lemma="{{Lemma}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
+<div id="feedback" data-with-stress="{{Lemma}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
-  var lemmaWithStress = feedback.dataset.lemma;
-  var lemmaNoStress = feedback.dataset.noStress;
-  var typedInput = document.querySelector('input[type="text"]');
+  // Normalize to NFC before comparing. Combining stress marks (U+0301) can
+  // reach the reconstructed typed answer (see below) in a different Unicode
+  // normalization form than the field is stored in (OS keyboard/IME-dependent)
+  // even though the strings look visually identical, so a raw === comparison
+  // silently fails for otherwise-correct accented answers.
+  var lemmaWithStress = (feedback.dataset.withStress || '').normalize('NFC');
+  var lemmaNoStress = (feedback.dataset.noStress || '').normalize('NFC');
 
-  if (!typedInput) return;
+  // Anki's own type-answer field replaces the front's <input> with a #typeans
+  // diff (spans classed typeGood/typeBad/typeMissed) once the answer side
+  // renders -- there is no live <input> to read here (the previous
+  // document.querySelector('input[type="text"]') lookup never found one on
+  // the answer side, so this feedback block never actually populated).
+  // Reconstruct what was typed from that diff instead -- same technique as
+  // UA_PVOM_Infinitive (setup_ua_pvom_note_type.py).
+  var typedAnswer = null;
+  var typeansEl = document.getElementById('typeans');
+  if (typeansEl) {
+    var arrowEl = typeansEl.querySelector('#typearrow');
+    var chunks = [];
+    for (var i = 0; i < typeansEl.childNodes.length; i++) {
+      var child = typeansEl.childNodes[i];
+      if (arrowEl && child === arrowEl) break;
+      if (child.nodeType === 1 && (child.classList.contains('typeGood') || child.classList.contains('typeBad'))) {
+        chunks.push(child);
+      }
+    }
+    if (chunks.length) {
+      typedAnswer = chunks.map(function(el) { return el.textContent; }).join('').normalize('NFC');
+    }
+    // Hide Anki's raw per-character diff (answer side only) -- it can
+    // visually detach combining stress marks from their base letter (renders
+    // like a stray apostrophe next to the vowel instead of a proper accent).
+    // The #feedback message below is the intended user-facing display.
+    typeansEl.style.display = 'none';
+  }
 
-  var typedAnswer = typedInput.value.trim();
   var html = '';
 
   if (typedAnswer === lemmaWithStress) {
     // Perfect: with stress marks
     html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           typedAnswer + ' ✓ PERFECT</div>' +
+           lemmaWithStress + ' ✓ PERFECT</div>' +
            '<div style="color: #2e7d32; font-size: 14px;">Correct with stress marks (bonus!)</div>';
   } else if (typedAnswer === lemmaNoStress) {
     // Close: correct letters, missing stress
     html = '<div style="color: #ff9800; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           typedAnswer + ' ~ CORRECT</div>' +
+           lemmaNoStress + ' ~ CORRECT</div>' +
            '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, but missing stress marks</div>' +
            '<div style="color: #2e7d32; font-size: 16px; font-weight: bold;">Bonus answer:</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + lemmaWithStress + '</b></div>';
-  } else if (typedAnswer.length > 0) {
-    // Incorrect
+  } else if (typedAnswer !== null) {
+    // Reconstruction succeeded and it's neither accepted answer -- genuinely wrong.
     html = '<div style="color: #d32f2f; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
            typedAnswer + ' ✗ INCORRECT</div>' +
            '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Not quite right</div>' +
@@ -300,6 +338,12 @@ EN_UA_BACK = """\
            '<div style="color: #2e7d32; font-size: 16px; margin-bottom: 8px;"><b>' + lemmaNoStress + '</b></div>' +
            '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Correct (with stress):</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + lemmaWithStress + '</b></div>';
+  } else {
+    // Couldn't determine what was typed at all (e.g. #typeans markup ever
+    // changes shape) -- show the answer neutrally rather than guessing.
+    html = '<div style="color: #1565c0; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           lemmaWithStress + '</div>' +
+           '<div style="color: #999; font-size: 13px;">(no stress: ' + lemmaNoStress + ')</div>';
   }
 
   feedback.innerHTML = html;

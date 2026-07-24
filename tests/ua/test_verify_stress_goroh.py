@@ -755,13 +755,37 @@ fields:
         # CounterpartForm is looked up under its own bare form, not the primary lemma
         assert cp_targets[0]["lookup_lemma"] == "воді́йка".replace(STRESS, "")
 
-    def test_real_note_0003_has_correct_targets(self):
-        """ua-lexeme-0003 (воді́й) should yield lemma + irregular forms + counterpart."""
+    def test_real_note_0003_has_correct_targets(self, tmp_path, monkeypatch):
+        """ua-lexeme-0003 (воді́й) should yield lemma + irregular forms + counterpart.
+
+        Reads the real corpus file (to catch format drift against live content)
+        but forces stress:unverified onto a tmp copy rather than asserting on the
+        corpus's live tag. Note 0003 has since gone through stress verification
+        and legitimately lost that tag (status:verified, tag removed) — coupling
+        this test to the corpus's current review state made it break whenever the
+        note it happened to target got verified, not when extraction logic broke.
+        """
+        import yaml
+
+        import tools.anki.inspect.verify_stress_goroh as vsg
+
         path = NOTES_CH00 / "ua-lexeme-0003.md"
         if not path.exists():
             pytest.skip("ua-lexeme-0003.md not found")
-        result = extract_note_targets(path)
-        assert result is not None, "note has stress:unverified but extract returned None"
+        text = path.read_text(encoding="utf-8")
+        parts = text.split("---", 2)
+        meta = yaml.safe_load(parts[1])
+        tags = list(meta.get("tags") or [])
+        if "stress:unverified" not in tags:
+            tags.append("stress:unverified")
+        meta["tags"] = tags
+        forced_text = "---\n" + yaml.safe_dump(meta, allow_unicode=True, sort_keys=False) + "---\n" + parts[2]
+        forced_path = tmp_path / "ua-lexeme-0003.md"
+        forced_path.write_text(forced_text, encoding="utf-8")
+        monkeypatch.setattr(vsg, "REPO_ROOT", tmp_path)
+
+        result = extract_note_targets(forced_path)
+        assert result is not None, "note has stress:unverified (forced) but extract returned None"
         assert result["lemma"] == "воді́й"
         fields_found = {t["field"] for t in result["targets"]}
         assert "Lemma" in fields_found

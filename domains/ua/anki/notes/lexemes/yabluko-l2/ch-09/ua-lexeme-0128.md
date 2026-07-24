@@ -30,11 +30,7 @@ fields:
   TypingAnswer: доїжджати
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: <table class="conj"><tr><th></th><th>IPFV (доїжджа́ти)</th><th>PFV (дої́хати)</th></tr><tr><th
-    colspan="3">Теп./Майб. (Present / Future)</th></tr><tr><td>я</td><td>доїжджа́ю</td><td>дої́ду</td></tr><tr><td>ти</td><td>доїжджа́єш</td><td>дої́деш</td></tr><tr><td>він/вона</td><td>доїжджа́є</td><td>дої́де</td></tr><tr><td>ми</td><td>доїжджа́ємо</td><td>дої́демо</td></tr><tr><td>ви</td><td>доїжджа́єте</td><td>дої́дете</td></tr><tr><td>вони</td><td>доїжджа́ють</td><td>дої́дуть</td></tr><tr><th
-    colspan="3">Минулий (Past)</th></tr><tr><td>він</td><td>доїжджа́в</td><td>дої́хав</td></tr><tr><td>вона</td><td>доїжджа́ла</td><td>дої́хала</td></tr><tr><td>вони</td><td>доїжджа́ли</td><td>дої́хали</td></tr><tr><th
-    colspan="3">Наказовий (Imperative)</th></tr><tr><td>2sg / 2pl</td><td>доїжджа́й / доїжджа́йте</td><td>дої́дь
-    / дої́дьте</td></tr></table>
+  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/доїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
