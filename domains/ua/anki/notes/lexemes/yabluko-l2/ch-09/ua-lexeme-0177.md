@@ -12,6 +12,7 @@ tags:
 - ch:2.9.2
 - pos:verb
 - status:verified
+- ch:2.9.3
 fields:
   NoteID: ua-lexeme-0177
   Lemma: перемага́ти
@@ -31,13 +32,14 @@ fields:
   UA_Example: Наша команда перемагає у більшості матчів.
   EN_Example: Our team wins most of its matches.
   Verb_Conj_Table: ''
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/перемагати; https://goroh.pp.ua/Словозміна/перемогти
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects. Vocab list (9.2) cites
     the perfective 'перемогти' — this note uses the imperfective 'перемагати' as Lemma for
     consistency with all other verb lexemes in the corpus (Craig's decision, 2026-07-22);
     'перемогти' appears in the Perfective field; full conjugation for both aspects lives on
     the separate ua-verb-0034 conjugation note.
-  Verification Notes: ''
+  Verification Notes: '2026-07-26: reused for ch.9.3 (perfective ''перемогти'' in the phrase
+    ''перемогти суперника'') — see ua-lexeme-0233.'
 ---
 

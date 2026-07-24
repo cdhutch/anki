@@ -1,0 +1,41 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0214
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:2.9.3
+- pos:verb
+- stress:unverified
+- status:draft
+fields:
+  NoteID: ua-lexeme-0214
+  Lemma: забива́ти
+  PartOfSpeech: verb
+  Gender: ''
+  Perfective: заби́ти
+  EN_Gloss: to score, hit, drive in
+  Govt_Case: ''
+  CounterpartForm: ''
+  IrregularForms: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  EuphonyNote: ''
+  TypingAnswer: забивати
+  UA_Example: Він часто забиває голи з кутового удару.
+  EN_Example: He often scores goals from a corner kick.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:2.9.3
+  Source_URL: https://goroh.pp.ua/Словозміна/забивати; https://goroh.pp.ua/Словозміна/забити
+  Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
+    combat gear).
+  Verification Notes: ''
+---
+
