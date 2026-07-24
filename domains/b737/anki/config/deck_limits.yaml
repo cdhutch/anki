@@ -1,0 +1,128 @@
+# B737 Deck Limits Configuration
+# ==============================
+#
+# Strategy: Review-only phase — 0 new cards/day, up to 200 review/day across
+# active type rating subdecks. Type rating drill material - specific to
+# First Officer (FO) role.
+#
+# Active decks (FO-specific):
+#   - Limits::NonTrivia
+#   - Mnemonics
+#   - Inflight_Maneuvers
+#   - QRC
+#
+# Suspended: All other subdecks (including Captain-specific role decks)
+
+decks:
+  # Parent deck - review-only (0 new/day, up to 200 review/day)
+  B737:
+    new: 0
+    review: 200
+    suspended: false
+    reason: "Type rating review phase - 0 new/day, up to 200 review/day across active subdecks (FO role)"
+
+  # ===== ACTIVE SUBDECKS (FO-applicable) =====
+  B737::Core::Limits::Non-Trivia:
+    new: 0
+    review: 200
+    suspended: false
+    tags:
+      - "role:fo"
+      - "scope:active"
+      - "type:limits"
+    reason: "Active: Limits Non-Trivia (FO-applicable, review-only, shares parent pool)"
+
+  B737::Core::Mnemonics:
+    new: 0
+    review: 200
+    suspended: false
+    tags:
+      - "role:fo"
+      - "scope:active"
+      - "type:mnemonics"
+    reason: "Active: Mnemonics (FO-applicable, review-only, shares parent pool)"
+
+  B737::Core::Procedures::Inflight_Maneuvers:
+    new: 0
+    review: 200
+    suspended: false
+    tags:
+      - "role:fo"
+      - "scope:active"
+      - "type:procedures"
+    reason: "Active: Inflight Maneuvers (FO-applicable, review-only, shares parent pool)"
+
+  B737::Core::QRC:
+    new: 0
+    review: 200
+    suspended: false
+    tags:
+      - "role:fo"
+      - "scope:active"
+      - "type:reference"
+    reason: "Active: QRC reference material, in scope for review (FO-applicable, shares parent pool)"
+
+  # ===== SUSPENDED SUBDECKS (Captain-specific or not applicable to FO) =====
+  # Note: Suspended decks below retain their suspension status.
+  # Update script honors the suspended: true flag and skips these.
+
+  B737::Core::Limits::Trivia:
+    new: 0
+    review: 0
+    suspended: true
+    tags:
+      - "scope:out-of-scope"
+    reason: "Suspended: Not part of current study plan"
+
+  B737::Systems:
+    new: 0
+    review: 0
+    suspended: true
+    tags:
+      - "role:captain"
+      - "scope:out-of-scope"
+    reason: "Suspended: Captain-specific or out of scope"
+
+  B737::Core::Procedures::Normal:
+    new: 0
+    review: 0
+    suspended: true
+    tags:
+      - "role:captain"
+      - "scope:out-of-scope"
+    reason: "Suspended: May be Captain-specific or covered elsewhere"
+
+  B737::Core::Procedures::Non_Normal:
+    new: 0
+    review: 0
+    suspended: true
+    tags:
+      - "role:captain"
+      - "scope:out-of-scope"
+    reason: "Suspended: May be Captain-specific or covered elsewhere"
+
+  B737::Core::Cats_and_Dogs:
+    new: 0
+    review: 0
+    suspended: true
+    tags:
+      - "scope:out-of-scope"
+    reason: "Suspended: Not part of current study plan"
+
+  B737::Core::Checklists:
+    new: 0
+    review: 0
+    suspended: true
+    tags:
+      - "type:reference"
+      - "scope:out-of-scope"
+    reason: "Suspended: Reference material, not for active drilling"
+
+# Context
+# -------
+# B737 deck: 0 new/day, up to 200 review/day (review-only phase, FO role only)
+# UA deck: 50 new/day + 100 review/day (formal language learning)
+# Total new cards/day: 50 (50 UA + 0 B737)
+#
+# FSRS is used independently for B737 (separate configuration from UA)
+# Cards in suspended decks remain suspended and are not studied
