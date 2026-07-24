@@ -25,8 +25,14 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: перегі́н (sing., 'a stage/leg of a route or railway section') — a distinct
-    lemma, not this word's singular
+  ConfusableSet: "перегі́н (sing., 'a stage/leg of a route or railway section') — a distinct\
+    \ lemma, not this word's singular\nбіг (running, race - narrower: on foot specifically)\n\
+    Scenario A: Describing a ski race, car race, boat race, horse race, or other non-running\
+    \ competition\n-> Use: перегони (racing by any means of transport/method)\nScenario B:\
+    \ Describing a running-specific race, e.g. a marathon or sprint\n-> Use: біг (foot-racing\
+    \ specifically; cf. марафонський біг)\nKey distinction: перегони is the general word for\
+    \ competitive racing regardless of mode; біг narrows specifically to racing/running on\
+    \ foot."
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -38,9 +44,11 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/перегони
   Source_Note: Pluralia tantum (no singular form) — Горох confirms nominative singular '—'.
     Verified 2026-07-22.
-  Verification Notes: Горох's page for 'перегони' also lists a separate singular lemma 'перегін'
-    (a stage/leg of a journey/route). That is a different word, not the singular of this one
-    — do not conflate. Reused in ch.9.2 ('nature/water & outdoor scenes') as well as 9.1 —
-    same lemma, no new note created per the whole-corpus dedup rule; added ch:2.9.2 tag.
+  Verification Notes: "Горох's page for 'перегони' also lists a separate singular lemma 'перегін'\
+    \ (a stage/leg of a journey/route). That is a different word, not the singular of this\
+    \ one — do not conflate. Reused in ch.9.2 ('nature/water & outdoor scenes') as well as\
+    \ 9.1 — same lemma, no new note created per the whole-corpus dedup rule; added ch:2.9.2\
+    \ tag.\n2026-07-24: cross-linked ConfusableSet with біг (ua-lexeme-0145) — outcome-4 dedup\
+    \ audit found both EN_Gloss values overlapped on \"race\"."
 ---
 

@@ -200,12 +200,61 @@ def canonicalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     return out
 
 
+class _DQStr(str):
+    """Marker subclass: force double-quoted YAML style for this string."""
+
+
+class _DQDumper(yaml.SafeDumper):
+    pass
+
+
+def _represent_dq_str(dumper: yaml.SafeDumper, data: str):
+    return dumper.represent_scalar("tag:yaml.org,2002:str", str(data), style='"')
+
+
+_DQDumper.add_representer(_DQStr, _represent_dq_str)
+
+
+def _force_dquote_multiline(obj: Any) -> Any:
+    """Recursively wrap any string containing an embedded newline so it always
+    dumps double-quoted (with \\n escaped), never single-quoted.
+
+    PyYAML's default representer picks single-quoted style for a multi-line
+    string UNLESS the string also happens to contain a single-quote character,
+    in which case it picks double-quoted instead. Single-quoted style folds
+    each embedded "\\n" into a *blank physical line* on dump — which silently
+    violates this module's own "no blank lines inside frontmatter" rule
+    (_reject_blank_lines_in_yaml) the next time the file is parsed. Whether a
+    given field's value happens to contain an apostrophe is incidental to its
+    content, not a deliberate style choice, so relying on it is fragile: e.g.
+    ua-lexeme-0058's ConfusableSet field (which discusses "a plumber's...
+    skills") happened to dump safely only because of that apostrophe; a
+    similar multi-line field without one (as several fields added during the
+    2026-07-24 dedup/homograph audit were) would dump broken. Forcing
+    double-quoted style for every multi-line string removes the dependency on
+    incidental content and matches the byte-identical output PyYAML already
+    produces for 0058 today (verified: canonicalizing 0058 with this function
+    reproduces its current on-disk bytes exactly), so this is not a formatting
+    change for any note already stored this way — it only fixes the cases that
+    were previously silently broken.
+    """
+    if isinstance(obj, str):
+        return _DQStr(obj) if "\n" in obj else obj
+    if isinstance(obj, dict):
+        return {k: _force_dquote_multiline(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_force_dquote_multiline(v) for v in obj]
+    return obj
+
+
 def dump_yaml(meta: dict[str, Any]) -> str:
     """
     Deterministic-ish YAML dump (order preserved, no sort_keys).
     """
-    return yaml.safe_dump(
-        meta,
+    wrapped = _force_dquote_multiline(meta)
+    return yaml.dump(
+        wrapped,
+        Dumper=_DQDumper,
         sort_keys=False,
         allow_unicode=True,
         default_flow_style=False,

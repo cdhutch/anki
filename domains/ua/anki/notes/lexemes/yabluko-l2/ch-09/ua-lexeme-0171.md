@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- homograph:true
 fields:
   NoteID: ua-lexeme-0171
   Lemma: мете́лик
@@ -24,7 +25,12 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: 'метелик (2nd Горох sense, informal: bow-tie; flyer/leaflet)'
+  ConfusableSet: "мете́лик (2nd sense, homograph - unrelated meaning: bow-tie, a menswear\
+    \ accessory; informal 3rd sense: flyer/leaflet) - see ua-lexeme-0181\nScenario A: Describing\
+    \ an insect seen in a garden or during a nature walk\n-> Use: метелик (butterfly - this\
+    \ note's sense)\nScenario B: Describing formal menswear, e.g. a tuxedo accessory\n-> Use:\
+    \ метелик (bow-tie - same spelling, unrelated meaning; see ua-lexeme-0181)\nKey distinction:\
+    \ same spelling, unrelated meanings - a true homograph, not a semantic range of one word."
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -37,6 +43,8 @@ fields:
   Source_Note: 'Горох lists 2 senses for ''мете́лик'' (identical spelling): ''комаха'' (insect/butterfly,
     used here) and ''краватка; листівка - розм.'' (informal: bow-tie; flyer/leaflet). Verified
     2026-07-22.'
-  Verification Notes: ''
+  Verification Notes: '2026-07-24: split the bow-tie/flyer sense into its own note (ua-lexeme-0181,
+    status:draft) per the corpus''s homograph procedure, replacing the earlier inline ConfusableSet
+    aside.'
 ---
 
