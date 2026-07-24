@@ -12,8 +12,8 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:n
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0260
   Lemma: очі́кування
