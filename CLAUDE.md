@@ -1,8 +1,10 @@
 # CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
 **Current work**: UA domain -- Ch-09 motion-verb polish punch list (7/7 items) complete as of
-2026-07-22; push + PR to main pending Craig's go-ahead. B737 Phase A distractor authoring
-paused (26/29 systems verified).
+2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling
+built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see
+[CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring
+(item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -57,6 +59,7 @@ in this repo -- all run by Craig, not Claude:
 | **Flag audit workflow** | [CLAUDE-flag-audit.md](CLAUDE-flag-audit.md) |
 | **Ch-09 vocabulary sourcing workflow** | [CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md) |
 | **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
+| **Vocab dedup/homograph audit tooling** | [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) |
 
 ---
 
@@ -104,6 +107,16 @@ complete:
      new/homograph/duplicate outcome (see "Vocabulary dedup & homograph handling" above) is
      handled inline as part of generation rather than as a separate manual step run after
      the fact. Do this before continuing further ch.9.3+ sourcing.
+     **Progress (2026-07-24):** the reusable pieces this needs now exist —
+     `tools/anki/lib/lexeme_dedup.py` (importable `create_or_link_lexeme()` API implementing
+     all three buckets) and `tools/anki/inspect/build_lexeme_index.py` (full-corpus TSV dump
+     for audits), both tested (60 passing tests across `tests/ua/test_lexeme_dedup.py` +
+     `tests/ua/test_build_lexeme_index.py`). A full 180-note corpus audit ran on
+     `feature/ua-vocab-dedup-homograph` using this tooling — see
+     [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) for what it found and
+     the resulting edits. **Still open:** actually calling `create_or_link_lexeme()` from any
+     `gen_ch09_*.py`-style generator script — the library exists but isn't wired into
+     generation yet, so this item isn't done.
   1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9 — subsections
      9.3 onward. (9.1 sourced, reviewed, verified, and synced. 9.2 sourced, drafted,
      canonicalized, and synced as `status:draft` — 18 lexemes ua-lexeme-0163–0180 + 5
@@ -363,9 +376,9 @@ instead of `-ська`). The vowel-index comparison handles this correctly since
 syllable is the same. The script is embedded in session context — rebuild from the pattern
 in `tools/anki/inspect/` when needed as a standalone tool.
 
-### Vocabulary dedup & homograph handling (established 2026-07-23)
+### Vocabulary dedup & homograph handling (established 2026-07-23, outcome 4 added 2026-07-24)
 
-As chapter-by-chapter sourcing continues, every new candidate word falls into one of three
+As chapter-by-chapter sourcing continues, every new candidate word falls into one of four
 buckets. Triage deliberately — do not assume from spelling alone.
 
 1. **Brand new vocabulary.** No existing note has this spelling. Default behavior: Горох-
@@ -398,14 +411,42 @@ buckets. Triage deliberately — do not assume from spelling alone.
    This is the exact pattern already used for перегони (ua-lexeme-0144, reused across
    9.1/9.2) — now the standard procedure rather than ad hoc.
 
-**Tooling:** `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
-lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
-under `domains/ua/anki/notes/lexemes/` for an exact-spelling match. Reports NoteID, file
-path, current `EN_Gloss`, and `Tags_Ch` for any match, so the new/homograph/duplicate call
-gets made deliberately instead of by ad hoc grep (which produced false negatives earlier
-in this project — see the перегони/перемогти́/програ́ти dedup-check history). Meaning
-comparison (bucket 2 vs. 3) still requires human/Горох judgment — the tool only automates
-the "does this spelling already exist" lookup reliably.
+4. **Convergent synonyms — multiple UA spellings, overlapping EN gloss** (established
+   2026-07-24, Craig). Different spelling from bucket 2/3 (which are keyed on the *same* UA
+   spelling) — this bucket catches the opposite drift: several distinct UA words whose
+   `EN_Gloss` values overlap enough that the semantic distinction between them gets lost.
+   E.g. пожежа/ватра/вогонь all glossing loosely to "fire" in EN, or (found in the
+   2026-07-24 audit) добре/непогано/нормально/чудово all glossing to some flavor of
+   "good/fine." This is **not spelling-based** and not mechanically detectable — it requires
+   reading the whole `EN_Gloss` list and clustering by judgment (semantic, not keyword
+   matching). Handling: cross-link the cluster via `ConfusableSet` with scenario-based
+   discrimination (same field/format as bucket 2), explaining the actual distinction (e.g. a
+   register/enthusiasm scale, or a broader-vs-narrower relationship) rather than tagging
+   `homograph:true` (these are related-but-distinct words, not homographs). Run as a
+   standalone full-corpus audit periodically, not per-candidate at generation time — see
+   [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md).
+
+**Tooling:**
+- `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
+  lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
+  under `domains/ua/anki/notes/lexemes/` for an exact-spelling match. Reports NoteID, file
+  path, current `EN_Gloss`, and `Tags_Ch` for any match, so the new/homograph/duplicate call
+  gets made deliberately instead of by ad hoc grep (which produced false negatives earlier
+  in this project — see the перегони/перемогти́/програ́ти dedup-check history). Meaning
+  comparison (bucket 2 vs. 3) still requires human/Горох judgment — the tool only automates
+  the "does this spelling already exist" lookup reliably. Manual, per-candidate, run before
+  drafting a batch.
+- `tools/anki/lib/lexeme_dedup.py` (new 2026-07-24) — the same spelling-match logic
+  packaged as an importable library (`create_or_link_lexeme()`), plus the write-side
+  handling for all three spelling-keyed buckets (new/homograph/duplicate): creates the new
+  note, or appends the chapter tag + dated verification note to an existing one, or
+  cross-links both notes' `ConfusableSet` fields for a homograph pair. Not yet called from
+  any generator script — see item 0 above and
+  [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md).
+- `tools/anki/inspect/build_lexeme_index.py` (new 2026-07-24) — dumps the full lexeme
+  corpus to `build/ua_lexeme_index.tsv` (gitignored) in one pass, for the bucket-4
+  full-corpus audit and for spot-checking bucket-1/2/3 spelling collisions at scale without
+  hitting per-file staging rate limits.
 
 ### Deck Presets and Limit Configuration (2026-07-20)
 
@@ -458,6 +499,8 @@ python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
 | `tools/anki/inspect/test_preset_creation.py` | ✓ new (2026-07-20) | Diagnostic tool for testing preset creation approaches |
 | `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
 | `tools/anki/inspect/patch_ch09_conj_tables.py` | ✓ done | One-shot: Verb_Conj_Table for notes 0117–0131 |
+| `tools/anki/lib/lexeme_dedup.py` | ✓ new (2026-07-24) | `create_or_link_lexeme()` — dedup/homograph create-or-link API (new/homograph/duplicate); not yet wired into any generator script |
+| `tools/anki/inspect/build_lexeme_index.py` | ✓ new (2026-07-24) | Full-corpus lexeme → `build/ua_lexeme_index.tsv` dump for audits |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 
