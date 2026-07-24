@@ -98,25 +98,23 @@ complete:
   - Templates update correctly via `make ua-setup-visual`.
 
 **Pending / Next planned work (as of 2026-07-23):**
-  0. **TOP PRIORITY (set by Craig 2026-07-23):** Integrate the dedup/homograph-check logic
-     directly into the vocabulary-generation workflow, not just the standalone
-     `check_lexeme_dedup.py` tool. Today that tool has to be run manually before drafting a
-     batch; the goal is to wire the same check into the per-subchapter generator scripts
-     (the `gen_ch09_*.py`-style scripts used to draft each batch) so every candidate word is
-     checked against the corpus automatically before a new note is created, and the
-     new/homograph/duplicate outcome (see "Vocabulary dedup & homograph handling" above) is
-     handled inline as part of generation rather than as a separate manual step run after
-     the fact. Do this before continuing further ch.9.3+ sourcing.
-     **Progress (2026-07-24):** the reusable pieces this needs now exist —
+  0. **DONE (2026-07-25).** Integrate the dedup/homograph-check logic directly into the
+     vocabulary-generation workflow, not just the standalone `check_lexeme_dedup.py` tool.
      `tools/anki/lib/lexeme_dedup.py` (importable `create_or_link_lexeme()` API implementing
      all three buckets) and `tools/anki/inspect/build_lexeme_index.py` (full-corpus TSV dump
-     for audits), both tested (60 passing tests across `tests/ua/test_lexeme_dedup.py` +
-     `tests/ua/test_build_lexeme_index.py`). A full 180-note corpus audit ran on
-     `feature/ua-vocab-dedup-homograph` using this tooling — see
-     [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) for what it found and
-     the resulting edits. **Still open:** actually calling `create_or_link_lexeme()` from any
-     `gen_ch09_*.py`-style generator script — the library exists but isn't wired into
-     generation yet, so this item isn't done.
+     for audits) were built 2026-07-24 and used for a full 180-note corpus audit — see
+     [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md). The remaining piece
+     — an actual `gen_ch09_*.py`-style script calling `create_or_link_lexeme()` — is now
+     `tools/anki/extract/gen_ch09_subsection.py` (75 passing tests total across
+     `tests/ua/test_lexeme_dedup.py`, `tests/ua/test_build_lexeme_index.py`, and the new
+     `tests/ua/test_gen_ch09_subsection.py`). Note on what this script does and doesn't
+     automate: Горох verification, phrase/component decomposition, and the new-vs-duplicate-
+     vs-homograph *judgment call* itself all still require human/Claude-in-Chrome
+     involvement per CLAUDE-ch09-vocab-workflow.md — this script's job is narrower but load-
+     bearing: every candidate, once drafted with its dedup decision already made, is routed
+     through `create_or_link_lexeme()` before it touches disk, so no note can land in the
+     corpus by a hand-written-file path that skips the check. Not yet exercised against a
+     real ch.9.3+ batch — that's the next actual use of it.
   1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9 — subsections
      9.3 onward. (9.1 sourced, reviewed, verified, and synced. 9.2 sourced, drafted,
      canonicalized, and synced as `status:draft` — 18 lexemes ua-lexeme-0163–0180 + 5
@@ -308,9 +306,50 @@ student to internalize the prefixation patterns through repeated production, not
 told the answer's shape in advance.
 
 **Field pattern:** each base has a stressed field (`*_UA`) and an unstressed field
-(`*_Typing`) used for Anki's `{{type:...}}` comparison; the back-side script compares the
-typed answer against both to give tiered feedback (perfect-with-stress / correct-no-stress
-/ incorrect), same pattern as `UA_Lexeme`'s typing cards.
+(`*_Typing`); the back-side script compares the reconstructed typed answer against both to
+give tiered feedback (perfect-with-stress / correct-no-stress / incorrect) — see "Typing-card
+design pattern for Ukrainian text" below for the full mechanics (this is the canonical
+implementation the pattern was later copied from into `UA_Lexeme`, 2026-07-25).
+
+**Typing-card design pattern for Ukrainian text (established here; UA_Lexeme's EN→UA card
+fixed to match, 2026-07-25).** Any card where the student types Ukrainian and the correct
+answer may carry combining stress marks (U+0301) must use this pattern — a naive
+`{{type:Field}}` + `document.querySelector('input[type="text"]')` script (what `UA_Lexeme`'s
+EN→UA card originally shipped with) is broken two independent ways:
+
+1. **Anki's own native `{{type:Field}}` diff** — auto-rendered wherever `{{FrontSide}}`
+   appears on the answer side — wraps every character in its own `<span>`. A combining
+   stress mark rendered in isolation visually detaches from its base vowel: it looks like a
+   stray apostrophe/tick mark sitting next to the letter, not an accent on top of it. (This
+   is what Craig originally reported as "apostrophes... called out as their own character.")
+2. **There is no live `<input>` element on the answer side.** Anki replaces it with the diff
+   markup above by the time any answer-side script runs, so
+   `document.querySelector('input[type="text"]')` always returns `null` — any custom
+   feedback block built on that lookup silently never populates.
+
+The fix, implemented in `tools/anki/setup/setup_ua_pvom_note_type.py` (`make_front`/
+`make_back`/`FEEDBACK_SCRIPT`) and copied into `setup_ua_note_types.py`'s `EN_UA_FRONT`/
+`EN_UA_BACK`:
+
+- **Type the STRESSED field as the `{{type:...}}` target, not the unstressed one** — e.g.
+  `{{type:Walking_Multi_UA}}` / `{{type:Lemma}}`, not the `*_Typing`/`TypingAnswer` field.
+  Typing the stressed form correctly is then a clean exact match for Anki's diff; typing
+  without stress becomes a clean *omission*. Both are well-behaved. The reverse (unstressed
+  target, stressed *insertion*) is the case that produces the detached-mark artifact.
+- **Reconstruct the typed answer from Anki's own `#typeans` diff** instead of a live input:
+  walk `#typeans`'s child nodes, collect `.typeGood`/`.typeBad` span text content, and stop
+  at `#typearrow` if present (an inexact match renders TWO lines inside `#typeans` — "what
+  you typed" then a `#typearrow` separator then "the correct answer" — both reuse the same
+  classes, so not stopping at the arrow doubles the reconstructed text).
+- **Hide the native diff** (`typeansEl.style.display = 'none'`) and render custom tiered
+  feedback (perfect-with-stress / correct-no-stress / incorrect / couldn't-determine) from
+  the reconstructed text instead.
+- **NFC-normalize before comparing** — the reconstructed text and the reference field values
+  can differ in Unicode composition form even when visually identical (combining-diacritic
+  text is sensitive to this in a way plain text isn't).
+
+Reference this pattern for any future Ukrainian-typing card — e.g. the UA_Verb production
+template noted as "design decision pending" below, if it gets built.
 
 **Verification caveat:** the з- prefix (схо́дити/зійти́) is the one form in this set where
 Горох's dictionary entry doesn't cleanly label the aspectual pair the way it does for the
@@ -440,9 +479,15 @@ buckets. Triage deliberately — do not assume from spelling alone.
   packaged as an importable library (`create_or_link_lexeme()`), plus the write-side
   handling for all three spelling-keyed buckets (new/homograph/duplicate): creates the new
   note, or appends the chapter tag + dated verification note to an existing one, or
-  cross-links both notes' `ConfusableSet` fields for a homograph pair. Not yet called from
-  any generator script — see item 0 above and
-  [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md).
+  cross-links both notes' `ConfusableSet` fields for a homograph pair.
+- `tools/anki/extract/gen_ch09_subsection.py` (new 2026-07-25) — the actual generator
+  script item 0 called for: takes a batch of already-drafted candidates (lemma, fields,
+  and an explicit dedup decision) and routes every one through `create_or_link_lexeme()`
+  before it touches disk. Does not automate the Горох verification, phrase/component
+  decomposition, or the new-vs-duplicate-vs-homograph judgment call itself — those stay
+  human/Claude-in-Chrome-driven per CLAUDE-ch09-vocab-workflow.md — it only guarantees no
+  candidate can reach the corpus by a hand-written-file path that skips the check. Not yet
+  exercised against a real ch.9.3+ batch.
 - `tools/anki/inspect/build_lexeme_index.py` (new 2026-07-24) — dumps the full lexeme
   corpus to `build/ua_lexeme_index.tsv` (gitignored) in one pass, for the bucket-4
   full-corpus audit and for spot-checking bucket-1/2/3 spelling collisions at scale without
@@ -499,8 +544,9 @@ python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
 | `tools/anki/inspect/test_preset_creation.py` | ✓ new (2026-07-20) | Diagnostic tool for testing preset creation approaches |
 | `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
 | `tools/anki/inspect/patch_ch09_conj_tables.py` | ✓ done | One-shot: Verb_Conj_Table for notes 0117–0131 |
-| `tools/anki/lib/lexeme_dedup.py` | ✓ new (2026-07-24) | `create_or_link_lexeme()` — dedup/homograph create-or-link API (new/homograph/duplicate); not yet wired into any generator script |
+| `tools/anki/lib/lexeme_dedup.py` | ✓ new (2026-07-24) | `create_or_link_lexeme()` — dedup/homograph create-or-link API (new/homograph/duplicate) |
 | `tools/anki/inspect/build_lexeme_index.py` | ✓ new (2026-07-24) | Full-corpus lexeme → `build/ua_lexeme_index.tsv` dump for audits |
+| `tools/anki/extract/gen_ch09_subsection.py` | ✓ new (2026-07-25) | Ch-09 batch driver wiring `create_or_link_lexeme()` into note generation (CLAUDE.md item 0); not yet used on a real batch |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 
