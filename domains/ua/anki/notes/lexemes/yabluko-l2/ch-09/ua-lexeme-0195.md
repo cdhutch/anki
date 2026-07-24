@@ -12,15 +12,15 @@ tags:
 - ch:2.9.3
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0195
   Lemma: тру́бка
   PartOfSpeech: noun
   Gender: f
   Perfective: ''
-  EN_Gloss: 'tube; snorkel tube; (also: telephone receiver)'
+  EN_Gloss: tube; snorkel tube
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

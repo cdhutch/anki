@@ -12,7 +12,7 @@ tags:
 - ch:2.9.3
 - pos:phrase
 - phrase:verb
-- stress:unverified
+- stress:verified
 - status:draft
 fields:
   NoteID: ua-lexeme-0225

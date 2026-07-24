@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.3
 - pos:adjective
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0206
   Lemma: видо́вищний

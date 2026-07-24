@@ -11,16 +11,16 @@ tags:
 - textbook:яблуко
 - ch:2.9.3
 - pos:noun
-- gender:pl
+- gender:m
 - stress:unverified
 - status:draft
 fields:
   NoteID: ua-lexeme-0189
-  Lemma: ла́сти
+  Lemma: ласт
   PartOfSpeech: noun
-  Gender: pl
+  Gender: m
   Perfective: ''
-  EN_Gloss: flippers, swim fins
+  EN_Gloss: flipper, swim fin
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -29,7 +29,7 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: ласти
+  TypingAnswer: ласт
   UA_Example: Без ластів важко швидко плисти під водою.
   EN_Example: Without flippers it's hard to swim fast underwater.
   Verb_Conj_Table: ''
