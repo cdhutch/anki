@@ -612,6 +612,31 @@ buckets. Triage deliberately — do not assume from spelling alone.
      - Cross-reference the retirement in the surviving/replacement note's `Verification
        Notes` (see ua-lexeme-0211).
 
+6. **Same-Lemma polysemy split — one UA spelling, multiple disjoint EN senses**
+   (established 2026-07-25, Craig; вболівати/партія precedent). Different axis from bucket
+   2/3 (same spelling, different chapter encounter) and from bucket 4 (different spellings,
+   overlapping gloss) -- this is one word, one spelling, genuinely unrelated meanings, where
+   Craig's call is multiple notes over one combined gloss. Full mechanism, template
+   requirements, and worked examples are documented under "Same-Lemma polysemy split" in
+   Card Template Techniques below -- not repeated here. Trigger and steps, briefly:
+     - **Trigger:** a note's `EN_Gloss` is combining two or more senses that don't share a
+       throughline (contrast with вік's age/era, which stays one note -- see "Polysemous
+       word examples" below), OR Горох's Тлумачення lists multiple numbered senses and the
+       note is silently scoped to just one without saying so.
+     - **Steps:** narrow the original note's `EN_Gloss` to the one sense it actually
+       demonstrates; create a sibling note with the same `Lemma`/`TypingAnswer`, a new
+       NoteID, and its own `EN_Gloss`/`UA_Example`/`EN_Example` for the other sense; cross-
+       reference both notes explicitly in `Verification Notes`.
+     - **Do NOT use Compare card fields (`CompareScenario`/`CompareA-D`) for this.** Per
+       Craig, those are for the opposite direction -- multiple UA spellings competing for one
+       EN concept (bucket 2/4 territory, e.g. вид/метелик's true homographs). One UA spelling
+       with multiple EN senses is handled by `EN_Example`/`UA_Example` alone: `UA_EN_FRONT`
+       renders `UA_Example` on every card now, so each sibling's own example sentence is what
+       disambiguates which sense is being tested.
+     - Horox's page may list far more senses than are worth splitting out (партія has ~7) --
+       only split what's textbook-relevant or genuinely common; note the rest as excluded in
+       Verification Notes rather than creating a note per dictionary sense.
+
 **Tooling:**
 - `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
   lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
