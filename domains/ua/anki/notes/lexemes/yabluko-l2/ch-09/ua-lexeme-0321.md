@@ -11,14 +11,14 @@ tags:
 - textbook:яблуко
 - ch:2.9.6
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0321
   Lemma: перепро́шувати
   PartOfSpeech: verb
   Gender: ''
-  Perfective: ''
+  Perfective: перепроси́ти
   EN_Gloss: 'to apologize, beg pardon (discourse marker: ''excuse me'')'
   Govt_Case: ''
   CounterpartForm: ''
@@ -33,11 +33,15 @@ fields:
   EN_Example: Excuse me, I didn't hear when the train departs.
   Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
-  Source_URL: https://goroh.pp.ua/Словозміна/перепрошувати
-  Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
-  Verification Notes: Горох's second homograph sense ('розпитувати', to question/interrogate)
-    is unrelated; this note uses the apologetic 'excuse me' sense. No clean perfective counterpart
-    is attested for this discourse-marker usage -- treated as imperfective-only, similar to
-    вболівати in ch.9.3.
+  Source_URL: https://goroh.pp.ua/Словозміна/перепрошувати; https://goroh.pp.ua/Словозміна/перепросити
+  Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass. Corrected 2026-07-28 per
+    Craig's question -- see Verification Notes.
+  Verification Notes: '2026-07-28: added Perfective (перепроси́ти), correcting the earlier
+    "no clean perfective attested" claim. Горох''s Тлумачення entry for перепросити carries
+    two homograph senses (перепросити1/перепросити2), each redirecting "Див." back to the
+    matching перепрошувати1/2 sense -- same aspect-pair cross-reference format confirmed for
+    установити/устано́влювати and утопити/втопити earlier in this corpus. Sense 1 ("просити
+    вибачення; вибачатися") is the apologize/"excuse me" sense this note uses; sense 2 ("розпитувати")
+    is the unrelated interrogate homograph, still not used here.'
 ---
 
