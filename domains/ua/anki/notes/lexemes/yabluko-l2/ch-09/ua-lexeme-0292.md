@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0292
   Lemma: фінішува́ти
@@ -24,7 +24,7 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: закінчувати
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -35,7 +35,11 @@ fields:
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/фінішувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
-  Verification Notes: Двовидове (biaspectual) -- same form serves both imperfective and perfective
-    functions; no separate Perfective form.
+  Verification Notes: 'Двовидове (biaspectual) -- same form serves both imperfective and perfective
+    functions; no separate Perfective form. 2026-07-28: added ConfusableSet (закінчувати)
+    -- Горох''s Синонімія page for фінішувати lists both закінчувати and кінчати as synonyms;
+    закінчувати chosen over кінчувати per Craig''s decision to avoid the latter''s well-known
+    colloquial vulgar connotation (not documented by Горох but common knowledge). No standalone
+    Lexeme or PVOM note exists for закінчувати.'
 ---
 

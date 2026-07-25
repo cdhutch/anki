@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0291
   Lemma: старту́ва́ти
@@ -24,7 +24,7 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: починати
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -35,7 +35,9 @@ fields:
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/стартувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
-  Verification Notes: Двовидове (biaspectual) -- same form serves both imperfective and perfective
-    functions; no separate Perfective form.
+  Verification Notes: 'Двовидове (biaspectual) -- same form serves both imperfective and perfective
+    functions; no separate Perfective form. 2026-07-28: added ConfusableSet (починати) --
+    Горох''s Синонімія page for стартувати lists починати directly. No standalone Lexeme or
+    PVOM note exists for починати; ConfusableSet only needs the string value, not a note reference.'
 ---
 
