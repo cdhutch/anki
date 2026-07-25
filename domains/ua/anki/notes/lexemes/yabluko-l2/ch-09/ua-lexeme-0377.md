@@ -12,7 +12,7 @@ tags:
 - ch:2.9.3
 - pos:verb
 - stress:verified
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0377
   Lemma: вболіва́ти

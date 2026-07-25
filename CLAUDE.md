@@ -53,7 +53,34 @@ on syllable 2) is a different, unrelated word ("to wear out by prolonged walking
 `*_Euphony`, its vehicle forms do. находити is added PVOM-only (highly polysemous -- 6 Горох
 senses, dominant modern use is "find" via знайти, not walking -- so no `UA_Lexeme` note unless
 it turns up in Яблуко); its на- prefix has no euphonic tension (vowel-final, unlike в-), so all
-four `*_Euphony` fields are blank on 0013.
+four `*_Euphony` fields are blank on 0013. 2026-07-25 (later still): redesigned `UA_Lexeme`'s
+euphony mechanism from pure tolerance to recognition-testing, per Craig -- the goal isn't just
+accepting either spelling, it's requiring the student to demonstrate they know a euphonic
+partner exists. `EuphonyNote` (single note-level field, bare/unstressed) is retired, renamed via
+AnkiConnect `modelFieldRename` (preserves 0211/0377's existing data, not a destructive
+add+remove) to `Lemma_Euphony`, alongside two new sibling fields
+`ImperfectiveUnidirectional_Euphony` and `Perfective_Euphony` -- matching PVOM's per-slot
+`*_Euphony` pattern exactly, since euphony can land on any one aspect slot independently (e.g.
+учити/вчити -> вивчити has euphony only on the imperfective slot). Contract change: these
+fields now store the STRESSED alternate (e.g. `уболіва́ти`, not `уболівати`) -- a euphonic
+alternate's own stress mark can't be safely derived from the primary form's (see входити/увійти
+above), so it's authored directly, same as every other stressed field in this note type.
+`compute_typing_target()` in `ua_lexeme_import.py` now computes three joined variants per note
+at sync time: `TypingTarget_UA`/`TypingAnswer` (FULL -- euphony-having slots render as
+"primary ; euphonic", nested inside the existing `/`-joined aspect string), and two new derived
+field pairs, `TypingTarget_UA_Base`/`TypingAnswer_Base` (primary forms only -- this is exactly
+the pre-redesign join) and `TypingTarget_UA_AltOnly`/`TypingAnswer_AltOnly` (euphonic form in
+place of primary, for slots that have one). New JS tier in `EN_UA_BACK`: typing the FULL
+string = PERFECT (pairing recognized); typing Base or AltOnly alone = new PARTIAL tier (word is
+right, pairing isn't demonstrated); neither = INCORRECT. For notes with no euphony on any slot,
+Base equals the FULL string and AltOnly is blank, so the PARTIAL tier is unreachable and
+behavior is byte-for-byte unchanged from before this redesign -- verified by construction, not
+just by testing 0211/0377. **Behavior change on already-tested data:** typing bare `уболівати`
+on 0211/0377, which previously graded as full-credit "accepted alternate spelling," now grades
+as PARTIAL -- this is the intended outcome of the redesign, not a regression. PVOM's separate,
+simpler accept-either-for-full-credit mechanism (`Vehicle_*_Euphony` on ua-pvom-0012) is
+explicitly out of scope for this redesign and unchanged -- Craig confirmed PVOM validation
+complete under the original design before this thread resumed.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -415,26 +442,65 @@ aspect (habitual/ongoing vs. one-time/completed) was expected. `AspectCue` fixes
   were excluded on this basis (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360), leaving 15 that
   got `AspectCue` values (0224, 0226-0229, 0231-0234, 0299-0303, 0359).
 
-**EuphonyNote acceptance (alternate spelling grading, added 2026-07-25; extended to
-`UA_PVOM_Infinitive` same day)**
+**PVOM euphony acceptance (alternate spelling grading, added 2026-07-25)**
 
-`EN_UA_BACK` already reconstructs the typed answer from Anki's `#typeans` diff and does its
-own exact-string comparison (against `TypingTarget_UA`/`TypingAnswer`) rather than trusting
-Anki's native diff for pass/fail -- see the dual-tier PERFECT/CORRECT JS block. `EuphonyNote`
-hooks into that same comparison as a third tier: if the typed answer (stress-stripped, NFC
-normalized) matches an `EuphonyNote` alternate, it's graded correct, not just noted. Craig's
-call, 2026-07-25: real acceptance, not a passive display note -- the plumbing already existed,
-so building it properly cost little more than displaying it would have.
+`UA_PVOM_Infinitive`'s per-base `*_Euphony` fields (`Walking_Multi_Euphony`, `Walking_Uni_Euphony`,
+`Vehicle_Multi_Euphony`, `Vehicle_Uni_Euphony`) implement pure tolerance: `*_UA`/`*_Typing`
+back-side scripts already reconstruct the typed answer from Anki's `#typeans` diff and compare
+it against both (PERFECT-with-stress / CORRECT-no-stress); `*_Euphony` hooks in as a third tier
+-- typed answer (stress-stripped, NFC normalized) matches an alternate -> graded correct
+outright, no pairing recognition required. Field contract: bare word, no stress marks,
+`|`-delimited if more than one alternate. First use: ua-pvom-0012 (входити), accepting
+уїжджати/уїхати on its vehicle forms. **Deliberately kept simple and unchanged** -- see the
+`UA_Lexeme` mechanism below for why a richer design was needed there but not here (PVOM cards
+already isolate each base form on its own template/FSRS card, so there's no aspect-pair join to
+nest euphony inside of).
 
-- **Field contract:** bare word, no stress marks, `|`-delimited if more than one alternate.
-- Rendered as its own tier in the feedback JS (distinct from the PERFECT-with-stress and
-  CORRECT-no-stress tiers), and also shown passively on `UA_EN_BACK` for reading context.
-- First use: ua-lexeme-0211/0377 (вболівати), accepting уболівати (the у-/в- initial variant).
-- **Shared by both note types.** `UA_PVOM_Infinitive` uses the identical field contract and JS
-  tier, but per-slot: `Walking_Multi_Euphony`, `Walking_Uni_Euphony`, `Vehicle_Multi_Euphony`,
-  `Vehicle_Uni_Euphony` (mirrors the existing `*_UA`/`*_Typing` per-base-form pattern -- see
-  "PVOM prefix drilling" below). First PVOM use: ua-pvom-0012 (входити), accepting
-  уїжджати/уїхати on its vehicle forms.
+**Lemma_Euphony / aspect+euphony recognition testing (`UA_Lexeme`, redesigned 2026-07-25)**
+
+Supersedes an earlier same-day design (`EuphonyNote`, pure tolerance, same shape as PVOM's
+mechanism above) once Craig reframed the goal: the EN->UA card should require demonstrating
+that a euphonic partner is *known to exist*, not just accept either spelling silently.
+
+- **Fields:** `Lemma_Euphony`, `ImperfectiveUnidirectional_Euphony`, `Perfective_Euphony` --
+  one per aspect slot, since euphony can land on any slot independently (e.g. учити/вчити ->
+  вивчити has it only on the imperfective slot; входити's hypothetical PVOM analog would have
+  it only on vehicle forms, not walking -- see PVOM section above). Optional, blank where not
+  applicable.
+- **Contract: stressed**, unlike PVOM's bare-word contract. A euphonic alternate's own stress
+  mark isn't safely derivable from the primary form's -- увійти isn't a letter-swap of входити,
+  it has its own epenthesis -- so it's authored directly on the field, same as every other
+  stressed field on this note type (`Lemma`, `Perfective`, etc).
+- **Computed at sync time** (`compute_typing_target()`, `ua_lexeme_import.py`), same
+  derive-don't-hand-author principle as the original aspect join: three stressed/unstressed
+  pairs per note --
+  - `TypingTarget_UA` / `TypingAnswer` (**FULL**): the existing `/`-joined aspect string, but
+    any slot with a populated `*_Euphony` renders as `primary ; euphonic` instead of just
+    `primary` -- e.g. `учи́ти ; вчи́ти / ви́вчити` (`;` nests inside a slot, `/` still separates
+    aspect slots -- backward compatible with every non-euphony note, which never sees a `;`).
+  - `TypingTarget_UA_Base` / `TypingAnswer_Base`: primary forms only, every slot -- identical
+    to what `TypingTarget_UA` computed before this redesign.
+  - `TypingTarget_UA_AltOnly` / `TypingAnswer_AltOnly`: euphonic form in place of primary, for
+    slots that have one (other slots still use primary) -- blank entirely when no slot on the
+    note has any `*_Euphony` populated.
+- **Feedback tiers (`EN_UA_BACK` JS):** typed == FULL (stressed) -> PERFECT, pairing recognized
+  with bonus stress credit. Typed == FULL (unstressed) -> CORRECT, pairing recognized, missing
+  stress. Typed == Base or AltOnly (stressed or unstressed) -> new **PARTIAL** tier: the word
+  itself is right, but the pairing wasn't demonstrated -- shown its own color, feedback names
+  the FULL form as what earns full credit. Anything else -> INCORRECT.
+- **Degrades cleanly:** for any note with no euphony on any slot, Base and FULL are identical
+  strings and AltOnly is blank, so the PARTIAL tier's conditions can never be met (they'd have
+  already matched PERFECT/CORRECT) -- verified by construction that this redesign doesn't touch
+  grading for the rest of the corpus, not just spot-tested.
+- **Behavior change, not a bug:** typing bare `уболівати` on 0211/0377 used to be full credit
+  under the old `EuphonyNote` tolerance design; under this redesign it's PARTIAL, since it
+  demonstrates knowing a word but not the pairing. Intended per Craig's reframed goal.
+- **Migration:** `EuphonyNote`'s existing data (0211/0377) renamed to `Lemma_Euphony` via
+  AnkiConnect `modelFieldRename` (preserves the field's data in place) rather than add-new +
+  remove-old, which `setup_ua_note_types.py`'s normal field-sync loop would otherwise do
+  (destructively, per its own "Removing field: X (data lost)" log line) since it only knows how
+  to add-missing/remove-obsolete, not rename. The renamed field's value was also re-authored
+  with its stress mark (`уболівати` -> `уболіва́ти`) to satisfy the new stressed contract.
 
 **PVOM prefix drilling (multi-form typing cards)**
 
