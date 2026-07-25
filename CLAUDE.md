@@ -493,11 +493,14 @@ that a euphonic partner is *known to exist*, not just accept either spelling sil
   - `TypingTarget_UA_AltOnly` / `TypingAnswer_AltOnly`: euphonic form in place of primary, for
     slots that have one (other slots still use primary) -- blank entirely when no slot on the
     note has any `*_Euphony` populated.
-- **Feedback tiers (`EN_UA_BACK` JS):** typed == FULL (stressed) -> PERFECT, pairing recognized
-  with bonus stress credit. Typed == FULL (unstressed) -> CORRECT, pairing recognized, missing
-  stress. Typed == Base or AltOnly (stressed or unstressed) -> new **PARTIAL** tier: the word
-  itself is right, but the pairing wasn't demonstrated -- shown its own color, feedback names
-  the FULL form as what earns full credit. Anything else -> INCORRECT.
+- **Feedback tiers (`EN_UA_BACK` JS), 5 total.** FULL (stressed) -> PERFECT (green), pairing
+  recognized with bonus stress credit. FULL (unstressed) -> CORRECT (orange), pairing
+  recognized, missing stress. **PARTIAL is split the same with-stress/no-stress way as FULL**
+  (added 2026-07-25, per Craig -- "the red and orange levels like we did for stress"): Base or
+  AltOnly *with* its own correct stress -> PARTIAL-stressed (dark amber #ef6c00), single form
+  right and properly stressed, pairing not shown; Base or AltOnly with no stress -> PARTIAL-no-
+  stress (dark red #c62828), single form right but missing both stress and pairing. Anything
+  else -> INCORRECT (red). All tiers name the FULL stressed form as what earns full credit.
 - **Degrades cleanly:** for any note with no euphony on any slot, Base and FULL are identical
   strings and AltOnly is blank, so the PARTIAL tier's conditions can never be met (they'd have
   already matched PERFECT/CORRECT) -- verified by construction that this redesign doesn't touch
