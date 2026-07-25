@@ -432,13 +432,23 @@ EN_UA_BACK = """\
            '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, but missing stress marks</div>' +
            '<div style="color: #2e7d32; font-size: 16px; font-weight: bold;">Bonus answer:</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
-  } else if (typedAnswer !== null && (partialWithStress.indexOf(typedAnswer) !== -1 || partialNoStress.indexOf(typedAnswer) !== -1)) {
-    // PARTIAL (added 2026-07-25): a genuinely correct single form, but the
-    // euphonic pairing wasn't demonstrated -- not full credit.
-    html = '<div style="color: #7b1fa2; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+  } else if (typedAnswer !== null && partialWithStress.indexOf(typedAnswer) !== -1) {
+    // PARTIAL, stressed (added 2026-07-25): single form, but WITH its own
+    // correct stress mark -- one rung below CORRECT (which requires the
+    // pairing), same two-level with-stress/no-stress split the FULL tier
+    // uses above, applied to the partial-credit tier too.
+    html = '<div style="color: #ef6c00; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
            typedAnswer + ' ½ PARTIAL</div>' +
-           '<div style="color: #7b1fa2; font-size: 14px; margin-bottom: 12px;">Correct word, but the euphonic pairing isn\'t shown</div>' +
+           '<div style="color: #ef6c00; font-size: 14px; margin-bottom: 12px;">Correct word with stress, but the euphonic pairing isn\'t shown</div>' +
            '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Full credit needs both:</div>' +
+           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
+  } else if (typedAnswer !== null && partialNoStress.indexOf(typedAnswer) !== -1) {
+    // PARTIAL, no stress: single form, missing its own stress mark too --
+    // weaker than the stressed-partial tier above, still ahead of INCORRECT.
+    html = '<div style="color: #c62828; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           typedAnswer + ' ½ PARTIAL</div>' +
+           '<div style="color: #c62828; font-size: 14px; margin-bottom: 12px;">Correct word, but missing stress AND the euphonic pairing</div>' +
+           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Full credit needs both, with stress:</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
   } else if (typedAnswer !== null) {
     // Reconstruction succeeded and it's none of the above -- genuinely wrong.
