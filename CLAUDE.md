@@ -24,7 +24,15 @@ per Горох verification (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360 -- s
 under Card Template Techniques below for the full mechanism and "Legacy Field Removal" for the
 live-model field count). The remaining 15 (0224, 0226-0229, 0231-0234, 0299-0303, 0359) are
 drafted, Горох-researched, and locally pre-validated clean via `cnsf_canonicalize.py`; commit
-pending Craig's go-ahead.
+pending Craig's go-ahead. 2026-07-25: adopted the "Same-Lemma polysemy split" pattern for words
+with genuinely disjoint senses (see Card Template Techniques below) -- вболівати split into
+ua-lexeme-0211/0225 ("root for") and a new sibling ua-lexeme-0377 ("worry/grieve for"). Enabled
+by a `UA_EN_FRONT` template change: `UA_Example` now renders on every UA->EN card front (not
+just back), and the `Lemma`/`Perfective` aspect pair now shares one line/font instead of two.
+New process rule from Craig, effective this change: for a paradigm change, document in CLAUDE.md
+first and get that committed on its own before implementing the corresponding code/YAML --
+this entry is that first step; the `setup_ua_note_types.py` template edit and the 0211/0225/0377
+note changes are drafted but not yet synced or committed as of this entry.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -290,6 +298,39 @@ EN_Example: At what age do children go to school? | They lived during the Middle
 ```
 
 This shows the learner that the same Ukrainian word spans multiple semantic domains.
+
+**Same-Lemma polysemy split (multiple notes, one Lemma) -- added 2026-07-25**
+
+For a UA word with genuinely *disjoint* senses (not closely-related shades of one meaning, like
+вік's "age"/"era" above), Craig's call is to split into separate notes sharing the same
+`Lemma`/`TypingAnswer` rather than combining both senses into one `EN_Gloss`. Each sibling note
+gets its own `EN_Gloss`, `UA_Example`, `EN_Example` -- whichever specific sense it covers.
+Example: вболіва́ти has two disjoint dictionary senses (Горох Тлумачення) -- "to root for, cheer
+for (a team)" (ua-lexeme-0211, plus the "вболівати за" phrase form ua-lexeme-0225) and "to
+worry/grieve for (someone)" (ua-lexeme-0377) -- both true imperfectiva tantum (same aspect
+research applies to every sibling; see ua-lexeme-0211's Verification Notes for the full Горох
+evidence).
+
+Cross-reference siblings explicitly in `Verification Notes` (see ua-lexeme-0211/0225/0377) so
+the dedup/homograph audit tooling doesn't mistake identical-Lemma siblings for accidental
+duplicates -- this is a different situation from true duplicates (CNSF Dedup Workflow above) and
+from homograph splits like лавка/0235/0372 (etymologically distinct words that happen to share
+spelling): here it's one word, one form, genuinely disjoint meanings.
+
+This only works because `UA_EN_FRONT` now always renders `UA_Example` (see below) -- without a
+context sentence on the front, two same-Lemma notes would be indistinguishable until the flip,
+making it impossible to tell which sense is actually being tested.
+
+**`UA_EN_FRONT` template changes -- 2026-07-25:**
+
+- `UA_Example` now renders on the front of every UA->EN card, not just the back. Two reasons:
+  general reading practice (Craig wants to read Ukrainian phrases in context, not bare
+  headwords) and it's what makes the same-Lemma polysemy split above workable at all.
+- `Lemma` and `Perfective` (the ндв/дв aspect pair) now render on one line in one shared style
+  (both use the `.lemma` class) instead of two separate divs -- previously `Perfective` sat on
+  its own line in a smaller, greyed-out `.perfective` style, which read as a demoted afterthought
+  rather than an equally valid form. The `.perfective` CSS class is retired (nothing else used
+  it).
 
 **Comparison card (scenario-based confusable discrimination)**
 
