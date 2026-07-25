@@ -13,8 +13,8 @@ tags:
 - pos:verb
 - phrase:verb
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0300
   Lemma: перелеті́ти че́рез рі́чку на мотузці́

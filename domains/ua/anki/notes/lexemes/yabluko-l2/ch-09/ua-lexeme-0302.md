@@ -13,8 +13,8 @@ tags:
 - pos:verb
 - phrase:verb
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0302
   Lemma: підніма́тися на ске́лі

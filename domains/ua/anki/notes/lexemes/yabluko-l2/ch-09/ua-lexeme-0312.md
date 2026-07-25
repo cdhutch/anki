@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.6
 - pos:adjective
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0312
   Lemma: ни́жній

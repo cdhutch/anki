@@ -13,8 +13,8 @@ tags:
 - pos:phrase
 - phrase:conversational
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0327
   Lemma: Вибачте, Ви сказа́ли...?
