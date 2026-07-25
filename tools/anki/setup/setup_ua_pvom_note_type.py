@@ -26,12 +26,16 @@ FIELDS = [
     "Prefix",
     "Walking_Multi_UA",
     "Walking_Multi_Typing",
+    "Walking_Multi_Euphony",
     "Walking_Uni_UA",
     "Walking_Uni_Typing",
+    "Walking_Uni_Euphony",
     "Vehicle_Multi_UA",
     "Vehicle_Multi_Typing",
+    "Vehicle_Multi_Euphony",
     "Vehicle_Uni_UA",
     "Vehicle_Uni_Typing",
+    "Vehicle_Uni_Euphony",
     "Tags_Ch",
     "Source_Note",
     "Verification_Notes",
@@ -43,6 +47,14 @@ FEEDBACK_SCRIPT = """\
   var feedback = document.getElementById('feedback');
   var withStress = feedback.dataset.withStress;
   var noStress = feedback.dataset.noStress;
+
+  // EuphonyNote acceptance (added 2026-07-25, ported from UA_Lexeme's EN_UA_BACK) --
+  // bare/pipe-delimited alternates, stress-stripped + NFC-normalized before comparison.
+  function stripStress(s) { return s.replace(/\u0301/g, ''); }
+  var euphonyRaw = feedback.dataset.euphony || '';
+  var euphonyAlts = euphonyRaw.split('|')
+    .map(function(s) { return stripStress(s.trim()).normalize('NFC'); })
+    .filter(function(s) { return s.length > 0; });
 
   // Anki's own type-answer field replaces the front's <input> with a #typeans
   // diff (spans classed typeGood/typeBad/typeMissed) once the answer side
@@ -91,6 +103,13 @@ FEEDBACK_SCRIPT = """\
            '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, missing stress</div>' +
            '<div style="color: #1565c0; font-size: 16px; font-weight: bold;">With stress:</div>' +
            '<div style="color: #1565c0; font-size: 18px;"><b>' + withStress + '</b></div>';
+  } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer).normalize('NFC')) !== -1) {
+    // Accepted alternate spelling (*_Euphony) -- genuinely correct, not just noted.
+    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           typedAnswer + ' ✓ CORRECT</div>' +
+           '<div style="color: #2e7d32; font-size: 14px; margin-bottom: 12px;">Accepted alternate spelling</div>' +
+           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Primary form:</div>' +
+           '<div style="color: #1565c0; font-size: 16px;"><b>' + withStress + '</b></div>';
   } else if (typedAnswer !== null) {
     // Reconstruction succeeded and it's neither of the accepted answers --
     // genuinely wrong.
@@ -121,12 +140,13 @@ def make_front(label, typing_field):
     )
 
 
-def make_back(with_stress_field, no_stress_field):
+def make_back(with_stress_field, no_stress_field, euphony_field):
     return (
         "{{FrontSide}}\n"
         '<hr id="answer">\n'
         '<div id="feedback" data-with-stress="{{' + with_stress_field + '}}" '
-        'data-no-stress="{{' + no_stress_field + '}}" style="margin-bottom: 16px;"></div>\n'
+        'data-no-stress="{{' + no_stress_field + '}}" '
+        'data-euphony="{{' + euphony_field + '}}" style="margin-bottom: 16px;"></div>\n'
         + FEEDBACK_SCRIPT
         + '<div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e0e0e0; '
         'font-size: 12px; color: #999;">\n  {{Source_Note}}\n</div>\n'
@@ -141,22 +161,22 @@ CARD_TEMPLATES = [
         # clean omission instead. Both are well-behaved for Anki's diff --
         # the reverse (unstressed target, stressed insertion) is not.
         "Front": make_front("ходити", "Walking_Multi_UA"),
-        "Back": make_back("Walking_Multi_UA", "Walking_Multi_Typing"),
+        "Back": make_back("Walking_Multi_UA", "Walking_Multi_Typing", "Walking_Multi_Euphony"),
     },
     {
         "name": "Walking (Uni)",
         "Front": make_front("іти", "Walking_Uni_UA"),
-        "Back": make_back("Walking_Uni_UA", "Walking_Uni_Typing"),
+        "Back": make_back("Walking_Uni_UA", "Walking_Uni_Typing", "Walking_Uni_Euphony"),
     },
     {
         "name": "Vehicle (Multi)",
         "Front": make_front("їздити", "Vehicle_Multi_UA"),
-        "Back": make_back("Vehicle_Multi_UA", "Vehicle_Multi_Typing"),
+        "Back": make_back("Vehicle_Multi_UA", "Vehicle_Multi_Typing", "Vehicle_Multi_Euphony"),
     },
     {
         "name": "Vehicle (Uni)",
         "Front": make_front("їхати", "Vehicle_Uni_UA"),
-        "Back": make_back("Vehicle_Uni_UA", "Vehicle_Uni_Typing"),
+        "Back": make_back("Vehicle_Uni_UA", "Vehicle_Uni_Typing", "Vehicle_Uni_Euphony"),
     },
 ]
 
