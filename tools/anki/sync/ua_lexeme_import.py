@@ -41,6 +41,7 @@ import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
+from tools.anki.lib.lexeme_dedup import strip_stress  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Lexeme"
@@ -163,6 +164,38 @@ def parse_note_file(path: Path) -> dict | None:
 # ---------------------------------------------------------------------------
 
 
+def compute_typing_target(lemma: str, impf_uni: str, perfective: str) -> tuple[str, str] | None:
+    """Build the EN->UA typing target for a verb's full stressed aspect set.
+
+    Added 2026-07-27 per Craig: for verb notes, the EN->UA card should require
+    typing the entire aspect singlet/couplet/triplet, not just Lemma alone --
+    e.g. "ходи́ти / йти / піти́" (multidirectional-imperfective / unidirectional-
+    imperfective / perfective triplet) or "перекида́ти / переки́нути" (imperfective/
+    perfective doublet). Order is always Lemma, then ImperfectiveUnidirectional (if
+    populated), then Perfective (if populated) -- matching the multi-imp -> uni-imp
+    -> perfective progression. Any missing slot is dropped, not left blank, so a
+    doublet renders as "Lemma / Perfective", never "Lemma / / Perfective".
+
+    Returns None when fewer than two forms are populated (a plain singlet, e.g. an
+    imperfective-only verb like мати with no aspectual counterpart, or any non-verb
+    note where Perfective/ImperfectiveUnidirectional are simply not applicable) --
+    callers should leave TypingTarget_UA/TypingAnswer as Lemma-only in that case,
+    same behavior as before this feature existed.
+
+    Computed here (at sync time) rather than hand-authored into a new CNSF field,
+    by design: Lemma/ImperfectiveUnidirectional/Perfective are already the
+    authored source of truth, and deriving the join avoids the exact class of bug
+    just fixed above (a second, independently-authored field silently drifting out
+    of sync with -- or being clobbered relative to -- the fields it's derived from).
+    """
+    parts = [p for p in (lemma, impf_uni, perfective) if p]
+    if len(parts) < 2:
+        return None
+    stressed = " / ".join(parts)
+    unstressed = " / ".join(strip_stress(p) for p in parts)
+    return stressed, unstressed
+
+
 def import_note(data: dict, dry_run: bool) -> str:
     """Import a single parsed note. Returns 'added', 'updated', or 'skipped'."""
     note_id = data.get("note_id", "")
@@ -175,6 +208,20 @@ def import_note(data: dict, dry_run: bool) -> str:
 
     # Coerce all field values to strings (YAML may parse numbers/booleans)
     fields = {k: ("" if v is None else str(v)) for k, v in raw_fields.items()}
+
+    # EN->UA typing target: full stressed aspect join for verbs with a populated
+    # counterpart (see compute_typing_target docstring); Lemma alone otherwise.
+    typing_target = compute_typing_target(
+        fields.get("Lemma", ""),
+        fields.get("ImperfectiveUnidirectional", ""),
+        fields.get("Perfective", ""),
+    )
+    if typing_target:
+        fields["TypingTarget_UA"] = typing_target[0]
+        fields["TypingAnswer"] = typing_target[1]
+    else:
+        fields["TypingTarget_UA"] = fields.get("Lemma", "")
+        # TypingAnswer left as authored in the CNSF file for singlets.
 
     # NOTE (2026-07-27 bug fix): this function used to overwrite fields["CompareA"]
     # / fields["CompareB"] here with a parity-based swap of (Lemma, raw ConfusableSet
