@@ -56,15 +56,25 @@ it turns up in Яблуко); its на- prefix has no euphonic tension (vowel-fi
 four `*_Euphony` fields are blank on 0013. 2026-07-25 (later still): redesigned `UA_Lexeme`'s
 euphony mechanism from pure tolerance to recognition-testing, per Craig -- the goal isn't just
 accepting either spelling, it's requiring the student to demonstrate they know a euphonic
-partner exists. `EuphonyNote` (single note-level field, bare/unstressed) is retired, renamed via
-AnkiConnect `modelFieldRename` (preserves 0211/0377's existing data, not a destructive
-add+remove) to `Lemma_Euphony`, alongside two new sibling fields
-`ImperfectiveUnidirectional_Euphony` and `Perfective_Euphony` -- matching PVOM's per-slot
-`*_Euphony` pattern exactly, since euphony can land on any one aspect slot independently (e.g.
-учити/вчити -> вивчити has euphony only on the imperfective slot). Contract change: these
-fields now store the STRESSED alternate (e.g. `уболіва́ти`, not `уболівати`) -- a euphonic
-alternate's own stress mark can't be safely derived from the primary form's (see входити/увійти
-above), so it's authored directly, same as every other stressed field in this note type.
+partner exists. **Correction to this entry, same day, before implementing:** the original plan
+was to rename `EuphonyNote` -> `Lemma_Euphony` via AnkiConnect `modelFieldRename`. Caught before
+running it -- `EuphonyNote` is NOT 0211/0377-only. It's a pre-existing, general-purpose
+free-text commentary field (see design.md's original description: "Prefix euphony, apostrophe
+insertion, jotation") already holding real authored content on 7 *other*, already-verified,
+already-studied notes from the original motion-verb batch (0115, 0117-0119, 0124, 0126-0127 --
+e.g. 0115: "PFV: в- + іти -> увійти (also ввійти); у- preferred before й"). All seven already
+have `Lemma`+`Perfective` populated, so `compute_typing_target()` runs on them -- a blind rename
+would have folded that commentary straight into `Lemma_Euphony` and joined garbled sentences
+into their live `TypingTarget_UA`. **Fix:** `EuphonyNote` is left alone, unrenamed, still doing
+its original job. Three brand-new fields are added instead --  `Lemma_Euphony`,
+`ImperfectiveUnidirectional_Euphony`, `Perfective_Euphony` -- matching PVOM's per-slot
+`*_Euphony` pattern, since euphony can land on any one aspect slot independently (e.g.
+учити/вчити -> вивчити has euphony only on the imperfective slot). Contract: these NEW fields
+store the STRESSED alternate (e.g. `уболіва́ти`, not `уболівати`) -- a euphonic alternate's own
+stress mark can't be safely derived from the primary form's (see входити/увійти above), so it's
+authored directly, same as every other stressed field in this note type. 0211/0377's old
+`EuphonyNote: уболівати` value moved to the new `Lemma_Euphony: уболіва́ти` (added the stress
+mark) with `EuphonyNote` explicitly cleared back to `''` on both, rather than left stale.
 `compute_typing_target()` in `ua_lexeme_import.py` now computes three joined variants per note
 at sync time: `TypingTarget_UA`/`TypingAnswer` (FULL -- euphony-having slots render as
 "primary ; euphonic", nested inside the existing `/`-joined aspect string), and two new derived
@@ -252,7 +262,7 @@ Template Techniques below)
 
 *Grammatical Properties:* `Govt_Case`, `IrregularForms`, `CounterpartForm` (gender pairs), `VerbMotion_Pair` (base unprefixed form)
 
-*Semantic Relations:* `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote` (accepted alternate spelling(s), e.g. уболівати for вболівати -- bare word, no stress, `|`-delimited if more than one; wired into EN_UA_BACK's typed-answer grading, see "EuphonyNote acceptance" below, not just a display note)
+*Semantic Relations:* `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote` (free-text linguistic commentary -- apostrophe insertion, epenthesis, etc; NOT the grading mechanism, see "Lemma_Euphony / aspect+euphony recognition testing" below for that -- purely a passive `UA_EN_BACK` display note, unrelated fields despite the similar name; do not conflate or repurpose, see the 2026-07-25 near-miss note there)
 
 *Typing & Examples:* `TypingAnswer` (Lemma without stress marks), `UA_Example`, `EN_Example`
 
@@ -495,12 +505,17 @@ that a euphonic partner is *known to exist*, not just accept either spelling sil
 - **Behavior change, not a bug:** typing bare `уболівати` on 0211/0377 used to be full credit
   under the old `EuphonyNote` tolerance design; under this redesign it's PARTIAL, since it
   demonstrates knowing a word but not the pairing. Intended per Craig's reframed goal.
-- **Migration:** `EuphonyNote`'s existing data (0211/0377) renamed to `Lemma_Euphony` via
-  AnkiConnect `modelFieldRename` (preserves the field's data in place) rather than add-new +
-  remove-old, which `setup_ua_note_types.py`'s normal field-sync loop would otherwise do
-  (destructively, per its own "Removing field: X (data lost)" log line) since it only knows how
-  to add-missing/remove-obsolete, not rename. The renamed field's value was also re-authored
-  with its stress mark (`уболівати` -> `уболіва́ти`) to satisfy the new stressed contract.
+- **Not a field rename.** `EuphonyNote` is a separate, pre-existing, general-purpose free-text
+  commentary field (apostrophe insertion, epenthesis, etc) already holding real content on 7
+  *other* already-verified notes from the original motion-verb batch (0115, 0117-0119, 0124,
+  0126-0127) -- unrelated to this grading mechanism despite the similar name. The original plan
+  renamed `EuphonyNote` -> `Lemma_Euphony` via AnkiConnect `modelFieldRename`; caught before
+  running it, since all 7 of those notes already have `Lemma`+`Perfective` populated, so
+  `compute_typing_target()` would have folded their commentary sentences straight into their
+  live `TypingTarget_UA`. Fixed: `Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony`/
+  `Perfective_Euphony` are added as brand-new fields, `EuphonyNote` is untouched. 0211/0377's
+  old `EuphonyNote: уболівати` moved to `Lemma_Euphony: уболіва́ти` (stress mark added) with
+  `EuphonyNote` explicitly cleared to `''` on both, rather than left stale.
 
 **PVOM prefix drilling (multi-form typing cards)**
 
