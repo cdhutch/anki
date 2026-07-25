@@ -27,7 +27,8 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  EuphonyNote: уболівати
+  Lemma_Euphony: уболіва́ти
+  EuphonyNote: ''
   TypingAnswer: вболівати
   UA_Example: Мати вболівала за сина, який довго не дзвонив додому.
   EN_Example: The mother worried for her son, who hadn't called home in a long time.

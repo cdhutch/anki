@@ -57,6 +57,18 @@ FIELDS = [
     # once via compute_typing_target()).
     "AspectCue",
 
+    # Euphony (redesigned 2026-07-25): one per aspect slot, since a euphonic
+    # variant can land on any single slot independently (e.g. учити/вчити ->
+    # вивчити has it only on the imperfective slot). STRESSED contract --
+    # unlike UA_PVOM_Infinitive's bare-word *_Euphony fields, a euphonic
+    # alternate's own stress mark isn't safely derivable from the primary
+    # form's (увійти isn't a letter-swap of входити), so it's authored
+    # directly. Optional, blank where not applicable. Fed into
+    # compute_typing_target() at sync time -- see ua_lexeme_import.py.
+    "Lemma_Euphony",
+    "ImperfectiveUnidirectional_Euphony",
+    "Perfective_Euphony",
+
     # Semantic Content
     "EN_Gloss",
 
@@ -75,6 +87,12 @@ FIELDS = [
     "CompareC",
     "CompareD",
     "CrossLang_Analog",
+    # EuphonyNote: free-text linguistic commentary (apostrophe insertion,
+    # epenthesis, etc), NOT the grading mechanism -- that lives in the
+    # per-slot *_Euphony fields above. Predates and is independent of the
+    # 2026-07-25 redesign; still holds real authored content on the original
+    # motion-verb batch (0115/0117-0119/0124/0126-0127). Do not repurpose or
+    # rename this field for grading -- see near-miss note in CLAUDE.md.
     "EuphonyNote",
 
     # Typing & Examples
@@ -85,6 +103,17 @@ FIELDS = [
     # sync time -- see compute_typing_target() there. Never hand-authored.
     "TypingTarget_UA",
     "TypingAnswer",
+    # Base/AltOnly (added 2026-07-25, alongside Lemma_Euphony etc.): derived
+    # alongside TypingTarget_UA/TypingAnswer at sync time, never hand-authored.
+    # Base = primary forms only (what TypingTarget_UA computed before this
+    # redesign); AltOnly = euphonic form in place of primary on slots that have
+    # one. Both blank when the note has no euphony on any slot. Feed the
+    # EN_UA_BACK PARTIAL-credit tier -- see CLAUDE.md "Lemma_Euphony / aspect+
+    # euphony recognition testing".
+    "TypingTarget_UA_Base",
+    "TypingAnswer_Base",
+    "TypingTarget_UA_AltOnly",
+    "TypingAnswer_AltOnly",
     "UA_Example",
     "EN_Example",
 
@@ -280,7 +309,10 @@ UA_EN_BACK = """\
 {{#IrregularForms}}<div class="irregular">{{IrregularForms}}</div>{{/IrregularForms}}
 {{#Govt_Case}}<div class="irregular">governs: {{Govt_Case}}</div>{{/Govt_Case}}
 {{#ConfusableSet}}<div class="confusable">cf. {{ConfusableSet}}</div>{{/ConfusableSet}}
-{{#EuphonyNote}}<div class="euphony">also accepted: {{EuphonyNote}}</div>{{/EuphonyNote}}
+{{#Lemma_Euphony}}<div class="euphony">euphonic partner: {{Lemma_Euphony}}</div>{{/Lemma_Euphony}}
+{{#ImperfectiveUnidirectional_Euphony}}<div class="euphony">euphonic partner: {{ImperfectiveUnidirectional_Euphony}}</div>{{/ImperfectiveUnidirectional_Euphony}}
+{{#Perfective_Euphony}}<div class="euphony">euphonic partner: {{Perfective_Euphony}}</div>{{/Perfective_Euphony}}
+{{#EuphonyNote}}<div class="euphony">note: {{EuphonyNote}}</div>{{/EuphonyNote}}
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
@@ -323,8 +355,18 @@ EN_UA_FRONT = """\
 EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<!-- Color-coded typing feedback with dual validation -->
-<div id="feedback" data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}" data-euphony="{{EuphonyNote}}" style="margin-bottom: 16px;"></div>
+<!-- Color-coded typing feedback. Redesigned 2026-07-25: FULL (TypingTarget_UA/
+     TypingAnswer) now nests each slot's euphonic partner ("primary ; euphonic")
+     inside the existing aspect join, so PERFECT/CORRECT here mean the student
+     produced BOTH forms, demonstrating the pairing is known -- not just one
+     accepted spelling. Base/AltOnly are the single-form fallbacks, graded as
+     PARTIAL, not full credit -- see CLAUDE.md "Lemma_Euphony / aspect+euphony
+     recognition testing" for the full design and why. -->
+<div id="feedback"
+     data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}"
+     data-base-with-stress="{{TypingTarget_UA_Base}}" data-base-no-stress="{{TypingAnswer_Base}}"
+     data-alt-with-stress="{{TypingTarget_UA_AltOnly}}" data-alt-no-stress="{{TypingAnswer_AltOnly}}"
+     style="margin-bottom: 16px;"></div>
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
@@ -336,15 +378,16 @@ EN_UA_BACK = """\
   var targetWithStress = (feedback.dataset.withStress || '').normalize('NFC');
   var targetNoStress = (feedback.dataset.noStress || '').normalize('NFC');
 
-  // EuphonyNote (2026-07-25): bare alternate spelling(s), '|'-delimited, e.g.
-  // "уболівати" as an accepted alternate for вболівати. Stress-strip (combining
-  // acute U+0301) both sides before comparing -- EuphonyNote values are stored
-  // unstressed, but a student may type the alternate's own stress mark.
-  function stripStress(s) { return s.replace(/\u0301/g, ''); }
-  var euphonyAlts = (feedback.dataset.euphony || '')
-    .split('|')
-    .map(function(s) { return stripStress(s.trim().normalize('NFC')); })
-    .filter(Boolean);
+  // PARTIAL-credit set (2026-07-25): single-form answers -- either the plain
+  // aspect join with no euphony (*_Base), or the euphonic form standing in for
+  // primary (*_AltOnly). Both blank (-> filtered out) when the note has no
+  // euphony on any slot, which is what makes this tier unreachable for the
+  // rest of the corpus -- Base then equals the FULL target exactly, already
+  // caught by the PERFECT/CORRECT branches above this one.
+  var partialWithStress = [feedback.dataset.baseWithStress, feedback.dataset.altWithStress]
+    .filter(Boolean).map(function(s) { return s.normalize('NFC'); });
+  var partialNoStress = [feedback.dataset.baseNoStress, feedback.dataset.altNoStress]
+    .filter(Boolean).map(function(s) { return s.normalize('NFC'); });
 
   // Anki's own type-answer field replaces the front's <input> with a #typeans
   // diff (spans classed typeGood/typeBad/typeMissed) once the answer side
@@ -378,26 +421,27 @@ EN_UA_BACK = """\
   var html = '';
 
   if (typedAnswer === targetWithStress) {
-    // Perfect: with stress marks
+    // Perfect: pairing demonstrated, with stress marks
     html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
            targetWithStress + ' ✓ PERFECT</div>' +
            '<div style="color: #2e7d32; font-size: 14px;">Correct with stress marks (bonus!)</div>';
   } else if (typedAnswer === targetNoStress) {
-    // Close: correct letters, missing stress
+    // Close: pairing demonstrated, correct letters, missing stress
     html = '<div style="color: #ff9800; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
            targetNoStress + ' ~ CORRECT</div>' +
            '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, but missing stress marks</div>' +
            '<div style="color: #2e7d32; font-size: 16px; font-weight: bold;">Bonus answer:</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
-  } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer)) !== -1) {
-    // Accepted alternate spelling (EuphonyNote) -- genuinely correct, not just noted.
-    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           typedAnswer + ' ✓ CORRECT</div>' +
-           '<div style="color: #2e7d32; font-size: 14px; margin-bottom: 12px;">Accepted alternate spelling</div>' +
-           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Primary form:</div>' +
+  } else if (typedAnswer !== null && (partialWithStress.indexOf(typedAnswer) !== -1 || partialNoStress.indexOf(typedAnswer) !== -1)) {
+    // PARTIAL (added 2026-07-25): a genuinely correct single form, but the
+    // euphonic pairing wasn't demonstrated -- not full credit.
+    html = '<div style="color: #7b1fa2; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           typedAnswer + ' ½ PARTIAL</div>' +
+           '<div style="color: #7b1fa2; font-size: 14px; margin-bottom: 12px;">Correct word, but the euphonic pairing isn\'t shown</div>' +
+           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Full credit needs both:</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
   } else if (typedAnswer !== null) {
-    // Reconstruction succeeded and it's neither accepted answer -- genuinely wrong.
+    // Reconstruction succeeded and it's none of the above -- genuinely wrong.
     html = '<div style="color: #d32f2f; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
            typedAnswer + ' ✗ INCORRECT</div>' +
            '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Not quite right</div>' +

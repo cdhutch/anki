@@ -27,7 +27,8 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  EuphonyNote: уболівати
+  Lemma_Euphony: уболіва́ти
+  EuphonyNote: ''
   TypingAnswer: вболівати
   UA_Example: Уся сім'я вболівала за українську команду.
   EN_Example: The whole family was rooting for the Ukrainian team.

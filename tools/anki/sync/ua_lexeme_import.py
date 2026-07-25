@@ -203,36 +203,73 @@ def parse_note_file(path: Path) -> dict | None:
 # ---------------------------------------------------------------------------
 
 
-def compute_typing_target(lemma: str, impf_uni: str, perfective: str) -> tuple[str, str] | None:
-    """Build the EN->UA typing target for a verb's full stressed aspect set.
+def compute_typing_target(
+    lemma: str, impf_uni: str, perfective: str,
+    lemma_euphony: str = "", impf_uni_euphony: str = "", perfective_euphony: str = "",
+) -> dict[str, tuple[str, str]] | None:
+    """Build the EN->UA typing target(s) for a verb's aspect set, with euphony
+    pairing nested in per redesign 2026-07-25.
 
-    Added 2026-07-27 per Craig: for verb notes, the EN->UA card should require
+    Base behavior (added 2026-07-27): for verb notes, the EN->UA card requires
     typing the entire aspect singlet/couplet/triplet, not just Lemma alone --
     e.g. "ходи́ти / йти / піти́" (multidirectional-imperfective / unidirectional-
     imperfective / perfective triplet) or "перекида́ти / переки́нути" (imperfective/
     perfective doublet). Order is always Lemma, then ImperfectiveUnidirectional (if
-    populated), then Perfective (if populated) -- matching the multi-imp -> uni-imp
-    -> perfective progression. Any missing slot is dropped, not left blank, so a
-    doublet renders as "Lemma / Perfective", never "Lemma / / Perfective".
+    populated), then Perfective (if populated). Any missing slot is dropped, not
+    left blank, so a doublet renders as "Lemma / Perfective", never
+    "Lemma / / Perfective".
 
-    Returns None when fewer than two forms are populated (a plain singlet, e.g. an
-    imperfective-only verb like мати with no aspectual counterpart, or any non-verb
-    note where Perfective/ImperfectiveUnidirectional are simply not applicable) --
-    callers should leave TypingTarget_UA/TypingAnswer as Lemma-only in that case,
-    same behavior as before this feature existed.
+    Euphony (redesigned 2026-07-25, see CLAUDE.md "Lemma_Euphony / aspect+euphony
+    recognition testing"): each slot may carry its own stressed euphonic
+    alternate (e.g. Lemma_Euphony). A populated alternate makes that slot's FULL
+    unit "primary ; euphonic" instead of just "primary" -- e.g.
+    "учи́ти ; вчи́ти / ви́вчити" (euphony only on the imperfective slot). Three
+    variants are computed and returned:
+      - "full":  every slot as "primary ; euphonic" where it has one, else
+                 just "primary" -- the target for full/PERFECT credit.
+      - "base":  every slot as "primary" only, regardless of euphony -- the
+                 pre-redesign join, kept for PARTIAL-credit grading.
+      - "alt":   every slot as its euphonic form where it has one, else
+                 "primary" -- the other PARTIAL-credit variant. Empty string
+                 pair when no slot has any euphony at all (nothing to offer).
 
-    Computed here (at sync time) rather than hand-authored into a new CNSF field,
-    by design: Lemma/ImperfectiveUnidirectional/Perfective are already the
-    authored source of truth, and deriving the join avoids the exact class of bug
-    just fixed above (a second, independently-authored field silently drifting out
-    of sync with -- or being clobbered relative to -- the fields it's derived from).
+    Returns None when there's nothing to compute at all: fewer than two aspect
+    slots populated AND no euphony on the sole slot (a plain non-verb note, or
+    an aspectless/imperfectiva-tantum verb with no euphonic variant either) --
+    callers should leave TypingTarget_UA/TypingAnswer as Lemma-only in that
+    case, same behavior as before this feature existed.
+
+    Computed here (at sync time) rather than hand-authored into a new CNSF
+    field, by design: Lemma/ImperfectiveUnidirectional/Perfective/*_Euphony are
+    already the authored source of truth, and deriving the join avoids a
+    second, independently-authored field silently drifting out of sync with --
+    or being clobbered relative to -- the fields it's derived from.
     """
-    parts = [p for p in (lemma, impf_uni, perfective) if p]
-    if len(parts) < 2:
+    slots = [
+        (lemma, lemma_euphony),
+        (impf_uni, impf_uni_euphony),
+        (perfective, perfective_euphony),
+    ]
+    populated = [(primary, euphony) for primary, euphony in slots if primary]
+    has_any_euphony = any(euphony for _, euphony in populated)
+
+    if len(populated) < 2 and not has_any_euphony:
         return None
-    stressed = " / ".join(parts)
-    unstressed = " / ".join(strip_stress(p) for p in parts)
-    return stressed, unstressed
+
+    full_stressed = " / ".join(
+        f"{primary} ; {euphony}" if euphony else primary for primary, euphony in populated
+    )
+    base_stressed = " / ".join(primary for primary, _ in populated)
+
+    result = {
+        "full": (full_stressed, strip_stress(full_stressed)),
+        "base": (base_stressed, strip_stress(base_stressed)),
+        "alt": ("", ""),
+    }
+    if has_any_euphony:
+        alt_stressed = " / ".join(euphony or primary for primary, euphony in populated)
+        result["alt"] = (alt_stressed, strip_stress(alt_stressed))
+    return result
 
 
 def import_note(data: dict, dry_run: bool) -> str:
@@ -248,18 +285,27 @@ def import_note(data: dict, dry_run: bool) -> str:
     # Coerce all field values to strings (YAML may parse numbers/booleans)
     fields = {k: ("" if v is None else str(v)) for k, v in raw_fields.items()}
 
-    # EN->UA typing target: full stressed aspect join for verbs with a populated
-    # counterpart (see compute_typing_target docstring); Lemma alone otherwise.
+    # EN->UA typing target: full stressed aspect join (with euphony nested per
+    # slot, see compute_typing_target docstring) for verbs with a populated
+    # counterpart or any euphony; Lemma alone otherwise.
     typing_target = compute_typing_target(
         fields.get("Lemma", ""),
         fields.get("ImperfectiveUnidirectional", ""),
         fields.get("Perfective", ""),
+        fields.get("Lemma_Euphony", ""),
+        fields.get("ImperfectiveUnidirectional_Euphony", ""),
+        fields.get("Perfective_Euphony", ""),
     )
     if typing_target:
-        fields["TypingTarget_UA"] = typing_target[0]
-        fields["TypingAnswer"] = typing_target[1]
+        fields["TypingTarget_UA"], fields["TypingAnswer"] = typing_target["full"]
+        fields["TypingTarget_UA_Base"], fields["TypingAnswer_Base"] = typing_target["base"]
+        fields["TypingTarget_UA_AltOnly"], fields["TypingAnswer_AltOnly"] = typing_target["alt"]
     else:
         fields["TypingTarget_UA"] = fields.get("Lemma", "")
+        fields["TypingTarget_UA_Base"] = ""
+        fields["TypingAnswer_Base"] = ""
+        fields["TypingTarget_UA_AltOnly"] = ""
+        fields["TypingAnswer_AltOnly"] = ""
         # TypingAnswer left as authored in the CNSF file for singlets.
 
     # NOTE (2026-07-27 bug fix): this function used to overwrite fields["CompareA"]
