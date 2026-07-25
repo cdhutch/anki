@@ -319,23 +319,33 @@ def collect_files(targets: list[str]) -> list[Path]:
     return files
 
 
-def collect_all_corpus_note_ids() -> set[str]:
-    """Every note_id in the full CNSF corpus, regardless of this run's `targets`.
+def collect_all_corpus_note_ids() -> tuple[set[str], list[Path]]:
+    """Every note_id in the full CNSF corpus, regardless of this run's `targets`,
+    plus the list of files that failed to parse.
 
     Deliberately walks LEXEME_ROOT rather than args.targets -- see the
-    LEXEME_ROOT comment above.
+    LEXEME_ROOT comment above. Returns failures explicitly rather than
+    silently skipping them (parse_note_file() already prints a SKIP line and
+    returns None) -- a single unparseable file must never be treated as "this
+    note_id doesn't exist," since that would make prune_orphans() delete a
+    perfectly live Anki note over what might be a one-line YAML typo.
     """
     note_ids = set()
+    failed = []
     for path in LEXEME_ROOT.rglob("ua-lexeme-*.md"):
         data = parse_note_file(path)
-        if data:
-            note_id = data.get("note_id", "")
-            if note_id:
-                note_ids.add(note_id)
-    return note_ids
+        if data is None:
+            failed.append(path)
+            continue
+        note_id = data.get("note_id", "")
+        if note_id:
+            note_ids.add(note_id)
+        else:
+            failed.append(path)
+    return note_ids, failed
 
 
-def prune_orphans(dry_run: bool) -> int:
+def prune_orphans(dry_run: bool, sync_errors: int) -> int:
     """Hard-delete Anki notes whose CNSF source file no longer exists.
 
     2026-07-25, Craig: hard delete, not suspend -- if a retired note_id slot
@@ -345,8 +355,24 @@ def prune_orphans(dry_run: bool) -> int:
     note. Hard-deleting means the next sync's find_note_by_id() finds
     nothing and add_note() creates a fresh note with clean scheduling
     instead, which is what a genuinely new/different note should get.
+
+    Safety gate (2026-07-25, Craig): refuses to prune at all unless this
+    run's own add/update pass was clean (sync_errors == 0) AND the full
+    corpus parses cleanly (no failed files from collect_all_corpus_note_ids).
+    A minor YAML slip in even one unrelated file must not be able to wipe
+    another note's FSRS history -- fail loud and prune nothing instead.
     """
-    corpus_ids = collect_all_corpus_note_ids()
+    if sync_errors:
+        print(f"  PRUNE   aborted: {sync_errors} error(s) in this run's own sync pass -- fix those first.")
+        return 0
+
+    corpus_ids, failed = collect_all_corpus_note_ids()
+    if failed:
+        print(f"  PRUNE   aborted: {len(failed)} file(s) in the corpus failed to parse -- fix those first:")
+        for path in failed:
+            print(f"            {path}")
+        return 0
+
     anki_ids = all_anki_note_ids()
     orphan_note_ids = sorted(set(anki_ids) - corpus_ids)
     if not orphan_note_ids:
@@ -410,7 +436,7 @@ def main():
 
     pruned = 0
     if args.prune_orphans:
-        pruned = prune_orphans(args.dry_run)
+        pruned = prune_orphans(args.dry_run, errors)
 
     summary = f"\nDone: {added} added, {updated} updated, {skipped} skipped, {errors} errors"
     if args.prune_orphans:
