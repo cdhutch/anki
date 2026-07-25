@@ -592,6 +592,26 @@ buckets. Triage deliberately — do not assume from spelling alone.
    standalone full-corpus audit periodically, not per-candidate at generation time — see
    [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md).
 
+5. **Retiring a note** (established 2026-07-25, ua-lexeme-0225 precedent). A note is
+   redundant/wrong and should stop existing (not just get corrected) -- e.g. 0225 duplicated
+   0211's `Govt_Case`-covered government pattern under a malformed Lemma. Steps:
+     - Delete the CNSF `.md` file (Craig runs `git rm`, per the Big 3 rules).
+     - Run `ua_lexeme_import.py --prune-orphans` (add `--dry-run` first to preview) to
+       hard-delete the corresponding Anki note.
+     - **Hard delete, not suspend.** If the freed note_id slot is later reused for
+       unrelated new content, `find_note_by_id()` matches by NoteID field and
+       `updateNoteFields()` would silently carry a suspended orphan's old FSRS
+       scheduling/review history onto the new, unrelated note -- misleading the algorithm
+       into thinking an unseen word is already learned. Hard delete makes the next sync's
+       `find_note_by_id()` find nothing, so the new note goes through `add_note()` with
+       clean scheduling instead, which is correct for genuinely new content.
+     - `--prune-orphans` always compares against every note_id in the full corpus
+       (`LEXEME_ROOT`), not just whatever `targets` a given invocation passes -- otherwise a
+       partial/single-directory run would falsely flag every note outside its own targets as
+       orphaned.
+     - Cross-reference the retirement in the surviving/replacement note's `Verification
+       Notes` (see ua-lexeme-0211).
+
 **Tooling:**
 - `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
   lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
@@ -660,7 +680,7 @@ python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
 | Rename `UA` → `UA_Legacy` in Anki GUI | ✓ done | One-time manual rename; frees UA:: namespace |
 | `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme + UA_Grammar + UA_Visual |
 | `tools/anki/setup/create_deck_presets.py` | ✓ new (2026-07-20) | Data-driven preset creation from JSON definitions |
-| `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
+| `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert + `--prune-orphans` hard-delete, 2026-07-25) |
 | `tools/anki/sync/ua_grammar_import.py` | ✓ done | UA_Grammar CNSF notes → Anki (upsert) |
 | `tools/anki/sync/ua_visual_import.py` | ✓ done | UA_Visual CNSF notes → Anki (upsert) |
 | `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
