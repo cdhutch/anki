@@ -26,13 +26,21 @@ live-model field count). The remaining 15 (0224, 0226-0229, 0231-0234, 0299-0303
 drafted, Горох-researched, and locally pre-validated clean via `cnsf_canonicalize.py`; commit
 pending Craig's go-ahead. 2026-07-25: adopted the "Same-Lemma polysemy split" pattern for words
 with genuinely disjoint senses (see Card Template Techniques below) -- вболівати split into
-ua-lexeme-0211/0225 ("root for") and a new sibling ua-lexeme-0377 ("worry/grieve for"). Enabled
+ua-lexeme-0211 ("root for") and a new sibling ua-lexeme-0377 ("worry/grieve for"); the
+separate ua-lexeme-0225 ("вболівати за") was retired as a duplicate of 0211 the same day -- see
+below. Enabled
 by a `UA_EN_FRONT` template change: `UA_Example` now renders on every UA->EN card front (not
 just back), and the `Lemma`/`Perfective` aspect pair now shares one line/font instead of two.
 New process rule from Craig, effective this change: for a paradigm change, document in CLAUDE.md
 first and get that committed on its own before implementing the corresponding code/YAML --
-this entry is that first step; the `setup_ua_note_types.py` template edit and the 0211/0225/0377
-note changes are drafted but not yet synced or committed as of this entry.
+this entry is that first step; the `setup_ua_note_types.py` template edit and the 0211/0377
+note changes are drafted but not yet synced or committed as of this entry. 2026-07-25 (later same
+day): Craig flagged that 0225's Lemma ("вболіва́ти за") mixed government into the headword --
+every other phrase-type Lemma in the corpus carries a concrete complement after its preposition
+(e.g. "би́тися з реа́льним супе́рником"), never a bare dangling preposition, and 0211 already
+covers "вболівати за + Acc." correctly via `Govt_Case` + a live example. Craig chose to retire
+0225 outright (Option A) rather than fix it into a standalone phrase note (Option B) -- it was
+purely redundant with 0211. See "Same-Lemma polysemy split" below.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -306,12 +314,21 @@ For a UA word with genuinely *disjoint* senses (not closely-related shades of on
 `Lemma`/`TypingAnswer` rather than combining both senses into one `EN_Gloss`. Each sibling note
 gets its own `EN_Gloss`, `UA_Example`, `EN_Example` -- whichever specific sense it covers.
 Example: вболіва́ти has two disjoint dictionary senses (Горох Тлумачення) -- "to root for, cheer
-for (a team)" (ua-lexeme-0211, plus the "вболівати за" phrase form ua-lexeme-0225) and "to
-worry/grieve for (someone)" (ua-lexeme-0377) -- both true imperfectiva tantum (same aspect
-research applies to every sibling; see ua-lexeme-0211's Verification Notes for the full Горох
-evidence).
+for (a team)" (ua-lexeme-0211) and "to worry/grieve for (someone)" (ua-lexeme-0377) -- both true
+imperfectiva tantum (same aspect research applies to every sibling; see ua-lexeme-0211's
+Verification Notes for the full Горох evidence).
 
-Cross-reference siblings explicitly in `Verification Notes` (see ua-lexeme-0211/0225/0377) so
+A third note, ua-lexeme-0225 ("вболіва́ти за"), was originally drafted alongside these for the
+same "root for" sense as a phrase-type note, but was retired 2026-07-25: its Lemma bare-dangled
+a preposition with no complement, mixing `Govt_Case` government into the headword instead of
+either leaving `Lemma` bare (like 0211, government captured in `Govt_Case`) or giving it a
+concrete complement (like every other phrase-type Lemma in the corpus, e.g. "би́тися з реа́льним
+супе́рником"). Since 0211 already covers "вболівати за + Acc." correctly, 0225 was purely
+redundant -- retired rather than fixed. **Lesson for future splits:** a sibling note only earns
+its place if it covers a genuinely distinct sense; a note that just restates an existing note's
+government pattern under a different Lemma format is a duplicate, not a split.
+
+Cross-reference siblings explicitly in `Verification Notes` (see ua-lexeme-0211/0377) so
 the dedup/homograph audit tooling doesn't mistake identical-Lemma siblings for accidental
 duplicates -- this is a different situation from true duplicates (CNSF Dedup Workflow above) and
 from homograph splits like лавка/0235/0372 (etymologically distinct words that happen to share
