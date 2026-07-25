@@ -116,12 +116,6 @@ CSS = """\
   margin-bottom: 4px;
 }
 
-.perfective {
-  font-size: 22px;
-  color: #555;
-  margin-bottom: 8px;
-}
-
 .pos {
   font-size: 13px;
   color: #888;
@@ -254,9 +248,22 @@ details.conj-wrap[open] summary::before {
 
 # Template 1: UA → EN  (Recognition: see Ukrainian, recall English)
 UA_EN_FRONT = """\
-<div class="lemma">{{Lemma}}</div>
-{{#Perfective}}<div class="perfective">/ {{Perfective}}</div>{{/Perfective}}
+<!-- Aspect pair (2026-07-25): Lemma and Perfective now share one div/class so
+     the ндв/дв pair renders on the same line in the same font -- Craig's
+     request; previously Perfective was a separate block-level div in a
+     smaller, greyed-out style (.perfective), which read as a demoted
+     afterthought rather than an equally-valid answer form. -->
+<div class="lemma">{{Lemma}}{{#Perfective}} / {{Perfective}}{{/Perfective}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
+<!-- UA_Example on front (2026-07-25): standard on every UA->EN card now, per
+     Craig -- reading a real Ukrainian phrase in context, not just a bare
+     headword. Also what makes the same-Lemma polysemy-split pattern (see
+     CLAUDE.md "Same-Lemma polysemy split" under Card Template Techniques)
+     workable: sibling notes sharing one Lemma (e.g. вболівати, ua-lexeme-0211
+     "root for" vs. ua-lexeme-0377 "worry/grieve for") are otherwise
+     indistinguishable on this card until the flip -- the example sentence is
+     what lets the student infer which sense is being tested. -->
+{{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 """
 
 UA_EN_BACK = """\
