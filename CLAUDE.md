@@ -184,65 +184,66 @@ complete:
 
 **Aspect convention:** Lemma is always imperfective (base form). Perfective field contains PFV counterpart. Aspect is implicit in field structure (no explicit Aspect field needed).
 
-**Verb conjugations:** `Verb_Conj_Table` field is being phased out of UA_Lexeme — blanked corpus-wide 2026-07-22 (all ~180 lexeme notes), but the field itself has not yet been removed from the schema/model. Full removal is planned but not yet executed — see "Verb_Conj_Table Removal Plan (Future)" below. Conjugation morphology belongs in the UA_Verb note type as structured fields, one note per lemma's own aspect, linked to the lexeme via matching Lemma text.
+**Verb conjugations:** `Verb_Conj_Table` was removed from the live `UA_Lexeme` Anki model on
+2026-07-28 (Craig ran AnkiConnect `modelFieldRemove` directly) — content had been blanked
+corpus-wide since 2026-07-22 and no card template ever rendered it; conjugation morphology
+belongs entirely to the `UA_Verb` note type (structured fields, one note per lemma's own
+aspect, linked to the lexeme via matching Lemma text) — `UA_Verb` already covers this, so
+nothing else needs to render it. `Verification Notes` was removed from the live model in the
+same pass, but for a different reason — see "Legacy Field Removal" below.
 
-### Verb_Conj_Table Removal Plan (Future)
+### Legacy Field Removal — `Verb_Conj_Table` & `Verification Notes`
 
-**Status:** Planned, not yet executed. Decided 2026-07-22 after clearing all *content* from the
-field on the 18 pre-existing verb lexemes (`ua-lexeme-0114`–`0131`) and the 5 new ch.9.2 verb
-lexemes (`ua-lexeme-0176`–`0180`) — this plan covers removing the *field itself* from the
-schema/model, corpus-wide.
+**Status (2026-07-28):** Both fields removed from the live `UA_Lexeme` Anki model (Craig ran
+AnkiConnect `modelFieldRemove` directly). They have different follow-up plans, though — one is
+dead data to finish stripping out; the other is intentionally CNSF-only and stays as-is.
 
-**Correction of prior doc drift:** this file previously claimed (above) that `Verb_Conj_Table`
-had already been removed from `UA_Lexeme` — that was aspirational/incorrect. The field is still
-live in the Anki model and present (currently blank) in all ~180 lexeme `.md` files.
+- **`Verb_Conj_Table`** — genuinely dead. Blank corpus-wide since 2026-07-22, never rendered by
+  any card template, fully superseded by `UA_Verb`. CNSF cleanup (steps below) still needs to
+  happen: every lexeme `.md` file still declares the key under `fields:`, which is now a pure
+  no-op on sync (`ua_lexeme_import.py` still passes it through unfiltered; AnkiConnect silently
+  drops fields the model doesn't have) rather than a bug, but it's stale and should eventually
+  be stripped from the source files.
+- **`Verification Notes`** — kept, deliberately, as CNSF/YAML-only documentation. Craig's call
+  2026-07-28: this field doesn't need to reach Anki at all — it's audit-trail content for
+  human/Claude review (Горох-verification notes, stress corrections, judgment-call flags like
+  the брати note on ua-lexeme-0376), not card content, so removing it from the live model was
+  intentional rather than a gap to fix. **No CNSF stripping, no migration into `Source_Note` —
+  leave every note's `Verification Notes` key exactly as authored.** Keep populating it the same
+  way going forward (see the dedup workflow's "True duplicate" bucket above, for example).
 
-**Rationale:** repo-wide grep confirms no card template anywhere references `{{Verb_Conj_Table}}`
-— the field has never been rendered on any card, in any note-type version. It's genuinely dead
-data, not just duplicated-but-harmless. Conjugation data belongs on the dedicated `UA_Verb` notes
-(structured `Pres_*`/`Imperative_*`/`Past_*` fields).
+**`setup_ua_note_types.py`'s `FIELDS` list is now in sync (field names) with the live model** —
+confirmed 2026-07-28 via `inspect_ua_lexeme_fields.py`: both are the same 27-field set (order
+differs — the live model's order reflects historical `modelFieldAdd` sequence, not the script's
+intended semantic grouping; AnkiConnect doesn't reposition existing fields on sync). Earlier doc
+drift warnings about `Mnemonic_EN`/`CompareA`/`CompareB` missing from the script are now stale —
+those were added to `FIELDS` since. Still worth re-running `inspect_ua_lexeme_fields.py` before
+any future schema change rather than trusting either list blind.
 
-**Known complication:** `tools/anki/setup/setup_ua_note_types.py`'s `FIELDS` list — the nominal
-source of truth for the model definition — does *not* currently include `Verb_Conj_Table`, nor
-`Verification Notes`, `Mnemonic_EN`, `CompareA`, or `CompareB`, all of which real notes have. That
-script is stale relative to the live Anki model — **don't trust it as ground truth** for this
-migration. Before touching the live model, run `tools/anki/inspect/inspect_ua_lexeme_fields.py` to
-get the actual field list/order straight from AnkiConnect.
+**Remaining CNSF cleanup steps (`Verb_Conj_Table` only):**
 
-**Migration steps:**
-
-1. **Verify live state** (read-only): run `inspect_ua_lexeme_fields.py` to confirm
-   `Verb_Conj_Table`'s exact position in the real model and note any other drift from
-   `setup_ua_note_types.py`.
-2. **Back up the Anki collection** before any schema mutation (File → Export, or Anki's own
-   backup) — `modelFieldRemove` is destructive and not easily undone.
-3. **Strip the field from all CNSF source files**: delete the `Verb_Conj_Table` key from the
-   `fields:` dict in all ~180 `ua_lexeme` `.md` files (`yabluko-l1/` and `yabluko-l2/`), then run
+1. **Strip the key from all CNSF source files**: delete `Verb_Conj_Table` from the `fields:`
+   dict in every `ua_lexeme` `.md` file (`yabluko-l1/` and `yabluko-l2/`), then run
    `python -m tools.anki.cnsf_canonicalize --write` across the whole lexeme corpus. Commit this
-   on its own.
-4. **Update tooling that references the field:**
+   on its own. (`Verification Notes` is NOT part of this step — see above.)
+2. **Update tooling that references the field:**
    - `tools/anki/extract/mappings/UA_Lexeme.yml` — remove the `f__Verb_Conj_Table` entry.
-   - `tools/anki/generate/ua_generate_examples.py` (~line 176) — remove `"Verb_Conj_Table"` from
-     its field-order list.
+   - `tools/anki/generate/ua_generate_examples.py` (~line 176) — remove `"Verb_Conj_Table"`
+     from its field-order list.
    - `tests/ua/test_verify_stress_goroh.py` (4 fixture occurrences) and
-     `tests/ua/test_backfill_source_url.py` (1 occurrence) — hardcode `Verb_Conj_Table: ''` in
-     sample note fixtures; update or the tests may fail once real notes stop carrying the key.
-     Run the full `tests/ua/` suite after.
-   - `tools/anki/extract/gen_ua_lexemes_l2_ch09.py` / `gen_ua_lexemes_vstup.py` are historical
-     one-off generation scripts (already run, not part of the live pipeline) — optional cleanup
-     only, low priority.
-   - `tools/anki/inspect/patch_ch09_conj_tables.py` / `patch_ch09_stress.py` are historical patch
-     scripts, already executed — leave as-is, historical record.
-5. **Remove the field from the live Anki model**: AnkiConnect `modelFieldRemove` on `UA_Lexeme`
-   for `Verb_Conj_Table`. Craig runs this himself (same pattern as all sync/import scripts) —
-   probably worth a tiny one-off script that prints the field list before and after, rather than
-   a raw API call.
-6. **Verify:** re-run `inspect_ua_lexeme_fields.py` to confirm removal; re-run
-   `cnsf_canonicalize --check` across the corpus; run `tests/ua/`; spot-check a few `UA_Lexeme`
-   cards in the Anki browser (expect zero visual change, since nothing ever rendered this field).
+     `tests/ua/test_backfill_source_url.py` (1 occurrence) — hardcode `Verb_Conj_Table: ''`;
+     update once real notes stop carrying the key. Run the full `tests/ua/` suite after.
+   - `tools/anki/extract/gen_ua_lexemes_l2_ch09.py` / `gen_ua_lexemes_vstup.py` and
+     `tools/anki/inspect/patch_ch09_conj_tables.py` / `patch_ch09_stress.py` are historical
+     one-off scripts, already run — leave as-is, historical record.
+3. **Verify:** re-run `inspect_ua_lexeme_fields.py` to confirm the live model still shows
+   neither field; re-run `cnsf_canonicalize --check` across the corpus; run `tests/ua/`;
+   spot-check a few `UA_Lexeme` cards in the Anki browser (expect zero visual change, since
+   `Verb_Conj_Table` was never rendered on a live card template).
 
-**Not blocking:** the field is already blank everywhere as of 2026-07-22, so there's no urgency —
-this is a cleanup, not a bug fix.
+**Not urgent:** `Verb_Conj_Table`'s sync-time pass-through is inert, not lossy, so there's no
+rush on the CNSF cleanup. `Verification Notes` needs no cleanup at all — its current CNSF-only
+state is the intended end state, not a transitional one.
 
 ### Card Template Techniques
 
@@ -462,7 +463,9 @@ buckets. Triage deliberately — do not assume from spelling alone.
    chapter. Do NOT create a new note. Instead:
      - Append the new `ch:2.9.X` tag to the note's `tags` list.
      - Append the new chapter to `Tags_Ch` (comma-separated, e.g. `"ch:2.9.1, ch:2.9.2"`).
-     - Append a short dated note to `Verification Notes` documenting the reuse.
+     - Append a short dated note to `Verification Notes` documenting the reuse. (This field is
+       CNSF/YAML-only -- it was intentionally removed from the live UA_Lexeme Anki model
+       2026-07-28 since it's not meant to render on any card; see "Legacy Field Removal" above.)
    This is the exact pattern already used for перегони (ua-lexeme-0144, reused across
    9.1/9.2) — now the standard procedure rather than ad hoc.
 
