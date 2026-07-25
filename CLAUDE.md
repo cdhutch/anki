@@ -14,7 +14,17 @@ status/stress verification pass is complete through ch.9.4 and ch.9.5 0253-0260;
 0261-0303 and all of ch.9.6/9.7 are still `status:draft`/`stress:unverified`, pending review --
 blocked mid-session by the Chrome extension not connecting (device-bridge file access worked
 fine). Changes staged/committed subchapter-by-subchapter as of 2026-07-26; push pending Craig's
-go-ahead.
+go-ahead. 2026-07-28: built the `AspectCue` mechanism (new optional `UA_Lexeme` field + a chip
+on the `EN_UA_FRONT` template, styled to match the Compare card's distractor chips) so EN->UA
+cards for single-aspect verb/phrase notes give a vivid, indirect situational cue toward the
+correct aspect instead of silently leaving it ambiguous -- schema/template change synced live
+via `setup_ua_note_types.py --model UA_Lexeme` and committed. A full-corpus scan then found 23
+single-aspect verb/phrase candidates; 8 were excluded as bi-aspectual or imperfectiva tantum
+per Горох verification (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360 -- see "AspectCue chip"
+under Card Template Techniques below for the full mechanism and "Legacy Field Removal" for the
+live-model field count). The remaining 15 (0224, 0226-0229, 0231-0234, 0299-0303, 0359) are
+drafted, Горох-researched, and locally pre-validated clean via `cnsf_canonicalize.py`; commit
+pending Craig's go-ahead.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -125,6 +135,14 @@ complete:
      through `create_or_link_lexeme()` before it touches disk, so no note can land in the
      corpus by a hand-written-file path that skips the check. Not yet exercised against a
      real ch.9.3+ batch — that's the next actual use of it.
+  0b. **DONE (2026-07-28).** Give EN->UA cards an explicit-but-indirect aspect cue for
+     single-aspect verb/phrase notes -- see "AspectCue chip" under Card Template Techniques above
+     for the mechanism, and "Legacy Field Removal" above for the live-model field count. Schema/
+     template change (`AspectCue` field + `EN_UA_FRONT` chip) synced and committed. Full-corpus
+     scan found 23 single-aspect candidates; 8 excluded as bi-aspectual/imperfectiva tantum
+     (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360); the remaining 15 (0224, 0226-0229,
+     0231-0234, 0299-0303, 0359) are drafted, Горох-researched, and locally pre-validated --
+     commit pending Craig's go-ahead.
   1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9. Status as of
      2026-07-26: 9.1 (ua-lexeme-0182) and 9.2 (ua-lexeme-0163–0181 + 5 conjugation notes
      ua-verb-0033–0037) sourced, reviewed, verified, and synced. 9.3 (ua-lexeme-0183–0234)
@@ -164,13 +182,15 @@ complete:
 
 ### Primary note type: `UA_Lexeme`
 
-**Fields (20, in semantic order):**
+**Fields (21, in semantic order):**
 
 *Identity & Metadata:* `NoteID`
 
 *Core Lemma & Morphology:* `Lemma`, `PartOfSpeech`, `Gender`
 
-*Aspect (verbs only):* `Perfective` (PFV counterpart), `ImperfectiveUnidirectional` (motion verb directional form)
+*Aspect (verbs only):* `Perfective` (PFV counterpart), `ImperfectiveUnidirectional` (motion verb
+directional form), `AspectCue` (optional, hand-authored -- see "AspectCue chip" under Card
+Template Techniques below)
 
 *Semantic Content:* `EN_Gloss`
 
@@ -213,12 +233,15 @@ dead data to finish stripping out; the other is intentionally CNSF-only and stay
   way going forward (see the dedup workflow's "True duplicate" bucket above, for example).
 
 **`setup_ua_note_types.py`'s `FIELDS` list is now in sync (field names) with the live model** —
-confirmed 2026-07-28 via `inspect_ua_lexeme_fields.py`: both are the same 27-field set (order
-differs — the live model's order reflects historical `modelFieldAdd` sequence, not the script's
-intended semantic grouping; AnkiConnect doesn't reposition existing fields on sync). Earlier doc
-drift warnings about `Mnemonic_EN`/`CompareA`/`CompareB` missing from the script are now stale —
-those were added to `FIELDS` since. Still worth re-running `inspect_ua_lexeme_fields.py` before
-any future schema change rather than trusting either list blind.
+confirmed 2026-07-28 via `inspect_ua_lexeme_fields.py`: both were the same 27-field set at that
+point (order differs — the live model's order reflects historical `modelFieldAdd` sequence, not
+the script's intended semantic grouping; AnkiConnect doesn't reposition existing fields on sync).
+Later the same day, `AspectCue` was added to `FIELDS` and synced live via `setup_ua_note_types.py
+--model UA_Lexeme` (confirmed success: "Adding field: AspectCue... Note type is ready"), bringing
+the live model to 28 fields. Earlier doc drift warnings about `Mnemonic_EN`/`CompareA`/`CompareB`
+missing from the script are now stale — those were added to `FIELDS` since. Still worth
+re-running `inspect_ua_lexeme_fields.py` before any future schema change rather than trusting
+either list blind.
 
 **Remaining CNSF cleanup steps (`Verb_Conj_Table` only):**
 
@@ -293,6 +316,33 @@ Example: професія vs. фах
 - Scenario B: "Discussing a plumber's expertise" → фах (skilled trade/craft)
 
 The "Compare" card only renders when `ConfusableSet` is populated, making it lightweight.
+
+**AspectCue chip (single-aspect verb/phrase disambiguation, added 2026-07-28)**
+
+For a verb/phrase note that types only ONE aspect on its EN->UA card -- no `Perfective`/
+`ImperfectiveUnidirectional` counterpart populated, so `TypingTarget_UA` resolves to the bare
+`Lemma` via `compute_typing_target()` -- nothing on the card previously told the student which
+aspect (habitual/ongoing vs. one-time/completed) was expected. `AspectCue` fixes this:
+
+- **Optional field, `UA_Lexeme`.** Blank for notes where aspect ambiguity doesn't apply --
+  doublet/triplet notes (both aspects populated, so `TypingTarget_UA` already asks for both at
+  once) and aspectless/bi-aspectual singlets (see exclusions below).
+- **Content:** a short situational question that makes the answer's aspect vivid through natural
+  English framing, *without naming the grammar term*. Present/habitual framing ("what does X
+  regularly do") cues imperfective; "in that moment / just now / finally" framing cues
+  perfective. Same idea as `ConfusableSet`'s scenario framing, applied to aspect instead of
+  word choice.
+- **Rendering:** its own chip on `EN_UA_FRONT`, guarded by `{{#AspectCue}}...{{/AspectCue}}` (no
+  render when blank), styled to match the Compare card's distractor chips (`font-size: 20px`,
+  bold, boxed, blue left border) -- Craig's requirement that the cue carry the same visual weight
+  as an actual answer option, not read as a small caption.
+- **Not every single-aspect note needs one.** Before adding `AspectCue`, confirm via Горох that
+  the note actually has an aspect choice to cue: some verbs are bi-aspectual (двовидове -- same
+  infinitive covers both aspects, e.g. стартувати/фінішувати) or imperfectiva tantum (no
+  perfective counterpart exists at all, e.g. мати, вболівати). Neither case needs a cue -- there's
+  no ambiguity to resolve. A full-corpus scan 2026-07-28 found 23 single-aspect candidates; 8
+  were excluded on this basis (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360), leaving 15 that
+  got `AspectCue` values (0224, 0226-0229, 0231-0234, 0299-0303, 0359).
 
 **PVOM prefix drilling (multi-form typing cards)**
 
