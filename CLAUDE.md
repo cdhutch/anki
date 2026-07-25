@@ -212,7 +212,7 @@ Template Techniques below)
 
 *Grammatical Properties:* `Govt_Case`, `IrregularForms`, `CounterpartForm` (gender pairs), `VerbMotion_Pair` (base unprefixed form)
 
-*Semantic Relations:* `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote` (alternate spellings: уже/вже, всі/усі)
+*Semantic Relations:* `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote` (accepted alternate spelling(s), e.g. уболівати for вболівати -- bare word, no stress, `|`-delimited if more than one; wired into EN_UA_BACK's typed-answer grading, see "EuphonyNote acceptance" below, not just a display note)
 
 *Typing & Examples:* `TypingAnswer` (Lemma without stress marks), `UA_Example`, `EN_Example`
 
@@ -401,6 +401,21 @@ aspect (habitual/ongoing vs. one-time/completed) was expected. `AspectCue` fixes
   no ambiguity to resolve. A full-corpus scan 2026-07-28 found 23 single-aspect candidates; 8
   were excluded on this basis (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360), leaving 15 that
   got `AspectCue` values (0224, 0226-0229, 0231-0234, 0299-0303, 0359).
+
+**EuphonyNote acceptance (alternate spelling grading, added 2026-07-25)**
+
+`EN_UA_BACK` already reconstructs the typed answer from Anki's `#typeans` diff and does its
+own exact-string comparison (against `TypingTarget_UA`/`TypingAnswer`) rather than trusting
+Anki's native diff for pass/fail -- see the dual-tier PERFECT/CORRECT JS block. `EuphonyNote`
+hooks into that same comparison as a third tier: if the typed answer (stress-stripped, NFC
+normalized) matches an `EuphonyNote` alternate, it's graded correct, not just noted. Craig's
+call, 2026-07-25: real acceptance, not a passive display note -- the plumbing already existed,
+so building it properly cost little more than displaying it would have.
+
+- **Field contract:** bare word, no stress marks, `|`-delimited if more than one alternate.
+- Rendered as its own tier in the feedback JS (distinct from the PERFECT-with-stress and
+  CORRECT-no-stress tiers), and also shown passively on `UA_EN_BACK` for reading context.
+- First use: ua-lexeme-0211/0377 (вболівати), accepting уболівати (the у-/в- initial variant).
 
 **PVOM prefix drilling (multi-form typing cards)**
 
