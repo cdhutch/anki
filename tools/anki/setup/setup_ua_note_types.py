@@ -439,7 +439,7 @@ EN_UA_BACK = """\
     // uses above, applied to the partial-credit tier too.
     html = '<div style="color: #ef6c00; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
            typedAnswer + ' ½ PARTIAL</div>' +
-           '<div style="color: #ef6c00; font-size: 14px; margin-bottom: 12px;">Correct word with stress, but the euphonic pairing isn\'t shown</div>' +
+           '<div style="color: #ef6c00; font-size: 14px; margin-bottom: 12px;">Correct word with stress, but the euphonic pairing is not shown</div>' +
            '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Full credit needs both:</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
   } else if (typedAnswer !== null && partialNoStress.indexOf(typedAnswer) !== -1) {
