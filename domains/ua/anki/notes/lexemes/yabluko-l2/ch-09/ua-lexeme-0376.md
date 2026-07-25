@@ -20,7 +20,8 @@ fields:
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
-  EN_Gloss: to take part in the competition (impf.)
+  EN_Gloss: to take part in the competition
+  AspectCue: As a rule, what are six of the team members doing in the competition?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -55,6 +56,8 @@ fields:
     new vocabulary -- flagging as a judgment call for Craig''s review, same precedent. If
     a UA_Lexeme note for bare "брати" already exists elsewhere in the corpus, this note should
     cross-reference it in ConfusableSet rather than stand alone. Content still needs your
-    review pass before flipping to status:verified.'
+    review pass before flipping to status:verified. 2026-07-28: added AspectCue (chip-styled
+    EN->UA prompt, replacing the earlier "(impf.)" parenthetical on EN_Gloss) so the card
+    indicates the ongoing/habitual reading is expected here, not the perfective взяти участь.'
 ---
 

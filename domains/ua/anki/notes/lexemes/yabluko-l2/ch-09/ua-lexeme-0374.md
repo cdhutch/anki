@@ -20,7 +20,8 @@ fields:
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
-  EN_Gloss: to use equipment/gear (impf.)
+  EN_Gloss: to use equipment/gear
+  AspectCue: Every time they dive, what do participants do with their gear?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -46,6 +47,8 @@ fields:
   Verification Notes: '2026-07-27: Горох-verified via Chrome (see ua-lexeme-0373 for the використовувати/
     використати paradigm check). Both components'' stress confirmed: використо́вувати as drafted,
     спорядження already verified in the pre-existing ua-lexeme-0194. Content (gloss, example)
-    still needs your review pass before flipping to status:verified.'
+    still needs your review pass before flipping to status:verified. 2026-07-28: added AspectCue
+    (chip-styled EN->UA prompt, replacing the earlier "(impf.)" parenthetical on EN_Gloss)
+    so the card indicates the ongoing/habitual reading is expected here.'
 ---
 

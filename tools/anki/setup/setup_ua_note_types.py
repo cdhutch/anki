@@ -42,6 +42,20 @@ FIELDS = [
     # Aspect (Perfective & Imperfective variants)
     "Perfective",
     "ImperfectiveUnidirectional",  # Motion verbs: іти, їхати (directional IPFV)
+    # AspectCue (added 2026-07-28): hand-authored, optional. For a verb/phrase
+    # note that types only ONE aspect (no populated Perfective/Imperfective
+    # counterpart -- e.g. a phrase note like ua-lexeme-0251 виходити назустріч),
+    # nothing on the EN->UA card previously told the student WHICH aspect was
+    # expected. AspectCue holds a short situational question that makes the
+    # answer's aspect (habitual/ongoing vs. one-time/completed) vivid without
+    # naming it in dry grammar terms -- same idea as CompareScenario, applied
+    # to aspect instead of confusable-word discrimination. Rendered as its own
+    # chip on the EN->UA front, styled to match the Compare card's distractor
+    # chips (see EN_UA_FRONT below). Blank/absent for notes where aspect
+    # ambiguity doesn't apply (singlets with no real alternative, or triplet/
+    # doublet notes where TypingTarget_UA already asks for every aspect at
+    # once via compute_typing_target()).
+    "AspectCue",
 
     # Semantic Content
     "EN_Gloss",
@@ -269,6 +283,13 @@ UA_EN_BACK = """\
 EN_UA_FRONT = """\
 <div class="gloss">{{EN_Gloss}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
+<!-- AspectCue (2026-07-28): optional, only for notes where the EN->UA typing
+     target is a single aspect and it isn't otherwise obvious which one from
+     EN_Gloss alone. Styled to match the Compare card's distractor chips
+     (font-size: 20px, bold, boxed) per Craig's request -- same visual weight
+     as an actual answer option, not a small caption. Absent for notes where
+     it doesn't apply (renders nothing, per the {{#AspectCue}} guard). -->
+{{#AspectCue}}<div style="display: inline-block; font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; margin: 12px 0; background: #f9f9f9; border-left: 3px solid #1565c0;">{{AspectCue}}</div>{{/AspectCue}}
 <!-- Typing target is the STRESSED field (TypingTarget_UA), not TypingAnswer:
      typing it correctly is then a clean exact match for Anki's diff (no
      insertion); typing without stress becomes a clean omission instead. Both

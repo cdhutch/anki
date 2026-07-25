@@ -20,7 +20,8 @@ fields:
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
-  EN_Gloss: to earn/score a point (pfv.)
+  EN_Gloss: to earn/score a point
+  AspectCue: In that one decisive moment, what does the player do to add to the score?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -46,12 +47,14 @@ fields:
     base verb with its own phrase note). This slot''s position, directly between "завдати
     ударів" (0229) and "кинути мʼяч" (0231), lines up with заробляти''s place in the exercise
     list.'
-  Verification Notes: Stress verified by reuse -- both components (зароби́ти from the existing
+  Verification Notes: 'Stress verified by reuse -- both components (зароби́ти from the existing
     ua-lexeme-0216, Горох-verified 2026-07-24; очко́ from the existing ua-lexeme-0203, Горох-verified
     2026-07-24) were already confirmed elsewhere in the corpus, so no fresh Горох lookup was
     needed for this phrase itself. Pairs the existing base verb ua-lexeme-0216 (заробляти/заробити)
     with the existing noun ua-lexeme-0203 (очко), following the same base-verb-plus-phrase
     pattern as its siblings. Content (gloss, example) still needs your review pass before
-    flipping to status:verified.
+    flipping to status:verified. 2026-07-28: added AspectCue (chip-styled EN->UA prompt, replacing
+    the earlier "(pfv.)" parenthetical on EN_Gloss) so the card indicates a one-time completed
+    action is expected, not the imperfective заробляти.'
 ---
 
