@@ -159,6 +159,12 @@ hr#answer {
   margin-top: 6px;
 }
 
+.euphony {
+  font-size: 13px;
+  color: #888;
+  margin-top: 6px;
+}
+
 .example-ua {
   font-size: 15px;
   margin-top: 14px;
@@ -274,6 +280,7 @@ UA_EN_BACK = """\
 {{#IrregularForms}}<div class="irregular">{{IrregularForms}}</div>{{/IrregularForms}}
 {{#Govt_Case}}<div class="irregular">governs: {{Govt_Case}}</div>{{/Govt_Case}}
 {{#ConfusableSet}}<div class="confusable">cf. {{ConfusableSet}}</div>{{/ConfusableSet}}
+{{#EuphonyNote}}<div class="euphony">also accepted: {{EuphonyNote}}</div>{{/EuphonyNote}}
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
@@ -317,7 +324,7 @@ EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
 <!-- Color-coded typing feedback with dual validation -->
-<div id="feedback" data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
+<div id="feedback" data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}" data-euphony="{{EuphonyNote}}" style="margin-bottom: 16px;"></div>
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
@@ -328,6 +335,16 @@ EN_UA_BACK = """\
   // silently fails for otherwise-correct accented answers.
   var targetWithStress = (feedback.dataset.withStress || '').normalize('NFC');
   var targetNoStress = (feedback.dataset.noStress || '').normalize('NFC');
+
+  // EuphonyNote (2026-07-25): bare alternate spelling(s), '|'-delimited, e.g.
+  // "уболівати" as an accepted alternate for вболівати. Stress-strip (combining
+  // acute U+0301) both sides before comparing -- EuphonyNote values are stored
+  // unstressed, but a student may type the alternate's own stress mark.
+  function stripStress(s) { return s.replace(/\u0301/g, ''); }
+  var euphonyAlts = (feedback.dataset.euphony || '')
+    .split('|')
+    .map(function(s) { return stripStress(s.trim().normalize('NFC')); })
+    .filter(Boolean);
 
   // Anki's own type-answer field replaces the front's <input> with a #typeans
   // diff (spans classed typeGood/typeBad/typeMissed) once the answer side
@@ -371,6 +388,13 @@ EN_UA_BACK = """\
            targetNoStress + ' ~ CORRECT</div>' +
            '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, but missing stress marks</div>' +
            '<div style="color: #2e7d32; font-size: 16px; font-weight: bold;">Bonus answer:</div>' +
+           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
+  } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer)) !== -1) {
+    // Accepted alternate spelling (EuphonyNote) -- genuinely correct, not just noted.
+    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+           typedAnswer + ' ✓ CORRECT</div>' +
+           '<div style="color: #2e7d32; font-size: 14px; margin-bottom: 12px;">Accepted alternate spelling</div>' +
+           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Primary form:</div>' +
            '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
   } else if (typedAnswer !== null) {
     // Reconstruction succeeded and it's neither accepted answer -- genuinely wrong.
