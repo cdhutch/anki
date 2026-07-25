@@ -40,7 +40,20 @@ every other phrase-type Lemma in the corpus carries a concrete complement after 
 (e.g. "би́тися з реа́льним супе́рником"), never a bare dangling preposition, and 0211 already
 covers "вболівати за + Acc." correctly via `Govt_Case` + a live example. Craig chose to retire
 0225 outright (Option A) rather than fix it into a standalone phrase note (Option B) -- it was
-purely redundant with 0211. See "Same-Lemma polysemy split" below.
+purely redundant with 0211. See "Same-Lemma polysemy split" below. 2026-07-25 (later still):
+extended `EuphonyNote` handling to `UA_PVOM_Infinitive`, coded the same way as the existing
+stress-tier fields (`*_UA`/`*_Typing` per base form) -- a fourth per-slot `*_Euphony` field,
+only populated where a base form actually has an attested euphonic variant. Two new PVOM notes
+added: ua-pvom-0012 (входити, prefix "в") and ua-pvom-0013 (находити, prefix "на"). входити
+surfaced two findings during research: (1) a stress-shifted homograph trap -- входи́ти (stress
+on syllable 2) is a different, unrelated word ("to wear out by prolonged walking"), not
+входити's perfective; the real perfective is увійти́ (irregular epenthesis, not euphony).
+(2) входити's *vehicle* forms have genuine euphonic variation attested in Горох:
+в'їжджати/уїжджати (impf) and в'їхати/уїхати (perf) -- its walking forms don't need
+`*_Euphony`, its vehicle forms do. находити is added PVOM-only (highly polysemous -- 6 Горох
+senses, dominant modern use is "find" via знайти, not walking -- so no `UA_Lexeme` note unless
+it turns up in Яблуко); its на- prefix has no euphonic tension (vowel-final, unlike в-), so all
+four `*_Euphony` fields are blank on 0013.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -402,7 +415,8 @@ aspect (habitual/ongoing vs. one-time/completed) was expected. `AspectCue` fixes
   were excluded on this basis (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360), leaving 15 that
   got `AspectCue` values (0224, 0226-0229, 0231-0234, 0299-0303, 0359).
 
-**EuphonyNote acceptance (alternate spelling grading, added 2026-07-25)**
+**EuphonyNote acceptance (alternate spelling grading, added 2026-07-25; extended to
+`UA_PVOM_Infinitive` same day)**
 
 `EN_UA_BACK` already reconstructs the typed answer from Anki's `#typeans` diff and does its
 own exact-string comparison (against `TypingTarget_UA`/`TypingAnswer`) rather than trusting
@@ -416,6 +430,11 @@ so building it properly cost little more than displaying it would have.
 - Rendered as its own tier in the feedback JS (distinct from the PERFECT-with-stress and
   CORRECT-no-stress tiers), and also shown passively on `UA_EN_BACK` for reading context.
 - First use: ua-lexeme-0211/0377 (вболівати), accepting уболівати (the у-/в- initial variant).
+- **Shared by both note types.** `UA_PVOM_Infinitive` uses the identical field contract and JS
+  tier, but per-slot: `Walking_Multi_Euphony`, `Walking_Uni_Euphony`, `Vehicle_Multi_Euphony`,
+  `Vehicle_Uni_Euphony` (mirrors the existing `*_UA`/`*_Typing` per-base-form pattern -- see
+  "PVOM prefix drilling" below). First PVOM use: ua-pvom-0012 (входити), accepting
+  уїжджати/уїхати on its vehicle forms.
 
 **PVOM prefix drilling (multi-form typing cards)**
 
@@ -435,10 +454,13 @@ than one card with four blanks:
 scheduling and leech tracking. The four forms are not equally hard — mutations
 (apostrophe insertion: підʼїхати, відʼїхати, надʼїхати, обʼїхати, зʼїхати; epenthetic
 -ій-: підійти, відійти, надійти, обійти, зійти; з→с assimilation before voiceless х:
-з- + ходити → сходити, not "зходити") make some prefixes much harder to produce than
-others, and a student can be solid on the walking forms while still missing vehicle
-forms. Separate templates let each be suspended/re-weighted independently without
-touching the others.
+з- + ходити → сходити, not "зходити"; входити takes an epenthetic у- on that same -ій- shape:
+увійти, not "войти") make some prefixes much harder to produce than others, and a student can
+be solid on the walking forms while still missing vehicle forms. Separate templates let each
+be suspended/re-weighted independently without touching the others. Vehicle forms can
+additionally carry real euphonic variants (в'їжджати/уїжджати, в'їхати/уїхати for входити) --
+these aren't a mutation of the same word but two independently attested spellings, handled via
+`*_Euphony` (see "EuphonyNote acceptance" above), not baked into the `*_UA`/`*_Typing` pair.
 
 **Card design — no hints on the front.** Front is just `{{Prefix}} + <base label>` (e.g.
 "ви + іти", "під + їздити") — no aspect labels, no mutation hints. The point is for the
@@ -449,7 +471,9 @@ told the answer's shape in advance.
 (`*_Typing`); the back-side script compares the reconstructed typed answer against both to
 give tiered feedback (perfect-with-stress / correct-no-stress / incorrect) — see "Typing-card
 design pattern for Ukrainian text" below for the full mechanics (this is the canonical
-implementation the pattern was later copied from into `UA_Lexeme`, 2026-07-25).
+implementation the pattern was later copied from into `UA_Lexeme`, 2026-07-25). Each base also
+has an optional fourth field, `*_Euphony` (added 2026-07-25), for bases with an attested
+euphonic variant — see "EuphonyNote acceptance" above.
 
 **Typing-card design pattern for Ukrainian text (established here; UA_Lexeme's EN→UA card
 fixed to match, 2026-07-25).** Any card where the student types Ukrainian and the correct
