@@ -30,6 +30,11 @@ Usage (with Anki open + AnkiConnect running):
 
     # Import a whole directory
     python tools/anki/sync/ua_lexeme_import.py domains/ua/anki/notes/lexemes/yabluko-l1/vstup/
+
+    # Hard-delete Anki notes whose CNSF file was removed (2026-07-25, opt-in,
+    # irreversible -- preview with --dry-run first)
+    python tools/anki/sync/ua_lexeme_import.py --dry-run --prune-orphans domains/ua/anki/notes/lexemes/
+    python tools/anki/sync/ua_lexeme_import.py --prune-orphans domains/ua/anki/notes/lexemes/
 """
 from __future__ import annotations
 
@@ -45,6 +50,13 @@ from tools.anki.lib.lexeme_dedup import strip_stress  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Lexeme"
+
+# Full CNSF root, independent of whatever `targets` a given invocation passes
+# (e.g. a single file or one subdirectory) -- orphan detection (--prune-orphans,
+# added 2026-07-25) must always compare against every note_id that exists
+# ANYWHERE in the corpus, not just the files this particular run touched, or
+# it would falsely flag every note outside `targets` as orphaned and delete it.
+LEXEME_ROOT = Path(__file__).resolve().parents[3] / "domains/ua/anki/notes/lexemes"
 
 DECK_RECOGNITION = "UA::Recognition::UA→EN"
 DECK_PRODUCTION  = "UA::Production::EN→UA"
@@ -135,6 +147,33 @@ def set_suspended(anki_note_id: int, suspend: bool, dry_run: bool):
         return
     action = "suspend" if suspend else "unsuspend"
     anki_request(action, {"cards": card_ids}, url=ANKI_URL)
+
+
+def all_anki_note_ids() -> dict[str, int]:
+    """Map every live UA_Lexeme note's NoteID field -> Anki note id.
+
+    Used by --prune-orphans to find Anki notes whose CNSF source file has
+    been deleted (hard-delete decision, 2026-07-25 -- see Verification
+    Notes/CLAUDE.md: reusing a note_id slot for unrelated new content must
+    NOT inherit a stale note's FSRS scheduling/review history, which a
+    suspend-only approach would silently do via updateNoteFields).
+    """
+    ids = anki_request("findNotes", {"query": f'note:"{MODEL_NAME}"'}, url=ANKI_URL) or []
+    if not ids:
+        return {}
+    infos = anki_request("notesInfo", {"notes": ids}, url=ANKI_URL) or []
+    result = {}
+    for info in infos:
+        note_id_field = (info.get("fields", {}).get("NoteID", {}) or {}).get("value", "")
+        if note_id_field:
+            result[note_id_field] = info["noteId"]
+    return result
+
+
+def delete_notes(anki_note_ids: list[int], dry_run: bool):
+    if dry_run or not anki_note_ids:
+        return
+    anki_request("deleteNotes", {"notes": anki_note_ids}, url=ANKI_URL)
 
 
 # ---------------------------------------------------------------------------
@@ -280,10 +319,58 @@ def collect_files(targets: list[str]) -> list[Path]:
     return files
 
 
+def collect_all_corpus_note_ids() -> set[str]:
+    """Every note_id in the full CNSF corpus, regardless of this run's `targets`.
+
+    Deliberately walks LEXEME_ROOT rather than args.targets -- see the
+    LEXEME_ROOT comment above.
+    """
+    note_ids = set()
+    for path in LEXEME_ROOT.rglob("ua-lexeme-*.md"):
+        data = parse_note_file(path)
+        if data:
+            note_id = data.get("note_id", "")
+            if note_id:
+                note_ids.add(note_id)
+    return note_ids
+
+
+def prune_orphans(dry_run: bool) -> int:
+    """Hard-delete Anki notes whose CNSF source file no longer exists.
+
+    2026-07-25, Craig: hard delete, not suspend -- if a retired note_id slot
+    gets reused for unrelated new content later, find_note_by_id() would
+    match the orphan by NoteID field and updateNoteFields() would silently
+    inherit its old FSRS scheduling/review history onto the new, unrelated
+    note. Hard-deleting means the next sync's find_note_by_id() finds
+    nothing and add_note() creates a fresh note with clean scheduling
+    instead, which is what a genuinely new/different note should get.
+    """
+    corpus_ids = collect_all_corpus_note_ids()
+    anki_ids = all_anki_note_ids()
+    orphan_note_ids = sorted(set(anki_ids) - corpus_ids)
+    if not orphan_note_ids:
+        return 0
+    label = "Would delete" if dry_run else "Deleting"
+    for note_id in orphan_note_ids:
+        print(f"  PRUNE   {label.lower()} {note_id} (no matching CNSF file)")
+    delete_notes([anki_ids[nid] for nid in orphan_note_ids], dry_run)
+    return len(orphan_note_ids)
+
+
 def main():
     parser = argparse.ArgumentParser(description="Import ua_lexeme notes into Anki.")
     parser.add_argument("targets", nargs="+", help="Files or directories to import")
     parser.add_argument("--dry-run", action="store_true", help="Show what would happen; touch nothing")
+    parser.add_argument(
+        "--prune-orphans",
+        action="store_true",
+        help=(
+            "Hard-delete Anki notes whose CNSF source file no longer exists anywhere in the "
+            "corpus. Off by default -- irreversible (loses FSRS/review history), opt in "
+            "explicitly. Combine with --dry-run to preview first."
+        ),
+    )
     args = parser.parse_args()
 
     if args.dry_run:
@@ -321,7 +408,14 @@ def main():
             print(f"  ERROR   {f.name}: {e}")
             errors += 1
 
-    print(f"\nDone: {added} added, {updated} updated, {skipped} skipped, {errors} errors.")
+    pruned = 0
+    if args.prune_orphans:
+        pruned = prune_orphans(args.dry_run)
+
+    summary = f"\nDone: {added} added, {updated} updated, {skipped} skipped, {errors} errors"
+    if args.prune_orphans:
+        summary += f", {pruned} pruned"
+    print(summary + ".")
     if errors:
         sys.exit(1)
 
