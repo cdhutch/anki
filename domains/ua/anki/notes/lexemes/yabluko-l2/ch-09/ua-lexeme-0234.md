@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to take third place
+  AspectCue: The moment results are announced, what does the athlete achieve?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -38,8 +39,10 @@ fields:
     https://goroh.pp.ua/Словозміна/місце
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: Ordinal component 'третє' (neuter of 'третій') is treated as basic grammar
-    rather than new content vocabulary and doesn't get its own lexeme note -- flagging this
-    as a judgment call for Craig's review, same as ua-lexeme-0232.
+  Verification Notes: 'Ordinal component ''третє'' (neuter of ''третій'') is treated as basic
+    grammar rather than new content vocabulary and doesn''t get its own lexeme note -- flagging
+    this as a judgment call for Craig''s review, same as ua-lexeme-0232. 2026-07-28: added
+    AspectCue framing the one-time completed-result reading of посі́сти (perfective) -- the
+    real imperfective counterpart посіда́ти is already its own corpus note, ua-lexeme-0220.'
 ---
 

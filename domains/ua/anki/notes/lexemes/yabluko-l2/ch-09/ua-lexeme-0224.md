@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to fight a real opponent (as opposed to a training dummy/practice partner)
+  AspectCue: In training, what do fighters regularly do against a live opponent, not a dummy?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -38,6 +39,10 @@ fields:
     https://goroh.pp.ua/Словозміна/суперник
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: ''
+  Verification Notes: '2026-07-28: added AspectCue framing the ongoing/repeated training-practice
+    reading of би́тися (imperfective, reflexive) -- this note has no attested single-form
+    perfective counterpart confirmed via Горох (unlike most of this batch), so the cue leans
+    on the training-context framing already implicit in the gloss rather than asserting a
+    specific competing pfv. form.'
 ---
 

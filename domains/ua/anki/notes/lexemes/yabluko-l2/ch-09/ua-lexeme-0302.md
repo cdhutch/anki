@@ -22,6 +22,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to climb on the rocks
+  AspectCue: Right now, partway up the rock face, what is the climber doing?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -37,6 +38,8 @@ fields:
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/підніматися; https://goroh.pp.ua/Словозміна/скеля
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
-  Verification Notes: Reuses підніма́тися/підня́тися (ua-lexeme-0286) and ске́ля (ua-lexeme-0268).
+  Verification Notes: 'Reuses підніма́тися/підня́тися (ua-lexeme-0286) and ске́ля (ua-lexeme-0268).
+    2026-07-28: added AspectCue framing the in-progress reading of підніма́тися (imperfective)
+    -- the real perfective counterpart підня́тися is already its own corpus note, ua-lexeme-0286.'
 ---
 

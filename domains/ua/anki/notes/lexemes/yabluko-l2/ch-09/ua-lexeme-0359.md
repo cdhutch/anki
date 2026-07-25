@@ -22,6 +22,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to call a taxi
+  AspectCue: Whenever you need a ride, what's the first thing you do?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -37,6 +38,10 @@ fields:
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/викликати; https://goroh.pp.ua/Словозміна/таксі
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
-  Verification Notes: Reuses виклика́ти/ви́кликати (ua-lexeme-0338) and таксі́ (ua-lexeme-0339).
+  Verification Notes: 'Reuses виклика́ти/ви́кликати (ua-lexeme-0338) and таксі́ (ua-lexeme-0339).
+    2026-07-28: added AspectCue framing the habitual/repeated reading of виклика́ти (imperfective)
+    -- Горох-confirmed this is a genuine stress-differentiated pair (ви́кликати pfv. / виклика́ти
+    impf.), not two variant spellings of the same word, so the stress mark itself carries
+    the aspect distinction here.'
 ---
 

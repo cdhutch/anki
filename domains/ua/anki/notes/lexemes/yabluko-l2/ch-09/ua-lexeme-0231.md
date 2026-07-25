@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to throw the ball
+  AspectCue: In one quick motion, what does the player do with the ball?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -37,6 +38,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/кинути; https://goroh.pp.ua/Словозміна/м'яч
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: ''
+  Verification Notes: '2026-07-28: added AspectCue framing the one-time single-throw (semelfactive)
+    reading of ки́нути (perfective) -- the real imperfective counterpart ки́дати is already
+    its own corpus note, ua-lexeme-0217.'
 ---
 

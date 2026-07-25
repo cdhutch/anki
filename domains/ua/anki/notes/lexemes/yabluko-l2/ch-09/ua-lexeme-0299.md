@@ -22,6 +22,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to climb up onto a cliff
+  AspectCue: After the long struggle, what does the climber finally do?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -37,6 +38,8 @@ fields:
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/вилізти; https://goroh.pp.ua/Словозміна/скеля
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
-  Verification Notes: Reuses вила́зити/ви́лізти (ua-lexeme-0280) and ске́ля (ua-lexeme-0268).
+  Verification Notes: 'Reuses вила́зити/ви́лізти (ua-lexeme-0280) and ске́ля (ua-lexeme-0268).
+    2026-07-28: added AspectCue framing the one-time completed-climb reading of ви́лізти (perfective)
+    -- the real imperfective counterpart вила́зити is already its own corpus note, ua-lexeme-0280.'
 ---
 

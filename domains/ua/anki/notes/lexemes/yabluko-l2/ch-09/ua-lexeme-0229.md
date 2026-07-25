@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to deal blows, land hits
+  AspectCue: By the time the round ends, what has the boxer already landed on his opponent?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -38,6 +39,8 @@ fields:
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
   Verification Notes: '''удар'' (genitive plural ''ударів'') reuses the existing noun ua-lexeme-0174
-    (already sourced for ch.9.2).'
+    (already sourced for ch.9.2). 2026-07-28: added AspectCue framing the completed-by-round''s-end
+    reading of завда́ти (perfective) -- the real imperfective counterpart завдава́ти is already
+    its own corpus note, ua-lexeme-0215.'
 ---
 

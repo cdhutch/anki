@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to score the puck into the goal
+  AspectCue: In that split second, what does the player finally do with the puck?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -39,6 +40,8 @@ fields:
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
   Verification Notes: '''ворота'' reuses the existing noun ua-lexeme-0164 (already sourced
-    for ch.9.2).'
+    for ch.9.2). 2026-07-28: added AspectCue framing the one-time completed-goal reading of
+    заби́ти (perfective) -- Горох-confirmed real imperfective counterpart забива́ти exists
+    as its own headword.'
 ---
 
