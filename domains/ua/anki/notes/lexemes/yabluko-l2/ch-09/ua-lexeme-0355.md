@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - pos:preposition
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0355
   Lemma: че́рез

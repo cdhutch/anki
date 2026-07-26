@@ -37,8 +37,6 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Горох lists a second homograph sense of 'перелітати' ('облітати багато
     місць', labeled доконаний); this note uses the general 'move through the air / cross a
-    boundary' sense as the imperfective pair of перелеті́ти. Mixed-script correction 2026-07-26
-    -- Lemma had a Latin 'i' in place of Cyrillic 'і', and TypingAnswer had Latin 't'/'a'
-    in place of Cyrillic 'т'/'а'; both now render as clean Cyrillic.
+    boundary' sense as the imperfective pair of перелеті́ти.
 ---
 

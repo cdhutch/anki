@@ -13,7 +13,7 @@ tags:
 - pos:phrase
 - phrase:verb
 - stress:verified
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0230
   Lemma: зароби́ти очко́

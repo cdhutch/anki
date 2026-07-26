@@ -12,8 +12,8 @@ tags:
 - ch:2.9.4
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 - homograph:true
 fields:
   NoteID: ua-lexeme-0372
@@ -28,11 +28,17 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: 'ла́вка (2nd Горох sense: ''крамниця'' -- shop, stall) -- homograph, unrelated
     meaning: "market stall, shop stand" -- see ua-lexeme-0235.'
-  Mnemonic_EN: ''
+  Mnemonic_EN: Same spelling either way (лавка) — the card tests which SENSE fits, not which
+    word.
+  CompareScenario: Which sense of лавка is being used?
+  CompareA: На парку було багато лавок, де люди могли сидіти.
+  Homograph_SenseA: bench (for sitting)
+  CompareB: Вона купила букет троянд у квітковій лавці на ринку.
+  Homograph_SenseB: market stall, shop stand
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: лавка
-  UA_Example: Він сів на лавку в парку, щоб трохи відпочити.
+  UA_Example: Він сід на лавку в парку, щоб трохи відпочити.
   EN_Example: He sat down on a bench in the park to rest for a bit.
   Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4

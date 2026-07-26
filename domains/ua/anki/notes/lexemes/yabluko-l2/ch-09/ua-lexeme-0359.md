@@ -13,8 +13,8 @@ tags:
 - pos:verb
 - phrase:verb
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0359
   Lemma: виклика́ти таксі́

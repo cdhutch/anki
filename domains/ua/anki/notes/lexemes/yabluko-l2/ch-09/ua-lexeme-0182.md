@@ -34,11 +34,11 @@ fields:
     \ grammatical term underlying every Perfective/imperfective verb pair in this corpus."
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: A grammar textbook is explaining why "прочитати" is treated differently
-    from "читати" -- specifically, whether the action is being presented as completed or ongoing,
-    not what category of activity it is.
-  CompareA: kind, type (e.g. вид спорту)
-  CompareB: grammatical aspect (perfective/imperfective)
+  CompareScenario: Which sense of вид is being used?
+  CompareA: Який вид спорту ти любиш?
+  Homograph_SenseA: kind, type
+  CompareB: Дієслово "читати" має недоконаний вид.
+  Homograph_SenseB: grammatical aspect (perfective/imperfective)
   CrossLang_Analog: 'EN: aspect (grammatical category) · RU: вид (same term, cognate) - English
     verbs don''t mark aspect morphologically the way Slavic languages do; this is often the
     single hardest grammatical concept for English-speaking learners of Ukrainian.'

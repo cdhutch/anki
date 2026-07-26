@@ -20,7 +20,7 @@ fields:
   PartOfSpeech: noun
   Gender: m
   Perfective: ''
-  EN_Gloss: winner, champion
+  EN_Gloss: winner
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

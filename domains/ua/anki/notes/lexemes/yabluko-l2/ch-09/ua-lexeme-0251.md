@@ -14,7 +14,7 @@ tags:
 - phrase:verb
 - ch09-phrase
 - stress:verified
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0251
   Lemma: вихо́дити назу́стріч

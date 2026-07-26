@@ -42,32 +42,6 @@ FIELDS = [
     # Aspect (Perfective & Imperfective variants)
     "Perfective",
     "ImperfectiveUnidirectional",  # Motion verbs: іти, їхати (directional IPFV)
-    # AspectCue (added 2026-07-28): hand-authored, optional. For a verb/phrase
-    # note that types only ONE aspect (no populated Perfective/Imperfective
-    # counterpart -- e.g. a phrase note like ua-lexeme-0251 виходити назустріч),
-    # nothing on the EN->UA card previously told the student WHICH aspect was
-    # expected. AspectCue holds a short situational question that makes the
-    # answer's aspect (habitual/ongoing vs. one-time/completed) vivid without
-    # naming it in dry grammar terms -- same idea as CompareScenario, applied
-    # to aspect instead of confusable-word discrimination. Rendered as its own
-    # chip on the EN->UA front, styled to match the Compare card's distractor
-    # chips (see EN_UA_FRONT below). Blank/absent for notes where aspect
-    # ambiguity doesn't apply (singlets with no real alternative, or triplet/
-    # doublet notes where TypingTarget_UA already asks for every aspect at
-    # once via compute_typing_target()).
-    "AspectCue",
-
-    # Euphony (redesigned 2026-07-25): one per aspect slot, since a euphonic
-    # variant can land on any single slot independently (e.g. учити/вчити ->
-    # вивчити has it only on the imperfective slot). STRESSED contract --
-    # unlike UA_PVOM_Infinitive's bare-word *_Euphony fields, a euphonic
-    # alternate's own stress mark isn't safely derivable from the primary
-    # form's (увійти isn't a letter-swap of входити), so it's authored
-    # directly. Optional, blank where not applicable. Fed into
-    # compute_typing_target() at sync time -- see ua_lexeme_import.py.
-    "Lemma_Euphony",
-    "ImperfectiveUnidirectional_Euphony",
-    "Perfective_Euphony",
 
     # Semantic Content
     "EN_Gloss",
@@ -81,39 +55,19 @@ FIELDS = [
     # Semantic Relations & Cross-lingual
     "ConfusableSet",
     "Mnemonic_EN",
+    "_IsHomograph",  # Internal marker: populated by import script based on homograph:true tag
     "CompareScenario",
     "CompareA",
     "CompareB",
     "CompareC",
     "CompareD",
+    "Homograph_SenseA",  # EN sense for CompareA (homographs only)
+    "Homograph_SenseB",  # EN sense for CompareB (homographs only)
     "CrossLang_Analog",
-    # EuphonyNote: free-text linguistic commentary (apostrophe insertion,
-    # epenthesis, etc), NOT the grading mechanism -- that lives in the
-    # per-slot *_Euphony fields above. Predates and is independent of the
-    # 2026-07-25 redesign; still holds real authored content on the original
-    # motion-verb batch (0115/0117-0119/0124/0126-0127). Do not repurpose or
-    # rename this field for grading -- see near-miss note in CLAUDE.md.
     "EuphonyNote",
 
     # Typing & Examples
-    # TypingTarget_UA (added 2026-07-27): the EN->UA typing target. For most
-    # notes this is just Lemma. For verb notes with a populated
-    # ImperfectiveUnidirectional and/or Perfective, ua_lexeme_import.py computes
-    # this as the full stressed aspect join (e.g. "ходи́ти / йти / піти́") at
-    # sync time -- see compute_typing_target() there. Never hand-authored.
-    "TypingTarget_UA",
     "TypingAnswer",
-    # Base/AltOnly (added 2026-07-25, alongside Lemma_Euphony etc.): derived
-    # alongside TypingTarget_UA/TypingAnswer at sync time, never hand-authored.
-    # Base = primary forms only (what TypingTarget_UA computed before this
-    # redesign); AltOnly = euphonic form in place of primary on slots that have
-    # one. Both blank when the note has no euphony on any slot. Feed the
-    # EN_UA_BACK PARTIAL-credit tier -- see CLAUDE.md "Lemma_Euphony / aspect+
-    # euphony recognition testing".
-    "TypingTarget_UA_Base",
-    "TypingAnswer_Base",
-    "TypingTarget_UA_AltOnly",
-    "TypingAnswer_AltOnly",
     "UA_Example",
     "EN_Example",
 
@@ -143,6 +97,12 @@ CSS = """\
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 4px;
+}
+
+.perfective {
+  font-size: 22px;
+  color: #555;
+  margin-bottom: 8px;
 }
 
 .pos {
@@ -185,12 +145,6 @@ hr#answer {
 .confusable {
   font-size: 13px;
   color: #b07000;
-  margin-top: 6px;
-}
-
-.euphony {
-  font-size: 13px;
-  color: #888;
   margin-top: 6px;
 }
 
@@ -283,22 +237,9 @@ details.conj-wrap[open] summary::before {
 
 # Template 1: UA → EN  (Recognition: see Ukrainian, recall English)
 UA_EN_FRONT = """\
-<!-- Aspect pair (2026-07-25): Lemma and Perfective now share one div/class so
-     the ндв/дв pair renders on the same line in the same font -- Craig's
-     request; previously Perfective was a separate block-level div in a
-     smaller, greyed-out style (.perfective), which read as a demoted
-     afterthought rather than an equally-valid answer form. -->
-<div class="lemma">{{Lemma}}{{#Perfective}} / {{Perfective}}{{/Perfective}}</div>
+<div class="lemma">{{Lemma}}</div>
+{{#Perfective}}<div class="perfective">/ {{Perfective}}</div>{{/Perfective}}
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
-<!-- UA_Example on front (2026-07-25): standard on every UA->EN card now, per
-     Craig -- reading a real Ukrainian phrase in context, not just a bare
-     headword. Also what makes the same-Lemma polysemy-split pattern (see
-     CLAUDE.md "Same-Lemma polysemy split" under Card Template Techniques)
-     workable: sibling notes sharing one Lemma (e.g. вболівати, ua-lexeme-0211
-     "root for" vs. ua-lexeme-0377 "worry/grieve for") are otherwise
-     indistinguishable on this card until the flip -- the example sentence is
-     what lets the student infer which sense is being tested. -->
-{{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 """
 
 UA_EN_BACK = """\
@@ -309,10 +250,6 @@ UA_EN_BACK = """\
 {{#IrregularForms}}<div class="irregular">{{IrregularForms}}</div>{{/IrregularForms}}
 {{#Govt_Case}}<div class="irregular">governs: {{Govt_Case}}</div>{{/Govt_Case}}
 {{#ConfusableSet}}<div class="confusable">cf. {{ConfusableSet}}</div>{{/ConfusableSet}}
-{{#Lemma_Euphony}}<div class="euphony">euphonic partner: {{Lemma_Euphony}}</div>{{/Lemma_Euphony}}
-{{#ImperfectiveUnidirectional_Euphony}}<div class="euphony">euphonic partner: {{ImperfectiveUnidirectional_Euphony}}</div>{{/ImperfectiveUnidirectional_Euphony}}
-{{#Perfective_Euphony}}<div class="euphony">euphonic partner: {{Perfective_Euphony}}</div>{{/Perfective_Euphony}}
-{{#EuphonyNote}}<div class="euphony">note: {{EuphonyNote}}</div>{{/EuphonyNote}}
 {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
@@ -320,33 +257,20 @@ UA_EN_BACK = """\
 """
 
 # Template 2: EN → UA  (Production: see English, type Ukrainian)
-# Accepts both {{TypingTarget_UA}} (with stress) and {{TypingAnswer}} (without stress).
-# TypingTarget_UA (2026-07-27): for verb notes with a populated
-# ImperfectiveUnidirectional and/or Perfective, this is the full stressed aspect
-# join (e.g. "ходи́ти / йти / піти́"), computed at sync time in ua_lexeme_import.py
-# -- not just Lemma alone. For every other note it's simply Lemma, unchanged from
-# before this field existed.
+# Accepts both {{Lemma}} (with stress) and {{TypingAnswer}} (without stress)
 EN_UA_FRONT = """\
 <div class="gloss">{{EN_Gloss}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
-<!-- AspectCue (2026-07-28): optional, only for notes where the EN->UA typing
-     target is a single aspect and it isn't otherwise obvious which one from
-     EN_Gloss alone. Styled to match the Compare card's distractor chips
-     (font-size: 20px, bold, boxed) per Craig's request -- same visual weight
-     as an actual answer option, not a small caption. Absent for notes where
-     it doesn't apply (renders nothing, per the {{#AspectCue}} guard). -->
-{{#AspectCue}}<div style="display: inline-block; font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; margin: 12px 0; background: #f9f9f9; border-left: 3px solid #1565c0;">{{AspectCue}}</div>{{/AspectCue}}
-<!-- Typing target is the STRESSED field (TypingTarget_UA), not TypingAnswer:
-     typing it correctly is then a clean exact match for Anki's diff (no
-     insertion); typing without stress becomes a clean omission instead. Both
-     are well-behaved for Anki's diff -- the reverse (unstressed target,
-     stressed insertion, the previous setup) is not: a typed stress mark shows
-     as an inserted character with no adjacent match, which Anki's
-     per-character span-wrapping renders visually detached from its base
-     letter (looks like a stray apostrophe next to the vowel). Same reasoning
-     as UA_PVOM_Infinitive's Walking/Vehicle templates -- see
-     setup_ua_pvom_note_type.py. -->
-{{type:TypingTarget_UA}}
+<!-- Typing target is the STRESSED field (Lemma), not TypingAnswer: typing it
+     correctly is then a clean exact match for Anki's diff (no insertion);
+     typing without stress becomes a clean omission instead. Both are
+     well-behaved for Anki's diff -- the reverse (unstressed target, stressed
+     insertion, the previous setup) is not: a typed stress mark shows as an
+     inserted character with no adjacent match, which Anki's per-character
+     span-wrapping renders visually detached from its base letter (looks like
+     a stray apostrophe next to the vowel). Same reasoning as
+     UA_PVOM_Infinitive's Walking/Vehicle templates -- see setup_ua_pvom_note_type.py. -->
+{{type:Lemma}}
 <div id="type-hint" style="font-size: 12px; color: #999; margin-top: 8px;">
   (Type without stress, or with stress marks for bonus credit)
 </div>
@@ -355,18 +279,8 @@ EN_UA_FRONT = """\
 EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<!-- Color-coded typing feedback. Redesigned 2026-07-25: FULL (TypingTarget_UA/
-     TypingAnswer) now nests each slot's euphonic partner ("primary ; euphonic")
-     inside the existing aspect join, so PERFECT/CORRECT here mean the student
-     produced BOTH forms, demonstrating the pairing is known -- not just one
-     accepted spelling. Base/AltOnly are the single-form fallbacks, graded as
-     PARTIAL, not full credit -- see CLAUDE.md "Lemma_Euphony / aspect+euphony
-     recognition testing" for the full design and why. -->
-<div id="feedback"
-     data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}"
-     data-base-with-stress="{{TypingTarget_UA_Base}}" data-base-no-stress="{{TypingAnswer_Base}}"
-     data-alt-with-stress="{{TypingTarget_UA_AltOnly}}" data-alt-no-stress="{{TypingAnswer_AltOnly}}"
-     style="margin-bottom: 16px;"></div>
+<!-- Color-coded typing feedback with dual validation -->
+<div id="feedback" data-with-stress="{{Lemma}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
@@ -375,19 +289,8 @@ EN_UA_BACK = """\
   // normalization form than the field is stored in (OS keyboard/IME-dependent)
   // even though the strings look visually identical, so a raw === comparison
   // silently fails for otherwise-correct accented answers.
-  var targetWithStress = (feedback.dataset.withStress || '').normalize('NFC');
-  var targetNoStress = (feedback.dataset.noStress || '').normalize('NFC');
-
-  // PARTIAL-credit set (2026-07-25): single-form answers -- either the plain
-  // aspect join with no euphony (*_Base), or the euphonic form standing in for
-  // primary (*_AltOnly). Both blank (-> filtered out) when the note has no
-  // euphony on any slot, which is what makes this tier unreachable for the
-  // rest of the corpus -- Base then equals the FULL target exactly, already
-  // caught by the PERFECT/CORRECT branches above this one.
-  var partialWithStress = [feedback.dataset.baseWithStress, feedback.dataset.altWithStress]
-    .filter(Boolean).map(function(s) { return s.normalize('NFC'); });
-  var partialNoStress = [feedback.dataset.baseNoStress, feedback.dataset.altNoStress]
-    .filter(Boolean).map(function(s) { return s.normalize('NFC'); });
+  var lemmaWithStress = (feedback.dataset.withStress || '').normalize('NFC');
+  var lemmaNoStress = (feedback.dataset.noStress || '').normalize('NFC');
 
   // Anki's own type-answer field replaces the front's <input> with a #typeans
   // diff (spans classed typeGood/typeBad/typeMissed) once the answer side
@@ -420,51 +323,33 @@ EN_UA_BACK = """\
 
   var html = '';
 
-  if (typedAnswer === targetWithStress) {
-    // Perfect: pairing demonstrated, with stress marks
+  if (typedAnswer === lemmaWithStress) {
+    // Perfect: with stress marks
     html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           targetWithStress + ' ✓ PERFECT</div>' +
+           lemmaWithStress + ' ✓ PERFECT</div>' +
            '<div style="color: #2e7d32; font-size: 14px;">Correct with stress marks (bonus!)</div>';
-  } else if (typedAnswer === targetNoStress) {
-    // Close: pairing demonstrated, correct letters, missing stress
+  } else if (typedAnswer === lemmaNoStress) {
+    // Close: correct letters, missing stress
     html = '<div style="color: #ff9800; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           targetNoStress + ' ~ CORRECT</div>' +
+           lemmaNoStress + ' ~ CORRECT</div>' +
            '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, but missing stress marks</div>' +
            '<div style="color: #2e7d32; font-size: 16px; font-weight: bold;">Bonus answer:</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
-  } else if (typedAnswer !== null && partialWithStress.indexOf(typedAnswer) !== -1) {
-    // PARTIAL, stressed (added 2026-07-25): single form, but WITH its own
-    // correct stress mark -- one rung below CORRECT (which requires the
-    // pairing), same two-level with-stress/no-stress split the FULL tier
-    // uses above, applied to the partial-credit tier too.
-    html = '<div style="color: #ef6c00; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           typedAnswer + ' ½ PARTIAL</div>' +
-           '<div style="color: #ef6c00; font-size: 14px; margin-bottom: 12px;">Correct word with stress, but the euphonic pairing is not shown</div>' +
-           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Full credit needs both:</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
-  } else if (typedAnswer !== null && partialNoStress.indexOf(typedAnswer) !== -1) {
-    // PARTIAL, no stress: single form, missing its own stress mark too --
-    // weaker than the stressed-partial tier above, still ahead of INCORRECT.
-    html = '<div style="color: #c62828; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           typedAnswer + ' ½ PARTIAL</div>' +
-           '<div style="color: #c62828; font-size: 14px; margin-bottom: 12px;">Correct word, but missing stress AND the euphonic pairing</div>' +
-           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Full credit needs both, with stress:</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
+           '<div style="color: #1565c0; font-size: 16px;"><b>' + lemmaWithStress + '</b></div>';
   } else if (typedAnswer !== null) {
-    // Reconstruction succeeded and it's none of the above -- genuinely wrong.
+    // Reconstruction succeeded and it's neither accepted answer -- genuinely wrong.
     html = '<div style="color: #d32f2f; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
            typedAnswer + ' ✗ INCORRECT</div>' +
            '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Not quite right</div>' +
            '<div style="color: #2e7d32; font-size: 16px; font-weight: bold; margin-bottom: 4px;">Correct (no stress):</div>' +
-           '<div style="color: #2e7d32; font-size: 16px; margin-bottom: 8px;"><b>' + targetNoStress + '</b></div>' +
+           '<div style="color: #2e7d32; font-size: 16px; margin-bottom: 8px;"><b>' + lemmaNoStress + '</b></div>' +
            '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Correct (with stress):</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
+           '<div style="color: #1565c0; font-size: 16px;"><b>' + lemmaWithStress + '</b></div>';
   } else {
     // Couldn't determine what was typed at all (e.g. #typeans markup ever
     // changes shape) -- show the answer neutrally rather than guessing.
     html = '<div style="color: #1565c0; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
-           targetWithStress + '</div>' +
-           '<div style="color: #999; font-size: 13px;">(no stress: ' + targetNoStress + ')</div>';
+           lemmaWithStress + '</div>' +
+           '<div style="color: #999; font-size: 13px;">(no stress: ' + lemmaNoStress + ')</div>';
   }
 
   feedback.innerHTML = html;
@@ -501,7 +386,21 @@ EN_UA_BACK = """\
 # with a populated ConfusableSet should get a real CompareScenario over time.
 
 COMPARISON_FRONT = """\
-{{#ConfusableSet}}<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
+{{#ConfusableSet}}
+{{#_IsHomograph}}
+<!-- HOMOGRAPH MODE: UA→EN direction. Show Ukrainian sentences, student deduces EN meaning -->
+<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Which sense is being used?</div>
+<div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
+  {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}[Homograph scenario]{{/CompareScenario}}
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
+<div style="font-size: 16px; color: #1a1a1a; padding: 12px; background: #f0f7ff; border-left: 3px solid #1565c0;">{{CompareA}}</div>
+{{#CompareB}}<div style="font-size: 16px; color: #1a1a1a; padding: 12px; background: #f0f7ff; border-left: 3px solid #1565c0;">{{CompareB}}</div>{{/CompareB}}
+</div>
+{{/_IsHomograph}}
+{{^_IsHomograph}}
+<!-- CONFUSABLES MODE: EN→UA direction. Show English scenario, student picks Ukrainian word -->
+<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
   Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
 </div>
@@ -510,19 +409,43 @@ COMPARISON_FRONT = """\
 {{#CompareB}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareB}}</div>{{/CompareB}}
 {{#CompareC}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareC}}</div>{{/CompareC}}
 {{#CompareD}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareD}}</div>{{/CompareD}}
-</div>{{/ConfusableSet}}
+</div>
+{{/_IsHomograph}}
+{{/ConfusableSet}}
 """
 
 COMPARISON_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-{{#ConfusableSet}}<div style="margin-top: 16px; font-size: 16px;">
+{{#ConfusableSet}}
+{{#_IsHomograph}}
+<!-- HOMOGRAPH BACK: Show each Ukrainian sentence + its EN sense -->
+<div style="margin-top: 16px; font-size: 16px;">
+<div style="color: #2e7d32; font-size: 18px; font-weight: bold; margin-bottom: 12px;">Senses of {{Lemma}}:</div>
+<div style="margin: 12px 0; padding: 10px; background: #f5f5f5; border-left: 3px solid #2e7d32;">
+  <div style="color: #1565c0; font-size: 15px; margin-bottom: 4px;">{{CompareA}}</div>
+  <div style="color: #2e7d32; font-size: 13px;">{{Homograph_SenseA}}</div>
+</div>
+<div style="margin: 12px 0; padding: 10px; background: #f5f5f5; border-left: 3px solid #2e7d32;">
+  <div style="color: #1565c0; font-size: 15px; margin-bottom: 4px;">{{CompareB}}</div>
+  <div style="color: #2e7d32; font-size: 13px;">{{Homograph_SenseB}}</div>
+</div>
+{{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
+<strong>Remember:</strong> {{Mnemonic_EN}}
+</div>{{/Mnemonic_EN}}
+</div>
+{{/_IsHomograph}}
+{{^_IsHomograph}}
+<!-- CONFUSABLES BACK: Show the correct word and why it fits -->
+<div style="margin-top: 16px; font-size: 16px;">
 <div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 4px;">✓ {{Lemma}}</div>
 <div style="color: #2e7d32; font-size: 13px; margin-bottom: 12px;">{{EN_Gloss}}</div>
 {{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
 <strong>Remember:</strong> {{Mnemonic_EN}}
 </div>{{/Mnemonic_EN}}
-</div>{{/ConfusableSet}}
+</div>
+{{/_IsHomograph}}
+{{/ConfusableSet}}
 """
 
 CARD_TEMPLATES = [
