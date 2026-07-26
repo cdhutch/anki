@@ -71,3 +71,36 @@ Agreed plan (2026-07-22), documented here before any note files were generated.
 
 See `CLAUDE-approved-web-sources.md` — goroh.pp.ua and r2u.org.ua, pending Craig's
 confirmation.
+
+## Confusable-candidate flagging (agreed 2026-07-26, during ch.9 review)
+
+Craig started drafting notes in a later chapter of the level-2 textbook, so he already
+has exposure to a lot of vocabulary from the legacy `legacy_UA` Anki notes that hasn't
+been re-encountered in this CNSF-authored corpus yet. He doesn't want to wait for the
+counterpart word's own chapter to come up before capturing a remembered confusable
+relationship -- but the full treatment (bidirectional `ConfusableSet` + a real
+contrastive `Mnemonic_EN`) still requires both notes to exist to be done well.
+
+Resolution: a lightweight, one-sided flag now; the full cross-link later.
+
+- When Craig flags a word as confusable with something not yet drafted, add a
+  `confusable:candidate` tag to the existing note (distinct from `homograph:true`, which
+  is reserved for confirmed, fully cross-linked pairs).
+- Populate `ConfusableSet` immediately with the remembered lemma, one-sided -- it's a
+  plain-text field, not a hard link to a NoteID, so this is safe even though the
+  counterpart note doesn't exist yet. The card surfaces the hint right away.
+- Add a one-line `Verification Notes` entry recording what was flagged and why (e.g.
+  "Craig flags this as confusable with X -- not yet drafted; revisit when X gets its own
+  note").
+- When the counterpart word's note is eventually drafted (regular dedup/sourcing pass),
+  search for `confusable:candidate` tags matching it, complete the reverse `ConfusableSet`
+  link and a real `Mnemonic_EN` contrasting the two, and drop the `confusable:candidate`
+  tag from the original note (the pair is now a confirmed, bidirectional link).
+
+**Legacy-deck mining tool**: `tools/anki/setup/mine_legacy_yabluko.py` pulls every note
+from the legacy `Legacy::Ukrainian Active::Яблуко` Anki deck via AnkiConnect (Front/Back
+notes and Cloze notes alike) into a searchable JSON + flat-text datafile. Craig's Cloze
+notes there are the richest source of prior confusable-word context, since that's where
+he originally called out contrasts directly. Run this before drafting a note for a word
+that might already have legacy context, or when deciding what a `confusable:candidate`
+flag was actually about.

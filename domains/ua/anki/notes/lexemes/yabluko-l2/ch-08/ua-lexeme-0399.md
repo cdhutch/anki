@@ -12,8 +12,8 @@ tags:
 - ch:2.8.1
 - pos:noun
 - gender:n
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0399
   Lemma: со́нце
