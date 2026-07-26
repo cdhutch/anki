@@ -1,10 +1,132 @@
-# CLAUDE.md — B737 Anki Project
+# CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
-**Current work**: Distractor authoring (Phase A), 26/29 systems verified.
+**Current work**: UA domain -- Ch-09 motion-verb polish punch list (7/7 items) complete as of
+2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling
+built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see
+[CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring
+(item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
+Ch-09 sourcing now extends through 9.7 (ua-lexeme-0114-0371, plus homograph companion note
+0372). 2026-07-26 review session (Горох stress/meaning check of ua-lexeme-0181-0372) found and
+fixed three data-integrity bugs -- 0283 (Latin characters mixed into Cyrillic Lemma/TypingAnswer),
+0361 ("як"+"тільки" fused into one non-word, no space), 0248 (`stress:uerified` tag typo) --
+and split лавка into a homograph companion note (0235/0372, bench vs. shop/stall). Craig's
+status/stress verification pass is complete through ch.9.4 and ch.9.5 0253-0260; ch.9.5
+0261-0303 and all of ch.9.6/9.7 are still `status:draft`/`stress:unverified`, pending review --
+blocked mid-session by the Chrome extension not connecting (device-bridge file access worked
+fine). Changes staged/committed subchapter-by-subchapter as of 2026-07-26; push pending Craig's
+go-ahead. 2026-07-28: built the `AspectCue` mechanism (new optional `UA_Lexeme` field + a chip
+on the `EN_UA_FRONT` template, styled to match the Compare card's distractor chips) so EN->UA
+cards for single-aspect verb/phrase notes give a vivid, indirect situational cue toward the
+correct aspect instead of silently leaving it ambiguous -- schema/template change synced live
+via `setup_ua_note_types.py --model UA_Lexeme` and committed. A full-corpus scan then found 23
+single-aspect verb/phrase candidates; 8 were excluded as bi-aspectual or imperfectiva tantum
+per Горох verification (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360 -- see "AspectCue chip"
+under Card Template Techniques below for the full mechanism and "Legacy Field Removal" for the
+live-model field count). The remaining 15 (0224, 0226-0229, 0231-0234, 0299-0303, 0359) are
+drafted, Горох-researched, and locally pre-validated clean via `cnsf_canonicalize.py`; commit
+pending Craig's go-ahead. 2026-07-25: adopted the "Same-Lemma polysemy split" pattern for words
+with genuinely disjoint senses (see Card Template Techniques below) -- вболівати split into
+ua-lexeme-0211 ("root for") and a new sibling ua-lexeme-0377 ("worry/grieve for"); the
+separate ua-lexeme-0225 ("вболівати за") was retired as a duplicate of 0211 the same day -- see
+below. Enabled
+by a `UA_EN_FRONT` template change: `UA_Example` now renders on every UA->EN card front (not
+just back), and the `Lemma`/`Perfective` aspect pair now shares one line/font instead of two.
+New process rule from Craig, effective this change: for a paradigm change, document in CLAUDE.md
+first and get that committed on its own before implementing the corresponding code/YAML --
+this entry is that first step; the `setup_ua_note_types.py` template edit and the 0211/0377
+note changes are drafted but not yet synced or committed as of this entry. 2026-07-25 (later same
+day): Craig flagged that 0225's Lemma ("вболіва́ти за") mixed government into the headword --
+every other phrase-type Lemma in the corpus carries a concrete complement after its preposition
+(e.g. "би́тися з реа́льним супе́рником"), never a bare dangling preposition, and 0211 already
+covers "вболівати за + Acc." correctly via `Govt_Case` + a live example. Craig chose to retire
+0225 outright (Option A) rather than fix it into a standalone phrase note (Option B) -- it was
+purely redundant with 0211. See "Same-Lemma polysemy split" below. 2026-07-25 (later still):
+extended `EuphonyNote` handling to `UA_PVOM_Infinitive`, coded the same way as the existing
+stress-tier fields (`*_UA`/`*_Typing` per base form) -- a fourth per-slot `*_Euphony` field,
+only populated where a base form actually has an attested euphonic variant. Two new PVOM notes
+added: ua-pvom-0012 (входити, prefix "в") and ua-pvom-0013 (находити, prefix "на"). входити
+surfaced two findings during research: (1) a stress-shifted homograph trap -- входи́ти (stress
+on syllable 2) is a different, unrelated word ("to wear out by prolonged walking"), not
+входити's perfective; the real perfective is увійти́ (irregular epenthesis, not euphony).
+(2) входити's *vehicle* forms have genuine euphonic variation attested in Горох:
+в'їжджати/уїжджати (impf) and в'їхати/уїхати (perf) -- its walking forms don't need
+`*_Euphony`, its vehicle forms do. находити is added PVOM-only (highly polysemous -- 6 Горох
+senses, dominant modern use is "find" via знайти, not walking -- so no `UA_Lexeme` note unless
+it turns up in Яблуко); its на- prefix has no euphonic tension (vowel-final, unlike в-), so all
+four `*_Euphony` fields are blank on 0013. 2026-07-25 (later still): redesigned `UA_Lexeme`'s
+euphony mechanism from pure tolerance to recognition-testing, per Craig -- the goal isn't just
+accepting either spelling, it's requiring the student to demonstrate they know a euphonic
+partner exists. **Correction to this entry, same day, before implementing:** the original plan
+was to rename `EuphonyNote` -> `Lemma_Euphony` via AnkiConnect `modelFieldRename`. Caught before
+running it -- `EuphonyNote` is NOT 0211/0377-only. It's a pre-existing, general-purpose
+free-text commentary field (see design.md's original description: "Prefix euphony, apostrophe
+insertion, jotation") already holding real authored content on 7 *other*, already-verified,
+already-studied notes from the original motion-verb batch (0115, 0117-0119, 0124, 0126-0127 --
+e.g. 0115: "PFV: в- + іти -> увійти (also ввійти); у- preferred before й"). All seven already
+have `Lemma`+`Perfective` populated, so `compute_typing_target()` runs on them -- a blind rename
+would have folded that commentary straight into `Lemma_Euphony` and joined garbled sentences
+into their live `TypingTarget_UA`. **Fix:** `EuphonyNote` is left alone, unrenamed, still doing
+its original job. Three brand-new fields are added instead --  `Lemma_Euphony`,
+`ImperfectiveUnidirectional_Euphony`, `Perfective_Euphony` -- matching PVOM's per-slot
+`*_Euphony` pattern, since euphony can land on any one aspect slot independently (e.g.
+учити/вчити -> вивчити has euphony only on the imperfective slot). Contract: these NEW fields
+store the STRESSED alternate (e.g. `уболіва́ти`, not `уболівати`) -- a euphonic alternate's own
+stress mark can't be safely derived from the primary form's (see входити/увійти above), so it's
+authored directly, same as every other stressed field in this note type. 0211/0377's old
+`EuphonyNote: уболівати` value moved to the new `Lemma_Euphony: уболіва́ти` (added the stress
+mark) with `EuphonyNote` explicitly cleared back to `''` on both, rather than left stale.
+`compute_typing_target()` in `ua_lexeme_import.py` now computes three joined variants per note
+at sync time: `TypingTarget_UA`/`TypingAnswer` (FULL -- euphony-having slots render as
+"primary ; euphonic", nested inside the existing `/`-joined aspect string), and two new derived
+field pairs, `TypingTarget_UA_Base`/`TypingAnswer_Base` (primary forms only -- this is exactly
+the pre-redesign join) and `TypingTarget_UA_AltOnly`/`TypingAnswer_AltOnly` (euphonic form in
+place of primary, for slots that have one). New JS tier in `EN_UA_BACK`: typing the FULL
+string = PERFECT (pairing recognized); typing Base or AltOnly alone = new PARTIAL tier (word is
+right, pairing isn't demonstrated); neither = INCORRECT. For notes with no euphony on any slot,
+Base equals the FULL string and AltOnly is blank, so the PARTIAL tier is unreachable and
+behavior is byte-for-byte unchanged from before this redesign -- verified by construction, not
+just by testing 0211/0377. **Behavior change on already-tested data:** typing bare `уболівати`
+on 0211/0377, which previously graded as full-credit "accepted alternate spelling," now grades
+as PARTIAL -- this is the intended outcome of the redesign, not a regression. PVOM's separate,
+simpler accept-either-for-full-credit mechanism (`Vehicle_*_Euphony` on ua-pvom-0012) is
+explicitly out of scope for this redesign and unchanged -- Craig confirmed PVOM validation
+complete under the original design before this thread resumed.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
 ## Workflow Notes
+
+This repo builds and maintains Anki flashcard decks across three top-level decks:
+
+- **B737** (`domains/b737/`) — type rating study. CNSF markdown notes exported
+  to TSV and imported via AnkiConnect. High-stakes professional content.
+- **UA** (`domains/ua/`) — formal language learning (Galician/Lviv
+  register, Яблуко textbook). Active branch `feature/ua-domain`.
+  See `domains/ua/anki/docs/design.md` for full schema and migration plan.
+- **Legacy** — archive of older decks. Being systematically migrated or archived.
+
+**FSRS Isolation:** Each top-level deck has completely separate FSRS configuration 
+and card history. Cards in B737 do not influence UA scheduling and vice versa.
+See [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) for parameters.
+
+### The Big 3 Rules (recite verbatim at session start if asked)
+
+1. **Only Craig runs git commands, which Claude provides.** Claude never executes `git`
+   itself -- including read-only commands like `status`/`diff`/`log`, even for quick
+   investigation. Claude writes the exact command(s); Craig runs them and pastes back the
+   output. (A violation on 2026-07-22 -- Claude ran `git status`/`git diff` directly via
+   `device_bash` -- left a stale `.git/index.lock` that blocked Craig's own git commands
+   until he manually removed it. See CLAUDE-known-issues.md.)
+2. **Only Craig deletes files on his computer.** Claude does not delete files via any
+   mechanism, even where technically possible. (In practice `device_bash` can't delete
+   anyway -- `rm`/`rmdir`/`unlink` fail with "Operation not permitted," only `mv` works --
+   but the rule holds regardless of mechanism.)
+3. **After each set of commands, Claude waits for Craig to respond before providing
+   additional commands.** No stacking multiple rounds of git/shell commands speculatively
+   ahead of confirmation.
+
+These extend to `make`, Python scripts that touch AnkiConnect, and any other shell command
+in this repo -- all run by Craig, not Claude:
 
 - **Shell commands are run by Craig**, not Claude. Claude provides commands to copy/paste; it does not execute git, make, or Python commands directly. (Claude's sandbox lacks access to the required conda env and git hooks will fail.)
 - **Pull requests**: Claude provides the `gh pr create` command; Craig runs it and completes the PR on the GitHub website.
@@ -18,3 +140,831 @@ See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last se
 | **Known issues** | [CLAUDE-known-issues.md](CLAUDE-known-issues.md) |
 | **Key paths** | [CLAUDE-key-paths.md](CLAUDE-key-paths.md) |
 | **Migration progress** | [CLAUDE-migration-log.md](CLAUDE-migration-log.md) |
+| **UA_Verb design** | [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) |
+| **FSRS deck configs** | [CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md) |
+| **Flag audit workflow** | [CLAUDE-flag-audit.md](CLAUDE-flag-audit.md) |
+| **Ch-09 vocabulary sourcing workflow** | [CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md) |
+| **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
+| **Vocab dedup/homograph audit tooling** | [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) |
+
+---
+
+## Ukrainian Domain (`domains/ua/`)
+
+**Branch:** `feature/ua-domain` (based off `main`)
+
+**Status (as of 2026-07-22):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
+Book 2 Ch. 9 (`feature/ua-verb-phase2a` branch) imported and polished — 7-item punch list
+complete:
+  - **18 UA_Lexeme notes** (ua-lexeme-0114–0131, prefixed walking + vehicle motion verbs)
+    imported via `make ua-batch BATCH=yabluko-l2/ch-09`. `status:verified`; both UA→EN and
+    EN→UA cards active (36 cards). `Compare` card template active for confusable pairs
+    (про-/пере- pairs 0120/0121, 0129/0130, plus 0059 from ch-00) via `ConfusableSet` +
+    new `Mnemonic_EN`/`CompareA`/`CompareB` fields (see Comparison card section below).
+  - **UA_Grammar**: rebuilt from scratch as a real Cloze model (the live model had been a
+    stale non-cloze legacy model — see CLAUDE-known-issues.md footgun #5). 9 notes
+    (ua-grammar-0001–0009), all `status:draft`/suspended. 0008 (до/в–у/на destination
+    prepositions) and 0009 (від/з–із–зі source/departure prepositions) are new, atomically
+    clozed and leak-checked — see Cloze design principles below. 0001–0007 still use the
+    older "busy" multi-fact-per-cloze pattern and have empty `Source_URL`/`Source_Note`;
+    not yet revisited.
+  - **UA_Visual**: redesigned from 2 templates (Spatial→UA / UA→Spatial) to a single
+    "Prefix + Government" card (front = diagram + blank table, back = same table filled in
+    place). 9 notes, 9 cards, `status:verified`, active in `UA::Recognition::Visual`.
+  - **UA_PVOM_Infinitive**: reworked from 22 single-form notes to 11 notes × 4 card
+    templates (Walking Multi/Uni, Vehicle Multi/Uni) — 44 cards total, each base form
+    independently suspendable/leech-trackable.
+  - All lexeme + grammar stresses Горох-verified. `Verb_Conj_Table` fully populated for
+    all 18 verb pairs (0114–0131).
+
+**UA_Visual card template design (2026-07-10):**
+  - Card 1 (Spatial→UA): front = diagram + English meaning; back = Ukrainian prefix, government, verb pairs, example.
+  - Card 2 (UA→Spatial): front = Ukrainian prefix + verb pairs; back = diagram + English meaning + government + example.
+  - Template redesign fixed & deployed ✅ — `setup_ua_note_types.py` now calls `updateModelTemplates` with all templates in single call (not per-template loop).
+  - Templates update correctly via `make ua-setup-visual`.
+
+**Pending / Next planned work (as of 2026-07-23):**
+  0. **DONE (2026-07-25).** Integrate the dedup/homograph-check logic directly into the
+     vocabulary-generation workflow, not just the standalone `check_lexeme_dedup.py` tool.
+     `tools/anki/lib/lexeme_dedup.py` (importable `create_or_link_lexeme()` API implementing
+     all three buckets) and `tools/anki/inspect/build_lexeme_index.py` (full-corpus TSV dump
+     for audits) were built 2026-07-24 and used for a full 180-note corpus audit — see
+     [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md). The remaining piece
+     — an actual `gen_ch09_*.py`-style script calling `create_or_link_lexeme()` — is now
+     `tools/anki/extract/gen_ch09_subsection.py` (75 passing tests total across
+     `tests/ua/test_lexeme_dedup.py`, `tests/ua/test_build_lexeme_index.py`, and the new
+     `tests/ua/test_gen_ch09_subsection.py`). Note on what this script does and doesn't
+     automate: Горох verification, phrase/component decomposition, and the new-vs-duplicate-
+     vs-homograph *judgment call* itself all still require human/Claude-in-Chrome
+     involvement per CLAUDE-ch09-vocab-workflow.md — this script's job is narrower but load-
+     bearing: every candidate, once drafted with its dedup decision already made, is routed
+     through `create_or_link_lexeme()` before it touches disk, so no note can land in the
+     corpus by a hand-written-file path that skips the check. Not yet exercised against a
+     real ch.9.3+ batch — that's the next actual use of it.
+  0b. **DONE (2026-07-28).** Give EN->UA cards an explicit-but-indirect aspect cue for
+     single-aspect verb/phrase notes -- see "AspectCue chip" under Card Template Techniques above
+     for the mechanism, and "Legacy Field Removal" above for the live-model field count. Schema/
+     template change (`AspectCue` field + `EN_UA_FRONT` chip) synced and committed. Full-corpus
+     scan found 23 single-aspect candidates; 8 excluded as bi-aspectual/imperfectiva tantum
+     (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360); the remaining 15 (0224, 0226-0229,
+     0231-0234, 0299-0303, 0359) are drafted, Горох-researched, and locally pre-validated --
+     commit pending Craig's go-ahead.
+  1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9. Status as of
+     2026-07-26: 9.1 (ua-lexeme-0182) and 9.2 (ua-lexeme-0163–0181 + 5 conjugation notes
+     ua-verb-0033–0037) sourced, reviewed, verified, and synced. 9.3 (ua-lexeme-0183–0234)
+     and 9.4 (ua-lexeme-0235–0251, plus homograph companion note 0372) sourced, reviewed, and
+     flipped to `status:verified` (0189/0225/0230 still `status:draft`, not yet resolved).
+     9.5 (ua-lexeme-0252–0303) sourced; only 0253–0260 reviewed and verified so far, the
+     remainder (0261–0303) is still `status:draft`/`stress:unverified`. 9.6 (ua-lexeme-0304–0328)
+     and 9.7 (ua-lexeme-0329–0371) are sourced and drafted but not yet reviewed at all. Keep
+     following the 5 established sourcing rules (Горох verification, verb pairing,
+     phrase+component creation, autonomy, draft-until-reviewed status).
+  2. Craig reviews/validates the remaining batches -- ch.9.5 0261–0303, all of ch.9.6, all of
+     ch.9.7 -- against Горох and flips `status:draft` → `status:verified` once satisfied, same
+     process used for 9.1–9.4. (Needs the Chrome extension connected for live Горох lookups --
+     it didn't connect during the 2026-07-26 session, so this review is stalled on that.)
+     Re-sync afterward with `make ua-lexeme` / `make ua-verb`, or the new `make ua` aggregate
+     target (canonicalizes + syncs every UA note type in one pass — see Reference Files).
+  3. Get the Solarized light/dark palette correct and consistent across both Anki domains
+     (B737 and Ukrainian). Concrete bug found 2026-07-23: `UA_Visual`'s CSS uses the
+     `.night_mode` (snake_case) selector instead of `.nightMode` (camelCase) — confirmed via
+     AnkiMobile's own docs that both desktop Anki and AnkiMobile key off `.nightMode`, so
+     `UA_Visual`'s dark-mode rules are currently dead on every platform, not just iOS. Most
+     other note types already carry Solarized CSS via `tools/anki/setup/update_legacy_css.py`
+     (7 legacy models: B737_SV_Cloze, B737_Systems, UA_Conjugation, UA_Grammar, UA_Lexeme,
+     UA_Lexeme_Legacy, UA_Verb) plus the individual `setup_*_model.py` scripts. Still need to
+     audit `B737_Checklist`, `B737_Mnemonic`, `B737_Structured`, `B737_SV_MCQ`, `B737_SV_TF`
+     for Solarized coverage and confirm none share the night-mode selector bug. See
+     `.claude/memory/b737-anki-solarized-theme.md` for the original project tracking note.
+     Craig wants this kept CSS-only — do not touch B737 note-type structure/fields.
+  4. **Future: Extend euphonic variant typing support beyond verbs.** Euphony (prefix/spelling
+     variants like в-/у-, apostrophe insertion) appears across multiple parts of speech, not just
+     verbs. Current implementation (Lemma_Euphony, etc.) is verb/phrase-specific via aspect slots.
+     Need to design and implement typing acceptance for euphonic variants on adverbs, nouns, and
+     other PoS where they occur. Example: ua-lexeme-0353 (ввечері/увечері, "in the evening") —
+     both forms attested by Горох with identical stress and meaning. Currently documented in
+     EuphonyNote (free-text) rather than in a grading mechanism. Design decision needed: extend
+     the aspect-slot Lemma_Euphony pattern to non-verbs (which have no aspect slots), or create
+     a simpler general-purpose euphony field + typing-acceptance logic that doesn't depend on
+     aspect structure? This is a lower-priority enhancement — the current free-text EuphonyNote
+     approach is functional but doesn't provide typing recognition.
+
+### Current Anki state
+- 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
+- 788 leeches (20%) — triage before bulk migration
+- Active deck hierarchy: `UA::Recognition::*` / `UA::Production::*`
+- New canonical decks: `UA::Recognition::UA→EN` / `UA::Production::EN→UA`
+- Legacy decks: `Ukrainian Active::Яблуко`, `Inactive::Ukrainian Inactive::*`
+- Tags in use: `textbook:яблуко`, `ch:2.8.x` (= Level 2, Ch. 8, §x), `leech`, `converted`, `to_convert`
+
+### Primary note type: `UA_Lexeme`
+
+**Fields (21, in semantic order):**
+
+*Identity & Metadata:* `NoteID`
+
+*Core Lemma & Morphology:* `Lemma`, `PartOfSpeech`, `Gender`
+
+*Aspect (verbs only):* `Perfective` (PFV counterpart), `ImperfectiveUnidirectional` (motion verb
+directional form), `AspectCue` (optional, hand-authored -- see "AspectCue chip" under Card
+Template Techniques below)
+
+*Semantic Content:* `EN_Gloss`
+
+*Grammatical Properties:* `Govt_Case`, `IrregularForms`, `CounterpartForm` (gender pairs), `VerbMotion_Pair` (base unprefixed form)
+
+*Semantic Relations:* `ConfusableSet`, `CrossLang_Analog`, `EuphonyNote` (free-text linguistic commentary -- apostrophe insertion, epenthesis, etc; NOT the grading mechanism, see "Lemma_Euphony / aspect+euphony recognition testing" below for that -- purely a passive `UA_EN_BACK` display note, unrelated fields despite the similar name; do not conflate or repurpose, see the 2026-07-25 near-miss note there)
+
+*Typing & Examples:* `TypingAnswer` (Lemma without stress marks), `UA_Example`, `EN_Example`
+
+*Metadata & Sources:* `Tags_Ch`, `Source_URL`, `Source_Note`
+
+**Aspect convention:** Lemma is always imperfective (base form). Perfective field contains PFV counterpart. Aspect is implicit in field structure (no explicit Aspect field needed).
+
+**Verb conjugations:** `Verb_Conj_Table` was removed from the live `UA_Lexeme` Anki model on
+2026-07-28 (Craig ran AnkiConnect `modelFieldRemove` directly) — content had been blanked
+corpus-wide since 2026-07-22 and no card template ever rendered it; conjugation morphology
+belongs entirely to the `UA_Verb` note type (structured fields, one note per lemma's own
+aspect, linked to the lexeme via matching Lemma text) — `UA_Verb` already covers this, so
+nothing else needs to render it. `Verification Notes` was removed from the live model in the
+same pass, but for a different reason — see "Legacy Field Removal" below.
+
+### Legacy Field Removal — `Verb_Conj_Table` & `Verification Notes`
+
+**Status (2026-07-28):** Both fields removed from the live `UA_Lexeme` Anki model (Craig ran
+AnkiConnect `modelFieldRemove` directly). They have different follow-up plans, though — one is
+dead data to finish stripping out; the other is intentionally CNSF-only and stays as-is.
+
+- **`Verb_Conj_Table`** — genuinely dead. Blank corpus-wide since 2026-07-22, never rendered by
+  any card template, fully superseded by `UA_Verb`. CNSF cleanup (steps below) still needs to
+  happen: every lexeme `.md` file still declares the key under `fields:`, which is now a pure
+  no-op on sync (`ua_lexeme_import.py` still passes it through unfiltered; AnkiConnect silently
+  drops fields the model doesn't have) rather than a bug, but it's stale and should eventually
+  be stripped from the source files.
+- **`Verification Notes`** — kept, deliberately, as CNSF/YAML-only documentation. Craig's call
+  2026-07-28: this field doesn't need to reach Anki at all — it's audit-trail content for
+  human/Claude review (Горох-verification notes, stress corrections, judgment-call flags like
+  the брати note on ua-lexeme-0376), not card content, so removing it from the live model was
+  intentional rather than a gap to fix. **No CNSF stripping, no migration into `Source_Note` —
+  leave every note's `Verification Notes` key exactly as authored.** Keep populating it the same
+  way going forward (see the dedup workflow's "True duplicate" bucket above, for example).
+
+**`setup_ua_note_types.py`'s `FIELDS` list is now in sync (field names) with the live model** —
+confirmed 2026-07-28 via `inspect_ua_lexeme_fields.py`: both were the same 27-field set at that
+point (order differs — the live model's order reflects historical `modelFieldAdd` sequence, not
+the script's intended semantic grouping; AnkiConnect doesn't reposition existing fields on sync).
+Later the same day, `AspectCue` was added to `FIELDS` and synced live via `setup_ua_note_types.py
+--model UA_Lexeme` (confirmed success: "Adding field: AspectCue... Note type is ready"), bringing
+the live model to 28 fields. Earlier doc drift warnings about `Mnemonic_EN`/`CompareA`/`CompareB`
+missing from the script are now stale — those were added to `FIELDS` since. Still worth
+re-running `inspect_ua_lexeme_fields.py` before any future schema change rather than trusting
+either list blind.
+
+**Remaining CNSF cleanup steps (`Verb_Conj_Table` only):**
+
+1. **Strip the key from all CNSF source files**: delete `Verb_Conj_Table` from the `fields:`
+   dict in every `ua_lexeme` `.md` file (`yabluko-l1/` and `yabluko-l2/`), then run
+   `python -m tools.anki.cnsf_canonicalize --write` across the whole lexeme corpus. Commit this
+   on its own. (`Verification Notes` is NOT part of this step — see above.)
+2. **Update tooling that references the field:**
+   - `tools/anki/extract/mappings/UA_Lexeme.yml` — remove the `f__Verb_Conj_Table` entry.
+   - `tools/anki/generate/ua_generate_examples.py` (~line 176) — remove `"Verb_Conj_Table"`
+     from its field-order list.
+   - `tests/ua/test_verify_stress_goroh.py` (4 fixture occurrences) and
+     `tests/ua/test_backfill_source_url.py` (1 occurrence) — hardcode `Verb_Conj_Table: ''`;
+     update once real notes stop carrying the key. Run the full `tests/ua/` suite after.
+   - `tools/anki/extract/gen_ua_lexemes_l2_ch09.py` / `gen_ua_lexemes_vstup.py` and
+     `tools/anki/inspect/patch_ch09_conj_tables.py` / `patch_ch09_stress.py` are historical
+     one-off scripts, already run — leave as-is, historical record.
+3. **Verify:** re-run `inspect_ua_lexeme_fields.py` to confirm the live model still shows
+   neither field; re-run `cnsf_canonicalize --check` across the corpus; run `tests/ua/`;
+   spot-check a few `UA_Lexeme` cards in the Anki browser (expect zero visual change, since
+   `Verb_Conj_Table` was never rendered on a live card template).
+
+**Not urgent:** `Verb_Conj_Table`'s sync-time pass-through is inert, not lossy, so there's no
+rush on the CNSF cleanup. `Verification Notes` needs no cleanup at all — its current CNSF-only
+state is the intended end state, not a transitional one.
+
+### Card Template Techniques
+
+**Polysemous word examples (multiple meanings)**
+
+When a UA word has multiple distinct meanings, demonstrate semantic range in the example fields:
+
+```yaml
+UA_Example: |
+  Example showing meaning 1
+  Example showing meaning 2
+EN_Example: |
+  Translation for meaning 1
+  Translation for meaning 2
+```
+
+Example: вік (age as measure of time; era/epoch as historical period)
+```
+UA_Example: У якому віці діти йдуть до школи? | Вони жили в добу Середніх віків.
+EN_Example: At what age do children go to school? | They lived during the Middle Ages.
+```
+
+This shows the learner that the same Ukrainian word spans multiple semantic domains.
+
+**Same-Lemma polysemy split (multiple notes, one Lemma) -- added 2026-07-25**
+
+For a UA word with genuinely *disjoint* senses (not closely-related shades of one meaning, like
+вік's "age"/"era" above), Craig's call is to split into separate notes sharing the same
+`Lemma`/`TypingAnswer` rather than combining both senses into one `EN_Gloss`. Each sibling note
+gets its own `EN_Gloss`, `UA_Example`, `EN_Example` -- whichever specific sense it covers.
+Example: вболіва́ти has two disjoint dictionary senses (Горох Тлумачення) -- "to root for, cheer
+for (a team)" (ua-lexeme-0211) and "to worry/grieve for (someone)" (ua-lexeme-0377) -- both true
+imperfectiva tantum (same aspect research applies to every sibling; see ua-lexeme-0211's
+Verification Notes for the full Горох evidence).
+
+A third note, ua-lexeme-0225 ("вболіва́ти за"), was originally drafted alongside these for the
+same "root for" sense as a phrase-type note, but was retired 2026-07-25: its Lemma bare-dangled
+a preposition with no complement, mixing `Govt_Case` government into the headword instead of
+either leaving `Lemma` bare (like 0211, government captured in `Govt_Case`) or giving it a
+concrete complement (like every other phrase-type Lemma in the corpus, e.g. "би́тися з реа́льним
+супе́рником"). Since 0211 already covers "вболівати за + Acc." correctly, 0225 was purely
+redundant -- retired rather than fixed. **Lesson for future splits:** a sibling note only earns
+its place if it covers a genuinely distinct sense; a note that just restates an existing note's
+government pattern under a different Lemma format is a duplicate, not a split.
+
+Cross-reference siblings explicitly in `Verification Notes` (see ua-lexeme-0211/0377) so
+the dedup/homograph audit tooling doesn't mistake identical-Lemma siblings for accidental
+duplicates -- this is a different situation from true duplicates (CNSF Dedup Workflow above) and
+from homograph splits like лавка/0235/0372 (etymologically distinct words that happen to share
+spelling): here it's one word, one form, genuinely disjoint meanings.
+
+This only works because `UA_EN_FRONT` now always renders `UA_Example` (see below) -- without a
+context sentence on the front, two same-Lemma notes would be indistinguishable until the flip,
+making it impossible to tell which sense is actually being tested.
+
+**`UA_EN_FRONT` template changes -- 2026-07-25:**
+
+- `UA_Example` now renders on the front of every UA->EN card, not just the back. Two reasons:
+  general reading practice (Craig wants to read Ukrainian phrases in context, not bare
+  headwords) and it's what makes the same-Lemma polysemy split above workable at all.
+- `Lemma` and `Perfective` (the ндв/дв aspect pair) now render on one line in one shared style
+  (both use the `.lemma` class) instead of two separate divs -- previously `Perfective` sat on
+  its own line in a smaller, greyed-out `.perfective` style, which read as a demoted afterthought
+  rather than an equally valid form. The `.perfective` CSS class is retired (nothing else used
+  it).
+
+**Comparison card (scenario-based confusable discrimination)**
+
+UA_Lexeme generates a 3rd optional "Compare" card template when `ConfusableSet` is populated:
+
+- **Front:** Scenario/context requiring semantic discrimination (not pattern recognition)
+- **Back:** Correct word + explanation of why it fits this specific context
+- **Design principle:** Scenario-based + bidirectional (forces understanding of *when* each word fits, not just *that* one is correct)
+- **Avoids memorization trap:** Multiple scenarios with different contexts prevent learner from simply memorizing "gloss → word"
+
+**ConfusableSet format** (structured for scenario generation):
+```yaml
+ConfusableSet: |
+  фах (alternative word + brief definition)
+  Scenario A: Context where lemma fits
+  → Use: lemma (when/why)
+  Scenario B: Context where confusable fits
+  → Use: confusable (when/why)
+  Key distinction: Explicit semantic/contextual difference
+```
+
+Example: професія vs. фах
+- Scenario A: "Asking someone about their job formally" → професія (formal career identity)
+- Scenario B: "Discussing a plumber's expertise" → фах (skilled trade/craft)
+
+The "Compare" card only renders when `ConfusableSet` is populated, making it lightweight.
+
+**AspectCue chip (single-aspect verb/phrase disambiguation, added 2026-07-28)**
+
+For a verb/phrase note that types only ONE aspect on its EN->UA card -- no `Perfective`/
+`ImperfectiveUnidirectional` counterpart populated, so `TypingTarget_UA` resolves to the bare
+`Lemma` via `compute_typing_target()` -- nothing on the card previously told the student which
+aspect (habitual/ongoing vs. one-time/completed) was expected. `AspectCue` fixes this:
+
+- **Optional field, `UA_Lexeme`.** Blank for notes where aspect ambiguity doesn't apply --
+  doublet/triplet notes (both aspects populated, so `TypingTarget_UA` already asks for both at
+  once) and aspectless/bi-aspectual singlets (see exclusions below).
+- **Content:** a short situational question that makes the answer's aspect vivid through natural
+  English framing, *without naming the grammar term*. Present/habitual framing ("what does X
+  regularly do") cues imperfective; "in that moment / just now / finally" framing cues
+  perfective. Same idea as `ConfusableSet`'s scenario framing, applied to aspect instead of
+  word choice.
+- **Rendering:** its own chip on `EN_UA_FRONT`, guarded by `{{#AspectCue}}...{{/AspectCue}}` (no
+  render when blank), styled to match the Compare card's distractor chips (`font-size: 20px`,
+  bold, boxed, blue left border) -- Craig's requirement that the cue carry the same visual weight
+  as an actual answer option, not read as a small caption.
+- **Not every single-aspect note needs one.** Before adding `AspectCue`, confirm via Горох that
+  the note actually has an aspect choice to cue: some verbs are bi-aspectual (двовидове -- same
+  infinitive covers both aspects, e.g. стартувати/фінішувати) or imperfectiva tantum (no
+  perfective counterpart exists at all, e.g. мати, вболівати). Neither case needs a cue -- there's
+  no ambiguity to resolve. A full-corpus scan 2026-07-28 found 23 single-aspect candidates; 8
+  were excluded on this basis (0211, 0225, 0291, 0292, 0321, 0333, 0341, 0360), leaving 15 that
+  got `AspectCue` values (0224, 0226-0229, 0231-0234, 0299-0303, 0359).
+
+**PVOM euphony acceptance (alternate spelling grading, added 2026-07-25)**
+
+`UA_PVOM_Infinitive`'s per-base `*_Euphony` fields (`Walking_Multi_Euphony`, `Walking_Uni_Euphony`,
+`Vehicle_Multi_Euphony`, `Vehicle_Uni_Euphony`) implement pure tolerance: `*_UA`/`*_Typing`
+back-side scripts already reconstruct the typed answer from Anki's `#typeans` diff and compare
+it against both (PERFECT-with-stress / CORRECT-no-stress); `*_Euphony` hooks in as a third tier
+-- typed answer (stress-stripped, NFC normalized) matches an alternate -> graded correct
+outright, no pairing recognition required. Field contract: bare word, no stress marks,
+`|`-delimited if more than one alternate. First use: ua-pvom-0012 (входити), accepting
+уїжджати/уїхати on its vehicle forms. **Deliberately kept simple and unchanged** -- see the
+`UA_Lexeme` mechanism below for why a richer design was needed there but not here (PVOM cards
+already isolate each base form on its own template/FSRS card, so there's no aspect-pair join to
+nest euphony inside of).
+
+**Lemma_Euphony / aspect+euphony recognition testing (`UA_Lexeme`, redesigned 2026-07-25)**
+
+Supersedes an earlier same-day design (`EuphonyNote`, pure tolerance, same shape as PVOM's
+mechanism above) once Craig reframed the goal: the EN->UA card should require demonstrating
+that a euphonic partner is *known to exist*, not just accept either spelling silently.
+
+- **Fields:** `Lemma_Euphony`, `ImperfectiveUnidirectional_Euphony`, `Perfective_Euphony` --
+  one per aspect slot, since euphony can land on any slot independently (e.g. учити/вчити ->
+  вивчити has it only on the imperfective slot; входити's hypothetical PVOM analog would have
+  it only on vehicle forms, not walking -- see PVOM section above). Optional, blank where not
+  applicable.
+- **Contract: stressed**, unlike PVOM's bare-word contract. A euphonic alternate's own stress
+  mark isn't safely derivable from the primary form's -- увійти isn't a letter-swap of входити,
+  it has its own epenthesis -- so it's authored directly on the field, same as every other
+  stressed field on this note type (`Lemma`, `Perfective`, etc).
+- **Computed at sync time** (`compute_typing_target()`, `ua_lexeme_import.py`), same
+  derive-don't-hand-author principle as the original aspect join: three stressed/unstressed
+  pairs per note --
+  - `TypingTarget_UA` / `TypingAnswer` (**FULL**): the existing `/`-joined aspect string, but
+    any slot with a populated `*_Euphony` renders as `primary ; euphonic` instead of just
+    `primary` -- e.g. `учи́ти ; вчи́ти / ви́вчити` (`;` nests inside a slot, `/` still separates
+    aspect slots -- backward compatible with every non-euphony note, which never sees a `;`).
+  - `TypingTarget_UA_Base` / `TypingAnswer_Base`: primary forms only, every slot -- identical
+    to what `TypingTarget_UA` computed before this redesign.
+  - `TypingTarget_UA_AltOnly` / `TypingAnswer_AltOnly`: euphonic form in place of primary, for
+    slots that have one (other slots still use primary) -- blank entirely when no slot on the
+    note has any `*_Euphony` populated.
+- **Feedback tiers (`EN_UA_BACK` JS), 5 total.** FULL (stressed) -> PERFECT (green), pairing
+  recognized with bonus stress credit. FULL (unstressed) -> CORRECT (orange), pairing
+  recognized, missing stress. **PARTIAL is split the same with-stress/no-stress way as FULL**
+  (added 2026-07-25, per Craig -- "the red and orange levels like we did for stress"): Base or
+  AltOnly *with* its own correct stress -> PARTIAL-stressed (dark amber #ef6c00), single form
+  right and properly stressed, pairing not shown; Base or AltOnly with no stress -> PARTIAL-no-
+  stress (dark red #c62828), single form right but missing both stress and pairing. Anything
+  else -> INCORRECT (red). All tiers name the FULL stressed form as what earns full credit.
+- **Degrades cleanly:** for any note with no euphony on any slot, Base and FULL are identical
+  strings and AltOnly is blank, so the PARTIAL tier's conditions can never be met (they'd have
+  already matched PERFECT/CORRECT) -- verified by construction that this redesign doesn't touch
+  grading for the rest of the corpus, not just spot-tested.
+- **Behavior change, not a bug:** typing bare `уболівати` on 0211/0377 used to be full credit
+  under the old `EuphonyNote` tolerance design; under this redesign it's PARTIAL, since it
+  demonstrates knowing a word but not the pairing. Intended per Craig's reframed goal.
+- **Not a field rename.** `EuphonyNote` is a separate, pre-existing, general-purpose free-text
+  commentary field (apostrophe insertion, epenthesis, etc) already holding real content on 7
+  *other* already-verified notes from the original motion-verb batch (0115, 0117-0119, 0124,
+  0126-0127) -- unrelated to this grading mechanism despite the similar name. The original plan
+  renamed `EuphonyNote` -> `Lemma_Euphony` via AnkiConnect `modelFieldRename`; caught before
+  running it, since all 7 of those notes already have `Lemma`+`Perfective` populated, so
+  `compute_typing_target()` would have folded their commentary sentences straight into their
+  live `TypingTarget_UA`. Fixed: `Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony`/
+  `Perfective_Euphony` are added as brand-new fields, `EuphonyNote` is untouched. 0211/0377's
+  old `EuphonyNote: уболівати` moved to `Lemma_Euphony: уболіва́ти` (stress mark added) with
+  `EuphonyNote` explicitly cleared to `''` on both, rather than left stale.
+
+**PVOM prefix drilling (multi-form typing cards)**
+
+`UA_PVOM_Infinitive` (one note per prefix, `domains/ua/anki/notes/pvom/`) drills all four
+verb-of-motion base forms a prefix combines with, as four separate card templates rather
+than one card with four blanks:
+
+- **Walking (Multi)** — multidirectional, imperfective (ходити-family)
+- **Walking (Uni)** — unidirectional, perfective (іти-family)
+- **Vehicle (Multi)** — multidirectional, imperfective; labeled "їздити" on the card, but
+  the typed answer is the dictionary-primary **-їжджати** surface form (Горох consistently
+  redirects "-їздити" entries to "-їжджати" as the canonical headword — both are real, but
+  -їжджати is the one attested as primary)
+- **Vehicle (Uni)** — unidirectional, perfective (їхати-family)
+
+**Why four separate templates, not one card:** each base form gets independent FSRS
+scheduling and leech tracking. The four forms are not equally hard — mutations
+(apostrophe insertion: підʼїхати, відʼїхати, надʼїхати, обʼїхати, зʼїхати; epenthetic
+-ій-: підійти, відійти, надійти, обійти, зійти; з→с assimilation before voiceless х:
+з- + ходити → сходити, not "зходити"; входити takes an epenthetic у- on that same -ій- shape:
+увійти, not "войти") make some prefixes much harder to produce than others, and a student can
+be solid on the walking forms while still missing vehicle forms. Separate templates let each
+be suspended/re-weighted independently without touching the others. Vehicle forms can
+additionally carry real euphonic variants (в'їжджати/уїжджати, в'їхати/уїхати for входити) --
+these aren't a mutation of the same word but two independently attested spellings, handled via
+`*_Euphony` (see "EuphonyNote acceptance" above), not baked into the `*_UA`/`*_Typing` pair.
+
+**Card design — no hints on the front.** Front is just `{{Prefix}} + <base label>` (e.g.
+"ви + іти", "під + їздити") — no aspect labels, no mutation hints. The point is for the
+student to internalize the prefixation patterns through repeated production, not to be
+told the answer's shape in advance.
+
+**Field pattern:** each base has a stressed field (`*_UA`) and an unstressed field
+(`*_Typing`); the back-side script compares the reconstructed typed answer against both to
+give tiered feedback (perfect-with-stress / correct-no-stress / incorrect) — see "Typing-card
+design pattern for Ukrainian text" below for the full mechanics (this is the canonical
+implementation the pattern was later copied from into `UA_Lexeme`, 2026-07-25). Each base also
+has an optional fourth field, `*_Euphony` (added 2026-07-25), for bases with an attested
+euphonic variant — see "EuphonyNote acceptance" above.
+
+**Typing-card design pattern for Ukrainian text (established here; UA_Lexeme's EN→UA card
+fixed to match, 2026-07-25).** Any card where the student types Ukrainian and the correct
+answer may carry combining stress marks (U+0301) must use this pattern — a naive
+`{{type:Field}}` + `document.querySelector('input[type="text"]')` script (what `UA_Lexeme`'s
+EN→UA card originally shipped with) is broken two independent ways:
+
+1. **Anki's own native `{{type:Field}}` diff** — auto-rendered wherever `{{FrontSide}}`
+   appears on the answer side — wraps every character in its own `<span>`. A combining
+   stress mark rendered in isolation visually detaches from its base vowel: it looks like a
+   stray apostrophe/tick mark sitting next to the letter, not an accent on top of it. (This
+   is what Craig originally reported as "apostrophes... called out as their own character.")
+2. **There is no live `<input>` element on the answer side.** Anki replaces it with the diff
+   markup above by the time any answer-side script runs, so
+   `document.querySelector('input[type="text"]')` always returns `null` — any custom
+   feedback block built on that lookup silently never populates.
+
+The fix, implemented in `tools/anki/setup/setup_ua_pvom_note_type.py` (`make_front`/
+`make_back`/`FEEDBACK_SCRIPT`) and copied into `setup_ua_note_types.py`'s `EN_UA_FRONT`/
+`EN_UA_BACK`:
+
+- **Type the STRESSED field as the `{{type:...}}` target, not the unstressed one** — e.g.
+  `{{type:Walking_Multi_UA}}` / `{{type:Lemma}}`, not the `*_Typing`/`TypingAnswer` field.
+  Typing the stressed form correctly is then a clean exact match for Anki's diff; typing
+  without stress becomes a clean *omission*. Both are well-behaved. The reverse (unstressed
+  target, stressed *insertion*) is the case that produces the detached-mark artifact.
+- **Reconstruct the typed answer from Anki's own `#typeans` diff** instead of a live input:
+  walk `#typeans`'s child nodes, collect `.typeGood`/`.typeBad` span text content, and stop
+  at `#typearrow` if present (an inexact match renders TWO lines inside `#typeans` — "what
+  you typed" then a `#typearrow` separator then "the correct answer" — both reuse the same
+  classes, so not stopping at the arrow doubles the reconstructed text).
+- **Hide the native diff** (`typeansEl.style.display = 'none'`) and render custom tiered
+  feedback (perfect-with-stress / correct-no-stress / incorrect / couldn't-determine) from
+  the reconstructed text instead.
+- **NFC-normalize before comparing** — the reconstructed text and the reference field values
+  can differ in Unicode composition form even when visually identical (combining-diacritic
+  text is sensitive to this in a way plain text isn't).
+
+Reference this pattern for any future Ukrainian-typing card — e.g. the UA_Verb production
+template noted as "design decision pending" below, if it gets built.
+
+**Verification caveat:** the з- prefix (схо́дити/зійти́) is the one form in this set where
+Горох's dictionary entry doesn't cleanly label the aspectual pair the way it does for the
+other ten prefixes — its primary listed sense is "ascend," not explicitly "get off/descend."
+Treat it as slightly lower-confidence than the rest until cross-checked against the
+textbook.
+
+**Cloze note design principles (UA_Grammar, established 2026-07-22)**
+
+- **Atomicity:** each distinct cloze number (`{{c1::}}`, `{{c2::}}`, ...) should test exactly
+  one isolated fact. Reusing the same cloze number for multiple unrelated facts in one note
+  (the pattern in `ua-grammar-0001`–`0007`) makes a single card "busy" — it forces recall of
+  several things at once instead of one clean fact.
+- **No self-leak:** nothing outside a cloze span may name the answer being tested inside that
+  span. Concrete examples belong in `Extra` (back-side only), not in `Text` next to the
+  cloze — a parenthetical like "(зайти до друга)" sitting outside a
+  `{{c1::до + genitive}}` span gives the answer away on the very card testing it.
+- **No cross-cloze substring leak:** one cloze's answer text must not be a literal substring
+  of another cloze's visible answer text on the same note (e.g. "зі" as its own cloze target
+  when "з/із/зі" is also shown plainly elsewhere on the card).
+- **Don't pad to hit a card-count target.** Atomicity means one card per fact that earns
+  independent recall, not maximizing cloze numbers — see `ua-grammar-0009`, trimmed from an
+  initial 4-fact draft down to 2 after the extra facts turned out to be low-value trivia.
+- **Cloze cards aren't retroactively deleted when a `{{cN::}}` tag is removed from Text.**
+  If a stale extra card persists after trimming a note's cloze count, delete the note in
+  Anki and let the next sync recreate it with the correct card count — this is expected
+  Anki behavior, not a bug to chase.
+
+### Language conventions (critical)
+- Dialect: modern Ukrainian, **Galician/Lviv** register
+- Apostrophe: **U+02BC `ʼ`** — never ASCII `'`
+- Stress marks: **never guess** — verify against Горох (goroh.pp.ua) via Claude in Chrome.
+  Tag unverified with `stress:unverified`. Remove tag only after Горох confirms.
+- Stress disambiguation: some words have stress-dependent meanings (e.g. му́зика = music,
+  музи́ка = musician). Always check before "correcting" based on Горох alone.
+- **Two accent marks on one word is valid Горох output** — it means the word has free/variant
+  stress (either syllable may be stressed). Do NOT treat this as an extraction bug or garbled
+  data; do NOT collapse it to a single mark when transcribing. Record both marks in the Lemma
+  field as Горох shows them.
+- **Data-quality priority: a multisyllable word with ZERO stress marks is a stronger red flag
+  than one with two.** Double-stress is a legitimate linguistic outcome (see above); a missing
+  stress mark on a multisyllable lemma is not — that's the pattern that indicates a real
+  extraction bug (wrong homograph block, failed fetch, stripped markup) and should block on
+  re-verification before the note is trusted.
+- `сь` after vowels preferred (дивлюсь, вчусь) — preserve unless correcting
+- Grammar explanations always in English
+
+### Stress verification workflow (established)
+
+Горох Словозміна (`goroh.pp.ua/Словозміна/<word>`) returns the full inflection paradigm
+with stress marks. Accessible via Claude in Chrome (not via web_fetch — blocked).
+
+Batch verification process:
+1. Extract lemmas from notes (Python, strip stress to get bare form)
+2. Fetch Горох pages in batch via Chrome JS `Promise.all` (30 at a time to avoid truncation)
+3. Strip phonetic markers from Горох output: remove `<sup>...</sup>` WITH content,
+   backtick, apostrophe, colons, `{дз}`/`{дж}` → keep content, `ў` stays as non-vowel
+4. Compare vowel-index of stress in lemma vs Горох form; flag mismatches
+5. Apply corrections; keep `stress:unverified` tag until user confirms
+
+Important: Горох returns the **masculine adjective** form for adjectives (e.g. `-ський`
+instead of `-ська`). The vowel-index comparison handles this correctly since the stressed
+syllable is the same. The script is embedded in session context — rebuild from the pattern
+in `tools/anki/inspect/` when needed as a standalone tool.
+
+### Vocabulary dedup & homograph handling (established 2026-07-23, outcome 4 added 2026-07-24)
+
+As chapter-by-chapter sourcing continues, every new candidate word falls into one of four
+buckets. Triage deliberately — do not assume from spelling alone.
+
+1. **Brand new vocabulary.** No existing note has this spelling. Default behavior: Горох-
+   verify, create a new `ua-lexeme-NNNN` note per the standard process.
+
+2. **Homograph — same spelling, unrelated meaning** (e.g. EN "blue" the color vs "blue" the
+   mood; ГА "коса" braid / scythe / spit-of-land). Горох itself already surfaces this as
+   separate `.article-block` entries under distinct H2 labels on the same Словозміна page —
+   this is the same multi-homograph-page pattern the "біг"/"Бог" extraction bug taught us to
+   handle correctly (match the H2 label text, don't grab the first table). Handling:
+     - Create a normal new note (own NoteID/file) — do not merge into the existing one.
+     - Cross-link both notes via `ConfusableSet`, explicitly stating "homograph — unrelated
+       meaning" plus both glosses, matching the pattern used for алфавіт/абетка (ua-lexeme-
+       0022/0023 — note that pair is near-synonyms, not true homographs, but the field
+       mechanics are identical).
+     - Tag both notes `homograph:true` so the set is queryable later (e.g. for a dedicated
+       homograph-review pass or card set).
+     - Write `UA_Example` sentences where surrounding context makes the intended sense
+       unambiguous.
+     - Proposed but not yet built: extend the existing `Mnemonic_EN` / `CompareA` /
+       `CompareB` fields + Comparison card template (built for про-/пере- prefix pairs) to
+       lexical homographs generally, for explicit discrimination drilling. Needs Craig's
+       go-ahead before repurposing that template's scope.
+
+3. **True duplicate — same spelling AND same meaning**, encountered again in a later
+   chapter. Do NOT create a new note. Instead:
+     - Append the new `ch:2.9.X` tag to the note's `tags` list.
+     - Append the new chapter to `Tags_Ch` (comma-separated, e.g. `"ch:2.9.1, ch:2.9.2"`).
+     - Append a short dated note to `Verification Notes` documenting the reuse. (This field is
+       CNSF/YAML-only -- it was intentionally removed from the live UA_Lexeme Anki model
+       2026-07-28 since it's not meant to render on any card; see "Legacy Field Removal" above.)
+   This is the exact pattern already used for перегони (ua-lexeme-0144, reused across
+   9.1/9.2) — now the standard procedure rather than ad hoc.
+
+4. **Convergent synonyms — multiple UA spellings, overlapping EN gloss** (established
+   2026-07-24, Craig). Different spelling from bucket 2/3 (which are keyed on the *same* UA
+   spelling) — this bucket catches the opposite drift: several distinct UA words whose
+   `EN_Gloss` values overlap enough that the semantic distinction between them gets lost.
+   E.g. пожежа/ватра/вогонь all glossing loosely to "fire" in EN, or (found in the
+   2026-07-24 audit) добре/непогано/нормально/чудово all glossing to some flavor of
+   "good/fine." This is **not spelling-based** and not mechanically detectable — it requires
+   reading the whole `EN_Gloss` list and clustering by judgment (semantic, not keyword
+   matching). Handling: cross-link the cluster via `ConfusableSet` with scenario-based
+   discrimination (same field/format as bucket 2), explaining the actual distinction (e.g. a
+   register/enthusiasm scale, or a broader-vs-narrower relationship) rather than tagging
+   `homograph:true` (these are related-but-distinct words, not homographs). Run as a
+   standalone full-corpus audit periodically, not per-candidate at generation time — see
+   [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md).
+
+5. **Retiring a note** (established 2026-07-25, ua-lexeme-0225 precedent). A note is
+   redundant/wrong and should stop existing (not just get corrected) -- e.g. 0225 duplicated
+   0211's `Govt_Case`-covered government pattern under a malformed Lemma. Steps:
+     - Delete the CNSF `.md` file (Craig runs `git rm`, per the Big 3 rules).
+     - Run `ua_lexeme_import.py --prune-orphans` (add `--dry-run` first to preview) to
+       hard-delete the corresponding Anki note.
+     - **Hard delete, not suspend.** If the freed note_id slot is later reused for
+       unrelated new content, `find_note_by_id()` matches by NoteID field and
+       `updateNoteFields()` would silently carry a suspended orphan's old FSRS
+       scheduling/review history onto the new, unrelated note -- misleading the algorithm
+       into thinking an unseen word is already learned. Hard delete makes the next sync's
+       `find_note_by_id()` find nothing, so the new note goes through `add_note()` with
+       clean scheduling instead, which is correct for genuinely new content.
+     - `--prune-orphans` always compares against every note_id in the full corpus
+       (`LEXEME_ROOT`), not just whatever `targets` a given invocation passes -- otherwise a
+       partial/single-directory run would falsely flag every note outside its own targets as
+       orphaned.
+     - Cross-reference the retirement in the surviving/replacement note's `Verification
+       Notes` (see ua-lexeme-0211).
+
+6. **Same-Lemma polysemy split — one UA spelling, multiple disjoint EN senses**
+   (established 2026-07-25, Craig; вболівати/партія precedent). Different axis from bucket
+   2/3 (same spelling, different chapter encounter) and from bucket 4 (different spellings,
+   overlapping gloss) -- this is one word, one spelling, genuinely unrelated meanings, where
+   Craig's call is multiple notes over one combined gloss. Full mechanism, template
+   requirements, and worked examples are documented under "Same-Lemma polysemy split" in
+   Card Template Techniques below -- not repeated here. Trigger and steps, briefly:
+     - **Trigger:** a note's `EN_Gloss` is combining two or more senses that don't share a
+       throughline (contrast with вік's age/era, which stays one note -- see "Polysemous
+       word examples" below), OR Горох's Тлумачення lists multiple numbered senses and the
+       note is silently scoped to just one without saying so.
+     - **Steps:** narrow the original note's `EN_Gloss` to the one sense it actually
+       demonstrates; create a sibling note with the same `Lemma`/`TypingAnswer`, a new
+       NoteID, and its own `EN_Gloss`/`UA_Example`/`EN_Example` for the other sense; cross-
+       reference both notes explicitly in `Verification Notes`.
+     - **Do NOT use Compare card fields (`CompareScenario`/`CompareA-D`) for this.** Per
+       Craig, those are for the opposite direction -- multiple UA spellings competing for one
+       EN concept (bucket 2/4 territory, e.g. вид/метелик's true homographs). One UA spelling
+       with multiple EN senses is handled by `EN_Example`/`UA_Example` alone: `UA_EN_FRONT`
+       renders `UA_Example` on every card now, so each sibling's own example sentence is what
+       disambiguates which sense is being tested.
+     - Horox's page may list far more senses than are worth splitting out (партія has ~7) --
+       only split what's textbook-relevant or genuinely common; note the rest as excluded in
+       Verification Notes rather than creating a note per dictionary sense.
+
+**Tooling:**
+- `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
+  lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
+  under `domains/ua/anki/notes/lexemes/` for an exact-spelling match. Reports NoteID, file
+  path, current `EN_Gloss`, and `Tags_Ch` for any match, so the new/homograph/duplicate call
+  gets made deliberately instead of by ad hoc grep (which produced false negatives earlier
+  in this project — see the перегони/перемогти́/програ́ти dedup-check history). Meaning
+  comparison (bucket 2 vs. 3) still requires human/Горох judgment — the tool only automates
+  the "does this spelling already exist" lookup reliably. Manual, per-candidate, run before
+  drafting a batch.
+- `tools/anki/lib/lexeme_dedup.py` (new 2026-07-24) — the same spelling-match logic
+  packaged as an importable library (`create_or_link_lexeme()`), plus the write-side
+  handling for all three spelling-keyed buckets (new/homograph/duplicate): creates the new
+  note, or appends the chapter tag + dated verification note to an existing one, or
+  cross-links both notes' `ConfusableSet` fields for a homograph pair.
+- `tools/anki/extract/gen_ch09_subsection.py` (new 2026-07-25) — the actual generator
+  script item 0 called for: takes a batch of already-drafted candidates (lemma, fields,
+  and an explicit dedup decision) and routes every one through `create_or_link_lexeme()`
+  before it touches disk. Does not automate the Горох verification, phrase/component
+  decomposition, or the new-vs-duplicate-vs-homograph judgment call itself — those stay
+  human/Claude-in-Chrome-driven per CLAUDE-ch09-vocab-workflow.md — it only guarantees no
+  candidate can reach the corpus by a hand-written-file path that skips the check. Not yet
+  exercised against a real ch.9.3+ batch.
+- `tools/anki/inspect/build_lexeme_index.py` (new 2026-07-24) — dumps the full lexeme
+  corpus to `build/ua_lexeme_index.tsv` (gitignored) in one pass, for the bucket-4
+  full-corpus audit and for spot-checking bucket-1/2/3 spelling collisions at scale without
+  hitting per-file staging rate limits.
+
+### Deck Presets and Limit Configuration (2026-07-20)
+
+**Strategy:** Differentiated daily limits by cognitive load tier + data-driven preset creation.
+
+**Preset configuration files:**
+- `domains/ua/anki/presets/preset_definitions.json` — UA domain presets (6 presets: parent + 5 child tiers)
+- `domains/b737/anki/presets/preset_definitions.json` — B737 domain preset (1 preset: review-only)
+
+**Limit configuration files:**
+- `domains/ua/anki/config/deck_limits.yaml` — UA domain limit strategy with commentary
+- `domains/b737/anki/config/deck_limits.yaml` — B737 domain limit strategy with role-based suspension
+
+**Key concepts:**
+- **Parent limit:** 50 new / 100 review per day (UA domain). Child decks cannot exceed this.
+- **Cognitive load tiers:**
+  - High (PVOM, Lexeme EN→UA): 15–18 new/day (typing/production)
+  - Medium (Grammar, Verbs): 20 new/day (recognition + recall)
+  - Low (Visual): 25 new/day (recognition)
+- **Total child capacity:** 98 new/day (98 > 50 parent), but balanced by selective activation
+- **B737 limits:** 0 new / 200 review (review-only, no new cards for type-rating study)
+- **Suspension tagging:** Decks suspended with tags documenting reason (role:captain, scope:out-of-scope, etc.)
+
+**Preset creation workflow:**
+1. `tools/anki/setup/create_deck_presets.py` — Reads JSON preset definitions, creates/updates presets via AnkiConnect
+2. `tools/anki/inspect/update_deck_limits.py` — Reads YAML limits, updates existing deck configs, applies to UA decks
+3. `tools/anki/inspect/update_b737_deck_limits.py` — Same pattern for B737 (honors suspension flags)
+
+**Execution order (Craig runs these):**
+```bash
+python tools/anki/setup/create_deck_presets.py      # Create all presets
+python tools/anki/inspect/update_deck_limits.py     # Apply UA limits
+python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
+```
+
+### Tooling status
+| Path | Status | Purpose |
+|---|---|---|
+| Rename `UA` → `UA_Legacy` in Anki GUI | ✓ done | One-time manual rename; frees UA:: namespace |
+| `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme + UA_Grammar + UA_Visual |
+| `tools/anki/setup/create_deck_presets.py` | ✓ new (2026-07-20) | Data-driven preset creation from JSON definitions |
+| `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert + `--prune-orphans` hard-delete, 2026-07-25) |
+| `tools/anki/sync/ua_grammar_import.py` | ✓ done | UA_Grammar CNSF notes → Anki (upsert) |
+| `tools/anki/sync/ua_visual_import.py` | ✓ done | UA_Visual CNSF notes → Anki (upsert) |
+| `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
+| `tools/anki/inspect/update_deck_limits.py` | ✓ new (2026-07-20) | Apply UA domain limits from YAML config |
+| `tools/anki/inspect/update_b737_deck_limits.py` | ✓ new (2026-07-20) | Apply B737 domain limits, honor suspension tags |
+| `tools/anki/inspect/backfill_source_url.py` | ✓ done | Add Source_URL + Source_Note to all lexeme notes |
+| `tools/anki/inspect/verify_stress_goroh.py` | ✓ done | Stress verification vs Горох; Вступ pass complete |
+| `tools/anki/inspect/test_preset_creation.py` | ✓ new (2026-07-20) | Diagnostic tool for testing preset creation approaches |
+| `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
+| `tools/anki/inspect/patch_ch09_conj_tables.py` | ✓ done | One-shot: Verb_Conj_Table for notes 0117–0131 |
+| `tools/anki/lib/lexeme_dedup.py` | ✓ new (2026-07-24) | `create_or_link_lexeme()` — dedup/homograph create-or-link API (new/homograph/duplicate) |
+| `tools/anki/inspect/build_lexeme_index.py` | ✓ new (2026-07-24) | Full-corpus lexeme → `build/ua_lexeme_index.tsv` dump for audits |
+| `tools/anki/extract/gen_ch09_subsection.py` | ✓ new (2026-07-25) | Ch-09 batch driver wiring `create_or_link_lexeme()` into note generation (CLAUDE.md item 0); not yet used on a real batch |
+| `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
+| `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
+
+### UA_Verb Note Type (Phase 2a, committed 2026-07-12)
+
+**Design:** See [CLAUDE-ua-verb-design.md](CLAUDE-ua-verb-design.md) for complete specification.
+
+**Implementation status (2026-07-12):**
+- ✅ UA_Verb note type created in Anki (27 fields: identity, present 6, imperatives 3, past 4, participles 6, metadata)
+- ✅ Recognition card template deployed (collapsible details for imperatives, past, participles)
+- ✅ ua_verb_import.py + `make ua-verb` target operational
+- ✅ 2 base motion verbs authored & imported (ходити ua-verb-0001, їхати ua-verb-0002) — Горох verified
+- ✅ ua_verb_export.py created; 69 legacy UA_Verb + 5 UA_Conjugation exported to CNSF, canonicalized
+- ⏳ Production template (randomized conjugation drilling): design decision pending
+
+**Key principles:**
+- **Separate morphology from vocabulary.** One UA_Verb note (ходити) serves multiple lexemes (ходити, походити, заходити, etc.) via tag linking, not 1:1 coupling.
+- **Structured fields, not HTML.** 26 fields store individual conjugation forms (6 pronouns, 3 imperatives, 4 past, 6 participles) + metadata. Templates render as tables. HTML is generated cache, not canonical.
+- **CNSF canonical format.** All UA_Verb notes version-controlled as markdown with YAML front matter, imported via AnkiConnect.
+- **Tag-based linking.** UA_Lexeme and UA_Verb share tags (e.g., `conj:motion-walking-ходити`) for bidirectional reference without foreign keys.
+- **Suspended by default, unsuspend selectively.** Import with `conj:suspended` tag; unsuspend class leaders + irregulars tagged `conj:drill` (~90–100 cards active).
+
+**Phase 2a execution plan (12 steps, in progress 2026-07-13):**
+1. ✅ Create `ua_verb_export.py` — Export 69 existing UA_Verb + 5 UA_Conjugation notes to CNSF (backup + version control)
+2. ✅ Export all legacy notes to canonical .md files in `domains/ua/anki/notes/verbs/exported/` — 74 notes canonicalized, ready for migration
+3. ✅ Build & test Recognition card template for ходити/їхати — Card template designed with block-based layout:
+   - **Present tense:** 2-column grid (я/ми, ти/ви, він,вона,воно/вони)
+   - **Past tense:** Full-width 4 rows (ч.р., ж.р., с.р., мн.)
+   - **Imperative:** Full-width 3 rows (ти, ми, ви)
+   - **Participles:** Collapsible section (Act. Pres., Adv. Pres., Pass. Past m/f, Impersonal, Adv. Past)
+   - Both ua-verb-0001 (ходити) and ua-verb-0002 (їздити) synced to Anki with correct conjugation data. Template deployed via setup_ua_note_types.py. Created survey_ua_verb.py tool for card verification.
+4. Design decision: Production template needed (randomized conjugation drilling) or recognition-only sufficient?
+5. Finish ch-09 verbs (Phase 2a) — target 35–50 canonical CNSF notes:
+   - **Prefixed motion verbs** (10–14): походити, заходити, виходити, перейходити (ходити base); поїхати, заїхати, виїхати (їхати base). Tag: `conj:motion-walking-ходити` / `conj:motion-vehicle-їхати`
+   - **Class leaders** (5–10): писати, читати, казати, робити, жити, говорити, слухати, гуляти, хотіти, etc. Tag: `class:leader, phase:2a, conj:drill`
+   - **Irregulars** (8–12): бути, дати/давати, їсти/з'їсти, брати/взяти, ставати/стати, лежати/лягти, сідіти/сісти, etc. Tag: `class:irregular, phase:2a, conj:drill`
+6. Create `ua_conjugation_to_verb.py` migration script — Automate 5 UA_Conjugation → UA_Verb CNSF conversion (field mapping: Pres_1S→Pres_1sg, ActPart_Pres→Participle_Active_Present, Gerund→Participle_Adverbial)
+7. Run migration — Generate CNSF files in `domains/ua/anki/notes/verbs/migrated/`
+8. Field-coverage audit — Compare old vs new structure; flag data loss before sync
+9. Verify tags & metadata — Standardize legacy tags to new scheme (phase:2a, conj:drill, conj:suspended)
+10. Stage sync in batches:
+    - Batch A: 2 new verbs (ходити, їхати) ✓ complete
+    - Batch B: New Phase 2a verbs (prefixed, class leaders, irregulars)
+    - Batch C: 69 legacy UA_Verb reimported from exported CNSF
+    - Batch D: 5 migrated UA_Conjugation → UA_Verb format
+11. Final QA — Spot-check in Anki: verify conjugations, tags, deck placement
+12. Update CLAUDE.md — Document completion, tools, tagging conventions
+
+**CNSF canonicalization note (2026-07-13):**
+- UA_Verb notes use `Verification_Notes` (underscore) not `Verification Notes` (space). The canonicalizer (`tools/anki/cnsf_canonicalize.py`) has been fixed to remove the space variant when processing ua_verb note_type. This prevents duplicate fields in canonical files.
+
+**Participles policy:**
+- **Adverbial past participle** (е.g., робивши) — *required*; useful for reading comprehension
+- **Passive participle** (e.g., робленный) — *optional*; include if standard/common, else blank
+
+**UA_Verb sequencing** — *501 Ukrainian Verbs* (book) used as breadth/coverage map, not a to-do list.
+
+- **Phase 2a** — Implement UA_Verb note type; author class leaders + irregulars (~60–70 notes). These are structural skeletons of Ukrainian conjugation.
+- **Phase 2b** — High-frequency regulars (~60–100 additional notes) from Яблуко + Ukrainian National Corpus frequency list.
+- **Phase 2c (ongoing)** — Expand via *501 Ukrainian Verbs* as curriculum demands. Target total: ~160–220 authored notes, ~90–100 marked for active drill.
+- **Prefixed verb variants** inherit base conjugation via tag linking; no separate conjugation notes per prefix.
+
+**LLM example sentence generation** — `tools/anki/generate/ua_generate_examples.py` ✓ written.
+Run with `make ua-generate-examples BATCH=yabluko-l1/ch-00 [LIMIT=10]`.
+Requires `ANTHROPIC_API_KEY` env var and `pip install anthropic`.
+Generated examples tagged `example:generated` until reviewed; then remove tag.
+
+Alternative: **extract examples from the Яблуко textbook PDF directly** — higher
+authenticity than generated examples and no hallucination risk. The Level 1 PDF is
+at `domains/ua/anki/sources/yabluko/level-1/`. Would require OCR/extraction tooling
+and per-lemma lookup; feasible as a future enrichment pass to replace or supplement
+generated examples.
+
+**Unit 1–12 lexeme generation** — follow the pattern of `gen_ua_lexemes_vstup.py`,
+extracting vocab from Яблуко appendix pages 220–237 unit by unit.
+
+**Legacy card migration** — write `export_ua_legacy.py` to pull existing Basic/Cloze
+cards from Anki and generate CNSF skeletons. Enrich with PoS, gender, stress marks
+before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Яблуко ch-by-ch.
+
+**EN translation variant guidance** — When developing UA_Lexeme cards, for English words with multiple UA translations, provide the literal EN translation in addition to the common meaning. This helps learners understand why a single English word might map to different Ukrainian equivalents, showing semantic nuance rather than just glosses.
+
+### Flagged Card Fix Workflow (Future)
+
+**Purpose:** Periodic review and correction of flagged cards (red=errors, orange=confusing).
+After each study session, fix all flagged cards and remove flags.
+
+**Workflow:**
+1. Query Anki for flagged cards in UA domain → extract NoteIDs
+2. For each flagged NoteID:
+   - Read canonical CNSF file from repo
+   - Show to Claude: full note (fields)
+   - Claude asks: "Why flagged?" (with flag color context)
+   - You respond with issue/fix
+   - Claude suggests if unclear
+   - Update CNSF file with correction
+3. Batch re-import corrected notes to Anki (via `ua_lexeme_import.py`, `ua_verb_import.py`, etc.)
+4. Remove flags from all cards in one query
+5. Commit corrected CNSF files to git
+
+**Tools needed:**
+- `ua_flag_audit.py` — Query flagged cards, extract NoteIDs, map to canonical file paths
+- Integration with existing import scripts (ua_lexeme_import.py, ua_verb_import.py, ua_grammar_import.py, ua_visual_import.py)
+
+**Status:** Planned. End of queue after Phase 2a completion.
+
+### Source materials
+| Path | Purpose |
+|---|---|
+| `domains/ua/anki/sources/yabluko/level-1/` | Яблуко Level 1 PDF (good copy available) |
+| `domains/ua/anki/sources/yabluko/level-2/` | Яблуко Level 2 OCR'd excerpts: `yabluko-l2-vocabulary.pdf`, `yabluko-l2-grammar-guide.pdf`, `yabluko-l2-verb-dictionary.pdf` |
+| `domains/ua/anki/notes/lexemes/yabluko-l1/ch-00/` | 113 ua_lexeme notes — Вступ (= ch-00) |
+| `domains/ua/anki/notes/grammar/` | ua_grammar canonical notes (not yet populated) |
+| `domains/ua/anki/docs/design.md` | Full schema, deck architecture, migration plan |
+| `tools/anki/inspect/survey_ukrainian.py` | AnkiConnect survey script |

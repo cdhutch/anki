@@ -1,0 +1,74 @@
+# UA Deck Limits Configuration
+# ============================
+#
+# Strategy: 50 new cards/day across UA domain, differentiated by cognitive load
+# Total review capacity: 100/day (scales as cards mature)
+#
+# IMPORTANT: All new UA domain notes/cards remain ACTIVE (not suspended)
+#
+# Cognitive load tiers:
+# - High (typing/production): 15-18 new/day, 6-8 review/day
+# - Medium (grammar/conjugation): 20 new/day, 8 review/day
+# - Low (visual/recognition): 25 new/day, 10 review/day
+
+decks:
+  # Parent deck - union of all child limits
+  UA:
+    new: 50
+    review: 100
+    reason: "Parent deck - accommodates all UA child decks"
+
+  # Parent pass-through (does not limit children)
+  UA::Recognition:
+    new: 9999
+    review: 9999
+    reason: "Parent pass-through - children have explicit configs"
+
+  UA::Production:
+    new: 9999
+    review: 9999
+    reason: "Parent pass-through - children have explicit configs"
+
+  # High cognitive load (typing/production)
+  UA::Production::EN→UA:
+    new: 15
+    review: 8
+    reason: "Lexeme production typing (EN→UA) - high cognitive load"
+
+  # High cognitive load (typing/production)
+  UA::Recognition::PVOM:
+    new: 18
+    review: 6
+    reason: "Infinitive typing - requires recall + spelling"
+
+  # Medium cognitive load (recognition)
+  UA::Recognition::UA→EN:
+    new: 20
+    review: 9999
+    reason: "Lexeme recognition (UA→EN) - medium cognitive load, unlimited reviews"
+
+  # Low cognitive load (visual/recognition)
+  UA::Recognition::Visual:
+    new: 25
+    review: 10
+    reason: "Visual/diagram-based - pattern recognition only"
+
+  # Medium cognitive load (grammar/rules)
+  UA::Recognition::Grammar:
+    new: 20
+    review: 8
+    reason: "Grammar rules - recognition-based"
+
+  # Medium cognitive load (conjugation)
+  UA::Verbs:
+    new: 20
+    review: 8
+    reason: "Verb conjugation - mixed recognition/production"
+
+# Context
+# -------
+# B737 deck: 20 new/day (review-only, limited to Limits::NonTrivia, Mnemonics, Inflight_Maneuvers)
+# UA deck: 50 new/day (formal language learning, Яблуко textbook)
+# Total new cards: 70/day
+#
+# FSRS is used for both decks independently (separate configurations, separate card histories)

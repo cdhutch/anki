@@ -81,9 +81,80 @@ help:
 	@echo "  checklists-fix      Canonicalize CNSF formatting for Checklist notes"
 	@echo "  checklists-clean    Remove generated Checklists TSV file"
 	@echo ""
-	@echo "Core (aggregate)"
-	@echo "  core                Export and sync all B737::Core decks to Anki"
-	@echo "  core-fix            Canonicalize all B737::Core note files"
+	@echo "Ukrainian (UA) — note type setup"
+	@echo "  ua-setup                  Create/update all UA note types in Anki"
+	@echo "  ua-setup-lexeme           Create/update UA_Lexeme only"
+	@echo "  ua-setup-grammar          Create/update UA_Grammar only"
+	@echo "  ua-setup-visual           Create/update UA_Visual only"
+	@echo "  ua-setup-verb             Create/update UA_Verb only"
+	@echo ""
+	@echo "Ukrainian (UA) — lexeme pipeline"
+	@echo "  ua-batch BATCH=<b>/<ch>   Canonicalize + sync one chapter  (e.g. BATCH=yabluko-l1/ch-00)"
+	@echo "  ua-batch-check BATCH=…    Check CNSF formatting for one chapter (no changes)"
+	@echo "  ua-batch-fix BATCH=…      Canonicalize one chapter"
+	@echo "  ua-book BOOK=<book>       Canonicalize + sync whole textbook (e.g. BOOK=yabluko-l1)"
+	@echo "  ua-book-check BOOK=…      Check whole textbook"
+	@echo "  ua-book-fix BOOK=…        Canonicalize whole textbook"
+	@echo "  ua-lexeme                 Canonicalize + sync all UA lexeme notes"
+	@echo "  ua-lexeme-check           Check all UA lexeme notes"
+	@echo "  ua-lexeme-fix             Canonicalize all UA lexeme notes"
+	@echo ""
+	@echo "  Batch path convention:  <textbook>/ch-<NN>"
+	@echo "    yabluko-l1/ch-00  =  Вступ"
+	@echo "    yabluko-l1/ch-01  =  Chapter 1, etc."
+	@echo "    yabluko-l2/ch-09  =  Book 2, Chapter 9 (prefixed motion verbs)"
+	@echo ""
+	@echo "Ukrainian (UA) — grammar pipeline"
+	@echo "  ua-grammar                Canonicalize + sync all UA grammar notes"
+	@echo "  ua-grammar-check          Check CNSF formatting (no changes)"
+	@echo "  ua-grammar-fix            Canonicalize all UA grammar notes"
+	@echo ""
+	@echo "Ukrainian (UA) — visual prefix cards"
+	@echo "  ua-visual                 Canonicalize + sync all UA visual notes"
+	@echo "  ua-visual-check           Check CNSF formatting (no changes)"
+	@echo "  ua-visual-fix             Canonicalize all UA visual notes"
+	@echo ""
+	@echo "Ukrainian (UA) — verb conjugation paradigms"
+	@echo "  ua-verb                   Canonicalize + sync all UA verb notes"
+	@echo "  ua-verb-check             Check CNSF formatting (no changes)"
+	@echo "  ua-verb-fix               Canonicalize all UA verb notes"
+	@echo ""
+	@echo "Ukrainian (UA) — PVOM infinitive drilling"
+	@echo "  ua-pvom                   Canonicalize + sync all PVOM infinitive notes"
+	@echo "  ua-pvom-check             Check CNSF formatting (no changes)"
+	@echo "  ua-pvom-fix               Canonicalize all PVOM infinitive notes"
+	@echo ""
+	@echo "Ukrainian (UA) — aggregate"
+	@echo "  ua                  Canonicalize + sync all UA note types (lexeme, grammar, visual, verb, pvom)"
+	@echo "  ua-fix              Canonicalize all UA note types (no sync)"
+	@echo ""
+	@echo "Ukrainian (UA) — stress verification"
+	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
+	@echo "                      Writes /tmp/goroh/goroh_mismatches.tsv for review"
+	@echo "  ua-stress-extract   Generate goroh_input.json + goroh_fetch.js"
+	@echo "  ua-stress-fetch     Fetch Горох pages via Python (no Chrome needed)"
+	@echo "  ua-stress-compare   Compare stored forms vs cached Горох data"
+	@echo "  ua-stress-apply     Apply corrections from goroh_mismatches.tsv"
+	@echo "  ua-stress-wizard    Interactive guided wizard (extract→fetch→compare→apply)"
+	@echo ""
+	@echo "Ukrainian (UA) — example generation"
+	@echo "  ua-generate-examples BATCH=…  Generate UA_Example/EN_Example via Anthropic API"
+	@echo "                                 Optional: LIMIT=N (default 10)"
+	@echo "  ua-inject-examples BATCH=…    Inject pre-generated examples from JSON file"
+	@echo "                                 Optional: JSON=<path> (default: BATCH/generated_examples.json)"
+	@echo ""
+	@echo "Ukrainian (UA) — tests"
+	@echo "  ua-test             Run pytest suite for UA inspect scripts"
+	@echo ""
+	@echo "B737 (aggregate)"
+	@echo "  b737                Export and sync all B737::Core decks to Anki"
+	@echo "  b737-fix            Canonicalize all B737::Core note files"
+	@echo ""
+	@echo "Deck Configuration"
+	@echo "  line-flying         Configure decks for line flying (non-training mode)"
+	@echo "                      Enables: Core::Limits::*, Core::Mnemonics, Core::QRC,"
+	@echo "                                Core::Procedures::Inflight_Maneuvers"
+	@echo "                      Suspends all other decks + notes tagged 'always_hide'"
 	@echo ""
 
 # -------------------------------------------------------------------
@@ -478,11 +549,11 @@ sve: sve-check
 	done
 
 # -------------------------------------------------------------------
-# Core (aggregate — all B737::Core decks)
+# B737 (aggregate — all B737::Core decks)
 # -------------------------------------------------------------------
-.PHONY: core core-fix
+.PHONY: b737 b737-fix
 
-core-fix:
+b737-fix:
 	$(MAKE) limits-fix
 	$(MAKE) qrc-fix
 	$(MAKE) triggers-fix
@@ -493,11 +564,11 @@ core-fix:
 	$(MAKE) proc-non-normal-fix
 	$(MAKE) proc-inflight-fix
 
-core:
+b737:
 	@TARGETS="limits qrc triggers cats mnemonic checklists proc-normal proc-normal-cloze proc-non-normal proc-inflight"; \
 	for t in $$TARGETS; do \
 		printf "\033[1;34m→ $$t...\033[0m\n"; \
-		$(MAKE) $$t || { printf "\033[1;31m✗  Core sync failed at: $$t\033[0m\n"; exit 1; }; \
+		$(MAKE) $$t || { printf "\033[1;31m✗  B737 sync failed at: $$t\033[0m\n"; exit 1; }; \
 		printf "\033[0;32m✓  $$t\033[0m\n"; \
 	done; \
 	printf "\n\033[1;32m✓  All B737::Core decks synced successfully.\033[0m\n"
@@ -512,3 +583,251 @@ sve-%:
 	$(PYTHON) tools/anki/sync/sv_exam_import_to_anki.py \
 		--mcq "$(SV_BUILD)/sve-mcq-$*.tsv" \
 		--tf "$(SV_BUILD)/sve-tf-$*.tsv"
+
+# -------------------------------------------------------------------
+# Deck Configuration — Line Flying Mode
+# -------------------------------------------------------------------
+.PHONY: line-flying
+
+line-flying:
+	$(PYTHON) tools/anki/setup/configure_line_flying_decks.py
+
+# -------------------------------------------------------------------
+# Ukrainian (UA) — lexeme pipeline
+#
+# Batch path convention:  <textbook>/ch-<NN>
+#   yabluko-l1/ch-00  =  Вступ (introductory chapter)
+#   yabluko-l1/ch-01  =  Chapter 1, and so on
+#   yabluko-l2/ch-01  =  Level 2, Chapter 1
+#
+# Single-chapter usage:  make ua-batch BATCH=yabluko-l1/ch-00
+# Whole-book usage:      make ua-book  BOOK=yabluko-l1
+# All UA notes:          make ua-lexeme
+# -------------------------------------------------------------------
+UA_LEXEME_ROOT  := domains/ua/anki/notes/lexemes
+UA_VERB_ROOT    := domains/ua/anki/notes/verbs
+UA_GRAMMAR_ROOT := domains/ua/anki/notes/grammar
+UA_VISUAL_ROOT  := domains/ua/anki/notes/visual
+UA_PVOM_ROOT    := domains/ua/anki/notes/pvom
+UA_INSPECT      := tools/anki/inspect
+UA_GENERATE     := tools/anki/generate
+UA_GOROH_DIR    := /tmp/goroh
+UA_EXAMPLES_LIMIT ?= 10
+
+.PHONY: ua-setup ua-setup-lexeme ua-setup-grammar ua-setup-visual ua-setup-pvom
+.PHONY: ua-visual ua-visual-check ua-visual-fix
+.PHONY: ua-pvom ua-pvom-check ua-pvom-fix
+.PHONY: ua-batch ua-batch-check ua-batch-fix
+.PHONY: ua-book  ua-book-check  ua-book-fix
+.PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
+.PHONY: ua-grammar ua-grammar-check ua-grammar-fix
+.PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
+.PHONY: ua-generate-examples ua-inject-examples
+.PHONY: ua-unverified
+.PHONY: ua ua-fix
+
+# ── Note type setup ──────────────────────────────────────────────────────────
+
+ua-setup:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py
+
+ua-setup-lexeme:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Lexeme
+
+ua-setup-grammar:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Grammar
+
+ua-setup-visual:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Visual
+
+ua-setup-verb:
+	$(PYTHON) tools/anki/setup/setup_ua_note_types.py --model UA_Verb
+
+ua-setup-pvom:
+	$(PYTHON) tools/anki/setup/setup_ua_pvom_note_type.py
+
+# ── Single chapter:  make ua-batch BATCH=yabluko-l1/ch-00 ────────────────────
+
+ua-batch-check:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-batch-check BATCH=<book>/ch-<NN>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BATCH)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BATCH)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BATCH) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-batch-fix:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-batch-fix BATCH=<book>/ch-<NN>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BATCH)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BATCH)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BATCH) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-batch: ua-batch-fix
+	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$(BATCH)/
+
+# ── Whole textbook:  make ua-book BOOK=yabluko-l1 ────────────────────────────
+
+ua-book-check:
+	@test -n "$(BOOK)" || { echo "Usage: make ua-book-check BOOK=<book>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BOOK)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BOOK)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BOOK) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-book-fix:
+	@test -n "$(BOOK)" || { echo "Usage: make ua-book-fix BOOK=<book>"; exit 1; }
+	@test -d "$(UA_LEXEME_ROOT)/$(BOOK)" || { echo "Not found: $(UA_LEXEME_ROOT)/$(BOOK)"; exit 1; }
+	find $(UA_LEXEME_ROOT)/$(BOOK) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-book: ua-book-fix
+	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$(BOOK)/
+
+# ── All UA lexeme notes ──────────────────────────────────────────────────────
+
+ua-lexeme-check:
+	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-lexeme-fix:
+	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-lexeme: ua-lexeme-fix
+	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/
+
+# ── Grammar notes:  make ua-grammar ──────────────────────────────────────────
+
+ua-grammar-check:
+	find $(UA_GRAMMAR_ROOT) -name "ua-grammar-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-grammar-fix:
+	find $(UA_GRAMMAR_ROOT) -name "ua-grammar-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-grammar: ua-grammar-fix
+	$(PYTHON) tools/anki/sync/ua_grammar_import.py $(UA_GRAMMAR_ROOT)/
+
+# ── Visual prefix cards:  make ua-visual ─────────────────────────────────────
+
+ua-visual-check:
+	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-visual-fix:
+	$(PYTHON) tools/anki/fix_visual_svg_yaml.py $(UA_VISUAL_ROOT)
+	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-visual: ua-visual-fix
+	$(PYTHON) tools/anki/sync/ua_visual_import.py $(UA_VISUAL_ROOT)/
+
+# ── Verb conjugation paradigms:  make ua-verb ──────────────────────────────────
+
+ua-verb-check:
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-verb-fix:
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-verb: ua-verb-fix
+	$(PYTHON) tools/anki/sync/ua_verb_import.py $(UA_VERB_ROOT)/
+
+# ── PVOM infinitive drilling cards:  make ua-pvom ──────────────────────────────
+
+ua-pvom-check:
+	find $(UA_PVOM_ROOT) -name "ua-pvom-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
+
+ua-pvom-fix:
+	find $(UA_PVOM_ROOT) -name "ua-pvom-*.md" \
+	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
+
+ua-pvom: ua-setup-pvom ua-pvom-fix
+	$(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/
+
+# ── Unverified notes report (stress or status) ───────────────────────────────
+# Bold + blink + bright yellow, deliberately obnoxious: printed at the end of
+# `make ua` and `make ua-fix` so leftover stress:unverified / status:draft /
+# no-status notes can't just scroll by unnoticed. Blink is ignored by some
+# terminals (accessibility-disabled by default in several) -- the bold bright
+# yellow + repeated warning glyphs still carry the "look at this" signal even
+# without it.
+ua-unverified:
+	@printf "\033[1;5;93m\n⚠ ⚠ ⚠  UNVERIFIED UA NOTES (stress or status) ⚠ ⚠ ⚠\033[0m\n"
+	@$(PYTHON) tools/anki/inspect/list_unverified.py
+
+# ── All UA note types (aggregate) ────────────────────────────────────────────
+
+ua-fix:
+	$(MAKE) ua-lexeme-fix
+	$(MAKE) ua-grammar-fix
+	$(MAKE) ua-visual-fix
+	$(MAKE) ua-verb-fix
+	$(MAKE) ua-pvom-fix
+	$(MAKE) ua-unverified
+
+ua:
+	@TARGETS="ua-lexeme ua-grammar ua-visual ua-verb ua-pvom"; \
+	for t in $$TARGETS; do \
+		printf "\033[1;34m→ $$t...\033[0m\n"; \
+		$(MAKE) $$t || { printf "\033[1;31m✗  UA sync failed at: $$t\033[0m\n"; exit 1; }; \
+		printf "\033[0;32m✓  $$t\033[0m\n"; \
+	done; \
+	printf "\n\033[1;32m✓  All UA note types synced successfully.\033[0m\n"
+	$(MAKE) ua-unverified
+
+# ── Stress verification ──────────────────────────────────────────────────────
+
+ua-stress-extract:
+	@mkdir -p $(UA_GOROH_DIR)
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --extract --out-dir $(UA_GOROH_DIR)
+
+ua-stress-fetch:
+	@mkdir -p $(UA_GOROH_DIR)
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --fetch --out-dir $(UA_GOROH_DIR)
+
+ua-stress-compare:
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --compare $(UA_GOROH_DIR)/goroh_cache.json \
+	    --out-dir $(UA_GOROH_DIR)
+
+ua-stress-apply:
+	$(PYTHON) $(UA_INSPECT)/verify_stress_goroh.py \
+	    --apply $(UA_GOROH_DIR)/goroh_mismatches.tsv
+
+ua-stress: ua-stress-extract ua-stress-fetch ua-stress-compare
+	@echo ""
+	@echo "Review $(UA_GOROH_DIR)/goroh_mismatches.tsv"
+	@echo "Fill in the 'correction' column, then run: make ua-stress-apply"
+
+ua-stress-wizard:
+	$(PYTHON) $(UA_INSPECT)/run_stress_verification.py \
+	    --out-dir $(UA_GOROH_DIR)
+
+# ── Tests ────────────────────────────────────────────────────────────────────
+
+.PHONY: ua-test
+
+ua-test:
+	$(PYTHON) -m pytest tests/ua/ -v
+
+# ── Example generation ────────────────────────────────────────────────────────
+# Requires: ANTHROPIC_API_KEY env var + `pip install anthropic`
+# Usage:    make ua-generate-examples BATCH=yabluko-l1/ch-00 [LIMIT=10]
+
+ua-generate-examples:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-generate-examples BATCH=<book>/ch-<NN> [LIMIT=10]"; exit 1; }
+	$(PYTHON) $(UA_GENERATE)/ua_generate_examples.py \
+	    --batch $(UA_LEXEME_ROOT)/$(BATCH) \
+	    --limit $(UA_EXAMPLES_LIMIT)
+
+UA_EXAMPLES_JSON ?=
+ua-inject-examples:
+	@test -n "$(BATCH)" || { echo "Usage: make ua-inject-examples BATCH=<book>/ch-<NN> [JSON=<path>]"; exit 1; }
+	$(PYTHON) $(UA_GENERATE)/ua_generate_examples.py \
+	    --batch $(UA_LEXEME_ROOT)/$(BATCH) \
+	    --limit 0 \
+	    --from-json $(if $(UA_EXAMPLES_JSON),$(UA_EXAMPLES_JSON),$(UA_LEXEME_ROOT)/$(BATCH)/generated_examples.json)

@@ -1,0 +1,45 @@
+---
+schema: cnsf/v0
+note_type: ua_verb
+note_id: ua-verb-0029
+anki:
+  model: UA_Verb
+  deck: UA::Verbs
+tags:
+- domain:ua
+- motion:vehicle
+- prefixed
+- phase:2a
+- class:prefixed
+- ch:2.9.4
+- stress:unverified
+fields:
+  NoteID: ua-verb-0029
+  Lemma: проїхати
+  Aspect: perfective
+  VerbClass: motion-vehicle-prefixed
+  FreqSource: ch:2.9
+  Pres_1sg: прої́ду
+  Pres_2sg: проїде́ш
+  Pres_3sg: проїде́
+  Pres_1pl: проїде́м
+  Pres_2pl: проїдете́
+  Pres_3pl: прої́дуть
+  Imperative_2sg: проїдь
+  Imperative_1pl: проїдімте́
+  Imperative_2pl: проїдіть
+  Past_1sg_m: проїхав
+  Past_1sg_f: проїха́ла
+  Past_1sg_n: проїха́ло
+  Past_3pl: проїха́ли
+  Participle_Active_Present: ''
+  Participle_Adverbial_Present: ''
+  Participle_Passive_Past_m: ''
+  Participle_Passive_Past_f: ''
+  Participle_Impersonal_Past: ''
+  Participle_Adverbial_Past: ''
+  UA_Example: ''
+  EN_Example: ''
+  Verification_Notes: ''
+---
+

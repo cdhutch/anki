@@ -1,0 +1,39 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0088
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.0
+- pos:adjective
+- pos:nationality-adj
+- status:verified
+fields:
+  NoteID: ua-lexeme-0088
+  Lemma: брази́льський
+  PartOfSpeech: adjective
+  Gender: m
+  Perfective: ''
+  EN_Gloss: Brazilian (adj.)
+  Govt_Case: ''
+  CounterpartForm: 'm: брази́льський'
+  IrregularForms: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  CrossLang_Analog: ''
+  EuphonyNote: ''
+  TypingAnswer: бразильський
+  UA_Example: Вони танцюють бразильський танець самбу.
+  EN_Example: They dance the Brazilian dance samba.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:1.0
+  Source_URL: https://goroh.pp.ua/Словозміна/бразильський
+  Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: ''
+---
+

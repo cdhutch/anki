@@ -13,17 +13,17 @@ tags:
 - status:unverified
 fields:
   Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
+  Source Location: AOM §10.6.2 Non-ILS Approach Review
   Verification Notes: ''
 ---
 
 # front_md
 
-**Check + 2 setup** — what are the three additional steps for a **non-ILS** approach compared to an ILS approach?
+**Check + 2 setup** — what are the up to four additional steps for a **non-ILS** approach compared to an ILS approach?
 
 # back_md
 
 1. **LEGS page** — check whether a coded GP angle exists; determines whether to use V/S on final
-2. **PROG Page 1 NAV STATUS** — set VOR UPDATE to **OFF**
-3. **RNP (AR) only — PROG Page 4:**
-   - Enter charted RNP value (if required)
-   - Enter VERT RNP **125** (if jet has NPS scales)
+2. **PROG Page 1 PROGRESS | NAV STATUS** — set VOR UPDATE to **OFF**
+3. **PROG Page 4 RNP PROGRESS** — enter VERT RNP **125** (if jet has NPS scales)
+4. **PROG Page 4 RNP PROGRESS** — enter charted RNP value (**RNP (AR) approach only**)

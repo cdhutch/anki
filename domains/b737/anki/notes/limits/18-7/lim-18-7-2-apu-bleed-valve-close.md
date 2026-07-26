@@ -23,7 +23,7 @@ fields:
 
 **B737 LIMITS — APU**
 
-When must the **APU bleed valve be CLOSED**?
+Name the three specific Air Conditioning Panel bleed configurations when must the **APU bleed valve be CLOSED**?
 
 # back_md
 
@@ -32,7 +32,3 @@ APU bleed valve must be **closed** when:
 - Ground air is connected **AND** the isolation valve is open  
 - Engine No. 1 bleed valve is open  
 - Isolation valve **AND** engine No. 2 bleed valves are open  
-
-**Note**
-
-APU bleed valve may be open during **engine start**, but avoid engine power above idle.

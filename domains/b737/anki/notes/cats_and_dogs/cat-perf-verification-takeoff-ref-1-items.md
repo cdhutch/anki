@@ -23,7 +23,7 @@ fields:
 # back_md
 
 1. Flaps
-2. CG
+2. Runway
 3. V1
 4. VR
 5. V2

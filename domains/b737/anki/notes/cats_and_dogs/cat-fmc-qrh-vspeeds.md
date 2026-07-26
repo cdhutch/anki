@@ -12,7 +12,7 @@ tags:
 - type:cats_and_dogs
 - status:unverified
 fields:
-  Source Document: American Airlines B737 Aircraft Operating Manual Revision Number 9.0
+  Source Document: American Airlines B737 Takeoff Card
   Verification Notes: ''
 ---
 
@@ -23,7 +23,7 @@ fields:
 # back_md
 
 - **N1 Limit Page**
-    - Delete temperature
+    - Delete assumed temperature if using max thrust
     - Select thrust rating
 - **TAKEOFF REF Page 2**
     - Enter Wind

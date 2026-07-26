@@ -1,0 +1,53 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0058
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.0
+- pos:noun
+- gender:f
+- status:verified
+fields:
+  NoteID: ua-lexeme-0058
+  Lemma: профе́сія
+  PartOfSpeech: noun
+  Gender: f
+  Perfective: ''
+  EN_Gloss: profession, occupation
+  Govt_Case: ''
+  CounterpartForm: ''
+  IrregularForms: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: "фах (alternative: trade, craft, skilled expertise)\nScenario A: \"Asking\
+    \ someone about their job formally at a dinner party\"\n→ Use: професія (formal career\
+    \ identity)\nScenario B: \"Discussing a plumber's or carpenter's skills and expertise\"\
+    \  \n→ Use: фах (skilled trade/craft)\nKey distinction: професія = formal career + credentials;\
+    \ фах = skilled expertise + craft\n"
+  Mnemonic_EN: професія = formal career identity/credentials; фах = a specific skilled trade
+    or craft expertise.
+  CompareScenario: Filling out an official form that asks for your occupation, or introducing
+    yourself formally by career at a professional networking event.
+  CompareA: професія
+  CompareB: фах
+  CrossLang_Analog: 'EN: profession · RU: профессия · FR: profession · DE: Profession'
+  EuphonyNote: ''
+  TypingAnswer: професія
+  UA_Example: Яка ваша професія? Я лікар.
+  EN_Example: What is your profession? I am a doctor.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:1.0
+  Source_URL: https://goroh.pp.ua/Словозміна/професія
+  Source_Note: verified 2026-07-06 via Горох
+  Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
+    card (see compare-card-audit-findings.md) — this note''s ConfusableSet already had good
+    scenario prose; CompareA/B/Scenario extract that same content into the fields the new
+    template actually reads. Needs your review. Note: фах has no lexeme note of its own in
+    the corpus, so this Compare card is one-directional (from професія only).'
+---
+
