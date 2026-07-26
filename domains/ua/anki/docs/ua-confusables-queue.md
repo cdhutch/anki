@@ -40,3 +40,27 @@ tags:
 
 **Added:** 2026-07-28 during ch-09 review  
 **Note:** Exact confusable words TBD by user
+
+---
+
+### вогонь (fire)
+
+**Status:** Anticipated (ua-lexeme-0329, ch-09)  
+**YAML tag to add:** `confusables:anticipated`
+
+**English meanings:** fire, flame, blaze
+
+**Anticipated confusables:** Multiple UA words for different fire contexts
+- Literal fire/flame: вогонь (fire as element/phenomenon)
+- Bonfire/campfire: ватра (traditional bonfire)
+- Conflagration: пожежа (destructive fire/conflagration)
+- Light/glow: полум'я (flame/blaze)
+- Other senses likely exist per Горох
+
+**When sourced:**
+1. Create note with `confusables:anticipated` tag in YAML frontmatter
+2. Later populate ConfusableSet with scenario-based discrimination
+3. Remove/replace tag once ConfusableSet is complete
+
+**Added:** 2026-07-28 during ch-09 review  
+**Note:** Exact confusable words and distinctions TBD by user
