@@ -30,6 +30,7 @@ fields:
   CompareA: входити
   CompareB: виходити
   CrossLang_Analog: '≈ RU: входить / войти'
+  Perfective_Euphony: ввійти́
   EuphonyNote: 'PFV: в- + іти → увійти (also ввійти); у- preferred before й'
   TypingAnswer: входити
   UA_Example: ''
@@ -39,6 +40,11 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/входити
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
-    redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
+    redesigned Compare card (see compare-card-audit-findings.md). Needs your review. 2026-07-26:
+    added Perfective_Euphony (ввійти́) per corpus-wide у/в euphony survey -- confirmed via
+    СУМ-20 (sum20ua.com), which lists the headword itself with parenthetical variants ("ВХО́ДИТИ
+    ..., ВВІХО́ДИТИ (УВІХО́ДИТИ) ... ВВІЙТИ́ (УВІЙТИ́)"), plus slovnyk.ua confirming ввійти
+    as a standalone headword with its own conjugation table ("ВВІЙТИ див. входити"). увійти́
+    remains the more common form; ввійти́ is dictionary-attested, not a typo.'
 ---
 

@@ -12,8 +12,8 @@ tags:
 - ch:2.9.3
 - pos:phrase
 - phrase:noun
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0223
   Lemma: показо́вий ви́ступ

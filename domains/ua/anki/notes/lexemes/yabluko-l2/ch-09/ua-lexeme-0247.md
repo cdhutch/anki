@@ -13,8 +13,8 @@ tags:
 - pos:adverb
 - fixed-phrase
 - ch:2.9.7
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0247
   Lemma: ра́но-вра́нці

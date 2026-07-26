@@ -11,11 +11,11 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0283
-  Lemma: перелiта́ти
+  Lemma: переліта́ти
   PartOfSpeech: verb
   Gender: ''
   Perfective: перелеті́ти
@@ -28,7 +28,7 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: переліtaти
+  TypingAnswer: перелітати
   UA_Example: Наступний етап -- перелетіти через річку на мотузці.
   EN_Example: The next stage is flying across the river on a rope.
   Verb_Conj_Table: ''

@@ -13,8 +13,8 @@ tags:
 - pos:adjective
 - phrase:adjective
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0297
   Lemma: заря́джений позити́вною ене́ргією приго́д

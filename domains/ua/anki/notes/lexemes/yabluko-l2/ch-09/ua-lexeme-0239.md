@@ -12,8 +12,8 @@ tags:
 - ch:2.9.4
 - pos:noun
 - gender:m
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0239
   Lemma: буке́т

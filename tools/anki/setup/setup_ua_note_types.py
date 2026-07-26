@@ -55,11 +55,14 @@ FIELDS = [
     # Semantic Relations & Cross-lingual
     "ConfusableSet",
     "Mnemonic_EN",
+    "_IsHomograph",  # Internal marker: populated by import script based on homograph:true tag
     "CompareScenario",
     "CompareA",
     "CompareB",
     "CompareC",
     "CompareD",
+    "Homograph_SenseA",  # EN sense for CompareA (homographs only)
+    "Homograph_SenseB",  # EN sense for CompareB (homographs only)
     "CrossLang_Analog",
     "EuphonyNote",
 
@@ -383,7 +386,21 @@ EN_UA_BACK = """\
 # with a populated ConfusableSet should get a real CompareScenario over time.
 
 COMPARISON_FRONT = """\
-{{#ConfusableSet}}<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
+{{#ConfusableSet}}
+{{#_IsHomograph}}
+<!-- HOMOGRAPH MODE: UA→EN direction. Show Ukrainian sentences, student deduces EN meaning -->
+<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Which sense is being used?</div>
+<div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
+  {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}[Homograph scenario]{{/CompareScenario}}
+</div>
+<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
+<div style="font-size: 16px; color: #1a1a1a; padding: 12px; background: #f0f7ff; border-left: 3px solid #1565c0;">{{CompareA}}</div>
+{{#CompareB}}<div style="font-size: 16px; color: #1a1a1a; padding: 12px; background: #f0f7ff; border-left: 3px solid #1565c0;">{{CompareB}}</div>{{/CompareB}}
+</div>
+{{/_IsHomograph}}
+{{^_IsHomograph}}
+<!-- CONFUSABLES MODE: EN→UA direction. Show English scenario, student picks Ukrainian word -->
+<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
   Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
 </div>
@@ -392,19 +409,43 @@ COMPARISON_FRONT = """\
 {{#CompareB}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareB}}</div>{{/CompareB}}
 {{#CompareC}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareC}}</div>{{/CompareC}}
 {{#CompareD}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareD}}</div>{{/CompareD}}
-</div>{{/ConfusableSet}}
+</div>
+{{/_IsHomograph}}
+{{/ConfusableSet}}
 """
 
 COMPARISON_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-{{#ConfusableSet}}<div style="margin-top: 16px; font-size: 16px;">
+{{#ConfusableSet}}
+{{#_IsHomograph}}
+<!-- HOMOGRAPH BACK: Show each Ukrainian sentence + its EN sense -->
+<div style="margin-top: 16px; font-size: 16px;">
+<div style="color: #2e7d32; font-size: 18px; font-weight: bold; margin-bottom: 12px;">Senses of {{Lemma}}:</div>
+<div style="margin: 12px 0; padding: 10px; background: #f5f5f5; border-left: 3px solid #2e7d32;">
+  <div style="color: #1565c0; font-size: 15px; margin-bottom: 4px;">{{CompareA}}</div>
+  <div style="color: #2e7d32; font-size: 13px;">{{Homograph_SenseA}}</div>
+</div>
+<div style="margin: 12px 0; padding: 10px; background: #f5f5f5; border-left: 3px solid #2e7d32;">
+  <div style="color: #1565c0; font-size: 15px; margin-bottom: 4px;">{{CompareB}}</div>
+  <div style="color: #2e7d32; font-size: 13px;">{{Homograph_SenseB}}</div>
+</div>
+{{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
+<strong>Remember:</strong> {{Mnemonic_EN}}
+</div>{{/Mnemonic_EN}}
+</div>
+{{/_IsHomograph}}
+{{^_IsHomograph}}
+<!-- CONFUSABLES BACK: Show the correct word and why it fits -->
+<div style="margin-top: 16px; font-size: 16px;">
 <div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 4px;">✓ {{Lemma}}</div>
 <div style="color: #2e7d32; font-size: 13px; margin-bottom: 12px;">{{EN_Gloss}}</div>
 {{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
 <strong>Remember:</strong> {{Mnemonic_EN}}
 </div>{{/Mnemonic_EN}}
-</div>{{/ConfusableSet}}
+</div>
+{{/_IsHomograph}}
+{{/ConfusableSet}}
 """
 
 CARD_TEMPLATES = [

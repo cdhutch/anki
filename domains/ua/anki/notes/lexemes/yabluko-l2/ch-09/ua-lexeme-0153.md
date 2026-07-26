@@ -27,6 +27,7 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
+  Lemma_Euphony: вболіва́льник
   EuphonyNote: ''
   TypingAnswer: уболівальник
   UA_Example: У світі спорту Ви — уболівальник.
@@ -36,6 +37,9 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/уболівальник
   Source_Note: Stress verified 2026-07-22 via Горох. Example adapted from Яблуко 2, ch.9.1
     test scoring key (Вправа 7).
-  Verification Notes: ''
+  Verification Notes: '2026-07-26: added Lemma_Euphony (вболіва́льник) per corpus-wide у/в
+    euphony survey -- Горох''s Слововживання entry for вболівальник states directly "вболівальник
+    (уболівальник)" as parallel forms derived from вболівати/уболівати. Stress confirmed вболіва́льник
+    via Горох Словозміна.'
 ---
 

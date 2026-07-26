@@ -12,8 +12,8 @@ tags:
 - ch:2.9.3
 - pos:phrase
 - phrase:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0226
   Lemma: ви́грати па́ртію
@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to win a game/match
+  AspectCue: At the final move, what does the winner finally manage to do?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -37,6 +38,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/виграти; https://goroh.pp.ua/Словозміна/партія
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: ''
+  Verification Notes: '2026-07-28: added AspectCue framing the one-time completed-victory
+    reading of ви́грати (perfective) -- Горох-confirmed real imperfective counterpart виграва́ти
+    exists as its own headword.'
 ---
 

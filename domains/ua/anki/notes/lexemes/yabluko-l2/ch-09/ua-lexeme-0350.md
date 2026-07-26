@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - pos:adverb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0350
   Lemma: прибли́зно

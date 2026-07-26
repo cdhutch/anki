@@ -12,15 +12,15 @@ tags:
 - ch:2.9.6
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0311
   Lemma: поли́ця
   PartOfSpeech: noun
   Gender: f
   Perfective: ''
-  EN_Gloss: berth, shelf (train compartment sleeping shelf)
+  EN_Gloss: shelf
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -30,13 +30,20 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: полиця
-  UA_Example: Я забронював нижню полицю, щоб легше було спати.
-  EN_Example: I booked the lower berth so it would be easier to sleep.
+  UA_Example: Постав книжки на полицю.
+  EN_Example: Put the books on the shelf.
   Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/полиця
-  Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
-  Verification Notes: Confirms 'полиця' (shelf/berth), not 'поліція' (police) -- the latter
-    would not fit the train-travel context of 'нижня, верхня, бічна' (lower/upper/side berths).
+  Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass. Rescoped 2026-07-28 per
+    Craig's review -- see Verification Notes.
+  Verification Notes: '2026-07-28: rescoped from the narrower train-berth sense to Горох''s
+    Тлумачення sense 1, the general household shelf ("дошка або кілька дощок, які закріплені
+    горизонтально на стіні або в шафі" -- a board fixed horizontally on a wall or in a cabinet,
+    for dishes/books/food/clothes), per Craig''s catch that the original gloss was too specific.
+    The train-berth sense (Горох sense 2) is real and distinct, not a narrower case of this
+    one -- moved to sibling note ua-lexeme-0381, same-Lemma polysemy-split pattern (see ua-lexeme-0211/0377
+    for вболівати, ua-lexeme-0304/0380 for відправлення). Confirms ''полиця'' (shelf/berth),
+    not ''поліція'' (police).'
 ---
 

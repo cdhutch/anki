@@ -12,8 +12,8 @@ tags:
 - ch:2.9.3
 - pos:phrase
 - phrase:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0233
   Lemma: перемогти́ супе́рника
@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to defeat an opponent
+  AspectCue: When the match is finally over, what has one side accomplished?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -38,6 +39,7 @@ fields:
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
   Verification Notes: '''перемогти'' reuses the existing verb ua-lexeme-0177 (Lemma ''перемагати'',
-    Perfective field ''перемогти''; already sourced for ch.9.2).'
+    Perfective field ''перемогти''; already sourced for ch.9.2). 2026-07-28: added AspectCue
+    framing the one-time decisive-outcome reading of this perfective.'
 ---
 

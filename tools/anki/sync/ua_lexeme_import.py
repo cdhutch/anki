@@ -13,6 +13,12 @@ self-healing, so a re-import always converges to this state regardless of
 prior manual suspend/unsuspend actions taken outside this script):
     - status:draft    → suspend every card on the note
     - status:verified → unsuspend every card on the note
+    - ConfusableSet empty/blank → suspend the Compare card (card #3)
+    - ConfusableSet populated   → unsuspend the Compare card (card #3)
+
+The Compare card suspension is independent of status flags -- a status:verified
+note with no ConfusableSet will have all other cards active but the Compare card
+suspended. This prevents blank Compare cards from appearing in study.
 
 (2026-07-22: this previously also suspended just the EN→UA card for
 motion:prefixed + status:verified notes, on the theory that PVOM's
@@ -44,6 +50,13 @@ from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Lexeme"
+
+# Full CNSF root, independent of whatever `targets` a given invocation passes
+# (e.g. a single file or one subdirectory) -- orphan detection (--prune-orphans,
+# added 2026-07-25) must always compare against every note_id that exists
+# ANYWHERE in the corpus, not just the files this particular run touched, or
+# it would falsely flag every note outside `targets` as orphaned and delete it.
+LEXEME_ROOT = Path(__file__).resolve().parents[3] / "domains/ua/anki/notes/lexemes"
 
 DECK_RECOGNITION = "UA::Recognition::UA→EN"
 DECK_PRODUCTION  = "UA::Production::EN→UA"
@@ -136,6 +149,27 @@ def set_suspended(anki_note_id: int, suspend: bool, dry_run: bool):
     anki_request(action, {"cards": card_ids}, url=ANKI_URL)
 
 
+def set_compare_card_suspended(anki_note_id: int, suspend: bool, dry_run: bool):
+    """Conditionally suspend/unsuspend just the Compare card (card #3) by template name.
+
+    Called after status-based suspension to enforce Compare-card-specific logic:
+    - Compare card should be suspended if ConfusableSet is empty (no confusables/homographs)
+    - Compare card should be unsuspended if ConfusableSet is populated (has data to test)
+
+    This prevents blank Compare cards from appearing in study while keeping other cards
+    (UA→EN recognition, EN→UA production) active regardless of ConfusableSet status.
+    """
+    if dry_run:
+        return
+    compare_ids = anki_request(
+        "findCards", {"query": f'nid:{anki_note_id} "card:Compare"'}, url=ANKI_URL
+    ) or []
+    if not compare_ids:
+        return
+    action = "suspend" if suspend else "unsuspend"
+    anki_request(action, {"cards": compare_ids}, url=ANKI_URL)
+
+
 # ---------------------------------------------------------------------------
 # CNSF parsing
 # ---------------------------------------------------------------------------
@@ -196,21 +230,32 @@ def import_note(data: dict, dry_run: bool) -> str:
     # Coerce all field values to strings (YAML may parse numbers/booleans)
     fields = {k: ("" if v is None else str(v)) for k, v in raw_fields.items()}
 
-    # Compare card prompt: vary which word (Lemma vs ConfusableSet) is
-    # named first, so the prompt text alone doesn't give away the answer.
-    compare_a, compare_b = compute_compare_options(
-        note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
-    )
-    fields["CompareA"] = compare_a
-    fields["CompareB"] = compare_b
-
-    # Tags: from CNSF frontmatter
+    # Tags: from CNSF frontmatter (needed before Compare card logic)
     tags = data.get("tags", [])
     if not isinstance(tags, list):
         tags = []
 
+    # Populate _IsHomograph field based on homograph:true tag.
+    # Used by Compare card template to decide UA→EN (homographs) vs EN→UA (confusables) mode.
+    is_homograph = "homograph:true" in tags
+    fields["_IsHomograph"] = "1" if is_homograph else ""
+
+    # Compare card prompt: vary which word (Lemma vs ConfusableSet) is named first
+    # (confusables only). For homographs, CompareA/B are authored Ukrainian sentences
+    # that shouldn't be reordered -- use them as-is from the YAML.
+    if not is_homograph:
+        compare_a, compare_b = compute_compare_options(
+            note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
+        )
+        fields["CompareA"] = compare_a
+        fields["CompareB"] = compare_b
+
     # Suspension policy -- see module docstring.
     suspend = "status:draft" in tags
+
+    # Compare card suspension: suspend if ConfusableSet is empty (no confusables/homographs)
+    confusable_set = fields.get("ConfusableSet", "").strip()
+    suspend_compare_card = not confusable_set
 
     existing_id = find_note_by_id(note_id)
 
@@ -220,12 +265,14 @@ def import_note(data: dict, dry_run: bool) -> str:
             route_cards_to_decks(anki_id, dry_run)
             if suspend:
                 set_suspended(anki_id, True, dry_run)
+            set_compare_card_suspended(anki_id, suspend_compare_card, dry_run)
         return "added"
     else:
         update_note(existing_id, fields, tags, dry_run)
         if not dry_run:
             route_cards_to_decks(existing_id, dry_run)
             set_suspended(existing_id, suspend, dry_run)
+            set_compare_card_suspended(existing_id, suspend_compare_card, dry_run)
         return "updated"
 
 

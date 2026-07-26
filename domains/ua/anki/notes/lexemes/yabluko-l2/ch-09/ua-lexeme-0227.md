@@ -12,8 +12,8 @@ tags:
 - ch:2.9.3
 - pos:phrase
 - phrase:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0227
   Lemma: відбива́ти мʼяч
@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to hit/return the ball
+  AspectCue: During a long rally, what does a player keep doing with the ball?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -37,6 +38,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/відбивати; https://goroh.pp.ua/Словозміна/м'яч
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: ''
+  Verification Notes: '2026-07-28: added AspectCue framing the ongoing/repeated-rally reading
+    of відбива́ти (imperfective) -- Горох-confirmed real perfective counterpart відби́ти exists
+    as its own headword.'
 ---
 

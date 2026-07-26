@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - gender:f
 - ch:2.9.7
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0278
   Lemma: си́ла

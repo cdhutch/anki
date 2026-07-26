@@ -12,8 +12,8 @@ tags:
 - ch:2.9.3
 - pos:phrase
 - phrase:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0232
   Lemma: набра́ти одне́ очко́
@@ -21,6 +21,7 @@ fields:
   Gender: ''
   Perfective: ''
   EN_Gloss: to score one point
+  AspectCue: Just now, what did the team manage to add to the scoreboard?
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -38,9 +39,11 @@ fields:
     https://goroh.pp.ua/Словозміна/очко
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: Ordinal/cardinal component 'одне' (neuter of 'один') is treated as basic
-    grammar rather than new content vocabulary and doesn't get its own lexeme note, consistent
-    with skipping 'третє' in ua-lexeme-0234 -- flagging this as a judgment call for Craig's
-    review.
+  Verification Notes: 'Ordinal/cardinal component ''одне'' (neuter of ''один'') is treated
+    as basic grammar rather than new content vocabulary and doesn''t get its own lexeme note,
+    consistent with skipping ''третє'' in ua-lexeme-0234 -- flagging this as a judgment call
+    for Craig''s review. 2026-07-28: added AspectCue framing the one-time scoring-event reading
+    of набра́ти (perfective) -- the real imperfective counterpart набира́ти is already its
+    own corpus note, ua-lexeme-0218.'
 ---
 

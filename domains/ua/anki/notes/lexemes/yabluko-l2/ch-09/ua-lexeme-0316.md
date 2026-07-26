@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.6
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0316
   Lemma: прибува́ти
@@ -24,7 +24,7 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: приходити
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
@@ -35,7 +35,11 @@ fields:
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/прибувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
-  Verification Notes: Горох's second homograph sense of 'прибути' ('придбати', to acquire)
-    is unrelated; this note uses the 'приїхати' (arrive) sense.
+  Verification Notes: 'Горох''s second homograph sense of ''прибути'' (''придбати'', to acquire)
+    is unrelated; this note uses the ''приїхати'' (arrive) sense. 2026-07-28: added ConfusableSet
+    (приходити) -- Горох''s Синонімія page for прибувати lists приходити and приїжджати as
+    synonyms for the arrival sense; walking form used per Craig''s preference for these Compare-card
+    constructions. приходити itself is drilled via PVOM (ua-pvom-0004, prefix при-), not a
+    separate Lexeme note.'
 ---
 

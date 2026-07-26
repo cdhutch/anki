@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:adverb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0276
   Lemma: зале́жно

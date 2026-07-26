@@ -12,8 +12,8 @@ tags:
 - ch:2.9.2
 - pos:noun
 - gender:m
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 - homograph:true
 fields:
   NoteID: ua-lexeme-0181

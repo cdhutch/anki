@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0281
   Lemma: топи́ти
@@ -27,6 +27,7 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
+  Perfective_Euphony: утопи́ти
   EuphonyNote: ''
   TypingAnswer: топити
   UA_Example: Течія намагалася топити човен на переправі.
@@ -35,7 +36,10 @@ fields:
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/топити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
-  Verification Notes: Горох lists three homograph senses for 'топити' (maintain a fire; flood/sink;
+  Verification Notes: 'Горох lists three homograph senses for топити (maintain a fire; flood/sink;
     melt/soften) -- this note uses the flood/sink sense, the imperfective pair of втопи́ти.
+    2026-07-26: added Perfective_Euphony (утопи́ти) per corpus-wide у/в euphony survey --
+    Горох''s Тлумачення entry for утопити redirects "Див. втопи́ти", the same cross-reference
+    format confirmed for established aspect/euphony pairs (e.g. установити/устано́влювати).'
 ---
 

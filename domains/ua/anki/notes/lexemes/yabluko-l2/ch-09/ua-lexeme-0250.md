@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - phrase:noun
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0250
   Lemma: квітко́вий ри́нок

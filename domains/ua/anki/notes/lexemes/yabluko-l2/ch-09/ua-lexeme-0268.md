@@ -12,15 +12,15 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0268
   Lemma: ске́ля
   PartOfSpeech: noun
   Gender: f
   Perfective: ''
-  EN_Gloss: cliff, rock
+  EN_Gloss: cliff, crag (geological formation)
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

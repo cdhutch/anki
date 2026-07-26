@@ -12,8 +12,8 @@ tags:
 - ch:2.9.3
 - pos:noun
 - gender:n
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0205
   Lemma: мі́сце

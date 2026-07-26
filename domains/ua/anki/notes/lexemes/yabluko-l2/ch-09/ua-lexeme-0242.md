@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.4
 - pos:adjective
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0242
   Lemma: бурхли́вий

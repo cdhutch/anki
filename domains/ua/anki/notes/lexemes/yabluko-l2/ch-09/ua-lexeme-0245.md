@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.4
 - pos:adverb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0245
   Lemma: неспі́шно
