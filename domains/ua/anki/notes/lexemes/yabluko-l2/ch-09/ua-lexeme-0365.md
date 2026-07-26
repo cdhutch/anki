@@ -13,8 +13,8 @@ tags:
 - pos:preposition
 - phrase:preposition
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0365
   Lemma: че́рез (три годи́ни)

@@ -13,7 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - stress:verified
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0375
   Lemma: у́часть

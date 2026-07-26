@@ -237,6 +237,17 @@ complete:
      for Solarized coverage and confirm none share the night-mode selector bug. See
      `.claude/memory/b737-anki-solarized-theme.md` for the original project tracking note.
      Craig wants this kept CSS-only — do not touch B737 note-type structure/fields.
+  4. **Future: Extend euphonic variant typing support beyond verbs.** Euphony (prefix/spelling
+     variants like в-/у-, apostrophe insertion) appears across multiple parts of speech, not just
+     verbs. Current implementation (Lemma_Euphony, etc.) is verb/phrase-specific via aspect slots.
+     Need to design and implement typing acceptance for euphonic variants on adverbs, nouns, and
+     other PoS where they occur. Example: ua-lexeme-0353 (ввечері/увечері, "in the evening") —
+     both forms attested by Горох with identical stress and meaning. Currently documented in
+     EuphonyNote (free-text) rather than in a grading mechanism. Design decision needed: extend
+     the aspect-slot Lemma_Euphony pattern to non-verbs (which have no aspect slots), or create
+     a simpler general-purpose euphony field + typing-acceptance logic that doesn't depend on
+     aspect structure? This is a lower-priority enhancement — the current free-text EuphonyNote
+     approach is functional but doesn't provide typing recognition.
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types

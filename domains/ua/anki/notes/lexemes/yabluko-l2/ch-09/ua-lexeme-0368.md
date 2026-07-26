@@ -13,8 +13,8 @@ tags:
 - pos:adverb
 - phrase:adverb
 - ch09-phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0368
   Lemma: прибли́зно пі́сля (пі́вночі)

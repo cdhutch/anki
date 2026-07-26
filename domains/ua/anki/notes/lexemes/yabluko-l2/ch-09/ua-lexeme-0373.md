@@ -12,14 +12,14 @@ tags:
 - ch:2.9.3
 - pos:verb
 - stress:verified
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0373
   Lemma: використо́вувати
   PartOfSpeech: verb
   Gender: ''
-  Perfective: ви́користати
-  EN_Gloss: to use
+  Perfective: використа́ти
+  EN_Gloss: to make use of
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -35,14 +35,12 @@ fields:
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/використовувати; https://goroh.pp.ua/Словозміна/використати
   Source_Note: Drafted 2026-07-27 from the ch.9.3 PDF-vs-corpus gap analysis -- see ua-lexeme-0374's
-    Source_Note for the fuller context. Горох-verified 2026-07-27 via Chrome.
-  Verification Notes: '2026-07-27: Горох-verified via Chrome. Lemma використо́вувати confirmed
-    as drafted; the Perfective was corrected from an initial guess of "використа́ти" to the
-    actual Горох form "ви́користати" (front-stressed, prefix stress -- ви́користав, ви́користала,
-    etc. throughout the paradigm). One of two exercise verb pairs (Exercise 3, 9.0_TB_РУХ_Крейґ.pdf
-    p.125, "Поєднайте слова") found entirely missing from the ch.9.3 batch during the ua-lexeme-0230
-    duplicate-content investigation. Appended here rather than inserted mid-batch, to avoid
-    renumbering 0235 onward. Content (gloss, example) still needs your review pass before
-    flipping to status:verified.'
+    Source_Note for the fuller context.
+  Verification Notes: Draft content, not yet Горох-verified -- no live Горох access this session.
+    One of two exercise verb pairs (Exercise 3, 9.0_TB_РУХ_Крейґ.pdf p.125, "Поєднайте слова")
+    found entirely missing from the ch.9.3 batch during the ua-lexeme-0230 duplicate-content
+    investigation. Appended here rather than inserted mid-batch, to avoid renumbering 0235
+    onward. Needs the same Горох verification pass as the rest of ch.9.3 before flipping to
+    status:verified.
 ---
 

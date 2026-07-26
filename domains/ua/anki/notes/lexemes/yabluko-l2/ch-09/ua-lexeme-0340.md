@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0340
   Lemma: вируша́ти
