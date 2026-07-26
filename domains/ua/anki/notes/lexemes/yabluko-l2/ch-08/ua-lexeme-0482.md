@@ -1,0 +1,42 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0482
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:2.8.3
+- pos:verb
+- stress:unverified
+- status:draft
+fields:
+  NoteID: ua-lexeme-0482
+  Lemma: дотри́муватися
+  PartOfSpeech: verb
+  Gender: ''
+  Perfective: ''
+  EN_Gloss: to adhere to, abide by, observe (rules/laws)
+  Govt_Case: genitive
+  CounterpartForm: ''
+  IrregularForms: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  EuphonyNote: ''
+  TypingAnswer: дотримуватися
+  UA_Example: Туристи повинні дотримуватися місцевих законів.
+  EN_Example: Tourists must abide by local laws.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:2.8.3
+  Source_URL: https://goroh.pp.ua/Словозміна/дотримуватися
+  Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
+  Verification Notes: Imperfective, reflexive, 1st conjugation. Full conjugation lives on
+    ua-verb-0077. Perfective дотриматися not verified this pass. Component of phrase ua-lexeme-0489
+    (дотримуватися закону).
+---
+

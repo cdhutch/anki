@@ -1,0 +1,47 @@
+---
+schema: cnsf/v0
+note_type: ua_verb
+note_id: ua-verb-0079
+anki:
+  model: UA_Verb
+  deck: UA::Verbs
+tags:
+- domain:ua
+- class:irregular
+- ch:2.8.3
+- conj:suspended
+- status:draft
+- stress:unverified
+fields:
+  NoteID: ua-verb-0079
+  Lemma: впасти
+  Aspect: perfective
+  VerbClass: irregular
+  FreqSource: ch:2.8
+  Pres_1sg: впаду́
+  Pres_2sg: впаде́ш
+  Pres_3sg: впаде́
+  Pres_1pl: впаде́м, впадемо́
+  Pres_2pl: впадете́
+  Pres_3pl: впаду́ть
+  Imperative_2sg: впади́
+  Imperative_1pl: впаді́м, впаді́мо
+  Imperative_2pl: впади́-но, впаді́ть
+  Past_1sg_m: впав
+  Past_1sg_f: впа́ла
+  Past_1sg_n: впа́ло
+  Past_3pl: впа́ли
+  Participle_Active_Present: ''
+  Participle_Adverbial_Present: ''
+  Participle_Passive_Past_m: ''
+  Participle_Passive_Past_f: ''
+  Participle_Impersonal_Past: ''
+  Participle_Adverbial_Past: ''
+  UA_Example: ''
+  EN_Example: ''
+  Verification_Notes: Non-reflexive. Pres_* fields hold the perfective future here (standard
+    corpus convention for perfective conjugation notes, cf. ua-verb-0004). Imperfective partner
+    is па́дати; Горох also shows an unrelated, much rarer впасти derived from 'па́сти' (to
+    graze), not relevant here. See lexeme ua-lexeme-0484.
+---
+

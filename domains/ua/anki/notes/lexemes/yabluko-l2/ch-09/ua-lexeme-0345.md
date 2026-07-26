@@ -13,6 +13,7 @@ tags:
 - pos:adverb
 - stress:unverified
 - status:draft
+- ch:2.8.3
 fields:
   NoteID: ua-lexeme-0345
   Lemma: тро́хи
@@ -32,9 +33,10 @@ fields:
   UA_Example: Вони трохи заблукали перед поворотом.
   EN_Example: They got a little lost before the turn.
   Verb_Conj_Table: ''
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/трохи
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
-  Verification Notes: Filtered out unrelated homograph nouns 'троха'/'троха́'.
+  Verification Notes: Bucket 3 true duplicate, reused for ch.8.3 -- same general adverb sense;
+    no new note created, ch:2.8.3 tag appended. Filtered out unrelated homograph nouns троха/троха.
 ---
 
