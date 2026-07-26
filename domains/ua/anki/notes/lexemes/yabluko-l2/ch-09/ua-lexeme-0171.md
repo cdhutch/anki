@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- homograph:true
 fields:
   NoteID: ua-lexeme-0171
   Lemma: мете́лик
@@ -28,10 +29,11 @@ fields:
     flyer/leaflet) - see ua-lexeme-0181'
   Mnemonic_EN: Same spelling either way (метелик) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: You're walking through a garden in summer and see a colorful winged insect
-    land on a flower.
-  CompareA: butterfly (insect)
-  CompareB: bow-tie (menswear accessory)
+  CompareScenario: Which sense of метелик is being used?
+  CompareA: Червоний метелик сів на білу квітку.
+  Homograph_SenseA: butterfly (insect)
+  CompareB: На вечірці він носив чорний метелик.
+  Homograph_SenseB: bow-tie (menswear accessory)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: метелик

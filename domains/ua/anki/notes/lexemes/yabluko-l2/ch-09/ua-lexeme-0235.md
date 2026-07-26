@@ -28,6 +28,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: 'ла́вка (1st Горох sense: ''для сидіння'' -- bench, seat) -- homograph, unrelated
     meaning: "bench (for sitting)" -- see ua-lexeme-0372.'
+  CompareScenario: Which sense of лавка is being used?
+  CompareA: Вона купила букет троянд у квітковій лавці на ринку.
+  Homograph_SenseA: market stall, shop stand
+  CompareB: На парку було багато лавок, де люди могли сидіти.
+  Homograph_SenseB: bench (for sitting)
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''

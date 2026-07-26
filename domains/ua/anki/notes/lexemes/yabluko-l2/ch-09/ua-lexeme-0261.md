@@ -12,15 +12,15 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:m
-- stress:verified
-- status:verified
+- stress:unverified
+- status:draft
 fields:
   NoteID: ua-lexeme-0261
   Lemma: перемо́жець
   PartOfSpeech: noun
   Gender: m
   Perfective: ''
-  EN_Gloss: winner, champion
+  EN_Gloss: winner
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
