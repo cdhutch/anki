@@ -237,8 +237,7 @@ details.conj-wrap[open] summary::before {
 
 # Template 1: UA → EN  (Recognition: see Ukrainian, recall English)
 UA_EN_FRONT = """\
-<div class="lemma">{{Lemma}}</div>
-{{#Perfective}}<div class="perfective">/ {{Perfective}}</div>{{/Perfective}}
+<div class="lemma">{{Lemma}}{{#Perfective}} / {{Perfective}}{{/Perfective}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
 """
 
@@ -274,16 +273,61 @@ EN_UA_FRONT = """\
 <div id="type-hint" style="font-size: 12px; color: #999; margin-top: 8px;">
   (Type without stress, or with stress marks for bonus credit)
 </div>
+<div id="aspect-indicator" data-lemma="{{Lemma}}" data-perfective="{{Perfective}}" data-pos="{{PartOfSpeech}}" style="font-size: 11px; font-weight: bold; margin-top: 8px;"></div>
+<script>
+(function() {
+  var indicator = document.getElementById('aspect-indicator');
+  var lemma = (indicator.dataset.lemma || '').normalize('NFC');
+  var perfective = (indicator.dataset.perfective || '').normalize('NFC');
+  var pos = (indicator.dataset.pos || '').toLowerCase();
+
+  // Only show aspect indicator for verbs
+  if (pos !== 'verb') {
+    indicator.style.display = 'none';
+    return;
+  }
+
+  // Strip combining stress mark (U+0301) to get base forms
+  var stripStress = function(s) {
+    return s.replace(/́/g, '');
+  };
+
+  var lemmaBase = stripStress(lemma);
+  var perfectiveBase = stripStress(perfective);
+
+  var html = '';
+
+  if (lemma && perfective) {
+    if (lemmaBase === perfectiveBase) {
+      // Same base word, only stress differs
+      html = '<div style="color: #1565c0;">Pair (stress variants)</div>';
+    } else {
+      // Different words (true aspect pair)
+      html = '<div style="color: #1565c0;">Pair</div>';
+    }
+  } else if (lemma && !perfective) {
+    html = '<div style="color: #666;">Imperfective only</div>';
+  } else if (!lemma && perfective) {
+    html = '<div style="color: #ff6b6b;">Perfective only</div>';
+  }
+
+  indicator.innerHTML = html;
+})();
+</script>
 """
 
 EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
+<!-- Display what you typed for verification -->
+<div id="what-you-typed" style="margin-bottom: 16px; padding: 12px; background: #f5f5f5; border-left: 3px solid #999; border-radius: 3px;"></div>
 <!-- Color-coded typing feedback with dual validation -->
 <div id="feedback" data-with-stress="{{Lemma}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
+  var whatYouTypedDiv = document.getElementById('what-you-typed');
+
   // Normalize to NFC before comparing. Combining stress marks (U+0301) can
   // reach the reconstructed typed answer (see below) in a different Unicode
   // normalization form than the field is stored in (OS keyboard/IME-dependent)
@@ -319,6 +363,14 @@ EN_UA_BACK = """\
     // like a stray apostrophe next to the vowel instead of a proper accent).
     // The #feedback message below is the intended user-facing display.
     typeansEl.style.display = 'none';
+  }
+
+  // Display what was typed (for user self-verification)
+  if (typedAnswer !== null) {
+    whatYouTypedDiv.innerHTML = '<div style="color: #666; font-size: 12px; margin-bottom: 4px;">You typed:</div>' +
+                                '<div style="color: #1a1a1a; font-size: 18px; font-weight: 600;">' + typedAnswer + '</div>';
+  } else {
+    whatYouTypedDiv.style.display = 'none';
   }
 
   var html = '';
