@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:phrase
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0421
   Lemma: ви́бір страв

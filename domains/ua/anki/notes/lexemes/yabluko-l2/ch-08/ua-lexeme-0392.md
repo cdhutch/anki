@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.1
 - pos:noun
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0392
   Lemma: о́пади

@@ -12,8 +12,8 @@ tags:
 - ch:2.8.2
 - pos:noun
 - gender:m
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0419
   Lemma: ви́бір

@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.1
 - pos:adjective
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0386
   Lemma: грозови́й

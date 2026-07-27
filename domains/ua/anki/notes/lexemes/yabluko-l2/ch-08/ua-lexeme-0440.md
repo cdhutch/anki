@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - stress:unverified
 - status:draft
+- needs-confusable-set
 fields:
   NoteID: ua-lexeme-0440
   Lemma: до́брий

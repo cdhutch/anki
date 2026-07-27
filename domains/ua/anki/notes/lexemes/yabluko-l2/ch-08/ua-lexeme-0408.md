@@ -12,8 +12,8 @@ tags:
 - ch:2.8.1
 - pos:noun
 - gender:m
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0408
   Lemma: тума́н

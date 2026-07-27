@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.1
 - pos:adverb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 - homograph:true
 fields:
   NoteID: ua-lexeme-0405

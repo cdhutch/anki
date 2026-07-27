@@ -12,8 +12,8 @@ tags:
 - ch:2.8.2
 - pos:noun
 - gender:n
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0423
   Lemma: обслуго́вування

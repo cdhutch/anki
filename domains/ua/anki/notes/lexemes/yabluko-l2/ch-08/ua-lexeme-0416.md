@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.1
 - pos:adverb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0416
   Lemma: хо́лодно
