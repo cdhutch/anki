@@ -27,11 +27,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: "вид (2nd sense, homograph - unrelated meaning: grammatical aspect, perfective/imperfective)\
     \ - see ua-lexeme-0182\nScenario A: Describing what kind of sport someone does, e.g. вид\
-    \ спорту\n-> Use: вид (kind/type - this note's sense)\nScenario B: Describing whether a\
-    \ verb is perfective or imperfective, e.g. in a grammar explanation\n-> Use: вид (grammatical\
-    \ aspect - see ua-lexeme-0182)\nKey distinction: same spelling, unrelated meanings - a true\
-    \ homograph. Горох also lists a further archaic sense (face/appearance; краєвид = view/landscape)\
-    \ not covered by a separate lexeme note in this corpus."
+    \ спорту\n-> Use: вид (kind/type - this note's sense)\nScenario B: Describing whether\
+    \ a verb is perfective or imperfective, e.g. in a grammar explanation\n-> Use: вид (grammatical\
+    \ aspect - see ua-lexeme-0182)\nKey distinction: same spelling, unrelated meanings - a\
+    \ true homograph. Горох also lists a further archaic sense (face/appearance; краєвид =\
+    \ view/landscape) not covered by a separate lexeme note in this corpus."
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
   CompareScenario: Which sense of вид is being used?
