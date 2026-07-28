@@ -24,8 +24,19 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: закінчувати
-  Mnemonic_EN: ''
+  ConfusableSet: "закі́нчувати/закі́нчити - synonym listed by Горох (along with кінчати, avoided\
+    \ per Craig's\nnote on its well-known colloquial vulgar connotation); закі́нчувати is\
+    \ the general-purpose\n\"finish/end\" verb for ANY activity, while фінішува́ти is narrower\
+    \ -- specifically crossing\nthe finish line in a race/competition.\nKey distinction: фінішувати\
+    \ can't replace закінчувати outside races (you would not say\n\"фінішувати роботу\" for\
+    \ \"finish the work\") -- закінчувати is the all-purpose verb,\nфінішувати is the specialized\
+    \ racing one."
+  Mnemonic_EN: фінішувати = crossing the finish line (races only); закінчувати = finishing
+    anything at all (the general-purpose verb). See ua-lexeme-0291/стартувати for the starting-line
+    mirror of this same distinction.
+  CompareScenario: The first runner breaks the tape at the finish line.
+  CompareA: фінішува́ти
+  CompareB: закі́нчувати
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: фінішувати
@@ -40,6 +51,8 @@ fields:
     -- Горох''s Синонімія page for фінішувати lists both закінчувати and кінчати as synonyms;
     закінчувати chosen over кінчувати per Craig''s decision to avoid the latter''s well-known
     colloquial vulgar connotation (not documented by Горох but common knowledge). No standalone
-    Lexeme or PVOM note exists for закінчувати.'
+    Lexeme or PVOM note exists for закінчувати. 2026-07-28: completed the Compare card --
+    added CompareScenario + CompareA/CompareB. Cross-links with ua-lexeme-0291 (стартувати),
+    the starting-line mirror of the same distinction. Needs your review.'
 ---
 

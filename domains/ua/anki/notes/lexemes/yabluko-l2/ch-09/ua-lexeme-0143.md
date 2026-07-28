@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- homograph:true
 fields:
   NoteID: ua-lexeme-0143
   Lemma: вид
@@ -24,15 +25,20 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: "вид (2nd Горох sense: обличчя; вигляд, зовнішність — арх.; краєвид = face/appearance-archaic;\
-    \ view, landscape)\nвид (3rd sense, homograph - unrelated meaning: grammatical aspect,\
-    \ perfective/imperfective) - see ua-lexeme-0182"
+  ConfusableSet: "вид (2nd sense, homograph - unrelated meaning: grammatical aspect, perfective/imperfective)\
+    \ - see ua-lexeme-0182\nScenario A: Describing what kind of sport someone does, e.g. вид\
+    \ спорту\n-> Use: вид (kind/type - this note's sense)\nScenario B: Describing whether a\
+    \ verb is perfective or imperfective, e.g. in a grammar explanation\n-> Use: вид (grammatical\
+    \ aspect - see ua-lexeme-0182)\nKey distinction: same spelling, unrelated meanings - a true\
+    \ homograph. Горох also lists a further archaic sense (face/appearance; краєвид = view/landscape)\
+    \ not covered by a separate lexeme note in this corpus."
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: Someone asks what kind of sport you play -- swimming, basketball, tennis,
-    and so on.
-  CompareA: kind, type (e.g. вид спорту)
-  CompareB: grammatical aspect (perfective/imperfective)
+  CompareScenario: Which sense of вид is being used?
+  CompareA: Який вид спорту ти любиш?
+  Homograph_SenseA: kind, type
+  CompareB: Дієслово "читати" має недоконаний вид.
+  Homograph_SenseB: grammatical aspect (perfective/imperfective)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вид
@@ -51,6 +57,15 @@ fields:
     \ ConfusableSet previously only documented the archaic face/appearance sense and didn't\
     \ reference 0182 by ID. Also added CompareScenario + CompareA/B for the redesigned Compare\
     \ card (see compare-card-audit-findings.md); the archaic sense isn't part of the active\
-    \ card since it has no lexeme note of its own. Needs your review."
+    \ card since it has no lexeme note of its own. Needs your review.\n2026-07-28: found this\
+    \ note_id (ua-lexeme-0143) duplicated in a second file at yabluko-l1/ch-00/ua-lexeme-0143.md\
+    \ during a corpus-wide Compare-card audit -- Craig confirmed this file (yabluko-l2/ch-09)\
+    \ is authoritative, the l1/ch-00 copy is the one to remove. Migrated CompareScenario/CompareA/\
+    \ CompareB off the old English-chip format (kind, type / grammatical aspect as plain text)\
+    \ onto the current Shape 1 dual-mode format -- Ukrainian sentences + Homograph_SenseA/B,\
+    \ copied verbatim from sibling ua-lexeme-0182 per the identical-chip-content convention.\
+    \ Added the missing homograph:true tag (this note previously routed to confusables mode\
+    \ instead of the homograph sentence layout). See CLAUDE-compare-card-field-mapping.md.\
+    \ Needs your review."
 ---
 

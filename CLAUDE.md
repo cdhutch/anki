@@ -89,6 +89,7 @@ in this repo -- all run by Craig, not Claude:
 | **Ch-09 vocabulary sourcing workflow** | [CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md) |
 | **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
 | **Vocab dedup/homograph audit tooling** | [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) |
+| **Compare card field mapping (homograph vs confusables)** | [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) |
 
 ---
 
@@ -283,6 +284,21 @@ This shows the learner that the same Ukrainian word spans multiple semantic doma
 **Comparison card (scenario-based confusable discrimination, redesigned 2026-07-24 for
 CompareA-D + CompareScenario -- this section previously described the pre-redesign flat-prose
 format; corrected 2026-07-28)**
+
+**See [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) for the
+full field-by-field spec** (added 2026-07-28 after two authoring bugs were found in the same
+session: ua-lexeme-0305 got `ConfusableSet` populated with no `CompareA`/`CompareB` authored,
+which the importer's legacy fallback then filled with the raw `ConfusableSet` prose paragraph
+-- rendered live, unsuspended, as a fake front-side answer chip; ua-lexeme-0181 had never been
+migrated off the pre-dual-mode English-chip format, so its Compare card front was entirely in
+English with nothing to recognize in Ukrainian). The short version: decide up front whether a
+note is a true homograph (one spelling, split across sibling notes, `CompareA`/`CompareB` hold
+Ukrainian *sentences*, `Homograph_SenseA`/`SenseB` hold the English answers) or a confusables
+cluster (different spellings, `CompareA`-`D` hold the Ukrainian *words themselves*,
+`Homograph_SenseA`/`SenseB` stay blank) -- and never populate `ConfusableSet` without also
+hand-authoring real `CompareA`/`CompareB` content in the matching shape, even if you don't
+want a live Compare card (there's no supported "cf.-note-only" state; leaving Compare fields
+blank triggers the legacy auto-derive fallback instead of suppressing the card).
 
 UA_Lexeme generates a 3rd optional "Compare" card template when `ConfusableSet` is populated:
 

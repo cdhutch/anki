@@ -24,8 +24,22 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
-  Mnemonic_EN: ''
+  ConfusableSet: "перемага́ти/перемогти́ - near-synonym, not a plain duplicate: виграва́ти\
+    \ answers \"what did\nyou win?\" (the contest, match, or prize -- never a person), while\
+    \ перемага́ти answers \"who\ndid you beat?\" (takes a direct object -- the opponent/team\
+    \ defeated, Acc.).\nKey distinction: виграти матч/приз (win a match/prize -- object is\
+    \ a THING, the contest or\nprize itself) vs. перемогти суперника (defeat an opponent --\
+    \ object is a PERSON/team). You\ncan виграти гроші/приз but not *перемогти гроші; you\
+    \ can перемогти a team but not *виграти\na team. The agent noun перемо́жець (\"winner\"\
+    , ua-lexeme-0261) covers BOTH roots -- Ukrainian\ndoesn't have a separate everyday agent\
+    \ noun built from виграти; ви́граш (the win/prize\nitself, a thing, not a person) is виграти's\
+    \ closest nominal counterpart."
+  Mnemonic_EN: вигравати = WHAT you win (a match/prize/thing, never a person); перемагати
+    = WHO you beat (a person/team, direct object). See ua-lexeme-0177/перемагати for the mirror
+    note.
+  CompareScenario: At the poker table, what does a player do to walk away with the whole pot?
+  CompareA: перемогти́ (перемага́ти)
+  CompareB: ви́грати (виграва́ти)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: вигравати
@@ -38,6 +52,9 @@ fields:
     combat gear).
   Verification Notes: 'Irregular davaty-family present-tense stress shift: виграю́, виграє́ш,
     виграє́, виграє́м/виграємо́, виграєте́, виграю́ть (stress on the ending, not on ''ва''
-    as in the regular -увати/-авати pattern).'
+    as in the regular -увати/-авати pattern). 2026-07-28: added ConfusableSet + CompareScenario
+    + CompareA/CompareB cross-linking this note with ua-lexeme-0177 (перемагати) -- both gloss
+    loosely to "win" but take structurally different objects. Also see ua-lexeme-0261 (переможець)
+    for the shared agent noun. Needs your review.'
 ---
 
