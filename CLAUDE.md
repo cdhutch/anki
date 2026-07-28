@@ -12,6 +12,28 @@ same-lemma pattern (0437 expensive sense + new 0580 dear/affectionate sense, cro
 in Verification_Notes). Tagged ch-08 lexeme notes 0436 (важкий) and 0440 (добрий) with
 `needs-confusable-set` marker for future Compare card/confusable-set handling (convergent
 synonyms bucket). Batch of ch-08 lexeme note updates staged.
+2026-07-28 (evening session): four fixes/additions to `UA_Lexeme`, none yet applied to live
+Anki or committed -- Craig has the exact `python`/`make` commands and commit messages from
+the session, pending review. (1) `UA_EN_FRONT` now shows `UA_Example` for context (was
+back-only); deduped the now-redundant line from `UA_EN_BACK`. (2) Found and fixed a real data-
+integrity bug in `ua_lexeme_import.py`: `compute_compare_options()` was unconditionally
+overwriting hand-authored `CompareA`/`CompareB` with `(Lemma, raw ConfusableSet text)` on
+every re-import -- found via ua-lexeme-0022 (алфавіт/абетка), whose Compare-card front was
+showing a full explanatory paragraph instead of a short chip. Now only fires as a fallback
+when `CompareA`/`CompareB` aren't already authored -- see "Comparison card" under Card
+Template Techniques below. This likely affected every confusable cluster re-imported since
+the 2026-07-24 CompareA-D redesign, not just 0022/0023 -- worth a broader re-sync + spot-check.
+(3) Compare card now suspends (importer-side) and shows a "should be suspended" notice
+(template-side, defensive) when `CompareA`/B/C/D are all blank despite `ConfusableSet` being
+populated -- e.g. a `homograph:true` note where Compare fields were never authored. (4) Built
+a new bucket-4 convergent-synonym Compare-card cluster: відбивати/забивати/завдавати/набирати
+(ua-lexeme-0213/0214/0215/0218) -- see Vocabulary dedup & homograph handling below.
+Separately: rolled back `EN_UA_FRONT`/`EN_UA_BACK` to the aspect+euphony design from commit
+`a5b4a15` (git archaeology across `main`, since this branch's copy had been reverted past that
+point back to a bare `{{Lemma}}`-only typing target with no aspect or euphony handling at
+all) -- see "EN→UA aspect+euphony typing" under Card Template Techniques below for the design
+and why the 2026-07-25 `881ac25`/`2e93202` redesign (require typing both primary and euphonic
+forms together) was abandoned in favor of it.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -258,31 +280,59 @@ EN_Example: At what age do children go to school? | They lived during the Middle
 
 This shows the learner that the same Ukrainian word spans multiple semantic domains.
 
-**Comparison card (scenario-based confusable discrimination)**
+**Comparison card (scenario-based confusable discrimination, redesigned 2026-07-24 for
+CompareA-D + CompareScenario -- this section previously described the pre-redesign flat-prose
+format; corrected 2026-07-28)**
 
 UA_Lexeme generates a 3rd optional "Compare" card template when `ConfusableSet` is populated:
 
-- **Front:** Scenario/context requiring semantic discrimination (not pattern recognition)
-- **Back:** Correct word + explanation of why it fits this specific context
-- **Design principle:** Scenario-based + bidirectional (forces understanding of *when* each word fits, not just *that* one is correct)
-- **Avoids memorization trap:** Multiple scenarios with different contexts prevent learner from simply memorizing "gloss → word"
+- **Front:** `CompareScenario` (a situational prompt calibrated to elicit one specific member
+  of the cluster, without restating its `EN_Gloss` -- see the добре/непогано/нормально/чудово
+  cluster below for why EN_Gloss alone leaks the answer for near-synonyms) plus 2-4 chips
+  (`CompareA` required, `CompareB`/`CompareC`/`CompareD` optional) showing the real candidate
+  words themselves, not "A or B" text.
+- **Back:** Correct word (`Lemma`) + `EN_Gloss` + `Mnemonic_EN` explanation of why it fits.
+- **Homograph mode:** when the note is tagged `homograph:true`, `_IsHomograph` (importer-set)
+  switches the card to a different layout -- UA sentences on front, student deduces which
+  sense; `Homograph_SenseA`/`Homograph_SenseB` on the back. See "Add dual-mode Compare cards"
+  in git history (`f6c5127`) for the full design.
+- **CompareA/B/C/D population:** for non-homograph (confusables) notes, hand-author these
+  directly in the note's CNSF YAML -- do NOT rely on `compute_compare_options()` in
+  `ua_lexeme_import.py` to derive them; that function only exists as a fallback for notes that
+  predate the 2026-07-24 redesign and have never had CompareA/B authored. **Bug found and
+  fixed 2026-07-28:** this function used to run unconditionally on every import, silently
+  overwriting hand-authored CompareA/CompareB with `(Lemma, raw ConfusableSet text)` --
+  ConfusableSet holds long discriminator prose, not a short chip word, so the whole paragraph
+  ended up rendered as a front-side answer option (found via ua-lexeme-0022, алфавіт/абетка).
+  Guard it with `already_authored = CompareA and CompareB` before calling it.
+- **Empty-Compare-card safeguard (added 2026-07-28):** `CompareA` is "always required" by
+  design (`CompareB`/C/D optional) -- if it's blank despite `ConfusableSet` being populated
+  (e.g. a homograph note whose Compare fields were never authored), the importer suspends the
+  Compare card automatically, and the template itself shows a "should be suspended" notice as
+  a defensive fallback for previewing/QA. Don't rely on the notice as the primary safeguard --
+  the importer suspension is what actually keeps it out of study.
 
-**ConfusableSet format** (structured for scenario generation):
+**ConfusableSet format** — free-text discriminator prose, cross-linking the cluster and
+explaining the actual distinction (not shown directly on the Compare card front/back; used as
+the populated/blank gate for whether the card renders, and shown verbatim on `UA_EN_BACK` as
+`cf. {{ConfusableSet}}`):
 ```yaml
 ConfusableSet: |
   фах (alternative word + brief definition)
-  Scenario A: Context where lemma fits
-  → Use: lemma (when/why)
-  Scenario B: Context where confusable fits
-  → Use: confusable (when/why)
-  Key distinction: Explicit semantic/contextual difference
+  Key distinction: explicit semantic/contextual difference between the cluster members
+CompareScenario: A situational prompt whose natural answer is this note's own word
+CompareA: слово1
+CompareB: слово2
 ```
 
-Example: професія vs. фах
-- Scenario A: "Asking someone about their job formally" → професія (formal career identity)
-- Scenario B: "Discussing a plumber's expertise" → фах (skilled trade/craft)
+Example: професія vs. фах -- CompareScenario for професія: "Asking someone about their job
+formally." CompareScenario for фах: "Discussing a plumber's expertise." CompareA/CompareB are
+identical (`професія`, `фах`) on both notes -- same chip order regardless of which note it is,
+matching the pattern used for every multi-note cluster (see добре/непогано/нормально/чудово
+below, or відбивати/забивати/завдавати/набирати).
 
-The "Compare" card only renders when `ConfusableSet` is populated, making it lightweight.
+The "Compare" card only renders real content when `ConfusableSet` AND `CompareA` are both
+populated, making it lightweight and self-suppressing when a cluster hasn't been authored yet.
 
 **PVOM prefix drilling (multi-form typing cards)**
 
@@ -339,10 +389,12 @@ The fix, implemented in `tools/anki/setup/setup_ua_pvom_note_type.py` (`make_fro
 `EN_UA_BACK`:
 
 - **Type the STRESSED field as the `{{type:...}}` target, not the unstressed one** — e.g.
-  `{{type:Walking_Multi_UA}}` / `{{type:Lemma}}`, not the `*_Typing`/`TypingAnswer` field.
-  Typing the stressed form correctly is then a clean exact match for Anki's diff; typing
-  without stress becomes a clean *omission*. Both are well-behaved. The reverse (unstressed
-  target, stressed *insertion*) is the case that produces the detached-mark artifact.
+  `{{type:Walking_Multi_UA}}` / `{{type:TypingTarget_UA}}` (UA_Lexeme's EN→UA card types
+  `TypingTarget_UA`, not `Lemma` directly — see "EN→UA aspect+euphony typing" below for why),
+  not the `*_Typing`/`TypingAnswer` field. Typing the stressed form correctly is then a clean
+  exact match for Anki's diff; typing without stress becomes a clean *omission*. Both are
+  well-behaved. The reverse (unstressed target, stressed *insertion*) is the case that
+  produces the detached-mark artifact.
 - **Reconstruct the typed answer from Anki's own `#typeans` diff** instead of a live input:
   walk `#typeans`'s child nodes, collect `.typeGood`/`.typeBad` span text content, and stop
   at `#typearrow` if present (an inexact match renders TWO lines inside `#typeans` — "what
@@ -357,6 +409,44 @@ The fix, implemented in `tools/anki/setup/setup_ua_pvom_note_type.py` (`make_fro
 
 Reference this pattern for any future Ukrainian-typing card — e.g. the UA_Verb production
 template noted as "design decision pending" below, if it gets built.
+
+**EN→UA aspect+euphony typing (established as commit `a5b4a15`, 2026-07-25; reverted past
+that point at some later merge/edit; restored via git archaeology 2026-07-28 -- do not
+re-add the complexity described below without Craig's sign-off, it was tried once already).**
+
+`EN_UA_FRONT` types `{{type:TypingTarget_UA}}`, not `{{type:Lemma}}`. `TypingTarget_UA` /
+`TypingAnswer` are computed at sync time by `compute_typing_target()` in
+`ua_lexeme_import.py` — never hand-authored — by joining `Lemma`, `ImperfectiveUnidirectional`
+(if populated), and `Perfective` (if populated) with `" / "` (e.g. `ходи́ти / йти / піти́` for a
+multi-imp/uni-imp/perfective triplet, or `перекида́ти / переки́нути` for an imperfective/
+perfective doublet). Returns `None` (caller falls back to `Lemma` alone) when fewer than two
+slots are populated — a plain singlet, or any non-verb note.
+
+`EuphonyNote` (bare alternate spelling(s), `|`-delimited, e.g. `уболівати` as an accepted
+alternate for `вболівати`) is graded as a **third genuinely-correct tier**, not a "note" and
+not a lesser partial-credit outcome: `EN_UA_BACK`'s feedback script reconstructs the typed
+answer from Anki's `#typeans` diff (see typing-card pattern above) and checks it against, in
+order: `TypingTarget_UA` with stress → PERFECT; `TypingAnswer` (no stress) → CORRECT; a
+stress-stripped match against any `EuphonyNote` alternate → CORRECT ("accepted alternate
+spelling"); anything else → INCORRECT. `AspectCue` is an optional hand-authored situational
+chip (styled like a Compare-card distractor) for notes where `TypingTarget_UA` is a single
+aspect and it isn't otherwise obvious which reading is expected from `EN_Gloss` alone.
+
+**Why this note exists:** on 2026-07-25, this design was redesigned (`881ac25` "Lemma_Euphony
+as recognition-testing, not tolerance", then `2e93202` "split EN_UA_BACK PARTIAL tier by
+stress") into something that required typing *both* the primary and euphonic form together
+(`primary ; euphonic`, per aspect slot) to get full credit, via new per-slot
+`Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony`/`Perfective_Euphony` fields and computed
+`TypingTarget_UA_Base`/`TypingAnswer_Base`/`TypingTarget_UA_AltOnly`/`TypingAnswer_AltOnly`
+fields feeding a PARTIAL-credit tier. That redesign — and the aspect+euphony feature
+entirely, including the simpler `a5b4a15` version — was later fully reverted on this branch
+back to a bare `{{type:Lemma}}` with no `TypingTarget_UA`/`AspectCue`/`EuphonyNote` handling
+at all (found 2026-07-28 while investigating why the live template didn't match `main`'s
+history despite `git branch --contains` showing the redesign commits as ancestors — appears
+to be a merge conflict resolution, not an explicit revert commit). If this template looks
+simpler than the git history implies again in the future, check `EN_UA_FRONT`/`EN_UA_BACK`
+against `git show a5b4a15:tools/anki/setup/setup_ua_note_types.py` before reintroducing
+anything — that commit is the reference "it worked great" state per Craig.
 
 **Verification caveat:** the з- prefix (схо́дити/зійти́) is the one form in this set where
 Горох's dictionary entry doesn't cleanly label the aspectual pair the way it does for the
@@ -471,6 +561,22 @@ buckets. Triage deliberately — do not assume from spelling alone.
    `homograph:true` (these are related-but-distinct words, not homographs). Run as a
    standalone full-corpus audit periodically, not per-candidate at generation time — see
    [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md).
+
+   Another cluster type worth naming: not a scale (like добре/непогано/нормально/чудово) but
+   **distinct roles sharing one rough EN gloss** — found 2026-07-28, Craig struggling to keep
+   verb roots straight (prefixes were fine): відбивати/забивати/завдавати/набирати
+   (ua-lexeme-0213/0214/0215/0218), all "ball/impact-game action" verbs that gloss loosely to
+   "hit/score" but each answers a different question about where the force ends up
+   (відбивати = deflect an incoming ball, defense; забивати = drive the ball into a goal,
+   offense; завдавати = land a blow on a person, combat, not a ball at all; набирати = the
+   scoreboard number increasing, bookkeeping, no physical trajectory). `ConfusableSet` +
+   `Mnemonic_EN` frame this as "roles," not a graded scale; `CompareA`-`CompareD` are the
+   same four stressed verbs in the same order on all four notes. Root-level confusion like
+   this (as opposed to prefix confusion, which `UA_PVOM_Infinitive` already drills) doesn't
+   have a dedicated drill mechanism elsewhere in the corpus, so the Compare card is it — worth
+   watching for other root clusters as ch-09+ sourcing continues. `status:verified` kept on
+   all four; `Verification Notes` flags the new Compare content "Needs your review" per the
+   standing convention (see добре/непогано/нормально/чудово below for the same pattern).
 
 **Tooling:**
 - `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
