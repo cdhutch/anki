@@ -243,7 +243,21 @@ def import_note(data: dict, dry_run: bool) -> str:
     # Compare card prompt: vary which word (Lemma vs ConfusableSet) is named first
     # (confusables only). For homographs, CompareA/B are authored Ukrainian sentences
     # that shouldn't be reordered -- use them as-is from the YAML.
-    if not is_homograph:
+    #
+    # Only auto-derive when the note hasn't been hand-authored with explicit
+    # CompareA/CompareB values. Found 2026-07-28 (ua-lexeme-0022/0023,
+    # алфавіт/абетка): this used to run unconditionally, so it silently
+    # overwrote authored short chip labels (e.g. CompareA: абетка / CompareB:
+    # алфавіт) with (Lemma, raw ConfusableSet text) on every re-import.
+    # ConfusableSet holds long discriminator prose, not a short alternate
+    # word -- once the 2026-07-24 CompareScenario/CompareA/CompareB redesign
+    # landed, treating it as the "confusable" arg here meant the full
+    # explanation (which names the other word) ended up rendered as a front-
+    # side chip via {{CompareB}}, leaking the answer. compute_compare_options
+    # is now only a fallback for notes that predate that redesign and have
+    # never had CompareA/CompareB authored.
+    already_authored = fields.get("CompareA", "").strip() and fields.get("CompareB", "").strip()
+    if not is_homograph and not already_authored:
         compare_a, compare_b = compute_compare_options(
             note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
         )
@@ -253,9 +267,23 @@ def import_note(data: dict, dry_run: bool) -> str:
     # Suspension policy -- see module docstring.
     suspend = "status:draft" in tags
 
-    # Compare card suspension: suspend if ConfusableSet is empty (no confusables/homographs)
+    # Compare card suspension: suspend if ConfusableSet is empty (no confusables/
+    # homographs), OR if it's populated but CompareA never got authored --
+    # CompareA is "always required" by the Compare template's own design
+    # (CompareB/C/D optional; see comment above CARD_TEMPLATES in
+    # setup_ua_note_types.py), so a blank CompareA here means the actual
+    # chip content is missing even though ConfusableSet has text (e.g. a
+    # homograph:true note where CompareA/B were never authored -- those
+    # aren't auto-derived above, unlike the confusables case). Without this,
+    # such a note would generate an active Compare card whose front shows
+    # the scenario prompt with no answer chips. Found 2026-07-28 alongside
+    # the CompareA/CompareB clobbering bug; the template itself now also
+    # shows a "should be suspended" notice in this state as a defensive
+    # fallback, but suspending here is the primary safeguard so it's never
+    # actually seen in study.
     confusable_set = fields.get("ConfusableSet", "").strip()
-    suspend_compare_card = not confusable_set
+    compare_a_content = fields.get("CompareA", "").strip()
+    suspend_compare_card = not confusable_set or not compare_a_content
 
     existing_id = find_note_by_id(note_id)
 

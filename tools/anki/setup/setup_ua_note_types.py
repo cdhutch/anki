@@ -239,6 +239,10 @@ details.conj-wrap[open] summary::before {
 UA_EN_FRONT = """\
 <div class="lemma">{{Lemma}}{{#Perfective}} / {{Perfective}}{{/Perfective}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
+<!-- UA_Example on front (2026-07-28, per Craig): show the example sentence
+     for context on the Recognition (UA->EN) card, not just the bare
+     headword. -->
+{{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 """
 
 UA_EN_BACK = """\
@@ -249,7 +253,6 @@ UA_EN_BACK = """\
 {{#IrregularForms}}<div class="irregular">{{IrregularForms}}</div>{{/IrregularForms}}
 {{#Govt_Case}}<div class="irregular">governs: {{Govt_Case}}</div>{{/Govt_Case}}
 {{#ConfusableSet}}<div class="confusable">cf. {{ConfusableSet}}</div>{{/ConfusableSet}}
-{{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
 {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
@@ -439,6 +442,20 @@ EN_UA_BACK = """\
 
 COMPARISON_FRONT = """\
 {{#ConfusableSet}}
+<!-- CompareA is "always required" by convention (CompareB/C/D optional) --
+     see comment above CARD_TEMPLATES. A blank CompareA here means the note
+     has ConfusableSet populated but Compare fields were never authored
+     (e.g. a homograph:true note where CompareA/B got skipped), or some
+     other data gap. The importer (ua_lexeme_import.py) suspends this card
+     whenever CompareA is blank, so in normal study this notice should never
+     surface -- it's a defensive fallback for previewing/QA, not the primary
+     safeguard. -->
+{{^CompareA}}
+<div style="font-size: 15px; color: #c62828; font-style: italic; padding: 16px; border: 1px dashed #c62828; border-radius: 4px;">
+⚠ Compare card has no CompareA/B/C/D authored yet -- this card should be suspended.
+</div>
+{{/CompareA}}
+{{#CompareA}}
 {{#_IsHomograph}}
 <!-- HOMOGRAPH MODE: UA→EN direction. Show Ukrainian sentences, student deduces EN meaning -->
 <div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Which sense is being used?</div>
@@ -463,6 +480,7 @@ COMPARISON_FRONT = """\
 {{#CompareD}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareD}}</div>{{/CompareD}}
 </div>
 {{/_IsHomograph}}
+{{/CompareA}}
 {{/ConfusableSet}}
 """
 
@@ -470,6 +488,7 @@ COMPARISON_BACK = """\
 {{FrontSide}}
 <hr id="answer">
 {{#ConfusableSet}}
+{{#CompareA}}
 {{#_IsHomograph}}
 <!-- HOMOGRAPH BACK: Show each Ukrainian sentence + its EN sense -->
 <div style="margin-top: 16px; font-size: 16px;">
@@ -497,6 +516,12 @@ COMPARISON_BACK = """\
 </div>{{/Mnemonic_EN}}
 </div>
 {{/_IsHomograph}}
+{{/CompareA}}
+{{^CompareA}}
+<div style="font-size: 15px; color: #c62828; font-style: italic; padding: 16px; border: 1px dashed #c62828; border-radius: 4px;">
+⚠ Compare card has no CompareA/B/C/D authored yet -- this card should be suspended.
+</div>
+{{/CompareA}}
 {{/ConfusableSet}}
 """
 
