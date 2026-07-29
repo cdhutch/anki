@@ -22,17 +22,18 @@ fields:
   Vehicle_Pair: вʼїжджа́ти / вʼї́хати
   Example_UA: Він увійшов у будинок.
   Example_EN: He entered the building.
-  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker></defs><!-- Legend --><text x="5" y="12"
-    font-size="10" font-weight="bold" fill="#586e75">Legend:</text><rect x="10" y="21" width="12"
-    height="12" fill="none" stroke="#268bd2" stroke-width="1"/><text x="26" y="28" font-size="9"
-    fill="#586e75">Enclosed space</text><!-- Main: arrow enters box --><circle cx="30" cy="75"
-    r="5" fill="#268bd2"/><line x1="40" y1="75" x2="180" y2="75" stroke="#859900" stroke-width="2.5"
-    marker-end="url(#arr)"/><rect x="170" y="55" width="50" height="40" fill="none" stroke="#268bd2"
-    stroke-width="2.5"/></svg>'
+  Diagram_SVG: <svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arrG" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker><marker id="arrR" markerWidth="8" markerHeight="8"
+    refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#dc322f"/></marker><pattern
+    id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line
+    x1="0" y1="0" x2="0" y2="6" stroke="#586e75" stroke-width="1.5"/></pattern></defs><rect
+    x="150" y="30" width="60" height="60" fill="none" stroke="#586e75" stroke-width="3"/><line
+    x1="20" y1="60" x2="175" y2="60" stroke="#859900" stroke-width="3" marker-end="url(#arrG)"/></svg>
   Tags_Ch: ch:2.9.4
   Source_Note: в-/у- — enter inside
-  Verification Notes: ''
+  Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 (arrow
+    entering a plain square) to match the textbook''s enclosed-space icon exactly. Reviewed
+    and approved by Craig.'
 ---
 

@@ -22,17 +22,21 @@ fields:
   Vehicle_Pair: доїжджа́ти / дої́хати
   Example_UA: Ми дійшли до зупинки.
   Example_EN: We reached the bus stop.
-  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker></defs><!-- Legend --><text x="5" y="12"
-    font-size="10" font-weight="bold" fill="#586e75">Legend:</text><polygon points="10,20
-    15,25 10,30 5,25" fill="#dc322f"/><text x="20" y="28" font-size="9" fill="#586e75">Destination
-    reached</text><!-- Main: arrow reaches and stops at destination point --><circle cx="30"
-    cy="75" r="5" fill="#268bd2"/><line x1="40" y1="75" x2="200" y2="75" stroke="#859900"
-    stroke-width="2.5" marker-end="url(#arr)"/><polygon points="220,65 230,75 220,85 210,75"
-    fill="#dc322f"/></svg>'
+  Diagram_SVG: <svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arrG" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker><marker id="arrR" markerWidth="8" markerHeight="8"
+    refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#dc322f"/></marker><pattern
+    id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line
+    x1="0" y1="0" x2="0" y2="6" stroke="#586e75" stroke-width="1.5"/></pattern></defs><line
+    x1="20" y1="60" x2="105" y2="60" stroke="#859900" stroke-width="3" stroke-dasharray="7,5"
+    marker-end="url(#arrG)"/><line x1="125" y1="50" x2="145" y2="70" stroke="#586e75" stroke-width="3"/><line
+    x1="145" y1="50" x2="125" y2="70" stroke="#586e75" stroke-width="3"/></svg>
   Tags_Ch: ch:2.9.4
   Source_Note: до- — reach/get to destination
-  Verification Notes: ''
+  Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 --
+    a dashed arrow reaching an X mark, no continuation past it. This replaces the previous
+    solid-arrow-to-diamond design; the dashed line (vs. при-''s solid line to the same X mark)
+    is the textbook''s own way of distinguishing до- (reach as far as, more effortful) from
+    при- (simple arrival). Reviewed and approved by Craig.'
 ---
 
