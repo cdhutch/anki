@@ -34,6 +34,14 @@ point back to a bare `{{Lemma}}`-only typing target with no aspect or euphony ha
 all) -- see "EN→UA aspect+euphony typing" under Card Template Techniques below for the design
 and why the 2026-07-25 `881ac25`/`2e93202` redesign (require typing both primary and euphonic
 forms together) was abandoned in favor of it.
+2026-07-29: Scoped (not yet implemented) a two-part extension to the EN→UA
+aspect+euphony typing design: (1) evaluate every populated UA_Lexeme aspect slot
+(Lemma/ImperfectiveUnidirectional/Perfective) independently for в-/у- euphony
+tolerance, rather than only at the single-lemma level; (2) for verb-phrase notes
+where only one aspect fits the idiomatic meaning, default to imperfective and rely
+on clearly-worded EN_Gloss rather than a new schema field. See "Per-slot euphony
+tolerance + verb-phrase aspect defaulting (planned 2026-07-29)" under Card
+Template Techniques for the full design. Execution deferred pending go-ahead.
 
 See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
 
@@ -469,6 +477,48 @@ anything — that commit is the reference "it worked great" state per Craig.
 other ten prefixes — its primary listed sense is "ascend," not explicitly "get off/descend."
 Treat it as slightly lower-confidence than the rest until cross-checked against the
 textbook.
+
+**Per-slot euphony tolerance + verb-phrase aspect defaulting (planned 2026-07-29,
+not yet implemented -- discussed and scoped with Craig, execution deferred).**
+
+Extends the aspect+euphony typing design above in two ways, both agreed but not
+yet built:
+
+1. **Per-slot в-/у- tolerance for UA_Lexeme.** Today `EuphonyNote`/`*_Euphony`
+   companion fields (e.g. `Perfective_Euphony` on ua-lexeme-0115: увійти́ primary
+   / ввійти́ euphonic) are only reliably evaluated at the single-lemma level.
+   Plan: evaluate **every populated aspect slot** (`Lemma`,
+   `ImperfectiveUnidirectional`, `Perfective` -- 1, 2, or 3 slots depending on the
+   verb) independently, accepting **either** the в- or у- surface form in
+   whichever slot has a documented alternate. Mechanically: split the
+   reconstructed `#typeans` answer on the same " / " delimiter used to build
+   `TypingTarget_UA`, check each slot's sub-answer against its own {primary,
+   `*_Euphony` alternate} pair, and aggregate tiers across slots rather than
+   diffing the whole compound string as one unit -- PERFECT only if every
+   populated slot matches with correct stress (from either form); CORRECT if
+   every slot matches but stress is missing somewhere; INCORRECT if any slot
+   fails to match anything acceptable. Reuses the
+   `Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony`/`Perfective_Euphony`
+   field names from the shelved 2026-07-25 redesign (`881ac25`/`2e93202`) but
+   explicitly does **not** revive that redesign's requirement to type both forms
+   together -- this is tolerance (accept either), not required dual production,
+   matching the "it worked great" `a5b4a15` philosophy, just generalized from one
+   lemma to the full aspect-slot set. `AspectCue` stays as-is, kept as a
+   rarely-used escape hatch rather than folded away.
+2. **Verb-phrase aspect defaulting.** For verb-phrase notes where only one
+   aspect is idiomatically correct (e.g. the зробити/заробити очко́ family,
+   ua-lexeme-0216/0230), rather than adding a new "aspect required" schema field
+   (rejected as unnecessary corpus-wide authoring debt), default
+   `TypingTarget_UA` to imperfective when a phrase note doesn't clearly call for
+   perfective, and rely on well-worded `EN_Gloss` text to signal when perfective
+   is specifically intended, rather than a mechanical flag. No new field --
+   authoring discipline, not a schema change.
+
+**Not yet done:** no code, no field backfill, no template changes. Planning note
+only -- implementation (feedback-script rewrite in `EN_UA_BACK`,
+`Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony` backfill on notes with real
+в-/у- alternation, gloss review pass on affected phrase notes) is deferred until
+Craig gives the go-ahead to execute.
 
 **Cloze note design principles (UA_Grammar, established 2026-07-22)**
 
