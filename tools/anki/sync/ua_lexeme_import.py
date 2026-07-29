@@ -197,6 +197,49 @@ def parse_note_file(path: Path) -> dict | None:
 # ---------------------------------------------------------------------------
 
 
+def strip_stress(s: str) -> str:
+    """Remove the combining acute accent (U+0301) used for stress marks."""
+    return s.replace("́", "")
+
+
+def compute_typing_target(lemma: str, impf_uni: str, perfective: str) -> tuple[str, str] | None:
+    """Build the EN->UA typing target for a verb's full stressed aspect set.
+
+    Restored 2026-07-28 (git archaeology, commit a5b4a15 -- the last version
+    before the 2026-07-25 Lemma_Euphony redesign made this require typing
+    both a primary and euphonic form together; see setup_ua_note_types.py's
+    EN_UA_FRONT/EN_UA_BACK for the template side of this restoration).
+
+    For verb notes, the EN->UA card should require typing the entire aspect
+    singlet/couplet/triplet, not just Lemma alone -- e.g. "ходи́ти / йти /
+    піти́" (multidirectional-imperfective / unidirectional-imperfective /
+    perfective triplet) or "перекида́ти / переки́нути" (imperfective/perfective
+    doublet). Order is always Lemma, then ImperfectiveUnidirectional (if
+    populated), then Perfective (if populated) -- matching the multi-imp ->
+    uni-imp -> perfective progression. Any missing slot is dropped, not left
+    blank, so a doublet renders as "Lemma / Perfective", never
+    "Lemma / / Perfective".
+
+    Returns None when fewer than two forms are populated (a plain singlet,
+    e.g. an imperfective-only verb like мати with no aspectual counterpart,
+    or any non-verb note where Perfective/ImperfectiveUnidirectional are
+    simply not applicable) -- callers should leave TypingTarget_UA/
+    TypingAnswer as Lemma-only in that case.
+
+    Computed here (at sync time) rather than hand-authored into a new CNSF
+    field, by design: Lemma/ImperfectiveUnidirectional/Perfective are already
+    the authored source of truth, and deriving the join avoids a second,
+    independently-authored field silently drifting out of sync with -- or
+    being clobbered relative to -- the fields it's derived from.
+    """
+    parts = [p for p in (lemma, impf_uni, perfective) if p]
+    if len(parts) < 2:
+        return None
+    stressed = " / ".join(parts)
+    unstressed = " / ".join(strip_stress(p) for p in parts)
+    return stressed, unstressed
+
+
 def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[str, str]:
     """Decide display order for the Compare card's "X or Y?" prompt.
 
@@ -240,10 +283,39 @@ def import_note(data: dict, dry_run: bool) -> str:
     is_homograph = "homograph:true" in tags
     fields["_IsHomograph"] = "1" if is_homograph else ""
 
+    # EN->UA typing target: full stressed aspect join for verbs with a
+    # populated counterpart (see compute_typing_target docstring); Lemma
+    # alone otherwise. Restored 2026-07-28 (git archaeology, commit a5b4a15).
+    typing_target = compute_typing_target(
+        fields.get("Lemma", ""),
+        fields.get("ImperfectiveUnidirectional", ""),
+        fields.get("Perfective", ""),
+    )
+    if typing_target:
+        fields["TypingTarget_UA"] = typing_target[0]
+        fields["TypingAnswer"] = typing_target[1]
+    else:
+        fields["TypingTarget_UA"] = fields.get("Lemma", "")
+        # TypingAnswer left as authored in the CNSF file for singlets.
+
     # Compare card prompt: vary which word (Lemma vs ConfusableSet) is named first
     # (confusables only). For homographs, CompareA/B are authored Ukrainian sentences
     # that shouldn't be reordered -- use them as-is from the YAML.
-    if not is_homograph:
+    #
+    # Only auto-derive when the note hasn't been hand-authored with explicit
+    # CompareA/CompareB values. Found 2026-07-28 (ua-lexeme-0022/0023,
+    # алфавіт/абетка): this used to run unconditionally, so it silently
+    # overwrote authored short chip labels (e.g. CompareA: абетка / CompareB:
+    # алфавіт) with (Lemma, raw ConfusableSet text) on every re-import.
+    # ConfusableSet holds long discriminator prose, not a short alternate
+    # word -- once the 2026-07-24 CompareScenario/CompareA/CompareB redesign
+    # landed, treating it as the "confusable" arg here meant the full
+    # explanation (which names the other word) ended up rendered as a front-
+    # side chip via {{CompareB}}, leaking the answer. compute_compare_options
+    # is now only a fallback for notes that predate that redesign and have
+    # never had CompareA/CompareB authored.
+    already_authored = fields.get("CompareA", "").strip() and fields.get("CompareB", "").strip()
+    if not is_homograph and not already_authored:
         compare_a, compare_b = compute_compare_options(
             note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
         )
@@ -253,9 +325,23 @@ def import_note(data: dict, dry_run: bool) -> str:
     # Suspension policy -- see module docstring.
     suspend = "status:draft" in tags
 
-    # Compare card suspension: suspend if ConfusableSet is empty (no confusables/homographs)
+    # Compare card suspension: suspend if ConfusableSet is empty (no confusables/
+    # homographs), OR if it's populated but CompareA never got authored --
+    # CompareA is "always required" by the Compare template's own design
+    # (CompareB/C/D optional; see comment above CARD_TEMPLATES in
+    # setup_ua_note_types.py), so a blank CompareA here means the actual
+    # chip content is missing even though ConfusableSet has text (e.g. a
+    # homograph:true note where CompareA/B were never authored -- those
+    # aren't auto-derived above, unlike the confusables case). Without this,
+    # such a note would generate an active Compare card whose front shows
+    # the scenario prompt with no answer chips. Found 2026-07-28 alongside
+    # the CompareA/CompareB clobbering bug; the template itself now also
+    # shows a "should be suspended" notice in this state as a defensive
+    # fallback, but suspending here is the primary safeguard so it's never
+    # actually seen in study.
     confusable_set = fields.get("ConfusableSet", "").strip()
-    suspend_compare_card = not confusable_set
+    compare_a_content = fields.get("CompareA", "").strip()
+    suspend_compare_card = not confusable_set or not compare_a_content
 
     existing_id = find_note_by_id(note_id)
 

@@ -22,18 +22,20 @@ fields:
   Vehicle_Pair: приїжджа́ти / приї́хати
   Example_UA: Вона прийшла до нас.
   Example_EN: She came to our place.
-  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="arr" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker></defs><!-- Legend --><text x="5" y="12"
-    font-size="10" font-weight="bold" fill="#586e75">Legend:</text><line x1="10" y1="20" x2="20"
-    y2="30" stroke="#dc322f" stroke-width="2"/><line x1="20" y1="20" x2="10" y2="30" stroke="#dc322f"
-    stroke-width="2"/><text x="25" y="28" font-size="9" fill="#586e75">Place</text><!-- Main:
-    arrow crosses through X boundary --><circle cx="30" cy="75" r="5" fill="#268bd2"/><line
-    x1="40" y1="75" x2="220" y2="75" stroke="#859900" stroke-width="2.5" marker-end="url(#arr)"/><line
-    x1="210" y1="60" x2="230" y2="90" stroke="#dc322f" stroke-width="3"/><line x1="230" y1="60"
-    x2="210" y2="90" stroke="#dc322f" stroke-width="3"/></svg>'
+  Diagram_SVG: <svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arrG" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker><marker id="arrR" markerWidth="8" markerHeight="8"
+    refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#dc322f"/></marker><pattern
+    id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line
+    x1="0" y1="0" x2="0" y2="6" stroke="#586e75" stroke-width="1.5"/></pattern></defs><line
+    x1="30" y1="60" x2="115" y2="60" stroke="#859900" stroke-width="3" marker-end="url(#arrG)"/><line
+    x1="135" y1="50" x2="155" y2="70" stroke="#586e75" stroke-width="3"/><line x1="155" y1="50"
+    x2="135" y2="70" stroke="#586e75" stroke-width="3"/></svg>
   Tags_Ch: ch:2.9.4
   Source_Note: при- — arrival at place
-  Verification Notes: ''
+  Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 (arrow
+    reaching an X mark, arrival only) -- the textbook''s original icon paired this with a
+    departure half (see the new ua-visual-0010, Ø/no-prefix, for that half). Reviewed and
+    approved by Craig.'
 ---
 

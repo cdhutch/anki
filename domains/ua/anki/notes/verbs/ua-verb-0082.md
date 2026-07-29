@@ -1,0 +1,45 @@
+---
+schema: cnsf/v0
+note_type: ua_verb
+note_id: ua-verb-0082
+anki:
+  model: UA_Verb
+  deck: UA::Verbs
+tags:
+- domain:ua
+- class:regular-2
+- ch:2.8.5
+- conj:suspended
+- status:draft
+- stress:unverified
+fields:
+  NoteID: ua-verb-0082
+  Lemma: розводити
+  Aspect: imperfective
+  VerbClass: regular-2
+  FreqSource: ch:2.8
+  Pres_1sg: розво́джу
+  Pres_2sg: розво́диш
+  Pres_3sg: розво́дить
+  Pres_1pl: розво́дим, розво́димо
+  Pres_2pl: розво́дите
+  Pres_3pl: розво́дять
+  Imperative_2sg: розво́дь
+  Imperative_1pl: розво́дьмо
+  Imperative_2pl: розво́дьте
+  Past_1sg_m: розво́див
+  Past_1sg_f: розво́дила
+  Past_1sg_n: розво́дило
+  Past_3pl: розво́дили
+  Participle_Active_Present: ''
+  Participle_Adverbial_Present: ''
+  Participle_Passive_Past_m: ''
+  Participle_Passive_Past_f: ''
+  Participle_Impersonal_Past: ''
+  Participle_Adverbial_Past: ''
+  UA_Example: ''
+  EN_Example: ''
+  Verification_Notes: Non-reflexive, 2nd conjugation. Горох does not surface a perfective
+    partner on this page. See lexeme ua-lexeme-0520.
+---
+

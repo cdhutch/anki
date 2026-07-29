@@ -127,6 +127,7 @@ help:
 	@echo "Ukrainian (UA) — aggregate"
 	@echo "  ua                  Canonicalize + sync all UA note types (lexeme, grammar, visual, verb, pvom)"
 	@echo "  ua-fix              Canonicalize all UA note types (no sync)"
+	@echo "  ua-compare-check    Audit UA_Lexeme Compare/homograph card fields (report-only; STRICT=1 to fail on findings)"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
@@ -624,6 +625,7 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
 .PHONY: ua-generate-examples ua-inject-examples
 .PHONY: ua-unverified
+.PHONY: ua-compare-check
 .PHONY: ua ua-fix
 
 # ── Note type setup ──────────────────────────────────────────────────────────
@@ -757,6 +759,17 @@ ua-unverified:
 	@printf "\033[1;5;93m\n⚠ ⚠ ⚠  UNVERIFIED UA NOTES (stress or status) ⚠ ⚠ ⚠\033[0m\n"
 	@$(PYTHON) tools/anki/inspect/list_unverified.py
 
+# ── Compare/homograph card field audit ───────────────────────────────────────
+# Checks every ua-lexeme-*.md's Compare-card fields (ConfusableSet / CompareA-D /
+# Homograph_SenseA-B / the homograph:true tag) against the shapes documented in
+# CLAUDE-compare-card-field-mapping.md, plus a corpus-wide duplicate-NoteID check.
+# Report-only by default, matching ua-unverified's style -- pass STRICT=1 to fail
+# the build instead (e.g. for a pre-push check). See tools/anki/inspect/
+# check_compare_card_fields.py for what each finding class means.
+ua-compare-check:
+	@printf "\033[1;36m\n— Compare/homograph card field audit —\033[0m\n"
+	$(PYTHON) tools/anki/inspect/check_compare_card_fields.py $(if $(STRICT),--strict,)
+
 # ── All UA note types (aggregate) ────────────────────────────────────────────
 
 ua-fix:
@@ -766,6 +779,7 @@ ua-fix:
 	$(MAKE) ua-verb-fix
 	$(MAKE) ua-pvom-fix
 	$(MAKE) ua-unverified
+	$(MAKE) ua-compare-check
 
 ua:
 	@TARGETS="ua-lexeme ua-grammar ua-visual ua-verb ua-pvom"; \

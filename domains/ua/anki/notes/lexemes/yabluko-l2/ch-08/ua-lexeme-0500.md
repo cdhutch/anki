@@ -1,0 +1,41 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0500
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:2.8.4
+- pos:noun
+- gender:f
+- stress:unverified
+- status:draft
+fields:
+  NoteID: ua-lexeme-0500
+  Lemma: споку́са
+  PartOfSpeech: noun
+  Gender: f
+  Perfective: ''
+  EN_Gloss: temptation
+  Govt_Case: ''
+  CounterpartForm: ''
+  IrregularForms: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  EuphonyNote: ''
+  TypingAnswer: спокуса
+  UA_Example: Спокуса скуштувати місцеву кухню була надто великою.
+  EN_Example: The temptation to try the local cuisine was too great.
+  Verb_Conj_Table: ''
+  Tags_Ch: ch:2.8.4
+  Source_URL: https://goroh.pp.ua/Словозміна/спокуса
+  Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.
+  Verification Notes: ''
+---
+
