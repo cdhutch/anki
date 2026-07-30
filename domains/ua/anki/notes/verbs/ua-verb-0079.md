@@ -39,9 +39,15 @@ fields:
   Participle_Adverbial_Past: ''
   UA_Example: ''
   EN_Example: ''
-  Verification_Notes: Non-reflexive. Pres_* fields hold the perfective future here (standard
+  Verification_Notes: 'Non-reflexive. Pres_* fields hold the perfective future here (standard
     corpus convention for perfective conjugation notes, cf. ua-verb-0004). Imperfective partner
-    is па́дати; Горох also shows an unrelated, much rarer впасти derived from 'па́сти' (to
-    graze), not relevant here. See lexeme ua-lexeme-0484.
+    is па́дати (the general unprefixed "to fall" pair); Горох also shows an unrelated, much
+    rarer впасти derived from ''па́сти'' (to graze), not relevant here. See lexeme ua-lexeme-0484.
+    2026-07-30: ua-lexeme-0484 was re-keyed per Craig''s correction to Lemma=впадати/ Perfective=впасти
+    -- this впасти conjugation paradigm is still accurate and still the right Perfective-field
+    reference for that note, but note the lexeme now treats впадати (not падати) as впасти''s
+    paired imperfective for typing-target purposes. No UA_Verb note exists yet for впадати''s
+    own conjugation paradigm -- would need its own note (irregular class:regular 1st conjugation
+    -ва- imperfectivizing pattern) if a full conjugation card for впадати is wanted later.'
 ---
 

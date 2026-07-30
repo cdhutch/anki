@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - stress:verified
 - status:verified
+- needs-confusable-set
 fields:
   NoteID: ua-lexeme-0321
   Lemma: перепро́шувати
@@ -42,6 +43,13 @@ fields:
     matching перепрошувати1/2 sense -- same aspect-pair cross-reference format confirmed for
     установити/устано́влювати and утопити/втопити earlier in this corpus. Sense 1 ("просити
     вибачення; вибачатися") is the apologize/"excuse me" sense this note uses; sense 2 ("розпитувати")
-    is the unrelated interrogate homograph, still not used here.'
+    is the unrelated interrogate homograph, still not used here. 2026-07-30 Craig: will eventually
+    join a confusable set with other prefixed and unprefixed forms of the -прошувати/-просити
+    root (e.g. про-сити "to ask/request", за-прошувати/за-просити "to invite", по-просити
+    "to ask (once)") -- none of those exist as their own notes yet, and this is a same-root-different-prefix
+    cluster (like відбивати/забивати/завдавати/набирати) rather than a single known target
+    lemma, so tagged `needs-confusable-set` (the existing generic marker, see ua-lexeme-0436/0440)
+    rather than a specific pending-confusable:<lemma> tag -- re-tag with the more specific
+    mechanism once the actual family members are sourced and their exact spellings are known.'
 ---
 

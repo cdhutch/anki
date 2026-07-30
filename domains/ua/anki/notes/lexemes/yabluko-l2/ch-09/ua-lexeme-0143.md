@@ -31,7 +31,10 @@ fields:
     \ a verb is perfective or imperfective, e.g. in a grammar explanation\n-> Use: вид (grammatical\
     \ aspect - see ua-lexeme-0182)\nKey distinction: same spelling, unrelated meanings - a\
     \ true homograph. Горох also lists a further archaic sense (face/appearance; краєвид =\
-    \ view/landscape) not covered by a separate lexeme note in this corpus."
+    \ view/landscape) not covered by a separate lexeme note in this corpus.\nAlso a convergent\
+    \ synonym (not a homograph) with тип (ua-lexeme-0306) in this kind/type sense -- see that\
+    \ note's own Compare card for the тип/вид discrimination; not rewired here to avoid conflicting\
+    \ with this note's active homograph pairing with ua-lexeme-0182."
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
   CompareScenario: Which sense of вид is being used?
@@ -66,6 +69,10 @@ fields:
     \ copied verbatim from sibling ua-lexeme-0182 per the identical-chip-content convention.\
     \ Added the missing homograph:true tag (this note previously routed to confusables mode\
     \ instead of the homograph sentence layout). See CLAUDE-compare-card-field-mapping.md.\
-    \ Needs your review."
+    \ Needs your review.\n2026-07-30: added a prose cross-reference to ua-lexeme-0306 (тип)\
+    \ in ConfusableSet -- Craig flagged тип/вид as confusable. Deliberately did not touch\
+    \ CompareA/B/Homograph_SenseA/B here, since this note's Compare card is already committed\
+    \ to Shape 1 homograph-disambiguation with ua-lexeme-0182; the тип/вид confusables card\
+    \ lives entirely on 0306's own note instead."
 ---
 

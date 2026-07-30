@@ -91,6 +91,30 @@ stored that way — only fixes cases that were previously silently broken). See 
 a genuine pre-existing latent bug in a shared, pre-commit-enforced file, not specific to this
 audit's fields, so it's worth knowing about regardless of dedup/homograph work.
 
+### `tools/anki/inspect/check_pending_confusables.py` (bucket 5, new 2026-07-30)
+
+Added during Craig's Ch-08 lexeme verification pass, when he repeatedly named a confusable-set
+partner for a note under review before that partner word had been sourced (e.g. "0463 рух will
+be in a confusable set with затор" while затор doesn't have its own note yet). CLAUDE.md's
+"Vocabulary dedup & homograph handling" now documents this as bucket 5. Mechanically: tag the
+*existing* note `pending-confusable:<bare-spelling>` (stress optional — stripped for matching);
+this script scans the corpus for those tags and reports when the target spelling now exists as
+its own note. It reuses `lexeme_dedup.py`'s `load_corpus()`/`strip_stress()` directly rather
+than a fourth reimplementation of spelling-match logic — same dependency `check_lexeme_dedup.py`
+and `build_lexeme_index.py` don't share with each other, worth unifying further someday. Like
+`check_lexeme_dedup.py`, it only detects the match; a human/Claude still writes the actual
+`ConfusableSet`/`Mnemonic_EN`/`CompareScenario`/`CompareA-D` content. Wired into `make ua-check`
+alongside `audit_verb_aspect_forms.py`'s aspect-completeness check (a separate, unrelated
+report-only audit added the same session — see CLAUDE.md "Aspect-only tags").
+
+As of 2026-07-30, tagged: ua-lexeme-0453 (звісно → зазвичай), 0463 (рух → затор), 0467
+(значно → забагато, joining the already-live значно/набагато pair), 0471 (погляд → вигляд,
+доглянати), 0477 (кілька → скільки, декілька), 0272 (пригода → погода, природа, порода), 0330
+(мандрівка → подорож). ua-lexeme-0321 (перепрошувати) got the older generic
+`needs-confusable-set` tag instead, since Craig named an open-ended -прошувати/-просити prefix
+family rather than one exact spelling — `check_pending_confusables.py` doesn't try to resolve
+those, it just reports a count as a reminder.
+
 ## The 2026-07-24 full-corpus audit
 
 Ran `build_lexeme_index.py` (180 notes, 0 tagged `homograph:true` yet, 0 distinct spellings

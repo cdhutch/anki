@@ -12,8 +12,8 @@ tags:
 - ch:2.8.3
 - pos:phrase
 - phrase:discourse
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0491
   Lemma: не таки́й ... як

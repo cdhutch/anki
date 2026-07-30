@@ -42,8 +42,43 @@ where only one aspect fits the idiomatic meaning, default to imperfective and re
 on clearly-worded EN_Gloss rather than a new schema field. See "Per-slot euphony
 tolerance + verb-phrase aspect defaulting (planned 2026-07-29)" under Card
 Template Techniques for the full design. Execution deferred pending go-ahead.
-
-See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
+2026-07-30: **Current task is Ch-08 lexeme verification** — Craig reviewing UA_Lexeme
+notes under `domains/ua/anki/notes/lexemes/yabluko-l2/ch-08/` (ua-lexeme-044x–049x
+range) against Горох and against each other. Craig has passed over a first punch
+list of confusable-set candidates (0447+0465, 0453+зазвичай-cluster, 0463+затор,
+0467 joining the existing значно/набагато pair, 0471+вигляд/доглянати,
+0477+скільки/декілька), one aspect-pairing gap (0482 дотримуватися missing
+Perfective дотриматися), one correction (0484 should be впадати, imperfective,
+with впасти as its perfective partner — currently filed as впасти itself), and one
+open usage question (0474 раз — counting usage vs. один). None of this is written
+into ConfusableSet/CompareA-D fields, Perfective fields, or tooling yet — Claude
+flagged some open questions while scoping (see conversation log) and is waiting on
+Craig's confirmation before anything gets written to the appropriate docs/notes.
+Craig then gave feedback and Claude executed on it same session: (1) built a
+`pending-confusable:<lemma>` tag + `tools/anki/inspect/check_pending_confusables.py`
+watchlist mechanism (see Vocabulary dedup & homograph handling, bucket 5) and tagged
+every currently-not-yet-sourced confusable partner named so far (зазвичай, затор,
+забагато, вигляд, доглянати, скільки, декілька, погода/природа/порода off
+ua-lexeme-0272 пригода, подорож off ua-lexeme-0330 мандрівка); ua-lexeme-0321
+(перепрошувати) tagged with the existing generic `needs-confusable-set` marker
+instead, since Craig named an open-ended -прошувати/-просити prefix family rather
+than one exact spelling. (2) Extended `audit_verb_aspect_forms.py` to recognize
+hand-authored `aspect:imperfective-only`/`aspect:perfective-only` tags — flags only
+fire when a verb has ZERO aspectual counterparts populated (a true singlet) and
+neither tag is present; doublets/triplets were never flagged and still aren't.
+Per Craig, Claude never applies either tag itself — only reads them; Craig alone
+decides and hand-tags after checking Горох. Wired both scripts into a new
+`make ua-check` target (report-only, STRICT=1 to fail). (3) Re-keyed ua-lexeme-0484
+from Lemma=впасти/Perfective=blank to Lemma=впада́ти/Perfective=впа́сти per Craig's
+correction — Горох-verified the впадати stress and confirmed via Горох's own
+Тлумачення that впадати/впасти (not падати/впасти) is the pair actually used in the
+"впасти в очі" idiom (ua-lexeme-0488 already suspected this); updated 0488's and
+ua-verb-0079's cross-references to match. Still open on 0484: UA_Example/EN_Example
+still show the perfective "впало" (apple falling) rather than an example
+demonstrating впадати's own aspect — flagged in Verification Notes, needs Craig's
+call, not silently rewritten. Also answered Craig's раз-counting and
+мандрівка-vs-подорож questions inline (see conversation log for the full reasoning
+and Горох citations).
 
 ## Workflow Notes
 
@@ -204,7 +239,9 @@ complete:
 
 *Metadata & Sources:* `Tags_Ch`, `Source_URL`, `Source_Note`
 
-**Aspect convention:** Lemma is always imperfective (base form). Perfective field contains PFV counterpart. Aspect is implicit in field structure (no explicit Aspect field needed).
+**Aspect convention:** Lemma is always imperfective (base form). Perfective field contains PFV counterpart. Aspect is implicit in field structure (no explicit Aspect field needed). Exception: a genuine perfectiva tantum (no imperfective counterpart exists) has to file Lemma as the perfective form instead — tag it `aspect:perfective-only` when this happens so the exception is documented, not silently inconsistent with the rule.
+
+**Aspect-only tags (`aspect:imperfective-only` / `aspect:perfective-only`, added 2026-07-30):** hand-authored tags marking a verb as confirmed to have no aspectual counterpart (imperfectiva/perfectiva tantum, e.g. мати for imperfective-only). Craig wants to be directly involved in every decision that labels a verb this way, so these tags are **only ever applied by Craig, by hand, after checking Горох** — no script in this repo applies them automatically, and none should in the future without his explicit sign-off. `tools/anki/inspect/audit_verb_aspect_forms.py` (extended 2026-07-30, wired into `make ua-check`) scans every `pos:verb` note and flags it for review only when it has ZERO aspectual counterparts populated (a true singlet — both `ImperfectiveUnidirectional` and `Perfective` blank) and neither aspect-only tag is present; a verb missing just one of two possible counterparts (a doublet) is never flagged, since one populated counterpart already means the pairing is at least partly recorded. See "Vocabulary dedup & homograph handling" bucket 5 below for the parallel `pending-confusable:<lemma>` mechanism, same Craig-decides-not-scripts philosophy.
 
 **Verb conjugations:** `Verb_Conj_Table` field is being phased out of UA_Lexeme — blanked corpus-wide 2026-07-22 (all ~180 lexeme notes), but the field itself has not yet been removed from the schema/model. Full removal is planned but not yet executed — see "Verb_Conj_Table Removal Plan (Future)" below. Conjugation morphology belongs in the UA_Verb note type as structured fields, one note per lemma's own aspect, linked to the lexeme via matching Lemma text.
 
@@ -644,6 +681,23 @@ buckets. Triage deliberately — do not assume from spelling alone.
    all four; `Verification Notes` flags the new Compare content "Needs your review" per the
    standing convention (see добре/непогано/нормально/чудово below for the same pattern).
 
+5. **Pending confusable-set watchlist** (added 2026-07-30, Craig, during Ch-08 verification).
+   Craig frequently knows a note's future confusable-set partner before that partner word has
+   been sourced (e.g. "0463 рух will be in a confusable set with затор" while затор doesn't
+   have its own note yet). Rather than relying on memory across sessions, tag the *existing*
+   note with `pending-confusable:<bare-spelling>` (stress marks optional — matching is always
+   stress-stripped, same rule as bucket 1-4 tooling). `tools/anki/inspect/check_pending_confusables.py`
+   (wired into `make ua-check`) scans the whole corpus for these tags and reports when the
+   target spelling now exists as its own note, so it can be linked into a proper ConfusableSet
+   the same session it's sourced instead of being rediscovered later. The script only detects
+   the match — a human (or Claude) still writes the actual `ConfusableSet`/`Mnemonic_EN`/
+   `CompareScenario`/`CompareA-D` content once it fires, same division of labor as the
+   dedup-check tooling in buckets 1-3. For an open-ended same-root/different-prefix family with
+   no single known target spelling (e.g. ua-lexeme-0321 перепрошувати eventually clustering
+   with other -прошувати/-просити forms), use the pre-existing generic `needs-confusable-set`
+   tag instead (see ua-lexeme-0436/0440) — `check_pending_confusables.py` reports a plain count
+   of these as a reminder but doesn't try to resolve them.
+
 **Tooling:**
 - `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
   lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
@@ -671,6 +725,15 @@ buckets. Triage deliberately — do not assume from spelling alone.
   corpus to `build/ua_lexeme_index.tsv` (gitignored) in one pass, for the bucket-4
   full-corpus audit and for spot-checking bucket-1/2/3 spelling collisions at scale without
   hitting per-file staging rate limits.
+- `tools/anki/inspect/check_pending_confusables.py` (new 2026-07-30) — the bucket-5
+  watchlist checker: scans for `pending-confusable:<lemma>` tags and reports when the target
+  spelling now exists as its own note, reusing `tools/anki/lib/lexeme_dedup.py`'s
+  `load_corpus()`/`strip_stress()` rather than a fourth reimplementation of the same
+  spelling-match logic. Wired into `make ua-check`.
+- `tools/anki/inspect/audit_verb_aspect_forms.py` (new 2026-07-27, extended 2026-07-30) —
+  flags `pos:verb` notes with zero populated aspectual counterparts (`ImperfectiveUnidirectional`
+  and `Perfective` both blank) and no `aspect:imperfective-only`/`aspect:perfective-only` tag.
+  Never applies either tag itself — see "Aspect-only tags" above. Wired into `make ua-check`.
 
 ### Deck Presets and Limit Configuration (2026-07-20)
 
@@ -726,6 +789,8 @@ python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
 | `tools/anki/lib/lexeme_dedup.py` | ✓ new (2026-07-24) | `create_or_link_lexeme()` — dedup/homograph create-or-link API (new/homograph/duplicate) |
 | `tools/anki/inspect/build_lexeme_index.py` | ✓ new (2026-07-24) | Full-corpus lexeme → `build/ua_lexeme_index.tsv` dump for audits |
 | `tools/anki/extract/gen_ch09_subsection.py` | ✓ new (2026-07-25) | Ch-09 batch driver wiring `create_or_link_lexeme()` into note generation (CLAUDE.md item 0); not yet used on a real batch |
+| `tools/anki/inspect/audit_verb_aspect_forms.py` | ✓ new (2026-07-27), extended (2026-07-30) | Flag verb notes with zero aspectual counterparts and no `aspect:*-only` tag; wired into `make ua-check` |
+| `tools/anki/inspect/check_pending_confusables.py` | ✓ new (2026-07-30) | Bucket-5 watchlist: report when a `pending-confusable:<lemma>` tag's target now exists in the corpus; wired into `make ua-check` |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 

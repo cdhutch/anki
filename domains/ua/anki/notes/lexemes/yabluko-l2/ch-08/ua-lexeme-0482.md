@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0482
   Lemma: дотри́муватися

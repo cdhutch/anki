@@ -11,15 +11,15 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:adjective
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0466
   Lemma: приві́тний
   PartOfSpeech: adjective
   Gender: ''
   Perfective: ''
-  EN_Gloss: friendly, welcoming
+  EN_Gloss: welcoming, friendly
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

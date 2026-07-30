@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:adverb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0468
   Lemma: набага́то

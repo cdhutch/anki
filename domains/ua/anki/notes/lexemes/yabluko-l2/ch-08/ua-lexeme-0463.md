@@ -12,8 +12,9 @@ tags:
 - ch:2.8.3
 - pos:noun
 - gender:m
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
+- pending-confusable:затор
 fields:
   NoteID: ua-lexeme-0463
   Lemma: рух
@@ -36,8 +37,12 @@ fields:
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Тлумачення/рух
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
-  Verification Notes: Тлумачення sense 3 (фізичне переміщення внаслідок обертання/коливання/переміщення)
-    used for the transportation/traffic gloss needed for 'розклад руху'; the philosophical
-    'motion of matter' sense (sense 1) is not relevant here. Component of phrase ua-lexeme-0487.
+  Verification Notes: 'Тлумачення sense 3 (фізичне переміщення внаслідок обертання/коливання/переміщення)
+    used for the transportation/traffic gloss needed for ''розклад руху''; the philosophical
+    ''motion of matter'' sense (sense 1) is not relevant here. Component of phrase ua-lexeme-0487.
+    2026-07-30 Craig: will join a confusable set with затор once sourced -- затор doesn''t
+    have its own note yet (only substring hits inside ''організатори'' on unrelated ch-09
+    notes). Tagged pending-confusable:затор; see CLAUDE.md Vocabulary dedup & homograph handling,
+    bucket 5.'
 ---
 

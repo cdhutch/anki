@@ -36,10 +36,13 @@ fields:
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/впасти; https://goroh.pp.ua/Словозміна/око
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
-  Verification Notes: Idiom, literally 'to fall into the eyes'. Components впасти (ua-lexeme-0484,
-    full conjugation on ua-verb-0079) and око (ua-lexeme-0479, uses irregular plural очі)
-    each also have their own note per rule 3. The more common idiomatic aspect is actually
-    imperfective впадати в очі ('to stand out' as an ongoing quality); the textbook's own
-    vocabulary line specifies the perfective впасти, so that is what is drafted here.
+  Verification Notes: 'Idiom, literally ''to fall into the eyes''. Components впасти (the
+    Perfective field of ua-lexeme-0484, whose Lemma is впадати as of the 2026-07-30 re-key
+    -- conjugation for the впасти form lives on ua-verb-0079) and око (ua-lexeme-0479, uses
+    irregular plural очі) each also have their own note per rule 3. The more common idiomatic
+    aspect is actually imperfective впадати в очі (''to stand out'' as an ongoing quality);
+    the textbook''s own vocabulary line specifies the perfective впасти, so that is what is
+    drafted here. 2026-07-30: this idiom''s aspect pair is exactly what confirmed Craig''s
+    ua-lexeme-0484 re-key was correct -- see that note''s Verification Notes.'
 ---
 
