@@ -298,6 +298,32 @@ def import_note(data: dict, dry_run: bool) -> str:
         fields["TypingTarget_UA"] = fields.get("Lemma", "")
         # TypingAnswer left as authored in the CNSF file for singlets.
 
+    # UA->EN front aspect label: for a verb note that's a true singlet (no
+    # ImperfectiveUnidirectional, no Perfective -- so TypingTarget_UA above is
+    # just Lemma alone), show a small "(pf.)"/"(impf.)" tag next to the word
+    # on the Recognition card front. Doublets/triplets never get a label --
+    # the slash-joined TypingTarget_UA already shows the aspectual range, so
+    # a tag would be redundant there. Per Craig 2026-07-31.
+    #
+    # Aspect of a bare singlet is derived the same way compute_typing_target's
+    # docstring and the "Aspect convention" section of CLAUDE.md already
+    # define it, not re-decided here: Lemma is imperfective by schema
+    # convention UNLESS the note is tagged aspect:perfective-only (the
+    # perfectiva tantum exception, in which case Lemma holds the perfective
+    # form instead). This does not require the tag to exist to label a verb
+    # "(impf.)" -- only "(pf.)" requires the explicit tag, since imperfective
+    # is the schema's default and untagged singlets (most of the corpus,
+    # since aspect:*-only tags are hand-applied by Craig only after checking
+    # Горох) are still correctly "(impf.)" by that same convention.
+    is_verb = fields.get("PartOfSpeech", "").strip().lower() == "verb"
+    is_singlet = not fields.get("ImperfectiveUnidirectional", "").strip() and not fields.get(
+        "Perfective", ""
+    ).strip()
+    if is_verb and is_singlet:
+        fields["_AspectLabel"] = "(pf.)" if "aspect:perfective-only" in tags else "(impf.)"
+    else:
+        fields["_AspectLabel"] = ""
+
     # Compare card prompt: vary which word (Lemma vs ConfusableSet) is named first
     # (confusables only). For homographs, CompareA/B are authored Ukrainian sentences
     # that shouldn't be reordered -- use them as-is from the YAML.
