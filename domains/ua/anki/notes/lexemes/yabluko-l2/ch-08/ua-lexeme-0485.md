@@ -12,8 +12,8 @@ tags:
 - ch:2.8.3
 - pos:phrase
 - phrase:noun
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0485
   Lemma: грома́дський тра́нспорт

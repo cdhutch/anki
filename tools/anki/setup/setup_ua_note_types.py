@@ -43,6 +43,14 @@ FIELDS = [
     "Perfective",
     "ImperfectiveUnidirectional",  # Motion verbs: іти, їхати (directional IPFV)
 
+    # _AspectLabel: Internal marker, populated by import script (never hand-
+    # authored). "(pf.)" or "(impf.)" for a verb note that's a true aspectual
+    # singlet (Perfective and ImperfectiveUnidirectional both blank); empty
+    # for doublets/triplets and for non-verb notes. Shown next to the lemma
+    # on the UA->EN Recognition card front -- see UA_EN_FRONT below. Added
+    # 2026-07-31 per Craig.
+    "_AspectLabel",
+
     # AspectCue: hand-authored, optional. For a verb/phrase note that types
     # only ONE aspect (no populated Perfective/ImperfectiveUnidirectional, so
     # TypingTarget_UA is just Lemma), a short situational question framing
@@ -119,6 +127,12 @@ CSS = """\
   font-size: 22px;
   color: #555;
   margin-bottom: 8px;
+}
+
+.aspect-label {
+  font-size: 16px;
+  font-weight: normal;
+  color: #888;
 }
 
 .pos {
@@ -253,7 +267,17 @@ details.conj-wrap[open] summary::before {
 
 # Template 1: UA → EN  (Recognition: see Ukrainian, recall English)
 UA_EN_FRONT = """\
-<div class="lemma">{{Lemma}}{{#Perfective}} / {{Perfective}}{{/Perfective}}</div>
+<!-- Lemma line uses TypingTarget_UA (2026-07-31, per Craig), not a hand-built
+     Lemma/Perfective join: TypingTarget_UA already computes the full stressed
+     aspect set for doublets/triplets (e.g. "ходи́ти / йти / піти́"), all as
+     one string in the same .lemma div/font -- see compute_typing_target() in
+     ua_lexeme_import.py. Previously this line only ever showed Lemma and
+     Perfective, silently dropping ImperfectiveUnidirectional for motion-verb
+     triplets. _AspectLabel adds a small "(pf.)"/"(impf.)" tag for true
+     singlets only (doublets/triplets already show their range via the slash
+     join, so no tag is needed there) -- see _AspectLabel's FIELDS comment
+     and import_note() for how it's derived. -->
+<div class="lemma">{{TypingTarget_UA}}{{#_AspectLabel}} <span class="aspect-label">{{_AspectLabel}}</span>{{/_AspectLabel}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
 <!-- UA_Example on front (2026-07-28, per Craig): show the example sentence
      for context on the Recognition (UA->EN) card, not just the bare

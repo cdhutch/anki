@@ -11,8 +11,10 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:numeral
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
+- pending-confusable:скільки
+- pending-confusable:декілька
 fields:
   NoteID: ua-lexeme-0477
   Lemma: кі́лька
@@ -35,6 +37,11 @@ fields:
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/кілька
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
-  Verification Notes: Component of phrase ua-lexeme-0492 (у кілька разів).
+  Verification Notes: 'Component of phrase ua-lexeme-0492 (у кілька разів). 2026-07-30 Craig:
+    will join a confusable set with скільки and декілька once sourced -- neither exists as
+    its own note yet. Craig confirmed: all three (кілька, скільки, декілька) go together in
+    one cluster, similar either in meaning or in UA spelling -- not split into separate clusters.
+    Tagged pending-confusable:скільки and pending-confusable:декілька; see CLAUDE.md Vocabulary
+    dedup & homograph handling, bucket 5.'
 ---
 

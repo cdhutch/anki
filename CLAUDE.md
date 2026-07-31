@@ -34,8 +34,99 @@ point back to a bare `{{Lemma}}`-only typing target with no aspect or euphony ha
 all) -- see "EN→UA aspect+euphony typing" under Card Template Techniques below for the design
 and why the 2026-07-25 `881ac25`/`2e93202` redesign (require typing both primary and euphonic
 forms together) was abandoned in favor of it.
-
-See **[CLAUDE-active-status.md](CLAUDE-active-status.md)** for queue and last session.
+2026-07-29: Scoped (not yet implemented) a two-part extension to the EN→UA
+aspect+euphony typing design: (1) evaluate every populated UA_Lexeme aspect slot
+(Lemma/ImperfectiveUnidirectional/Perfective) independently for в-/у- euphony
+tolerance, rather than only at the single-lemma level; (2) for verb-phrase notes
+where only one aspect fits the idiomatic meaning, default to imperfective and rely
+on clearly-worded EN_Gloss rather than a new schema field. See "Per-slot euphony
+tolerance + verb-phrase aspect defaulting (planned 2026-07-29)" under Card
+Template Techniques for the full design. Execution deferred pending go-ahead.
+2026-07-30: **Current task is Ch-08 lexeme verification** — Craig reviewing UA_Lexeme
+notes under `domains/ua/anki/notes/lexemes/yabluko-l2/ch-08/` (ua-lexeme-044x–049x
+range) against Горох and against each other. Craig has passed over a first punch
+list of confusable-set candidates (0447+0465, 0453+зазвичай-cluster, 0463+затор,
+0467 joining the existing значно/набагато pair, 0471+вигляд/доглянати,
+0477+скільки/декілька), one aspect-pairing gap (0482 дотримуватися missing
+Perfective дотриматися), one correction (0484 should be впадати, imperfective,
+with впасти as its perfective partner — currently filed as впасти itself), and one
+open usage question (0474 раз — counting usage vs. один). None of this is written
+into ConfusableSet/CompareA-D fields, Perfective fields, or tooling yet — Claude
+flagged some open questions while scoping (see conversation log) and is waiting on
+Craig's confirmation before anything gets written to the appropriate docs/notes.
+Craig then gave feedback and Claude executed on it same session: (1) built a
+`pending-confusable:<lemma>` tag + `tools/anki/inspect/check_pending_confusables.py`
+watchlist mechanism (see Vocabulary dedup & homograph handling, bucket 5) and tagged
+every currently-not-yet-sourced confusable partner named so far (зазвичай, затор,
+забагато, вигляд, доглянати, скільки, декілька, погода/природа/порода off
+ua-lexeme-0272 пригода, подорож off ua-lexeme-0330 мандрівка); ua-lexeme-0321
+(перепрошувати) tagged with the existing generic `needs-confusable-set` marker
+instead, since Craig named an open-ended -прошувати/-просити prefix family rather
+than one exact spelling. (2) Extended `audit_verb_aspect_forms.py` to recognize
+hand-authored `aspect:imperfective-only`/`aspect:perfective-only` tags — flags only
+fire when a verb has ZERO aspectual counterparts populated (a true singlet) and
+neither tag is present; doublets/triplets were never flagged and still aren't.
+Per Craig, Claude never applies either tag itself — only reads them; Craig alone
+decides and hand-tags after checking Горох. Wired both scripts into a new
+`make ua-check` target (report-only, STRICT=1 to fail). (3) Re-keyed ua-lexeme-0484
+from Lemma=впасти/Perfective=blank to Lemma=впада́ти/Perfective=впа́сти per Craig's
+correction — Горох-verified the впадати stress and confirmed via Горох's own
+Тлумачення that впадати/впасти (not падати/впасти) is the pair actually used in the
+"впасти в очі" idiom (ua-lexeme-0488 already suspected this); updated 0488's and
+ua-verb-0079's cross-references to match. Still open on 0484: UA_Example/EN_Example
+still show the perfective "впало" (apple falling) rather than an example
+demonstrating впадати's own aspect — flagged in Verification Notes, needs Craig's
+call, not silently rewritten. Also answered Craig's раз-counting and
+мандрівка-vs-подорож questions inline (see conversation log for the full reasoning
+and Горох citations).
+2026-07-30 (continued): **Compare-card fixes closeout.** Synced the four 2026-07-28
+`UA_Lexeme`/`ua_lexeme_import.py` fixes described above. While verifying, found
+ua-lexeme-0405/0407 (те́пло adverb "warmly" / тепло́ noun "warmth" — a stress-shift
+homograph pair) had never generated a Compare card at all: it only ever had the
+lightweight bucket-2 cross-link (bare alternate spelling in `ConfusableSet`, no
+Compare fields), and Anki does not create a card whose front template renders
+completely empty — this predates the "should be suspended" defensive fallback, so
+the gap was silent rather than visibly suspended. Drafted and synced the missing
+Shape-1 Compare content (`CompareScenario`/`CompareA`/`Homograph_SenseA`/`CompareB`/
+`Homograph_SenseB`) on both notes, mirroring the established мете́лик
+(ua-lexeme-0171/0181) pattern. Then ran a full corpus-wide sweep (579 notes, 59 with
+`ConfusableSet` populated) confirming тепло was the *only* Compare-content gap in the
+entire lexeme corpus — see
+[CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) for the sweep
+methodology and results. Also clarified for the record: the `compute_compare_options()`
+clobbering bug (found/fixed 2026-07-28) only ever corrupted live Anki data via
+`updateNoteFields` — it never touched the CNSF files themselves — so no separate
+file-level remediation was needed beyond the normal re-sync.
+2026-07-31: **UA→EN front aspect display.** Added `_AspectLabel` (new computed field)
+and wired `TypingTarget_UA` (already computed for the EN→UA typing target) into
+`UA_EN_FRONT`'s lemma line, so the Recognition card front now shows the full
+slash-joined aspect set (e.g. `ходи́ти / йти / піти́`) in one consistent font, with a
+small `(pf.)`/`(impf.)` tag next to true singlets where the aspect wouldn't otherwise
+be visible. Per Craig 2026-07-31 — see "UA→EN front aspect display" under Card
+Template Techniques below for the full design and code. Implemented in
+`tools/anki/setup/setup_ua_note_types.py` and `tools/anki/sync/ua_lexeme_import.py`;
+synced.
+2026-07-31: **Solarized correction.** Craig confirmed live `UA_Lexeme` currently shows
+*neither* competing CSS source (see "Pending / Next planned work" item 3 below, rewritten)
+— Solarized styling for `UA_Lexeme`'s three card templates (UA→EN, EN→UA, Compare) is
+still genuinely future work, not already-partially-done as this doc previously implied.
+2026-07-31: **Base motion-verb triplet lexemes drafted.** Per Craig's request, drafted
+5 new `ua-lexeme` notes (0581–0585) for the base (unprefixed) motion-verb triplets —
+ходити/їздити/літати/плавати/бігати, each spanning multidirectional-imperfective /
+unidirectional-imperfective / perfective in one note (`Lemma`/`ImperfectiveUnidirectional`/
+`Perfective`). These are the *first* lexeme notes in the corpus to populate
+`ImperfectiveUnidirectional` — everything else sourced so far has been a doublet or
+singlet — so they're the real-data example the new front-aspect-display feature above
+needed. Горох-verified stress throughout; `status:draft` pending Craig's review. Also
+added `ua-verb-0086`/`0087` (плисти/поплисти) — while sourcing the плавати triplet,
+Craig caught that Горох's плисти́/поплисти́ are valid free-variant headwords of
+пливти́/попливти́ (same relationship as йти/іти), and that the swimming group was the
+only one of the five missing this variant-pair note (walking already has both
+йти/ua-verb-0003 and іти/ua-verb-0002). While sourcing плисти/поплисти, also found —
+but per Craig, held for a separate pass, not fixed here — that the *existing*
+ua-verb-0009 (пливти) and ua-verb-0010 (попливти) have stored conjugation tables that
+don't match their own Lemma (they look like a mixed-up плинути/попити paradigm
+instead); see "Remaining Work" below and each note's `Verification Notes` for detail.
 
 ## Workflow Notes
 
@@ -156,17 +247,91 @@ complete:
      / `make ua-verb`, or the new `make ua` aggregate target (canonicalizes + syncs every
      UA note type in one pass — see Reference Files).
   3. Get the Solarized light/dark palette correct and consistent across both Anki domains
-     (B737 and Ukrainian). Concrete bug found 2026-07-23: `UA_Visual`'s CSS uses the
-     `.night_mode` (snake_case) selector instead of `.nightMode` (camelCase) — confirmed via
-     AnkiMobile's own docs that both desktop Anki and AnkiMobile key off `.nightMode`, so
-     `UA_Visual`'s dark-mode rules are currently dead on every platform, not just iOS. Most
-     other note types already carry Solarized CSS via `tools/anki/setup/update_legacy_css.py`
-     (7 legacy models: B737_SV_Cloze, B737_Systems, UA_Conjugation, UA_Grammar, UA_Lexeme,
-     UA_Lexeme_Legacy, UA_Verb) plus the individual `setup_*_model.py` scripts. Still need to
-     audit `B737_Checklist`, `B737_Mnemonic`, `B737_Structured`, `B737_SV_MCQ`, `B737_SV_TF`
-     for Solarized coverage and confirm none share the night-mode selector bug. See
-     `.claude/memory/b737-anki-solarized-theme.md` for the original project tracking note.
+     (B737 and Ukrainian). **Corrected 2026-07-31** — this item previously claimed `UA_Lexeme`
+     already carries Solarized CSS via `update_legacy_css.py`; Craig confirmed live `UA_Lexeme`
+     currently shows *neither* competing source (see below), so that was wrong. Concrete bug
+     found 2026-07-23: `UA_Visual`'s CSS uses the `.night_mode` (snake_case) selector instead
+     of `.nightMode` (camelCase) — confirmed via AnkiMobile's own docs that both desktop Anki
+     and AnkiMobile key off `.nightMode`, so `UA_Visual`'s dark-mode rules are currently dead
+     on every platform, not just iOS. **Still open, unfixed.**
+     Two disagreeing CSS sources exist for `UA_Lexeme` (found 2026-07-31): (a)
+     `tools/anki/setup/setup_ua_note_types.py`'s own `CSS` constant — plain, non-Solarized,
+     the one this doc's setup scripts actually apply — and (b) the separate,
+     Makefile-untracked `tools/anki/setup/update_legacy_css.py` — genuinely Solarized
+     (`.lemma`/`.perfective`/`.pos` in `#2aa198`/`#93a1a1`, full `.nightMode` dark rules), but
+     apparently a manually-run one-off script, not wired into any `make` target. Whichever ran
+     most recently against live Anki wins; Craig confirmed today that plain (source a) is
+     currently live for all three `UA_Lexeme` templates (UA→EN, EN→UA, Compare) — so Solarized
+     for `UA_Lexeme` is genuine future work, not a live-but-partial state, and there's a
+     standing decision needed (merge the two scripts, retire one, or wire `update_legacy_css.py`
+     into the Makefile) before that work starts, so the two sources don't fight again.
+     Separately confirmed 2026-07-30/31: all five of `B737_Checklist`, `B737_Mnemonic`,
+     `B737_Structured`, `B737_SV_MCQ`, `B737_SV_TF` already use the correct `.nightMode`
+     selector with real Solarized colors (`#268bd2`, `#fdf6e3`, etc.) — the "still need to
+     audit" note below was stale; no B737 note type needs the camelCase fix except `UA_Visual`.
+     See `.claude/memory/b737-anki-solarized-theme.md` for the original project tracking note.
      Craig wants this kept CSS-only — do not touch B737 note-type structure/fields.
+
+### Remaining Work — Note & Card-Template Structure (as of 2026-07-31, separate from
+lexeme-content verification)
+
+This is a structural punch list — note-type schema, card templates, CSS, and tooling —
+distinct from chapter-by-chapter vocabulary sourcing/verification tracked elsewhere in
+this doc. Roughly in priority order:
+
+1. **Two disagreeing `UA_Lexeme` CSS sources** (found 2026-07-31, see item 3 above) —
+   needs a decision (merge `update_legacy_css.py`'s Solarized rules into
+   `setup_ua_note_types.py`'s `CSS` constant, retire one script, or wire
+   `update_legacy_css.py` into the Makefile so it's not a manually-run one-off) before
+   any Solarized work on `UA_Lexeme` starts. Still open.
+2. **`UA_Visual`'s `.night_mode`/`.nightMode` CSS bug** (found 2026-07-23) — one-line
+   selector fix, still unapplied. Still open.
+3. **`UA_Lexeme` Solarized palette** — genuinely future work (corrected 2026-07-31; see
+   item 3 above for why this doc previously overstated progress here). Blocked on #1.
+4. **`Verb_Conj_Table` field removal** — field blanked corpus-wide 2026-07-22 but not
+   yet removed from the schema/model; see "Verb_Conj_Table Removal Plan (Future)"
+   below for the existing 6-step plan. Not yet executed.
+5. **UA→EN front aspect display** — **Done, 2026-07-31**, synced. See "UA→EN front
+   aspect display" under Card Template Techniques above.
+6. **Compare-card suspend mechanism** (`set_compare_card_suspended()` in
+   `ua_lexeme_import.py`) — genuinely untested in live Anki, since no current note has
+   actually needed it to suspend a real Compare card end-to-end (0405/0407 ended up
+   with real Compare content instead of hitting the suspend path when fixed
+   2026-07-30). A footgun noted earlier this project: targeted `findCards` +
+   `card:"Name"` + `suspend`/`unsuspend` verified correct in a dry run but didn't
+   reliably stick in live Anki during an earlier EN→UA suspend attempt (Phase 2a) —
+   unclear if that footgun applies here too. Needs a deliberately-constructed test
+   case. Still open.
+7. **Per-slot euphony tolerance + verb-phrase aspect defaulting** — scoped with Craig
+   2026-07-29, not built. See the full design under Card Template Techniques above.
+   Still open.
+8. **Flagged Card Fix Workflow tooling** — see "Flagged Card Fix Workflow (Future)"
+   below. Not built.
+9. **`gen_ch09_subsection.py` generator-script wiring** — built 2026-07-25, not yet
+   exercised against a real ch.9.3+ batch. Unexercised, not broken.
+10. **`UA_Grammar` 0001–0007 cloze review pass** — these notes predate the atomicity/
+    no-self-leak/no-cross-cloze-substring-leak principles established 2026-07-22 (see
+    "Cloze note design principles" below) and haven't been audited against them.
+    Needs a decision on whether to revisit.
+11. **ua-verb-0009/0010 conjugation-table data mismatch** (found 2026-07-31, held for
+    a separate pass per Craig) — both notes' stored `Pres_*`/`Imperative_*`/`Past_*`
+    fields don't match their own `Lemma` (пливти/попливти); the data instead matches
+    a different verb family (плинути/попити-adjacent forms). Both are tagged
+    `stress:unverified`, so this looks like a pre-existing authoring mix-up, not
+    something introduced by today's ua-verb-0086/0087 (плисти/поплисти) additions —
+    see those notes' `Verification Notes` for the Горох-verified correct paradigms to
+    fix 0009/0010 against, once Craig gives the go-ahead. Still open.
+12. **New content pending Craig's `status:draft` → `status:verified` review**:
+    ua-lexeme-0581–0585 (base motion-verb triplets: ходити/їздити/літати/плавати/
+    бігати) and ua-verb-0086/0087 (плисти/поплисти), both drafted 2026-07-31.
+
+**Done, for reference (structural work closed out this project so far):** the
+CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
+the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph
+Compare-card generalization (bucket 2 above, done 2026-07-30), the тепло Compare-card
+content gap fix + corpus-wide sweep (2026-07-30), the EN→UA aspect+euphony typing
+restoration (2026-07-28, git archaeology), and the UA→EN front aspect display
+(2026-07-31, item 5 above).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -196,7 +361,9 @@ complete:
 
 *Metadata & Sources:* `Tags_Ch`, `Source_URL`, `Source_Note`
 
-**Aspect convention:** Lemma is always imperfective (base form). Perfective field contains PFV counterpart. Aspect is implicit in field structure (no explicit Aspect field needed).
+**Aspect convention:** Lemma is always imperfective (base form). Perfective field contains PFV counterpart. Aspect is implicit in field structure (no explicit Aspect field needed). Exception: a genuine perfectiva tantum (no imperfective counterpart exists) has to file Lemma as the perfective form instead — tag it `aspect:perfective-only` when this happens so the exception is documented, not silently inconsistent with the rule.
+
+**Aspect-only tags (`aspect:imperfective-only` / `aspect:perfective-only`, added 2026-07-30):** hand-authored tags marking a verb as confirmed to have no aspectual counterpart (imperfectiva/perfectiva tantum, e.g. мати for imperfective-only). Craig wants to be directly involved in every decision that labels a verb this way, so these tags are **only ever applied by Craig, by hand, after checking Горох** — no script in this repo applies them automatically, and none should in the future without his explicit sign-off. `tools/anki/inspect/audit_verb_aspect_forms.py` (extended 2026-07-30, wired into `make ua-check`) scans every `pos:verb` note and flags it for review only when it has ZERO aspectual counterparts populated (a true singlet — both `ImperfectiveUnidirectional` and `Perfective` blank) and neither aspect-only tag is present; a verb missing just one of two possible counterparts (a doublet) is never flagged, since one populated counterpart already means the pairing is at least partly recorded. See "Vocabulary dedup & homograph handling" bucket 5 below for the parallel `pending-confusable:<lemma>` mechanism, same Craig-decides-not-scripts philosophy.
 
 **Verb conjugations:** `Verb_Conj_Table` field is being phased out of UA_Lexeme — blanked corpus-wide 2026-07-22 (all ~180 lexeme notes), but the field itself has not yet been removed from the schema/model. Full removal is planned but not yet executed — see "Verb_Conj_Table Removal Plan (Future)" below. Conjugation morphology belongs in the UA_Verb note type as structured fields, one note per lemma's own aspect, linked to the lexeme via matching Lemma text.
 
@@ -470,6 +637,104 @@ other ten prefixes — its primary listed sense is "ascend," not explicitly "get
 Treat it as slightly lower-confidence than the rest until cross-checked against the
 textbook.
 
+**Per-slot euphony tolerance + verb-phrase aspect defaulting (planned 2026-07-29,
+not yet implemented -- discussed and scoped with Craig, execution deferred).**
+
+Extends the aspect+euphony typing design above in two ways, both agreed but not
+yet built:
+
+1. **Per-slot в-/у- tolerance for UA_Lexeme.** Today `EuphonyNote`/`*_Euphony`
+   companion fields (e.g. `Perfective_Euphony` on ua-lexeme-0115: увійти́ primary
+   / ввійти́ euphonic) are only reliably evaluated at the single-lemma level.
+   Plan: evaluate **every populated aspect slot** (`Lemma`,
+   `ImperfectiveUnidirectional`, `Perfective` -- 1, 2, or 3 slots depending on the
+   verb) independently, accepting **either** the в- or у- surface form in
+   whichever slot has a documented alternate. Mechanically: split the
+   reconstructed `#typeans` answer on the same " / " delimiter used to build
+   `TypingTarget_UA`, check each slot's sub-answer against its own {primary,
+   `*_Euphony` alternate} pair, and aggregate tiers across slots rather than
+   diffing the whole compound string as one unit -- PERFECT only if every
+   populated slot matches with correct stress (from either form); CORRECT if
+   every slot matches but stress is missing somewhere; INCORRECT if any slot
+   fails to match anything acceptable. Reuses the
+   `Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony`/`Perfective_Euphony`
+   field names from the shelved 2026-07-25 redesign (`881ac25`/`2e93202`) but
+   explicitly does **not** revive that redesign's requirement to type both forms
+   together -- this is tolerance (accept either), not required dual production,
+   matching the "it worked great" `a5b4a15` philosophy, just generalized from one
+   lemma to the full aspect-slot set. `AspectCue` stays as-is, kept as a
+   rarely-used escape hatch rather than folded away.
+2. **Verb-phrase aspect defaulting.** For verb-phrase notes where only one
+   aspect is idiomatically correct (e.g. the зробити/заробити очко́ family,
+   ua-lexeme-0216/0230), rather than adding a new "aspect required" schema field
+   (rejected as unnecessary corpus-wide authoring debt), default
+   `TypingTarget_UA` to imperfective when a phrase note doesn't clearly call for
+   perfective, and rely on well-worded `EN_Gloss` text to signal when perfective
+   is specifically intended, rather than a mechanical flag. No new field --
+   authoring discipline, not a schema change.
+
+**Not yet done:** no code, no field backfill, no template changes. Planning note
+only -- implementation (feedback-script rewrite in `EN_UA_BACK`,
+`Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony` backfill on notes with real
+в-/у- alternation, gloss review pass on affected phrase notes) is deferred until
+Craig gives the go-ahead to execute.
+
+**UA→EN front aspect display (`_AspectLabel` + `TypingTarget_UA` reuse, added
+2026-07-31, synced).** Per Craig: when a verb note's aspect set has more than one
+populated slot, the Recognition-card (`UA_EN_FRONT`) lemma line should show every
+populated slot — same as the EN→UA typing target — separated by slashes, all in one
+font, no per-slot styling differences. When only one slot is populated (a true
+singlet), show a small `(pf.)`/`(impf.)` tag next to the word instead, since there's
+no slash-joined set to make the aspect visually obvious.
+
+Reuses `TypingTarget_UA` (already computed by `compute_typing_target()` for the EN→UA
+card, see above) rather than adding a second independently-authored join — one
+source of truth for "what does this note's aspect set look like joined." New
+`_AspectLabel` computed field (added to `FIELDS` in `setup_ua_note_types.py`, set in
+`import_note()` in `ua_lexeme_import.py`) fires only for the true-singlet case (both
+`ImperfectiveUnidirectional` and `Perfective` blank) — doublets/triplets never get a
+label, since the slash-joined `TypingTarget_UA` already shows the aspectual range and
+a tag would be redundant. Aspect for the singlet case follows the same schema
+convention `compute_typing_target()`'s docstring and this doc's "Aspect-only tags"
+section already define: `Lemma` is imperfective by default unless the note carries
+`aspect:perfective-only` (hand-applied by Craig only, never by scripts) — so an
+untagged singlet is correctly labeled `(impf.)`, not left uninferred.
+
+Example front-line output for various configurations:
+```
+Triplet (multi/uni/perf populated):
+  ходи́ти / йти / піти́
+
+Doublet (impf/perf populated):
+  перекида́ти / переки́нути
+
+Singlet, untagged (imperfective by schema default):
+  ма́ти (impf.)
+
+Singlet, tagged aspect:perfective-only:
+  зустрі́ти (pf.)
+```
+
+`UA_EN_FRONT`'s lemma line:
+```html
+<div class="lemma">{{TypingTarget_UA}}{{#_AspectLabel}} <span class="aspect-label">{{_AspectLabel}}</span>{{/_AspectLabel}}</div>
+```
+
+New CSS rule (`.aspect-label`, plain-CSS for now — see the Solarized item under
+"Pending / Next planned work" above for why this isn't Solarized-colored yet):
+```css
+.aspect-label {
+  font-size: 16px;
+  font-weight: normal;
+  color: #888;
+}
+```
+
+Note: there's a pre-existing, unused `.perfective` CSS class in `UA_Lexeme`'s CSS
+(orphaned — no current template references it) — left untouched, but flagged as a
+landmine if anyone ever reactivates it, since it predates and is unrelated to
+`.aspect-label`.
+
 **Cloze note design principles (UA_Grammar, established 2026-07-22)**
 
 - **Atomicity:** each distinct cloze number (`{{c1::}}`, `{{c2::}}`, ...) should test exactly
@@ -550,10 +815,13 @@ buckets. Triage deliberately — do not assume from spelling alone.
        homograph-review pass or card set).
      - Write `UA_Example` sentences where surrounding context makes the intended sense
        unambiguous.
-     - Proposed but not yet built: extend the existing `Mnemonic_EN` / `CompareA` /
-       `CompareB` fields + Comparison card template (built for про-/пере- prefix pairs) to
-       lexical homographs generally, for explicit discrimination drilling. Needs Craig's
-       go-ahead before repurposing that template's scope.
+     - **Done, as of 2026-07-30.** Extended the `Mnemonic_EN`/`CompareA`/`CompareB` fields +
+       Comparison card template (originally built for про-/пере- prefix pairs) to lexical
+       homographs generally — Shape-1 mode (`_IsHomograph`-driven: UA sentences on front,
+       `Homograph_SenseA`/`SenseB` on back) is live for every `homograph:true` pair in the
+       corpus. Confirmed via the 2026-07-30 corpus-wide Compare-card sweep (579 notes) — see
+       [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) — that тепло
+       (ua-lexeme-0405/0407) was the only pair still missing this content; now fixed.
 
 3. **True duplicate — same spelling AND same meaning**, encountered again in a later
    chapter. Do NOT create a new note. Instead:
@@ -594,6 +862,23 @@ buckets. Triage deliberately — do not assume from spelling alone.
    all four; `Verification Notes` flags the new Compare content "Needs your review" per the
    standing convention (see добре/непогано/нормально/чудово below for the same pattern).
 
+5. **Pending confusable-set watchlist** (added 2026-07-30, Craig, during Ch-08 verification).
+   Craig frequently knows a note's future confusable-set partner before that partner word has
+   been sourced (e.g. "0463 рух will be in a confusable set with затор" while затор doesn't
+   have its own note yet). Rather than relying on memory across sessions, tag the *existing*
+   note with `pending-confusable:<bare-spelling>` (stress marks optional — matching is always
+   stress-stripped, same rule as bucket 1-4 tooling). `tools/anki/inspect/check_pending_confusables.py`
+   (wired into `make ua-check`) scans the whole corpus for these tags and reports when the
+   target spelling now exists as its own note, so it can be linked into a proper ConfusableSet
+   the same session it's sourced instead of being rediscovered later. The script only detects
+   the match — a human (or Claude) still writes the actual `ConfusableSet`/`Mnemonic_EN`/
+   `CompareScenario`/`CompareA-D` content once it fires, same division of labor as the
+   dedup-check tooling in buckets 1-3. For an open-ended same-root/different-prefix family with
+   no single known target spelling (e.g. ua-lexeme-0321 перепрошувати eventually clustering
+   with other -прошувати/-просити forms), use the pre-existing generic `needs-confusable-set`
+   tag instead (see ua-lexeme-0436/0440) — `check_pending_confusables.py` reports a plain count
+   of these as a reminder but doesn't try to resolve them.
+
 **Tooling:**
 - `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
   lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
@@ -621,6 +906,15 @@ buckets. Triage deliberately — do not assume from spelling alone.
   corpus to `build/ua_lexeme_index.tsv` (gitignored) in one pass, for the bucket-4
   full-corpus audit and for spot-checking bucket-1/2/3 spelling collisions at scale without
   hitting per-file staging rate limits.
+- `tools/anki/inspect/check_pending_confusables.py` (new 2026-07-30) — the bucket-5
+  watchlist checker: scans for `pending-confusable:<lemma>` tags and reports when the target
+  spelling now exists as its own note, reusing `tools/anki/lib/lexeme_dedup.py`'s
+  `load_corpus()`/`strip_stress()` rather than a fourth reimplementation of the same
+  spelling-match logic. Wired into `make ua-check`.
+- `tools/anki/inspect/audit_verb_aspect_forms.py` (new 2026-07-27, extended 2026-07-30) —
+  flags `pos:verb` notes with zero populated aspectual counterparts (`ImperfectiveUnidirectional`
+  and `Perfective` both blank) and no `aspect:imperfective-only`/`aspect:perfective-only` tag.
+  Never applies either tag itself — see "Aspect-only tags" above. Wired into `make ua-check`.
 
 ### Deck Presets and Limit Configuration (2026-07-20)
 
@@ -676,6 +970,8 @@ python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
 | `tools/anki/lib/lexeme_dedup.py` | ✓ new (2026-07-24) | `create_or_link_lexeme()` — dedup/homograph create-or-link API (new/homograph/duplicate) |
 | `tools/anki/inspect/build_lexeme_index.py` | ✓ new (2026-07-24) | Full-corpus lexeme → `build/ua_lexeme_index.tsv` dump for audits |
 | `tools/anki/extract/gen_ch09_subsection.py` | ✓ new (2026-07-25) | Ch-09 batch driver wiring `create_or_link_lexeme()` into note generation (CLAUDE.md item 0); not yet used on a real batch |
+| `tools/anki/inspect/audit_verb_aspect_forms.py` | ✓ new (2026-07-27), extended (2026-07-30) | Flag verb notes with zero aspectual counterparts and no `aspect:*-only` tag; wired into `make ua-check` |
+| `tools/anki/inspect/check_pending_confusables.py` | ✓ new (2026-07-30) | Bucket-5 watchlist: report when a `pending-confusable:<lemma>` tag's target now exists in the corpus; wired into `make ua-check` |
 | `tools/anki/export/ua_lexeme_md_to_tsv.py` | not written | Canonical notes → TSV (if needed) |
 | `tools/anki/extract/export_ua_legacy.py` | not written | Pull existing Anki cards → CNSF skeletons |
 

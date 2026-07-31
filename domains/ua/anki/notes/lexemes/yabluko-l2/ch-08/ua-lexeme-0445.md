@@ -11,15 +11,15 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adjective
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0445
   Lemma: двомі́сний
   PartOfSpeech: adjective
   Gender: ''
   Perfective: ''
-  EN_Gloss: double, two-person (room)
+  EN_Gloss: two-place, two-person (room)
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

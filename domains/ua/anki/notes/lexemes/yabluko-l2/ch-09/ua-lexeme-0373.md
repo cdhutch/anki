@@ -18,7 +18,7 @@ fields:
   Lemma: використо́вувати
   PartOfSpeech: verb
   Gender: ''
-  Perfective: використа́ти
+  Perfective: ви́користати
   EN_Gloss: to make use of
   Govt_Case: ''
   CounterpartForm: ''

@@ -11,8 +11,9 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:adverb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
+- pending-confusable:забагато
 fields:
   NoteID: ua-lexeme-0467
   Lemma: зна́чно
@@ -54,6 +55,9 @@ fields:
     a hand-authored card). Built out a proper Shape 2 confusables card: CompareScenario tailored
     to elicit значно''s formal/written register, CompareA/CompareB the two stressed lemmas
     (same chip set/order as ua-lexeme-0468). Still status:draft -- needs your review, including
-    stress verification.'
+    stress verification. 2026-07-30 Craig: this cluster should eventually also include забагато
+    -- not in the corpus yet, so tagged pending-confusable:забагато (bucket 5 watchlist, CLAUDE.md
+    Vocabulary dedup & homograph handling); once забагато is sourced, `make ua-check` will
+    flag the match so it can be added as CompareC alongside значно/набагато.'
 ---
 

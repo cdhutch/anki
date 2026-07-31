@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - gender:m
 - animate:true
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0498
   Lemma: верблю́д

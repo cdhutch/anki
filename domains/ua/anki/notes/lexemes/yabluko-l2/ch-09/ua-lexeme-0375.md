@@ -26,7 +26,10 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  Mnemonic_EN: ''
+  Mnemonic_EN: участь starts with у- (у́часть), not в-/вч- -- "вчасть" is not a word in Ukrainian.
+    (It's easy to blend with вчасно "on time," or with the Russian часть "part" -- Ukrainian
+    uses частина for "part," and участь for "participation" is its own root, not built on
+    "часть" at all.)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: участь
@@ -39,6 +42,9 @@ fields:
   Verification Notes: '2026-07-27: Горох-verified via Chrome -- у́часть confirmed exactly
     as drafted (3rd declension, feminine, stress fixed on the first syllable throughout the
     paradigm). Component noun for the fixed collocation брати/взяти участь (see ua-lexeme-0376).
-    Content still needs your review pass before flipping to status:verified.'
+    Content still needs your review pass before flipping to status:verified. 2026-07-30 Craig:
+    yes, add the same "вчасть isn''t a word" warning here as on ua-lexeme-0376 -- added to
+    Mnemonic_EN, which renders on the EN→UA production back card and the Compare card (not
+    the plain UA→EN recognition back, per setup_ua_note_types.py).'
 ---
 

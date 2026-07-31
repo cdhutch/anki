@@ -11,14 +11,14 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0482
   Lemma: дотри́муватися
   PartOfSpeech: verb
   Gender: ''
-  Perfective: ''
+  Perfective: дотри́матися
   EN_Gloss: to adhere to, abide by, observe (rules/laws)
   Govt_Case: genitive
   CounterpartForm: ''
@@ -33,10 +33,13 @@ fields:
   EN_Example: Tourists must abide by local laws.
   Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
-  Source_URL: https://goroh.pp.ua/Словозміна/дотримуватися
-  Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
+  Source_URL: https://goroh.pp.ua/Словозміна/дотримуватися; https://goroh.pp.ua/Словозміна/дотриматися
+  Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass. Perfective дотри́матися Горох-verified
+    2026-07-30.
   Verification Notes: Imperfective, reflexive, 1st conjugation. Full conjugation lives on
-    ua-verb-0077. Perfective дотриматися not verified this pass. Component of phrase ua-lexeme-0489
+    ua-verb-0077. Perfective дотри́матися Горох-verified 2026-07-30 -- доконаний вид, рефлексивне,
+    stress on -и- throughout the paradigm (дотри́матись/дотри́матися, дотри́маюсь, дотри́мався,
+    etc.), matching the imperfective's stress position. Component of phrase ua-lexeme-0489
     (дотримуватися закону).
 ---
 
