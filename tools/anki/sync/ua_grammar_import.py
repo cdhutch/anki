@@ -5,6 +5,13 @@ Upsert logic: adds new notes, updates fields on existing notes (matched by NoteI
 
 Deck: UA::Recognition::Grammar
 
+Suspension policy:
+    - status:draft → suspend cards after import
+    - status:verified → unsuspend cards
+    - note has a red/orange-flagged card → keep suspended (added 2026-07-31, per
+      Craig -- see get_flagged_note_ids in tsv_to_anki.py). Only checked for
+      existing notes; a brand-new note can't already have a flagged card.
+
 Usage (with Anki open + AnkiConnect running):
     # Dry run — show what would be added/updated, touch nothing
     python tools/anki/sync/ua_grammar_import.py --dry-run domains/ua/anki/notes/grammar/
@@ -24,11 +31,15 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
+from tools.anki.sync.tsv_to_anki import anki_request, get_flagged_note_ids  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Grammar"
 DECK_GRAMMAR = "UA::Recognition::Grammar"
+
+# Deck query scope for the red/orange-flag suspend check -- same query
+# string used across every UA sync script; see ua_lexeme_import.py.
+FLAG_DECK_QUERY = "deck:UA::*"
 
 
 # ---------------------------------------------------------------------------
@@ -114,8 +125,13 @@ def parse_note_file(path: Path) -> dict | None:
 # ---------------------------------------------------------------------------
 
 
-def import_note(data: dict, dry_run: bool) -> str:
-    """Import a single parsed note. Returns 'added', 'updated', or 'skipped'."""
+def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:
+    """Import a single parsed note. Returns 'added', 'updated', or 'skipped'.
+
+    flagged_note_ids: Anki note IDs with a red/orange-flagged card, from
+    get_flagged_note_ids() -- see module docstring's suspension policy.
+    """
+    flagged_note_ids = flagged_note_ids or set()
     note_id = data.get("note_id", "")
     if not note_id:
         return "skipped"
@@ -143,9 +159,13 @@ def import_note(data: dict, dry_run: bool) -> str:
                 set_suspended(anki_id, True, dry_run)
         return "added"
     else:
+        # Red/orange flag override -- see module docstring. Only meaningful
+        # here (existing-note path); a note can't have a flagged card in
+        # Anki before this sync creates it.
+        note_suspend = suspend or (existing_id in flagged_note_ids)
         update_note(existing_id, fields, tags, dry_run)
         if not dry_run:
-            set_suspended(existing_id, suspend, dry_run)
+            set_suspended(existing_id, note_suspend, dry_run)
         return "updated"
 
 
@@ -183,6 +203,11 @@ def main():
         print("No ua-grammar-*.md files found.")
         sys.exit(1)
 
+    # One bulk query for the whole sync run -- see get_flagged_note_ids.
+    flagged_note_ids = get_flagged_note_ids(FLAG_DECK_QUERY, ANKI_URL)
+    if flagged_note_ids:
+        print(f"Found {len(flagged_note_ids)} note(s) with a red/orange-flagged card -- keeping suspended.\n")
+
     added = updated = skipped = errors = 0
 
     for f in files:
@@ -191,7 +216,7 @@ def main():
             skipped += 1
             continue
         try:
-            result = import_note(data, args.dry_run)
+            result = import_note(data, args.dry_run, flagged_note_ids)
             note_id = data.get("note_id", f.name)
             topic = (data.get("fields") or {}).get("Topic", "")
             label = f"{note_id}  {topic}"

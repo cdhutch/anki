@@ -62,6 +62,51 @@ def anki_request(action: str, params: Optional[dict] = None, url: str = ANKI_CON
     return data.get("result")
 
 
+# Anki's built-in flag numbering: 1=red, 2=orange, 3=green, 4=blue, 5=pink,
+# 6=turquoise, 7=purple. Only red/orange currently mean anything to the UA
+# sync scripts -- see get_flagged_note_ids below.
+FLAG_RED = 1
+FLAG_ORANGE = 2
+SUSPEND_FLAG_COLORS = (FLAG_RED, FLAG_ORANGE)
+
+
+def get_flagged_note_ids(
+    deck_query: str,
+    url: str = ANKI_CONNECT_URL_DEFAULT,
+    flags: Tuple[int, ...] = SUSPEND_FLAG_COLORS,
+) -> set:
+    """Return the Anki note IDs with at least one card flagged red or orange
+    within *deck_query* (e.g. "deck:UA::*").
+
+    Added 2026-07-31 per Craig: a mistyped keystroke during review (Command-1
+    or Alt-1 instead of the intended Alt-`) can suspend a card by accident,
+    with no corresponding CNSF tag change -- so every UA import script's
+    tag-based suspension policy would otherwise force it straight back to
+    unsuspended on the very next sync, silently undoing the mistake but also
+    silently undoing a *deliberate* suspend if one was ever wanted. Flagging
+    a card red or orange is the escape hatch: every UA sync script now treats
+    "this note has a red/orange-flagged card" as an additional, independent
+    reason to suspend, on top of its own tag policy -- same standing as
+    status:draft, checked once per sync rather than per note.
+
+    Deliberately one bulk query for the whole deck tree rather than a
+    find-cards-per-note check -- the UA corpus is 700+ notes across five note
+    types; checking flags one note at a time would add 700+ AnkiConnect
+    round-trips to every sync. Callers query once in main() and pass the
+    resulting set down to each note's suspend decision.
+
+    Any flag color other than red/orange (green/blue/pink/turquoise/purple)
+    is not assigned a meaning here and has no effect on suspension --
+    tighten *flags* at the call site if that should ever change.
+    """
+    flag_clause = " OR ".join(f"flag:{f}" for f in flags)
+    card_ids = anki_request("findCards", {"query": f"{deck_query} ({flag_clause})"}, url=url) or []
+    if not card_ids:
+        return set()
+    cards_info = anki_request("cardsInfo", {"cards": card_ids}, url=url) or []
+    return {c["note"] for c in cards_info if "note" in c}
+
+
 @dataclass
 class TsvRow:
     note_id: str

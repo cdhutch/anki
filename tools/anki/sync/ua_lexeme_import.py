@@ -15,6 +15,10 @@ prior manual suspend/unsuspend actions taken outside this script):
     - status:verified → unsuspend every card on the note
     - ConfusableSet empty/blank → suspend the Compare card (card #3)
     - ConfusableSet populated   → unsuspend the Compare card (card #3)
+    - note has a red/orange-flagged card (any card) → suspend every card on
+      the note, including the Compare card (added 2026-07-31, per Craig --
+      see get_flagged_note_ids in tsv_to_anki.py). Only checked for existing
+      notes; a brand-new note can't already have a flagged card in Anki.
 
 The Compare card suspension is independent of status flags -- a status:verified
 note with no ConfusableSet will have all other cards active but the Compare card
@@ -46,10 +50,15 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
+from tools.anki.sync.tsv_to_anki import anki_request, get_flagged_note_ids  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Lexeme"
+
+# Deck query scope for the red/orange-flag suspend check -- the whole UA
+# deck tree, not just this note type's own two decks, so the same query
+# string is reusable verbatim across every UA sync script.
+FLAG_DECK_QUERY = "deck:UA::*"
 
 # Full CNSF root, independent of whatever `targets` a given invocation passes
 # (e.g. a single file or one subdirectory) -- orphan detection (--prune-orphans,
@@ -260,8 +269,13 @@ def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[
     return confusable, lemma
 
 
-def import_note(data: dict, dry_run: bool) -> str:
-    """Import a single parsed note. Returns 'added', 'updated', or 'skipped'."""
+def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:
+    """Import a single parsed note. Returns 'added', 'updated', or 'skipped'.
+
+    flagged_note_ids: Anki note IDs with a red/orange-flagged card, from
+    get_flagged_note_ids() -- see module docstring's suspension policy.
+    """
+    flagged_note_ids = flagged_note_ids or set()
     note_id = data.get("note_id", "")
     if not note_id:
         return "skipped"
@@ -297,32 +311,6 @@ def import_note(data: dict, dry_run: bool) -> str:
     else:
         fields["TypingTarget_UA"] = fields.get("Lemma", "")
         # TypingAnswer left as authored in the CNSF file for singlets.
-
-    # UA->EN front aspect label: for a verb note that's a true singlet (no
-    # ImperfectiveUnidirectional, no Perfective -- so TypingTarget_UA above is
-    # just Lemma alone), show a small "(pf.)"/"(impf.)" tag next to the word
-    # on the Recognition card front. Doublets/triplets never get a label --
-    # the slash-joined TypingTarget_UA already shows the aspectual range, so
-    # a tag would be redundant there. Per Craig 2026-07-31.
-    #
-    # Aspect of a bare singlet is derived the same way compute_typing_target's
-    # docstring and the "Aspect convention" section of CLAUDE.md already
-    # define it, not re-decided here: Lemma is imperfective by schema
-    # convention UNLESS the note is tagged aspect:perfective-only (the
-    # perfectiva tantum exception, in which case Lemma holds the perfective
-    # form instead). This does not require the tag to exist to label a verb
-    # "(impf.)" -- only "(pf.)" requires the explicit tag, since imperfective
-    # is the schema's default and untagged singlets (most of the corpus,
-    # since aspect:*-only tags are hand-applied by Craig only after checking
-    # Горох) are still correctly "(impf.)" by that same convention.
-    is_verb = fields.get("PartOfSpeech", "").strip().lower() == "verb"
-    is_singlet = not fields.get("ImperfectiveUnidirectional", "").strip() and not fields.get(
-        "Perfective", ""
-    ).strip()
-    if is_verb and is_singlet:
-        fields["_AspectLabel"] = "(pf.)" if "aspect:perfective-only" in tags else "(impf.)"
-    else:
-        fields["_AspectLabel"] = ""
 
     # Compare card prompt: vary which word (Lemma vs ConfusableSet) is named first
     # (confusables only). For homographs, CompareA/B are authored Ukrainian sentences
@@ -380,11 +368,18 @@ def import_note(data: dict, dry_run: bool) -> str:
             set_compare_card_suspended(anki_id, suspend_compare_card, dry_run)
         return "added"
     else:
+        # Red/orange flag override -- see module docstring and
+        # get_flagged_note_ids in tsv_to_anki.py. Only meaningful here (the
+        # existing-note path): a note can't have a flagged card in Anki
+        # before this sync creates it.
+        flagged = existing_id in flagged_note_ids
+        note_suspend = suspend or flagged
+        compare_suspend = suspend_compare_card or flagged
         update_note(existing_id, fields, tags, dry_run)
         if not dry_run:
             route_cards_to_decks(existing_id, dry_run)
-            set_suspended(existing_id, suspend, dry_run)
-            set_compare_card_suspended(existing_id, suspend_compare_card, dry_run)
+            set_suspended(existing_id, note_suspend, dry_run)
+            set_compare_card_suspended(existing_id, compare_suspend, dry_run)
         return "updated"
 
 
@@ -423,6 +418,11 @@ def main():
         print("No ua-lexeme-*.md files found.")
         sys.exit(1)
 
+    # One bulk query for the whole sync run -- see get_flagged_note_ids.
+    flagged_note_ids = get_flagged_note_ids(FLAG_DECK_QUERY, ANKI_URL)
+    if flagged_note_ids:
+        print(f"Found {len(flagged_note_ids)} note(s) with a red/orange-flagged card -- keeping suspended.\n")
+
     added = updated = skipped = errors = 0
 
     for f in files:
@@ -431,7 +431,7 @@ def main():
             skipped += 1
             continue
         try:
-            result = import_note(data, args.dry_run)
+            result = import_note(data, args.dry_run, flagged_note_ids)
             note_id = data.get("note_id", f.name)
             lemma = (data.get("fields") or {}).get("Lemma", "")
             label = f"{note_id}  {lemma}"
