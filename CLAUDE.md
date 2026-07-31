@@ -378,6 +378,38 @@ schema/model, corpus-wide.
 had already been removed from `UA_Lexeme` — that was aspirational/incorrect. The field is still
 live in the Anki model and present (currently blank) in all ~180 lexeme `.md` files.
 
+**Progress (2026-07-31):** Steps 3-4 executed on branch `chore/remove-verb-conj-table`. The
+"~180" estimate above was wrong — the field was present in all 584 lexeme `.md` files
+(`domains/ua/anki/notes/lexemes/*/*/*.md`); confirmed via corpus-wide grep before removal,
+value uniformly blank (`Verb_Conj_Table: ''`) everywhere, no exceptions. All 584 stripped
+and re-canonicalized via `cnsf_canonicalize.py --write` (pure local tool, no AnkiConnect).
+Step 4's tooling list undercounted by 3 — besides the 4 files named below,
+`tools/anki/extract/gen_ch09_subsection.py` (active, unexercised generator script) and two
+more test fixtures (`tests/ua/test_lexeme_dedup.py`, `tests/ua/test_gen_ch09_subsection.py`)
+also referenced the field and were updated too. Left alone, per the plan: the four historical
+one-off scripts (`patch_ch09_conj_tables.py`, `patch_ch09_stress.py`,
+`gen_ua_lexemes_l2_ch09.py`, `gen_ua_lexemes_vstup.py`). Also found but NOT touched (out of
+scope for this pass, flagged for Craig): `domains/ua/anki/docs/design.md` still describes
+`Verb_Conj_Table` in several places but is broadly stale relative to the live schema
+(predates `CounterpartForm`/`AspectCue`/`TypingTarget_UA` etc.) and needs a fuller refresh,
+not a one-line fix; and `CLAUDE-active-status.md` claims (as of 2026-07-26) that
+`Verb_Conj_Table` was "removed... moved to UA_Verb note type" — which wasn't true before
+today's actual removal, a doc-vs-code mismatch in the same family as the `_AspectLabel` and
+`prune_orphans` gaps found earlier 2026-07-31.
+
+**Resolved (2026-07-31):** step 1 run — `inspect_ua_lexeme_fields.py` confirms the live
+`UA_Lexeme` model's 32 fields do NOT include `Verb_Conj_Table` at all. So
+`CLAUDE-active-status.md`'s claim was right about the *model* (already removed there,
+predating this doc) — it was only the CNSF *source files* that still carried the dead key,
+which today's step 3-4 work fixed. Step 5 (`modelFieldRemove`) is therefore unnecessary —
+there's nothing left in the model to remove. Step 2 (backup) is no longer required either,
+since no live-model mutation is happening. Step 6 verification: `cnsf_canonicalize --check`
+already clean (done above); running `tests/ua/` and a live-card spot-check are optional at
+this point, not blocking, since nothing rendered this field and the model was never touched.
+**Removal plan is effectively complete.** `chore/remove-verb-conj-table` was reviewed,
+merged to `main` via PR #58 (2026-07-31), and the branch deleted (local + remote) —
+no further AnkiConnect action needed.
+
 **Rationale:** repo-wide grep confirms no card template anywhere references `{{Verb_Conj_Table}}`
 — the field has never been rendered on any card, in any note-type version. It's genuinely dead
 data, not just duplicated-but-harmless. Conjugation data belongs on the dedicated `UA_Verb` notes
