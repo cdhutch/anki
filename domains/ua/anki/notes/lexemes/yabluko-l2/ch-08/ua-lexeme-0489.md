@@ -32,7 +32,6 @@ fields:
   TypingAnswer: дотримуватися закону
   UA_Example: У подорожі важливо дотримуватися закону країни, яку відвідуєш.
   EN_Example: While traveling, it's important to abide by the law of the country you're visiting.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/дотримуватися; https://goroh.pp.ua/Словозміна/закон
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

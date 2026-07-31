@@ -37,7 +37,6 @@ fields:
   TypingAnswer: вечір
   UA_Example: Увечері ми любимо гуляти у парку.
   EN_Example: In the evening we like to walk in the park.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/вечір
   Source_Note: verified 2026-07-06 via Горох

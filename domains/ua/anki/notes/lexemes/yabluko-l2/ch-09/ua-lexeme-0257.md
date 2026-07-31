@@ -32,7 +32,6 @@ fields:
   TypingAnswer: пункт
   UA_Example: До контрольного пункту залишилося два кілометри.
   EN_Example: Two kilometers remained to the checkpoint.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/пункт
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

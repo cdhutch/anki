@@ -32,7 +32,6 @@ fields:
   TypingAnswer: жаб'ячі лапки
   UA_Example: Жаб'ячі лапки — популярна страва у Франції.
   EN_Example: Frog legs are a popular dish in France.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/жаб'ячий; https://goroh.pp.ua/Словозміна/лапка
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

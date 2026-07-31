@@ -34,7 +34,6 @@ fields:
   TypingAnswer: виходити назустріч
   UA_Example: Щоразу, коли приходять гості, господар виходить їм назустріч.
   EN_Example: Every time guests arrive, the host goes out to meet them.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/виходити; https://goroh.pp.ua/Словозміна/назустріч
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

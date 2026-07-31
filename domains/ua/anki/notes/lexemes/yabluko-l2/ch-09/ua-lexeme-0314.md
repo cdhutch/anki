@@ -31,7 +31,6 @@ fields:
   TypingAnswer: бічний
   UA_Example: Бічна полиця розташована біля вікна у коридорі.
   EN_Example: The side berth is located by the corridor window.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/бічний
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

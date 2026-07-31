@@ -46,7 +46,6 @@ fields:
   TypingAnswer: ходити / йти / піти
   UA_Example: Я щодня ходжу до школи пішки, а сьогодні йшов і думав про іспит.
   EN_Example: I walk to school every day, and today I was walking and thinking about the exam.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/ходити; https://goroh.pp.ua/Словозміна/йти; https://goroh.pp.ua/Словозміна/іти;
     https://goroh.pp.ua/Словозміна/піти

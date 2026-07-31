@@ -31,7 +31,6 @@ fields:
   TypingAnswer: малий
   UA_Example: Номер виявився занадто малим для трьох осіб.
   EN_Example: The room turned out too small for three people.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/малий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

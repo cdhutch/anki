@@ -31,7 +31,6 @@ fields:
   TypingAnswer: громадський
   UA_Example: Громадський транспорт тут дуже зручний.
   EN_Example: Public transportation here is very convenient.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/громадський
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: похмуро
   UA_Example: Надворі було похмуро і сіро.
   EN_Example: It was gloomy and grey outside.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/похмуро
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

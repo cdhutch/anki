@@ -34,7 +34,6 @@ fields:
   TypingAnswer: вилізти на скелю
   UA_Example: Перший етап -- вилізти на скелю без страховки.
   EN_Example: The first stage is climbing up onto the cliff without safety gear.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/вилізти; https://goroh.pp.ua/Словозміна/скеля
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

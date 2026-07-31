@@ -32,7 +32,6 @@ fields:
   TypingAnswer: уболівальник
   UA_Example: У світі спорту Ви — уболівальник.
   EN_Example: In the world of sport, you're a fan.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/уболівальник
   Source_Note: Stress verified 2026-07-22 via Горох. Example adapted from Яблуко 2, ch.9.1

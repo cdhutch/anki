@@ -33,7 +33,6 @@ fields:
   TypingAnswer: верхня полиця
   UA_Example: Верхня полиця часто дешевша за нижню.
   EN_Example: The upper berth is often cheaper than the lower one.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/верхній; https://goroh.pp.ua/Словозміна/полиця
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

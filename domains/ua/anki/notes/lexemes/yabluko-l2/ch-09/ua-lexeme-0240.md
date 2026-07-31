@@ -32,7 +32,6 @@ fields:
   TypingAnswer: троянда
   UA_Example: Червоні троянди -- її улюблені квіти.
   EN_Example: Red roses are her favorite flowers.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/троянда
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

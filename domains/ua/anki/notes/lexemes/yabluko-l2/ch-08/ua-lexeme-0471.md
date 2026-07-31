@@ -34,7 +34,6 @@ fields:
   TypingAnswer: погляд
   UA_Example: Її погляд був сповнений здивування.
   EN_Example: Her look was full of surprise.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/погляд
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

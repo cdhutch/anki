@@ -31,7 +31,6 @@ fields:
   TypingAnswer: туманний
   UA_Example: Уранці була туманна погода.
   EN_Example: The weather was foggy in the morning.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/туманний
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

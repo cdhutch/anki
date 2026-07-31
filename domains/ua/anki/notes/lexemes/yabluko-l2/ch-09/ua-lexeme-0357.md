@@ -33,7 +33,6 @@ fields:
   TypingAnswer: надувний човен
   UA_Example: Надувний човен ледь вмістив усіх пʼятьох.
   EN_Example: The inflatable boat barely fit all five of them.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/надувний; https://goroh.pp.ua/Словозміна/човен
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

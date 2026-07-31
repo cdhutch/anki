@@ -32,7 +32,6 @@ fields:
   TypingAnswer: розведення овець
   UA_Example: Розведення овець залишається головним заняттям горян.
   EN_Example: Sheep breeding remains the main occupation of the highlanders.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/розведення; https://goroh.pp.ua/Словозміна/вівця
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

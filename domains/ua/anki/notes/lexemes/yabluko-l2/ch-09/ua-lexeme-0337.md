@@ -32,7 +32,6 @@ fields:
   TypingAnswer: сироварня
   UA_Example: Місцева сироварня пригостила подорожніх свіжим сиром.
   EN_Example: The local cheese dairy treated the travelers to fresh cheese.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/сироварня
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

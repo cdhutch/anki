@@ -33,7 +33,6 @@ fields:
   TypingAnswer: контрольний пункт
   UA_Example: Команда відмітилася на кожному контрольному пункті.
   EN_Example: The team checked in at every checkpoint.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/контрольний; https://goroh.pp.ua/Словозміна/пункт
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

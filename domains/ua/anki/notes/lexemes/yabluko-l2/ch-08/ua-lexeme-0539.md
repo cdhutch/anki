@@ -33,7 +33,6 @@ fields:
   TypingAnswer: їжак
   UA_Example: У лісі ми побачили колючого їжака.
   EN_Example: In the forest we saw a prickly hedgehog.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/їжак
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

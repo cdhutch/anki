@@ -29,7 +29,6 @@ fields:
   TypingAnswer: Яка Ваша професія?
   UA_Example: — Яка Ваша професія? — Я лікар.
   EN_Example: — What is your profession? — I am a doctor.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

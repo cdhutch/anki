@@ -36,7 +36,6 @@ fields:
   TypingAnswer: стілець
   UA_Example: Сядьте, будь ласка, на стілець коло столу.
   EN_Example: Please sit down on the chair near the table.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/стілець
   Source_Note: verified 2026-07-06 via Горох

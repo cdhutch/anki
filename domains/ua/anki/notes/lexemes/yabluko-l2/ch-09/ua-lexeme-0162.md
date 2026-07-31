@@ -31,7 +31,6 @@ fields:
   TypingAnswer: спортивна ходьба
   UA_Example: Спортивна ходьба виглядає простіше, ніж є насправді.
   EN_Example: Race walking looks simpler than it actually is.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/спортивний; https://goroh.pp.ua/Словозміна/ходьба
   Source_Note: Components verified via Горох (see ua-lexeme-0139, ua-lexeme-0148). Verified

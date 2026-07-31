@@ -32,7 +32,6 @@ fields:
   TypingAnswer: показовий виступ
   UA_Example: Показовий виступ фігуристів завершив змагання.
   EN_Example: The figure skaters' exhibition performance closed out the competition.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/показовий; https://goroh.pp.ua/Словозміна/виступ
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

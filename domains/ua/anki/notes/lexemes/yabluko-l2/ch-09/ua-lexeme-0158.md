@@ -32,7 +32,6 @@ fields:
   UA_Example: Спортсмени, які займаються цим видом спорту, бігають по трасі, але не просто
     так, а на лижах.
   EN_Example: Athletes who do this sport run along a course — but not just running, on skis.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/лижний; https://goroh.pp.ua/Словозміна/перегони
   Source_Note: Components verified via Горох (see ua-lexeme-0135, ua-lexeme-0144). Example

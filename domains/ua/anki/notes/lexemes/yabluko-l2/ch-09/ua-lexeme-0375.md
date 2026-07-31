@@ -35,7 +35,6 @@ fields:
   TypingAnswer: участь
   UA_Example: Шестеро гравців беруть участь у змаганні, а четверо -- запасні.
   EN_Example: Six players take part in the competition, and four are substitutes.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/участь
   Source_Note: Drafted 2026-07-27 -- see ua-lexeme-0376's Source_Note for the fuller context.

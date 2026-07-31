@@ -33,7 +33,6 @@ fields:
   TypingAnswer: рак
   UA_Example: На ринку продавали свіжих раків.
   EN_Example: Fresh crayfish were being sold at the market.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/рак
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

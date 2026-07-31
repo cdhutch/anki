@@ -31,7 +31,6 @@ fields:
   TypingAnswer: школяр
   UA_Example: Школяр іде до школи з великим портфелем.
   EN_Example: The schoolboy goes to school with a large schoolbag.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/школяр
   Source_Note: verified 2026-07-06 via Горох

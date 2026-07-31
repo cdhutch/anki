@@ -32,7 +32,6 @@ fields:
   TypingAnswer: складається враження
   UA_Example: У мене складається враження, що це місто ніколи не спить.
   EN_Example: I get the impression that this city never sleeps.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/складатися; https://goroh.pp.ua/Словозміна/враження
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

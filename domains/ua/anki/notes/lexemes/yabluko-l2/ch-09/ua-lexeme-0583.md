@@ -40,7 +40,6 @@ fields:
   TypingAnswer: літати / летіти / полетіти
   UA_Example: Птахи літають високо в небі, а орел летів прямо над нами.
   EN_Example: Birds fly high in the sky, and an eagle was flying right above us.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/літати; https://goroh.pp.ua/Словозміна/летіти;
     https://goroh.pp.ua/Словозміна/полетіти

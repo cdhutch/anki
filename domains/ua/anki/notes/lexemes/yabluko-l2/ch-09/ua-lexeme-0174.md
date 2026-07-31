@@ -31,7 +31,6 @@ fields:
   TypingAnswer: удар
   UA_Example: Удар був дуже сильним.
   EN_Example: The strike was very strong.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/удар
   Source_Note: Горох lists 3 homograph entries for 'удар' — the common noun (this word, 'blow/strike'),

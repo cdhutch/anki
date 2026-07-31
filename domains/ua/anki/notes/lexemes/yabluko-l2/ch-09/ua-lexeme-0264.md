@@ -32,7 +32,6 @@ fields:
   TypingAnswer: складність
   UA_Example: Організатори підвищили рівень складності цьогорічної гонки.
   EN_Example: The organizers raised the difficulty level of this year's race.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/складність
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

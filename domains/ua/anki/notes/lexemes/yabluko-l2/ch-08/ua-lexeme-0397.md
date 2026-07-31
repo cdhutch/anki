@@ -31,7 +31,6 @@ fields:
   TypingAnswer: сніжний
   UA_Example: Цієї зими була дуже сніжна зима.
   EN_Example: This winter was a very snowy winter.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/сніжний
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

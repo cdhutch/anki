@@ -31,7 +31,6 @@ fields:
   TypingAnswer: колючий
   UA_Example: Колючий їжак згорнувся клубочком.
   EN_Example: The prickly hedgehog curled into a ball.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/колючий
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

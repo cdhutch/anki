@@ -229,7 +229,6 @@ fields:
   TypingAnswer: {typing}
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
 ---

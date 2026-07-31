@@ -32,7 +32,6 @@ fields:
   TypingAnswer: капуста
   UA_Example: Капуста росте майже в кожному городі.
   EN_Example: Cabbage grows in almost every garden.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/капуста
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

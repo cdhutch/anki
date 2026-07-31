@@ -31,7 +31,6 @@ fields:
   TypingAnswer: спорт
   UA_Example: Ви любите займатися спортом?
   EN_Example: Do you like doing sports?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/спорт
   Source_Note: Verified 2026-07-22 via Горох (no stress mark needed — one syllable). Example

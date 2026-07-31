@@ -32,7 +32,6 @@ fields:
   TypingAnswer: бездоріжжя
   UA_Example: Траса пригодницької гонки пролягала через бездоріжжя.
   EN_Example: The adventure race course ran through off-road terrain.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/бездоріжжя
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

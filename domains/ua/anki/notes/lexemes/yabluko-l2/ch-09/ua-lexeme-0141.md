@@ -31,7 +31,6 @@ fields:
   TypingAnswer: їзда
   UA_Example: Їзда на велосипеді корисна для здоров'я.
   EN_Example: Bicycle riding is good for your health.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/їзда
   Source_Note: Stress verified 2026-07-22 via Горох.

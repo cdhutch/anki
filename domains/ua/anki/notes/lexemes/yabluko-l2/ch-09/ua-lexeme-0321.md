@@ -32,7 +32,6 @@ fields:
   TypingAnswer: перепрошувати
   UA_Example: Перепрошую, я не почула, коли відправляється поїзд.
   EN_Example: Excuse me, I didn't hear when the train departs.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/перепрошувати; https://goroh.pp.ua/Словозміна/перепросити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass. Corrected 2026-07-28 per

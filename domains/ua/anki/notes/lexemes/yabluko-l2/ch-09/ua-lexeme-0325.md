@@ -33,7 +33,6 @@ fields:
   TypingAnswer: бічна полиця
   UA_Example: Бічна полиця розташована навпроти купе провідника.
   EN_Example: The side berth is located across from the conductor's compartment.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/бічний; https://goroh.pp.ua/Словозміна/полиця
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

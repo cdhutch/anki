@@ -32,7 +32,6 @@ fields:
   TypingAnswer: прохолода
   UA_Example: Увечері настала приємна прохолода.
   EN_Example: A pleasant coolness set in during the evening.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/прохолода
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

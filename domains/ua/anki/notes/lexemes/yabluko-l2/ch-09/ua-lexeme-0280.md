@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вилазити
   UA_Example: Гострий схил не давав вилазити на скелю без мотузки.
   EN_Example: The steep slope made it impossible to climb out onto the rock without a rope.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/вилазити; https://goroh.pp.ua/Словозміна/вилізти
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

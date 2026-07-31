@@ -32,7 +32,6 @@ fields:
   TypingAnswer: сонце
   UA_Example: Сонце сьогодні світить яскраво.
   EN_Example: The sun is shining brightly today.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/сонце
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

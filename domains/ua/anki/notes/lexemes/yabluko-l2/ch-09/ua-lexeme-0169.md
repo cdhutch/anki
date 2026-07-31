@@ -31,7 +31,6 @@ fields:
   TypingAnswer: корабель
   UA_Example: Корабель відпливає рано-вранці.
   EN_Example: The ship departs early in the morning.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/корабель
   Source_Note: Stress verified 2026-07-22 via Горох.

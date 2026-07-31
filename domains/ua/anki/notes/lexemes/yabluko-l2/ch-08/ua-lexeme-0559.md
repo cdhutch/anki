@@ -31,7 +31,6 @@ fields:
   TypingAnswer: шорсткий
   UA_Example: Стовбур дерева був шорсткий на дотик.
   EN_Example: The tree trunk felt rough to the touch.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/шорсткий
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: якщо говорити про
   UA_Example: Якщо говорити про житло, ми залишились дуже задоволені.
   EN_Example: Speaking of the housing, we were very pleased.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/якщо
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

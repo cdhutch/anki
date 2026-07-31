@@ -31,7 +31,6 @@ fields:
   TypingAnswer: спокусливо
   UA_Example: Цукрова вата виглядала дуже спокусливо.
   EN_Example: The cotton candy looked very tempting.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/спокусливо
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

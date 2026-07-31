@@ -31,7 +31,6 @@ fields:
   TypingAnswer: змагання
   UA_Example: Змагання відбудуться завтра.
   EN_Example: The competition will take place tomorrow.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/змагання
   Source_Note: Горох lists a 2nd, capitalized homograph entry ('Змагання') alongside this

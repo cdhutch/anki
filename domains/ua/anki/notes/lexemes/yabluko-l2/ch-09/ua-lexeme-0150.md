@@ -31,7 +31,6 @@ fields:
   TypingAnswer: дельтапланеризм
   UA_Example: Дельтапланеризм — екстремальний вид спорту.
   EN_Example: Hang gliding is an extreme sport.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/дельтапланеризм
   Source_Note: Stress verified 2026-07-22 via Горох.

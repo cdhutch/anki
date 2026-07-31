@@ -44,7 +44,6 @@ fields:
   TypingAnswer: метелик
   UA_Example: Він одягнув чорний метелик до смокінга.
   EN_Example: He put on a black bow-tie for the tuxedo.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/метелик
   Source_Note: Split from ua-lexeme-0171 during the 2026-07-24 corpus dedup/homograph audit

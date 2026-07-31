@@ -32,7 +32,6 @@ fields:
   TypingAnswer: скелелазіння
   UA_Example: Скелелазіння вимагає гарної фізичної підготовки.
   EN_Example: Rock climbing requires good physical fitness.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/скелелазіння
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

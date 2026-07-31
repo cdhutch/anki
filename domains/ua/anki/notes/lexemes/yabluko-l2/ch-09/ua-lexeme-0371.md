@@ -33,7 +33,6 @@ fields:
   TypingAnswer: якийсь час
   UA_Example: Вони мовчки йшли якийсь час.
   EN_Example: They walked in silence for some time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/якийсь; https://goroh.pp.ua/Словозміна/час
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

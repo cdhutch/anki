@@ -32,7 +32,6 @@ fields:
   TypingAnswer: обслуговування
   UA_Example: Обслуговування в цьому готелі було чудове.
   EN_Example: The service at this hotel was excellent.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/обслуговування
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

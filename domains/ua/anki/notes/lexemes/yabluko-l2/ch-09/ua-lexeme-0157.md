@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вітрильний спорт
   UA_Example: Вітрильний спорт популярний на узбережжі.
   EN_Example: Sailing is popular along the coast.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/вітрильний; https://goroh.pp.ua/Словозміна/спорт
   Source_Note: Components verified via Горох (see ua-lexeme-0134, ua-lexeme-0142). Verified

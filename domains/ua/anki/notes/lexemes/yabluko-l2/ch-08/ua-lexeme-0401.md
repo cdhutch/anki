@@ -31,7 +31,6 @@ fields:
   TypingAnswer: сонячно
   UA_Example: Надворі тепло і сонячно.
   EN_Example: It's warm and sunny outside.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/сонячно
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

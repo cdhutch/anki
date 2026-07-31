@@ -33,7 +33,6 @@ fields:
   TypingAnswer: перемогти суперника
   UA_Example: Йому вдалося перемогти суперника в останньому раунді.
   EN_Example: He managed to defeat his opponent in the final round.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/перемагати; https://goroh.pp.ua/Словозміна/суперник
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

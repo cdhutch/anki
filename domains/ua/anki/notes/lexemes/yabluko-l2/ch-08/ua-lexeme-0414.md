@@ -32,7 +32,6 @@ fields:
   TypingAnswer: холод
   UA_Example: Узимку тут стоїть страшний холод.
   EN_Example: In winter there is terrible cold here.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/холод
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

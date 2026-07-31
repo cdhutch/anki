@@ -32,7 +32,6 @@ fields:
   TypingAnswer: у порівнянні
   UA_Example: У порівнянні з долиною, у горах значно прохолодніше.
   EN_Example: Compared to the valley, it's significantly cooler in the mountains.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/порівняння
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

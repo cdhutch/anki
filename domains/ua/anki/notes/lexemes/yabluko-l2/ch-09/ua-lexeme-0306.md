@@ -45,7 +45,6 @@ fields:
   TypingAnswer: тип
   UA_Example: 'Оберіть тип вагона: люкс, купе чи плацкарта.'
   EN_Example: 'Choose the type of train car: deluxe, compartment, or open-plan sleeper.'
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/тип
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

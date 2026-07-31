@@ -32,7 +32,6 @@ fields:
   TypingAnswer: сире тісто
   UA_Example: Сире тісто не можна їсти.
   EN_Example: Raw dough shouldn't be eaten.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/сирий; https://goroh.pp.ua/Словозміна/тісто
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

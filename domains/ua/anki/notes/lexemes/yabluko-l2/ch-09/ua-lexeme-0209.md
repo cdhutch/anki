@@ -31,7 +31,6 @@ fields:
   TypingAnswer: реальний
   UA_Example: У спарингу він бився з реальним суперником, а не з тренажером.
   EN_Example: In the sparring session he fought a real opponent, not a training dummy.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/реальний
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

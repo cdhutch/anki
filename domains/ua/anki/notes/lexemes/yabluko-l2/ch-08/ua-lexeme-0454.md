@@ -31,7 +31,6 @@ fields:
   TypingAnswer: досить
   UA_Example: Номер був досить зручний.
   EN_Example: The room was quite comfortable.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/досить
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

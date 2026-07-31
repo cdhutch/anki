@@ -30,7 +30,6 @@ fields:
   TypingAnswer: прізвище
   UA_Example: Він написав своє прізвище та адресу в анкеті.
   EN_Example: He wrote his surname and address in the form.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/прізвище
   Source_Note: verified 2026-07-06 via Горох

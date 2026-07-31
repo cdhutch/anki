@@ -31,7 +31,6 @@ fields:
   TypingAnswer: далекий
   UA_Example: До моря ще далекий шлях.
   EN_Example: It's still a long way to the sea.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/далекий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

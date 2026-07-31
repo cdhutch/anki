@@ -32,7 +32,6 @@ fields:
   TypingAnswer: на перший погляд
   UA_Example: На перший погляд усе виглядало знайомо.
   EN_Example: At first glance everything looked familiar.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/перший; https://goroh.pp.ua/Словозміна/погляд
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

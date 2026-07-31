@@ -32,7 +32,6 @@ fields:
   TypingAnswer: мурашки по шкірі
   UA_Example: Від цієї мелодії мурашки по шкірі.
   EN_Example: This melody gives you goosebumps.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/мурашка; https://goroh.pp.ua/Словозміна/шкіра
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

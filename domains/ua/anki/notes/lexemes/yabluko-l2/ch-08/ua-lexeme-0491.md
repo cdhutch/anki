@@ -32,7 +32,6 @@ fields:
   TypingAnswer: не такий ... як
   UA_Example: Це місто не таке гамірне, як я думав.
   EN_Example: This city isn't as noisy as I thought.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/такий; https://goroh.pp.ua/Словозміна/як
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

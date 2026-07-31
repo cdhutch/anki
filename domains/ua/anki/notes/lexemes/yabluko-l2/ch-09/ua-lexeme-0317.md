@@ -31,7 +31,6 @@ fields:
   TypingAnswer: казати
   UA_Example: Вибачте, Ви сказали, що поїзд запізнюється?
   EN_Example: Sorry, did you say the train is running late?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/казати; https://goroh.pp.ua/Словозміна/сказати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass. Corrected 2026-07-28 per

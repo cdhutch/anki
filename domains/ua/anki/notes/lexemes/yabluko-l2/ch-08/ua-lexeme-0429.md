@@ -31,7 +31,6 @@ fields:
   TypingAnswer: молодий
   UA_Example: У готелі працює молодий персонал.
   EN_Example: The hotel has young staff.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/молодий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

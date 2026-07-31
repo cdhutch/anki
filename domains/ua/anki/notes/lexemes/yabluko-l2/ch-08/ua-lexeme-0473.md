@@ -32,7 +32,6 @@ fields:
   TypingAnswer: закон
   UA_Example: Тут туристи повинні дотримуватися місцевого закону.
   EN_Example: Tourists here must abide by local law.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/закон
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

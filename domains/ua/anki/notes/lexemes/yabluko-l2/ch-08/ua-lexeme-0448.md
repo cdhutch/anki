@@ -31,7 +31,6 @@ fields:
   TypingAnswer: мокро
   UA_Example: На підлозі у ванній було мокро.
   EN_Example: The bathroom floor was wet.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/мокро
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

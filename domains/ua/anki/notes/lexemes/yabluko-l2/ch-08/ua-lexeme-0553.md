@@ -32,7 +32,6 @@ fields:
   TypingAnswer: смак
   UA_Example: У цієї страви дуже насичений смак.
   EN_Example: This dish has a very rich taste.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/смак
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

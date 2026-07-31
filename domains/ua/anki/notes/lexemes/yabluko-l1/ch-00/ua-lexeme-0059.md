@@ -37,7 +37,6 @@ fields:
   TypingAnswer: ранок
   UA_Example: Уранці ми снідаємо разом і говоримо про плани.
   EN_Example: In the morning we have breakfast together and talk about plans.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/ранок
   Source_Note: verified 2026-07-06 via Горох

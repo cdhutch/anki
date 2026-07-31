@@ -30,7 +30,6 @@ fields:
   TypingAnswer: російський
   UA_Example: Він вивчає російську мову в університеті.
   EN_Example: He studies the Russian language at university.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/російський
   Source_Note: verified 2026-07-06 via Горох

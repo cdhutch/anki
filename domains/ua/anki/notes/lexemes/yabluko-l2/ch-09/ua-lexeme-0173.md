@@ -31,7 +31,6 @@ fields:
   TypingAnswer: пожежа
   UA_Example: Пожежники загасили пожежу.
   EN_Example: The firefighters put out the fire.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/пожежа
   Source_Note: Горох lists a 2nd, capitalized homograph entry ('Поже́жа', a populated place

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: кінець
   UA_Example: У кінці мандрівки всі відчували втому й радість.
   EN_Example: At the end of the journey, everyone felt both tired and happy.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/кінець
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

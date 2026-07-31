@@ -30,7 +30,6 @@ fields:
   TypingAnswer: фірма
   UA_Example: Він працює у великій міжнародній фірмі.
   EN_Example: He works at a large international company.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/фірма
   Source_Note: verified 2026-07-06 via Горох

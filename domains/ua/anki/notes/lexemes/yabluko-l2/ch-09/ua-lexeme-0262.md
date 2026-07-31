@@ -32,7 +32,6 @@ fields:
   TypingAnswer: претендент
   UA_Example: Двоє претендентів боролися за перше місце до самого фінішу.
   EN_Example: Two contenders battled for first place right up to the finish.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/претендент
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

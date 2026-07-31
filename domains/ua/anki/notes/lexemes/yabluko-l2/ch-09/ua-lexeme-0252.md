@@ -41,7 +41,6 @@ fields:
   TypingAnswer: бал
   UA_Example: Команда отримала додаткові бали за швидкість.
   EN_Example: The team got extra points for speed.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/бал
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

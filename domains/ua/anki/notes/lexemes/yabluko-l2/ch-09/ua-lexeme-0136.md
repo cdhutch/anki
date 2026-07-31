@@ -30,7 +30,6 @@ fields:
   TypingAnswer: марафонський
   UA_Example: Марафонський біг вимагає багатомісячної підготовки.
   EN_Example: Marathon running requires months of preparation.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/марафонський
   Source_Note: Stress verified 2026-07-22 via Горох.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: фермер
   UA_Example: Фермер працює на полі від ранку до вечора.
   EN_Example: The farmer works in the field from morning to evening.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/фермер
   Source_Note: verified 2026-07-06 via Горох

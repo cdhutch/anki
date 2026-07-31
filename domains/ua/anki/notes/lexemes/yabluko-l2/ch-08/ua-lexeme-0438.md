@@ -31,7 +31,6 @@ fields:
   TypingAnswer: високий
   UA_Example: Ми зупинилися у високому готелі біля моря.
   EN_Example: We stayed at a tall hotel by the sea.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/високий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: неймовірно
   UA_Example: Виступ був неймовірно емоційним.
   EN_Example: The performance was incredibly emotional.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/неймовірно
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

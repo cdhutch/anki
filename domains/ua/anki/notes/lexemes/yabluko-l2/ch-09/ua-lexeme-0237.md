@@ -32,7 +32,6 @@ fields:
   TypingAnswer: перехрестя
   UA_Example: На перехресті поверніть ліворуч.
   EN_Example: Turn left at the intersection.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/перехрестя
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

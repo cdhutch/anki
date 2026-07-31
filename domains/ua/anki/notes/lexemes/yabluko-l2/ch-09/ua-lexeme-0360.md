@@ -33,7 +33,6 @@ fields:
   TypingAnswer: мати сили
   UA_Example: Після довгого підйому вже мало хто мав сили йти далі.
   EN_Example: After the long climb, few still had the strength to keep going.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/мати; https://goroh.pp.ua/Словозміна/сила
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
