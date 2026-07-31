@@ -25,8 +25,17 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: тепло́
-  Mnemonic_EN: ''
+  ConfusableSet: тепло́ (Горох homograph -- stress shift, neuter noun "warmth") - see ua-lexeme-0407.
+    Same spelling; те́пло (stress on те-, this note) is the adverb "warmly", тепло́ (stress
+    on -ло́) is the noun "warmth".
+  Mnemonic_EN: Same spelling either way (тепло) — stress is the only visible cue. те́пло (stress
+    те-) describes HOW something is done ("warmly"); тепло́ (stress -ло́) IS the thing itself
+    ("warmth" as a noun, usually paired with an adjective like приємне).
+  CompareScenario: Which sense of тепло is being used?
+  CompareA: Одягайся тепло, надворі холодно.
+  Homograph_SenseA: warmly (adverb)
+  CompareB: Від каміна йшло приємне тепло.
+  Homograph_SenseB: warmth (noun)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: тепло
@@ -36,8 +45,18 @@ fields:
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/тепло
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
-  Verification Notes: Stress-based homograph pair with ua-lexeme-0407 (тепло́, noun "warmth"),
-    per Craig's catch -- те́пло (stress on те-) is the predicative adverb, confirmed via Горох's
-    Словозміна page which lists both forms side by side.
+  Verification Notes: 'Stress-based homograph pair with ua-lexeme-0407 (тепло́, noun "warmth"),
+    per Craig''s catch -- те́пло (stress on те-) is the predicative adverb, confirmed via
+    Горох''s Словозміна page which lists both forms side by side. 2026-07-30: authored the
+    missing Shape-1 Compare-card content (CompareScenario/CompareA/Homograph_SenseA/CompareB/Homograph_SenseB)
+    and rewrote ConfusableSet into discriminator prose -- this pair previously had only the
+    lightweight bucket-2 cross-link (bare alternate spelling in ConfusableSet, no Compare
+    fields), unlike every other homograph:true pair in the corpus, and as a result had never
+    generated a Compare card in Anki at all (the template''s front rendered completely empty
+    with CompareA blank, before the "should be suspended" fallback existed -- Anki does not
+    create a card whose front renders empty). Content mirrors the established мете́лик (ua-lexeme-0171/0181)
+    pattern: identical CompareA/B and Homograph_SenseA/B on both sibling notes, sourced from
+    each note''s own already-written UA_Example. Needs your review -- including whether re-syncing
+    actually backfills the Compare card for this already-existing note, which is unverified.'
 ---
 
