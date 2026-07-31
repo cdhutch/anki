@@ -79,56 +79,54 @@ demonstrating впадати's own aspect — flagged in Verification Notes, nee
 call, not silently rewritten. Also answered Craig's раз-counting and
 мандрівка-vs-подорож questions inline (see conversation log for the full reasoning
 and Горох citations).
-2026-07-30 (continued, separate thread from Ch-08 lexeme verification above): closed
-out the four 2026-07-28 Compare-card fixes. Updated three ch-08 lexeme notes along the
-way (0482 дотримуватися — Perfective дотриматися Горох-verified and filled in; 0484/0474
-confirmed already resolved, no changes needed). Ran `make ua-setup-lexeme` + `make
-ua-lexeme`; Craig spot-verified live in Anki: ua-lexeme-0022/0023 (алфавіт/абетка, the
-original clobbering-bug discovery), the відбивати/забивати/завдавати/набирати cluster
-(0213–0218), and the тепло/тепло homograph pair (0405/0407) all render correctly.
-Diagnosed why 0405/0407 had never had a Compare card at all: they were the corpus's only
-`homograph:true` pair with no `CompareScenario`/`CompareA-D`/`Homograph_Sense*` content —
-`ConfusableSet` held just the bare alternate spelling (bucket-2-only treatment), so the
-Compare template's front rendered completely empty at add time and Anki never generated
-the card (Anki doesn't create a card whose front renders empty). Authored the missing
-Shape-1 content mirroring мете́лик's (0171/0181) pattern and confirmed the sync backfilled
-the third card. Ran a full corpus-wide sweep (579 `ua-lexeme` notes; 59 with `ConfusableSet`
-populated) checking every note for blank `CompareA`/`CompareB` — тепло was the *only* gap
-in the entire corpus. Clarified that the `compute_compare_options()` clobbering bug only
-ever corrupted live Anki data (writes via `updateNoteFields`, never back to the CNSF
-files) — since the files were already clean, the corpus-wide re-sync was the complete
-remediation on its own. **Still open/unverified:** `set_compare_card_suspended()`'s
-targeted `findCards` + `card:"Compare"` suspend technique (Known Issues footgun #4
-territory) was never exercised by this pass, since 0405/0407 ended up with real content
-instead of hitting the suspend path — no note in the corpus currently needs the Compare
-card suspended, so this is untested in practice.
-2026-07-31: Added a `_AspectLabel` computed field + rewrote `UA_EN_FRONT`'s lemma line to
-use `{{TypingTarget_UA}}` instead of a hand-built `{{Lemma}}{{#Perfective}}...` join.
-Two real problems fixed at once: (1) the old front only ever showed `Lemma`/`Perfective`,
-silently dropping `ImperfectiveUnidirectional` for motion-verb triplets (e.g. ходи́ти/піти́
-shown, йти missing) — now it reuses the same full stressed aspect join already computed
-for the EN→UA typing target, so triplets show all three forms, same font/size, no new
-logic duplicated. (2) Per Craig: a true aspectual singlet (`pos:verb`, both
-`ImperfectiveUnidirectional` and `Perfective` blank) now gets a small "(pf.)"/"(impf.)"
-tag next to the word — "(pf.)" only when tagged `aspect:perfective-only`, "(impf.)"
-otherwise (schema default, doesn't require the tag to exist). Doublets/triplets never
-get a tag — the slash join already shows the range. New `.aspect-label` CSS added
-(16px, grey, normal weight, matching `.pos`'s visual weight). **Not yet synced** —
-pending Craig running `make ua-setup-lexeme` + `make ua-lexeme` and spot-checking a
-triplet (ходити family), a doublet, and a singlet.
-**Solarized correction, 2026-07-31:** item 3 below previously claimed `UA_Lexeme`
-already carries Solarized CSS via `update_legacy_css.py`. Craig confirmed directly in
-Anki: none of `UA_Lexeme`'s three cards (UA→EN, EN→UA, Compare) currently show
-Solarized — that claim was wrong. Root cause found while investigating: `UA_Lexeme`'s
-styling is defined in **two places** that disagree — `setup_ua_note_types.py`'s own
-`CSS` constant (plain, no Solarized, the one just edited above for `.aspect-label`) and
-a separate, Makefile-untracked `update_legacy_css.py` script that pushes a genuinely
-Solarized block (including `.nightMode` dark-mode rules) to the same live model via
-`updateModelStyling`. Whichever ran against Anki most recently wins; right now that's
-`setup_ua_note_types.py`'s plain version. Craig confirmed Solarized for `UA_Lexeme` is
-**future work**, not blocking today's `_AspectLabel` sync — but the two-source CSS
-conflict itself is worth resolving before that work starts, so it isn't fought over
-again. See "Remaining Work — Note & Card-Template Structure" below.
+2026-07-30 (continued): **Compare-card fixes closeout.** Synced the four 2026-07-28
+`UA_Lexeme`/`ua_lexeme_import.py` fixes described above. While verifying, found
+ua-lexeme-0405/0407 (те́пло adverb "warmly" / тепло́ noun "warmth" — a stress-shift
+homograph pair) had never generated a Compare card at all: it only ever had the
+lightweight bucket-2 cross-link (bare alternate spelling in `ConfusableSet`, no
+Compare fields), and Anki does not create a card whose front template renders
+completely empty — this predates the "should be suspended" defensive fallback, so
+the gap was silent rather than visibly suspended. Drafted and synced the missing
+Shape-1 Compare content (`CompareScenario`/`CompareA`/`Homograph_SenseA`/`CompareB`/
+`Homograph_SenseB`) on both notes, mirroring the established мете́лик
+(ua-lexeme-0171/0181) pattern. Then ran a full corpus-wide sweep (579 notes, 59 with
+`ConfusableSet` populated) confirming тепло was the *only* Compare-content gap in the
+entire lexeme corpus — see
+[CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) for the sweep
+methodology and results. Also clarified for the record: the `compute_compare_options()`
+clobbering bug (found/fixed 2026-07-28) only ever corrupted live Anki data via
+`updateNoteFields` — it never touched the CNSF files themselves — so no separate
+file-level remediation was needed beyond the normal re-sync.
+2026-07-31: **UA→EN front aspect display.** Added `_AspectLabel` (new computed field)
+and wired `TypingTarget_UA` (already computed for the EN→UA typing target) into
+`UA_EN_FRONT`'s lemma line, so the Recognition card front now shows the full
+slash-joined aspect set (e.g. `ходи́ти / йти / піти́`) in one consistent font, with a
+small `(pf.)`/`(impf.)` tag next to true singlets where the aspect wouldn't otherwise
+be visible. Per Craig 2026-07-31 — see "UA→EN front aspect display" under Card
+Template Techniques below for the full design and code. Implemented in
+`tools/anki/setup/setup_ua_note_types.py` and `tools/anki/sync/ua_lexeme_import.py`;
+synced.
+2026-07-31: **Solarized correction.** Craig confirmed live `UA_Lexeme` currently shows
+*neither* competing CSS source (see "Pending / Next planned work" item 3 below, rewritten)
+— Solarized styling for `UA_Lexeme`'s three card templates (UA→EN, EN→UA, Compare) is
+still genuinely future work, not already-partially-done as this doc previously implied.
+2026-07-31: **Base motion-verb triplet lexemes drafted.** Per Craig's request, drafted
+5 new `ua-lexeme` notes (0581–0585) for the base (unprefixed) motion-verb triplets —
+ходити/їздити/літати/плавати/бігати, each spanning multidirectional-imperfective /
+unidirectional-imperfective / perfective in one note (`Lemma`/`ImperfectiveUnidirectional`/
+`Perfective`). These are the *first* lexeme notes in the corpus to populate
+`ImperfectiveUnidirectional` — everything else sourced so far has been a doublet or
+singlet — so they're the real-data example the new front-aspect-display feature above
+needed. Горох-verified stress throughout; `status:draft` pending Craig's review. Also
+added `ua-verb-0086`/`0087` (плисти/поплисти) — while sourcing the плавати triplet,
+Craig caught that Горох's плисти́/поплисти́ are valid free-variant headwords of
+пливти́/попливти́ (same relationship as йти/іти), and that the swimming group was the
+only one of the five missing this variant-pair note (walking already has both
+йти/ua-verb-0003 and іти/ua-verb-0002). While sourcing плисти/поплисти, also found —
+but per Craig, held for a separate pass, not fixed here — that the *existing*
+ua-verb-0009 (пливти) and ua-verb-0010 (попливти) have stored conjugation tables that
+don't match their own Lemma (they look like a mixed-up плинути/попити paradigm
+instead); see "Remaining Work" below and each note's `Verification Notes` for detail.
 
 ## Workflow Notes
 
@@ -249,81 +247,91 @@ complete:
      / `make ua-verb`, or the new `make ua` aggregate target (canonicalizes + syncs every
      UA note type in one pass — see Reference Files).
   3. Get the Solarized light/dark palette correct and consistent across both Anki domains
-     (B737 and Ukrainian). Confirmed **not currently true, corrected 2026-07-31**: this item
-     used to claim `UA_Lexeme` "already carries Solarized CSS via `update_legacy_css.py`" —
-     Craig checked directly in Anki and none of `UA_Lexeme`'s three cards (UA→EN, EN→UA,
-     Compare) show Solarized. Root cause: `UA_Lexeme`'s styling is defined in two places that
-     disagree (`setup_ua_note_types.py`'s own plain `CSS` constant vs. the separate,
-     Makefile-untracked `update_legacy_css.py`'s genuinely-Solarized block) — whichever ran
-     against Anki most recently wins, and right now that's the plain one. See "Remaining
-     Work" below for the fix-ordering. Original `UA_Visual` bug (found 2026-07-23, still open
-     2026-07-31): its CSS uses the `.night_mode` (snake_case) selector instead of `.nightMode`
-     (camelCase) — confirmed via AnkiMobile's own docs that both desktop Anki and AnkiMobile
-     key off `.nightMode`, so `UA_Visual`'s dark-mode rules are currently dead on every
-     platform, not just iOS. B737 side confirmed DONE, 2026-07-30 (previously listed here as
-     needing audit — it doesn't): `B737_Checklist`, `B737_Mnemonic`, `B737_Structured`,
-     `B737_Table`, `B737_SV_MCQ`, and `B737_SV_TF` were all checked directly in their
-     `setup_*_model.py`/`update_sv_exam_templates.py` scripts — every one already uses the
-     correct `.nightMode` selector with real Solarized colors. See
-     `.claude/memory/b737-anki-solarized-theme.md` for the original project tracking note.
-     Craig wants this kept CSS-only — do not touch B737 or UA_Visual note-type
-     structure/fields, selector fix only.
+     (B737 and Ukrainian). **Corrected 2026-07-31** — this item previously claimed `UA_Lexeme`
+     already carries Solarized CSS via `update_legacy_css.py`; Craig confirmed live `UA_Lexeme`
+     currently shows *neither* competing source (see below), so that was wrong. Concrete bug
+     found 2026-07-23: `UA_Visual`'s CSS uses the `.night_mode` (snake_case) selector instead
+     of `.nightMode` (camelCase) — confirmed via AnkiMobile's own docs that both desktop Anki
+     and AnkiMobile key off `.nightMode`, so `UA_Visual`'s dark-mode rules are currently dead
+     on every platform, not just iOS. **Still open, unfixed.**
+     Two disagreeing CSS sources exist for `UA_Lexeme` (found 2026-07-31): (a)
+     `tools/anki/setup/setup_ua_note_types.py`'s own `CSS` constant — plain, non-Solarized,
+     the one this doc's setup scripts actually apply — and (b) the separate,
+     Makefile-untracked `tools/anki/setup/update_legacy_css.py` — genuinely Solarized
+     (`.lemma`/`.perfective`/`.pos` in `#2aa198`/`#93a1a1`, full `.nightMode` dark rules), but
+     apparently a manually-run one-off script, not wired into any `make` target. Whichever ran
+     most recently against live Anki wins; Craig confirmed today that plain (source a) is
+     currently live for all three `UA_Lexeme` templates (UA→EN, EN→UA, Compare) — so Solarized
+     for `UA_Lexeme` is genuine future work, not a live-but-partial state, and there's a
+     standing decision needed (merge the two scripts, retire one, or wire `update_legacy_css.py`
+     into the Makefile) before that work starts, so the two sources don't fight again.
+     Separately confirmed 2026-07-30/31: all five of `B737_Checklist`, `B737_Mnemonic`,
+     `B737_Structured`, `B737_SV_MCQ`, `B737_SV_TF` already use the correct `.nightMode`
+     selector with real Solarized colors (`#268bd2`, `#fdf6e3`, etc.) — the "still need to
+     audit" note below was stale; no B737 note type needs the camelCase fix except `UA_Visual`.
+     See `.claude/memory/b737-anki-solarized-theme.md` for the original project tracking note.
+     Craig wants this kept CSS-only — do not touch B737 note-type structure/fields.
 
-**Remaining Work — Note & Card-Template Structure (as of 2026-07-31, kept separate from
-lexeme-content verification/sourcing, which is tracked above and in
-[CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md)):**
+### Remaining Work — Note & Card-Template Structure (as of 2026-07-31, separate from
+lexeme-content verification)
 
-  - **UA_Lexeme has two disagreeing CSS sources.** `setup_ua_note_types.py`'s own `CSS`
-    constant and the separate `update_legacy_css.py` script both push styling to the same
-    live model via different mechanisms (`updateModelStyling` from two different call
-    sites), and they define different things (plain vs. Solarized) for the same selectors
-    (`.lemma`, `.pos`, `.perfective`, etc.). Whichever ran most recently against Anki wins,
-    silently. Before building Solarized support for `UA_Lexeme` (or touching this CSS again
-    at all), worth deciding: merge `update_legacy_css.py`'s Solarized block into
-    `setup_ua_note_types.py`'s `CSS` constant as the single source of truth, or retire one
-    script's authority over this model explicitly. Otherwise the two will keep silently
-    fighting over what's live.
-  - **UA_Visual `.night_mode`/`.nightMode` CSS bug** — see item 3 immediately above. CSS-only
-    fix whenever Craig wants it done.
-  - **UA_Lexeme Solarized palette** — confirmed missing 2026-07-31 (see item 3 above).
-    Craig: future work, not urgent. Should be sequenced after resolving the two-CSS-source
-    issue immediately above, not before.
-  - **`Verb_Conj_Table` field removal from `UA_Lexeme`.** Full 6-step migration plan already
-    written — see "Verb_Conj_Table Removal Plan (Future)" below. Field has been blank
-    corpus-wide since 2026-07-22 but not yet removed from the schema/model. Not urgent,
-    pure cleanup debt.
-  - **UA_EN_FRONT aspect display — implemented 2026-07-31, not yet synced.** See the
-    2026-07-31 entry in "Current work" above: `{{TypingTarget_UA}}` now drives the front
-    lemma line (fixes the dropped-`ImperfectiveUnidirectional` bug for triplets) plus a new
-    `_AspectLabel` field showing "(pf.)"/"(impf.)" next to true singlets. Needs
-    `make ua-setup-lexeme` + `make ua-lexeme` and a spot-check across a triplet, a doublet,
-    and a singlet before considering this done.
-  - **Compare-card suspend mechanism unverified.** `set_compare_card_suspended()` (added
-    2026-07-28) uses a targeted `findCards` + `card:"Compare"` query + `suspend`/`unsuspend`
-    call — the same technique Known Issues footgun #4 already found unreliable in live Anki
-    for a different card (verified correct in dry-run, didn't actually stick when tried for
-    EN→UA suspension in Phase 2a). No note in the corpus currently needs the Compare card
-    suspended (the 2026-07-30 sweep's one candidate, 0405/0407, ended up with real content
-    authored instead) — worth deliberately constructing a test case (a `homograph:true` note
-    with `ConfusableSet` populated and `CompareA` intentionally left blank) and confirming in
-    the Anki browser that it actually suspends before relying on this mechanism for real.
-  - **Per-slot euphony tolerance + verb-phrase aspect defaulting** for the EN→UA typing
-    card. Full design scoped 2026-07-29 — see "Per-slot euphony tolerance + verb-phrase
-    aspect defaulting (planned 2026-07-29)" under Card Template Techniques below. No code,
-    no field backfill, no template changes yet — deferred pending Craig's go-ahead to
-    execute.
-  - **Flagged Card Fix Workflow tooling** — `ua_flag_audit.py` doesn't exist yet; see
-    "Flagged Card Fix Workflow (Future)" below. The whole red/orange-flag review process is
-    designed on paper only, no implementation.
-  - **Generator-script wiring** (item 0 above) — `tools/anki/extract/gen_ch09_subsection.py`
-    is built and tested but has never been exercised against a real ch.9.3+ batch.
-  - **UA_Grammar 0001–0007 review pass** — still `status:draft`/suspended with empty
-    `Source_URL`/`Source_Note`, unlike 0008/0009 which already have real sourced citations.
-    Decide whether to review/verify or leave as-is.
-  - **Done, for reference:** the four 2026-07-28 Compare-card fixes and the тепло/тепло
-    homograph fix are synced and Craig-verified live as of 2026-07-30. A full corpus-wide
-    sweep (579 lexeme notes) confirms no other `ConfusableSet`-populated note is missing
-    `CompareA`/`CompareB` content.
+This is a structural punch list — note-type schema, card templates, CSS, and tooling —
+distinct from chapter-by-chapter vocabulary sourcing/verification tracked elsewhere in
+this doc. Roughly in priority order:
+
+1. **Two disagreeing `UA_Lexeme` CSS sources** (found 2026-07-31, see item 3 above) —
+   needs a decision (merge `update_legacy_css.py`'s Solarized rules into
+   `setup_ua_note_types.py`'s `CSS` constant, retire one script, or wire
+   `update_legacy_css.py` into the Makefile so it's not a manually-run one-off) before
+   any Solarized work on `UA_Lexeme` starts. Still open.
+2. **`UA_Visual`'s `.night_mode`/`.nightMode` CSS bug** (found 2026-07-23) — one-line
+   selector fix, still unapplied. Still open.
+3. **`UA_Lexeme` Solarized palette** — genuinely future work (corrected 2026-07-31; see
+   item 3 above for why this doc previously overstated progress here). Blocked on #1.
+4. **`Verb_Conj_Table` field removal** — field blanked corpus-wide 2026-07-22 but not
+   yet removed from the schema/model; see "Verb_Conj_Table Removal Plan (Future)"
+   below for the existing 6-step plan. Not yet executed.
+5. **UA→EN front aspect display** — **Done, 2026-07-31**, synced. See "UA→EN front
+   aspect display" under Card Template Techniques above.
+6. **Compare-card suspend mechanism** (`set_compare_card_suspended()` in
+   `ua_lexeme_import.py`) — genuinely untested in live Anki, since no current note has
+   actually needed it to suspend a real Compare card end-to-end (0405/0407 ended up
+   with real Compare content instead of hitting the suspend path when fixed
+   2026-07-30). A footgun noted earlier this project: targeted `findCards` +
+   `card:"Name"` + `suspend`/`unsuspend` verified correct in a dry run but didn't
+   reliably stick in live Anki during an earlier EN→UA suspend attempt (Phase 2a) —
+   unclear if that footgun applies here too. Needs a deliberately-constructed test
+   case. Still open.
+7. **Per-slot euphony tolerance + verb-phrase aspect defaulting** — scoped with Craig
+   2026-07-29, not built. See the full design under Card Template Techniques above.
+   Still open.
+8. **Flagged Card Fix Workflow tooling** — see "Flagged Card Fix Workflow (Future)"
+   below. Not built.
+9. **`gen_ch09_subsection.py` generator-script wiring** — built 2026-07-25, not yet
+   exercised against a real ch.9.3+ batch. Unexercised, not broken.
+10. **`UA_Grammar` 0001–0007 cloze review pass** — these notes predate the atomicity/
+    no-self-leak/no-cross-cloze-substring-leak principles established 2026-07-22 (see
+    "Cloze note design principles" below) and haven't been audited against them.
+    Needs a decision on whether to revisit.
+11. **ua-verb-0009/0010 conjugation-table data mismatch** (found 2026-07-31, held for
+    a separate pass per Craig) — both notes' stored `Pres_*`/`Imperative_*`/`Past_*`
+    fields don't match their own `Lemma` (пливти/попливти); the data instead matches
+    a different verb family (плинути/попити-adjacent forms). Both are tagged
+    `stress:unverified`, so this looks like a pre-existing authoring mix-up, not
+    something introduced by today's ua-verb-0086/0087 (плисти/поплисти) additions —
+    see those notes' `Verification Notes` for the Горох-verified correct paradigms to
+    fix 0009/0010 against, once Craig gives the go-ahead. Still open.
+12. **New content pending Craig's `status:draft` → `status:verified` review**:
+    ua-lexeme-0581–0585 (base motion-verb triplets: ходити/їздити/літати/плавати/
+    бігати) and ua-verb-0086/0087 (плисти/поплисти), both drafted 2026-07-31.
+
+**Done, for reference (structural work closed out this project so far):** the
+CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
+the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph
+Compare-card generalization (bucket 2 above, done 2026-07-30), the тепло Compare-card
+content gap fix + corpus-wide sweep (2026-07-30), the EN→UA aspect+euphony typing
+restoration (2026-07-28, git archaeology), and the UA→EN front aspect display
+(2026-07-31, item 5 above).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -671,6 +679,62 @@ only -- implementation (feedback-script rewrite in `EN_UA_BACK`,
 в-/у- alternation, gloss review pass on affected phrase notes) is deferred until
 Craig gives the go-ahead to execute.
 
+**UA→EN front aspect display (`_AspectLabel` + `TypingTarget_UA` reuse, added
+2026-07-31, synced).** Per Craig: when a verb note's aspect set has more than one
+populated slot, the Recognition-card (`UA_EN_FRONT`) lemma line should show every
+populated slot — same as the EN→UA typing target — separated by slashes, all in one
+font, no per-slot styling differences. When only one slot is populated (a true
+singlet), show a small `(pf.)`/`(impf.)` tag next to the word instead, since there's
+no slash-joined set to make the aspect visually obvious.
+
+Reuses `TypingTarget_UA` (already computed by `compute_typing_target()` for the EN→UA
+card, see above) rather than adding a second independently-authored join — one
+source of truth for "what does this note's aspect set look like joined." New
+`_AspectLabel` computed field (added to `FIELDS` in `setup_ua_note_types.py`, set in
+`import_note()` in `ua_lexeme_import.py`) fires only for the true-singlet case (both
+`ImperfectiveUnidirectional` and `Perfective` blank) — doublets/triplets never get a
+label, since the slash-joined `TypingTarget_UA` already shows the aspectual range and
+a tag would be redundant. Aspect for the singlet case follows the same schema
+convention `compute_typing_target()`'s docstring and this doc's "Aspect-only tags"
+section already define: `Lemma` is imperfective by default unless the note carries
+`aspect:perfective-only` (hand-applied by Craig only, never by scripts) — so an
+untagged singlet is correctly labeled `(impf.)`, not left uninferred.
+
+Example front-line output for various configurations:
+```
+Triplet (multi/uni/perf populated):
+  ходи́ти / йти / піти́
+
+Doublet (impf/perf populated):
+  перекида́ти / переки́нути
+
+Singlet, untagged (imperfective by schema default):
+  ма́ти (impf.)
+
+Singlet, tagged aspect:perfective-only:
+  зустрі́ти (pf.)
+```
+
+`UA_EN_FRONT`'s lemma line:
+```html
+<div class="lemma">{{TypingTarget_UA}}{{#_AspectLabel}} <span class="aspect-label">{{_AspectLabel}}</span>{{/_AspectLabel}}</div>
+```
+
+New CSS rule (`.aspect-label`, plain-CSS for now — see the Solarized item under
+"Pending / Next planned work" above for why this isn't Solarized-colored yet):
+```css
+.aspect-label {
+  font-size: 16px;
+  font-weight: normal;
+  color: #888;
+}
+```
+
+Note: there's a pre-existing, unused `.perfective` CSS class in `UA_Lexeme`'s CSS
+(orphaned — no current template references it) — left untouched, but flagged as a
+landmine if anyone ever reactivates it, since it predates and is unrelated to
+`.aspect-label`.
+
 **Cloze note design principles (UA_Grammar, established 2026-07-22)**
 
 - **Atomicity:** each distinct cloze number (`{{c1::}}`, `{{c2::}}`, ...) should test exactly
@@ -751,10 +815,13 @@ buckets. Triage deliberately — do not assume from spelling alone.
        homograph-review pass or card set).
      - Write `UA_Example` sentences where surrounding context makes the intended sense
        unambiguous.
-     - Proposed but not yet built: extend the existing `Mnemonic_EN` / `CompareA` /
-       `CompareB` fields + Comparison card template (built for про-/пере- prefix pairs) to
-       lexical homographs generally, for explicit discrimination drilling. Needs Craig's
-       go-ahead before repurposing that template's scope.
+     - **Done, as of 2026-07-30.** Extended the `Mnemonic_EN`/`CompareA`/`CompareB` fields +
+       Comparison card template (originally built for про-/пере- prefix pairs) to lexical
+       homographs generally — Shape-1 mode (`_IsHomograph`-driven: UA sentences on front,
+       `Homograph_SenseA`/`SenseB` on back) is live for every `homograph:true` pair in the
+       corpus. Confirmed via the 2026-07-30 corpus-wide Compare-card sweep (579 notes) — see
+       [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) — that тепло
+       (ua-lexeme-0405/0407) was the only pair still missing this content; now fixed.
 
 3. **True duplicate — same spelling AND same meaning**, encountered again in a later
    chapter. Do NOT create a new note. Instead:
