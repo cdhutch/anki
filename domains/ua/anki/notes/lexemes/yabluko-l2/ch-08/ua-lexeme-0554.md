@@ -32,7 +32,6 @@ fields:
   TypingAnswer: дотик
   UA_Example: Дотик до холодної води був приємним.
   EN_Example: The touch of cold water was pleasant.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/дотик
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

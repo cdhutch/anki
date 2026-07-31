@@ -47,7 +47,6 @@ fields:
   UA_Example: У реченні «Я прочитав книгу» дієслово «прочитати» має доконаний вид.
   EN_Example: In the sentence "I read the book," the verb "прочитати" is in the perfective
     aspect.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/вид
   Source_Note: Split from ua-lexeme-0143 during the 2026-07-24 corpus dedup/homograph audit

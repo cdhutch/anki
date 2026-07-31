@@ -32,7 +32,6 @@ fields:
   TypingAnswer: північ
   UA_Example: Вони заночували в сироварні приблизно після півночі.
   EN_Example: They ended up spending the night at the cheese dairy sometime after midnight.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/північ
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

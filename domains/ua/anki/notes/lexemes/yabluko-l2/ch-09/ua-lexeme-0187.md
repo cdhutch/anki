@@ -32,7 +32,6 @@ fields:
   TypingAnswer: майстерність
   UA_Example: Він показав неймовірну майстерність у бою.
   EN_Example: He showed incredible mastery in the fight.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/майстерність
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

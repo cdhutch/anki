@@ -32,7 +32,6 @@ fields:
   TypingAnswer: напрямок
   UA_Example: Скажіть, будь ласка, у якому напрямку ринок?
   EN_Example: Could you tell me which direction the market is in?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/напрямок
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

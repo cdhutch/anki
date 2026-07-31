@@ -30,7 +30,6 @@ fields:
   TypingAnswer: польський
   UA_Example: Вона добре розуміє польську мову.
   EN_Example: She understands the Polish language well.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/польський
   Source_Note: verified 2026-07-06 via Горох

@@ -47,7 +47,6 @@ fields:
   TypingAnswer: забивати
   UA_Example: Він часто забиває голи з кутового удару.
   EN_Example: He often scores goals from a corner kick.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/забивати; https://goroh.pp.ua/Словозміна/забити
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

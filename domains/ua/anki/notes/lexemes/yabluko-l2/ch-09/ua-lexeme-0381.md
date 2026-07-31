@@ -32,7 +32,6 @@ fields:
   TypingAnswer: полиця
   UA_Example: Я забронював нижню полицю, щоб легше було спати.
   EN_Example: I booked the lower berth so it would be easier to sleep.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/полиця; https://goroh.pp.ua/Тлумачення/полиця
   Source_Note: Created 2026-07-28 as the same-Lemma polysemy-split sibling to ua-lexeme-0311

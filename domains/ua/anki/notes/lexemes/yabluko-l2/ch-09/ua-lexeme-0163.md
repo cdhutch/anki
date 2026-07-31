@@ -31,7 +31,6 @@ fields:
   TypingAnswer: велосипедист
   UA_Example: Велосипедист їхав по узбіччю дороги.
   EN_Example: The cyclist rode along the side of the road.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/велосипедист
   Source_Note: Stress verified 2026-07-22 via Горох.

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: шахта
   UA_Example: Стара соляна шахта стала туристичною визначною пам'яткою.
   EN_Example: The old salt mine became a tourist attraction.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/шахта
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: пішохідний туризм
   UA_Example: Ви літаєте в інші країни, щоб там зайнятися пішохідним туризмом.
   EN_Example: You fly to other countries to go hiking there.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/пішохідний; https://goroh.pp.ua/Словозміна/туризм
   Source_Note: Components verified via Горох (see ua-lexeme-0137, ua-lexeme-0146). Example

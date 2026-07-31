@@ -33,7 +33,6 @@ fields:
   TypingAnswer: приблизно після (півночі)
   UA_Example: Вони прибули до табору приблизно після півночі.
   EN_Example: They arrived at the camp sometime after midnight.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/приблизно; https://goroh.pp.ua/Словозміна/північ
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

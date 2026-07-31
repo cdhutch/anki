@@ -32,7 +32,6 @@ fields:
   TypingAnswer: вболівати
   UA_Example: Мати вболівала за сина, який довго не дзвонив додому.
   EN_Example: The mother worried for her son, who hadn't called home in a long time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/вболівати; https://goroh.pp.ua/Тлумачення/уболівати
   Source_Note: Created 2026-07-25 as the same-Lemma polysemy-split sibling to ua-lexeme-0211/0225

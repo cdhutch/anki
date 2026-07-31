@@ -32,7 +32,6 @@ fields:
   TypingAnswer: транспорт
   UA_Example: Ми обрали громадський транспорт замість таксі.
   EN_Example: We chose public transportation instead of a taxi.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/транспорт
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

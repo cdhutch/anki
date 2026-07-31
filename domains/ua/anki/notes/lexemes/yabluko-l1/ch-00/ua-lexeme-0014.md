@@ -31,7 +31,6 @@ fields:
   TypingAnswer: спортсмен
   UA_Example: Молодий спортсмен тренується щодня.
   EN_Example: The young athlete trains every day.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/спортсмен
   Source_Note: verified 2026-07-06 via Горох

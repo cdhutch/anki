@@ -33,7 +33,6 @@ fields:
   TypingAnswer: Вибачте, Ви сказали...?
   UA_Example: Вибачте, Ви сказали, що потрібно пересісти в Києві?
   EN_Example: Sorry, did you say we need to change trains in Kyiv?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/вибачити; https://goroh.pp.ua/Словозміна/сказати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

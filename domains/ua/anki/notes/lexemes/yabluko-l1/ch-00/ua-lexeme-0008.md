@@ -31,7 +31,6 @@ fields:
   TypingAnswer: офіціантка
   UA_Example: Офіціантка приносить нам меню і посміхається.
   EN_Example: The waitress brings us the menu and smiles.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/офіціантка
   Source_Note: verified 2026-07-06 via Горох

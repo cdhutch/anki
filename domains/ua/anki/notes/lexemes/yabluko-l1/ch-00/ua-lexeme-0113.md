@@ -29,7 +29,6 @@ fields:
   TypingAnswer: Скільки Вам років?
   UA_Example: — Скільки Вам років? — Мені тридцять.
   EN_Example: — How old are you? — I am thirty.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: розклад
   UA_Example: Розклад руху потягів висить на вокзалі.
   EN_Example: The train schedule hangs at the station.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/розклад
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

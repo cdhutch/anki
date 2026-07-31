@@ -32,7 +32,6 @@ fields:
   TypingAnswer: квашена капуста
   UA_Example: Квашена капуста подається як гарнір.
   EN_Example: Sauerkraut is served as a side dish.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/квашений; https://goroh.pp.ua/Словозміна/капуста
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

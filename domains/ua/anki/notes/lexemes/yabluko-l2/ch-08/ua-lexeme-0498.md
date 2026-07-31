@@ -33,7 +33,6 @@ fields:
   TypingAnswer: верблюд
   UA_Example: У пустелі туристи їздять верхи на верблюдах.
   EN_Example: In the desert, tourists ride camels.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/верблюд
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

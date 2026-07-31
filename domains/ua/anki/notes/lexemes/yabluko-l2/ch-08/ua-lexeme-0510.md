@@ -31,7 +31,6 @@ fields:
   TypingAnswer: гірськолижний
   UA_Example: Гірськолижна траса тут підходить навіть початківцям.
   EN_Example: The ski slope here suits even beginners.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/гірськолижний
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

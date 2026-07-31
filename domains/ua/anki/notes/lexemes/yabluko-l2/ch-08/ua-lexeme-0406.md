@@ -31,7 +31,6 @@ fields:
   TypingAnswer: теплий
   UA_Example: Сьогодні теплий весняний день.
   EN_Example: Today is a warm spring day.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/теплий
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

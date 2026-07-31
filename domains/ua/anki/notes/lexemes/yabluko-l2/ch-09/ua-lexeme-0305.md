@@ -42,7 +42,6 @@ fields:
   TypingAnswer: прибуття
   UA_Example: Прибуття очікується завтра вранці.
   EN_Example: Arrival is expected tomorrow morning.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/прибуття
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

@@ -29,7 +29,6 @@ fields:
   TypingAnswer: цікаво
   UA_Example: Цікаво, звідки він так добре знає українську.
   EN_Example: I wonder where he learned Ukrainian so well.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/цікаво
   Source_Note: verified 2026-07-06 via Горох

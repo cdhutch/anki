@@ -31,7 +31,6 @@ fields:
   TypingAnswer: пірнати
   UA_Example: Ми пірнали біля коралового рифу.
   EN_Example: We dove near the coral reef.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/пірнати
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

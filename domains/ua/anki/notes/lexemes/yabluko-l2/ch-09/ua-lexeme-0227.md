@@ -33,7 +33,6 @@ fields:
   TypingAnswer: відбивати мʼяч
   UA_Example: Гравець мусить відбивати мʼяч точно в потрібний бік.
   EN_Example: The player has to return the ball precisely in the right direction.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/відбивати; https://goroh.pp.ua/Словозміна/м'яч
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

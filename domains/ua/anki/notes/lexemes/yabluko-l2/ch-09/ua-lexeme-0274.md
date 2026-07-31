@@ -32,7 +32,6 @@ fields:
   TypingAnswer: енергія
   UA_Example: Атмосфера старту була заряджена позитивною енергією пригод.
   EN_Example: The atmosphere at the start was charged with the positive energy of adventure.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/енергія
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

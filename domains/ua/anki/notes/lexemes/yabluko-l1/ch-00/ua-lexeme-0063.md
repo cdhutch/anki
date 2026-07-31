@@ -30,7 +30,6 @@ fields:
   TypingAnswer: стаття
   UA_Example: Я прочитав цікаву статтю у газеті.
   EN_Example: I read an interesting article in the newspaper.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/стаття
   Source_Note: verified 2026-07-06 via Горох

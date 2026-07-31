@@ -31,7 +31,6 @@ fields:
   TypingAnswer: показовий
   UA_Example: Тренер провів показовий урок для новачків.
   EN_Example: The coach gave a demonstration lesson for the beginners.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/показовий
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

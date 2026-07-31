@@ -31,7 +31,6 @@ fields:
   TypingAnswer: як
   UA_Example: Це місто не таке велике, як я очікував.
   EN_Example: This city isn't as big as I expected.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/як
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

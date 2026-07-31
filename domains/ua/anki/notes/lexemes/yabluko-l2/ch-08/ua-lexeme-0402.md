@@ -32,7 +32,6 @@ fields:
   TypingAnswer: спека
   UA_Example: Влітку тут страшна спека.
   EN_Example: The heat here in summer is terrible.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/спека
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

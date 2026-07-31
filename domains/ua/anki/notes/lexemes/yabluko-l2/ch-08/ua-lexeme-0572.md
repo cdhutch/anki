@@ -31,7 +31,6 @@ fields:
   TypingAnswer: дивовижний
   UA_Example: У нього дивовижний голос.
   EN_Example: He has an amazing voice.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/дивовижний
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

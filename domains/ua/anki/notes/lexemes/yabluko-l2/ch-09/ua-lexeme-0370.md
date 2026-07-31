@@ -33,7 +33,6 @@ fields:
   TypingAnswer: пізно ввечері
   UA_Example: Вони дісталися табору пізно ввечері.
   EN_Example: They reached the camp late in the evening.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/пізно; https://goroh.pp.ua/Словозміна/ввечері
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

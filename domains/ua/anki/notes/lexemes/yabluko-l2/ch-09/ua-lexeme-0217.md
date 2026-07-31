@@ -31,7 +31,6 @@ fields:
   TypingAnswer: кидати
   UA_Example: Гравці кидають мʼяч один одному.
   EN_Example: The players throw the ball to each other.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/кидати; https://goroh.pp.ua/Словозміна/кинути
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

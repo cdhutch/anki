@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вибачати
   UA_Example: Вибачте, повторіть, будь ласка, номер вагона.
   EN_Example: Sorry, please repeat the train car number.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/вибачати; https://goroh.pp.ua/Словозміна/вибачити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

@@ -33,7 +33,6 @@ fields:
   TypingAnswer: носоріг
   UA_Example: Волохатий носоріг колись жив у цих краях.
   EN_Example: The woolly rhinoceros once lived in these parts.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/носоріг
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

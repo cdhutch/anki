@@ -32,7 +32,6 @@ fields:
   TypingAnswer: ночівля
   UA_Example: Ночівля біля підніжжя гори була холодною, але незабутньою.
   EN_Example: The overnight stay at the foot of the mountain was cold but unforgettable.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/ночівля
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

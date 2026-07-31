@@ -32,7 +32,6 @@ fields:
   TypingAnswer: сопілка
   UA_Example: Музикант грав на сопілці народну мелодію.
   EN_Example: The musician played a folk melody on the sopilka.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/сопілка
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

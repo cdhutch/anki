@@ -38,7 +38,6 @@ fields:
   TypingAnswer: алфавіт
   UA_Example: В українському алфавіті тридцять три букви.
   EN_Example: The Ukrainian alphabet has thirty-three letters.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/алфавіт
   Source_Note: verified 2026-07-06 via Горох

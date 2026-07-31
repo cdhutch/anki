@@ -33,7 +33,6 @@ fields:
   TypingAnswer: звісно
   UA_Example: Звісно, ми залишимо відгук про готель.
   EN_Example: Of course, we'll leave a review of the hotel.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/звісно
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

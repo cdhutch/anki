@@ -31,7 +31,6 @@ fields:
   TypingAnswer: стосуватися
   UA_Example: Це правило стосується лише готелів у центрі.
   EN_Example: This rule applies only to hotels in the center.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/стосуватися
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

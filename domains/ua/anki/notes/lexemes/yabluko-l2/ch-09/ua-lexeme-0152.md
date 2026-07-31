@@ -31,7 +31,6 @@ fields:
   TypingAnswer: тренування
   UA_Example: Як часто Ви ходите на тренування?
   EN_Example: How often do you go to training?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/тренування
   Source_Note: Stress verified 2026-07-22 via Горох. Example verbatim from Яблуко 2, ch.9.1

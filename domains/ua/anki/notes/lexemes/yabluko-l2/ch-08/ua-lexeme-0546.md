@@ -32,7 +32,6 @@ fields:
   TypingAnswer: дерево
   UA_Example: Ми сховались у затінку старого дерева.
   EN_Example: We took shelter in the shade of an old tree.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/дерево
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

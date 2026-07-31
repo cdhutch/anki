@@ -32,7 +32,6 @@ fields:
   TypingAnswer: що стосується
   UA_Example: Що стосується транспорту, тут усе дуже зручно.
   EN_Example: As for transportation, everything here is very convenient.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/стосуватися
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

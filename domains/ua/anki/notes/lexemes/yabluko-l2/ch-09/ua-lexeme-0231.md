@@ -33,7 +33,6 @@ fields:
   TypingAnswer: кинути мʼяч
   UA_Example: Тренер попросив кинути мʼяч точно у кошик.
   EN_Example: The coach asked him to throw the ball right into the basket.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/кинути; https://goroh.pp.ua/Словозміна/м'яч
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

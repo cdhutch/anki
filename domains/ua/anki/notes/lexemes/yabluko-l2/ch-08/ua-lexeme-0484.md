@@ -31,7 +31,6 @@ fields:
   TypingAnswer: впадати
   UA_Example: Яблуко впало з дерева просто йому під ноги.
   EN_Example: An apple fell from the tree right at his feet.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/впадати; https://goroh.pp.ua/Словозміна/впасти
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass. Re-keyed 2026-07-30 per Craig's

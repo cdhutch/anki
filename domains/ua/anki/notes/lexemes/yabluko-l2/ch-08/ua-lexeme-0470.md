@@ -31,7 +31,6 @@ fields:
   TypingAnswer: перший
   UA_Example: Це наша перша подорож до Карпат.
   EN_Example: This is our first trip to the Carpathians.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/перший
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

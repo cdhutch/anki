@@ -31,7 +31,6 @@ fields:
   TypingAnswer: багатий
   UA_Example: Це багатий на визначні пам'ятки регіон.
   EN_Example: This is a region rich in landmarks.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/багатий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

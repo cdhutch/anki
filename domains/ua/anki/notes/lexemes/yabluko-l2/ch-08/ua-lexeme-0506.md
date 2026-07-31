@@ -31,7 +31,6 @@ fields:
   TypingAnswer: волохатий
   UA_Example: У музеї показують скелет волохатого носорога.
   EN_Example: The museum displays the skeleton of a woolly rhinoceros.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/волохатий
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

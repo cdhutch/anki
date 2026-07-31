@@ -30,7 +30,6 @@ fields:
   TypingAnswer: парасоля
   UA_Example: Вона взяла парасолю, бо надворі дощ.
   EN_Example: She took an umbrella because it is raining outside.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/парасоля
   Source_Note: verified 2026-07-06 via Горох

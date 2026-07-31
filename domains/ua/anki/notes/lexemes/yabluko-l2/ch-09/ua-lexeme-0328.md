@@ -33,7 +33,6 @@ fields:
   TypingAnswer: Вибачте, повторіть, будь ласка...
   UA_Example: Вибачте, повторіть, будь ласка, номер платформи.
   EN_Example: Sorry, please repeat the platform number.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/вибачити; https://goroh.pp.ua/Словозміна/повторити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

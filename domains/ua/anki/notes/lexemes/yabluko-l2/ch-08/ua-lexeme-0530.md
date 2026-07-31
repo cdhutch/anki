@@ -32,7 +32,6 @@ fields:
   TypingAnswer: гірськолижна траса
   UA_Example: Ми обрали легшу гірськолижну трасу для першого дня.
   EN_Example: We chose an easier ski slope for the first day.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/гірськолижний; https://goroh.pp.ua/Словозміна/траса
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

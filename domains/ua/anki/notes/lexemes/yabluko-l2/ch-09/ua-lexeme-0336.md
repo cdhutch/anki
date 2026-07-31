@@ -34,7 +34,6 @@ fields:
     \ змінив все.\n"
   EN_Example: "Right after the turn, the cheese dairy came into view.\nSuch an abrupt turning\
     \ point in the economy changed everything.\n"
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/поворот
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

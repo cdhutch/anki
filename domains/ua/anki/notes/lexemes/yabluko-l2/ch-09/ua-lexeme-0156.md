@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вид спорту
   UA_Example: Якими видами спорту Вам подобається займатися?
   EN_Example: Which sports do you like to do?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/вид; https://goroh.pp.ua/Словозміна/спорт
   Source_Note: Components verified via Горох (see ua-lexeme-0143, ua-lexeme-0142). 'Спорту'

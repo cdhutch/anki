@@ -31,7 +31,6 @@ fields:
   TypingAnswer: катер
   UA_Example: Катер швидко перетнув затоку.
   EN_Example: The motorboat quickly crossed the bay.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/катер
   Source_Note: Stress verified 2026-07-22 via Горох.

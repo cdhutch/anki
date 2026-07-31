@@ -42,7 +42,6 @@ fields:
   TypingAnswer: стартувати
   UA_Example: Команди стартували рівно о восьмій ранку.
   EN_Example: The teams started right at eight in the morning.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/стартувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

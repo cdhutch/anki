@@ -31,7 +31,6 @@ fields:
   TypingAnswer: гостинний
   UA_Example: Господарі виявились дуже гостинними.
   EN_Example: The hosts turned out to be very hospitable.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/гостинний
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

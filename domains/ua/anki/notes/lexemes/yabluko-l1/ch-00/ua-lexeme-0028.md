@@ -30,7 +30,6 @@ fields:
   TypingAnswer: буква
   UA_Example: Напишіть першу букву свого імені тут.
   EN_Example: Write the first letter of your name here.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/буква
   Source_Note: verified 2026-07-06 via Горох

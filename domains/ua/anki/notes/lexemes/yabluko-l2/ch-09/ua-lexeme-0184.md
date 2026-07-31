@@ -32,7 +32,6 @@ fields:
   TypingAnswer: команда
   UA_Example: Наша команда виграла останній матч.
   EN_Example: Our team won the last match.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/команда
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

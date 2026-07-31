@@ -31,7 +31,6 @@ fields:
   TypingAnswer: попередній
   UA_Example: Попередній маршрут виявився занадто складним.
   EN_Example: The previous route turned out to be too difficult.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/попередній
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

@@ -30,7 +30,6 @@ fields:
   TypingAnswer: адреса
   UA_Example: Будь ласка, напишіть свою адресу в анкеті.
   EN_Example: Please write your address in the form.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/адреса
   Source_Note: verified 2026-07-06 via Горох

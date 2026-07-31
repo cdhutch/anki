@@ -32,7 +32,6 @@ fields:
   TypingAnswer: хребет
   UA_Example: Гірський хребет тягнеться через кілька областей.
   EN_Example: The mountain range stretches across several regions.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/хребет
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

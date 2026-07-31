@@ -32,7 +32,6 @@ fields:
   TypingAnswer: порівняння
   UA_Example: У порівнянні з минулим роком, сніг випав раніше.
   EN_Example: Compared to last year, snow fell earlier.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/порівняння
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

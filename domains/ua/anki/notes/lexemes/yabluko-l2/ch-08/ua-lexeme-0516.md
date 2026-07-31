@@ -32,7 +32,6 @@ fields:
   TypingAnswer: температура
   UA_Example: Температура різко впала після заходу сонця.
   EN_Example: The temperature dropped sharply after sunset.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/температура
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

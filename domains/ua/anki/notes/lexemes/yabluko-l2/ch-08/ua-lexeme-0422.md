@@ -32,7 +32,6 @@ fields:
   TypingAnswer: намет
   UA_Example: Ми поставили намет біля озера.
   EN_Example: We pitched a tent by the lake.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/намет
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

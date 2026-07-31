@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вглиб
   UA_Example: Стежка вела вглиб лісу.
   EN_Example: The path led deep into the forest.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/вглиб
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

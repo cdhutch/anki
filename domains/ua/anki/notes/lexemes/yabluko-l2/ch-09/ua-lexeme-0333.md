@@ -31,7 +31,6 @@ fields:
   TypingAnswer: заночувати
   UA_Example: Через дощ їм довелося заночувати в сироварні.
   EN_Example: Because of the rain, they ended up spending the night at the cheese dairy.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/заночувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

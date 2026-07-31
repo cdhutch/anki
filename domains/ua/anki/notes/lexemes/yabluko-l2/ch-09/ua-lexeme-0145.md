@@ -41,7 +41,6 @@ fields:
   TypingAnswer: біг
   UA_Example: Біг — чудовий спосіб залишатися у формі.
   EN_Example: Running is a great way to stay in shape.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/біг
   Source_Note: Verified 2026-07-22 via Горох.

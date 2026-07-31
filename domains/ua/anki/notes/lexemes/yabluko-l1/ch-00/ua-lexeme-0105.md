@@ -29,7 +29,6 @@ fields:
   TypingAnswer: привіт
   UA_Example: — Привіт! Як твої справи?
   EN_Example: — Hi! How are you?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/привіт
   Source_Note: verified 2026-07-06 via Горох

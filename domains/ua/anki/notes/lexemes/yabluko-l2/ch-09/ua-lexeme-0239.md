@@ -32,7 +32,6 @@ fields:
   TypingAnswer: букет
   UA_Example: Букет троянд пахнув на всю кімнату.
   EN_Example: The bouquet of roses filled the whole room with scent.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/букет
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

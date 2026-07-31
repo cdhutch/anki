@@ -31,7 +31,6 @@ fields:
   TypingAnswer: Японія
   UA_Example: Мій колега приїхав з Японії.
   EN_Example: My colleague arrived from Japan.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/Японія
   Source_Note: verified 2026-07-06 via Горох

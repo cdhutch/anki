@@ -33,7 +33,6 @@ fields:
   TypingAnswer: око
   UA_Example: Це кафе легко впадає в очі завдяки яскравій вивісці.
   EN_Example: This café easily catches the eye thanks to its bright sign.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/око
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

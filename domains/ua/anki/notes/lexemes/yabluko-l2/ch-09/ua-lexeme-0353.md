@@ -32,7 +32,6 @@ fields:
   TypingAnswer: ввечері
   UA_Example: Пізно ввечері всі зібралися біля вогню.
   EN_Example: Late in the evening everyone gathered around the fire.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/ввечері
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

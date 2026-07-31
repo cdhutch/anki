@@ -34,7 +34,6 @@ fields:
   TypingAnswer: переплисти озеро
   UA_Example: Наймолодший учасник переплив озеро найшвидше.
   EN_Example: The youngest participant swam across the lake the fastest.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/переплисти; https://goroh.pp.ua/Словозміна/озеро
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

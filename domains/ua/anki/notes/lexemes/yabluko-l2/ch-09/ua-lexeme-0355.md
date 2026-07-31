@@ -31,7 +31,6 @@ fields:
   TypingAnswer: через
   UA_Example: Вони прибудуть через три години.
   EN_Example: They will arrive in three hours.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/через
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

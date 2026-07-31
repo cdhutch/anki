@@ -31,7 +31,6 @@ fields:
   TypingAnswer: використовувати
   UA_Example: Учасники використовують спорядження для дайвінгу.
   EN_Example: The participants use equipment for diving.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/використовувати; https://goroh.pp.ua/Словозміна/використати
   Source_Note: Drafted 2026-07-27 from the ch.9.3 PDF-vs-corpus gap analysis -- see ua-lexeme-0374's

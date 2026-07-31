@@ -31,7 +31,6 @@ fields:
   TypingAnswer: викликати
   UA_Example: Треба викликати таксі до готелю.
   EN_Example: We need to call a taxi to the hotel.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/викликати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: липкий
   UA_Example: Тісто виявилось надто липким.
   EN_Example: The dough turned out too sticky.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/липкий
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

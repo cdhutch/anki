@@ -32,7 +32,6 @@ fields:
   TypingAnswer: темрява
   UA_Example: У темряві важко знайти правильний напрямок.
   EN_Example: In the dark it's hard to find the right direction.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/темрява
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

@@ -30,7 +30,6 @@ fields:
   TypingAnswer: число
   UA_Example: Напишіть число, місяць і рік свого народження.
   EN_Example: Write the number, month and year of your birth.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/число
   Source_Note: verified 2026-07-06 via Горох

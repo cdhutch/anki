@@ -33,7 +33,6 @@ fields:
   TypingAnswer: мамонт
   UA_Example: У печері знайшли кістки мамонта.
   EN_Example: Mammoth bones were found in the cave.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/мамонт
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

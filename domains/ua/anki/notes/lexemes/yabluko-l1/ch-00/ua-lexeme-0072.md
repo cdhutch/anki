@@ -31,7 +31,6 @@ fields:
   TypingAnswer: Америка
   UA_Example: Вони мріють поїхати до Америки.
   EN_Example: They dream of going to America.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/Америка
   Source_Note: verified 2026-07-06 via Горох

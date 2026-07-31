@@ -33,7 +33,6 @@ fields:
   TypingAnswer: трохи пізніше
   UA_Example: Трохи пізніше почався дощ.
   EN_Example: A little later it started to rain.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/трохи; https://goroh.pp.ua/Словозміна/пізніше
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

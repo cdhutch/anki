@@ -30,7 +30,6 @@ fields:
   TypingAnswer: малюнок
   UA_Example: Дитина намалювала гарний малюнок олівцями.
   EN_Example: The child drew a beautiful picture with pencils.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/малюнок
   Source_Note: verified 2026-07-06 via Горох

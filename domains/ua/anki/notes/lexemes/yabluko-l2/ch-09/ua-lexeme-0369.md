@@ -31,7 +31,6 @@ fields:
   TypingAnswer: після того як
   UA_Example: Після того як дощ ущух, вони вирушили далі.
   EN_Example: After the rain let up, they set off further.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/після того як
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

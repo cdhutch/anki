@@ -30,7 +30,6 @@ fields:
   TypingAnswer: метро
   UA_Example: Ми їдемо до центру на метро.
   EN_Example: We go to the centre by metro.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/метро
   Source_Note: verified 2026-07-06 via Горох

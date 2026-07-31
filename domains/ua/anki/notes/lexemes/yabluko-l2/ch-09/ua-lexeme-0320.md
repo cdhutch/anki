@@ -31,7 +31,6 @@ fields:
   TypingAnswer: повторювати
   UA_Example: Провідник любʼязно повторив час прибуття.
   EN_Example: The conductor kindly repeated the arrival time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/повторювати; https://goroh.pp.ua/Словозміна/повторити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

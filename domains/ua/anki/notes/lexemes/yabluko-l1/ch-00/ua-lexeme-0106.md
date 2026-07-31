@@ -29,7 +29,6 @@ fields:
   TypingAnswer: До побачення
   UA_Example: — До побачення! — До побачення, до завтра!
   EN_Example: — Goodbye! — Goodbye, see you tomorrow!
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: за винятком
   UA_Example: За винятком одного дня, погода була чудова.
   EN_Example: With the exception of one day, the weather was wonderful.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/виняток
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

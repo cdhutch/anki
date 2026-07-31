@@ -30,7 +30,6 @@ fields:
   TypingAnswer: конверт
   UA_Example: Він кладе листа в конверт і відправляє.
   EN_Example: He puts the letter in an envelope and sends it.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/конверт
   Source_Note: verified 2026-07-06 via Горох

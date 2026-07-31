@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вибір страв
   UA_Example: У цьому ресторані великий вибір страв.
   EN_Example: This restaurant has a large choice of dishes.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/вибір; https://goroh.pp.ua/Словозміна/страва
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass. Vocabulary-appendix phrase

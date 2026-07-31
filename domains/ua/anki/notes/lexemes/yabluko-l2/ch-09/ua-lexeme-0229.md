@@ -33,7 +33,6 @@ fields:
   TypingAnswer: завдати ударів
   UA_Example: Боксер завдав кілька сильних ударів у першому раунді.
   EN_Example: The boxer landed several strong blows in the first round.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/завдати; https://goroh.pp.ua/Словозміна/удар
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

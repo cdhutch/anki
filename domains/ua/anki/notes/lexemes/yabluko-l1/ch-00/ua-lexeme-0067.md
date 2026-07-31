@@ -30,7 +30,6 @@ fields:
   TypingAnswer: фільм
   UA_Example: Учора ввечері ми дивилися цікавий фільм.
   EN_Example: Yesterday evening we watched an interesting film.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/фільм
   Source_Note: verified 2026-07-06 via Горох

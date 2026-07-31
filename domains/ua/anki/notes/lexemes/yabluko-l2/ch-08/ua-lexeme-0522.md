@@ -32,7 +32,6 @@ fields:
   TypingAnswer: трембіта
   UA_Example: Звук трембіти лунав по всій долині.
   EN_Example: The sound of the trembita echoed throughout the valley.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/трембіта
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

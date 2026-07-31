@@ -33,7 +33,6 @@ fields:
   TypingAnswer: кілька
   UA_Example: Ми провели в місті кілька днів.
   EN_Example: We spent several days in the city.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/кілька
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

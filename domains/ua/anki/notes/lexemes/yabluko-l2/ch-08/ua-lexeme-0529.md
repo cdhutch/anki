@@ -32,7 +32,6 @@ fields:
   TypingAnswer: гірський хребет
   UA_Example: Карпатський гірський хребет добре видно з літака.
   EN_Example: The Carpathian mountain range is clearly visible from the plane.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/гірський; https://goroh.pp.ua/Словозміна/хребет
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

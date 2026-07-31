@@ -42,7 +42,6 @@ fields:
   TypingAnswer: тепло
   UA_Example: Від каміна йшло приємне тепло.
   EN_Example: Pleasant warmth radiated from the fireplace.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/тепло
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: шумно
   UA_Example: На вулиці біля готелю було шумно.
   EN_Example: It was noisy on the street by the hotel.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/шумно
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: гірський
   UA_Example: Гірський масив тягнеться на десятки кілометрів.
   EN_Example: The mountain range stretches for dozens of kilometers.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/гірський
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

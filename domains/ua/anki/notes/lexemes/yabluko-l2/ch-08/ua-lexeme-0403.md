@@ -31,7 +31,6 @@ fields:
   TypingAnswer: спекотний
   UA_Example: Липень був найспекотнішим місяцем.
   EN_Example: July was the hottest month.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/спекотний
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

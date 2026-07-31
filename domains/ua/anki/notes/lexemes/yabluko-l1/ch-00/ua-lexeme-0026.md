@@ -30,7 +30,6 @@ fields:
   TypingAnswer: балет
   UA_Example: Учора ввечері ми дивилися чудовий балет.
   EN_Example: Yesterday evening we watched a wonderful ballet.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/балет
   Source_Note: verified 2026-07-06 via Горох

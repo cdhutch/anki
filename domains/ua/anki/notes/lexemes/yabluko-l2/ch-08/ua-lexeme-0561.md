@@ -31,7 +31,6 @@ fields:
   TypingAnswer: смішно
   UA_Example: Було смішно дивитися, як він куштує квашену капусту вперше.
   EN_Example: It was funny to watch him try sauerkraut for the first time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/смішно
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

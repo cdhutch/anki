@@ -31,7 +31,6 @@ fields:
   TypingAnswer: суворий
   UA_Example: Клімат тут доволі суворий узимку.
   EN_Example: The climate here is quite harsh in winter.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/суворий
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

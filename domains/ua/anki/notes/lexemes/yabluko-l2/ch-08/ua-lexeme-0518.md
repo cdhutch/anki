@@ -32,7 +32,6 @@ fields:
   TypingAnswer: розведення
   UA_Example: Розведення овець — традиційний промисел у цих горах.
   EN_Example: Sheep breeding is a traditional trade in these mountains.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/розведення
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

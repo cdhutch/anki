@@ -31,7 +31,6 @@ fields:
   TypingAnswer: надувний
   UA_Example: Вони перепливли річку на надувному човні.
   EN_Example: They crossed the river in an inflatable boat.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/надувний
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

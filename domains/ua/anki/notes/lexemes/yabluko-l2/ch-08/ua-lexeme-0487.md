@@ -32,7 +32,6 @@ fields:
   TypingAnswer: розклад руху
   UA_Example: Розклад руху потягів змінився з понеділка.
   EN_Example: The train traffic schedule changed as of Monday.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/розклад; https://goroh.pp.ua/Тлумачення/рух
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

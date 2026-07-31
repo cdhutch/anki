@@ -31,7 +31,6 @@ fields:
   TypingAnswer: галявина
   UA_Example: Діти гралися на галявині.
   EN_Example: The children played in the clearing.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/галявина
   Source_Note: Stress verified 2026-07-22 via Горох.

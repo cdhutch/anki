@@ -31,7 +31,6 @@ fields:
   TypingAnswer: долати
   UA_Example: Команда мала подолати бездоріжжя за одну годину.
   EN_Example: The team had to get through the off-road stretch in one hour.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/долати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

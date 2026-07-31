@@ -32,7 +32,6 @@ fields:
   TypingAnswer: дельтаплан
   UA_Example: Він уперше політав на дельтаплані над горами.
   EN_Example: He flew a hang glider over the mountains for the first time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/дельтаплан
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

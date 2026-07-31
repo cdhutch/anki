@@ -33,7 +33,6 @@ fields:
   TypingAnswer: установлювати / установити
   UA_Example: Технік установлює нове обладнання в лабораторії.
   EN_Example: The technician is installing new equipment in the lab.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/установлювати; https://goroh.pp.ua/Словозміна/установити;
     https://goroh.pp.ua/Синонімія/встановити

@@ -30,7 +30,6 @@ fields:
   TypingAnswer: лижний
   UA_Example: Лижний сезон починається у грудні.
   EN_Example: Ski season starts in December.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/лижний
   Source_Note: Stress verified 2026-07-22 via Горох.

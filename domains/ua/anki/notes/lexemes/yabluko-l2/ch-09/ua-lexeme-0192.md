@@ -32,7 +32,6 @@ fields:
   TypingAnswer: поле
   UA_Example: Гравці вибігли на поле під оплески вболівальників.
   EN_Example: The players ran out onto the field to the fans' applause.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/поле
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

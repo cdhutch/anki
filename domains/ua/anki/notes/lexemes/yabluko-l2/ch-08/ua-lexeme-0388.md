@@ -31,7 +31,6 @@ fields:
   TypingAnswer: дощовий
   UA_Example: Восени часто буває дощова погода.
   EN_Example: In autumn the weather is often rainy.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/дощовий
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

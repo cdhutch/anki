@@ -29,7 +29,6 @@ fields:
   TypingAnswer: правильно
   UA_Example: Ти написав усі слова правильно.
   EN_Example: You wrote all the words correctly.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/правильно
   Source_Note: verified 2026-07-06 via Горох

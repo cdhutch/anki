@@ -31,7 +31,6 @@ fields:
   TypingAnswer: пахнути
   UA_Example: У кухні пахло свіжим часником.
   EN_Example: The kitchen smelled of fresh garlic.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/пахнути
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

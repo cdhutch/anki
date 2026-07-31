@@ -32,7 +32,6 @@ fields:
   TypingAnswer: сніг
   UA_Example: Уночі випав перший сніг.
   EN_Example: The first snow fell overnight.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/сніг
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

@@ -41,7 +41,6 @@ fields:
   UA_Example: Ми часто їздимо на дачу влітку, а того дня ми їхали і слухали радіо.
   EN_Example: We often go (drive) to the dacha in summer, and that day we were driving and
     listening to the radio.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/їздити; https://goroh.pp.ua/Словозміна/їхати;
     https://goroh.pp.ua/Словозміна/поїхати

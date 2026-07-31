@@ -32,7 +32,6 @@ fields:
   TypingAnswer: партія
   UA_Example: Ми зіграли ще одну партію в шахи.
   EN_Example: We played one more game of chess.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/партія
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

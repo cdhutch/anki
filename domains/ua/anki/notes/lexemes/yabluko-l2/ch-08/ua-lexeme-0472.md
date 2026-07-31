@@ -31,7 +31,6 @@ fields:
   TypingAnswer: якщо
   UA_Example: Якщо буде дощ, ми залишимось у готелі.
   EN_Example: If it rains, we'll stay at the hotel.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/якщо
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

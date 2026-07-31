@@ -33,7 +33,6 @@ fields:
   TypingAnswer: не пізніше ніж
   UA_Example: Вони мали прибути не пізніше ніж о десятій.
   EN_Example: They had to arrive no later than ten o'clock.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/пізніше
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: хмарний
   UA_Example: Сьогодні хмарний, але теплий день.
   EN_Example: Today is a cloudy but warm day.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/хмарний
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: рівень життя
   UA_Example: Рівень життя тут вищий, ніж у сусідньому регіоні.
   EN_Example: The standard of living here is higher than in the neighboring region.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/рівень; https://goroh.pp.ua/Словозміна/життя
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

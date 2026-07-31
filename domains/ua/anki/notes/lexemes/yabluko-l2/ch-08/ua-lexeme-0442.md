@@ -31,7 +31,6 @@ fields:
   TypingAnswer: великий
   UA_Example: У нас був великий номер із видом на море.
   EN_Example: We had a big room with a sea view.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/великий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
