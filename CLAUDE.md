@@ -297,14 +297,27 @@ this doc. Roughly in priority order:
 5. **UA→EN front aspect display** — **Done, 2026-07-31**, synced. See "UA→EN front
    aspect display" under Card Template Techniques above.
 6. **Compare-card suspend mechanism** (`set_compare_card_suspended()` in
-   `ua_lexeme_import.py`) — genuinely untested in live Anki, since no current note has
-   actually needed it to suspend a real Compare card end-to-end (0405/0407 ended up
-   with real Compare content instead of hitting the suspend path when fixed
-   2026-07-30). A footgun noted earlier this project: targeted `findCards` +
-   `card:"Name"` + `suspend`/`unsuspend` verified correct in a dry run but didn't
-   reliably stick in live Anki during an earlier EN→UA suspend attempt (Phase 2a) —
-   unclear if that footgun applies here too. Needs a deliberately-constructed test
-   case. Still open.
+   `ua_lexeme_import.py`) — **Tested and confirmed working (2026-08-01).** Built 3
+   deliberately-constructed scratch notes (ua-lexeme-9997/9998/9999, deleted from Anki
+   and the repo after verification) to exercise `suspend_compare_card`:
+   - **Blank `CompareA` from note creation** (9999, homograph mode, `ConfusableSet`
+     populated, `CompareA` never authored): Anki never generates the Compare card at
+     all — its own empty-card-generation rule refuses, because the `{{^CompareA}}`
+     "should be suspended" warning text in `COMPARISON_FRONT` is pure static template
+     text with no field substitution, so the rendered front doesn't count as non-empty.
+     This makes that branch of the Python suspend logic dead/unreachable in practice —
+     harmless, but the comment above it in `setup_ua_note_types.py` calling it "a
+     defensive fallback for previewing/QA" is inaccurate, since the card whose front
+     would show the notice never exists to preview. Worth a comment fix; not urgent.
+   - **Valid Compare data throughout** (9998): Card 3 generated normally and stayed
+     unsuspended, as expected.
+   - **Valid → retracted** (9997, two-phase: imported with real `ConfusableSet`/
+     `CompareA`/`CompareB` so Anki generated a genuine Compare card, then re-imported
+     with those fields cleared): this was the real test of the historical footgun. The
+     pre-existing Compare card correctly ended up suspended on re-sync (confirmed via
+     AnkiConnect `cardsInfo` `queue:-1` and visually in Anki's browser) while UA→EN/
+     EN→UA stayed active. **The footgun does not reproduce here** — suspension does
+     stick on a genuinely pre-existing Compare card. Resolved.
 7. **Per-slot euphony tolerance + verb-phrase aspect defaulting** — scoped with Craig
    2026-07-29, not built. See the full design under Card Template Techniques above.
    Still open.
@@ -333,8 +346,9 @@ CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-
 the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph
 Compare-card generalization (bucket 2 above, done 2026-07-30), the тепло Compare-card
 content gap fix + corpus-wide sweep (2026-07-30), the EN→UA aspect+euphony typing
-restoration (2026-07-28, git archaeology), and the UA→EN front aspect display
-(2026-07-31, item 5 above).
+restoration (2026-07-28, git archaeology), the UA→EN front aspect display
+(2026-07-31, item 5 above), and the Compare-card suspend mechanism test/confirmation
+(2026-08-01, item 6 above).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -409,8 +423,9 @@ there's nothing left in the model to remove. Step 2 (backup) is no longer requir
 since no live-model mutation is happening. Step 6 verification: `cnsf_canonicalize --check`
 already clean (done above); running `tests/ua/` and a live-card spot-check are optional at
 this point, not blocking, since nothing rendered this field and the model was never touched.
-**Removal plan is effectively complete** once `chore/remove-verb-conj-table` is
-reviewed/staged/committed and merged — no further AnkiConnect action needed.
+**Removal plan is effectively complete.** `chore/remove-verb-conj-table` was reviewed,
+merged to `main` via PR #58 (2026-07-31), and the branch deleted (local + remote) —
+no further AnkiConnect action needed.
 
 **Rationale:** repo-wide grep confirms no card template anywhere references `{{Verb_Conj_Table}}`
 — the field has never been rendered on any card, in any note-type version. It's genuinely dead
