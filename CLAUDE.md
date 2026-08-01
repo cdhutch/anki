@@ -321,8 +321,24 @@ this doc. Roughly in priority order:
 7. **Per-slot euphony tolerance + verb-phrase aspect defaulting** — scoped with Craig
    2026-07-29, not built. See the full design under Card Template Techniques above.
    Still open.
-8. **Flagged Card Fix Workflow tooling** — see "Flagged Card Fix Workflow (Future)"
-   below. Not built.
+8. **Flagged Card Fix Workflow tooling** — **Built and tested, 2026-08-01.**
+   `tools/anki/inspect/ua_flag_audit.py` implements Phase 1 (`--query`) and Phase 3
+   (`--apply`) of the workflow in "Flagged Card Fix Workflow (Future)" below (Phase 2,
+   the interactive review/fix loop, is a conversation with Claude, not something a
+   script does). `--query` validated against all 11 real flagged notes currently in the
+   corpus -- every one correctly resolved to its canonical CNSF path, including the
+   recursive lexeme search across textbook/chapter subdirectories. `--apply` validated
+   end-to-end via a disposable synthetic note: found and fixed a real bug along the way
+   -- `CLAUDE-flag-audit.md`'s suggested flag-removal call (`anki_request("unmark", ...)`)
+   was aspirational and never actually worked (`"unsupported action"` -- there is no
+   batch unmark/setFlag action in AnkiConnect). Real mechanism is
+   `setSpecificValueOfCard`, one card at a time, with `newValues` as ints (`["0"]`
+   silently no-ops; `[0]` actually clears the flag). `--apply` now does a three-pass
+   sequence -- sync corrected content (still suspended, still flagged) → clear flags →
+   re-sync (picks up the cleared flags, unsuspends) -- so fixed notes end up unsuspended
+   within the same `--apply` run rather than deferred to whatever sync happens next.
+   `CLAUDE-flag-audit.md` corrected to match. See git history on
+   `feature/flagged-card-fix-workflow` for the full test trail.
 9. **`gen_ch09_subsection.py` generator-script wiring** — built 2026-07-25, not yet
    exercised against a real ch.9.3+ batch. Unexercised, not broken.
 10. **`UA_Grammar` 0001–0007 cloze review pass** — these notes predate the atomicity/
@@ -347,8 +363,9 @@ the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph
 Compare-card generalization (bucket 2 above, done 2026-07-30), the тепло Compare-card
 content gap fix + corpus-wide sweep (2026-07-30), the EN→UA aspect+euphony typing
 restoration (2026-07-28, git archaeology), the UA→EN front aspect display
-(2026-07-31, item 5 above), and the Compare-card suspend mechanism test/confirmation
-(2026-08-01, item 6 above).
+(2026-07-31, item 5 above), the Compare-card suspend mechanism test/confirmation
+(2026-08-01, item 6 above), and the Flagged Card Fix Workflow tooling
+(2026-08-01, item 8 above).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -1125,7 +1142,10 @@ After each study session, fix all flagged cards and remove flags.
 - `ua_flag_audit.py` — Query flagged cards, extract NoteIDs, map to canonical file paths
 - Integration with existing import scripts (ua_lexeme_import.py, ua_verb_import.py, ua_grammar_import.py, ua_visual_import.py)
 
-**Status:** Planned. End of queue after Phase 2a completion.
+**Status:** Phase 1 (`--query`) and Phase 3 (`--apply`) tooling built and tested,
+2026-08-01 -- see item 8 in the structural punch list above and
+`tools/anki/inspect/ua_flag_audit.py`. Phase 2 (interactive review/fix) is ready to use
+whenever Craig wants to work through the current 11 flagged notes.
 
 ### Source materials
 | Path | Purpose |
