@@ -127,6 +127,46 @@ but per Craig, held for a separate pass, not fixed here — that the *existing*
 ua-verb-0009 (пливти) and ua-verb-0010 (попливти) have stored conjugation tables that
 don't match their own Lemma (they look like a mixed-up плинути/попити paradigm
 instead); see "Remaining Work" below and each note's `Verification Notes` for detail.
+2026-08-01: **Gruvbox palette rollout — structural items 1–3 resolved (see "Remaining
+Work" below).** Found `feature/anki-mobile-night-mode` already existed with real prior
+work (a `.night_mode`→`.nightMode` fix commit, plus a `Solarized_Palette_Demo` proof-of-
+concept Craig had built 2026-07-27, commit `aa52393`) — merged both into the working
+branch. Resolved item 1 (dual CSS sources): `setup_ua_note_types.py` is now the single
+source of truth for all four live UA note types (`UA_Lexeme`/`UA_Grammar`/`UA_Verb`/
+`UA_Visual`); `update_legacy_css.py` trimmed to its B737-legacy entries only, per Craig's
+decision. Resolved item 2: `.night_mode`→`.nightMode` fixed throughout `VISUAL_CSS`.
+Item 3 ("Solarized palette") superseded — mid-task, Craig's actual objective turned out
+to be broader: a repo-wide default palette, chosen empirically against his real
+accessibility need (iOS Accessibility → Display & Text Size → Color Filters → Color Tint
+→ Hue near-full-left, a red-tint "night vision" filter he uses ~10% of the time, vs. ~60%
+day / ~30% ordinary night mode). Built `tools/anki/setup/setup_palette_comparison_demo.py`
+(`Palette_Comparison_Demo` note type, `Demo::Palette_Comparison` deck, under
+`domains/demo/` — see `domains/demo/README.md`) to A/B/C-test three candidates (Solarized
+/ Monochrome / Warm-Gruvbox-style) as composite card mockups that live-flip via
+`.nightMode`, tested in a three-pass walkthrough (Day mode → Night Mode → Night Mode +
+red-tint filter). Craig's verdict: **Gruvbox**, with Accent B corrected from olive green
+to blue (`#076678`/`#83a598`) after on-device testing showed green sat too close in hue
+to the secondary-text gray. Gruvbox is now rolled out as the actual palette across
+`CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS` in `setup_ua_note_types.py` (bg `#fbf1c7`/
+`#282828`, primary `#3c3836`/`#ebdbb2`, secondary `#7c6f64`/`#a89984`, Accent A orange
+`#af3a03`/`#fe8019`, Accent B blue as above). Scope also expanded per Craig to cover the
+Compare card and both typing-feedback scripts (`EN_UA_BACK` in `setup_ua_note_types.py`;
+`FEEDBACK_SCRIPT` in `setup_ua_pvom_note_type.py`, previously **completely unthemed, zero
+`.nightMode` support**) — their hardcoded inline `style="color:#hex"` attributes are now
+`.nightMode`-aware CSS classes (`fb-*`/`status-*` for the typing-feedback success/error/
+warning/info states, `compare-*` for the Compare card). Per Craig: status colors stay
+close to their pre-existing blue/green/red/orange roles (no new hues introduced); the
+"warning" state stayed in the original orange family (`#af3a03`/`#fe8019`, reusing Accent
+A) rather than switching to Gruvbox's yellow; dark-mode red/orange use Gruvbox's *bright*
+tier, not the muted/neutral tier, for maximum luminance contrast — specifically so they
+don't wash out under the red-tint filter, per Craig's explicit request. A 5th demo card
+(`palette-compare-status`) was added to `Palette_Comparison_Demo` previewing these exact
+shipped colors for Craig to confirm under pass 3 before this is treated as fully
+validated. **Status: all code delivered to Craig and written to his checkout; not yet
+synced to live Anki or confirmed on-device.** Next step for Craig: `make ua-setup` (all
+four UA note types) and `make ua-setup-pvom`, then re-run
+`python tools/anki/setup/setup_palette_comparison_demo.py` to pick up the new status-color
+demo card and re-test pass 3 specifically for the red/orange legibility question above.
 
 ## Workflow Notes
 
@@ -246,15 +286,18 @@ complete:
      once satisfied, same process used for ch.9.1. Re-sync afterward with `make ua-lexeme`
      / `make ua-verb`, or the new `make ua` aggregate target (canonicalizes + syncs every
      UA note type in one pass — see Reference Files).
-  3. Get the Solarized light/dark palette correct and consistent across both Anki domains
-     (B737 and Ukrainian). **Corrected 2026-07-31** — this item previously claimed `UA_Lexeme`
-     already carries Solarized CSS via `update_legacy_css.py`; Craig confirmed live `UA_Lexeme`
-     currently shows *neither* competing source (see below), so that was wrong. Concrete bug
-     found 2026-07-23: `UA_Visual`'s CSS uses the `.night_mode` (snake_case) selector instead
-     of `.nightMode` (camelCase) — confirmed via AnkiMobile's own docs that both desktop Anki
-     and AnkiMobile key off `.nightMode`, so `UA_Visual`'s dark-mode rules are currently dead
-     on every platform, not just iOS. **Still open, unfixed.**
-     Two disagreeing CSS sources exist for `UA_Lexeme` (found 2026-07-31): (a)
+  3. **Superseded 2026-08-01 — see the dated log entry above and "Remaining Work" items
+     1–3 below, all resolved.** Originally scoped as "get the Solarized palette correct
+     and consistent"; Craig's actual objective turned out to be broader (a repo-wide
+     default palette chosen against his real accessibility need), and the palette itself
+     changed from Solarized to **Gruvbox** after an on-device A/B/C comparison. The dual
+     CSS-source conflict and the `UA_Visual` `.night_mode`/`.nightMode` bug described below
+     are both fixed; kept the paragraphs below for the historical record of how the bugs
+     were found. Only `UA_Lexeme`/`UA_Grammar`/`UA_Verb`/`UA_Visual` (the UA domain) were
+     touched — B737 note-type CSS/structure was not, per Craig's original instruction to
+     keep this CSS-only and UA-scoped; a repo-wide (B737-included) rollout is still future
+     work if Craig wants it.
+     Two disagreeing CSS sources existed for `UA_Lexeme` (found 2026-07-31): (a)
      `tools/anki/setup/setup_ua_note_types.py`'s own `CSS` constant — plain, non-Solarized,
      the one this doc's setup scripts actually apply — and (b) the separate,
      Makefile-untracked `tools/anki/setup/update_legacy_css.py` — genuinely Solarized
@@ -280,14 +323,28 @@ distinct from chapter-by-chapter vocabulary sourcing/verification tracked elsewh
 this doc. Roughly in priority order:
 
 1. **Two disagreeing `UA_Lexeme` CSS sources** (found 2026-07-31, see item 3 above) —
-   needs a decision (merge `update_legacy_css.py`'s Solarized rules into
-   `setup_ua_note_types.py`'s `CSS` constant, retire one script, or wire
-   `update_legacy_css.py` into the Makefile so it's not a manually-run one-off) before
-   any Solarized work on `UA_Lexeme` starts. Still open.
-2. **`UA_Visual`'s `.night_mode`/`.nightMode` CSS bug** (found 2026-07-23) — one-line
-   selector fix, still unapplied. Still open.
-3. **`UA_Lexeme` Solarized palette** — genuinely future work (corrected 2026-07-31; see
-   item 3 above for why this doc previously overstated progress here). Blocked on #1.
+   **Resolved, 2026-08-01.** Decision made: `setup_ua_note_types.py`'s `CSS` constant
+   (plus `GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`) is now the single source of truth for all
+   four live UA note types; `update_legacy_css.py` trimmed to its B737-legacy entries only
+   (`SV_CLOZE_CSS`/`B737_SYSTEMS_CSS`), per Craig's explicit choice. See the 2026-08-01 log
+   entry above.
+2. **`UA_Visual`'s `.night_mode`/`.nightMode` CSS bug** (found 2026-07-23) — **Fixed,
+   2026-08-01.** All 13 occurrences in `VISUAL_CSS` converted to `.nightMode`; the
+   `.night_mode` duplication is intentionally not carried forward into new work (Android
+   isn't one of Craig's devices — see the `.nightMode`/`.night_mode` research in
+   `domains/demo/FINDINGS_AND_TESTING.md`), though it's correctly left alone in the two
+   B737 legacy CSS blocks that keep both selectors for parity.
+3. **`UA_Lexeme` color palette** — **Done, 2026-08-01, delivered to Craig; pending his
+   on-device sync/confirmation.** Superseded Solarized with **Gruvbox** after an on-device
+   A/B/C comparison against Craig's real accessibility need (iOS red-tint Color Filter
+   night mode) — see the 2026-08-01 log entry above for the full palette values and the
+   `domains/demo/README.md` "Palette Comparison Demo" section for the comparison tooling.
+   Rolled out to `CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`, the Compare card, and both
+   typing-feedback scripts (`EN_UA_BACK` here and `setup_ua_pvom_note_type.py`'s
+   `FEEDBACK_SCRIPT`, previously unthemed). Craig still needs to run `make ua-setup` /
+   `make ua-setup-pvom` and confirm on-device, especially the red/orange status colors
+   under the red-tint filter (pass 3) — see `palette-compare-status` in the comparison
+   demo, added specifically for that check.
 4. **`Verb_Conj_Table` field removal** — field blanked corpus-wide 2026-07-22. Steps 3-4
    of the plan below (strip the field from all CNSF lexeme files, canonicalize, update
    dependent tooling) done 2026-07-31 on branch `chore/remove-verb-conj-table` — see the
@@ -364,8 +421,10 @@ Compare-card generalization (bucket 2 above, done 2026-07-30), the тепло Co
 content gap fix + corpus-wide sweep (2026-07-30), the EN→UA aspect+euphony typing
 restoration (2026-07-28, git archaeology), the UA→EN front aspect display
 (2026-07-31, item 5 above), the Compare-card suspend mechanism test/confirmation
-(2026-08-01, item 6 above), and the Flagged Card Fix Workflow tooling
-(2026-08-01, item 8 above).
+(2026-08-01, item 6 above), the Flagged Card Fix Workflow tooling
+(2026-08-01, item 8 above), and the CSS single-source-of-truth decision + `.night_mode`
+selector fix + Gruvbox palette rollout (2026-08-01, items 1–3 above — delivered to
+Craig, sync/on-device confirmation still pending).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types

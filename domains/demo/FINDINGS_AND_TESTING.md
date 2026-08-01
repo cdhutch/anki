@@ -5,6 +5,14 @@ Solarized Light/Dark capability demo under `domains/demo/anki/notes/solarized_pa
 and `tools/anki/setup/setup_solarized_demo.py`. See `domains/demo/README.md`
 for a shorter usage/cleanup summary — this doc is the full writeup.
 
+**2026-08-01 update:** the `.nightMode`/`.night_mode` platform research below (section
+1.1) is still the authoritative finding and is now applied throughout the UA domain's
+CSS. The palette itself, however, changed — Solarized was superseded by **Gruvbox**
+after a follow-up on-device comparison (see `domains/demo/README.md`'s "Palette
+Comparison Demo" section and CLAUDE.md's 2026-08-01 log entry). This doc's palette
+table (section 1.2) and canonical-vs-repo dark-bg comparison (section 1.3) remain
+accurate for Solarized specifically, just no longer describe the repo's chosen palette.
+
 ---
 
 ## 1. Findings

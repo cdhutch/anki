@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
-"""Apply the Solarized palette to legacy note types (B737 + Ukrainian).
+"""Apply the Solarized palette to legacy B737 note types.
 
 Models updated:
   - B737_SV_Cloze      (legacy cloze cards, being phased out)
   - B737_Systems       (older systems knowledge cards)
-  - UA_Conjugation     (Ukrainian conjugation tables)
-  - UA_Grammar         (Ukrainian grammar cards)
-  - UA_Lexeme          (Ukrainian lexeme cards with examples)
-  - UA_Lexeme_Legacy   (legacy Ukrainian cards)
-  - UA_Verb            (Ukrainian verb cards)
+
+**Trimmed to B737-only 2026-08-01** (see CLAUDE.md item 1/3): this script used
+to also carry CSS for UA_Conjugation/UA_Grammar/UA_Lexeme/UA_Lexeme_Legacy/
+UA_Verb, but it was never wired into the Makefile, and its UA entries had
+drifted stale relative to the live templates (e.g. its UA_Grammar/UA_Verb
+versions only styled `.card`, missing most of the classes those templates
+actually use). `tools/anki/setup/setup_ua_note_types.py` -- the script that's
+actually run via `make ua-setup*` -- is now the single source of truth for
+Solarized CSS across all four live UA note types (Lexeme, Grammar, Visual,
+Verb). This script stays scoped to the two B737 legacy models above, which
+setup_ua_note_types.py does not manage.
 
 Usage:
     python tools/anki/setup/update_legacy_css.py
@@ -137,192 +143,12 @@ th { font-weight: 700; background-color: #eee8d5; }
 """
 
 # ---------------------------------------------------------------------------
-# Ukrainian types
-# ---------------------------------------------------------------------------
-
-UA_CONJUGATION_CSS = """\
-/* Light mode (Solarized light) */
-.card {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 18px;
-  text-align: left;
-  padding: 20px;
-  line-height: 1.4;
-  color: #586e75;
-  background-color: #fdf6e3;
-}
-
-.lemma { font-size: 32px; font-weight: 700; margin-bottom: 10px; color: #2aa198; }
-.subtitle { font-size: 16px; color: #93a1a1; margin-bottom: 16px; }
-.section { font-size: 18px; font-weight: 700; margin-top: 18px; margin-bottom: 8px; color: #586e75; }
-
-.conj-table { border-collapse: collapse; table-layout: fixed; width: 460px; margin-bottom: 12px; }
-.conj-table th, .conj-table td { border: 1px solid #93a1a1; padding: 6px 8px; vertical-align: top; color: #586e75; }
-.conj-table th { background: #eee8d5; font-weight: 600; text-align: left; }
-
-.col-person { width: 180px; }
-.col-form { width: 280px; }
-
-.note { margin-top: 12px; font-size: 16px; color: #93a1a1; }
-
-/* Dark mode (Solarized dark) */
-.nightMode .card { color: #657b83; background-color: #032029; }
-.night_mode .card { color: #657b83; background-color: #032029; }
-.nightMode .lemma { color: #2aa198; }
-.night_mode .lemma { color: #2aa198; }
-.nightMode .subtitle { color: #586e75; }
-.night_mode .subtitle { color: #586e75; }
-.nightMode .section { color: #657b83; }
-.night_mode .section { color: #657b83; }
-.nightMode .conj-table th, .nightMode .conj-table td { border-color: #586e75; color: #657b83; }
-.night_mode .conj-table th, .night_mode .conj-table td { border-color: #586e75; color: #657b83; }
-.nightMode .conj-table th { background: #073642; }
-.night_mode .conj-table th { background: #073642; }
-.nightMode .note { color: #586e75; }
-.night_mode .note { color: #586e75; }
-"""
-
-UA_GRAMMAR_CSS = """\
-/* Light mode (Solarized light) */
-.card {
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
-    color: #586e75;
-    background-color: #fdf6e3;
-}
-
-/* Dark mode (Solarized dark) */
-.nightMode .card {
-    color: #657b83;
-    background-color: #032029;
-}
-.night_mode .card {
-    color: #657b83;
-    background-color: #032029;
-}
-"""
-
-UA_LEXEME_CSS = """\
-/* Light mode (Solarized light) */
-.card {
-  font-family: system-ui, -apple-system, sans-serif;
-  font-size: 18px;
-  color: #586e75;
-  background-color: #fdf6e3;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 24px 20px;
-  text-align: center;
-}
-
-.lemma { font-size: 28px; font-weight: bold; margin-bottom: 4px; color: #2aa198; }
-.perfective { font-size: 22px; color: #93a1a1; margin-bottom: 8px; }
-.pos { font-size: 13px; color: #93a1a1; font-style: italic; margin-bottom: 16px; }
-.gender { font-size: 13px; color: #93a1a1; margin-bottom: 4px; }
-
-hr#answer { border: none; border-top: 2px solid #93a1a1; margin: 20px 0; }
-
-.gloss { font-size: 22px; font-weight: bold; margin-bottom: 8px; color: #586e75; }
-.counterpart { font-size: 14px; color: #93a1a1; margin-top: 4px; }
-.irregular { font-size: 13px; color: #93a1a1; margin-top: 4px; }
-.confusable { font-size: 13px; color: #859900; margin-top: 6px; }
-
-.example-ua { font-size: 15px; margin-top: 14px; font-style: italic; color: #586e75; }
-.example-en { font-size: 13px; color: #93a1a1; margin-top: 2px; }
-
-.note-id { font-size: 10px; color: #93a1a1; text-align: right; margin-top: 16px; }
-
-input#typeans { font-size: 20px; font-family: system-ui, -apple-system, sans-serif; width: 80%; text-align: center; color: #586e75; background-color: #eee8d5; border: 1px solid #93a1a1; padding: 6px; }
-
-/* Dark mode (Solarized dark) */
-.nightMode .card { color: #657b83; background-color: #032029; }
-.night_mode .card { color: #657b83; background-color: #032029; }
-.nightMode .lemma { color: #2aa198; }
-.night_mode .lemma { color: #2aa198; }
-.nightMode .perfective { color: #586e75; }
-.night_mode .perfective { color: #586e75; }
-.nightMode .pos { color: #586e75; }
-.night_mode .pos { color: #586e75; }
-.nightMode .gender { color: #586e75; }
-.night_mode .gender { color: #586e75; }
-.nightMode hr#answer { border-top-color: #586e75; }
-.night_mode hr#answer { border-top-color: #586e75; }
-.nightMode .gloss { color: #657b83; }
-.night_mode .gloss { color: #657b83; }
-.nightMode .counterpart { color: #586e75; }
-.night_mode .counterpart { color: #586e75; }
-.nightMode .irregular { color: #586e75; }
-.night_mode .irregular { color: #586e75; }
-.nightMode .confusable { color: #859900; }
-.night_mode .confusable { color: #859900; }
-.nightMode .example-ua { color: #657b83; }
-.night_mode .example-ua { color: #657b83; }
-.nightMode .example-en { color: #586e75; }
-.night_mode .example-en { color: #586e75; }
-.nightMode .note-id { color: #586e75; }
-.night_mode .note-id { color: #586e75; }
-.nightMode input#typeans { color: #657b83; background-color: #032029; border-color: #586e75; }
-.night_mode input#typeans { color: #657b83; background-color: #032029; border-color: #586e75; }
-"""
-
-UA_LEXEME_LEGACY_CSS = """\
-/* Light mode (Solarized light) */
-.card {
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
-    color: #586e75;
-    background-color: #fdf6e3;
-}
-
-/* Dark mode (Solarized dark) */
-.nightMode .card {
-    color: #657b83;
-    background-color: #032029;
-}
-.night_mode .card {
-    color: #657b83;
-    background-color: #032029;
-}
-"""
-
-UA_VERB_CSS = """\
-/* Light mode (Solarized light) */
-.card {
-    font-family: system-ui, -apple-system, sans-serif;
-    font-size: 20px;
-    line-height: 1.5;
-    text-align: center;
-    color: #586e75;
-    background-color: #fdf6e3;
-}
-
-/* Dark mode (Solarized dark) */
-.nightMode .card {
-    color: #657b83;
-    background-color: #032029;
-}
-.night_mode .card {
-    color: #657b83;
-    background-color: #032029;
-}
-"""
-
-# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
 MODELS = {
     "B737_SV_Cloze":    SV_CLOZE_CSS,
     "B737_Systems":     B737_SYSTEMS_CSS,
-    "UA_Conjugation":   UA_CONJUGATION_CSS,
-    "UA_Grammar":       UA_GRAMMAR_CSS,
-    "UA_Lexeme":        UA_LEXEME_CSS,
-    "UA_Lexeme_Legacy": UA_LEXEME_LEGACY_CSS,
-    "UA_Verb":          UA_VERB_CSS,
 }
 
 
