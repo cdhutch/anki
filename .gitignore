@@ -58,6 +58,10 @@ collection.anki2
 systems/_scratch/
 domains/b737/systems/_scratch/system-737-electrical_UPDATED_v2.tsv
 
+# Flagged Card Fix Workflow manifest (transient working state, tied to
+# whatever's currently flagged in live Anki -- see CLAUDE-flag-audit.md)
+flagged_cards_manifest.json
+
 # --- Domain-first repo guardrails ---
 /flows/
 /maneuvers/
