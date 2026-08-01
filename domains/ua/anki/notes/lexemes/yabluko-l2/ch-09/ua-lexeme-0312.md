@@ -31,7 +31,6 @@ fields:
   TypingAnswer: нижній
   UA_Example: Нижня полиця зазвичай зручніша за верхню.
   EN_Example: The lower berth is usually more comfortable than the upper one.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/нижній
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

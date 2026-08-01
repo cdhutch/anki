@@ -30,7 +30,6 @@ fields:
   TypingAnswer: мова
   UA_Example: Я вивчаю українську мову вже рік.
   EN_Example: I have been studying the Ukrainian language for a year already.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/мова
   Source_Note: verified 2026-07-06 via Горох

@@ -33,7 +33,6 @@ fields:
   TypingAnswer: квітковий ринок
   UA_Example: Квітковий ринок розташований біля перехрестя.
   EN_Example: The flower market is located near the intersection.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/квітковий; https://goroh.pp.ua/Словозміна/ринок
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

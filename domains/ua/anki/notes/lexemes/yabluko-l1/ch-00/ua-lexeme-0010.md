@@ -31,7 +31,6 @@ fields:
   TypingAnswer: письменник
   UA_Example: Цей письменник написав багато цікавих книжок.
   EN_Example: This writer has written many interesting books.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/письменник
   Source_Note: verified 2026-07-06 via Горох

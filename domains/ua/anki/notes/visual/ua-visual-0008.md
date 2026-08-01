@@ -22,19 +22,19 @@ fields:
   Vehicle_Pair: переїжджа́ти / переї́хати
   Example_UA: Вона перейшла через вулицю.
   Example_EN: She crossed the street.
-  Diagram_SVG: '<svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
-    auto"><defs><marker id="arr-r" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
-    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker><marker id="arr-r-red" markerWidth="8" markerHeight="8"
-    refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#dc322f"/></marker></defs><!--
-    Legend --><text x="5" y="12" font-size="10" font-weight="bold" fill="#586e75">Legend:</text><line
-    x1="10" y1="25" x2="25" y2="25" stroke="#93a1a1" stroke-width="2" stroke-dasharray="3,3"/><text
-    x="30" y="28" font-size="9" fill="#586e75">Barrier</text><!-- Main: arrow crosses from
-    one side to other --><line x1="30" y1="75" x2="110" y2="75" stroke="#859900" stroke-width="2.5"
-    marker-end="url(#arr-r)"/><line x1="125" y1="60" x2="125" y2="90" stroke="#93a1a1" stroke-width="2.5"
-    stroke-dasharray="3,3"/><line x1="140" y1="75" x2="220" y2="75" stroke="#dc322f" stroke-width="2.5"
-    marker-end="url(#arr-r-red)"/></svg>'
+  Diagram_SVG: <svg viewBox="0 0 260 120" xmlns="http://www.w3.org/2000/svg" style="max-width:260px;display:block;margin:0
+    auto"><defs><marker id="arrG" markerWidth="8" markerHeight="8" refX="7" refY="3" orient="auto"><path
+    d="M0,0 L0,6 L8,3 z" fill="#859900"/></marker><marker id="arrR" markerWidth="8" markerHeight="8"
+    refX="7" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#dc322f"/></marker><pattern
+    id="hatch" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse"><line
+    x1="0" y1="0" x2="0" y2="6" stroke="#586e75" stroke-width="1.5"/></pattern></defs><rect
+    x="110" y="55" width="40" height="40" fill="url(#hatch)" stroke="#586e75" stroke-width="3"/><path
+    d="M40,85 Q130,10 220,85" fill="none" stroke="#859900" stroke-width="3" marker-end="url(#arrG)"/></svg>
   Tags_Ch: ch:2.9.4
   Source_Note: пере- — across/over
-  Verification Notes: ''
+  Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 --
+    a curved arc arrow passing up and over a hatched square, matching the textbook''s icon
+    (replacing the previous two straight segments with a dashed barrier line, which did not
+    match the source). Reviewed and approved by Craig.'
 ---
 

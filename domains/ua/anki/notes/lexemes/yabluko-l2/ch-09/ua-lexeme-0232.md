@@ -33,7 +33,6 @@ fields:
   TypingAnswer: набрати одне очко
   UA_Example: До кінця матчу команді треба набрати ще одне очко.
   EN_Example: Before the match ends the team needs to score one more point.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/набрати; https://goroh.pp.ua/Словозміна/одне;
     https://goroh.pp.ua/Словозміна/очко

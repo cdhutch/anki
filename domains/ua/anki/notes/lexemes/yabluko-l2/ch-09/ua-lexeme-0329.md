@@ -32,7 +32,6 @@ fields:
   TypingAnswer: вогонь
   UA_Example: Вони розпалили вогонь біля намету.
   EN_Example: They lit a fire next to the tent.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/вогонь
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

@@ -30,7 +30,6 @@ fields:
   TypingAnswer: місто
   UA_Example: Наше місто велике і дуже красиве.
   EN_Example: Our city is large and very beautiful.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/місто
   Source_Note: verified 2026-07-06 via Горох

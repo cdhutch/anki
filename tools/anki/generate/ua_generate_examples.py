@@ -173,7 +173,7 @@ _NOTE_FIELDS = [
     "NoteID", "Lemma", "PartOfSpeech", "Gender", "Perfective", "EN_Gloss",
     "Govt_Case", "CounterpartForm", "IrregularForms", "VerbMotion_Pair",
     "ConfusableSet", "CrossLang_Analog", "EuphonyNote", "TypingAnswer",
-    "UA_Example", "EN_Example", "Verb_Conj_Table", "Tags_Ch",
+    "UA_Example", "EN_Example", "Tags_Ch",
     "Source_URL", "Source_Note",
 ]
 

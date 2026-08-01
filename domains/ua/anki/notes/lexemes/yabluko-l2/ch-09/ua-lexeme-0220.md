@@ -31,7 +31,6 @@ fields:
   TypingAnswer: посідати
   UA_Example: Наша команда щороку посідає перше місце.
   EN_Example: Our team takes first place every year.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/посідати; https://goroh.pp.ua/Словозміна/посісти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

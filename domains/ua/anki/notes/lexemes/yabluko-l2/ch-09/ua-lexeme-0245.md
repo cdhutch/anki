@@ -31,7 +31,6 @@ fields:
   TypingAnswer: неспішно
   UA_Example: Вони неспішно йшли ринком, роздивляючись квіти.
   EN_Example: They walked unhurriedly through the market, looking at the flowers.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/неспішно
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

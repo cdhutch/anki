@@ -32,7 +32,6 @@ fields:
   TypingAnswer: очікування
   UA_Example: Гонка перевершила всі очікування глядачів.
   EN_Example: The race exceeded all the spectators' expectations.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/очікування
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: лебідь
   UA_Example: Лебідь плаває по озеру.
   EN_Example: The swan swims on the lake.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/лебідь
   Source_Note: Горох lists 4 homograph entries for 'лебідь' — 3 capitalized proper nouns (a

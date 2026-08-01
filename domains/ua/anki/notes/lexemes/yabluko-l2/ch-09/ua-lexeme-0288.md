@@ -31,7 +31,6 @@ fields:
   TypingAnswer: приваблювати
   UA_Example: Пригодницька гонка щороку приваблює нових учасників.
   EN_Example: The adventure race attracts new participants every year.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/приваблювати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

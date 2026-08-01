@@ -32,7 +32,6 @@ fields:
   TypingAnswer: церемонія
   UA_Example: Церемонія закриття відбулася ввечері на головній сцені.
   EN_Example: The closing ceremony took place in the evening on the main stage.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/церемонія
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

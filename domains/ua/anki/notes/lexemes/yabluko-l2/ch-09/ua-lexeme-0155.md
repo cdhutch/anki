@@ -31,7 +31,6 @@ fields:
   TypingAnswer: верхова їзда
   UA_Example: Верхова їзда розвиває координацію та впевненість.
   EN_Example: Horseback riding develops coordination and confidence.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/верховий; https://goroh.pp.ua/Словозміна/їзда
   Source_Note: Components verified via Горох (see ua-lexeme-0133, ua-lexeme-0141). Verified

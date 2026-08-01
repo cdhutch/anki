@@ -30,7 +30,6 @@ fields:
   TypingAnswer: компʼютер
   UA_Example: Я працюю на компʼютері цілий день.
   EN_Example: I work on the computer all day.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/компʼютер
   Source_Note: verified 2026-07-06 via Горох

@@ -30,7 +30,6 @@ fields:
   TypingAnswer: книжка
   UA_Example: Ця книжка дуже цікава і корисна.
   EN_Example: This book is very interesting and useful.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/книжка
   Source_Note: verified 2026-07-06 via Горох

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: бойове мистецтво
   UA_Example: Карате — це відоме бойове мистецтво.
   EN_Example: Karate is a well-known martial art.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/бойовий; https://goroh.pp.ua/Словозміна/мистецтво
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

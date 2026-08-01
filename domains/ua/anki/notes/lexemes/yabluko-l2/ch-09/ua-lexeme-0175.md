@@ -32,7 +32,6 @@ fields:
   TypingAnswer: човен
   UA_Example: Ми попливли на човні по річці.
   EN_Example: We sailed on a boat down the river.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2, ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/човен
   Source_Note: Stress verified 2026-07-22 via Горох.

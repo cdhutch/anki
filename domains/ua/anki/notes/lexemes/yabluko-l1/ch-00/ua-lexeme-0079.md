@@ -31,7 +31,6 @@ fields:
   TypingAnswer: Китай
   UA_Example: Цей товар зроблений у Китаї.
   EN_Example: This product is made in China.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/Китай
   Source_Note: verified 2026-07-06 via Горох

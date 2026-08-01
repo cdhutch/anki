@@ -33,7 +33,6 @@ fields:
   TypingAnswer: забити шайбу у ворота
   UA_Example: Нападник забив шайбу у ворота за хвилину до кінця матчу.
   EN_Example: The forward scored the puck into the goal a minute before the match ended.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/забити; https://goroh.pp.ua/Словозміна/шайба;
     https://goroh.pp.ua/Словозміна/ворота

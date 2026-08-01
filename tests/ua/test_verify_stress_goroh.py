@@ -611,7 +611,6 @@ fields:
   TypingAnswer: актор
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: https://goroh.pp.ua/Словозміна/актор
@@ -651,7 +650,6 @@ fields:
   TypingAnswer: актор
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: ''
@@ -696,7 +694,6 @@ fields:
   TypingAnswer: вікно
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: ''
@@ -740,7 +737,6 @@ fields:
   TypingAnswer: водій
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Verification Notes: ''
   Source_URL: ''

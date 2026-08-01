@@ -33,7 +33,6 @@ fields:
   TypingAnswer: рано-вранці
   UA_Example: Квітковий ринок працює рано-вранці.
   EN_Example: The flower market is open very early in the morning.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4, ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/рано; https://goroh.pp.ua/Словозміна/вранці
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

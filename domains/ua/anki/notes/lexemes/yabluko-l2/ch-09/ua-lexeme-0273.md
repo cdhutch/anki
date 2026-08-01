@@ -31,7 +31,6 @@ fields:
   TypingAnswer: пригодницький
   UA_Example: Пригодницька гонка щороку збирає сотні команд.
   EN_Example: The adventure race draws hundreds of teams every year.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/пригодницький
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

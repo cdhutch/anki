@@ -33,7 +33,6 @@ fields:
   TypingAnswer: підніжжя гори
   UA_Example: Вони розбили табір біля підніжжя гори.
   EN_Example: They set up camp at the foot of the mountain.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/підніжжя; https://goroh.pp.ua/Словозміна/гора
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

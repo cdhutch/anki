@@ -31,7 +31,6 @@ fields:
   TypingAnswer: перепливати
   UA_Example: Останній етап -- переплисти озеро.
   EN_Example: The last stage is swimming across the lake.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/перепливати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

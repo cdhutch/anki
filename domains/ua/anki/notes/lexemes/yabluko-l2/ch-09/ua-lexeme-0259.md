@@ -32,7 +32,6 @@ fields:
   TypingAnswer: новачок
   UA_Example: Новачки змагалися нарівні з досвідченими командами.
   EN_Example: The newcomers competed on equal footing with experienced teams.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/новачок
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

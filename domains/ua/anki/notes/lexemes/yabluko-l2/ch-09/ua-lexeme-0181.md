@@ -34,16 +34,16 @@ fields:
     \ range of one word."
   Mnemonic_EN: Same spelling either way (метелик) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: He's getting dressed for a black-tie event and needs to fasten this accessory
-    around his collar before putting on the tuxedo jacket.
-  CompareA: butterfly (insect)
-  CompareB: bow-tie (menswear accessory)
+  CompareScenario: Which sense of метелик is being used?
+  CompareA: Червоний метелик сів на білу квітку.
+  Homograph_SenseA: butterfly (insect)
+  CompareB: На вечірці він носив чорний метелик.
+  Homograph_SenseB: bow-tie (menswear accessory)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: метелик
   UA_Example: Він одягнув чорний метелик до смокінга.
   EN_Example: He put on a black bow-tie for the tuxedo.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/метелик
   Source_Note: Split from ua-lexeme-0171 during the 2026-07-24 corpus dedup/homograph audit
@@ -51,8 +51,14 @@ fields:
     Source_Note). Stress inherited from the primary (butterfly) sense; re-verify independently
     against Горох before flipping to status:verified.
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
-    card (see compare-card-audit-findings.md). Since both senses share the same spelling,
-    CompareA/B hold the two English senses (not two UA spellings) — the card tests which meaning
-    fits the scenario, and the back reveals the correct sense via EN_Gloss. Needs your review.'
+    card (see compare-card-audit-findings.md). 2026-07-28: found this note was never migrated
+    to the dual-mode homograph redesign -- CompareA/B held the two English senses as plain
+    text ("butterfly (insect)" / "bow-tie (menswear accessory)"), so with _IsHomograph routing
+    to the sentence-based front layout, the entire card front rendered in English with nothing
+    to recognize in Ukrainian ("not a useful card," Craig). Replaced CompareScenario/CompareA/
+    CompareB with the sibling ua-lexeme-0171''s already-correct Ukrainian-sentence values
+    (identical chips on both notes per convention) and added the missing Homograph_SenseA/
+    SenseB fields. See CLAUDE-compare-card-field-mapping.md for the full spec this was fixed
+    against. Needs your review.'
 ---
 

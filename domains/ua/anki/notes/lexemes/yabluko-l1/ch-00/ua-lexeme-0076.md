@@ -31,7 +31,6 @@ fields:
   TypingAnswer: Іспанія
   UA_Example: Влітку вони відпочивали в Іспанії.
   EN_Example: In summer they vacationed in Spain.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/Іспанія
   Source_Note: verified 2026-07-06 via Горох

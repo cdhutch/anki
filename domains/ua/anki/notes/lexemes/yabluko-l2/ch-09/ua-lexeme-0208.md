@@ -31,7 +31,6 @@ fields:
   TypingAnswer: козацький
   UA_Example: На фестивалі показали козацький танець і бій.
   EN_Example: At the festival they showed a Cossack dance and a Cossack fight.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/козацький
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

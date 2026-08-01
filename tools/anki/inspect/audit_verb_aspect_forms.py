@@ -13,22 +13,52 @@ counterpart, etc.) has not been systematically populated across the corpus — a
 found it empty on every verb note sampled, including the prefixed motion-verb batch
 (ua-lexeme-0114–0131) where `Perfective` is already Горох-verified and populated.
 
+Extended 2026-07-30, Craig (originally raised as a `make ua-check` request during Ch-08
+verification: "the script should flag verbs where the Perfective field is blank, unless there
+is a tag designating imperfective-only form"). Added recognition of two hand-authored tags:
+
+    aspect:imperfective-only   — Craig has confirmed via Горох this verb has no perfective
+                                  counterpart (a genuine imperfectiva tantum, e.g. мати).
+    aspect:perfective-only     — Craig has confirmed via Горох this verb has no imperfective
+                                  counterpart (a genuine perfectiva tantum). Also flags that
+                                  Lemma itself is exceptionally the perfective form, since the
+                                  schema convention (CLAUDE.md "Aspect convention") is that
+                                  Lemma is always imperfective — this tag is the documented
+                                  exception to that rule.
+
+IMPORTANT — this script NEVER applies either tag itself, and never will. Craig said explicitly
+he wants to be directly involved in every decision that labels a verb as having no aspectual
+counterpart, so this script only ever *reads* the tags if a human has already hand-authored
+them into the note's CNSF file after checking Горох; it purely reports what still needs a
+decision. Do not "helpfully" auto-tag singlets from this script or any future automation
+without Craig's sign-off — that would defeat the point of the request.
+
 This script does NOT modify anything. It scans every `ua-lexeme-*.md` tagged `pos:verb`,
 reports what's already populated (ready for the join as-is) vs. what's missing, and prints a
-classification per note so Craig can decide which need `ImperfectiveUnidirectional` looked up
-and Горох-verified before the new typing target renders correctly for them:
+classification per note so Craig can decide which need `ImperfectiveUnidirectional`/`Perfective`
+looked up and Горох-verified before the new typing target renders correctly for them:
 
-  triplet   — Lemma + ImperfectiveUnidirectional + Perfective all populated (ready)
-  doublet   — Lemma + exactly one of {ImperfectiveUnidirectional, Perfective} (ready)
-  singlet   — only Lemma populated (ready — no counterpart to type, unchanged from today)
-  candidate — Lemma + `VerbMotion_Pair` populated but ImperfectiveUnidirectional is empty —
-              VerbMotion_Pair already records e.g. "іти / ходити" as a cross-reference note,
-              which is a strong hint this note's own triplet is incomplete and worth a look,
-              even though it doesn't by itself tell us the correct unidirectional form/stress.
+  triplet              — Lemma + ImperfectiveUnidirectional + Perfective all populated (ready)
+  doublet              — Lemma + exactly one of {ImperfectiveUnidirectional, Perfective} (ready)
+  confirmed-imperfective-only — singlet, but tagged aspect:imperfective-only (ready, no
+                          action needed — Craig has already confirmed there's no counterpart)
+  confirmed-perfective-only   — tagged aspect:perfective-only (ready, no action needed —
+                          Craig has already confirmed the Lemma-is-perfective exception)
+  singlet              — only Lemma populated, NOT tagged either aspect:*-only — needs Craig's
+                          review/decision (may turn out to be genuinely imperfective-only, e.g.
+                          мати, but that hasn't been confirmed and tagged yet)
+  candidate            — Lemma + `VerbMotion_Pair` populated but ImperfectiveUnidirectional is
+                          empty — VerbMotion_Pair already records e.g. "іти / ходити" as a
+                          cross-reference note, a strong hint this note's own triplet is
+                          incomplete, even though it doesn't by itself tell us the correct
+                          unidirectional form/stress.
 
 Craig runs this (see CLAUDE.md Big 3 Rules — Claude does not run scripts in this repo itself):
 
     python tools/anki/inspect/audit_verb_aspect_forms.py
+
+Also wired into `make ua-check` (report-only; STRICT=1 to fail the build on anything still
+needing review) alongside check_pending_confusables.py.
 """
 from __future__ import annotations
 
@@ -45,14 +75,34 @@ from tools.anki.cnsf_canonicalize import split_frontmatter  # noqa: E402
 
 DEFAULT_LEXEME_ROOT = REPO_ROOT / "domains" / "ua" / "anki" / "notes" / "lexemes"
 
+TAG_IMPERFECTIVE_ONLY = "aspect:imperfective-only"
+TAG_PERFECTIVE_ONLY = "aspect:perfective-only"
 
-def classify(lemma: str, impf_uni: str, perfective: str, verb_motion_pair: str) -> str:
+READY_CLASSIFICATIONS = (
+    "triplet",
+    "doublet",
+    "confirmed-imperfective-only",
+    "confirmed-perfective-only",
+)
+NEEDS_REVIEW_CLASSIFICATIONS = (
+    "singlet",
+    "candidate (has VerbMotion_Pair, missing ImperfectiveUnidirectional)",
+)
+
+
+def classify(lemma: str, impf_uni: str, perfective: str, verb_motion_pair: str, tags: list[str]) -> str:
     if not lemma:
         return "unknown (no Lemma)"
     if impf_uni and perfective:
         return "triplet"
     if impf_uni or perfective:
         return "doublet"
+    # No counterpart populated. Check for Craig's hand-authored aspect-only tags before
+    # falling through to "needs review" — these tags are never applied by this script.
+    if TAG_IMPERFECTIVE_ONLY in tags:
+        return "confirmed-imperfective-only"
+    if TAG_PERFECTIVE_ONLY in tags:
+        return "confirmed-perfective-only"
     if verb_motion_pair:
         return "candidate (has VerbMotion_Pair, missing ImperfectiveUnidirectional)"
     return "singlet"
@@ -88,7 +138,7 @@ def scan(lexeme_root: Path) -> list[dict[str, str]]:
                 "ImperfectiveUnidirectional": impf_uni,
                 "Perfective": perfective,
                 "VerbMotion_Pair": verb_motion_pair,
-                "Classification": classify(lemma, impf_uni, perfective, verb_motion_pair),
+                "Classification": classify(lemma, impf_uni, perfective, verb_motion_pair, tags),
                 "Path": str(path.resolve().relative_to(REPO_ROOT)),
             }
         )
@@ -98,6 +148,7 @@ def scan(lexeme_root: Path) -> list[dict[str, str]]:
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--lexeme-root", type=Path, default=DEFAULT_LEXEME_ROOT)
+    parser.add_argument("--strict", action="store_true", help="Exit 1 if anything still needs review.")
     args = parser.parse_args()
 
     rows = scan(args.lexeme_root)
@@ -112,20 +163,32 @@ def main() -> int:
         print(f"  {n:>3}  {cls}")
     print()
 
-    needs_review = [r for r in rows if r["Classification"] in ("singlet", "candidate (has VerbMotion_Pair, missing ImperfectiveUnidirectional)")]
-    print(f"Notes to review for a possible missing ImperfectiveUnidirectional ({len(needs_review)}):")
-    print("(A 'singlet' may be genuinely imperfective-only -- e.g. мати -- and need no change;")
-    print(" it's listed so you can confirm that rather than assume it.)\n")
+    confirmed = [r for r in rows if r["Classification"] in ("confirmed-imperfective-only", "confirmed-perfective-only")]
+    if confirmed:
+        print(f"Confirmed aspect-only, Craig-tagged (no action needed) ({len(confirmed)}):")
+        for r in confirmed:
+            print(f"  {r['NoteID']:<18} {r['Lemma']:<22} {r['Classification']}")
+        print()
+
+    needs_review = [r for r in rows if r["Classification"] in NEEDS_REVIEW_CLASSIFICATIONS]
+    print(f"Notes to review for a possible missing ImperfectiveUnidirectional/Perfective ({len(needs_review)}):")
+    print("(A 'singlet' may be genuinely imperfective-only -- e.g. мати -- but Claude never")
+    print(" tags that for you. Confirm via Горох yourself, then hand-add `aspect:imperfective-only`")
+    print(" or `aspect:perfective-only` to the note's tags so future runs skip it.)\n")
     header = f"{'NoteID':<18} {'Lemma':<22} {'Perfective':<22} {'VerbMotion_Pair':<20} Classification"
     print(header)
     print("-" * len(header))
     for r in needs_review:
         print(f"{r['NoteID']:<18} {r['Lemma']:<22} {r['Perfective']:<22} {r['VerbMotion_Pair']:<20} {r['Classification']}")
 
-    print(f"\nReady as-is (triplet/doublet, no action needed for the sync-time join):")
+    print(f"\nReady as-is (triplet/doublet/confirmed-aspect-only, no action needed for the sync-time join):")
     ready = [r for r in rows if r["Classification"] in ("triplet", "doublet")]
     for r in ready:
         print(f"  {r['NoteID']:<18} {r['Lemma']:<22} impf_uni={r['ImperfectiveUnidirectional'] or '-':<15} perfective={r['Perfective'] or '-'}")
+
+    if args.strict and needs_review:
+        print(f"\nSTRICT: {len(needs_review)} note(s) still need review.")
+        return 1
 
     return 0
 

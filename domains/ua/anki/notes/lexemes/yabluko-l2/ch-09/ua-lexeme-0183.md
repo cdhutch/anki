@@ -32,7 +32,6 @@ fields:
   TypingAnswer: гравець
   UA_Example: Кожен гравець команди має свою позицію на полі.
   EN_Example: Every player on the team has their own position on the field.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/гравець
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

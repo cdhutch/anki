@@ -14,6 +14,7 @@ tags:
 - gender:n
 - stress:verified
 - status:verified
+- homograph:true
 fields:
   NoteID: ua-lexeme-0380
   Lemma: відпра́влення
@@ -25,14 +26,25 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
-  Mnemonic_EN: ''
+  ConfusableSet: "відпра́влення (1st sense, homograph - unrelated meaning: departure, e.g.\
+    \ of a train) - see ua-lexeme-0304\nScenario A: Picking up a package at the post office\n\
+    -> Use: відправлення (parcel/mailed item - this note's sense)\nScenario B: A train or\
+    \ bus schedule board, or asking when transport leaves\n-> Use: відправлення (departure\
+    \ - see ua-lexeme-0304)\nKey distinction: same spelling, unrelated meanings - a true homograph\
+    \ (postal \"send off\" vs transport \"depart\")."
+  Mnemonic_EN: Same spelling either way (відправлення) — the card tests which SENSE fits,
+    not which word. Both senses trace to відправляти "to send off" — a train is "sent off"
+    (departs), a parcel is "sent off" (mailed).
+  CompareScenario: Which sense of відправлення is being used?
+  CompareA: Час відправлення поїзда -- девʼята вечора.
+  Homograph_SenseA: departure
+  CompareB: Ваше відправлення готове до отримання на пошті.
+  Homograph_SenseB: parcel, mailed item (letter/package)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: відправлення
   UA_Example: Ваше відправлення готове до отримання на пошті.
   EN_Example: Your parcel is ready for pickup at the post office.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/відправлення; https://goroh.pp.ua/Тлумачення/відправлення
   Source_Note: Created 2026-07-28 as the same-Lemma polysemy-split sibling to ua-lexeme-0304
@@ -45,8 +57,12 @@ fields:
     for this sense ("Поштові відправлення належать відправникам до моменту вручення одержувачам")
     but rephrased into a natural, learner-friendly register (post-office pickup notice) rather
     than the legalistic/documents register of the dictionary citation.
-  Verification Notes: Same word form and stress as ua-lexeme-0304 (noun sense doesn't shift
-    stress); inherits that note's stress:unverified status pending your review. Content (gloss,
-    example) needs your review pass before flipping to status:verified.
+  Verification Notes: 'Same word form and stress as ua-lexeme-0304 (noun sense doesn''t shift
+    stress); inherits that note''s stress:unverified status pending your review. Content (gloss,
+    example) needs your review pass before flipping to status:verified. 2026-07-28: tagged
+    homograph:true and cross-linked with sibling ua-lexeme-0304 (same spelling, unrelated
+    "departure" sense); added CompareScenario + CompareA/Homograph_SenseA + CompareB/Homograph_SenseB
+    for the dual-mode Homograph Compare card (see ua-lexeme-0182, вид, for the reference pattern).
+    Needs your review.'
 ---
 

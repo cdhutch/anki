@@ -32,7 +32,6 @@ fields:
   TypingAnswer: мʼяч
   UA_Example: Воротар спіймав мʼяч в останню мить.
   EN_Example: The goalkeeper caught the ball at the last moment.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/м'яч
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

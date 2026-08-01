@@ -29,7 +29,6 @@ fields:
   TypingAnswer: Як Вас звати?
   UA_Example: — Як Вас звати? — Мене звати Іван.
   EN_Example: — What is your name? — My name is Ivan.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

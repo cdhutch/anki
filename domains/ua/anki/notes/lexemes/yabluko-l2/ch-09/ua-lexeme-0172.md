@@ -31,7 +31,6 @@ fields:
   TypingAnswer: океан
   UA_Example: Атлантичний океан дуже глибокий.
   EN_Example: The Atlantic Ocean is very deep.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/океан
   Source_Note: Stress verified 2026-07-22 via Горох.

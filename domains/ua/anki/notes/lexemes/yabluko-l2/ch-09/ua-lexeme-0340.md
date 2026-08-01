@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вирушати
   UA_Example: Вони вирушили в дорогу рано-вранці.
   EN_Example: They set off on the road very early in the morning.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/вирушати; https://goroh.pp.ua/Словозміна/вирушити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

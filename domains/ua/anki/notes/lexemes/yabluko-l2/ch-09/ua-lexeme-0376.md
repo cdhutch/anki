@@ -27,13 +27,15 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
-  Mnemonic_EN: ''
+  Mnemonic_EN: участь starts with у- (у́часть), not в-/вч- -- "вчасть" is not a word in Ukrainian.
+    (It's easy to blend with вчасно "on time," or with the Russian часть "part" -- Ukrainian
+    uses частина for "part," and участь for "participation" is its own root, not built on
+    "часть" at all.)
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: брати участь у змаганнях
   UA_Example: Шестеро з них беруть участь у змаганні, а ще четверо -- запасні гравці.
   EN_Example: Six of them take part in the competition, and four more are substitute players.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/брати; https://goroh.pp.ua/Словозміна/участь;
     https://goroh.pp.ua/Словозміна/змагання
@@ -58,6 +60,15 @@ fields:
     cross-reference it in ConfusableSet rather than stand alone. Content still needs your
     review pass before flipping to status:verified. 2026-07-28: added AspectCue (chip-styled
     EN->UA prompt, replacing the earlier "(impf.)" parenthetical on EN_Gloss) so the card
-    indicates the ongoing/habitual reading is expected here, not the perfective взяти участь.'
+    indicates the ongoing/habitual reading is expected here, not the perfective взяти участь.
+    2026-07-30 Craig: emphasize on the back card that "вчасть" is not a real Ukrainian word
+    (guarding against the у́часть mistyping/misremembering). Put it in Mnemonic_EN since that''s
+    the field that already renders on the EN→UA production back card (and the Compare card)
+    -- per setup_ua_note_types.py, the plain UA→EN back card (UA_EN_BACK) does NOT render
+    Mnemonic_EN at all, so this warning will only surface on the direction where a student
+    could actually mistype "вчасть" (production), not on recognition. Flagging for Craig:
+    this note (0376) is the whole phrase "брати участь у змаганнях," but the вчасть-confusion
+    risk is really about the component noun участь itself (ua-lexeme-0375) -- worth considering
+    the same Mnemonic_EN addition there too, not just here.'
 ---
 

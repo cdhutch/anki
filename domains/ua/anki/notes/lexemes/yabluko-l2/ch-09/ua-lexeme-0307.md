@@ -32,7 +32,6 @@ fields:
   TypingAnswer: вагон
   UA_Example: Наш вагон -- третій від початку поїзда.
   EN_Example: Our train car is the third one from the front of the train.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/вагон
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

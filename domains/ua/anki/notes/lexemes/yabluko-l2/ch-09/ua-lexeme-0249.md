@@ -33,7 +33,6 @@ fields:
   TypingAnswer: букет троянд
   UA_Example: Він купив букет троянд для мами.
   EN_Example: He bought a bouquet of roses for his mother.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/букет; https://goroh.pp.ua/Словозміна/троянда
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

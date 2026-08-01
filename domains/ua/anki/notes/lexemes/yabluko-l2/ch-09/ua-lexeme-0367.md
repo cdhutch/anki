@@ -33,7 +33,6 @@ fields:
   TypingAnswer: наступного (дня)
   UA_Example: Наступного дня вони заночували в сироварні.
   EN_Example: The next day they ended up staying overnight at the cheese dairy.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/наступний
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

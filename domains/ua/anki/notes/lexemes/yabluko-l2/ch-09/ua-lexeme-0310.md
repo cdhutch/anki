@@ -32,7 +32,6 @@ fields:
   TypingAnswer: плацкарта
   UA_Example: Квитки в плацкарту були значно дешевші за купе.
   EN_Example: Tickets for the open-plan sleeper car were much cheaper than for the compartment.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/плацкарта
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

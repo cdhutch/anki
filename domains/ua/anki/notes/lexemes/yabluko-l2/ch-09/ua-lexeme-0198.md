@@ -32,7 +32,6 @@ fields:
   TypingAnswer: шайба
   UA_Example: Шайба влетіла у ворота на останній секунді.
   EN_Example: The puck flew into the goal in the last second.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/шайба
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

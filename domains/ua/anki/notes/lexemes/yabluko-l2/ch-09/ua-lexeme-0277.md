@@ -31,7 +31,6 @@ fields:
   TypingAnswer: останній
   UA_Example: Вона перепливла озеро з останніх сил.
   EN_Example: She swam across the lake with her last ounce of strength.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/останній
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

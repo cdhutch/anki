@@ -33,7 +33,6 @@ fields:
   TypingAnswer: виграти партію
   UA_Example: Йому знадобилося пів години, щоб виграти партію.
   EN_Example: It took him half an hour to win the game.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/виграти; https://goroh.pp.ua/Словозміна/партія
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: полиця
   UA_Example: Постав книжки на полицю.
   EN_Example: Put the books on the shelf.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/полиця
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass. Rescoped 2026-07-28 per

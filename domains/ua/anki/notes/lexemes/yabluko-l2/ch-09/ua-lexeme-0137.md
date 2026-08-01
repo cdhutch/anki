@@ -30,7 +30,6 @@ fields:
   TypingAnswer: пішохідний
   UA_Example: Ви їдете в інші країни, щоб зайнятися пішохідним туризмом.
   EN_Example: You travel to other countries to go hiking there.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/пішохідний
   Source_Note: Stress verified 2026-07-22 via Горох. Example adapted from Яблуко 2, ch.9.1

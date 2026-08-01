@@ -31,7 +31,6 @@ fields:
   TypingAnswer: бурхливий
   UA_Example: Бурхлива течія річки заважала переправі.
   EN_Example: The turbulent current of the river hindered the crossing.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/бурхливий
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: спорядження
   UA_Example: Перед грою треба перевірити все спорядження.
   EN_Example: Before the game you need to check all the equipment.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/спорядження
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

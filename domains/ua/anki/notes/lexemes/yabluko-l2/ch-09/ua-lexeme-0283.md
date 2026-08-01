@@ -31,7 +31,6 @@ fields:
   TypingAnswer: перелітати
   UA_Example: Наступний етап -- перелетіти через річку на мотузці.
   EN_Example: The next stage is flying across the river on a rope.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/перелітати; https://goroh.pp.ua/Словозміна/перелетіти
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

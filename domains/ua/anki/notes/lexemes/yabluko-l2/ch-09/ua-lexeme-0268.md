@@ -32,7 +32,6 @@ fields:
   TypingAnswer: скеля
   UA_Example: Найважчим етапом було вилізти на скелю.
   EN_Example: The hardest stage was climbing up the cliff.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/скеля
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

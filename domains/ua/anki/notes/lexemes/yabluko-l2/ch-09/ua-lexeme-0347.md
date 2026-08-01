@@ -31,7 +31,6 @@ fields:
   TypingAnswer: потім
   UA_Example: Спочатку вони перепочили, потім вирушили далі.
   EN_Example: First they rested, then they set off further.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/потім
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

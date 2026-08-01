@@ -30,7 +30,6 @@ fields:
   TypingAnswer: верховий
   UA_Example: Верхова їзда розвиває координацію та впевненість.
   EN_Example: Horseback riding develops coordination and confidence.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/верховий
   Source_Note: Stress verified 2026-07-22 via Горох; page lists 2 senses for this lemma, this

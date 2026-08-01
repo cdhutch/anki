@@ -14,6 +14,9 @@ tags:
 - gender:f
 - stress:verified
 - status:verified
+- pending-confusable:погода
+- pending-confusable:природа
+- pending-confusable:порода
 fields:
   NoteID: ua-lexeme-0272
   Lemma: приго́да
@@ -32,10 +35,13 @@ fields:
   TypingAnswer: пригода
   UA_Example: Гонка була справжньою пригодою для всіх учасників.
   EN_Example: The race was a real adventure for all the participants.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/пригода
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
-  Verification Notes: Filtered out a proper-noun (surname) homograph.
+  Verification Notes: 'Filtered out a proper-noun (surname) homograph. 2026-07-30 Craig: will
+    eventually join a confusable set with погода, природа, порода (near-rhyming, easily mixed-up
+    nouns) -- only пригода itself exists in the corpus so far. Tagged pending-confusable:погода,
+    pending-confusable:природа, pending-confusable:порода; see CLAUDE.md Vocabulary dedup
+    & homograph handling, bucket 5.'
 ---
 

@@ -33,7 +33,6 @@ fields:
   TypingAnswer: церемонія закриття
   UA_Example: Церемонія закриття відбулася під музику й феєрверки.
   EN_Example: The closing ceremony took place with music and fireworks.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/церемонія; https://goroh.pp.ua/Словозміна/закриття
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

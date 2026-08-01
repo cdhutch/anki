@@ -32,7 +32,6 @@ fields:
   TypingAnswer: партія
   UA_Example: Ця партія перемогла на виборах.
   EN_Example: This party won the election.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/партія; https://goroh.pp.ua/Тлумачення/партія
   Source_Note: Created 2026-07-25 as the same-Lemma polysemy-split sibling to ua-lexeme-0186

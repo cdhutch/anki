@@ -30,7 +30,6 @@ fields:
   TypingAnswer: помічати
   UA_Example: Я помічаю кожну деталь.
   EN_Example: I notice every detail.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/помічати; https://goroh.pp.ua/Словозміна/помітити
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects. Vocab list (9.2) cites

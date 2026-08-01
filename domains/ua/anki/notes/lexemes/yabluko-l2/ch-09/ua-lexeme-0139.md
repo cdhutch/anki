@@ -30,7 +30,6 @@ fields:
   TypingAnswer: спортивний
   UA_Example: Він веде спортивний спосіб життя.
   EN_Example: He leads an athletic lifestyle.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/спортивний
   Source_Note: Stress verified 2026-07-22 via Горох.

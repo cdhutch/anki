@@ -24,14 +24,24 @@ fields:
   CounterpartForm: ''
   IrregularForms: ''
   VerbMotion_Pair: ''
-  ConfusableSet: відходити
-  Mnemonic_EN: ''
+  ConfusableSet: "відхо́дити - synonym listed by Горох for the train-departure sense (walking\
+    \ register); PVOM\nprefix від- (ua-pvom-0007) drills відходити/відійти (on foot) and від'їжджати/від'їхати\n\
+    (by vehicle) for everyday departure.\nKey distinction: відправлятися/відправитися is the\
+    \ formal, register-neutral word for\ntransportation timetables and announcements (\"поїзд\
+    \ відправляється\") and never specifies\nmode; відходити/відійти and від'їжджати/від'їхати\
+    \ are the everyday PVOM verbs, and always\nspecify mode (on foot vs by vehicle)."
+  Mnemonic_EN: Formal/schedule register, mode unspecified -> відправлятися (timetables, announcements).
+    Everyday, on-foot departure -> відходити (PVOM від-, walking family). Pairs with прибувати/приходити
+    the same way -- see ua-lexeme-0316.
+  CompareScenario: The departures board at the station shows what a train does at exactly
+    nine in the evening.
+  CompareA: відправля́тися
+  CompareB: відхо́дити
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: відправлятися
   UA_Example: Поїзд відправляється з другої платформи.
   EN_Example: The train departs from platform two.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/відправлятися; https://goroh.pp.ua/Словозміна/відправитися
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
@@ -39,6 +49,10 @@ fields:
     for відправлятися lists відходити as a direct synonym for the train-departure sense (also
     lists від''їжджати, labeled зап./borrowing); walking form used per Craig''s preference
     for these Compare-card constructions. відходити itself is drilled via PVOM (ua-pvom-0007,
-    prefix від-), not a separate Lexeme note.'
+    prefix від-), not a separate Lexeme note. 2026-07-28: completed the Compare card -- added
+    CompareScenario + CompareA/CompareB (this note''s existing bare ConfusableSet string was
+    populated but the card was still suspended pending these fields, per the Empty-Compare-card
+    safeguard). Cross-links with ua-lexeme-0316 (прибувати), the arrival-side mirror of the
+    same formal-vs-PVOM distinction. Needs your review.'
 ---
 

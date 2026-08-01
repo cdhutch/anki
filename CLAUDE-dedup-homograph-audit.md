@@ -91,6 +91,30 @@ stored that way — only fixes cases that were previously silently broken). See 
 a genuine pre-existing latent bug in a shared, pre-commit-enforced file, not specific to this
 audit's fields, so it's worth knowing about regardless of dedup/homograph work.
 
+### `tools/anki/inspect/check_pending_confusables.py` (bucket 5, new 2026-07-30)
+
+Added during Craig's Ch-08 lexeme verification pass, when he repeatedly named a confusable-set
+partner for a note under review before that partner word had been sourced (e.g. "0463 рух will
+be in a confusable set with затор" while затор doesn't have its own note yet). CLAUDE.md's
+"Vocabulary dedup & homograph handling" now documents this as bucket 5. Mechanically: tag the
+*existing* note `pending-confusable:<bare-spelling>` (stress optional — stripped for matching);
+this script scans the corpus for those tags and reports when the target spelling now exists as
+its own note. It reuses `lexeme_dedup.py`'s `load_corpus()`/`strip_stress()` directly rather
+than a fourth reimplementation of spelling-match logic — same dependency `check_lexeme_dedup.py`
+and `build_lexeme_index.py` don't share with each other, worth unifying further someday. Like
+`check_lexeme_dedup.py`, it only detects the match; a human/Claude still writes the actual
+`ConfusableSet`/`Mnemonic_EN`/`CompareScenario`/`CompareA-D` content. Wired into `make ua-check`
+alongside `audit_verb_aspect_forms.py`'s aspect-completeness check (a separate, unrelated
+report-only audit added the same session — see CLAUDE.md "Aspect-only tags").
+
+As of 2026-07-30, tagged: ua-lexeme-0453 (звісно → зазвичай), 0463 (рух → затор), 0467
+(значно → забагато, joining the already-live значно/набагато pair), 0471 (погляд → вигляд,
+доглянати), 0477 (кілька → скільки, декілька), 0272 (пригода → погода, природа, порода), 0330
+(мандрівка → подорож). ua-lexeme-0321 (перепрошувати) got the older generic
+`needs-confusable-set` tag instead, since Craig named an open-ended -прошувати/-просити prefix
+family rather than one exact spelling — `check_pending_confusables.py` doesn't try to resolve
+those, it just reports a count as a reminder.
+
 ## The 2026-07-24 full-corpus audit
 
 Ran `build_lexeme_index.py` (180 notes, 0 tagged `homograph:true` yet, 0 distinct spellings
@@ -127,6 +151,56 @@ review/stress-check, per the standing draft-until-reviewed rule.
   and is tested, but no `gen_ch09_*.py`-style script calls `create_or_link_lexeme()` yet.
 - Whether to repeat the bucket-4 audit periodically (e.g. after each chapter batch) or only
   at natural review points is an open question — not yet decided.
-- The `Mnemonic_EN`/`CompareA`/`CompareB` field repurposing for homographs generally
+- ~~The `Mnemonic_EN`/`CompareA`/`CompareB` field repurposing for homographs generally
   (proposed in CLAUDE.md's bucket-2 section) still needs Craig's go-ahead before it's built
-  out beyond the про-/пере- prefix pairs it was originally built for.
+  out beyond the про-/пере- prefix pairs it was originally built for.~~ **Done, 2026-07-30.**
+
+## 2026-07-30 corpus-wide Compare-card content sweep
+
+Ran a full sweep of all 579 `ua-lexeme-*.md` notes checking for `ConfusableSet` populated
+with `CompareA`/`CompareB` blank — the shape that produces either a legacy-fallback
+paragraph-as-chip (confusables) or a card-generation gap (homographs; see below). Started
+from a concrete discovery: `ua-lexeme-0405`/`0407` (те́пло/тепло́, a stress-only homograph
+pair) had `ConfusableSet` populated with just the bare alternate spelling but no
+`CompareScenario`/`CompareA`/`Homograph_SenseA`/`CompareB`/`Homograph_SenseB` at all — the
+only `homograph:true` pair in the corpus never given the full Shape-1 treatment described in
+[CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md). Because the
+Compare template's front rendered completely empty for these two notes before the
+2026-07-28 "should be suspended" fallback existed, Anki never generated a Compare card for
+them at all (Anki doesn't create a card whose front renders empty) — confirmed by Craig
+checking the Anki browser directly (only UA→EN/EN→UA cards existed, no third card).
+
+Fix: authored the missing Shape-1 content for both notes, mirroring the established
+мете́лик (0171/0181) pattern — identical `CompareA`/`CompareB`/`Homograph_SenseA`/
+`Homograph_SenseB` on both siblings, sourced from each note's own already-written
+`UA_Example`; `ConfusableSet` rewritten from the bare alternate spelling into real
+discriminator prose. Synced via `make ua-setup-lexeme` + `make ua-lexeme`; Craig confirmed
+in the Anki browser that the third (Compare) card was successfully backfilled for an
+already-existing note — so `updateNoteFields`-driven resync CAN retroactively create a
+card that didn't exist before, at least in this case.
+
+Swept the rest of the corpus (59 notes total have `ConfusableSet` populated, spanning ~25
+distinct clusters/pairs — synonym clusters, near-synonym roots, the прихо́дити-family
+prefixed motion verbs, and 5 true `homograph:true` pairs) for the same gap: **тепло was the
+only one.** Every other `ConfusableSet`-populated note already had both `CompareA` and
+`CompareB` authored on disk.
+
+**Clarified re: the `compute_compare_options()` clobbering bug** (found/fixed 2026-07-28,
+see CLAUDE.md's Card Template Techniques → Comparison card section): it only ever wrote
+corrupted values into live Anki via `updateNoteFields` — it never wrote back to the CNSF
+`.md` files, since the importer only reads files, it doesn't mutate them. Since this sweep
+confirms every file's `CompareA`/`CompareB` content is already correct, a full `make
+ua-lexeme` re-sync is the complete remediation for any historical live-Anki corruption from
+that bug window (2026-07-24 through 2026-07-28) — no separate per-note detection or file
+edit was needed beyond the тепло gap above. Craig spot-verified `ua-lexeme-0022`/`0023`
+(the original bug discovery) and the відбивати/забивати/завдавати/набирати cluster
+(0213–0218) render correctly post-sync.
+
+**Still open:** `set_compare_card_suspended()`'s targeted `findCards` + `card:"Compare"`
+suspend/unsuspend technique (added alongside the clobbering-bug fix, 2026-07-28) was never
+exercised by this sweep — 0405/0407, the one note that would have tested the suspend path,
+ended up with real content authored instead. This is the same class of targeted-suspend
+call that Known Issues footgun #4 already found unreliable for a different card (verified
+correct in dry-run, didn't actually suspend in live Anki). No note in the corpus currently
+needs the Compare card suspended, so this is untested in practice — worth deliberately
+constructing a test case before trusting it.

@@ -34,7 +34,6 @@ fields:
   TypingAnswer: виходити
   UA_Example: ''
   EN_Example: ''
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/виходити
   Source_Note: Stress verified 2026-07-06 via Горох.

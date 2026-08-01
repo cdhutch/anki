@@ -33,7 +33,6 @@ fields:
   TypingAnswer: заробити очко
   UA_Example: Гравець заробив очко для своєї команди.
   EN_Example: The player earned a point for his team.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/заробити; https://goroh.pp.ua/Словозміна/очко
   Source_Note: 'Reconstructed 2026-07-27. This file previously contained a byte-for-byte duplicate

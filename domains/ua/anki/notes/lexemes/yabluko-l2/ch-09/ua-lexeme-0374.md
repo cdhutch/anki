@@ -33,7 +33,6 @@ fields:
   TypingAnswer: використовувати спорядження
   UA_Example: Учасники використовують спорядження для дайвінгу -- маску, трубку та ласти.
   EN_Example: Participants use equipment for diving -- a mask, snorkel, and flippers.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/використовувати; https://goroh.pp.ua/Словозміна/спорядження
   Source_Note: Drafted 2026-07-27. This phrase, and the base verb ua-lexeme-0373 it pairs

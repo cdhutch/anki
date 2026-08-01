@@ -32,7 +32,6 @@ fields:
   TypingAnswer: мотузка
   UA_Example: Вони натягнули мотузку між двома берегами.
   EN_Example: They stretched a rope between the two banks.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/мотузка
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

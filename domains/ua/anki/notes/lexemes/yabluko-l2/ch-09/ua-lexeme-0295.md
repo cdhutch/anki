@@ -33,7 +33,6 @@ fields:
   TypingAnswer: рівень складності
   UA_Example: Організатори підвищили рівень складності другого етапу.
   EN_Example: The organizers raised the difficulty level of the second stage.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/рівень; https://goroh.pp.ua/Словозміна/складність
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

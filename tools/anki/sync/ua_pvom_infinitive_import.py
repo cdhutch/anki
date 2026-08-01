@@ -6,13 +6,39 @@ Walking_Multi_{UA,Typing}, Walking_Uni_{UA,Typing}, Vehicle_Multi_{UA,Typing},
 Vehicle_Uni_{UA,Typing}, plus NoteID/Prefix/Tags_Ch/Source_Note/Verification_Notes.
 CNSF field names match the Anki field names exactly -- no renaming/derivation
 needed, unlike the old single-form schema this replaced.
+
+Suspension policy (added 2026-07-31 -- this script previously had none at
+all, so a card suspended by accident here, e.g. a mistyped Command-1/Alt-1
+during review, stayed suspended forever; nothing ever re-asserted a state):
+    - stress:unverified tag → suspend (every PVOM note currently carries
+      this tag; none has been Горох-re-verified since the prefix drilling
+      set was built, matching the same "not ready for drilling until
+      confirmed" rationale used in ua_verb_import.py)
+    - status:draft tag → suspend (no current PVOM note uses this tag, but
+      checked for consistency with every other UA note type in case one
+      ever does)
+    - neither tag present → unsuspend
+    - note has a red/orange-flagged card → suspend, regardless of tags
+      above (per Craig -- see get_flagged_note_ids in tsv_to_anki.py). Only
+      checked for existing notes; a brand-new note can't already have a
+      flagged card in Anki.
+Applied on every import, add or update -- declarative and self-healing like
+every other UA note type, not just a one-time default at creation.
 """
 
+import argparse
 import json
 import urllib.request
 import sys
 from pathlib import Path
 import yaml
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from tools.anki.sync.tsv_to_anki import anki_request, get_flagged_note_ids  # noqa: E402
+
+# Deck query scope for the red/orange-flag suspend check -- same query
+# string used across every UA sync script; see ua_lexeme_import.py.
+FLAG_DECK_QUERY = "deck:UA::*"
 
 ANKI_FIELDS = [
     "NoteID",
@@ -52,6 +78,23 @@ def anki_connect(action, params=None):
     except Exception as e:
         print(f"AnkiConnect error: {e}", file=sys.stderr)
         return None
+
+
+def should_suspend(tags):
+    """Suspension policy for UA_PVOM_Infinitive cards -- see module docstring."""
+    return "stress:unverified" in tags or "status:draft" in tags
+
+
+def set_suspended(anki_note_id, suspend, dry_run=False):
+    """Suspend or unsuspend every card belonging to an Anki note ID."""
+    if dry_run:
+        return
+    result = anki_connect("findCards", {"query": f"nid:{anki_note_id}"})
+    card_ids = (result or {}).get("result") or []
+    if not card_ids:
+        return
+    action = "suspend" if suspend else "unsuspend"
+    anki_connect(action, {"cards": card_ids})
 
 
 def load_note_from_cnsf(filepath):
@@ -104,7 +147,7 @@ def find_note_by_noteid(noteid, deck_name="UA::Recognition::PVOM"):
     return None
 
 
-def upsert_notes(pvom_dir):
+def upsert_notes(pvom_dir, dry_run=False):
     """Upsert all PVOM infinitive notes (update if exists, create if new)."""
     pvom_path = Path(pvom_dir)
 
@@ -112,8 +155,18 @@ def upsert_notes(pvom_dir):
         print(f"Error: {pvom_dir} is not a directory", file=sys.stderr)
         return False
 
+    # One bulk query for the whole sync run -- see get_flagged_note_ids.
+    flagged_note_ids = get_flagged_note_ids(FLAG_DECK_QUERY)
+    if flagged_note_ids:
+        print(f"Found {len(flagged_note_ids)} note(s) with a red/orange-flagged card -- keeping suspended.")
+
     notes_to_create = []
     updates = []
+    # Tags carried alongside updates/creates so suspend state can be applied
+    # after add/update succeeds -- updateNoteFields/addNotes only touch
+    # fields, never suspend state, so that's a separate pass below.
+    update_tags = []  # parallel to `updates`, same index
+    create_tags = []  # parallel to `notes_to_create`, same index
 
     for filepath in sorted(pvom_path.glob("ua-pvom-*.md")):
         note_data = load_note_from_cnsf(filepath)
@@ -123,6 +176,9 @@ def upsert_notes(pvom_dir):
 
         fields = note_data.get("fields", {})
         noteid = fields.get("NoteID", "")
+        tags = note_data.get("tags", [])
+        if not isinstance(tags, list):
+            tags = []
 
         existing_note_id = find_note_by_noteid(noteid)
 
@@ -131,15 +187,30 @@ def upsert_notes(pvom_dir):
                 "id": existing_note_id,
                 "fields": anki_fields_from(fields),
             })
+            update_tags.append(tags)
         else:
             notes_to_create.append(build_anki_note(note_data))
+            create_tags.append(tags)
+
+    if dry_run:
+        for note, tags in zip(notes_to_create, create_tags):
+            note_id = note["fields"]["NoteID"]
+            print(f"  ADD (dry-run)     {note_id}  suspend={should_suspend(tags)}")
+        for update, tags in zip(updates, update_tags):
+            note_suspend = should_suspend(tags) or (update["id"] in flagged_note_ids)
+            print(f"  UPDATE (dry-run)  id={update['id']}  suspend={note_suspend}")
+        total = len(notes_to_create) + len(updates)
+        print(f"\nDRY RUN: would process {total} PVOM infinitive notes "
+              f"({len(notes_to_create)} create, {len(updates)} update). No changes made.")
+        return True
 
     created = 0
+    created_ids = []
     if notes_to_create:
         result = anki_connect("addNotes", {"notes": notes_to_create})
         if result and not result.get("error"):
-            note_ids = result.get("result", [])
-            created = len([nid for nid in note_ids if nid is not None])
+            created_ids = result.get("result", [])
+            created = len([nid for nid in created_ids if nid is not None])
         else:
             print(f"✗ Create failed: {result}", file=sys.stderr)
             return False
@@ -154,21 +225,32 @@ def upsert_notes(pvom_dir):
                 print(f"✗ Update failed for note {update['id']}: {result}", file=sys.stderr)
                 return False
 
+    # Suspend policy pass -- see module docstring. A brand-new note can't
+    # already have a flagged card in Anki, so the flag check only applies
+    # to the update path.
+    for note_id, tags in zip(created_ids, create_tags):
+        if note_id is not None and should_suspend(tags):
+            set_suspended(note_id, True)
+
+    for update, tags in zip(updates, update_tags):
+        note_suspend = should_suspend(tags) or (update["id"] in flagged_note_ids)
+        set_suspended(update["id"], note_suspend)
+
     total = len(notes_to_create) + len(updates)
     print(f"✓ Processed {total} PVOM infinitive notes ({created} created, {updated} updated)")
     return True
 
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print(
-            "Usage: python ua_pvom_infinitive_import.py <pvom_notes_dir>",
-            file=sys.stderr,
-        )
-        sys.exit(1)
+    parser = argparse.ArgumentParser(description="Import ua_pvom_infinitive notes into Anki.")
+    parser.add_argument("pvom_dir", help="Directory of ua-pvom-*.md files")
+    parser.add_argument("--dry-run", action="store_true", help="Show what would happen; touch nothing")
+    args = parser.parse_args()
 
-    pvom_dir = sys.argv[1]
-    if upsert_notes(pvom_dir):
+    if args.dry_run:
+        print("DRY RUN — no changes will be made to Anki.\n")
+
+    if upsert_notes(args.pvom_dir, dry_run=args.dry_run):
         sys.exit(0)
     else:
         sys.exit(1)

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: синхронне плавання
   UA_Example: Синхронне плавання — це олімпійський вид спорту.
   EN_Example: Synchronized swimming is an Olympic sport.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/синхронний; https://goroh.pp.ua/Словозміна/плавання
   Source_Note: Components verified via Горох (see ua-lexeme-0138, ua-lexeme-0147). Verified

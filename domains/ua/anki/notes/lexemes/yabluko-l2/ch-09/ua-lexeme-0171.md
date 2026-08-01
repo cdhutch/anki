@@ -39,7 +39,6 @@ fields:
   TypingAnswer: метелик
   UA_Example: Метелик сів на квітку.
   EN_Example: The butterfly landed on the flower.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/метелик
   Source_Note: 'Горох lists 2 senses for ''мете́лик'' (identical spelling): ''комаха'' (insect/butterfly,
