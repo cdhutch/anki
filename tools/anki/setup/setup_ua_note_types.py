@@ -465,9 +465,13 @@ COMPARISON_FRONT = """\
      see comment above CARD_TEMPLATES. A blank CompareA here means the note
      has ConfusableSet populated but Compare fields were never authored
      (e.g. a homograph:true note where CompareA/B got skipped), or some
-     other data gap. The importer (ua_lexeme_import.py) suspends this card
-     whenever CompareA is blank, so in normal study this notice should never
-     surface -- it's a defensive fallback for previewing/QA, not the primary
+     other data gap. Tested 2026-08-01 (see CLAUDE.md item 6): this warning
+     text is pure static markup with no field substitution, so Anki's own
+     empty-card-generation rule refuses to create this card at all when
+     CompareA is blank -- the warning below can never actually be seen in
+     Anki, in study or in preview/QA, and the importer's suspend call for
+     this exact case is a no-op against a card that doesn't exist. Left here
+     as a readable marker of the data-gap condition, not a functioning
      safeguard. -->
 {{^CompareA}}
 <div style="font-size: 15px; color: #c62828; font-style: italic; padding: 16px; border: 1px dashed #c62828; border-radius: 4px;">

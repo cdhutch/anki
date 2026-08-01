@@ -346,13 +346,17 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     # setup_ua_note_types.py), so a blank CompareA here means the actual
     # chip content is missing even though ConfusableSet has text (e.g. a
     # homograph:true note where CompareA/B were never authored -- those
-    # aren't auto-derived above, unlike the confusables case). Without this,
-    # such a note would generate an active Compare card whose front shows
-    # the scenario prompt with no answer chips. Found 2026-07-28 alongside
-    # the CompareA/CompareB clobbering bug; the template itself now also
-    # shows a "should be suspended" notice in this state as a defensive
-    # fallback, but suspending here is the primary safeguard so it's never
-    # actually seen in study.
+    # aren't auto-derived above, unlike the confusables case). Found 2026-07-28
+    # alongside the CompareA/CompareB clobbering bug. Tested 2026-08-01 (see
+    # CLAUDE.md item 6): this suspend call is actually a no-op in the blank-
+    # CompareA-from-creation case -- the template's "should be suspended"
+    # notice is pure static text with no field substitution, so Anki's own
+    # empty-card-generation rule never creates the card in the first place.
+    # This suspend call earns its keep in a different, real scenario instead:
+    # a note whose Compare card was already generated with valid data, then
+    # later has that data retracted (ConfusableSet/CompareA/CompareB cleared)
+    # -- confirmed working end-to-end via a two-phase test (see CLAUDE.md
+    # item 6), so the already-existing card does get suspended on re-sync.
     confusable_set = fields.get("ConfusableSet", "").strip()
     compare_a_content = fields.get("CompareA", "").strip()
     suspend_compare_card = not confusable_set or not compare_a_content
