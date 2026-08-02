@@ -30,7 +30,6 @@ fields:
   TypingAnswer: розминатися
   UA_Example: Ми часто розминаємося в коридорі.
   EN_Example: We often just miss each other in the hallway.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/розминатися; https://goroh.pp.ua/Словозміна/розминутися
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects. Vocab list (9.2) cites

@@ -34,7 +34,6 @@ fields:
   TypingAnswer: спускатися вниз
   UA_Example: Спускатися вниз зі скелі виявилося складніше, ніж підніматися.
   EN_Example: Going down the cliff turned out to be harder than climbing up.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/спускатися; https://goroh.pp.ua/Словозміна/вниз
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

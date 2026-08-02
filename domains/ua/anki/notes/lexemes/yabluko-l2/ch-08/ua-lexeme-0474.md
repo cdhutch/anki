@@ -32,7 +32,6 @@ fields:
   TypingAnswer: раз
   UA_Example: Це вже другий раз, коли ми відвідуємо це місто.
   EN_Example: This is already the second time we've visited this city.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/раз
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

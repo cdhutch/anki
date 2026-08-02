@@ -32,7 +32,6 @@ fields:
   TypingAnswer: суперник
   UA_Example: Він переміг сильного суперника у фіналі.
   EN_Example: He defeated a strong opponent in the final.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/суперник
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

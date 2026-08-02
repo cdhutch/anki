@@ -32,7 +32,6 @@ fields:
   TypingAnswer: мінлива хмарність
   UA_Example: Синоптики прогнозують мінливу хмарність.
   EN_Example: Forecasters predict variable cloudiness.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/мінливий; https://goroh.pp.ua/Словозміна/хмарність
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass. Vocabulary-appendix phrase

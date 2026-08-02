@@ -31,7 +31,6 @@ fields:
   TypingAnswer: м'який
   UA_Example: Ліжко в номері дуже м'яке.
   EN_Example: The bed in the room is very soft.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/м'який
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

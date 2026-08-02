@@ -45,7 +45,6 @@ fields:
   TypingAnswer: відправлення
   UA_Example: Час відправлення поїзда -- девʼята вечора.
   EN_Example: The train's departure time is nine in the evening.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/відправлення
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: ласт
   UA_Example: Без ластів важко швидко плисти під водою.
   EN_Example: Without flippers it's hard to swim fast underwater.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/ласти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

@@ -106,7 +106,6 @@ def _note_text(
         f"  TypingAnswer: {strip_stress(lemma)}\n"
         "  UA_Example: ''\n"
         "  EN_Example: ''\n"
-        "  Verb_Conj_Table: ''\n"
         f"  Tags_Ch: {tags_ch}\n"
         f"  Source_URL: https://goroh.pp.ua/Словозміна/{strip_stress(lemma)}\n"
         "  Source_Note: ''\n"

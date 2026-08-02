@@ -32,7 +32,6 @@ fields:
   TypingAnswer: ворота
   UA_Example: М'яч влучив у ворота.
   EN_Example: The ball hit the goal.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2, ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/ворота
   Source_Note: Pluralia tantum (no singular form) — Горох confirms nominative singular '—'.

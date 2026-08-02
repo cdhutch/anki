@@ -84,12 +84,18 @@ python tools/anki/inspect/ua_flag_audit.py --apply
 
 ### Tools
 
-**`ua_flag_audit.py`** (to be written)
-- Query flagged cards via AnkiConnect
-- Extract NoteID, flag color, card front/back
-- Map NoteID to canonical CNSF file path
-- Output manifest (JSON/CSV)
-- Batch remove flags after fixes applied
+**`tools/anki/inspect/ua_flag_audit.py`** (built and tested 2026-08-01, see CLAUDE.md item 8)
+- `--query`: find every red/orange-flagged card in the UA deck tree, group by note, resolve
+  each `NoteID` to its canonical CNSF file path (recursive search for lexemes, flat for
+  verbs/grammar/visual), print a summary, write a JSON manifest
+  (`flagged_cards_manifest.json` by default -- gitignored, transient)
+- `--apply`: three-step re-sync so fixed notes actually end up unsuspended in the same
+  run, not deferred to some later sync -- (1) re-import corrected CNSF files via the
+  right per-note-type import script, while flags are still set (notes stay suspended);
+  (2) clear flags via `setSpecificValueOfCard`; (3) re-import the same notes again, so
+  each import script's own suspend policy (re-queried fresh from AnkiConnect) sees the
+  now-cleared flags and unsuspends. `--no-unmark` skips steps 2-3 for a content-only
+  dry-test. `--manifest PATH` to target a non-default manifest.
 
 ### File Mapping
 
@@ -117,10 +123,20 @@ They:
 
 ### Flag Removal
 
-After re-import, remove flags via AnkiConnect:
+**Corrected 2026-08-01** (see CLAUDE.md item 8): the `unmark` action shown in an earlier version
+of this doc does not exist in AnkiConnect -- it was an aspirational, never-tested sketch, and
+`ua_flag_audit.py` hit a real `"AnkiConnect error for unmark: unsupported action"` when it tried
+it. There is no batch flag-clearing action; the real mechanism is `setSpecificValueOfCard`, called
+once per card, with `newValues` as actual ints (`["0"]` as a string silently no-ops -- returns
+`True` but leaves the flag unchanged; `[0]` actually clears it):
 ```python
-anki_request("unmark", {"cards": card_ids}, url=ANKI_URL)
+anki_request(
+    "setSpecificValueOfCard",
+    {"card": card_id, "keys": ["flags"], "newValues": [0]},
+    url=ANKI_URL,
+)
 ```
+`ua_flag_audit.py --apply` handles this correctly (loops per card_id, ints not strings).
 
 ## Workflow Integration
 

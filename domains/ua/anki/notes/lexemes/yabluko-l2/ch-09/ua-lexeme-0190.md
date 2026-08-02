@@ -32,7 +32,6 @@ fields:
   TypingAnswer: маска
   UA_Example: Дайвер одягнув маску перед зануренням.
   EN_Example: The diver put on a mask before diving in.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/маска
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

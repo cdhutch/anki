@@ -45,7 +45,6 @@ fields:
   TypingAnswer: вигравати
   UA_Example: Вона любить вигравати навіть у дружніх іграх.
   EN_Example: She likes to win even in friendly games.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/вигравати; https://goroh.pp.ua/Словозміна/виграти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

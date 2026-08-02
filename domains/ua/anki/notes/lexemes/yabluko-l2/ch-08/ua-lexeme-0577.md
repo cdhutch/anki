@@ -33,7 +33,6 @@ fields:
   TypingAnswer: мурашка
   UA_Example: По підлозі повзла маленька мурашка.
   EN_Example: A small ant crawled across the floor.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/мурашка
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

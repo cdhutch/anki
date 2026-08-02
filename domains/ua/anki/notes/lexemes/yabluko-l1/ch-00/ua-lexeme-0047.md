@@ -30,7 +30,6 @@ fields:
   TypingAnswer: ніж
   UA_Example: Кухар ріже хліб гострим ножем.
   EN_Example: The cook cuts bread with a sharp knife.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/ніж
   Source_Note: verified 2026-07-06 via Горох

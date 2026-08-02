@@ -31,7 +31,6 @@ fields:
   TypingAnswer: вчитель
   UA_Example: Вчитель пояснює нове правило на дошці.
   EN_Example: The teacher is explaining a new rule on the board.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/вчитель
   Source_Note: verified 2026-07-06 via Горох

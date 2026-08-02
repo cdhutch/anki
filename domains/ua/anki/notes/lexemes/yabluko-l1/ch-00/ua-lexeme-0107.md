@@ -29,7 +29,6 @@ fields:
   TypingAnswer: Дуже приемно
   UA_Example: — Мене звати Оля. — Дуже приємно, я Тарас.
   EN_Example: — My name is Olya. — Very pleased to meet you, I'm Taras.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

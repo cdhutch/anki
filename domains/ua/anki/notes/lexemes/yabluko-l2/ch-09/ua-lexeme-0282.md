@@ -31,7 +31,6 @@ fields:
   TypingAnswer: ночувати
   UA_Example: Команди мали ночувати просто неба між етапами.
   EN_Example: The teams had to spend the night outdoors between stages.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/ночувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

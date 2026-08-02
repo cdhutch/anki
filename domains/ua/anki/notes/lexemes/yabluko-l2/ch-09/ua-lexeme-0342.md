@@ -31,7 +31,6 @@ fields:
   TypingAnswer: підвозити
   UA_Example: Місцевий фермер погодився підвезти їх до сироварні.
   EN_Example: A local farmer agreed to give them a ride to the cheese dairy.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/підвозити; https://goroh.pp.ua/Словозміна/підвезти
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

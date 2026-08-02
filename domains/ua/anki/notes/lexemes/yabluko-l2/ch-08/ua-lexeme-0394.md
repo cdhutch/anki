@@ -31,7 +31,6 @@ fields:
   TypingAnswer: прохолодний
   UA_Example: Сьогодні досить прохолодний ранок.
   EN_Example: It's a rather cool morning today.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/прохолодний
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

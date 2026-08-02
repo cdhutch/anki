@@ -32,7 +32,6 @@ fields:
   TypingAnswer: тісто
   UA_Example: Вона замісила тісто для пирога.
   EN_Example: She kneaded the dough for the pie.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/тісто
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: розводити
   UA_Example: Тут місцеві родини здавна розводять овець.
   EN_Example: Local families have long bred sheep here.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/розводити
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

@@ -30,7 +30,6 @@ fields:
   TypingAnswer: сімʼя
   UA_Example: Наша сімʼя живе у великій квартирі.
   EN_Example: Our family lives in a large apartment.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/сімʼя
   Source_Note: verified 2026-07-06 via Горох

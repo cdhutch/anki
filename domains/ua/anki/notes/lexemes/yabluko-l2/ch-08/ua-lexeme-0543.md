@@ -31,7 +31,6 @@ fields:
   TypingAnswer: сирий
   UA_Example: Сира риба — основа суші.
   EN_Example: Raw fish is the base of sushi.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/сирий
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

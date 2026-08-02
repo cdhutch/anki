@@ -31,7 +31,6 @@ fields:
   TypingAnswer: зваритися
   UA_Example: Суп повинен зваритися ще хвилин десять.
   EN_Example: The soup needs to cook for about ten more minutes.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/зваритися
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

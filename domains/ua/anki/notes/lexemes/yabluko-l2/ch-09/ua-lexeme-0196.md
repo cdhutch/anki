@@ -32,7 +32,6 @@ fields:
   TypingAnswer: форма
   UA_Example: Уся команда вийшла на поле в новій формі.
   EN_Example: The whole team came out onto the field in new uniforms.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/форма
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

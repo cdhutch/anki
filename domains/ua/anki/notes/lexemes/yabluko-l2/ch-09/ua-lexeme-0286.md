@@ -32,7 +32,6 @@ fields:
   TypingAnswer: підніматися
   UA_Example: Найважче було підніматися на скелі під дощем.
   EN_Example: The hardest part was climbing on the cliffs in the rain.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5, ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/підніматися; https://goroh.pp.ua/Словозміна/піднятися
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

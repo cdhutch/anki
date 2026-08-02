@@ -32,7 +32,6 @@ fields:
   TypingAnswer: вибір
   UA_Example: У готелі був великий вибір страв.
   EN_Example: The hotel had a large choice of dishes.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/вибір
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

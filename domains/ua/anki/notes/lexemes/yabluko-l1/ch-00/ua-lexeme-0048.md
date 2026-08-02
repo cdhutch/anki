@@ -37,7 +37,6 @@ fields:
   TypingAnswer: ніч
   UA_Example: Вночі вулиці міста стають тихими.
   EN_Example: At night the city streets become quiet.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/ніч
   Source_Note: verified 2026-07-06 via Горох

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: дешевий
   UA_Example: Ми знайшли дешевий готель у центрі.
   EN_Example: We found a cheap hotel downtown.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/дешевий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

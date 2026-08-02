@@ -31,7 +31,6 @@ fields:
   TypingAnswer: нудно
   UA_Example: Без інтернету в номері було дуже нудно.
   EN_Example: It was very boring in the room without internet.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/нудно
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

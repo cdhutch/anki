@@ -36,7 +36,6 @@ fields:
   TypingAnswer: брати участь у змаганнях
   UA_Example: Шестеро з них беруть участь у змаганні, а ще четверо -- запасні гравці.
   EN_Example: Six of them take part in the competition, and four more are substitute players.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/брати; https://goroh.pp.ua/Словозміна/участь;
     https://goroh.pp.ua/Словозміна/змагання

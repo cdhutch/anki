@@ -31,7 +31,6 @@ fields:
   TypingAnswer: простягати
   UA_Example: Продавчиня простягала букет через прилавок.
   EN_Example: The saleswoman was reaching the bouquet across the counter.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/простягати; https://goroh.pp.ua/Словозміна/простягнути
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

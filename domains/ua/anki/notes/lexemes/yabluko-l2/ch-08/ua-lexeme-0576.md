@@ -31,7 +31,6 @@ fields:
   TypingAnswer: професійно
   UA_Example: Усе було зіграно дуже професійно.
   EN_Example: Everything was played very professionally.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/професійно
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

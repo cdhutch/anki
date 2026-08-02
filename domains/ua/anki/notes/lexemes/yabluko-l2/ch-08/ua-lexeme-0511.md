@@ -32,7 +32,6 @@ fields:
   TypingAnswer: траса
   UA_Example: Ми обрали найкоротшу трасу до вершини.
   EN_Example: We chose the shortest route to the summit.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/траса
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

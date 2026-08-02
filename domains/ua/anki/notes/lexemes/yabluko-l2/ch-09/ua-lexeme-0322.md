@@ -33,7 +33,6 @@ fields:
   TypingAnswer: тип вагона
   UA_Example: Оберіть тип вагона перед покупкою квитка.
   EN_Example: Choose the type of train car before buying the ticket.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/тип; https://goroh.pp.ua/Словозміна/вагон
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

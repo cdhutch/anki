@@ -31,7 +31,6 @@ fields:
   TypingAnswer: гладкий
   UA_Example: Шкірка яблука була гладкою і блискучою.
   EN_Example: The apple's skin was smooth and shiny.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/гладкий
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

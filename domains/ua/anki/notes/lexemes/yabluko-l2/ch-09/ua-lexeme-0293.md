@@ -33,7 +33,6 @@ fields:
   TypingAnswer: гірський масив
   UA_Example: Траса пролягала через увесь гірський масив.
   EN_Example: The course ran through the entire mountain massif.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/гірський; https://goroh.pp.ua/Словозміна/масив
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

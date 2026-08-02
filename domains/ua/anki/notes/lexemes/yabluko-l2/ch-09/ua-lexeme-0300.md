@@ -34,7 +34,6 @@ fields:
   TypingAnswer: перелетіти через річку на мотузці
   UA_Example: Команда мала перелетіти через річку на мотузці за хвилину.
   EN_Example: The team had to fly across the river on a rope in under a minute.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/перелетіти; https://goroh.pp.ua/Словозміна/річка;
     https://goroh.pp.ua/Словозміна/мотузка

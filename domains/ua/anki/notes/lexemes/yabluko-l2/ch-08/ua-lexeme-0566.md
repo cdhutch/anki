@@ -32,7 +32,6 @@ fields:
   TypingAnswer: стовбур дерева
   UA_Example: Ми виміряли обхват стовбура дерева.
   EN_Example: We measured the girth of the tree trunk.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/стовбур; https://goroh.pp.ua/Словозміна/дерево
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

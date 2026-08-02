@@ -42,7 +42,6 @@ fields:
   TypingAnswer: фінішувати
   UA_Example: Перша команда фінішувала за три дні.
   EN_Example: The first team finished in three days.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/фінішувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

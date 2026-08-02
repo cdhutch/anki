@@ -31,7 +31,6 @@ fields:
   TypingAnswer: контрольний
   UA_Example: На кожному контрольному пункті суддя фіксував час команди.
   EN_Example: At every checkpoint, a judge recorded the team's time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/контрольний
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

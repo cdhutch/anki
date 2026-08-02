@@ -39,7 +39,6 @@ fields:
   TypingAnswer: лавка
   UA_Example: Вона купила букет троянд у квітковій лавці на ринку.
   EN_Example: She bought a bouquet of roses at the flower stall in the market.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/лавка
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.

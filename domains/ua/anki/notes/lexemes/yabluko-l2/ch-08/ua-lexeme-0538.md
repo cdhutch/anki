@@ -32,7 +32,6 @@ fields:
   TypingAnswer: лапка
   UA_Example: На тарілці лежала маленька смажена лапка.
   EN_Example: A small fried leg lay on the plate.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/лапка
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

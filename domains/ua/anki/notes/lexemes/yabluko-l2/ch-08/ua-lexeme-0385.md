@@ -32,7 +32,6 @@ fields:
   TypingAnswer: гроза
   UA_Example: Учора ввечері була сильна гроза.
   EN_Example: Last night there was a strong thunderstorm.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/гроза
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

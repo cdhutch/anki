@@ -30,7 +30,6 @@ fields:
   TypingAnswer: японський
   UA_Example: Японська кухня дуже популярна в Україні.
   EN_Example: Japanese cuisine is very popular in Ukraine.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/японський
   Source_Note: verified 2026-07-06 via Горох

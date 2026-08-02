@@ -32,7 +32,6 @@ fields:
   TypingAnswer: на смак
   UA_Example: На смак ця страва була гострою.
   EN_Example: To the taste, this dish was spicy.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/смак
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

@@ -32,7 +32,6 @@ fields:
   TypingAnswer: бойовий гопак
   UA_Example: Бойовий гопак поєднує елементи танцю та бойового мистецтва.
   EN_Example: Combat hopak combines elements of dance and martial arts.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/бойовий; https://goroh.pp.ua/Словозміна/гопак
   Source_Note: Components verified via Горох (see ua-lexeme-0132, ua-lexeme-0140). Verified

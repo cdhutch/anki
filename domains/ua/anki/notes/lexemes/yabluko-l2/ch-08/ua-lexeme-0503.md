@@ -31,7 +31,6 @@ fields:
   TypingAnswer: гострий
   UA_Example: Ця страва занадто гостра для мене.
   EN_Example: This dish is too spicy for me.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/гострий
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

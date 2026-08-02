@@ -31,7 +31,6 @@ fields:
   TypingAnswer: Німеччина
   UA_Example: Ми вивчаємо німецьку, бо хочемо жити в Німеччині.
   EN_Example: We are studying German because we want to live in Germany.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/Німеччина
   Source_Note: verified 2026-07-06 via Горох

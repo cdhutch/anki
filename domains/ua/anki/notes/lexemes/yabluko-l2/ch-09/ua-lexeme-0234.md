@@ -33,7 +33,6 @@ fields:
   TypingAnswer: посісти третє місце
   UA_Example: Наша команда посіла третє місце на чемпіонаті.
   EN_Example: Our team took third place at the championship.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/посісти; https://goroh.pp.ua/Словозміна/третій;
     https://goroh.pp.ua/Словозміна/місце

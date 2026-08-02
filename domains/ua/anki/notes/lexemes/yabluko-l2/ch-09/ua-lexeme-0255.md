@@ -32,7 +32,6 @@ fields:
   TypingAnswer: масив
   UA_Example: Команди мали перетнути гірський масив за два дні.
   EN_Example: The teams had to cross the mountain massif in two days.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/масив
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

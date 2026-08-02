@@ -32,7 +32,6 @@ fields:
   TypingAnswer: нагорода
   UA_Example: Переможець отримав грошову нагороду.
   EN_Example: The winner received a cash prize.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/нагорода
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

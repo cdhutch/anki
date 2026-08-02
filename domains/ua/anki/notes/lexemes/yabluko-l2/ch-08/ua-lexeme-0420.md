@@ -32,7 +32,6 @@ fields:
   TypingAnswer: страва
   UA_Example: Ця страва дуже смачна.
   EN_Example: This dish is very tasty.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/страва
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

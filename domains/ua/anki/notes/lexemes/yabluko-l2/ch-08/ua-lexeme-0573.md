@@ -31,7 +31,6 @@ fields:
   TypingAnswer: енергійний
   UA_Example: Танцюристи виступили з енергійним номером.
   EN_Example: The dancers performed an energetic number.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/енергійний
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: туризм
   UA_Example: Пішохідний туризм стає дедалі популярнішим.
   EN_Example: Hiking is becoming increasingly popular.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/туризм
   Source_Note: Stress verified 2026-07-22 via Горох.

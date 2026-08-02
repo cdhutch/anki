@@ -32,7 +32,6 @@ fields:
   TypingAnswer: перепад температури
   UA_Example: Такий різкий перепад температури здивував навіть місцевих.
   EN_Example: Such a sharp temperature swing surprised even the locals.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/перепад; https://goroh.pp.ua/Словозміна/температура
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

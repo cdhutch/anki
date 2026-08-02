@@ -30,7 +30,6 @@ fields:
   TypingAnswer: насолоджуватися
   UA_Example: Ми насолоджуємося відпочинком на морі.
   EN_Example: We are enjoying our vacation by the sea.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/насолоджуватися; https://goroh.pp.ua/Словозміна/насолодитися
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects.

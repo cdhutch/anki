@@ -31,7 +31,6 @@ fields:
   TypingAnswer: як тільки
   UA_Example: Як тільки дощ ущух, вони вирушили далі.
   EN_Example: As soon as the rain let up, they set off further.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/як тільки
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

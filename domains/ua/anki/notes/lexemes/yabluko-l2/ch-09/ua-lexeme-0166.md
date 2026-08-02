@@ -31,7 +31,6 @@ fields:
   TypingAnswer: дельфін
   UA_Example: Дельфіни плавають у морі.
   EN_Example: Dolphins swim in the sea.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/дельфін
   Source_Note: Stress verified 2026-07-22 via Горох.

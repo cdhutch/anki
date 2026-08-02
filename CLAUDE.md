@@ -127,6 +127,58 @@ but per Craig, held for a separate pass, not fixed here — that the *existing*
 ua-verb-0009 (пливти) and ua-verb-0010 (попливти) have stored conjugation tables that
 don't match their own Lemma (they look like a mixed-up плинути/попити paradigm
 instead); see "Remaining Work" below and each note's `Verification Notes` for detail.
+2026-08-01: **Gruvbox palette rollout — structural items 1–3 resolved (see "Remaining
+Work" below).** Found `feature/anki-mobile-night-mode` already existed with real prior
+work (a `.night_mode`→`.nightMode` fix commit, plus a `Solarized_Palette_Demo` proof-of-
+concept Craig had built 2026-07-27, commit `aa52393`) — merged both into the working
+branch. Resolved item 1 (dual CSS sources): `setup_ua_note_types.py` is now the single
+source of truth for all four live UA note types (`UA_Lexeme`/`UA_Grammar`/`UA_Verb`/
+`UA_Visual`); `update_legacy_css.py` trimmed to its B737-legacy entries only, per Craig's
+decision. Resolved item 2: `.night_mode`→`.nightMode` fixed throughout `VISUAL_CSS`.
+Item 3 ("Solarized palette") superseded — mid-task, Craig's actual objective turned out
+to be broader: a repo-wide default palette, chosen empirically against his real
+accessibility need (iOS Accessibility → Display & Text Size → Color Filters → Color Tint
+→ Hue near-full-left, a red-tint "night vision" filter he uses ~10% of the time, vs. ~60%
+day / ~30% ordinary night mode). Built `tools/anki/setup/setup_palette_comparison_demo.py`
+(`Palette_Comparison_Demo` note type, `Demo::Palette_Comparison` deck, under
+`domains/demo/` — see `domains/demo/README.md`) to A/B/C-test three candidates (Solarized
+/ Monochrome / Warm-Gruvbox-style) as composite card mockups that live-flip via
+`.nightMode`, tested in a three-pass walkthrough (Day mode → Night Mode → Night Mode +
+red-tint filter). Craig's verdict: **Gruvbox**, with Accent B corrected from olive green
+to blue (`#076678`/`#83a598`) after on-device testing showed green sat too close in hue
+to the secondary-text gray. Gruvbox is now rolled out as the actual palette across
+`CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS` in `setup_ua_note_types.py` (bg `#fbf1c7`/
+`#282828`, primary `#3c3836`/`#ebdbb2`, secondary `#7c6f64`/`#a89984`, Accent A orange
+`#af3a03`/`#fe8019`, Accent B blue as above). Scope also expanded per Craig to cover the
+Compare card and both typing-feedback scripts (`EN_UA_BACK` in `setup_ua_note_types.py`;
+`FEEDBACK_SCRIPT` in `setup_ua_pvom_note_type.py`, previously **completely unthemed, zero
+`.nightMode` support**) — their hardcoded inline `style="color:#hex"` attributes are now
+`.nightMode`-aware CSS classes (`fb-*`/`status-*` for the typing-feedback success/error/
+warning/info states, `compare-*` for the Compare card). Per Craig: status colors stay
+close to their pre-existing blue/green/red/orange roles (no new hues introduced); the
+"warning" state stayed in the original orange family (`#af3a03`/`#fe8019`, reusing Accent
+A) rather than switching to Gruvbox's yellow; dark-mode red/orange use Gruvbox's *bright*
+tier, not the muted/neutral tier, for maximum luminance contrast — specifically so they
+don't wash out under the red-tint filter, per Craig's explicit request. A 5th demo card
+(`palette-compare-status`) was added to `Palette_Comparison_Demo` previewing these exact
+shipped colors for Craig to confirm under pass 3 before this is treated as fully
+validated. **Status: all code delivered to Craig and written to his checkout; not yet
+synced to live Anki or confirmed on-device.** Next step for Craig: `make ua-setup` (all
+four UA note types) and `make ua-setup-pvom`, then re-run
+`python tools/anki/setup/setup_palette_comparison_demo.py` to pick up the new status-color
+demo card and re-test pass 3 specifically for the red/orange legibility question above.
+2026-08-01: **PR merged to `main`.** The Gruvbox rollout above (`feature/anki-mobile-
+night-mode` → `main`) merged via a regular merge commit (not squash), by design — Craig
+wants to keep committing follow-up fixes to `feature/anki-mobile-night-mode` itself while
+he runs the on-device validation pass described above, then open a clean follow-up PR
+with just the new commits, rather than branching per fix. **The code is now in `main`,
+but on-device validation (the `make ua-setup`/`make ua-setup-pvom` sync, the three-pass
+Day/Night/red-tint walkthrough, and the `palette-compare-status` red/orange check
+specifically) is still outstanding** — nothing above should be read as "confirmed
+working" until that pass happens. If validation surfaces fixes, make them on
+`feature/anki-mobile-night-mode` (confirm with `git branch -a`/`git status` that it's
+still there — the merge-commit choice was specifically so it wouldn't need to be
+recreated) and PR that branch into `main` again when ready.
 
 ## Workflow Notes
 
@@ -246,15 +298,18 @@ complete:
      once satisfied, same process used for ch.9.1. Re-sync afterward with `make ua-lexeme`
      / `make ua-verb`, or the new `make ua` aggregate target (canonicalizes + syncs every
      UA note type in one pass — see Reference Files).
-  3. Get the Solarized light/dark palette correct and consistent across both Anki domains
-     (B737 and Ukrainian). **Corrected 2026-07-31** — this item previously claimed `UA_Lexeme`
-     already carries Solarized CSS via `update_legacy_css.py`; Craig confirmed live `UA_Lexeme`
-     currently shows *neither* competing source (see below), so that was wrong. Concrete bug
-     found 2026-07-23: `UA_Visual`'s CSS uses the `.night_mode` (snake_case) selector instead
-     of `.nightMode` (camelCase) — confirmed via AnkiMobile's own docs that both desktop Anki
-     and AnkiMobile key off `.nightMode`, so `UA_Visual`'s dark-mode rules are currently dead
-     on every platform, not just iOS. **Still open, unfixed.**
-     Two disagreeing CSS sources exist for `UA_Lexeme` (found 2026-07-31): (a)
+  3. **Superseded 2026-08-01 — see the dated log entry above and "Remaining Work" items
+     1–3 below, all resolved.** Originally scoped as "get the Solarized palette correct
+     and consistent"; Craig's actual objective turned out to be broader (a repo-wide
+     default palette chosen against his real accessibility need), and the palette itself
+     changed from Solarized to **Gruvbox** after an on-device A/B/C comparison. The dual
+     CSS-source conflict and the `UA_Visual` `.night_mode`/`.nightMode` bug described below
+     are both fixed; kept the paragraphs below for the historical record of how the bugs
+     were found. Only `UA_Lexeme`/`UA_Grammar`/`UA_Verb`/`UA_Visual` (the UA domain) were
+     touched — B737 note-type CSS/structure was not, per Craig's original instruction to
+     keep this CSS-only and UA-scoped; a repo-wide (B737-included) rollout is still future
+     work if Craig wants it.
+     Two disagreeing CSS sources existed for `UA_Lexeme` (found 2026-07-31): (a)
      `tools/anki/setup/setup_ua_note_types.py`'s own `CSS` constant — plain, non-Solarized,
      the one this doc's setup scripts actually apply — and (b) the separate,
      Makefile-untracked `tools/anki/setup/update_legacy_css.py` — genuinely Solarized
@@ -280,33 +335,88 @@ distinct from chapter-by-chapter vocabulary sourcing/verification tracked elsewh
 this doc. Roughly in priority order:
 
 1. **Two disagreeing `UA_Lexeme` CSS sources** (found 2026-07-31, see item 3 above) —
-   needs a decision (merge `update_legacy_css.py`'s Solarized rules into
-   `setup_ua_note_types.py`'s `CSS` constant, retire one script, or wire
-   `update_legacy_css.py` into the Makefile so it's not a manually-run one-off) before
-   any Solarized work on `UA_Lexeme` starts. Still open.
-2. **`UA_Visual`'s `.night_mode`/`.nightMode` CSS bug** (found 2026-07-23) — one-line
-   selector fix, still unapplied. Still open.
-3. **`UA_Lexeme` Solarized palette** — genuinely future work (corrected 2026-07-31; see
-   item 3 above for why this doc previously overstated progress here). Blocked on #1.
-4. **`Verb_Conj_Table` field removal** — field blanked corpus-wide 2026-07-22 but not
-   yet removed from the schema/model; see "Verb_Conj_Table Removal Plan (Future)"
-   below for the existing 6-step plan. Not yet executed.
+   **Resolved, 2026-08-01; merged to `main`.** Decision made: `setup_ua_note_types.py`'s
+   `CSS` constant (plus `GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`) is now the single source of
+   truth for all four live UA note types; `update_legacy_css.py` trimmed to its
+   B737-legacy entries only (`SV_CLOZE_CSS`/`B737_SYSTEMS_CSS`), per Craig's explicit
+   choice. See the 2026-08-01 log entries above.
+2. **`UA_Visual`'s `.night_mode`/`.nightMode` CSS bug** (found 2026-07-23) — **Fixed,
+   2026-08-01; merged to `main`.** All 13 occurrences in `VISUAL_CSS` converted to
+   `.nightMode`; the `.night_mode` duplication is intentionally not carried forward into
+   new work (Android isn't one of Craig's devices — see the `.nightMode`/`.night_mode`
+   research in `domains/demo/FINDINGS_AND_TESTING.md`), though it's correctly left alone
+   in the two B737 legacy CSS blocks that keep both selectors for parity.
+3. **`UA_Lexeme` color palette** — **Code done and merged to `main`, 2026-08-01;
+   on-device validation still outstanding.** Superseded Solarized with **Gruvbox** after
+   an on-device A/B/C comparison against Craig's real accessibility need (iOS red-tint
+   Color Filter night mode) — see the 2026-08-01 log entries above for the full palette
+   values and the `domains/demo/README.md` "Palette Comparison Demo" section for the
+   comparison tooling. Rolled out to `CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`, the
+   Compare card, and both typing-feedback scripts (`EN_UA_BACK` here and
+   `setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT`, previously unthemed). **Still open:**
+   Craig needs to run `make ua-setup` / `make ua-setup-pvom` and confirm on-device,
+   especially the red/orange status colors under the red-tint filter (pass 3) — see
+   `palette-compare-status` in the comparison demo, added specifically for that check. Any
+   fixes from validation land on `feature/anki-mobile-night-mode` (kept alive after the
+   merge-commit PR for exactly this) and PR into `main` again when ready.
+4. **`Verb_Conj_Table` field removal** — **Resolved, 2026-07-31.** Field blanked
+   corpus-wide 2026-07-22; steps 3-4 of the plan below (strip the field from all 584 CNSF
+   lexeme files, canonicalize, update dependent tooling) done 2026-07-31 on branch
+   `chore/remove-verb-conj-table`. Steps 1 and 5 turned out to be unnecessary —
+   `inspect_ua_lexeme_fields.py` confirmed the live `UA_Lexeme` model never had the field
+   to begin with (already gone before this audit), so there was nothing for
+   `modelFieldRemove`/a collection backup to act on; only the CNSF source files still
+   carried the dead key, which steps 3-4 fixed. Step 6 verification done. Merged to
+   `main` via PR #58 (2026-07-31); branch deleted. See "Verb_Conj_Table Removal Plan"
+   below for the full writeup — no further action needed, this item was previously
+   listed as still requiring Craig's action by mistake (this doc hadn't been updated to
+   match the "Resolved"/"Removal plan is effectively complete" notes already sitting in
+   that section).
 5. **UA→EN front aspect display** — **Done, 2026-07-31**, synced. See "UA→EN front
    aspect display" under Card Template Techniques above.
 6. **Compare-card suspend mechanism** (`set_compare_card_suspended()` in
-   `ua_lexeme_import.py`) — genuinely untested in live Anki, since no current note has
-   actually needed it to suspend a real Compare card end-to-end (0405/0407 ended up
-   with real Compare content instead of hitting the suspend path when fixed
-   2026-07-30). A footgun noted earlier this project: targeted `findCards` +
-   `card:"Name"` + `suspend`/`unsuspend` verified correct in a dry run but didn't
-   reliably stick in live Anki during an earlier EN→UA suspend attempt (Phase 2a) —
-   unclear if that footgun applies here too. Needs a deliberately-constructed test
-   case. Still open.
+   `ua_lexeme_import.py`) — **Tested and confirmed working (2026-08-01).** Built 3
+   deliberately-constructed scratch notes (ua-lexeme-9997/9998/9999, deleted from Anki
+   and the repo after verification) to exercise `suspend_compare_card`:
+   - **Blank `CompareA` from note creation** (9999, homograph mode, `ConfusableSet`
+     populated, `CompareA` never authored): Anki never generates the Compare card at
+     all — its own empty-card-generation rule refuses, because the `{{^CompareA}}`
+     "should be suspended" warning text in `COMPARISON_FRONT` is pure static template
+     text with no field substitution, so the rendered front doesn't count as non-empty.
+     This makes that branch of the Python suspend logic dead/unreachable in practice —
+     harmless, but the comment above it in `setup_ua_note_types.py` calling it "a
+     defensive fallback for previewing/QA" is inaccurate, since the card whose front
+     would show the notice never exists to preview. Worth a comment fix; not urgent.
+   - **Valid Compare data throughout** (9998): Card 3 generated normally and stayed
+     unsuspended, as expected.
+   - **Valid → retracted** (9997, two-phase: imported with real `ConfusableSet`/
+     `CompareA`/`CompareB` so Anki generated a genuine Compare card, then re-imported
+     with those fields cleared): this was the real test of the historical footgun. The
+     pre-existing Compare card correctly ended up suspended on re-sync (confirmed via
+     AnkiConnect `cardsInfo` `queue:-1` and visually in Anki's browser) while UA→EN/
+     EN→UA stayed active. **The footgun does not reproduce here** — suspension does
+     stick on a genuinely pre-existing Compare card. Resolved.
 7. **Per-slot euphony tolerance + verb-phrase aspect defaulting** — scoped with Craig
    2026-07-29, not built. See the full design under Card Template Techniques above.
    Still open.
-8. **Flagged Card Fix Workflow tooling** — see "Flagged Card Fix Workflow (Future)"
-   below. Not built.
+8. **Flagged Card Fix Workflow tooling** — **Built and tested, 2026-08-01.**
+   `tools/anki/inspect/ua_flag_audit.py` implements Phase 1 (`--query`) and Phase 3
+   (`--apply`) of the workflow in "Flagged Card Fix Workflow (Future)" below (Phase 2,
+   the interactive review/fix loop, is a conversation with Claude, not something a
+   script does). `--query` validated against all 11 real flagged notes currently in the
+   corpus -- every one correctly resolved to its canonical CNSF path, including the
+   recursive lexeme search across textbook/chapter subdirectories. `--apply` validated
+   end-to-end via a disposable synthetic note: found and fixed a real bug along the way
+   -- `CLAUDE-flag-audit.md`'s suggested flag-removal call (`anki_request("unmark", ...)`)
+   was aspirational and never actually worked (`"unsupported action"` -- there is no
+   batch unmark/setFlag action in AnkiConnect). Real mechanism is
+   `setSpecificValueOfCard`, one card at a time, with `newValues` as ints (`["0"]`
+   silently no-ops; `[0]` actually clears the flag). `--apply` now does a three-pass
+   sequence -- sync corrected content (still suspended, still flagged) → clear flags →
+   re-sync (picks up the cleared flags, unsuspends) -- so fixed notes end up unsuspended
+   within the same `--apply` run rather than deferred to whatever sync happens next.
+   `CLAUDE-flag-audit.md` corrected to match. See git history on
+   `feature/flagged-card-fix-workflow` for the full test trail.
 9. **`gen_ch09_subsection.py` generator-script wiring** — built 2026-07-25, not yet
    exercised against a real ch.9.3+ batch. Unexercised, not broken.
 10. **`UA_Grammar` 0001–0007 cloze review pass** — these notes predate the atomicity/
@@ -330,8 +440,14 @@ CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-
 the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph
 Compare-card generalization (bucket 2 above, done 2026-07-30), the тепло Compare-card
 content gap fix + corpus-wide sweep (2026-07-30), the EN→UA aspect+euphony typing
-restoration (2026-07-28, git archaeology), and the UA→EN front aspect display
-(2026-07-31, item 5 above).
+restoration (2026-07-28, git archaeology), the UA→EN front aspect display
+(2026-07-31, item 5 above), the Compare-card suspend mechanism test/confirmation
+(2026-08-01, item 6 above), the Flagged Card Fix Workflow tooling
+(2026-08-01, item 8 above), and the CSS single-source-of-truth decision + `.night_mode`
+selector fix + Gruvbox palette rollout (2026-08-01, items 1–3 above — merged to `main`
+via `feature/anki-mobile-night-mode`; on-device validation still pending, see item 3),
+and the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
+omitted it since item 4 itself was mislabeled as still open; corrected 2026-08-01).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -367,7 +483,7 @@ restoration (2026-07-28, git archaeology), and the UA→EN front aspect display
 
 **Verb conjugations:** `Verb_Conj_Table` field is being phased out of UA_Lexeme — blanked corpus-wide 2026-07-22 (all ~180 lexeme notes), but the field itself has not yet been removed from the schema/model. Full removal is planned but not yet executed — see "Verb_Conj_Table Removal Plan (Future)" below. Conjugation morphology belongs in the UA_Verb note type as structured fields, one note per lemma's own aspect, linked to the lexeme via matching Lemma text.
 
-### Verb_Conj_Table Removal Plan (Future)
+### Verb_Conj_Table Removal Plan (Complete, 2026-07-31)
 
 **Status:** Planned, not yet executed. Decided 2026-07-22 after clearing all *content* from the
 field on the 18 pre-existing verb lexemes (`ua-lexeme-0114`–`0131`) and the 5 new ch.9.2 verb
@@ -422,7 +538,10 @@ script is stale relative to the live Anki model — **don't trust it as ground t
 migration. Before touching the live model, run `tools/anki/inspect/inspect_ua_lexeme_fields.py` to
 get the actual field list/order straight from AnkiConnect.
 
-**Migration steps:**
+**Migration steps (as originally planned — kept for historical record; see "Progress"/
+"Resolved" above for what actually happened, which diverged in a few places: steps 1/2/5
+turned out unnecessary since the live model never had the field to remove, and step 3's
+scope was 584 files, not the ~180 estimated below):**
 
 1. **Verify live state** (read-only): run `inspect_ua_lexeme_fields.py` to confirm
    `Verb_Conj_Table`'s exact position in the real model and note any other drift from
@@ -454,8 +573,9 @@ get the actual field list/order straight from AnkiConnect.
    `cnsf_canonicalize --check` across the corpus; run `tests/ua/`; spot-check a few `UA_Lexeme`
    cards in the Anki browser (expect zero visual change, since nothing ever rendered this field).
 
-**Not blocking:** the field is already blank everywhere as of 2026-07-22, so there's no urgency —
-this is a cleanup, not a bug fix.
+**Historical note:** this "not blocking" framing applied while the plan was still open —
+kept here for context on why it sat unexecuted for over a week. The removal itself is
+done as of 2026-07-31 (see above).
 
 ### Card Template Techniques
 
@@ -1108,7 +1228,10 @@ After each study session, fix all flagged cards and remove flags.
 - `ua_flag_audit.py` — Query flagged cards, extract NoteIDs, map to canonical file paths
 - Integration with existing import scripts (ua_lexeme_import.py, ua_verb_import.py, ua_grammar_import.py, ua_visual_import.py)
 
-**Status:** Planned. End of queue after Phase 2a completion.
+**Status:** Phase 1 (`--query`) and Phase 3 (`--apply`) tooling built and tested,
+2026-08-01 -- see item 8 in the structural punch list above and
+`tools/anki/inspect/ua_flag_audit.py`. Phase 2 (interactive review/fix) is ready to use
+whenever Craig wants to work through the current 11 flagged notes.
 
 ### Source materials
 | Path | Purpose |

@@ -33,7 +33,6 @@ fields:
   TypingAnswer: заряджений позитивною енергією пригод
   UA_Example: Атмосфера старту була заряджена позитивною енергією пригод.
   EN_Example: The atmosphere at the start was charged with the positive energy of adventure.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/заряджений; https://goroh.pp.ua/Словозміна/позитивний;
     https://goroh.pp.ua/Словозміна/енергія; https://goroh.pp.ua/Словозміна/пригода

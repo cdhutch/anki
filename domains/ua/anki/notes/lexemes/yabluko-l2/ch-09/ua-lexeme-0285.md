@@ -31,7 +31,6 @@ fields:
   TypingAnswer: переправлятися
   UA_Example: Команди переправлялися через річку по черзі.
   EN_Example: The teams crossed the river one after another.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/переправлятися; https://goroh.pp.ua/Словозміна/переправитися
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

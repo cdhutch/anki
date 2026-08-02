@@ -47,7 +47,6 @@ fields:
   TypingAnswer: завдавати
   UA_Example: Боксер завдавав ударів один за одним.
   EN_Example: The boxer was dealing blows one after another.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/завдавати; https://goroh.pp.ua/Словозміна/завдати
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

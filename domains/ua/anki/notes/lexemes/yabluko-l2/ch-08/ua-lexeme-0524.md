@@ -31,7 +31,6 @@ fields:
   TypingAnswer: високогірний
   UA_Example: Ми зупинилися у високогірному селі на ніч.
   EN_Example: We stopped overnight in a high-altitude village.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/високогірний
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

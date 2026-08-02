@@ -33,7 +33,6 @@ fields:
   TypingAnswer: з останніх сил
   UA_Example: Вона доліз до фінішу з останніх сил.
   EN_Example: She reached the finish with her last ounce of strength.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/останній; https://goroh.pp.ua/Словозміна/сила
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

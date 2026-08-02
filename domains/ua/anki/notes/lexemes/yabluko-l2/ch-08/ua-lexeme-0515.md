@@ -32,7 +32,6 @@ fields:
   TypingAnswer: перепад
   UA_Example: Перепад температури вночі в горах буває значним.
   EN_Example: The temperature swing at night in the mountains can be significant.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/перепад
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

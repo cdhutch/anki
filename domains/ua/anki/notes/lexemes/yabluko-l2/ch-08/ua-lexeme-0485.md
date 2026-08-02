@@ -32,7 +32,6 @@ fields:
   TypingAnswer: громадський транспорт
   UA_Example: У цьому місті громадський транспорт ходить дуже часто.
   EN_Example: In this city public transportation runs very frequently.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/громадський; https://goroh.pp.ua/Словозміна/транспорт
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

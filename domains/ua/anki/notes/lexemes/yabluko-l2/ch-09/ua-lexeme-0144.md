@@ -45,7 +45,6 @@ fields:
   TypingAnswer: перегони
   UA_Example: Лижні перегони відбудуться в неділю.
   EN_Example: The ski races will take place on Sunday.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1, ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/перегони
   Source_Note: Pluralia tantum (no singular form) — Горох confirms nominative singular '—'.

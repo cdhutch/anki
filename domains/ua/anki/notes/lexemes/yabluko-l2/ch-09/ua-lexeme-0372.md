@@ -40,7 +40,6 @@ fields:
   TypingAnswer: лавка
   UA_Example: Він сід на лавку в парку, щоб трохи відпочити.
   EN_Example: He sat down on a bench in the park to rest for a bit.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/лавка
   Source_Note: Горох-verified 2026-07-26 -- same page as ua-lexeme-0235; this is the "для\

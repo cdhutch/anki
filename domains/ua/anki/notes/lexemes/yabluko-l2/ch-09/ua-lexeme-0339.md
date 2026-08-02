@@ -32,7 +32,6 @@ fields:
   TypingAnswer: таксі
   UA_Example: Таксі приїхало через пʼять хвилин.
   EN_Example: The taxi arrived in five minutes.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/таксі
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

@@ -45,7 +45,6 @@ fields:
   TypingAnswer: відправлення
   UA_Example: Ваше відправлення готове до отримання на пошті.
   EN_Example: Your parcel is ready for pickup at the post office.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/відправлення; https://goroh.pp.ua/Тлумачення/відправлення
   Source_Note: Created 2026-07-28 as the same-Lemma polysemy-split sibling to ua-lexeme-0304

@@ -43,7 +43,6 @@ fields:
   TypingAnswer: непогано
   UA_Example: Вона непогано малює, але хоче вчитися більше.
   EN_Example: She draws not badly, but wants to study more.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/непогано
   Source_Note: verified 2026-07-06 via Горох

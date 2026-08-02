@@ -34,7 +34,6 @@ fields:
   TypingAnswer: підніматися на скелі
   UA_Example: Підніматися на скелі найважче після дощу.
   EN_Example: Climbing on the rocks is hardest right after rain.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/підніматися; https://goroh.pp.ua/Словозміна/скеля
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

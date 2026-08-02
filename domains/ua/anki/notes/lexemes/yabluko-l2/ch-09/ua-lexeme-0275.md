@@ -31,7 +31,6 @@ fields:
   TypingAnswer: заряджений
   UA_Example: Стартова зона була заряджена позитивною енергією пригод.
   EN_Example: The start area was charged with the positive energy of adventure.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/заряджений
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

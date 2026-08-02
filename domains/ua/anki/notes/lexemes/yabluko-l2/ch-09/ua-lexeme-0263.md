@@ -32,7 +32,6 @@ fields:
   TypingAnswer: рівень
   UA_Example: Рівень складності траси зростав з кожним етапом.
   EN_Example: The course's level of difficulty increased with every stage.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/рівень
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

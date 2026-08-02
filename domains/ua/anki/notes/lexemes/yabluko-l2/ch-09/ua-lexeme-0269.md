@@ -32,7 +32,6 @@ fields:
   TypingAnswer: річка
   UA_Example: Команда мала перелетіти через річку на мотузці.
   EN_Example: The team had to fly across the river on a rope.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/річка
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

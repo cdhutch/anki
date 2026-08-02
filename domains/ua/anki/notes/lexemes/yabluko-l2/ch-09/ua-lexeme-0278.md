@@ -33,7 +33,6 @@ fields:
   TypingAnswer: сила
   UA_Example: Він доліз до вершини з останніх сил.
   EN_Example: He climbed to the top with his last ounce of strength.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5, ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/сила
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

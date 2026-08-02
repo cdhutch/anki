@@ -33,7 +33,6 @@ fields:
   TypingAnswer: восьминіг
   UA_Example: У меню був смажений восьминіг.
   EN_Example: The menu had fried octopus.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/восьминіг
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

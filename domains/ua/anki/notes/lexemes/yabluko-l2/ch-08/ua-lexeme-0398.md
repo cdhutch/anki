@@ -31,7 +31,6 @@ fields:
   TypingAnswer: сніжно
   UA_Example: У горах зараз дуже сніжно.
   EN_Example: It's very snowy in the mountains right now.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/сніжно
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

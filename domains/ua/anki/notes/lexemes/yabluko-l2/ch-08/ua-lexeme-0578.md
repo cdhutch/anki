@@ -32,7 +32,6 @@ fields:
   TypingAnswer: шкіра
   UA_Example: Шкіра після сонця стала червоною.
   EN_Example: The skin turned red after the sun.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/шкіра
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

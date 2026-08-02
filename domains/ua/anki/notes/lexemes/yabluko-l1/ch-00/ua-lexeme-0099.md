@@ -43,7 +43,6 @@ fields:
   TypingAnswer: добре
   UA_Example: Він добре знає свою роботу.
   EN_Example: He knows his work well.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/добре
   Source_Note: verified 2026-07-06 via Горох

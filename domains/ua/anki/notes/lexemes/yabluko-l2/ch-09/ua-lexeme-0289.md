@@ -31,7 +31,6 @@ fields:
   TypingAnswer: розміщувати
   UA_Example: Організатори розміщували учасників у наметовому таборі.
   EN_Example: The organizers accommodated the participants in a tent camp.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/розміщувати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

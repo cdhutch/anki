@@ -31,7 +31,6 @@ fields:
   TypingAnswer: видовищний
   UA_Example: Це був справді видовищний матч.
   EN_Example: It was a truly spectacular match.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/видовищний
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

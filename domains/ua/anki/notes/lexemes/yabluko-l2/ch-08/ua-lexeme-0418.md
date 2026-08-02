@@ -31,7 +31,6 @@ fields:
   TypingAnswer: місцями
   UA_Example: Місцями можливі короткочасні дощі.
   EN_Example: Brief rain is possible in places.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/місцями
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

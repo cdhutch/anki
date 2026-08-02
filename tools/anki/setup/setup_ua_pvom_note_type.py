@@ -94,36 +94,36 @@ FEEDBACK_SCRIPT = """\
   var html = '';
 
   if (typedAnswer === withStress) {
-    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-success">' +
            withStress + ' ✓ PERFECT</div>' +
-           '<div style="color: #2e7d32; font-size: 14px;">Correct with stress marks</div>';
+           '<div class="fb-sub status-success">Correct with stress marks</div>';
   } else if (typedAnswer === noStress) {
-    html = '<div style="color: #ff9800; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-warning">' +
            noStress + ' ~ CORRECT</div>' +
-           '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, missing stress</div>' +
-           '<div style="color: #1565c0; font-size: 16px; font-weight: bold;">With stress:</div>' +
-           '<div style="color: #1565c0; font-size: 18px;"><b>' + withStress + '</b></div>';
+           '<div class="fb-sub status-warning">Correct letters, missing stress</div>' +
+           '<div class="fb-label status-info">With stress:</div>' +
+           '<div class="fb-value status-info"><b>' + withStress + '</b></div>';
   } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer).normalize('NFC')) !== -1) {
     // Accepted alternate spelling (*_Euphony) -- genuinely correct, not just noted.
-    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-success">' +
            typedAnswer + ' ✓ CORRECT</div>' +
-           '<div style="color: #2e7d32; font-size: 14px; margin-bottom: 12px;">Accepted alternate spelling</div>' +
-           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Primary form:</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + withStress + '</b></div>';
+           '<div class="fb-sub status-success">Accepted alternate spelling</div>' +
+           '<div class="fb-label status-info">Primary form:</div>' +
+           '<div class="fb-value status-info"><b>' + withStress + '</b></div>';
   } else if (typedAnswer !== null) {
     // Reconstruction succeeded and it's neither of the accepted answers --
     // genuinely wrong.
-    html = '<div style="color: #d32f2f; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-error">' +
            typedAnswer + ' ✗ INCORRECT</div>' +
-           '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Not quite right</div>' +
-           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Correct answer:</div>' +
-           '<div style="color: #1565c0; font-size: 18px;"><b>' + withStress + '</b></div>';
+           '<div class="fb-sub status-error">Not quite right</div>' +
+           '<div class="fb-label status-info">Correct answer:</div>' +
+           '<div class="fb-value status-info"><b>' + withStress + '</b></div>';
   } else {
     // Couldn't determine what was typed at all (e.g. #typeans markup ever
     // changes shape) -- show the answer neutrally rather than guessing.
-    html = '<div style="color: #1565c0; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-info">' +
            withStress + '</div>' +
-           '<div style="color: #999; font-size: 13px;">(no stress: ' + noStress + ')</div>';
+           '<div class="fb-note status-neutral">(no stress: ' + noStress + ')</div>';
   }
 
   feedback.innerHTML = html;
@@ -148,8 +148,7 @@ def make_back(with_stress_field, no_stress_field, euphony_field):
         'data-no-stress="{{' + no_stress_field + '}}" '
         'data-euphony="{{' + euphony_field + '}}" style="margin-bottom: 16px;"></div>\n'
         + FEEDBACK_SCRIPT
-        + '<div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e0e0e0; '
-        'font-size: 12px; color: #999;">\n  {{Source_Note}}\n</div>\n'
+        + '<div class="source-note">\n  {{Source_Note}}\n</div>\n'
     )
 
 
@@ -181,11 +180,17 @@ CARD_TEMPLATES = [
 ]
 
 CSS = """\
+/* Gruvbox palette (github.com/morhetz/gruvbox) -- see setup_ua_note_types.py's
+   CSS constant (UA_Lexeme) for the full palette rationale. This note type
+   had ZERO .nightMode support before 2026-08-01; the fb-*/status-* classes
+   below are kept in sync (by hand) with setup_ua_note_types.py's identical
+   classes so the typing-feedback script here and EN_UA_BACK's script look
+   the same across the whole UA domain, day/night/red-tint alike. */
 .card {
   font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 18px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #fbf1c7; /* bg0 (light) */
   max-width: 600px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -194,9 +199,46 @@ CSS = """\
 
 hr#answer {
   border: none;
-  border-top: 2px solid #e0e0e0;
+  border-top: 2px solid #7c6f64; /* gray (light secondary) */
   margin: 20px 0;
 }
+
+.source-note {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #7c6f64; /* gray (light secondary) */
+  font-size: 12px;
+  color: #7c6f64; /* gray (light secondary) */
+}
+
+/* Status/feedback system -- see FEEDBACK_SCRIPT above. status-warning stays
+   orange (not Gruvbox's yellow) so the "close/partial-credit" state keeps
+   its original color family (was #ff9800) -- per Craig 2026-08-01: keep
+   status colors close to current, while making sure red/orange don't wash
+   out under the red-tint night filter, hence using Gruvbox's *bright*-tier
+   red/orange for dark mode below (not the muted/neutral tier) for maximum
+   luminance contrast against the dark background. */
+.fb-headline { font-size: 22px; font-weight: bold; margin-bottom: 4px; }
+.fb-sub { font-size: 14px; margin-bottom: 12px; }
+.fb-label { font-size: 16px; font-weight: bold; margin-bottom: 4px; }
+.fb-value { font-size: 16px; }
+.fb-note { font-size: 13px; }
+
+.status-success { color: #79740e; } /* green (light) */
+.status-error { color: #9d0006; } /* red (light) */
+.status-warning { color: #af3a03; } /* orange (light) */
+.status-info { color: #076678; } /* blue (light) */
+.status-neutral { color: #7c6f64; } /* gray (light secondary) */
+
+/* Dark mode (Gruvbox dark) */
+.nightMode .card { color: #ebdbb2; background-color: #282828; } /* fg1 dark / bg0 dark */
+.nightMode hr#answer { border-top-color: #a89984; } /* gray (dark secondary) */
+.nightMode .source-note { border-top-color: #a89984; color: #a89984; } /* gray (dark secondary) */
+.nightMode .status-success { color: #b8bb26; } /* green, bright tier (dark) */
+.nightMode .status-error { color: #fb4934; } /* red, bright tier (dark) */
+.nightMode .status-warning { color: #fe8019; } /* orange, bright tier (dark) */
+.nightMode .status-info { color: #83a598; } /* blue, bright tier (dark) */
+.nightMode .status-neutral { color: #a89984; } /* gray (dark secondary) */
 """
 
 

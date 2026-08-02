@@ -31,7 +31,6 @@ fields:
   TypingAnswer: прохолодно
   UA_Example: Сьогодні надворі прохолодно.
   EN_Example: It's cool outside today.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/прохолодно
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

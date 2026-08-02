@@ -32,7 +32,6 @@ fields:
   TypingAnswer: закриття
   UA_Example: Усі команди зібралися на церемонію закриття.
   EN_Example: All the teams gathered for the closing ceremony.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/закриття
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

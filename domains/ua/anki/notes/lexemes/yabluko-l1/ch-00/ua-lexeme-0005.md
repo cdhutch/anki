@@ -31,7 +31,6 @@ fields:
   TypingAnswer: кухар
   UA_Example: Кухар готує смачний обід для гостей.
   EN_Example: The cook is preparing a delicious lunch for the guests.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/кухар
   Source_Note: verified 2026-07-06 via Горох

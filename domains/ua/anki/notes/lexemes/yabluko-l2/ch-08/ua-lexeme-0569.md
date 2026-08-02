@@ -32,7 +32,6 @@ fields:
   TypingAnswer: на дотик
   UA_Example: На дотик тісто було липким.
   EN_Example: To the touch, the dough was sticky.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/дотик
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

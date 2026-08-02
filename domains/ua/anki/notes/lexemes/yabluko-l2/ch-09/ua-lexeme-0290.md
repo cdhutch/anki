@@ -32,7 +32,6 @@ fields:
   TypingAnswer: спускатися
   UA_Example: Спускатися вниз зі скелі довелося повільно, крок за кроком.
   EN_Example: They had to descend the cliff slowly, step by step.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5, ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/спускатися; https://goroh.pp.ua/Словозміна/спуститися
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

@@ -38,7 +38,6 @@ fields:
   TypingAnswer: абетка
   UA_Example: Діти вчать абетку вже у першому класі.
   EN_Example: Children learn the alphabet as early as first grade.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/абетка
   Source_Note: verified 2026-07-06 via Горох

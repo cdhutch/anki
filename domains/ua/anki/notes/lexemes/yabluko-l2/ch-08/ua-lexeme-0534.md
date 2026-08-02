@@ -32,7 +32,6 @@ fields:
   TypingAnswer: відчуття
   UA_Example: Це були нові й дивні відчуття для мене.
   EN_Example: These were new and strange sensations for me.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/відчуття
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

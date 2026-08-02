@@ -32,7 +32,6 @@ fields:
   TypingAnswer: цукрова вата
   UA_Example: Цукрова вата — улюблені ласощі дітей.
   EN_Example: Cotton candy is children's favorite treat.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/цукровий; https://goroh.pp.ua/Словозміна/вата
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

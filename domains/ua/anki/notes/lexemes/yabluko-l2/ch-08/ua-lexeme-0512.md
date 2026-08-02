@@ -33,7 +33,6 @@ fields:
   TypingAnswer: горянин
   UA_Example: Місцевий горянин показав нам стежку до водоспаду.
   EN_Example: A local highlander showed us the path to the waterfall.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/горянин
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

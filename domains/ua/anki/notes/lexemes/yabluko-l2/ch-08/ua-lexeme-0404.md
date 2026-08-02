@@ -31,7 +31,6 @@ fields:
   TypingAnswer: спекотно
   UA_Example: Сьогодні на вулиці дуже спекотно.
   EN_Example: It's very hot outside today.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/спекотно
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

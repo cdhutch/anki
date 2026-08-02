@@ -31,7 +31,6 @@ fields:
   TypingAnswer: водій
   UA_Example: Наш водій добре знає це місто.
   EN_Example: Our driver knows this city well.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/водій
   Source_Note: verified 2026-07-06 via Горох

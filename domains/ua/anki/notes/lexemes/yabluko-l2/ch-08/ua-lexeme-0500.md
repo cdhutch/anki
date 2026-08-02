@@ -32,7 +32,6 @@ fields:
   TypingAnswer: спокуса
   UA_Example: Спокуса скуштувати місцеву кухню була надто великою.
   EN_Example: The temptation to try the local cuisine was too great.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/спокуса
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

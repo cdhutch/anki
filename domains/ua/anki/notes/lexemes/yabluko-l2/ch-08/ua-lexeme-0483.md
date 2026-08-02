@@ -31,7 +31,6 @@ fields:
   TypingAnswer: складатися
   UA_Example: Тур складається з трьох днів у горах.
   EN_Example: The tour consists of three days in the mountains.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/складатися
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

@@ -43,7 +43,6 @@ fields:
   TypingAnswer: очко
   UA_Example: Команда набрала останнє очко за секунду до кінця.
   EN_Example: The team scored the last point a second before the end.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/очко
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

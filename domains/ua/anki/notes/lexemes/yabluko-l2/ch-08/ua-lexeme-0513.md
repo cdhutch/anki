@@ -32,7 +32,6 @@ fields:
   TypingAnswer: град
   UA_Example: Раптовий град змусив нас сховатися в наметі.
   EN_Example: Sudden hail forced us to take shelter in the tent.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/град
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

@@ -31,7 +31,6 @@ fields:
   TypingAnswer: такий
   UA_Example: Я не очікував такий теплий прийом.
   EN_Example: I didn't expect such a warm welcome.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/такий
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

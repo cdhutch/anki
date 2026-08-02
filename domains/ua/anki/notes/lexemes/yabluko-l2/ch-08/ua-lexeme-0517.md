@@ -32,7 +32,6 @@ fields:
   TypingAnswer: прибуток
   UA_Example: Туризм приносить регіону непоганий прибуток.
   EN_Example: Tourism brings the region a decent profit.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/прибуток
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

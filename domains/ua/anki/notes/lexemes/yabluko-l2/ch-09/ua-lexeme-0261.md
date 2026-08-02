@@ -32,7 +32,6 @@ fields:
   TypingAnswer: переможець
   UA_Example: Переможець гонки отримав кубок і нагороду.
   EN_Example: The winner of the race received a cup and a prize.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/переможець
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

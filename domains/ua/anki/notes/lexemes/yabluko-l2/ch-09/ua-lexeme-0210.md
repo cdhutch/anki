@@ -31,7 +31,6 @@ fields:
   TypingAnswer: битися
   UA_Example: Хлопці билися на деревʼяних шаблях.
   EN_Example: The boys fought with wooden sabers.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/битися; https://goroh.pp.ua/Словозміна/побитися
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

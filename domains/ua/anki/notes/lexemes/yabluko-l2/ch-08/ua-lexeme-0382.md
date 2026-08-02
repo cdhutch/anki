@@ -32,7 +32,6 @@ fields:
   TypingAnswer: вітер
   UA_Example: Сьогодні дме сильний вітер.
   EN_Example: There's a strong wind blowing today.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/вітер
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

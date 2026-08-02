@@ -29,7 +29,6 @@ fields:
   TypingAnswer: Який Ваш телефон?
   UA_Example: — Який Ваш телефон? — 050-123-45-67.
   EN_Example: — What is your phone number? — 050-123-45-67.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

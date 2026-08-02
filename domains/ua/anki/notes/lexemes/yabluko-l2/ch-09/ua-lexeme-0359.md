@@ -34,7 +34,6 @@ fields:
   TypingAnswer: викликати таксі
   UA_Example: Вона вирішила викликати таксі до вокзалу.
   EN_Example: She decided to call a taxi to the train station.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/викликати; https://goroh.pp.ua/Словозміна/таксі
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

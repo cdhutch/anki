@@ -30,7 +30,6 @@ fields:
   TypingAnswer: програвати
   UA_Example: Він рідко програє в шахи.
   EN_Example: He rarely loses at chess.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/програвати; https://goroh.pp.ua/Словозміна/програти
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects. Vocab list (9.2) cites

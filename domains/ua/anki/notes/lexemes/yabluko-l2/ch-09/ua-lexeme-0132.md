@@ -31,7 +31,6 @@ fields:
   TypingAnswer: бойовий
   UA_Example: Бойовий гопак поєднує танець і бойові прийоми.
   EN_Example: Combat hopak combines dance and fighting techniques.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1, ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/бойовий
   Source_Note: Stress verified 2026-07-22 via Горох.

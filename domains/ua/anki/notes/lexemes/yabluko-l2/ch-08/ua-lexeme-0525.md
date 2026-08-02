@@ -31,7 +31,6 @@ fields:
   TypingAnswer: мальовничий
   UA_Example: Дорога вела через мальовничі села.
   EN_Example: The road led through picturesque villages.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/мальовничий
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

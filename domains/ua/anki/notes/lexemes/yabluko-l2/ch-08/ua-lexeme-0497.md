@@ -32,7 +32,6 @@ fields:
   TypingAnswer: акваланг
   UA_Example: Перед зануренням ми перевірили акваланг.
   EN_Example: Before diving, we checked the scuba tank.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/акваланг
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.

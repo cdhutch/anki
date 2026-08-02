@@ -32,7 +32,6 @@ fields:
   TypingAnswer: гора
   UA_Example: Гора здавалася ще вищою у вечірньому світлі.
   EN_Example: The mountain seemed even taller in the evening light.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/гора
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

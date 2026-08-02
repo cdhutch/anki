@@ -30,7 +30,6 @@ fields:
   TypingAnswer: увага
   UA_Example: Увага! Зараз починається урок.
   EN_Example: Attention! The lesson is about to begin.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/увага
   Source_Note: verified 2026-07-06 via Горох

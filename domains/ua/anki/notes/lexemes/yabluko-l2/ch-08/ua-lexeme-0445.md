@@ -31,7 +31,6 @@ fields:
   TypingAnswer: двомісний
   UA_Example: Ми забронювали двомісний номер.
   EN_Example: We booked a double room.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/двомісний
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

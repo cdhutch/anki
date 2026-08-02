@@ -32,7 +32,6 @@ fields:
   TypingAnswer: водорість
   UA_Example: У салаті було багато морських водоростей.
   EN_Example: The salad had a lot of seaweed.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/водорості
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

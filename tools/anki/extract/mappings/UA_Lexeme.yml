@@ -36,8 +36,6 @@ preserve_fields:
   - f__TypingAnswer
   - f__UA_Example
   - f__VerbMotion_Pair
-  - f__Verb_Conj_Table
-
 include_anki_tags: true
 add_tags:
   - status:unverified

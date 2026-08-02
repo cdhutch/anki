@@ -29,7 +29,6 @@ fields:
   TypingAnswer: На добраніч
   UA_Example: — На добраніч! — Солодких снів!
   EN_Example: — Good night! — Sweet dreams!
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

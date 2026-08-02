@@ -29,7 +29,6 @@ fields:
   TypingAnswer: Як справи?
   UA_Example: — Привіт! Як справи? — Все добре, дякую.
   EN_Example: — Hi! How are things? — Everything is fine, thanks.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: ''
   Source_Note: ''

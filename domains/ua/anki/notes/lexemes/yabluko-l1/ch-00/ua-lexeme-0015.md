@@ -37,7 +37,6 @@ fields:
   TypingAnswer: студент
   UA_Example: Студент читає підручник у бібліотеці.
   EN_Example: The student is reading a textbook in the library.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/студент
   Source_Note: verified 2026-07-06 via Горох

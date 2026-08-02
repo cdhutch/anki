@@ -32,7 +32,6 @@ fields:
   TypingAnswer: озеро
   UA_Example: Наступний етап -- переплисти озеро.
   EN_Example: The next stage is swimming across the lake.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/озеро
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

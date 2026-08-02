@@ -32,7 +32,6 @@ fields:
   TypingAnswer: тарган
   UA_Example: У номері ми побачили таргана.
   EN_Example: We saw a cockroach in the room.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/тарган
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.

@@ -73,7 +73,6 @@ FIELD_ORDER = [
     "TypingAnswer",
     "UA_Example",
     "EN_Example",
-    "Verb_Conj_Table",
     "Tags_Ch",
     "Source_URL",
     "Source_Note",

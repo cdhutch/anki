@@ -30,7 +30,6 @@ fields:
   TypingAnswer: цирк
   UA_Example: Ми з дітьми ходили до цирку у суботу.
   EN_Example: We went to the circus with the children on Saturday.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/цирк
   Source_Note: verified 2026-07-06 via Горох

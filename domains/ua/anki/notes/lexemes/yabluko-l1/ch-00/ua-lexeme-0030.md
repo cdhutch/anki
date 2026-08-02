@@ -30,7 +30,6 @@ fields:
   TypingAnswer: вік
   UA_Example: У якому віці діти йдуть до школи? | Вони жили в добу Середніх віків.
   EN_Example: At what age do children go to school? | They lived during the Middle Ages.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/вік
   Source_Note: verified 2026-07-06 via Горох

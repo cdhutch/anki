@@ -32,7 +32,6 @@ fields:
   TypingAnswer: купе
   UA_Example: Ми їхали в купе разом з ще двома пасажирами.
   EN_Example: We rode in a compartment with two other passengers.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/купе
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

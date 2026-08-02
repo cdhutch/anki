@@ -32,7 +32,6 @@ fields:
   TypingAnswer: палиця
   UA_Example: У народному бою іноді використовують дерев'яну палицю.
   EN_Example: In folk combat a wooden stick is sometimes used.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/палиця
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

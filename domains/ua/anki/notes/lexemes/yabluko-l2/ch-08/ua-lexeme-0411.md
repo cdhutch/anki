@@ -32,7 +32,6 @@ fields:
   TypingAnswer: хмара
   UA_Example: На небі з'явилася велика чорна хмара.
   EN_Example: A big black cloud appeared in the sky.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/хмара
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.

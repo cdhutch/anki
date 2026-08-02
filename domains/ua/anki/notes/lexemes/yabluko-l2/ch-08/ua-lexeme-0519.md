@@ -33,7 +33,6 @@ fields:
   TypingAnswer: вівця
   UA_Example: На гірських схилах пасуться отари овець.
   EN_Example: Flocks of sheep graze on the mountain slopes.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/вівця
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

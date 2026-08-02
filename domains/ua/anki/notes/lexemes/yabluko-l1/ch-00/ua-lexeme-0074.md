@@ -31,7 +31,6 @@ fields:
   TypingAnswer: Великобританія
   UA_Example: Він вчиться в університеті у Великобританії.
   EN_Example: He studies at a university in Great Britain.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/Великобританія
   Source_Note: verified 2026-07-06 via Горох

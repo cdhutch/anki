@@ -47,7 +47,6 @@ fields:
   TypingAnswer: вид
   UA_Example: Який вид спорту тобі найбільше подобається?
   EN_Example: Which sport do you like the most?
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/вид
   Source_Note: Горох lists 2 homograph senses for 'вид' (identical spelling, one syllable

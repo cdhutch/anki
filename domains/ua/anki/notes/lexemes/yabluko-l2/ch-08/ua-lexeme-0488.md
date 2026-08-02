@@ -32,7 +32,6 @@ fields:
   TypingAnswer: впасти в очі
   UA_Example: Її яскрава сукня одразу впала в очі.
   EN_Example: Her bright dress immediately caught everyone's eye.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/впасти; https://goroh.pp.ua/Словозміна/око
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

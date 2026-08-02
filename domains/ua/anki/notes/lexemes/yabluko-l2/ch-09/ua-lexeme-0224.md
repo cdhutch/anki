@@ -33,7 +33,6 @@ fields:
   TypingAnswer: битися з реальним суперником
   UA_Example: На останньому тренуванні він уперше бився з реальним суперником.
   EN_Example: At the last training session he fought a real opponent for the first time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/битися; https://goroh.pp.ua/Словозміна/реальний;
     https://goroh.pp.ua/Словозміна/суперник

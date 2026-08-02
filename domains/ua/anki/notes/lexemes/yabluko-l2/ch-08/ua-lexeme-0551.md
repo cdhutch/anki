@@ -31,7 +31,6 @@ fields:
   TypingAnswer: звучати
   UA_Example: Назва страви звучала для нас незнайомо.
   EN_Example: The name of the dish sounded unfamiliar to us.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/звучати
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

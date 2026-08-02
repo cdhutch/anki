@@ -30,7 +30,6 @@ fields:
   TypingAnswer: зошит
   UA_Example: Я пишу відповіді в зошиті олівцем.
   EN_Example: I write the answers in my notebook with a pencil.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/зошит
   Source_Note: verified 2026-07-06 via Горох

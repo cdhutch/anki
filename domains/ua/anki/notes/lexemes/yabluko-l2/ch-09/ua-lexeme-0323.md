@@ -33,7 +33,6 @@ fields:
   TypingAnswer: нижня полиця
   UA_Example: Нижня полиця коштує трохи дорожче за верхню.
   EN_Example: The lower berth costs a bit more than the upper one.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/нижній; https://goroh.pp.ua/Словозміна/полиця
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.

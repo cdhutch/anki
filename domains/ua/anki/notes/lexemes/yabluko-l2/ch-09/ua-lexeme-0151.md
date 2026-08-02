@@ -31,7 +31,6 @@ fields:
   TypingAnswer: триатлон
   UA_Example: Він тренується до триатлону вже пів року.
   EN_Example: He has been training for the triathlon for half a year.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/триатлон
   Source_Note: Checked 2026-07-22 via Горох — the declension table has NO stress mark on any

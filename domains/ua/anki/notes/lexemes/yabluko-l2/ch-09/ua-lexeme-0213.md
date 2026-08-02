@@ -47,7 +47,6 @@ fields:
   TypingAnswer: відбивати
   UA_Example: Воротар щоразу відбиває мʼяч.
   EN_Example: The goalkeeper deflects the ball every time.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/відбивати; https://goroh.pp.ua/Словозміна/відбити
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

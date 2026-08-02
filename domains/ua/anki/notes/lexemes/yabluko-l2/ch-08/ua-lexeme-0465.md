@@ -31,7 +31,6 @@ fields:
   TypingAnswer: жахливий
   UA_Example: Погода була просто жахлива.
   EN_Example: The weather was simply terrible.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/жахливий
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.

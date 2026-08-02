@@ -31,7 +31,6 @@ fields:
   TypingAnswer: пізніше
   UA_Example: Трохи пізніше вони знайшли місце для ночівлі.
   EN_Example: A little later they found a place to spend the night.
-  Verb_Conj_Table: ''
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/пізніше
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
