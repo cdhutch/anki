@@ -106,11 +106,26 @@ FIELDS = [
 # ---------------------------------------------------------------------------
 
 CSS = """\
+/* Gruvbox palette (github.com/morhetz/gruvbox), chosen 2026-08-01 after an
+   on-device comparison (Solarized / Monochrome / Gruvbox) against Craig's
+   accessibility need: iOS Accessibility > Display & Text Size > Color
+   Filters > Color Tint > Hue set near-full-left, a red-dominant night-vision
+   filter -- this replaces the Solarized draft that was here before, per
+   CLAUDE.md item 1/3. Accent A (orange) is the headword/primary highlight;
+   Accent B (blue) is the cross-reference/structural highlight -- blue was
+   chosen over the original olive green for staying visually distinct from
+   the gray secondary text under the red tint. Status colors (below) reuse
+   Gruvbox's green/red/yellow for the typing-feedback and Compare-card
+   status system, and Accent B blue for "info" -- see the status-* classes.
+   This is the single source of truth for all UA_Lexeme templates (UA->EN,
+   EN->UA, Compare), including the typing-feedback script and Compare card's
+   colors, which used to be hardcoded inline styles with no night-mode
+   support -- see the fb-*/compare-* classes. */
 .card {
   font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 18px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #3c3836; /* gruvbox fg1 (light) */
+  background-color: #fbf1c7; /* gruvbox bg0 (light) */
   max-width: 600px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -121,36 +136,37 @@ CSS = """\
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 4px;
+  color: #af3a03; /* Accent A: orange (light) */
 }
 
 .perfective {
   font-size: 22px;
-  color: #555;
+  color: #7c6f64; /* gray (light secondary) */
   margin-bottom: 8px;
 }
 
 .aspect-label {
   font-size: 16px;
   font-weight: normal;
-  color: #888;
+  color: #7c6f64; /* gray (light secondary) */
 }
 
 .pos {
   font-size: 13px;
-  color: #888;
+  color: #7c6f64; /* gray (light secondary) */
   font-style: italic;
   margin-bottom: 16px;
 }
 
 .gender {
   font-size: 13px;
-  color: #888;
+  color: #7c6f64; /* gray (light secondary) */
   margin-bottom: 4px;
 }
 
 hr#answer {
   border: none;
-  border-top: 2px solid #e0e0e0;
+  border-top: 2px solid #7c6f64; /* gray (light secondary) */
   margin: 20px 0;
 }
 
@@ -158,23 +174,24 @@ hr#answer {
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 8px;
+  color: #3c3836; /* fg1 (light primary) */
 }
 
 .counterpart {
   font-size: 14px;
-  color: #666;
+  color: #7c6f64; /* gray (light secondary) */
   margin-top: 4px;
 }
 
 .irregular {
   font-size: 13px;
-  color: #888;
+  color: #7c6f64; /* gray (light secondary) */
   margin-top: 4px;
 }
 
 .confusable {
   font-size: 13px;
-  color: #b07000;
+  color: #076678; /* Accent B: blue (light) */
   margin-top: 6px;
 }
 
@@ -182,18 +199,18 @@ hr#answer {
   font-size: 15px;
   margin-top: 14px;
   font-style: italic;
-  color: #333;
+  color: #3c3836; /* fg1 (light primary) */
 }
 
 .example-en {
   font-size: 13px;
-  color: #777;
+  color: #7c6f64; /* gray (light secondary) */
   margin-top: 2px;
 }
 
 .note-id {
   font-size: 10px;
-  color: #ccc;
+  color: #7c6f64; /* gray (light secondary) */
   text-align: right;
   margin-top: 16px;
 }
@@ -205,7 +222,7 @@ hr#answer {
 }
 
 .source-link a {
-  color: #aaa;
+  color: #7c6f64; /* gray (light secondary) */
   text-decoration: none;
 }
 
@@ -215,9 +232,144 @@ input#typeans {
   font-family: 'Noto Sans', Arial, sans-serif;
   width: 80%;
   text-align: center;
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #ebdbb2; /* bg1 (light highlight) */
+  border: 1px solid #7c6f64; /* gray (light secondary) */
+  padding: 6px;
 }
 
-/* Conjugation table */
+/* Typing-feedback hint (EN->UA front, "type without stress..." caption) */
+.type-hint {
+  font-size: 12px;
+  color: #7c6f64; /* gray (light secondary) */
+  margin-top: 8px;
+}
+
+/* AspectCue (EN->UA front, optional): same visual weight as a Compare-card
+   distractor chip -- see compare-chip-word below. */
+.aspect-cue {
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 16px;
+  margin: 12px 0;
+  border-left: 3px solid;
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #ebdbb2; /* bg1 (light highlight) */
+  border-left-color: #076678; /* Accent B: blue (light) */
+}
+
+/* Divider used by EN->UA back's reference-answer block */
+.ref-divider {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #7c6f64; /* gray (light secondary) */
+}
+
+/* Status/feedback system (typing-feedback script, Compare card): green for
+   correct/success, red for incorrect/error, yellow for partial-credit, blue
+   (Accent B) for informational/reveal text. Layout-only rules (font-size,
+   weight, margin) live in the *-headline/-sub/-label/-value/-note classes so
+   JS only ever has to add ONE color modifier class alongside them -- see
+   EN_UA_BACK's <script> and setup_ua_pvom_note_type.py's FEEDBACK_SCRIPT. */
+.fb-headline { font-size: 22px; font-weight: bold; margin-bottom: 4px; }
+.fb-sub { font-size: 14px; margin-bottom: 12px; }
+.fb-label { font-size: 16px; font-weight: bold; margin-bottom: 4px; }
+.fb-value { font-size: 16px; }
+.fb-note { font-size: 13px; }
+
+.status-success { color: #79740e; } /* green (light) */
+.status-error { color: #9d0006; } /* red (light) */
+.status-warning { color: #af3a03; } /* orange, reuses Accent A (light) -- kept
+  orange rather than Gruvbox's yellow so the "close/partial-credit" typing-
+  feedback state stays close to its original color family (was #ff9800), per
+  Craig 2026-08-01: keep status colors close to current. Dark-mode red/orange
+  below use Gruvbox's *bright* tier (not the muted/neutral tier) specifically
+  for maximum luminance contrast against the dark background -- per Craig,
+  these should NOT wash out under the red-tint night filter. Claude can't
+  preview that filter directly; this is the best available color choice, and
+  worth a quick on-device check (e.g. via the palette-comparison demo) before
+  treating it as fully validated. */
+.status-info { color: #076678; } /* Accent B: blue (light) */
+.status-neutral { color: #7c6f64; } /* gray (light secondary) */
+
+/* Compare card ("Confusable Comparison" template) */
+.compare-prompt-header {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #076678; /* Accent B: blue (light) */
+}
+.compare-warning {
+  font-size: 15px;
+  font-style: italic;
+  padding: 16px;
+  border: 1px dashed;
+  border-radius: 4px;
+  color: #9d0006; /* red (light) */
+  border-color: #9d0006; /* red (light) */
+}
+.compare-chip-sentence {
+  font-size: 16px;
+  padding: 12px;
+  border-left: 3px solid;
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #ebdbb2; /* bg1 (light highlight) */
+  border-left-color: #076678; /* Accent B: blue (light) */
+}
+.compare-chip-word {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 16px;
+  border-left: 3px solid;
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #ebdbb2; /* bg1 (light highlight) */
+  border-left-color: #076678; /* Accent B: blue (light) */
+}
+.compare-reveal-header {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #79740e; /* green (light) */
+}
+.compare-correct-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  color: #79740e; /* green (light) */
+}
+.compare-correct-sub {
+  font-size: 13px;
+  margin-bottom: 12px;
+  color: #79740e; /* green (light) */
+}
+.compare-sense-block {
+  margin: 12px 0;
+  padding: 10px;
+  border-left: 3px solid;
+  background-color: #ebdbb2; /* bg1 (light highlight) */
+  border-left-color: #79740e; /* green (light) */
+}
+.compare-sense-ua {
+  font-size: 15px;
+  margin-bottom: 4px;
+  color: #076678; /* Accent B: blue (light) */
+}
+.compare-sense-en {
+  font-size: 13px;
+  color: #79740e; /* green (light) */
+}
+.compare-mnemonic {
+  padding: 10px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-top: 10px;
+  background-color: #ebdbb2; /* bg1 (light highlight) */
+}
+
+/* Conjugation table (not currently rendered by any live template --
+   Verb_Conj_Table was removed from UA_Lexeme 2026-07-31 -- themed anyway
+   rather than left an untouched light-only remnant, in case it's revived) */
 .conj {
   width: 100%;
   border-collapse: collapse;
@@ -227,15 +379,15 @@ input#typeans {
 }
 .conj th, .conj td {
   padding: 4px 8px;
-  border: 1px solid #ddd;
+  border: 1px solid #7c6f64; /* gray (light secondary) */
 }
 .conj th {
-  background-color: #f0f0f0;
+  background-color: #ebdbb2; /* bg1 (light highlight) */
   font-weight: 600;
-  color: #444;
+  color: #3c3836; /* fg1 (light primary) */
 }
 .conj td:first-child {
-  color: #888;
+  color: #7c6f64; /* gray (light secondary) */
   font-size: 12px;
   width: 6em;
 }
@@ -247,7 +399,7 @@ details.conj-wrap {
 }
 details.conj-wrap summary {
   font-size: 13px;
-  color: #888;
+  color: #7c6f64; /* gray (light secondary) */
   cursor: pointer;
   user-select: none;
   list-style: none;
@@ -259,6 +411,47 @@ details.conj-wrap summary::before {
 details.conj-wrap[open] summary::before {
   content: '▼ ';
 }
+
+/* Dark mode (Gruvbox dark) */
+.nightMode .card { color: #ebdbb2; background-color: #282828; } /* fg1 dark / bg0 dark */
+.nightMode .lemma { color: #fe8019; } /* Accent A: orange (dark) */
+.nightMode .perfective { color: #a89984; } /* gray (dark secondary) */
+.nightMode .aspect-label { color: #a89984; } /* gray (dark secondary) */
+.nightMode .pos { color: #a89984; } /* gray (dark secondary) */
+.nightMode .gender { color: #a89984; } /* gray (dark secondary) */
+.nightMode hr#answer { border-top-color: #a89984; } /* gray (dark secondary) */
+.nightMode .gloss { color: #ebdbb2; } /* fg1 (dark primary) */
+.nightMode .counterpart { color: #a89984; } /* gray (dark secondary) */
+.nightMode .irregular { color: #a89984; } /* gray (dark secondary) */
+.nightMode .confusable { color: #83a598; } /* Accent B: blue (dark) */
+.nightMode .example-ua { color: #ebdbb2; } /* fg1 (dark primary) */
+.nightMode .example-en { color: #a89984; } /* gray (dark secondary) */
+.nightMode .note-id { color: #a89984; } /* gray (dark secondary) */
+.nightMode .source-link a { color: #a89984; } /* gray (dark secondary) */
+.nightMode input#typeans { color: #ebdbb2; background-color: #282828; border-color: #a89984; } /* fg1 dark / bg0 dark / gray dark */
+.nightMode .type-hint { color: #a89984; } /* gray (dark secondary) */
+.nightMode .aspect-cue { color: #ebdbb2; background-color: #3c3836; border-left-color: #83a598; } /* fg1 dark / bg1 dark / Accent B dark */
+.nightMode .ref-divider { border-top-color: #a89984; } /* gray (dark secondary) */
+.nightMode .status-success { color: #b8bb26; } /* green (dark) */
+.nightMode .status-error { color: #fb4934; } /* red (dark) */
+.nightMode .status-warning { color: #fabd2f; } /* yellow (dark) */
+.nightMode .status-info { color: #83a598; } /* Accent B: blue (dark) */
+.nightMode .status-neutral { color: #a89984; } /* gray (dark secondary) */
+.nightMode .compare-prompt-header { color: #83a598; } /* Accent B: blue (dark) */
+.nightMode .compare-warning { color: #fb4934; border-color: #fb4934; } /* red (dark) */
+.nightMode .compare-chip-sentence { color: #ebdbb2; background-color: #3c3836; border-left-color: #83a598; } /* fg1 dark / bg1 dark / Accent B dark */
+.nightMode .compare-chip-word { color: #ebdbb2; background-color: #3c3836; border-left-color: #83a598; } /* fg1 dark / bg1 dark / Accent B dark */
+.nightMode .compare-reveal-header { color: #b8bb26; } /* green (dark) */
+.nightMode .compare-correct-header { color: #b8bb26; } /* green (dark) */
+.nightMode .compare-correct-sub { color: #b8bb26; } /* green (dark) */
+.nightMode .compare-sense-block { background-color: #3c3836; border-left-color: #b8bb26; } /* bg1 dark / green dark */
+.nightMode .compare-sense-ua { color: #83a598; } /* Accent B: blue (dark) */
+.nightMode .compare-sense-en { color: #b8bb26; } /* green (dark) */
+.nightMode .compare-mnemonic { background-color: #3c3836; } /* bg1 dark */
+.nightMode .conj th, .nightMode .conj td { border-color: #a89984; } /* gray (dark secondary) */
+.nightMode .conj th { background-color: #3c3836; color: #ebdbb2; } /* bg1 dark / fg1 dark */
+.nightMode .conj td:first-child { color: #a89984; } /* gray (dark secondary) */
+.nightMode details.conj-wrap summary { color: #a89984; } /* gray (dark secondary) */
 """
 
 # ---------------------------------------------------------------------------
@@ -316,7 +509,7 @@ EN_UA_FRONT = """\
      20px, bold, boxed) -- same visual weight as an actual answer option, not
      a small caption. Absent for notes where it doesn't apply (renders
      nothing, per the {{#AspectCue}} guard). -->
-{{#AspectCue}}<div style="display: inline-block; font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; margin: 12px 0; background: #f9f9f9; border-left: 3px solid #1565c0;">{{AspectCue}}</div>{{/AspectCue}}
+{{#AspectCue}}<div class="aspect-cue">{{AspectCue}}</div>{{/AspectCue}}
 <!-- Typing target is the STRESSED field (TypingTarget_UA), not TypingAnswer:
      typing it correctly is then a clean exact match for Anki's diff (no
      insertion); typing without stress becomes a clean omission instead. Both
@@ -328,7 +521,7 @@ EN_UA_FRONT = """\
      as UA_PVOM_Infinitive's Walking/Vehicle templates -- see
      setup_ua_pvom_note_type.py. -->
 {{type:TypingTarget_UA}}
-<div id="type-hint" style="font-size: 12px; color: #999; margin-top: 8px;">
+<div id="type-hint" class="type-hint">
   (Type without stress, or with stress marks for bonus credit)
 </div>
 """
@@ -392,45 +585,45 @@ EN_UA_BACK = """\
 
   if (typedAnswer === targetWithStress) {
     // Perfect: with stress marks
-    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-success">' +
            targetWithStress + ' ✓ PERFECT</div>' +
-           '<div style="color: #2e7d32; font-size: 14px;">Correct with stress marks (bonus!)</div>';
+           '<div class="fb-sub status-success">Correct with stress marks (bonus!)</div>';
   } else if (typedAnswer === targetNoStress) {
     // Close: correct letters, missing stress
-    html = '<div style="color: #ff9800; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-warning">' +
            targetNoStress + ' ~ CORRECT</div>' +
-           '<div style="color: #ff9800; font-size: 14px; margin-bottom: 12px;">Correct letters, but missing stress marks</div>' +
-           '<div style="color: #2e7d32; font-size: 16px; font-weight: bold;">Bonus answer:</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
+           '<div class="fb-sub status-warning">Correct letters, but missing stress marks</div>' +
+           '<div class="fb-label status-success">Bonus answer:</div>' +
+           '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
   } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer)) !== -1) {
     // Accepted alternate spelling (EuphonyNote) -- genuinely correct, not just noted.
-    html = '<div style="color: #2e7d32; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-success">' +
            typedAnswer + ' ✓ CORRECT</div>' +
-           '<div style="color: #2e7d32; font-size: 14px; margin-bottom: 12px;">Accepted alternate spelling</div>' +
-           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Primary form:</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
+           '<div class="fb-sub status-success">Accepted alternate spelling</div>' +
+           '<div class="fb-label status-info">Primary form:</div>' +
+           '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
   } else if (typedAnswer !== null) {
     // Reconstruction succeeded and it's neither accepted answer -- genuinely wrong.
-    html = '<div style="color: #d32f2f; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-error">' +
            typedAnswer + ' ✗ INCORRECT</div>' +
-           '<div style="color: #d32f2f; font-size: 14px; margin-bottom: 12px;">Not quite right</div>' +
-           '<div style="color: #2e7d32; font-size: 16px; font-weight: bold; margin-bottom: 4px;">Correct (no stress):</div>' +
-           '<div style="color: #2e7d32; font-size: 16px; margin-bottom: 8px;"><b>' + targetNoStress + '</b></div>' +
-           '<div style="color: #1565c0; font-size: 14px; font-weight: bold; margin-bottom: 4px;">Correct (with stress):</div>' +
-           '<div style="color: #1565c0; font-size: 16px;"><b>' + targetWithStress + '</b></div>';
+           '<div class="fb-sub status-error">Not quite right</div>' +
+           '<div class="fb-label status-success">Correct (no stress):</div>' +
+           '<div class="fb-value status-success" style="margin-bottom: 8px;"><b>' + targetNoStress + '</b></div>' +
+           '<div class="fb-label status-info">Correct (with stress):</div>' +
+           '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
   } else {
     // Couldn't determine what was typed at all (e.g. #typeans markup ever
     // changes shape) -- show the answer neutrally rather than guessing.
-    html = '<div style="color: #1565c0; font-size: 22px; font-weight: bold; margin-bottom: 4px;">' +
+    html = '<div class="fb-headline status-info">' +
            targetWithStress + '</div>' +
-           '<div style="color: #999; font-size: 13px;">(no stress: ' + targetNoStress + ')</div>';
+           '<div class="fb-note status-neutral">(no stress: ' + targetNoStress + ')</div>';
   }
 
   feedback.innerHTML = html;
 })();
 </script>
 <!-- Reference answer and context -->
-<div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid #e0e0e0;">
+<div class="ref-divider">
   {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
   {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 </div>
@@ -474,33 +667,33 @@ COMPARISON_FRONT = """\
      as a readable marker of the data-gap condition, not a functioning
      safeguard. -->
 {{^CompareA}}
-<div style="font-size: 15px; color: #c62828; font-style: italic; padding: 16px; border: 1px dashed #c62828; border-radius: 4px;">
+<div class="compare-warning">
 ⚠ Compare card has no CompareA/B/C/D authored yet -- this card should be suspended.
 </div>
 {{/CompareA}}
 {{#CompareA}}
 {{#_IsHomograph}}
 <!-- HOMOGRAPH MODE: UA→EN direction. Show Ukrainian sentences, student deduces EN meaning -->
-<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Which sense is being used?</div>
+<div class="compare-prompt-header">Which sense is being used?</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
   {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}[Homograph scenario]{{/CompareScenario}}
 </div>
 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
-<div style="font-size: 16px; color: #1a1a1a; padding: 12px; background: #f0f7ff; border-left: 3px solid #1565c0;">{{CompareA}}</div>
-{{#CompareB}}<div style="font-size: 16px; color: #1a1a1a; padding: 12px; background: #f0f7ff; border-left: 3px solid #1565c0;">{{CompareB}}</div>{{/CompareB}}
+<div class="compare-chip-sentence">{{CompareA}}</div>
+{{#CompareB}}<div class="compare-chip-sentence">{{CompareB}}</div>{{/CompareB}}
 </div>
 {{/_IsHomograph}}
 {{^_IsHomograph}}
 <!-- CONFUSABLES MODE: EN→UA direction. Show English scenario, student picks Ukrainian word -->
-<div style="font-size: 16px; color: #1565c0; font-weight: bold; margin-bottom: 12px;">Choose the right word:</div>
+<div class="compare-prompt-header">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
   Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
 </div>
 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;">
-<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareA}}</div>
-{{#CompareB}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareB}}</div>{{/CompareB}}
-{{#CompareC}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareC}}</div>{{/CompareC}}
-{{#CompareD}}<div style="font-size: 20px; font-weight: bold; color: #1a1a1a; padding: 12px 16px; background: #f9f9f9; border-left: 3px solid #1565c0;">{{CompareD}}</div>{{/CompareD}}
+<div class="compare-chip-word">{{CompareA}}</div>
+{{#CompareB}}<div class="compare-chip-word">{{CompareB}}</div>{{/CompareB}}
+{{#CompareC}}<div class="compare-chip-word">{{CompareC}}</div>{{/CompareC}}
+{{#CompareD}}<div class="compare-chip-word">{{CompareD}}</div>{{/CompareD}}
 </div>
 {{/_IsHomograph}}
 {{/CompareA}}
@@ -515,16 +708,16 @@ COMPARISON_BACK = """\
 {{#_IsHomograph}}
 <!-- HOMOGRAPH BACK: Show each Ukrainian sentence + its EN sense -->
 <div style="margin-top: 16px; font-size: 16px;">
-<div style="color: #2e7d32; font-size: 18px; font-weight: bold; margin-bottom: 12px;">Senses of {{Lemma}}:</div>
-<div style="margin: 12px 0; padding: 10px; background: #f5f5f5; border-left: 3px solid #2e7d32;">
-  <div style="color: #1565c0; font-size: 15px; margin-bottom: 4px;">{{CompareA}}</div>
-  <div style="color: #2e7d32; font-size: 13px;">{{Homograph_SenseA}}</div>
+<div class="compare-reveal-header">Senses of {{Lemma}}:</div>
+<div class="compare-sense-block">
+  <div class="compare-sense-ua">{{CompareA}}</div>
+  <div class="compare-sense-en">{{Homograph_SenseA}}</div>
 </div>
-<div style="margin: 12px 0; padding: 10px; background: #f5f5f5; border-left: 3px solid #2e7d32;">
-  <div style="color: #1565c0; font-size: 15px; margin-bottom: 4px;">{{CompareB}}</div>
-  <div style="color: #2e7d32; font-size: 13px;">{{Homograph_SenseB}}</div>
+<div class="compare-sense-block">
+  <div class="compare-sense-ua">{{CompareB}}</div>
+  <div class="compare-sense-en">{{Homograph_SenseB}}</div>
 </div>
-{{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
+{{#Mnemonic_EN}}<div class="compare-mnemonic">
 <strong>Remember:</strong> {{Mnemonic_EN}}
 </div>{{/Mnemonic_EN}}
 </div>
@@ -532,16 +725,16 @@ COMPARISON_BACK = """\
 {{^_IsHomograph}}
 <!-- CONFUSABLES BACK: Show the correct word and why it fits -->
 <div style="margin-top: 16px; font-size: 16px;">
-<div style="color: #2e7d32; font-size: 20px; font-weight: bold; margin-bottom: 4px;">✓ {{Lemma}}</div>
-<div style="color: #2e7d32; font-size: 13px; margin-bottom: 12px;">{{EN_Gloss}}</div>
-{{#Mnemonic_EN}}<div style="background: #e8f5e9; padding: 10px; border-radius: 4px; font-size: 13px; margin-top: 10px;">
+<div class="compare-correct-header">✓ {{Lemma}}</div>
+<div class="compare-correct-sub">{{EN_Gloss}}</div>
+{{#Mnemonic_EN}}<div class="compare-mnemonic">
 <strong>Remember:</strong> {{Mnemonic_EN}}
 </div>{{/Mnemonic_EN}}
 </div>
 {{/_IsHomograph}}
 {{/CompareA}}
 {{^CompareA}}
-<div style="font-size: 15px; color: #c62828; font-style: italic; padding: 16px; border: 1px dashed #c62828; border-radius: 4px;">
+<div class="compare-warning">
 ⚠ Compare card has no CompareA/B/C/D authored yet -- this card should be suspended.
 </div>
 {{/CompareA}}
@@ -698,11 +891,15 @@ GRAMMAR_FIELDS = [
 ]
 
 GRAMMAR_CSS = """\
+/* Gruvbox palette (github.com/morhetz/gruvbox) -- see the CSS constant
+   above (UA_Lexeme) for the full rationale. Accent B (blue) is reused here
+   for .cloze, matching its role as the cross-reference/structural highlight
+   elsewhere in the repo. */
 .card {
   font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 18px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #fbf1c7; /* bg0 (light) */
   max-width: 640px;
   margin: 0 auto;
   padding: 24px 20px;
@@ -710,36 +907,44 @@ GRAMMAR_CSS = """\
 
 .topic {
   font-size: 13px;
-  color: #888;
+  color: #7c6f64; /* gray (light secondary) */
   font-style: italic;
   margin-bottom: 14px;
 }
 
 .cloze {
   font-weight: bold;
-  color: #2563eb;
+  color: #076678; /* Accent B: blue (light) */
 }
 
 .extra {
   font-size: 14px;
-  color: #555;
+  color: #3c3836; /* fg1 (light primary) */
   margin-top: 16px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid #7c6f64; /* gray (light secondary) */
   padding-top: 10px;
 }
 
 .note-id {
   font-size: 10px;
-  color: #ccc;
+  color: #7c6f64; /* gray (light secondary) */
   text-align: right;
   margin-top: 16px;
 }
 
 .chapter {
   font-size: 11px;
-  color: #aaa;
+  color: #7c6f64; /* gray (light secondary) */
   text-align: right;
 }
+
+/* Dark mode (Gruvbox dark) */
+.nightMode .card { color: #ebdbb2; background-color: #282828; } /* fg1 dark / bg0 dark */
+.nightMode .topic { color: #a89984; } /* gray (dark secondary) */
+.nightMode .cloze { color: #83a598; } /* Accent B: blue (dark) */
+.nightMode .extra { color: #ebdbb2; border-top-color: #a89984; } /* fg1 dark / gray dark */
+.nightMode .note-id { color: #a89984; } /* gray (dark secondary) */
+.nightMode .chapter { color: #a89984; } /* gray (dark secondary) */
 """
 
 GRAMMAR_FRONT = """\
@@ -856,74 +1061,82 @@ VISUAL_FIELDS = [
 ]
 
 VISUAL_CSS = """\
-/* Solarized palette (ethanschoonover.com/solarized) throughout.
-   Accents (green/blue/red) are identical in both modes by design;
-   base01/base1 deliberately swap roles between light and dark mode. */
+/* Gruvbox palette (github.com/morhetz/gruvbox) -- see the CSS constant
+   above (UA_Lexeme) for the full rationale. .vis-prefix/.vis-govt are dead
+   CSS (never referenced by VISUAL_FRONT_1/VISUAL_BACK_1's live markup, found
+   2026-08-01) -- themed anyway rather than left untouched, same reasoning as
+   the .conj table above. td:last-child (the live Prefix/Govt answer color)
+   reuses Accent B blue, matching its role as the cross-reference/structural
+   highlight elsewhere in the repo. This block previously set .nightMode
+   .card to literal canonical Solarized base0/base03 rather than this repo's
+   established dark-bg convention -- normalized here to match every other UA
+   note type. */
 .card {
   font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 18px;
-  color: #657b83; /* base00 */
-  background-color: #fdf6e3; /* base3 */
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #fbf1c7; /* bg0 (light) */
   max-width: 580px;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
 }
 
-.night_mode .card {
-  color: #839496; /* base0 */
-  background-color: #002b36; /* base03 */
+.nightMode .card {
+  color: #ebdbb2; /* fg1 (dark primary) */
+  background-color: #282828; /* bg0 (dark) */
 }
 
 .vis-prefix {
   font-size: 36px;
   font-weight: bold;
-  color: #859900; /* green */
+  color: #79740e; /* green (light) */
   margin: 10px 0 4px;
   letter-spacing: 1px;
 }
+.nightMode .vis-prefix { color: #b8bb26; } /* green (dark) */
 
 .vis-meaning {
   font-size: 17px;
-  color: #586e75; /* base01 */
+  color: #7c6f64; /* gray (light secondary) */
   margin-bottom: 8px;
 }
-.night_mode .vis-meaning { color: #93a1a1; } /* base1 */
+.nightMode .vis-meaning { color: #a89984; } /* gray (dark secondary) */
 
 .vis-govt {
   font-size: 20px;
   font-weight: 600;
-  color: #268bd2; /* blue */
-  background: #eee8d5; /* base2 */
+  color: #076678; /* Accent B: blue (light) */
+  background: #ebdbb2; /* bg1 (light highlight) */
   border-radius: 6px;
   padding: 4px 14px;
   display: inline-block;
   margin: 8px 0;
 }
-.night_mode .vis-govt { background: #073642; } /* base02 */
+.nightMode .vis-govt { color: #83a598; background: #3c3836; } /* Accent B blue dark / bg1 dark */
 
 .vis-pairs {
   font-size: 15px;
-  color: #586e75; /* base01 */
+  color: #3c3836; /* fg1 (light primary) */
   margin: 6px 0;
   line-height: 1.6;
 }
-.night_mode .vis-pairs { color: #93a1a1; } /* base1 */
+.nightMode .vis-pairs { color: #ebdbb2; } /* fg1 (dark primary) */
 
 .vis-example {
   font-size: 16px;
   font-style: italic;
-  color: #586e75; /* base01 */
+  color: #3c3836; /* fg1 (light primary) */
   margin-top: 10px;
 }
-.night_mode .vis-example { color: #93a1a1; } /* base1 */
+.nightMode .vis-example { color: #ebdbb2; } /* fg1 (dark primary) */
 
 .vis-example-en {
   font-size: 13px;
-  color: #93a1a1; /* base1 */
+  color: #7c6f64; /* gray (light secondary) */
   margin-top: 2px;
 }
-.night_mode .vis-example-en { color: #839496; } /* base0 */
+.nightMode .vis-example-en { color: #a89984; } /* gray (dark secondary) */
 
 /* Fixed table + column widths so the table renders at the SAME size on
    front (blank "?" placeholders) and back (real, longer answer text) --
@@ -940,46 +1153,56 @@ VISUAL_CSS = """\
 }
 .vis-prompt-table td {
   padding: 4px 12px;
-  border-bottom: 1px solid #eee8d5; /* base2 */
+  border-bottom: 1px solid #ebdbb2; /* bg1 (light highlight) */
   text-align: left;
   word-wrap: break-word;
 }
-.night_mode .vis-prompt-table td {
-  border-bottom: 1px solid #073642; /* base02 */
+.nightMode .vis-prompt-table td {
+  border-bottom: 1px solid #3c3836; /* bg1 (dark highlight) */
 }
 .vis-prompt-table td:first-child {
   width: 130px;
-  color: #93a1a1; /* base1 */
+  color: #7c6f64; /* gray (light secondary) */
 }
-.night_mode .vis-prompt-table td:first-child {
-  color: #586e75; /* base01 */
+.nightMode .vis-prompt-table td:first-child {
+  color: #a89984; /* gray (dark secondary) */
 }
 .vis-prompt-table td:last-child {
   width: 190px;
   font-weight: 600;
-  color: #268bd2; /* blue */
+  color: #076678; /* Accent B: blue (light) */
+}
+.nightMode .vis-prompt-table td:last-child {
+  color: #83a598; /* Accent B: blue (dark) */
 }
 
 .note-id {
   font-size: 10px;
-  color: #93a1a1; /* base1 */
+  color: #7c6f64; /* gray (light secondary) */
   text-align: right;
   margin-top: 14px;
 }
+.nightMode .note-id { color: #a89984; } /* gray (dark secondary) */
 
 hr#answer {
   border: none;
-  border-top: 2px solid #eee8d5; /* base2 */
+  border-top: 2px solid #ebdbb2; /* bg1 (light highlight) */
   margin: 16px 0;
 }
-.night_mode hr#answer { border-top-color: #073642; } /* base02 */
+.nightMode hr#answer { border-top-color: #3c3836; } /* bg1 (dark highlight) */
 
-/* Diagram SVGs: base01/base1 role-flip for night mode. Accent colors
-   (green #859900, blue #268bd2, red #dc322f) are unchanged in both modes. */
-.night_mode .card svg [fill="#586e75"] { fill: #93a1a1; }
-.night_mode .card svg [stroke="#586e75"] { stroke: #93a1a1; }
-.night_mode .card svg [fill="#93a1a1"] { fill: #586e75; }
-.night_mode .card svg [stroke="#93a1a1"] { stroke: #586e75; }
+/* Diagram SVGs: role-flip for night mode, matching whichever of the two
+   text-tier hex values (light primary / light secondary) a given diagram
+   was authored with -- see the .card / .vis-meaning color roles above.
+   NOTE: no Diagram_SVG content exists in this checkout to verify against
+   (see CLAUDE.md item 2's history) -- these selectors assume future
+   diagrams embed fill/stroke as literal hex matching this file's light-mode
+   text colors, the same assumption the pre-existing (Solarized-era) version
+   of this rule made. Revisit if/when actual SVG content is authored. */
+.nightMode .card svg [fill="#3c3836"] { fill: #ebdbb2; }
+.nightMode .card svg [stroke="#3c3836"] { stroke: #ebdbb2; }
+.nightMode .card svg [fill="#7c6f64"] { fill: #a89984; }
+.nightMode .card svg [stroke="#7c6f64"] { stroke: #a89984; }
 """
 
 # Single card: diagram + a 2-column table (prompt labels, blanks) on front.
@@ -1158,11 +1381,16 @@ VERB_FIELDS = [
 ]
 
 VERB_CSS = """\
+/* Gruvbox palette (github.com/morhetz/gruvbox) -- see the CSS constant
+   above (UA_Lexeme) for the full rationale. .verb-lemma reuses green
+   (matching its pre-existing role as this template's headword accent);
+   .section-title/.pronoun reuse Accent B blue, matching that color's role
+   as the cross-reference/structural highlight elsewhere in the repo. */
 .card {
   font-family: 'Noto Sans', Arial, sans-serif;
   font-size: 16px;
-  color: #1a1a1a;
-  background-color: #ffffff;
+  color: #3c3836; /* fg1 (light primary) */
+  background-color: #fbf1c7; /* bg0 (light) */
   max-width: 650px;
   margin: 0 auto;
   padding: 20px;
@@ -1171,13 +1399,13 @@ VERB_CSS = """\
 .verb-lemma {
   font-size: 32px;
   font-weight: bold;
-  color: #2e7d32;
+  color: #79740e; /* green (light) */
   margin: 10px 0;
 }
 
 .verb-aspect {
   font-size: 13px;
-  color: #666;
+  color: #7c6f64; /* gray (light secondary) */
   margin-bottom: 14px;
   font-style: italic;
 }
@@ -1190,23 +1418,24 @@ VERB_CSS = """\
 }
 
 .verb-table th {
-  background-color: #f5f5f5;
-  border: 1px solid #ddd;
+  background-color: #ebdbb2; /* bg1 (light highlight) */
+  border: 1px solid #7c6f64; /* gray (light secondary) */
   padding: 8px;
   text-align: left;
   font-weight: 600;
+  color: #3c3836; /* fg1 (light primary) */
 }
 
 .verb-table td {
-  border: 1px solid #ddd;
+  border: 1px solid #7c6f64; /* gray (light secondary) */
   padding: 8px;
   text-align: left;
 }
 
 .section-title {
   font-weight: 700;
-  color: #1565c0;
-  background-color: #e3f2fd;
+  color: #076678; /* Accent B: blue (light) */
+  background-color: #ebdbb2; /* bg1 (light highlight) */
   padding: 6px 10px;
   margin-top: 12px;
   margin-bottom: 6px;
@@ -1216,20 +1445,20 @@ VERB_CSS = """\
 
 .verb-prompt {
   font-size: 13px;
-  color: #666;
+  color: #7c6f64; /* gray (light secondary) */
   margin-top: 8px;
 }
 
 .note-id {
   font-size: 10px;
-  color: #ccc;
+  color: #7c6f64; /* gray (light secondary) */
   text-align: right;
   margin-top: 14px;
 }
 
 hr#answer {
   border: none;
-  border-top: 2px solid #e0e0e0;
+  border-top: 2px solid #7c6f64; /* gray (light secondary) */
   margin: 16px 0;
 }
 
@@ -1241,7 +1470,7 @@ hr#answer {
 }
 
 .person-block {
-  border: 1px solid #ccc;
+  border: 1px solid #7c6f64; /* gray (light secondary) */
   padding: 0.8em;
   border-radius: 4px;
   text-align: center;
@@ -1249,22 +1478,22 @@ hr#answer {
 
 .pronoun {
   font-weight: bold;
-  color: #0066cc;
+  color: #076678; /* Accent B: blue (light) */
   font-size: 0.9em;
   margin-bottom: 0.4em;
 }
 
 .form {
   font-size: 1.2em;
-  color: #333;
+  color: #3c3836; /* fg1 (light primary) */
 }
 
 .tense-header {
   grid-column: 1 / -1;
   font-weight: bold;
   font-size: 1.1em;
-  color: #555;
-  border-bottom: 2px solid #666;
+  color: #3c3836; /* fg1 (light primary) */
+  border-bottom: 2px solid #3c3836; /* fg1 (light primary) */
   padding-bottom: 0.5em;
   margin-bottom: 0.5em;
   margin-top: 1em;
@@ -1276,6 +1505,28 @@ hr#answer {
   gap: 1em;
   margin: 1em 0;
 }
+
+.source-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #7c6f64; /* gray (light secondary) */
+}
+
+/* Dark mode (Gruvbox dark) */
+.nightMode .card { color: #ebdbb2; background-color: #282828; } /* fg1 dark / bg0 dark */
+.nightMode .source-note { color: #a89984; } /* gray (dark secondary) */
+.nightMode .verb-lemma { color: #b8bb26; } /* green (dark) */
+.nightMode .verb-aspect { color: #a89984; } /* gray (dark secondary) */
+.nightMode .verb-table th { background-color: #3c3836; border-color: #a89984; color: #ebdbb2; } /* bg1 dark / gray dark / fg1 dark */
+.nightMode .verb-table td { border-color: #a89984; } /* gray (dark secondary) */
+.nightMode .section-title { color: #83a598; background-color: #3c3836; } /* Accent B blue dark / bg1 dark */
+.nightMode .verb-prompt { color: #a89984; } /* gray (dark secondary) */
+.nightMode .note-id { color: #a89984; } /* gray (dark secondary) */
+.nightMode hr#answer { border-top-color: #a89984; } /* gray (dark secondary) */
+.nightMode .person-block { border-color: #a89984; } /* gray (dark secondary) */
+.nightMode .pronoun { color: #83a598; } /* Accent B: blue (dark) */
+.nightMode .form { color: #ebdbb2; } /* fg1 (dark primary) */
+.nightMode .tense-header { color: #ebdbb2; border-bottom-color: #a89984; } /* fg1 dark / gray dark */
 """
 
 VERB_FRONT_RECOGNITION = """\
@@ -1364,7 +1615,7 @@ VERB_BACK_RECOGNITION = """\
   </table>
 </details>
 
-{{#Source_Note}}<div style="margin-top:12px; font-size:13px; color:#777;">{{Source_Note}}</div>{{/Source_Note}}
+{{#Source_Note}}<div class="source-note">{{Source_Note}}</div>{{/Source_Note}}
 <div class="note-id">{{NoteID}} · {{Tags_Conj}}</div>
 """
 
