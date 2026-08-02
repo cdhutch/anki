@@ -9,6 +9,9 @@ the full story.
 **Reorganized and refreshed 2026-08-01** (previous version was last substantively updated
 2026-07-22, and its content was reorganized under the old structure without being brought
 current — this pass pulls forward everything material from `CLAUDE.md`'s log since then).
+**Corrected 2026-08-02:** the 2026-08-01 refresh still carried forward a stale claim
+("ch-09.3+ not yet sourced") — see the dated `CLAUDE.md` log entry for 2026-08-02. Fixed
+below (Summary line, Next Actions #2–#3).
 Both domains share one CNSF-markdown-source → AnkiConnect-sync pipeline and the same
 `status:draft` (imports suspended) / `status:verified` (imports active) convention.
 
@@ -24,8 +27,11 @@ Formal Ukrainian language learning content (Galician/Lviv register), sourced fro
 markdown source files under `domains/ua/anki/notes/` and synced via AnkiConnect
 (`tools/anki/setup/setup_ua_note_types.py` / `setup_ua_pvom_note_type.py`, `make ua-setup`
 family of targets). Level 1 ch-00 (Вступ) is complete and verified; Level 2 is in progress
-chapter by chapter (ch-09 imported and polished; ch-08 verification in progress; ch-09.2
-sourced but not yet reviewed; ch-09.3+ not yet sourced).
+chapter by chapter (ch-09 imported and polished; ch-08 verification in progress). Ch-09
+vocabulary (subsections 9.1–9.7, all of it) is fully sourced and `UA_Lexeme`-verified —
+only `ua-lexeme-0369`/`0584`/`0585` remain draft. The linked `UA_Verb` conjugation notes
+(55 of them, `ua-verb-0033`–`0085`) are the real gap: all still `status:draft`, missing
+participles/examples, mostly `stress:unverified`.
 
 ## Current Projects
 
@@ -65,10 +71,16 @@ sourced but not yet reviewed; ch-09.3+ not yet sourced).
 1. Confirm the Gruvbox on-device validation (three-pass walkthrough, `palette-compare-status`
    card specifically) and report back. Any fixes go on `feature/anki-mobile-night-mode`
    (kept alive for exactly this), then PR into `main` again.
-2. Continue sourcing Yabluko L2 ch.9.3 onward (`gen_ch09_subsection.py` is built for this,
-   just not yet exercised on a real batch).
-3. Review/verify the ch.9.2 batch (18 lexemes ua-lexeme-0163–0180 + 5 conjugation notes
-   ua-verb-0033–0037, currently `status:draft`) → flip to `status:verified`, re-sync.
+2. **Corrected 2026-08-02 — no longer accurate, see below.** ~~Continue sourcing Yabluko
+   L2 ch.9.3 onward~~ — all of ch:2.9.1–2.9.7 is already sourced and lexeme-verified.
+   `gen_ch09_subsection.py` remains unexercised on a real batch, but there's no more ch-09
+   vocabulary left to run it against unless a new subsection/chapter is added.
+3. Finish the 55 draft `UA_Verb` conjugation notes (`ua-verb-0033`–`0085`, spanning
+   ch:2.9.2–2.9.7 and a ch:2.8.x batch): Craig is running the Горох stress-verification
+   pass directly (only 0033–0037 and 0086/0087 are currently `stress:verified`); once
+   that lands, fill the required `Participle_Adverbial_Past` field (currently blank on
+   all 55) plus other participles/examples where findable, then flip to `status:verified`
+   and re-sync with `make ua-verb`.
 4. Continue the ch-08 verification pass — write the confirmed confusable-set/aspect-pairing
    decisions into fields once Craig signs off on each.
 5. Work through the 11 flagged notes with Claude (Phase 2 of the flagged-card workflow)

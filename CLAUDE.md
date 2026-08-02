@@ -179,6 +179,22 @@ working" until that pass happens. If validation surfaces fixes, make them on
 `feature/anki-mobile-night-mode` (confirm with `git branch -a`/`git status` that it's
 still there — the merge-commit choice was specifically so it wouldn't need to be
 recreated) and PR that branch into `main` again when ready.
+2026-08-02: **Doc-drift correction — ch-09 vocabulary sourcing was already complete.**
+This doc's "Pending / Next planned work" item 1 (below) and `CLAUDE-active-status.md`
+both still said "ch-09.2 sourced but not yet reviewed, ch-09.3+ not yet sourced" — Craig
+flagged this as wrong for 9.3 specifically, and a full on-disk check confirmed it's wrong
+for the whole chapter: every subsection tag `ch:2.9.1` through `ch:2.9.7` is already
+present across the `ua-lexeme-*` corpus (64/41/120/100/156/79/144 notes respectively),
+and all but 3 of those lexeme notes (`ua-lexeme-0369`, plus the unrelated `0584`/`0585`
+triplet notes) are already `status:verified`, not draft. The real open item is different:
+all 55 `UA_Verb` conjugation notes linked to this vocabulary (`ua-verb-0033`–`0074` for
+ch-09, `ua-verb-0075`–`0085` for a batch of ch-08 verbs) are still `status:draft`, and
+every single one of them has zero `Participle_*` fields and zero `UA_Example`/`EN_Example`
+populated — a uniform gap, not word-specific. Of those 55, only 0033–0037 (5 notes,
+ch:2.9.2) plus `ua-verb-0086`/`0087` (плисти/поплисти) carry `stress:verified`; the other
+48 are `stress:unverified` and still need a Горох pass. Craig is doing that Горох
+verification pass directly rather than via Claude in Chrome (which isn't connected in
+this session). Items 1–2 below corrected to match; see also `CLAUDE-active-status.md`.
 
 ## Workflow Notes
 
@@ -233,6 +249,7 @@ in this repo -- all run by Craig, not Claude:
 | **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
 | **Vocab dedup/homograph audit tooling** | [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) |
 | **Compare card field mapping (homograph vs confusables)** | [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) |
+| **Draft UA_Verb QA worklist (stress + participle/example gaps)** | [CLAUDE-ua-verb-qa-worklist.md](CLAUDE-ua-verb-qa-worklist.md) |
 
 ---
 
@@ -288,16 +305,19 @@ complete:
      through `create_or_link_lexeme()` before it touches disk, so no note can land in the
      corpus by a hand-written-file path that skips the check. Not yet exercised against a
      real ch.9.3+ batch — that's the next actual use of it.
-  1. Continue sourcing and importing UA vocabulary from Yabluko L2 Chapter 9 — subsections
-     9.3 onward. (9.1 sourced, reviewed, verified, and synced. 9.2 sourced, drafted,
-     canonicalized, and synced as `status:draft` — 18 lexemes ua-lexeme-0163–0180 + 5
-     conjugation notes ua-verb-0033–0037.) Keep following the 5 established sourcing rules
-     (Горох verification, verb pairing, phrase+component creation, autonomy, draft-until-
-     reviewed status).
-  2. Craig reviews/validates the ch.9.2 batch and flips `status:draft` → `status:verified`
-     once satisfied, same process used for ch.9.1. Re-sync afterward with `make ua-lexeme`
-     / `make ua-verb`, or the new `make ua` aggregate target (canonicalizes + syncs every
-     UA note type in one pass — see Reference Files).
+  1. **Superseded 2026-08-02 — see the dated log entry above.** Originally scoped as
+     "continue sourcing Yabluko L2 ch.9, subsections 9.3 onward" — this is done. All of
+     ch:2.9.1–2.9.7 is sourced and the `UA_Lexeme` notes are `status:verified` (only
+     `ua-lexeme-0369`/`0584`/`0585` remain draft, pending Craig's review). The real
+     remaining gap in this vein: all 55 linked `UA_Verb` conjugation notes
+     (`ua-verb-0033`–`0085`) are still `status:draft`, missing participles/examples, and
+     mostly `stress:unverified` — Craig is running the Горох verification pass on those
+     directly.
+  2. Once Craig's Горох pass on the draft `UA_Verb` notes lands, apply any stress
+     corrections + fill `Participle_Adverbial_Past` (required per
+     `CLAUDE-ua-verb-design.md`) and other participle/example fields, then Craig
+     reviews and flips `status:draft` → `status:verified`. Re-sync with `make ua-verb`
+     (or `make ua` aggregate) afterward.
   3. **Superseded 2026-08-01 — see the dated log entry above and "Remaining Work" items
      1–3 below, all resolved.** Originally scoped as "get the Solarized palette correct
      and consistent"; Craig's actual objective turned out to be broader (a repo-wide
