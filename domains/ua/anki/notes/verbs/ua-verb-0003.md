@@ -12,7 +12,7 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- stress:unverified
+- stress:verified
 fields:
   NoteID: ua-verb-0003
   Lemma: йти
@@ -22,24 +22,21 @@ fields:
   Pres_1sg: йду́
   Pres_2sg: йде́ш
   Pres_3sg: йде́
-  Pres_1pl: йде́м
+  Pres_1pl: йдемо́
   Pres_2pl: йдете́
   Pres_3pl: йду́ть
   Imperative_2sg: йди́
-  Imperative_1pl: йді́м
+  Imperative_1pl: йді́мо
   Imperative_2pl: йді́ть
-  Past_1sg_m: йшо́в
-  Past_1sg_f: йшла́
-  Past_1sg_n: йшло́
-  Past_3pl: йшли́
+  Past_1sg_m: йшов
+  Past_1sg_f: йшла
+  Past_1sg_n: йшло
+  Past_3pl: йшли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: ''
 ---
 

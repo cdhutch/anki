@@ -12,7 +12,7 @@ tags:
 - phase:2a
 - conj:drill
 - ch:2.9.2
-- stress:unverified
+- stress:verified
 fields:
   NoteID: ua-verb-0001
   Lemma: ходи́ти
@@ -22,20 +22,19 @@ fields:
   Pres_1sg: ходжу́
   Pres_2sg: хо́диш
   Pres_3sg: хо́дить
-  Pres_1pl: хо́дим
+  Pres_1pl: хо́димо
   Pres_2pl: хо́дите
   Pres_3pl: хо́дять
   Imperative_2sg: ходи́
-  Imperative_1pl: ході́м
+  Imperative_1pl: ході́мо
   Imperative_2pl: ході́ть
   Past_1sg_m: ходи́в
   Past_1sg_f: ходи́ла
   Past_1sg_n: ходи́ло
-  Past_1pl: ходи́ли
+  Past_3pl: ходи́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ходя́чи
-  Participle_Passive_Past_m: х́оджений
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: хо́джений
   Participle_Impersonal_Past: хо́джено
   Participle_Adverbial_Past: ходи́вши
   Tags_Conj: class:leader motion:walking phase:2a ch:2.9 conj:drill
