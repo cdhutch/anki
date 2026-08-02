@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - stress:verified
 - status:verified
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0211
   Lemma: вболіва́ти
@@ -28,7 +29,7 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   Lemma_Euphony: уболіва́ти
-  EuphonyNote: ''
+  EuphonyNote: уболіва́ти
   TypingAnswer: вболівати
   UA_Example: Уся сім'я вболівала за українську команду.
   EN_Example: The whole family was rooting for the Ukrainian team.

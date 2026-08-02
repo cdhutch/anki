@@ -28,7 +28,7 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   Lemma_Euphony: уболіва́ти
-  EuphonyNote: ''
+  EuphonyNote: уболіва́ти
   TypingAnswer: вболівати
   UA_Example: Мати вболівала за сина, який довго не дзвонив додому.
   EN_Example: The mother worried for her son, who hadn't called home in a long time.
@@ -46,6 +46,6 @@ fields:
     2026-07-25: Горох''s Словозміна entry tags вболівати/уболівати недоконаний вид only (not
     двовидове), and a differently-spelled candidate (уболіти) 404s. See ua-lexeme-0211''s
     Verification Notes for the full evidence writeup; not repeated here. Content (gloss, example)
-    still needs your review pass before flipping to status:verified.'
+    reviewed and confirmed correct by Craig 2026-08-02; status:verified is accurate.'
 ---
 
