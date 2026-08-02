@@ -167,6 +167,18 @@ synced to live Anki or confirmed on-device.** Next step for Craig: `make ua-setu
 four UA note types) and `make ua-setup-pvom`, then re-run
 `python tools/anki/setup/setup_palette_comparison_demo.py` to pick up the new status-color
 demo card and re-test pass 3 specifically for the red/orange legibility question above.
+2026-08-01: **PR merged to `main`.** The Gruvbox rollout above (`feature/anki-mobile-
+night-mode` → `main`) merged via a regular merge commit (not squash), by design — Craig
+wants to keep committing follow-up fixes to `feature/anki-mobile-night-mode` itself while
+he runs the on-device validation pass described above, then open a clean follow-up PR
+with just the new commits, rather than branching per fix. **The code is now in `main`,
+but on-device validation (the `make ua-setup`/`make ua-setup-pvom` sync, the three-pass
+Day/Night/red-tint walkthrough, and the `palette-compare-status` red/orange check
+specifically) is still outstanding** — nothing above should be read as "confirmed
+working" until that pass happens. If validation surfaces fixes, make them on
+`feature/anki-mobile-night-mode` (confirm with `git branch -a`/`git status` that it's
+still there — the merge-commit choice was specifically so it wouldn't need to be
+recreated) and PR that branch into `main` again when ready.
 
 ## Workflow Notes
 
@@ -323,34 +335,43 @@ distinct from chapter-by-chapter vocabulary sourcing/verification tracked elsewh
 this doc. Roughly in priority order:
 
 1. **Two disagreeing `UA_Lexeme` CSS sources** (found 2026-07-31, see item 3 above) —
-   **Resolved, 2026-08-01.** Decision made: `setup_ua_note_types.py`'s `CSS` constant
-   (plus `GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`) is now the single source of truth for all
-   four live UA note types; `update_legacy_css.py` trimmed to its B737-legacy entries only
-   (`SV_CLOZE_CSS`/`B737_SYSTEMS_CSS`), per Craig's explicit choice. See the 2026-08-01 log
-   entry above.
+   **Resolved, 2026-08-01; merged to `main`.** Decision made: `setup_ua_note_types.py`'s
+   `CSS` constant (plus `GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`) is now the single source of
+   truth for all four live UA note types; `update_legacy_css.py` trimmed to its
+   B737-legacy entries only (`SV_CLOZE_CSS`/`B737_SYSTEMS_CSS`), per Craig's explicit
+   choice. See the 2026-08-01 log entries above.
 2. **`UA_Visual`'s `.night_mode`/`.nightMode` CSS bug** (found 2026-07-23) — **Fixed,
-   2026-08-01.** All 13 occurrences in `VISUAL_CSS` converted to `.nightMode`; the
-   `.night_mode` duplication is intentionally not carried forward into new work (Android
-   isn't one of Craig's devices — see the `.nightMode`/`.night_mode` research in
-   `domains/demo/FINDINGS_AND_TESTING.md`), though it's correctly left alone in the two
-   B737 legacy CSS blocks that keep both selectors for parity.
-3. **`UA_Lexeme` color palette** — **Done, 2026-08-01, delivered to Craig; pending his
-   on-device sync/confirmation.** Superseded Solarized with **Gruvbox** after an on-device
-   A/B/C comparison against Craig's real accessibility need (iOS red-tint Color Filter
-   night mode) — see the 2026-08-01 log entry above for the full palette values and the
-   `domains/demo/README.md` "Palette Comparison Demo" section for the comparison tooling.
-   Rolled out to `CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`, the Compare card, and both
-   typing-feedback scripts (`EN_UA_BACK` here and `setup_ua_pvom_note_type.py`'s
-   `FEEDBACK_SCRIPT`, previously unthemed). Craig still needs to run `make ua-setup` /
-   `make ua-setup-pvom` and confirm on-device, especially the red/orange status colors
-   under the red-tint filter (pass 3) — see `palette-compare-status` in the comparison
-   demo, added specifically for that check.
-4. **`Verb_Conj_Table` field removal** — field blanked corpus-wide 2026-07-22. Steps 3-4
-   of the plan below (strip the field from all CNSF lexeme files, canonicalize, update
-   dependent tooling) done 2026-07-31 on branch `chore/remove-verb-conj-table` — see the
-   "Progress" note under "Verb_Conj_Table Removal Plan (Future)" below. Steps 1-2
-   (inspect live model, back up collection) and step 5 (`modelFieldRemove`) still need
-   Craig, since they require AnkiConnect; step 6 (final verify) pending those.
+   2026-08-01; merged to `main`.** All 13 occurrences in `VISUAL_CSS` converted to
+   `.nightMode`; the `.night_mode` duplication is intentionally not carried forward into
+   new work (Android isn't one of Craig's devices — see the `.nightMode`/`.night_mode`
+   research in `domains/demo/FINDINGS_AND_TESTING.md`), though it's correctly left alone
+   in the two B737 legacy CSS blocks that keep both selectors for parity.
+3. **`UA_Lexeme` color palette** — **Code done and merged to `main`, 2026-08-01;
+   on-device validation still outstanding.** Superseded Solarized with **Gruvbox** after
+   an on-device A/B/C comparison against Craig's real accessibility need (iOS red-tint
+   Color Filter night mode) — see the 2026-08-01 log entries above for the full palette
+   values and the `domains/demo/README.md` "Palette Comparison Demo" section for the
+   comparison tooling. Rolled out to `CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`, the
+   Compare card, and both typing-feedback scripts (`EN_UA_BACK` here and
+   `setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT`, previously unthemed). **Still open:**
+   Craig needs to run `make ua-setup` / `make ua-setup-pvom` and confirm on-device,
+   especially the red/orange status colors under the red-tint filter (pass 3) — see
+   `palette-compare-status` in the comparison demo, added specifically for that check. Any
+   fixes from validation land on `feature/anki-mobile-night-mode` (kept alive after the
+   merge-commit PR for exactly this) and PR into `main` again when ready.
+4. **`Verb_Conj_Table` field removal** — **Resolved, 2026-07-31.** Field blanked
+   corpus-wide 2026-07-22; steps 3-4 of the plan below (strip the field from all 584 CNSF
+   lexeme files, canonicalize, update dependent tooling) done 2026-07-31 on branch
+   `chore/remove-verb-conj-table`. Steps 1 and 5 turned out to be unnecessary —
+   `inspect_ua_lexeme_fields.py` confirmed the live `UA_Lexeme` model never had the field
+   to begin with (already gone before this audit), so there was nothing for
+   `modelFieldRemove`/a collection backup to act on; only the CNSF source files still
+   carried the dead key, which steps 3-4 fixed. Step 6 verification done. Merged to
+   `main` via PR #58 (2026-07-31); branch deleted. See "Verb_Conj_Table Removal Plan"
+   below for the full writeup — no further action needed, this item was previously
+   listed as still requiring Craig's action by mistake (this doc hadn't been updated to
+   match the "Resolved"/"Removal plan is effectively complete" notes already sitting in
+   that section).
 5. **UA→EN front aspect display** — **Done, 2026-07-31**, synced. See "UA→EN front
    aspect display" under Card Template Techniques above.
 6. **Compare-card suspend mechanism** (`set_compare_card_suspended()` in
@@ -423,8 +444,10 @@ restoration (2026-07-28, git archaeology), the UA→EN front aspect display
 (2026-07-31, item 5 above), the Compare-card suspend mechanism test/confirmation
 (2026-08-01, item 6 above), the Flagged Card Fix Workflow tooling
 (2026-08-01, item 8 above), and the CSS single-source-of-truth decision + `.night_mode`
-selector fix + Gruvbox palette rollout (2026-08-01, items 1–3 above — delivered to
-Craig, sync/on-device confirmation still pending).
+selector fix + Gruvbox palette rollout (2026-08-01, items 1–3 above — merged to `main`
+via `feature/anki-mobile-night-mode`; on-device validation still pending, see item 3),
+and the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
+omitted it since item 4 itself was mislabeled as still open; corrected 2026-08-01).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -460,7 +483,7 @@ Craig, sync/on-device confirmation still pending).
 
 **Verb conjugations:** `Verb_Conj_Table` field is being phased out of UA_Lexeme — blanked corpus-wide 2026-07-22 (all ~180 lexeme notes), but the field itself has not yet been removed from the schema/model. Full removal is planned but not yet executed — see "Verb_Conj_Table Removal Plan (Future)" below. Conjugation morphology belongs in the UA_Verb note type as structured fields, one note per lemma's own aspect, linked to the lexeme via matching Lemma text.
 
-### Verb_Conj_Table Removal Plan (Future)
+### Verb_Conj_Table Removal Plan (Complete, 2026-07-31)
 
 **Status:** Planned, not yet executed. Decided 2026-07-22 after clearing all *content* from the
 field on the 18 pre-existing verb lexemes (`ua-lexeme-0114`–`0131`) and the 5 new ch.9.2 verb
@@ -515,7 +538,10 @@ script is stale relative to the live Anki model — **don't trust it as ground t
 migration. Before touching the live model, run `tools/anki/inspect/inspect_ua_lexeme_fields.py` to
 get the actual field list/order straight from AnkiConnect.
 
-**Migration steps:**
+**Migration steps (as originally planned — kept for historical record; see "Progress"/
+"Resolved" above for what actually happened, which diverged in a few places: steps 1/2/5
+turned out unnecessary since the live model never had the field to remove, and step 3's
+scope was 584 files, not the ~180 estimated below):**
 
 1. **Verify live state** (read-only): run `inspect_ua_lexeme_fields.py` to confirm
    `Verb_Conj_Table`'s exact position in the real model and note any other drift from
@@ -547,8 +573,9 @@ get the actual field list/order straight from AnkiConnect.
    `cnsf_canonicalize --check` across the corpus; run `tests/ua/`; spot-check a few `UA_Lexeme`
    cards in the Anki browser (expect zero visual change, since nothing ever rendered this field).
 
-**Not blocking:** the field is already blank everywhere as of 2026-07-22, so there's no urgency —
-this is a cleanup, not a bug fix.
+**Historical note:** this "not blocking" framing applied while the plan was still open —
+kept here for context on why it sat unexecuted for over a week. The removal itself is
+done as of 2026-07-31 (see above).
 
 ### Card Template Techniques
 
