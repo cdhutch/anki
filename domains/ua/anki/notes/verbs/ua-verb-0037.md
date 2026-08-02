@@ -33,12 +33,9 @@ fields:
   Past_3pl: розмина́лися
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: Blank Pres_1sg/Pres_2sg/Pres_1pl/Pres_2pl and all Imperative fields
     reflect Горох's source data directly — the imperfective 'розминатися' has no attested
     1st/2nd-person or imperative forms (shown as '—' on Горох), consistent with its reciprocal

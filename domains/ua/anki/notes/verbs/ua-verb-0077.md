@@ -33,12 +33,9 @@ fields:
   Past_3pl: дотримувались, дотримувалися
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: Reflexive, 1st conjugation. Govs genitive. Perfective дотриматися not
     verified this pass. See lexeme ua-lexeme-0482.
 ---

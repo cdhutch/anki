@@ -33,12 +33,9 @@ fields:
   Past_3pl: били́сь, били́ся
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: Irregular 'бити' root (б'ю-family). See ua-lexeme-0210.
 ---
 
