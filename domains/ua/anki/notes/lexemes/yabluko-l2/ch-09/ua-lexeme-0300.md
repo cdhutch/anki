@@ -17,7 +17,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0300
-  Lemma: перелеті́ти че́рез рі́чку на мотузці́
+  Lemma: перелеті́ти че́рез рі́чку на моту́зці
   PartOfSpeech: verb
   Gender: ''
   Perfective: ''

@@ -14,7 +14,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0111
-  Lemma: Яка́ Ваша профе́сія?
+  Lemma: Яка́ Ва́ша профе́сія?
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
