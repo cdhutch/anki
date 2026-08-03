@@ -33,8 +33,8 @@ fields:
     an irregular epenthesis (у-...-ій-), not a simple concatenation. Caution: входи́ти (stress
     on syllable 2) is a DIFFERENT, unrelated word ("to wear out by prolonged walking") --
     do not confuse with вхо́дити''s perfective. Vehicle forms carry real euphonic variation:
-    Горох cross-references в''їжджати/уїжджати and в''їхати/уїхати as attested variants of
-    each other; вʼї- forms kept as primary (matches this note type''s existing apostrophe-insertion
+    Горох cross-references вʼїжджати/уїжджати and вʼїхати/уїхати as attested variants of each
+    other; вʼї- forms kept as primary (matches this note type''s existing apostrophe-insertion
     convention), у- forms accepted via *_Euphony.'
   Verification_Notes: ''
   Verification Notes: ''

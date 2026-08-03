@@ -21,7 +21,7 @@ fields:
   PartOfSpeech: noun
   Gender: ''
   Perfective: ''
-  EN_Gloss: difficulty level
+  EN_Gloss: level of difficulty
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

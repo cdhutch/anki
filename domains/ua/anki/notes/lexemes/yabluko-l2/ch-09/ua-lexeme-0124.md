@@ -38,12 +38,12 @@ fields:
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4
-  Source_URL: https://goroh.pp.ua/Словозміна/в'їжджати
+  Source_URL: https://goroh.pp.ua/Словозміна/вʼїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md). Needs your review. 2026-07-26:
     added Lemma_Euphony (уїжджа́ти) + Perfective_Euphony (уї́хати) per corpus-wide у/в euphony
-    survey -- Горох Синонімія cross-references confirm в''їжджати/уїжджати and в''їхати/уїхати
+    survey -- Горох Синонімія cross-references confirm вʼїжджати/уїжджати and вʼїхати/уїхати
     as attested variants; both уїжджати and уїхати have their own Горох Словозміна pages;
     stress confirmed уїжджа́ти, уї́хати.'
 ---

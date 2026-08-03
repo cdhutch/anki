@@ -25,10 +25,10 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: "відхо́дити - synonym listed by Горох for the train-departure sense (walking\
-    \ register); PVOM\nprefix від- (ua-pvom-0007) drills відходити/відійти (on foot) and від'їжджати/від'їхати\n\
+    \ register); PVOM\nprefix від- (ua-pvom-0007) drills відходити/відійти (on foot) and відʼїжджати/відʼїхати\n\
     (by vehicle) for everyday departure.\nKey distinction: відправлятися/відправитися is the\
     \ formal, register-neutral word for\ntransportation timetables and announcements (\"поїзд\
-    \ відправляється\") and never specifies\nmode; відходити/відійти and від'їжджати/від'їхати\
+    \ відправляється\") and never specifies\nmode; відходити/відійти and відʼїжджати/відʼїхати\
     \ are the everyday PVOM verbs, and always\nspecify mode (on foot vs by vehicle)."
   Mnemonic_EN: Formal/schedule register, mode unspecified -> відправлятися (timetables, announcements).
     Everyday, on-foot departure -> відходити (PVOM від-, walking family). Pairs with прибувати/приходити
@@ -47,7 +47,7 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: '2026-07-28: added ConfusableSet (відходити) -- Горох''s Синонімія page
     for відправлятися lists відходити as a direct synonym for the train-departure sense (also
-    lists від''їжджати, labeled зап./borrowing); walking form used per Craig''s preference
+    lists відʼїжджати, labeled зап./borrowing); walking form used per Craig''s preference
     for these Compare-card constructions. відходити itself is drilled via PVOM (ua-pvom-0007,
     prefix від-), not a separate Lexeme note. 2026-07-28: completed the Compare card -- added
     CompareScenario + CompareA/CompareB (this note''s existing bare ConfusableSet string was

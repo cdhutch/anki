@@ -35,6 +35,6 @@ fields:
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/лапка
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
-  Verification Notes: Component of phrase ua-lexeme-0563 (жаб'ячі лапки).
+  Verification Notes: Component of phrase ua-lexeme-0563 (жабʼячі лапки).
 ---
 

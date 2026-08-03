@@ -30,7 +30,7 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: хмара
-  UA_Example: На небі з'явилася велика чорна хмара.
+  UA_Example: На небі зʼявилася велика чорна хмара.
   EN_Example: A big black cloud appeared in the sky.
   Tags_Ch: ch:2.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/хмара

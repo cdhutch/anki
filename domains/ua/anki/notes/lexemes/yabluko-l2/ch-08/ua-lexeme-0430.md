@@ -15,7 +15,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0430
-  Lemma: м'яки́й
+  Lemma: мʼяки́й
   PartOfSpeech: adjective
   Gender: ''
   Perfective: ''
@@ -28,11 +28,11 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: м'який
-  UA_Example: Ліжко в номері дуже м'яке.
+  TypingAnswer: мʼякий
+  UA_Example: Ліжко в номері дуже мʼяке.
   EN_Example: The bed in the room is very soft.
   Tags_Ch: ch:2.8.2
-  Source_URL: https://goroh.pp.ua/Словозміна/м'який
+  Source_URL: https://goroh.pp.ua/Словозміна/мʼякий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''
 ---

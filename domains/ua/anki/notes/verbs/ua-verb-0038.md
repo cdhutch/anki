@@ -18,12 +18,12 @@ fields:
   Aspect: imperfective
   VerbClass: reflexive-reciprocal
   FreqSource: ch:2.9
-  Pres_1sg: б'ю́ся, б'юсь
-  Pres_2sg: б'є́шся
-  Pres_3sg: б'є́ться
-  Pres_1pl: б'є́мся, б'ємо́сь, б'ємо́ся
-  Pres_2pl: б'єте́сь, б'єте́ся
-  Pres_3pl: б'ю́ться
+  Pres_1sg: бʼю́ся, бʼюсь
+  Pres_2sg: бʼє́шся
+  Pres_3sg: бʼє́ться
+  Pres_1pl: бʼє́мся, бʼємо́сь, бʼємо́ся
+  Pres_2pl: бʼєте́сь, бʼєте́ся
+  Pres_3pl: бʼю́ться
   Imperative_2sg: би́йся, бийсь
   Imperative_1pl: би́ймось, би́ймося
   Imperative_2pl: би́йтесь, би́йтеся
@@ -39,6 +39,6 @@ fields:
   Participle_Adverbial_Past: ''
   UA_Example: ''
   EN_Example: ''
-  Verification_Notes: Irregular 'бити' root (б'ю-family). See ua-lexeme-0210.
+  Verification_Notes: Irregular 'бити' root (бʼю-family). See ua-lexeme-0210.
 ---
 

@@ -9,6 +9,9 @@ the full story.
 **Reorganized and refreshed 2026-08-01** (previous version was last substantively updated
 2026-07-22, and its content was reorganized under the old structure without being brought
 current — this pass pulls forward everything material from `CLAUDE.md`'s log since then).
+**Corrected 2026-08-02:** the 2026-08-01 refresh still carried forward a stale claim
+("ch-09.3+ not yet sourced") — see the dated `CLAUDE.md` log entry for 2026-08-02. Fixed
+below (Summary line, Next Actions #2–#3).
 Both domains share one CNSF-markdown-source → AnkiConnect-sync pipeline and the same
 `status:draft` (imports suspended) / `status:verified` (imports active) convention.
 
@@ -24,8 +27,11 @@ Formal Ukrainian language learning content (Galician/Lviv register), sourced fro
 markdown source files under `domains/ua/anki/notes/` and synced via AnkiConnect
 (`tools/anki/setup/setup_ua_note_types.py` / `setup_ua_pvom_note_type.py`, `make ua-setup`
 family of targets). Level 1 ch-00 (Вступ) is complete and verified; Level 2 is in progress
-chapter by chapter (ch-09 imported and polished; ch-08 verification in progress; ch-09.2
-sourced but not yet reviewed; ch-09.3+ not yet sourced).
+chapter by chapter (ch-09 imported and polished; ch-08 verification in progress). Ch-09
+vocabulary (subsections 9.1–9.7, all of it) is fully sourced and `UA_Lexeme`-verified —
+only `ua-lexeme-0369`/`0584`/`0585` remain draft. The linked `UA_Verb` conjugation notes
+(55 of them, `ua-verb-0033`–`0085`) are the real gap: all still `status:draft`, missing
+participles/examples, mostly `stress:unverified`.
 
 ## Current Projects
 
@@ -65,10 +71,16 @@ sourced but not yet reviewed; ch-09.3+ not yet sourced).
 1. Confirm the Gruvbox on-device validation (three-pass walkthrough, `palette-compare-status`
    card specifically) and report back. Any fixes go on `feature/anki-mobile-night-mode`
    (kept alive for exactly this), then PR into `main` again.
-2. Continue sourcing Yabluko L2 ch.9.3 onward (`gen_ch09_subsection.py` is built for this,
-   just not yet exercised on a real batch).
-3. Review/verify the ch.9.2 batch (18 lexemes ua-lexeme-0163–0180 + 5 conjugation notes
-   ua-verb-0033–0037, currently `status:draft`) → flip to `status:verified`, re-sync.
+2. **Corrected 2026-08-02 — no longer accurate, see below.** ~~Continue sourcing Yabluko
+   L2 ch.9.3 onward~~ — all of ch:2.9.1–2.9.7 is already sourced and lexeme-verified.
+   `gen_ch09_subsection.py` remains unexercised on a real batch, but there's no more ch-09
+   vocabulary left to run it against unless a new subsection/chapter is added.
+3. Finish the 55 draft `UA_Verb` conjugation notes (`ua-verb-0033`–`0085`, spanning
+   ch:2.9.2–2.9.7 and a ch:2.8.x batch): Craig is running the Горох stress-verification
+   pass directly (only 0033–0037 and 0086/0087 are currently `stress:verified`); once
+   that lands, fill the required `Participle_Adverbial_Past` field (currently blank on
+   all 55) plus other participles/examples where findable, then flip to `status:verified`
+   and re-sync with `make ua-verb`.
 4. Continue the ch-08 verification pass — write the confirmed confusable-set/aspect-pairing
    decisions into fields once Craig signs off on each.
 5. Work through the 11 flagged notes with Claude (Phase 2 of the flagged-card workflow)
@@ -95,6 +107,35 @@ sourced but not yet reviewed; ch-09.3+ not yet sourced).
   That mechanism now appears to cover this need directly; flagging here rather than
   silently dropping it, in case Craig still wants a dedicated note type for some case the
   Compare card doesn't handle.
+- **Confusable set — motion-lexeme cluster** (added 2026-08-03): Craig flagged three
+  related groups needing a Compare-card pass — the `-правлятися`/`-правитися` reflexive
+  verbs together with their `-правлення` noun counterparts, `вирушати`, and the PVOM
+  (Prefixed Verbs of Motion) set. All cluster around similar "set off / depart / direct
+  oneself" motion vocabulary that's easy to confuse.
+- **EN→UA card front — show the English sentence** (added 2026-08-03): if not already the
+  case, EN→UA cards should show the English example sentence on the front rather than just
+  the bare word, so learners can disambiguate EN words that map to multiple distinct UA
+  translations. Needs a check against the current live template to see if this is already
+  true.
+- **ua-lexeme-0106 ("goodbye") needs a Compare Card** (added 2026-08-03): several other UA
+  words also translate to "goodbye" (Craig named папа/бувай as examples) that aren't
+  currently distinguished from `ua-lexeme-0106`. Needs a confusable-set / Compare Card
+  pass to help learners tell them apart.
+- **Compare cards don't need a complete confusable set to start** (design note, added
+  2026-08-03): Craig confirmed it's fine to build a Compare Card from a partial set of
+  lexemes when the genuinely tricky members of a cluster are already known, rather than
+  waiting until every member is sourced first.
+- **UA→EN lexeme verb cards — show multiple aspects per euphonic slot** (added
+  2026-08-03): cards should be able to display more than one aspect form (imperfective/
+  perfective) per euphonic-variant slot, not just one. Relates to the existing "Per-slot
+  euphony tolerance + verb-phrase aspect defaulting" item above — worth reconciling the
+  two when either gets picked up.
+- **Motion verb classes — add an "arriving" category** (added 2026-08-03): incorporate
+  прибува́ти / прибу́ти into the set of "arriving" verbs of motion that need to be tracked
+  and managed like the existing walking/vehicle/swimming/running/flying classes (see the
+  `VerbClass` tags on `ua-verb-*`, e.g. `motion-walking-new`, `motion-vehicle-prefixed`).
+  `ua-verb-0064` (прибувати) currently has `VerbClass: regular-1` — not yet part of that
+  taxonomy — and the perfective прибу́ти doesn't have its own `UA_Verb` note yet.
 
 ## Completed Projects
 
