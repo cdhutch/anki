@@ -29,7 +29,7 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: багатий
-  UA_Example: Це багатий на визначні пам'ятки регіон.
+  UA_Example: Це багатий на визначні памʼятки регіон.
   EN_Example: This is a region rich in landmarks.
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/багатий

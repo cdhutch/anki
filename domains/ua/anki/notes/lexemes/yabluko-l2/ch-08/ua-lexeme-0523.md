@@ -30,7 +30,7 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: шахта
-  UA_Example: Стара соляна шахта стала туристичною визначною пам'яткою.
+  UA_Example: Стара соляна шахта стала туристичною визначною памʼяткою.
   EN_Example: The old salt mine became a tourist attraction.
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/шахта

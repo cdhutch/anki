@@ -30,7 +30,7 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: палиця
-  UA_Example: У народному бою іноді використовують дерев'яну палицю.
+  UA_Example: У народному бою іноді використовують деревʼяну палицю.
   EN_Example: In folk combat a wooden stick is sometimes used.
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/палиця

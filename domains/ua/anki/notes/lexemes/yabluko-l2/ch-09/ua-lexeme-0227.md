@@ -34,7 +34,7 @@ fields:
   UA_Example: Гравець мусить відбивати мʼяч точно в потрібний бік.
   EN_Example: The player has to return the ball precisely in the right direction.
   Tags_Ch: ch:2.9.3
-  Source_URL: https://goroh.pp.ua/Словозміна/відбивати; https://goroh.pp.ua/Словозміна/м'яч
+  Source_URL: https://goroh.pp.ua/Словозміна/відбивати; https://goroh.pp.ua/Словозміна/мʼяч
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
   Verification Notes: '2026-07-28: added AspectCue framing the ongoing/repeated-rally reading

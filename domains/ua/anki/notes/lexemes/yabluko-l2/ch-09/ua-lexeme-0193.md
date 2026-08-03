@@ -30,7 +30,7 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: сітка
-  UA_Example: М'яч влучив прямо в сітку.
+  UA_Example: Мʼяч влучив прямо в сітку.
   EN_Example: The ball hit right into the net.
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/сітка
