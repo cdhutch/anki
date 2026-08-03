@@ -95,6 +95,29 @@ sourced but not yet reviewed; ch-09.3+ not yet sourced).
   That mechanism now appears to cover this need directly; flagging here rather than
   silently dropping it, in case Craig still wants a dedicated note type for some case the
   Compare card doesn't handle.
+- **Confusable set — motion-lexeme cluster** (added 2026-08-03): Craig flagged three
+  related groups needing a Compare-card pass — the `-правлятися`/`-правитися` reflexive
+  verbs together with their `-правлення` noun counterparts, `вирушати`, and the PVOM
+  (Prefixed Verbs of Motion) set. All cluster around similar "set off / depart / direct
+  oneself" motion vocabulary that's easy to confuse.
+- **EN→UA card front — show the English sentence** (added 2026-08-03): if not already the
+  case, EN→UA cards should show the English example sentence on the front rather than just
+  the bare word, so learners can disambiguate EN words that map to multiple distinct UA
+  translations. Needs a check against the current live template to see if this is already
+  true.
+- **ua-lexeme-0106 ("goodbye") needs a Compare Card** (added 2026-08-03): several other UA
+  words also translate to "goodbye" (Craig named папа/бувай as examples) that aren't
+  currently distinguished from `ua-lexeme-0106`. Needs a confusable-set / Compare Card
+  pass to help learners tell them apart.
+- **Compare cards don't need a complete confusable set to start** (design note, added
+  2026-08-03): Craig confirmed it's fine to build a Compare Card from a partial set of
+  lexemes when the genuinely tricky members of a cluster are already known, rather than
+  waiting until every member is sourced first.
+- **UA→EN lexeme verb cards — show multiple aspects per euphonic slot** (added
+  2026-08-03): cards should be able to display more than one aspect form (imperfective/
+  perfective) per euphonic-variant slot, not just one. Relates to the existing "Per-slot
+  euphony tolerance + verb-phrase aspect defaulting" item above — worth reconciling the
+  two when either gets picked up.
 
 ## Completed Projects
 
