@@ -195,6 +195,32 @@ ch:2.9.2) plus `ua-verb-0086`/`0087` (плисти/поплисти) carry `stre
 48 are `stress:unverified` and still need a Горох pass. Craig is doing that Горох
 verification pass directly rather than via Claude in Chrome (which isn't connected in
 this session). Items 1–2 below corrected to match; see also `CLAUDE-active-status.md`.
+2026-08-03: **UA_Verb schema cleanup shipped; ua-verb-0001–0016 stress-verified.**
+Building on the 2026-08-02 finding above: `Participle_Passive_Past_m`/`_f` merged into a
+single `Participle_Passive_Past` field (schema + both Recognition/Production card
+templates in `setup_ua_note_types.py`); a pre-existing `Past_1pl`/`Past_3pl` field-name
+mismatch fixed (86 of 87 CNSF notes already used `Past_3pl`, but the live schema still
+declared `Past_1pl` — AnkiConnect silently drops unmatched field names, so the plural-past
+form had likely never synced). The vestigial `UA_Example`/`EN_Example` fields (Craig:
+"these fields are appropriate to Lexeme, not Verb conjugation") were removed corpus-wide,
+all 86 instances confirmed blank before removal. Craig completed a full Горох
+stress-verification pass on `ua-verb-0001`–`0016`, including several rounds of real fixes
+caught along the way: missing stem syllables (`плавати`'s `-ва-` had been dropped across
+its whole present/imperative paradigm), cross-verb paradigm contamination where one verb's
+forms had been copied from a phonetically-similar sibling (`пливти`/`попливти` vs.
+`плинути`; `бігти`/`побігти` vs. `бігати`; `летіти`/`полетіти`'s past-tense stem and
+`Pres_3pl`), the Горох `-м`-vs-standard-`-мо` first-person-plural quirk, and `Lemma` stress
+marks per the updated convention (stress-differentiated aspect pairs like
+`виклика́ти`/`ви́кликати` are why `Lemma` now carries stress). All 71 remaining draft notes
+(`ua-verb-0017`–`0087`) got the mechanical schema cleanup (participle merge, Example-field
+removal) but have **not** yet been through the stress-verification pass — still
+`stress:unverified`. Work is on `chore/ua-verb-participle-merge-and-stress-pass` (4
+commits: doc-drift fix, schema fix, 0001–0016 verification, 0017–0087 mechanical cleanup),
+confirmed conflict-free against `main` but intentionally not yet PR'd — Craig is
+continuing the stress-verification pass on this branch before merging. Separately,
+`lexeme-review` was renamed to `maint/lexeme-review` (already fully merged into `main` via
+PR #62; kept alive going forward as a persistent maintenance branch rather than a one-shot
+feature branch, matching the existing `maint/` convention from `maint/b737-core-rename`).
 
 ## Workflow Notes
 
@@ -203,7 +229,11 @@ This repo builds and maintains Anki flashcard decks across three top-level decks
 - **B737** (`domains/b737/`) — type rating study. CNSF markdown notes exported
   to TSV and imported via AnkiConnect. High-stakes professional content.
 - **UA** (`domains/ua/`) — formal language learning (Galician/Lviv
-  register, Яблуко textbook). Active branch `feature/ua-domain`.
+  register, Яблуко textbook). Active work is currently split across
+  `chore/ua-verb-participle-merge-and-stress-pass` (UA_Verb stress-verification pass, not
+  yet merged) and `maint/lexeme-review` (persistent maintenance branch, currently at parity
+  with `main`) — see the 2026-08-03 log entry below. `feature/ua-domain` no longer exists
+  as a branch (confirmed via `git branch -a` 2026-08-03) — this reference was stale.
   See `domains/ua/anki/docs/design.md` for full schema and migration plan.
 - **Legacy** — archive of older decks. Being systematically migrated or archived.
 
@@ -255,7 +285,9 @@ in this repo -- all run by Craig, not Claude:
 
 ## Ukrainian Domain (`domains/ua/`)
 
-**Branch:** `feature/ua-domain` (based off `main`)
+**Branch:** `feature/ua-domain` no longer exists (see Workflow Notes above). Current work:
+`chore/ua-verb-participle-merge-and-stress-pass` (based off `main`, not yet merged) and
+`maint/lexeme-review` (persistent maintenance branch, based off `main`).
 
 **Status (as of 2026-07-22):** Вступ (ch-00) complete — 113 notes live, stress verified, examples added.
 Book 2 Ch. 9 (`feature/ua-verb-phase2a` branch) imported and polished — 7-item punch list
@@ -313,11 +345,18 @@ complete:
      (`ua-verb-0033`–`0085`) are still `status:draft`, missing participles/examples, and
      mostly `stress:unverified` — Craig is running the Горох verification pass on those
      directly.
-  2. Once Craig's Горох pass on the draft `UA_Verb` notes lands, apply any stress
-     corrections + fill `Participle_Adverbial_Past` (required per
-     `CLAUDE-ua-verb-design.md`) and other participle/example fields, then Craig
-     reviews and flips `status:draft` → `status:verified`. Re-sync with `make ua-verb`
-     (or `make ua` aggregate) afterward.
+  2. **Updated 2026-08-03 — see the dated log entry above.** 16 of the 87 `UA_Verb`
+     conjugation notes (`ua-verb-0001`–`0016`) are now Горох stress-verified, with the
+     schema/field cleanup (participle merge, `Past_3pl` fix, Example-field removal)
+     applied corpus-wide to all 87. The remaining 71 (`ua-verb-0017`–`0087`) still need
+     the same Горох stress-verification pass Craig is running directly. Once a batch
+     lands: apply stress corrections, fill `Participle_Adverbial_Past` (required per
+     `CLAUDE-ua-verb-design.md`) and other participle fields where findable, then flip
+     `status:draft` → `status:verified` and re-sync with `make ua-setup-verb` (schema)
+     + `make ua-verb` (content). All of this is happening on
+     `chore/ua-verb-participle-merge-and-stress-pass`, confirmed conflict-free against
+     `main` (`git merge-tree` check, 2026-08-03) but intentionally not yet PR'd until the
+     verification pass is further along.
   3. **Superseded 2026-08-01 — see the dated log entry above and "Remaining Work" items
      1–3 below, all resolved.** Originally scoped as "get the Solarized palette correct
      and consistent"; Craig's actual objective turned out to be broader (a repo-wide
