@@ -26,12 +26,13 @@ CANON_ANKI_KEYS = ["model", "deck"]
 # Ukrainian apostrophe (апостроф) normalization. U+02BC MODIFIER LETTER APOSTROPHE
 # is the Ukrainian National Academy's recommended character for this letter (e.g.
 # м'який) -- it's a distinct letter in Ukrainian orthography, not punctuation.
-# Source text sometimes has the curly single-quote apostrophe (U+2019) instead.
-# Normalize U+2019 -> U+02BC only when it sits directly between two Cyrillic
-# characters, so ordinary curly-quote punctuation in non-Ukrainian text (English
-# possessives/contractions, quoted strings, etc.) is left untouched.
+# Source text sometimes has the curly single-quote apostrophe (U+2019) or a plain
+# straight apostrophe (U+0027) instead. Normalize either -> U+02BC only when it
+# sits directly between two Cyrillic characters, so ordinary apostrophe/quote
+# punctuation in non-Ukrainian text (English possessives/contractions, quoted
+# strings, etc.) is left untouched.
 UA_APOSTROPHE_TARGET = "ʼ"
-_UA_APOSTROPHE_SOURCE_RE = re.compile(r"(?<=[Ѐ-ӿ])’(?=[Ѐ-ӿ])")
+_UA_APOSTROPHE_SOURCE_RE = re.compile(r"(?<=[Ѐ-ӿ])['’](?=[Ѐ-ӿ])")
 
 
 def normalize_ukrainian_apostrophes(text: str) -> str:
