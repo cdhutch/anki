@@ -16,7 +16,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0496
-  Lemma: якщо говори́ти про
+  Lemma: якщо́ говори́ти про
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
