@@ -33,12 +33,9 @@ fields:
   Past_3pl: розмі́щували
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: Pairs with perfective розмісти́ти. See ua-lexeme-0289.
 ---
 

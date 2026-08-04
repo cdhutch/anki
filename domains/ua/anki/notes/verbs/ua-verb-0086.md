@@ -12,7 +12,7 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- stress:verified
+- stress:unverified
 - status:draft
 fields:
   NoteID: ua-verb-0086
@@ -23,11 +23,11 @@ fields:
   Pres_1sg: пливу́
   Pres_2sg: пливе́ш
   Pres_3sg: пливе́
-  Pres_1pl: пливе́м, пливемо́
+  Pres_1pl: пливемо́
   Pres_2pl: пливете́
   Pres_3pl: пливу́ть
   Imperative_2sg: пливи́
-  Imperative_1pl: пливі́м, пливі́мо
+  Imperative_1pl: пливі́мо
   Imperative_2pl: пливі́ть
   Past_1sg_m: плив
   Past_1sg_f: плила́

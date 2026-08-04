@@ -12,7 +12,7 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- stress:verified
+- stress:unverified
 - status:draft
 fields:
   NoteID: ua-verb-0087
@@ -23,11 +23,11 @@ fields:
   Pres_1sg: попливу́
   Pres_2sg: попливе́ш
   Pres_3sg: попливе́
-  Pres_1pl: попливе́м, попливемо́
+  Pres_1pl: попливемо́
   Pres_2pl: попливете́
   Pres_3pl: попливу́ть
   Imperative_2sg: попливи́
-  Imperative_1pl: попливі́м, попливі́мо
+  Imperative_1pl: попливі́мо
   Imperative_2pl: попливі́ть
   Past_1sg_m: попли́в
   Past_1sg_f: поплила́

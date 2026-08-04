@@ -33,12 +33,9 @@ fields:
   Past_3pl: розво́дили
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: Non-reflexive, 2nd conjugation. Горох does not surface a perfective
     partner on this page. See lexeme ua-lexeme-0520.
 ---

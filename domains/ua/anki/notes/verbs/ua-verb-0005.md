@@ -11,34 +11,31 @@ tags:
 - phase:2a
 - conj:drill
 - ch:2.9.2
-- stress:unverified
+- stress:verified
 fields:
   NoteID: ua-verb-0005
-  Lemma: їздити
+  Lemma: ї́здити
   Aspect: imperfective
   VerbClass: motion-vehicle-habitual
   FreqSource: ch:2.9
-  Pres_1sg: їжджу́
-  Pres_2sg: їзди́ш
-  Pres_3sg: їзди́ть
-  Pres_1pl: їзди́м
-  Pres_2pl: їзди́те
-  Pres_3pl: їзді́ть
-  Imperative_2sg: їзди́
-  Imperative_1pl: їзди́мо
-  Imperative_2pl: їзди́те
-  Past_1sg_m: їзди́в
-  Past_1sg_f: їзди́ла
-  Past_1sg_n: їзди́ло
-  Past_3pl: їзди́ли
+  Pres_1sg: ї́жджу
+  Pres_2sg: ї́здиш
+  Pres_3sg: ї́здить
+  Pres_1pl: ї́здимо
+  Pres_2pl: ї́здите
+  Pres_3pl: ї́здять
+  Imperative_2sg: їздь
+  Imperative_1pl: ї́здьмо
+  Imperative_2pl: ї́здьте
+  Past_1sg_m: ї́здив
+  Past_1sg_f: ї́здила
+  Past_1sg_n: ї́здило
+  Past_3pl: ї́здили
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
-  Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
+  Participle_Adverbial_Present: ї́здячи
+  Participle_Passive_Past: ї́жджений
+  Participle_Impersonal_Past: ї́жджено
+  Participle_Adverbial_Past: ї́здивши
   Verification_Notes: ''
 ---
 

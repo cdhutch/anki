@@ -33,12 +33,9 @@ fields:
   Past_3pl: заночува́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: Perfective; Pres_* fields hold the future-tense forms Горох lists (standard
     for perfective verbs). No attested direct imperfective pair -- see ua-lexeme-0333.
 ---
