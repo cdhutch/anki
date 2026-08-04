@@ -33,12 +33,9 @@ fields:
   Past_3pl: завдава́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: 'Perfective: завда́ти. Irregular davaty-family stress shift, same pattern
     as ''вигравати''. See ua-lexeme-0215.'
 ---

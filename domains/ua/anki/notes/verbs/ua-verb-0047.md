@@ -33,12 +33,9 @@ fields:
   Past_3pl: перекида́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: 'Perfective: переки́нути. Lemma is the ''перекида́ти'' (kidaty bahato
     u kilka pryjomiv -- toss repeatedly) sense, stress-distinct from the perfective ''переки́дати''
     (toss over/topple) homograph -- see ua-lexeme-0219.'

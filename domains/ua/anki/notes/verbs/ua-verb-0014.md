@@ -11,34 +11,31 @@ tags:
 - phase:2a
 - conj:drill
 - ch:2.9.2
-- stress:unverified
+- stress:verified
 fields:
   NoteID: ua-verb-0014
-  Lemma: літати
+  Lemma: літа́ти
   Aspect: imperfective
   VerbClass: motion-flying-new
   FreqSource: ch:2.9
-  Pres_1sg: лі́таю
-  Pres_2sg: лі́таєш
-  Pres_3sg: лі́тає
-  Pres_1pl: лі́таєм
-  Pres_2pl: лі́таєте
-  Pres_3pl: лі́тають
-  Imperative_2sg: лі́тай
-  Imperative_1pl: лі́тайме
-  Imperative_2pl: лі́тайте
-  Past_1sg_m: лі́тав
-  Past_1sg_f: лі́тала
-  Past_1sg_n: лі́тало
-  Past_3pl: лі́тали
-  Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Pres_1sg: літа́ю
+  Pres_2sg: літа́єш
+  Pres_3sg: літа́є
+  Pres_1pl: літа́єм
+  Pres_2pl: літа́єте
+  Pres_3pl: літа́ють
+  Imperative_2sg: літа́й
+  Imperative_1pl: літа́ймо
+  Imperative_2pl: літа́йте
+  Past_1sg_m: літа́в
+  Past_1sg_f: літа́ла
+  Past_1sg_n: літа́ло
+  Past_3pl: літа́ли
+  Participle_Active_Present: літа́ючий
+  Participle_Adverbial_Present: літа́ючи
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
+  Participle_Adverbial_Past: літа́вши
   Verification_Notes: ''
 ---
 

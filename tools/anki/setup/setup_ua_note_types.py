@@ -1488,12 +1488,11 @@ VERB_FIELDS = [
     "Past_1sg_m",
     "Past_1sg_f",
     "Past_1sg_n",
-    "Past_1pl",
-    # Participles (6 forms)
+    "Past_3pl",
+    # Participles (5 forms)
     "Participle_Active_Present",
     "Participle_Adverbial_Present",
-    "Participle_Passive_Past_m",
-    "Participle_Passive_Past_f",
+    "Participle_Passive_Past",
     "Participle_Impersonal_Past",
     "Participle_Adverbial_Past",
     # Metadata
@@ -1705,7 +1704,7 @@ VERB_BACK_RECOGNITION = """\
   </div>
   <div class="person-block">
     <div class="pronoun">мн. (ми/ви/вони)</div>
-    <div class="form">{{Past_1pl}}</div>
+    <div class="form">{{Past_3pl}}</div>
   </div>
 </div>
 
@@ -1730,8 +1729,7 @@ VERB_BACK_RECOGNITION = """\
   <table class="verb-table">
     <tr><td>Act. Pres.</td><td>{{Participle_Active_Present}}</td></tr>
     <tr><td>Adv. Pres.</td><td>{{Participle_Adverbial_Present}}</td></tr>
-    <tr><td>Pass. Past (м.)</td><td>{{Participle_Passive_Past_m}}</td></tr>
-    <tr><td>Pass. Past (ж.)</td><td>{{Participle_Passive_Past_f}}</td></tr>
+    <tr><td>Pass. Past</td><td>{{Participle_Passive_Past}}</td></tr>
     <tr><td>Impersonal</td><td>{{Participle_Impersonal_Past}}</td></tr>
     <tr><td>Adv. Past</td><td>{{Participle_Adverbial_Past}}</td></tr>
   </table>
@@ -1853,7 +1851,7 @@ VERB_BACK_PRODUCTION_PAST = """\
   </div>
   <div class="person-block">
     <div class="pronoun">мн. (ми/ви/вони)</div>
-    <div class="form">{{Past_1pl}}</div>
+    <div class="form">{{Past_3pl}}</div>
   </div>
 </div>
 <div class="note-id">{{NoteID}}</div>
@@ -1920,18 +1918,12 @@ VERB_FRONT_PRODUCTION_PARTICIPLES = """\
     <div class="form">_______</div>
   </div>
   {{/Participle_Adverbial_Present}}
-  {{#Participle_Passive_Past_m}}
+  {{#Participle_Passive_Past}}
   <div class="person-block">
-    <div class="pronoun">Pass. Past (м.)</div>
+    <div class="pronoun">Pass. Past</div>
     <div class="form">_______</div>
   </div>
-  {{/Participle_Passive_Past_m}}
-  {{#Participle_Passive_Past_f}}
-  <div class="person-block">
-    <div class="pronoun">Pass. Past (ж.)</div>
-    <div class="form">_______</div>
-  </div>
-  {{/Participle_Passive_Past_f}}
+  {{/Participle_Passive_Past}}
   {{#Participle_Impersonal_Past}}
   <div class="person-block">
     <div class="pronoun">Impersonal</div>
@@ -1965,18 +1957,12 @@ VERB_BACK_PRODUCTION_PARTICIPLES = """\
     <div class="form">{{Participle_Adverbial_Present}}</div>
   </div>
   {{/Participle_Adverbial_Present}}
-  {{#Participle_Passive_Past_m}}
+  {{#Participle_Passive_Past}}
   <div class="person-block">
-    <div class="pronoun">Pass. Past (м.)</div>
-    <div class="form">{{Participle_Passive_Past_m}}</div>
+    <div class="pronoun">Pass. Past</div>
+    <div class="form">{{Participle_Passive_Past}}</div>
   </div>
-  {{/Participle_Passive_Past_m}}
-  {{#Participle_Passive_Past_f}}
-  <div class="person-block">
-    <div class="pronoun">Pass. Past (ж.)</div>
-    <div class="form">{{Participle_Passive_Past_f}}</div>
-  </div>
-  {{/Participle_Passive_Past_f}}
+  {{/Participle_Passive_Past}}
   {{#Participle_Impersonal_Past}}
   <div class="person-block">
     <div class="pronoun">Impersonal</div>

@@ -33,12 +33,9 @@ fields:
   Past_3pl: звари́лись, звари́лися
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification_Notes: Reflexive perfective; imperfective partner варитися. Pres_* fields hold
     the perfective future here (standard corpus convention). See lexeme ua-lexeme-0501.
 ---

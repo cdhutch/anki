@@ -44,6 +44,26 @@ participles/examples, mostly `stress:unverified`.
   especially whether the `palette-compare-status` demo card's red/orange status colors
   hold up under the red-tint filter. Treat this as "shipped, not yet validated" until
   that's reported back.
+- **Per-slot euphony tolerance/display + EN→UA example sentence** (structural queue items
+  #3/#4/#5) — code complete and unit-tested on `feature/ua-lexeme-aspect-euphony-cards`
+  (2026-08-04): new `Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony`/
+  `Perfective_Euphony`/`_EuphonySlots`/`_UA_EN_DisplayLemma` fields, per-slot tolerance in
+  `EN_UA_BACK`'s feedback script, `EN_Example` added to `EN_UA_FRONT`. 12/12 new tests pass
+  (`tests/ua/test_lexeme_import.py`, `TestComputeEuphonySlots`/`TestComputeUaEnDisplay`).
+  **Not yet confirmed:** `make ua-setup-lexeme`/`make ua-lexeme` haven't been run and no
+  card has been eyeballed in Anki yet — same "shipped, not yet validated" status as the
+  Gruvbox item above, until spot-checked.
+- **Two pre-existing `tests/ua/test_lexeme_import.py` failure groups found 2026-08-04,
+  parked** (unrelated to the euphony work above): `TestComputeTypingTarget` (8 failures)
+  tests the shelved 2026-07-25 `Lemma_Euphony` redesign (`881ac25`/`2e93202`, dict-returning
+  `compute_typing_target()`) that was reverted back to the simpler `a5b4a15` design by
+  2026-07-28 — the test file was never updated to match. `TestPruneOrphansSafetyGate`
+  (5 failures) references `prune_orphans`/`collect_all_corpus_note_ids`/
+  `all_anki_note_ids`/`delete_notes`, none of which exist anywhere in the repo
+  (grep-confirmed) — the same "`prune_orphans` gap" already flagged in passing on
+  2026-07-31 (see the `Verb_Conj_Table` Removal Plan section in `CLAUDE.md`). Both branch
+  and `main` sit at the `maint/lexeme-review` merge (PR #63) — likely source of both
+  mismatches, not yet investigated.
 - **Ch-08 lexeme verification** (started 2026-07-30, ua-lexeme-044x–049x range) is
   mid-flight: a punch list of 6 confusable-set candidates, 1 aspect-pairing gap
   (0482 дотримуватися missing its `Perfective`), and 1 open usage question were raised.
@@ -55,16 +75,31 @@ participles/examples, mostly `stress:unverified`.
 - **11 flagged notes** exist in the corpus. The audit/fix tooling (`ua_flag_audit.py`,
   Phase 1 query + Phase 3 apply) is built and tested; Phase 2 (the actual interactive
   walkthrough with Claude) hasn't happened yet.
-- **ua-verb-0009/0010** have conjugation-table data that belongs to a different verb
-  family than their own Lemma — found 2026-07-31, correct paradigms already sit in
-  ua-verb-0086/0087's Verification Notes, fix held for a separate pass per Craig.
-  Same for **CLAUDE.md item 10**: `UA_Grammar` 0001–0007 predate the 2026-07-22
-  atomicity/no-leak cloze principles and haven't been audited against them.
-  Same for two small 2026-07-22 loose ends that were never explicitly closed out in the
-  log since: (a) none of the 18 ch-09 lexemes ever got their `conj:motion-walking-*` /
-  `conj:motion-vehicle-*` linking tags (confirmed 0/18 as of 2026-07-22, no later
-  confirmation found); (b) the `UA::Production::EN→UA` ch-00 deck-routing count was
-  flagged as "likely fixed, not yet verified" and never explicitly re-checked.
+- **Dangling branch `archive/ua-verb-participle-merge-and-stress-pass` found 2026-08-04**
+  (see CLAUDE.md item 13 under "Remaining Work"). A locally-deleted branch, still live as
+  `origin/chore/ua-verb-participle-merge-and-stress-pass` (`f907726`), holds a real
+  stress-verification pass across all 87 `ua-verb-*.md` notes plus a
+  `Participle_Passive_Past_m`/`_f` → single-field schema consolidation, none of it merged
+  to `main`. Per Craig, its verified content is truth — already applied to `ua-verb-0009`/
+  `0010` (see Completed Projects). Tag command given to Craig, not yet run:
+  `git tag archive/ua-verb-participle-merge-and-stress-pass f907726 && git push origin
+  archive/ua-verb-participle-merge-and-stress-pass`. Full reconciliation (0086/0087's
+  -мо-only sweep, the participle-field schema migration, the remaining 0002–0087 data) is
+  still open — see Future Projects.
+- **Two-branch plan for today's #3/#4/#5 + conjugation work (per Craig):** structure and
+  content stay on separate branches, not just separate commits.
+  `feature/ua-lexeme-aspect-euphony-cards` stays scoped to the #3/#4/#5 code/tests only;
+  a second, stacked branch (working name
+  `content/ua-motion-verb-euphony-and-conjugation-fixes`) carries `ua-lexeme-0581`/`0584`,
+  `ua-verb-0009`/`0010`, and the matching CLAUDE.md/CLAUDE-active-status.md doc hunks.
+  Exact commands given to Craig; not yet run.
+- **CLAUDE.md item 10**: `UA_Grammar` 0001–0007 predate the 2026-07-22 atomicity/no-leak
+  cloze principles and haven't been audited against them. Also two small 2026-07-22 loose
+  ends that were never explicitly closed out in the log since: (a) none of the 18 ch-09
+  lexemes ever got their `conj:motion-walking-*` / `conj:motion-vehicle-*` linking tags
+  (confirmed 0/18 as of 2026-07-22, no later confirmation found); (b) the
+  `UA::Production::EN→UA` ch-00 deck-routing count was flagged as "likely fixed, not yet
+  verified" and never explicitly re-checked.
 
 ### Next Actions
 
@@ -85,18 +120,37 @@ participles/examples, mostly `stress:unverified`.
    decisions into fields once Craig signs off on each.
 5. Work through the 11 flagged notes with Claude (Phase 2 of the flagged-card workflow)
    whenever you're ready.
-6. Apply the ua-verb-0009/0010 conjugation-table fix using the paradigms already sourced
-   on ua-verb-0086/0087.
+6. ~~Apply the ua-verb-0009/0010 conjugation-table fix~~ — **Done 2026-08-04.** See
+   Completed Projects below.
 7. Review `status:draft` content pending verification: ua-lexeme-0581–0585 (motion-verb
    triplets), ua-verb-0086/0087 (плисти/поплисти).
 8. Decide whether to revisit `UA_Grammar` 0001–0007 against the atomicity principles, and
    whether the two 2026-07-22 loose ends above (motion-verb tagging, EN→UA deck-routing
    count) still need checking.
+9. Confirm the #3/#4/#5 on-device validation (per-slot euphony tolerance/display + EN→UA
+   example sentence, `feature/ua-lexeme-aspect-euphony-cards`): run `make ua-setup-lexeme`
+   then `make ua-lexeme`, spot-check 0115 (входити/увійти) and 0124 (уїжджати/уїхати) for
+   the new per-slot euphony behavior, 0581 (ходити/йти/піти, no-euphony control) to confirm
+   no regression, and the `EN_UA_FRONT` example-sentence addition on any note with a
+   populated `EN_Example`.
+10. Troubleshoot the two pre-existing `tests/ua/test_lexeme_import.py` failure groups
+    parked 2026-08-04 (see Current Findings above and the 2026-08-04 `CLAUDE.md` log
+    entry) — likely both trace back to the `maint/lexeme-review` merge (PR #63).
+11. Run the two-branch commit sequence for today's #3/#4/#5 + conjugation work (commands
+    given in conversation), then the `archive/ua-verb-participle-merge-and-stress-pass`
+    tag + push commands, so the dangling commit can't be lost.
+12. Plan and execute the full reconciliation of `archive/ua-verb-participle-merge-and-stress-pass`
+    into `main` — see CLAUDE.md item 13 under "Remaining Work" for the three open pieces
+    (0086/0087 -мо-only sweep, `Participle_Passive_Past` schema migration, remaining
+    0002–0087 conjugation-data check).
 
 ## Future Projects
 
 - **Per-slot euphony tolerance + verb-phrase aspect defaulting** — fully scoped with Craig
-  2026-07-29, not built. See "Card Template Techniques" in `CLAUDE.md`.
+  2026-07-29. **Item 1 (per-slot tolerance) code-complete 2026-08-04**, see Current Findings
+  above and Next Action #9 — not yet on-device validated. Item 2 (verb-phrase aspect
+  defaulting) is authoring guidance only ("no new field"), still not acted on. See "Card
+  Template Techniques" in `CLAUDE.md`.
 - **Extending the Gruvbox palette to B737** — explicitly out of scope for the 2026-08-01
   rollout (UA-only, CSS-only per Craig's instruction); an open decision if wanted later.
 - **`domains/ua/anki/docs/design.md` refresh** — stale relative to the live schema
@@ -112,11 +166,10 @@ participles/examples, mostly `stress:unverified`.
   verbs together with their `-правлення` noun counterparts, `вирушати`, and the PVOM
   (Prefixed Verbs of Motion) set. All cluster around similar "set off / depart / direct
   oneself" motion vocabulary that's easy to confuse.
-- **EN→UA card front — show the English sentence** (added 2026-08-03): if not already the
-  case, EN→UA cards should show the English example sentence on the front rather than just
-  the bare word, so learners can disambiguate EN words that map to multiple distinct UA
-  translations. Needs a check against the current live template to see if this is already
-  true.
+- **EN→UA card front — show the English sentence** (added 2026-08-03). **Code-complete
+  2026-08-04** — confirmed this was genuinely missing (not already-true); `EN_UA_FRONT` now
+  shows `EN_Example`, see Current Findings above and Next Action #9. Not yet on-device
+  validated.
 - **ua-lexeme-0106 ("goodbye") needs a Compare Card** (added 2026-08-03): several other UA
   words also translate to "goodbye" (Craig named папа/бувай as examples) that aren't
   currently distinguished from `ua-lexeme-0106`. Needs a confusable-set / Compare Card
@@ -126,10 +179,12 @@ participles/examples, mostly `stress:unverified`.
   lexemes when the genuinely tricky members of a cluster are already known, rather than
   waiting until every member is sourced first.
 - **UA→EN lexeme verb cards — show multiple aspects per euphonic slot** (added
-  2026-08-03): cards should be able to display more than one aspect form (imperfective/
-  perfective) per euphonic-variant slot, not just one. Relates to the existing "Per-slot
-  euphony tolerance + verb-phrase aspect defaulting" item above — worth reconciling the
-  two when either gets picked up.
+  2026-08-03). **Code-complete 2026-08-04**, reconciled with the "Per-slot euphony
+  tolerance" item above via a new, deliberately separate `_UA_EN_DisplayLemma` field (kept
+  apart from `TypingTarget_UA` so the EN→UA typing target never grows parentheticals) — see
+  Current Findings above and Next Action #9. The parenthetical display format
+  (`"primary (euphonic)"`) was Claude's naming/format call, not yet confirmed by Craig — flag
+  for feedback during the on-device spot-check.
 - **Motion verb classes — add an "arriving" category** (added 2026-08-03): incorporate
   прибува́ти / прибу́ти into the set of "arriving" verbs of motion that need to be tracked
   and managed like the existing walking/vehicle/swimming/running/flying classes (see the
@@ -139,6 +194,20 @@ participles/examples, mostly `stress:unverified`.
 
 ## Completed Projects
 
+- **ua-verb-0009/0010 conjugation-table fix** (2026-08-04): both notes were populated with
+  a different verb's paradigm (`0009`/пливти had плинути's forms; `0010`/попливти had
+  попити's) — found 2026-07-31, fixed today. `0009` used the already-Горох-verified
+  paradigm sourced alongside `ua-verb-0086` (плисти) on 2026-07-31; `0010` needed its own
+  fresh Горох lookup (попливти́, goroh.pp.ua/Словозміна/попливти), fetched live via Claude
+  in Chrome since `ua-verb-0087`'s 2026-07-31 sourcing only covered поплисти itself, not
+  попливти. Both now `stress:verified`. Confirms the same present/imperative-identical,
+  past-divergent pattern holds for попливти/поплисти as for пливти/плисти. **Reconciled
+  further, same day**, against a dangling commit (`f907726`,
+  `archive/ua-verb-participle-merge-and-stress-pass`, see Current Findings below) treated
+  as source of truth per Craig: added missing `Lemma` stress marks, and simplified
+  `Pres_1pl`/`Imperative_1pl` to the -мо-only form (project convention now — both -м/-мо
+  free variants are Горох-valid, this is a "one canonical form" choice, not a correctness
+  fix). `0009` also picked up `Participle_Adverbial_Present: пливучи́` from the same source.
 - Ch-00 (Вступ, Level 1): 113 notes, `status:verified`.
 - Ch-09 (Level 2) motion-verb polish: full 7-item punch list complete, imported, synced
   (18 `UA_Lexeme`, 9 `UA_Grammar`, 9 `UA_Visual`, 11 `UA_PVOM_Infinitive` × 4 templates,

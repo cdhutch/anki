@@ -11,34 +11,31 @@ tags:
 - phase:2a
 - conj:drill
 - ch:2.9.2
-- stress:unverified
+- stress:verified
 fields:
   NoteID: ua-verb-0016
-  Lemma: полетіти
+  Lemma: полеті́ти
   Aspect: perfective
   VerbClass: motion-flying-new
   FreqSource: ch:2.9
   Pres_1sg: полечу́
   Pres_2sg: полети́ш
   Pres_3sg: полети́ть
-  Pres_1pl: полети́м
-  Pres_2pl: полети́те
-  Pres_3pl: політі́ть
+  Pres_1pl: полетимо́
+  Pres_2pl: полетите́
+  Pres_3pl: полетя́ть
   Imperative_2sg: полети́
-  Imperative_1pl: полети́мо
-  Imperative_2pl: полети́те
-  Past_1sg_m: полета́в
-  Past_1sg_f: полета́ла
-  Past_1sg_n: полета́ло
-  Past_3pl: полета́ли
+  Imperative_1pl: полеті́мо
+  Imperative_2pl: полеті́ть
+  Past_1sg_m: полеті́в
+  Past_1sg_f: полеті́ла
+  Past_1sg_n: полеті́ло
+  Past_3pl: полеті́ли
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
+  Participle_Adverbial_Past: полеті́вши
   Verification_Notes: ''
 ---
 

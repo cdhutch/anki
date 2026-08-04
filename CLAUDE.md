@@ -179,6 +179,118 @@ working" until that pass happens. If validation surfaces fixes, make them on
 `feature/anki-mobile-night-mode` (confirm with `git branch -a`/`git status` that it's
 still there — the merge-commit choice was specifically so it wouldn't need to be
 recreated) and PR that branch into `main` again when ready.
+2026-08-04: **UA_Lexeme per-slot euphony tolerance/display + EN→UA example sentence**
+(branch `feature/ua-lexeme-aspect-euphony-cards`, based off `main` at the `maint/lexeme-
+review` merge, PR #63). Implemented three items from the structural (non-lexeme-content)
+task queue: (1) `EN_UA_FRONT` now shows `EN_Example` for context (was back-only) — confirmed
+this was genuinely missing, not already-true as the 2026-08-03 note had left open; deduped
+the now-redundant `EN_Example` line from `EN_UA_BACK`'s ref-divider, matching the existing
+`UA_Example`/`UA_EN_FRONT` precedent from 2026-07-28. (2) Per-slot euphony tolerance: new
+`Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony`/`Perfective_Euphony` fields wire up
+euphony data that already existed in 7 CNSF notes (0115, 0124, 0153, 0211, 0281, 0377, 0379,
+from a 2026-07-26 corpus survey) but was never synced to the live model — dead data until
+now. `EN_UA_BACK`'s feedback script now evaluates each aspect slot independently (PERFECT/
+CORRECT/INCORRECT per-slot, via new `_EuphonySlots` field) instead of only matching the
+whole compound `TypingTarget_UA` string, mirroring `UA_PVOM_Infinitive`'s already-working
+single-slot version of the same pattern (`setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT`).
+`EuphonyNote` remains a fallback for singlet notes authored before the per-slot fields
+existed. Item 2 of the original per-slot-euphony plan (verb-phrase aspect defaulting) is
+authoring guidance only ("no new field, authoring discipline"), not implemented as code.
+(3) New `_UA_EN_DisplayLemma` field shows euphonic alternates inline on the UA→EN
+Recognition front (e.g. "вхо́дити / уві́йти (ввійти́)"), deliberately kept separate from
+`TypingTarget_UA` so the EN→UA typing target never grows parentheticals — Claude's proposed
+answer to the 2026-08-03 "worth reconciling the two" note, flagged to Craig as a naming/
+format decision rather than assumed settled.
+Added 12 new unit tests (`tests/ua/test_lexeme_import.py`, `TestComputeEuphonySlots` +
+`TestComputeUaEnDisplay`) covering real corpus cases (0115/0124-style doublets, singlet
+legacy-`EuphonyNote` fallback, singlet with its own `*_Euphony` field, defensive
+unpopulated-slot cases) — all 12 pass, confirmed independently in both Claude's sandbox and
+Craig's local run.
+**Two pre-existing test failures found and parked, unrelated to this work:** running the
+full `tests/ua/test_lexeme_import.py` file surfaces 13 failures that predate this session
+(confirmed identical on both Claude's sandbox and Craig's machine). (a) `TestComputeTypingTarget`
+(8 failures) tests the shelved 2026-07-25 `Lemma_Euphony` redesign (`881ac25`/`2e93202` —
+dict-returning `compute_typing_target()` with `"full"`/`"base"`/`"alt"` keys, `" ; "`-joined
+primary+euphonic forms requiring both to be typed together) that this log's 2026-07-28 entry
+documents as fully reverted back to the simpler `a5b4a15` tolerance-only design — the one
+live today, and the one item (2) above builds on. The test file was apparently never updated
+when the redesign was abandoned. (b) `TestPruneOrphansSafetyGate` (5 failures) references
+`prune_orphans`/`collect_all_corpus_note_ids`/`all_anki_note_ids`/`delete_notes`, none of
+which exist anywhere in `ua_lexeme_import.py` or elsewhere in the repo (grep-confirmed) —
+this is the same "`prune_orphans` gap" already flagged in passing on 2026-07-31 (see the
+`Verb_Conj_Table` Removal Plan section above), not something new. Both branch and `main` sit
+at the `maint/lexeme-review` merge (PR #63) — the likely source of both mismatches (test
+file changes merged without matching source changes, or vice versa) — not yet investigated
+further. See `CLAUDE-active-status.md` Next Actions for the troubleshooting task.
+**Status: code + tests complete, not yet synced to live Anki or on-device validated.** Next:
+`make ua-setup-lexeme` + `make ua-lexeme`, then spot-check 0115/0124/0581 and the
+`EN_UA_FRONT` example-sentence change in Anki.
+2026-08-04 (continued): **0581/0584 spot-check follow-up + ua-verb-0009/0010 fix.** Craig's
+spot-check of 0581 (ходити/йти/піти) surfaced a real alternate typing answer, "ходи́ти / іти́
+/ піти́" -- йти/іти are free-variant headworks for the same unidirectional imperfective, per
+Craig a euphonic (semi-vowel і~й) mutation, same family as the і/й "and" alternation already
+cited in 0581's own `EuphonyNote`, not a separate category needing new fields. Populated the
+new per-slot `ImperfectiveUnidirectional_Euphony` field on 0581 (`іти́`) and on 0584
+(плавати/пливти/попливти triplet, `плисти́` -- same situation, already documented in its own
+`EuphonyNote` from 2026-07-31, parallel to 0581's). Checked 0582/0583/0585 (їздити/літати/
+бігати triplets) for the same pattern -- none found. Both notes' typing/display now use the
+#3/#5 mechanism live rather than the previously-inert `EuphonyNote` prose.
+Separately, Craig flagged that пливти and плисти need their own `UA_Verb` conjugation notes
+since their present tense is identical but past tense diverges -- already true structurally
+(`ua-verb-0009`/`0086` for пливти/плисти, `ua-verb-0010`/`0087` for попливти/поплисти), but
+this surfaced that `ua-verb-0009`/`0010`'s stored conjugation data was still the wrong-verb
+mismatch found and held open 2026-07-31 (see "Remaining Work" item 11, now resolved). Fixed
+both: `0009` (пливти) used the paradigm already Горох-verified and documented in `0086`'s
+Verification Notes (present/imperative identical to плисти: пливу́/пливе́ш/пливе́/пливе́м,
+пливемо́/пливете́/пливу́ть, пливи́/пливі́м,пливі́мо/пливі́ть; past divergent: плив/пливла́/
+пливло́/пливли́). `0010` (попливти) needed fresh sourcing -- `0087`'s 2026-07-31 session had
+only verified поплисти itself, not попливти -- fetched live via Claude in Chrome once
+reconnected mid-session (goroh.pp.ua/Словозміна/попливти): попливу́/попливе́ш/попливе́/
+попливе́м,попливемо́/попливете́/попливу́ть, попливи́/попливі́м,попливі́мо/попливі́ть (turn out
+identical to `0087`/поплисти, confirming the same present/imperative-identical pattern),
+past попли́в/попливла́/попливло́/попливли́ (masc stressed here, two syllables, unlike пливти's
+unstressed monosyllabic плив). Both notes flipped `stress:unverified` → `stress:verified`.
+**Status: all four lexeme/verb note fixes written to Craig's checkout, not yet
+canonicalized/synced.** Next: `make ua-lexeme-fix` + `make ua-lexeme` (0581/0584), then
+`make ua-verb-fix` + `make ua-verb` (0009/0010), then re-check in Anki.
+2026-08-04 (continued further): **Craig decided synthetic future tense stays out of `UA_Verb`**
+(formation is close to 100% procedural for imperfective verbs -- see "Future tense --
+deliberately not a stored field" under Card Template Techniques above for the full note).
+**Found a dangling commit with real, independently-authored `ua-verb-0009`/`0010` conjugation
+data, predating today's fix.** Craig recalled deleting a branch with "a lot of conjugation
+verifications" — reflog search found `f907726`, still live as
+`origin/chore/ua-verb-participle-merge-and-stress-pass` (dated 2026-08-02: "Verify stress for
+ua-verb-0001-0016," "Merge Participle_Passive_Past_m/_f into one field; fix Past_1pl/Past_3pl
+mismatch," touching all 87 `ua-verb-*.md` notes plus `setup_ua_note_types.py`) — tag command
+given to Craig: `git tag archive/ua-verb-participle-merge-and-stress-pass f907726` +
+`git push origin archive/ua-verb-participle-merge-and-stress-pass` (not yet run as of this
+writing). Diffed that commit's `ua-verb-0009`/`0010` against today's fix and cross-checked both
+live against Горох. Two real findings: (1) today's fix had left `Lemma` unstressed
+(`пливти`/`попливти`) — the dangling branch had it right (`пливти́`/`попливти́`); corrected here,
+since an unstressed multisyllable lemma is this project's own documented red flag for a bad
+extraction. (2) Горох confirms `Pres_1pl`/`Imperative_1pl` genuinely have free-variant short
+(-м) and full (-мо) forms for both verbs (e.g. `пливе́м, пливемо́` / `пливі́м, пливі́мо`) — today's
+fix had stored both variants, the dangling branch stores only the -мо form. **Per Craig: "anything
+verified from `archive/ua-verb-participle-merge-and-stress-pass` is truth"** — so the -мо-only
+form is the adopted project convention (not a correctness question; both forms are valid
+Ukrainian, this is a "store one canonical form" choice), and `0009`/`0010`'s `Pres_1pl`/
+`Imperative_1pl` were simplified to match (`пливемо́`/`пливі́мо`, `попливемо́`/`попливі́мо`).
+Also adopted the dangling branch's `Participle_Adverbial_Present: пливучи́` on `0009` (was
+blank; `0010` correctly stays blank, попливти being perfective). **Open follow-ups, deferred to
+a full reconciliation of the dangling branch (not attempted here — it also touches
+`setup_ua_note_types.py`, which conflicts with today's #3/#4/#5 structural work on the same
+file):** whether `ua-verb-0086`/`0087` (плисти/поплисти, sourced 2026-07-31) need the same
+-мо-only simplification — they still carry dual-variant `Pres_1pl`/`Imperative_1pl`; and the
+dangling branch's `Participle_Passive_Past_m`/`_f` → single-field schema consolidation, not yet
+applied to the live model. **Branching decision (per Craig): keep structure and content on
+separate branches, not just separate commits on one branch.** `feature/ua-lexeme-aspect-euphony-cards`
+stays scoped to the #3/#4/#5 code + tests only (`setup_ua_note_types.py`, `ua_lexeme_import.py`,
+`tests/ua/test_lexeme_import.py`, plus only the CLAUDE.md/CLAUDE-active-status.md hunks
+describing that code). A second branch, stacked on top after that commit (working name
+`content/ua-motion-verb-euphony-and-conjugation-fixes`), carries the lexeme/verb content:
+`ua-lexeme-0581`/`0584`'s new `ImperfectiveUnidirectional_Euphony` values, `ua-verb-0009`/`0010`'s
+conjugation fix, the Future-tense doc note, and the dangling-branch/-мо-convention material
+above. Exact commands given to Craig in the same session; not yet run.
 
 ## Workflow Notes
 
@@ -423,17 +535,30 @@ this doc. Roughly in priority order:
     no-self-leak/no-cross-cloze-substring-leak principles established 2026-07-22 (see
     "Cloze note design principles" below) and haven't been audited against them.
     Needs a decision on whether to revisit.
-11. **ua-verb-0009/0010 conjugation-table data mismatch** (found 2026-07-31, held for
-    a separate pass per Craig) — both notes' stored `Pres_*`/`Imperative_*`/`Past_*`
-    fields don't match their own `Lemma` (пливти/попливти); the data instead matches
-    a different verb family (плинути/попити-adjacent forms). Both are tagged
-    `stress:unverified`, so this looks like a pre-existing authoring mix-up, not
-    something introduced by today's ua-verb-0086/0087 (плисти/поплисти) additions —
-    see those notes' `Verification Notes` for the Горох-verified correct paradigms to
-    fix 0009/0010 against, once Craig gives the go-ahead. Still open.
+11. **ua-verb-0009/0010 conjugation-table data mismatch** — **Resolved 2026-08-04.** See
+    the dated log entry below for the fix; kept here for the historical record of how the
+    bug was found (2026-07-31, both notes' stored `Pres_*`/`Imperative_*`/`Past_*` fields
+    matched a different verb family — плинути/попити-adjacent forms — instead of their own
+    `Lemma`, пливти/попливти).
 12. **New content pending Craig's `status:draft` → `status:verified` review**:
     ua-lexeme-0581–0585 (base motion-verb triplets: ходити/їздити/літати/плавати/
     бігати) and ua-verb-0086/0087 (плисти/поплисти), both drafted 2026-07-31.
+13. **Proper reconciliation of `archive/ua-verb-participle-merge-and-stress-pass`** (found
+    2026-08-04 — see the dated log entry above). A locally-deleted branch, still live as
+    `origin/chore/ua-verb-participle-merge-and-stress-pass` (commit `f907726`, tagged for
+    safekeeping), contains a real stress-verification pass across all 87 `ua-verb-*.md` notes
+    (0001–0016 explicitly) plus a `Participle_Passive_Past_m`/`_f` → single-field schema
+    consolidation in `setup_ua_note_types.py`/the live `UA_Verb` model — none of it merged into
+    `main`. Per Craig, this branch's verified content is treated as truth: already applied to
+    `ua-verb-0009`/`0010` (Lemma stress marks, -мо-only `Pres_1pl`/`Imperative_1pl` convention,
+    `0009`'s `Participle_Adverbial_Present`). Still open: (a) sweep the same -мо-only
+    convention across `ua-verb-0086`/`0087` and, once the full branch is reconciled, the rest
+    of the 87-note corpus; (b) decide and execute the `Participle_Passive_Past_m`/`_f` →
+    single-field migration (a live-model change, not just data) — this conflicts with
+    2026-08-04's #3/#4/#5 changes to `setup_ua_note_types.py`, so needs careful merge/review,
+    not a blind branch merge; (c) reconcile the branch's other 0002–0087 conjugation data
+    against what's live now, in case more notes carry the same kind of pre-existing corruption
+    ua-verb-0009/0010 had.
 
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
@@ -1178,6 +1303,14 @@ python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
 **Participles policy:**
 - **Adverbial past participle** (е.g., робивши) — *required*; useful for reading comprehension
 - **Passive participle** (e.g., робленный) — *optional*; include if standard/common, else blank
+
+**Future tense — deliberately not a stored field (decided 2026-08-04, per Craig).** Horox's
+Словозміна pages show a distinct synthetic future for imperfective verbs (e.g. плисти́ →
+плисти́му/плисти́меш/плисти́ме/плисти́мем,плисти́мемо/плисти́мете/плисти́муть) that `UA_Verb`
+has never had a field for. Confirmed intentional, not a gap: formation is close to 100%
+procedural (infinitive stem + му/меш/еш/etc.) for any imperfective verb, so it doesn't need
+per-verb storage or drilling the way genuinely irregular forms (present/imperative/past)
+do. Don't add a `Future`/`Fut_*` field family without Craig revisiting this decision.
 
 **UA_Verb sequencing** — *501 Ukrainian Verbs* (book) used as breadth/coverage map, not a to-do list.
 
