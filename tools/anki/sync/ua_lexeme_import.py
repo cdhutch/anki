@@ -249,6 +249,85 @@ def compute_typing_target(lemma: str, impf_uni: str, perfective: str) -> tuple[s
     return stressed, unstressed
 
 
+def compute_euphony_slots(
+    lemma: str,
+    impf_uni: str,
+    perfective: str,
+    lemma_euphony: str,
+    impf_uni_euphony: str,
+    perfective_euphony: str,
+    euphony_note: str,
+) -> str:
+    """Build the per-slot euphony-alternate string for EN_UA_BACK's answer-
+    side typing tolerance (added 2026-08-04, CLAUDE.md "Per-slot euphony
+    tolerance").
+
+    Positionally aligned with compute_typing_target()'s " / " join -- same
+    populated-slot filter/order (Lemma, then ImperfectiveUnidirectional, then
+    Perfective, each included only if populated). Each slot's own *_Euphony
+    field is authoritative when populated; a slot with none contributes an
+    empty segment (still counted, so positions stay aligned with
+    TypingTarget_UA's slots on the JS side).
+
+    Fallback for true singlets (exactly one populated slot) authored before
+    the per-slot fields existed: if that one slot has no *_Euphony of its
+    own, fall back to the legacy whole-note EuphonyNote value -- this is how
+    EuphonyNote behaved before this function existed, so those notes don't
+    silently lose the tolerance they already had.
+
+    Returns '' when nothing applies (no euphony data anywhere on the note).
+    """
+    slots = [
+        (lemma, lemma_euphony),
+        (impf_uni, impf_uni_euphony),
+        (perfective, perfective_euphony),
+    ]
+    populated = [(base, alt) for base, alt in slots if base]
+    if not populated:
+        return ""
+    if len(populated) == 1 and not populated[0][1] and euphony_note:
+        return euphony_note
+    if not any(alt for _, alt in populated):
+        return ""
+    return " / ".join(alt for _, alt in populated)
+
+
+def compute_ua_en_display(
+    lemma: str,
+    impf_uni: str,
+    perfective: str,
+    lemma_euphony: str,
+    impf_uni_euphony: str,
+    perfective_euphony: str,
+) -> str:
+    """Build _UA_EN_DisplayLemma for the UA->EN Recognition card front
+    (added 2026-08-04, CLAUDE.md "UA->EN lexeme verb cards -- show multiple
+    aspects per euphonic slot").
+
+    Same populated-slot join as compute_typing_target() (Lemma, then
+    ImperfectiveUnidirectional, then Perfective, each only if populated), but
+    each slot's own *_Euphony alternate -- if that specific slot has one --
+    is shown inline in parentheses, e.g. "уві́йти (ввійти́)". Deliberately
+    kept separate from TypingTarget_UA/compute_typing_target(): that field
+    must stay a pure, exact-match typing target for the EN->UA card's
+    {{type:...}}, so it can never grow parentheticals. When no slot has a
+    euphonic alternate, this renders identically to TypingTarget_UA's own
+    stressed join -- i.e. no visible change on notes without per-slot
+    euphony data.
+    """
+    slots = [
+        (lemma, lemma_euphony),
+        (impf_uni, impf_uni_euphony),
+        (perfective, perfective_euphony),
+    ]
+    parts = []
+    for base, alt in slots:
+        if not base:
+            continue
+        parts.append(f"{base} ({alt})" if alt else base)
+    return " / ".join(parts)
+
+
 def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[str, str]:
     """Decide display order for the Compare card's "X or Y?" prompt.
 
@@ -311,6 +390,36 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     else:
         fields["TypingTarget_UA"] = fields.get("Lemma", "")
         # TypingAnswer left as authored in the CNSF file for singlets.
+
+    # Per-slot euphony tolerance data for EN_UA_BACK's answer-side script
+    # (added 2026-08-04, CLAUDE.md "Per-slot euphony tolerance"). Positionally
+    # aligned with TypingTarget_UA's " / " join -- see compute_euphony_slots
+    # docstring.
+    fields["_EuphonySlots"] = compute_euphony_slots(
+        fields.get("Lemma", ""),
+        fields.get("ImperfectiveUnidirectional", ""),
+        fields.get("Perfective", ""),
+        fields.get("Lemma_Euphony", ""),
+        fields.get("ImperfectiveUnidirectional_Euphony", ""),
+        fields.get("Perfective_Euphony", ""),
+        fields.get("EuphonyNote", ""),
+    )
+
+    # UA->EN Recognition card front display (added 2026-08-04, CLAUDE.md
+    # "UA->EN lexeme verb cards -- show multiple aspects per euphonic slot").
+    # Same aspect-slot join as TypingTarget_UA, but with per-slot euphonic
+    # alternates shown inline -- see compute_ua_en_display docstring. Always
+    # computed, even for non-verb/singlet notes, where it just renders as
+    # Lemma (optionally with Lemma_Euphony), matching TypingTarget_UA's own
+    # fallback for those notes.
+    fields["_UA_EN_DisplayLemma"] = compute_ua_en_display(
+        fields.get("Lemma", ""),
+        fields.get("ImperfectiveUnidirectional", ""),
+        fields.get("Perfective", ""),
+        fields.get("Lemma_Euphony", ""),
+        fields.get("ImperfectiveUnidirectional_Euphony", ""),
+        fields.get("Perfective_Euphony", ""),
+    )
 
     # Compare card prompt: vary which word (Lemma vs ConfusableSet) is named first
     # (confusables only). For homographs, CompareA/B are authored Ukrainian sentences

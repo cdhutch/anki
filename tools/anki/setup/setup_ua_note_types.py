@@ -36,12 +36,24 @@ FIELDS = [
 
     # Core Lemma & Morphology
     "Lemma",
+
+    # Lemma_Euphony: hand-authored, optional. в-/у- (or similar) phonological
+    # alternate spelling of Lemma itself, e.g. "уболіва́ти" alongside Lemma
+    # "вболіва́ти". Per-slot companion to Lemma -- see
+    # ImperfectiveUnidirectional_Euphony/Perfective_Euphony below for the
+    # other two aspect slots. Added 2026-08-04 (per-slot euphony tolerance +
+    # display, CLAUDE.md "Per-slot euphony tolerance"); the field key itself
+    # already existed in several CNSF source files from a 2026-07-26 corpus
+    # survey but was never wired into the model/import script until now.
+    "Lemma_Euphony",
     "PartOfSpeech",
     "Gender",
 
     # Aspect (Perfective & Imperfective variants)
     "Perfective",
+    "Perfective_Euphony",  # per-slot euphonic alternate for Perfective, e.g. увійти́ / ввійти́
     "ImperfectiveUnidirectional",  # Motion verbs: іти, їхати (directional IPFV)
+    "ImperfectiveUnidirectional_Euphony",  # per-slot euphonic alternate for ImperfectiveUnidirectional
 
     # _AspectLabel: Internal marker, populated by import script (never hand-
     # authored). "(pf.)" or "(impf.)" for a verb note that's a true aspectual
@@ -50,6 +62,23 @@ FIELDS = [
     # on the UA->EN Recognition card front -- see UA_EN_FRONT below. Added
     # 2026-07-31 per Craig.
     "_AspectLabel",
+
+    # _UA_EN_DisplayLemma: Internal marker, populated by import script (never
+    # hand-authored). Per-slot display join for the UA->EN Recognition card
+    # front -- same populated-slot set as TypingTarget_UA (Lemma, then
+    # ImperfectiveUnidirectional, then Perfective, each only if populated),
+    # but with each slot's own *_Euphony alternate shown inline in
+    # parentheses when that specific slot has one (e.g. "ходи́ти / йти /
+    # уві́йти (ввійти́)"), rather than a single whole-note EuphonyNote value.
+    # Deliberately a SEPARATE field from TypingTarget_UA rather than adding
+    # parentheticals to that field directly -- TypingTarget_UA must stay a
+    # pure, exact-match typing target for the EN->UA card's {{type:...}};
+    # this is a second render over the same source fields (Lemma/
+    # ImperfectiveUnidirectional/Perfective/*_Euphony), not a second
+    # independently-authored value. See compute_ua_en_display() in
+    # ua_lexeme_import.py. Added 2026-08-04 per Craig (CLAUDE.md "UA->EN
+    # lexeme verb cards -- show multiple aspects per euphonic slot").
+    "_UA_EN_DisplayLemma",
 
     # AspectCue: hand-authored, optional. For a verb/phrase note that types
     # only ONE aspect (no populated Perfective/ImperfectiveUnidirectional, so
@@ -82,6 +111,15 @@ FIELDS = [
     "Homograph_SenseA",  # EN sense for CompareA (homographs only)
     "Homograph_SenseB",  # EN sense for CompareB (homographs only)
     "CrossLang_Analog",
+
+    # EuphonyNote: free-text descriptive note (bare alternate spelling(s) or
+    # explanatory prose). As of 2026-08-04, no longer the primary source for
+    # EN->UA typing-tolerance on multi-slot (doublet/triplet) verb notes --
+    # that's now driven per-slot by Lemma_Euphony/
+    # ImperfectiveUnidirectional_Euphony/Perfective_Euphony (see
+    # _EuphonySlots below). Still used as a fallback for true singlet notes
+    # authored before the per-slot fields existed -- see
+    # compute_euphony_slots() in ua_lexeme_import.py.
     "EuphonyNote",
 
     # Typing & Examples
@@ -92,6 +130,15 @@ FIELDS = [
     # hand-authored. Restored 2026-07-28 (git archaeology, commit a5b4a15).
     "TypingTarget_UA",
     "TypingAnswer",
+
+    # _EuphonySlots: Internal marker, populated by import script (never
+    # hand-authored). Positionally aligned with TypingTarget_UA's " / " join
+    # (same populated-slot order/filter) -- each slot's own accepted
+    # euphonic alternate(s), pipe-delimited within a slot. Drives per-slot
+    # typing tolerance on the EN->UA card's answer-side feedback script (see
+    # compute_euphony_slots() in ua_lexeme_import.py and EN_UA_BACK below).
+    # Added 2026-08-04.
+    "_EuphonySlots",
     "UA_Example",
     "EN_Example",
 
@@ -460,17 +507,22 @@ details.conj-wrap[open] summary::before {
 
 # Template 1: UA → EN  (Recognition: see Ukrainian, recall English)
 UA_EN_FRONT = """\
-<!-- Lemma line uses TypingTarget_UA (2026-07-31, per Craig), not a hand-built
-     Lemma/Perfective join: TypingTarget_UA already computes the full stressed
-     aspect set for doublets/triplets (e.g. "ходи́ти / йти / піти́"), all as
-     one string in the same .lemma div/font -- see compute_typing_target() in
-     ua_lexeme_import.py. Previously this line only ever showed Lemma and
-     Perfective, silently dropping ImperfectiveUnidirectional for motion-verb
-     triplets. _AspectLabel adds a small "(pf.)"/"(impf.)" tag for true
-     singlets only (doublets/triplets already show their range via the slash
-     join, so no tag is needed there) -- see _AspectLabel's FIELDS comment
-     and import_note() for how it's derived. -->
-<div class="lemma">{{TypingTarget_UA}}{{#_AspectLabel}} <span class="aspect-label">{{_AspectLabel}}</span>{{/_AspectLabel}}</div>
+<!-- Lemma line uses _UA_EN_DisplayLemma (2026-08-04, per Craig -- supersedes
+     the 2026-07-31 TypingTarget_UA reuse), not TypingTarget_UA directly:
+     _UA_EN_DisplayLemma is a second render over the same source fields
+     (Lemma/ImperfectiveUnidirectional/Perfective, plus each slot's own
+     *_Euphony alternate), so a slot with a documented в-/у- euphonic
+     variant shows both forms inline (e.g. "уві́йти (ввійти́)") instead of
+     silently only showing the primary spelling. TypingTarget_UA itself is
+     left untouched -- it must stay a pure, exact-match typing target for
+     the EN->UA card's {{type:...}}, so it never grows parentheticals; when
+     no slot has a euphonic alternate, _UA_EN_DisplayLemma renders
+     identically to TypingTarget_UA. See compute_ua_en_display() in
+     ua_lexeme_import.py. _AspectLabel adds a small "(pf.)"/"(impf.)" tag for
+     true singlets only (doublets/triplets already show their range via the
+     slash join, so no tag is needed there) -- see _AspectLabel's FIELDS
+     comment and import_note() for how it's derived. -->
+<div class="lemma">{{_UA_EN_DisplayLemma}}{{#_AspectLabel}} <span class="aspect-label">{{_AspectLabel}}</span>{{/_AspectLabel}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
 <!-- UA_Example on front (2026-07-28, per Craig): show the example sentence
      for context on the Recognition (UA->EN) card, not just the bare
@@ -503,6 +555,15 @@ UA_EN_BACK = """\
 EN_UA_FRONT = """\
 <div class="gloss">{{EN_Gloss}}</div>
 <div class="pos">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
+<!-- EN_Example on front (2026-08-04, per Craig -- CLAUDE.md "EN->UA card
+     front -- show the English sentence"): several distinct UA words can map
+     to the same EN_Gloss (e.g. multiple words for "goodbye"), so the bare
+     gloss alone can under-specify which UA translation is actually wanted.
+     Showing the English example sentence gives the same disambiguating
+     context UA_EN_FRONT already gets from UA_Example (added 2026-07-28).
+     Deduped the now-redundant EN_Example line from EN_UA_BACK's
+     ref-divider below, matching that same UA_EN_FRONT/BACK precedent. -->
+{{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 <!-- AspectCue: optional, only for notes where the EN->UA typing target is a
      single aspect and it isn't otherwise obvious which one from EN_Gloss
      alone. Styled to match the Compare card's distractor chips (font-size:
@@ -529,8 +590,16 @@ EN_UA_FRONT = """\
 EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<!-- Color-coded typing feedback with dual validation -->
-<div id="feedback" data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}" data-euphony="{{EuphonyNote}}" style="margin-bottom: 16px;"></div>
+<!-- Color-coded typing feedback with dual validation.
+     data-euphony-slots (2026-08-04, replaces the old whole-note
+     data-euphony="{{EuphonyNote}}" attribute): _EuphonySlots is positionally
+     aligned with TypingTarget_UA's " / " join, one segment per populated
+     aspect slot -- see compute_euphony_slots() in ua_lexeme_import.py and
+     CLAUDE.md "Per-slot euphony tolerance". A true singlet note with no
+     per-slot *_Euphony authored still gets its legacy whole-note EuphonyNote
+     value here, via that same Python function's fallback -- so this one
+     attribute covers both the new per-slot case and the old singlet case. -->
+<div id="feedback" data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}" data-euphony-slots="{{_EuphonySlots}}" style="margin-bottom: 16px;"></div>
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
@@ -541,16 +610,22 @@ EN_UA_BACK = """\
   // silently fails for otherwise-correct accented answers.
   var targetWithStress = (feedback.dataset.withStress || '').normalize('NFC');
   var targetNoStress = (feedback.dataset.noStress || '').normalize('NFC');
-
-  // EuphonyNote: bare alternate spelling(s), '|'-delimited, e.g. "уболівати"
-  // as an accepted alternate for вболівати. Stress-strip (combining acute
-  // U+0301) both sides before comparing -- EuphonyNote values are stored
-  // unstressed, but a student may type the alternate's own stress mark.
   function stripStress(s) { return s.replace(/́/g, ''); }
-  var euphonyAlts = (feedback.dataset.euphony || '')
-    .split('|')
-    .map(function(s) { return stripStress(s.trim().normalize('NFC')); })
-    .filter(Boolean);
+
+  // Per-slot euphony alternates (2026-08-04): split the same way
+  // TypingTarget_UA was joined (" / ", one segment per populated aspect
+  // slot -- Lemma, then ImperfectiveUnidirectional, then Perfective). Each
+  // slot's own alternate(s) are '|'-delimited within that slot's segment.
+  var stressSlots = targetWithStress ? targetWithStress.split(' / ') : [];
+  var noStressSlots = targetNoStress ? targetNoStress.split(' / ') : [];
+  var euphonySlotsRaw = (feedback.dataset.euphonySlots || '').normalize('NFC');
+  var euphonySlots = euphonySlotsRaw ? euphonySlotsRaw.split(' / ') : [];
+  function euphonyAltsForSlot(i) {
+    return (euphonySlots[i] || '')
+      .split('|')
+      .map(function(s) { return stripStress(s.trim()); })
+      .filter(Boolean);
+  }
 
   // Anki's own type-answer field replaces the front's <input> with a #typeans
   // diff (spans classed typeGood/typeBad/typeMissed) once the answer side
@@ -583,49 +658,96 @@ EN_UA_BACK = """\
 
   var html = '';
 
-  if (typedAnswer === targetWithStress) {
-    // Perfect: with stress marks
-    html = '<div class="fb-headline status-success">' +
-           targetWithStress + ' ✓ PERFECT</div>' +
-           '<div class="fb-sub status-success">Correct with stress marks (bonus!)</div>';
-  } else if (typedAnswer === targetNoStress) {
-    // Close: correct letters, missing stress
-    html = '<div class="fb-headline status-warning">' +
-           targetNoStress + ' ~ CORRECT</div>' +
-           '<div class="fb-sub status-warning">Correct letters, but missing stress marks</div>' +
-           '<div class="fb-label status-success">Bonus answer:</div>' +
-           '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
-  } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer)) !== -1) {
-    // Accepted alternate spelling (EuphonyNote) -- genuinely correct, not just noted.
-    html = '<div class="fb-headline status-success">' +
-           typedAnswer + ' ✓ CORRECT</div>' +
-           '<div class="fb-sub status-success">Accepted alternate spelling</div>' +
-           '<div class="fb-label status-info">Primary form:</div>' +
-           '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
-  } else if (typedAnswer !== null) {
-    // Reconstruction succeeded and it's neither accepted answer -- genuinely wrong.
-    html = '<div class="fb-headline status-error">' +
-           typedAnswer + ' ✗ INCORRECT</div>' +
-           '<div class="fb-sub status-error">Not quite right</div>' +
-           '<div class="fb-label status-success">Correct (no stress):</div>' +
-           '<div class="fb-value status-success" style="margin-bottom: 8px;"><b>' + targetNoStress + '</b></div>' +
-           '<div class="fb-label status-info">Correct (with stress):</div>' +
-           '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
-  } else {
+  if (typedAnswer === null) {
     // Couldn't determine what was typed at all (e.g. #typeans markup ever
     // changes shape) -- show the answer neutrally rather than guessing.
     html = '<div class="fb-headline status-info">' +
            targetWithStress + '</div>' +
            '<div class="fb-note status-neutral">(no stress: ' + targetNoStress + ')</div>';
+  } else if (typedAnswer === targetWithStress) {
+    // Perfect: whole compound answer matches with stress marks, exactly.
+    html = '<div class="fb-headline status-success">' +
+           targetWithStress + ' ✓ PERFECT</div>' +
+           '<div class="fb-sub status-success">Correct with stress marks (bonus!)</div>';
+  } else if (typedAnswer === targetNoStress) {
+    // Close: correct letters throughout, missing stress everywhere.
+    html = '<div class="fb-headline status-warning">' +
+           targetNoStress + ' ~ CORRECT</div>' +
+           '<div class="fb-sub status-warning">Correct letters, but missing stress marks</div>' +
+           '<div class="fb-label status-success">Bonus answer:</div>' +
+           '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
+  } else {
+    // Neither whole-string match hit -- evaluate per aspect slot instead of
+    // failing outright, so a doublet/triplet note only loses credit for the
+    // specific slot that's actually wrong (per-slot euphony tolerance,
+    // 2026-08-04; see compute_euphony_slots() in ua_lexeme_import.py and
+    // CLAUDE.md "Per-slot euphony tolerance"). PERFECT requires every slot
+    // to match its own stressed primary or stressed euphonic alternate;
+    // CORRECT requires every slot to match SOMETHING acceptable (primary,
+    // no-stress, or euphonic) with at least one slot short of "perfect";
+    // INCORRECT if any single slot matches nothing acceptable at all.
+    var typedSlots = typedAnswer.split(' / ');
+    var slotsAcceptable = stressSlots.length > 0 && typedSlots.length === stressSlots.length;
+    var everySlotPerfect = slotsAcceptable;
+    var anyEuphonyUsed = false;
+
+    if (slotsAcceptable) {
+      for (var i = 0; i < stressSlots.length; i++) {
+        var typedSlot = typedSlots[i];
+        var stressSlot = stressSlots[i];
+        var noStressSlot = noStressSlots[i] || stripStress(stressSlot);
+
+        if (typedSlot === stressSlot) {
+          continue; // this slot: perfect
+        }
+        everySlotPerfect = false;
+        if (typedSlot === noStressSlot) {
+          continue; // this slot: correct, missing stress
+        }
+        if (euphonyAltsForSlot(i).indexOf(stripStress(typedSlot)) !== -1) {
+          anyEuphonyUsed = true;
+          continue; // this slot: correct, accepted euphonic alternate
+        }
+        slotsAcceptable = false;
+        break; // this slot: nothing acceptable matched -- whole answer is INCORRECT
+      }
+    }
+
+    if (slotsAcceptable && everySlotPerfect) {
+      // Not normally reachable (exact match handled above) -- kept for
+      // safety/symmetry with the per-slot loop.
+      html = '<div class="fb-headline status-success">' +
+             targetWithStress + ' ✓ PERFECT</div>' +
+             '<div class="fb-sub status-success">Correct with stress marks (bonus!)</div>';
+    } else if (slotsAcceptable) {
+      html = '<div class="fb-headline status-warning">' +
+             typedAnswer + ' ~ CORRECT</div>' +
+             '<div class="fb-sub status-warning">' +
+             (anyEuphonyUsed
+               ? 'Accepted euphonic alternate and/or missing stress marks'
+               : 'Correct letters, but missing stress marks somewhere') +
+             '</div>' +
+             '<div class="fb-label status-success">Bonus answer:</div>' +
+             '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
+    } else {
+      html = '<div class="fb-headline status-error">' +
+             typedAnswer + ' ✗ INCORRECT</div>' +
+             '<div class="fb-sub status-error">Not quite right</div>' +
+             '<div class="fb-label status-success">Correct (no stress):</div>' +
+             '<div class="fb-value status-success" style="margin-bottom: 8px;"><b>' + targetNoStress + '</b></div>' +
+             '<div class="fb-label status-info">Correct (with stress):</div>' +
+             '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
+    }
   }
 
   feedback.innerHTML = html;
 })();
 </script>
-<!-- Reference answer and context -->
+<!-- Reference answer and context. EN_Example moved to EN_UA_FRONT
+     (2026-08-04) -- deduped here to match the UA_EN_FRONT/BACK precedent
+     (UA_Example moved to UA_EN_FRONT, 2026-07-28). -->
 <div class="ref-divider">
   {{#UA_Example}}<div class="example-ua">{{UA_Example}}</div>{{/UA_Example}}
-  {{#EN_Example}}<div class="example-en">{{EN_Example}}</div>{{/EN_Example}}
 </div>
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
