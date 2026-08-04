@@ -20,6 +20,7 @@ fields:
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional: пливти́
+  ImperfectiveUnidirectional_Euphony: плисти́
   Perfective: попливти́
   EN_Gloss: to swim
   Govt_Case: ''
@@ -65,6 +66,11 @@ fields:
     as a free-variant pair via EuphonyNote, parallel to the йти/іти treatment on ua-lexeme-0581
     -- пливти́ kept as ImperfectiveUnidirectional since it matches the existing ua-verb-0009
     headword. Drafted per Craig''s request 2026-07-31. status:draft pending Craig''s independent
-    review.'
+    review. 2026-08-04: per Craig''s call on ua-lexeme-0581 (пливти́/плисти́ is the same euphonic/
+    semi-vowel-mutation family as йти/іти, not a separate category), populated the new per-slot
+    ImperfectiveUnidirectional_Euphony field with плисти́ -- previously only documented in
+    EuphonyNote prose, never wired to grant typing credit. Typing плисти́ for the unidirectional
+    slot on the EN->UA card is now graded CORRECT/PERFECT (previously always INCORRECT), and
+    the UA->EN Recognition front now shows "пливти́ (плисти́)".'
 ---
 

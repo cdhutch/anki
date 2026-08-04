@@ -12,7 +12,7 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- stress:verified
+- stress:unverified
 - status:draft
 fields:
   NoteID: ua-verb-0087
@@ -23,11 +23,11 @@ fields:
   Pres_1sg: попливу́
   Pres_2sg: попливе́ш
   Pres_3sg: попливе́
-  Pres_1pl: попливе́м, попливемо́
+  Pres_1pl: попливемо́
   Pres_2pl: попливете́
   Pres_3pl: попливу́ть
   Imperative_2sg: попливи́
-  Imperative_1pl: попливі́м, попливі́мо
+  Imperative_1pl: попливі́мо
   Imperative_2pl: попливі́ть
   Past_1sg_m: попли́в
   Past_1sg_f: поплила́
@@ -35,9 +35,12 @@ fields:
   Past_3pl: поплили́
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past: ''
+  Participle_Passive_Past_m: ''
+  Participle_Passive_Past_f: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  UA_Example: ''
+  EN_Example: ''
   Verification_Notes: 'Free-variant/"phonetic-variant" of попливти (ua-verb-0010), parallel
     to плисти (ua-verb-0086) vs пливти (ua-verb-0009), and to йти (ua-verb-0003) vs іти (ua-verb-0002).
     Горох-verified 2026-07-31: поплисти́ is a valid headword (доконаний вид, особова форма,

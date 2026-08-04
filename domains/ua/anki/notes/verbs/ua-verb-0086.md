@@ -12,7 +12,7 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- stress:verified
+- stress:unverified
 - status:draft
 fields:
   NoteID: ua-verb-0086
@@ -23,11 +23,11 @@ fields:
   Pres_1sg: пливу́
   Pres_2sg: пливе́ш
   Pres_3sg: пливе́
-  Pres_1pl: пливе́м, пливемо́
+  Pres_1pl: пливемо́
   Pres_2pl: пливете́
   Pres_3pl: пливу́ть
   Imperative_2sg: пливи́
-  Imperative_1pl: пливі́м, пливі́мо
+  Imperative_1pl: пливі́мо
   Imperative_2pl: пливі́ть
   Past_1sg_m: плив
   Past_1sg_f: плила́
@@ -35,9 +35,12 @@ fields:
   Past_3pl: плили́
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past: ''
+  Participle_Passive_Past_m: ''
+  Participle_Passive_Past_f: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  UA_Example: ''
+  EN_Example: ''
   Verification_Notes: 'Free-variant/"phonetic-variant" of пливти (ua-verb-0009), parallel
     to йти (ua-verb-0003) vs іти (ua-verb-0002). Горох-verified 2026-07-31: плисти́ and пливти́
     are both valid headwords (недоконаний вид, нерефлексивне, 1 дієвідміна) with IDENTICAL
