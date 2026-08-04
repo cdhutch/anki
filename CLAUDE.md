@@ -291,6 +291,49 @@ describing that code). A second branch, stacked on top after that commit (workin
 `ua-lexeme-0581`/`0584`'s new `ImperfectiveUnidirectional_Euphony` values, `ua-verb-0009`/`0010`'s
 conjugation fix, the Future-tense doc note, and the dangling-branch/-мо-convention material
 above. Exact commands given to Craig in the same session; not yet run.
+2026-08-04 (continued further still): **Dangling-branch reconciliation landed via git merge,
+plus branch cleanup.** The two-branch plan above was executed: `feature/ua-lexeme-aspect-
+euphony-cards` got the #3/#4/#5 structural commit; a stacked content commit landed directly
+on top of `origin/chore/ua-verb-participle-merge-and-stress-pass` (`f907726` → `a24d6e6`,
+fast-forward push, no divergent-history merge needed) carrying `ua-lexeme-0581`/`0584`,
+`ua-verb-0009`/`0010`, and the matching doc hunks. Opening a PR for that content branch
+into `main` (GitHub PR #2) surfaced real conflicts on two files: `CLAUDE-active-status.md`
+(pure add/add — both branches had appended different bullets to the same list; resolved by
+keeping both) and `ua-verb-0038.md` (resolved by taking `main`'s side, which had already
+picked up proper `ʼ` apostrophes and blank `UA_Example`/`EN_Example` fields via the
+`maint/lexeme-review` merge, PR #63 — no actual verb-form data differed, so this was a
+formatting/schema pick, not a content-verification call). The repo's `cnsf-canonical`
+pre-commit hook then caught a real drift the merge itself hadn't flagged: `ua-verb-0038.md`'s
+resolved content still carried the legacy single `Participle_Passive_Past` field instead of
+the `_m`/`_f` split every other reconciled note (including `0009`/`0010`) already uses —
+fixed by splitting it (both blank, so no data lost) before the merge commit (`2906f8d`) would
+pass hooks. Pushed and merged as PR #64. Because the content branch was built directly on
+`f907726` (which already carried the full 87-note stress-verification pass from the original
+dangling commit, not just 0009/0010), merging `origin/main` back into
+`feature/ua-lexeme-aspect-euphony-cards` before opening its own PR pulled that entire
+corpus-wide reconciliation through as a side effect — the diff touched all of
+`ua-verb-0001.md`–`ua-verb-0087.md`, not just the handful this session touched directly.
+That merge was clean (no conflicts). Pushed and merged as PR #65. **Net effect: `main` now
+has the dangling branch's full stress-verification content across all 87 `ua-verb-*.md`
+notes**, resolving "Remaining Work" item 13's open follow-ups (a) and (c) below, and settling
+(b) — the live schema kept the `Participle_Passive_Past_m`/`_f` split rather than migrating
+to the dangling branch's single-field proposal, per the `ua-verb-0038.md` resolution above.
+Confirmed via a full corpus sync (`make ua-setup-lexeme` → `make ua-lexeme`: 584 lexemes
+updated, 0 errors; `make ua-verb-fix` → `make ua-verb`: 87 verbs updated, 0 errors; 15
+red/orange-flagged notes correctly kept suspended in both runs) and Craig's on-device
+spot-check ("Spot checks are good").
+**Branch cleanup, same session:** `feature/anki-mobile-night-mode` deleted (local + remote)
+after confirming via `git log main..feature/anki-mobile-night-mode` (empty — fully merged)
+and Craig confirming he's happy with the on-device Gruvbox validation, closing out
+"Remaining Work" item 3. `feature/ua-lexeme-aspect-euphony-cards`'s now-stale remote deleted
+post-PR-#65-merge (repo doesn't auto-delete on merge). `chore/ua-verb-participle-merge-and-
+stress-pass` retired in favor of a fresh `maint/verb-review` branch cut from current `main`
+(mirroring the existing `maint/lexeme-review` pattern) as the ongoing home for future verb-
+corpus review — verified safe via `git merge-base --is-ancestor origin/chore/ua-verb-
+participle-merge-and-stress-pass maint/verb-review` (true, zero orphaned commits) before
+deleting the old remote. The `archive/ua-verb-participle-merge-and-stress-pass` tag on
+`f907726` stays untouched as the permanent historical marker for the original dangling
+commit — separate from and unaffected by the new `maint/verb-review` branch.
 
 ## Workflow Notes
 
@@ -458,19 +501,17 @@ this doc. Roughly in priority order:
    new work (Android isn't one of Craig's devices — see the `.nightMode`/`.night_mode`
    research in `domains/demo/FINDINGS_AND_TESTING.md`), though it's correctly left alone
    in the two B737 legacy CSS blocks that keep both selectors for parity.
-3. **`UA_Lexeme` color palette** — **Code done and merged to `main`, 2026-08-01;
-   on-device validation still outstanding.** Superseded Solarized with **Gruvbox** after
-   an on-device A/B/C comparison against Craig's real accessibility need (iOS red-tint
-   Color Filter night mode) — see the 2026-08-01 log entries above for the full palette
-   values and the `domains/demo/README.md` "Palette Comparison Demo" section for the
-   comparison tooling. Rolled out to `CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`, the
-   Compare card, and both typing-feedback scripts (`EN_UA_BACK` here and
-   `setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT`, previously unthemed). **Still open:**
-   Craig needs to run `make ua-setup` / `make ua-setup-pvom` and confirm on-device,
-   especially the red/orange status colors under the red-tint filter (pass 3) — see
-   `palette-compare-status` in the comparison demo, added specifically for that check. Any
-   fixes from validation land on `feature/anki-mobile-night-mode` (kept alive after the
-   merge-commit PR for exactly this) and PR into `main` again when ready.
+3. **`UA_Lexeme` color palette** — **Resolved, 2026-08-04.** Code done and merged to
+   `main` 2026-08-01; on-device validation confirmed by Craig 2026-08-04 ("I'm pretty
+   happy with the night mode"). Superseded Solarized with **Gruvbox** after an on-device
+   A/B/C comparison against Craig's real accessibility need (iOS red-tint Color Filter
+   night mode) — see the 2026-08-01 log entries above for the full palette values and the
+   `domains/demo/README.md` "Palette Comparison Demo" section for the comparison tooling.
+   Rolled out to `CSS`/`GRAMMAR_CSS`/`VERB_CSS`/`VISUAL_CSS`, the Compare card, and both
+   typing-feedback scripts (`EN_UA_BACK` here and `setup_ua_pvom_note_type.py`'s
+   `FEEDBACK_SCRIPT`, previously unthemed). `feature/anki-mobile-night-mode` (kept alive
+   past its original merge specifically for follow-up fixes) deleted 2026-08-04, confirmed
+   fully merged into `main` first — no fixes ended up being needed.
 4. **`Verb_Conj_Table` field removal** — **Resolved, 2026-07-31.** Field blanked
    corpus-wide 2026-07-22; steps 3-4 of the plan below (strip the field from all 584 CNSF
    lexeme files, canonicalize, update dependent tooling) done 2026-07-31 on branch
@@ -543,22 +584,28 @@ this doc. Roughly in priority order:
 12. **New content pending Craig's `status:draft` → `status:verified` review**:
     ua-lexeme-0581–0585 (base motion-verb triplets: ходити/їздити/літати/плавати/
     бігати) and ua-verb-0086/0087 (плисти/поплисти), both drafted 2026-07-31.
-13. **Proper reconciliation of `archive/ua-verb-participle-merge-and-stress-pass`** (found
-    2026-08-04 — see the dated log entry above). A locally-deleted branch, still live as
-    `origin/chore/ua-verb-participle-merge-and-stress-pass` (commit `f907726`, tagged for
-    safekeeping), contains a real stress-verification pass across all 87 `ua-verb-*.md` notes
-    (0001–0016 explicitly) plus a `Participle_Passive_Past_m`/`_f` → single-field schema
-    consolidation in `setup_ua_note_types.py`/the live `UA_Verb` model — none of it merged into
-    `main`. Per Craig, this branch's verified content is treated as truth: already applied to
-    `ua-verb-0009`/`0010` (Lemma stress marks, -мо-only `Pres_1pl`/`Imperative_1pl` convention,
-    `0009`'s `Participle_Adverbial_Present`). Still open: (a) sweep the same -мо-only
-    convention across `ua-verb-0086`/`0087` and, once the full branch is reconciled, the rest
-    of the 87-note corpus; (b) decide and execute the `Participle_Passive_Past_m`/`_f` →
-    single-field migration (a live-model change, not just data) — this conflicts with
-    2026-08-04's #3/#4/#5 changes to `setup_ua_note_types.py`, so needs careful merge/review,
-    not a blind branch merge; (c) reconcile the branch's other 0002–0087 conjugation data
-    against what's live now, in case more notes carry the same kind of pre-existing corruption
-    ua-verb-0009/0010 had.
+13. **Proper reconciliation of `archive/ua-verb-participle-merge-and-stress-pass`** —
+    **Resolved, 2026-08-04.** Found earlier the same day as a locally-deleted branch, still
+    live as `origin/chore/ua-verb-participle-merge-and-stress-pass` (commit `f907726`,
+    tagged for safekeeping), containing a real stress-verification pass across all 87
+    `ua-verb-*.md` notes plus a `Participle_Passive_Past` schema question. See the dated
+    "2026-08-04 (continued further still)" log entry above for the full mechanics, but in
+    short: because the content branch used for today's `ua-verb-0009`/`0010` fixes was built
+    directly on top of `f907726`, merging it (and later `main`) through PRs #64 and #65
+    carried the *entire* 87-note reconciliation into `main` as a side effect, not just the
+    notes this session touched by hand. Confirmed via a clean corpus-wide `make ua-verb-fix`
+    + `make ua-verb` sync (87/87 updated, 0 errors) and Craig's on-device spot-check. The
+    three items previously left open here are now closed: (a) the -мо-only
+    `Pres_1pl`/`Imperative_1pl` convention is corpus-wide, not just on `0009`/`0010`; (b) the
+    `Participle_Passive_Past_m`/`_f` split (not the dangling branch's single-field proposal)
+    is confirmed as the live schema — the `cnsf-canonical` pre-commit hook now enforces it;
+    (c) the rest of the 0002–0087 conjugation data came along in the same merge. The
+    `chore/ua-verb-participle-merge-and-stress-pass` branch itself was retired in favor of
+    `maint/verb-review`, cut fresh from `main`, as the ongoing home for future verb-corpus
+    review (mirroring `maint/lexeme-review`'s pattern). **Not independently re-verified:**
+    this session's confirmation was a successful sync run plus Craig's spot-check, not a
+    note-by-note read of all 87 files' final stress marks/tags — worth keeping in mind if
+    something looks off in the previously-`status:draft` 0033–0085 range during future review.
 
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
@@ -570,8 +617,8 @@ restoration (2026-07-28, git archaeology), the UA→EN front aspect display
 (2026-08-01, item 6 above), the Flagged Card Fix Workflow tooling
 (2026-08-01, item 8 above), and the CSS single-source-of-truth decision + `.night_mode`
 selector fix + Gruvbox palette rollout (2026-08-01, items 1–3 above — merged to `main`
-via `feature/anki-mobile-night-mode`; on-device validation still pending, see item 3),
-and the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
+via `feature/anki-mobile-night-mode`, on-device validation confirmed and branch deleted
+2026-08-04, see item 3), and the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
 omitted it since item 4 itself was mislabeled as still open; corrected 2026-08-01).
 
 ### Current Anki state
