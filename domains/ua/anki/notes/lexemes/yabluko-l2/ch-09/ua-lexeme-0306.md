@@ -33,7 +33,11 @@ fields:
     own example and Горох''s "тип машин"/"тип пристрою"), вид pairs with activities/species/categories
     (вид спорту -- ua-lexeme-0143''s own sense, and Горох''s "вид рослин"/"вид тваринного
     світу"). Key distinction: тип = classifying an object/mechanism/document by kind; вид
-    = classifying an activity, species, or category by kind.'
+    = classifying an activity, species, or category by kind. Note: вид is itself a homograph
+    -- besides this kind/type sense (ua-lexeme-0143), it also has an unrelated grammatical-aspect
+    sense (ua-lexeme-0182, доконаний/недоконаний вид -- perfective/imperfective). тип has
+    no meaningful overlap with that aspect sense; only the kind/type sense of вид is the actual
+    confusable pair tested on this card.'
   Mnemonic_EN: тип = what KIND of thing/object/document (тип вагона); вид = what KIND of activity/category
     (вид спорту) -- same job, different collocation family.
   CompareScenario: Filling out a train ticket booking form and picking which category of train
@@ -59,6 +63,17 @@ fields:
     shapes on one note (see CLAUDE-compare-card-field-mapping.md). Instead cross-referenced
     тип in 0143''s ConfusableSet as prose only. Still status:verified but this Compare content
     is new -- needs your review, including stress verification (тип itself has no stress mark
-    per the note above; вид is also monosyllabic).'
+    per the note above; вид is also monosyllabic). 2026-08-02: Craig asked for a compare note
+    tying together вид (grammatical aspect, 0182), вид (kind/type, 0143), and тип (kind/type,
+    this note). Added a matching prose cross-reference to ua-lexeme-0182 here, and a reciprocal
+    one to ua-lexeme-0306 (this note) on 0182 itself -- 0182 had never mentioned тип even
+    though 0143 got that cross-reference back on 2026-07-30, an inconsistency between the
+    two homograph siblings. Did not build a live interactive card directly between 0306 and
+    0182: this note''s Compare card is already Shape 2 confusables (CompareA/B = тип/вид word
+    chips) and 0182''s is Shape 1 homograph (CompareA/B = UA sentences, Homograph_SenseA/B
+    = EN senses, capped at 2 slots) -- neither shape can cleanly add a third, genuinely distinct
+    participant: Shape 1 has no Homograph_SenseC field, and Shape 2 can''t hold two identically-spelled
+    "вид" chips for two different senses. A true 3-way card would need a template change.
+    Flagged this to Craig rather than silently building something structurally broken.'
 ---
 

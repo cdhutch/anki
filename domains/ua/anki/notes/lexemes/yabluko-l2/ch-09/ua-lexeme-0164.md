@@ -30,7 +30,7 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: ворота
-  UA_Example: М'яч влучив у ворота.
+  UA_Example: Мʼяч влучив у ворота.
   EN_Example: The ball hit the goal.
   Tags_Ch: ch:2.9.2, ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/ворота

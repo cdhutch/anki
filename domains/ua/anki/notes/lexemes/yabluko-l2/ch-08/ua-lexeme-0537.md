@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-0537
-  Lemma: жа́б'ячий
+  Lemma: жа́бʼячий
   PartOfSpeech: adjective
   Gender: ''
   Perfective: ''
@@ -28,12 +28,12 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: жаб'ячий
-  UA_Example: Жаб'ячий смак нагадує курятину.
+  TypingAnswer: жабʼячий
+  UA_Example: Жабʼячий смак нагадує курятину.
   EN_Example: Frog(-leg) taste is similar to chicken.
   Tags_Ch: ch:2.8.6
-  Source_URL: https://goroh.pp.ua/Словозміна/жаб'ячий
+  Source_URL: https://goroh.pp.ua/Словозміна/жабʼячий
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
-  Verification Notes: Component of phrase ua-lexeme-0563 (жаб'ячі лапки), per rule 3.
+  Verification Notes: Component of phrase ua-lexeme-0563 (жабʼячі лапки), per rule 3.
 ---
 

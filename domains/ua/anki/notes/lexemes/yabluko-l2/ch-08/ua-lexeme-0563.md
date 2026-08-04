@@ -16,7 +16,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-0563
-  Lemma: жа́б'ячі ла́пки
+  Lemma: жа́бʼячі ла́пки
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
@@ -29,13 +29,13 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   EuphonyNote: ''
-  TypingAnswer: жаб'ячі лапки
-  UA_Example: Жаб'ячі лапки — популярна страва у Франції.
+  TypingAnswer: жабʼячі лапки
+  UA_Example: Жабʼячі лапки — популярна страва у Франції.
   EN_Example: Frog legs are a popular dish in France.
   Tags_Ch: ch:2.8.6
-  Source_URL: https://goroh.pp.ua/Словозміна/жаб'ячий; https://goroh.pp.ua/Словозміна/лапка
+  Source_URL: https://goroh.pp.ua/Словозміна/жабʼячий; https://goroh.pp.ua/Словозміна/лапка
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
-  Verification Notes: Vocabulary-appendix phrase item; components жаб'ячий (ua-lexeme-0537)
+  Verification Notes: Vocabulary-appendix phrase item; components жабʼячий (ua-lexeme-0537)
     and лапка (ua-lexeme-0538) each also have their own note per rule 3.
 ---
 

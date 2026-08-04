@@ -29,7 +29,7 @@ fields:
   CrossLang_Analog: ''
   EuphonyNote: ''
   TypingAnswer: їзда
-  UA_Example: Їзда на велосипеді корисна для здоров'я.
+  UA_Example: Їзда на велосипеді корисна для здоровʼя.
   EN_Example: Bicycle riding is good for your health.
   Tags_Ch: ch:2.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/їзда

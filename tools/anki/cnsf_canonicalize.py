@@ -23,6 +23,31 @@ CANON_TOP_KEYS = [
 
 CANON_ANKI_KEYS = ["model", "deck"]
 
+# Ukrainian apostrophe (апостроф) normalization. U+02BC MODIFIER LETTER APOSTROPHE
+# is the Ukrainian National Academy's recommended character for this letter (e.g.
+# м'який) -- it's a distinct letter in Ukrainian orthography, not punctuation.
+# Source text sometimes has the curly single-quote apostrophe (U+2019) or a plain
+# straight apostrophe (U+0027) instead. Normalize either -> U+02BC only when it
+# sits directly between two Cyrillic characters, so ordinary apostrophe/quote
+# punctuation in non-Ukrainian text (English possessives/contractions, quoted
+# strings, etc.) is left untouched.
+UA_APOSTROPHE_TARGET = "ʼ"
+_UA_APOSTROPHE_SOURCE_RE = re.compile(r"(?<=[Ѐ-ӿ])['’](?=[Ѐ-ӿ])")
+
+
+def normalize_ukrainian_apostrophes(text: str) -> str:
+    return _UA_APOSTROPHE_SOURCE_RE.sub(UA_APOSTROPHE_TARGET, text)
+
+
+def _normalize_apostrophes_recursive(obj: Any) -> Any:
+    if isinstance(obj, str):
+        return normalize_ukrainian_apostrophes(obj)
+    if isinstance(obj, dict):
+        return {k: _normalize_apostrophes_recursive(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [_normalize_apostrophes_recursive(v) for v in obj]
+    return obj
+
 
 @dataclass(frozen=True)
 class SplitFM:
@@ -164,6 +189,12 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
         val = fields.get(choice_key)
         if isinstance(val, bool):
             fields[choice_key] = "True" if val else "False"
+
+    # Normalize Ukrainian apostrophes (curly U+2019 -> modifier-letter U+02BC)
+    # in all field content. Scoped to `fields` rather than the whole meta dict --
+    # tags/note_id/model/deck are structural identifiers, not prose, so there's no
+    # legitimate case for an apostrophe there.
+    meta["fields"] = _normalize_apostrophes_recursive(fields)
 
     return meta
 

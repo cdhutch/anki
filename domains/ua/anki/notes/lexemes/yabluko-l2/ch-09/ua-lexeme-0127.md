@@ -31,7 +31,7 @@ fields:
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4
-  Source_URL: https://goroh.pp.ua/Словозміна/від'їжджати
+  Source_URL: https://goroh.pp.ua/Словозміна/відʼїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: ''
 ---

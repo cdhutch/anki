@@ -20,7 +20,7 @@ fields:
   PartOfSpeech: noun
   Gender: f
   Perfective: ''
-  EN_Gloss: minibus, marshrutka (shared van/route taxi)
+  EN_Gloss: minibus, shared van/route taxi
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

@@ -31,7 +31,7 @@ fields:
   Lemma_Euphony: уболіва́ти
   EuphonyNote: уболіва́ти
   TypingAnswer: вболівати
-  UA_Example: Уся сім'я вболівала за українську команду.
+  UA_Example: Уся сімʼя вболівала за українську команду.
   EN_Example: The whole family was rooting for the Ukrainian team.
   Tags_Ch: ch:2.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/вболівати; https://goroh.pp.ua/Словозміна/вболіти
