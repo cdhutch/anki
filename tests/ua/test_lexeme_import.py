@@ -102,6 +102,89 @@ class TestComputeTypingTarget:
 
 
 # ---------------------------------------------------------------------------
+# compute_euphony_slots / compute_ua_en_display
+#
+# Added 2026-08-04 (per-slot euphony tolerance + UA->EN display, CLAUDE.md
+# "Per-slot euphony tolerance" and "UA->EN lexeme verb cards -- show multiple
+# aspects per euphonic slot"). Both are positionally aligned with
+# compute_typing_target's " / " join order (Lemma, ImperfectiveUnidirectional,
+# Perfective, each only if populated) -- see the functions' own docstrings in
+# ua_lexeme_import.py. Test data mirrors real corpus notes where noted.
+# ---------------------------------------------------------------------------
+
+
+class TestComputeEuphonySlots:
+    def test_no_slots_populated_returns_blank(self):
+        assert li.compute_euphony_slots("", "", "", "", "", "", "") == ""
+
+    def test_triplet_no_euphony_anywhere_returns_blank(self):
+        # ua-lexeme-0581-style triplet (ходити/йти/піти) -- no euphony data.
+        result = li.compute_euphony_slots("ходи́ти", "йти", "піти́", "", "", "", "")
+        assert result == ""
+
+    def test_doublet_euphony_only_on_perfective_slot(self):
+        # ua-lexeme-0115 (входити/увійти): Perfective_Euphony populated,
+        # Lemma_Euphony blank. The empty Lemma segment must stay a real
+        # (empty) slot, not be dropped, so positions still line up with
+        # TypingTarget_UA's own " / " split on the JS side.
+        result = li.compute_euphony_slots("вхо́дити", "", "уві́йти", "", "", "ввійти́", "")
+        assert result == " / ввійти́"
+
+    def test_doublet_euphony_on_both_slots(self):
+        # ua-lexeme-0124 (уїжджати/уїхати): both Lemma_Euphony and
+        # Perfective_Euphony populated.
+        result = li.compute_euphony_slots(
+            "уїжджа́ти", "", "уї́хати", "уїжджа́ти", "", "уї́хати", "",
+        )
+        assert result == "уїжджа́ти / уї́хати"
+
+    def test_singlet_legacy_euphony_note_fallback(self):
+        # A singlet authored before the per-slot fields existed (old-style
+        # bare EuphonyNote, e.g. ua-lexeme-0211/0377 вболівати) must keep
+        # its tolerance.
+        result = li.compute_euphony_slots("вболіва́ти", "", "", "", "", "", "уболіва́ти")
+        assert result == "уболіва́ти"
+
+    def test_singlet_with_own_field_ignores_legacy_note(self):
+        # Once a singlet has its own Lemma_Euphony populated (e.g.
+        # ua-lexeme-0153 вболівальник), that's authoritative -- the
+        # EuphonyNote fallback only applies when the one populated slot has
+        # nothing of its own.
+        result = li.compute_euphony_slots(
+            "вболіва́льник", "", "", "уболіва́льник", "", "", "якесь інше пояснення",
+        )
+        assert result == "уболіва́льник"
+
+    def test_euphony_ignored_when_primary_slot_empty(self):
+        # Defensive: a *_Euphony value on an unpopulated slot must not leak
+        # into the join.
+        result = li.compute_euphony_slots("вболіва́ти", "", "", "", "", "щось", "")
+        assert "щось" not in result
+
+
+class TestComputeUaEnDisplay:
+    def test_no_slots_populated_returns_blank(self):
+        assert li.compute_ua_en_display("", "", "", "", "", "") == ""
+
+    def test_triplet_no_euphony_matches_typing_target_join(self):
+        result = li.compute_ua_en_display("ходи́ти", "йти", "піти́", "", "", "")
+        assert result == "ходи́ти / йти / піти́"
+
+    def test_doublet_euphony_only_on_perfective_slot(self):
+        # ua-lexeme-0115: only the Perfective slot gets a parenthetical.
+        result = li.compute_ua_en_display("вхо́дити", "", "уві́йти", "", "", "ввійти́")
+        assert result == "вхо́дити / уві́йти (ввійти́)"
+
+    def test_singlet_with_euphony_gets_parenthetical(self):
+        result = li.compute_ua_en_display("вболіва́льник", "", "", "уболіва́льник", "", "")
+        assert result == "вболіва́льник (уболіва́льник)"
+
+    def test_euphony_ignored_when_primary_slot_empty(self):
+        result = li.compute_ua_en_display("вболіва́ти", "", "", "", "", "щось")
+        assert "щось" not in result
+
+
+# ---------------------------------------------------------------------------
 # prune_orphans safety gate
 # ---------------------------------------------------------------------------
 
