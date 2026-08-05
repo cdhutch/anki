@@ -1,20 +1,22 @@
 #!/usr/bin/env python3
-"""tools/anki/inspect/list_unverified.py — Report every UA note not yet fully verified.
+"""tools/anki/inspect/list_unverified_b737.py — Report every B737 note not yet fully verified.
 
-Scans all UA note-type corpora (lexemes, verbs, grammar, visual, pvom) for notes
-carrying any of these "not verified" signals:
-  - stress:unverified tag — stress marks not yet confirmed against Горох
-  - status:draft tag       — content not yet reviewed by Craig
-  - no status tag at all   — neither status:draft nor status:verified present; flagged
-    separately so it's never silently conflated with a deliberate status:draft
+Scans all B737 note-root corpora (QRC, Triggers/Flows, Cats and Dogs, Mnemonics,
+Checklists, Procedures [normal/non-normal/inflight], Limits, Systems Verification)
+for notes carrying any of these "not verified" signals:
+  - status:unverified tag — content not yet reviewed
+  - status:draft tag       — content still in draft (e.g. SV exam-bank conversions)
+  - no status tag at all   — neither status:draft/unverified nor status:verified
+    present; flagged separately so it's never silently conflated with a
+    deliberate status:draft
 
-A note can have more than one reason at once (e.g. status:verified content whose
-stress is still stress:unverified — see ua_verb_import.py's should_suspend()).
+B737 has no stress-verification axis (that's a UA-only concept for Ukrainian
+pronunciation marks) — status is the only signal here.
 
 Usage:
-    python -m tools.anki.inspect.list_unverified
-    python -m tools.anki.inspect.list_unverified --type ua_verb
-    make ua-unverified
+    python -m tools.anki.inspect.list_unverified_b737
+    python -m tools.anki.inspect.list_unverified_b737 --type limits
+    make b737-unverified
 """
 from __future__ import annotations
 
@@ -26,35 +28,58 @@ from typing import Any
 import yaml
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
+B737_ROOT = REPO_ROOT / "domains" / "b737" / "anki" / "notes"
 
 NOTE_ROOTS: dict[str, tuple[Path, str]] = {
-    "ua_lexeme": (REPO_ROOT / "domains" / "ua" / "anki" / "notes" / "lexemes", "ua-lexeme-*.md"),
-    "ua_verb": (REPO_ROOT / "domains" / "ua" / "anki" / "notes" / "verbs", "ua-verb-*.md"),
-    "ua_grammar": (REPO_ROOT / "domains" / "ua" / "anki" / "notes" / "grammar", "ua-grammar-*.md"),
-    "ua_visual": (REPO_ROOT / "domains" / "ua" / "anki" / "notes" / "visual", "ua-visual-*.md"),
-    "ua_pvom": (REPO_ROOT / "domains" / "ua" / "anki" / "notes" / "pvom", "ua-pvom-*.md"),
+    "qrc_recall": (B737_ROOT / "qrc_recall", "*.md"),
+    "triggers_and_flows": (B737_ROOT / "triggers_and_flows", "*.md"),
+    "cats_and_dogs": (B737_ROOT / "cats_and_dogs", "*.md"),
+    "mnemonics": (B737_ROOT / "mnemonics", "*.md"),
+    "checklists": (B737_ROOT / "checklists", "*.md"),
+    "procedures_normal": (B737_ROOT / "procedures" / "normal", "*.md"),
+    "procedures_non_normal": (B737_ROOT / "procedures" / "non_normal", "*.md"),
+    "procedures_inflight": (B737_ROOT / "procedures" / "inflight_maneuvers", "*.md"),
+    "limits": (B737_ROOT / "limits", "*.md"),
+    "systems_verification": (B737_ROOT / "systems_verification", "*.md"),
 }
 
 
-def _read_meta(path: Path) -> dict[str, Any] | None:
+def _read_doc(path: Path) -> tuple[dict[str, Any] | None, str]:
     text = path.read_text(encoding="utf-8")
     if not text.startswith("---"):
-        return None
+        return None, ""
     parts = text.split("---", 2)
     if len(parts) < 3:
-        return None
+        return None, ""
     try:
         doc = yaml.safe_load(parts[1])
     except yaml.YAMLError:
-        return None
-    return doc if isinstance(doc, dict) else None
+        return None, ""
+    return (doc if isinstance(doc, dict) else None), parts[2]
+
+
+def _front_md_preview(body: str, limit: int = 70) -> str:
+    """Pull a short preview from the '# front_md' section of the note body."""
+    marker = "# front_md"
+    idx = body.find(marker)
+    if idx == -1:
+        return ""
+    rest = body[idx + len(marker) :]
+    next_heading = rest.find("\n# ")
+    if next_heading != -1:
+        rest = rest[:next_heading]
+    text = " ".join(rest.split())
+    text = text.replace("**", "").replace("*", "").replace("`", "")
+    if len(text) > limit:
+        text = text[: limit - 1].rstrip() + "…"
+    return text
 
 
 def _reasons(tags: list[str]) -> list[str]:
     reasons = []
-    if "stress:unverified" in tags:
-        reasons.append("stress:unverified")
-    if "status:draft" in tags:
+    if "status:unverified" in tags:
+        reasons.append("status:unverified")
+    elif "status:draft" in tags:
         reasons.append("status:draft")
     elif "status:verified" not in tags:
         reasons.append("no status tag")
@@ -66,9 +91,9 @@ def find_unverified(note_type: str, root: Path, pattern: str) -> list[dict[str, 
     if not root.exists():
         return results
     for path in sorted(root.rglob(pattern)):
-        if "exported" in path.parts:
+        if path.name.startswith("_"):
             continue
-        meta = _read_meta(path)
+        meta, body = _read_doc(path)
         if meta is None:
             continue
         tags = meta.get("tags") or []
@@ -79,7 +104,12 @@ def find_unverified(note_type: str, root: Path, pattern: str) -> list[dict[str, 
             continue
 
         fields = meta.get("fields") or {}
-        label = fields.get("Lemma") or fields.get("Prefix") or ""
+        label = (
+            _front_md_preview(body)
+            or fields.get("Question Stem")
+            or fields.get("Source Location")
+            or ""
+        )
 
         results.append(
             {
@@ -110,7 +140,7 @@ def _relpath(path: Path) -> str:
 
 def print_report(results: list[dict[str, Any]]) -> None:
     if not results:
-        print("Nothing unverified — every scanned note has confirmed stress and status:verified.")
+        print("Nothing unverified — every scanned B737 note is status:verified.")
         return
 
     by_type: dict[str, list[dict[str, Any]]] = {}
@@ -124,7 +154,7 @@ def print_report(results: list[dict[str, Any]]) -> None:
         for r in rows:
             reasons = ", ".join(r["reasons"])
             label = r["label"] or r["note_id"]
-            print(f"  {r['note_id']:<20} {label:<25} [{reasons}]  {_relpath(r['path'])}")
+            print(f"  {r['note_id']:<28} {label:<30} [{reasons}]  {_relpath(r['path'])}")
 
     print(f"\nTotal: {len(results)} unverified note(s) across {len(by_type)} note type(s).")
 

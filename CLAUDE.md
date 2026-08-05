@@ -1112,6 +1112,13 @@ Batch verification process:
 4. Compare vowel-index of stress in lemma vs Горох form; flag mismatches
 5. Apply corrections; keep `stress:unverified` tag until user confirms
 
+**Division of labor, restated explicitly per Craig (2026-08-05):** Claude sources forms
+from Горох, drafts the corrected fields, and proposes a stress mark -- that is the extent
+of Claude's role. Claude does not verify and must never flip a note to `stress:verified`
+(or `status:verified`) itself. Only Craig, after his own independent check against Горох,
+makes that call and sets the tag. This applies even when Claude is highly confident in a
+sourced form.
+
 Important: Горох returns the **masculine adjective** form for adjectives (e.g. `-ський`
 instead of `-ська`). The vowel-index comparison handles this correctly since the stressed
 syllable is the same. The script is embedded in session context — rebuild from the pattern

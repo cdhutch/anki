@@ -131,6 +131,7 @@ help:
 	@echo "  ua-check            Aspect completeness + pending-confusable watchlist (report-only; STRICT=1 to fail on findings)"
 	@echo "  ua-check-aspect     Flag pos:verb notes with zero aspectual counterparts and no aspect:*-only tag"
 	@echo "  ua-check-pending-confusables  Report pending-confusable:<lemma> tags whose target now exists in the corpus"
+	@echo "  ua-audit            Full report sweep: unverified + compare-check + check (logged to /tmp/anki-sync-logs)"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
@@ -153,6 +154,8 @@ help:
 	@echo "B737 (aggregate)"
 	@echo "  b737                Export and sync all B737::Core decks to Anki"
 	@echo "  b737-fix            Canonicalize all B737::Core note files"
+	@echo "  b737-unverified     Report notes not status:verified, across all B737 note roots"
+	@echo "  b737-audit          Full report sweep (currently just b737-unverified; logged to /tmp/anki-sync-logs)"
 	@echo ""
 	@echo "Deck Configuration"
 	@echo "  line-flying         Configure decks for line flying (non-training mode)"
@@ -176,6 +179,37 @@ git-unlock:
 # -------------------------------------------------------------------
 PYTHON := /Users/craig/miniforge3/envs/craigdev/bin/python
 BUILD_DIR := build
+
+# -------------------------------------------------------------------
+# Anki sync logging
+#
+# Every target that actually pushes notes to Anki (not the bare
+# *-check/*-fix canonicalization-only targets) additionally tees its
+# console output to a timestamped log file under /tmp/anki-sync-logs,
+# named <domain>_<target>_<timestamp>.txt (domain is "b737" or "ua").
+# Mechanism: the real recipe is renamed to a private _<target>, and
+# the public <target> becomes a thin wrapper that re-invokes it
+# through `make` and pipes the combined stdout/stderr through `tee`.
+# Aggregate targets (b737, ua, sv, sve) call the private _<target>
+# names internally for their sub-steps, so a single `make ua` run
+# produces one combined log rather than one-per-note-type -- but
+# running a sync target directly (e.g. `make ua-lexeme`) still gets
+# its own log. Logs are not committed or auto-cleaned -- they live
+# in /tmp and age out with the OS as usual.
+# -------------------------------------------------------------------
+SYNC_LOG_DIR := /tmp/anki-sync-logs
+TIMESTAMP    := $(shell date +%Y-%m-%dT%H-%M-%S%z)
+
+# $(call log_wrap,<domain>,<target-name>)
+define log_wrap
+	@mkdir -p $(SYNC_LOG_DIR)
+	@logfile="$(SYNC_LOG_DIR)/$(1)_$(2)_$(TIMESTAMP).txt"; \
+	bash -c "set -o pipefail; $(MAKE) --no-print-directory _$(2) 2>&1 | tee \"$$logfile\""; \
+	status=$$?; \
+	echo ""; \
+	echo "Log: $$logfile"; \
+	exit $$status
+endef
 
 SV_ROOT := domains/b737/anki/notes/systems_verification
 SV_BUILD := $(BUILD_DIR)
@@ -211,7 +245,7 @@ apu \
 engines \
 performance
 
-.PHONY: sv sv-check sv-fix sv-clean $(addprefix sv-,$(SV_SYSTEMS))
+.PHONY: sv sv-check sv-fix sv-clean _sv $(addprefix sv-,$(SV_SYSTEMS)) $(addprefix _sv-,$(SV_SYSTEMS))
 
 sv-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(SV_ROOT)/*/*.md
@@ -222,7 +256,7 @@ sv-fix:
 sv-clean:
 	rm -f $(SV_BUILD)/sv-*.tsv
 
-sv: sv-check
+_sv: sv-check
 	@echo "=== Building Systems Verification decks ==="
 	@set -e; \
 	mkdir -p $(SV_BUILD); \
@@ -237,7 +271,10 @@ sv: sv-check
 		fi; \
 	done
 
-sv-%:
+sv:
+	$(call log_wrap,b737,sv)
+
+_sv-%:
 	mkdir -p $(SV_BUILD)
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/$*/*.md
 	$(PYTHON) tools/anki/export/sv_md_to_tsv.py \
@@ -246,13 +283,16 @@ sv-%:
 	$(PYTHON) tools/anki/export/sv_import_to_anki.py \
 		"$(SV_BUILD)/sv-$*.tsv"
 
+sv-%:
+	$(call log_wrap,b737,sv-$*)
+
 # -------------------------------------------------------------------
 # QRC Recall
 # -------------------------------------------------------------------
 QRC_ROOT := domains/b737/anki/notes/qrc_recall
 QRC_TSV := $(BUILD_DIR)/qrc-recall.tsv
 
-.PHONY: qrc qrc-check qrc-fix qrc-clean
+.PHONY: qrc qrc-check qrc-fix qrc-clean _qrc
 
 qrc-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(QRC_ROOT)/*.md
@@ -263,13 +303,16 @@ qrc-fix:
 qrc-clean:
 	rm -f $(QRC_TSV)
 
-qrc: qrc-check
+_qrc: qrc-check
 	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(QRC_ROOT) \
 		--out $(QRC_TSV) \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(QRC_TSV)
+
+qrc:
+	$(call log_wrap,b737,qrc)
 
 # -------------------------------------------------------------------
 # Triggers and Flows
@@ -283,7 +326,7 @@ qrc: qrc-check
 TRIGGERS_ROOT := domains/b737/anki/notes/triggers_and_flows
 TRIGGERS_TSV := $(BUILD_DIR)/triggers-and-flows.tsv
 
-.PHONY: triggers triggers-check triggers-fix triggers-clean triggers-lint triggers-fmt
+.PHONY: triggers triggers-check triggers-fix triggers-clean triggers-lint triggers-fmt _triggers
 
 triggers-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(TRIGGERS_ROOT)/*.md
@@ -294,13 +337,16 @@ triggers-fix:
 triggers-clean:
 	rm -f $(TRIGGERS_TSV)
 
-triggers: triggers-check
+_triggers: triggers-check
 	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(TRIGGERS_ROOT) \
 		--out $(TRIGGERS_TSV) \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(TRIGGERS_TSV)
+
+triggers:
+	$(call log_wrap,b737,triggers)
 
 triggers-lint:
 	$(PYTHON) tools/anki/lint_flows.py
@@ -314,7 +360,7 @@ triggers-fmt: triggers-fix triggers-lint
 CATS_ROOT := domains/b737/anki/notes/cats_and_dogs
 CATS_TSV  := $(BUILD_DIR)/cats-and-dogs.tsv
 
-.PHONY: cats cats-check cats-fix cats-clean
+.PHONY: cats cats-check cats-fix cats-clean _cats
 
 cats-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(CATS_ROOT)/*.md
@@ -325,7 +371,7 @@ cats-fix:
 cats-clean:
 	rm -f $(CATS_TSV)
 
-cats: cats-check
+_cats: cats-check
 	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(CATS_ROOT) \
@@ -333,13 +379,16 @@ cats: cats-check
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(CATS_TSV)
 
+cats:
+	$(call log_wrap,b737,cats)
+
 # -------------------------------------------------------------------
 # Mnemonics
 # -------------------------------------------------------------------
 MNEMONIC_ROOT := domains/b737/anki/notes/mnemonics
 MNEMONIC_TSV  := $(BUILD_DIR)/mnemonics.tsv
 
-.PHONY: mnemonic mnemonic-check mnemonic-fix mnemonic-clean
+.PHONY: mnemonic mnemonic-check mnemonic-fix mnemonic-clean _mnemonic
 
 mnemonic-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(MNEMONIC_ROOT)/*.md
@@ -350,13 +399,16 @@ mnemonic-fix:
 mnemonic-clean:
 	rm -f $(MNEMONIC_TSV)
 
-mnemonic: mnemonic-check
+_mnemonic: mnemonic-check
 	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(MNEMONIC_ROOT) \
 		--out $(MNEMONIC_TSV) \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(MNEMONIC_TSV)
+
+mnemonic:
+	$(call log_wrap,b737,mnemonic)
 
 # -------------------------------------------------------------------
 # Checklists
@@ -365,7 +417,7 @@ mnemonic: mnemonic-check
 CHECKLISTS_ROOT := domains/b737/anki/notes/checklists
 CHECKLISTS_TSV  := $(BUILD_DIR)/checklists.tsv
 
-.PHONY: checklists checklists-check checklists-fix checklists-clean
+.PHONY: checklists checklists-check checklists-fix checklists-clean _checklists
 
 checklists-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(shell find $(CHECKLISTS_ROOT) -name "*.md" ! -name "_*")
@@ -376,13 +428,16 @@ checklists-fix:
 checklists-clean:
 	rm -f $(CHECKLISTS_TSV)
 
-checklists: checklists-check
+_checklists: checklists-check
 	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(CHECKLISTS_ROOT) \
 		--out $(CHECKLISTS_TSV) \
 		--overwrite
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki --tsv $(CHECKLISTS_TSV)
+
+checklists:
+	$(call log_wrap,b737,checklists)
 
 # -------------------------------------------------------------------
 # Procedures
@@ -399,10 +454,10 @@ PROCEDURES_NON_NORMAL_CLOZE_ROOT := $(PROCEDURES_NON_NORMAL_ROOT)/cloze
 
 PROCEDURES_BUILD := $(BUILD_DIR)
 
-.PHONY: proc-normal-check proc-normal-fix proc-normal-clean proc-normal
-.PHONY: proc-normal-cloze-check proc-normal-cloze-clean proc-normal-cloze
-.PHONY: proc-non-normal-check proc-non-normal-fix proc-non-normal-clean proc-non-normal
-.PHONY: proc-non-normal-cloze-check proc-non-normal-cloze-clean proc-non-normal-cloze
+.PHONY: proc-normal-check proc-normal-fix proc-normal-clean proc-normal _proc-normal
+.PHONY: proc-normal-cloze-check proc-normal-cloze-clean proc-normal-cloze _proc-normal-cloze
+.PHONY: proc-non-normal-check proc-non-normal-fix proc-non-normal-clean proc-non-normal _proc-non-normal
+.PHONY: proc-non-normal-cloze-check proc-non-normal-cloze-clean proc-non-normal-cloze _proc-non-normal-cloze
 
 proc-normal-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NORMAL_STRUCTURED_ROOT)/*.md
@@ -413,7 +468,7 @@ proc-normal-fix:
 proc-normal-clean:
 	rm -f $(PROCEDURES_BUILD)/procedures-normal.tsv
 
-proc-normal: proc-normal-check
+_proc-normal: proc-normal-check
 	mkdir -p $(PROCEDURES_BUILD)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(PROCEDURES_NORMAL_STRUCTURED_ROOT) \
@@ -422,13 +477,16 @@ proc-normal: proc-normal-check
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
 		--tsv $(PROCEDURES_BUILD)/procedures-normal.tsv
 
+proc-normal:
+	$(call log_wrap,b737,proc-normal)
+
 proc-normal-cloze-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NORMAL_CLOZE_ROOT)/*.md
 
 proc-normal-cloze-clean:
 	rm -f $(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
 
-proc-normal-cloze:
+_proc-normal-cloze:
 	mkdir -p $(PROCEDURES_BUILD)
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(PROCEDURES_NORMAL_CLOZE_ROOT)/*.md
 	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
@@ -436,6 +494,9 @@ proc-normal-cloze:
 		--out $(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
 	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
 		$(PROCEDURES_BUILD)/procedures-normal-cloze.tsv
+
+proc-normal-cloze:
+	$(call log_wrap,b737,proc-normal-cloze)
 
 proc-non-normal-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NON_NORMAL_STRUCTURED_ROOT)/*.md
@@ -446,7 +507,7 @@ proc-non-normal-fix:
 proc-non-normal-clean:
 	rm -f $(PROCEDURES_BUILD)/procedures-non-normal.tsv
 
-proc-non-normal: proc-non-normal-check
+_proc-non-normal: proc-non-normal-check
 	mkdir -p $(PROCEDURES_BUILD)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(PROCEDURES_NON_NORMAL_STRUCTURED_ROOT) \
@@ -455,13 +516,16 @@ proc-non-normal: proc-non-normal-check
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
 		--tsv $(PROCEDURES_BUILD)/procedures-non-normal.tsv
 
+proc-non-normal:
+	$(call log_wrap,b737,proc-non-normal)
+
 proc-non-normal-cloze-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_NON_NORMAL_CLOZE_ROOT)/*.md
 
 proc-non-normal-cloze-clean:
 	rm -f $(PROCEDURES_BUILD)/procedures-non-normal-cloze.tsv
 
-proc-non-normal-cloze:
+_proc-non-normal-cloze:
 	mkdir -p $(PROCEDURES_BUILD)
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(PROCEDURES_NON_NORMAL_CLOZE_ROOT)/*.md
 	$(PYTHON) tools/anki/export/cloze_md_to_tsv.py \
@@ -470,9 +534,12 @@ proc-non-normal-cloze:
 	$(PYTHON) tools/anki/export/cloze_import_to_anki.py \
 		$(PROCEDURES_BUILD)/procedures-non-normal-cloze.tsv
 
+proc-non-normal-cloze:
+	$(call log_wrap,b737,proc-non-normal-cloze)
+
 PROCEDURES_INFLIGHT_ROOT := $(PROCEDURES_ROOT)/inflight_maneuvers
 
-.PHONY: proc-inflight-check proc-inflight-fix proc-inflight-clean proc-inflight
+.PHONY: proc-inflight-check proc-inflight-fix proc-inflight-clean proc-inflight _proc-inflight
 
 proc-inflight-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(PROCEDURES_INFLIGHT_ROOT)/*.md
@@ -483,7 +550,7 @@ proc-inflight-fix:
 proc-inflight-clean:
 	rm -f $(PROCEDURES_BUILD)/procedures-inflight-maneuvers.tsv
 
-proc-inflight: proc-inflight-check
+_proc-inflight: proc-inflight-check
 	mkdir -p $(PROCEDURES_BUILD)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(PROCEDURES_INFLIGHT_ROOT) \
@@ -492,6 +559,9 @@ proc-inflight: proc-inflight-check
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
 		--tsv $(PROCEDURES_BUILD)/procedures-inflight-maneuvers.tsv
 
+proc-inflight:
+	$(call log_wrap,b737,proc-inflight)
+
 
 # -------------------------------------------------------------------
 # Limits
@@ -499,7 +569,7 @@ proc-inflight: proc-inflight-check
 LIMITS_ROOT := domains/b737/anki/notes/limits
 LIMITS_TSV := $(BUILD_DIR)/limits.tsv
 
-.PHONY: limits-check limits-fix limits-clean limits
+.PHONY: limits-check limits-fix limits-clean limits _limits
 
 limits-check:
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --check $(LIMITS_ROOT)/*/*.md
@@ -510,7 +580,7 @@ limits-fix:
 limits-clean:
 	rm -f $(LIMITS_TSV)
 
-limits: limits-check
+_limits: limits-check
 	mkdir -p $(BUILD_DIR)
 	$(PYTHON) -m tools.anki.export.cnsf_to_import_tsv \
 		--in $(LIMITS_ROOT) \
@@ -519,6 +589,9 @@ limits: limits-check
 	$(PYTHON) -m tools.anki.sync.tsv_to_anki \
 		--tsv $(LIMITS_TSV)
 
+limits:
+	$(call log_wrap,b737,limits)
+
 # -------------------------------------------------------------------
 # Systems Verification Exam (SVE) — exam-mode MCQ / T/F pipeline
 #
@@ -526,7 +599,7 @@ limits: limits-check
 # sve-check and sve-fix delegate to sv-check / sv-fix (same files, same
 # canonicalizer) so there is no duplication.
 # -------------------------------------------------------------------
-.PHONY: sve sve-check sve-fix sve-clean
+.PHONY: sve sve-check sve-fix sve-clean _sve
 
 sve-check: sv-check
 
@@ -535,7 +608,7 @@ sve-fix: sv-fix
 sve-clean:
 	rm -f $(SV_BUILD)/sve-*.tsv
 
-sve: sve-check
+_sve: sve-check
 	@echo "=== Building Systems Verification Exam decks ==="
 	@set -e; \
 	mkdir -p $(SV_BUILD); \
@@ -552,10 +625,13 @@ sve: sve-check
 		fi; \
 	done
 
+sve:
+	$(call log_wrap,b737,sve)
+
 # -------------------------------------------------------------------
 # B737 (aggregate — all B737::Core decks)
 # -------------------------------------------------------------------
-.PHONY: b737 b737-fix
+.PHONY: b737 b737-fix _b737
 
 b737-fix:
 	$(MAKE) limits-fix
@@ -568,16 +644,19 @@ b737-fix:
 	$(MAKE) proc-non-normal-fix
 	$(MAKE) proc-inflight-fix
 
-b737:
+_b737:
 	@TARGETS="limits qrc triggers cats mnemonic checklists proc-normal proc-normal-cloze proc-non-normal proc-inflight"; \
 	for t in $$TARGETS; do \
 		printf "\033[1;34m→ $$t...\033[0m\n"; \
-		$(MAKE) $$t || { printf "\033[1;31m✗  B737 sync failed at: $$t\033[0m\n"; exit 1; }; \
+		$(MAKE) _$$t || { printf "\033[1;31m✗  B737 sync failed at: $$t\033[0m\n"; exit 1; }; \
 		printf "\033[0;32m✓  $$t\033[0m\n"; \
 	done; \
 	printf "\n\033[1;32m✓  All B737::Core decks synced successfully.\033[0m\n"
 
-sve-%:
+b737:
+	$(call log_wrap,b737,b737)
+
+_sve-%:
 	mkdir -p $(SV_BUILD)
 	$(PYTHON) tools/anki/cnsf_canonicalize.py --write $(SV_ROOT)/$*/*.md
 	$(PYTHON) tools/anki/export/sv_exam_md_to_tsv.py \
@@ -587,6 +666,31 @@ sve-%:
 	$(PYTHON) tools/anki/sync/sv_exam_import_to_anki.py \
 		--mcq "$(SV_BUILD)/sve-mcq-$*.tsv" \
 		--tf "$(SV_BUILD)/sve-tf-$*.tsv"
+
+sve-%:
+	$(call log_wrap,b737,sve-$*)
+
+# -------------------------------------------------------------------
+# B737 audit (aggregate report)
+#
+# B737 has no lexeme-style Compare/aspect/confusable concepts (those are
+# UA-only), so the only signal here is status: unverified/draft/no-tag,
+# scanned across all ten B737 note roots (QRC, Triggers/Flows, Cats and
+# Dogs, Mnemonics, Checklists, Procedures, Limits, Systems Verification).
+# See tools/anki/inspect/list_unverified_b737.py. Logged to
+# /tmp/anki-sync-logs like ua-audit, for the same reason: this is what's
+# actually worth a dated record of, not raw Anki sync transactions.
+# -------------------------------------------------------------------
+.PHONY: b737-unverified b737-audit _b737-audit
+
+b737-unverified:
+	@printf "\033[1;5;93m\n⚠ ⚠ ⚠  UNVERIFIED B737 NOTES (status) ⚠ ⚠ ⚠\033[0m\n"
+	@$(PYTHON) tools/anki/inspect/list_unverified_b737.py
+
+_b737-audit: b737-unverified
+
+b737-audit:
+	$(call log_wrap,b737,b737-audit)
 
 # -------------------------------------------------------------------
 # Deck Configuration — Line Flying Mode
@@ -619,18 +723,20 @@ UA_GOROH_DIR    := /tmp/goroh
 UA_EXAMPLES_LIMIT ?= 10
 
 .PHONY: ua-setup ua-setup-lexeme ua-setup-grammar ua-setup-visual ua-setup-pvom
-.PHONY: ua-visual ua-visual-check ua-visual-fix
-.PHONY: ua-pvom ua-pvom-check ua-pvom-fix
-.PHONY: ua-batch ua-batch-check ua-batch-fix
-.PHONY: ua-book  ua-book-check  ua-book-fix
-.PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix
-.PHONY: ua-grammar ua-grammar-check ua-grammar-fix
+.PHONY: ua-visual ua-visual-check ua-visual-fix _ua-visual
+.PHONY: ua-pvom ua-pvom-check ua-pvom-fix _ua-pvom
+.PHONY: ua-batch ua-batch-check ua-batch-fix _ua-batch
+.PHONY: ua-book  ua-book-check  ua-book-fix _ua-book
+.PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix _ua-lexeme
+.PHONY: ua-grammar ua-grammar-check ua-grammar-fix _ua-grammar
+.PHONY: ua-verb ua-verb-check ua-verb-fix _ua-verb
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
 .PHONY: ua-generate-examples ua-inject-examples
 .PHONY: ua-unverified
 .PHONY: ua-compare-check
 .PHONY: ua-check ua-check-aspect ua-check-pending-confusables
-.PHONY: ua ua-fix
+.PHONY: ua-audit _ua-audit
+.PHONY: ua ua-fix _ua
 
 # ── Note type setup ──────────────────────────────────────────────────────────
 
@@ -666,8 +772,11 @@ ua-batch-fix:
 	find $(UA_LEXEME_ROOT)/$(BATCH) -name "ua-lexeme-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-ua-batch: ua-batch-fix
+_ua-batch: ua-batch-fix
 	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$(BATCH)/
+
+ua-batch:
+	$(call log_wrap,ua,ua-batch)
 
 # ── Whole textbook:  make ua-book BOOK=yabluko-l1 ────────────────────────────
 
@@ -683,8 +792,11 @@ ua-book-fix:
 	find $(UA_LEXEME_ROOT)/$(BOOK) -name "ua-lexeme-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-ua-book: ua-book-fix
+_ua-book: ua-book-fix
 	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/$(BOOK)/
+
+ua-book:
+	$(call log_wrap,ua,ua-book)
 
 # ── All UA lexeme notes ──────────────────────────────────────────────────────
 
@@ -696,8 +808,11 @@ ua-lexeme-fix:
 	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-ua-lexeme: ua-lexeme-fix
+_ua-lexeme: ua-lexeme-fix
 	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/
+
+ua-lexeme:
+	$(call log_wrap,ua,ua-lexeme)
 
 # ── Grammar notes:  make ua-grammar ──────────────────────────────────────────
 
@@ -709,8 +824,11 @@ ua-grammar-fix:
 	find $(UA_GRAMMAR_ROOT) -name "ua-grammar-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-ua-grammar: ua-grammar-fix
+_ua-grammar: ua-grammar-fix
 	$(PYTHON) tools/anki/sync/ua_grammar_import.py $(UA_GRAMMAR_ROOT)/
+
+ua-grammar:
+	$(call log_wrap,ua,ua-grammar)
 
 # ── Visual prefix cards:  make ua-visual ─────────────────────────────────────
 
@@ -723,21 +841,27 @@ ua-visual-fix:
 	find $(UA_VISUAL_ROOT) -name "ua-visual-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-ua-visual: ua-visual-fix
+_ua-visual: ua-visual-fix
 	$(PYTHON) tools/anki/sync/ua_visual_import.py $(UA_VISUAL_ROOT)/
+
+ua-visual:
+	$(call log_wrap,ua,ua-visual)
 
 # ── Verb conjugation paradigms:  make ua-verb ──────────────────────────────────
 
 ua-verb-check:
-	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" ! -path "*/exported/*" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
 
 ua-verb-fix:
-	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" ! -path "*/exported/*" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-ua-verb: ua-verb-fix
+_ua-verb: ua-verb-fix
 	$(PYTHON) tools/anki/sync/ua_verb_import.py $(UA_VERB_ROOT)/
+
+ua-verb:
+	$(call log_wrap,ua,ua-verb)
 
 # ── PVOM infinitive drilling cards:  make ua-pvom ──────────────────────────────
 
@@ -749,8 +873,11 @@ ua-pvom-fix:
 	find $(UA_PVOM_ROOT) -name "ua-pvom-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-ua-pvom: ua-setup-pvom ua-pvom-fix
+_ua-pvom: ua-setup-pvom ua-pvom-fix
 	$(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/
+
+ua-pvom:
+	$(call log_wrap,ua,ua-pvom)
 
 # ── Unverified notes report (stress or status) ───────────────────────────────
 # Bold + blink + bright yellow, deliberately obnoxious: printed at the end of
@@ -792,6 +919,20 @@ ua-check:
 	$(MAKE) ua-check-aspect
 	$(MAKE) ua-check-pending-confusables
 
+# ── Full audit (aggregate report) ────────────────────────────────────────────
+# Combines all four report-only checks above -- unverified stress/status,
+# Compare/homograph card field audit, aspect completeness, and pending-
+# confusable watchlist -- into one pass across the whole UA corpus. This is
+# the target to reach for when you want to know what needs your attention,
+# as opposed to ua-lexeme/ua-verb/etc., which sync notes to Anki and log the
+# raw sync transaction. Logged to /tmp/anki-sync-logs like the sync targets,
+# since the audit findings are the more useful thing to keep a dated record
+# of. Pass STRICT=1 to fail the build if any check finds something.
+_ua-audit: ua-unverified ua-compare-check ua-check
+
+ua-audit:
+	$(call log_wrap,ua,ua-audit)
+
 # ── All UA note types (aggregate) ────────────────────────────────────────────
 
 ua-fix:
@@ -803,15 +944,18 @@ ua-fix:
 	$(MAKE) ua-unverified
 	$(MAKE) ua-compare-check
 
-ua:
+_ua:
 	@TARGETS="ua-lexeme ua-grammar ua-visual ua-verb ua-pvom"; \
 	for t in $$TARGETS; do \
 		printf "\033[1;34m→ $$t...\033[0m\n"; \
-		$(MAKE) $$t || { printf "\033[1;31m✗  UA sync failed at: $$t\033[0m\n"; exit 1; }; \
+		$(MAKE) _$$t || { printf "\033[1;31m✗  UA sync failed at: $$t\033[0m\n"; exit 1; }; \
 		printf "\033[0;32m✓  $$t\033[0m\n"; \
 	done; \
 	printf "\n\033[1;32m✓  All UA note types synced successfully.\033[0m\n"
 	$(MAKE) ua-unverified
+
+ua:
+	$(call log_wrap,ua,ua)
 
 # ── Stress verification ──────────────────────────────────────────────────────
 
