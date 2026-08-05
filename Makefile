@@ -131,6 +131,7 @@ help:
 	@echo "  ua-check            Aspect completeness + pending-confusable watchlist (report-only; STRICT=1 to fail on findings)"
 	@echo "  ua-check-aspect     Flag pos:verb notes with zero aspectual counterparts and no aspect:*-only tag"
 	@echo "  ua-check-pending-confusables  Report pending-confusable:<lemma> tags whose target now exists in the corpus"
+	@echo "  ua-audit            Full report sweep: unverified + compare-check + check (logged to /tmp/anki-sync-logs)"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
@@ -183,7 +184,7 @@ BUILD_DIR := build
 # Every target that actually pushes notes to Anki (not the bare
 # *-check/*-fix canonicalization-only targets) additionally tees its
 # console output to a timestamped log file under /tmp/anki-sync-logs,
-# named <domain>_<target>_<timestamp>.md (domain is "b737" or "ua").
+# named <domain>_<target>_<timestamp>.txt (domain is "b737" or "ua").
 # Mechanism: the real recipe is renamed to a private _<target>, and
 # the public <target> becomes a thin wrapper that re-invokes it
 # through `make` and pipes the combined stdout/stderr through `tee`.
@@ -200,7 +201,7 @@ TIMESTAMP    := $(shell date +%Y-%m-%dT%H-%M-%S%z)
 # $(call log_wrap,<domain>,<target-name>)
 define log_wrap
 	@mkdir -p $(SYNC_LOG_DIR)
-	@logfile="$(SYNC_LOG_DIR)/$(1)_$(2)_$(TIMESTAMP).md"; \
+	@logfile="$(SYNC_LOG_DIR)/$(1)_$(2)_$(TIMESTAMP).txt"; \
 	bash -c "set -o pipefail; $(MAKE) --no-print-directory _$(2) 2>&1 | tee \"$$logfile\""; \
 	status=$$?; \
 	echo ""; \
@@ -710,6 +711,7 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-unverified
 .PHONY: ua-compare-check
 .PHONY: ua-check ua-check-aspect ua-check-pending-confusables
+.PHONY: ua-audit _ua-audit
 .PHONY: ua ua-fix _ua
 
 # ── Note type setup ──────────────────────────────────────────────────────────
@@ -892,6 +894,20 @@ ua-check-pending-confusables:
 ua-check:
 	$(MAKE) ua-check-aspect
 	$(MAKE) ua-check-pending-confusables
+
+# ── Full audit (aggregate report) ────────────────────────────────────────────
+# Combines all four report-only checks above -- unverified stress/status,
+# Compare/homograph card field audit, aspect completeness, and pending-
+# confusable watchlist -- into one pass across the whole UA corpus. This is
+# the target to reach for when you want to know what needs your attention,
+# as opposed to ua-lexeme/ua-verb/etc., which sync notes to Anki and log the
+# raw sync transaction. Logged to /tmp/anki-sync-logs like the sync targets,
+# since the audit findings are the more useful thing to keep a dated record
+# of. Pass STRICT=1 to fail the build if any check finds something.
+_ua-audit: ua-unverified ua-compare-check ua-check
+
+ua-audit:
+	$(call log_wrap,ua,ua-audit)
 
 # ── All UA note types (aggregate) ────────────────────────────────────────────
 
