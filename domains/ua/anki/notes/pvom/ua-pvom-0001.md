@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:pvom_infinitive
 - stress:unverified
+- status:draft
 fields:
   NoteID: ua-pvom-0001
   Prefix: про

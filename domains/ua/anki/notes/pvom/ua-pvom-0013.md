@@ -12,7 +12,8 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:pvom_infinitive
-- stress:unverified
+- stress:verified
+- status:draft
 fields:
   NoteID: ua-pvom-0013
   Prefix: на
