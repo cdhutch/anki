@@ -850,11 +850,11 @@ ua-visual:
 # ── Verb conjugation paradigms:  make ua-verb ──────────────────────────────────
 
 ua-verb-check:
-	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" ! -path "*/exported/*" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --check
 
 ua-verb-fix:
-	find $(UA_VERB_ROOT) -name "ua-verb-*.md" \
+	find $(UA_VERB_ROOT) -name "ua-verb-*.md" ! -path "*/exported/*" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 _ua-verb: ua-verb-fix
