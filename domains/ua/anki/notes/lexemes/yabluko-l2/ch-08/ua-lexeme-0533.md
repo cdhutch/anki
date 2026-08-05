@@ -12,8 +12,8 @@ tags:
 - ch:2.8.5
 - pos:phrase
 - phrase:discourse
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0533
   Lemma: у порівня́нні

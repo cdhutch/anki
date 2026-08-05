@@ -12,8 +12,8 @@ tags:
 - ch:2.8.5
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0511
   Lemma: тра́са

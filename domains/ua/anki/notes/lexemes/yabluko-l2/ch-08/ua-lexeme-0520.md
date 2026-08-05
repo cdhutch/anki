@@ -11,14 +11,14 @@ tags:
 - textbook:яблуко
 - ch:2.8.5
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0520
   Lemma: розво́дити
   PartOfSpeech: verb
   Gender: ''
-  Perfective: ''
+  Perfective: розвести́
   EN_Gloss: to breed, raise (animals)
   Govt_Case: ''
   CounterpartForm: ''

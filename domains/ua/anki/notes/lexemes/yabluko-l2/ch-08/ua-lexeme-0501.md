@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.4
 - pos:verb
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0501
   Lemma: звари́тися
