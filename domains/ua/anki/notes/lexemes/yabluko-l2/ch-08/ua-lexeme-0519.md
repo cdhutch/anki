@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - gender:f
 - animate:true
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0519
   Lemma: вівця́

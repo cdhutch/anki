@@ -15,7 +15,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0291
-  Lemma: старту́ва́ти
+  Lemma: стартува́ти
   PartOfSpeech: verb
   Gender: ''
   Perfective: ''
@@ -25,17 +25,17 @@ fields:
   IrregularForms: ''
   VerbMotion_Pair: ''
   ConfusableSet: "почина́ти/поча́ти - synonym listed by Горох; почина́ти is the general-purpose\
-    \ \"begin/start\"\nverb for ANY activity (a class, a conversation, a project), while старту́вати\
+    \ \"begin/start\"\nverb for ANY activity (a class, a conversation, a project), while стартува́ти\
     \ is narrower --\nspecifically the competitive/race-start sense (a runner, a car, a rocket\
-    \ leaving the\nstarting line).\nKey distinction: старту́вати can't replace почина́ти outside\
+    \ leaving the\nstarting line).\nKey distinction: стартува́ти can't replace почина́ти outside\
     \ races/competitions/launches\n(you would not say \"стартувати уроки\" for \"start the\
-    \ lesson\") -- почина́ти is the all-purpose\nverb, старту́вати is the specialized one,\
+    \ lesson\") -- почина́ти is the all-purpose\nverb, стартува́ти is the specialized one,\
     \ not a plain synonym pair."
-  Mnemonic_EN: старту́вати = leaving the starting line (races, launches only); почина́ти =
+  Mnemonic_EN: стартува́ти = leaving the starting line (races, launches only); почина́ти =
     beginning anything at all (the general-purpose verb). See ua-lexeme-0292/фінішувати for
     the finish-line mirror of this same distinction.
   CompareScenario: The referee fires the starting pistol and the runners take off.
-  CompareA: старту́вати
+  CompareA: стартува́ти
   CompareB: почина́ти
   CrossLang_Analog: ''
   EuphonyNote: ''

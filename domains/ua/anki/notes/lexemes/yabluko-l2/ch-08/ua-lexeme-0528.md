@@ -12,8 +12,8 @@ tags:
 - ch:2.8.5
 - pos:phrase
 - phrase:noun
-- stress:unverified
-- status:draft
+- stress:verified
+- status:verified
 fields:
   NoteID: ua-lexeme-0528
   Lemma: волоха́тий носорі́г
