@@ -11,7 +11,7 @@ tags:
 - phase:2a
 - conj:drill
 - ch:2.9.2
-- stress:unverified
+- stress:verified
 fields:
   NoteID: ua-verb-0010
   Lemma: попливти́
@@ -70,6 +70,10 @@ fields:
     dangling branch (expected -- попливти is perfective, no present participle). Same open
     follow-ups as ua-verb-0009: ua-verb-0087 (поплисти) may need the same -мо-only simplification,
     and the Participle_Passive_Past schema question is deferred to the larger branch-reconciliation
-    pass.'
+    pass. 2026-08-05: Craig independently re-verified this note''s stored forms and confirmed
+    stress:verified (the tag had gone back to stress:unverified in the interim, per Craig''s
+    own review process -- see his 2026-08-04 note elsewhere in this session about reverting
+    пливти/попливти to unverified pending his own check). No field values changed as part
+    of this pass, only the tag.'
 ---
 
