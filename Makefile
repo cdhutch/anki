@@ -154,6 +154,8 @@ help:
 	@echo "B737 (aggregate)"
 	@echo "  b737                Export and sync all B737::Core decks to Anki"
 	@echo "  b737-fix            Canonicalize all B737::Core note files"
+	@echo "  b737-unverified     Report notes not status:verified, across all B737 note roots"
+	@echo "  b737-audit          Full report sweep (currently just b737-unverified; logged to /tmp/anki-sync-logs)"
 	@echo ""
 	@echo "Deck Configuration"
 	@echo "  line-flying         Configure decks for line flying (non-training mode)"
@@ -667,6 +669,28 @@ _sve-%:
 
 sve-%:
 	$(call log_wrap,b737,sve-$*)
+
+# -------------------------------------------------------------------
+# B737 audit (aggregate report)
+#
+# B737 has no lexeme-style Compare/aspect/confusable concepts (those are
+# UA-only), so the only signal here is status: unverified/draft/no-tag,
+# scanned across all ten B737 note roots (QRC, Triggers/Flows, Cats and
+# Dogs, Mnemonics, Checklists, Procedures, Limits, Systems Verification).
+# See tools/anki/inspect/list_unverified_b737.py. Logged to
+# /tmp/anki-sync-logs like ua-audit, for the same reason: this is what's
+# actually worth a dated record of, not raw Anki sync transactions.
+# -------------------------------------------------------------------
+.PHONY: b737-unverified b737-audit _b737-audit
+
+b737-unverified:
+	@printf "\033[1;5;93m\n⚠ ⚠ ⚠  UNVERIFIED B737 NOTES (status) ⚠ ⚠ ⚠\033[0m\n"
+	@$(PYTHON) tools/anki/inspect/list_unverified_b737.py
+
+_b737-audit: b737-unverified
+
+b737-audit:
+	$(call log_wrap,b737,b737-audit)
 
 # -------------------------------------------------------------------
 # Deck Configuration — Line Flying Mode
