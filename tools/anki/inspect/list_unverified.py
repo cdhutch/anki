@@ -66,6 +66,8 @@ def find_unverified(note_type: str, root: Path, pattern: str) -> list[dict[str, 
     if not root.exists():
         return results
     for path in sorted(root.rglob(pattern)):
+        if "exported" in path.parts:
+            continue
         meta = _read_meta(path)
         if meta is None:
             continue
