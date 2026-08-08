@@ -6,6 +6,12 @@ this file exists to answer "what's done and what's next" at a glance, not to rep
 log. Everything here traces back to specific `CLAUDE.md` log entries (dated) if you need
 the full story.
 
+**For a checkbox-per-item list Craig checks off himself after personally verifying in
+Anki/the repo (not from what this file or the CLAUDE.md log claims), see
+[CLAUDE-work-queue.md](CLAUDE-work-queue.md).** This file and the CLAUDE.md log have both
+drifted stale before (see CLAUDE-work-queue.md's intro) — treat the work-queue checkboxes
+as the more trustworthy signal of what's actually confirmed done.
+
 **Reorganized and refreshed 2026-08-01** (previous version was last substantively updated
 2026-07-22, and its content was reorganized under the old structure without being brought
 current — this pass pulls forward everything material from `CLAUDE.md`'s log since then).
