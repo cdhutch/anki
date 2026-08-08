@@ -16,7 +16,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0492
-  Lemma: у кі́лька рази́в
+  Lemma: у кі́лька разі́в
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''

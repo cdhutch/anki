@@ -18,7 +18,7 @@ fields:
   Lemma: відрізня́тися
   PartOfSpeech: verb
   Gender: ''
-  Perfective: ''
+  Perfective: відрізни́тися
   EN_Gloss: to differ, to be different
   Govt_Case: від + genitive
   CounterpartForm: ''

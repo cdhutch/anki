@@ -20,7 +20,7 @@ fields:
   PartOfSpeech: noun
   Gender: m
   Perfective: ''
-  EN_Gloss: profit, income
+  EN_Gloss: profit
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
