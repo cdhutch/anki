@@ -16,10 +16,10 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0488
-  Lemma: впа́сти в о́чі
+  Lemma: впа́дати в о́чі
   PartOfSpeech: phrase
   Gender: ''
-  Perfective: ''
+  Perfective: впа́сти в о́чі
   EN_Gloss: to catch the eye, stand out
   Govt_Case: ''
   CounterpartForm: ''
@@ -28,6 +28,8 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
+  Lemma_Euphony: упада́ти в о́чі
+  Perfective_Euphony: упа́сти в о́чі
   EuphonyNote: ''
   TypingAnswer: впасти в очі
   UA_Example: Її яскрава сукня одразу впала в очі.

@@ -19,7 +19,7 @@ fields:
   PartOfSpeech: adjective
   Gender: ''
   Perfective: ''
-  EN_Gloss: high-altitude, alpine
+  EN_Gloss: high-elevation, alpine
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -30,7 +30,7 @@ fields:
   EuphonyNote: ''
   TypingAnswer: високогірний
   UA_Example: Ми зупинилися у високогірному селі на ніч.
-  EN_Example: We stopped overnight in a high-altitude village.
+  EN_Example: We stopped overnight in a high-elevation village.
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/високогірний
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

@@ -20,7 +20,7 @@ fields:
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
-  EN_Gloss: ski slope, ski piste
+  EN_Gloss: (Nordic) ski slope
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

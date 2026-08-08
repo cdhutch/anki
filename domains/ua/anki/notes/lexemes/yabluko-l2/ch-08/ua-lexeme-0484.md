@@ -27,6 +27,8 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
+  Lemma_Euphony: упада́ти
+  Perfective_Euphony: упа́сти
   EuphonyNote: ''
   TypingAnswer: впадати
   UA_Example: Яблуко впало з дерева просто йому під ноги.
