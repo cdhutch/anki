@@ -376,6 +376,7 @@ in this repo -- all run by Craig, not Claude:
 
 | Topic | File |
 |-------|------|
+| **Work queue (checkbox tracker)** | [CLAUDE-work-queue.md](CLAUDE-work-queue.md) |
 | **SV field spec** | [CLAUDE-sv-field-conventions.md](CLAUDE-sv-field-conventions.md) |
 | **Deck architecture** | [CLAUDE-deck-architecture.md](CLAUDE-deck-architecture.md) |
 | **Known issues** | [CLAUDE-known-issues.md](CLAUDE-known-issues.md) |
