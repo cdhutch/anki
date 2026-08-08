@@ -18,6 +18,46 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ---
 
+## Bugs — reported by Craig, needs investigation
+
+- [ ] **EN→UA stress-mark feedback misjudges a correctly-stressed answer as
+  INCORRECT** (reported 2026-08-08). Reproduction: ua-lexeme-0532 (phrase note,
+  `Lemma: розве́дення ове́ць`, `TypingAnswer: розведення овець` — no aspect
+  slots, so `TypingTarget_UA` falls back to `Lemma` per
+  `compute_typing_target()`). Craig typed the stress correctly but the
+  feedback script (`EN_UA_BACK` in `setup_ua_note_types.py`) reported
+  `✗ INCORRECT`, and the on-screen reconstruction of what he typed rendered as
+  `розведе ́ння ове́ць` — the combining accent (U+0301) appears **detached from
+  its letter with a stray space before it**, and in the wrong position (after
+  the 7th letter/second е, not the 5th letter/first е where `розве́дення`
+  actually stresses).
+  **What I checked:** the note's fields are correct (`Lemma` stress verified,
+  Горох-sourced). The feedback script reconstructs "what was typed" by walking
+  `#typeans`'s child nodes and concatenating only `.typeGood`/`.typeBad` span
+  text content (`typedAnswer = chunks.map(el => el.textContent).join('')`),
+  specifically to avoid the older, documented "combining mark renders detached
+  from its base letter" bug from Anki's own raw diff (see "Typing-card design
+  pattern for Ukrainian text" in `CLAUDE.md`). The fact that a *detached* mark
+  is showing up in the reconstructed `typedAnswer` string itself — not just in
+  Anki's raw diff — means either (a) Anki's `#typeans` diff, for this specific
+  kind of mismatch, is inserting an un-classed space/text node *between* two
+  `.typeGood`/`.typeBad` spans that the walker doesn't filter out, or (b)
+  Anki's character-level diff treats the base letter and its combining accent
+  as two independent diff units, and a one-position stress shift cascades into
+  a run of spurious mismatches that happens to include a real space character
+  from somewhere in that run. I can't tell which without seeing the actual
+  `#typeans` DOM for a failing case — this needs on-device diagnosis, not a
+  guess shipped blind (a wrong fix here means another sync-and-retest round
+  trip). **Next step:** next time this reproduces, open Chrome/Anki's
+  DevTools, right-click the feedback area → Inspect, and copy the raw HTML of
+  the `#typeans` element before the script hides it (or temporarily comment
+  out the `typeansEl.style.display = 'none'` line and screenshot it) — that
+  tells us definitively whether the phantom space is Anki's diff output or an
+  artifact of the reconstruction loop. Worth checking whether this only
+  affects phrase notes (multi-word `Lemma`, like this one) or also plain
+  single-word notes, and whether it's specific to a stress-mark *position*
+  mismatch vs. any mismatch at all.
+
 ## UA Domain — Structural / card & note-type work
 
 - [ ] **EN→UA card front shows the English example sentence** (`EN_Example` rendered
