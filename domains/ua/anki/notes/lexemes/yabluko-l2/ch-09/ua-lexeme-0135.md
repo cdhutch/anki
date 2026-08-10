@@ -18,7 +18,7 @@ fields:
   PartOfSpeech: adjective
   Gender: ''
   Perfective: ''
-  EN_Gloss: ski (adj.), skiing
+  EN_Gloss: ski (adj.), skiing (general)
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''

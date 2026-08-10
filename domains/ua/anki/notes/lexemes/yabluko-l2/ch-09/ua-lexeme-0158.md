@@ -19,7 +19,7 @@ fields:
   PartOfSpeech: phrase
   Gender: ''
   Perfective: ''
-  EN_Gloss: ski race(s)
+  EN_Gloss: country skiing, cross-country ski racing
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
