@@ -16,7 +16,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0488
-  Lemma: впа́дати в о́чі
+  Lemma: впада́ти в о́чі
   PartOfSpeech: phrase
   Gender: ''
   Perfective: впа́сти в о́чі
