@@ -18,10 +18,14 @@ during review, stayed suspended forever; nothing ever re-asserted a state):
       checked for consistency with every other UA note type in case one
       ever does)
     - neither tag present → unsuspend
-    - note has a red/orange-flagged card → suspend, regardless of tags
-      above (per Craig -- see get_flagged_note_ids in tsv_to_anki.py). Only
+    - note has a red-flagged card → suspend, regardless of tags above (per
+      Craig -- see get_flagged_note_ids_by_color in tsv_to_anki.py). Only
       checked for existing notes; a brand-new note can't already have a
       flagged card in Anki.
+    - note has an orange-flagged card, no red → NOT suspended (does not
+      override the tag-based decision above). Called out in the sync log
+      instead (2026-08-10, per Craig -- orange means "confusing/unclear",
+      not "wrong"; see CLAUDE-flag-audit.md).
 Applied on every import, add or update -- declarative and self-healing like
 every other UA note type, not just a one-time default at creation.
 """
@@ -34,7 +38,13 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from tools.anki.sync.tsv_to_anki import anki_request, get_flagged_note_ids  # noqa: E402
+from tools.anki.sync.tsv_to_anki import (  # noqa: E402
+    FLAG_ORANGE,
+    FLAG_RED,
+    anki_request,
+    describe_note_ids,
+    get_flagged_note_ids_by_color,
+)
 
 # Deck query scope for the red/orange-flag suspend check -- same query
 # string used across every UA sync script; see ua_lexeme_import.py.
@@ -155,10 +165,19 @@ def upsert_notes(pvom_dir, dry_run=False):
         print(f"Error: {pvom_dir} is not a directory", file=sys.stderr)
         return False
 
-    # One bulk query for the whole sync run -- see get_flagged_note_ids.
-    flagged_note_ids = get_flagged_note_ids(FLAG_DECK_QUERY)
+    # One bulk query for the whole sync run -- see get_flagged_note_ids_by_color.
+    # Red still forces suspension; orange is a call-out only (2026-08-10, per
+    # Craig -- see SUSPEND_FLAG_COLORS in tsv_to_anki.py).
+    flags_by_color = get_flagged_note_ids_by_color(FLAG_DECK_QUERY)
+    flagged_note_ids = flags_by_color[FLAG_RED]
     if flagged_note_ids:
-        print(f"Found {len(flagged_note_ids)} note(s) with a red/orange-flagged card -- keeping suspended.")
+        print(f"Found {len(flagged_note_ids)} note(s) with a red-flagged card -- keeping suspended.")
+    orange_flagged_note_ids = flags_by_color[FLAG_ORANGE]
+    if orange_flagged_note_ids:
+        print(f"⚠ {len(orange_flagged_note_ids)} note(s) have an orange-flagged card "
+              f"(confusing/unclear) -- NOT suspended, flagged for review:")
+        for label in describe_note_ids(orange_flagged_note_ids):
+            print(f"    {label}")
 
     notes_to_create = []
     updates = []
