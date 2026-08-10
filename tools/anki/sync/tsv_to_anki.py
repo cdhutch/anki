@@ -64,47 +64,84 @@ def anki_request(action: str, params: Optional[dict] = None, url: str = ANKI_CON
 
 # Anki's built-in flag numbering: 1=red, 2=orange, 3=green, 4=blue, 5=pink,
 # 6=turquoise, 7=purple. Only red/orange currently mean anything to the UA
-# sync scripts -- see get_flagged_note_ids below.
+# sync scripts -- see get_flagged_note_ids_by_color below.
 FLAG_RED = 1
 FLAG_ORANGE = 2
-SUSPEND_FLAG_COLORS = (FLAG_RED, FLAG_ORANGE)
+TRACKED_FLAG_COLORS = (FLAG_RED, FLAG_ORANGE)
+
+# Which of the tracked colors actually force a card suspended. Split out
+# 2026-08-10 per Craig: red ("errors to fix" per CLAUDE-flag-audit.md) still
+# suspends every card on the note, same as before. Orange ("confusing/
+# unclear") no longer does -- it's downgraded to a call-out in the sync log
+# instead (see describe_note_ids below), so Craig sees it without the card
+# silently dropping out of review.
+SUSPEND_FLAG_COLORS = (FLAG_RED,)
 
 
-def get_flagged_note_ids(
+def get_flagged_note_ids_by_color(
     deck_query: str,
     url: str = ANKI_CONNECT_URL_DEFAULT,
-    flags: Tuple[int, ...] = SUSPEND_FLAG_COLORS,
-) -> set:
-    """Return the Anki note IDs with at least one card flagged red or orange
-    within *deck_query* (e.g. "deck:UA::*").
+    flags: Tuple[int, ...] = TRACKED_FLAG_COLORS,
+) -> Dict[int, set]:
+    """Return {flag_color: {note_ids}} for cards flagged red or orange within
+    *deck_query* (e.g. "deck:UA::*").
 
-    Added 2026-07-31 per Craig: a mistyped keystroke during review (Command-1
-    or Alt-1 instead of the intended Alt-`) can suspend a card by accident,
-    with no corresponding CNSF tag change -- so every UA import script's
-    tag-based suspension policy would otherwise force it straight back to
-    unsuspended on the very next sync, silently undoing the mistake but also
-    silently undoing a *deliberate* suspend if one was ever wanted. Flagging
-    a card red or orange is the escape hatch: every UA sync script now treats
-    "this note has a red/orange-flagged card" as an additional, independent
-    reason to suspend, on top of its own tag policy -- same standing as
-    status:draft, checked once per sync rather than per note.
+    Added 2026-07-31 per Craig (originally a single merged set -- see git
+    history for the pre-2026-08-10 get_flagged_note_ids): a mistyped keystroke
+    during review (Command-1 or Alt-1 instead of the intended Alt-`) can
+    suspend a card by accident, with no corresponding CNSF tag change -- so
+    every UA import script's tag-based suspension policy would otherwise force
+    it straight back to unsuspended on the very next sync, silently undoing
+    the mistake but also silently undoing a *deliberate* suspend if one was
+    ever wanted. Flagging a card is the escape hatch.
+
+    Split by color 2026-08-10 per Craig: red and orange no longer carry equal
+    weight -- see SUSPEND_FLAG_COLORS. Callers build their suspend set from
+    result[color] for color in SUSPEND_FLAG_COLORS (currently just
+    result[FLAG_RED]) and use the remaining bucket(s) purely for a printed
+    call-out via describe_note_ids(). A note with both a red card and a
+    separate orange card lands in both buckets -- harmless, since red is
+    suspend-authoritative whenever both are present.
 
     Deliberately one bulk query for the whole deck tree rather than a
     find-cards-per-note check -- the UA corpus is 700+ notes across five note
     types; checking flags one note at a time would add 700+ AnkiConnect
     round-trips to every sync. Callers query once in main() and pass the
-    resulting set down to each note's suspend decision.
+    resulting sets down to each note's suspend decision.
 
     Any flag color other than red/orange (green/blue/pink/turquoise/purple)
-    is not assigned a meaning here and has no effect on suspension --
-    tighten *flags* at the call site if that should ever change.
+    is not assigned a meaning here and has no effect -- tighten *flags* at
+    the call site if that should ever change.
     """
     flag_clause = " OR ".join(f"flag:{f}" for f in flags)
     card_ids = anki_request("findCards", {"query": f"{deck_query} ({flag_clause})"}, url=url) or []
+    result: Dict[int, set] = {color: set() for color in flags}
     if not card_ids:
-        return set()
+        return result
     cards_info = anki_request("cardsInfo", {"cards": card_ids}, url=url) or []
-    return {c["note"] for c in cards_info if "note" in c}
+    for c in cards_info:
+        color = c.get("flags")
+        note = c.get("note")
+        if color in result and note is not None:
+            result[color].add(note)
+    return result
+
+
+def describe_note_ids(note_ids: set, url: str = ANKI_CONNECT_URL_DEFAULT) -> List[str]:
+    """Resolve Anki note IDs to their CNSF NoteID field, for a human-readable
+    call-out (e.g. each UA sync script's orange-flag notice in main()) instead
+    of a bare AnkiConnect integer nobody can grep the repo for. Falls back to
+    "id:<n>" if a note has neither a NoteID nor note_id field.
+    """
+    if not note_ids:
+        return []
+    notes_info = anki_request("notesInfo", {"notes": sorted(note_ids)}, url=url) or []
+    labels = []
+    for n in notes_info:
+        fields = n.get("fields", {})
+        value = (fields.get("NoteID") or fields.get("note_id") or {}).get("value")
+        labels.append(value or f"id:{n.get('noteId')}")
+    return sorted(labels)
 
 
 @dataclass

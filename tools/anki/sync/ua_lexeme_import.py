@@ -15,10 +15,15 @@ prior manual suspend/unsuspend actions taken outside this script):
     - status:verified → unsuspend every card on the note
     - ConfusableSet empty/blank → suspend the Compare card (card #3)
     - ConfusableSet populated   → unsuspend the Compare card (card #3)
-    - note has a red/orange-flagged card (any card) → suspend every card on
-      the note, including the Compare card (added 2026-07-31, per Craig --
-      see get_flagged_note_ids in tsv_to_anki.py). Only checked for existing
-      notes; a brand-new note can't already have a flagged card in Anki.
+    - note has a red-flagged card (any card) → suspend every card on the
+      note, including the Compare card (added 2026-07-31, per Craig -- see
+      get_flagged_note_ids_by_color in tsv_to_anki.py). Only checked for
+      existing notes; a brand-new note can't already have a flagged card in
+      Anki.
+    - note has an orange-flagged card, no red → NOT suspended. Called out in
+      the sync log instead (2026-08-10, per Craig: orange means "confusing/
+      unclear", not "wrong" -- see CLAUDE-flag-audit.md -- so it shouldn't
+      silently pull the card out of review the way red does).
 
 The Compare card suspension is independent of status flags -- a status:verified
 note with no ConfusableSet will have all other cards active but the Compare card
@@ -50,7 +55,13 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from tools.anki.sync.tsv_to_anki import anki_request, get_flagged_note_ids  # noqa: E402
+from tools.anki.sync.tsv_to_anki import (  # noqa: E402
+    FLAG_ORANGE,
+    FLAG_RED,
+    anki_request,
+    describe_note_ids,
+    get_flagged_note_ids_by_color,
+)
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Lexeme"
@@ -351,8 +362,10 @@ def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[
 def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:
     """Import a single parsed note. Returns 'added', 'updated', or 'skipped'.
 
-    flagged_note_ids: Anki note IDs with a red/orange-flagged card, from
-    get_flagged_note_ids() -- see module docstring's suspension policy.
+    flagged_note_ids: Anki note IDs with a red-flagged card (orange is a
+    call-out only, not a suspend reason -- see main()), from
+    get_flagged_note_ids_by_color()[FLAG_RED] -- see module docstring's
+    suspension policy.
     """
     flagged_note_ids = flagged_note_ids or set()
     note_id = data.get("note_id", "")
@@ -481,10 +494,11 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
             set_compare_card_suspended(anki_id, suspend_compare_card, dry_run)
         return "added"
     else:
-        # Red/orange flag override -- see module docstring and
-        # get_flagged_note_ids in tsv_to_anki.py. Only meaningful here (the
-        # existing-note path): a note can't have a flagged card in Anki
-        # before this sync creates it.
+        # Red-flag override -- see module docstring and
+        # get_flagged_note_ids_by_color in tsv_to_anki.py. Only meaningful
+        # here (the existing-note path): a note can't have a flagged card in
+        # Anki before this sync creates it. Orange doesn't reach this point
+        # at all -- main() only puts FLAG_RED note ids into flagged_note_ids.
         flagged = existing_id in flagged_note_ids
         note_suspend = suspend or flagged
         compare_suspend = suspend_compare_card or flagged
@@ -531,10 +545,20 @@ def main():
         print("No ua-lexeme-*.md files found.")
         sys.exit(1)
 
-    # One bulk query for the whole sync run -- see get_flagged_note_ids.
-    flagged_note_ids = get_flagged_note_ids(FLAG_DECK_QUERY, ANKI_URL)
+    # One bulk query for the whole sync run -- see get_flagged_note_ids_by_color.
+    # Red still forces suspension; orange is a call-out only (2026-08-10, per
+    # Craig -- see SUSPEND_FLAG_COLORS in tsv_to_anki.py).
+    flags_by_color = get_flagged_note_ids_by_color(FLAG_DECK_QUERY, ANKI_URL)
+    flagged_note_ids = flags_by_color[FLAG_RED]
     if flagged_note_ids:
-        print(f"Found {len(flagged_note_ids)} note(s) with a red/orange-flagged card -- keeping suspended.\n")
+        print(f"Found {len(flagged_note_ids)} note(s) with a red-flagged card -- keeping suspended.\n")
+    orange_flagged_note_ids = flags_by_color[FLAG_ORANGE]
+    if orange_flagged_note_ids:
+        print(f"⚠ {len(orange_flagged_note_ids)} note(s) have an orange-flagged card "
+              f"(confusing/unclear) -- NOT suspended, flagged for review:")
+        for label in describe_note_ids(orange_flagged_note_ids, ANKI_URL):
+            print(f"    {label}")
+        print()
 
     added = updated = skipped = errors = 0
 

@@ -607,6 +607,27 @@ this doc. Roughly in priority order:
     this session's confirmation was a successful sync run plus Craig's spot-check, not a
     note-by-note read of all 87 files' final stress marks/tags — worth keeping in mind if
     something looks off in the previously-`status:draft` 0033–0085 range during future review.
+14. **Red/orange flag suspend-policy split** — **Done, 2026-08-10.** Per Craig: red and
+    orange flags no longer carry equal weight in the automatic per-sync suspend check.
+    Red ("errors to fix") still force-suspends every card on the note, unchanged. Orange
+    ("confusing/unclear") no longer suspends -- it's downgraded to a printed call-out
+    (resolved to the note's CNSF `NoteID` via a new `describe_note_ids()` helper, not a
+    bare AnkiConnect integer) so Craig sees it in the sync log without the card silently
+    dropping out of review. Implemented by splitting `get_flagged_note_ids` (item 8) into
+    `get_flagged_note_ids_by_color()` in `tools/anki/sync/tsv_to_anki.py`, which now
+    returns `{flag_color: {note_ids}}` instead of one merged set; `SUSPEND_FLAG_COLORS`
+    narrowed to `(FLAG_RED,)` (was `(FLAG_RED, FLAG_ORANGE)`) as the single source of
+    truth for which colors actually suspend. All five UA import scripts
+    (`ua_lexeme_import.py`, `ua_verb_import.py`, `ua_visual_import.py`,
+    `ua_grammar_import.py`, `ua_pvom_infinitive_import.py`) updated to query both
+    buckets, keep building their suspend set from red only, and print the new orange
+    call-out in `main()`. `ua_flag_audit.py` (item 8's tooling) untouched in behavior --
+    it already queried/reported red and orange separately for its own manifest/summary --
+    but its comments were corrected where they described the old merged-suspend Pass-1
+    behavior. `CLAUDE-flag-audit.md`'s Flag Usage Convention table updated to match. Not
+    yet run against live Anki (edited via Claude's device-bridge staging, not executed --
+    Craig's Big 3 rules mean Claude doesn't run `make`/Python against AnkiConnect) --
+    verify with a `make ua` sync and an orange-flagged test note before relying on it.
 
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
@@ -619,8 +640,10 @@ restoration (2026-07-28, git archaeology), the UA→EN front aspect display
 (2026-08-01, item 8 above), and the CSS single-source-of-truth decision + `.night_mode`
 selector fix + Gruvbox palette rollout (2026-08-01, items 1–3 above — merged to `main`
 via `feature/anki-mobile-night-mode`, on-device validation confirmed and branch deleted
-2026-08-04, see item 3), and the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
-omitted it since item 4 itself was mislabeled as still open; corrected 2026-08-01).
+2026-08-04, see item 3), the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
+omitted it since item 4 itself was mislabeled as still open; corrected 2026-08-01), and the
+red/orange flag suspend-policy split (2026-08-10, item 14 above — pending its first live
+`make ua` verification, see item 14).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -1399,6 +1422,11 @@ before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Ябл�
 **Purpose:** Periodic review and correction of flagged cards (red=errors, orange=confusing).
 After each study session, fix all flagged cards and remove flags.
 
+**Suspend behavior (updated 2026-08-10, item 14 above in the structural punch list):** red still force-suspends a
+flagged note's cards on the next sync; orange no longer does -- it's a printed call-out
+in the sync log only. See `CLAUDE-flag-audit.md`'s Flag Usage Convention table for the
+current per-color behavior.
+
 **Workflow:**
 1. Query Anki for flagged cards in UA domain → extract NoteIDs
 2. For each flagged NoteID:
@@ -1419,7 +1447,9 @@ After each study session, fix all flagged cards and remove flags.
 **Status:** Phase 1 (`--query`) and Phase 3 (`--apply`) tooling built and tested,
 2026-08-01 -- see item 8 in the structural punch list above and
 `tools/anki/inspect/ua_flag_audit.py`. Phase 2 (interactive review/fix) is ready to use
-whenever Craig wants to work through the current 11 flagged notes.
+whenever Craig wants to work through the current 11 flagged notes. Red/orange
+suspend-policy split done 2026-08-10, see item 14 above -- pending its first live
+`make ua` verification.
 
 ### Source materials
 | Path | Purpose |

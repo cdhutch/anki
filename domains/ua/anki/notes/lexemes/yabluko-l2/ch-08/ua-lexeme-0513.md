@@ -16,7 +16,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0513
-  Lemma: гра́д
+  Lemma: град
   PartOfSpeech: noun
   Gender: m
   Perfective: ''

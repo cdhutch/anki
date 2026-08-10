@@ -41,10 +41,11 @@ from tools.anki.sync.tsv_to_anki import anki_request, FLAG_RED, FLAG_ORANGE  # n
 
 ANKI_URL = "http://127.0.0.1:8765"
 
-# Same deck-tree scope as the sync scripts' red/orange suspend-override check
-# (get_flagged_note_ids in tsv_to_anki.py) -- kept as a literal here rather
-# than imported, since that helper returns a bare set of Anki note IDs and
-# this tool needs per-card flag color + template info that helper discards.
+# Same deck-tree scope as the sync scripts' red/orange flag check
+# (get_flagged_note_ids_by_color in tsv_to_anki.py) -- kept as a literal here
+# rather than imported, since that helper returns bare sets of Anki note IDs
+# per color and this tool needs per-card flag color + template info that
+# helper discards.
 FLAG_DECK_QUERY = "deck:UA::*"
 
 FLAG_NAMES = {FLAG_RED: "red", FLAG_ORANGE: "orange"}
@@ -190,7 +191,10 @@ def cmd_apply(args):
 
     # Pass 1: sync corrected content. The suspend policy inside each import
     # script still sees these notes as flagged at this point (flags haven't
-    # been cleared yet), so they stay suspended here -- expected, not a bug.
+    # been cleared yet), so red-flagged notes stay suspended here -- expected,
+    # not a bug. Orange-only notes were never suspended by the flag check
+    # (2026-08-10, per Craig -- see SUSPEND_FLAG_COLORS in tsv_to_anki.py), so
+    # there's nothing to preserve for those; they just get their content fixed.
     print("--- Pass 1: sync corrected content ---")
     resync()
 

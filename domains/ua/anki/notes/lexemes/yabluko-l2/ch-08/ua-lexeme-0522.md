@@ -20,7 +20,7 @@ fields:
   PartOfSpeech: noun
   Gender: f
   Perfective: ''
-  EN_Gloss: trembita (long Hutsul alpine horn)
+  EN_Gloss: long Hutsul alpenhorn
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
@@ -31,7 +31,7 @@ fields:
   EuphonyNote: ''
   TypingAnswer: трембіта
   UA_Example: Звук трембіти лунав по всій долині.
-  EN_Example: The sound of the trembita echoed throughout the valley.
+  EN_Example: The sound of the alpenhorn echoed throughout the valley.
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/трембіта
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

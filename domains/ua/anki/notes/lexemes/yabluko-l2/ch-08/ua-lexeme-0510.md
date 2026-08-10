@@ -19,7 +19,7 @@ fields:
   PartOfSpeech: adjective
   Gender: ''
   Perfective: ''
-  EN_Gloss: ski-, skiing (attributive)
+  EN_Gloss: alpine skiing
   Govt_Case: ''
   CounterpartForm: ''
   IrregularForms: ''
