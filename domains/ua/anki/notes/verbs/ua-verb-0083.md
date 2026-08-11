@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Non-reflexive, 1st conjugation. See lexeme ua-lexeme-0550.
+  Verification Notes: Non-reflexive, 1st conjugation. See lexeme ua-lexeme-0550.
 ---
 

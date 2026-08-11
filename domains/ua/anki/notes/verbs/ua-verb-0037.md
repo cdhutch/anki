@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Blank Pres_1sg/Pres_2sg/Pres_1pl/Pres_2pl and all Imperative fields
+  Verification Notes: Blank Pres_1sg/Pres_2sg/Pres_1pl/Pres_2pl and all Imperative fields
     reflect Горох's source data directly — the imperfective 'розминатися' has no attested
     1st/2nd-person or imperative forms (shown as '—' on Горох), consistent with its reciprocal
     'X and Y miss each other' meaning. Not an extraction gap. See ua-lexeme-0180 for the fuller

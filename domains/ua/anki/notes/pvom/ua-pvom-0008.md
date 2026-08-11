@@ -27,7 +27,6 @@ fields:
   Tags_Ch: ch:2.9.4
   Source_Note: Verified via Горох (Тлумачення) 2026-07-21. Rare/dated variant надіхо́дити
     also attested for the imperfective.
-  Verification_Notes: ''
   Verification Notes: ''
 ---
 

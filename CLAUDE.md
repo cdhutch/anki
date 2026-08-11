@@ -629,6 +629,46 @@ this doc. Roughly in priority order:
     Craig's Big 3 rules mean Claude doesn't run `make`/Python against AnkiConnect) --
     verify with a `make ua` sync and an orange-flagged test note before relying on it.
 
+15. **`Verification Notes` field-name unification** — **Done, 2026-08-11, file side and
+    live Anki, verified.** Per Craig: verification-notes should use the exact
+    same field name across every note type that carries it, and the CNSF/YAML is the source
+    of truth over whatever Anki's live model happens to be named. Investigation found the
+    field split three ways: `UA_Grammar` already used `Verification Notes` (space, matching
+    its live model); `UA_Lexeme`/`UA_Visual` also authored `Verification Notes` in CNSF, and
+    per Craig their live models already have it too — `setup_ua_note_types.py`'s
+    `FIELDS`/`VISUAL_FIELDS` constants were simply stale and never listed it (the same
+    stale-constant pattern as the `Verb_Conj_Table` history and the work-queue's "Establish
+    canonical field-set" item), even though 282/585 `UA_Lexeme` notes and 10/10 `UA_Visual`
+    notes carry real content there and both import scripts pass CNSF `fields:` straight
+    through unfiltered to AnkiConnect, so sync was already working; `UA_Verb`/
+    `UA_PVOM_Infinitive` used `Verification_Notes` (underscore) end-to-end — CNSF, code, and
+    live model all internally consistent, just on the non-unified name. Standardized
+    everything on `Verification Notes` (space): renamed the key in all 87 `UA_Verb` + 13
+    `UA_PVOM_Infinitive` CNSF files (`domains/ua/anki/notes/verbs/exported/`'s legacy dump
+    intentionally left untouched — the real sync never reads it); added `Verification Notes`
+    to `FIELDS`/`VISUAL_FIELDS` and renamed it in `VERB_FIELDS` (`setup_ua_note_types.py`)
+    and PVOM's `FIELDS` (`setup_ua_pvom_note_type.py`); updated the underscore references in
+    `generate_ua_verb_skeleton.py`, `generate_ua_verb_from_goroh.py`,
+    `reformat_ua_verb_cnsf.py`, and `ua_pvom_infinitive_import.py`; simplified
+    `cnsf_canonicalize.py`'s `_normalize_meta()` to unconditionally default
+    `Verification Notes` instead of branching on `note_type == "ua_verb"`.
+    `check_cnsf_field_schema.py` confirms no more missing/unknown `Verification Notes*` keys
+    across any of the 5 note types. Craig manually renamed the live `Verification_Notes`
+    field to `Verification Notes` on `UA_Verb`/`UA_PVOM_Infinitive` (Anki app, Manage Note
+    Types → Fields → Rename, after a collection backup) and manually added a new
+    `Verification Notes` field to `UA_Lexeme`/`UA_Visual` (same dialog, Add instead of
+    Rename) via the Anki app directly rather than AnkiConnect scripting -- note that
+    `make ua` alone never creates fields (the sync path only calls `addNote`/
+    `updateNoteFields`, silently dropping any field the live model doesn't recognize); the
+    `modelFieldAdd`-capable path is `setup_ua_note_types.py` (`make ua-setup-*`), which
+    wasn't used here since it adds *every* constant field missing from the live model, not
+    just the one field wanted -- for `UA_Lexeme` that would have also silently added the 5
+    still-undecided euphony/display fields below. Re-verified 2026-08-11 via
+    `inspect_note_type_fields.py`: `UA_Verb`/`UA_PVOM_Infinitive` field sets now match
+    exactly (order differs, cosmetic only); `UA_Visual` matches exactly (12/12); `UA_Lexeme`
+    now carries the field live too, with its only remaining drift being the 5 pre-existing
+    euphony/display fields, unrelated to this fix.
+
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
 the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph

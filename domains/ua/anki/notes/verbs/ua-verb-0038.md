@@ -39,6 +39,6 @@ fields:
   Participle_Adverbial_Past: ''
   UA_Example: ''
   EN_Example: ''
-  Verification_Notes: Irregular 'бити' root (бʼю-family). See ua-lexeme-0210.
+  Verification Notes: Irregular 'бити' root (бʼю-family). See ua-lexeme-0210.
 ---
 

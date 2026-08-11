@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Non-reflexive, 2nd conjugation. Горох does not surface a perfective
+  Verification Notes: Non-reflexive, 2nd conjugation. Горох does not surface a perfective
     partner on this page. See lexeme ua-lexeme-0520.
 ---
 

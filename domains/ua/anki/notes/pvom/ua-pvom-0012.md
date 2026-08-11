@@ -36,7 +36,6 @@ fields:
     Горох cross-references вʼїжджати/уїжджати and вʼїхати/уїхати as attested variants of each
     other; вʼї- forms kept as primary (matches this note type''s existing apostrophe-insertion
     convention), у- forms accepted via *_Euphony.'
-  Verification_Notes: ''
   Verification Notes: ''
 ---
 

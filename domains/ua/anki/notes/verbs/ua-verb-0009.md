@@ -39,7 +39,7 @@ fields:
   Participle_Adverbial_Past: ''
   UA_Example: ''
   EN_Example: ''
-  Verification_Notes: 'Corrected 2026-08-04, per Craig -- stored Pres_*/Imperative_*/Past_*
+  Verification Notes: 'Corrected 2026-08-04, per Craig -- stored Pres_*/Imperative_*/Past_*
     fields previously matched плинути ("to flow/stream," an unrelated -нути verb), not пливти.
     Replaced with the Горох-verified пливти paradigm sourced 2026-07-31 while drafting ua-verb-0086
     (плисти) -- see that note''s Verification_Notes for the full sourcing detail and the Горох

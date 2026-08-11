@@ -174,13 +174,12 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     if not isinstance(fields, dict):
         raise ValueError(f"{path}: fields must be a mapping/object.")
     # Optional: ensure the known field names exist (allow extensions)
-    # UA_Verb uses Verification_Notes (underscore), not Verification Notes (space)
-    note_type = meta.get("note_type", "")
-    if note_type == "ua_verb":
-        # Remove the space-separated variant if present
-        fields.pop("Verification Notes", None)
-    else:
-        fields.setdefault("Verification Notes", "")
+    # Verification Notes uses the same field name across every note type that
+    # carries it (unified 2026-08-11, per Craig -- previously UA_Verb/
+    # UA_PVOM_Infinitive used an underscore-separated variant; see
+    # CLAUDE-flag-audit.md for the full history). No more per-note-type
+    # branching needed.
+    fields.setdefault("Verification Notes", "")
 
     # Fix YAML boolean coercion in Choice fields: unquoted True/False in YAML is
     # loaded as Python bool by yaml.safe_load, then dumped as lowercase true/false.

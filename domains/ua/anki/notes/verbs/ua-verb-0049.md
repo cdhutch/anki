@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Pairs with perfective простягну́ти. See ua-lexeme-0248.
+  Verification Notes: Pairs with perfective простягну́ти. See ua-lexeme-0248.
 ---
 

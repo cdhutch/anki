@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: 'Perfective: ки́нути. See ua-lexeme-0217.'
+  Verification Notes: 'Perfective: ки́нути. See ua-lexeme-0217.'
 ---
 

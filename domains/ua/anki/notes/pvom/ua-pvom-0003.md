@@ -28,7 +28,6 @@ fields:
   Source_Note: Verified via Горох (Тлумачення) 2026-07-21. Distinct from homonym заходи́ти
     (stress on -ди-) "to start pacing back and forth" — захо́дити (stress on -хо-) is the
     impf. partner of зайти́.
-  Verification_Notes: ''
   Verification Notes: ''
 ---
 

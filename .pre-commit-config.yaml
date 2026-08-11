@@ -8,6 +8,15 @@ repos:
         additional_dependencies:
           - pyyaml
         files: ^domains/.*/anki/notes/.*\.md$
+        # verbs/exported/ is a legacy dump Craig is keeping as a temporary
+        # reference while building out the rest of the notes -- the real sync
+        # scripts already skip it (see check_cnsf_field_schema.py's
+        # NOTE_TYPE_CONFIGS comment); the canonicalization hook should too,
+        # rather than requiring it to track the current schema. Added
+        # 2026-08-11 after the Verification Notes unification (CLAUDE.md item
+        # 15) started failing this hook against exported/'s untouched,
+        # never-migrated files.
+        exclude: ^domains/ua/anki/notes/verbs/exported/
 
       - id: flow-lint
         name: B737 flow linter

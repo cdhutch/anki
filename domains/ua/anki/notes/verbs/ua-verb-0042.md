@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: 'Perfective: заби́ти. See ua-lexeme-0214.'
+  Verification Notes: 'Perfective: заби́ти. See ua-lexeme-0214.'
 ---
 

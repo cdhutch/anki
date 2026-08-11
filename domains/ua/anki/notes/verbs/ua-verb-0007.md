@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: пої́хавши
-  Verification_Notes: ''
+  Verification Notes: ''
 ---
 

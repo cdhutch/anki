@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Двовидове (biaspectual) -- same form for both aspects. See ua-lexeme-0292.
+  Verification Notes: Двовидове (biaspectual) -- same form for both aspects. See ua-lexeme-0292.
 ---
 

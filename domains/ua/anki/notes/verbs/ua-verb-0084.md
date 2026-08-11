@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Non-reflexive, 2nd conjugation. No 1pl imperative form surfaced on Горох
+  Verification Notes: Non-reflexive, 2nd conjugation. No 1pl imperative form surfaced on Горох
     (left blank rather than guessed). See lexeme ua-lexeme-0551.
 ---
 
