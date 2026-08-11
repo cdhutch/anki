@@ -53,5 +53,13 @@ fields:
     Lexeme or PVOM note exists for закінчувати. 2026-07-28: completed the Compare card --
     added CompareScenario + CompareA/CompareB. Cross-links with ua-lexeme-0291 (стартувати),
     the starting-line mirror of the same distinction. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

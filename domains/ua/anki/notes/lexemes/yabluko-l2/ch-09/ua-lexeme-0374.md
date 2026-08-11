@@ -49,5 +49,15 @@ fields:
     still needs your review pass before flipping to status:verified. 2026-07-28: added AspectCue
     (chip-styled EN->UA prompt, replacing the earlier "(impf.)" parenthetical on EN_Gloss)
     so the card indicates the ongoing/habitual reading is expected here.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

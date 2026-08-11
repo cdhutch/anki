@@ -61,5 +61,13 @@ fields:
     the example sentence were not separately called out as checked during that pass -- flag
     if either needs its own look. CompareScenario is designed to specifically trigger різкий
     over гострий (an abrupt swerve, not an edge, spice, or mental-acuity sense).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

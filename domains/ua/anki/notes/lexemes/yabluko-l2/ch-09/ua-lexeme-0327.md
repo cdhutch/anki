@@ -38,5 +38,16 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: Fixed clarification-request phrase. Reuses вибача́ти/ви́бачити (ua-lexeme-0319)
     and говори́ти/сказа́ти (ua-lexeme-0317).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

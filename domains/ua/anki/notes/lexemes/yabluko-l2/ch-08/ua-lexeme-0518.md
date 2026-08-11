@@ -38,5 +38,16 @@ fields:
   Verification Notes: Deverbal noun from розводити (ua-lexeme-0520). Also has a 'dilution'
     sense in other contexts; breeding sense used here. Component of phrase ua-lexeme-0532
     (розведення овець).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -41,5 +41,16 @@ fields:
     on -ни́й) is a distinct sense, "який діє за допомогою вітру" (wind-powered/operated by
     wind, e.g. вітряний млин/windmill) -- not used here, no note created for it pending an
     actual ch.8+ vocabulary hit.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

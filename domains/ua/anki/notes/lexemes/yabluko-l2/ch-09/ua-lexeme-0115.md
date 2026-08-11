@@ -45,5 +45,12 @@ fields:
     ..., ВВІХО́ДИТИ (УВІХО́ДИТИ) ... ВВІЙТИ́ (УВІЙТИ́)"), plus slovnyk.ua confirming ввійти
     as a standalone headword with its own conjugation table ("ВВІЙТИ див. входити"). увійти́
     remains the more common form; ввійти́ is dictionary-attested, not a typo.'
+  Lemma_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

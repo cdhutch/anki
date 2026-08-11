@@ -48,5 +48,13 @@ fields:
     scenario prose; CompareA/B/Scenario extract that same content into the fields the new
     template actually reads. Needs your review. Note: фах has no lexeme note of its own in
     the corpus, so this Compare card is one-directional (from професія only).'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

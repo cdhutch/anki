@@ -37,5 +37,16 @@ fields:
   Verification Notes: 'Горох lists two senses under верхови́й: (1) ''той, що зверху; стос.
     верхової їзди'' — upper / riding-related, used here; (2) ''вершник'' — a horseman/rider
     (noun-like sense). Confirm sense (1) is intended.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

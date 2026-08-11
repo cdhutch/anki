@@ -104,7 +104,7 @@ def reformat_files():
                 "Participle_Adverbial_Past": "",
                 "UA_Example": "",
                 "EN_Example": "",
-                "Verification_Notes": "",
+                "Verification Notes": "",
             },
         }
 

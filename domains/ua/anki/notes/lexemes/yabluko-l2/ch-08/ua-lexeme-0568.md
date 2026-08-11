@@ -39,5 +39,16 @@ fields:
     X' constructions in this subsection (на смак, на дотик, ...). Component смак (ua-lexeme-0553)
     also has its own note per rule 3; на (preposition) treated as a functional word and not
     given a separate note.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

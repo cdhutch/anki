@@ -40,5 +40,16 @@ fields:
     with the perfective 'посісти' ('заволодіти' sense, used in the textbook's 'посісти третє
     місце'). A separate, unrelated 'посідати' sense ('сісти -- про всіх або багатьох' = 'to
     sit down, of everyone/many') is also perfective there and not relevant to this lexeme.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

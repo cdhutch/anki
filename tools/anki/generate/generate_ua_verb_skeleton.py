@@ -119,7 +119,7 @@ def create_ua_verb_cnsf_skeleton(
             "Participle_Adverbial_Past": "",
             "UA_Example": "",
             "EN_Example": "",
-            "Verification_Notes": f"Conjugation forms to be filled from Горох (goroh.pp.ua/{lemma})",
+            "Verification Notes": f"Conjugation forms to be filled from Горох (goroh.pp.ua/{lemma})",
             "Source_URL": f"https://goroh.pp.ua/Словозміна/{lemma}",
         },
     }

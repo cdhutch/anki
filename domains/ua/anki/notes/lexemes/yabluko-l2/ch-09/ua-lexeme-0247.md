@@ -40,5 +40,16 @@ fields:
     decomposed into рано + вранці. 2026-07-26: reused for ch.9.7 (same fixed expression, no
     new note) -- see the ch:2.9.7 tag/Tags_Ch append above, per Craig''s true-duplicate reuse
     convention.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

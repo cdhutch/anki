@@ -57,5 +57,11 @@ fields:
     pattern: identical CompareA/B and Homograph_SenseA/B on both sibling notes, sourced from
     each note''s own already-written UA_Example. Needs your review -- including whether re-syncing
     actually backfills the Compare card for this already-existing note, which is unverified.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

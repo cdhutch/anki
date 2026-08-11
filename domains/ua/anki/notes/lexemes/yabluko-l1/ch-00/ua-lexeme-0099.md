@@ -52,5 +52,11 @@ fields:
     \ Compare card (see compare-card-audit-findings.md) — EN_Gloss alone was too close to\
     \ this note's own answer to serve as the front-side scenario, so a dedicated situational\
     \ prompt was authored instead. Needs your review."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

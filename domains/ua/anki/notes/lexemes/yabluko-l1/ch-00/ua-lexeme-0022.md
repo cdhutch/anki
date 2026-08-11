@@ -44,5 +44,13 @@ fields:
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
     card (see compare-card-audit-findings.md) — restructured from flat explanatory prose into
     a scenario + two-way choice. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

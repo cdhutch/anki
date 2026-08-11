@@ -36,5 +36,16 @@ fields:
   Source_Note: Verified 2026-07-22 via Горох (no stress mark needed — one syllable). Example
     is the opening question of Яблуко 2 ch.9.1.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

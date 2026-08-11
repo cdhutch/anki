@@ -915,9 +915,22 @@ ua-check-pending-confusables:
 	@printf "\033[1;36m\n— Pending confusable-set watchlist —\033[0m\n"
 	$(PYTHON) tools/anki/inspect/check_pending_confusables.py
 
+# CNSF field-schema consistency, per note type (all 5 UA note types) --
+# wired in 2026-08-11, completing CLAUDE-work-queue.md "Wire the checker
+# into make ua-check". STRICT=1 also fails on fields missing from *every*
+# note (not just unknown keys) -- off by default here because the
+# always-vs-sparse convention is only settled for UA_Lexeme's 12 fields
+# (CLAUDE.md item 17) so far, not yet for UA_Verb's Tags_Conj/Source_Note
+# or UA_PVOM_Infinitive's *_Euphony fields. Unknown keys always fail,
+# STRICT or not -- see check_cnsf_field_schema.py's own docstring.
+ua-check-fields:
+	@printf "\033[1;36m\n— CNSF field-schema consistency —\033[0m\n"
+	$(PYTHON) tools/anki/inspect/check_cnsf_field_schema.py $(if $(STRICT),--strict,)
+
 ua-check:
 	$(MAKE) ua-check-aspect
 	$(MAKE) ua-check-pending-confusables
+	$(MAKE) ua-check-fields
 
 # ── Full audit (aggregate report) ────────────────────────────────────────────
 # Combines all four report-only checks above -- unverified stress/status,

@@ -40,5 +40,15 @@ fields:
   Verification Notes: 'Reuses підніма́тися/підня́тися (ua-lexeme-0286) and ске́ля (ua-lexeme-0268).
     2026-07-28: added AspectCue framing the in-progress reading of підніма́тися (imperfective)
     -- the real perfective counterpart підня́тися is already its own corpus note, ua-lexeme-0286.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

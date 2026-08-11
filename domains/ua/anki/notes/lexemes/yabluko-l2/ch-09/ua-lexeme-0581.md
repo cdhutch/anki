@@ -75,5 +75,15 @@ fields:
     so the singlet-only EuphonyNote fallback in compute_euphony_slots() didn''t apply either).
     Typing іти́ for the unidirectional slot on the EN->UA card is now graded CORRECT/PERFECT
     (previously always INCORRECT), and the UA->EN Recognition front now shows "йти (іти́)".'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

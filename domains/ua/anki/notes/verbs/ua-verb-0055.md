@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Pairs with perfective перепра́витися. See ua-lexeme-0285. Feminine/neuter
+  Verification Notes: Pairs with perfective перепра́витися. See ua-lexeme-0285. Feminine/neuter
     past forms follow the regular reflexive pattern (masculine confirmed via Горох, others
     by regular morphology).
 ---

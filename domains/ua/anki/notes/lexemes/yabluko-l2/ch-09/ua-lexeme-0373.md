@@ -41,5 +41,16 @@ fields:
     investigation. Appended here rather than inserted mid-batch, to avoid renumbering 0235
     onward. Needs the same Горох verification pass as the rest of ch.9.3 before flipping to
     status:verified.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -38,5 +38,16 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item; components дотримуватися (ua-lexeme-0482,
     full conjugation on ua-verb-0077) and закон (ua-lexeme-0473) each also have their own
     note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

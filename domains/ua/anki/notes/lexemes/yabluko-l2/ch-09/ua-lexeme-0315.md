@@ -54,5 +54,13 @@ fields:
     populated but the card was still suspended pending these fields, per the Empty-Compare-card
     safeguard). Cross-links with ua-lexeme-0316 (прибувати), the arrival-side mirror of the
     same formal-vs-PVOM distinction. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

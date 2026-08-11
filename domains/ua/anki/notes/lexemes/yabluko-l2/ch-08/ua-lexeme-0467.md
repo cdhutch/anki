@@ -58,5 +58,13 @@ fields:
     -- not in the corpus yet, so tagged pending-confusable:забагато (bucket 5 watchlist, CLAUDE.md
     Vocabulary dedup & homograph handling); once забагато is sourced, `make ua-check` will
     flag the match so it can be added as CompareC alongside значно/набагато.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

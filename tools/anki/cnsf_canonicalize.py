@@ -174,13 +174,38 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     if not isinstance(fields, dict):
         raise ValueError(f"{path}: fields must be a mapping/object.")
     # Optional: ensure the known field names exist (allow extensions)
-    # UA_Verb uses Verification_Notes (underscore), not Verification Notes (space)
+    # Verification Notes uses the same field name across every note type that
+    # carries it (unified 2026-08-11, per Craig -- previously UA_Verb/
+    # UA_PVOM_Infinitive used an underscore-separated variant; see
+    # CLAUDE-flag-audit.md for the full history). No more per-note-type
+    # branching needed.
+    fields.setdefault("Verification Notes", "")
+
+    # UA_Lexeme "newer optional fields" convention (decided 2026-08-11, per
+    # Craig): always-present, blank when unused -- matching how the rest of
+    # the schema already works, rather than sparse-key-only. Covers the
+    # per-slot euphony tolerance fields (item 16, CLAUDE.md) and the Compare/
+    # Homograph/AspectCue/Mnemonic_EN fields that had drifted to sparse
+    # presence across the corpus (see CLAUDE-work-queue.md "Decide the
+    # convention for newer optional fields"). UA_Lexeme-specific -- these
+    # keys don't exist on the other 4 note types' models at all.
     note_type = meta.get("note_type", "")
-    if note_type == "ua_verb":
-        # Remove the space-separated variant if present
-        fields.pop("Verification Notes", None)
-    else:
-        fields.setdefault("Verification Notes", "")
+    if note_type == "ua_lexeme":
+        for key in (
+            "Lemma_Euphony",
+            "Perfective_Euphony",
+            "ImperfectiveUnidirectional_Euphony",
+            "CompareA",
+            "CompareB",
+            "CompareC",
+            "CompareD",
+            "CompareScenario",
+            "Homograph_SenseA",
+            "Homograph_SenseB",
+            "AspectCue",
+            "Mnemonic_EN",
+        ):
+            fields.setdefault(key, "")
 
     # Fix YAML boolean coercion in Choice fields: unquoted True/False in YAML is
     # loaded as Python bool by yaml.safe_load, then dumped as lowercase true/false.

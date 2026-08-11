@@ -38,5 +38,16 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item. гірський reuses the existing ch.9 note
     ua-lexeme-0254 (bucket 3, same 'mountain(ous)' sense -- ch:2.8.5 tag appended there rather
     than duplicating); хребет (ua-lexeme-0509) is a new component note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

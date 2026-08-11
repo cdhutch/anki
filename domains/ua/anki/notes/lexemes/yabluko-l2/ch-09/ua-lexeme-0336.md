@@ -41,5 +41,16 @@ fields:
     path changes direction; (2) metaphorical/abstract — a complete change in direction or
     development of something, a turning point or shift in circumstances. Both are common in
     Ukrainian; examples provided to show semantic range.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

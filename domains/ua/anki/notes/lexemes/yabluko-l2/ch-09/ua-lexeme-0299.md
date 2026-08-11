@@ -40,5 +40,15 @@ fields:
   Verification Notes: 'Reuses вила́зити/ви́лізти (ua-lexeme-0280) and ске́ля (ua-lexeme-0268).
     2026-07-28: added AspectCue framing the one-time completed-climb reading of ви́лізти (perfective)
     -- the real imperfective counterpart вила́зити is already its own corpus note, ua-lexeme-0280.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

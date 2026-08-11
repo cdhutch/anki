@@ -38,5 +38,16 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: 'Filtered out proper-noun homographs (a given name ''Сила'' and a place
     name). 2026-07-26: also reused for ch.9.7 (''мати сили'') — see ua-lexeme-0360.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -38,5 +38,16 @@ fields:
     verbatim from Яблуко 2, ch.9.1 (Вправа 5 speech bubble, describing picture item 1 'лижні
     перегони').
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

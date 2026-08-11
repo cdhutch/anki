@@ -38,5 +38,16 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item (розведення + genitive plural овець);
     components розведення (ua-lexeme-0518) and вівця (ua-lexeme-0519) each also have their
     own note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

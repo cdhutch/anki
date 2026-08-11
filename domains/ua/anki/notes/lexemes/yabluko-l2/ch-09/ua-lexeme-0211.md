@@ -60,5 +60,15 @@ fields:
     the preposition with no complement (mixing Govt_Case government into the headword), and
     this note already covers "вболівати за + Acc." correctly via Govt_Case + its own live
     example.'
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

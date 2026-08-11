@@ -55,5 +55,15 @@ fields:
     flipping to status:verified. 2026-07-28: added AspectCue (chip-styled EN->UA prompt, replacing
     the earlier "(pfv.)" parenthetical on EN_Gloss) so the card indicates a one-time completed
     action is expected, not the imperfective заробляти.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

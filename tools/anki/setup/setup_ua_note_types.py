@@ -146,6 +146,10 @@ FIELDS = [
     "Tags_Ch",
     "Source_URL",
     "Source_Note",
+    "Verification Notes",  # stale in this constant until 2026-08-11 -- the live
+    # UA_Lexeme model has always had this field; ua_lexeme_import.py passes CNSF
+    # fields through unfiltered, so sync already worked, this constant just
+    # never listed it (see CLAUDE-flag-audit.md).
 ]
 
 # ---------------------------------------------------------------------------
@@ -1180,6 +1184,8 @@ VISUAL_FIELDS = [
     "Diagram_SVG",
     "Tags_Ch",
     "Source_Note",
+    "Verification Notes",  # stale in this constant until 2026-08-11 -- same
+    # story as UA_Lexeme above: live model already had it, constant didn't list it.
 ]
 
 VISUAL_CSS = """\
@@ -1498,7 +1504,7 @@ VERB_FIELDS = [
     # Metadata
     "Tags_Conj",
     "Source_Note",
-    "Verification_Notes",
+    "Verification Notes",  # unified 2026-08-11, per Craig -- was underscore-only
 ]
 
 VERB_CSS = """\

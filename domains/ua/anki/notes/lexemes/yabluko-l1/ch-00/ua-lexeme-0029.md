@@ -45,5 +45,12 @@ fields:
     — previously ConfusableSet was just the bare paired word ''ранок'' with no scenario, and
     didn''t mention ніч at all even though 0048 (ніч) already pointed back at вечір. Needs
     your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

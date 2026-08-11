@@ -46,5 +46,16 @@ fields:
     RU''s suppletive pair). EN_Gloss/UA_Example were already казати-shaped ("Ви сказали...")
     even under the old Lemma, so only the headword and gloss changed. говорити itself held
     per Craig''s request, pending its own glossary appearance.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

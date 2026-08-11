@@ -38,5 +38,16 @@ fields:
     combat gear).
   Verification Notes: '''бойове'' reuses the existing adjective ua-lexeme-0132 (бойовий);
     component noun ''мистецтво'' is new, see ua-lexeme-0199.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -43,5 +43,16 @@ fields:
     nouns) -- only пригода itself exists in the corpus so far. Tagged pending-confusable:погода,
     pending-confusable:природа, pending-confusable:порода; see CLAUDE.md Vocabulary dedup
     & homograph handling, bucket 5.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

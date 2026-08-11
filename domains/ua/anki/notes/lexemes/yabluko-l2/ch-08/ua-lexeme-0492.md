@@ -38,5 +38,16 @@ fields:
   Verification Notes: Multiplicative-comparison discourse phrase (кілька + instrumental plural
     разів). Components кілька (ua-lexeme-0477) and раз (ua-lexeme-0474) each also have their
     own note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

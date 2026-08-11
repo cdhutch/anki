@@ -48,5 +48,11 @@ fields:
     \ note ua-lexeme-0372 (the bench sense) and homograph:true tag -- Горох lists the bench\
     \ sense first/more centrally on the page, so this split is worth flagging clearly rather\
     \ than leaving 0235 looking like the only sense. Needs your review."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

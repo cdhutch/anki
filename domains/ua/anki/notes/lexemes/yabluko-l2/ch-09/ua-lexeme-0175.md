@@ -36,5 +36,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/човен
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: '2026-07-26: reused for ch.9.7 (''надувний човен'') — see ua-lexeme-0357.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

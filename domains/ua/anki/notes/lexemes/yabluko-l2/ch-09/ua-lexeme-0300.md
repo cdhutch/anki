@@ -42,5 +42,15 @@ fields:
     and моту́зка (ua-lexeme-0270). 2026-07-28: added AspectCue framing the one-time completed-crossing
     reading of перелеті́ти (perfective) -- the real imperfective counterpart перелiта́ти is
     already its own corpus note, ua-lexeme-0283.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

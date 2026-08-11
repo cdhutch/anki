@@ -37,5 +37,16 @@ fields:
   Verification Notes: Горох lists як as both adverb (interrogative 'how') and conjunction
     (comparative 'as/like'); classed as conjunction here for its role in ua-lexeme-0491 (не
     такий... як). Component of that phrase.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

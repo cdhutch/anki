@@ -38,5 +38,16 @@ fields:
     pattern of the nominative (common word; not individually re-verified on Горох's genitive
     row). Example adapted from the Яблуко 2 ch.9.1 opener.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

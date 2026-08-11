@@ -37,5 +37,16 @@ fields:
   Verification Notes: Горох lists both an ordinal numeral and an ordinal-adjective entry for
     пе́рший; classed as adjective here per corpus convention for ordinals used attributively.
     Component of phrase ua-lexeme-0494 (на перший погляд).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -41,5 +41,16 @@ fields:
     as out-of-scope/rare -- see ua-lexeme-0186's Verification Notes).
   Verification Notes: Same Lemma/stress as ua-lexeme-0186, already Горох-verified there. Content
     (gloss, example) still needs your review pass before flipping to status:verified.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

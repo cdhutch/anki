@@ -48,5 +48,11 @@ fields:
     per Craig''s review flag that Горох lists this (bench) sense first/more centrally, while
     0235 documents only the shop/stall sense. Cross-linked via ConfusableSet on both notes;
     both tagged homograph:true. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

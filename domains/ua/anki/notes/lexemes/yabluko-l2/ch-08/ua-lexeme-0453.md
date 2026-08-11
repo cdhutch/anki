@@ -45,5 +45,16 @@ fields:
     surface the match once зазвичай is sourced. 2026-07-30 Craig: incorporate both -- зазвичай
     and звичайно are similar either in meaning or in UA spelling, so both should join this
     cluster once sourced. Tagged pending-confusable:звичайно as well.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

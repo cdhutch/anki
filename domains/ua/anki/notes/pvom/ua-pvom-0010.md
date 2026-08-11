@@ -29,7 +29,6 @@ fields:
     assimilation before voiceless х (з- + ходити → сходити), not a simple concatenation. схо́дити/зійти́
     pairing is also less crisply labeled in Горох (its primary listed sense is "ascend");
     verify against your textbook if the "get off/descend" sense feels off.
-  Verification_Notes: ''
   Verification Notes: ''
 ---
 

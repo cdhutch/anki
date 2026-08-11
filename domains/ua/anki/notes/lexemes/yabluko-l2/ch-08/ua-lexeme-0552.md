@@ -38,5 +38,16 @@ fields:
     have a smell'') vs. perfective пахну́ти (''to waft/emanate a smell suddenly''). The imperfective
     sense fits this subsection''s descriptive context and is drafted here. Full conjugation
     lives on ua-verb-0085.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

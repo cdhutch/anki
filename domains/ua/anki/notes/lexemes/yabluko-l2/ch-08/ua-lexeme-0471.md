@@ -45,5 +45,16 @@ fields:
     Perfective field should be populated with доглянути. Tagged pending-confusable:вигляд
     and pending-confusable:доглядати; see CLAUDE.md Vocabulary dedup & homograph handling,
     bucket 5.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

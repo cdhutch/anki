@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Pairs with perfective втопи́ти (flood/sink sense). See ua-lexeme-0281.
+  Verification Notes: Pairs with perfective втопи́ти (flood/sink sense). See ua-lexeme-0281.
 ---
 

@@ -54,5 +54,13 @@ fields:
     spicy) to speak for itself. різкий itself is a new, not-yet-Горох-verified draft note
     -- see its own Verification Notes. This note''s own stress and status remain draft and
     unverified pending Craig''s independent review, unchanged by this addition.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

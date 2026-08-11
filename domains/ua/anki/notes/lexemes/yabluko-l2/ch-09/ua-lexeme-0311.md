@@ -44,5 +44,16 @@ fields:
     one -- moved to sibling note ua-lexeme-0381, same-Lemma polysemy-split pattern (see ua-lexeme-0211/0377
     for вболівати, ua-lexeme-0304/0380 for відправлення). Confirms ''полиця'' (shelf/berth),
     not ''поліція'' (police).'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

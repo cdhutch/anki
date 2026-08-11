@@ -39,5 +39,16 @@ fields:
     is deliberately NOT broken out into its own lexeme note despite appearing as a phrase
     component here; only якщо (ua-lexeme-0472) is verified and cross-linked. про (preposition)
     treated as a functional word and not given a separate note.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

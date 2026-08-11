@@ -40,5 +40,16 @@ fields:
     (used here, food context) vs. an inanimate ''cancer (disease)'' sense, plus an unrelated
     surname Рак. Same spelling and stress across senses (not a stress-based split); only the
     crayfish sense is drafted since that is the attested vocabulary item.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -38,5 +38,16 @@ fields:
   Verification Notes: Горох lists several closely related senses (flame/fig. passion; bonfire/light;
     body heat; gunfire; the command 'fire!') all at the same spelling/stress; this note uses
     the core 'flame' sense.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

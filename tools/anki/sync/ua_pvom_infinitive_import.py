@@ -3,7 +3,7 @@
 
 Each note carries one prefix and all four verb-of-motion base forms:
 Walking_Multi_{UA,Typing}, Walking_Uni_{UA,Typing}, Vehicle_Multi_{UA,Typing},
-Vehicle_Uni_{UA,Typing}, plus NoteID/Prefix/Tags_Ch/Source_Note/Verification_Notes.
+Vehicle_Uni_{UA,Typing}, plus NoteID/Prefix/Tags_Ch/Source_Note/Verification Notes.
 CNSF field names match the Anki field names exactly -- no renaming/derivation
 needed, unlike the old single-form schema this replaced.
 
@@ -67,7 +67,7 @@ ANKI_FIELDS = [
     "Vehicle_Uni_Euphony",
     "Tags_Ch",
     "Source_Note",
-    "Verification_Notes",
+    "Verification Notes",  # unified 2026-08-11, per Craig -- was underscore-only
 ]
 
 

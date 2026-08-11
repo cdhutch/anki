@@ -38,5 +38,16 @@ fields:
   Verification Notes: Fixed prepositional discourse phrase. Component порівняння (ua-lexeme-0527)
     also has its own note per rule 3; у (preposition) treated as a functional word and not
     given a separate note.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

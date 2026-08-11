@@ -41,5 +41,16 @@ fields:
     (ua-lexeme-0272). 'позитивний' (positive) is basic grammar-adjacent vocabulary, not given
     its own lexeme note here (judgment call, same as the ordinal/cardinal skips documented
     for ch.9.3 -- flagging for Craig's review).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

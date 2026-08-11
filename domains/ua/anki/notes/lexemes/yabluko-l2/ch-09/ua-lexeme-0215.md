@@ -56,5 +56,11 @@ fields:
     across the відбивати/забивати/завдавати/набирати ball-action verb-root cluster (bucket-4
     convergent-synonym audit, per Craig -- roots are the confusion point, not prefixes) +
     CompareScenario/CompareA-D for the Compare card. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

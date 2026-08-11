@@ -44,5 +44,15 @@ fields:
     for Craig''s review. 2026-07-28: added AspectCue framing the one-time scoring-event reading
     of набра́ти (perfective) -- the real imperfective counterpart набира́ти is already its
     own corpus note, ua-lexeme-0218.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

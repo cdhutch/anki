@@ -37,5 +37,16 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.
   Verification Notes: Горох's homograph 'ринка' (a shallow bowl/pan) is a different word;
     not relevant here.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

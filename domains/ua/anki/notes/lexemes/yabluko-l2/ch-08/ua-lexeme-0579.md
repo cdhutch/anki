@@ -38,5 +38,16 @@ fields:
   Verification Notes: Idiom, literally 'ants on the skin' (cf. English 'goosebumps'/'chills').
     Components мурашка (ua-lexeme-0577) and шкіра (ua-lexeme-0578) each also have their own
     note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

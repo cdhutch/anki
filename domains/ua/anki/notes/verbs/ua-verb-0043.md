@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: 'Perfective: завда́ти. Irregular davaty-family stress shift, same pattern
+  Verification Notes: 'Perfective: завда́ти. Irregular davaty-family stress shift, same pattern
     as ''вигравати''. See ua-lexeme-0215.'
 ---
 

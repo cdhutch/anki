@@ -40,5 +40,15 @@ fields:
     euphony survey -- Горох''s Слововживання entry for вболівальник states directly "вболівальник
     (уболівальник)" as parallel forms derived from вболівати/уболівати. Stress confirmed вболіва́льник
     via Горох Словозміна.'
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

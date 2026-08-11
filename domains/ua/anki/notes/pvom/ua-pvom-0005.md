@@ -26,7 +26,6 @@ fields:
   Vehicle_Uni_Typing: виїхати
   Tags_Ch: ch:2.9.4
   Source_Note: Verified via Горох (Тлумачення) 2026-07-21.
-  Verification_Notes: ''
   Verification Notes: ''
 ---
 

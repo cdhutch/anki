@@ -39,5 +39,16 @@ fields:
   Verification Notes: Reuses тип (ua-lexeme-0306) and ваго́н (ua-lexeme-0307). The enumerated
     values (люкс/купе/плацкарта) each have their own lexeme note above rather than being folded
     into this phrase.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

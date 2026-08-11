@@ -43,5 +43,15 @@ fields:
     this as a judgment call for Craig''s review, same as ua-lexeme-0232. 2026-07-28: added
     AspectCue framing the one-time completed-result reading of посі́сти (perfective) -- the
     real imperfective counterpart посіда́ти is already its own corpus note, ua-lexeme-0220.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

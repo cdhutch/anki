@@ -38,5 +38,16 @@ fields:
   Verification Notes: Fixed discourse construction built on стосуватися (ua-lexeme-0481, full
     conjugation on ua-verb-0076), which also has its own note per rule 3; що (interrogative/relative
     pronoun) treated as a functional word here and not given a separate note.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

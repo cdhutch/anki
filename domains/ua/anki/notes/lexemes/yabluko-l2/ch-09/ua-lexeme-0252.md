@@ -54,5 +54,13 @@ fields:
     \ grading, judged sports), not an explicit Горох gloss. Flagging this as a judgment call\
     \ for your review rather than a strict dictionary fact. Added CompareScenario + CompareA/CompareB\
     \ for the Compare card."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -43,5 +43,16 @@ fields:
     over unchanged from the original (pre-split) ua-lexeme-0311 content, since it was already
     correctly scoped to this train-travel sense (нижня/верхня полиця). Confirms 'полиця' (shelf/berth),
     not 'поліція' (police).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

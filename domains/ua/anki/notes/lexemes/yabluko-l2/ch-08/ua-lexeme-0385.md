@@ -39,5 +39,16 @@ fields:
     Гро́за (surname), гроза́ (this note, "thunderstorm"), and a third sense not needed here.
     Confirmed feminine 1st-declension common noun via the гроза́/гро́зи/грози́ declension
     pattern.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

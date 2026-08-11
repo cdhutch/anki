@@ -38,5 +38,16 @@ fields:
   Verification Notes: Vocabulary appendix lists the plural form водорості; Lemma normalized
     to Горох's singular citation form во́дорість (the word is used collectively/pluralized
     in practice, similar to English 'seaweed').
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

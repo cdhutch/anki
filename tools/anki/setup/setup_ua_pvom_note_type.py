@@ -38,7 +38,7 @@ FIELDS = [
     "Vehicle_Uni_Euphony",
     "Tags_Ch",
     "Source_Note",
-    "Verification_Notes",
+    "Verification Notes",  # unified 2026-08-11, per Craig -- was underscore-only
 ]
 
 FEEDBACK_SCRIPT = """\

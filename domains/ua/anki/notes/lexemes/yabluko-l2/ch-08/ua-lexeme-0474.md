@@ -38,5 +38,16 @@ fields:
   Verification Notes: Горох also lists раз as an adverb/subordinating-conjunction homonym
     ('as soon as'); the noun sense (occasion/time) is the one needed here. Component of phrase
     ua-lexeme-0492 (у кілька разів).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -36,5 +36,16 @@ fields:
   Source_Note: Горох lists a 2nd, capitalized homograph entry ('Змагання') alongside this
     common noun; verified the lowercase common-noun sense was used. Verified 2026-07-22.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -41,5 +41,15 @@ fields:
     (already sourced for ch.9.2). 2026-07-28: added AspectCue framing the completed-by-round''s-end
     reading of завда́ти (perfective) -- the real imperfective counterpart завдава́ти is already
     its own corpus note, ua-lexeme-0215.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 
