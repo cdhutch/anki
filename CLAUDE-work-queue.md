@@ -76,7 +76,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   2026-08-03, but the parenthetical format itself was Claude's own call, never
   confirmed by Craig. Check: does the format actually read well, or do you want it
   changed?
-- [ ] **Gruvbox palette holds up under the iOS red-tint Color Filter** on real
+- [x] **Gruvbox palette holds up under the iOS red-tint Color Filter** on real
   content, not just the `Palette_Comparison_Demo` card. Log claims: A/B/C comparison
   done, Craig said "I'm pretty happy with the night mode" 2026-08-04. Check: the
   actual 3-pass Day/Night/red-tint walkthrough against live `UA_Lexeme`/`UA_Verb`
@@ -102,7 +102,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ## UA Domain — YAML/CNSF schema consistency
 
-- [ ] **Build a CNSF field-schema checker** (per note type: `UA_Lexeme`,
+- [x] **Build a CNSF field-schema checker** (per note type: `UA_Lexeme`,
   `UA_Verb`, `UA_Grammar`, `UA_Visual`, `UA_PVOM_Infinitive`) that verifies
   every note carries the full standard field-key set — even blank (`''`) —
   rather than omitting keys for unused optional fields. Flag any note missing
@@ -128,7 +128,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   schema), or sparse-key-only is the intended design for optional fields — then
   make `cnsf_canonicalize.py` enforce whichever choice, so this doesn't keep
   drifting silently.
-- [ ] **Run the same field-presence check against `UA_Verb`/`UA_Grammar`/
+- [x] **Run the same field-presence check against `UA_Verb`/`UA_Grammar`/
   `UA_Visual`/`UA_PVOM_Infinitive`** — the numbers above only cover
   `UA_Lexeme`; the other four note types haven't been checked yet.
 - [ ] **Wire the checker into `make ua-check`** alongside the existing
