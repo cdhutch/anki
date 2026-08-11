@@ -38,5 +38,16 @@ fields:
     stress patterns: stem-stress ''гі́рський'' and ending-stress ''гірськи́й'', with no distinguishing
     gloss between them -- likely free/variant stress rather than a meaning split. This note
     uses the ending-stress form (гірськи́й), the more common citation form for ''mountain(ous)''.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

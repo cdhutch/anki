@@ -37,5 +37,16 @@ fields:
   Verification Notes: Горох lists a second homograph sense of 'перелітати' ('облітати багато
     місць', labeled доконаний); this note uses the general 'move through the air / cross a
     boundary' sense as the imperfective pair of перелеті́ти.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -38,5 +38,16 @@ fields:
     closely related to ночува́ти/переночува́ти (ua-lexeme-0282, ch.9.5), but implies an unplanned
     or unexpected overnight stay rather than a scheduled one. Perfective field left blank;
     documented here rather than forcing an artificial pairing.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

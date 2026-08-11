@@ -37,5 +37,16 @@ fields:
   Verification Notes: Imperfective, reflexive, 1st conjugation; effectively reflexivum tantum
     (no attested perfective partner). Full conjugation lives on ua-verb-0076. Component of
     phrase ua-lexeme-0495 (що стосується).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

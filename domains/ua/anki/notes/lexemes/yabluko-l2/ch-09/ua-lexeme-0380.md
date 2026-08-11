@@ -64,5 +64,11 @@ fields:
     "departure" sense); added CompareScenario + CompareA/Homograph_SenseA + CompareB/Homograph_SenseB
     for the dual-mode Homograph Compare card (see ua-lexeme-0182, вид, for the reference pattern).
     Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

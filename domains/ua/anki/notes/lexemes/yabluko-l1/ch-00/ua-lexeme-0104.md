@@ -50,5 +50,11 @@ fields:
     \ register scale (outcome-4 dedup audit — EN glosses overlapped enough to obscure the\
     \ enthusiasm gradient).\n2026-07-24: added CompareScenario + CompareA-D for the redesigned\
     \ Compare card (see compare-card-audit-findings.md). Needs your review."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

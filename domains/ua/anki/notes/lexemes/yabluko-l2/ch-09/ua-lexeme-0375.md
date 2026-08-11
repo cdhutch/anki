@@ -45,5 +45,16 @@ fields:
     yes, add the same "вчасть isn''t a word" warning here as on ua-lexeme-0376 -- added to
     Mnemonic_EN, which renders on the EN→UA production back card and the Compare card (not
     the plain UA→EN recognition back, per setup_ua_note_types.py).'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

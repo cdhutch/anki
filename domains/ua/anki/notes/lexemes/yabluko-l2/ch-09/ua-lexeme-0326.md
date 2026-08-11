@@ -39,5 +39,16 @@ fields:
   Verification Notes: Fixed clarification-request phrase from the textbook's conversational
     appendix. Reuses перепро́шувати (ua-lexeme-0321) and чу́ти/почу́ти (ua-lexeme-0318). '-ла'
     marks the feminine past-tense alternative (почула), following textbook convention.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

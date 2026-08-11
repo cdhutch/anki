@@ -37,5 +37,16 @@ fields:
     in Ukraine) alongside this common noun; verified the lowercase common-noun sense ('fire')
     was used. Verified 2026-07-22.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -37,5 +37,16 @@ fields:
   Source_Note: Pluralia tantum (no singular form) — Горох confirms nominative singular '—'.
     Verified 2026-07-22.
   Verification Notes: '2026-07-26: reused for ch.9.3 (''забити шайбу у ворота'') — see ua-lexeme-0228.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

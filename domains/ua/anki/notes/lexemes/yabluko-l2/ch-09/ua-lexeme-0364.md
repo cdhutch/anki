@@ -39,5 +39,16 @@ fields:
   Verification Notes: Reuses пізні́ше (ua-lexeme-0344); 'не' and 'ніж' (comparative conjunction
     'than' -- distinct from the homograph noun 'ніж'/knife already in the corpus as ua-lexeme-0047)
     are basic grammar words, not separately noted.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

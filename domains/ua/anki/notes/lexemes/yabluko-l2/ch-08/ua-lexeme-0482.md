@@ -40,5 +40,16 @@ fields:
     stress on -и- throughout the paradigm (дотри́матись/дотри́матися, дотри́маюсь, дотри́мався,
     etc.), matching the imperfective's stress position. Component of phrase ua-lexeme-0489
     (дотримуватися закону).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

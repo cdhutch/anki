@@ -43,5 +43,15 @@ fields:
     perfective counterpart confirmed via Горох (unlike most of this batch), so the cue leans
     on the training-context framing already implicit in the gloss rather than asserting a
     specific competing pfv. form.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

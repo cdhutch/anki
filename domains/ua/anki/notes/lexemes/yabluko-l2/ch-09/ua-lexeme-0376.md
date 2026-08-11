@@ -70,5 +70,15 @@ fields:
     this note (0376) is the whole phrase "брати участь у змаганнях," but the вчасть-confusion
     risk is really about the component noun участь itself (ua-lexeme-0375) -- worth considering
     the same Mnemonic_EN addition there too, not just here.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

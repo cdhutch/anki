@@ -38,5 +38,16 @@ fields:
   Verification Notes: 'Monosyllabic -- no stress mark. Горох lists several homographs (''unit
     of illuminance'', ''something luxurious'', indeclinable); this note uses the ''hotel room/compartment/cabin
     of higher comfort'' sense, matching ''тип вагона: люкс''.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

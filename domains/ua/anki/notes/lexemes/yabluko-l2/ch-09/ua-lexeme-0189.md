@@ -40,5 +40,16 @@ fields:
     declension: ''fin of a marine animal; unit of ship-cargo measure''). Using the plural
     ''ласти'' as Lemma to match how the gear is actually used/taught (a pair), the same precedent
     as ua-lexeme-0164 ''ворота'' (pluralized sporting-equipment noun).'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

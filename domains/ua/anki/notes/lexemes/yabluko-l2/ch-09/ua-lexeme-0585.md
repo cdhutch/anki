@@ -50,5 +50,16 @@ fields:
     intentionally left blank -- this is an aspect triplet, not a lexical-confusable/homograph
     pair, so the Compare card is expected to stay suspended. Drafted per Craig''s request
     2026-07-31. status:draft pending Craig''s independent review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

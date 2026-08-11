@@ -38,5 +38,16 @@ fields:
     (1st-syllable stress) and виклика́ти (2nd-syllable stress) -- following the same stress-differentiated-aspect
     pattern as перекидати/вилазити. This note uses виклика́ти as the imperfective Lemma, ви́кликати
     as the perfective.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

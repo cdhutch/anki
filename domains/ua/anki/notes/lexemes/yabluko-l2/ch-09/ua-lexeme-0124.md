@@ -46,5 +46,11 @@ fields:
     survey -- Горох Синонімія cross-references confirm вʼїжджати/уїжджати and вʼїхати/уїхати
     as attested variants; both уїжджати and уїхати have their own Горох Словозміна pages;
     stress confirmed уїжджа́ти, уї́хати.'
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

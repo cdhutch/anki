@@ -42,5 +42,15 @@ fields:
     -- Горох-confirmed this is a genuine stress-differentiated pair (ви́кликати pfv. / виклика́ти
     impf.), not two variant spellings of the same word, so the stress mark itself carries
     the aspect distinction here.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

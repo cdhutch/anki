@@ -35,5 +35,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/високогірний
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

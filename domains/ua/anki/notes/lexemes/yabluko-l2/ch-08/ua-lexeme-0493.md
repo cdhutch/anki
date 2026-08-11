@@ -38,5 +38,16 @@ fields:
   Verification Notes: Fixed prepositional discourse phrase (за + instrumental винятком). Component
     виняток (ua-lexeme-0469) also has its own note per rule 3; за (preposition) treated as
     a functional word and not given a separate note.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

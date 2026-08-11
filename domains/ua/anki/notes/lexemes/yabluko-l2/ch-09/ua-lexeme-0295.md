@@ -37,5 +37,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/рівень; https://goroh.pp.ua/Словозміна/складність
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Reuses рі́вень (ua-lexeme-0263) and скла́дність (ua-lexeme-0264).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

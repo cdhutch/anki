@@ -37,5 +37,16 @@ fields:
   Verification Notes: Горох's Словозміна page also has a homograph, Холо́дний (a surname)
     -- not used here. Note the stress (холо́дний) differs from the noun холод (хо́лод, ua-lexeme-0414)
     -- a genuine derivational stress shift, not an error.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

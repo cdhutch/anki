@@ -38,5 +38,16 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item. рівень reuses the existing ch.9 note
     ua-lexeme-0263 (bucket 3, same 'level' sense — ch:2.8.3 tag appended there rather than
     duplicating); життя (ua-lexeme-0475) is a new component note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

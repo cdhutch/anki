@@ -37,5 +37,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/носоріг
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0528 (волохатий носоріг).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

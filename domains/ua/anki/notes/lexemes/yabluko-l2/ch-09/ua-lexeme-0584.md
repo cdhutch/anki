@@ -72,5 +72,15 @@ fields:
     EuphonyNote prose, never wired to grant typing credit. Typing плисти́ for the unidirectional
     slot on the EN->UA card is now graded CORRECT/PERFECT (previously always INCORRECT), and
     the UA->EN Recognition front now shows "пливти́ (плисти́)".'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

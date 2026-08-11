@@ -38,5 +38,16 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.
   Verification Notes: Component of idiomatic phrase ua-lexeme-0579 (мурашки по шкірі), per
     rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -75,5 +75,13 @@ fields:
     participant: Shape 1 has no Homograph_SenseC field, and Shape 2 can''t hold two identically-spelled
     "вид" chips for two different senses. A true 3-way card would need a template change.
     Flagged this to Craig rather than silently building something structurally broken.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -40,5 +40,15 @@ fields:
   Verification Notes: 'Reuses спуска́тися/спусти́тися (ua-lexeme-0290) and вниз (ua-lexeme-0279).
     2026-07-28: added AspectCue framing the in-progress reading of спуска́тися (imperfective)
     -- the real perfective counterpart спусти́тися is already its own corpus note, ua-lexeme-0290.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

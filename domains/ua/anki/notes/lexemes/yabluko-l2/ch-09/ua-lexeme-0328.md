@@ -40,5 +40,16 @@ fields:
     and повто́рювати/повтори́ти (ua-lexeme-0320). 'будь ласка' (please) is a basic fixed phrase,
     not given its own lexeme note here (judgment call, same as other basic-grammar skips documented
     for ch.9.3/9.5 -- flagging for Craig's review).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

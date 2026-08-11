@@ -38,5 +38,16 @@ fields:
     item; components мінливий (ua-lexeme-0389) and хмарність (ua-lexeme-0390) each also have
     their own note per rule 3.
   Verification Notes: phrase:noun tag added (standard weather-forecast collocation).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

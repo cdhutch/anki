@@ -52,5 +52,13 @@ fields:
     CompareScenario tailored to elicit набагато''s everyday spoken register, CompareA/CompareB
     the two stressed lemmas (same chip set/order as ua-lexeme-0467). Still status:draft --
     needs your review, including stress verification.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

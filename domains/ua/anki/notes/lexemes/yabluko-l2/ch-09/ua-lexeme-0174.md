@@ -43,5 +43,16 @@ fields:
     requiring a learner to choose between them, so the card would just be noise. The homograph
     documentation is preserved in Source_Note above; nothing is lost by clearing this field.
     Needs your review/confirmation.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

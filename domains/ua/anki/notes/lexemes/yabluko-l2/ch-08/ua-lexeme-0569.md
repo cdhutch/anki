@@ -38,5 +38,16 @@ fields:
   Verification Notes: Fixed sensory-description discourse phrase, parallel to ua-lexeme-0568
     (на смак). Component дотик (ua-lexeme-0554) also has its own note per rule 3; на (preposition)
     treated as a functional word and not given a separate note.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

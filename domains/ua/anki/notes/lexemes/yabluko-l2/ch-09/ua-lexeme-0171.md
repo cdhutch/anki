@@ -48,5 +48,11 @@ fields:
     this note''s ConfusableSet named the 2nd sense but didn''t reference the split-off note).
     Also added CompareScenario + CompareA/B for the redesigned Compare card (see compare-card-audit-findings.md).
     Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

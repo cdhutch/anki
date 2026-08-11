@@ -38,5 +38,16 @@ fields:
   Verification Notes: '2026-07-26: reused for ch.9.7, which cites the bare perfective ''спуститися''
     as its own vocab item -- same verb pair already captured here via the Perfective field,
     no new note created (true-duplicate reuse).'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

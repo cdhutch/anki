@@ -43,5 +43,13 @@ fields:
     приходити (ua-lexeme-0114) already has its own Compare card against відходити (its directional
     opposite), so this note tests the on-foot/by-vehicle distinction from the vehicle side
     only. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

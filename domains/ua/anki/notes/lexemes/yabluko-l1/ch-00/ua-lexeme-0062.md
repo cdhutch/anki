@@ -34,5 +34,17 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/сімʼя
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
+  Mnemonic_EN: ''
 ---
 

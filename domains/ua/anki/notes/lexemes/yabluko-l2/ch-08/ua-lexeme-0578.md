@@ -36,5 +36,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/шкіра
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.
   Verification Notes: Component of idiomatic phrase ua-lexeme-0579 (мурашки по шкірі).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -37,5 +37,16 @@ fields:
   Verification Notes: Горох classifies this grammatically as a passive past participle of
     квасити (to pickle/ferment); classed as adjective here per corpus convention for participles
     used attributively (cf. пе́рший). Component of phrase ua-lexeme-0564 (квашена капуста).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

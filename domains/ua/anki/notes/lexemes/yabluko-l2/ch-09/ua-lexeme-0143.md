@@ -73,5 +73,11 @@ fields:
     \ CompareA/B/Homograph_SenseA/B here, since this note's Compare card is already committed\
     \ to Shape 1 homograph-disambiguation with ua-lexeme-0182; the тип/вид confusables card\
     \ lives entirely on 0306's own note instead."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

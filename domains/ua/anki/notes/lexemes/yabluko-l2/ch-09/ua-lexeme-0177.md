@@ -59,5 +59,13 @@ fields:
     loosely to "win" but take structurally different objects (a person/team defeated vs. a
     match/prize won). Also see ua-lexeme-0261 (переможець) for the shared agent noun. Needs
     your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

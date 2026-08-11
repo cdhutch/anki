@@ -40,5 +40,16 @@ fields:
     skips already flagged for Craig's review. Missing-space correction 2026-07-26 -- Lemma/TypingAnswer/Source_URL
     had 'як' and 'тільки' fused into one non-word ('якті́льки'/'яктільки'); corrected to two
     words throughout.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

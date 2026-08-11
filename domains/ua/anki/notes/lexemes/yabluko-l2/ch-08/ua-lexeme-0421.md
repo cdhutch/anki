@@ -37,5 +37,16 @@ fields:
     item; components вибір (ua-lexeme-0419) and страва (ua-lexeme-0420) each also have their
     own note per rule 3.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

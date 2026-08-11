@@ -58,5 +58,15 @@ fields:
     Flipped back to status:draft since content changed materially after the 2026-07-26 verification
     -- only needs a quick reglance (Lemma/TypingAnswer/stress are all unchanged), not a fresh
     Горох check.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

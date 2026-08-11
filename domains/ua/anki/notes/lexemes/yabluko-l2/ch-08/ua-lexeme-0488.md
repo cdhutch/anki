@@ -45,5 +45,14 @@ fields:
     the textbook''s own vocabulary line specifies the perfective впасти, so that is what is
     drafted here. 2026-07-30: this idiom''s aspect pair is exactly what confirmed Craig''s
     ua-lexeme-0484 re-key was correct -- see that note''s Verification Notes.'
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

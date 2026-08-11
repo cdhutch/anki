@@ -37,5 +37,16 @@ fields:
   Verification Notes: Fixed subordinating conjunction. Its components 'після', 'того', 'як'
     are basic grammar words not otherwise given their own lexeme notes -- same judgment call
     as 'як тільки' (ua-lexeme-0361) above.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

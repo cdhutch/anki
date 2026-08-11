@@ -40,5 +40,16 @@ fields:
     table). Standard references generally give триатло́н (stress on the final syllable); used
     informally in the mnemonic/examples above but the Lemma field is left unmarked per the
     actual (unmarked) Горох data. Needs independent stress check before leaving draft.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

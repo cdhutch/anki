@@ -37,5 +37,16 @@ fields:
   Source_Note: Components verified via Горох (see ua-lexeme-0132, ua-lexeme-0140). Verified
     2026-07-22.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

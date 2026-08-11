@@ -72,5 +72,11 @@ fields:
     тип/вид confusables card lives entirely on 0306''s own note, same division of labor as
     the existing 0143/0306 precedent. Flagged this constraint to Craig; a real 3-way card
     would require a template change, not just a content edit.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

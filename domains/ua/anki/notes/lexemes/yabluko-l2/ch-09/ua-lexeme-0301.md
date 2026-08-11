@@ -41,5 +41,15 @@ fields:
     2026-07-28: added AspectCue framing the one-time completed-crossing reading of переплисти́
     (perfective) -- the real imperfective counterpart переплива́ти is already its own corpus
     note, ua-lexeme-0284.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

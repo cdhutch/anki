@@ -37,5 +37,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/церемонія; https://goroh.pp.ua/Словозміна/закриття
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Reuses церемо́нія (ua-lexeme-0266) and закриття́ (ua-lexeme-0267).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

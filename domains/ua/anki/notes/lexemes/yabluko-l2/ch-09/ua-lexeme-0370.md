@@ -37,5 +37,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/пізно; https://goroh.pp.ua/Словозміна/ввечері
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Reuses пі́зно (ua-lexeme-0352) and вве́чері (ua-lexeme-0353).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

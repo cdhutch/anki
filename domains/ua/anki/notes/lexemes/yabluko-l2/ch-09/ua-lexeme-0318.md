@@ -35,5 +35,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/чути
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: Filtered out a homograph 'чутити' (to sense/smell), a different word.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

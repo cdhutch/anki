@@ -60,5 +60,11 @@ fields:
     (identical chips on both notes per convention) and added the missing Homograph_SenseA/
     SenseB fields. See CLAUDE-compare-card-field-mapping.md for the full spec this was fixed
     against. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  AspectCue: ''
 ---
 

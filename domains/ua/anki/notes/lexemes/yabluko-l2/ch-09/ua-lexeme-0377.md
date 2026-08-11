@@ -47,5 +47,15 @@ fields:
     двовидове), and a differently-spelled candidate (уболіти) 404s. See ua-lexeme-0211''s
     Verification Notes for the full evidence writeup; not repeated here. Content (gloss, example)
     reviewed and confirmed correct by Craig 2026-08-02; status:verified is accurate.'
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

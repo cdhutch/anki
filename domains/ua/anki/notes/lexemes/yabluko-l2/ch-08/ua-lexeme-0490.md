@@ -38,5 +38,16 @@ fields:
   Verification Notes: Idiomatic fixed 3rd-person-singular construction ('у мене/нас складається
     враження, що...'). Components складатися (ua-lexeme-0483, full conjugation on ua-verb-0078)
     and враження (ua-lexeme-0456) each also have their own note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

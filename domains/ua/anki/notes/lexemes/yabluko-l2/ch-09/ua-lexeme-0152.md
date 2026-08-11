@@ -36,5 +36,16 @@ fields:
   Source_Note: Stress verified 2026-07-22 via Горох. Example verbatim from Яблуко 2, ch.9.1
     test (Вправа 6, Q4).
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

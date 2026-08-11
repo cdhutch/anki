@@ -44,5 +44,13 @@ fields:
     was just the bare paired word with no scenario. Also noted the same-direction/different-mode
     relationship to приїжджати (ua-lexeme-0123), which gets its own separate Compare card
     against this note. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

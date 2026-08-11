@@ -44,5 +44,16 @@ fields:
     The perfective 'розминутися' has full personal forms. Blank Pres_1sg/Pres_2sg/Imperative
     fields on the corresponding ua-verb-0037 note reflect this gap in the source data, not
     an extraction error.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

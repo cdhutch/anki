@@ -39,5 +39,16 @@ fields:
     sense ('to roast/overheat in the sun', fitting this active-travel subsection) is plausible
     but not directly dictionary-attested this pass -- flagging for Craig rather than asserting
     it. Full conjugation lives on ua-verb-0080.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

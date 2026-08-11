@@ -37,5 +37,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/букет; https://goroh.pp.ua/Словозміна/троянда
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.
   Verification Notes: Reuses буке́т (ua-lexeme-0239) and троя́нда (ua-lexeme-0240).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

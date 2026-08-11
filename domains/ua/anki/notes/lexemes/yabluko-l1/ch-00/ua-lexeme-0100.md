@@ -53,5 +53,11 @@ fields:
     \ originally flagged as verbose/answer-leaking; EN_Gloss (\"not bad\") is this note's\
     \ own answer, so it could not double as the front-side scenario. A dedicated situational\
     \ prompt was authored instead. Needs your review."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

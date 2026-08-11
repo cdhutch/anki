@@ -41,5 +41,16 @@ fields:
     ''to throw repeatedly / back and forth''). Chose the imperfective sense as the better
     fit for the sports-vocabulary context (ongoing back-and-forth tossing during play) versus
     a one-off perfective toss.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

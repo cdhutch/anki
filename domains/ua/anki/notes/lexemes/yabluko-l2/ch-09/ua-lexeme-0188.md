@@ -39,5 +39,16 @@ fields:
   Verification Notes: Горох's Словозміна page for 'ключка' also lists two unrelated proper-noun
     senses (a river name and a surname) -- filtered out; this note is the common noun (hockey
     stick) sense only.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

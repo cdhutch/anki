@@ -44,5 +44,16 @@ fields:
     of the remaining senses in general usage). The other senses (batch of goods, musical part,
     marriage match, etc.) are excluded as out of scope for this vocabulary deck -- none are
     textbook-attested and they''re comparatively rare/specialized.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

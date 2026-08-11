@@ -35,5 +35,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/дельтапланеризм
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

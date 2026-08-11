@@ -37,5 +37,16 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.
   Verification Notes: Горох lists 3 entries for this spelling (incl. an archaic/toponymic
     sense related to 'town/citadel'); the weather sense (hail) is the one used here.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

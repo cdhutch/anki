@@ -53,5 +53,14 @@ fields:
     Словозміна for all four forms: устано́влювати, встано́влювати, установи́ти, встанови́ти
     -- euphonic variants preserve the primary form''s stress position in all four cases, as
     expected.'
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

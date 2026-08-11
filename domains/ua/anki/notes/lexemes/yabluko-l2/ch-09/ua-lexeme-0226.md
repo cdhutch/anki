@@ -40,5 +40,15 @@ fields:
   Verification Notes: '2026-07-28: added AspectCue framing the one-time completed-victory
     reading of ви́грати (perfective) -- Горох-confirmed real imperfective counterpart виграва́ти
     exists as its own headword.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

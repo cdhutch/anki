@@ -41,5 +41,13 @@ fields:
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
     card (see compare-card-audit-findings.md) — Mnemonic_EN already existed and is unchanged.
     Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

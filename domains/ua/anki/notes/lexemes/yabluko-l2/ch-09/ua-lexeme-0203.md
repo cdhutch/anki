@@ -59,5 +59,13 @@ fields:
     \ Added CompareScenario + CompareA/CompareB for the Compare card. The play-vs-rating distinction\
     \ is general Ukrainian usage, not an explicit Горох gloss -- see the dated note on ua-lexeme-0252\
     \ for the caveat. Needs your review."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -38,5 +38,16 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item (Ice-Age megafauna, alongside мамонт);
     components волохатий (ua-lexeme-0506) and носоріг (ua-lexeme-0507) each also have their
     own note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

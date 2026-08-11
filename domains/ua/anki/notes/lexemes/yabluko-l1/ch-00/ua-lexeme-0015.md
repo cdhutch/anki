@@ -43,5 +43,13 @@ fields:
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md) — previously ConfusableSet
     was just the bare paired word with no scenario. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

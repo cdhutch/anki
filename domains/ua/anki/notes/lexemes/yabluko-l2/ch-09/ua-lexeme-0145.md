@@ -56,5 +56,13 @@ fields:
     \ values overlapped on \"race\".\n2026-07-24: added CompareScenario + CompareA/B for the\
     \ redesigned Compare card (see compare-card-audit-findings.md) — this is one of the two\
     \ notes you originally flagged as verbose/answer-leaking. Needs your review."
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

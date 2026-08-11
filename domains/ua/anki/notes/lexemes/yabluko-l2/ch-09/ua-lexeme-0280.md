@@ -38,5 +38,16 @@ fields:
     (stress 2nd syll, labeled недоконаний) -- analogous to the перекидати-type stress-differentiated
     aspect pattern already documented for ch.9.3. This note uses вила́зити (ipfv) as Lemma,
     paired with ви́лізти (pfv).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

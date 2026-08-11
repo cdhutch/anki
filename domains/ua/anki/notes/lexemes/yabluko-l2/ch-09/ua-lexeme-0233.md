@@ -40,5 +40,15 @@ fields:
   Verification Notes: '''перемогти'' reuses the existing verb ua-lexeme-0177 (Lemma ''перемагати'',
     Perfective field ''перемогти''; already sourced for ch.9.2). 2026-07-28: added AspectCue
     framing the one-time decisive-outcome reading of this perfective.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

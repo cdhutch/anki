@@ -36,5 +36,16 @@ fields:
   Source_Note: Components verified via Горох (see ua-lexeme-0137, ua-lexeme-0146). Example
     verbatim from Яблуко 2, ch.9.1 test (Вправа 6, Q5).
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

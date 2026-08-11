@@ -37,5 +37,16 @@ fields:
   Verification Notes: Loose antonym of наступний (ua-lexeme-0349, reused this chapter); not
     given a ConfusableSet cross-link per corpus convention (antonym pairs are not treated
     as 'confusable').
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -60,5 +60,14 @@ fields:
     line claiming "Imperfective partner is па́дати" which is now superseded/needs its own
     update; no ua-verb note exists yet for впадати''s own conjugation paradigm. Component
     of phrase ua-lexeme-0488 (впасти в очі).'
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

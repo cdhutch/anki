@@ -37,5 +37,16 @@ fields:
     consistency (Craig's decision, 2026-07-22); 'програти' appears in the Perfective field;
     full conjugation for both aspects lives on the separate ua-verb-0036 conjugation note.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

@@ -43,5 +43,12 @@ fields:
   Verification Notes: '2026-07-24: added cross-link to ніч by ID, Mnemonic_EN, CompareScenario
     + CompareA/B/C (3-way time-of-day cluster) for the redesigned Compare card (see compare-card-audit-findings.md)
     — previously ConfusableSet only pointed at вечір, not ніч. Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

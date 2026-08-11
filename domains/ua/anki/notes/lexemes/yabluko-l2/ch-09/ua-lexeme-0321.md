@@ -50,5 +50,16 @@ fields:
     lemma, so tagged `needs-confusable-set` (the existing generic marker, see ua-lexeme-0436/0440)
     rather than a specific pending-confusable:<lemma> tag -- re-tag with the more specific
     mechanism once the actual family members are sourced and their exact spellings are known.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

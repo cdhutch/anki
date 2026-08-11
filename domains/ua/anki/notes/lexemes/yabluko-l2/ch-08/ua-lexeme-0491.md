@@ -39,5 +39,16 @@ fields:
     'не такий' and 'як' as two separate lines, combined here into one discourse construction
     per textbook convention. Components такий (ua-lexeme-0478, pronoun) and як (ua-lexeme-0476,
     conjunction) each also have their own note per rule 3.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

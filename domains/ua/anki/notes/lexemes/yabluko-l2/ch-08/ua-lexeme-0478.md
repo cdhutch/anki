@@ -37,5 +37,16 @@ fields:
   Verification Notes: Горох classes such/такий as a займенник вказівний (demonstrative pronoun),
     not an adjective — PartOfSpeech set to pronoun accordingly (2nd precedent in corpus after
     ua-lexeme-0354). Component of phrase ua-lexeme-0491 (не такий... як).
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

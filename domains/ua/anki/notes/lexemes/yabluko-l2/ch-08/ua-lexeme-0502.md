@@ -36,5 +36,16 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.
   Verification Notes: Imperfective, non-reflexive, 1st conjugation. Perfective partner not
     verified this pass. Full conjugation lives on ua-verb-0081.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

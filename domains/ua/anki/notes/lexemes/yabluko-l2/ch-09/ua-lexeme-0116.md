@@ -41,5 +41,13 @@ fields:
     redesigned Compare card (see compare-card-audit-findings.md). Needs your review. (Carried
     over from ch.9.4 delivery — this note was already touched once this session for the виходити
     назустріч reuse tag; this is an independent, later edit.)'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

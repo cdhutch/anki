@@ -42,5 +42,15 @@ fields:
     for ch.9.2). 2026-07-28: added AspectCue framing the one-time completed-goal reading of
     заби́ти (perfective) -- Горох-confirmed real imperfective counterpart забива́ти exists
     as its own headword.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
 ---
 

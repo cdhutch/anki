@@ -34,5 +34,16 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/насолоджуватися; https://goroh.pp.ua/Словозміна/насолодитися
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects.
   Verification Notes: ''
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

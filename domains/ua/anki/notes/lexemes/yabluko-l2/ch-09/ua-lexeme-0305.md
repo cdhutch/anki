@@ -57,5 +57,13 @@ fields:
     + CompareA/CompareB (a genuine 2-way confusables-mode card, прибуття vs відправлення)
     instead of leaving them blank. See CLAUDE-compare-card-field-mapping.md for the full spec.
     Needs your review.'
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

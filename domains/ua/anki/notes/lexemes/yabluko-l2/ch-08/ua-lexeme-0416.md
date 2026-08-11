@@ -37,5 +37,16 @@ fields:
   Verification Notes: Stress (хо́лодно) matches the noun холод (ua-lexeme-0414), not the adjective
     холодний (холо́дний, ua-lexeme-0415) -- both confirmed independently via Горох, a genuine
     three-way stress pattern worth noting rather than assuming derivational consistency.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 

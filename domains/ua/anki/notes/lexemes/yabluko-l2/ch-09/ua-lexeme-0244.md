@@ -37,5 +37,16 @@ fields:
   Verification Notes: Monosyllabic (one vowel) -- no stress mark by Горох convention. Горох
     also lists a preposition sense (rv_rod) and an unrelated verb 'вглибити'; this note uses
     the adverb sense.
+  Lemma_Euphony: ''
+  Perfective_Euphony: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  CompareScenario: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  AspectCue: ''
 ---
 
