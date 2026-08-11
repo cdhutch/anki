@@ -33,12 +33,9 @@ fields:
   Past_3pl: пливли́
   Participle_Active_Present: ''
   Participle_Adverbial_Present: пливучи́
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification Notes: 'Corrected 2026-08-04, per Craig -- stored Pres_*/Imperative_*/Past_*
     fields previously matched плинути ("to flow/stream," an unrelated -нути verb), not пливти.
     Replaced with the Горох-verified пливти paradigm sourced 2026-07-31 while drafting ua-verb-0086
@@ -79,6 +76,10 @@ fields:
     same -мо-only simplification, and the still-unresolved Participle_Passive_Past schema
     question (single field on the branch vs. this note''s _m/_f split), are both deferred
     to the larger, proper merge of the whole archive/ua-verb-participle-merge-and-stress-pass
-    branch, not fixed here.'
+    branch, not fixed here. 2026-08-11 (resolved, per Craig): the Participle_Passive_Past
+    schema question above is now settled -- singular field, male form as the default, no _m/_f
+    split. This note''s Participle_Passive_Past_m/_f (both blank, no data to migrate) consolidated
+    back to a single Participle_Passive_Past field. See CLAUDE.md item 13''s 2026-08-11 correction
+    for the full history of how the split claim got into this repo in the first place.'
 ---
 

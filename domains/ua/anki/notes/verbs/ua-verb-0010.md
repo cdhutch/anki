@@ -33,12 +33,9 @@ fields:
   Past_3pl: попливли́
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification Notes: 'Corrected 2026-08-04, per Craig -- stored Pres_*/Imperative_*/Past_*
     fields previously matched попити ("to drink up")/поплинути-adjacent forms, not попливти.
     Replaced with попливти''s own Горох Словозміна page (goroh.pp.ua/Словозміна/попливти),
@@ -70,6 +67,9 @@ fields:
     dangling branch (expected -- попливти is perfective, no present participle). Same open
     follow-ups as ua-verb-0009: ua-verb-0087 (поплисти) may need the same -мо-only simplification,
     and the Participle_Passive_Past schema question is deferred to the larger branch-reconciliation
-    pass.'
+    pass. 2026-08-11 (resolved, per Craig): singular field, male form as the default, no _m/_f
+    split. This note''s Participle_Passive_Past_m/_f (both blank, no data to migrate) consolidated
+    back to a single Participle_Passive_Past field -- see ua-verb-0009''s note and CLAUDE.md
+    item 13''s 2026-08-11 correction.'
 ---
 

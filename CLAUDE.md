@@ -597,10 +597,22 @@ this doc. Roughly in priority order:
     notes this session touched by hand. Confirmed via a clean corpus-wide `make ua-verb-fix`
     + `make ua-verb` sync (87/87 updated, 0 errors) and Craig's on-device spot-check. The
     three items previously left open here are now closed: (a) the -мо-only
-    `Pres_1pl`/`Imperative_1pl` convention is corpus-wide, not just on `0009`/`0010`; (b) the
-    `Participle_Passive_Past_m`/`_f` split (not the dangling branch's single-field proposal)
-    is confirmed as the live schema — the `cnsf-canonical` pre-commit hook now enforces it;
-    (c) the rest of the 0002–0087 conjugation data came along in the same merge. The
+    `Pres_1pl`/`Imperative_1pl` convention is corpus-wide, not just on `0009`/`0010`; (b)
+    **correction, 2026-08-11:** this line previously claimed the `Participle_Passive_Past_m`/
+    `_f` split "is confirmed as the live schema" and that "the `cnsf-canonical` pre-commit
+    hook now enforces it" — both were wrong. Live-model inspection
+    (`inspect_note_type_fields.py`) showed the live `UA_Verb` model only ever had the
+    singular `Participle_Passive_Past` field, and the pre-commit hook only validates YAML
+    key order/structure, never specific field sets. Craig ruled 2026-08-10: singular field,
+    male form as default, no split. The 5 notes carrying the split (`0009`/`0010`/`0038`/
+    `0086`/`0087`, all blank on both halves, no data to migrate) were consolidated back to
+    `Participle_Passive_Past` 2026-08-11. The same 5 notes also carried stray `UA_Example`/
+    `EN_Example` fields -- not part of `VERB_FIELDS` at all, both blank on all 5, apparent
+    leftovers from this note group's tangled authoring history above -- removed the same day
+    per Craig. `check_cnsf_field_schema.py` is now fully clean (0 unknown keys, all 5 note
+    types) for the first time since the checker was built; (c) the rest of the 0002–0087
+    conjugation data came
+    along in the same merge. The
     `chore/ua-verb-participle-merge-and-stress-pass` branch itself was retired in favor of
     `maint/verb-review`, cut fresh from `main`, as the ongoing home for future verb-corpus
     review (mirroring `maint/lexeme-review`'s pattern). **Not independently re-verified:**

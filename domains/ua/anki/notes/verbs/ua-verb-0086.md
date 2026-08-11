@@ -35,12 +35,9 @@ fields:
   Past_3pl: плили́
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past_m: ''
-  Participle_Passive_Past_f: ''
+  Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  UA_Example: ''
-  EN_Example: ''
   Verification Notes: 'Free-variant/"phonetic-variant" of пливти (ua-verb-0009), parallel
     to йти (ua-verb-0003) vs іти (ua-verb-0002). Горох-verified 2026-07-31: плисти́ and пливти́
     are both valid headwords (недоконаний вид, нерефлексивне, 1 дієвідміна) with IDENTICAL
