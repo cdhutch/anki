@@ -66,11 +66,17 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   "good" 2026-08-04. 567/585 lexeme notes have `EN_Example` populated. Check: open a
   few EN→UA cards for notes with a populated `EN_Example` and confirm the sentence
   actually renders.
-- [ ] **Per-slot euphony tolerance** — EN→UA typing accepts either в-/у- (etc.) form
-  independently per aspect slot, not just at the whole-string level. Log claims:
-  code + 12 unit tests complete 2026-08-03, synced in the same corpus run as above.
-  Check: type both the в- and у- forms for ua-lexeme-0115 (входити/увійти) and
-  ua-lexeme-0124 (уїжджати/уїхати) and confirm both are accepted.
+- [ ] **Per-slot euphony tolerance — partially confirmed, real gap found (2026-08-11).**
+  EN→UA typing accepts either в-/у- (etc.) form independently per aspect slot, not just
+  at the whole-string level. The template had never actually been pushed live until this
+  session (`make ua` doesn't push templates — see the field-order item below); after
+  running `make ua-setup-lexeme`, Craig tested `ua-lexeme-0115` (входити/увійти): typing
+  the euphonic alternate (`вхо́дити / ввійти́`) IS accepted rather than rejected, but only
+  ever lands at the CORRECT tier, never PERFECT, even with full correct stress — a real
+  bug in `EN_UA_BACK`'s feedback script (`everySlotPerfect` is set `false` before the
+  euphonic-alternate check runs; full root cause in CLAUDE.md's euphony/aspect refactor
+  section). `ua-lexeme-0124` (уїжджати/уїхати) not yet tested. Not being fixed in
+  isolation — folded into the "EN→UA euphony + verbal-aspect refactor" item below.
 - [ ] **UA→EN front multi-aspect display** — `_UA_EN_DisplayLemma` shows euphonic
   alternates inline, e.g. "вхо́дити / уві́йти (ввійти́)". Log claims code-complete
   2026-08-03, but the parenthetical format itself was Claude's own call, never
@@ -84,15 +90,35 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 - [ ] **Verb-phrase aspect defaulting** (EN→UA typing target defaults to imperfective
   when a verb-phrase note doesn't clearly call for perfective) — scoped 2026-07-29,
   never coded. Authoring-guidance-only right now. Decide if/when this gets built.
+- [ ] **EN→UA euphony + verbal-aspect refactor** (broader than the item above) —
+  flagged 2026-08-11: Craig recalls abandoning a prior effort in this area and wants
+  the whole approach to how euphony and verbal aspect are jointly managed on the
+  EN→UA side reconsidered from scratch, including whether to keep the existing
+  per-slot tolerance mechanism (built 2026-08-04) at all. Not started, no design yet.
+  See "EN→UA Euphony + Verbal-Aspect Refactor (Future)" in `CLAUDE.md` for the full
+  history to read before scoping.
+- [ ] **UA note-type field order not preserved across `make ua-setup-*` runs**
+  (flagged 2026-08-11) — Craig manually dragged `UA_Lexeme`'s fields into a logical
+  order during this session's validation pass; running `make ua-setup-lexeme`
+  afterward silently reset it back to the raw `FIELDS` constant order in
+  `setup_ua_note_types.py`. Any future `make ua-setup-*`/`make ua-setup` run will
+  clobber a manually-dragged order the same way. Future work: update the
+  `FIELDS`/`GRAMMAR_FIELDS`/`VISUAL_FIELDS`/`VERB_FIELDS` constants (and
+  `setup_ua_pvom_note_type.py`'s `FIELDS`) to reflect a deliberate logical order for
+  all 5 UA note types, so the setup script stops fighting manual reordering. Not
+  started — see CLAUDE.md item 20.
 - [ ] **`UA_Grammar` 0001–0007 reviewed** against the 2026-07-22 atomicity /
   no-self-leak / no-cross-cloze-leak cloze principles (0008/0009 already meet them).
   No work started.
-- [ ] **Two pre-existing `tests/ua/test_lexeme_import.py` failure groups**
-  investigated: `TestComputeTypingTarget` (8 failures, tests an abandoned
-  2026-07-25 design) and `TestPruneOrphansSafetyGate` (5 failures, references
-  functions — `prune_orphans`, `collect_all_corpus_note_ids`, `all_anki_note_ids`,
-  `delete_notes` — that don't exist anywhere in the repo). Parked 2026-08-04,
-  nothing since.
+- [x] **Two pre-existing `tests/ua/test_lexeme_import.py` failure groups resolved
+  (2026-08-11).** `TestComputeTypingTarget` (8 failures — tested an abandoned
+  2026-07-25 design) rewritten against the real, live `compute_typing_target()`
+  behavior; all 6 rewritten tests pass. `TestPruneOrphansSafetyGate` (5 failures —
+  referenced `prune_orphans`/`collect_all_corpus_note_ids`/`all_anki_note_ids`/
+  `delete_notes`, none of which exist) deleted outright per Craig, rather than left
+  failing for unbuilt code — see CLAUDE.md item 19 for the design to rebuild against
+  whenever that feature actually gets built. Craig personally ran `make ua-test` and
+  confirmed clean (246 passed, 0 failed).
 - [ ] **`domains/ua/anki/docs/design.md` refreshed** to match the live schema
   (currently predates `CounterpartForm`/`AspectCue`/`TypingTarget_UA` and others).
 - [ ] **Compare-card "should be suspended" comment fixed** in
@@ -108,14 +134,14 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   rather than omitting keys for unused optional fields. Flag any note missing
   a standard key, and any note carrying a key that isn't in the standard set
   (typos, abandoned experiments).
-- [ ] **Establish the canonical field-set source of truth per note type**
+- [x] **Establish the canonical field-set source of truth per note type**
   before trusting the checker's output — `setup_ua_note_types.py`'s `FIELDS`
   constants have already been caught stale relative to the live AnkiConnect
   model once before (missing `Verification Notes`/`Mnemonic_EN`/`CompareA`/
   `CompareB` at the time — see "Verb_Conj_Table Removal Plan" in `CLAUDE.md`).
   Reconcile the constant against `inspect_ua_lexeme_fields.py`'s live-model
   output first.
-- [ ] **Decide the convention for newer optional fields and enforce it** —
+- [x] **Decide the convention for newer optional fields and enforce it** —
   verified directly against the corpus (2026-08-08, 585 `UA_Lexeme` notes):
   every core field (`Lemma`, `EN_Gloss`, `ConfusableSet`, `EuphonyNote`, etc.)
   is present as a key on all 585/585 notes, blank string when unused. The
@@ -131,7 +157,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 - [x] **Run the same field-presence check against `UA_Verb`/`UA_Grammar`/
   `UA_Visual`/`UA_PVOM_Infinitive`** — the numbers above only cover
   `UA_Lexeme`; the other four note types haven't been checked yet.
-- [ ] **Wire the checker into `make ua-check`** alongside the existing
+- [x] **Wire the checker into `make ua-check`** alongside the existing
   `audit_verb_aspect_forms.py`/`check_pending_confusables.py` audits, so field
   drift gets caught on every check run instead of accumulating unnoticed.
 

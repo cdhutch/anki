@@ -716,7 +716,14 @@ this doc. Roughly in priority order:
     (`_AspectLabel`, `_UA_EN_DisplayLemma`, `_IsHomograph`, `TypingTarget_UA`,
     `_EuphonySlots`) that are populated by `ua_lexeme_import.py` at sync time, never
     CNSF-authored, and the pre-existing sparse `ImperfectiveUnidirectional` field (5/585),
-    which wasn't among the 12 Craig approved for this convention.
+    which wasn't among the 12 Craig approved for this convention. **Cross-reference:** the
+    "Two pre-existing test failures found and parked" paragraph earlier in this file (under
+    the 2026-08-04 dated log entry) already explains why `tests/ua/test_lexeme_import.py`
+    has 8 `TestComputeTypingTarget` failures unrelated to this item -- they test an
+    abandoned design, not a gap in what got built here. Don't re-diagnose that from scratch
+    (an early mistake in this session's own analysis, corrected 2026-08-11) -- read that
+    paragraph first, and see item 19 below for the one genuinely unbuilt piece
+    (`prune_orphans`) the same test file surfaces.
 
 18. **CNSF field-schema checker wired into `make ua-check`** — **Done, 2026-08-11.**
     Completes "Wire the checker into `make ua-check`" (`CLAUDE-work-queue.md`), the last
@@ -735,6 +742,50 @@ this doc. Roughly in priority order:
     (`ua-verb-0009`/`0010`/`0038`/`0086`/`0087`) -- pre-existing, tracked separately (the
     still-open participle-field consolidation Craig ruled on 2026-08-10), not caused by this
     wiring.
+
+19. **Build `prune_orphans()` safety gate for `UA_Lexeme`** — **New, flagged 2026-08-11,
+    not started.** Specifies a well-defined but never-built feature:
+    `collect_all_corpus_note_ids()` (returns `(valid_ids, parse_failure_paths)`),
+    `all_anki_note_ids()` (returns `{note_id: anki_note_id}` from AnkiConnect),
+    `delete_notes(ids, dry_run)`, and `prune_orphans(dry_run, sync_errors)` tying them
+    together -- abort (return 0, delete nothing) if `sync_errors` is nonzero or any CNSF
+    file failed to parse; otherwise diff corpus note IDs against live Anki note IDs and
+    delete (or just report, if `dry_run`) any Anki note with no matching CNSF file. None of
+    these four functions exist anywhere in the repo (grep-confirmed) -- this gap was already
+    flagged in passing on 2026-07-31 (see the `Verb_Conj_Table` Removal Plan section above)
+    and again 2026-08-04, but never acted on. Purpose: protect FSRS review history -- "a
+    single unrelated YAML typo could silently wipe review history on an unrelated note"
+    without a safety gate catching a mass-deletion signal (all-corpus parse failure, or a
+    sync that errored) before it reaches `deleteNotes`. Deliberately not attempted as a
+    quick fix: this touches AnkiConnect `deleteNotes` directly (irreversible without a
+    backup) and deserves real design review, not a rushed implementation. **Tests removed,
+    2026-08-11 (per Craig):** `tests/ua/test_lexeme_import.py`'s `TestPruneOrphansSafetyGate`
+    (5 tests, written 2026-07-25 per the module's then-docstring) specified this feature
+    TDD-style but had been failing since it was written, since none of the four functions it
+    references ever got built. Craig wants `make ua-test` to run clean rather than carry
+    known-failing specs for unbuilt code, so the class was deleted outright rather than left
+    red or skip-marked. New tests get written alongside the real implementation whenever this
+    item is picked up -- the design above (function signatures, abort conditions) is what to
+    rebuild them against, not the deleted test file itself.
+
+20. **UA note-type field order not preserved across `make ua-setup-*` runs** — **New,
+    flagged 2026-08-11.** During this session's validation pass, Craig manually dragged
+    `UA_Lexeme`'s fields in the Anki Fields dialog into the logical order proposed
+    conversationally (identity → core lemma/aspect → computed/display-only fields, grouped
+    together → semantic content → grammatical properties → semantic relations/Compare →
+    typing/examples → metadata/sources). Running `make ua-setup-lexeme` afterward (to push
+    the `EN_UA_BACK` template fix -- see the euphony/aspect refactor section below) silently
+    reset the field order straight back to the raw `FIELDS` constant order in
+    `setup_ua_note_types.py`, since the setup script pushes field order from that list every
+    time it runs. Any future `make ua-setup-*`/`make ua-setup` invocation will clobber a
+    manually-dragged order the same way. Future work, per Craig: update the
+    `FIELDS`/`GRAMMAR_FIELDS`/`VISUAL_FIELDS`/`VERB_FIELDS` constants here (and
+    `setup_ua_pvom_note_type.py`'s `FIELDS`) to reflect a deliberately-chosen logical order
+    for all 5 UA note types, not just `UA_Lexeme`, so the setup script becomes the source of
+    truth for field order instead of fighting manual reordering in the Anki GUI. Not
+    started; only `UA_Lexeme` has a proposed order so far (see above), and that proposal
+    hasn't been written into the `FIELDS` constant itself yet -- it only exists as what
+    Craig dragged into place live, which the next setup run will undo again.
 
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
@@ -1562,6 +1613,48 @@ current per-color behavior.
 whenever Craig wants to work through the current 11 flagged notes. Red/orange
 suspend-policy split done 2026-08-10, see item 14 above -- pending its first live
 `make ua` verification.
+
+### EN→UA Euphony + Verbal-Aspect Refactor (Future)
+
+**Flagged by Craig, 2026-08-11.** Craig recalls abandoning a prior effort in this area and
+wants the whole approach to how euphony and verbal aspect are jointly managed on the EN→UA
+production side reconsidered from scratch, rather than continuing to layer incremental fixes
+onto the existing design. Not started; no design yet.
+
+**Relevant history to read before scoping this** (see "Per-slot euphony tolerance +
+verb-phrase aspect defaulting" under Card Template Techniques, and Remaining Work item 7,
+both above):
+- 2026-07-25: `881ac25`/`2e93202` redesigned euphony as *required dual-form typing*
+  (primary + euphonic together, `" ; "`-joined) — abandoned 2026-07-28, reverted back to the
+  simpler `a5b4a15` tolerance-only design ("it worked great" per Craig).
+- 2026-07-29: a two-part follow-on plan was scoped on top of `a5b4a15` — (1) per-slot в-/у-
+  euphony tolerance across all populated aspect slots, (2) verb-phrase aspect defaulting
+  (default `TypingTarget_UA` to imperfective on phrase notes where only one aspect is
+  idiomatic, via authoring discipline rather than a new schema field).
+- 2026-08-04: part (1) was implemented and synced (`Lemma_Euphony`/
+  `ImperfectiveUnidirectional_Euphony`/`Perfective_Euphony` fields, per-slot feedback-script
+  evaluation in `EN_UA_BACK`). Part (2) was never implemented — deferred as authoring
+  guidance only.
+
+Given this history of partial builds and at least one outright abandonment, treat the
+existing per-slot tolerance mechanism as a candidate for replacement, not necessarily a
+foundation to build on — the point of this refactor is to step back and reconsider the
+overall design, not just finish part (2) of the 2026-07-29 plan.
+
+**Validation finding, 2026-08-11 (Craig, live-testing ua-lexeme-0115 after `make ua-setup-
+lexeme`):** confirmed the per-slot euphony tolerance mechanism is live and functioning at
+the CORRECT tier -- typing `вхо́дити / ввійти́` (primary lemma + the dictionary-attested
+`Perfective_Euphony` alternate, both fully stressed) is accepted rather than rejected. But
+it never reaches PERFECT, even with full correct stress on the euphonic form, which the
+feedback script's own comments document as intended behavior. Root cause in `EN_UA_BACK`'s
+feedback script (`setup_ua_note_types.py`): `everySlotPerfect` is set to `false` as soon as
+a typed slot doesn't literally equal the *primary* stressed form -- before the euphonic-
+alternate check even runs -- and that check itself strips stress from both sides
+(`stripStress(typedSlot)` vs. an already-stripped `euphonyAltsForSlot(i)`), so it can't
+distinguish "euphonic alternate, fully stressed" from "euphonic alternate, no stress." Both
+land in the same CORRECT bucket. Per Craig: functional, a good start, but the euphonic
+capabilities still need to be built out properly -- left as part of this refactor rather
+than patched in isolation.
 
 ### Source materials
 | Path | Purpose |
