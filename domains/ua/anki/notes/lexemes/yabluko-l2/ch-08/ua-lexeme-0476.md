@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0476
   Lemma: як
+  Lemma_Euphony: ''
   PartOfSpeech: conjunction
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: as, like (comparative)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: як
   UA_Example: Це місто не таке велике, як я очікував.
   EN_Example: This city isn't as big as I expected.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Горох lists як as both adverb (interrogative 'how') and conjunction
     (comparative 'as/like'); classed as conjunction here for its role in ua-lexeme-0491 (не
     такий... як). Component of that phrase.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

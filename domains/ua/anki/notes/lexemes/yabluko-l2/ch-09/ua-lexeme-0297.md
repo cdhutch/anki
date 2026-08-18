@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0297
   Lemma: заря́джений позити́вною ене́ргією приго́д
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: charged with the positive energy of adventure
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: заряджений позитивною енергією пригод
   UA_Example: Атмосфера старту була заряджена позитивною енергією пригод.
   EN_Example: The atmosphere at the start was charged with the positive energy of adventure.
@@ -41,16 +52,5 @@ fields:
     (ua-lexeme-0272). 'позитивний' (positive) is basic grammar-adjacent vocabulary, not given
     its own lexeme note here (judgment call, same as the ordinal/cardinal skips documented
     for ch.9.3 -- flagging for Craig's review).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0322
   Lemma: тип ваго́на
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: type of train car
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: тип вагона
   UA_Example: Оберіть тип вагона перед покупкою квитка.
   EN_Example: Choose the type of train car before buying the ticket.
@@ -39,16 +50,5 @@ fields:
   Verification Notes: Reuses тип (ua-lexeme-0306) and ваго́н (ua-lexeme-0307). The enumerated
     values (люкс/купе/плацкарта) each have their own lexeme note above rather than being folded
     into this phrase.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

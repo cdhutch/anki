@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0008
   Lemma: офіціа́нтка
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: waitress
   Govt_Case: ''
-  CounterpartForm: 'm: офіціа́нт'
   IrregularForms: ''
+  CounterpartForm: 'm: офіціа́нт'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: офіціантка
   UA_Example: Офіціантка приносить нам меню і посміхається.
   EN_Example: The waitress brings us the menu and smiles.
@@ -35,17 +47,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/офіціантка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

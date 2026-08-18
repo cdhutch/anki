@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0359
   Lemma: виклика́ти таксі́
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to call a taxi
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: Whenever you need a ride, what's the first thing you do?
+  EN_Gloss: to call a taxi
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: викликати таксі
   UA_Example: Вона вирішила викликати таксі до вокзалу.
   EN_Example: She decided to call a taxi to the train station.
@@ -42,15 +52,5 @@ fields:
     -- Горох-confirmed this is a genuine stress-differentiated pair (ви́кликати pfv. / виклика́ти
     impf.), not two variant spellings of the same word, so the stress mark itself carries
     the aspect distinction here.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

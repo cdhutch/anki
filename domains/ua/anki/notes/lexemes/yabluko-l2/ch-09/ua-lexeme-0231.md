@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0231
   Lemma: ки́нути мʼяч
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to throw the ball
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: In one quick motion, what does the player do with the ball?
+  EN_Gloss: to throw the ball
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: кинути мʼяч
   UA_Example: Тренер попросив кинути мʼяч точно у кошик.
   EN_Example: The coach asked him to throw the ball right into the basket.
@@ -40,15 +50,5 @@ fields:
   Verification Notes: '2026-07-28: added AspectCue framing the one-time single-throw (semelfactive)
     reading of ки́нути (perfective) -- the real imperfective counterpart ки́дати is already
     its own corpus note, ua-lexeme-0217.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

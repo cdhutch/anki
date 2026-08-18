@@ -17,22 +17,32 @@ tags:
 fields:
   NoteID: ua-lexeme-0376
   Lemma: бра́ти у́часть у змага́ннях
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to take part in the competition
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: As a rule, what are six of the team members doing in the competition?
+  EN_Gloss: to take part in the competition
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: участь starts with у- (у́часть), not в-/вч- -- "вчасть" is not a word in Ukrainian.
     (It's easy to blend with вчасно "on time," or with the Russian часть "part" -- Ukrainian
     uses частина for "part," and участь for "participation" is its own root, not built on
     "часть" at all.)
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: брати участь у змаганнях
   UA_Example: Шестеро з них беруть участь у змаганні, а ще четверо -- запасні гравці.
   EN_Example: Six of them take part in the competition, and four more are substitute players.
@@ -70,15 +80,5 @@ fields:
     this note (0376) is the whole phrase "брати участь у змаганнях," but the вчасть-confusion
     risk is really about the component noun участь itself (ua-lexeme-0375) -- worth considering
     the same Mnemonic_EN addition there too, not just here.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

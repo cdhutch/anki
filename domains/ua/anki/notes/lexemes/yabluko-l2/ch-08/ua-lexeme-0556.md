@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0556
   Lemma: ко́лючий
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: prickly, thorny (literal texture)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: колючий
   UA_Example: Колючий їжак згорнувся клубочком.
   EN_Example: The prickly hedgehog curled into a ball.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: 'Горох shows a stress-based homograph: literal ко́лючий (''sharp/prickly,
     what one pricks with'') vs. figurative колю́чий (''hurtful, biting'', e.g. of words).
     The literal texture sense fits this subsection and is drafted here.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0004
   Lemma: журналі́ст
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: journalist
   Govt_Case: ''
-  CounterpartForm: 'f: журналі́стка'
   IrregularForms: ''
+  CounterpartForm: 'f: журналі́стка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: journalist · RU: журналист · FR: journaliste · DE: Journalist'
-  EuphonyNote: ''
   TypingAnswer: журналіст
   UA_Example: Журналіст пише статтю для газети.
   EN_Example: The journalist is writing an article for the newspaper.
@@ -35,17 +47,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/журналіст
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

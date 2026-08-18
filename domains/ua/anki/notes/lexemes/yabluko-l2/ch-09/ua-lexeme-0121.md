@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0121
   Lemma: перехо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: перейти́
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to cross, go across (on foot)
   Govt_Case: через + Acc
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: прохо́дити (pass by/through vs. cross to the far side)
   Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
@@ -30,8 +35,11 @@ fields:
     other.
   CompareA: проходити
   CompareB: переходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: переходить / перейти'
-  EuphonyNote: ''
   TypingAnswer: переходити
   UA_Example: ''
   EN_Example: ''
@@ -41,13 +49,5 @@ fields:
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
     card (see compare-card-audit-findings.md) — Mnemonic_EN already existed and is unchanged.
     Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

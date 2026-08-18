@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0244
   Lemma: вглиб
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: deep, into the depths
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вглиб
   UA_Example: Стежка вела вглиб лісу.
   EN_Example: The path led deep into the forest.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Monosyllabic (one vowel) -- no stress mark by Горох convention. Горох
     also lists a preposition sense (rv_rod) and an unrelated verb 'вглибити'; this note uses
     the adverb sense.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

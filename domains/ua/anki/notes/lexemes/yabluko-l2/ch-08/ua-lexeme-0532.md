@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0532
   Lemma: розве́дення ове́ць
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: sheep breeding, sheep farming
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: розведення овець
   UA_Example: Розведення овець залишається головним заняттям горян.
   EN_Example: Sheep breeding remains the main occupation of the highlanders.
@@ -38,16 +49,5 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item (розведення + genitive plural овець);
     components розведення (ua-lexeme-0518) and вівця (ua-lexeme-0519) each also have their
     own note per rule 3.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

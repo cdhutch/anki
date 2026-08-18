@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0128
   Lemma: доїжджа́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: дої́хати
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to reach, get to (by vehicle)
   Govt_Case: до + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: підʼїжджа́ти (approach vs. actually reach, by vehicle)
   Mnemonic_EN: під- = approaching by vehicle, getting close; до- = actually reaching the destination
@@ -30,8 +35,11 @@ fields:
   CompareScenario: A car finally arrives at the destination after a long drive.
   CompareA: підʼїжджати
   CompareB: доїжджати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: доезжать / доехать'
-  EuphonyNote: ''
   TypingAnswer: доїжджати
   UA_Example: ''
   EN_Example: ''
@@ -40,13 +48,5 @@ fields:
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

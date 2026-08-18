@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0405
   Lemma: те́пло
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: warmly
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: тепло́ (Горох homograph -- stress shift, neuter noun "warmth") - see ua-lexeme-0407.
     Same spelling; те́пло (stress on те-, this note) is the adverb "warmly", тепло́ (stress
@@ -33,11 +38,12 @@ fields:
     ("warmth" as a noun, usually paired with an adjective like приємне).
   CompareScenario: Which sense of тепло is being used?
   CompareA: Одягайся тепло, надворі холодно.
-  Homograph_SenseA: warmly (adverb)
   CompareB: Від каміна йшло приємне тепло.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: warmly (adverb)
   Homograph_SenseB: warmth (noun)
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: тепло
   UA_Example: Одягайся тепло, надворі холодно.
   EN_Example: Dress warmly, it's cold outside.
@@ -57,11 +63,5 @@ fields:
     pattern: identical CompareA/B and Homograph_SenseA/B on both sibling notes, sourced from
     each note''s own already-written UA_Example. Needs your review -- including whether re-syncing
     actually backfills the Compare card for this already-existing note, which is unverified.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  AspectCue: ''
 ---
 

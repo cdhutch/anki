@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0317
   Lemma: каза́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: сказа́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to say, tell
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: казати
   UA_Example: Вибачте, Ви сказали, що поїзд запізнюється?
   EN_Example: Sorry, did you say the train is running late?
@@ -46,16 +57,5 @@ fields:
     RU''s suppletive pair). EN_Gloss/UA_Example were already казати-shaped ("Ви сказали...")
     even under the old Lemma, so only the headword and gloss changed. говорити itself held
     per Craig''s request, pending its own glossary appearance.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

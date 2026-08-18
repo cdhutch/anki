@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0302
   Lemma: підніма́тися на ске́лі
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to climb on the rocks
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: Right now, partway up the rock face, what is the climber doing?
+  EN_Gloss: to climb on the rocks
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: підніматися на скелі
   UA_Example: Підніматися на скелі найважче після дощу.
   EN_Example: Climbing on the rocks is hardest right after rain.
@@ -40,15 +50,5 @@ fields:
   Verification Notes: 'Reuses підніма́тися/підня́тися (ua-lexeme-0286) and ске́ля (ua-lexeme-0268).
     2026-07-28: added AspectCue framing the in-progress reading of підніма́тися (imperfective)
     -- the real perfective counterpart підня́тися is already its own corpus note, ua-lexeme-0286.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

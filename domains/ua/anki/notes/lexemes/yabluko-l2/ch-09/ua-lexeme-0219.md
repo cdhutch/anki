@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0219
   Lemma: перекида́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: переки́нути
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to toss, pass back and forth
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перекидати
   UA_Example: Діти перекидали мʼяч через сітку.
   EN_Example: The kids were tossing the ball back and forth over the net.
@@ -41,16 +52,5 @@ fields:
     ''to throw repeatedly / back and forth''). Chose the imperfective sense as the better
     fit for the sports-vocabulary context (ongoing back-and-forth tossing during play) versus
     a one-off perfective toss.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

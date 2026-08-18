@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0224
   Lemma: би́тися з реа́льним супе́рником
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to fight a real opponent (as opposed to a training dummy/practice partner)
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: In training, what do fighters regularly do against a live opponent, not a dummy?
+  EN_Gloss: to fight a real opponent (as opposed to a training dummy/practice partner)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: битися з реальним суперником
   UA_Example: На останньому тренуванні він уперше бився з реальним суперником.
   EN_Example: At the last training session he fought a real opponent for the first time.
@@ -43,15 +53,5 @@ fields:
     perfective counterpart confirmed via Горох (unlike most of this batch), so the cue leans
     on the training-context framing already implicit in the gloss rather than asserting a
     specific competing pfv. form.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

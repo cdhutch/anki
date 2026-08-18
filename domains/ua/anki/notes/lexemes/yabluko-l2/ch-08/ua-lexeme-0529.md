@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0529
   Lemma: гірськи́й хребе́т
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: mountain range, mountain ridge
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: гірський хребет
   UA_Example: Карпатський гірський хребет добре видно з літака.
   EN_Example: The Carpathian mountain range is clearly visible from the plane.
@@ -38,16 +49,5 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item. гірський reuses the existing ch.9 note
     ua-lexeme-0254 (bucket 3, same 'mountain(ous)' sense -- ch:2.8.5 tag appended there rather
     than duplicating); хребет (ua-lexeme-0509) is a new component note per rule 3.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

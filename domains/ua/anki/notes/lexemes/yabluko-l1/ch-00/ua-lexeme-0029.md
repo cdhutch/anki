@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0029
   Lemma: ве́чір
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: evening
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: gen.sg. ве́чора (stem vowel і→о in oblique cases)
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ра́нок, ніч — time-of-day cluster (day/night cycle). See ua-lexeme-0048 (ніч),
     ua-lexeme-0059 (ранок).
@@ -32,8 +37,10 @@ fields:
   CompareA: вечір
   CompareB: ніч
   CompareC: ранок
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вечір
   UA_Example: Увечері ми любимо гуляти у парку.
   EN_Example: In the evening we like to walk in the park.
@@ -45,12 +52,5 @@ fields:
     — previously ConfusableSet was just the bare paired word ''ранок'' with no scenario, and
     didn''t mention ніч at all even though 0048 (ніч) already pointed back at вечір. Needs
     your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

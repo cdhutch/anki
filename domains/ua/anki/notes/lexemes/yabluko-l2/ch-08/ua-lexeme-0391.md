@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0391
   Lemma: мінли́ва хма́рність
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: variable/changeable cloudiness
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: мінлива хмарність
   UA_Example: Синоптики прогнозують мінливу хмарність.
   EN_Example: Forecasters predict variable cloudiness.
@@ -38,16 +49,5 @@ fields:
     item; components мінливий (ua-lexeme-0389) and хмарність (ua-lexeme-0390) each also have
     their own note per rule 3.
   Verification Notes: phrase:noun tag added (standard weather-forecast collocation).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

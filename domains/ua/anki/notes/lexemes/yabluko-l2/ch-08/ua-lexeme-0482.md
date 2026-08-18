@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0482
   Lemma: дотри́муватися
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: дотри́матися
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to adhere to, abide by, observe (rules/laws)
   Govt_Case: genitive
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: дотримуватися
   UA_Example: Туристи повинні дотримуватися місцевих законів.
   EN_Example: Tourists must abide by local laws.
@@ -40,16 +51,5 @@ fields:
     stress on -и- throughout the paradigm (дотри́матись/дотри́матися, дотри́маюсь, дотри́мався,
     etc.), matching the imperfective's stress position. Component of phrase ua-lexeme-0489
     (дотримуватися закону).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

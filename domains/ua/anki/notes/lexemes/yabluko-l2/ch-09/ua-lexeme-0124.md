@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0124
   Lemma: вʼїжджа́ти
+  Lemma_Euphony: уїжджа́ти
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: вʼї́хати
+  Perfective_Euphony: уї́хати
+  EuphonyNote: 'apostrophe after в- before ї: вʼїхати; cf. RU въехать'
+  AspectCue: ''
   EN_Gloss: to drive in/into (by vehicle)
   Govt_Case: в/у + Acc
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: виїжджа́ти (directional opposite)
   Mnemonic_EN: вʼ- = driving into (same в-/ви- opposition as входити/виходити, applied to
@@ -30,10 +35,11 @@ fields:
   CompareScenario: A car turns into a parking garage or driveway.
   CompareA: вʼїжджати
   CompareB: виїжджати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: въезжать / въехать (ʼ corresponds to RU ъ)'
-  Lemma_Euphony: уїжджа́ти
-  Perfective_Euphony: уї́хати
-  EuphonyNote: 'apostrophe after в- before ї: вʼїхати; cf. RU въехать'
   TypingAnswer: вʼїжджати
   UA_Example: ''
   EN_Example: ''
@@ -46,11 +52,5 @@ fields:
     survey -- Горох Синонімія cross-references confirm вʼїжджати/уїжджати and вʼїхати/уїхати
     as attested variants; both уїжджати and уїхати have their own Горох Словозміна pages;
     stress confirmed уїжджа́ти, уї́хати.'
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

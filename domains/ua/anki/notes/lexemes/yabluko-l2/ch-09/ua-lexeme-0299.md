@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0299
   Lemma: ви́лізти на ске́лю
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to climb up onto a cliff
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: After the long struggle, what does the climber finally do?
+  EN_Gloss: to climb up onto a cliff
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вилізти на скелю
   UA_Example: Перший етап -- вилізти на скелю без страховки.
   EN_Example: The first stage is climbing up onto the cliff without safety gear.
@@ -40,15 +50,5 @@ fields:
   Verification Notes: 'Reuses вила́зити/ви́лізти (ua-lexeme-0280) and ске́ля (ua-lexeme-0268).
     2026-07-28: added AspectCue framing the one-time completed-climb reading of ви́лізти (perfective)
     -- the real imperfective counterpart вила́зити is already its own corpus note, ua-lexeme-0280.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

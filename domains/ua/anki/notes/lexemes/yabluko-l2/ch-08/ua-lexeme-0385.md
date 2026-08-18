@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0385
   Lemma: гроза́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: thunderstorm
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: гроза
   UA_Example: Учора ввечері була сильна гроза.
   EN_Example: Last night there was a strong thunderstorm.
@@ -39,16 +50,5 @@ fields:
     Гро́за (surname), гроза́ (this note, "thunderstorm"), and a third sense not needed here.
     Confirmed feminine 1st-declension common noun via the гроза́/гро́зи/грози́ declension
     pattern.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0300
   Lemma: перелеті́ти че́рез рі́чку на моту́зці
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to fly across a river on a rope
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: In one daring swing, what does the adventurer do to reach the other side?
+  EN_Gloss: to fly across a river on a rope
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перелетіти через річку на мотузці
   UA_Example: Команда мала перелетіти через річку на мотузці за хвилину.
   EN_Example: The team had to fly across the river on a rope in under a minute.
@@ -42,15 +52,5 @@ fields:
     and моту́зка (ua-lexeme-0270). 2026-07-28: added AspectCue framing the one-time completed-crossing
     reading of перелеті́ти (perfective) -- the real imperfective counterpart перелiта́ти is
     already its own corpus note, ua-lexeme-0283.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0492
   Lemma: у кі́лька разі́в
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: several times over, by several-fold
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: у кілька разів
   UA_Example: Готель виявився у кілька разів дорожчим, ніж ми очікували.
   EN_Example: The hotel turned out to be several times more expensive than we expected.
@@ -38,16 +49,5 @@ fields:
   Verification Notes: Multiplicative-comparison discourse phrase (кілька + instrumental plural
     разів). Components кілька (ua-lexeme-0477) and раз (ua-lexeme-0474) each also have their
     own note per rule 3.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

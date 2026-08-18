@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0230
   Lemma: зароби́ти очко́
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to earn/score a point
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: In that one decisive moment, what does the player do to add to the score?
+  EN_Gloss: to earn/score a point
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: заробити очко
   UA_Example: Гравець заробив очко для своєї команди.
   EN_Example: The player earned a point for his team.
@@ -55,15 +65,5 @@ fields:
     flipping to status:verified. 2026-07-28: added AspectCue (chip-styled EN->UA prompt, replacing
     the earlier "(pfv.)" parenthetical on EN_Gloss) so the card indicates a one-time completed
     action is expected, not the imperfective заробляти.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0378
   Lemma: па́ртія
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: (political) party
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: партія
   UA_Example: Ця партія перемогла на виборах.
   EN_Example: This party won the election.
@@ -41,16 +52,5 @@ fields:
     as out-of-scope/rare -- see ua-lexeme-0186's Verification Notes).
   Verification Notes: Same Lemma/stress as ua-lexeme-0186, already Горох-verified there. Content
     (gloss, example) still needs your review pass before flipping to status:verified.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

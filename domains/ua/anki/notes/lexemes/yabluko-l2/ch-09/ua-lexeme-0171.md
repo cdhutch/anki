@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0171
   Lemma: мете́лик
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: butterfly
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'метелик (2nd Горох sense, homograph - unrelated meaning, informal: bow-tie;
     flyer/leaflet) - see ua-lexeme-0181'
@@ -31,11 +36,12 @@ fields:
     word.
   CompareScenario: Which sense of метелик is being used?
   CompareA: Червоний метелик сів на білу квітку.
-  Homograph_SenseA: butterfly (insect)
   CompareB: На вечірці він носив чорний метелик.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: butterfly (insect)
   Homograph_SenseB: bow-tie (menswear accessory)
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: метелик
   UA_Example: Метелик сів на квітку.
   EN_Example: The butterfly landed on the flower.
@@ -48,11 +54,5 @@ fields:
     this note''s ConfusableSet named the 2nd sense but didn''t reference the split-off note).
     Also added CompareScenario + CompareA/B for the redesigned Compare card (see compare-card-audit-findings.md).
     Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  AspectCue: ''
 ---
 

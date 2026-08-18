@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0221
   Lemma: бойове́ мисте́цтво
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: martial art
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: бойове мистецтво
   UA_Example: Карате — це відоме бойове мистецтво.
   EN_Example: Karate is a well-known martial art.
@@ -38,16 +49,5 @@ fields:
     combat gear).
   Verification Notes: '''бойове'' reuses the existing adjective ua-lexeme-0132 (бойовий);
     component noun ''мистецтво'' is new, see ua-lexeme-0199.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

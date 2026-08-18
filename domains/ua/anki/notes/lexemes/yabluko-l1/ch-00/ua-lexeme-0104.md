@@ -15,13 +15,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0104
   Lemma: чудо́во
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: wonderfully; great!
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "до́бре, непога́но, норма́льно - same \"how are you?\" register family, graded\
     \ by enthusiasm.\nScale (low to high enthusiasm): непогано (not bad - lukewarm/hedging)\
@@ -38,8 +43,9 @@ fields:
   CompareB: норма́льно
   CompareC: до́бре
   CompareD: чудо́во
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: чудово
   UA_Example: — Ти чудово зіграв цю роль!
   EN_Example: — You played that role wonderfully!
@@ -50,11 +56,5 @@ fields:
     \ register scale (outcome-4 dedup audit — EN glosses overlapped enough to obscure the\
     \ enthusiasm gradient).\n2026-07-24: added CompareScenario + CompareA-D for the redesigned\
     \ Compare card (see compare-card-audit-findings.md). Needs your review."
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

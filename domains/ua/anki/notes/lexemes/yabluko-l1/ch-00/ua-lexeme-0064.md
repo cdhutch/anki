@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0064
   Lemma: стіле́ць
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: chair
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'gen: стільця́; pl: стільці́'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: па́рта
   Mnemonic_EN: парта = school desk (classroom-specific, often a desk+bench unit); стілець
@@ -31,8 +36,11 @@ fields:
     a dinner table or in a waiting room.
   CompareA: парта
   CompareB: стілець
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: стілець
   UA_Example: Сядьте, будь ласка, на стілець коло столу.
   EN_Example: Please sit down on the chair near the table.
@@ -41,13 +49,5 @@ fields:
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

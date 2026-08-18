@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0220
   Lemma: посіда́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: посі́сти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to occupy, take (a place/position/rank)
   Govt_Case: + Acc. (посідати місце)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: посідати
   UA_Example: Наша команда щороку посідає перше місце.
   EN_Example: Our team takes first place every year.
@@ -40,16 +51,5 @@ fields:
     with the perfective 'посісти' ('заволодіти' sense, used in the textbook's 'посісти третє
     місце'). A separate, unrelated 'посідати' sense ('сісти -- про всіх або багатьох' = 'to
     sit down, of everyone/many') is also perfective there and not relevant to this lexeme.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

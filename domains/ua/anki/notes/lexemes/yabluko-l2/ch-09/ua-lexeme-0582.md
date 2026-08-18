@@ -17,14 +17,19 @@ tags:
 fields:
   NoteID: ua-lexeme-0582
   Lemma: ї́здити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional: ї́хати
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: пої́хати
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to travel, go (by vehicle)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: 'Base motion-verb triplet: ї́здити (multidirectional impf.) / ї́хати (unidirectional
     impf.) / пої́хати (perf.). Full conjugation tables exist as separate UA_Verb notes: ua-verb-0005
     (їздити), ua-verb-0006 (їхати), ua-verb-0007 (поїхати).'
@@ -33,10 +38,16 @@ fields:
     -- e.g. commutes, makes repeated trips). ї́хати = "is riding/driving, headed one way,
     right now" (unidirectional). пої́хати = "set off (by vehicle) / departed" (perfective
     -- the trip as a completed whole).
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: English "go/drive/travel" covers both їздити and їхати without marking
     the habitual-vs-single-trip distinction -- closest analogy is "used to drive out there"
     (multi) vs "was driving there" (uni) vs "set off driving" (perf).
-  EuphonyNote: ''
   TypingAnswer: їздити / їхати / поїхати
   UA_Example: Ми часто їздимо на дачу влітку, а того дня ми їхали і слухали радіо.
   EN_Example: We often go (drive) to the dacha in summer, and that day we were driving and
@@ -53,16 +64,5 @@ fields:
     triplet, not a lexical-confusable/homograph pair, so the Compare card is expected to stay
     suspended. Drafted per Craig''s request 2026-07-31. status:draft pending Craig''s independent
     review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

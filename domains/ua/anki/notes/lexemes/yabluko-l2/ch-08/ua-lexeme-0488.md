@@ -17,20 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0488
   Lemma: впада́ти в о́чі
+  Lemma_Euphony: упада́ти в о́чі
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: впа́сти в о́чі
+  Perfective_Euphony: упа́сти в о́чі
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to catch the eye, stand out
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  Lemma_Euphony: упада́ти в о́чі
-  Perfective_Euphony: упа́сти в о́чі
-  EuphonyNote: ''
   TypingAnswer: впасти в очі
   UA_Example: Її яскрава сукня одразу впала в очі.
   EN_Example: Her bright dress immediately caught everyone's eye.
@@ -45,14 +54,5 @@ fields:
     the textbook''s own vocabulary line specifies the perfective впасти, so that is what is
     drafted here. 2026-07-30: this idiom''s aspect pair is exactly what confirmed Craig''s
     ua-lexeme-0484 re-key was correct -- see that note''s Verification Notes.'
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

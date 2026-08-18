@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0552
   Lemma: па́хнути
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to smell (of), have a scent
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: пахнути
   UA_Example: У кухні пахло свіжим часником.
   EN_Example: The kitchen smelled of fresh garlic.
@@ -38,16 +49,5 @@ fields:
     have a smell'') vs. perfective пахну́ти (''to waft/emanate a smell suddenly''). The imperfective
     sense fits this subsection''s descriptive context and is drafted here. Full conjugation
     lives on ua-verb-0085.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

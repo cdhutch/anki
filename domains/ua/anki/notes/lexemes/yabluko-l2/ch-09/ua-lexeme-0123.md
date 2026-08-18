@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0123
   Lemma: приїжджа́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: приї́хати
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to arrive (by vehicle)
   Govt_Case: до + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: прихо́дити (same "arrive" sense, different mode of motion — see ua-lexeme-0114)
   Mnemonic_EN: 'Same significance (''arrive''), different mode: приходити = on foot; приїжджати
@@ -30,8 +35,11 @@ fields:
   CompareScenario: A friend arrives in your city by train or car after a long trip.
   CompareA: приїжджати
   CompareB: приходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: приезжать / приехать'
-  EuphonyNote: ''
   TypingAnswer: приїжджати
   UA_Example: ''
   EN_Example: ''
@@ -43,13 +51,5 @@ fields:
     приходити (ua-lexeme-0114) already has its own Compare card against відходити (its directional
     opposite), so this note tests the on-foot/by-vehicle distinction from the vehicle side
     only. Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

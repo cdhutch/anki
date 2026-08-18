@@ -18,13 +18,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0182
   Lemma: вид
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: 'aspect (grammatical: perfective vs. imperfective distinction)'
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "вид (1st sense, homograph - unrelated meaning: kind, type) - see ua-lexeme-0143\n\
     Scenario A: Describing whether a verb is perfective or imperfective, e.g. in a grammar\
@@ -40,13 +45,14 @@ fields:
     word.
   CompareScenario: Which sense of вид is being used?
   CompareA: Який вид спорту ти любиш?
-  Homograph_SenseA: kind, type
   CompareB: Дієслово "читати" має недоконаний вид.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: kind, type
   Homograph_SenseB: grammatical aspect (perfective/imperfective)
   CrossLang_Analog: 'EN: aspect (grammatical category) · RU: вид (same term, cognate) - English
     verbs don''t mark aspect morphologically the way Slavic languages do; this is often the
     single hardest grammatical concept for English-speaking learners of Ukrainian.'
-  EuphonyNote: ''
   TypingAnswer: вид
   UA_Example: У реченні «Я прочитав книгу» дієслово «прочитати» має доконаний вид.
   EN_Example: In the sentence "I read the book," the verb "прочитати" is in the perfective
@@ -72,11 +78,5 @@ fields:
     тип/вид confusables card lives entirely on 0306''s own note, same division of labor as
     the existing 0143/0306 precedent. Flagged this constraint to Craig; a real 3-way card
     would require a template change, not just a content edit.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  AspectCue: ''
 ---
 

@@ -18,13 +18,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0380
   Lemma: відпра́влення
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: parcel, mailed item (letter/package)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "відпра́влення (1st sense, homograph - unrelated meaning: departure, e.g.\
     \ of a train) - see ua-lexeme-0304\nScenario A: Picking up a package at the post office\n\
@@ -37,11 +42,12 @@ fields:
     (departs), a parcel is "sent off" (mailed).
   CompareScenario: Which sense of відправлення is being used?
   CompareA: Час відправлення поїзда -- девʼята вечора.
-  Homograph_SenseA: departure
   CompareB: Ваше відправлення готове до отримання на пошті.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: departure
   Homograph_SenseB: parcel, mailed item (letter/package)
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: відправлення
   UA_Example: Ваше відправлення готове до отримання на пошті.
   EN_Example: Your parcel is ready for pickup at the post office.
@@ -64,11 +70,5 @@ fields:
     "departure" sense); added CompareScenario + CompareA/Homograph_SenseA + CompareB/Homograph_SenseB
     for the dual-mode Homograph Compare card (see ua-lexeme-0182, вид, for the reference pattern).
     Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  AspectCue: ''
 ---
 

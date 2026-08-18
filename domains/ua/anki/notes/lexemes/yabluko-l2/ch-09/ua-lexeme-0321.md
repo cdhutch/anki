@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0321
   Lemma: перепро́шувати
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: перепроси́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: 'to apologize, beg pardon (discourse marker: ''excuse me'')'
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перепрошувати
   UA_Example: Перепрошую, я не почула, коли відправляється поїзд.
   EN_Example: Excuse me, I didn't hear when the train departs.
@@ -50,16 +61,5 @@ fields:
     lemma, so tagged `needs-confusable-set` (the existing generic marker, see ua-lexeme-0436/0440)
     rather than a specific pending-confusable:<lemma> tag -- re-tag with the more specific
     mechanism once the actual family members are sourced and their exact spellings are known.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

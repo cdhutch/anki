@@ -16,20 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0379
   Lemma: устано́влювати
+  Lemma_Euphony: встано́влювати
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: установи́ти
+  Perfective_Euphony: встанови́ти
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to establish, set up, install (something)
   Govt_Case: + Acc. (установлювати щось)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  Lemma_Euphony: встано́влювати
-  Perfective_Euphony: встанови́ти
-  EuphonyNote: ''
   TypingAnswer: установлювати / установити
   UA_Example: Технік установлює нове обладнання в лабораторії.
   EN_Example: The technician is installing new equipment in the lab.
@@ -53,14 +62,5 @@ fields:
     Словозміна for all four forms: устано́влювати, встано́влювати, установи́ти, встанови́ти
     -- euphonic variants preserve the primary form''s stress position in all four cases, as
     expected.'
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

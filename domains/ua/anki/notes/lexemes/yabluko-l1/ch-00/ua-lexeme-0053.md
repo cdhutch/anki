@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0053
   Lemma: па́рта
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: school desk
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: стіле́ць
   Mnemonic_EN: парта = school desk (classroom-specific, often a desk+bench unit); стілець
@@ -31,8 +36,11 @@ fields:
     notebook during a lesson.
   CompareA: парта
   CompareB: стілець
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: парта
   UA_Example: Учень сидить за партою біля вікна.
   EN_Example: The pupil sits at a desk near the window.
@@ -41,13 +49,5 @@ fields:
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

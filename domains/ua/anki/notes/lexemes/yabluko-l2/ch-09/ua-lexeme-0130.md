@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0130
   Lemma: переїжджа́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: переї́хати
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to cross (by vehicle); to relocate
   Govt_Case: через + Acc
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: проїжджа́ти (pass by/through vs. cross to the far side, by vehicle)
   Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
@@ -30,8 +35,11 @@ fields:
     its extended sense, a family moving their household to a new city.
   CompareA: проїжджати
   CompareB: переїжджати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: переезжать / переехать'
-  EuphonyNote: ''
   TypingAnswer: переїжджати
   UA_Example: ''
   EN_Example: ''
@@ -41,13 +49,5 @@ fields:
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare
     card (see compare-card-audit-findings.md) — Mnemonic_EN already existed and is unchanged.
     Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

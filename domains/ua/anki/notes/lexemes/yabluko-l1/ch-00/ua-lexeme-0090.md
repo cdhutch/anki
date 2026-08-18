@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0090
   Lemma: італі́йський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Italian (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: італі́йський'
   IrregularForms: ''
+  CounterpartForm: 'm: італі́йський'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: італійський
   UA_Example: Він любить італійське кіно та музику.
   EN_Example: He loves Italian cinema and music.
@@ -34,17 +46,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/італійський
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

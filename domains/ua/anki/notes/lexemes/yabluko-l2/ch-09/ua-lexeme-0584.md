@@ -17,26 +17,13 @@ tags:
 fields:
   NoteID: ua-lexeme-0584
   Lemma: пла́вати
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional: пливти́
   ImperfectiveUnidirectional_Euphony: плисти́
   Perfective: попливти́
-  EN_Gloss: to swim
-  Govt_Case: ''
-  CounterpartForm: ''
-  IrregularForms: ''
-  VerbMotion_Pair: 'Base motion-verb triplet: пла́вати (multidirectional impf.) / пливти́
-    (unidirectional impf.) / попливти́ (perf.). Full conjugation tables exist as separate
-    UA_Verb notes: ua-verb-0008 (плавати), ua-verb-0009 (пливти), ua-verb-0010 (попливти).'
-  ConfusableSet: ''
-  Mnemonic_EN: пла́вати = "swims habitually / knows how to swim, no set direction" (multidirectional
-    -- e.g. swims around, can swim). пливти́ = "is swimming, headed one way, right now" (unidirectional
-    -- e.g. swimming across/toward something). попливти́ = "set off swimming" (perfective
-    -- the swim as a completed whole).
-  CrossLang_Analog: English "swim" covers both плавати and пливти without marking the habitual-vs-
-    single-swim distinction -- closest analogy is "used to swim around here" (multi) vs "was
-    swimming toward shore" (uni) vs "set off swimming" (perf).
+  Perfective_Euphony: ''
   EuphonyNote: 'пливти́ and плисти́ are free variants of the same unidirectional imperfective
     "to swim" verb -- both Горох-verified as valid headwords (недоконаний вид, нерефлексивне,
     1 дієвідміна for both). Paradigms are near-identical: present tense (пливу́/пливе́ш/.../пливу́ть),
@@ -46,6 +33,29 @@ fields:
     the corpus''s existing UA_Verb conjugation note (ua-verb-0009, headworded пливти). Treat
     the two as free variants of one lexeme, not separate words -- parallels the йти/іти alternation
     documented on ua-lexeme-0581 (ходити group).'
+  AspectCue: ''
+  EN_Gloss: to swim
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: ''
+  VerbMotion_Pair: 'Base motion-verb triplet: пла́вати (multidirectional impf.) / пливти́
+    (unidirectional impf.) / попливти́ (perf.). Full conjugation tables exist as separate
+    UA_Verb notes: ua-verb-0008 (плавати), ua-verb-0009 (пливти), ua-verb-0010 (попливти).'
+  ConfusableSet: ''
+  Mnemonic_EN: пла́вати = "swims habitually / knows how to swim, no set direction" (multidirectional
+    -- e.g. swims around, can swim). пливти́ = "is swimming, headed one way, right now" (unidirectional
+    -- e.g. swimming across/toward something). попливти́ = "set off swimming" (perfective
+    -- the swim as a completed whole).
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
+  CrossLang_Analog: English "swim" covers both плавати and пливти without marking the habitual-vs-
+    single-swim distinction -- closest analogy is "used to swim around here" (multi) vs "was
+    swimming toward shore" (uni) vs "set off swimming" (perf).
   TypingAnswer: плавати / пливти / попливти
   UA_Example: Діти люблять плавати в озері, а вчора один хлопчик плив до берега.
   EN_Example: Children love to swim in the lake, and yesterday one boy was swimming toward
@@ -72,15 +82,5 @@ fields:
     EuphonyNote prose, never wired to grant typing credit. Typing плисти́ for the unidirectional
     slot on the EN->UA card is now graded CORRECT/PERFECT (previously always INCORRECT), and
     the UA->EN Recognition front now shows "пливти́ (плисти́)".'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

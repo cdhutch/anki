@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0127
   Lemma: відʼїжджа́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: відʼї́хати
+  Perfective_Euphony: ''
+  EuphonyNote: 'apostrophe after від- before ї: відʼїхати'
+  AspectCue: ''
   EN_Gloss: to drive away (by vehicle)
   Govt_Case: від + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: отъезжать / отъехать (ʼ corresponds to RU ъ)'
-  EuphonyNote: 'apostrophe after від- before ї: відʼїхати'
   TypingAnswer: відʼїжджати
   UA_Example: ''
   EN_Example: ''
@@ -34,17 +46,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/відʼїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0542
   Lemma: ра́к
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: crayfish
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: рак
   UA_Example: На ринку продавали свіжих раків.
   EN_Example: Fresh crayfish were being sold at the market.
@@ -40,16 +51,5 @@ fields:
     (used here, food context) vs. an inanimate ''cancer (disease)'' sense, plus an unrelated
     surname Рак. Same spelling and stress across senses (not a stress-based split); only the
     crayfish sense is drafted since that is the attested vocabulary item.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

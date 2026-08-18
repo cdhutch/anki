@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0493
   Lemma: за ви́нятком
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: with the exception of
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: за винятком
   UA_Example: За винятком одного дня, погода була чудова.
   EN_Example: With the exception of one day, the weather was wonderful.
@@ -38,16 +49,5 @@ fields:
   Verification Notes: Fixed prepositional discourse phrase (за + instrumental винятком). Component
     виняток (ua-lexeme-0469) also has its own note per rule 3; за (preposition) treated as
     a functional word and not given a separate note.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

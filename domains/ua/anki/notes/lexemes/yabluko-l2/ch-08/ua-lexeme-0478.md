@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0478
   Lemma: таки́й
+  Lemma_Euphony: ''
   PartOfSpeech: pronoun
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: such, like this/that
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: такий
   UA_Example: Я не очікував такий теплий прийом.
   EN_Example: I didn't expect such a warm welcome.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Горох classes such/такий as a займенник вказівний (demonstrative pronoun),
     not an adjective — PartOfSpeech set to pronoun accordingly (2nd precedent in corpus after
     ua-lexeme-0354). Component of phrase ua-lexeme-0491 (не такий... як).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

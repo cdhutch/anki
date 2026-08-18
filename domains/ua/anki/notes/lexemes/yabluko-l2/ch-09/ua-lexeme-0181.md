@@ -18,13 +18,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0181
   Lemma: мете́лик
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: 'bow-tie (menswear accessory); informal: flyer, leaflet'
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "мете́лик (1st/primary sense, homograph - unrelated meaning: butterfly, the\
     \ insect) - see ua-lexeme-0171\nScenario A: Describing formal menswear, e.g. a tuxedo\
@@ -36,11 +41,12 @@ fields:
     word.
   CompareScenario: Which sense of метелик is being used?
   CompareA: Червоний метелик сів на білу квітку.
-  Homograph_SenseA: butterfly (insect)
   CompareB: На вечірці він носив чорний метелик.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: butterfly (insect)
   Homograph_SenseB: bow-tie (menswear accessory)
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: метелик
   UA_Example: Він одягнув чорний метелик до смокінга.
   EN_Example: He put on a black bow-tie for the tuxedo.
@@ -60,11 +66,5 @@ fields:
     (identical chips on both notes per convention) and added the missing Homograph_SenseA/
     SenseB fields. See CLAUDE-compare-card-field-mapping.md for the full spec this was fixed
     against. Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  AspectCue: ''
 ---
 
