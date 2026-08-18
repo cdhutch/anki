@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0247
   Lemma: ра́но-вра́нці
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: very early in the morning
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: рано-вранці
   UA_Example: Квітковий ринок працює рано-вранці.
   EN_Example: The flower market is open very early in the morning.
@@ -40,16 +51,5 @@ fields:
     decomposed into рано + вранці. 2026-07-26: reused for ch.9.7 (same fixed expression, no
     new note) -- see the ch:2.9.7 tag/Tags_Ch append above, per Craig''s true-duplicate reuse
     convention.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

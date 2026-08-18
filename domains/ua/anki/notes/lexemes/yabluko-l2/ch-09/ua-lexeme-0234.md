@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0234
   Lemma: посі́сти тре́тє мі́сце
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to take third place
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: The moment results are announced, what does the athlete achieve?
+  EN_Gloss: to take third place
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: посісти третє місце
   UA_Example: Наша команда посіла третє місце на чемпіонаті.
   EN_Example: Our team took third place at the championship.
@@ -43,15 +53,5 @@ fields:
     this as a judgment call for Craig''s review, same as ua-lexeme-0232. 2026-07-28: added
     AspectCue framing the one-time completed-result reading of посі́сти (perfective) -- the
     real imperfective counterpart посіда́ти is already its own corpus note, ua-lexeme-0220.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

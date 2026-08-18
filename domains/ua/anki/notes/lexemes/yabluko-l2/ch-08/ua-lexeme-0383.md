@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0383
   Lemma: ві́тряний
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: windy
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вітряний
   UA_Example: Завтра буде вітряний день.
   EN_Example: Tomorrow will be a windy day.
@@ -41,16 +52,5 @@ fields:
     on -ни́й) is a distinct sense, "який діє за допомогою вітру" (wind-powered/operated by
     wind, e.g. вітряний млин/windmill) -- not used here, no note created for it pending an
     actual ch.8+ vocabulary hit.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

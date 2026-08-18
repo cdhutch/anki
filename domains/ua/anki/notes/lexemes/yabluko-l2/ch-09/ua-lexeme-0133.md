@@ -15,18 +15,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0133
   Lemma: верхови́й
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: relating to horseback riding; upper (adj.)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: верховий
   UA_Example: Верхова їзда розвиває координацію та впевненість.
   EN_Example: Horseback riding develops coordination and confidence.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: 'Горох lists two senses under верхови́й: (1) ''той, що зверху; стос.
     верхової їзди'' — upper / riding-related, used here; (2) ''вершник'' — a horseman/rider
     (noun-like sense). Confirm sense (1) is intended.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

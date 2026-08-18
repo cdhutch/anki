@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0284
   Lemma: переплива́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: переплисти́
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to swim across
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перепливати
   UA_Example: Останній етап -- переплисти озеро.
   EN_Example: The last stage is swimming across the lake.
@@ -35,16 +46,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/перепливати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

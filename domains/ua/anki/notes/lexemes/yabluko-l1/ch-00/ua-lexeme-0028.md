@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0028
   Lemma: бу́ква
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: letter (of the alphabet)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: буква
   UA_Example: Напишіть першу букву свого імені тут.
   EN_Example: Write the first letter of your name here.
@@ -34,17 +46,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/буква
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

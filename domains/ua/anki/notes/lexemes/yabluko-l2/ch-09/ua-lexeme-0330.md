@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0330
   Lemma: мандрі́вка
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: journey, trip
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: мандрівка
   UA_Example: Ця мандрівка стала найпамʼятнішою пригодою літа.
   EN_Example: This journey became the most memorable adventure of the summer.
@@ -46,16 +57,5 @@ fields:
     neutral general word) -- worth Craig's judgment on the exact discriminator once подорож
     is sourced. подорож doesn't have its own note yet; tagged pending-confusable:подорож.
     See CLAUDE.md Vocabulary dedup & homograph handling, bucket 5.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

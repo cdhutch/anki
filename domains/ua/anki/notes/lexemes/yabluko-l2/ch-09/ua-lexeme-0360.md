@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0360
   Lemma: ма́ти си́ли
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to have (the) strength
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: мати сили
   UA_Example: Після довгого підйому вже мало хто мав сили йти далі.
   EN_Example: After the long climb, few still had the strength to keep going.
@@ -38,16 +49,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Reuses ма́ти (ua-lexeme-0341) and си́ла (ua-lexeme-0278, first sourced
     ch.9.5; 'ch:2.9.7' appended to its tags/Tags_Ch here as a true-duplicate reuse).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

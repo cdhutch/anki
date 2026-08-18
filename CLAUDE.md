@@ -334,6 +334,118 @@ participle-merge-and-stress-pass maint/verb-review` (true, zero orphaned commits
 deleting the old remote. The `archive/ua-verb-participle-merge-and-stress-pass` tag on
 `f907726` stays untouched as the permanent historical marker for the original dangling
 commit — separate from and unaffected by the new `maint/verb-review` branch.
+2026-08-18: **UA note-type field order — root cause found and fixed; "Remaining Work"
+item 20 resolved and verified live** (branch `fix/ua-field-order-enforcement`, commit
+`5e9f2e4`). Item 20's diagnosis was **wrong in mechanism, right in symptom** — corrected
+here rather than left to mislead a future session. `make ua-setup-lexeme` never pushed the
+`FIELDS` constant's order at all: `inOrderFields` is only honoured by `createModel`, the
+update paths only ever called `modelFieldAdd` (which **appends**) and `modelFieldRemove`,
+and `modelFieldReposition` appeared **nowhere in the repo**. So live field order was never
+"what the constant says" — it was "whatever order fields happened to get added in," across
+the model's whole history, and the `FIELDS`/`GRAMMAR_FIELDS`/`VISUAL_FIELDS`/`VERB_FIELDS`
+constants were decorative for any model that already existed. What actually happened on
+2026-08-11 is that `Verification Notes` (removed and re-added by the field-name
+unification, item 15) plus the five euphony/display fields (item 16) were **appended to the
+bottom**, yanking them out of the positions Craig had just dragged them into — same visible
+symptom, different cause. Confirmed by running `inspect_note_type_fields.py` against live
+Anki: `UA_Lexeme`'s live order matched neither the dragged order nor the constant, but
+exactly the historical add-order with that 2026-08-11 tail appended in sequence; `UA_Verb`
+(`Participle_Passive_Past` last among the participles, from `0e3a987`) and
+`UA_PVOM_Infinitive` (four `*_Euphony` fields appended past `Verification Notes`) carried
+the same fingerprint. **Fix:** new `sync_field_order()` in `setup_ua_note_types.py` and
+`setup_ua_pvom_note_type.py`, called last in all five update paths (after the add/remove
+passes, which change live order out from under it) — an insertion sort via
+`modelFieldReposition`, guarded on a leading-slice comparison so it makes **zero**
+AnkiConnect calls when order already matches. That guard is load-bearing, not tidiness:
+repositioning is a schema modification, so an unguarded pass would demand a full AnkiWeb
+upload on every single `make ua-setup-*` run. `UA_Lexeme`'s `FIELDS` reordered into the
+grouping item 20 recorded (38 fields in, 38 out, set-identical); also puts
+`ImperfectiveUnidirectional` **before** `Perfective`, matching the slot order
+`compute_typing_target()`/`compute_euphony_slots()`/`compute_ua_en_display()` and the
+`EN_UA_BACK` feedback script all already use — the constant had them reversed. `EuphonyNote`
+moved up beside the three per-slot `*_Euphony` fields it's the legacy ancestor of; the
+`TypingTarget_UA`/`TypingAnswer`/`_EuphonySlots` triple deliberately kept adjacent (they're
+positionally aligned by convention only, so separating them in the editor is how alignment
+bugs get written). 9 new tests (`tests/ua/test_setup_field_order.py`) driven against a fake
+implementing Anki's real remove-then-insert reposition semantics, using live orders
+captured this session — `make ua-test` 255 passed (was 246). **Verified live, in order:**
+`make ua-setup-lexeme` (repositioned 38) → re-run (no-op, guard confirmed) →
+`make ua-setup-verb` (26, Craig confirmed the resulting order in Anki) →
+`make ua-setup-pvom` (17) → `inspect_note_type_fields.py` reporting **all 5 note types
+matching exactly, set and order**, for the first time since that tool was built. Craig took
+a collection backup first; the one-time full AnkiWeb upload was expected and handled as a
+single event rather than three. `UA_Grammar`/`UA_Visual` already matched and were untouched
+by the guard throughout.
+2026-08-18: **CNSF `fields:` key order canonicalized from the same constants** (same
+branch, commit `1baf0c2`). Craig's question while reviewing the above — "will this also
+ensure that all of the YAML notes' fields are in the same order?" — turned up a genuine
+gap: it would not have. `cnsf_canonicalize.py` only ever ordered the **seven top-level
+keys** (`CANON_TOP_KEYS`); keys *inside* `fields:` were preserved exactly as authored, and
+`cmd_check()`'s drift detection had the same blind spot, so the pre-commit hook had never
+once looked at field-key order. A 12-note sample across ch-00/ch-08/ch-09 turned up
+**three distinct orders**, none matching the model's — the `setdefault()` signature from
+item 17's backfill, appending new keys wherever each file happened to end. Exactly the
+`modelFieldAdd`-appends failure mode above, on the file side. **Per Craig: "Option A"** —
+one source of truth. `cnsf_canonicalize.py` now imports the same `FIELDS`/`GRAMMAR_FIELDS`/
+`VISUAL_FIELDS`/`VERB_FIELDS`/PVOM `FIELDS` constants that drive the live Anki models
+(`CANON_FIELD_ORDER`, keyed by CNSF `note_type`), rather than carrying a second
+hand-maintained list that would drift against them — the same import pattern
+`check_cnsf_field_schema.py` and `inspect_note_type_fields.py` already use for the field
+*set*, extended to order. Three design points worth not re-litigating: ordering runs
+**after** `_normalize_meta` (that's where `setdefault()` injects the always-present
+optional keys, so ordering first would strand exactly those at the end); the CNSF key set
+is a deliberate **subset** of the Anki field set (32 vs 38 — the five computed fields are
+never authored, and `ImperfectiveUnidirectional` is sparse per item 17), so the target is
+matching *relative* order of the authored subset, not equality; and unknown keys **trail**
+rather than being dropped, keeping their relative order, so B737 and any experimental key
+are safe. `cmd_check()` now names field-order drift specifically, since it's always fixed
+by `--write` and never needs a content decision. **Verified:** `--check` reported 585/585
+lexeme notes drifted with **zero** in the other drift categories; `make ua-lexeme-fix`
+rewrote all 585; the diff is provably order-only — 7497 insertions against 7497 deletions
+with byte-identical sorted added/removed line multisets, plus an earlier 16-note dry run
+confirming identical key sets, values, metadata and bodies. `ua-verb`/`ua-grammar`/
+`ua-visual`/`ua-pvom` and all of B737 were **already** in constant order and are untouched
+(confirmed by the `--all-files` hook run, where only lexemes failed). **No Anki re-sync is
+needed** — the import scripts send fields as a name-keyed dict, so CNSF key order has never
+affected what reaches Anki.
+**Two things learned about the hooks, worth remembering:** (1) `.githooks/pre-commit` runs
+`pre-commit run --all-files`, **not** just staged files — so every commit validates the
+entire corpus regardless of what's staged. That's why a commit touching only two Python
+files got checked against 585 notes, and why the tooling and the 585-note rewrite had to
+land as a single commit: a tooling-only commit is blocked by the very check it adds, and a
+corpus-only commit would leave `main` with files no committed code produces. (2) The
+`cnsf-canonical` hook runs in an isolated venv declaring only `pyyaml`, so Option A's new
+import chain is a real fragility — it's stdlib-only today
+(`setup_ua_note_types` → `tools.anki.sync.tsv_to_anki`, plus `setup_ua_pvom_note_type`) and
+`tests/ua/test_cnsf_field_order.py::test_import_chain_stays_stdlib_only` walks those
+modules' imports and asserts it stays that way, so a future third-party import there fails
+in CI rather than breaking every commit. The hook validation Craig asked for passed: it
+imported the new chain and emitted the new message without error. `make ua-test`: 273
+passed (was 255).
+2026-08-18: **EN→UA euphony/aspect refactor — design scoping written, no code.** See
+[docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md), which
+supersedes the "EN→UA Euphony + Verbal-Aspect Refactor (Future)" section below as the place
+to start. Four **confirmed** bugs, of which two are newly root-caused: (a) the known
+`everySlotPerfect` ordering bug has a **second, independent defect** —
+`euphonyAltsForSlot()` stress-strips the stored alternates *and* the typed slot, so the code
+structurally cannot distinguish "euphonic alternate, perfectly stressed" from "euphonic
+alternate, no stress." Reordering the lines does not fix that; it needs a data-shape change,
+which is the main argument for the doc's recommended structured `_TypingSpec` option over
+patching in place. (b) **The work-queue's top bug — the detached stress mark on
+ua-lexeme-0532 — is root-caused and needs no on-device DevTools session.** It's Anki's own
+output: `rslib/src/typeanswer.rs`'s `isolate_leading_mark()` prepends U+00A0 to any diff
+chunk that *begins* with a combining mark, deliberately, "to prevent it from joining the
+previous token." That nbsp lands inside a `.typeGood`/`.typeBad` span, so `EN_UA_BACK`'s
+reconstruction loop concatenates it into `typedAnswer` — which then matches nothing and
+renders with a visible gap before the accent. It also explains why a *stress-position*
+mismatch triggers it while other mismatches don't: only a position shift makes the diff
+split mid-grapheme. Independent of aspect/euphony and fixable on its own. (c) separator
+spacing is load-bearing — `ходити/йти/піти` without spaces around the slashes fails the
+slot-count gate and grades INCORRECT outright. (d) a prose `EuphonyNote` on a singlet
+produces silent dead tolerance: it's compared as a candidate spelling, never matches, and
+nothing warns. Five decisions are open for Craig in the doc's §7; nothing should be built
+before those are answered. Worth noting for scale — only **8 of 585** notes carry any
+per-slot euphony data, so content-side migration risk for any option here is near zero.
 
 ## Workflow Notes
 
@@ -768,24 +880,44 @@ this doc. Roughly in priority order:
     item is picked up -- the design above (function signatures, abort conditions) is what to
     rebuild them against, not the deleted test file itself.
 
-20. **UA note-type field order not preserved across `make ua-setup-*` runs** — **New,
-    flagged 2026-08-11.** During this session's validation pass, Craig manually dragged
-    `UA_Lexeme`'s fields in the Anki Fields dialog into the logical order proposed
-    conversationally (identity → core lemma/aspect → computed/display-only fields, grouped
-    together → semantic content → grammatical properties → semantic relations/Compare →
-    typing/examples → metadata/sources). Running `make ua-setup-lexeme` afterward (to push
-    the `EN_UA_BACK` template fix -- see the euphony/aspect refactor section below) silently
-    reset the field order straight back to the raw `FIELDS` constant order in
-    `setup_ua_note_types.py`, since the setup script pushes field order from that list every
-    time it runs. Any future `make ua-setup-*`/`make ua-setup` invocation will clobber a
-    manually-dragged order the same way. Future work, per Craig: update the
-    `FIELDS`/`GRAMMAR_FIELDS`/`VISUAL_FIELDS`/`VERB_FIELDS` constants here (and
-    `setup_ua_pvom_note_type.py`'s `FIELDS`) to reflect a deliberately-chosen logical order
-    for all 5 UA note types, not just `UA_Lexeme`, so the setup script becomes the source of
-    truth for field order instead of fighting manual reordering in the Anki GUI. Not
-    started; only `UA_Lexeme` has a proposed order so far (see above), and that proposal
-    hasn't been written into the `FIELDS` constant itself yet -- it only exists as what
-    Craig dragged into place live, which the next setup run will undo again.
+20. **UA note-type field order not preserved across `make ua-setup-*` runs** —
+    **Resolved 2026-08-18, verified live.** See the dated log entry above for the full
+    writeup; the short version, and the correction future sessions need:
+
+    **The original 2026-08-11 diagnosis (kept below, struck through, as a caution) was
+    wrong about the mechanism.** It claimed "the setup script pushes field order from that
+    list every time it runs." It never did. `inOrderFields` is only honoured by
+    `createModel`; the update paths only ever called `modelFieldAdd` (which **appends**)
+    and `modelFieldRemove`; `modelFieldReposition` appeared nowhere in the repo. So the
+    constants were **decorative** for any already-created model, and live order was
+    "whatever order fields got added in," historically. What actually clobbered Craig's
+    dragged order was `Verification Notes` (item 15) and the five euphony/display fields
+    (item 16) being appended to the **bottom** of the model on 2026-08-11 — same visible
+    symptom, different cause. Proved by `inspect_note_type_fields.py` against live Anki:
+    `UA_Lexeme`'s live order matched neither the dragged order nor the constant, but exactly
+    the historical add-order with that 2026-08-11 tail appended in sequence.
+
+    ~~Running `make ua-setup-lexeme` afterward silently reset the field order straight back
+    to the raw `FIELDS` constant order in `setup_ua_note_types.py`, since the setup script
+    pushes field order from that list every time it runs.~~
+
+    **Fix:** `sync_field_order()` added to `setup_ua_note_types.py` and
+    `setup_ua_pvom_note_type.py`, called last in all five update paths (after the
+    add/remove passes, which change live order out from under it). Insertion sort via
+    `modelFieldReposition`, guarded on a leading-slice comparison so it makes zero
+    AnkiConnect calls when order already matches — repositioning is a schema mod, so an
+    unguarded pass would demand a full AnkiWeb upload on every `make ua-setup-*` run.
+    `UA_Lexeme`'s `FIELDS` reordered into the grouping this item originally recorded
+    (identity → core lemma/aspect → computed/display-only → semantic content →
+    grammatical properties → semantic relations/Compare → typing/examples →
+    metadata/sources), 38 fields in and 38 out, set-identical. All five note types now
+    match their constants exactly, set and order. 9 tests in
+    `tests/ua/test_setup_field_order.py`; `make ua-test` 255 passed.
+
+    **The constants are now genuinely the source of truth for field order** — so a
+    deliberate edit to one of them is how you change live field order from here on, and
+    manual dragging in the Anki GUI will be reverted by the next setup run. That's the
+    intended behaviour, not a regression.
 
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
@@ -1615,6 +1747,19 @@ suspend-policy split done 2026-08-10, see item 14 above -- pending its first liv
 `make ua` verification.
 
 ### EN→UA Euphony + Verbal-Aspect Refactor (Future)
+
+> **Start here instead, as of 2026-08-18:**
+> [docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md) —
+> full design scoping, four confirmed bugs (two newly root-caused), three options with a
+> recommendation, and five decisions open for Craig in its §7. **Nothing here should be
+> built before those five are answered.** The rest of this section is the history the doc
+> was written from; it stays accurate, but the doc supersedes it as the working document.
+> Two findings from it are worth knowing before reading further: the `everySlotPerfect`
+> bug below has a *second* defect that a line-reorder can't fix (the euphony comparison
+> stress-strips both sides, so it can't tell a perfectly-stressed alternate from an
+> unstressed one), and the work-queue's top bug — the detached stress mark — turned out to
+> be Anki's own `isolate_leading_mark()` prepending U+00A0 to diff chunks that start with a
+> combining mark, so it needs no on-device DevTools session to diagnose.
 
 **Flagged by Craig, 2026-08-11.** Craig recalls abandoning a prior effort in this area and
 wants the whole approach to how euphony and verbal aspect are jointly managed on the EN→UA

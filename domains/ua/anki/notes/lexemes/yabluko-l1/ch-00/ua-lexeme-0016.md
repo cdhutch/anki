@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0016
   Lemma: студе́нтка
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: student (f.)
   Govt_Case: ''
-  CounterpartForm: 'm: студе́нт'
   IrregularForms: ''
+  CounterpartForm: 'm: студе́нт'
   VerbMotion_Pair: ''
   ConfusableSet: студе́нт
   Mnemonic_EN: студент = male student; студентка = female student — the counterpart form,
@@ -32,8 +37,11 @@ fields:
     met her before.
   CompareA: студент
   CompareB: студентка
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'RU: студентка · DE: Studentin'
-  EuphonyNote: ''
   TypingAnswer: студентка
   UA_Example: Студентка живе в гуртожитку недалеко від університету.
   EN_Example: The female student lives in a dormitory not far from the university.
@@ -42,13 +50,5 @@ fields:
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

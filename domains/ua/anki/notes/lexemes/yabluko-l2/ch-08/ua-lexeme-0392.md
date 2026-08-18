@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0392
   Lemma: о́пади
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: precipitation (rain, snow, etc.)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: опади
   UA_Example: Завтра очікуються опади.
   EN_Example: Precipitation is expected tomorrow.
@@ -36,16 +47,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: 'Plural-only noun ("іменник множинний" per Горох) -- Gender field left
     blank, no singular form exists. Горох gloss: "дощ, сніг тощо" (rain, snow, etc.).'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

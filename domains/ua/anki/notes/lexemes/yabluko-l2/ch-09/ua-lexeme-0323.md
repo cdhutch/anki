@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0323
   Lemma: ни́жня поли́ця
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: lower berth
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: нижня полиця
   UA_Example: Нижня полиця коштує трохи дорожче за верхню.
   EN_Example: The lower berth costs a bit more than the upper one.
@@ -37,16 +48,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/нижній; https://goroh.pp.ua/Словозміна/полиця
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: Reuses ни́жній (ua-lexeme-0312) and поли́ця (ua-lexeme-0311).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

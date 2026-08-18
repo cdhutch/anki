@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0145
   Lemma: біг
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: running, race (on foot)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "перего́ни (competitive racing by any means - a broader word)\nScenario A:\
     \ Describing a foot race or running event, e.g. a marathon or sprint\n-> Use: біг (running-specific;\
@@ -36,8 +41,11 @@ fields:
     event -- a competition specifically involving running on foot.
   CompareA: перего́ни
   CompareB: біг
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: біг
   UA_Example: Біг — чудовий спосіб залишатися у формі.
   EN_Example: Running is a great way to stay in shape.
@@ -56,13 +64,5 @@ fields:
     \ values overlapped on \"race\".\n2026-07-24: added CompareScenario + CompareA/B for the\
     \ redesigned Compare card (see compare-card-audit-findings.md) — this is one of the two\
     \ notes you originally flagged as verbose/answer-leaking. Needs your review."
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

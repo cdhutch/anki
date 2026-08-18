@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0283
   Lemma: переліта́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: перелеті́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to fly over/across
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перелітати
   UA_Example: Наступний етап -- перелетіти через річку на мотузці.
   EN_Example: The next stage is flying across the river on a rope.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Горох lists a second homograph sense of 'перелітати' ('облітати багато
     місць', labeled доконаний); this note uses the general 'move through the air / cross a
     boundary' sense as the imperfective pair of перелеті́ти.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

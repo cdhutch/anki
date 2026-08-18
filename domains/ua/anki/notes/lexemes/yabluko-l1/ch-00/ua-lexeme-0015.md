@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0015
   Lemma: студе́нт
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: student (m.)
   Govt_Case: ''
-  CounterpartForm: 'f: студе́нтка'
   IrregularForms: ''
+  CounterpartForm: 'f: студе́нтка'
   VerbMotion_Pair: ''
   ConfusableSet: студе́нтка
   Mnemonic_EN: студент = male student; студентка = female student — the counterpart form,
@@ -32,8 +37,11 @@ fields:
     met him before.
   CompareA: студент
   CompareB: студентка
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU/DE: student/студент/Student'
-  EuphonyNote: ''
   TypingAnswer: студент
   UA_Example: Студент читає підручник у бібліотеці.
   EN_Example: The student is reading a textbook in the library.
@@ -43,13 +51,5 @@ fields:
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md) — previously ConfusableSet
     was just the bare paired word with no scenario. Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

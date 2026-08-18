@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0389
   Lemma: мінли́вий
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: changeable, variable
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: мінливий
   UA_Example: Восени погода дуже мінлива.
   EN_Example: In autumn the weather is very changeable.
@@ -36,16 +47,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: Component of phrase note ua-lexeme-0391 (мінлива хмарність); also independently
     useful vocabulary (general "changeable"), so given its own note per rule 3.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

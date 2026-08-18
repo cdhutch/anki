@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0188
   Lemma: клю́чка
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: (hockey) stick
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: ключка
   UA_Example: Гравець тримав ключку обома руками.
   EN_Example: The player held the stick with both hands.
@@ -39,16 +50,5 @@ fields:
   Verification Notes: Горох's Словозміна page for 'ключка' also lists two unrelated proper-noun
     senses (a river name and a surname) -- filtered out; this note is the common noun (hockey
     stick) sense only.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

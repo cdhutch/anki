@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0384
   Lemma: ві́тряно
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: it's windy (weather)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вітряно
   UA_Example: Надворі сьогодні вітряно.
   EN_Example: It's windy outside today.
@@ -35,16 +46,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/вітряно
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: Predicative adverb, stress matches ві́тряний's weather sense (see ua-lexeme-0383).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

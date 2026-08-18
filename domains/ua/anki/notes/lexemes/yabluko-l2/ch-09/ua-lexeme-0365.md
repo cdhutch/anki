@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0365
   Lemma: че́рез (три годи́ни)
+  Lemma_Euphony: ''
   PartOfSpeech: preposition
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: in (three hours) -- через + duration
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: через (три години)
   UA_Example: Поїзд прибуде через три години.
   EN_Example: The train will arrive in three hours.
@@ -38,16 +49,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Illustrates че́рез (ua-lexeme-0355) governing a duration phrase, as
     cited in the textbook's vocabulary list.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

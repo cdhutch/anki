@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0371
   Lemma: яки́йсь час
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: some time, a while
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: якийсь час
   UA_Example: Вони мовчки йшли якийсь час.
   EN_Example: They walked in silence for some time.
@@ -37,16 +48,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/якийсь; https://goroh.pp.ua/Словозміна/час
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Reuses яки́йсь (ua-lexeme-0354) and час (ua-lexeme-0356).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

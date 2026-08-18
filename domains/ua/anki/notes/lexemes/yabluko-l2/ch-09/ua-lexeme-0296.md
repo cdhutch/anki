@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0296
   Lemma: церемо́нія закриття́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: closing ceremony
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: церемонія закриття
   UA_Example: Церемонія закриття відбулася під музику й феєрверки.
   EN_Example: The closing ceremony took place with music and fireworks.
@@ -37,16 +48,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/церемонія; https://goroh.pp.ua/Словозміна/закриття
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Reuses церемо́нія (ua-lexeme-0266) and закриття́ (ua-lexeme-0267).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

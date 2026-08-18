@@ -15,13 +15,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0100
   Lemma: непога́но
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: not bad
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "до́бре, норма́льно, чудо́во - same \"how are you?\" register family, graded\
     \ by enthusiasm.\nScale (low to high enthusiasm): непогано (not bad - lukewarm/hedging)\
@@ -38,8 +43,9 @@ fields:
   CompareB: норма́льно
   CompareC: до́бре
   CompareD: чудо́во
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: непогано
   UA_Example: Вона непогано малює, але хоче вчитися більше.
   EN_Example: She draws not badly, but wants to study more.
@@ -53,11 +59,5 @@ fields:
     \ originally flagged as verbose/answer-leaking; EN_Gloss (\"not bad\") is this note's\
     \ own answer, so it could not double as the front-side scenario. A dedicated situational\
     \ prompt was authored instead. Needs your review."
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

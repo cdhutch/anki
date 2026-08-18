@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0416
   Lemma: хо́лодно
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: it's cold
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: холодно
   UA_Example: Сьогодні дуже холодно, одягайся тепліше.
   EN_Example: It's very cold today, dress warmer.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Stress (хо́лодно) matches the noun холод (ua-lexeme-0414), not the adjective
     холодний (холо́дний, ua-lexeme-0415) -- both confirmed independently via Горох, a genuine
     three-way stress pattern worth noting rather than assuming derivational consistency.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0504
   Lemma: попере́дній
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: previous, preceding
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: попередній
   UA_Example: Попередній маршрут виявився занадто складним.
   EN_Example: The previous route turned out to be too difficult.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Loose antonym of наступний (ua-lexeme-0349, reused this chapter); not
     given a ConfusableSet cross-link per corpus convention (antonym pairs are not treated
     as 'confusable').
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

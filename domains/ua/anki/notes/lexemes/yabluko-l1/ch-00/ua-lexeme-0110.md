@@ -15,17 +15,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0110
   Lemma: Як спра́ви?
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: How are you? How are things?
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Як справи?
   UA_Example: — Привіт! Як справи? — Все добре, дякую.
   EN_Example: — Hi! How are things? — Everything is fine, thanks.
@@ -33,17 +45,5 @@ fields:
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

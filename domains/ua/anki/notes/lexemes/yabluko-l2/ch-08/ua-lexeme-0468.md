@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0468
   Lemma: набага́то
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: much (before comparatives), by far
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'значно (ua-lexeme-0467) -- convergent synonym, not a homograph: both intensify
     a comparative ("significantly/much X-er"), but differ in register. набагато is the everyday
@@ -36,8 +41,11 @@ fields:
     that this room is way comfier than the other one.
   CompareA: зна́чно
   CompareB: набага́то
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: набагато
   UA_Example: Тут набагато затишніше, ніж у нашому готелі.
   EN_Example: It's much cozier here than in our hotel.
@@ -52,13 +60,5 @@ fields:
     CompareScenario tailored to elicit набагато''s everyday spoken register, CompareA/CompareB
     the two stressed lemmas (same chip set/order as ua-lexeme-0467). Still status:draft --
     needs your review, including stress verification.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

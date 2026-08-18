@@ -17,19 +17,30 @@ tags:
 fields:
   NoteID: ua-lexeme-0479
   Lemma: о́ко
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: eye
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: pl. nom./acc./voc. о́чі, gen. оче́й, dat. оча́м, instr. очи́ма, loc. оча́х
     (irregular о→і stem alternation across the whole plural)
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: око
   UA_Example: Це кафе легко впадає в очі завдяки яскравій вивісці.
   EN_Example: This café easily catches the eye thanks to its bright sign.
@@ -38,16 +49,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0488 (впасти в очі), which uses the irregular
     plural очі.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

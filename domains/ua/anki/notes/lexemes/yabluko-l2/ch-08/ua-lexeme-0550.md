@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0550
   Lemma: вигляда́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to look, appear (to seem a certain way)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: виглядати
   UA_Example: Ця страва виглядає досить незвично.
   EN_Example: This dish looks pretty unusual.
@@ -36,16 +47,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Imperfective, non-reflexive, 1st conjugation. Full conjugation lives
     on ua-verb-0083.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

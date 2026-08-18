@@ -15,18 +15,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0180
   Lemma: розмина́тися
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: розмину́тися
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to miss each other, cross paths without meeting
   Govt_Case: + з + Instr. (розминатися з кимось)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: розминатися
   UA_Example: Ми часто розминаємося в коридорі.
   EN_Example: We often just miss each other in the hallway.
@@ -44,16 +55,5 @@ fields:
     The perfective 'розминутися' has full personal forms. Blank Pres_1sg/Pres_2sg/Imperative
     fields on the corresponding ua-verb-0037 note reflect this gap in the source data, not
     an extraction error.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

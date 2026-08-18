@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0146
   Lemma: тури́зм
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: tourism; (here, in context) hiking, trekking
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: туризм
   UA_Example: Пішохідний туризм стає дедалі популярнішим.
   EN_Example: Hiking is becoming increasingly popular.
@@ -35,16 +46,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/туризм
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

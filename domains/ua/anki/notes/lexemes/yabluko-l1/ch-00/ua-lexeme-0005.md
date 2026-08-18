@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0005
   Lemma: ку́хар
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: cook, chef
   Govt_Case: ''
-  CounterpartForm: 'f: куха́рка'
   IrregularForms: ''
+  CounterpartForm: 'f: куха́рка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: кухар
   UA_Example: Кухар готує смачний обід для гостей.
   EN_Example: The cook is preparing a delicious lunch for the guests.
@@ -35,17 +47,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/кухар
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

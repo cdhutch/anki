@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0160
   Lemma: пішохі́дний тури́зм
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: hiking, trekking
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: пішохідний туризм
   UA_Example: Ви літаєте в інші країни, щоб там зайнятися пішохідним туризмом.
   EN_Example: You fly to other countries to go hiking there.
@@ -36,16 +47,5 @@ fields:
   Source_Note: Components verified via Горох (see ua-lexeme-0137, ua-lexeme-0146). Example
     verbatim from Яблуко 2, ch.9.1 test (Вправа 6, Q5).
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

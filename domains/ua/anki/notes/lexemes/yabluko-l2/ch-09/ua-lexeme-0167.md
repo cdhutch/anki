@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0167
   Lemma: змага́ння
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: competition, contest
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: змагання
   UA_Example: Змагання відбудуться завтра.
   EN_Example: The competition will take place tomorrow.
@@ -36,16 +47,5 @@ fields:
   Source_Note: Горох lists a 2nd, capitalized homograph entry ('Змагання') alongside this
     common noun; verified the lowercase common-noun sense was used. Verified 2026-07-22.
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

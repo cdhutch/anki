@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0301
   Lemma: переплисти́ о́зеро
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to swim across a lake
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: By the time they reach the far shore, what have they just done?
+  EN_Gloss: to swim across a lake
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: переплисти озеро
   UA_Example: Наймолодший учасник переплив озеро найшвидше.
   EN_Example: The youngest participant swam across the lake the fastest.
@@ -41,15 +51,5 @@ fields:
     2026-07-28: added AspectCue framing the one-time completed-crossing reading of переплисти́
     (perfective) -- the real imperfective counterpart переплива́ти is already its own corpus
     note, ua-lexeme-0284.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

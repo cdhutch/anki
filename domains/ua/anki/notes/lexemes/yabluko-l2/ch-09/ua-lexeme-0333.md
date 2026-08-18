@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0333
   Lemma: заночува́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to end up spending the night (somewhere)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: заночувати
   UA_Example: Через дощ їм довелося заночувати в сироварні.
   EN_Example: Because of the rain, they ended up spending the night at the cheese dairy.
@@ -38,16 +49,5 @@ fields:
     closely related to ночува́ти/переночува́ти (ua-lexeme-0282, ch.9.5), but implies an unplanned
     or unexpected overnight stay rather than a scheduled one. Perfective field left blank;
     documented here rather than forcing an artificial pairing.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

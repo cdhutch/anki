@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0459
   Lemma: житло́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: housing, dwelling
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: житло
   UA_Example: Ми орендували житло в центрі міста.
   EN_Example: We rented housing in the city center.
@@ -36,16 +47,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/житло
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

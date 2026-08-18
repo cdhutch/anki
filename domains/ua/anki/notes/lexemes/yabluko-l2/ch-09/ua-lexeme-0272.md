@@ -20,18 +20,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0272
   Lemma: приго́да
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: adventure
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: пригода
   UA_Example: Гонка була справжньою пригодою для всіх учасників.
   EN_Example: The race was a real adventure for all the participants.
@@ -43,16 +54,5 @@ fields:
     nouns) -- only пригода itself exists in the corpus so far. Tagged pending-confusable:погода,
     pending-confusable:природа, pending-confusable:порода; see CLAUDE.md Vocabulary dedup
     & homograph handling, bucket 5.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

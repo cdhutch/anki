@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0565
   Lemma: сире́ ті́сто
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: raw dough
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: сире тісто
   UA_Example: Сире тісто не можна їсти.
   EN_Example: Raw dough shouldn't be eaten.
@@ -37,16 +48,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Vocabulary-appendix phrase item; components сирий (ua-lexeme-0543) and
     тісто (ua-lexeme-0544) each also have their own note per rule 3.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

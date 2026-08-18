@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0327
   Lemma: Вибачте, Ви сказа́ли...?
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Sorry, did you say...?
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Вибачте, Ви сказали...?
   UA_Example: Вибачте, Ви сказали, що потрібно пересісти в Києві?
   EN_Example: Sorry, did you say we need to change trains in Kyiv?
@@ -38,16 +49,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: Fixed clarification-request phrase. Reuses вибача́ти/ви́бачити (ua-lexeme-0319)
     and говори́ти/сказа́ти (ua-lexeme-0317).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

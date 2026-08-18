@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0280
   Lemma: вила́зити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ви́лізти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to climb out (repeatedly/gradually)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вилазити
   UA_Example: Гострий схил не давав вилазити на скелю без мотузки.
   EN_Example: The steep slope made it impossible to climb out onto the rock without a rope.
@@ -38,16 +49,5 @@ fields:
     (stress 2nd syll, labeled недоконаний) -- analogous to the перекидати-type stress-differentiated
     aspect pattern already documented for ch.9.3. This note uses вила́зити (ipfv) as Lemma,
     paired with ви́лізти (pfv).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

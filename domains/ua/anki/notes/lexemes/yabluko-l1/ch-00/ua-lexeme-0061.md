@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0061
   Lemma: ру́чка
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: pen
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: олі́вець
   Mnemonic_EN: олівець = pencil (erasable, graphite); ручка = pen (permanent ink).
@@ -30,8 +35,11 @@ fields:
     be erased.
   CompareA: олівець
   CompareB: ручка
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: ручка
   UA_Example: Дай мені, будь ласка, ручку написати адресу.
   EN_Example: Give me a pen, please, to write the address.
@@ -40,13 +48,5 @@ fields:
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
     redesigned Compare card (see compare-card-audit-findings.md). Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

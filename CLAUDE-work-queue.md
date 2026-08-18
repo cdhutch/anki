@@ -48,15 +48,39 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   from somewhere in that run. I can't tell which without seeing the actual
   `#typeans` DOM for a failing case — this needs on-device diagnosis, not a
   guess shipped blind (a wrong fix here means another sync-and-retest round
-  trip). **Next step:** next time this reproduces, open Chrome/Anki's
-  DevTools, right-click the feedback area → Inspect, and copy the raw HTML of
-  the `#typeans` element before the script hides it (or temporarily comment
-  out the `typeansEl.style.display = 'none'` line and screenshot it) — that
-  tells us definitively whether the phantom space is Anki's diff output or an
-  artifact of the reconstruction loop. Worth checking whether this only
-  affects phrase notes (multi-word `Lemma`, like this one) or also plain
-  single-word notes, and whether it's specific to a stress-mark *position*
-  mismatch vs. any mismatch at all.
+  trip). ~~**Next step:** next time this reproduces, open Chrome/Anki's
+  DevTools...~~
+  **ROOT-CAUSED 2026-08-18 — no DevTools session needed. Hypothesis (a) above
+  was right.** It's Anki's own diff output, not the reconstruction loop. From
+  Anki's `rslib/src/typeanswer.rs`:
+
+  ```rust
+  /// Prefixes a leading mark character with a non-breaking space to prevent it
+  /// from joining the previous token.
+  fn isolate_leading_mark(text: &str) -> Cow<'_, str> {
+      if text.chars().next().is_some_and(|c| GeneralCategory::of(c).is_mark()) {
+          Cow::Owned(format!("\u{a0}{text}"))
+      } else {
+          Cow::Borrowed(text)
+      }
+  }
+  ```
+
+  When Anki's character-level diff splits a chunk such that the chunk *begins*
+  with U+0301, Anki deliberately prepends U+00A0 so the mark won't combine
+  with the preceding letter. That nbsp sits **inside** a `.typeGood`/`.typeBad`
+  span, so `chunks.map(el => el.textContent).join('')` swallows it into
+  `typedAnswer` — which then matches nothing, and renders with a visible gap
+  before a detached-looking accent. Exactly the reported symptom. It also
+  answers the last question above: this is specific to a stress-mark
+  **position** mismatch, because only a position shift makes the diff split
+  mid-grapheme; it is not phrase-note-specific.
+  **Fix:** normalise U+00A0 out of the reconstruction — drop it outright when
+  followed by a combining mark (Anki's isolation artifact), convert any other
+  occurrence to an ordinary space. Independent of the euphony/aspect work and
+  fixable on its own; see `docs/ua-en-ua-euphony-aspect-refactor.md` §4(b),
+  and §7(3) for the open question of whether to land it standalone or fold it
+  into the refactor.
 
 ## UA Domain — Structural / card & note-type work
 
@@ -97,16 +121,23 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   per-slot tolerance mechanism (built 2026-08-04) at all. Not started, no design yet.
   See "EN→UA Euphony + Verbal-Aspect Refactor (Future)" in `CLAUDE.md` for the full
   history to read before scoping.
-- [ ] **UA note-type field order not preserved across `make ua-setup-*` runs**
-  (flagged 2026-08-11) — Craig manually dragged `UA_Lexeme`'s fields into a logical
-  order during this session's validation pass; running `make ua-setup-lexeme`
-  afterward silently reset it back to the raw `FIELDS` constant order in
-  `setup_ua_note_types.py`. Any future `make ua-setup-*`/`make ua-setup` run will
-  clobber a manually-dragged order the same way. Future work: update the
-  `FIELDS`/`GRAMMAR_FIELDS`/`VISUAL_FIELDS`/`VERB_FIELDS` constants (and
-  `setup_ua_pvom_note_type.py`'s `FIELDS`) to reflect a deliberate logical order for
-  all 5 UA note types, so the setup script stops fighting manual reordering. Not
-  started — see CLAUDE.md item 20.
+- [x] **UA note-type field order not preserved across `make ua-setup-*` runs**
+  (flagged 2026-08-11) — **Fixed and personally verified 2026-08-18** (branch
+  `fix/ua-field-order-enforcement`, commit `5e9f2e4`). Checked off against live Anki,
+  not a log claim: Craig ran `make ua-setup-lexeme` (repositioned 38 fields), re-ran it
+  to confirm the no-op guard, ran `make ua-setup-verb` (26) and `make ua-setup-pvom`
+  (17), eyeballed the resulting `UA_Lexeme` and `UA_Verb` field lists in the Anki
+  Fields dialog against the expected order, and finished with
+  `inspect_note_type_fields.py` reporting **all 5 note types matching exactly, set and
+  order** — the first fully-clean run since that tool was built. Collection backup
+  taken first; the one-time full AnkiWeb upload completed. **Note the original
+  diagnosis above was wrong:** the setup script never pushed the `FIELDS` order at all
+  (`inOrderFields` is `createModel`-only; the update paths only appended), so the
+  constants were decorative and live order was the historical add-order. The 2026-08-11
+  clobbering was `Verification Notes` + the 5 euphony fields being appended to the
+  bottom. Fixed by adding a guarded `sync_field_order()` reposition pass — so the
+  constants are now genuinely authoritative, and manual dragging in the GUI will be
+  reverted by the next setup run **by design**. See CLAUDE.md item 20.
 - [ ] **`UA_Grammar` 0001–0007 reviewed** against the 2026-07-22 atomicity /
   no-self-leak / no-cross-cloze-leak cloze principles (0008/0009 already meet them).
   No work started.
@@ -157,6 +188,23 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 - [x] **Run the same field-presence check against `UA_Verb`/`UA_Grammar`/
   `UA_Visual`/`UA_PVOM_Infinitive`** — the numbers above only cover
   `UA_Lexeme`; the other four note types haven't been checked yet.
+- [x] **CNSF `fields:` key order canonicalized from the Anki `FIELDS` constants**
+  — **Done and personally verified 2026-08-18** (commit `1baf0c2`). Raised by Craig
+  while reviewing the Anki-side field-order fix ("will this also ensure that all of
+  the YAML notes' fields are in the same order?") — it would not have.
+  `cnsf_canonicalize.py` ordered only the seven top-level keys; keys inside `fields:`
+  were preserved as authored, and `cmd_check()` had the same blind spot, so the
+  pre-commit hook had never looked at field-key order. Three distinct orders found in
+  a 12-note sample. Per Craig, **Option A**: `cnsf_canonicalize.py` imports the same
+  constants that drive the live models, so file order and Anki order can't drift
+  apart. Checked off against real output, not a log claim: `--check` reported 585/585
+  lexeme notes drifted with zero in other categories; `make ua-lexeme-fix` rewrote all
+  585; the diff verified order-only (7497 insertions vs 7497 deletions, byte-identical
+  sorted line multisets); the `--all-files` pre-commit hook then passed clean, having
+  imported the new chain inside its pyyaml-only venv without error. `ua-verb`/
+  `ua-grammar`/`ua-visual`/`ua-pvom` and all of B737 were already in constant order and
+  were untouched. **No Anki re-sync needed** — the import scripts send fields as a
+  name-keyed dict, so CNSF key order never affected what reaches Anki.
 - [x] **Wire the checker into `make ua-check`** alongside the existing
   `audit_verb_aspect_forms.py`/`check_pending_confusables.py` audits, so field
   drift gets caught on every check run instead of accumulating unnoticed.

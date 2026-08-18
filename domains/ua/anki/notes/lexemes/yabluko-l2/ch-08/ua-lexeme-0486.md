@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0486
   Lemma: рі́вень життя́
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: standard of living
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: рівень життя
   UA_Example: Рівень життя тут вищий, ніж у сусідньому регіоні.
   EN_Example: The standard of living here is higher than in the neighboring region.
@@ -38,16 +49,5 @@ fields:
   Verification Notes: Vocabulary-appendix phrase item. рівень reuses the existing ch.9 note
     ua-lexeme-0263 (bucket 3, same 'level' sense — ch:2.8.3 tag appended there rather than
     duplicating); життя (ua-lexeme-0475) is a new component note per rule 3.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0520
   Lemma: розво́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: розвести́
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to breed, raise (animals)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: розводити
   UA_Example: Тут місцеві родини здавна розводять овець.
   EN_Example: Local families have long bred sheep here.
@@ -38,16 +49,5 @@ fields:
     a perfective partner or full sense list on this page; розводити is also commonly polysemous
     (to dilute a liquid; to separate/divorce people) -- the animal-breeding sense is used
     here per the ch.8.5 (розведення овець) context. Full conjugation lives on ua-verb-0082.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

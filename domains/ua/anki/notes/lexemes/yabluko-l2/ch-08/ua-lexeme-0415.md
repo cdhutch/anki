@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0415
   Lemma: холо́дний
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: cold
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: холодний
   UA_Example: Вода в озері дуже холодна.
   EN_Example: The water in the lake is very cold.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Горох's Словозміна page also has a homograph, Холо́дний (a surname)
     -- not used here. Note the stress (холо́дний) differs from the noun холод (хо́лод, ua-lexeme-0414)
     -- a genuine derivational stress shift, not an error.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

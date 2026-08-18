@@ -16,19 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0153
   Lemma: уболіва́льник
+  Lemma_Euphony: вболіва́льник
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: fan, supporter (sports)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  Lemma_Euphony: вболіва́льник
-  EuphonyNote: ''
   TypingAnswer: уболівальник
   UA_Example: У світі спорту Ви — уболівальник.
   EN_Example: In the world of sport, you're a fan.
@@ -40,15 +50,5 @@ fields:
     euphony survey -- Горох''s Слововживання entry for вболівальник states directly "вболівальник
     (уболівальник)" as parallel forms derived from вболівати/уболівати. Stress confirmed вболіва́льник
     via Горох Словозміна.'
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

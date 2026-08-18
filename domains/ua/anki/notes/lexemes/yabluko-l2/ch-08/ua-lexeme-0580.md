@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0580
   Lemma: дороги́й
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: dear; sweet (affectionate)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: дорогий
   UA_Example: Моя дорога́ мама! О, дорога́ подру́го!
   EN_Example: My dear mother! Oh, my dear friend!
@@ -38,16 +49,5 @@ fields:
   Verification Notes: 'Same-lemma polysemy split: дорогий has two disjoint senses (expensive
     vs. dear/affectionate), like French "cher". This note covers dear/affectionate (primary
     UA→EN direction). Sibling note ua-lexeme-0437 covers expensive (primary EN→UA direction).'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

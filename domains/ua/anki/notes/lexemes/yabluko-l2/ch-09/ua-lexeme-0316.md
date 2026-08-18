@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0316
   Lemma: прибува́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: прибу́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to arrive
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "прихо́дити - synonym listed by Горох for the arrival sense (walking register);\
     \ when the\nmode of arrival isn't a formal/scheduled one, приходити/прийти (on foot) or\
@@ -39,8 +44,11 @@ fields:
     the train gets in.
   CompareA: прибува́ти
   CompareB: прихо́дити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: прибувати
   UA_Example: Поїзд прибуває на станцію за розкладом.
   EN_Example: The train arrives at the station on schedule.
@@ -57,13 +65,5 @@ fields:
     the card was still suspended pending these fields, per the Empty-Compare-card safeguard).
     Cross-links with ua-lexeme-0315 (відправлятися), the departure-side mirror of the same
     formal-vs-PVOM distinction. Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

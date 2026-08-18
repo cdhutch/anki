@@ -16,19 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0281
   Lemma: топи́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: втопи́ти
+  Perfective_Euphony: утопи́ти
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to sink, to flood/submerge (something)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  Perfective_Euphony: утопи́ти
-  EuphonyNote: ''
   TypingAnswer: топити
   UA_Example: Течія намагалася топити човен на переправі.
   EN_Example: The current kept trying to sink the boat during the crossing.
@@ -40,15 +50,5 @@ fields:
     2026-07-26: added Perfective_Euphony (утопи́ти) per corpus-wide у/в euphony survey --
     Горох''s Тлумачення entry for утопити redirects "Див. втопи́ти", the same cross-reference
     format confirmed for established aspect/euphony pairs (e.g. установити/устано́влювати).'
-  Lemma_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

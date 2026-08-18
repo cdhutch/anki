@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0369
   Lemma: пі́сля то́го як
+  Lemma_Euphony: ''
   PartOfSpeech: conjunction
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: after (subordinating conjunction)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: після того як
   UA_Example: Після того як дощ ущух, вони вирушили далі.
   EN_Example: After the rain let up, they set off further.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: Fixed subordinating conjunction. Its components 'після', 'того', 'як'
     are basic grammar words not otherwise given their own lexeme notes -- same judgment call
     as 'як тільки' (ua-lexeme-0361) above.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0546
   Lemma: де́рево
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: tree
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: дерево
   UA_Example: Ми сховались у затінку старого дерева.
   EN_Example: We took shelter in the shade of an old tree.
@@ -36,16 +47,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/дерево
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0566 (стовбур дерева).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0059
   Lemma: ра́нок
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: morning
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'gen: ра́нку'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ве́чір, ніч — time-of-day cluster (day/night cycle). See ua-lexeme-0029 (вечір),
     ua-lexeme-0048 (ніч).
@@ -32,8 +37,10 @@ fields:
   CompareA: вечір
   CompareB: ніч
   CompareC: ранок
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: утро'
-  EuphonyNote: ''
   TypingAnswer: ранок
   UA_Example: Уранці ми снідаємо разом і говоримо про плани.
   EN_Example: In the morning we have breakfast together and talk about plans.
@@ -43,12 +50,5 @@ fields:
   Verification Notes: '2026-07-24: added cross-link to ніч by ID, Mnemonic_EN, CompareScenario
     + CompareA/B/C (3-way time-of-day cluster) for the redesigned Compare card (see compare-card-audit-findings.md)
     — previously ConfusableSet only pointed at вечір, not ніч. Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

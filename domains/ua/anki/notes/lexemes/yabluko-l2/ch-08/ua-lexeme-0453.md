@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0453
   Lemma: зві́сно
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: of course, naturally
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: звісно
   UA_Example: Звісно, ми залишимо відгук про готель.
   EN_Example: Of course, we'll leave a review of the hotel.
@@ -45,16 +56,5 @@ fields:
     surface the match once зазвичай is sourced. 2026-07-30 Craig: incorporate both -- зазвичай
     and звичайно are similar either in meaning or in UA spelling, so both should join this
     cluster once sourced. Tagged pending-confusable:звичайно as well.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

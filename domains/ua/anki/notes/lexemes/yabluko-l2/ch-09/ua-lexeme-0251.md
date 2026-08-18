@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0251
   Lemma: вихо́дити назу́стріч
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: What does a good host always do the moment guests arrive?
   EN_Gloss: to go out to meet (someone)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: виходити назустріч
   UA_Example: Щоразу, коли приходять гості, господар виходить їм назустріч.
   EN_Example: Every time guests arrive, the host goes out to meet them.
@@ -58,15 +68,5 @@ fields:
     Flipped back to status:draft since content changed materially after the 2026-07-26 verification
     -- only needs a quick reglance (Lemma/TypingAnswer/stress are all unchanged), not a fresh
     Горох check.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
 ---
 

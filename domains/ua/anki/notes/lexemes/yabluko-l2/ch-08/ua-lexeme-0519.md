@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0519
   Lemma: вівця́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: sheep
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вівця
   UA_Example: На гірських схилах пасуться отари овець.
   EN_Example: Flocks of sheep graze on the mountain slopes.
@@ -38,16 +49,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0532 (розведення овець), which uses the
     genitive plural овець.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

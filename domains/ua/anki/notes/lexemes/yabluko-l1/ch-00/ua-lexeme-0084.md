@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0084
   Lemma: Украї́на
+  Lemma_Euphony: ''
   PartOfSpeech: proper-noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Ukraine
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Україна
   UA_Example: Україна — незалежна держава у серці Європи.
   EN_Example: Ukraine is an independent state in the heart of Europe.
@@ -35,17 +47,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/Україна
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

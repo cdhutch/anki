@@ -17,15 +17,24 @@ tags:
 fields:
   NoteID: ua-lexeme-0581
   Lemma: ходи́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional: йти
   ImperfectiveUnidirectional_Euphony: іти́
   Perfective: піти́
+  Perfective_Euphony: ''
+  EuphonyNote: 'іти́ and йти are the same unidirectional imperfective "to go (on foot)" verb
+    -- both Горох-verified as valid headwords. йти is used here (and matches the corpus''s
+    existing prefixed family: прийти́, ви́йти, дійти́, etc. are all built on й-forms). іти́
+    is the more common variant after a consonant or at the start of a clause/sentence, paralleling
+    the і/й euphonic alternation seen elsewhere in Ukrainian (cf. і/й "and"). Treat the two
+    as free variants of one lexeme, not separate words.'
+  AspectCue: ''
   EN_Gloss: to walk, go (on foot)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: 'Base motion-verb triplet: ходи́ти (multidirectional impf.) / йти (unidirectional
     impf.) / піти́ (perf.). Full conjugation tables exist as separate UA_Verb notes: ua-verb-0001
     (ходити), ua-verb-0002/0003 (іти/йти), ua-verb-0004 (піти).'
@@ -34,16 +43,17 @@ fields:
     around, habitually, no set direction" (multidirectional). йти = "be walking, headed one
     way, right now" (unidirectional). піти́ = "set off walking / to have gone" (perfective
     -- the trip as a completed whole). Think "wanders" vs "is walking there" vs "went."
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: English does not grammaticalize the multidirectional/unidirectional distinction
     -- "walk" and "go" cover both ходити and йти. The closest analogy is aspectual, not lexical
     -- compare "used to walk over there" (multi) vs "was walking there" (uni) vs "set off
     walking" (perf).
-  EuphonyNote: 'іти́ and йти are the same unidirectional imperfective "to go (on foot)" verb
-    -- both Горох-verified as valid headwords. йти is used here (and matches the corpus''s
-    existing prefixed family: прийти́, ви́йти, дійти́, etc. are all built on й-forms). іти́
-    is the more common variant after a consonant or at the start of a clause/sentence, paralleling
-    the і/й euphonic alternation seen elsewhere in Ukrainian (cf. і/й "and"). Treat the two
-    as free variants of one lexeme, not separate words.'
   TypingAnswer: ходити / йти / піти
   UA_Example: Я щодня ходжу до школи пішки, а сьогодні йшов і думав про іспит.
   EN_Example: I walk to school every day, and today I was walking and thinking about the exam.
@@ -75,15 +85,5 @@ fields:
     so the singlet-only EuphonyNote fallback in compute_euphony_slots() didn''t apply either).
     Typing іти́ for the unidirectional slot on the EN->UA card is now graded CORRECT/PERFECT
     (previously always INCORRECT), and the UA->EN Recognition front now shows "йти (іти́)".'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

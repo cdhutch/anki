@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0214
   Lemma: забива́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: заби́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to score, hit, drive in
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "відбива́ти, завдава́ти, набира́ти - same ball/impact-game action cluster,\
     \ but each answers a different question about where the force ends up.\nRoles: відбивати\
@@ -42,8 +47,9 @@ fields:
   CompareB: забива́ти
   CompareC: завдава́ти
   CompareD: набира́ти
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: забивати
   UA_Example: Він часто забиває голи з кутового удару.
   EN_Example: He often scores goals from a corner kick.
@@ -55,11 +61,5 @@ fields:
     ball-action verb-root cluster (bucket-4 convergent-synonym audit, per Craig -- roots are
     the confusion point, not prefixes) + CompareScenario/CompareA-D for the Compare card.
     Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

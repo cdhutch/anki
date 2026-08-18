@@ -17,21 +17,32 @@ tags:
 fields:
   NoteID: ua-lexeme-0375
   Lemma: у́часть
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: participation
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: участь starts with у- (у́часть), not в-/вч- -- "вчасть" is not a word in Ukrainian.
     (It's easy to blend with вчасно "on time," or with the Russian часть "part" -- Ukrainian
     uses частина for "part," and участь for "participation" is its own root, not built on
     "часть" at all.)
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: участь
   UA_Example: Шестеро гравців беруть участь у змаганні, а четверо -- запасні.
   EN_Example: Six players take part in the competition, and four are substitutes.
@@ -45,16 +56,5 @@ fields:
     yes, add the same "вчасть isn''t a word" warning here as on ua-lexeme-0376 -- added to
     Mnemonic_EN, which renders on the EN→UA production back card and the Compare card (not
     the plain UA→EN recognition back, per setup_ua_note_types.py).'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

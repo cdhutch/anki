@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0071
   Lemma: Австра́лія
+  Lemma_Euphony: ''
   PartOfSpeech: proper-noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Australia
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Австралія
   UA_Example: Мій друг живе в Австралії вже три роки.
   EN_Example: My friend has been living in Australia for three years.
@@ -35,17 +47,5 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/Австралія
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
-  Mnemonic_EN: ''
 ---
 

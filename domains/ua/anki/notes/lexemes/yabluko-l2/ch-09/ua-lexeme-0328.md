@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0328
   Lemma: Вибачте, повтори́ть, будь ла́ска...
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Sorry, please repeat...
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Вибачте, повторіть, будь ласка...
   UA_Example: Вибачте, повторіть, будь ласка, номер платформи.
   EN_Example: Sorry, please repeat the platform number.
@@ -40,16 +51,5 @@ fields:
     and повто́рювати/повтори́ти (ua-lexeme-0320). 'будь ласка' (please) is a basic fixed phrase,
     not given its own lexeme note here (judgment call, same as other basic-grammar skips documented
     for ch.9.3/9.5 -- flagging for Craig's review).
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

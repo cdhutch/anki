@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0437
   Lemma: дороги́й
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: expensive
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: дорогий
   UA_Example: Цей номер у готелі занадто дорогий.
   EN_Example: This hotel room is too expensive.
@@ -37,16 +48,5 @@ fields:
   Verification Notes: 'Same-lemma polysemy split: дорогий has two disjoint senses (expensive
     vs. dear/affectionate). This note covers expensive (primary EN→UA direction). Sibling
     note ua-lexeme-0580 covers dear/affectionate (primary UA→EN direction).'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

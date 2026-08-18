@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0254
   Lemma: гірськи́й
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: mountain, mountainous (adj.)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: гірський
   UA_Example: Гірський масив тягнеться на десятки кілометрів.
   EN_Example: The mountain range stretches for dozens of kilometers.
@@ -38,16 +49,5 @@ fields:
     stress patterns: stem-stress ''гі́рський'' and ending-stress ''гірськи́й'', with no distinguishing
     gloss between them -- likely free/variant stress rather than a meaning split. This note
     uses the ending-stress form (гірськи́й), the more common citation form for ''mountain(ous)''.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

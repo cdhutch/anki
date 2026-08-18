@@ -16,22 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0115
   Lemma: вхо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: увійти́
+  Perfective_Euphony: ввійти́
+  EuphonyNote: 'PFV: в- + іти → увійти (also ввійти); у- preferred before й'
+  AspectCue: ''
   EN_Gloss: to enter, go in (on foot)
   Govt_Case: в/у + Acc
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: ви́ходити (directional opposite)
   Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
   CompareScenario: Someone walks into a building through the front door, on foot.
   CompareA: входити
   CompareB: виходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: входить / войти'
-  Perfective_Euphony: ввійти́
-  EuphonyNote: 'PFV: в- + іти → увійти (also ввійти); у- preferred before й'
   TypingAnswer: входити
   UA_Example: ''
   EN_Example: ''
@@ -45,12 +52,5 @@ fields:
     ..., ВВІХО́ДИТИ (УВІХО́ДИТИ) ... ВВІЙТИ́ (УВІЙТИ́)"), plus slovnyk.ua confirming ввійти
     as a standalone headword with its own conjugation table ("ВВІЙТИ див. входити"). увійти́
     remains the more common form; ввійти́ is dictionary-attested, not a typo.'
-  Lemma_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

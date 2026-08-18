@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0212
   Lemma: виграва́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ви́грати
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to win
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "перемага́ти/перемогти́ - near-synonym, not a plain duplicate: виграва́ти\
     \ answers \"what did\nyou win?\" (the contest, match, or prize -- never a person), while\
@@ -40,8 +45,11 @@ fields:
   CompareScenario: At the poker table, what does a player do to walk away with the whole pot?
   CompareA: перемогти́ (перемага́ти)
   CompareB: ви́грати (виграва́ти)
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вигравати
   UA_Example: Вона любить вигравати навіть у дружніх іграх.
   EN_Example: She likes to win even in friendly games.
@@ -55,13 +63,5 @@ fields:
     + CompareA/CompareB cross-linking this note with ua-lexeme-0177 (перемагати) -- both gloss
     loosely to "win" but take structurally different objects. Also see ua-lexeme-0261 (переможець)
     for the shared agent noun. Needs your review.'
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

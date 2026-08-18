@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0404
   Lemma: спеко́тно
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: it's hot
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: спекотно
   UA_Example: Сьогодні на вулиці дуже спекотно.
   EN_Example: It's very hot outside today.
@@ -39,16 +50,5 @@ fields:
     -ий/-о pair sourced this batch (сні́жний/сні́жно, тума́нний/тума́нно, хма́рний/хма́рно,
     со́нячний/со́нячно, ві́тряний/ві́тряно) -- Горох's own page rendering did not show the
     accent mark clearly in extraction. Flagged for stress re-check.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 

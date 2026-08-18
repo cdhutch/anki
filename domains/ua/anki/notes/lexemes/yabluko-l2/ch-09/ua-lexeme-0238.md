@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0238
   Lemma: те́мрява
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: darkness
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: темрява
   UA_Example: У темряві важко знайти правильний напрямок.
   EN_Example: In the dark it's hard to find the right direction.
@@ -37,16 +48,5 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.
   Verification Notes: Горох also lists an unrelated archaic adjective 'темрявий'; not relevant
     here.
-  Lemma_Euphony: ''
-  Perfective_Euphony: ''
-  ImperfectiveUnidirectional_Euphony: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  CompareScenario: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
-  AspectCue: ''
 ---
 
