@@ -236,13 +236,41 @@ def upsert_notes(pvom_dir, dry_run=False):
 
     updated = 0
     if updates:
-        for update in updates:
+        for update, tags in zip(updates, update_tags):
             result = anki_connect("updateNoteFields", {"note": update})
             if result and not result.get("error"):
                 updated += 1
             else:
                 print(f"✗ Update failed for note {update['id']}: {result}", file=sys.stderr)
                 return False
+
+            # Tags, separately -- AnkiConnect's updateNoteFields touches FIELDS
+            # ONLY and silently leaves tags alone. Fixed 2026-08-18: this script
+            # was the odd one out of the five UA importers (ua_lexeme_import.py,
+            # ua_verb_import.py, ua_grammar_import.py and ua_visual_import.py
+            # all already did this), so PVOM tags in Anki had been frozen at
+            # whatever each note was CREATED with, and no CNSF tag edit had ever
+            # reached Anki on the update path.
+            #
+            # It hid well: `tags` was already being collected here, and IS used
+            # for the suspend decision below -- but that decision reads the CNSF
+            # tags directly, never Anki's. So suspend/unsuspend behaved perfectly
+            # correctly off fresh tags while the tags shown in Anki went stale.
+            # That is why Craig's 13-note stress:unverified -> stress:verified
+            # pass unsuspended all 52 cards on 2026-08-18 and yet the browser
+            # still showed stress:unverified.
+            #
+            # remove-then-add rather than add-only, matching the other four: an
+            # add-only pass cannot clear a tag that was REMOVED from the CNSF
+            # file, which is precisely the stress:unverified case.
+            anki_id = update["id"]
+            existing = anki_connect("getNoteTags", {"note": anki_id})
+            existing_tags = (existing or {}).get("result") or []
+            if existing_tags:
+                anki_connect("removeTags",
+                             {"notes": [anki_id], "tags": " ".join(existing_tags)})
+            if tags:
+                anki_connect("addTags", {"notes": [anki_id], "tags": " ".join(tags)})
 
     # Suspend policy pass -- see module docstring. A brand-new note can't
     # already have a flagged card in Anki, so the flag check only applies

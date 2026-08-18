@@ -458,6 +458,40 @@ own docstring). The entire prefix-drilling set — the whole point of the 2026-0
 rework into 4 templates per note — is therefore inactive until a Горох stress pass
 drops that tag. Also: the count is **52 (13 notes × 4)**, not the 44 (11 × 4) this
 doc still states in two places.
+2026-08-18: **PVOM importer never wrote tags on the update path — fixed.** Craig noticed
+that his 13-note `stress:unverified` → `stress:verified` pass had not changed the tags
+shown in Anki, even though the same sync correctly unsuspended all 52 cards. Both were
+true, and for the same reason: AnkiConnect's `updateNoteFields` touches **fields only**
+and silently leaves tags alone. `ua_pvom_infinitive_import.py` was **the only one of the
+five UA importers** that didn't follow it with `getNoteTags` → `removeTags` → `addTags`
+(`ua_lexeme_import.py`, `ua_verb_import.py`, `ua_grammar_import.py` and
+`ua_visual_import.py` all already did). So **PVOM tags in Anki had been frozen at
+whatever each note was created with** — no CNSF tag edit had ever reached Anki on the
+update path, for the life of the note type.
+**Why it hid so well:** the `tags` list *was* already collected in that loop, and *is*
+used — but only for the suspend decision, which reads the CNSF tags directly and never
+consults Anki's. So suspension behaved correctly off fresh tags while the displayed tags
+went stale, producing the apparently contradictory pair of symptoms above. Fixed with
+remove-then-add rather than add-only, matching the other four: an add-only pass cannot
+clear a tag that was *removed* from the CNSF file, which is precisely the
+`stress:unverified` case. **Verified live:** after the fix, `note:UA_PVOM_Infinitive
+tag:stress:verified` = 13 and `tag:stress:unverified` = 0; before it, reversed.
+**Worth a look sometime:** any *other* PVOM tag edit made since the notes were created
+also never landed, so Anki's PVOM tags may differ from CNSF in ways beyond `stress:`.
+2026-08-18: **PVOM euphony + apostrophe validated live; PERFECT cap demonstrated on a
+real card.** After `make ua-pvom` (13 notes, 0 errors, all 52 cards unsuspended for the
+first time since the set was built), Craig tested `ua-pvom-0012`: typing `ухо́дити` —
+the у- euphonic partner added today — grades **✓ CORRECT / "Accepted alternate
+spelling"**. Two things confirmed at once. (1) The euphony values work: before today
+`Walking_Multi_Euphony`/`Walking_Uni_Euphony` were blank, so that same answer would have
+graded INCORRECT. (2) **The PERFECT cap is real and now demonstrated, not theorised** —
+a fully-stressed, dictionary-attested answer cannot exceed CORRECT, because the euphony
+branch does `euphonyAlts.indexOf(stripStress(typedAnswer))`, stripping stress from both
+sides, so it structurally cannot route a stressed alternate to the PERFECT tier. That is
+precisely what Option B exists to fix (Craig's decision 2, see the refactor doc). Also
+tested and **resolved with no code change**: the U+02BC apostrophe concern — `підʼї́хати`
+typed naturally grades PERFECT, so Craig's layout emits U+02BC and the 12 apostrophe-
+bearing PVOM typing targets are gradeable as-is.
 2026-08-18: **EN→UA euphony/aspect refactor — design scoping written, no code.** See
 [docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md), which
 supersedes the "EN→UA Euphony + Verbal-Aspect Refactor (Future)" section below as the place
@@ -784,10 +818,13 @@ this doc. Roughly in priority order:
     call-out in `main()`. `ua_flag_audit.py` (item 8's tooling) untouched in behavior --
     it already queried/reported red and orange separately for its own manifest/summary --
     but its comments were corrected where they described the old merged-suspend Pass-1
-    behavior. `CLAUDE-flag-audit.md`'s Flag Usage Convention table updated to match. Not
-    yet run against live Anki (edited via Claude's device-bridge staging, not executed --
-    Craig's Big 3 rules mean Claude doesn't run `make`/Python against AnkiConnect) --
-    verify with a `make ua` sync and an orange-flagged test note before relying on it.
+    behavior. `CLAUDE-flag-audit.md`'s Flag Usage Convention table updated to match. **Live-verified 2026-08-18** on the first `make ua-pvom` run after the PVOM stress
+    pass: 14 red-flagged notes kept suspended, 26 orange-flagged notes explicitly NOT
+    suspended and printed as a call-out instead. Working as designed. Two things that
+    run surfaced: the orange call-out is scoped by `FLAG_DECK_QUERY` (`deck:UA::*`)
+    rather than to the notes being imported, so a PVOM sync listed 26 non-PVOM notes;
+    and the flag counts quoted elsewhere in these docs (11, later 28) are stale — the
+    live figure is 40. Both tracked in `CLAUDE-work-queue.md`.
 
 15. **`Verification Notes` field-name unification** — **Done, 2026-08-11, file side and
     live Anki, verified.** Per Craig: verification-notes should use the exact
