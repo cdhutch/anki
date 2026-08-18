@@ -264,6 +264,51 @@ def anki_request(action, params=None):
         return None
 
 
+def sync_field_order(desired_fields):
+    """Reposition the live model's fields to match `desired_fields` exactly.
+
+    Added 2026-08-18 -- mirror of sync_field_order() in
+    setup_ua_note_types.py; see that function's docstring for the full
+    rationale. Short version: `inOrderFields` only applies at createModel, and
+    `modelFieldAdd` APPENDS, so before this existed the FIELDS constant above
+    had no bearing on an already-created model's field order. Live
+    UA_PVOM_Infinitive showed the resulting drift directly -- Tags_Ch /
+    Source_Note / Verification Notes sat at positions 3-5 with all four
+    *_Euphony fields appended after the typing fields at the very end.
+
+    Guarded: no AnkiConnect calls at all when the order already matches, so
+    routine runs don't re-trigger Anki's full-upload prompt. Must run AFTER
+    the field-add pass, which changes the live order.
+
+    Note this script's anki_request() returns the raw AnkiConnect envelope
+    (not the unwrapped result, unlike setup_ua_note_types.py's import from
+    tsv_to_anki) -- hence the .get("result") unwrapping here.
+    """
+    live = anki_request("modelFieldNames", {"modelName": MODEL_NAME})
+    live_fields = live.get("result", []) if live else []
+    target = [f for f in desired_fields if f in set(live_fields)]
+
+    # Leading-slice comparison, not filtered relative order -- the constant's
+    # fields must occupy indices 0..len(target)-1. This script intentionally
+    # leaves stale fields in place (see the stale_fields note in setup_model),
+    # so those trail after everything the constant names rather than staying
+    # wedged wherever they happen to sit.
+    if live_fields[: len(target)] == target:
+        return False
+
+    print("  Field order differs from this script's FIELDS constant -- repositioning...")
+    print("    NOTE: reordering fields is a schema change. Anki may ask for a full")
+    print("    upload on your next AnkiWeb sync. No note data is lost -- values move")
+    print("    with their field. Subsequent runs are a no-op once order matches.")
+    for index, field in enumerate(target):
+        anki_request(
+            "modelFieldReposition",
+            {"modelName": MODEL_NAME, "fieldName": field, "index": index},
+        )
+    print(f"    Repositioned {len(target)} field(s).")
+    return True
+
+
 def ensure_deck():
     """Ensure the deck exists."""
     anki_request("createDeck", {"deck": "UA::Recognition::PVOM"})
@@ -298,6 +343,11 @@ def setup_model():
                 "  If you want them gone, remove manually in Anki: "
                 "Tools > Manage Note Types > Fields > Delete."
             )
+
+        # Enforce field order AFTER the add pass above (which appends, and so
+        # changes the live order out from under this). Stale fields the script
+        # deliberately leaves in place settle at the end. See sync_field_order().
+        sync_field_order(FIELDS)
 
         # updateModelTemplates only refreshes Front/Back for templates that ALREADY
         # exist under that exact name -- it silently does nothing for names it doesn't

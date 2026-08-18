@@ -31,10 +31,16 @@ MODEL_NAME = "UA_Lexeme"
 # ---------------------------------------------------------------------------
 
 FIELDS = [
-    # Identity & Metadata
+    # -- 1. Identity ---------------------------------------------------------
     "NoteID",
 
-    # Core Lemma & Morphology
+    # -- 2. Core lemma & aspect (hand-authored) ------------------------------
+    # Ordered Lemma -> ImperfectiveUnidirectional -> Perfective, matching the
+    # multi-imp -> uni-imp -> perfective progression that compute_typing_target()
+    # / compute_euphony_slots() / compute_ua_en_display() all join in. Before
+    # 2026-08-18 this constant listed Perfective *before*
+    # ImperfectiveUnidirectional, so the editor's field order disagreed with the
+    # slot order every computed join and the EN_UA_BACK feedback script use.
     "Lemma",
 
     # Lemma_Euphony: hand-authored, optional. в-/у- (or similar) phonological
@@ -48,37 +54,24 @@ FIELDS = [
     "Lemma_Euphony",
     "PartOfSpeech",
     "Gender",
-
-    # Aspect (Perfective & Imperfective variants)
-    "Perfective",
-    "Perfective_Euphony",  # per-slot euphonic alternate for Perfective, e.g. увійти́ / ввійти́
     "ImperfectiveUnidirectional",  # Motion verbs: іти, їхати (directional IPFV)
     "ImperfectiveUnidirectional_Euphony",  # per-slot euphonic alternate for ImperfectiveUnidirectional
+    "Perfective",
+    "Perfective_Euphony",  # per-slot euphonic alternate for Perfective, e.g. увійти́ / ввійти́
 
-    # _AspectLabel: Internal marker, populated by import script (never hand-
-    # authored). "(pf.)" or "(impf.)" for a verb note that's a true aspectual
-    # singlet (Perfective and ImperfectiveUnidirectional both blank); empty
-    # for doublets/triplets and for non-verb notes. Shown next to the lemma
-    # on the UA->EN Recognition card front -- see UA_EN_FRONT below. Added
-    # 2026-07-31 per Craig.
-    "_AspectLabel",
-
-    # _UA_EN_DisplayLemma: Internal marker, populated by import script (never
-    # hand-authored). Per-slot display join for the UA->EN Recognition card
-    # front -- same populated-slot set as TypingTarget_UA (Lemma, then
-    # ImperfectiveUnidirectional, then Perfective, each only if populated),
-    # but with each slot's own *_Euphony alternate shown inline in
-    # parentheses when that specific slot has one (e.g. "ходи́ти / йти /
-    # уві́йти (ввійти́)"), rather than a single whole-note EuphonyNote value.
-    # Deliberately a SEPARATE field from TypingTarget_UA rather than adding
-    # parentheticals to that field directly -- TypingTarget_UA must stay a
-    # pure, exact-match typing target for the EN->UA card's {{type:...}};
-    # this is a second render over the same source fields (Lemma/
-    # ImperfectiveUnidirectional/Perfective/*_Euphony), not a second
-    # independently-authored value. See compute_ua_en_display() in
-    # ua_lexeme_import.py. Added 2026-08-04 per Craig (CLAUDE.md "UA->EN
-    # lexeme verb cards -- show multiple aspects per euphonic slot").
-    "_UA_EN_DisplayLemma",
+    # EuphonyNote: free-text descriptive note (bare alternate spelling(s) or
+    # explanatory prose). As of 2026-08-04, no longer the primary source for
+    # EN->UA typing-tolerance on multi-slot (doublet/triplet) verb notes --
+    # that's now driven per-slot by Lemma_Euphony/
+    # ImperfectiveUnidirectional_Euphony/Perfective_Euphony (see
+    # _EuphonySlots below). Still used as a fallback for true singlet notes
+    # authored before the per-slot fields existed -- see
+    # compute_euphony_slots() in ua_lexeme_import.py.
+    # Grouped here (2026-08-18) next to the three per-slot *_Euphony fields it
+    # is the legacy whole-note ancestor of, rather than down by the typing
+    # fields where it used to sit -- the relationship is what makes it
+    # readable.
+    "EuphonyNote",
 
     # AspectCue: hand-authored, optional. For a verb/phrase note that types
     # only ONE aspect (no populated Perfective/ImperfectiveUnidirectional, so
@@ -90,19 +83,32 @@ FIELDS = [
     # EN_UA_FRONT below for how it renders.
     "AspectCue",
 
-    # Semantic Content
+    # -- 3. Computed / display-only ------------------------------------------
+    # Populated by ua_lexeme_import.py at sync time, NEVER hand-authored in
+    # CNSF. Grouped together (2026-08-18) so the editor makes the
+    # authored-vs-derived split obvious at a glance; previously these were
+    # scattered through the authored fields. The underscore prefix is the
+    # naming convention that marks them. NOTE: TypingTarget_UA/TypingAnswer/
+    # _EuphonySlots are computed too, but live in group 7 below -- they have
+    # to stay adjacent to each other because they are positionally aligned
+    # (same " / " slot join), and reading them apart invites exactly the kind
+    # of misalignment bug this schema keeps producing.
+    "_AspectLabel",  # "(pf.)"/"(impf.)" for a true aspectual singlet; blank otherwise
+    "_UA_EN_DisplayLemma",  # UA->EN front join, euphonic alternates inline in parens
+    "_IsHomograph",  # "1" when the note carries the homograph:true tag
+
+    # -- 4. Semantic content --------------------------------------------------
     "EN_Gloss",
 
-    # Grammatical Properties
+    # -- 5. Grammatical properties -------------------------------------------
     "Govt_Case",
     "IrregularForms",
     "CounterpartForm",
     "VerbMotion_Pair",
 
-    # Semantic Relations & Cross-lingual
+    # -- 6. Semantic relations & Compare card --------------------------------
     "ConfusableSet",
     "Mnemonic_EN",
-    "_IsHomograph",  # Internal marker: populated by import script based on homograph:true tag
     "CompareScenario",
     "CompareA",
     "CompareB",
@@ -112,17 +118,11 @@ FIELDS = [
     "Homograph_SenseB",  # EN sense for CompareB (homographs only)
     "CrossLang_Analog",
 
-    # EuphonyNote: free-text descriptive note (bare alternate spelling(s) or
-    # explanatory prose). As of 2026-08-04, no longer the primary source for
-    # EN->UA typing-tolerance on multi-slot (doublet/triplet) verb notes --
-    # that's now driven per-slot by Lemma_Euphony/
-    # ImperfectiveUnidirectional_Euphony/Perfective_Euphony (see
-    # _EuphonySlots below). Still used as a fallback for true singlet notes
-    # authored before the per-slot fields existed -- see
-    # compute_euphony_slots() in ua_lexeme_import.py.
-    "EuphonyNote",
-
-    # Typing & Examples
+    # -- 7. Typing & examples -------------------------------------------------
+    # TypingTarget_UA / TypingAnswer / _EuphonySlots are one positionally
+    # aligned triple -- same " / " join, same populated-slot filter/order --
+    # and must be read together. Keep them adjacent.
+    #
     # TypingTarget_UA: the EN->UA typing target. For verb notes with a
     # populated ImperfectiveUnidirectional and/or Perfective, this is the full
     # stressed aspect join (e.g. "ходи́ти / йти / піти́"), computed at sync
@@ -142,7 +142,7 @@ FIELDS = [
     "UA_Example",
     "EN_Example",
 
-    # Metadata & Sources
+    # -- 8. Metadata & sources ------------------------------------------------
     "Tags_Ch",
     "Source_URL",
     "Source_Note",
@@ -882,6 +882,78 @@ def get_existing_models() -> list[str]:
     return anki_request("modelNames", url=ANKI_URL) or []
 
 
+def sync_field_order(model_name: str, desired_fields: list[str]) -> bool:
+    """Reposition an existing model's fields to match `desired_fields` exactly.
+
+    Added 2026-08-18. Until now the FIELDS-style constants in this module were
+    decorative for any model that already existed: `inOrderFields` is only
+    honoured by `createModel`, and `update_model()` and its siblings only ever
+    called `modelFieldAdd` (which APPENDS to the end of the model) and
+    `modelFieldRemove`. Nothing anywhere in the repo called
+    `modelFieldReposition`. So the live field order was never "whatever the
+    constant says" -- it was "whatever order fields happened to get added in,
+    across the whole history of the model."
+
+    That is what actually happened on 2026-08-11, and CLAUDE.md item 20's
+    diagnosis of it was wrong in mechanism (right in symptom): `make
+    ua-setup-lexeme` did not reset the field order to this constant's order.
+    It appended `Verification Notes` (removed and re-added by the field-name
+    unification) plus the five euphony/display fields to the BOTTOM of the
+    model, which yanked them out of the positions Craig had just dragged them
+    into. Confirmed 2026-08-18 by `inspect_note_type_fields.py` against live
+    Anki: `UA_Lexeme`'s live order matched neither the dragged order nor this
+    constant, but exactly the historical add-order, with that 2026-08-11 tail
+    appended in sequence. `UA_Verb` (Participle_Passive_Past last among the
+    participles, from the 0e3a987 consolidation) and `UA_PVOM_Infinitive`
+    (four *_Euphony fields appended past `Verification Notes`) carry the same
+    fingerprint.
+
+    Repositioning `desired_fields[i]` to index `i` in ascending order is an
+    insertion sort against the live model and converges on the exact target
+    order. Field VALUES follow their field -- Anki rewrites the notes -- so no
+    note data is lost, but this IS a schema modification: the first run that
+    actually moves anything will make Anki ask for a full AnkiWeb upload on
+    next sync. Hence the guard: when the live order already matches, this
+    makes zero AnkiConnect calls and returns False, so routine
+    `make ua-setup-*` runs stay silent and never re-trigger that prompt.
+
+    Only fields present on BOTH the live model and `desired_fields` are moved.
+    Anything live that the constant doesn't know about (a field the remove
+    pass deliberately left in place -- setup_ua_pvom_note_type.py does this on
+    purpose) is never repositioned directly, and ends up trailing after every
+    field the constant DOES name. That's deliberate: the constant owns the
+    leading positions, so an unrecognised legacy field can't sit wedged
+    between -- or ahead of -- fields whose order we're asserting.
+
+    Callers must run this AFTER their add/remove passes, since both change
+    the live order out from under it.
+
+    Returns True if any field was repositioned.
+    """
+    live_fields = anki_request("modelFieldNames", {"modelName": model_name}, url=ANKI_URL) or []
+    target = [f for f in desired_fields if f in set(live_fields)]
+
+    # Compare against the leading slice, not the filtered relative order: the
+    # constant's fields must occupy indices 0..len(target)-1 exactly. Checking
+    # only relative order would call it "already correct" when an unknown
+    # field sits at index 0 pushing everything down.
+    if live_fields[: len(target)] == target:
+        return False
+
+    print(f"  Field order differs from {model_name}'s FIELDS constant -- repositioning...")
+    print("    NOTE: reordering fields is a schema change. Anki may ask for a full")
+    print("    upload on your next AnkiWeb sync. No note data is lost -- values move")
+    print("    with their field. Subsequent runs are a no-op once order matches.")
+    for index, field in enumerate(target):
+        anki_request(
+            "modelFieldReposition",
+            {"modelName": model_name, "fieldName": field, "index": index},
+            url=ANKI_URL,
+        )
+    print(f"    Repositioned {len(target)} field(s).")
+    return True
+
+
 def create_model():
     print(f"Creating note type '{MODEL_NAME}'...")
     anki_request(
@@ -960,6 +1032,10 @@ def update_model():
         if field not in desired_set:
             print(f"  Removing field: {field}  (data lost)")
             anki_request("modelFieldRemove", {"modelName": MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    # Enforce field order LAST -- the add/remove passes above both change the
+    # live order, so anything earlier would be undone. See sync_field_order().
+    sync_field_order(MODEL_NAME, FIELDS)
 
     print("  Updated.")
 
@@ -1141,6 +1217,9 @@ def update_grammar_model():
         if field not in desired_set:
             print(f"  Removing field: {field}  (data lost)")
             anki_request("modelFieldRemove", {"modelName": GRAMMAR_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    # Enforce field order LAST -- see sync_field_order().
+    sync_field_order(GRAMMAR_MODEL_NAME, GRAMMAR_FIELDS)
 
     print("  Updated.")
 
@@ -1439,6 +1518,9 @@ def update_visual_model():
         if field not in desired_set:
             print(f"  Removing field: {field}  (data lost)")
             anki_request("modelFieldRemove", {"modelName": VISUAL_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    # Enforce field order LAST -- see sync_field_order().
+    sync_field_order(VISUAL_MODEL_NAME, VISUAL_FIELDS)
 
     obsolete_templates = [n for n in existing_template_names if n not in templates_dict]
     if obsolete_templates:
@@ -2041,6 +2123,9 @@ def update_verb_model():
         if field not in desired_set:
             print(f"  Removing field: {field}  (data lost)")
             anki_request("modelFieldRemove", {"modelName": VERB_MODEL_NAME, "fieldName": field}, url=ANKI_URL)
+
+    # Enforce field order LAST -- see sync_field_order().
+    sync_field_order(VERB_MODEL_NAME, VERB_FIELDS)
 
     print("  Updated.")
 
