@@ -59,8 +59,12 @@ fields:
     variant -- per Craig collocational dictionary (в- forms are the headwords for ходити/йти),
     corroborated by this note own 2026-07-26 SUM-20 citation above ("ВВІЙТИ́ (УВІЙТИ́)").
     This changes the computed TypingTarget_UA to "вхо́дити / ввійти́". Lemma_Euphony set to
-    ухо́дити from Gorokh (own headword, sense 1 glossed "входити кудись") -- NEEDS CRAIG DECISION:
-    SUM-20 instead gives вхо́дити variants as ВВІХО́ДИТИ (УВІХО́ДИТИ), a different pair, so
-    уходити is not corroborated by the same source. Drafted by Claude, not verified.'
+    ухо́дити from Gorokh (own headword, sense 1 glossed "входити кудись") -- RESOLVED 2026-08-18
+    by Craig: Shevchuk UA-EN Collocation Dictionary attests the у- forms of both ходити and
+    йти -- the same authority that settled the в- headword question above, so the two decisions
+    are consistent. Gorokh independently lists ухо́дити as its own headword whose sense 1
+    glosses to "входити кудись". SUM-20 separately gives ВВІХО́ДИТИ (УВІХО́ДИТИ) as входити
+    variants -- a DIFFERENT variant pair, not a rival claim: both alternations are attested.
+    Drafted by Claude, not verified.'
 ---
 

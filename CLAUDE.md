@@ -422,6 +422,42 @@ modules' imports and asserts it stays that way, so a future third-party import t
 in CI rather than breaking every commit. The hook validation Craig asked for passed: it
 imported the new chain and emitted the new message without error. `make ua-test`: 273
 passed (was 255).
+2026-08-18: **Detached stress mark FIXED and on-device validated** (branch
+`fix/typeans-combining-mark-nbsp`, commit `f9a4525`) — the top item in
+`CLAUDE-work-queue.md`, open since 2026-08-08. Root cause is Anki's own diff
+renderer, not this repo's reconstruction loop: `isolate_leading_mark()` in
+`rslib/src/typeanswer.rs` deliberately prepends U+00A0 to any chunk that *begins*
+with a combining mark, "to prevent it from joining the previous token." That nbsp
+lands inside a `.typeGood`/`.typeBad` span, so concatenating those spans'
+`textContent` swallows it — the string then matches no target and renders with a
+gap before what looks like a detached accent. **The work queue's stated next step
+(reproduce, open DevTools, inspect `#typeans`) was unnecessary** — Anki's source
+answers it outright. Fix: new `normalizeTypeansText()` in `EN_UA_BACK` **and** in
+`setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT` (PVOM uses the identical
+reconstruction technique, so it had the identical bug, and every PVOM answer
+carries a stress mark). An nbsp immediately followed by a combining mark is
+dropped so the mark re-attaches to its base letter; any *other* nbsp becomes an
+ordinary space, so grading never silently depends on Anki continuing to preserve
+real spaces via `white-space: pre-wrap` — which matters for phrase notes like
+ua-lexeme-0532 (`розве́дення ове́ць`). Kept as a separate helper rather than
+inlined, deliberately: the Option B euphony rewrite replaces the grading logic
+immediately around it. **Validated on-device by Craig across both note types** —
+see the work-queue entry for the five specific checks; the load-bearing ones are
+the two wrong-stress-*position* answers, since an exact match or a wholly-missing
+mark never triggers the mid-grapheme diff split that produces the nbsp in the
+first place. `make ua-test` 285 passed (was 273). **Two things worth carrying
+forward:** (1) `tests/ua/test_typeans_normalization.py` pins the *emitted bytes*,
+not just behaviour, because this JS lives inside Python string literals where a
+bare ` ` collapses to a literal NBSP and a doubled backslash emits a regex
+that silently never matches — both invisible by eye, and an early draft of that
+very test file fell into the trap (its constants are now built with `chr()`, with
+a comment saying why). (2) While testing PVOM: **all 52 `UA_PVOM_Infinitive` cards
+are suspended**, because every PVOM note still carries `stress:unverified` and
+`should_suspend()` treats that as a suspend reason (documented in that script's
+own docstring). The entire prefix-drilling set — the whole point of the 2026-07
+rework into 4 templates per note — is therefore inactive until a Горох stress pass
+drops that tag. Also: the count is **52 (13 notes × 4)**, not the 44 (11 × 4) this
+doc still states in two places.
 2026-08-18: **EN→UA euphony/aspect refactor — design scoping written, no code.** See
 [docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md), which
 supersedes the "EN→UA Euphony + Verbal-Aspect Refactor (Future)" section below as the place
@@ -1275,6 +1311,55 @@ other ten prefixes — its primary listed sense is "ascend," not explicitly "get
 Treat it as slightly lower-confidence than the rest until cross-checked against the
 textbook.
 
+**`*_Euphony` authoring convention (decided by Craig 2026-08-18 — applies to every
+note type that has these fields, i.e. `UA_Lexeme` and `UA_PVOM_Infinitive`).**
+
+1. **A populated `*_Euphony` value ALWAYS carries its stress mark.** `ухо́дити`, not
+   `уходити`.
+2. **There is deliberately NO `*_Euphony_Typing` companion field.** The unstressed
+   form is *derived* by stripping U+0301 at comparison time, never stored. The base
+   forms have a `*_Typing` twin only because they are the `{{type:...}}` target and
+   the tier logic must distinguish "correct letters, no stress" from "perfect" —
+   that needs both forms present. A euphony alternate is never a type target, so a
+   stored unstressed twin would be a hand-maintained duplicate of a mechanical
+   transform, i.e. the same drift-prone coupling as `TypingTarget_UA`/`_EuphonySlots`.
+   Derive, don't store.
+3. **The `*_Euphony` fields are always-present, blank when unused** — the same
+   convention as `UA_Lexeme`'s 12 optional fields (item 17), extended to
+   `UA_PVOM_Infinitive`'s four on 2026-08-18 per Craig ("all of the PVOM fields
+   should be the same in CNSF"). They had drifted identically: 11 of 13 notes
+   carried no `*_Euphony` key at all, `ua-pvom-0012` carried all four populated,
+   `ua-pvom-0013` all four blank — so `check_cnsf_field_schema.py` read 2/13 and
+   the Makefile kept `STRICT=1` off partly because of it. Enforced by the
+   `note_type == "ua_pvom_infinitive"` `setdefault` block in
+   `cnsf_canonicalize.py`, which runs *before* field ordering so the added keys
+   land in their proper positions instead of stranded at the end.
+4. **Which в-/у- form is the primary** and which is the euphonic partner follows
+   Craig's collocational dictionary — **Shevchuk's UA-EN Collocation Dictionary** — for
+   ходити/йти the **в- forms are the
+   headwords**, у- forms the euphonic partners. Corroborated by SUM-20's
+   `ВВІЙТИ́ (УВІЙТИ́)` headword-with-parenthetical form. Shevchuk also attests the
+   **у- forms** of both verbs, which is what settles `ухо́дити` as `вхо́дити`'s
+   euphonic partner; SUM-20's separate `ВВІХО́ДИТИ (УВІХО́ДИТИ)` is a different
+   variant pair of the same verb, not a competing claim. Горох attests both with full
+   standalone paradigms and no cross-redirect, so it does *not* settle this — don't
+   go looking there for a tiebreak. Applied 2026-08-18 to `ua-lexeme-0115` and
+   `ua-pvom-0012`, the only two slots in the corpus that had it backwards.
+
+**Why this needs a checker rather than authoring discipline:** the stress mark in a
+euphony field is currently **inert**. Both feedback scripts `stripStress()` the stored
+alternates *and* the typed answer before comparing, so an unstressed value grades
+identically to a stressed one and nothing anywhere notices. That is exactly how
+`UA_PVOM_Infinitive` came to store all four of its euphony values unstressed while
+`UA_Lexeme` stored all of its stressed, with neither side failing any check that
+existed. The inertness ends with the Option B refactor, where a fully-stressed
+euphonic alternate earns PERFECT and the stressed form becomes load-bearing — at
+which point anything authored unstressed has to be re-sourced.
+`tools/anki/inspect/check_euphony_stress.py` (wired into `make ua-check`) flags any
+populated `*_Euphony` value containing a multisyllabic word with no stress mark.
+Monosyllables are exempt (Ukrainian doesn't mark them) and double marks pass
+(free/variant stress is legitimate — see "Language conventions").
+
 **Per-slot euphony tolerance + verb-phrase aspect defaulting (planned 2026-07-29,
 item 1 below implemented 2026-08-04 / live-synced 2026-08-11, item 2 still not built).**
 
@@ -1561,6 +1646,10 @@ buckets. Triage deliberately — do not assume from spelling alone.
   spelling now exists as its own note, reusing `tools/anki/lib/lexeme_dedup.py`'s
   `load_corpus()`/`strip_stress()` rather than a fourth reimplementation of the same
   spelling-match logic. Wired into `make ua-check`.
+- `tools/anki/inspect/check_euphony_stress.py` (new 2026-08-18) — flags any populated
+  `*_Euphony` value containing a multisyllabic word with no stress mark, enforcing the
+  authoring convention above. Monosyllables exempt, double marks pass. Report-only;
+  `--strict` to fail. Wired into `make ua-check`.
 - `tools/anki/inspect/audit_verb_aspect_forms.py` (new 2026-07-27, extended 2026-07-30) —
   flags `pos:verb` notes with zero populated aspectual counterparts (`ImperfectiveUnidirectional`
   and `Perfective` both blank) and no `aspect:imperfective-only`/`aspect:perfective-only` tag.
