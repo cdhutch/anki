@@ -516,13 +516,30 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `main`, and restoring them silently reverts Option B — exactly the failure mode that bit
   us twice on 2026-08-19.
 
-- [ ] **PVOM notes need a non-`draft` `status:` tag** — follow-up created by the merge
-  above. Dropping `status:draft` leaves `e53f14d`'s actual goal unmet: all 13 fall back
-  into `list_unverified.py`'s "no status tag" bucket. `should_suspend()` trips only on
-  `stress:unverified` or `status:draft`, so `status:verified` would restore the reporting
-  coverage without suspending anything. **Not applied** — per the 2026-08-05 division of
-  labour Claude never sets `status:verified`; it asserts note-level review, not just the
-  stress pass `05d8e74` already did. Craig's call.
+- [ ] **PVOM `status:` tag — APPLIED 2026-08-19, commit `53680f4`, needs only your tick.**
+  Craig stated he was setting `status:verified`; all 13 notes tagged, one line each
+  (`- status:verified`, after the existing `- stress:` tag), no field values or other tags
+  touched. Confirmed working: PVOM no longer appears in `make ua-unverified` at all, and
+  the 52 cards stay unsuspended — `should_suspend()` trips only on `stress:unverified` or
+  `status:draft`. This closes `e53f14d`'s original goal (PVOM notes were falling into
+  `list_unverified.py`'s "no status tag" bucket) without its side effect.
+
+- [ ] **`ua-verb-0017`–`0032` have unstressed multisyllabic lemmas** — surfaced by the
+  2026-08-19 `make ua-unverified` run, not previously recorded here. All 16 read as bare
+  `приходити` / `виходити` / `підходити` / … with **zero stress marks**, which CLAUDE.md's
+  own language conventions call out as the strongest single indicator of a bad extraction
+  (wrong homograph block, failed fetch, stripped markup) — a firmer red flag than the
+  double-mark case. Two of them, `ua-verb-0027` (`підїхати`) and `ua-verb-0032`
+  (`відїхати`), are additionally **missing the U+02BC apostrophe** entirely; they should be
+  `підʼїхати` / `відʼїхати`. Worth treating as a data-integrity pass rather than a
+  verification pass — re-source from Горох before anything flips to `stress:verified`.
+  Squarely in `maint/verb-review`'s remit.
+
+- [ ] **`ua-verb-0001`–`0032` carry no `status:` tag at all** — the same gap PVOM just had
+  (`0001`–`0016` are stress-verified but statusless; `0017`–`0032` are neither). 87/87
+  `ua_verb` notes currently report unverified. Whether these want `status:verified`,
+  `status:draft`, or a re-source first depends on the item above; not actionable until
+  that's settled.
 
 ## B737 Domain
 
