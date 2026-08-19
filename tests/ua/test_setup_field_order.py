@@ -44,6 +44,14 @@ import tools.anki.setup.setup_ua_pvom_note_type as pvom_setup  # noqa: E402
 # collection. Kept verbatim rather than synthesised: the drift these encode
 # (the 2026-08-11 tail appended past `Verification Notes`, etc.) is the actual
 # thing this function exists to repair.
+#
+# One deliberate deviation from the capture, 2026-08-19: the last entry was
+# `_EuphonySlots`, renamed to `_TypingSpec` by the Option B refactor. It is
+# updated here rather than left verbatim because sync_field_order() runs LAST
+# in each update function, after the modelFieldAdd/modelFieldRemove passes --
+# so the live list it actually sees already has the old field dropped and the
+# new one appended. A verbatim-but-stale capture would be testing a state that
+# can no longer reach the function.
 LIVE_LEXEME = [
     "NoteID", "Lemma", "PartOfSpeech", "Gender", "Perfective",
     "ImperfectiveUnidirectional", "EN_Gloss", "Govt_Case", "IrregularForms",
@@ -53,7 +61,7 @@ LIVE_LEXEME = [
     "CompareScenario", "CompareC", "CompareD", "_IsHomograph",
     "Homograph_SenseA", "Homograph_SenseB", "AspectCue", "TypingTarget_UA",
     "_AspectLabel", "Verification Notes", "Lemma_Euphony", "Perfective_Euphony",
-    "ImperfectiveUnidirectional_Euphony", "_UA_EN_DisplayLemma", "_EuphonySlots",
+    "ImperfectiveUnidirectional_Euphony", "_UA_EN_DisplayLemma", "_TypingSpec",
 ]
 
 LIVE_VERB = [

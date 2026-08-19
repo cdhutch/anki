@@ -49,6 +49,7 @@ Usage (with Anki open + AnkiConnect running):
 from __future__ import annotations
 
 import argparse
+import json
 import sys
 from pathlib import Path
 
@@ -260,33 +261,64 @@ def compute_typing_target(lemma: str, impf_uni: str, perfective: str) -> tuple[s
     return stressed, unstressed
 
 
-def compute_euphony_slots(
+def compute_typing_spec(
     lemma: str,
     impf_uni: str,
     perfective: str,
     lemma_euphony: str,
     impf_uni_euphony: str,
     perfective_euphony: str,
-    euphony_note: str,
 ) -> str:
-    """Build the per-slot euphony-alternate string for EN_UA_BACK's answer-
-    side typing tolerance (added 2026-08-04, CLAUDE.md "Per-slot euphony
-    tolerance").
+    """Build `_TypingSpec` -- the structured grading input for EN_UA_BACK.
 
-    Positionally aligned with compute_typing_target()'s " / " join -- same
-    populated-slot filter/order (Lemma, then ImperfectiveUnidirectional, then
-    Perfective, each included only if populated). Each slot's own *_Euphony
-    field is authoritative when populated; a slot with none contributes an
-    empty segment (still counted, so positions stay aligned with
-    TypingTarget_UA's slots on the JS side).
+    Added 2026-08-19, replacing `_EuphonySlots` (Option B of
+    docs/ua-en-ua-euphony-aspect-refactor.md; decisions in its section 7).
 
-    Fallback for true singlets (exactly one populated slot) authored before
-    the per-slot fields existed: if that one slot has no *_Euphony of its
-    own, fall back to the legacy whole-note EuphonyNote value -- this is how
-    EuphonyNote behaved before this function existed, so those notes don't
-    silently lose the tolerance they already had.
+    Emits compact JSON, one object per POPULATED aspect slot, in the same
+    Lemma -> ImperfectiveUnidirectional -> Perfective order every other
+    computed field uses:
 
-    Returns '' when nothing applies (no euphony data anywhere on the note).
+        {"slots":[{"primary":"вхо́дити","alts":["ухо́дити"]},
+                  {"primary":"ввійти́","alts":["увійти́"]}]}
+
+    **Why this replaces `_EuphonySlots`.** That field was a `" / "`-joined
+    string that had to stay index-aligned with `TypingTarget_UA`'s own
+    `" / "` join, by convention, with nothing enforcing it and nothing able
+    to detect a break. The JS then had to reconstruct the slot structure by
+    splitting both strings and trusting the positions to correspond. Here the
+    slot IS the unit: primary and alternates travel together, so the entire
+    class of alignment bugs stops being possible rather than being avoided.
+
+    **Why it carries STRESSED alternates.** The old mechanism stress-stripped
+    the stored alternates AND the typed answer before comparing, so it could
+    not distinguish "euphonic alternate, perfectly stressed" from "euphonic
+    alternate, no stress at all" -- both landed in CORRECT, and a fully
+    correct dictionary-attested answer could never reach PERFECT. That was
+    the bug this refactor exists to fix (Craig's decision: a fully-stressed
+    euphonic alternate DOES earn PERFECT). Values are emitted exactly as
+    authored, stress intact; the JS derives the unstressed form by stripping,
+    which is why there is deliberately no `*_Euphony_Typing` field to store a
+    second copy that could drift (see the *_Euphony authoring convention in
+    CLAUDE.md).
+
+    A slot with no alternate emits `"alts":[]` rather than being omitted --
+    slot count must match `TypingTarget_UA`'s, since the JS still splits the
+    typed answer on the separator to know which slot each answer belongs to.
+
+    The legacy whole-note `EuphonyNote` fallback that `compute_euphony_slots()`
+    carried is deliberately NOT reproduced here. An audit on 2026-08-19 found
+    exactly ONE note reaching it corpus-wide (ua-lexeme-0353, вве́чері), and
+    its `EuphonyNote` was explanatory prose rather than a bare alternate --
+    so the fallback was producing silent dead tolerance: prose compared as a
+    spelling, matching nothing, warning about nothing. 0353 was given a
+    proper `Lemma_Euphony` in the same commit, leaving the fallback with zero
+    users. Authored euphony belongs in a `*_Euphony` field; `EuphonyNote` is
+    prose for humans.
+
+    Returns "" when no slot has an alternate -- the grading script treats a
+    missing/empty spec as "no euphony on this note" and uses its plain
+    whole-string comparison, so blank costs nothing and keeps the field out
+    of the way on the ~577 notes with no euphony data at all.
     """
     slots = [
         (lemma, lemma_euphony),
@@ -294,13 +326,23 @@ def compute_euphony_slots(
         (perfective, perfective_euphony),
     ]
     populated = [(base, alt) for base, alt in slots if base]
-    if not populated:
+    if not populated or not any(alt for _, alt in populated):
         return ""
-    if len(populated) == 1 and not populated[0][1] and euphony_note:
-        return euphony_note
-    if not any(alt for _, alt in populated):
-        return ""
-    return " / ".join(alt for _, alt in populated)
+
+    spec = {
+        "slots": [
+            {
+                "primary": base,
+                # '|'-delimited within a slot, matching how *_Euphony fields
+                # have always been authored for multiple alternates.
+                "alts": [a.strip() for a in alt.split("|") if a.strip()],
+            }
+            for base, alt in populated
+        ]
+    }
+    # Compact separators: this lands in an Anki field and is re-parsed by the
+    # card template, so bytes matter more than readability.
+    return json.dumps(spec, ensure_ascii=False, separators=(",", ":"))
 
 
 def compute_ua_en_display(
@@ -318,7 +360,7 @@ def compute_ua_en_display(
     Same populated-slot join as compute_typing_target() (Lemma, then
     ImperfectiveUnidirectional, then Perfective, each only if populated), but
     each slot's own *_Euphony alternate -- if that specific slot has one --
-    is shown inline in parentheses, e.g. "уві́йти (ввійти́)". Deliberately
+    is shown inline in parentheses, e.g. "ввійти́ (увійти́)". Deliberately
     kept separate from TypingTarget_UA/compute_typing_target(): that field
     must stay a pure, exact-match typing target for the EN->UA card's
     {{type:...}}, so it can never grow parentheticals. When no slot has a
@@ -404,18 +446,16 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
         fields["TypingTarget_UA"] = fields.get("Lemma", "")
         # TypingAnswer left as authored in the CNSF file for singlets.
 
-    # Per-slot euphony tolerance data for EN_UA_BACK's answer-side script
-    # (added 2026-08-04, CLAUDE.md "Per-slot euphony tolerance"). Positionally
-    # aligned with TypingTarget_UA's " / " join -- see compute_euphony_slots
-    # docstring.
-    fields["_EuphonySlots"] = compute_euphony_slots(
+    # Structured grading input for EN_UA_BACK's answer-side script. Replaced
+    # the positionally-aligned _EuphonySlots string 2026-08-19 -- see
+    # compute_typing_spec() and docs/ua-en-ua-euphony-aspect-refactor.md.
+    fields["_TypingSpec"] = compute_typing_spec(
         fields.get("Lemma", ""),
         fields.get("ImperfectiveUnidirectional", ""),
         fields.get("Perfective", ""),
         fields.get("Lemma_Euphony", ""),
         fields.get("ImperfectiveUnidirectional_Euphony", ""),
         fields.get("Perfective_Euphony", ""),
-        fields.get("EuphonyNote", ""),
     )
 
     # UA->EN Recognition card front display (added 2026-08-04, CLAUDE.md

@@ -119,9 +119,10 @@ FIELDS = [
     "CrossLang_Analog",
 
     # -- 7. Typing & examples -------------------------------------------------
-    # TypingTarget_UA / TypingAnswer / _EuphonySlots are one positionally
-    # aligned triple -- same " / " join, same populated-slot filter/order --
-    # and must be read together. Keep them adjacent.
+    # TypingTarget_UA / TypingAnswer / _TypingSpec are read together by the
+    # EN->UA grading script. They are no longer positionally coupled the way
+    # TypingTarget_UA/_EuphonySlots were (see _TypingSpec below), but keeping
+    # them adjacent still matches how they're reasoned about.
     #
     # TypingTarget_UA: the EN->UA typing target. For verb notes with a
     # populated ImperfectiveUnidirectional and/or Perfective, this is the full
@@ -131,14 +132,20 @@ FIELDS = [
     "TypingTarget_UA",
     "TypingAnswer",
 
-    # _EuphonySlots: Internal marker, populated by import script (never
-    # hand-authored). Positionally aligned with TypingTarget_UA's " / " join
-    # (same populated-slot order/filter) -- each slot's own accepted
-    # euphonic alternate(s), pipe-delimited within a slot. Drives per-slot
-    # typing tolerance on the EN->UA card's answer-side feedback script (see
-    # compute_euphony_slots() in ua_lexeme_import.py and EN_UA_BACK below).
-    # Added 2026-08-04.
-    "_EuphonySlots",
+    # _TypingSpec: Internal marker, populated by import script (never
+    # hand-authored). Compact JSON, one object per populated aspect slot:
+    # {"slots":[{"primary":"вхо́дити","alts":["ухо́дити"]},...]}, same slot
+    # order as TypingTarget_UA. Drives the EN->UA card's answer-side grading
+    # (see compute_typing_spec() in ua_lexeme_import.py and EN_UA_BACK below).
+    #
+    # Added 2026-08-19, REPLACING _EuphonySlots. That field was a second
+    # " / "-joined string required to stay index-aligned with TypingTarget_UA
+    # by convention alone -- nothing enforced it, and nothing could detect a
+    # break. Alternates here are stored STRESSED (the old field's consumer
+    # stripped stress from both sides, which is why a fully-stressed euphonic
+    # alternate could never reach PERFECT). See
+    # docs/ua-en-ua-euphony-aspect-refactor.md.
+    "_TypingSpec",
     "UA_Example",
     "EN_Example",
 
@@ -519,7 +526,9 @@ UA_EN_FRONT = """\
      variant shows both forms inline (e.g. "уві́йти (ввійти́)") instead of
      silently only showing the primary spelling. TypingTarget_UA itself is
      left untouched -- it must stay a pure, exact-match typing target for
-     the EN->UA card's {{type:...}}, so it never grows parentheticals; when
+     the EN->UA card's type-answer replacement (written without braces on
+     purpose: Anki parses replacements inside comments too -- see the note
+     in EN_UA_BACK), so it never grows parentheticals; when
      no slot has a euphonic alternate, _UA_EN_DisplayLemma renders
      identically to TypingTarget_UA. See compute_ua_en_display() in
      ua_lexeme_import.py. _AspectLabel adds a small "(pf.)"/"(impf.)" tag for
@@ -594,16 +603,37 @@ EN_UA_FRONT = """\
 EN_UA_BACK = """\
 {{FrontSide}}
 <hr id="answer">
-<!-- Color-coded typing feedback with dual validation.
-     data-euphony-slots (2026-08-04, replaces the old whole-note
-     data-euphony="{{EuphonyNote}}" attribute): _EuphonySlots is positionally
-     aligned with TypingTarget_UA's " / " join, one segment per populated
-     aspect slot -- see compute_euphony_slots() in ua_lexeme_import.py and
-     CLAUDE.md "Per-slot euphony tolerance". A true singlet note with no
-     per-slot *_Euphony authored still gets its legacy whole-note EuphonyNote
-     value here, via that same Python function's fallback -- so this one
-     attribute covers both the new per-slot case and the old singlet case. -->
-<div id="feedback" data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}" data-euphony-slots="{{_EuphonySlots}}" style="margin-bottom: 16px;"></div>
+<!-- Color-coded typing feedback.
+     _TypingSpec (2026-08-19) replaces the older _EuphonySlots string. It is
+     compact JSON, one object per populated aspect slot, primary plus its
+     stressed euphonic alternates. The previous design shipped TWO
+     " / "-joined strings (TypingTarget_UA and _EuphonySlots) that had to
+     stay index-aligned by convention, with nothing enforcing it and nothing
+     able to notice a break; the JS then rebuilt the slot structure by
+     splitting both and trusting the positions to correspond. Here primary
+     and alternates travel together, so that whole class of alignment bug is
+     gone rather than avoided. Alternates arrive STRESSED, which is what lets
+     a fully-stressed euphonic answer reach PERFECT -- see the grading block.
+
+     WHY THE JSON LIVES IN A SCRIPT BLOCK AND NOT AN ATTRIBUTE (2026-08-19,
+     second attempt): it first shipped as a data- attribute on the div below.
+     Anki does NOT HTML-escape field content -- it splices the raw text in --
+     so the JSON's own double quotes closed the attribute at the first one.
+     The browser saw the value as just "{", JSON.parse threw, the catch below
+     degraded to "no alternates", and every euphonic answer graded INCORRECT
+     while the correct-answer lines rendered perfectly, because those sit in
+     EARLIER attributes that were still intact. That split is what made it
+     look like a grading-logic bug rather than a quoting bug. A JSON script
+     block has no attribute quoting to get wrong; the application/json type
+     keeps it inert, and the text: filter stays on the replacement because
+     stripping tags is the one thing that could otherwise break out of the
+     block.
+
+     (Field replacements are deliberately not written out in this comment --
+     Anki parses them inside comments too. See the note in the script below.)
+     -->
+<div id="feedback" data-with-stress="{{TypingTarget_UA}}" data-no-stress="{{TypingAnswer}}" style="margin-bottom: 16px;"></div>
+<script type="application/json" id="typing-spec">{{text:_TypingSpec}}</script>
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
@@ -617,49 +647,101 @@ EN_UA_BACK = """\
   function stripStress(s) { return s.replace(/́/g, ''); }
 
   // Strip Anki's combining-mark isolation artifact out of a reconstructed
-  // #typeans string (added 2026-08-18).
-  //
-  // Anki's own diff renderer deliberately prepends U+00A0 to any chunk that
-  // BEGINS with a combining mark -- rslib/src/typeanswer.rs:
-  //
-  //     /// Prefixes a leading mark character with a non-breaking space to
-  //     /// prevent it from joining the previous token.
-  //     fn isolate_leading_mark(text: &str) -> Cow<'_, str> { ... }
-  //
-  // That nbsp lands INSIDE a .typeGood/.typeBad span, so the reconstruction
-  // loop below concatenates it into the typed answer -- which then matches
-  // nothing, and renders with a visible gap before what looks like a detached
-  // accent. This is the ua-lexeme-0532 bug reported 2026-08-08 (correct stress
-  // graded INCORRECT, accent rendering one position late and detached). It
-  // only surfaces on a stress-mark POSITION mismatch, because that is the case
-  // where Anki's character-level diff splits a chunk mid-grapheme -- which is
-  // why other mismatches never showed it.
-  //
-  // Two cases, deliberately handled separately: an nbsp immediately followed
-  // by a combining mark is Anki's artifact and is dropped outright, so the
-  // mark re-attaches to its base letter; any other nbsp becomes an ordinary
-  // space. Today's Anki preserves real spaces via `white-space: pre-wrap`
-  // rather than entity-encoding them, so the second case shouldn't arise --
-  // but phrase notes like ua-lexeme-0532 ("розве́дення ове́ць") do contain real
-  // spaces, and grading shouldn't silently depend on that implementation
-  // detail staying true.
+  // #typeans string (added 2026-08-18, restored 2026-08-19 -- the Option B
+  // rewrite of this block dropped it, silently reverting a fix that had
+  // already merged; test_typeans_normalization.py is what caught that, and
+  // is why it checks the emitted JS rather than only the Python).
+  // Anki's isolate_leading_mark() (rslib/src/typeanswer.rs) deliberately
+  // prepends U+00A0 to any diff chunk BEGINNING with a combining mark, so
+  // the mark renders on its own instead of stacking onto the previous
+  // chunk's last letter. That nbsp lands INSIDE a .typeGood/.typeBad span,
+  // so the reconstruction below swallows it into the typed answer and an
+  // otherwise-perfect answer compares unequal. Found on ua-lexeme-0532
+  // (2026-08-08). Restore the mark to its base letter; any remaining bare
+  // nbsp was a real space.
   function normalizeTypeansText(s) {
     return s.replace(/\\u00A0([\\u0300-\\u036F])/g, '$1').replace(/\\u00A0/g, ' ');
   }
 
-  // Per-slot euphony alternates (2026-08-04): split the same way
-  // TypingTarget_UA was joined (" / ", one segment per populated aspect
-  // slot -- Lemma, then ImperfectiveUnidirectional, then Perfective). Each
-  // slot's own alternate(s) are '|'-delimited within that slot's segment.
-  var stressSlots = targetWithStress ? targetWithStress.split(' / ') : [];
-  var noStressSlots = targetNoStress ? targetNoStress.split(' / ') : [];
-  var euphonySlotsRaw = (feedback.dataset.euphonySlots || '').normalize('NFC');
-  var euphonySlots = euphonySlotsRaw ? euphonySlotsRaw.split(' / ') : [];
-  function euphonyAltsForSlot(i) {
-    return (euphonySlots[i] || '')
-      .split('|')
-      .map(function(s) { return stripStress(s.trim()); })
-      .filter(Boolean);
+  // NB: never write a doubled curly brace in a template comment, even inside
+  // a // JS comment or an HTML comment. Anki scans the whole template text
+  // for replacements and does not know what a comment is, so it reads the
+  // brace pair as a field reference and rejects the template with "Field
+  // '...' not found". That is exactly what a "type:..." example written with
+  // braces did on 2026-08-19; test_template_field_refs.py now guards it.
+  //
+  // Slot model (2026-08-19, Option B). The typing target is still a
+  // " / "-joined string because that is what the type-answer replacement
+  // shows the learner, but grading now works from _TypingSpec, where each
+  // slot carries its own
+  // primary and alternates as one object. Nothing here depends on two
+  // strings staying index-aligned any more.
+  //
+  // SEPARATOR TOLERANCE: split on a whitespace-tolerant slash regex rather
+  // than the literal " / ".
+  // Previously a learner who typed "ходити/йти/піти" -- right forms, no
+  // spaces around the slashes -- failed the slot-count gate and graded
+  // INCORRECT outright. The separator is punctuation we render, not part of
+  // the answer being tested.
+  function splitSlots(s) {
+    var t = (s || '').trim();
+    return t ? t.split(/\\s*\\/\\s*/) : [];
+  }
+
+  var stressSlots = splitSlots(targetWithStress);
+  var noStressSlots = splitSlots(targetNoStress);
+
+  // _TypingSpec is blank on every note with no euphony data at all (573 of
+  // 585), in which case slotAlts() just returns [] and grading falls through
+  // to the plain primary/no-stress comparison. Parse defensively: a malformed
+  // spec must degrade to "no alternates", never throw and leave the learner
+  // staring at a blank feedback panel.
+  //
+  // Read from the JSON <script> block, NOT a data- attribute -- see the
+  // header comment. Silent degradation is the right behaviour for a genuinely
+  // malformed spec, but note that it is also what hid the attribute-quoting
+  // bug: every euphonic answer graded INCORRECT and nothing anywhere said
+  // why. test_typing_spec.py now parses the emitted HTML to assert the spec
+  // survives the round trip, because this catch block cannot.
+  var typingSpec = null;
+  try {
+    var specEl = document.getElementById('typing-spec');
+    var rawSpec = (specEl ? specEl.textContent : '').trim();
+    if (rawSpec) { typingSpec = JSON.parse(rawSpec); }
+  } catch (e) {
+    typingSpec = null;
+  }
+  var specSlots = (typingSpec && typingSpec.slots) || [];
+
+  // Alternates arrive STRESSED. Returning them as-is -- rather than
+  // pre-stripping the way the old per-slot euphony helper did -- is the whole
+  // point of the refactor: it lets matchSlot() below tell a perfectly-stressed
+  // alternate from an unstressed one, so the former can reach PERFECT.
+  function slotAlts(i) {
+    var slot = specSlots[i];
+    if (!slot || !slot.alts) { return []; }
+    return slot.alts.map(function(a) { return (a || '').normalize('NFC'); })
+                    .filter(Boolean);
+  }
+
+  // Grade one slot. Returns 'perfect' (matched something acceptable WITH its
+  // stress), 'correct' (matched something acceptable but unstressed), or null
+  // (matched nothing).
+  function matchSlot(typed, i) {
+    var stressed = (stressSlots[i] || '').normalize('NFC');
+    var plain = (noStressSlots[i] || stripStress(stressed)).normalize('NFC');
+    if (typed === stressed) { return 'perfect'; }
+
+    var alts = slotAlts(i);
+    for (var a = 0; a < alts.length; a++) {
+      if (typed === alts[a]) { return 'perfect'; }
+    }
+    if (typed === plain) { return 'correct'; }
+    var typedPlain = stripStress(typed);
+    for (var b = 0; b < alts.length; b++) {
+      if (typedPlain === stripStress(alts[b])) { return 'correct'; }
+    }
+    return null;
   }
 
   // Anki's own type-answer field replaces the front's <input> with a #typeans
@@ -714,54 +796,68 @@ EN_UA_BACK = """\
            '<div class="fb-label status-success">Bonus answer:</div>' +
            '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>';
   } else {
-    // Neither whole-string match hit -- evaluate per aspect slot instead of
-    // failing outright, so a doublet/triplet note only loses credit for the
-    // specific slot that's actually wrong (per-slot euphony tolerance,
-    // 2026-08-04; see compute_euphony_slots() in ua_lexeme_import.py and
-    // CLAUDE.md "Per-slot euphony tolerance"). PERFECT requires every slot
-    // to match its own stressed primary or stressed euphonic alternate;
-    // CORRECT requires every slot to match SOMETHING acceptable (primary,
-    // no-stress, or euphonic) with at least one slot short of "perfect";
-    // INCORRECT if any single slot matches nothing acceptable at all.
-    var typedSlots = typedAnswer.split(' / ');
-    var slotsAcceptable = stressSlots.length > 0 && typedSlots.length === stressSlots.length;
+    // Neither whole-string comparison hit. Grade slot by slot, so a
+    // doublet/triplet only loses credit for the slot that is actually wrong.
+    //
+    // Tiers (2026-08-19, Option B -- decisions in
+    // docs/ua-en-ua-euphony-aspect-refactor.md section 7):
+    //   PERFECT   every slot matched its primary OR an alternate, WITH stress
+    //   CORRECT   every slot matched something acceptable, at least one only
+    //             unstressed
+    //   INCORRECT any slot matched nothing acceptable
+    //
+    // The change from the previous version is that an alternate can now reach
+    // PERFECT. The old code cleared its everySlotPerfect flag the moment a
+    // slot failed to equal the *primary* -- before the alternate check ran --
+    // and then compared alternates stress-stripped on both sides, so it could
+    // not have distinguished a perfectly-stressed alternate from an unstressed
+    // one even in the right order. Craig's call: ввійти́ is not a lesser answer
+    // than уві́йти, just a different attested one.
+    var typedSlots = splitSlots(typedAnswer);
+    var slotsAcceptable = stressSlots.length > 0 &&
+                          typedSlots.length === stressSlots.length;
     var everySlotPerfect = slotsAcceptable;
-    var anyEuphonyUsed = false;
+    var anyAlternateUsed = false;
 
     if (slotsAcceptable) {
       for (var i = 0; i < stressSlots.length; i++) {
-        var typedSlot = typedSlots[i];
-        var stressSlot = stressSlots[i];
-        var noStressSlot = noStressSlots[i] || stripStress(stressSlot);
+        var typedSlot = (typedSlots[i] || '').normalize('NFC');
+        var verdict = matchSlot(typedSlot, i);
 
-        if (typedSlot === stressSlot) {
-          continue; // this slot: perfect
+        if (verdict === null) {
+          slotsAcceptable = false;
+          break;
         }
-        everySlotPerfect = false;
-        if (typedSlot === noStressSlot) {
-          continue; // this slot: correct, missing stress
+        if (verdict !== 'perfect') { everySlotPerfect = false; }
+        // Did this slot match an alternate rather than its primary? Only
+        // affects the wording of the CORRECT message.
+        if (typedSlot !== (stressSlots[i] || '').normalize('NFC') &&
+            typedSlot !== (noStressSlots[i] || stripStress(stressSlots[i] || '')).normalize('NFC')) {
+          anyAlternateUsed = true;
         }
-        if (euphonyAltsForSlot(i).indexOf(stripStress(typedSlot)) !== -1) {
-          anyEuphonyUsed = true;
-          continue; // this slot: correct, accepted euphonic alternate
-        }
-        slotsAcceptable = false;
-        break; // this slot: nothing acceptable matched -- whole answer is INCORRECT
       }
     }
 
     if (slotsAcceptable && everySlotPerfect) {
-      // Not normally reachable (exact match handled above) -- kept for
-      // safety/symmetry with the per-slot loop.
+      // Reachable now, unlike before: this is the fully-stressed euphonic
+      // alternate case, e.g. вхо́дити / ввійти́ on ua-lexeme-0115.
       html = '<div class="fb-headline status-success">' +
-             targetWithStress + ' ✓ PERFECT</div>' +
-             '<div class="fb-sub status-success">Correct with stress marks (bonus!)</div>';
+             typedAnswer + ' ✓ PERFECT</div>' +
+             '<div class="fb-sub status-success">' +
+             (anyAlternateUsed
+               ? 'Correct with stress marks — accepted variant form (bonus!)'
+               : 'Correct with stress marks (bonus!)') +
+             '</div>' +
+             (anyAlternateUsed
+               ? '<div class="fb-label status-info">Primary form:</div>' +
+                 '<div class="fb-value status-info"><b>' + targetWithStress + '</b></div>'
+               : '');
     } else if (slotsAcceptable) {
       html = '<div class="fb-headline status-warning">' +
              typedAnswer + ' ~ CORRECT</div>' +
              '<div class="fb-sub status-warning">' +
-             (anyEuphonyUsed
-               ? 'Accepted euphonic alternate and/or missing stress marks'
+             (anyAlternateUsed
+               ? 'Accepted variant form and/or missing stress marks'
                : 'Correct letters, but missing stress marks somewhere') +
              '</div>' +
              '<div class="fb-label status-success">Bonus answer:</div>' +

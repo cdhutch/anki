@@ -181,7 +181,47 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   aspect slot, mirroring `UA_PVOM_Infinitive`'s 4-template rationale), and the (d)
   audit of singlet notes whose `EuphonyNote` holds prose rather than a bare
   alternate — those produce silent dead tolerance, matching nothing and warning
-  about nothing. **Not started as code.**
+  about nothing. ~~**Not started as code.**~~
+  **Built and validated live 2026-08-19** (branch `feature/ua-typing-spec-refactor`).
+  `_TypingSpec` replaces `_EuphonySlots`; alternates now stored stressed; bugs (a),
+  (c) and (d) closed. The (d) audit found exactly one note (ua-lexeme-0353) reaching
+  the legacy fallback, holding prose; it was given a real `Lemma_Euphony` and the
+  fallback deleted. 14 typed cases confirmed by Craig against live cards — matrix in
+  `docs/ua-en-ua-euphony-aspect-refactor.md` §9.4. Option C remains undecided.
+  **Leaving this box for Craig**, as the header requires.
+
+- [ ] **Port `_TypingSpec` to `UA_PVOM_Infinitive`** (follow-up to the item above,
+  scoped by Craig 2026-08-19 as "UA_Lexeme now, PVOM as a follow-up"). PVOM still uses
+  the older single-slot `EuphonyNote` / `data-euphony` mechanism, which means its
+  euphonic alternates remain capped below PERFECT — the exact bug (a) that Option B
+  was built to close, still live on that note type. Two things to fold in while there:
+  (1) `normalizeTypeansText()` is a hand-maintained *copy* across the two setup
+  scripts, kept honest only by a test comparing their bodies — the 2026-08-19 near-miss
+  where the lexeme copy was silently deleted argues for a single shared source;
+  (2) PVOM's template dict uses the key `name` where the lexeme script uses `Name`,
+  which is harmless to AnkiConnect but has already cost one guard a silent blind spot.
+
+- [ ] **62 CNSF notes where `TypingAnswer` disagrees with the stress-stripped slot
+  join** (found 2026-08-19 during the `_TypingSpec` rollout). e.g. ua-lexeme-0114 holds
+  `приходити` where the note is a doublet needing `приходити / прийти`; ua-lexeme-0488
+  holds the Perfective instead of the Lemma. **Not a live bug** — `import_note()`
+  overwrites `TypingAnswer` from `compute_typing_target()[1]` for every doublet and
+  triplet, so Anki has always had the right value. The drift is confined to the CNSF
+  files, which matters only because CNSF is supposed to be the source of truth and a
+  reader of 0114 would draw the wrong conclusion about what gets typed. Natural home is
+  a `cnsf_canonicalize.py` pass, which already computes the same join for field-order
+  purposes. Low priority, zero learner impact.
+
+- [ ] **ua-lexeme-0153 / 0379 — example sentences after the в-/у- flip** (2026-08-19,
+  needs Craig, not code). Both notes had their headword direction corrected to в- per
+  Shevchuk. Their `UA_Example` sentences still use the у- form, deliberately: в/у
+  alternation is *phonetically conditioned*, and in 0379 ("Технік установлює нове
+  обладнання") the у- form is arguably the correct choice after a consonant, so
+  mechanically tracking the headword could make the example worse rather than better.
+  Wants a read against the orthography, not a find-and-replace.
+  ~~`Source_URL` on both still points at the у- spellings.~~ **Done — Craig repointed
+  both at the в- forms 2026-08-19**, matching the house pattern in 0115/0211/0377/0484.
+  (Claude had left these rather than assert a URL it had not opened.)
 - [x] **UA note-type field order not preserved across `make ua-setup-*` runs**
   (flagged 2026-08-11) — **Fixed and personally verified 2026-08-18** (branch
   `fix/ua-field-order-enforcement`, commit `5e9f2e4`). Checked off against live Anki,
