@@ -190,16 +190,29 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `docs/ua-en-ua-euphony-aspect-refactor.md` §9.4. Option C remains undecided.
   **Leaving this box for Craig**, as the header requires.
 
-- [ ] **Port `_TypingSpec` to `UA_PVOM_Infinitive`** (follow-up to the item above,
-  scoped by Craig 2026-08-19 as "UA_Lexeme now, PVOM as a follow-up"). PVOM still uses
-  the older single-slot `EuphonyNote` / `data-euphony` mechanism, which means its
-  euphonic alternates remain capped below PERFECT — the exact bug (a) that Option B
-  was built to close, still live on that note type. Two things to fold in while there:
-  (1) `normalizeTypeansText()` is a hand-maintained *copy* across the two setup
-  scripts, kept honest only by a test comparing their bodies — the 2026-08-19 near-miss
-  where the lexeme copy was silently deleted argues for a single shared source;
-  (2) PVOM's template dict uses the key `name` where the lexeme script uses `Name`,
-  which is harmless to AnkiConnect but has already cost one guard a silent blind spot.
+- [ ] **`UA_PVOM_Infinitive` euphonic alternates are still capped below PERFECT**
+  (bug (a), one-slot version — follow-up scoped by Craig 2026-08-19 as "UA_Lexeme now,
+  PVOM as a follow-up"; deferred same day). **This does NOT need `_TypingSpec`** — an
+  earlier draft of this item said it did, wrongly. `_TypingSpec` exists to remove
+  *positional alignment* between two joined strings; PVOM has four card templates each
+  testing exactly one form, so there is no join, no slot indexing, and nothing to align.
+  The JSON would be pure overhead. The real defect is a single line in `FEEDBACK_SCRIPT`:
+
+      } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer).normalize('NFC')) !== -1) {
+
+  It stress-strips both sides and the branch hardcodes `✓ CORRECT / Accepted alternate
+  spelling`, so `уходити` and `ухо́дити` are indistinguishable and neither can reach
+  PERFECT. Fix: compare stressed first and add a PERFECT branch above the existing
+  CORRECT one. **No data migration and no `make ua-pvom`** — the stored `*_Euphony`
+  values are already stressed under the 2026-08-18 authoring convention (enforced by
+  `check_euphony_stress.py`), so it is a template change plus `make ua-setup-pvom`.
+  `ua-pvom-0012` has all four euphony fields stressed and is the note to validate on.
+  Two things worth folding in while there: (1) `normalizeTypeansText()` is a
+  hand-maintained *copy* across the two setup scripts, kept honest only by a test
+  comparing their bodies — the 2026-08-19 near-miss where the lexeme copy was silently
+  deleted argues for a single shared source; (2) PVOM's template dict uses the key
+  `name` where the lexeme script uses `Name`, harmless to AnkiConnect but it has already
+  cost one guard a silent blind spot.
 
 - [ ] **62 CNSF notes where `TypingAnswer` disagrees with the stress-stripped slot
   join** (found 2026-08-19 during the `_TypingSpec` rollout). e.g. ua-lexeme-0114 holds
