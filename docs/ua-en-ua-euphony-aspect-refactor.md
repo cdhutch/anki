@@ -1,6 +1,9 @@
 # EN→UA Euphony + Verbal-Aspect Refactor — Design Scoping
 
-**Status:** design only. No code, no field changes, no template changes.
+**Status:** ~~design only. No code, no field changes, no template changes.~~ →
+**Option B implemented and validated live in Anki, 2026-08-19.** Bugs (a), (b),
+(c) and (d) are all closed. Option C remains undecided. §9 records what shipped,
+the two bugs the rollout itself introduced, and the validation matrix.
 **Written:** 2026-08-18, by Claude, at Craig's request (CLAUDE-work-queue.md,
 "EN→UA euphony + verbal-aspect refactor").
 **Decisions needed from Craig** are collected in §7. Nothing in §4–§6 should be
@@ -298,3 +301,150 @@ around it without swallowing or re-breaking it.
 - `tools/anki/setup/setup_ua_pvom_note_type.py` → `FEEDBACK_SCRIPT`, the
   single-slot version of this same mechanism, and the precedent for Option C
 - `git show a5b4a15:tools/anki/setup/setup_ua_note_types.py`
+
+---
+
+## 9. What actually shipped (2026-08-19)
+
+Added after implementation. §1–§8 are left as written on 2026-08-18 so the
+design reasoning stays readable against what it turned into.
+
+### 9.1 The change
+
+`_EuphonySlots` (a second `" / "`-joined string, index-aligned with
+`TypingTarget_UA` by convention only) is gone. `_TypingSpec` replaces it:
+compact JSON, one object per populated aspect slot, primary and alternates
+travelling together.
+
+```json
+{"slots":[{"primary":"вхо́дити","alts":["ухо́дити"]},
+          {"primary":"ввійти́","alts":["увійти́"]}]}
+```
+
+Alternates are stored **stressed**. That single change is what closes (a): the
+old mechanism stripped stress from both sides before comparing, so it could not
+distinguish "euphonic alternate, perfectly stressed" from "euphonic alternate,
+no stress" — both landed in CORRECT and PERFECT was structurally unreachable.
+
+Built by `compute_typing_spec()` in `ua_lexeme_import.py`; consumed by the
+grading block in `EN_UA_BACK`. `FIELDS` is unchanged in length (38): a single
+in-place swap at index 31. **The CNSF corpus needed no change** — both fields
+are computed at import time, and `_EuphonySlots` was populated on 0 of 585
+notes.
+
+12 of 585 notes carry euphony data: `0115 0124 0153 0211 0281 0353 0377 0379
+0484 0488 0581 0584`. The other 573 get a blank spec and fall through to plain
+primary/no-stress comparison.
+
+### 9.2 Bugs (b), (c), (d)
+
+- **(b)** landed standalone first, as planned, on `fix/typeans-combining-mark-nbsp`.
+  See 9.3 — it did not survive this refactor unaided.
+- **(c)** closed: `splitSlots()` splits on `/\s*\/\s*/`, so `ходити/йти/піти`
+  grades the same as `ходити / йти / піти`.
+- **(d)** audited and closed. Exactly **one** note corpus-wide reached the
+  legacy whole-note `EuphonyNote` fallback: `ua-lexeme-0353`. Its `EuphonyNote`
+  held explanatory prose, not a bare alternate, so the fallback was comparing a
+  whole sentence as a spelling — matching nothing and warning about nothing.
+  Dead tolerance that looked live. 0353 was given a real `Lemma_Euphony`
+  (`уве́чері`, lifted verbatim from its own prose) and the fallback was deleted;
+  it had zero remaining users.
+
+### 9.3 Two bugs the rollout itself introduced
+
+Both are worth recording because both were **silent**, and because the tests
+that should have caught them were the ones that failed.
+
+**A merged fix was reverted by rewriting around it.** §7 notes that (b) was
+deliberately landed as its own `normalizeTypeansText()` helper *so that the
+Option B rewrite could replace the grading logic without swallowing it*. The
+rewrite swallowed it anyway — the helper and its call site both vanished, and
+the ua-lexeme-0532 combining-mark bug came back. Nothing in the Python-level
+tests noticed. `test_typeans_normalization.py` caught it, because it asserts on
+the **emitted JavaScript** rather than on any Python function's return value.
+The helper is now restored byte-identical to the surviving copy in
+`setup_ua_pvom_note_type.py`, and `test_both_scripts_emit_identical_helper_bodies`
+enforces that they stay in sync.
+
+**The spec was shipped in an HTML attribute, which silently truncated it.**
+First version used `data-typing-spec="…"` on the `#feedback` div. Anki does
+**not** HTML-escape field content — it splices the raw text in — so the JSON's
+own double quotes closed the attribute at the first one. The browser saw
+`data-typing-spec="{"`, `JSON.parse` threw, and the defensive `catch` degraded
+to "no alternates". Every euphonic answer graded INCORRECT.
+
+What made this hard to read: the *correct-answer* lines still rendered
+perfectly, because `data-with-stress` and `data-no-stress` sit in **earlier**
+attributes that parsed fine. It presented as a grading-logic bug. The tell was
+that `ua-lexeme-0219` — one of the 573 notes with a blank spec — graded both
+tiers correctly.
+
+The JSON now lives in `<script type="application/json" id="typing-spec">`, read
+via `textContent`. No attribute quoting to get wrong.
+
+The original test for this asserted the attribute was **present**, reasoning
+that `{{text:}}` avoided HTML-escaping. Exactly backwards, and it passed
+happily while the feature was dead. Its replacement,
+`test_spec_survives_being_rendered_into_the_template`, renders the real
+`EN_UA_BACK` the way Anki does, parses it with an HTML parser, and asserts the
+JSON comes back byte-identical and re-parses. No Python-level test of
+`compute_typing_spec()` could have caught this: the spec was correct, the
+template was wrong.
+
+**Related, found the same day:** a `{{type:...}}` example written inside a
+template *comment* broke `updateModelTemplates` outright (`Field '...' not
+found`). Anki parses replacements inside comments — JS `//` and HTML `<!-- -->`
+alike. An identical brace-wrapped example had been sitting dormant in
+`UA_EN_FRONT` since 2026-08-04. `tests/ua/test_template_field_refs.py` now
+checks every replacement in all 13 templates across both setup scripts.
+
+### 9.4 Validation (live in Anki, 2026-08-19)
+
+All cases confirmed by Craig against the real cards, matching a node harness run
+against the real emitted template.
+
+| Note | Typed | Tier |
+|---|---|---|
+| 0115 | `вхо́дити / ввійти́` | PERFECT |
+| 0115 | `ухо́дити / увійти́` | PERFECT ← the case Option B exists for |
+| 0115 | `ухо́дити / ввійти́` | PERFECT (mixed alt + primary) |
+| 0115 | `вхо́дити/ввійти́` | PERFECT (bug (c)) |
+| 0115 | `уходити / увійти` | CORRECT |
+| 0115 | `вхо́дити / зайти́` | INCORRECT |
+| 0379 | `встано́влювати / встанови́ти` | PERFECT |
+| 0379 | `устано́влювати / установи́ти` | PERFECT |
+| 0581 | `ходи́ти / іти́ / піти́` | PERFECT ← alternate on the MIDDLE slot |
+| 0581 | `ходи́ти / йти / піти́` | PERFECT |
+| 0581 | `ходити / іти / піти` | CORRECT |
+| 0219 | `перекида́ти / переки́нути` | PERFECT (blank spec, control) |
+| 0219 | `перекидати / перекинути` | CORRECT |
+| 0532 | `розве́дення ове́ць` | PERFECT (bug (b) regression check) |
+
+`0581` matters disproportionately: it is the only note whose alternate sits on
+`ImperfectiveUnidirectional`, so it is the sole test that slot indexing is
+genuinely positional rather than accidentally working because every other
+alternate happened to sit on slot 0 or slot 2.
+
+### 9.5 Open, deferred
+
+- **Option C** (per-slot cards) — still unscoped, unchanged from §5.
+- **Port `_TypingSpec` to `UA_PVOM_Infinitive`.** That note type still uses the
+  older single-slot `EuphonyNote`/`data-euphony` mechanism, and its
+  `normalizeTypeansText()` is a hand-maintained copy rather than a shared
+  source. Craig scoped UA_Lexeme first, PVOM as a follow-up.
+- **62 notes where CNSF `TypingAnswer` disagrees with the stress-stripped slot
+  join** (e.g. `ua-lexeme-0114` holds `приходити`, should be
+  `приходити / прийти`; `0488` holds the Perfective instead of the Lemma). Not
+  a live bug — `import_note()` overwrites `TypingAnswer` from
+  `compute_typing_target()[1]` for every doublet/triplet, so Anki has always had
+  the right value. The drift is confined to the CNSF files, which is awkward
+  only because CNSF is meant to be the source of truth. Candidate for a
+  `cnsf_canonicalize.py` pass, which already computes the same join.
+- **`ua-lexeme-0153` / `0379` example sentences.** Both notes had their headword
+  direction flipped to в- on 2026-08-19. Their `UA_Example` sentences still use
+  the у- form, deliberately left alone: в/у alternation is phonetically
+  conditioned, and in `0379` ("Технік установлює…") the у- form is arguably the
+  *correct* choice after a consonant. Needs Craig's call, not a mechanical edit.
+- **`Source_URL` on `0153` / `0379`** still points at the у- spellings while the
+  house pattern points it at the `Lemma`. Left unchanged rather than assert a
+  URL that has not been opened.

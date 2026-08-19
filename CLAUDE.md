@@ -517,6 +517,83 @@ nothing warns. Five decisions are open for Craig in the doc's §7; nothing shoul
 before those are answered. Worth noting for scale — only **8 of 585** notes carry any
 per-slot euphony data, so content-side migration risk for any option here is near zero.
 
+2026-08-19: **EN→UA euphony/aspect refactor — Option B built, shipped and validated live.**
+`_EuphonySlots` is retired; `_TypingSpec` replaces it (compact JSON, one object per populated
+aspect slot, primary and alternates travelling together — `{"slots":[{"primary":"вхо́дити",
+"alts":["ухо́дити"]},…]}`). Alternates are stored **stressed**, which is the whole point: the
+old mechanism stripped stress from both sides before comparing, so a fully-stressed euphonic
+answer was structurally incapable of reaching PERFECT. `FIELDS` stays 38 fields — a single
+in-place swap at index 31 — and **the CNSF corpus needed no change at all**, since both fields
+are computed at import and `_EuphonySlots` was populated on 0 of 585 notes. Bugs (a), (c) and
+(d) from the design doc are closed alongside (b), which landed standalone the day before. The
+(d) audit found exactly **one** note corpus-wide reaching the legacy whole-note `EuphonyNote`
+fallback — ua-lexeme-0353 — and its `EuphonyNote` held explanatory prose rather than a bare
+alternate, so the fallback was comparing a whole sentence as a spelling: matching nothing,
+warning about nothing. Dead tolerance that looked live. 0353 got a real `Lemma_Euphony` and the
+fallback was deleted with zero remaining users. Validated live across 14 typed cases on 0115 /
+0219 / 0379 / 0532 / 0581 — including `ухо́дити / увійти́` → PERFECT (the case the refactor
+exists for) and `ходи́ти / іти́ / піти́` → PERFECT, which matters disproportionately because 0581
+is the only note whose alternate sits on the **middle** slot and therefore the only real test
+that slot indexing is positional rather than accidentally working. Full writeup, including the
+validation matrix, in [docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md) §9.
+
+2026-08-19: **Two silent self-inflicted bugs during that rollout, both worth remembering.**
+(1) **A merged fix was reverted by rewriting around it.** The design doc explicitly noted that
+`normalizeTypeansText()` (the 2026-08-18 combining-mark fix) was landed as its own helper *so
+that* the Option B rewrite could replace the grading logic without swallowing it. The rewrite
+swallowed it anyway — helper and call site both vanished, and the ua-lexeme-0532 bug came back
+silently. What caught it was `test_typeans_normalization.py`, which asserts on the **emitted
+JavaScript** rather than on any Python function's return value; no amount of testing
+`compute_*()` would have seen it. (2) **Anki does not HTML-escape field content.** `_TypingSpec`
+first shipped as `data-typing-spec="…"` on the `#feedback` div; the JSON's own double quotes
+closed the attribute at the first one, the browser saw `data-typing-spec="{"`, `JSON.parse`
+threw, and the defensive `catch` degraded to "no alternates" — so every euphonic answer graded
+INCORRECT while the *correct-answer* lines rendered perfectly, because those sit in **earlier**
+attributes that parsed fine. That split is what made it present as a grading-logic bug. The tell
+was ua-lexeme-0219 (blank spec) grading both tiers correctly. Fix: the JSON now lives in
+`<script type="application/json" id="typing-spec">`, read via `textContent` — no attribute
+quoting to get wrong. The test that should have caught this asserted the attribute was
+*present*, reasoning that `{{text:}}` avoided HTML-escaping — exactly backwards, and it passed
+happily while the feature was dead. Its replacement renders the real `EN_UA_BACK` the way Anki
+does, parses it with an HTML parser, and asserts the JSON survives byte-identical.
+
+2026-08-19: **Anki parses field replacements inside template comments.** `make ua-setup-lexeme`
+died with `Card template 2 in note type 'UA_Lexeme' has a problem.<br>Field '...' not found.`
+The missing field was literally named `...`: a comment in `EN_UA_BACK` described the typing
+target using a `type:...` example wrapped in doubled curly braces. Anki scans the whole template
+body and has no concept of a comment — not JS `//`, not HTML `<!-- -->` — so prose about
+templates becomes template code. An identical brace-wrapped example had been sitting **dormant
+in `UA_EN_FRONT` since 2026-08-04**; Anki appears to tolerate an unresolvable type-replacement
+on a *front* while rejecting it on a *back*, so the repo carried the bug for two weeks with
+nothing to show for it. Both are fixed. New guard: `tests/ua/test_template_field_refs.py` checks
+every `{{...}}` in all 13 templates across both setup scripts, front and back, against that
+model's real field list. Writing it also surfaced that `setup_ua_note_types.py` spells the
+template key `Name` while `setup_ua_pvom_note_type.py` spells it `name` — a guard assuming
+either one would have silently skipped the other note type entirely. Note the failure mode:
+this aborts `update_model()` **partway through**, after `modelFieldAdd` has already run, leaving
+the live model half-migrated until the run is repeated.
+
+2026-08-19: **62 notes where CNSF `TypingAnswer` disagrees with the stress-stripped slot join**
+(e.g. ua-lexeme-0114 holds `приходити` where the note is a doublet needing
+`приходити / прийти`; ua-lexeme-0488 holds the Perfective instead of the Lemma). **Not a live
+bug** — `import_note()` overwrites `TypingAnswer` from `compute_typing_target()[1]` for every
+doublet/triplet, so Anki has always had the correct value. The drift is confined to the CNSF
+files, which matters only because CNSF is meant to be the source of truth and a reader of 0114
+would draw the wrong conclusion about what gets typed. Candidate for a `cnsf_canonicalize.py`
+pass — it already computes the same join for field-order purposes. Logged, not fixed.
+
+2026-08-19: **Headword direction normalised on two more в-/у- notes.** Per Craig's collocational
+dictionary (Shevchuk), в- forms are the headwords and у- forms the euphonic partners.
+ua-lexeme-0153 (вболіва́льник) and ua-lexeme-0379 (встано́влювати / встанови́ти) both had it
+backwards; `Lemma`↔`Lemma_Euphony` and `Perfective`↔`Perfective_Euphony` exchanged, with
+`TypingAnswer` and `Govt_Case` following `Lemma` per the house pattern in 0115/0211/0377/0484.
+Both flagged drafted-not-verified. **Deliberately left alone:** their `UA_Example` sentences
+still use the у- form, because в/у alternation is phonetically conditioned and in 0379 ("Технік
+установлює…") the у- form is arguably *correct* after a consonant — that is a verification call,
+not a mechanical edit, and still open. `Source_URL` was likewise left pointing at the у-
+spellings rather than assert a URL Claude had not opened; **Craig repointed both at the в- forms
+the same day**, matching the house pattern in 0115/0211/0377/0484.
+
 ## Workflow Notes
 
 This repo builds and maintains Anki flashcard decks across three top-level decks:

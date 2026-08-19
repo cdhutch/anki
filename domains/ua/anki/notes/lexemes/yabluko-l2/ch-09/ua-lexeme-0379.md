@@ -15,17 +15,17 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0379
-  Lemma: устано́влювати
-  Lemma_Euphony: встано́влювати
+  Lemma: встано́влювати
+  Lemma_Euphony: устано́влювати
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: установи́ти
-  Perfective_Euphony: встанови́ти
+  Perfective: встанови́ти
+  Perfective_Euphony: установи́ти
   EuphonyNote: ''
   AspectCue: ''
   EN_Gloss: to establish, set up, install (something)
-  Govt_Case: + Acc. (установлювати щось)
+  Govt_Case: + Acc. (встановлювати щось)
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
@@ -39,11 +39,11 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: установлювати / установити
+  TypingAnswer: встановлювати / встановити
   UA_Example: Технік установлює нове обладнання в лабораторії.
   EN_Example: The technician is installing new equipment in the lab.
   Tags_Ch: ch:2.9.7
-  Source_URL: https://goroh.pp.ua/Словозміна/установлювати; https://goroh.pp.ua/Словозміна/установити;
+  Source_URL: https://goroh.pp.ua/Словозміна/встановлювати; https://goroh.pp.ua/Словозміна/встановити;
     https://goroh.pp.ua/Синонімія/встановити
   Source_Note: 'Added 2026-07-25 specifically to validate the aspect+euphony nested TypingTarget_UA
     join (both Lemma and Perfective slots have an attested euphonic partner, unlike 0211''s
@@ -51,16 +51,21 @@ fields:
     own навчити entry cross-references навчати, not учити, as its formal aspect pair, so that
     pairing wasn''t cleanly confirmable. Actual Яблуко chapter placement TBD; status:draft
     pending Craig''s review.'
-  Verification Notes: 'Горох-verified 2026-07-25. установлювати/установити: устано́влювати''s
-    Тлумачення entry lists senses place/install, organize/establish, determine, create/enact.
-    установи́ти''s own Тлумачення entry redirects "Див. устано́влювати" -- Горох''s standard
-    aspect-pair cross-reference format (same pattern confirmed for вхо́дити/увійти́ earlier).
-    Euphonic в-/у- variants: встановити is NOT a separate word -- Горох''s Синонімія/встановити
-    page lists установити as a synonym across all four of its sense groupings, confirming
-    they''re variant spellings of the same lexeme, not distinct words (same evidence pattern
-    used to confirm уїжджати/уїхати for входити, ua-pvom-0012). Stress confirmed via Горох
-    Словозміна for all four forms: устано́влювати, встано́влювати, установи́ти, встанови́ти
-    -- euphonic variants preserve the primary form''s stress position in all four cases, as
-    expected.'
+  Verification Notes: '2026-08-19: headword direction flipped -- Lemma/Lemma_Euphony and Perfective/Perfective_Euphony
+    each exchanged so the в- forms are the headwords and the у- forms the euphonic partners,
+    per Craig''s collocational dictionary (Shevchuk) and matching ua-lexeme-0115/0484/0488.
+    TypingAnswer and Govt_Case follow Lemma. All four stresses were already Горох-confirmed
+    in both directions (see PRIOR below), so no stress claim is new here. Source_URL and UA_Example
+    deliberately NOT changed -- see below. Drafted by Claude, NOT verified. PRIOR: Горох-verified
+    2026-07-25. установлювати/установити: устано́влювати''s Тлумачення entry lists senses
+    place/install, organize/establish, determine, create/enact. установи́ти''s own Тлумачення
+    entry redirects "Див. устано́влювати" -- Горох''s standard aspect-pair cross-reference
+    format (same pattern confirmed for вхо́дити/увійти́ earlier). Euphonic в-/у- variants:
+    встановити is NOT a separate word -- Горох''s Синонімія/встановити page lists установити
+    as a synonym across all four of its sense groupings, confirming they''re variant spellings
+    of the same lexeme, not distinct words (same evidence pattern used to confirm уїжджати/уїхати
+    for входити, ua-pvom-0012). Stress confirmed via Горох Словозміна for all four forms:
+    устано́влювати, встано́влювати, установи́ти, встанови́ти -- euphonic variants preserve
+    the primary form''s stress position in all four cases, as expected.'
 ---
 

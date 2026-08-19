@@ -181,7 +181,60 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   aspect slot, mirroring `UA_PVOM_Infinitive`'s 4-template rationale), and the (d)
   audit of singlet notes whose `EuphonyNote` holds prose rather than a bare
   alternate — those produce silent dead tolerance, matching nothing and warning
-  about nothing. **Not started as code.**
+  about nothing. ~~**Not started as code.**~~
+  **Built and validated live 2026-08-19** (branch `feature/ua-typing-spec-refactor`).
+  `_TypingSpec` replaces `_EuphonySlots`; alternates now stored stressed; bugs (a),
+  (c) and (d) closed. The (d) audit found exactly one note (ua-lexeme-0353) reaching
+  the legacy fallback, holding prose; it was given a real `Lemma_Euphony` and the
+  fallback deleted. 14 typed cases confirmed by Craig against live cards — matrix in
+  `docs/ua-en-ua-euphony-aspect-refactor.md` §9.4. Option C remains undecided.
+  **Leaving this box for Craig**, as the header requires.
+
+- [ ] **`UA_PVOM_Infinitive` euphonic alternates are still capped below PERFECT**
+  (bug (a), one-slot version — follow-up scoped by Craig 2026-08-19 as "UA_Lexeme now,
+  PVOM as a follow-up"; deferred same day). **This does NOT need `_TypingSpec`** — an
+  earlier draft of this item said it did, wrongly. `_TypingSpec` exists to remove
+  *positional alignment* between two joined strings; PVOM has four card templates each
+  testing exactly one form, so there is no join, no slot indexing, and nothing to align.
+  The JSON would be pure overhead. The real defect is a single line in `FEEDBACK_SCRIPT`:
+
+      } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer).normalize('NFC')) !== -1) {
+
+  It stress-strips both sides and the branch hardcodes `✓ CORRECT / Accepted alternate
+  spelling`, so `уходити` and `ухо́дити` are indistinguishable and neither can reach
+  PERFECT. Fix: compare stressed first and add a PERFECT branch above the existing
+  CORRECT one. **No data migration and no `make ua-pvom`** — the stored `*_Euphony`
+  values are already stressed under the 2026-08-18 authoring convention (enforced by
+  `check_euphony_stress.py`), so it is a template change plus `make ua-setup-pvom`.
+  `ua-pvom-0012` has all four euphony fields stressed and is the note to validate on.
+  Two things worth folding in while there: (1) `normalizeTypeansText()` is a
+  hand-maintained *copy* across the two setup scripts, kept honest only by a test
+  comparing their bodies — the 2026-08-19 near-miss where the lexeme copy was silently
+  deleted argues for a single shared source; (2) PVOM's template dict uses the key
+  `name` where the lexeme script uses `Name`, harmless to AnkiConnect but it has already
+  cost one guard a silent blind spot.
+
+- [ ] **62 CNSF notes where `TypingAnswer` disagrees with the stress-stripped slot
+  join** (found 2026-08-19 during the `_TypingSpec` rollout). e.g. ua-lexeme-0114 holds
+  `приходити` where the note is a doublet needing `приходити / прийти`; ua-lexeme-0488
+  holds the Perfective instead of the Lemma. **Not a live bug** — `import_note()`
+  overwrites `TypingAnswer` from `compute_typing_target()[1]` for every doublet and
+  triplet, so Anki has always had the right value. The drift is confined to the CNSF
+  files, which matters only because CNSF is supposed to be the source of truth and a
+  reader of 0114 would draw the wrong conclusion about what gets typed. Natural home is
+  a `cnsf_canonicalize.py` pass, which already computes the same join for field-order
+  purposes. Low priority, zero learner impact.
+
+- [ ] **ua-lexeme-0153 / 0379 — example sentences after the в-/у- flip** (2026-08-19,
+  needs Craig, not code). Both notes had their headword direction corrected to в- per
+  Shevchuk. Their `UA_Example` sentences still use the у- form, deliberately: в/у
+  alternation is *phonetically conditioned*, and in 0379 ("Технік установлює нове
+  обладнання") the у- form is arguably the correct choice after a consonant, so
+  mechanically tracking the headword could make the example worse rather than better.
+  Wants a read against the orthography, not a find-and-replace.
+  ~~`Source_URL` on both still points at the у- spellings.~~ **Done — Craig repointed
+  both at the в- forms 2026-08-19**, matching the house pattern in 0115/0211/0377/0484.
+  (Claude had left these rather than assert a URL it had not opened.)
 - [x] **UA note-type field order not preserved across `make ua-setup-*` runs**
   (flagged 2026-08-11) — **Fixed and personally verified 2026-08-18** (branch
   `fix/ua-field-order-enforcement`, commit `5e9f2e4`). Checked off against live Anki,
