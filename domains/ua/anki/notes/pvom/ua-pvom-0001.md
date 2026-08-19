@@ -12,18 +12,22 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:pvom_infinitive
-- stress:unverified
+- stress:verified
 fields:
   NoteID: ua-pvom-0001
   Prefix: про
   Walking_Multi_UA: прохо́дити
   Walking_Multi_Typing: проходити
+  Walking_Multi_Euphony: ''
   Walking_Uni_UA: пройти́
   Walking_Uni_Typing: пройти
+  Walking_Uni_Euphony: ''
   Vehicle_Multi_UA: проїжджа́ти
   Vehicle_Multi_Typing: проїжджати
+  Vehicle_Multi_Euphony: ''
   Vehicle_Uni_UA: прої́хати
   Vehicle_Uni_Typing: проїхати
+  Vehicle_Uni_Euphony: ''
   Tags_Ch: ch:2.9.4
   Source_Note: Verified via Горох (Тлумачення) 2026-07-21.
   Verification Notes: ''

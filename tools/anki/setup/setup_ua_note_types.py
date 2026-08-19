@@ -616,6 +616,37 @@ EN_UA_BACK = """\
   var targetNoStress = (feedback.dataset.noStress || '').normalize('NFC');
   function stripStress(s) { return s.replace(/́/g, ''); }
 
+  // Strip Anki's combining-mark isolation artifact out of a reconstructed
+  // #typeans string (added 2026-08-18).
+  //
+  // Anki's own diff renderer deliberately prepends U+00A0 to any chunk that
+  // BEGINS with a combining mark -- rslib/src/typeanswer.rs:
+  //
+  //     /// Prefixes a leading mark character with a non-breaking space to
+  //     /// prevent it from joining the previous token.
+  //     fn isolate_leading_mark(text: &str) -> Cow<'_, str> { ... }
+  //
+  // That nbsp lands INSIDE a .typeGood/.typeBad span, so the reconstruction
+  // loop below concatenates it into the typed answer -- which then matches
+  // nothing, and renders with a visible gap before what looks like a detached
+  // accent. This is the ua-lexeme-0532 bug reported 2026-08-08 (correct stress
+  // graded INCORRECT, accent rendering one position late and detached). It
+  // only surfaces on a stress-mark POSITION mismatch, because that is the case
+  // where Anki's character-level diff splits a chunk mid-grapheme -- which is
+  // why other mismatches never showed it.
+  //
+  // Two cases, deliberately handled separately: an nbsp immediately followed
+  // by a combining mark is Anki's artifact and is dropped outright, so the
+  // mark re-attaches to its base letter; any other nbsp becomes an ordinary
+  // space. Today's Anki preserves real spaces via `white-space: pre-wrap`
+  // rather than entity-encoding them, so the second case shouldn't arise --
+  // but phrase notes like ua-lexeme-0532 ("розве́дення ове́ць") do contain real
+  // spaces, and grading shouldn't silently depend on that implementation
+  // detail staying true.
+  function normalizeTypeansText(s) {
+    return s.replace(/\\u00A0([\\u0300-\\u036F])/g, '$1').replace(/\\u00A0/g, ' ');
+  }
+
   // Per-slot euphony alternates (2026-08-04): split the same way
   // TypingTarget_UA was joined (" / ", one segment per populated aspect
   // slot -- Lemma, then ImperfectiveUnidirectional, then Perfective). Each
@@ -651,7 +682,9 @@ EN_UA_BACK = """\
       }
     }
     if (chunks.length) {
-      typedAnswer = chunks.map(function(el) { return el.textContent; }).join('').normalize('NFC');
+      typedAnswer = normalizeTypeansText(
+        chunks.map(function(el) { return el.textContent; }).join('')
+      ).normalize('NFC');
     }
     // Hide Anki's raw per-character diff (answer side only) -- it can
     // visually detach combining stress marks from their base letter (renders

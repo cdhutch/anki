@@ -195,3 +195,71 @@ class TestSingleSourceOfTruth:
                     if root in ("__future__", "tools"):
                         continue
                     assert root in stdlib, f"{mod.__name__} imports non-stdlib {root!r}"
+
+
+class TestAlwaysPresentOptionalFields:
+    """The always-present-blank convention (CLAUDE.md item 17), extended to
+    UA_PVOM_Infinitive's *_Euphony fields 2026-08-18.
+
+    These fields had drifted the same way UA_Lexeme's optional fields once had:
+    11 of 13 PVOM notes carried no *_Euphony key at all, one carried all four
+    populated, one carried all four blank. Nothing caught it, because a missing
+    optional key is indistinguishable from a deliberately-unused one unless the
+    convention is enforced.
+    """
+
+    PVOM_EUPHONY = (
+        "Walking_Multi_Euphony",
+        "Walking_Uni_Euphony",
+        "Vehicle_Multi_Euphony",
+        "Vehicle_Uni_Euphony",
+    )
+
+    def _pvom(self, fields):
+        return {
+            "schema": "cnsf/v0",
+            "domain": "ua",
+            "note_type": "ua_pvom_infinitive",
+            "note_id": "ua-pvom-0001",
+            "anki": {"model": "UA_PVOM_Infinitive", "deck": "UA::Recognition::PVOM"},
+            "tags": ["domain:ua"],
+            "fields": fields,
+        }
+
+    def test_missing_euphony_keys_are_added_blank(self):
+        out = cc.canonicalize_meta(self._pvom({"NoteID": "ua-pvom-0001", "Prefix": "про"}),
+                                   Path("ua-pvom-0001.md"))
+        for k in self.PVOM_EUPHONY:
+            assert out["fields"][k] == "", k
+
+    def test_populated_euphony_values_are_not_clobbered(self):
+        acute = chr(0x0301)
+        val = "ухо" + acute + "дити"
+        out = cc.canonicalize_meta(
+            self._pvom({"NoteID": "ua-pvom-0012", "Walking_Multi_Euphony": val}),
+            Path("ua-pvom-0012.md"),
+        )
+        assert out["fields"]["Walking_Multi_Euphony"] == val
+
+    def test_added_keys_land_in_constant_order_not_appended(self):
+        """setdefault appends to the dict, so ordering has to run after it --
+        otherwise the freshly-added keys strand at the end, which is the exact
+        drift this whole area keeps producing."""
+        out = cc.canonicalize_meta(self._pvom({"NoteID": "ua-pvom-0001", "Prefix": "про"}),
+                                   Path("ua-pvom-0001.md"))
+        keys = list(out["fields"].keys())
+        const = [f for f in cc.CANON_FIELD_ORDER["ua_pvom_infinitive"] if f in set(keys)]
+        assert keys == const
+
+    def test_other_note_types_do_not_gain_pvom_fields(self):
+        out = cc.canonicalize_meta(
+            {
+                "schema": "cnsf/v0", "domain": "ua", "note_type": "ua_grammar",
+                "note_id": "ua-grammar-0001",
+                "anki": {"model": "UA_Grammar", "deck": "UA::Test"},
+                "tags": ["domain:ua"], "fields": {"NoteID": "ua-grammar-0001"},
+            },
+            Path("ua-grammar-0001.md"),
+        )
+        for k in self.PVOM_EUPHONY:
+            assert k not in out["fields"], k

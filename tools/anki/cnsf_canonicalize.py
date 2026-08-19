@@ -280,6 +280,22 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
         ):
             fields.setdefault(key, "")
 
+    # Same always-present convention extended to UA_PVOM_Infinitive's four
+    # *_Euphony fields (Craig, 2026-08-18). These had drifted exactly the way
+    # UA_Lexeme's optional fields had: 11 of 13 notes carried no *_Euphony key
+    # at all, ua-pvom-0012 carried all four populated, and ua-pvom-0013 carried
+    # all four blank -- so check_cnsf_field_schema.py reported 2/13 and the
+    # Makefile kept STRICT=1 off partly because of it. Blank-when-unused, so
+    # every PVOM note has the same field set.
+    if note_type == "ua_pvom_infinitive":
+        for key in (
+            "Walking_Multi_Euphony",
+            "Walking_Uni_Euphony",
+            "Vehicle_Multi_Euphony",
+            "Vehicle_Uni_Euphony",
+        ):
+            fields.setdefault(key, "")
+
     # Fix YAML boolean coercion in Choice fields: unquoted True/False in YAML is
     # loaded as Python bool by yaml.safe_load, then dumped as lowercase true/false.
     # Preserve the intended string value for all Choice slots.

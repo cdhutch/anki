@@ -51,6 +51,20 @@ FEEDBACK_SCRIPT = """\
   // EuphonyNote acceptance (added 2026-07-25, ported from UA_Lexeme's EN_UA_BACK) --
   // bare/pipe-delimited alternates, stress-stripped + NFC-normalized before comparison.
   function stripStress(s) { return s.replace(/\u0301/g, ''); }
+
+  // Strip Anki's combining-mark isolation artifact out of a reconstructed
+  // #typeans string (added 2026-08-18) -- mirror of normalizeTypeansText() in
+  // setup_ua_note_types.py's EN_UA_BACK; see that copy for the full writeup.
+  // Short version: Anki's isolate_leading_mark() (rslib/src/typeanswer.rs)
+  // deliberately prepends U+00A0 to any diff chunk BEGINNING with a combining
+  // mark, and that nbsp lands inside a .typeGood/.typeBad span, so the
+  // reconstruction below swallows it. Found on UA_Lexeme (ua-lexeme-0532,
+  // 2026-08-08); this script uses the identical reconstruction technique, so
+  // it has the identical bug -- every PVOM typing answer carries a stress
+  // mark, so any stress-position mismatch here hits it too.
+  function normalizeTypeansText(s) {
+    return s.replace(/\\u00A0([\\u0300-\\u036F])/g, '$1').replace(/\\u00A0/g, ' ');
+  }
   var euphonyRaw = feedback.dataset.euphony || '';
   var euphonyAlts = euphonyRaw.split('|')
     .map(function(s) { return stripStress(s.trim()).normalize('NFC'); })
@@ -82,7 +96,9 @@ FEEDBACK_SCRIPT = """\
       }
     }
     if (chunks.length) {
-      typedAnswer = chunks.map(function(el) { return el.textContent; }).join('');
+      typedAnswer = normalizeTypeansText(
+        chunks.map(function(el) { return el.textContent; }).join('')
+      );
     }
     // Hide Anki's raw per-character diff here (answer side only -- this
     // script never runs on the front, so the front's input box is untouched).

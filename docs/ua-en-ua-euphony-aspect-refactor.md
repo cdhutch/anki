@@ -109,6 +109,15 @@ strongest argument for §5's structured representation.
 
 ### (b) The detached stress mark — root cause found, no DevTools needed
 
+> **FIXED 2026-08-18**, standalone per decision 3 below, branch
+> `fix/typeans-combining-mark-nbsp`. `normalizeTypeansText()` added to both
+> `EN_UA_BACK` and `setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT` (PVOM uses
+> the identical reconstruction technique, so it had the identical bug, and every
+> PVOM answer carries a stress mark). Covered by
+> `tests/ua/test_typeans_normalization.py`. **Not yet on-device validated** —
+> needs `make ua-setup-lexeme` + `make ua-setup-pvom`, then a deliberate
+> wrong-stress-position answer on ua-lexeme-0532.
+
 The work queue's top bug (`ua-lexeme-0532`, `розве́дення ове́ць` misjudged
 INCORRECT with the accent rendering detached and one position late) is Anki's
 output, not the reconstruction loop. From Anki's `rslib/src/typeanswer.rs`:
@@ -244,6 +253,26 @@ Steps 1–3 leave the CNSF corpus untouched and are reversible by re-running
 ---
 
 ## 7. Decisions needed from Craig
+
+**All answered by Craig, 2026-08-18.** Recorded inline below; the questions are
+kept rather than replaced so the reasoning that produced each answer stays
+readable.
+
+> 1. **Option B.** Build the structured `_TypingSpec`.
+> 2. **Yes — a fully-stressed euphonic alternate earns PERFECT.** `ввійти́` is
+>    not a lesser answer than `уві́йти`, just a different attested one. This is
+>    what forces the data-shape change: the current comparison stress-strips
+>    both sides and structurally cannot distinguish a stressed alternate from an
+>    unstressed one, so Option A was never actually sufficient.
+> 3. **Bug (b) lands standalone, first.** Done — see the status note under §4(b).
+> 4. Option C (per-slot cards) — not yet decided; still to be scoped separately.
+> 5. The (d) audit — not yet run.
+
+**Consequence of (1)+(2) worth noting before implementation:** the stress-mark
+fix and the euphony rewrite touch the same reconstruct-then-compare block in
+`EN_UA_BACK`. (b) was deliberately landed as its own `normalizeTypeansText()`
+helper rather than inline, so the Option B rewrite can replace the grading logic
+around it without swallowing or re-breaking it.
 
 1. **Option B — build it, or just patch in place (Option A)?** Recommendation is
    B; A cannot fully fix (a) without paying most of B's cost anyway.

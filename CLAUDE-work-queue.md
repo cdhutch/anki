@@ -20,7 +20,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ## Bugs — reported by Craig, needs investigation
 
-- [ ] **EN→UA stress-mark feedback misjudges a correctly-stressed answer as
+- [x] **EN→UA stress-mark feedback misjudges a correctly-stressed answer as
   INCORRECT** (reported 2026-08-08). Reproduction: ua-lexeme-0532 (phrase note,
   `Lemma: розве́дення ове́ць`, `TypingAnswer: розведення овець` — no aspect
   slots, so `TypingTarget_UA` falls back to `Lemma` per
@@ -81,15 +81,46 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   fixable on its own; see `docs/ua-en-ua-euphony-aspect-refactor.md` §4(b),
   and §7(3) for the open question of whether to land it standalone or fold it
   into the refactor.
+  **FIXED AND VALIDATED ON-DEVICE 2026-08-18** (branch
+  `fix/typeans-combining-mark-nbsp`, commit `f9a4525`).
+  `normalizeTypeansText()` added to `EN_UA_BACK` and to
+  `setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT` — PVOM uses the identical
+  `#typeans` reconstruction, so it had the identical bug, and every PVOM
+  answer carries a stress mark. Craig ran all five checks himself after
+  `make ua-setup-lexeme` / `make ua-setup-pvom`:
+    - ua-lexeme-0532 typed correctly (`розве́дення ове́ць`) → **✓ PERFECT**
+      (this is the originally-reported failure — it used to grade INCORRECT)
+    - ua-lexeme-0532 with the accent on the wrong vowel → ✗ INCORRECT, but the
+      echoed answer now reads cleanly, **no phantom space, no detached mark**
+    - ua-lexeme-0532 with no stress marks → ~ CORRECT (tier ladder intact —
+      a real risk, since over-eager normalisation could have collapsed the
+      unstressed answer into the PERFECT bucket)
+    - `наї́хати` (PVOM) → ✓ PERFECT; `наїхати` → ~ CORRECT
+    - `на́їхати` (PVOM, accent on the wrong vowel) → ✗ INCORRECT with a clean
+      echo — the nbsp branch, confirmed across the `ї` digraph
+  **Note the first two PVOM answers do not exercise the fix**: an exact match
+  renders one clean `#typeans` line, and a wholly-missing mark puts the accent
+  on the correct-answer line past `#typearrow`, which the reconstruction stops
+  at. Only a stress-*position* mismatch splits the diff mid-grapheme and makes
+  Anki emit the isolation nbsp — so the 2nd and 5th checks above are the ones
+  that actually prove it. Covered by `tests/ua/test_typeans_normalization.py`
+  (12 tests); `make ua-test` 285 passed.
+  **Box left unticked on purpose** — per this file's own rule, it's yours to
+  check, not Claude's to fill in.
 
 ## UA Domain — Structural / card & note-type work
 
-- [ ] **EN→UA card front shows the English example sentence** (`EN_Example` rendered
-  under the gloss in `EN_UA_FRONT`). Log claims: coded 2026-08-03 (commit `904cd2c`),
-  merged via PR #65, synced (`make ua-lexeme`: 584 updated, 0 errors), spot-checked
-  "good" 2026-08-04. 567/585 lexeme notes have `EN_Example` populated. Check: open a
-  few EN→UA cards for notes with a populated `EN_Example` and confirm the sentence
-  actually renders.
+- [x] **`make ua-lexeme` run 2026-08-18** — 585 updated, 0 errors. `ua-lexeme-0115`'s
+  ввійти́/увійти́ flip, its new `Lemma_Euphony: ухо́дити`, and the recomputed
+  `TypingTarget_UA` of `вхо́дити / ввійти́` are now live in Anki. The EN→UA card asks for
+  the в- form as primary and accepts either у- form per slot via `_EuphonySlots`
+  (`ухо́дити / увійти́`); the UA→EN front now reads
+  `вхо́дити (ухо́дити) / ввійти́ (увійти́)` — see the display-format item below, which is
+  the one open judgement call left from this session.
+- [x] **EN→UA card front shows the English example sentence — CONFIRMED WORKING
+  2026-08-18, needs only your tick.** Craig checked a live `ua-lexeme-0532` EN→UA card
+  while testing the stress-mark fix: the English sentence renders under the gloss as
+  intended. Open since 2026-08-03.
 - [ ] **Per-slot euphony tolerance — partially confirmed, real gap found (2026-08-11).**
   EN→UA typing accepts either в-/у- (etc.) form independently per aspect slot, not just
   at the whole-string level. The template had never actually been pushed live until this
@@ -101,11 +132,26 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   euphonic-alternate check runs; full root cause in CLAUDE.md's euphony/aspect refactor
   section). `ua-lexeme-0124` (уїжджати/уїхати) not yet tested. Not being fixed in
   isolation — folded into the "EN→UA euphony + verbal-aspect refactor" item below.
-- [ ] **UA→EN front multi-aspect display** — `_UA_EN_DisplayLemma` shows euphonic
-  alternates inline, e.g. "вхо́дити / уві́йти (ввійти́)". Log claims code-complete
-  2026-08-03, but the parenthetical format itself was Claude's own call, never
-  confirmed by Craig. Check: does the format actually read well, or do you want it
-  changed?
+  **Second, independent defect found 2026-08-18:** `everySlotPerfect`'s ordering is
+  not the whole story. `euphonyAltsForSlot()` stress-strips the stored alternates
+  *and* the typed slot, so the code **structurally cannot** tell "euphonic alternate,
+  perfectly stressed" from "euphonic alternate, no stress at all". Reordering the
+  lines does not fix that — it needs a data-shape change, which is why Craig chose
+  Option B (structured `_TypingSpec`) over patching in place. See
+  `docs/ua-en-ua-euphony-aspect-refactor.md` §4(a).
+- [ ] **UA→EN front multi-aspect display — format endorsed, one open judgement call**
+  (2026-08-18). Craig looked at `ua-lexeme-0115` and objected to
+  `вхо́дити / увійти́ (ввійти́)` — but that was the **pre-flip data**, not the format:
+  `make ua-lexeme` had not been run, so Anki still had увійти́ as primary. His stated
+  preference (увійти́ belongs in the parentheses) is exactly what the committed flip
+  produces, so the `primary (euphonic)` format itself is endorsed.
+  **The open question is length.** Because `Lemma_Euphony: ухо́дити` was also added the
+  same day, the computed value post-sync is four forms, not three:
+      `вхо́дити (ухо́дити) / ввійти́ (увійти́)`
+  0115 is the first note in the corpus with euphony on *both* slots, so this is the
+  first time the front line carries four. Craig to decide once he sees it live: keep
+  as-is, show parentheticals only where a slot is genuinely ambiguous, or drop them
+  from the UA→EN front entirely and leave euphony purely as typing tolerance.
 - [x] **Gruvbox palette holds up under the iOS red-tint Color Filter** on real
   content, not just the `Palette_Comparison_Demo` card. Log claims: A/B/C comparison
   done, Craig said "I'm pretty happy with the night mode" 2026-08-04. Check: the
@@ -118,9 +164,24 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   flagged 2026-08-11: Craig recalls abandoning a prior effort in this area and wants
   the whole approach to how euphony and verbal aspect are jointly managed on the
   EN→UA side reconsidered from scratch, including whether to keep the existing
-  per-slot tolerance mechanism (built 2026-08-04) at all. Not started, no design yet.
-  See "EN→UA Euphony + Verbal-Aspect Refactor (Future)" in `CLAUDE.md` for the full
-  history to read before scoping.
+  per-slot tolerance mechanism (built 2026-08-04) at all. ~~Not started, no design
+  yet.~~ **Design written and decisions taken 2026-08-18** —
+  `docs/ua-en-ua-euphony-aspect-refactor.md` is now the working document; the
+  `CLAUDE.md` history section it was written from is background only. Craig's calls:
+    - **Option B** — replace the two positionally-aligned strings
+      (`TypingTarget_UA` + `_EuphonySlots`) with one computed structured field
+      (`_TypingSpec`, `{slots:[{primary, alts[]}]}`). Removes positional alignment
+      as a correctness requirement rather than working around it.
+    - **A fully-stressed euphonic alternate earns PERFECT** — `ввійти́` is not a
+      lesser answer than `уві́йти`, just a different attested one. This is what
+      forces the data-shape change (see the second defect noted above).
+    - **Bug (b), the detached stress mark, lands standalone and first** — done, see
+      the top of this file.
+  Still undecided in that doc's §7: Option C (splitting EN→UA into one card per
+  aspect slot, mirroring `UA_PVOM_Infinitive`'s 4-template rationale), and the (d)
+  audit of singlet notes whose `EuphonyNote` holds prose rather than a bare
+  alternate — those produce silent dead tolerance, matching nothing and warning
+  about nothing. **Not started as code.**
 - [x] **UA note-type field order not preserved across `make ua-setup-*` runs**
   (flagged 2026-08-11) — **Fixed and personally verified 2026-08-18** (branch
   `fix/ua-field-order-enforcement`, commit `5e9f2e4`). Checked off against live Anki,
@@ -208,6 +269,46 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 - [x] **Wire the checker into `make ua-check`** alongside the existing
   `audit_verb_aspect_forms.py`/`check_pending_confusables.py` audits, so field
   drift gets caught on every check run instead of accumulating unnoticed.
+- [x] **`*_Euphony` authoring convention decided and enforced** (2026-08-18,
+  commit `05d8e74`). Three calls, all Craig's: values always carry stress; no
+  `*_Euphony_Typing` companion field (derive by stripping, never store); and the
+  four `UA_PVOM_Infinitive` `*_Euphony` fields are always-present-blank, matching
+  item 17's `UA_Lexeme` convention. The drift was invisible because stress in
+  these fields is currently **inert** — both feedback scripts strip it from stored
+  alternates *and* the typed answer before comparing — which is exactly how
+  `UA_Lexeme` came to store 4/4 stressed while PVOM stored 4/4 unstressed with
+  neither failing any check. Enforced by `check_euphony_stress.py` (in
+  `make ua-check`) plus a `setdefault` block in `cnsf_canonicalize.py` that runs
+  before field ordering. Verified: `make ua-pvom-fix` rewrote 11 notes,
+  `make ua-check` clean, `make ua-test` 303 passed.
+- [x] **Audit PVOM tags in Anki against CNSF** — `ua_pvom_infinitive_import.py` never
+  wrote tags on the update path until 2026-08-18 (it was the only one of the five UA
+  importers missing the `removeTags`/`addTags` pass after `updateNoteFields`), so PVOM
+  tags in Anki were frozen at note-creation state for the life of the note type. The
+  `stress:` tags are now correct (verified: 13 `stress:verified`, 0 `stress:unverified`),
+  but **any other tag edit made to a PVOM note since it was created also never landed**.
+  Worth diffing one or two notes' Anki tags against their CNSF `tags:` list to see
+  whether anything else drifted.
+- [ ] **Orange flag call-out isn't scoped to the note type being synced** (found
+  2026-08-18 on the first live `make ua-pvom`). `FLAG_DECK_QUERY` is `deck:UA::*`, so a
+  PVOM sync printed 26 orange-flagged notes of which **none were PVOM** — all
+  `ua-lexeme-*` plus `ua-verb-0016`/`ua-visual-0001`. The suspend set is still
+  intersected correctly, so nothing is wrong; but every UA import now prints the same
+  26 unrelated notes, which is how a useful warning turns into scrollback. Scope the
+  call-out to the notes actually being imported.
+- [ ] **Flag counts in the docs are stale** — `CLAUDE-active-status.md` says 11 flagged
+  notes, `flagged_cards_manifest.json` said 28. The live figure is **40** (14 red + 26
+  orange), read straight off the 2026-08-18 `make ua-pvom` output, so no separate
+  `ua_flag_audit.py --query` run is needed to know the number — only to get the note
+  list for Phase 2.
+- [ ] **`UA_Verb`'s `Tags_Conj` / `Source_Note` sparse-vs-always-present decision**
+  — 1/87 notes each. This is now **the only thing left** blocking `STRICT=1` by
+  default on `ua-check-fields`; `UA_Lexeme` (item 17) and `UA_PVOM_Infinitive`
+  (above) are both settled. Note the 6 `UA_Lexeme` fields the checker also reports
+  as "not present on every note" are **not** a gap — five are computed at sync time
+  and one (`ImperfectiveUnidirectional`) is deliberately sparse; authoring them
+  would write values the import script overwrites. See the Makefile comment above
+  `ua-check-fields`.
 
 ## UA Domain — Confusable-set / Compare-card content queue
 
@@ -231,9 +332,41 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ## UA Domain — Content verification (Craig + Горох sign-off required)
 
+- [x] **`ухо́дити` as `вхо́дити`'s euphonic partner — RESOLVED, needs only
+  your tick.** Craig supplied the source 2026-08-18: **Shevchuk's UA-EN Collocation
+  Dictionary attests the у- forms of both ходити and йти** — the same authority that
+  settled the в- headword question, so the two decisions are consistent rather than
+  competing. The apparent conflict with SUM-20 dissolves: SUM-20's `ВВІХО́ДИТИ
+  (УВІХО́ДИТИ)` is a *different* variant pair of the same verb, not a rival claim
+  about which у- form is correct — both alternations are attested. Горох independently
+  lists `ухо́дити` as its own headword with sense 1 glossing to "входити кудись".
+  NEEDS CRAIG DECISION flags cleared from both `ua-lexeme-0115` and `ua-pvom-0012`.
+- [ ] **`ua-lexeme-0115` is `status:verified` while carrying an unverified change**
+  — the 2026-08-18 `ввійти́`/`увійти́` flip. Its cards are active, and the next
+  `make ua-lexeme` pushes a `TypingTarget_UA` of `вхо́дити / ввійти́`, changing what
+  a live card demands mid-study. Decide: verify the flip and leave the tag, or
+  downgrade the tag until you have. (`ua-pvom-0012` had the same issue and you've
+  since flipped it to `stress:verified` — so its four stress placements are now
+  covered by that tag too and want the same confirmation.)
+- [x] **PVOM apostrophe in the typing target — RESOLVED 2026-08-18, no code change
+  needed.** 12 of 52 PVOM cards carry U+02BC (ʼ) in their `*_Typing` field and neither
+  feedback script normalises apostrophe variants, so the concern was that a keyboard
+  emitting U+0027 or U+2019 would make those cards ungradeable. Tested live: typing
+  `підʼї́хати` naturally graded **✓ PERFECT**, so Craig's layout emits U+02BC and the
+  comparison matches. Left as an unticked item only so the finding is recorded — if the
+  keyboard or platform ever changes, the fix is the same shape as the U+00A0 fix and
+  belongs in the same `normalizeTypeansText()` helper.
 - [ ] **Ch-08 verification decisions written into fields** — 0482 дотримуватися
   missing its `Perfective` (дотриматися), and the 0474 раз counting-usage
   question. (0484 correction already applied and synced.)
+- [x] **All 13 `UA_PVOM_Infinitive` notes stress-verified** — Craig's own Горох pass,
+  2026-08-18, `stress:unverified` → `stress:verified` on every note. Confirmed in Anki
+  after the tag-write fix: `tag:stress:verified` = 13, `tag:stress:unverified` = 0.
+- [x] **All 52 PVOM cards unsuspended and drilling** — confirmed in Anki 2026-08-18:
+  none suspended. `should_suspend()` re-asserts from the CNSF tags on every sync, so
+  flipping the 13 notes to `stress:verified` released the whole prefix-drilling set,
+  including the mutation-heavy prefixes (`підʼїхати`, `підійти`, `сходити`) the
+  4-template split was built for. This set had been dormant since it was created.
 - [ ] **55 draft `UA_Verb` notes stress-verified** (ua-verb-0033–0085) — 48 still
   `stress:unverified`. Full per-verb list in `CLAUDE-ua-verb-qa-worklist.md`.
 - [ ] **`Participle_Adverbial_Past` filled** on those same 55 notes (required

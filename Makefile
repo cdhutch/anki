@@ -919,18 +919,36 @@ ua-check-pending-confusables:
 # wired in 2026-08-11, completing CLAUDE-work-queue.md "Wire the checker
 # into make ua-check". STRICT=1 also fails on fields missing from *every*
 # note (not just unknown keys) -- off by default here because the
-# always-vs-sparse convention is only settled for UA_Lexeme's 12 fields
-# (CLAUDE.md item 17) so far, not yet for UA_Verb's Tags_Conj/Source_Note
-# or UA_PVOM_Infinitive's *_Euphony fields. Unknown keys always fail,
-# STRICT or not -- see check_cnsf_field_schema.py's own docstring.
+# always-vs-sparse convention is settled for UA_Lexeme's 12 fields
+# (CLAUDE.md item 17) and, as of 2026-08-18, for UA_PVOM_Infinitive's four
+# *_Euphony fields -- but NOT yet for UA_Verb's Tags_Conj/Source_Note
+# (1/87 each), which is the one thing still standing between here and
+# flipping STRICT on by default. Unknown keys always fail, STRICT or not --
+# see check_cnsf_field_schema.py's own docstring.
+#
+# Two different things get reported as "not present on every note", and only
+# one of them is a gap:
+#   - UA_Lexeme's 6 (0/585 each for _AspectLabel, _UA_EN_DisplayLemma,
+#     _IsHomograph, TypingTarget_UA, _EuphonySlots; 5/585 for
+#     ImperfectiveUnidirectional) are NOT drift. The first five are computed by
+#     ua_lexeme_import.py at sync time and never CNSF-authored; the sixth is
+#     deliberately sparse. Do NOT "fix" these by adding them to the notes --
+#     that would author values the import script overwrites anyway.
+#   - UA_Verb's 2 (Tags_Conj, Source_Note, 1/87 each) ARE genuine sparseness,
+#     and are the open decision referred to above.
 ua-check-fields:
 	@printf "\033[1;36m\n— CNSF field-schema consistency —\033[0m\n"
 	$(PYTHON) tools/anki/inspect/check_cnsf_field_schema.py $(if $(STRICT),--strict,)
+
+ua-check-euphony-stress:
+	@printf "\033[1;36m\n— Euphony stress marks —\033[0m\n"
+	$(PYTHON) tools/anki/inspect/check_euphony_stress.py $(if $(STRICT),--strict,)
 
 ua-check:
 	$(MAKE) ua-check-aspect
 	$(MAKE) ua-check-pending-confusables
 	$(MAKE) ua-check-fields
+	$(MAKE) ua-check-euphony-stress
 
 # ── Full audit (aggregate report) ────────────────────────────────────────────
 # Combines all four report-only checks above -- unverified stress/status,
