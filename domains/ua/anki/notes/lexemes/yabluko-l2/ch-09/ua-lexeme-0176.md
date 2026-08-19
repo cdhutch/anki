@@ -15,18 +15,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0176
   Lemma: насоло́джуватися
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: насолоди́тися
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to enjoy, take pleasure (in)
   Govt_Case: + Instr. (насолоджуватися чимось)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: насолоджуватися
   UA_Example: Ми насолоджуємося відпочинком на морі.
   EN_Example: We are enjoying our vacation by the sea.

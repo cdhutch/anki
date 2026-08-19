@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0361
   Lemma: як ті́льки
+  Lemma_Euphony: ''
   PartOfSpeech: conjunction
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: as soon as
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: як тільки
   UA_Example: Як тільки дощ ущух, вони вирушили далі.
   EN_Example: As soon as the rain let up, they set off further.

@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0018
   Lemma: худо́жник
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: artist, painter
   Govt_Case: ''
-  CounterpartForm: 'f: худо́жниця'
   IrregularForms: ''
+  CounterpartForm: 'f: худо́жниця'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: художник
   UA_Example: Художник малює красивий краєвид у парку.
   EN_Example: The artist is painting a beautiful landscape in the park.

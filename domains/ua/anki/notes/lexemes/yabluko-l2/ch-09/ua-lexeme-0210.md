@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0210
   Lemma: би́тися
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: поби́тися
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to fight, come to blows
   Govt_Case: + з + Instr. (битися з кимось)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: битися
   UA_Example: Хлопці билися на деревʼяних шаблях.
   EN_Example: The boys fought with wooden sabers.

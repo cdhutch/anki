@@ -17,19 +17,30 @@ tags:
 fields:
   NoteID: ua-lexeme-0479
   Lemma: о́ко
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: eye
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: pl. nom./acc./voc. о́чі, gen. оче́й, dat. оча́м, instr. очи́ма, loc. оча́х
     (irregular о→і stem alternation across the whole plural)
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: око
   UA_Example: Це кафе легко впадає в очі завдяки яскравій вивісці.
   EN_Example: This café easily catches the eye thanks to its bright sign.

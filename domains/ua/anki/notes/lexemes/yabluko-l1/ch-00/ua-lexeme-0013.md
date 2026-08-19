@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0013
   Lemma: співа́к
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: singer
   Govt_Case: ''
-  CounterpartForm: 'f: співа́чка'
   IrregularForms: ''
+  CounterpartForm: 'f: співа́чка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: співак
   UA_Example: Цей співак має дуже гарний голос.
   EN_Example: This singer has a very beautiful voice.

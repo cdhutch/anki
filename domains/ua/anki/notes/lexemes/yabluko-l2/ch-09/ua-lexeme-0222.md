@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0222
   Lemma: коза́цький бій
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Cossack fight/combat (traditional martial-art demonstration)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: козацький бій
   UA_Example: На ярмарку туристи із захопленням дивилися козацький бій.
   EN_Example: At the fair, tourists watched the Cossack fight with delight.

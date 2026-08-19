@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0227
   Lemma: відбива́ти мʼяч
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to hit/return the ball
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: During a long rally, what does a player keep doing with the ball?
+  EN_Gloss: to hit/return the ball
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: відбивати мʼяч
   UA_Example: Гравець мусить відбивати мʼяч точно в потрібний бік.
   EN_Example: The player has to return the ball precisely in the right direction.

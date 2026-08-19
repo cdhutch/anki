@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0359
   Lemma: виклика́ти таксі́
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to call a taxi
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: Whenever you need a ride, what's the first thing you do?
+  EN_Gloss: to call a taxi
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: викликати таксі
   UA_Example: Вона вирішила викликати таксі до вокзалу.
   EN_Example: She decided to call a taxi to the train station.

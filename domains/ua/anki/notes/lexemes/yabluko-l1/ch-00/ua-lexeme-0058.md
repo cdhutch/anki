@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0058
   Lemma: профе́сія
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: profession, occupation
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "фах (alternative: trade, craft, skilled expertise)\nScenario A: \"Asking\
     \ someone about their job formally at a dinner party\"\n→ Use: професія (formal career\
@@ -35,8 +40,11 @@ fields:
     yourself formally by career at a professional networking event.
   CompareA: професія
   CompareB: фах
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: profession · RU: профессия · FR: profession · DE: Profession'
-  EuphonyNote: ''
   TypingAnswer: професія
   UA_Example: Яка ваша професія? Я лікар.
   EN_Example: What is your profession? I am a doctor.

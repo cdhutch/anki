@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Reflexive, 1st conjugation. Govs 'з + genitive'. No 1pl imperative form
+  Verification Notes: Reflexive, 1st conjugation. Govs 'з + genitive'. No 1pl imperative form
     surfaced on Горох (left blank rather than guessed). See lexeme ua-lexeme-0483.
 ---
 

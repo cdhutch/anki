@@ -16,19 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0377
   Lemma: вболіва́ти
+  Lemma_Euphony: уболіва́ти
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: уболіва́ти
+  AspectCue: ''
   EN_Gloss: to worry/grieve for (someone)
   Govt_Case: + за + Acc. (вболівати за когось)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  Lemma_Euphony: уболіва́ти
-  EuphonyNote: уболіва́ти
   TypingAnswer: вболівати
   UA_Example: Мати вболівала за сина, який довго не дзвонив додому.
   EN_Example: The mother worried for her son, who hadn't called home in a long time.

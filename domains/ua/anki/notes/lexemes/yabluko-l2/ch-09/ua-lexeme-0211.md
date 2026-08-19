@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0211
   Lemma: вболіва́ти
+  Lemma_Euphony: уболіва́ти
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: уболіва́ти
+  AspectCue: ''
   EN_Gloss: to root for, cheer for (a team)
   Govt_Case: + за + Acc. (вболівати за когось/щось)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  Lemma_Euphony: уболіва́ти
-  EuphonyNote: уболіва́ти
   TypingAnswer: вболівати
   UA_Example: Уся сімʼя вболівала за українську команду.
   EN_Example: The whole family was rooting for the Ukrainian team.

@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0117
   Lemma: підхо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: підійти́
+  Perfective_Euphony: ''
+  EuphonyNote: 'PFV: під- + іти → підійти (epenthetic и before й)'
+  AspectCue: ''
   EN_Gloss: to approach, walk up to (on foot)
   Govt_Case: до + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: дохо́дити (approach vs. actually reach)
   Mnemonic_EN: під- = approaching, getting close but not necessarily arriving; до- = actually
@@ -31,8 +36,11 @@ fields:
     but hasn't arrived yet.
   CompareA: підходити
   CompareB: доходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: подходить / подойти (під- ≈ под-)'
-  EuphonyNote: 'PFV: під- + іти → підійти (epenthetic и before й)'
   TypingAnswer: підходити
   UA_Example: ''
   EN_Example: ''

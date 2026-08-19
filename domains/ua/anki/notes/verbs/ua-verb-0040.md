@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: 'Perfective: ви́грати. Irregular davaty-family stress shift in present
+  Verification Notes: 'Perfective: ви́грати. Irregular davaty-family stress shift in present
     tense (stress on ending, not on ''ва''). See ua-lexeme-0212.'
 ---
 

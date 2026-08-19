@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0467
   Lemma: зна́чно
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: significantly
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'набагато (ua-lexeme-0468) -- convergent synonym, not a homograph: both intensify
     a comparative ("significantly/much X-er"), but differ in register. значно is the more
@@ -38,8 +43,11 @@ fields:
     statistics.
   CompareA: зна́чно
   CompareB: набага́то
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: значно
   UA_Example: Цей готель значно дорожчий за той.
   EN_Example: This hotel is significantly more expensive than that one.

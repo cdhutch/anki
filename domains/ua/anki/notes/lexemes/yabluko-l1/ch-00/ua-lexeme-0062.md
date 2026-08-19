@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0062
   Lemma: сімʼя́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: family
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: gen.pl. сіме́й
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: сімʼя
   UA_Example: Наша сімʼя живе у великій квартирі.
   EN_Example: Our family lives in a large apartment.

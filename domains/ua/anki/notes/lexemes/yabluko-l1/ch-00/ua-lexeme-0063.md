@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0063
   Lemma: стаття́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: article (in a publication)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'gen: статті́'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: стаття
   UA_Example: Я прочитав цікаву статтю у газеті.
   EN_Example: I read an interesting article in the newspaper.

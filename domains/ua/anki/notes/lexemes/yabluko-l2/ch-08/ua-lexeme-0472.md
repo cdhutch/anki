@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0472
   Lemma: якщо́
+  Lemma_Euphony: ''
   PartOfSpeech: conjunction
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: if
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: якщо
   UA_Example: Якщо буде дощ, ми залишимось у готелі.
   EN_Example: If it rains, we'll stay at the hotel.

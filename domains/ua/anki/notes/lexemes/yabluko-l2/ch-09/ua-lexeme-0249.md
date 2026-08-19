@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0249
   Lemma: буке́т троя́нд
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: a bouquet of roses
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: букет троянд
   UA_Example: Він купив букет троянд для мами.
   EN_Example: He bought a bouquet of roses for his mother.

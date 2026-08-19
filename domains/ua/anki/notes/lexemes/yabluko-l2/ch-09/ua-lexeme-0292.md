@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0292
   Lemma: фінішува́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to finish (a race)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "закі́нчувати/закі́нчити - synonym listed by Горох (along with кінчати, avoided\
     \ per Craig's\nnote on its well-known colloquial vulgar connotation); закі́нчувати is\
@@ -37,8 +42,11 @@ fields:
   CompareScenario: The first runner breaks the tape at the finish line.
   CompareA: фінішува́ти
   CompareB: закі́нчувати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: фінішувати
   UA_Example: Перша команда фінішувала за три дні.
   EN_Example: The first team finished in three days.

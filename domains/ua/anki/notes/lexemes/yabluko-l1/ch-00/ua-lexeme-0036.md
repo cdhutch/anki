@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0036
   Lemma: імʼя́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: first name, given name
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'н.р. despite -я ending; pl: імена́'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: імʼя
   UA_Example: Моє імʼя — Тарас, я з Львова.
   EN_Example: My name is Taras, I am from Lviv.

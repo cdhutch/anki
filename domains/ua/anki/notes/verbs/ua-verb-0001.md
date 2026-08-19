@@ -40,6 +40,6 @@ fields:
   Tags_Conj: class:leader motion:walking phase:2a ch:2.9 conj:drill
   Source_Note: Class leader for motion walking prefix pattern. Base for ходити, походити,
     заходити, виходити, перейходити. Verify all forms against Горох.
-  Verification_Notes: ''
+  Verification Notes: ''
 ---
 

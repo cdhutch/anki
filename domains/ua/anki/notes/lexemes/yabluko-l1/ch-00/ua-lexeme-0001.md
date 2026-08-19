@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0001
   Lemma: акто́р
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: actor
   Govt_Case: ''
-  CounterpartForm: 'f: акто́рка'
   IrregularForms: ''
+  CounterpartForm: 'f: акто́рка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: actor · RU: актёр · FR: acteur · DE: Akteur'
-  EuphonyNote: ''
   TypingAnswer: актор
   UA_Example: Цей актор грає головну роль у новому фільмі.
   EN_Example: This actor plays the main role in the new film.

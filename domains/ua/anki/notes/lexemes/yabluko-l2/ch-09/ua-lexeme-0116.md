@@ -16,21 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0116
   Lemma: ви́ходити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ви́йти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to go out, exit (on foot)
   Govt_Case: з + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: вхо́дити (directional opposite)
   Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
   CompareScenario: Someone walks out of a building through the front door, on foot.
   CompareA: входити
   CompareB: виходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выходить / выйти'
-  EuphonyNote: ''
   TypingAnswer: виходити
   UA_Example: ''
   EN_Example: ''

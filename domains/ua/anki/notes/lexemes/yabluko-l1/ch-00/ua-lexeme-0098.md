@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0098
   Lemma: япо́нський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Japanese (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: япо́нський'
   IrregularForms: ''
+  CounterpartForm: 'm: япо́нський'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: японський
   UA_Example: Японська кухня дуже популярна в Україні.
   EN_Example: Japanese cuisine is very popular in Ukraine.

@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0050
   Lemma: о́пера
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: opera
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU/FR/DE/IT: opera'
-  EuphonyNote: ''
   TypingAnswer: опера
   UA_Example: Ми були на опері у Львівському театрі.
   EN_Example: We were at the opera at the Lviv theatre.

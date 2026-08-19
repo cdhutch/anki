@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0012
   Lemma: продаве́ць
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: salesperson, seller
   Govt_Case: ''
-  CounterpartForm: 'f: продавчи́ня'
   IrregularForms: 'gen: продавця́'
+  CounterpartForm: 'f: продавчи́ня'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: продавець
   UA_Example: Продавець показує мені нові товари.
   EN_Example: The salesperson is showing me new goods.

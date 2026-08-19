@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0303
   Lemma: спуска́тися вниз
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to go down, descend
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: Step by step, what is the climber doing on the way back down?
+  EN_Gloss: to go down, descend
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: спускатися вниз
   UA_Example: Спускатися вниз зі скелі виявилося складніше, ніж підніматися.
   EN_Example: Going down the cliff turned out to be harder than climbing up.

@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0177
   Lemma: перемага́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: перемогти́
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to defeat, to win (against), to overcome
   Govt_Case: + Acc. (перемагати суперника)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "виграва́ти/ви́грати - near-synonym, not a plain duplicate: перемага́ти answers\
     \ \"who did you\nbeat?\" (takes a direct object -- the opponent/team defeated, Acc.),\
@@ -41,8 +46,11 @@ fields:
     champion?
   CompareA: перемогти́ (перемага́ти)
   CompareB: ви́грати (виграва́ти)
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перемагати
   UA_Example: Наша команда перемагає у більшості матчів.
   EN_Example: Our team wins most of its matches.

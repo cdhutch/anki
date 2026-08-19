@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0213
   Lemma: відбива́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: відби́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to hit back, deflect, return (a shot)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "забива́ти, завдава́ти, набира́ти - same ball/impact-game action cluster,\
     \ but each answers a different question about where the force ends up.\nRoles: відбивати\
@@ -42,8 +47,9 @@ fields:
   CompareB: забива́ти
   CompareC: завдава́ти
   CompareD: набира́ти
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: відбивати
   UA_Example: Воротар щоразу відбиває мʼяч.
   EN_Example: The goalkeeper deflects the ball every time.

@@ -334,6 +334,265 @@ participle-merge-and-stress-pass maint/verb-review` (true, zero orphaned commits
 deleting the old remote. The `archive/ua-verb-participle-merge-and-stress-pass` tag on
 `f907726` stays untouched as the permanent historical marker for the original dangling
 commit — separate from and unaffected by the new `maint/verb-review` branch.
+2026-08-18: **UA note-type field order — root cause found and fixed; "Remaining Work"
+item 20 resolved and verified live** (branch `fix/ua-field-order-enforcement`, commit
+`5e9f2e4`). Item 20's diagnosis was **wrong in mechanism, right in symptom** — corrected
+here rather than left to mislead a future session. `make ua-setup-lexeme` never pushed the
+`FIELDS` constant's order at all: `inOrderFields` is only honoured by `createModel`, the
+update paths only ever called `modelFieldAdd` (which **appends**) and `modelFieldRemove`,
+and `modelFieldReposition` appeared **nowhere in the repo**. So live field order was never
+"what the constant says" — it was "whatever order fields happened to get added in," across
+the model's whole history, and the `FIELDS`/`GRAMMAR_FIELDS`/`VISUAL_FIELDS`/`VERB_FIELDS`
+constants were decorative for any model that already existed. What actually happened on
+2026-08-11 is that `Verification Notes` (removed and re-added by the field-name
+unification, item 15) plus the five euphony/display fields (item 16) were **appended to the
+bottom**, yanking them out of the positions Craig had just dragged them into — same visible
+symptom, different cause. Confirmed by running `inspect_note_type_fields.py` against live
+Anki: `UA_Lexeme`'s live order matched neither the dragged order nor the constant, but
+exactly the historical add-order with that 2026-08-11 tail appended in sequence; `UA_Verb`
+(`Participle_Passive_Past` last among the participles, from `0e3a987`) and
+`UA_PVOM_Infinitive` (four `*_Euphony` fields appended past `Verification Notes`) carried
+the same fingerprint. **Fix:** new `sync_field_order()` in `setup_ua_note_types.py` and
+`setup_ua_pvom_note_type.py`, called last in all five update paths (after the add/remove
+passes, which change live order out from under it) — an insertion sort via
+`modelFieldReposition`, guarded on a leading-slice comparison so it makes **zero**
+AnkiConnect calls when order already matches. That guard is load-bearing, not tidiness:
+repositioning is a schema modification, so an unguarded pass would demand a full AnkiWeb
+upload on every single `make ua-setup-*` run. `UA_Lexeme`'s `FIELDS` reordered into the
+grouping item 20 recorded (38 fields in, 38 out, set-identical); also puts
+`ImperfectiveUnidirectional` **before** `Perfective`, matching the slot order
+`compute_typing_target()`/`compute_euphony_slots()`/`compute_ua_en_display()` and the
+`EN_UA_BACK` feedback script all already use — the constant had them reversed. `EuphonyNote`
+moved up beside the three per-slot `*_Euphony` fields it's the legacy ancestor of; the
+`TypingTarget_UA`/`TypingAnswer`/`_EuphonySlots` triple deliberately kept adjacent (they're
+positionally aligned by convention only, so separating them in the editor is how alignment
+bugs get written). 9 new tests (`tests/ua/test_setup_field_order.py`) driven against a fake
+implementing Anki's real remove-then-insert reposition semantics, using live orders
+captured this session — `make ua-test` 255 passed (was 246). **Verified live, in order:**
+`make ua-setup-lexeme` (repositioned 38) → re-run (no-op, guard confirmed) →
+`make ua-setup-verb` (26, Craig confirmed the resulting order in Anki) →
+`make ua-setup-pvom` (17) → `inspect_note_type_fields.py` reporting **all 5 note types
+matching exactly, set and order**, for the first time since that tool was built. Craig took
+a collection backup first; the one-time full AnkiWeb upload was expected and handled as a
+single event rather than three. `UA_Grammar`/`UA_Visual` already matched and were untouched
+by the guard throughout.
+2026-08-18: **CNSF `fields:` key order canonicalized from the same constants** (same
+branch, commit `1baf0c2`). Craig's question while reviewing the above — "will this also
+ensure that all of the YAML notes' fields are in the same order?" — turned up a genuine
+gap: it would not have. `cnsf_canonicalize.py` only ever ordered the **seven top-level
+keys** (`CANON_TOP_KEYS`); keys *inside* `fields:` were preserved exactly as authored, and
+`cmd_check()`'s drift detection had the same blind spot, so the pre-commit hook had never
+once looked at field-key order. A 12-note sample across ch-00/ch-08/ch-09 turned up
+**three distinct orders**, none matching the model's — the `setdefault()` signature from
+item 17's backfill, appending new keys wherever each file happened to end. Exactly the
+`modelFieldAdd`-appends failure mode above, on the file side. **Per Craig: "Option A"** —
+one source of truth. `cnsf_canonicalize.py` now imports the same `FIELDS`/`GRAMMAR_FIELDS`/
+`VISUAL_FIELDS`/`VERB_FIELDS`/PVOM `FIELDS` constants that drive the live Anki models
+(`CANON_FIELD_ORDER`, keyed by CNSF `note_type`), rather than carrying a second
+hand-maintained list that would drift against them — the same import pattern
+`check_cnsf_field_schema.py` and `inspect_note_type_fields.py` already use for the field
+*set*, extended to order. Three design points worth not re-litigating: ordering runs
+**after** `_normalize_meta` (that's where `setdefault()` injects the always-present
+optional keys, so ordering first would strand exactly those at the end); the CNSF key set
+is a deliberate **subset** of the Anki field set (32 vs 38 — the five computed fields are
+never authored, and `ImperfectiveUnidirectional` is sparse per item 17), so the target is
+matching *relative* order of the authored subset, not equality; and unknown keys **trail**
+rather than being dropped, keeping their relative order, so B737 and any experimental key
+are safe. `cmd_check()` now names field-order drift specifically, since it's always fixed
+by `--write` and never needs a content decision. **Verified:** `--check` reported 585/585
+lexeme notes drifted with **zero** in the other drift categories; `make ua-lexeme-fix`
+rewrote all 585; the diff is provably order-only — 7497 insertions against 7497 deletions
+with byte-identical sorted added/removed line multisets, plus an earlier 16-note dry run
+confirming identical key sets, values, metadata and bodies. `ua-verb`/`ua-grammar`/
+`ua-visual`/`ua-pvom` and all of B737 were **already** in constant order and are untouched
+(confirmed by the `--all-files` hook run, where only lexemes failed). **No Anki re-sync is
+needed** — the import scripts send fields as a name-keyed dict, so CNSF key order has never
+affected what reaches Anki.
+**Two things learned about the hooks, worth remembering:** (1) `.githooks/pre-commit` runs
+`pre-commit run --all-files`, **not** just staged files — so every commit validates the
+entire corpus regardless of what's staged. That's why a commit touching only two Python
+files got checked against 585 notes, and why the tooling and the 585-note rewrite had to
+land as a single commit: a tooling-only commit is blocked by the very check it adds, and a
+corpus-only commit would leave `main` with files no committed code produces. (2) The
+`cnsf-canonical` hook runs in an isolated venv declaring only `pyyaml`, so Option A's new
+import chain is a real fragility — it's stdlib-only today
+(`setup_ua_note_types` → `tools.anki.sync.tsv_to_anki`, plus `setup_ua_pvom_note_type`) and
+`tests/ua/test_cnsf_field_order.py::test_import_chain_stays_stdlib_only` walks those
+modules' imports and asserts it stays that way, so a future third-party import there fails
+in CI rather than breaking every commit. The hook validation Craig asked for passed: it
+imported the new chain and emitted the new message without error. `make ua-test`: 273
+passed (was 255).
+2026-08-18: **Detached stress mark FIXED and on-device validated** (branch
+`fix/typeans-combining-mark-nbsp`, commit `f9a4525`) — the top item in
+`CLAUDE-work-queue.md`, open since 2026-08-08. Root cause is Anki's own diff
+renderer, not this repo's reconstruction loop: `isolate_leading_mark()` in
+`rslib/src/typeanswer.rs` deliberately prepends U+00A0 to any chunk that *begins*
+with a combining mark, "to prevent it from joining the previous token." That nbsp
+lands inside a `.typeGood`/`.typeBad` span, so concatenating those spans'
+`textContent` swallows it — the string then matches no target and renders with a
+gap before what looks like a detached accent. **The work queue's stated next step
+(reproduce, open DevTools, inspect `#typeans`) was unnecessary** — Anki's source
+answers it outright. Fix: new `normalizeTypeansText()` in `EN_UA_BACK` **and** in
+`setup_ua_pvom_note_type.py`'s `FEEDBACK_SCRIPT` (PVOM uses the identical
+reconstruction technique, so it had the identical bug, and every PVOM answer
+carries a stress mark). An nbsp immediately followed by a combining mark is
+dropped so the mark re-attaches to its base letter; any *other* nbsp becomes an
+ordinary space, so grading never silently depends on Anki continuing to preserve
+real spaces via `white-space: pre-wrap` — which matters for phrase notes like
+ua-lexeme-0532 (`розве́дення ове́ць`). Kept as a separate helper rather than
+inlined, deliberately: the Option B euphony rewrite replaces the grading logic
+immediately around it. **Validated on-device by Craig across both note types** —
+see the work-queue entry for the five specific checks; the load-bearing ones are
+the two wrong-stress-*position* answers, since an exact match or a wholly-missing
+mark never triggers the mid-grapheme diff split that produces the nbsp in the
+first place. `make ua-test` 285 passed (was 273). **Two things worth carrying
+forward:** (1) `tests/ua/test_typeans_normalization.py` pins the *emitted bytes*,
+not just behaviour, because this JS lives inside Python string literals where a
+bare ` ` collapses to a literal NBSP and a doubled backslash emits a regex
+that silently never matches — both invisible by eye, and an early draft of that
+very test file fell into the trap (its constants are now built with `chr()`, with
+a comment saying why). (2) While testing PVOM: **all 52 `UA_PVOM_Infinitive` cards
+are suspended**, because every PVOM note still carries `stress:unverified` and
+`should_suspend()` treats that as a suspend reason (documented in that script's
+own docstring). The entire prefix-drilling set — the whole point of the 2026-07
+rework into 4 templates per note — is therefore inactive until a Горох stress pass
+drops that tag. Also: the count is **52 (13 notes × 4)**, not the 44 (11 × 4) this
+doc still states in two places.
+2026-08-18: **PVOM importer never wrote tags on the update path — fixed.** Craig noticed
+that his 13-note `stress:unverified` → `stress:verified` pass had not changed the tags
+shown in Anki, even though the same sync correctly unsuspended all 52 cards. Both were
+true, and for the same reason: AnkiConnect's `updateNoteFields` touches **fields only**
+and silently leaves tags alone. `ua_pvom_infinitive_import.py` was **the only one of the
+five UA importers** that didn't follow it with `getNoteTags` → `removeTags` → `addTags`
+(`ua_lexeme_import.py`, `ua_verb_import.py`, `ua_grammar_import.py` and
+`ua_visual_import.py` all already did). So **PVOM tags in Anki had been frozen at
+whatever each note was created with** — no CNSF tag edit had ever reached Anki on the
+update path, for the life of the note type.
+**Why it hid so well:** the `tags` list *was* already collected in that loop, and *is*
+used — but only for the suspend decision, which reads the CNSF tags directly and never
+consults Anki's. So suspension behaved correctly off fresh tags while the displayed tags
+went stale, producing the apparently contradictory pair of symptoms above. Fixed with
+remove-then-add rather than add-only, matching the other four: an add-only pass cannot
+clear a tag that was *removed* from the CNSF file, which is precisely the
+`stress:unverified` case. **Verified live:** after the fix, `note:UA_PVOM_Infinitive
+tag:stress:verified` = 13 and `tag:stress:unverified` = 0; before it, reversed.
+**Worth a look sometime:** any *other* PVOM tag edit made since the notes were created
+also never landed, so Anki's PVOM tags may differ from CNSF in ways beyond `stress:`.
+2026-08-18: **PVOM euphony + apostrophe validated live; PERFECT cap demonstrated on a
+real card.** After `make ua-pvom` (13 notes, 0 errors, all 52 cards unsuspended for the
+first time since the set was built), Craig tested `ua-pvom-0012`: typing `ухо́дити` —
+the у- euphonic partner added today — grades **✓ CORRECT / "Accepted alternate
+spelling"**. Two things confirmed at once. (1) The euphony values work: before today
+`Walking_Multi_Euphony`/`Walking_Uni_Euphony` were blank, so that same answer would have
+graded INCORRECT. (2) **The PERFECT cap is real and now demonstrated, not theorised** —
+a fully-stressed, dictionary-attested answer cannot exceed CORRECT, because the euphony
+branch does `euphonyAlts.indexOf(stripStress(typedAnswer))`, stripping stress from both
+sides, so it structurally cannot route a stressed alternate to the PERFECT tier. That is
+precisely what Option B exists to fix (Craig's decision 2, see the refactor doc). Also
+tested and **resolved with no code change**: the U+02BC apostrophe concern — `підʼї́хати`
+typed naturally grades PERFECT, so Craig's layout emits U+02BC and the 12 apostrophe-
+bearing PVOM typing targets are gradeable as-is.
+2026-08-18: **EN→UA euphony/aspect refactor — design scoping written, no code.** See
+[docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md), which
+supersedes the "EN→UA Euphony + Verbal-Aspect Refactor (Future)" section below as the place
+to start. Four **confirmed** bugs, of which two are newly root-caused: (a) the known
+`everySlotPerfect` ordering bug has a **second, independent defect** —
+`euphonyAltsForSlot()` stress-strips the stored alternates *and* the typed slot, so the code
+structurally cannot distinguish "euphonic alternate, perfectly stressed" from "euphonic
+alternate, no stress." Reordering the lines does not fix that; it needs a data-shape change,
+which is the main argument for the doc's recommended structured `_TypingSpec` option over
+patching in place. (b) **The work-queue's top bug — the detached stress mark on
+ua-lexeme-0532 — is root-caused and needs no on-device DevTools session.** It's Anki's own
+output: `rslib/src/typeanswer.rs`'s `isolate_leading_mark()` prepends U+00A0 to any diff
+chunk that *begins* with a combining mark, deliberately, "to prevent it from joining the
+previous token." That nbsp lands inside a `.typeGood`/`.typeBad` span, so `EN_UA_BACK`'s
+reconstruction loop concatenates it into `typedAnswer` — which then matches nothing and
+renders with a visible gap before the accent. It also explains why a *stress-position*
+mismatch triggers it while other mismatches don't: only a position shift makes the diff
+split mid-grapheme. Independent of aspect/euphony and fixable on its own. (c) separator
+spacing is load-bearing — `ходити/йти/піти` without spaces around the slashes fails the
+slot-count gate and grades INCORRECT outright. (d) a prose `EuphonyNote` on a singlet
+produces silent dead tolerance: it's compared as a candidate spelling, never matches, and
+nothing warns. Five decisions are open for Craig in the doc's §7; nothing should be built
+before those are answered. Worth noting for scale — only **8 of 585** notes carry any
+per-slot euphony data, so content-side migration risk for any option here is near zero.
+
+2026-08-19: **EN→UA euphony/aspect refactor — Option B built, shipped and validated live.**
+`_EuphonySlots` is retired; `_TypingSpec` replaces it (compact JSON, one object per populated
+aspect slot, primary and alternates travelling together — `{"slots":[{"primary":"вхо́дити",
+"alts":["ухо́дити"]},…]}`). Alternates are stored **stressed**, which is the whole point: the
+old mechanism stripped stress from both sides before comparing, so a fully-stressed euphonic
+answer was structurally incapable of reaching PERFECT. `FIELDS` stays 38 fields — a single
+in-place swap at index 31 — and **the CNSF corpus needed no change at all**, since both fields
+are computed at import and `_EuphonySlots` was populated on 0 of 585 notes. Bugs (a), (c) and
+(d) from the design doc are closed alongside (b), which landed standalone the day before. The
+(d) audit found exactly **one** note corpus-wide reaching the legacy whole-note `EuphonyNote`
+fallback — ua-lexeme-0353 — and its `EuphonyNote` held explanatory prose rather than a bare
+alternate, so the fallback was comparing a whole sentence as a spelling: matching nothing,
+warning about nothing. Dead tolerance that looked live. 0353 got a real `Lemma_Euphony` and the
+fallback was deleted with zero remaining users. Validated live across 14 typed cases on 0115 /
+0219 / 0379 / 0532 / 0581 — including `ухо́дити / увійти́` → PERFECT (the case the refactor
+exists for) and `ходи́ти / іти́ / піти́` → PERFECT, which matters disproportionately because 0581
+is the only note whose alternate sits on the **middle** slot and therefore the only real test
+that slot indexing is positional rather than accidentally working. Full writeup, including the
+validation matrix, in [docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md) §9.
+
+2026-08-19: **Two silent self-inflicted bugs during that rollout, both worth remembering.**
+(1) **A merged fix was reverted by rewriting around it.** The design doc explicitly noted that
+`normalizeTypeansText()` (the 2026-08-18 combining-mark fix) was landed as its own helper *so
+that* the Option B rewrite could replace the grading logic without swallowing it. The rewrite
+swallowed it anyway — helper and call site both vanished, and the ua-lexeme-0532 bug came back
+silently. What caught it was `test_typeans_normalization.py`, which asserts on the **emitted
+JavaScript** rather than on any Python function's return value; no amount of testing
+`compute_*()` would have seen it. (2) **Anki does not HTML-escape field content.** `_TypingSpec`
+first shipped as `data-typing-spec="…"` on the `#feedback` div; the JSON's own double quotes
+closed the attribute at the first one, the browser saw `data-typing-spec="{"`, `JSON.parse`
+threw, and the defensive `catch` degraded to "no alternates" — so every euphonic answer graded
+INCORRECT while the *correct-answer* lines rendered perfectly, because those sit in **earlier**
+attributes that parsed fine. That split is what made it present as a grading-logic bug. The tell
+was ua-lexeme-0219 (blank spec) grading both tiers correctly. Fix: the JSON now lives in
+`<script type="application/json" id="typing-spec">`, read via `textContent` — no attribute
+quoting to get wrong. The test that should have caught this asserted the attribute was
+*present*, reasoning that `{{text:}}` avoided HTML-escaping — exactly backwards, and it passed
+happily while the feature was dead. Its replacement renders the real `EN_UA_BACK` the way Anki
+does, parses it with an HTML parser, and asserts the JSON survives byte-identical.
+
+2026-08-19: **Anki parses field replacements inside template comments.** `make ua-setup-lexeme`
+died with `Card template 2 in note type 'UA_Lexeme' has a problem.<br>Field '...' not found.`
+The missing field was literally named `...`: a comment in `EN_UA_BACK` described the typing
+target using a `type:...` example wrapped in doubled curly braces. Anki scans the whole template
+body and has no concept of a comment — not JS `//`, not HTML `<!-- -->` — so prose about
+templates becomes template code. An identical brace-wrapped example had been sitting **dormant
+in `UA_EN_FRONT` since 2026-08-04**; Anki appears to tolerate an unresolvable type-replacement
+on a *front* while rejecting it on a *back*, so the repo carried the bug for two weeks with
+nothing to show for it. Both are fixed. New guard: `tests/ua/test_template_field_refs.py` checks
+every `{{...}}` in all 13 templates across both setup scripts, front and back, against that
+model's real field list. Writing it also surfaced that `setup_ua_note_types.py` spells the
+template key `Name` while `setup_ua_pvom_note_type.py` spells it `name` — a guard assuming
+either one would have silently skipped the other note type entirely. Note the failure mode:
+this aborts `update_model()` **partway through**, after `modelFieldAdd` has already run, leaving
+the live model half-migrated until the run is repeated.
+
+2026-08-19: **62 notes where CNSF `TypingAnswer` disagrees with the stress-stripped slot join**
+(e.g. ua-lexeme-0114 holds `приходити` where the note is a doublet needing
+`приходити / прийти`; ua-lexeme-0488 holds the Perfective instead of the Lemma). **Not a live
+bug** — `import_note()` overwrites `TypingAnswer` from `compute_typing_target()[1]` for every
+doublet/triplet, so Anki has always had the correct value. The drift is confined to the CNSF
+files, which matters only because CNSF is meant to be the source of truth and a reader of 0114
+would draw the wrong conclusion about what gets typed. Candidate for a `cnsf_canonicalize.py`
+pass — it already computes the same join for field-order purposes. Logged, not fixed.
+
+2026-08-19: **Headword direction normalised on two more в-/у- notes.** Per Craig's collocational
+dictionary (Shevchuk), в- forms are the headwords and у- forms the euphonic partners.
+ua-lexeme-0153 (вболіва́льник) and ua-lexeme-0379 (встано́влювати / встанови́ти) both had it
+backwards; `Lemma`↔`Lemma_Euphony` and `Perfective`↔`Perfective_Euphony` exchanged, with
+`TypingAnswer` and `Govt_Case` following `Lemma` per the house pattern in 0115/0211/0377/0484.
+Both flagged drafted-not-verified. **Deliberately left alone:** their `UA_Example` sentences
+still use the у- form, because в/у alternation is phonetically conditioned and in 0379 ("Технік
+установлює…") the у- form is arguably *correct* after a consonant — that is a verification call,
+not a mechanical edit, and still open. `Source_URL` was likewise left pointing at the у-
+spellings rather than assert a URL Claude had not opened; **Craig repointed both at the в- forms
+the same day**, matching the house pattern in 0115/0211/0377/0484.
 
 ## Workflow Notes
 
@@ -376,6 +635,7 @@ in this repo -- all run by Craig, not Claude:
 
 | Topic | File |
 |-------|------|
+| **Work queue (checkbox tracker)** | [CLAUDE-work-queue.md](CLAUDE-work-queue.md) |
 | **SV field spec** | [CLAUDE-sv-field-conventions.md](CLAUDE-sv-field-conventions.md) |
 | **Deck architecture** | [CLAUDE-deck-architecture.md](CLAUDE-deck-architecture.md) |
 | **Known issues** | [CLAUDE-known-issues.md](CLAUDE-known-issues.md) |
@@ -596,16 +856,218 @@ this doc. Roughly in priority order:
     notes this session touched by hand. Confirmed via a clean corpus-wide `make ua-verb-fix`
     + `make ua-verb` sync (87/87 updated, 0 errors) and Craig's on-device spot-check. The
     three items previously left open here are now closed: (a) the -мо-only
-    `Pres_1pl`/`Imperative_1pl` convention is corpus-wide, not just on `0009`/`0010`; (b) the
-    `Participle_Passive_Past_m`/`_f` split (not the dangling branch's single-field proposal)
-    is confirmed as the live schema — the `cnsf-canonical` pre-commit hook now enforces it;
-    (c) the rest of the 0002–0087 conjugation data came along in the same merge. The
+    `Pres_1pl`/`Imperative_1pl` convention is corpus-wide, not just on `0009`/`0010`; (b)
+    **correction, 2026-08-11:** this line previously claimed the `Participle_Passive_Past_m`/
+    `_f` split "is confirmed as the live schema" and that "the `cnsf-canonical` pre-commit
+    hook now enforces it" — both were wrong. Live-model inspection
+    (`inspect_note_type_fields.py`) showed the live `UA_Verb` model only ever had the
+    singular `Participle_Passive_Past` field, and the pre-commit hook only validates YAML
+    key order/structure, never specific field sets. Craig ruled 2026-08-10: singular field,
+    male form as default, no split. The 5 notes carrying the split (`0009`/`0010`/`0038`/
+    `0086`/`0087`, all blank on both halves, no data to migrate) were consolidated back to
+    `Participle_Passive_Past` 2026-08-11. The same 5 notes also carried stray `UA_Example`/
+    `EN_Example` fields -- not part of `VERB_FIELDS` at all, both blank on all 5, apparent
+    leftovers from this note group's tangled authoring history above -- removed the same day
+    per Craig. `check_cnsf_field_schema.py` is now fully clean (0 unknown keys, all 5 note
+    types) for the first time since the checker was built; (c) the rest of the 0002–0087
+    conjugation data came
+    along in the same merge. The
     `chore/ua-verb-participle-merge-and-stress-pass` branch itself was retired in favor of
     `maint/verb-review`, cut fresh from `main`, as the ongoing home for future verb-corpus
     review (mirroring `maint/lexeme-review`'s pattern). **Not independently re-verified:**
     this session's confirmation was a successful sync run plus Craig's spot-check, not a
     note-by-note read of all 87 files' final stress marks/tags — worth keeping in mind if
     something looks off in the previously-`status:draft` 0033–0085 range during future review.
+14. **Red/orange flag suspend-policy split** — **Done, 2026-08-10.** Per Craig: red and
+    orange flags no longer carry equal weight in the automatic per-sync suspend check.
+    Red ("errors to fix") still force-suspends every card on the note, unchanged. Orange
+    ("confusing/unclear") no longer suspends -- it's downgraded to a printed call-out
+    (resolved to the note's CNSF `NoteID` via a new `describe_note_ids()` helper, not a
+    bare AnkiConnect integer) so Craig sees it in the sync log without the card silently
+    dropping out of review. Implemented by splitting `get_flagged_note_ids` (item 8) into
+    `get_flagged_note_ids_by_color()` in `tools/anki/sync/tsv_to_anki.py`, which now
+    returns `{flag_color: {note_ids}}` instead of one merged set; `SUSPEND_FLAG_COLORS`
+    narrowed to `(FLAG_RED,)` (was `(FLAG_RED, FLAG_ORANGE)`) as the single source of
+    truth for which colors actually suspend. All five UA import scripts
+    (`ua_lexeme_import.py`, `ua_verb_import.py`, `ua_visual_import.py`,
+    `ua_grammar_import.py`, `ua_pvom_infinitive_import.py`) updated to query both
+    buckets, keep building their suspend set from red only, and print the new orange
+    call-out in `main()`. `ua_flag_audit.py` (item 8's tooling) untouched in behavior --
+    it already queried/reported red and orange separately for its own manifest/summary --
+    but its comments were corrected where they described the old merged-suspend Pass-1
+    behavior. `CLAUDE-flag-audit.md`'s Flag Usage Convention table updated to match. **Live-verified 2026-08-18** on the first `make ua-pvom` run after the PVOM stress
+    pass: 14 red-flagged notes kept suspended, 26 orange-flagged notes explicitly NOT
+    suspended and printed as a call-out instead. Working as designed. Two things that
+    run surfaced: the orange call-out is scoped by `FLAG_DECK_QUERY` (`deck:UA::*`)
+    rather than to the notes being imported, so a PVOM sync listed 26 non-PVOM notes;
+    and the flag counts quoted elsewhere in these docs (11, later 28) are stale — the
+    live figure is 40. Both tracked in `CLAUDE-work-queue.md`.
+
+15. **`Verification Notes` field-name unification** — **Done, 2026-08-11, file side and
+    live Anki, verified.** Per Craig: verification-notes should use the exact
+    same field name across every note type that carries it, and the CNSF/YAML is the source
+    of truth over whatever Anki's live model happens to be named. Investigation found the
+    field split three ways: `UA_Grammar` already used `Verification Notes` (space, matching
+    its live model); `UA_Lexeme`/`UA_Visual` also authored `Verification Notes` in CNSF, and
+    per Craig their live models already have it too — `setup_ua_note_types.py`'s
+    `FIELDS`/`VISUAL_FIELDS` constants were simply stale and never listed it (the same
+    stale-constant pattern as the `Verb_Conj_Table` history and the work-queue's "Establish
+    canonical field-set" item), even though 282/585 `UA_Lexeme` notes and 10/10 `UA_Visual`
+    notes carry real content there and both import scripts pass CNSF `fields:` straight
+    through unfiltered to AnkiConnect, so sync was already working; `UA_Verb`/
+    `UA_PVOM_Infinitive` used `Verification_Notes` (underscore) end-to-end — CNSF, code, and
+    live model all internally consistent, just on the non-unified name. Standardized
+    everything on `Verification Notes` (space): renamed the key in all 87 `UA_Verb` + 13
+    `UA_PVOM_Infinitive` CNSF files (`domains/ua/anki/notes/verbs/exported/`'s legacy dump
+    intentionally left untouched — the real sync never reads it); added `Verification Notes`
+    to `FIELDS`/`VISUAL_FIELDS` and renamed it in `VERB_FIELDS` (`setup_ua_note_types.py`)
+    and PVOM's `FIELDS` (`setup_ua_pvom_note_type.py`); updated the underscore references in
+    `generate_ua_verb_skeleton.py`, `generate_ua_verb_from_goroh.py`,
+    `reformat_ua_verb_cnsf.py`, and `ua_pvom_infinitive_import.py`; simplified
+    `cnsf_canonicalize.py`'s `_normalize_meta()` to unconditionally default
+    `Verification Notes` instead of branching on `note_type == "ua_verb"`.
+    `check_cnsf_field_schema.py` confirms no more missing/unknown `Verification Notes*` keys
+    across any of the 5 note types. Craig manually renamed the live `Verification_Notes`
+    field to `Verification Notes` on `UA_Verb`/`UA_PVOM_Infinitive` (Anki app, Manage Note
+    Types → Fields → Rename, after a collection backup) and manually added a new
+    `Verification Notes` field to `UA_Lexeme`/`UA_Visual` (same dialog, Add instead of
+    Rename) via the Anki app directly rather than AnkiConnect scripting -- note that
+    `make ua` alone never creates fields (the sync path only calls `addNote`/
+    `updateNoteFields`, silently dropping any field the live model doesn't recognize); the
+    `modelFieldAdd`-capable path is `setup_ua_note_types.py` (`make ua-setup-*`), which
+    wasn't used here since it adds *every* constant field missing from the live model, not
+    just the one field wanted -- for `UA_Lexeme` that would have also silently added the 5
+    still-undecided euphony/display fields below. Re-verified 2026-08-11 via
+    `inspect_note_type_fields.py`: `UA_Verb`/`UA_PVOM_Infinitive` field sets now match
+    exactly (order differs, cosmetic only); `UA_Visual` matches exactly (12/12); `UA_Lexeme`
+    now carries the field live too, with its only remaining drift being the 5 pre-existing
+    euphony/display fields, unrelated to this fix.
+
+16. **`UA_Lexeme` canonical field-set reconciliation — 5 euphony/display fields** —
+    **Done, 2026-08-11.** Completes "Establish the canonical field-set source of truth per
+    note type" (`CLAUDE-work-queue.md`). The `FIELDS` constant already listed
+    `Lemma_Euphony`/`Perfective_Euphony`/`ImperfectiveUnidirectional_Euphony`
+    (hand-authored, 7/6/2 of 585 `UA_Lexeme` notes respectively -- part of the per-slot
+    euphony tolerance feature, see the corrected planning note above) and
+    `_UA_EN_DisplayLemma`/`_EuphonySlots` (computed by `ua_lexeme_import.py`'s
+    `compute_ua_en_display()`/`compute_euphony_slots()`, written into every sync payload
+    regardless of CNSF authoring) -- but the live `UA_Lexeme` model never had any of the 5,
+    so this content/logic was silently dropped by AnkiConnect on every sync since the
+    feature was built (same failure mode as `Verification Notes`, item 15). Craig added all
+    5 fields to the live model via the Anki app (Manage Note Types → Fields → Add), after a
+    backup. Re-verified via `inspect_note_type_fields.py`: all 5 UA note types (`UA_Lexeme`,
+    `UA_Grammar`, `UA_Visual`, `UA_Verb`, `UA_PVOM_Infinitive`) now have their FIELDS-style
+    constants matching the live model exactly in field set (order differs on a few, cosmetic
+    only, harmless for sync per the tool's own framing). "Establish the canonical field-set
+    source of truth per note type" is now fully closed across all 5 note types.
+
+17. **UA_Lexeme "newer optional fields" convention decided + enforced** — **Done,
+    2026-08-11.** Completes "Decide the convention for newer optional fields and enforce
+    it" (`CLAUDE-work-queue.md`). Per Craig: always-present, blank when unused -- matching
+    how the rest of the schema already works -- rather than sparse-key-only. Applies to 12
+    `UA_Lexeme`-specific fields that had drifted to sparse presence across the corpus:
+    `Lemma_Euphony`, `Perfective_Euphony`, `ImperfectiveUnidirectional_Euphony`, `CompareA`,
+    `CompareB`, `CompareC`, `CompareD`, `CompareScenario`, `Homograph_SenseA`,
+    `Homograph_SenseB`, `AspectCue`, `Mnemonic_EN`. Implemented as a `note_type ==
+    "ua_lexeme"`-scoped `setdefault(key, "")` block in `cnsf_canonicalize.py`'s
+    `_normalize_meta()`, then backfilled corpus-wide via `cnsf_canonicalize.py --write`
+    across all 585 `UA_Lexeme` files -- additive only (`setdefault` never touches existing
+    content), verified idempotent (`--check` clean afterward) and confirmed via
+    `check_cnsf_field_schema.py --note-type UA_Lexeme`: all 12 fields now present (blank or
+    populated) on 585/585 notes. Deliberately out of scope: the 5 internal/computed fields
+    (`_AspectLabel`, `_UA_EN_DisplayLemma`, `_IsHomograph`, `TypingTarget_UA`,
+    `_EuphonySlots`) that are populated by `ua_lexeme_import.py` at sync time, never
+    CNSF-authored, and the pre-existing sparse `ImperfectiveUnidirectional` field (5/585),
+    which wasn't among the 12 Craig approved for this convention. **Cross-reference:** the
+    "Two pre-existing test failures found and parked" paragraph earlier in this file (under
+    the 2026-08-04 dated log entry) already explains why `tests/ua/test_lexeme_import.py`
+    has 8 `TestComputeTypingTarget` failures unrelated to this item -- they test an
+    abandoned design, not a gap in what got built here. Don't re-diagnose that from scratch
+    (an early mistake in this session's own analysis, corrected 2026-08-11) -- read that
+    paragraph first, and see item 19 below for the one genuinely unbuilt piece
+    (`prune_orphans`) the same test file surfaces.
+
+18. **CNSF field-schema checker wired into `make ua-check`** — **Done, 2026-08-11.**
+    Completes "Wire the checker into `make ua-check`" (`CLAUDE-work-queue.md`), the last
+    item in the "UA Domain — YAML/CNSF schema consistency" queue -- items 15–18 above close
+    it out entirely. Added `ua-check-fields` (matching the existing `ua-check-aspect`/
+    `ua-check-pending-confusables` pattern -- colored header, `$(PYTHON)
+    tools/anki/inspect/check_cnsf_field_schema.py`), wired into `ua-check` (and therefore
+    `_ua-audit`) alongside them. `STRICT=1` support follows the same `$(if $(STRICT),
+    --strict,)` convention as `ua-check-aspect` -- deliberately off by default, since the
+    always-vs-sparse convention (item 17) is only settled for `UA_Lexeme`'s 12 fields, not
+    yet for `UA_Verb`'s `Tags_Conj`/`Source_Note` or `UA_PVOM_Infinitive`'s `*_Euphony`
+    fields; running with `STRICT=1` would flag those as failures prematurely. Unknown-key
+    detection always fails regardless of `STRICT`, by design. **Expected non-regression
+    finding on first run:** `UA_Verb` currently has real `UNKNOWN` keys --
+    `Participle_Passive_Past_m`/`_f` and `UA_Example`/`EN_Example` on the same 5 notes
+    (`ua-verb-0009`/`0010`/`0038`/`0086`/`0087`) -- pre-existing, tracked separately (the
+    still-open participle-field consolidation Craig ruled on 2026-08-10), not caused by this
+    wiring.
+
+19. **Build `prune_orphans()` safety gate for `UA_Lexeme`** — **New, flagged 2026-08-11,
+    not started.** Specifies a well-defined but never-built feature:
+    `collect_all_corpus_note_ids()` (returns `(valid_ids, parse_failure_paths)`),
+    `all_anki_note_ids()` (returns `{note_id: anki_note_id}` from AnkiConnect),
+    `delete_notes(ids, dry_run)`, and `prune_orphans(dry_run, sync_errors)` tying them
+    together -- abort (return 0, delete nothing) if `sync_errors` is nonzero or any CNSF
+    file failed to parse; otherwise diff corpus note IDs against live Anki note IDs and
+    delete (or just report, if `dry_run`) any Anki note with no matching CNSF file. None of
+    these four functions exist anywhere in the repo (grep-confirmed) -- this gap was already
+    flagged in passing on 2026-07-31 (see the `Verb_Conj_Table` Removal Plan section above)
+    and again 2026-08-04, but never acted on. Purpose: protect FSRS review history -- "a
+    single unrelated YAML typo could silently wipe review history on an unrelated note"
+    without a safety gate catching a mass-deletion signal (all-corpus parse failure, or a
+    sync that errored) before it reaches `deleteNotes`. Deliberately not attempted as a
+    quick fix: this touches AnkiConnect `deleteNotes` directly (irreversible without a
+    backup) and deserves real design review, not a rushed implementation. **Tests removed,
+    2026-08-11 (per Craig):** `tests/ua/test_lexeme_import.py`'s `TestPruneOrphansSafetyGate`
+    (5 tests, written 2026-07-25 per the module's then-docstring) specified this feature
+    TDD-style but had been failing since it was written, since none of the four functions it
+    references ever got built. Craig wants `make ua-test` to run clean rather than carry
+    known-failing specs for unbuilt code, so the class was deleted outright rather than left
+    red or skip-marked. New tests get written alongside the real implementation whenever this
+    item is picked up -- the design above (function signatures, abort conditions) is what to
+    rebuild them against, not the deleted test file itself.
+
+20. **UA note-type field order not preserved across `make ua-setup-*` runs** —
+    **Resolved 2026-08-18, verified live.** See the dated log entry above for the full
+    writeup; the short version, and the correction future sessions need:
+
+    **The original 2026-08-11 diagnosis (kept below, struck through, as a caution) was
+    wrong about the mechanism.** It claimed "the setup script pushes field order from that
+    list every time it runs." It never did. `inOrderFields` is only honoured by
+    `createModel`; the update paths only ever called `modelFieldAdd` (which **appends**)
+    and `modelFieldRemove`; `modelFieldReposition` appeared nowhere in the repo. So the
+    constants were **decorative** for any already-created model, and live order was
+    "whatever order fields got added in," historically. What actually clobbered Craig's
+    dragged order was `Verification Notes` (item 15) and the five euphony/display fields
+    (item 16) being appended to the **bottom** of the model on 2026-08-11 — same visible
+    symptom, different cause. Proved by `inspect_note_type_fields.py` against live Anki:
+    `UA_Lexeme`'s live order matched neither the dragged order nor the constant, but exactly
+    the historical add-order with that 2026-08-11 tail appended in sequence.
+
+    ~~Running `make ua-setup-lexeme` afterward silently reset the field order straight back
+    to the raw `FIELDS` constant order in `setup_ua_note_types.py`, since the setup script
+    pushes field order from that list every time it runs.~~
+
+    **Fix:** `sync_field_order()` added to `setup_ua_note_types.py` and
+    `setup_ua_pvom_note_type.py`, called last in all five update paths (after the
+    add/remove passes, which change live order out from under it). Insertion sort via
+    `modelFieldReposition`, guarded on a leading-slice comparison so it makes zero
+    AnkiConnect calls when order already matches — repositioning is a schema mod, so an
+    unguarded pass would demand a full AnkiWeb upload on every `make ua-setup-*` run.
+    `UA_Lexeme`'s `FIELDS` reordered into the grouping this item originally recorded
+    (identity → core lemma/aspect → computed/display-only → semantic content →
+    grammatical properties → semantic relations/Compare → typing/examples →
+    metadata/sources), 38 fields in and 38 out, set-identical. All five note types now
+    match their constants exactly, set and order. 9 tests in
+    `tests/ua/test_setup_field_order.py`; `make ua-test` 255 passed.
+
+    **The constants are now genuinely the source of truth for field order** — so a
+    deliberate edit to one of them is how you change live field order from here on, and
+    manual dragging in the Anki GUI will be reverted by the next setup run. That's the
+    intended behaviour, not a regression.
 
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
@@ -618,8 +1080,10 @@ restoration (2026-07-28, git archaeology), the UA→EN front aspect display
 (2026-08-01, item 8 above), and the CSS single-source-of-truth decision + `.night_mode`
 selector fix + Gruvbox palette rollout (2026-08-01, items 1–3 above — merged to `main`
 via `feature/anki-mobile-night-mode`, on-device validation confirmed and branch deleted
-2026-08-04, see item 3), and the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
-omitted it since item 4 itself was mislabeled as still open; corrected 2026-08-01).
+2026-08-04, see item 3), the `Verb_Conj_Table` field removal (2026-07-31, item 4 above — this list previously
+omitted it since item 4 itself was mislabeled as still open; corrected 2026-08-01), and the
+red/orange flag suspend-policy split (2026-08-10, item 14 above — pending its first live
+`make ua` verification, see item 14).
 
 ### Current Anki state
 - 3,932 existing Ukrainian notes in vanilla Basic / Basic+reversed / Cloze types
@@ -961,8 +1425,57 @@ other ten prefixes — its primary listed sense is "ascend," not explicitly "get
 Treat it as slightly lower-confidence than the rest until cross-checked against the
 textbook.
 
+**`*_Euphony` authoring convention (decided by Craig 2026-08-18 — applies to every
+note type that has these fields, i.e. `UA_Lexeme` and `UA_PVOM_Infinitive`).**
+
+1. **A populated `*_Euphony` value ALWAYS carries its stress mark.** `ухо́дити`, not
+   `уходити`.
+2. **There is deliberately NO `*_Euphony_Typing` companion field.** The unstressed
+   form is *derived* by stripping U+0301 at comparison time, never stored. The base
+   forms have a `*_Typing` twin only because they are the `{{type:...}}` target and
+   the tier logic must distinguish "correct letters, no stress" from "perfect" —
+   that needs both forms present. A euphony alternate is never a type target, so a
+   stored unstressed twin would be a hand-maintained duplicate of a mechanical
+   transform, i.e. the same drift-prone coupling as `TypingTarget_UA`/`_EuphonySlots`.
+   Derive, don't store.
+3. **The `*_Euphony` fields are always-present, blank when unused** — the same
+   convention as `UA_Lexeme`'s 12 optional fields (item 17), extended to
+   `UA_PVOM_Infinitive`'s four on 2026-08-18 per Craig ("all of the PVOM fields
+   should be the same in CNSF"). They had drifted identically: 11 of 13 notes
+   carried no `*_Euphony` key at all, `ua-pvom-0012` carried all four populated,
+   `ua-pvom-0013` all four blank — so `check_cnsf_field_schema.py` read 2/13 and
+   the Makefile kept `STRICT=1` off partly because of it. Enforced by the
+   `note_type == "ua_pvom_infinitive"` `setdefault` block in
+   `cnsf_canonicalize.py`, which runs *before* field ordering so the added keys
+   land in their proper positions instead of stranded at the end.
+4. **Which в-/у- form is the primary** and which is the euphonic partner follows
+   Craig's collocational dictionary — **Shevchuk's UA-EN Collocation Dictionary** — for
+   ходити/йти the **в- forms are the
+   headwords**, у- forms the euphonic partners. Corroborated by SUM-20's
+   `ВВІЙТИ́ (УВІЙТИ́)` headword-with-parenthetical form. Shevchuk also attests the
+   **у- forms** of both verbs, which is what settles `ухо́дити` as `вхо́дити`'s
+   euphonic partner; SUM-20's separate `ВВІХО́ДИТИ (УВІХО́ДИТИ)` is a different
+   variant pair of the same verb, not a competing claim. Горох attests both with full
+   standalone paradigms and no cross-redirect, so it does *not* settle this — don't
+   go looking there for a tiebreak. Applied 2026-08-18 to `ua-lexeme-0115` and
+   `ua-pvom-0012`, the only two slots in the corpus that had it backwards.
+
+**Why this needs a checker rather than authoring discipline:** the stress mark in a
+euphony field is currently **inert**. Both feedback scripts `stripStress()` the stored
+alternates *and* the typed answer before comparing, so an unstressed value grades
+identically to a stressed one and nothing anywhere notices. That is exactly how
+`UA_PVOM_Infinitive` came to store all four of its euphony values unstressed while
+`UA_Lexeme` stored all of its stressed, with neither side failing any check that
+existed. The inertness ends with the Option B refactor, where a fully-stressed
+euphonic alternate earns PERFECT and the stressed form becomes load-bearing — at
+which point anything authored unstressed has to be re-sourced.
+`tools/anki/inspect/check_euphony_stress.py` (wired into `make ua-check`) flags any
+populated `*_Euphony` value containing a multisyllabic word with no stress mark.
+Monosyllables are exempt (Ukrainian doesn't mark them) and double marks pass
+(free/variant stress is legitimate — see "Language conventions").
+
 **Per-slot euphony tolerance + verb-phrase aspect defaulting (planned 2026-07-29,
-not yet implemented -- discussed and scoped with Craig, execution deferred).**
+item 1 below implemented 2026-08-04 / live-synced 2026-08-11, item 2 still not built).**
 
 Extends the aspect+euphony typing design above in two ways, both agreed but not
 yet built:
@@ -997,11 +1510,16 @@ yet built:
    is specifically intended, rather than a mechanical flag. No new field --
    authoring discipline, not a schema change.
 
-**Not yet done:** no code, no field backfill, no template changes. Planning note
-only -- implementation (feedback-script rewrite in `EN_UA_BACK`,
-`Lemma_Euphony`/`ImperfectiveUnidirectional_Euphony` backfill on notes with real
-в-/у- alternation, gloss review pass on affected phrase notes) is deferred until
-Craig gives the go-ahead to execute.
+**Correction, 2026-08-11:** the "not yet done" note below was stale. Item 1
+(`Lemma_Euphony`/`Perfective_Euphony`/`ImperfectiveUnidirectional_Euphony` fields,
+`_UA_EN_DisplayLemma`/`_EuphonySlots` computed display+typing logic) was actually
+built 2026-08-04 per the `FIELDS` constant's own dated comment in
+`setup_ua_note_types.py` -- this planning note just never got updated to say so.
+The live `UA_Lexeme` model didn't have any of those 5 fields until today, though,
+so the content/logic was silently dropped by AnkiConnect on every sync until now
+(same failure mode as `Verification Notes`, item 15 below) -- see item 16. Item 2
+(verb-phrase aspect defaulting) genuinely has no code, no field backfill, no
+template changes -- still deferred until Craig gives the go-ahead to execute.
 
 **UA→EN front aspect display (`_AspectLabel` + `TypingTarget_UA` reuse, added
 2026-07-31, synced).** Per Craig: when a verb note's aspect set has more than one
@@ -1242,6 +1760,10 @@ buckets. Triage deliberately — do not assume from spelling alone.
   spelling now exists as its own note, reusing `tools/anki/lib/lexeme_dedup.py`'s
   `load_corpus()`/`strip_stress()` rather than a fourth reimplementation of the same
   spelling-match logic. Wired into `make ua-check`.
+- `tools/anki/inspect/check_euphony_stress.py` (new 2026-08-18) — flags any populated
+  `*_Euphony` value containing a multisyllabic word with no stress mark, enforcing the
+  authoring convention above. Monosyllables exempt, double marks pass. Report-only;
+  `--strict` to fail. Wired into `make ua-check`.
 - `tools/anki/inspect/audit_verb_aspect_forms.py` (new 2026-07-27, extended 2026-07-30) —
   flags `pos:verb` notes with zero populated aspectual counterparts (`ImperfectiveUnidirectional`
   and `Perfective` both blank) and no `aspect:imperfective-only`/`aspect:perfective-only` tag.
@@ -1398,6 +1920,11 @@ before re-importing. Priority: `to_convert` tagged (13) → Shevchuk → Ябл�
 **Purpose:** Periodic review and correction of flagged cards (red=errors, orange=confusing).
 After each study session, fix all flagged cards and remove flags.
 
+**Suspend behavior (updated 2026-08-10, item 14 above in the structural punch list):** red still force-suspends a
+flagged note's cards on the next sync; orange no longer does -- it's a printed call-out
+in the sync log only. See `CLAUDE-flag-audit.md`'s Flag Usage Convention table for the
+current per-color behavior.
+
 **Workflow:**
 1. Query Anki for flagged cards in UA domain → extract NoteIDs
 2. For each flagged NoteID:
@@ -1418,7 +1945,64 @@ After each study session, fix all flagged cards and remove flags.
 **Status:** Phase 1 (`--query`) and Phase 3 (`--apply`) tooling built and tested,
 2026-08-01 -- see item 8 in the structural punch list above and
 `tools/anki/inspect/ua_flag_audit.py`. Phase 2 (interactive review/fix) is ready to use
-whenever Craig wants to work through the current 11 flagged notes.
+whenever Craig wants to work through the current 11 flagged notes. Red/orange
+suspend-policy split done 2026-08-10, see item 14 above -- pending its first live
+`make ua` verification.
+
+### EN→UA Euphony + Verbal-Aspect Refactor (Future)
+
+> **Start here instead, as of 2026-08-18:**
+> [docs/ua-en-ua-euphony-aspect-refactor.md](docs/ua-en-ua-euphony-aspect-refactor.md) —
+> full design scoping, four confirmed bugs (two newly root-caused), three options with a
+> recommendation, and five decisions open for Craig in its §7. **Nothing here should be
+> built before those five are answered.** The rest of this section is the history the doc
+> was written from; it stays accurate, but the doc supersedes it as the working document.
+> Two findings from it are worth knowing before reading further: the `everySlotPerfect`
+> bug below has a *second* defect that a line-reorder can't fix (the euphony comparison
+> stress-strips both sides, so it can't tell a perfectly-stressed alternate from an
+> unstressed one), and the work-queue's top bug — the detached stress mark — turned out to
+> be Anki's own `isolate_leading_mark()` prepending U+00A0 to diff chunks that start with a
+> combining mark, so it needs no on-device DevTools session to diagnose.
+
+**Flagged by Craig, 2026-08-11.** Craig recalls abandoning a prior effort in this area and
+wants the whole approach to how euphony and verbal aspect are jointly managed on the EN→UA
+production side reconsidered from scratch, rather than continuing to layer incremental fixes
+onto the existing design. Not started; no design yet.
+
+**Relevant history to read before scoping this** (see "Per-slot euphony tolerance +
+verb-phrase aspect defaulting" under Card Template Techniques, and Remaining Work item 7,
+both above):
+- 2026-07-25: `881ac25`/`2e93202` redesigned euphony as *required dual-form typing*
+  (primary + euphonic together, `" ; "`-joined) — abandoned 2026-07-28, reverted back to the
+  simpler `a5b4a15` tolerance-only design ("it worked great" per Craig).
+- 2026-07-29: a two-part follow-on plan was scoped on top of `a5b4a15` — (1) per-slot в-/у-
+  euphony tolerance across all populated aspect slots, (2) verb-phrase aspect defaulting
+  (default `TypingTarget_UA` to imperfective on phrase notes where only one aspect is
+  idiomatic, via authoring discipline rather than a new schema field).
+- 2026-08-04: part (1) was implemented and synced (`Lemma_Euphony`/
+  `ImperfectiveUnidirectional_Euphony`/`Perfective_Euphony` fields, per-slot feedback-script
+  evaluation in `EN_UA_BACK`). Part (2) was never implemented — deferred as authoring
+  guidance only.
+
+Given this history of partial builds and at least one outright abandonment, treat the
+existing per-slot tolerance mechanism as a candidate for replacement, not necessarily a
+foundation to build on — the point of this refactor is to step back and reconsider the
+overall design, not just finish part (2) of the 2026-07-29 plan.
+
+**Validation finding, 2026-08-11 (Craig, live-testing ua-lexeme-0115 after `make ua-setup-
+lexeme`):** confirmed the per-slot euphony tolerance mechanism is live and functioning at
+the CORRECT tier -- typing `вхо́дити / ввійти́` (primary lemma + the dictionary-attested
+`Perfective_Euphony` alternate, both fully stressed) is accepted rather than rejected. But
+it never reaches PERFECT, even with full correct stress on the euphonic form, which the
+feedback script's own comments document as intended behavior. Root cause in `EN_UA_BACK`'s
+feedback script (`setup_ua_note_types.py`): `everySlotPerfect` is set to `false` as soon as
+a typed slot doesn't literally equal the *primary* stressed form -- before the euphonic-
+alternate check even runs -- and that check itself strips stress from both sides
+(`stripStress(typedSlot)` vs. an already-stripped `euphonyAltsForSlot(i)`), so it can't
+distinguish "euphonic alternate, fully stressed" from "euphonic alternate, no stress." Both
+land in the same CORRECT bucket. Per Craig: functional, a good start, but the euphonic
+capabilities still need to be built out properly -- left as part of this refactor rather
+than patched in isolation.
 
 ### Source materials
 | Path | Purpose |

@@ -12,22 +12,24 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:pvom_infinitive
-- stress:unverified
-- status:draft
+- stress:verified
 fields:
   NoteID: ua-pvom-0004
   Prefix: при
   Walking_Multi_UA: прихо́дити
   Walking_Multi_Typing: приходити
+  Walking_Multi_Euphony: ''
   Walking_Uni_UA: прийти́
   Walking_Uni_Typing: прийти
+  Walking_Uni_Euphony: ''
   Vehicle_Multi_UA: приїжджа́ти
   Vehicle_Multi_Typing: приїжджати
+  Vehicle_Multi_Euphony: ''
   Vehicle_Uni_UA: приї́хати
   Vehicle_Uni_Typing: приїхати
+  Vehicle_Uni_Euphony: ''
   Tags_Ch: ch:2.9.4
   Source_Note: Verified via Горох (Тлумачення) 2026-07-21.
-  Verification_Notes: ''
   Verification Notes: ''
 ---
 

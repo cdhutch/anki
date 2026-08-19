@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0126
   Lemma: підʼїжджа́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: підʼї́хати
+  Perfective_Euphony: ''
+  EuphonyNote: 'apostrophe after під- before ї: підʼїхати'
+  AspectCue: ''
   EN_Gloss: to drive up to (by vehicle)
   Govt_Case: до + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: доїжджа́ти (approach vs. actually reach, by vehicle)
   Mnemonic_EN: під- = approaching by vehicle, getting close; до- = actually reaching the destination
@@ -31,8 +36,11 @@ fields:
     arrived at the final destination.
   CompareA: підʼїжджати
   CompareB: доїжджати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: подъезжать / подъехать (ʼ corresponds to RU ъ)'
-  EuphonyNote: 'apostrophe after під- before ї: підʼїхати'
   TypingAnswer: підʼїжджати
   UA_Example: ''
   EN_Example: ''

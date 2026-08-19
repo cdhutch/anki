@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0068
   Lemma: фі́рма
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: firm, company
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: firm · RU: фирма · DE: Firma ← Lat: firma'
-  EuphonyNote: ''
   TypingAnswer: фірма
   UA_Example: Він працює у великій міжнародній фірмі.
   EN_Example: He works at a large international company.

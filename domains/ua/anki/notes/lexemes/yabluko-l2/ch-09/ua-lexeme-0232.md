@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0232
   Lemma: набра́ти одне́ очко́
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to score one point
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: Just now, what did the team manage to add to the scoreboard?
+  EN_Gloss: to score one point
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: набрати одне очко
   UA_Example: До кінця матчу команді треба набрати ще одне очко.
   EN_Example: Before the match ends the team needs to score one more point.

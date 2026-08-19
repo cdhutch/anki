@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0158
   Lemma: ли́жні перего́ни
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: ski race(s)
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: country skiing, cross-country ski racing
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: лижні перегони
   UA_Example: Спортсмени, які займаються цим видом спорту, бігають по трасі, але не просто
     так, а на лижах.

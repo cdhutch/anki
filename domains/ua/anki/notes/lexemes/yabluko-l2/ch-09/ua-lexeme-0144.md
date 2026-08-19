@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0144
   Lemma: перего́ни
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: pl
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: races, racing (competitive)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "перегі́н (sing., 'a stage/leg of a route or railway section') — a distinct\
     \ lemma, not this word's singular\nбіг (running, race - narrower: on foot specifically)\n\
@@ -40,8 +45,11 @@ fields:
     on foot.
   CompareA: перего́ни
   CompareB: біг
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перегони
   UA_Example: Лижні перегони відбудуться в неділю.
   EN_Example: The ski races will take place on Sunday.

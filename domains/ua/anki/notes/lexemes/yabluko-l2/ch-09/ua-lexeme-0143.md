@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0143
   Lemma: вид
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: kind, type (esp. in 'вид спорту' = a sport / type of sport)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "вид (2nd sense, homograph - unrelated meaning: grammatical aspect, perfective/imperfective)\
     \ - see ua-lexeme-0182\nScenario A: Describing what kind of sport someone does, e.g. вид\
@@ -39,11 +44,12 @@ fields:
     word.
   CompareScenario: Which sense of вид is being used?
   CompareA: Який вид спорту ти любиш?
-  Homograph_SenseA: kind, type
   CompareB: Дієслово "читати" має недоконаний вид.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: kind, type
   Homograph_SenseB: grammatical aspect (perfective/imperfective)
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вид
   UA_Example: Який вид спорту тобі найбільше подобається?
   EN_Example: Which sport do you like the most?

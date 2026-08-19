@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0085
   Lemma: Фра́нція
+  Lemma_Euphony: ''
   PartOfSpeech: proper-noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: France
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Франція
   UA_Example: Ми хочемо поїхати до Франції і побачити Париж.
   EN_Example: We want to go to France and see Paris.

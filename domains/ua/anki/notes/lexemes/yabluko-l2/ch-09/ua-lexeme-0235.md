@@ -18,24 +18,30 @@ tags:
 fields:
   NoteID: ua-lexeme-0235
   Lemma: ла́вка
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: market stall, shop stand
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'ла́вка (1st Горох sense: ''для сидіння'' -- bench, seat) -- homograph, unrelated
     meaning: "bench (for sitting)" -- see ua-lexeme-0372.'
+  Mnemonic_EN: ''
   CompareScenario: Which sense of лавка is being used?
   CompareA: Вона купила букет троянд у квітковій лавці на ринку.
-  Homograph_SenseA: market stall, shop stand
   CompareB: На парку було багато лавок, де люди могли сидіти.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: market stall, shop stand
   Homograph_SenseB: bench (for sitting)
-  Mnemonic_EN: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: лавка
   UA_Example: Вона купила букет троянд у квітковій лавці на ринку.
   EN_Example: She bought a bouquet of roses at the flower stall in the market.

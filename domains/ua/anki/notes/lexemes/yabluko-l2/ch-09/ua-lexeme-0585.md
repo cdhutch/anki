@@ -17,14 +17,19 @@ tags:
 fields:
   NoteID: ua-lexeme-0585
   Lemma: бі́гати
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional: бі́гти
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: побі́гти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to run
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: 'Base motion-verb triplet: бі́гати (multidirectional impf.) / бі́гти (unidirectional
     impf.) / побі́гти (perf.). Full conjugation tables exist as separate UA_Verb notes: ua-verb-0011
     (бігати), ua-verb-0012 (бігти), ua-verb-0013 (побігти).'
@@ -32,10 +37,16 @@ fields:
   Mnemonic_EN: бі́гати = "runs/jogs habitually, no set direction" (multidirectional -- e.g.
     goes running regularly, runs around). бі́гти = "is running, headed one way, right now"
     (unidirectional). побі́гти = "set off running" (perfective -- the run as a completed whole).
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: English "run" covers both бігати and бігти without marking the habitual-vs-
     single-run distinction -- closest analogy is "used to run around here" (multi) vs "was
     running there" (uni) vs "took off running" (perf).
-  EuphonyNote: ''
   TypingAnswer: бігати / бігти / побігти
   UA_Example: Він бігає в парку щоранку, а сьогодні він біг дуже швидко.
   EN_Example: He runs in the park every morning, and today he was running very fast.

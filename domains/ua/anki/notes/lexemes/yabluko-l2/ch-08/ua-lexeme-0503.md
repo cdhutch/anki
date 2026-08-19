@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0503
   Lemma: го́стрий
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: sharp; spicy, hot (of food)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: різкий - both words translate English "sharp," but for different senses.
     гострий describes an intrinsic quality -- a physical edge (a sharp knife), spiciness (spicy
@@ -38,8 +43,11 @@ fields:
     in it.
   CompareA: гострий
   CompareB: різкий
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: гострий
   UA_Example: Ця страва занадто гостра для мене.
   EN_Example: This dish is too spicy for me.

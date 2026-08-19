@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0046
   Lemma: му́зика
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: music
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: music · RU: музыка · FR: musique · DE: Musik ← Gk μουσική'
-  EuphonyNote: ''
   TypingAnswer: музика
   UA_Example: Він слухає музику кожного вечора.
   EN_Example: He listens to music every evening.

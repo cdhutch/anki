@@ -17,21 +17,32 @@ tags:
 fields:
   NoteID: ua-lexeme-0522
   Lemma: трембі́та
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: trembita (long Hutsul alpine horn)
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: long Hutsul alpenhorn
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: трембіта
   UA_Example: Звук трембіти лунав по всій долині.
-  EN_Example: The sound of the trembita echoed throughout the valley.
+  EN_Example: The sound of the alpenhorn echoed throughout the valley.
   Tags_Ch: ch:2.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/трембіта
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.

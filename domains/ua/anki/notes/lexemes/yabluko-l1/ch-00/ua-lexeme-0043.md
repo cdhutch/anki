@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0043
   Lemma: метро́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: metro, subway
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: indeclinable
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU/FR/DE: metro'
-  EuphonyNote: ''
   TypingAnswer: метро
   UA_Example: Ми їдемо до центру на метро.
   EN_Example: We go to the centre by metro.

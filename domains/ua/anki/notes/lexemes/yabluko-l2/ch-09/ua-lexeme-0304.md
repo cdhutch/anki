@@ -18,13 +18,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0304
   Lemma: відпра́влення
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: departure
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "відпра́влення (2nd sense, homograph - unrelated meaning: mailed parcel/package)\
     \ - see ua-lexeme-0380\nScenario A: A train or bus schedule board, or asking when transport\
@@ -37,11 +42,12 @@ fields:
     (departs), a parcel is "sent off" (mailed).
   CompareScenario: Which sense of відправлення is being used?
   CompareA: Час відправлення поїзда -- девʼята вечора.
-  Homograph_SenseA: departure
   CompareB: Ваше відправлення готове до отримання на пошті.
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: departure
   Homograph_SenseB: parcel, mailed item (letter/package)
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: відправлення
   UA_Example: Час відправлення поїзда -- девʼята вечора.
   EN_Example: The train's departure time is nine in the evening.

@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Reflexive perfective; imperfective partner варитися. Pres_* fields hold
+  Verification Notes: Reflexive perfective; imperfective partner варитися. Pres_* fields hold
     the perfective future here (standard corpus convention). See lexeme ua-lexeme-0501.
 ---
 

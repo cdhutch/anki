@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0305
   Lemma: прибуття́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: arrival
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "відпра́влення (departure) - the paired opposite on transportation schedule\
     \ boards (\"Прибуття\n/ Відправлення\" = Arrivals / Departures) - see ua-lexeme-0304.\n\
@@ -37,8 +42,11 @@ fields:
     What just happened to it?
   CompareA: прибуття́
   CompareB: відпра́влення
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: прибуття
   UA_Example: Прибуття очікується завтра вранці.
   EN_Example: Arrival is expected tomorrow morning.

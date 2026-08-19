@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Imperfective-only (stative verb). See ua-lexeme-0341.
+  Verification Notes: Imperfective-only (stative verb). See ua-lexeme-0341.
 ---
 

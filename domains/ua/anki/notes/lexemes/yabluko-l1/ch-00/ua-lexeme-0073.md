@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0073
   Lemma: Брази́лія
+  Lemma_Euphony: ''
   PartOfSpeech: proper-noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Brazil
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Бразилія
   UA_Example: Карнавал у Бразилії відомий у всьому світі.
   EN_Example: The carnival in Brazil is known throughout the world.

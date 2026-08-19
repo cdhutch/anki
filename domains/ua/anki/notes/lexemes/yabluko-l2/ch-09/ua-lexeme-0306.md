@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0306
   Lemma: тип
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: type, kind
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'вид (ua-lexeme-0143, kind/type sense) -- convergent synonym, not a homograph:
     Горох''s own Синонімія page for тип lists вид among its synonyms in the classification/taxonomy
@@ -44,8 +49,11 @@ fields:
     car you want -- deluxe, compartment, or open-plan sleeper.
   CompareA: тип
   CompareB: вид
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: тип
   UA_Example: 'Оберіть тип вагона: люкс, купе чи плацкарта.'
   EN_Example: 'Choose the type of train car: deluxe, compartment, or open-plan sleeper.'

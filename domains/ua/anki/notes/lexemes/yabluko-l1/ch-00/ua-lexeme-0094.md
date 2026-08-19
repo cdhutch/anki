@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0094
   Lemma: росі́йський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Russian (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: росі́йський'
   IrregularForms: ''
+  CounterpartForm: 'm: росі́йський'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: російський
   UA_Example: Він вивчає російську мову в університеті.
   EN_Example: He studies the Russian language at university.

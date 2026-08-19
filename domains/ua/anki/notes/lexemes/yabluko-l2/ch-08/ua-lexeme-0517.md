@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0517
   Lemma: прибу́ток
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: profit, income
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: profit
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: прибуток
   UA_Example: Туризм приносить регіону непоганий прибуток.
   EN_Example: Tourism brings the region a decent profit.

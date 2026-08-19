@@ -15,18 +15,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0135
   Lemma: ли́жний
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: ski (adj.), skiing
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: ski (adj.), skiing (general)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: лижний
   UA_Example: Лижний сезон починається у грудні.
   EN_Example: Ski season starts in December.

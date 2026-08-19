@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0081
   Lemma: По́льща
+  Lemma_Euphony: ''
   PartOfSpeech: proper-noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Poland
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Польща
   UA_Example: З Польщі до Львова їхати дуже близько.
   EN_Example: From Poland to Lviv it is very close.

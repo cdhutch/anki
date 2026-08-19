@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0480
   Lemma: відрізня́тися
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
-  Perfective: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: відрізни́тися
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to differ, to be different
   Govt_Case: від + genitive
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: відрізнятися
   UA_Example: Ці два готелі значно відрізняються один від одного.
   EN_Example: These two hotels differ significantly from each other.

@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0023
   Lemma: алфа́ві́т
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: alphabet
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: абе́тка — near-synonym; абетка specifically evokes the context of learning
     the alphabet (children, new-language learners; cf. "ABC book"), while алфавіт is the neutral,
@@ -33,8 +38,11 @@ fields:
     writing system has.
   CompareA: абетка
   CompareB: алфавіт
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU: alphabet/алфавит ← Gk ἄλφα + βῆτα'
-  EuphonyNote: ''
   TypingAnswer: алфавіт
   UA_Example: В українському алфавіті тридцять три букви.
   EN_Example: The Ukrainian alphabet has thirty-three letters.

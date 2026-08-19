@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0533
   Lemma: у порівня́нні
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: in comparison, compared to
   Govt_Case: з + instrumental (у порівнянні з + instr.)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: у порівнянні
   UA_Example: У порівнянні з долиною, у горах значно прохолодніше.
   EN_Example: Compared to the valley, it's significantly cooler in the mountains.

@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0017
   Lemma: фе́рмер
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: farmer
   Govt_Case: ''
-  CounterpartForm: 'f: фе́рмерка'
   IrregularForms: ''
+  CounterpartForm: 'f: фе́рмерка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: фермер
   UA_Example: Фермер працює на полі від ранку до вечора.
   EN_Example: The farmer works in the field from morning to evening.

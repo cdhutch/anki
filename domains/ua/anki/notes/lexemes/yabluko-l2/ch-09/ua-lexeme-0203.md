@@ -17,15 +17,20 @@ tags:
 fields:
   NoteID: ua-lexeme-0203
   Lemma: очко́
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: point (in scoring)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'Nominative plural: очки́ (stress on the final syllable) -- NOT the regular
     neuter -а pattern one might expect. Contrast the unrelated о́чко homograph (diminutive
     of о́ко ''eye''), whose plural IS the expected о́чка. Горох-verified 2026-07-24.'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'бал (ua-lexeme-0252) -- convergent synonym, not a homograph: both loosely
     gloss as "point, score," but очко́ is a point earned DURING PLAY -- part of a running
@@ -38,8 +43,11 @@ fields:
     sinks a shot right at the buzzer.
   CompareA: очко́
   CompareB: бал
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: очко
   UA_Example: Команда набрала останнє очко за секунду до кінця.
   EN_Example: The team scored the last point a second before the end.

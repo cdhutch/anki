@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0089
   Lemma: іспа́нський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Spanish (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: іспа́нський'
   IrregularForms: ''
+  CounterpartForm: 'm: іспа́нський'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: іспанський
   UA_Example: Іспанська кухня дуже смачна і різноманітна.
   EN_Example: Spanish cuisine is very tasty and varied.

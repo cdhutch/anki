@@ -16,19 +16,30 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0492
-  Lemma: у кі́лька рази́в
+  Lemma: у кі́лька разі́в
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: several times over, by several-fold
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: у кілька разів
   UA_Example: Готель виявився у кілька разів дорожчим, ніж ми очікували.
   EN_Example: The hotel turned out to be several times more expensive than we expected.

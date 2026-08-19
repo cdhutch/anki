@@ -16,19 +16,30 @@ tags:
 fields:
   NoteID: ua-lexeme-0154
   Lemma: бойови́й гопа́к
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: combat hopak (a martial-arts-influenced style of the traditional Ukrainian hopak
     dance)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: бойовий гопак
   UA_Example: Бойовий гопак поєднує елементи танцю та бойового мистецтва.
   EN_Example: Combat hopak combines elements of dance and martial arts.

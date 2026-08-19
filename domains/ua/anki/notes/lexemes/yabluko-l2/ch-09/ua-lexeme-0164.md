@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0164
   Lemma: воро́та
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: pl
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: gate; (sports) goal
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: ворота
   UA_Example: Мʼяч влучив у ворота.
   EN_Example: The ball hit the goal.

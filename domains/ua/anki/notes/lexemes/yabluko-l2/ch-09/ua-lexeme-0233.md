@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0233
   Lemma: перемогти́ супе́рника
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to defeat an opponent
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: When the match is finally over, what has one side accomplished?
+  EN_Gloss: to defeat an opponent
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: перемогти суперника
   UA_Example: Йому вдалося перемогти суперника в останньому раунді.
   EN_Example: He managed to defeat his opponent in the final round.

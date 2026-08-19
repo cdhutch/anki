@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0231
   Lemma: ки́нути мʼяч
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to throw the ball
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: In one quick motion, what does the player do with the ball?
+  EN_Gloss: to throw the ball
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: кинути мʼяч
   UA_Example: Тренер попросив кинути мʼяч точно у кошик.
   EN_Example: The coach asked him to throw the ball right into the basket.

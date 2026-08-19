@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0041
   Lemma: краї́на
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: country
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: страна'
-  EuphonyNote: ''
   TypingAnswer: країна
   UA_Example: Україна — велика і красива країна.
   EN_Example: Ukraine is a large and beautiful country.

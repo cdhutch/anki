@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0119
   Lemma: дохо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: дійти́
+  Perfective_Euphony: ''
+  EuphonyNote: 'PFV: до- + іти → дійти (о drops before й)'
+  AspectCue: ''
   EN_Gloss: to reach, get to (on foot)
   Govt_Case: до + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: підхо́дити (approach vs. actually reach)
   Mnemonic_EN: під- = approaching, getting close but not necessarily arriving; до- = actually
@@ -30,8 +35,11 @@ fields:
   CompareScenario: Someone finally arrives at their destination, on foot, after a long walk.
   CompareA: підходити
   CompareB: доходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: доходить / дойти (до- + іти → дійти)'
-  EuphonyNote: 'PFV: до- + іти → дійти (о drops before й)'
   TypingAnswer: доходити
   UA_Example: ''
   EN_Example: ''

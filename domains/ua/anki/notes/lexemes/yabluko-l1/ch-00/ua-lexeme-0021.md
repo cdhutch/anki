@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0021
   Lemma: школя́р
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: schoolboy, pupil
   Govt_Case: ''
-  CounterpartForm: 'f: школя́рка'
   IrregularForms: ''
+  CounterpartForm: 'f: школя́рка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: школяр
   UA_Example: Школяр іде до школи з великим портфелем.
   EN_Example: The schoolboy goes to school with a large schoolbag.

@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0114
   Lemma: прихо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: прийти́
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to come, arrive (on foot)
   Govt_Case: до + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: відхо́дити (directional opposite); приїжджа́ти (same direction, different
     mode of motion — see ua-lexeme-0123)
@@ -31,8 +36,11 @@ fields:
   CompareScenario: A guest arrives at your door, on foot, for a party you're hosting.
   CompareA: приходити
   CompareB: відходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: приходить / прийти'
-  EuphonyNote: ''
   TypingAnswer: приходити
   UA_Example: ''
   EN_Example: ''

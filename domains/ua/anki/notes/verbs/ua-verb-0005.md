@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ї́жджений
   Participle_Impersonal_Past: ї́жджено
   Participle_Adverbial_Past: ї́здивши
-  Verification_Notes: ''
+  Verification Notes: ''
 ---
 

@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0484
   Lemma: впада́ти
+  Lemma_Euphony: упада́ти
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: впа́сти
+  Perfective_Euphony: упа́сти
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to fall
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: впадати
   UA_Example: Яблуко впало з дерева просто йому під ноги.
   EN_Example: An apple fell from the tree right at his feet.

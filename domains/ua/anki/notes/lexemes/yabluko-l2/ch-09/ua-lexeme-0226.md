@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0226
   Lemma: ви́грати па́ртію
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to win a game/match
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: At the final move, what does the winner finally manage to do?
+  EN_Gloss: to win a game/match
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: виграти партію
   UA_Example: Йому знадобилося пів години, щоб виграти партію.
   EN_Example: It took him half an hour to win the game.

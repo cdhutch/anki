@@ -6,11 +6,23 @@
 
 ## Flag Usage Convention
 
-| Flag Color | Meaning | Examples |
-|---|---|---|
-| Red | Errors to fix | Typos, wrong stress marks, incorrect definitions, bad examples |
-| Orange | Confusing/unclear | Definition too vague, poor example, near-synonym confusion, template issue |
-| Other | Flexible (context-dependent) | Use as needed for custom categorization |
+| Flag Color | Meaning | Examples | Suspends the note's cards on sync? |
+|---|---|---|---|
+| Red | Errors to fix | Typos, wrong stress marks, incorrect definitions, bad examples | Yes |
+| Orange | Confusing/unclear | Definition too vague, poor example, near-synonym confusion, template issue | No (called out in the sync log instead — see below) |
+| Other | Flexible (context-dependent) | Use as needed for custom categorization | No |
+
+**Suspend behavior split 2026-08-10, per Craig:** red and orange used to carry equal
+weight — either one force-suspended every card on the note during the next `make ua`
+sync (see `SUSPEND_FLAG_COLORS`/`get_flagged_note_ids_by_color` in `tools/anki/sync/
+tsv_to_anki.py`). Orange no longer suspends: it means "confusing/unclear," not "wrong,"
+so a card shouldn't silently vanish from review over it. Instead, every UA sync script
+prints a call-out for any orange-flagged note found (resolved to its CNSF `NoteID` via
+`describe_note_ids()`, not a bare AnkiConnect integer) — captured in the dated log file
+under `/tmp/anki-sync-logs` same as everything else the sync prints (see `log_wrap` in
+the `Makefile`). Red keeps the original "suspend on sync" behavior unchanged. This only
+affects the *automatic* per-sync suspend check — the `ua_flag_audit.py --query` manifest
+and Phase 1 summary below still report red and orange counts the same way as before.
 
 ## Workflow: Three Phases
 
@@ -91,11 +103,13 @@ python tools/anki/inspect/ua_flag_audit.py --apply
   (`flagged_cards_manifest.json` by default -- gitignored, transient)
 - `--apply`: three-step re-sync so fixed notes actually end up unsuspended in the same
   run, not deferred to some later sync -- (1) re-import corrected CNSF files via the
-  right per-note-type import script, while flags are still set (notes stay suspended);
-  (2) clear flags via `setSpecificValueOfCard`; (3) re-import the same notes again, so
-  each import script's own suspend policy (re-queried fresh from AnkiConnect) sees the
-  now-cleared flags and unsuspends. `--no-unmark` skips steps 2-3 for a content-only
-  dry-test. `--manifest PATH` to target a non-default manifest.
+  right per-note-type import script, while flags are still set (red-flagged notes stay
+  suspended through this pass; orange-only notes were never suspended by the flag check
+  to begin with -- see the 2026-08-10 split above); (2) clear flags via
+  `setSpecificValueOfCard`; (3) re-import the same notes again, so each import script's
+  own suspend policy (re-queried fresh from AnkiConnect) sees the now-cleared flags and
+  unsuspends. `--no-unmark` skips steps 2-3 for a content-only dry-test. `--manifest
+  PATH` to target a non-default manifest.
 
 ### File Mapping
 

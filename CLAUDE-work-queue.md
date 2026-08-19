@@ -451,60 +451,78 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 - [ ] **`gen_ch09_subsection.py` exercised end-to-end** against a real batch
   (built 2026-07-25, still untested — currently nothing left to run it against
   unless new ch-09+ content is added).
-- [ ] **Merging `main` into `maint/verb-review` conflicts on 14 note files** — flagged
-  by Craig and diagnosed 2026-08-19 via `git merge-tree --write-tree --name-only`
-  (computes the merge in memory; nothing to abort). Conflicted:
+- [ ] **`main` merged into `maint/verb-review`** — resolved 2026-08-19 by running the
+  merge for real (`git merge --no-commit --no-ff main`) instead of predicting it.
+  **15** conflicts, not the 14 previously recorded here:
 
       domains/ua/anki/notes/pvom/ua-pvom-0001.md … ua-pvom-0013.md   (all 13)
       domains/ua/anki/notes/verbs/ua-verb-0010.md
+      CLAUDE-work-queue.md                                            (add/add)
 
-  **No code conflicts at all.** `setup_ua_note_types.py`, `ua_lexeme_import.py`,
-  `tests/ua/test_lexeme_import.py`, `Makefile` and `ua_flag_audit.py` all auto-merge —
-  worth stating because the obvious guess was that PR #77's heavy rewrites were to
-  blame, and they are not.
+  **No code conflicts.** `Makefile` and `ua_flag_audit.py` auto-merged;
+  `compute_euphony_slots()` and `TestComputeEuphonySlots` stay deleted, as Option B
+  requires. **Cause confirmed as the 2026-08-18 CNSF field-order canonicalisation**, not
+  PR #77 — both sides rewrite the `fields:` block, so the hunks overlap.
 
-  **Probable cause is the 2026-08-18 CNSF field-order canonicalisation**, not #77. That
-  pass rewrote `fields:` key order corpus-wide (7497 insertions == 7497 deletions, an
-  order-only rewrite verified by comparing sorted multisets), and added the four
-  always-present-blank `*_Euphony` keys to every `ua_pvom_infinitive` note.
-  `maint/verb-review` branched before it and carries its own edits to those same notes,
-  so both sides rewrite the same lines and git cannot merge them. If that holds these
-  are **false conflicts** — the sides largely agree on content and disagree on line
-  position.
+  **The previous entry here was wrong on its central claim**, and is corrected for the
+  record because acting on it would have discarded a commit. It read *"`main` already
+  carries `status:draft` on all 13."* It does not — `git grep -l status:draft main --
+  domains/ua/anki/notes/pvom/` returns **0**. What the three trees actually hold:
 
-  **Confirmed 2026-08-19, and the 13 PVOM notes need no merging at all.** The branch's
-  entire contribution to each of them is one added tag line — `- status:draft`, inserted
-  after `- stress:unverified` — and `main` *already carries `status:draft` on all 13*
-  (checked directly against the working tree; 0013 additionally reads `stress:verified`
-  where the others read `stress:unverified`). Both sides added the same line
-  independently. They conflict only because `main` also rewrote the `fields:` block
-  immediately below, so the hunks overlap.
+      base 60cf537   stress:unverified                       (all 13)
+      main           stress:verified,  no status: tag        (all 13)
+      branch         stress:unverified + status:draft        (0013: stress:verified)
 
-  Resolution for those 13: take `main`'s version wholesale. Direction-independent, so
-  it cannot be got backwards the way `--ours`/`--theirs` can during a merge:
+  The two sides changed *different* tags, so these were real content conflicts, not the
+  false ones claimed. The old entry's risk note also inverted the danger: it concluded
+  "the tags happen to match, so the risk did not land." Both directions land — taking
+  `main` wholesale drops `status:draft`, and keeping `status:draft` re-suspends the cards.
 
-      git checkout main -- domains/ua/anki/notes/pvom/
+  **Resolution taken: `main`'s PVOM notes wholesale** (`git checkout main --
+  domains/ua/anki/notes/pvom/`) — the same command the old entry gave, for the opposite
+  reason, and confirmed by Craig 2026-08-19 as the verified, current content.
+  `should_suspend()` in `ua_pvom_infinitive_import.py` is `"stress:unverified" in tags or
+  "status:draft" in tags`, so the branch's `status:draft` and `main`'s `stress:verified`
+  are the *same lever*, pulled opposite ways. `05d8e74` (2026-08-18) is Craig's own Горох
+  pass and says outright that it unsuspends all 52 PVOM cards; `e53f14d` (2026-08-05)
+  predates it by 13 days and was a **reporting** fix — its message is about
+  `list_unverified.py` seeing PVOM notes in the "no status tag" bucket, not about
+  suspension. It tripped a branch the importer had written only defensively ("no current
+  PVOM note uses this tag, but checked for consistency … in case one ever does"). Keeping
+  it would have silently re-dormanted the prefix set.
 
-  **`domains/ua/anki/notes/verbs/ua-verb-0010.md` is the only file still needing a real
-  look** — it was outside the confirmed diff excerpt, so its branch-side change is
-  unknown:
+  **`ua-verb-0010.md`:** everything outside `Verification Notes` auto-merged correctly —
+  `main`'s schema (`Participle_Passive_Past` consolidated, empty `UA_Example`/`EN_Example`
+  dropped, space-form field name from `c020950`) plus the branch's `stress:verified`. Only
+  the trailing paragraph conflicted; both sides kept, since the 2026-08-05 tag
+  re-verification and the 2026-08-11 schema decision record different things.
 
-      git diff main...maint/verb-review -- domains/ua/anki/notes/verbs/ua-verb-0010.md
+  **Method note:** the wrong diagnosis came from `git merge-tree` plus a diff excerpt,
+  which show *which* files collide but not what each tree holds. Reading the same file out
+  of all three trees (`git show <ref>:<path>`) took one loop and contradicted it
+  immediately. Prefer that — or just run the merge, since `--no-commit` is abortable.
 
-  Finish with `make ua-check` so field ordering stays authoritative.
+  **Standing rule, restated after a violation in this session:** a `stress:verified` or
+  `status:verified` tag is authoritative. Where one side of a merge has `verified` and the
+  other `unverified` for the same note, the `verified` side wins and that is not a question
+  to put to Craig. Claude proposed the opposite here — a resolution reverting 12 PVOM notes
+  to `stress:unverified`, on the reasoning that a blanket flip was "a claim, not a fact."
+  It was Craig's own Горох pass. Verification is set by Craig alone and is never re-opened,
+  downgraded, or offered as a resolution option; no bulk or canonicalisation pass may emit
+  `stress:unverified` as a default onto a note that already carried `verified`.
 
-  **Why this was worth checking rather than merging optimistically:** PVOM
-  suspend/unsuspend is re-asserted *declaratively from CNSF tags on every sync*, and all
-  52 PVOM cards are currently unsuspended. A resolution that reintroduced a stale
-  `status:draft` — or dropped a `stress:verified` — would silently re-suspend cards on
-  the next `make ua-pvom`, with nothing in the merge itself to indicate it. Here the
-  tags happen to match, so the risk did not land; the general point stands for the
-  next branch.
+  **Do not resolve any future code conflict by taking the branch side wholesale**:
+  `compute_euphony_slots()` and `TestComputeEuphonySlots` are *intentionally* deleted on
+  `main`, and restoring them silently reverts Option B — exactly the failure mode that bit
+  us twice on 2026-08-19.
 
-  **Whatever the route, do not resolve any future code conflict by taking the branch
-  side wholesale**: `compute_euphony_slots()` and `TestComputeEuphonySlots` are
-  *intentionally* deleted on `main`, and restoring them silently reverts Option B —
-  exactly the failure mode that bit us twice on 2026-08-19.
+- [ ] **PVOM notes need a non-`draft` `status:` tag** — follow-up created by the merge
+  above. Dropping `status:draft` leaves `e53f14d`'s actual goal unmet: all 13 fall back
+  into `list_unverified.py`'s "no status tag" bucket. `should_suspend()` trips only on
+  `stress:unverified` or `status:draft`, so `status:verified` would restore the reporting
+  coverage without suspending anything. **Not applied** — per the 2026-08-05 division of
+  labour Claude never sets `status:verified`; it asserts note-level review, not just the
+  stress pass `05d8e74` already did. Craig's call.
 
 ## B737 Domain
 

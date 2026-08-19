@@ -3,7 +3,7 @@
 
 Each note carries one prefix and all four verb-of-motion base forms:
 Walking_Multi_{UA,Typing}, Walking_Uni_{UA,Typing}, Vehicle_Multi_{UA,Typing},
-Vehicle_Uni_{UA,Typing}, plus NoteID/Prefix/Tags_Ch/Source_Note/Verification_Notes.
+Vehicle_Uni_{UA,Typing}, plus NoteID/Prefix/Tags_Ch/Source_Note/Verification Notes.
 CNSF field names match the Anki field names exactly -- no renaming/derivation
 needed, unlike the old single-form schema this replaced.
 
@@ -18,10 +18,14 @@ during review, stayed suspended forever; nothing ever re-asserted a state):
       checked for consistency with every other UA note type in case one
       ever does)
     - neither tag present → unsuspend
-    - note has a red/orange-flagged card → suspend, regardless of tags
-      above (per Craig -- see get_flagged_note_ids in tsv_to_anki.py). Only
+    - note has a red-flagged card → suspend, regardless of tags above (per
+      Craig -- see get_flagged_note_ids_by_color in tsv_to_anki.py). Only
       checked for existing notes; a brand-new note can't already have a
       flagged card in Anki.
+    - note has an orange-flagged card, no red → NOT suspended (does not
+      override the tag-based decision above). Called out in the sync log
+      instead (2026-08-10, per Craig -- orange means "confusing/unclear",
+      not "wrong"; see CLAUDE-flag-audit.md).
 Applied on every import, add or update -- declarative and self-healing like
 every other UA note type, not just a one-time default at creation.
 """
@@ -34,7 +38,13 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
-from tools.anki.sync.tsv_to_anki import anki_request, get_flagged_note_ids  # noqa: E402
+from tools.anki.sync.tsv_to_anki import (  # noqa: E402
+    FLAG_ORANGE,
+    FLAG_RED,
+    anki_request,
+    describe_note_ids,
+    get_flagged_note_ids_by_color,
+)
 
 # Deck query scope for the red/orange-flag suspend check -- same query
 # string used across every UA sync script; see ua_lexeme_import.py.
@@ -57,7 +67,7 @@ ANKI_FIELDS = [
     "Vehicle_Uni_Euphony",
     "Tags_Ch",
     "Source_Note",
-    "Verification_Notes",
+    "Verification Notes",  # unified 2026-08-11, per Craig -- was underscore-only
 ]
 
 
@@ -155,10 +165,19 @@ def upsert_notes(pvom_dir, dry_run=False):
         print(f"Error: {pvom_dir} is not a directory", file=sys.stderr)
         return False
 
-    # One bulk query for the whole sync run -- see get_flagged_note_ids.
-    flagged_note_ids = get_flagged_note_ids(FLAG_DECK_QUERY)
+    # One bulk query for the whole sync run -- see get_flagged_note_ids_by_color.
+    # Red still forces suspension; orange is a call-out only (2026-08-10, per
+    # Craig -- see SUSPEND_FLAG_COLORS in tsv_to_anki.py).
+    flags_by_color = get_flagged_note_ids_by_color(FLAG_DECK_QUERY)
+    flagged_note_ids = flags_by_color[FLAG_RED]
     if flagged_note_ids:
-        print(f"Found {len(flagged_note_ids)} note(s) with a red/orange-flagged card -- keeping suspended.")
+        print(f"Found {len(flagged_note_ids)} note(s) with a red-flagged card -- keeping suspended.")
+    orange_flagged_note_ids = flags_by_color[FLAG_ORANGE]
+    if orange_flagged_note_ids:
+        print(f"⚠ {len(orange_flagged_note_ids)} note(s) have an orange-flagged card "
+              f"(confusing/unclear) -- NOT suspended, flagged for review:")
+        for label in describe_note_ids(orange_flagged_note_ids):
+            print(f"    {label}")
 
     notes_to_create = []
     updates = []
@@ -217,13 +236,41 @@ def upsert_notes(pvom_dir, dry_run=False):
 
     updated = 0
     if updates:
-        for update in updates:
+        for update, tags in zip(updates, update_tags):
             result = anki_connect("updateNoteFields", {"note": update})
             if result and not result.get("error"):
                 updated += 1
             else:
                 print(f"✗ Update failed for note {update['id']}: {result}", file=sys.stderr)
                 return False
+
+            # Tags, separately -- AnkiConnect's updateNoteFields touches FIELDS
+            # ONLY and silently leaves tags alone. Fixed 2026-08-18: this script
+            # was the odd one out of the five UA importers (ua_lexeme_import.py,
+            # ua_verb_import.py, ua_grammar_import.py and ua_visual_import.py
+            # all already did this), so PVOM tags in Anki had been frozen at
+            # whatever each note was CREATED with, and no CNSF tag edit had ever
+            # reached Anki on the update path.
+            #
+            # It hid well: `tags` was already being collected here, and IS used
+            # for the suspend decision below -- but that decision reads the CNSF
+            # tags directly, never Anki's. So suspend/unsuspend behaved perfectly
+            # correctly off fresh tags while the tags shown in Anki went stale.
+            # That is why Craig's 13-note stress:unverified -> stress:verified
+            # pass unsuspended all 52 cards on 2026-08-18 and yet the browser
+            # still showed stress:unverified.
+            #
+            # remove-then-add rather than add-only, matching the other four: an
+            # add-only pass cannot clear a tag that was REMOVED from the CNSF
+            # file, which is precisely the stress:unverified case.
+            anki_id = update["id"]
+            existing = anki_connect("getNoteTags", {"note": anki_id})
+            existing_tags = (existing or {}).get("result") or []
+            if existing_tags:
+                anki_connect("removeTags",
+                             {"notes": [anki_id], "tags": " ".join(existing_tags)})
+            if tags:
+                anki_connect("addTags", {"notes": [anki_id], "tags": " ".join(tags)})
 
     # Suspend policy pass -- see module docstring. A brand-new note can't
     # already have a flagged card in Anki, so the flag check only applies

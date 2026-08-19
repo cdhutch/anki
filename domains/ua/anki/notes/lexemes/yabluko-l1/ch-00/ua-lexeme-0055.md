@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0055
   Lemma: підру́чник
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: textbook
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: учебник'
-  EuphonyNote: ''
   TypingAnswer: підручник
   UA_Example: Відкрийте підручник на сторінці десять.
   EN_Example: Open the textbook to page ten.

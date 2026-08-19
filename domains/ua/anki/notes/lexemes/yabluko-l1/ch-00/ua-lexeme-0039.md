@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0039
   Lemma: компʼю́тер
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: computer
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: computer · RU: компьютер · DE: Computer'
-  EuphonyNote: ''
   TypingAnswer: компʼютер
   UA_Example: Я працюю на компʼютері цілий день.
   EN_Example: I work on the computer all day.

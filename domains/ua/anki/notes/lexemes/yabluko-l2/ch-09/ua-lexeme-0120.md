@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0120
   Lemma: прохо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: пройти́
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to walk past, pass through (on foot)
   Govt_Case: через / повз + Acc
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: перехо́дити (pass by/through vs. cross to the far side)
   Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
@@ -30,8 +35,11 @@ fields:
     on the way somewhere else.
   CompareA: проходити
   CompareB: переходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: проходить / пройти'
-  EuphonyNote: ''
   TypingAnswer: проходити
   UA_Example: ''
   EN_Example: ''

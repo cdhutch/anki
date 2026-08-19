@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: 'Perfective: посі́сти. Lemma is the ''брати у своє володіння'' (take
+  Verification Notes: 'Perfective: посі́сти. Lemma is the ''брати у своє володіння'' (take
     possession/occupy) sense at this spelling -- a second, unrelated ''посідати'' sense (''сісти
     -- про всіх або багатьох'') is perfective and not relevant here. See ua-lexeme-0220.'
 ---

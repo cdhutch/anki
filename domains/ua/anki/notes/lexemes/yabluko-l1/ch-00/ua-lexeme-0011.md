@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0011
   Lemma: полі́тик
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: politician
   Govt_Case: ''
-  CounterpartForm: 'm/f: same form'
   IrregularForms: ''
+  CounterpartForm: 'm/f: same form'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: politician · RU: политик · FR: politicien · DE: Politiker'
-  EuphonyNote: ''
   TypingAnswer: політик
   UA_Example: Молодий політик виступає по телебаченню.
   EN_Example: The young politician speaks on television.

@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Pairs with perfective ви́бачити. See ua-lexeme-0319.
+  Verification Notes: Pairs with perfective ви́бачити. See ua-lexeme-0319.
 ---
 

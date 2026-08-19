@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0218
   Lemma: набира́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: набра́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to gain, accumulate, rack up
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "відбива́ти, забива́ти, завдава́ти - same ball/impact-game action cluster,\
     \ but each answers a different question about where the force ends up.\nRoles: відбивати\
@@ -42,8 +47,9 @@ fields:
   CompareB: забива́ти
   CompareC: завдава́ти
   CompareD: набира́ти
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: набирати
   UA_Example: Команда швидко набирає очки в другому таймі.
   EN_Example: The team is quickly racking up points in the second half.

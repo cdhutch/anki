@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0291
   Lemma: стартува́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to start (a race)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "почина́ти/поча́ти - synonym listed by Горох; почина́ти is the general-purpose\
     \ \"begin/start\"\nverb for ANY activity (a class, a conversation, a project), while стартува́ти\
@@ -37,8 +42,11 @@ fields:
   CompareScenario: The referee fires the starting pistol and the runners take off.
   CompareA: стартува́ти
   CompareB: почина́ти
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: стартувати
   UA_Example: Команди стартували рівно о восьмій ранку.
   EN_Example: The teams started right at eight in the morning.

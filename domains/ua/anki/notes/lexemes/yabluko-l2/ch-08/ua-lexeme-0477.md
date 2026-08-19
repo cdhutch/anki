@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0477
   Lemma: кі́лька
+  Lemma_Euphony: ''
   PartOfSpeech: numeral
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: several, a few
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: кілька
   UA_Example: Ми провели в місті кілька днів.
   EN_Example: We spent several days in the city.

@@ -15,13 +15,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0099
   Lemma: до́бре
+  Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: well; fine; good
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "непога́но, норма́льно, чудо́во - same \"how are you?\" register family,\
     \ graded by enthusiasm.\nScale (low to high enthusiasm): непогано (not bad - lukewarm/hedging)\
@@ -38,8 +43,9 @@ fields:
   CompareB: норма́льно
   CompareC: до́бре
   CompareD: чудо́во
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: добре
   UA_Example: Він добре знає свою роботу.
   EN_Example: He knows his work well.

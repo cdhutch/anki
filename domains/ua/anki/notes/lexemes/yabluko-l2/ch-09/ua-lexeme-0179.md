@@ -15,18 +15,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0179
   Lemma: програва́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: програ́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to lose (a game, match)
   Govt_Case: в/у + Acc. (програвати в шахи) or Acc. (програвати матч)
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: програвати
   UA_Example: Він рідко програє в шахи.
   EN_Example: He rarely loses at chess.

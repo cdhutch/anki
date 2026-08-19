@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0229
   Lemma: завда́ти уда́рів
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to deal blows, land hits
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: By the time the round ends, what has the boxer already landed on his opponent?
+  EN_Gloss: to deal blows, land hits
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: завдати ударів
   UA_Example: Боксер завдав кілька сильних ударів у першому раунді.
   EN_Example: The boxer landed several strong blows in the first round.

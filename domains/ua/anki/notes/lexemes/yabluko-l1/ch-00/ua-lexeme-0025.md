@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0025
   Lemma: анке́та
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: questionnaire, form
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'RU: анкета · ← FR: enquête'
-  EuphonyNote: ''
   TypingAnswer: анкета
   UA_Example: Треба заповнити анкету і принести її завтра.
   EN_Example: You need to fill out the form and bring it tomorrow.

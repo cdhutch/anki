@@ -16,19 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0281
   Lemma: топи́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: втопи́ти
+  Perfective_Euphony: утопи́ти
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to sink, to flood/submerge (something)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  Perfective_Euphony: утопи́ти
-  EuphonyNote: ''
   TypingAnswer: топити
   UA_Example: Течія намагалася топити човен на переправі.
   EN_Example: The current kept trying to sink the boat during the crossing.

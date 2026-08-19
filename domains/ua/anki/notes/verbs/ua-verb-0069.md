@@ -36,7 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: Imperfective-only (no attested perfective for the 'excuse me' discourse-marker
+  Verification Notes: Imperfective-only (no attested perfective for the 'excuse me' discourse-marker
     sense). See ua-lexeme-0321.
 ---
 

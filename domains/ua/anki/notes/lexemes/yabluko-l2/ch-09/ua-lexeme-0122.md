@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0122
   Lemma: захо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: зайти́
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to stop by, drop in (on foot)
   Govt_Case: до + Gen; в/у + Acc
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: заїжджа́ти (same за- "stop by" sense, different mode of motion)
   Mnemonic_EN: 'Same за- prefix (''stop by''), different base verb for the mode of motion:
@@ -30,8 +35,11 @@ fields:
   CompareScenario: Dropping by a friend's apartment on foot, on your way home from work.
   CompareA: заходити
   CompareB: заїжджати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: заходить / зайти'
-  EuphonyNote: ''
   TypingAnswer: заходити
   UA_Example: ''
   EN_Example: ''

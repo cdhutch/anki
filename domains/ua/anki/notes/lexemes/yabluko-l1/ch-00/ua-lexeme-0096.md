@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0096
   Lemma: украї́нський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Ukrainian (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: украї́нський'
   IrregularForms: ''
+  CounterpartForm: 'm: украї́нський'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: український
   UA_Example: Він пише пісні українською мовою.
   EN_Example: He writes songs in the Ukrainian language.

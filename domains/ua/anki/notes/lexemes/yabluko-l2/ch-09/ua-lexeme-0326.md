@@ -18,18 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0326
   Lemma: Перепро́шую, я не почу́в/-ла...
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Excuse me, I didn't hear/catch (what you said)...
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: Перепрошую, я не почув/-ла...
   UA_Example: Перепрошую, я не почув, о котрій відправляється поїзд.
   EN_Example: Excuse me, I didn't catch what time the train departs.

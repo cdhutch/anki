@@ -17,13 +17,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0252
   Lemma: бал
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: point, score (unit of scoring)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'очко́ (ua-lexeme-0203) -- convergent synonym, not a homograph: both loosely
     gloss as "point, score," but бал is a point on an EVALUATIVE/RATING scale -- school grades,
@@ -36,8 +41,11 @@ fields:
     how they rated her performance.
   CompareA: очко́
   CompareB: бал
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: бал
   UA_Example: Команда отримала додаткові бали за швидкість.
   EN_Example: The team got extra points for speed.

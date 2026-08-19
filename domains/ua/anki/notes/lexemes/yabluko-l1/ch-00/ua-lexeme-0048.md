@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0048
   Lemma: ніч
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: night
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'gen: но́чі'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ве́чір, ра́нок — time-of-day cluster (day/night cycle). See ua-lexeme-0029
     (вечір), ua-lexeme-0059 (ранок).
@@ -32,8 +37,10 @@ fields:
   CompareA: вечір
   CompareB: ніч
   CompareC: ранок
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: ніч
   UA_Example: Вночі вулиці міста стають тихими.
   EN_Example: At night the city streets become quiet.

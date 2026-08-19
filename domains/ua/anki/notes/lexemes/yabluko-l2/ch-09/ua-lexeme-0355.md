@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0355
   Lemma: че́рез
+  Lemma_Euphony: ''
   PartOfSpeech: preposition
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: in, after (a span of time); through, across
   Govt_Case: + Acc.
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: через
   UA_Example: Вони прибудуть через три години.
   EN_Example: They will arrive in three hours.

@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0014
   Lemma: спортсме́н
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: sportsman, athlete
   Govt_Case: ''
-  CounterpartForm: 'f: спортсме́нка'
   IrregularForms: ''
+  CounterpartForm: 'f: спортсме́нка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: sportsman · RU: спортсмен'
-  EuphonyNote: ''
   TypingAnswer: спортсмен
   UA_Example: Молодий спортсмен тренується щодня.
   EN_Example: The young athlete trains every day.

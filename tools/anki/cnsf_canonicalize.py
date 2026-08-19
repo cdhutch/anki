@@ -10,6 +10,29 @@ from typing import Any
 
 import yaml
 
+# Field ORDER inside `fields:` is driven by the same FIELDS constants that drive
+# the live Anki models -- one source of truth for both, rather than a second
+# hand-maintained list here that drifts against them (Craig's call, 2026-08-18,
+# "Option A"). Same import pattern check_cnsf_field_schema.py and
+# inspect_note_type_fields.py already use for the field *set*; this extends it
+# to order.
+#
+# Hook safety: this module runs under the `cnsf-canonical` pre-commit hook in an
+# isolated venv that declares only pyyaml. The chain pulled in here --
+# setup_ua_note_types -> tools.anki.sync.tsv_to_anki, and
+# setup_ua_pvom_note_type -- is stdlib-only (argparse/csv/json/sys/
+# urllib.request/dataclasses/pathlib/typing), so it adds no third-party
+# dependency. Keep it that way: an external import anywhere in that chain would
+# break the hook, not just this module.
+sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+from tools.anki.setup.setup_ua_note_types import (  # noqa: E402
+    FIELDS as _LEXEME_FIELDS,
+    GRAMMAR_FIELDS as _GRAMMAR_FIELDS,
+    VISUAL_FIELDS as _VISUAL_FIELDS,
+    VERB_FIELDS as _VERB_FIELDS,
+)
+from tools.anki.setup.setup_ua_pvom_note_type import FIELDS as _PVOM_FIELDS  # noqa: E402
+
 
 CANON_TOP_KEYS = [
     "schema",
@@ -22,6 +45,56 @@ CANON_TOP_KEYS = [
 ]
 
 CANON_ANKI_KEYS = ["model", "deck"]
+
+# CNSF note_type -> the note type's canonical field order.
+#
+# Only the UA note types are listed. B737 and any other CNSF note type keep
+# their existing author-order behaviour untouched (see _canonical_field_order):
+# absence from this map means "don't reorder", not "reorder to empty".
+#
+# The CNSF key set is deliberately a SUBSET of the Anki field set -- computed
+# fields (_AspectLabel, _UA_EN_DisplayLemma, _IsHomograph, _EuphonySlots,
+# TypingTarget_UA) are written by the import scripts at sync time and never
+# authored in CNSF, and ImperfectiveUnidirectional is sparse by decision (see
+# CLAUDE.md item 17). So the goal is matching RELATIVE order of the authored
+# subset, not identical lists. Any key not in the constant sorts after every
+# key that is, preserving its relative order among the other unknowns -- so an
+# unrecognised or experimental key is never silently dropped or shuffled
+# against its neighbours, just moved to the end.
+CANON_FIELD_ORDER: dict[str, list[str]] = {
+    "ua_lexeme": _LEXEME_FIELDS,
+    "ua_grammar": _GRAMMAR_FIELDS,
+    "ua_visual": _VISUAL_FIELDS,
+    "ua_verb": _VERB_FIELDS,
+    "ua_pvom_infinitive": _PVOM_FIELDS,
+}
+
+
+def _canonical_field_order(note_type: str, fields: dict[str, Any]) -> dict[str, Any]:
+    """Reorder a note's `fields:` mapping to its note type's canonical order.
+
+    Added 2026-08-18. Before this, `fields:` key order was whatever each file
+    happened to be authored with, and every setdefault()-style backfill appended
+    new keys wherever that file ended -- the same drift the live Anki models had
+    (see sync_field_order() in setup_ua_note_types.py), just on the file side.
+    A 12-note sample across ch-00/ch-08/ch-09 turned up THREE distinct orders,
+    none matching the model's. cmd_check() never caught it because
+    _top_level_key_order() only ever compared the seven top-level keys.
+
+    Unknown note types pass through unchanged.
+    """
+    order = CANON_FIELD_ORDER.get(note_type)
+    if not order:
+        return fields
+
+    out: dict[str, Any] = {}
+    for k in order:
+        if k in fields:
+            out[k] = fields[k]
+    for k in fields:  # unknown keys trail, in their original relative order
+        if k not in out:
+            out[k] = fields[k]
+    return out
 
 # Ukrainian apostrophe (апостроф) normalization. U+02BC MODIFIER LETTER APOSTROPHE
 # is the Ukrainian National Academy's recommended character for this letter (e.g.
@@ -174,13 +247,54 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
     if not isinstance(fields, dict):
         raise ValueError(f"{path}: fields must be a mapping/object.")
     # Optional: ensure the known field names exist (allow extensions)
-    # UA_Verb uses Verification_Notes (underscore), not Verification Notes (space)
+    # Verification Notes uses the same field name across every note type that
+    # carries it (unified 2026-08-11, per Craig -- previously UA_Verb/
+    # UA_PVOM_Infinitive used an underscore-separated variant; see
+    # CLAUDE-flag-audit.md for the full history). No more per-note-type
+    # branching needed.
+    fields.setdefault("Verification Notes", "")
+
+    # UA_Lexeme "newer optional fields" convention (decided 2026-08-11, per
+    # Craig): always-present, blank when unused -- matching how the rest of
+    # the schema already works, rather than sparse-key-only. Covers the
+    # per-slot euphony tolerance fields (item 16, CLAUDE.md) and the Compare/
+    # Homograph/AspectCue/Mnemonic_EN fields that had drifted to sparse
+    # presence across the corpus (see CLAUDE-work-queue.md "Decide the
+    # convention for newer optional fields"). UA_Lexeme-specific -- these
+    # keys don't exist on the other 4 note types' models at all.
     note_type = meta.get("note_type", "")
-    if note_type == "ua_verb":
-        # Remove the space-separated variant if present
-        fields.pop("Verification Notes", None)
-    else:
-        fields.setdefault("Verification Notes", "")
+    if note_type == "ua_lexeme":
+        for key in (
+            "Lemma_Euphony",
+            "Perfective_Euphony",
+            "ImperfectiveUnidirectional_Euphony",
+            "CompareA",
+            "CompareB",
+            "CompareC",
+            "CompareD",
+            "CompareScenario",
+            "Homograph_SenseA",
+            "Homograph_SenseB",
+            "AspectCue",
+            "Mnemonic_EN",
+        ):
+            fields.setdefault(key, "")
+
+    # Same always-present convention extended to UA_PVOM_Infinitive's four
+    # *_Euphony fields (Craig, 2026-08-18). These had drifted exactly the way
+    # UA_Lexeme's optional fields had: 11 of 13 notes carried no *_Euphony key
+    # at all, ua-pvom-0012 carried all four populated, and ua-pvom-0013 carried
+    # all four blank -- so check_cnsf_field_schema.py reported 2/13 and the
+    # Makefile kept STRICT=1 off partly because of it. Blank-when-unused, so
+    # every PVOM note has the same field set.
+    if note_type == "ua_pvom_infinitive":
+        for key in (
+            "Walking_Multi_Euphony",
+            "Walking_Uni_Euphony",
+            "Vehicle_Multi_Euphony",
+            "Vehicle_Uni_Euphony",
+        ):
+            fields.setdefault(key, "")
 
     # Fix YAML boolean coercion in Choice fields: unquoted True/False in YAML is
     # loaded as Python bool by yaml.safe_load, then dumped as lowercase true/false.
@@ -217,6 +331,15 @@ def canonicalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
         if k not in anki_canon:
             anki_canon[k] = anki[k]
     meta["anki"] = anki_canon
+
+    # Canonicalize field order within `fields:` (2026-08-18). Runs AFTER
+    # _normalize_meta above, since that's where setdefault() injects the
+    # always-present optional keys -- ordering before it would leave those
+    # freshly-added keys stranded at the end, which is the exact drift this
+    # is here to remove.
+    fields = meta.get("fields")
+    if isinstance(fields, dict):
+        meta["fields"] = _canonical_field_order(meta.get("note_type", ""), fields)
 
     # Canonicalize top-level order
     out: dict[str, Any] = {}
@@ -304,6 +427,27 @@ def canonicalized_file_text(path: Path) -> tuple[str, dict[str, Any]]:
     return new_text, meta_c
 
 
+def _has_field_order_drift(old_text: str, path: Path) -> bool:
+    """True when the only-or-also-wrong thing is `fields:` key order.
+
+    Compares the file's authored key order against what _canonical_field_order()
+    would produce for the SAME key set -- deliberately not against the full
+    constant, so a note that's merely missing an optional key isn't reported as
+    an ordering problem. Best-effort: any parse failure returns False and the
+    caller falls back to the generic drift message.
+    """
+    try:
+        fm = split_frontmatter(old_text, path)
+        meta = yaml.safe_load(fm.yaml_text)
+        fields = meta.get("fields")
+        if not isinstance(fields, dict):
+            return False
+        authored = list(fields.keys())
+        return authored != list(_canonical_field_order(meta.get("note_type", ""), fields))
+    except Exception:
+        return False
+
+
 def cmd_check(paths: list[Path]) -> int:
     bad = 0
     for p in paths:
@@ -315,6 +459,12 @@ def cmd_check(paths: list[Path]) -> int:
             old_order = _top_level_key_order(fm.yaml_text)
             if old_order != [k for k in CANON_TOP_KEYS if k in old_order]:
                 print(f"FAIL (YAML order drift): {p}")
+            elif _has_field_order_drift(old_text, p):
+                # Distinguished from generic canonicalization drift (2026-08-18)
+                # so the fix is obvious from the message alone: field-order
+                # drift is always resolved by --write and never needs a content
+                # decision, unlike an apostrophe or boolean-coercion fix.
+                print(f"FAIL (field order drift): {p}")
             else:
                 print(f"FAIL (canonicalization drift): {p}")
             bad += 1

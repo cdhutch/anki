@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0586
   Lemma: різки́й
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: sharp, abrupt, sudden (of a change, movement, sound, or intensity)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: гострий - both words translate English "sharp," but for different senses.
     гострий describes an intrinsic quality -- a physical edge (a sharp knife), spiciness (spicy
@@ -38,8 +43,11 @@ fields:
     road.
   CompareA: різкий
   CompareB: гострий
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: різкий
   UA_Example: Він відчув різкий біль у нозі, коли підвернув ногу.
   EN_Example: He felt a sharp pain in his leg when he twisted his ankle.

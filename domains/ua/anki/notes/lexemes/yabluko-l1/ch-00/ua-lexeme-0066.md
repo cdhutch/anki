@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0066
   Lemma: ува́га
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: attention!
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: внимание · cf. DE: Achtung (same pragmatic use)'
-  EuphonyNote: ''
   TypingAnswer: увага
   UA_Example: Увага! Зараз починається урок.
   EN_Example: Attention! The lesson is about to begin.

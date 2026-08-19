@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0228
   Lemma: заби́ти ша́йбу у воро́та
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to score the puck into the goal
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: In that split second, what does the player finally do with the puck?
+  EN_Gloss: to score the puck into the goal
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: забити шайбу у ворота
   UA_Example: Нападник забив шайбу у ворота за хвилину до кінця матчу.
   EN_Example: The forward scored the puck into the goal a minute before the match ended.

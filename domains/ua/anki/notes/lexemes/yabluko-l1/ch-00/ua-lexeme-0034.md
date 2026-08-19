@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0034
   Lemma: завда́ння
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: task, assignment
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'gen sg = pl: завда́ння'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: завдання
   UA_Example: Учитель дає нам нове завдання додому.
   EN_Example: The teacher gives us a new assignment for homework.

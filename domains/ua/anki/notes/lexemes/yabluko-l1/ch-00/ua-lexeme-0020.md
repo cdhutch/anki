@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0020
   Lemma: вчи́тель
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: teacher
   Govt_Case: ''
-  CounterpartForm: 'f: вчи́телька / учи́телька'
   IrregularForms: gen.pl. вчителі́в (stress shifts)
+  CounterpartForm: 'f: вчи́телька / учи́телька'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вчитель
   UA_Example: Вчитель пояснює нове правило на дошці.
   EN_Example: The teacher is explaining a new rule on the board.

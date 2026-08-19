@@ -17,17 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0006
   Lemma: лі́кар
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: doctor, physician
   Govt_Case: ''
-  CounterpartForm: 'f: лі́карка'
   IrregularForms: ''
+  CounterpartForm: 'f: лі́карка'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: врач'
-  EuphonyNote: ''
   TypingAnswer: лікар
   UA_Example: Лікар каже, що я цілком здоровий.
   EN_Example: The doctor says I am completely healthy.

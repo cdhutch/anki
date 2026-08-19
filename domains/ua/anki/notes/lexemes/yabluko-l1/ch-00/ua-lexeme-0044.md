@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0044
   Lemma: мі́сто
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: city, town
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: gen.pl. міст (zero ending)
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: город'
-  EuphonyNote: ''
   TypingAnswer: місто
   UA_Example: Наше місто велике і дуже красиве.
   EN_Example: Our city is large and very beautiful.

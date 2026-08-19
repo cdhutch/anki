@@ -192,7 +192,7 @@ def create_ua_verb_cnsf(
             "Participle_Adverbial_Past": "",
             "UA_Example": example_data.get("ua_example", "") if example_data else "",
             "EN_Example": example_data.get("en_example", "") if example_data else "",
-            "Verification_Notes": "",
+            "Verification Notes": "",
             "Source_URL": f"{GOROH_BASE}/{lemma}" if lemma else "",
         },
     }

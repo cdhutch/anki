@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0315
   Lemma: відправля́тися
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: відпра́витися
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to depart, set off
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: "відхо́дити - synonym listed by Горох for the train-departure sense (walking\
     \ register); PVOM\nprefix від- (ua-pvom-0007) drills відходити/відійти (on foot) and відʼїжджати/відʼїхати\n\
@@ -37,8 +42,11 @@ fields:
     nine in the evening.
   CompareA: відправля́тися
   CompareB: відхо́дити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: відправлятися
   UA_Example: Поїзд відправляється з другої платформи.
   EN_Example: The train departs from platform two.

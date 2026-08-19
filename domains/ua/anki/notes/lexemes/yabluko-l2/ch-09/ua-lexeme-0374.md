@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0374
   Lemma: використо́вувати споря́дження
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to use equipment/gear
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: Every time they dive, what do participants do with their gear?
+  EN_Gloss: to use equipment/gear
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: використовувати спорядження
   UA_Example: Учасники використовують спорядження для дайвінгу -- маску, трубку та ласти.
   EN_Example: Participants use equipment for diving -- a mask, snorkel, and flippers.

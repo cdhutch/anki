@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0125
   Lemma: виїжджа́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ви́їхати
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to drive out (by vehicle)
   Govt_Case: з + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: вʼїжджа́ти (directional opposite)
   Mnemonic_EN: вʼ- = driving into (same в-/ви- opposition as входити/виходити, applied to
@@ -30,8 +35,11 @@ fields:
   CompareScenario: A car pulls out of a parking garage or driveway onto the street.
   CompareA: вʼїжджати
   CompareB: виїжджати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выезжать / выехать'
-  EuphonyNote: ''
   TypingAnswer: виїжджати
   UA_Example: ''
   EN_Example: ''

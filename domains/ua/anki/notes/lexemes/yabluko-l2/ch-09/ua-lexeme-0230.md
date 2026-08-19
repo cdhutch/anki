@@ -17,19 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0230
   Lemma: зароби́ти очко́
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to earn/score a point
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: In that one decisive moment, what does the player do to add to the score?
+  EN_Gloss: to earn/score a point
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: заробити очко
   UA_Example: Гравець заробив очко для своєї команди.
   EN_Example: The player earned a point for his team.

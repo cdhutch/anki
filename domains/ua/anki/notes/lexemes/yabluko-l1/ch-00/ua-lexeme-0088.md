@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0088
   Lemma: брази́льський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Brazilian (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: брази́льський'
   IrregularForms: ''
+  CounterpartForm: 'm: брази́льський'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: бразильський
   UA_Example: Вони танцюють бразильський танець самбу.
   EN_Example: They dance the Brazilian dance samba.

@@ -16,18 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0132
   Lemma: бойови́й
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: combat, military, martial (adj.)
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'RU: боевой'
-  EuphonyNote: ''
   TypingAnswer: бойовий
   UA_Example: Бойовий гопак поєднує танець і бойові прийоми.
   EN_Example: Combat hopak combines dance and fighting techniques.

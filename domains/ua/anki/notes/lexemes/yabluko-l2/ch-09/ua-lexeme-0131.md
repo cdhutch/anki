@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0131
   Lemma: заїжджа́ти
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: заї́хати
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to stop by (by vehicle)
   Govt_Case: до + Gen; в/у + Acc
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: захо́дити (same за- "stop by" sense, different mode of motion)
   Mnemonic_EN: 'Same за- prefix (''stop by''), different base verb for the mode of motion:
@@ -30,8 +35,11 @@ fields:
   CompareScenario: Dropping by a friend's house by car, on your way somewhere else.
   CompareA: заходити
   CompareB: заїжджати
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: заезжать / заехать'
-  EuphonyNote: ''
   TypingAnswer: заїжджати
   UA_Example: ''
   EN_Example: ''

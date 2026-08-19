@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0049
   Lemma: оліве́ць
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: pencil
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: 'gen: олі́вця (loses -е-)'
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ру́чка
   Mnemonic_EN: олівець = pencil (erasable, graphite); ручка = pen (permanent ink).
@@ -30,8 +35,11 @@ fields:
     form that requires erasable marks.
   CompareA: олівець
   CompareB: ручка
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '← DE: Bleiweiß · ≠ RU: карандаш ← Turkic'
-  EuphonyNote: ''
   TypingAnswer: олівець
   UA_Example: Напишіть своє прізвище олівцем на першій сторінці.
   EN_Example: Write your surname in pencil on the first page.

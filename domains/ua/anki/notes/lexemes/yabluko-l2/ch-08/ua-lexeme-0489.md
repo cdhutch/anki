@@ -17,18 +17,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0489
   Lemma: дотри́муватися зако́ну
+  Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: to abide by / comply with the law
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: дотримуватися закону
   UA_Example: У подорожі важливо дотримуватися закону країни, яку відвідуєш.
   EN_Example: While traveling, it's important to abide by the law of the country you're visiting.

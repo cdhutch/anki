@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0093
   Lemma: по́льський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: Polish (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: по́льський'
   IrregularForms: ''
+  CounterpartForm: 'm: по́льський'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: польський
   UA_Example: Вона добре розуміє польську мову.
   EN_Example: She understands the Polish language well.

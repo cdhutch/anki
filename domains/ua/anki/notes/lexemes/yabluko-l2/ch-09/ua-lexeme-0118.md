@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0118
   Lemma: відхо́дити
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: відійти́
+  Perfective_Euphony: ''
+  EuphonyNote: 'PFV: від- + іти → відійти (epenthetic и before й)'
+  AspectCue: ''
   EN_Gloss: to walk away, leave (on foot)
   Govt_Case: від + Gen
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
   ConfusableSet: прихо́дити (directional opposite)
   Mnemonic_EN: при- = arrival (toward the speaker/reference point); від- = departure (away
@@ -31,8 +36,11 @@ fields:
     of the evening.
   CompareA: приходити
   CompareB: відходити
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: отходить / отойти (від- ≈ от-)'
-  EuphonyNote: 'PFV: від- + іти → відійти (epenthetic и before й)'
   TypingAnswer: відходити
   UA_Example: ''
   EN_Example: ''

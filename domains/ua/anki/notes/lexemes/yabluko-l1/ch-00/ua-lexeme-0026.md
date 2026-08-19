@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0026
   Lemma: бале́т
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: ballet
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: ballet · RU: балет · DE: Ballett · ← FR: ballet'
-  EuphonyNote: ''
   TypingAnswer: балет
   UA_Example: Учора ввечері ми дивилися чудовий балет.
   EN_Example: Yesterday evening we watched a wonderful ballet.

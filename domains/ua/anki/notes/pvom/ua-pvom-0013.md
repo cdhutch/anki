@@ -13,7 +13,6 @@ tags:
 - grammar:verb_motion
 - grammar:pvom_infinitive
 - stress:verified
-- status:draft
 fields:
   NoteID: ua-pvom-0013
   Prefix: на
@@ -36,7 +35,6 @@ fields:
     Scoped here to the walking sense only, PVOM-only per Craig 2026-07-25: no UA_Lexeme note
     unless находити/найти turns up directly in Яблуко. на- is vowel-final so no euphonic в-/у-
     tension on vehicle forms (unlike входити) -- all *_Euphony fields blank.'
-  Verification_Notes: ''
   Verification Notes: ''
 ---
 

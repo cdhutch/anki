@@ -36,6 +36,6 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification_Notes: 'Perfective: набра́ти. See ua-lexeme-0218.'
+  Verification Notes: 'Perfective: набра́ти. See ua-lexeme-0218.'
 ---
 

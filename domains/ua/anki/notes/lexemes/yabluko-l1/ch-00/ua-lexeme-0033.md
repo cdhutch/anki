@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0033
   Lemma: ву́лиця
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: street
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: 'RU: улица (cognate)'
-  EuphonyNote: ''
   TypingAnswer: вулиця
   UA_Example: На нашій вулиці є гарний маленький парк.
   EN_Example: On our street there is a lovely little park.

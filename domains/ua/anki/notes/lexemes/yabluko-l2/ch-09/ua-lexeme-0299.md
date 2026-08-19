@@ -18,19 +18,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0299
   Lemma: ви́лізти на ске́лю
+  Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
-  EN_Gloss: to climb up onto a cliff
+  Perfective_Euphony: ''
+  EuphonyNote: ''
   AspectCue: After the long struggle, what does the climber finally do?
+  EN_Gloss: to climb up onto a cliff
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: вилізти на скелю
   UA_Example: Перший етап -- вилізти на скелю без страховки.
   EN_Example: The first stage is climbing up onto the cliff without safety gear.

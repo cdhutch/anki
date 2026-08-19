@@ -16,13 +16,18 @@ tags:
 fields:
   NoteID: ua-lexeme-0022
   Lemma: абе́тка
+  Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: alphabet; ABC primer
   Govt_Case: ''
-  CounterpartForm: ''
   IrregularForms: ''
+  CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: алфа́ві́т — near-synonym; алфавіт is the neutral, linguistic term for the
     letter system itself, while абетка specifically evokes the context of learning the alphabet
@@ -33,8 +38,11 @@ fields:
     learning their letters for the first time.
   CompareA: абетка
   CompareB: алфавіт
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: абетка
   UA_Example: Діти вчать абетку вже у першому класі.
   EN_Example: Children learn the alphabet as early as first grade.

@@ -16,17 +16,29 @@ tags:
 fields:
   NoteID: ua-lexeme-0087
   Lemma: англі́йський
+  Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: m
+  ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
   EN_Gloss: English (adj.)
   Govt_Case: ''
-  CounterpartForm: 'm: англі́йський; n: англі́йське'
   IrregularForms: ''
+  CounterpartForm: 'm: англі́йський; n: англі́йське'
   VerbMotion_Pair: ''
   ConfusableSet: ''
+  Mnemonic_EN: ''
+  CompareScenario: ''
+  CompareA: ''
+  CompareB: ''
+  CompareC: ''
+  CompareD: ''
+  Homograph_SenseA: ''
+  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  EuphonyNote: ''
   TypingAnswer: англійський
   UA_Example: Англійська мова дуже поширена у світі.
   EN_Example: The English language is very widespread in the world.
