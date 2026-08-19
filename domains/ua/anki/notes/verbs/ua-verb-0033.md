@@ -10,7 +10,7 @@ tags:
 - class:reflexive
 - ch:2.9.2
 - conj:suspended
-- status:draft
+- status:verified
 - stress:verified
 fields:
   NoteID: ua-verb-0033

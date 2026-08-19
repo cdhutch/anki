@@ -72,7 +72,7 @@ LIVE_VERB = [
     "Participle_Active_Present", "Participle_Adverbial_Present",
     "Participle_Impersonal_Past", "Participle_Adverbial_Past",
     "Participle_Passive_Past",
-    "Tags_Conj", "Source_Note", "Verification Notes",
+    "Source_Note", "Verification Notes",
 ]
 
 LIVE_PVOM = [

@@ -14,6 +14,7 @@ tags:
 - grammar:pvom_infinitive
 - stress:verified
 - status:verified
+- conj:drill
 fields:
   NoteID: ua-pvom-0006
   Prefix: під

@@ -14,6 +14,7 @@ tags:
 - grammar:pvom_infinitive
 - stress:verified
 - status:verified
+- conj:suspended
 fields:
   NoteID: ua-pvom-0001
   Prefix: про

@@ -2,7 +2,8 @@
 tests/ua/test_pvom_infinitive_import.py
 
 Unit tests for tools/anki/sync/ua_pvom_infinitive_import.py's anki_fields_from
-(the CNSF fields dict -> Anki field mapping). Everything else in this module
+(the CNSF fields dict -> Anki field mapping) and should_suspend (the
+suspension policy). Everything else in this module
 talks to AnkiConnect directly and isn't practically unit-testable without a
 live Anki instance -- this is the one piece of pure decision logic worth
 covering, and it's exactly the kind of function where a field added to
@@ -17,7 +18,11 @@ from pathlib import Path
 REPO_ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(REPO_ROOT))
 
-from tools.anki.sync.ua_pvom_infinitive_import import ANKI_FIELDS, anki_fields_from  # noqa: E402
+from tools.anki.sync.ua_pvom_infinitive_import import (  # noqa: E402
+    ANKI_FIELDS,
+    anki_fields_from,
+    should_suspend,
+)
 
 EUPHONY_BASES = ("Walking_Multi", "Walking_Uni", "Vehicle_Multi", "Vehicle_Uni")
 
@@ -61,3 +66,52 @@ class TestEuphonyFieldCoverage:
         for base in EUPHONY_BASES:
             assert f"{base}_UA" in ANKI_FIELDS
             assert f"{base}_Typing" in ANKI_FIELDS
+
+
+class TestShouldSuspend:
+    """Three independent suspend axes, mirroring test_ua_verb_import.py.
+
+    conj:suspended was added 2026-08-19. Before it, curation had no lever on
+    this note type: holding a note out of the drilling rotation meant tagging
+    it status:draft, which asserts "unreviewed" and pulls a verified note back
+    into list_unverified.py's report. These tests pin the separation so a
+    future simplification can't quietly re-merge the axes.
+    """
+
+    def test_verified_no_flags_unsuspends(self):
+        assert should_suspend(["domain:ua", "status:verified"]) is False
+
+    def test_status_draft_suspends(self):
+        assert should_suspend(["domain:ua", "status:draft"]) is True
+
+    def test_stress_unverified_suspends(self):
+        assert should_suspend(["stress:unverified"]) is True
+
+    def test_conj_suspended_suspends(self):
+        assert should_suspend(["domain:ua", "status:verified", "conj:suspended"]) is True
+
+    def test_conj_suspended_wins_over_full_verification(self):
+        # The whole point of the axis: a note can be correct on both quality
+        # axes and still be reference-only. This is the state of the nine
+        # non-selected prefixes as of 2026-08-19.
+        assert should_suspend(
+            ["domain:ua", "stress:verified", "status:verified", "conj:suspended"]
+        ) is True
+
+    def test_conj_drill_does_not_suspend(self):
+        # The four Craig keeps active (при-, в/у-, ви-, під-) carry conj:drill,
+        # which must not be confused for conj:suspended by a substring check.
+        assert should_suspend(
+            ["domain:ua", "stress:verified", "status:verified", "conj:drill"]
+        ) is False
+
+    def test_stress_unverified_suspends_even_if_status_verified(self):
+        assert should_suspend(["status:verified", "stress:unverified"]) is True
+
+    def test_no_tags_unsuspends(self):
+        assert should_suspend([]) is False
+
+    def test_multiple_suspend_reasons_still_suspends(self):
+        assert should_suspend(
+            ["status:draft", "stress:unverified", "conj:suspended"]
+        ) is True

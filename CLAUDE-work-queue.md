@@ -524,22 +524,58 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `status:draft`. This closes `e53f14d`'s original goal (PVOM notes were falling into
   `list_unverified.py`'s "no status tag" bucket) without its side effect.
 
-- [ ] **`ua-verb-0017`–`0032` have unstressed multisyllabic lemmas** — surfaced by the
-  2026-08-19 `make ua-unverified` run, not previously recorded here. All 16 read as bare
-  `приходити` / `виходити` / `підходити` / … with **zero stress marks**, which CLAUDE.md's
-  own language conventions call out as the strongest single indicator of a bad extraction
-  (wrong homograph block, failed fetch, stripped markup) — a firmer red flag than the
-  double-mark case. Two of them, `ua-verb-0027` (`підїхати`) and `ua-verb-0032`
-  (`відїхати`), are additionally **missing the U+02BC apostrophe** entirely; they should be
-  `підʼїхати` / `відʼїхати`. Worth treating as a data-integrity pass rather than a
-  verification pass — re-source from Горох before anything flips to `stress:verified`.
-  Squarely in `maint/verb-review`'s remit.
+- [ ] **`ua-verb-0017`–`0032` re-sourced from Горох — DONE 2026-08-19, Craig verified and
+  tagged. Needs only your tick.** The unstressed Lemma that `make ua-unverified` surfaced
+  was the visible symptom of a much larger defect: **182 of 224 conjugation fields were
+  wrong**, not merely unmarked.
 
-- [ ] **`ua-verb-0001`–`0032` carry no `status:` tag at all** — the same gap PVOM just had
-  (`0001`–`0016` are stress-verified but statusless; `0017`–`0032` are neither). 87/87
-  `ua_verb` notes currently report unverified. Whether these want `status:verified`,
-  `status:draft`, or a re-source first depends on the item above; not actionable until
-  that's settled.
+  **Root cause, `-ходити` group (`0017`–`0024`, 10/14 fields each):** Горох carries two
+  homograph entries per spelling — a prefix-stressed imperfective (`прихо́дити`) and a
+  stem-stressed perfective (`проходи́ти`). The stored paradigm was the **perfective** block
+  while every note is tagged `Aspect: imperfective`. Same wrong-homograph-block failure as
+  the `біг`/`Бог` bug. Three imperatives were not just mis-stressed but the wrong form
+  outright: stored `приходи́`/`приході́м`/`приході́ть`, correct `прихо́дь`/`прихо́дьмо`/`прихо́дьте`.
+  Per Craig: with the prefixes the stress is on `-хо́-`.
+
+  **Root cause, `-їхати` group (`0025`–`0032`, 12–14 each):** wrong in its own way — stored
+  `приїде́ш`/`приїде́м`/`приїдете́` against Горох's `приї́деш`/`приї́демо`/`приї́дете`, and
+  `Imperative_1pl` stored as `приїдімте́`, a form Горох does not list. `0026` is the group's
+  exception: `ви́їхати`, prefix-stressed, consistent with `ви́йти`.
+
+  **Also fixed:** `0027`/`0032` were missing the U+02BC apostrophe in **all 14** fields, not
+  just the Lemma — now `підʼї́хати` / `відʼї́хати`, confirmed by codepoint.
+
+  **Watch on next `make ua-verb`:** these 16 were suspended via `stress:unverified`. With
+  that cleared and no `status:` tag present — not a suspend reason for `ua_verb` — up to
+  **64 cards** (16 × 4 templates) unsuspend on the next sync.
+
+- [ ] **`ua-verb-0001`–`0032` carry no `status:` tag at all** — the same gap PVOM had before
+  `53680f4`. `0001`–`0032` are now all stress-verified but statusless, so they keep
+  reporting under `[no status tag]` in `make ua-unverified` even though the data is sound.
+  Same fix shape as PVOM: `status:verified` satisfies the report without changing suspension
+  (for `ua_verb`, `should_suspend()` trips on `stress:unverified`, `status:draft`, or
+  `conj:suspended` — never on absence). Craig's tag to set.
+
+- [ ] **`ua-lexeme-0116` lemma corrected to `вихо́дити` — DONE 2026-08-19 by Craig. Needs
+  only your tick.** Surfaced while re-sourcing `ua-verb-0018`: the note had stored
+  `ви́ходити` against the gloss "to go out, exit (on foot)". Горох's Тлумачення page carries
+  three homographs — **ВИХО́ДИТИ**, imperfective, first sense "Іти звідки-небудь назовні, за
+  межі чогось", with `ВИ́ЙТИ` as its perfective; plus two **ВИ́ХОДИТИ** entries that are bare
+  cross-references to `вихо́джувати¹`/`²`. So the `-хо́-` form is the one that matches this
+  note's gloss and its `Perfective: ви́йти`, and it now agrees with `ua-verb-0018`. Rechecked
+  against Горох after the edit.
+
+  Two cosmetic leftovers on that note, not worth their own commit — fold them in next time it
+  is touched: `Source_Note` still reads "Stress verified 2026-07-06 via Горох" though the
+  lemma changed 2026-08-19, and its `Verification Notes` ends "Needs your review" on a note
+  tagged `status:verified`.
+
+- [ ] **Sweep the corpus for any other `ви́ходити`-shaped lemma** — the 0116 error was a
+  prefix-stressed spelling standing in for a `-хо́-` imperfective, which is the same class of
+  mistake as the `ua-verb-0017`–`0032` paradigm corruption. Worth one pass to confirm it was
+  isolated rather than assuming:
+
+      git grep -n "ви́ходити\|ви́хо" -- domains/ua/anki/notes/ | grep -v exported/
 
 ## B737 Domain
 
