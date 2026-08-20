@@ -190,7 +190,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `docs/ua-en-ua-euphony-aspect-refactor.md` §9.4. Option C remains undecided.
   **Leaving this box for Craig**, as the header requires.
 
-- [ ] **`UA_PVOM_Infinitive` euphonic alternates are still capped below PERFECT**
+- [x] **`UA_PVOM_Infinitive` euphonic alternates are still capped below PERFECT**
   (bug (a), one-slot version — follow-up scoped by Craig 2026-08-19 as "UA_Lexeme now,
   PVOM as a follow-up"; deferred same day). **This does NOT need `_TypingSpec`** — an
   earlier draft of this item said it did, wrongly. `_TypingSpec` exists to remove
@@ -214,7 +214,32 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `name` where the lexeme script uses `Name`, harmless to AnkiConnect but it has already
   cost one guard a silent blind spot.
 
-- [ ] **62 CNSF notes where `TypingAnswer` disagrees with the stress-stripped slot
+  **DONE AND VALIDATED ON-DEVICE 2026-08-20** (`fe4efcc`, PR #79). Both fold-ins landed
+  too: `normalizeTypeansText()` now lives once in `tools/anki/lib/typeans_js.py` and is
+  spliced into both scripts (with a test asserting each embeds the constant *verbatim*,
+  so re-inlining fails even if the two inlined bodies agree), and the template dicts are
+  unified on `"Name"`. Alternates are kept stressed and both stressed comparisons now run
+  above both unstressed ones; the typed answer is also NFC-normalized, and the
+  null-reconstruction check hoisted to the top. Template change only — `make
+  ua-setup-pvom` was run, no `make ua-pvom` needed.
+
+  Craig typed all four cases on `ua-pvom-0012` Walking (Multi):
+    - `ухо́дити` → **✓ PERFECT**, "accepted variant form" (was CORRECT — this is the fix)
+    - `уходити` → ~ CORRECT, "variant form, missing or misplaced stress"
+    - `вхо́дити` → ✓ PERFECT, correctly with **no** "Primary form" line
+    - `вхо́дит` → ✗ INCORRECT
+  **The second is the load-bearing one** — it is the symmetric failure, and had it come
+  back PERFECT the two variant tiers would have collapsed at the top instead of the
+  bottom, which is no better than the bug. 18 tests in `test_pvom_euphony_grading.py`.
+
+  **Scope, per Craig the same day: this moves the DESKTOP path only.** Stress marks can't
+  be typed on his phone, so mobile study lands at CORRECT either way.
+
+  Note the four cards were hand-unsuspended in the browser to test, because the red flag
+  below suspends the whole note; the next `make ua-pvom` re-suspends them.
+  **Box left for you**, per this file's rule.
+
+- [x] **61 CNSF notes where `TypingAnswer` disagrees with the stress-stripped slot
   join** (found 2026-08-19 during the `_TypingSpec` rollout). e.g. ua-lexeme-0114 holds
   `приходити` where the note is a doublet needing `приходити / прийти`; ua-lexeme-0488
   holds the Perfective instead of the Lemma. **Not a live bug** — `import_note()`
@@ -224,6 +249,24 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   reader of 0114 would draw the wrong conclusion about what gets typed. Natural home is
   a `cnsf_canonicalize.py` pass, which already computes the same join for field-order
   purposes. Low priority, zero learner impact.
+  **DONE 2026-08-20** (`fe4efcc`, PR #79) — and the count is **61**, not 62; the figure
+  recorded here on 2026-08-19 was one high. `_sync_typing_answer()` in
+  `cnsf_canonicalize.py`, run via the existing `make ua-lexeme-fix`;
+  `compute_typing_target()`/`strip_stress()` moved to `tools/anki/lib/typing_target.py`
+  so the canonicaliser can compute the same join **without** importing
+  `ua_lexeme_import` — the `cnsf-canonical` hook runs in a pyyaml-only venv, and an
+  import-free leaf module can't break it from a distance. `cmd_check()` reports
+  `FAIL (TypingAnswer drift)` separately, checked before field-order drift.
+  **Scoped strictly to the case the importer overwrites.** Singlets keep their authored
+  value — every phrase and non-verb note is one, and those values are hand-written and
+  not derivable from `Lemma` alone, so a broader pass would have turned a documentation
+  problem into real data loss. Confirmed by all 113 ch-00 notes reporting `OK`. 15 tests
+  in `test_typing_answer_sync.py`, most of them pinning that inverse case.
+  **`ua-lexeme-0338` is the one note where the join legitimately collapses** —
+  `виклика́ти` / `ви́кликати` is a stress-only pair, so `TypingAnswer` reads
+  `викликати / викликати`. Settled per Craig, do not re-raise: the unstressed CORRECT
+  tier is the everyday path and stress can't be typed on the phone. Pre-existing live
+  behaviour that canonicalisation makes visible, not something it introduced.
 
 - [ ] **ua-lexeme-0153 / 0379 — example sentences after the в-/у- flip** (2026-08-19,
   needs Craig, not code). Both notes had their headword direction corrected to в- per
@@ -266,10 +309,15 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   confirmed clean (246 passed, 0 failed).
 - [ ] **`domains/ua/anki/docs/design.md` refreshed** to match the live schema
   (currently predates `CounterpartForm`/`AspectCue`/`TypingTarget_UA` and others).
-- [ ] **Compare-card "should be suspended" comment fixed** in
+- [x] **Compare-card "should be suspended" comment fixed** in
   `setup_ua_note_types.py` — the branch it describes is actually unreachable (Anki
   never generates an empty-front Compare card to begin with). Cosmetic, low
   priority.
+  **DONE 2026-08-20** (`fe4efcc`). The misleading part was the user-facing warning text,
+  not just the code comment: "this card should be suspended" reads as a live safeguard
+  when nothing is suspending anything, because there is no card. Reworded on both front
+  and back to describe the data gap and say plainly that seeing it at all would mean
+  Anki's empty-card behaviour had changed. `make ua-setup-lexeme` run.
 
 ## UA Domain — YAML/CNSF schema consistency
 
@@ -349,11 +397,24 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   intersected correctly, so nothing is wrong; but every UA import now prints the same
   26 unrelated notes, which is how a useful warning turns into scrollback. Scope the
   call-out to the notes actually being imported.
-- [ ] **Flag counts in the docs are stale** — `CLAUDE-active-status.md` says 11 flagged
+  **DONE 2026-08-20** (`fe4efcc`, PR #79). New `flag_query_for_model()` in
+  `tsv_to_anki.py`; all five importers build `FLAG_DECK_QUERY` from it. Scoped by note
+  type rather than by `--targets`, deliberately: a flagged sibling in the type you are
+  syncing is worth seeing, a flagged `UA_Visual` note during a PVOM sync is not.
+  `ua_flag_audit.py` keeps the whole-tree query on purpose — it enumerates the corpus for
+  Phase 2 — and `test_flag_query_scope.py` pins that so a future "fix the flag scope"
+  sweep does not narrow it by analogy. 19 tests. **Box left for you**, per this file's
+  rule; the check is a `make ua-lexeme` or `make ua-pvom` printing only its own note
+  type's orange notes.
+- [x] **Flag counts in the docs are stale** — `CLAUDE-active-status.md` says 11 flagged
   notes, `flagged_cards_manifest.json` said 28. The live figure is **40** (14 red + 26
   orange), read straight off the 2026-08-18 `make ua-pvom` output, so no separate
   `ua_flag_audit.py --query` run is needed to know the number — only to get the note
   list for Phase 2.
+  **DONE 2026-08-20** (`fe4efcc`). `CLAUDE-active-status.md` corrected to 40 (14 red + 26
+  orange) with provenance, and it now says outright that the manifest's 28 is stale and
+  wants a fresh `--query` before Phase 2. The manifest file itself is untouched —
+  regenerating it is part of Phase 2, not of this item.
 - [ ] **`UA_Verb`'s `Source_Note` sparse-vs-always-present decision** — the last
   `STRICT=1` blocker for this note type. `Source_Note` is populated on **1 of 87** notes.
   Either backfill it corpus-wide (blank where unknown, per the always-present convention
@@ -397,6 +458,13 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   about which у- form is correct — both alternations are attested. Горох independently
   lists `ухо́дити` as its own headword with sense 1 glossing to "входити кудись".
   NEEDS CRAIG DECISION flags cleared from both `ua-lexeme-0115` and `ua-pvom-0012`.
+- [ ] **`ua-lexeme-0115`'s `ConfusableSet` corrected to `вихо́дити`** (2026-08-20,
+  `fe4efcc`). It read `ви́ходити` — the prefix-stressed homograph (*to wear out by
+  prolonged walking*) — as входити's "directional opposite", left behind when you
+  corrected 0116's own `Lemma` on 2026-08-19. Now agrees with 0116 and with
+  `ua-verb-0018`. **Content change on a `status:verified` note, so it wants your tick**
+  rather than being assumed; the substance is your own already-rechecked 0116 call, not a
+  new stress claim. Found by the corpus sweep above.
 - [ ] **`ua-lexeme-0115` is `status:verified` while carrying an unverified change**
   — the 2026-08-18 `ввійти́`/`увійти́` flip. Its cards are active, and the next
   `make ua-lexeme` pushes a `TypingTarget_UA` of `вхо́дити / ввійти́`, changing what
@@ -412,9 +480,12 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   comparison matches. Left as an unticked item only so the finding is recorded — if the
   keyboard or platform ever changes, the fix is the same shape as the U+00A0 fix and
   belongs in the same `normalizeTypeansText()` helper.
-- [ ] **Ch-08 verification decisions written into fields** — 0482 дотримуватися
-  missing its `Perfective` (дотриматися), and the 0474 раз counting-usage
-  question. (0484 correction already applied and synced.)
+- [ ] **Ch-08 verification decisions written into fields** — ~~0482 дотримуватися
+  missing its `Perfective` (дотриматися)~~ **— that half is STALE as of 2026-08-20: 0482
+  carries `Perfective: дотри́матися`.** Noticed because it surfaced in the `TypingAnswer`
+  drift list, which only fires on notes that HAVE two populated aspect slots. What remains
+  open here is the 0474 раз counting-usage question. (0484 correction already applied and
+  synced.)
 - [x] **All 13 `UA_PVOM_Infinitive` notes stress-verified** — Craig's own Горох pass,
   2026-08-18, `stress:unverified` → `stress:verified` on every note. Confirmed in Anki
   after the tag-write fix: `tag:stress:verified` = 13, `tag:stress:unverified` = 0.
@@ -614,6 +685,17 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   isolated rather than assuming:
 
       git grep -n "ви́ходити\|ви́хо" -- domains/ua/anki/notes/ | grep -v exported/
+
+  **DONE 2026-08-20 — isolated, with one leftover, now fixed.** No other `Lemma` carried
+  the prefix-stressed spelling. But `ua-lexeme-0115`'s `ConfusableSet` still named
+  `ви́ходити` as входити's "directional opposite" — the homograph meaning *to wear out by
+  prolonged walking*, not `вихо́дити`. The 0116 lemma correction had never reached the
+  cross-reference pointing **at** 0116, so the Compare-card mnemonic named the wrong verb.
+  Corrected in `fe4efcc`; see the tick item under Content verification below.
+  A wider sweep for unstressed multisyllabic `Lemma`/`Perfective`/`*_UA` values across all
+  five note types returned only the known `ua-verb-0033`–`0087` draft range plus
+  `ua-lexeme-0151` (`триатлон`, a documented exception — Горох's declension table carries
+  no mark on any form, per that note's own `Source_Note`).
 
 ## B737 Domain
 

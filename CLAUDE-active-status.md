@@ -210,6 +210,30 @@ fully verified on both axes as of 2026-08-19.
 
 ## Completed Projects
 
+- **PVOM euphony PERFECT tier + two shared-code hoists + flag scoping + `TypingAnswer`
+  canonicalization** (2026-08-20, commit `fe4efcc`, PR #79, merged and live-validated).
+  Five work-queue items in one commit — they are import-coupled, so any split leaves an
+  unimportable intermediate commit, and `.githooks/pre-commit` runs `--all-files` on top
+  of that (the `1baf0c2` constraint again). (1) PVOM euphonic alternates could not reach
+  PERFECT: `euphonyAlts` was stress-stripped on the way in and the typed answer stripped
+  again at the comparison, so `ухо́дити` and `уходити` were the same string. Alternates are
+  now stored stressed and both stressed comparisons run above both unstressed ones —
+  validated by Craig across four typed cases, with `уходити → ~ CORRECT` as the
+  load-bearing one (the symmetric failure). **Desktop-only in effect:** stress marks
+  cannot be typed on the phone, so mobile study lands at CORRECT either way. (2)
+  `normalizeTypeansText()` hoisted to `tools/anki/lib/typeans_js.py` — one body instead of
+  two hand-synced copies, which came within one test of failing on 2026-08-19. (3) The
+  orange flag call-out is scoped to the note type being synced; `ua_flag_audit.py`
+  deliberately stays whole-tree. (4) 61 CNSF notes' `TypingAnswer` brought in line with
+  the aspect-slot join (the count logged 2026-08-19 as 62 was one high); scoped strictly
+  to doublets/triplets, since singlets are authored and not derivable. (5) The unreachable
+  Compare-card suspend warning reworded. Also: `ua-lexeme-0115`'s `ConfusableSet`
+  corrected `ви́ходити` → `вихо́дити`, found by the sweep confirming the 0116 error was
+  otherwise isolated — **wants Craig's tick**, being a content change on a
+  `status:verified` note. `make ua-test` 437 passed (was 384). `make ua-setup-pvom` and
+  `make ua-setup-lexeme` both clean with `sync_field_order()` making zero calls. Full
+  detail in `CLAUDE.md`'s 2026-08-20 entry.
+
 - **ua-verb-0017–0032 re-sourced from Горох + `conj:` curation axis** (2026-08-19,
   commits `0c12a5a`/`53680f4`/`7657034`, all synced live). `make ua-unverified` flagged an
   unstressed multisyllabic `Lemma` on all 16 prefixed motion verbs — the documented
