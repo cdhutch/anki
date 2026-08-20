@@ -15,7 +15,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0116
-  Lemma: ви́ходити
+  Lemma: вихо́дити
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''

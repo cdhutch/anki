@@ -1713,7 +1713,6 @@ VERB_FIELDS = [
     "Participle_Impersonal_Past",
     "Participle_Adverbial_Past",
     # Metadata
-    "Tags_Conj",
     "Source_Note",
     "Verification Notes",  # unified 2026-08-11, per Craig -- was underscore-only
 ]
@@ -1953,7 +1952,7 @@ VERB_BACK_RECOGNITION = """\
 </details>
 
 {{#Source_Note}}<div class="source-note">{{Source_Note}}</div>{{/Source_Note}}
-<div class="note-id">{{NoteID}} · {{Tags_Conj}}</div>
+<div class="note-id">{{NoteID}} · {{Tags}}</div>
 """
 
 VERB_FRONT_PRODUCTION_PRESENT = """\

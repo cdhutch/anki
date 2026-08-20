@@ -12,31 +12,47 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
-- stress:unverified
+- stress:verified
+- status:verified
+- conj:drill
 fields:
   NoteID: ua-verb-0027
-  Lemma: підїхати
+  Lemma: підʼї́хати
   Aspect: perfective
   VerbClass: motion-vehicle-prefixed
   FreqSource: ch:2.9
-  Pres_1sg: підї́ду
-  Pres_2sg: підїде́ш
-  Pres_3sg: підїде́
-  Pres_1pl: підїде́м
-  Pres_2pl: підїдете́
-  Pres_3pl: підї́дуть
-  Imperative_2sg: підїдь
-  Imperative_1pl: підїдімте́
-  Imperative_2pl: підїдіть
-  Past_1sg_m: підїхав
-  Past_1sg_f: підїха́ла
-  Past_1sg_n: підїха́ло
-  Past_3pl: підїха́ли
+  Pres_1sg: підʼї́ду
+  Pres_2sg: підʼї́деш
+  Pres_3sg: підʼї́де
+  Pres_1pl: підʼї́демо
+  Pres_2pl: підʼї́дете
+  Pres_3pl: підʼї́дуть
+  Imperative_2sg: підʼї́дь
+  Imperative_1pl: підʼї́дьмо
+  Imperative_2pl: підʼї́дьте
+  Past_1sg_m: підʼї́хав
+  Past_1sg_f: підʼї́хала
+  Past_1sg_n: підʼї́хало
+  Past_3pl: підʼї́хали
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
-  Verification Notes: ''
+  Verification Notes: 'Re-sourced from Горох (goroh.pp.ua/Словозміна) 2026-08-19 after `make
+    ua-unverified` surfaced an unstressed multisyllabic Lemma on all of ua-verb-0017-0032
+    -- CLAUDE.md''s own documented signature of a bad extraction. The Lemma was the visible
+    symptom; the stored paradigm was wrong too. For the -ходити group, Горох carries TWO homograph
+    entries per spelling: a prefix-stressed imperfective (прихо́дити) and a stem-stressed
+    perfective (проходи́ти). The stored forms matched the PERFECTIVE block while the note
+    is tagged Aspect: imperfective -- the same wrong-homograph-block failure as the біг/Бог
+    bug. The -їхати group was wrong in its own way (stored приїде́ш/приїде́м/приїдімте́ against
+    Горох''s приї́деш/приї́демо/приї́дьмо). Conventions applied: Pres_1pl/Imperative_1pl stored
+    in the -мо form only, per the 2026-08-04 decision; primary forms only, so the -но emphatic
+    imperative and colloquial variants (приходе, приходіть) are not stored; apostrophe normalised
+    to U+02BC. Claude sourced and drafted these. 2026-08-19: Craig independently verified
+    all sixteen notes (ua-verb-0017-0032) against Горох and set stress:verified himself; he
+    separately confirmed the rule that the prefixed imperfectives carry stress on -хо́-. No
+    field values changed as part of that pass, only the tag.'
 ---
 

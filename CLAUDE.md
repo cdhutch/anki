@@ -594,6 +594,95 @@ not a mechanical edit, and still open. `Source_URL` was likewise left pointing a
 spellings rather than assert a URL Claude had not opened; **Craig repointed both at the в- forms
 the same day**, matching the house pattern in 0115/0211/0377/0484.
 
+2026-08-19 (later session): **`main` merged into `maint/verb-review`; ua-verb-0017-0032
+re-sourced; both corpora given a working curation axis.** Commits `0c12a5a` (merge),
+`53680f4` (PVOM status tags), `7657034` (everything else). All synced live and confirmed
+in Anki.
+
+**The merge (15 conflicts, none in code).** The diagnosis previously committed in
+`0383df17` was **wrong on its central claim** — it said `main` already carried
+`status:draft` on all 13 PVOM notes; `main` carried it on none. The two sides had changed
+*different* tags (`main`: `stress:unverified`→`stress:verified`; branch: added
+`status:draft`), so these were real content conflicts, not the "false conflicts" claimed,
+and its risk note inverted the danger: both resolution directions lose something, not
+neither. Resolution was still `git checkout main -- domains/ua/anki/notes/pvom/`, for the
+opposite reason. **Method lesson:** the wrong diagnosis came from `git merge-tree` plus a
+diff excerpt, which show *which* files collide but not what each tree holds. Reading the
+same file out of all three trees (`git show <ref>:<path>`) took one loop and contradicted
+it immediately — prefer that, or just run the merge, since `--no-commit` is abortable.
+
+**ua-verb-0017-0032: 182 of 224 conjugation fields were wrong.** Surfaced by
+`make ua-unverified` flagging an unstressed multisyllabic `Lemma` on all 16 — CLAUDE.md's
+own documented signature of a bad extraction. The Lemma was only the visible symptom.
+Root cause for the `-ходити` group (0017-0024): **Горох carries two homograph entries per
+spelling** — a prefix-stressed imperfective (`прихо́дити`) and a stem-stressed perfective
+(`проходи́ти`) — and the stored paradigm was the **perfective** block on notes tagged
+`Aspect: imperfective`. Same wrong-homograph-block failure as the `біг`/`Бог` bug. Three
+imperatives were not merely mis-stressed but the wrong form outright
+(`приходи́`/`приході́м`/`приході́ть` → `прихо́дь`/`прихо́дьмо`/`прихо́дьте`). Per Craig, with the
+prefixes the stress is on `-хо́-`. The `-їхати` group (0025-0032) was wrong in its own way:
+stored `приїде́ш`/`приїде́м`/`приїдете́` against Горох's `приї́деш`/`приї́демо`/`приї́дете`, with
+`Imperative_1pl` as `приїдімте́`, a form Горох does not list. `0026` is the group's
+exception — `ви́їхати`, prefix-stressed, consistent with `ви́йти`. `0027`/`0032` were missing
+the U+02BC apostrophe in **all 14** fields, not just the Lemma. Claude sourced and drafted;
+**Craig verified all 16 against Горох himself and set `stress:verified`** — per the standing
+division of labour, Claude never flips that tag.
+
+**Note on sourcing method:** Горох was reached via `WebFetch`, not Claude in Chrome. The
+"blocked, use Chrome" note elsewhere in this file is **stale** — `WebFetch` works. But it
+summarises through a small model rather than reading the DOM, and one response came back
+with a visibly garbled token (`доші́ть`), so DOM extraction remains the more faithful route
+for a verification pass. Note also that a U+02BC apostrophe 404s in a Горох URL; the plain
+ASCII apostrophe resolves.
+
+**The `conj:` curation axis.** `UA_Verb` already had three independent suspend axes;
+`UA_PVOM_Infinitive` had only two (`stress:unverified`, `status:draft`), so a note that was
+reviewed and correct could be held out of the drilling rotation *only* by asserting it was
+unreviewed — which would drag it straight back into `list_unverified.py`'s report. Added
+`conj:suspended` to `ua_pvom_infinitive_import.py`'s `should_suspend()`, mirroring
+`ua_verb_import.py`. The three axes now read the same way on both note types:
+`stress:` = data confirmed against Горох, `status:` = content reviewed, `conj:` = drilled
+at all. Keeping them separate is the whole point — it is what let `ua-verb-0033`-`0037` move
+`status:draft` → `status:verified` with **zero** change to their suspension, since
+`conj:suspended` independently governs that. 9 new tests pin the separation, including that
+`conj:drill` is not caught by a substring match.
+
+Craig's selection, chosen to cover the gamut of stress patterns — regular, prefix-stressed
+(`ви́йти`/`ви́їхати`), `-ій-` epenthesis with apostrophe, and the в-/у- euphonic alternation:
+`conj:drill` on `при-`, `в-`, `ви-`, `під-` in PVOM (the other nine suspended), and on
+`при-`/`ви-`/`під-` in both the walking and vehicle `UA_Verb` sets (the other ten
+suspended). **`в-` has no `UA_Verb` note** — `входити`/`вʼїхати` exist only as
+`ua-lexeme-0115`/`0124` — so the euphonic alternation has no paradigm note, and combined
+with the red flag on `ua-pvom-0012` it is currently the least-covered of the four. Live
+result confirmed: `note:UA_PVOM_Infinitive -is:suspended` = **12 cards**, not 16, because
+`ua-pvom-0012`'s red-flagged Walking (Uni) card suspends the whole note regardless of tags.
+That is the documented red-flag override working, not a bug.
+
+**`Tags_Conj` deleted from the model, the constant, the test list and `ua-verb-0001`.** It
+was a display field the `UA_Verb` footer rendered as `{{NoteID}} · {{Tags_Conj}}` — a
+hand-maintained space-joined mirror of the note's own tags. It existed on exactly 1 of 87
+notes and had **already drifted**: it stored `ch:2.9` against an actual `ch:2.9.2` tag. The
+footer now renders Anki's built-in `{{Tags}}`, which resolves the duplication by
+construction rather than by discipline: nothing to author per note, nothing to compute at
+sync time, no copy that can disagree — and it shows `conj:`, `status:` **and** `stress:`, so
+the card itself names every reason it could be suspended. Also closes one of the two
+`STRICT=1` field gaps; `Source_Note` at 1/87 is now the only one left. **General principle
+worth keeping:** when a field duplicates information Anki already holds, prefer deleting the
+field over syncing the copy — the same reasoning that rejected a `*_Euphony_Typing`
+companion field on 2026-08-18.
+
+**Two process notes.** (1) A stale staged copy nearly reverted merged work: an edit was
+drafted against a pre-merge snapshot of `ua_pvom_infinitive_import.py` and would have undone
+`main`'s red/orange flag-colour handling. The mtime guard on write refused it. Re-read a
+file immediately before editing it if the merge landed in between. (2) `ua-lexeme-0116`'s
+`Lemma` was corrected by Craig from `ви́ходити` to `вихо́дити`; Горох's Тлумачення page shows
+**ВИХО́ДИТИ** as the imperfective ("Іти звідки-небудь назовні"), paired with `ВИ́ЙТИ`, while
+the two `ВИ́ХОДИТИ` entries are bare cross-references to `вихо́джувати¹`/`²`.
+
+`make ua-check` clean. `make ua-test`: **384 passed** (was 375). Live sync: `make
+ua-setup-verb` (removed `Tags_Conj`), `make ua-verb` 87/87 0 errors, `make ua-pvom` 13/13
+0 errors.
+
 ## Workflow Notes
 
 This repo builds and maintains Anki flashcard decks across three top-level decks:

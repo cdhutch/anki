@@ -131,6 +131,7 @@ help:
 	@echo "  ua-check            Aspect completeness + pending-confusable watchlist (report-only; STRICT=1 to fail on findings)"
 	@echo "  ua-check-aspect     Flag pos:verb notes with zero aspectual counterparts and no aspect:*-only tag"
 	@echo "  ua-check-pending-confusables  Report pending-confusable:<lemma> tags whose target now exists in the corpus"
+	@echo "  ua-check-flags      Report red/orange-flagged UA cards (report-only; runs automatically at the end of 'make ua')"
 	@echo "  ua-audit            Full report sweep: unverified + compare-check + check (logged to /tmp/anki-sync-logs)"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
@@ -734,7 +735,7 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-generate-examples ua-inject-examples
 .PHONY: ua-unverified
 .PHONY: ua-compare-check
-.PHONY: ua-check ua-check-aspect ua-check-pending-confusables
+.PHONY: ua-check ua-check-aspect ua-check-pending-confusables ua-check-flags
 .PHONY: ua-audit _ua-audit
 .PHONY: ua ua-fix _ua
 
@@ -964,6 +965,22 @@ _ua-audit: ua-unverified ua-compare-check ua-check
 ua-audit:
 	$(call log_wrap,ua,ua-audit)
 
+# ── Flagged card check ────────────────────────────────────────────────────────
+# New 2026-08-08, Craig. Wraps ua_flag_audit.py's Phase 1 (--query) so flagged
+# red/orange cards surface automatically instead of relying on remembering to
+# run it by hand. Styled like ua-check-aspect/ua-compare-check, but always
+# report-only -- no STRICT=1 wiring, since flags are expected/ongoing signal
+# (things Craig flagged during study to revisit), not corpus drift to fail a
+# build over. Requires Anki running with AnkiConnect; ua_flag_audit.py's
+# --query path catches a connection failure and prints a friendly one-line
+# skip instead of crashing. Deliberately NOT part of ua-check/ua-audit/ua-fix
+# -- those work with Anki closed (pure CNSF file checks) and should stay that
+# way; only wired into _ua below, which already requires Anki for the sync
+# itself.
+ua-check-flags:
+	@printf "\033[1;36m\n— Flagged card check —\033[0m\n"
+	$(PYTHON) tools/anki/inspect/ua_flag_audit.py --query
+
 # ── All UA note types (aggregate) ────────────────────────────────────────────
 
 ua-fix:
@@ -984,6 +1001,7 @@ _ua:
 	done; \
 	printf "\n\033[1;32m✓  All UA note types synced successfully.\033[0m\n"
 	$(MAKE) ua-unverified
+	$(MAKE) ua-check-flags
 
 ua:
 	$(call log_wrap,ua,ua)

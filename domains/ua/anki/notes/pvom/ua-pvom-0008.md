@@ -13,6 +13,8 @@ tags:
 - grammar:verb_motion
 - grammar:pvom_infinitive
 - stress:verified
+- status:verified
+- conj:suspended
 fields:
   NoteID: ua-pvom-0008
   Prefix: над

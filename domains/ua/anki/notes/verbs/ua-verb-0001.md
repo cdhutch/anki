@@ -13,6 +13,7 @@ tags:
 - conj:drill
 - ch:2.9.2
 - stress:verified
+- status:verified
 fields:
   NoteID: ua-verb-0001
   Lemma: ходи́ти
@@ -37,7 +38,6 @@ fields:
   Participle_Passive_Past: хо́джений
   Participle_Impersonal_Past: хо́джено
   Participle_Adverbial_Past: ходи́вши
-  Tags_Conj: class:leader motion:walking phase:2a ch:2.9 conj:drill
   Source_Note: Class leader for motion walking prefix pattern. Base for ходити, походити,
     заходити, виходити, перейходити. Verify all forms against Горох.
   Verification Notes: ''

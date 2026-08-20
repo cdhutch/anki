@@ -36,8 +36,11 @@ family of targets). Level 1 ch-00 (Вступ) is complete and verified; Level 2
 chapter by chapter (ch-09 imported and polished; ch-08 verification in progress). Ch-09
 vocabulary (subsections 9.1–9.7, all of it) is fully sourced and `UA_Lexeme`-verified —
 only `ua-lexeme-0369`/`0584`/`0585` remain draft. The linked `UA_Verb` conjugation notes
-(55 of them, `ua-verb-0033`–`0085`) are the real gap: all still `status:draft`, missing
-participles/examples, mostly `stress:unverified`.
+are the real gap: **50** of them (`ua-verb-0038`–`0085`, plus `0086`/`0087`) are still
+`status:draft` and `stress:unverified`, missing participles/examples. `0033`–`0037` moved
+to `status:verified` 2026-08-19 (they were already stress-verified); they stay suspended
+via `conj:suspended`, which is now a separate axis from review state. `0001`–`0032` are
+fully verified on both axes as of 2026-08-19.
 
 ## Current Projects
 
@@ -199,6 +202,23 @@ participles/examples, mostly `stress:unverified`.
   taxonomy — and the perfective прибу́ти doesn't have its own `UA_Verb` note yet.
 
 ## Completed Projects
+
+- **ua-verb-0017–0032 re-sourced from Горох + `conj:` curation axis** (2026-08-19,
+  commits `0c12a5a`/`53680f4`/`7657034`, all synced live). `make ua-unverified` flagged an
+  unstressed multisyllabic `Lemma` on all 16 prefixed motion verbs — the documented
+  signature of a bad extraction. It turned out **182 of 224 conjugation fields were
+  wrong**: for the `-ходити` group, Горох carries two homographs per spelling and the
+  stored paradigm was the stem-stressed **perfective** block on notes tagged
+  `Aspect: imperfective` (the `біг`/`Бог` failure again); three imperatives were the wrong
+  form outright. The `-їхати` group had its own variant of the same problem, and
+  `0027`/`0032` were missing the U+02BC apostrophe in all 14 fields. Claude sourced and
+  drafted; Craig verified all 16 against Горох and set `stress:verified`. Also in this
+  pass: `conj:suspended` added to PVOM's `should_suspend()` so curation is a third axis
+  independent of `stress:`/`status:` (9 new tests); `status:verified` filled in across
+  `ua-verb-0001`–`0037`; `Tags_Conj` deleted in favour of Anki's built-in `{{Tags}}`;
+  `ua-lexeme-0116` corrected to `вихо́дити`. `make ua-test` 384 passed. Live: `ua-verb`
+  87/87, `ua-pvom` 13/13, `ua-lexeme` 585/585, 0 errors; PVOM active card count confirmed
+  at 12. Full detail in `CLAUDE.md`'s 2026-08-19 (later session) entry.
 
 - **ua-verb-0009/0010 conjugation-table fix** (2026-08-04): both notes were populated with
   a different verb's paradigm (`0009`/пливти had плинути's forms; `0010`/попливти had

@@ -10,14 +10,24 @@ needed, unlike the old single-form schema this replaced.
 Suspension policy (added 2026-07-31 -- this script previously had none at
 all, so a card suspended by accident here, e.g. a mistyped Command-1/Alt-1
 during review, stayed suspended forever; nothing ever re-asserted a state):
-    - stress:unverified tag → suspend (every PVOM note currently carries
-      this tag; none has been Горох-re-verified since the prefix drilling
-      set was built, matching the same "not ready for drilling until
-      confirmed" rationale used in ua_verb_import.py)
-    - status:draft tag → suspend (no current PVOM note uses this tag, but
-      checked for consistency with every other UA note type in case one
-      ever does)
-    - neither tag present → unsuspend
+    - stress:unverified tag → suspend (stress not yet confirmed against Горох,
+      matching the "not ready for drilling until confirmed" rationale used in
+      ua_verb_import.py. Cleared on all 13 by Craig's 2026-08-18 Горох pass in
+      05d8e74; the check stays, since a future note starts unverified.)
+    - status:draft tag → suspend (inactive/unreviewed)
+    - conj:suspended tag → always suspend (added 2026-08-19, per Craig --
+      reference only, not for drilling). Mirrors ua_verb_import.py, where the
+      same tag separates the motion-verb cores that get drilled from the
+      predictable derivatives kept only as reference. PVOM needed its own copy
+      because curation had no lever here at all: the only way to hold a note
+      out of the rotation was status:draft, which asserts "unreviewed" and
+      would drag a fully-verified note back into list_unverified.py's report.
+      Craig keeps при-, в/у-, ви- and під- active because between them they
+      cover the gamut of stress patterns -- regular, prefix-stressed
+      (ви́йти/ви́їхати), -ій- epenthesis with apostrophe, and the в-/у- euphonic
+      alternation -- and suspends the other nine, whose behaviour follows from
+      those four.
+    - no suspend tag present → unsuspend
     - note has a red-flagged card → suspend, regardless of tags above (per
       Craig -- see get_flagged_note_ids_by_color in tsv_to_anki.py). Only
       checked for existing notes; a brand-new note can't already have a
@@ -91,8 +101,21 @@ def anki_connect(action, params=None):
 
 
 def should_suspend(tags):
-    """Suspension policy for UA_PVOM_Infinitive cards -- see module docstring."""
-    return "stress:unverified" in tags or "status:draft" in tags
+    """Suspension policy for UA_PVOM_Infinitive cards -- see module docstring.
+
+    Three independent axes, matching ua_verb_import.py:
+        - stress:unverified → data not confirmed against Горох
+        - status:draft      → content not reviewed
+        - conj:suspended    → reviewed and correct, but deliberately not drilled
+    Any one of them suspends. Keeping them separate is what lets a note be
+    verified on both quality axes and still held out of the rotation without
+    lying about its review state.
+    """
+    return (
+        "stress:unverified" in tags
+        or "status:draft" in tags
+        or "conj:suspended" in tags
+    )
 
 
 def set_suspended(anki_note_id, suspend, dry_run=False):

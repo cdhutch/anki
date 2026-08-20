@@ -34,6 +34,7 @@ import argparse
 import json
 import subprocess
 import sys
+import urllib.error
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
@@ -135,7 +136,21 @@ def query_flagged_cards() -> list[dict]:
 
 
 def cmd_query(args):
-    results = query_flagged_cards()
+    # anki_request() (tsv_to_anki.py) uses a bare urllib.request.urlopen with
+    # no error handling -- when Anki/AnkiConnect isn't running, that raises
+    # urllib.error.URLError (a urllib.error.URLError subclasses OSError, as
+    # does the underlying ConnectionRefusedError it usually wraps). Caught
+    # here rather than inside anki_request() itself, so --apply's manifest
+    # workflow -- which genuinely needs to know Anki is unreachable rather
+    # than silently no-op -- still sees the real exception. This is deliberately
+    # narrow: a RuntimeError from anki_request() (Anki running but AnkiConnect
+    # returned an actual API error) is a real problem and should still crash
+    # loudly, not be swallowed as "Anki not reachable."
+    try:
+        results = query_flagged_cards()
+    except (urllib.error.URLError, OSError):
+        print("Anki not reachable — skipping flag check.")
+        return
     if not results:
         print("No flagged cards found in the UA deck tree.")
         return
