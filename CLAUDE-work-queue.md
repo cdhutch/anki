@@ -219,10 +219,49 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   found anywhere in the log that this was ever done in Anki itself — full spec in
   `CLAUDE-fsrs-deck-configs.md`.
 
+  **Checked 2026-08-20 by Craig in the GUI — the presets exist but the assignments
+  did not happen, and the reason is a design conflict, not an oversight.** Live state:
+  `B737 FSRS` on **0** decks, `B737 FSRS Core` on **14**, `UA FSRS` on **0**,
+  `Legacy FSRS` on **1**. So the deck tree with active daily use is not on its tuned
+  retention config, and `B737 FSRS Core` is a preset neither document mentions.
+
+  **Two documents in this repo specify incompatible designs for the same decks:**
+  `CLAUDE-fsrs-deck-configs.md` wants three presets, one per top-level tree, carrying
+  *retention parameters*; `DECK_PRESET_MAPPING.md` wants nine presets across the UA tree
+  carrying *daily limits*. In Anki a deck has exactly one preset and that object holds
+  both `desiredRetention` and `new/rev perDay`, so both cannot be satisfied as written.
+  The live collection follows `DECK_PRESET_MAPPING.md`, which is why `UA FSRS` sits at
+  zero decks.
+
+  **Decide the architecture before touching anything:**
+  - *Option A* — keep the nine per-subdeck limit presets and set `desiredRetention` on
+    each; delete `UA FSRS`/`B737 FSRS`. Preserves working behaviour, and the FSRS doc's
+    isolation goal is already met since the UA and B737 preset sets are disjoint. Caveat
+    worth confirming against Anki's own optimizer rather than assumed: FSRS optimizes
+    per preset, so nine UA presets means nine smaller training pools.
+  - *Option B* — collapse to the three FSRS presets and lose per-subdeck throttling.
+
+  **Why this went unnoticed for six weeks: both survey tools are structurally blind to
+  it.** `list_deck_presets.py` and `inspect_deck_configs.py` enumerate presets by
+  iterating decks and collecting what they point at, so **a preset assigned to zero decks
+  can never appear**. `list_deck_presets.py` also covers UA only (and its own
+  "ALL AVAILABLE PRESETS" section is commented as not working); `inspect_deck_configs.py`
+  filters to `"737" in d`. Any replacement should be driven by the *expected* preset names
+  and report ones sitting at zero decks — that inverts the blindness.
+
+  **Bootstrap deadlock, separate from the above:** `apply_ua_fsrs_to_subdecks.py` refuses
+  to run unless the root `UA` deck is already on `UA FSRS`
+  (`if ua_config.get("name") != "UA FSRS": return 1`), and nothing in the repo assigns it
+  to the root. The rollout script could never have run from this state — it needs an
+  undocumented manual GUI step first.
+
 - [ ] **Deck presets + limits actually applied** in Anki
   (`create_deck_presets.py` → `update_deck_limits.py` →
   `update_b737_deck_limits.py`) — confirm these were run against live Anki, not
-  just written to the repo.
+  just written to the repo. **Blocked on the architecture decision in the FSRS item
+  above** (2026-08-20): the live collection appears to follow `DECK_PRESET_MAPPING.md`,
+  but that cannot be confirmed deck-by-deck until a survey tool exists that sees all
+  domains and reports zero-deck presets.
 
 - [ ] **`gen_ch09_subsection.py` exercised end-to-end** against a real batch
   (built 2026-07-25, still untested — currently nothing left to run it against
