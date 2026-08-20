@@ -50,17 +50,25 @@ fields:
     question above, so the two decisions are consistent. Gorokh independently lists ухо́дити
     as its own headword whose sense 1 glosses to "входити кудись". SUM-20 separately gives
     ВВІХО́ДИТИ (УВІХО́ДИТИ) as входити variants -- a DIFFERENT variant pair, not a rival claim:
-    both alternations are attested. Drafted by Claude, not verified. 2026-08-18 (later same
-    day): all four *_Euphony values re-stored WITH stress marks (уходити -> ухо́дити, увійти
-    -> увійти́, уїжджати -> уїжджа́ти, уїхати -> уї́хати). Convention decision by Craig: euphony
-    fields always carry stress, and there is deliberately NO *_Euphony_Typing companion field
-    -- the unstressed form is derived by stripping, never stored, so the two cannot drift
-    apart. Inert today (both feedback scripts stripStress() the stored alternates AND the
-    typed answer before comparing) but required by the planned Option B refactor, where a
-    fully-stressed euphonic alternate earns PERFECT and therefore needs the stressed form
-    on hand. Also unifies with UA_Lexeme, which already stored all its euphony values stressed.
-    уїжджа́ти and уї́хати taken verbatim from ua-lexeme-0124 (same words, already verified
-    there), not re-sourced from Gorokh. NEEDS CRAIG RE-CHECK: this note is stress:verified,
-    so the four stress placements above want confirming.'
+    both alternations are attested. 2026-08-18 (later same day): all four *_Euphony values
+    re-stored WITH stress marks (уходити -> ухо́дити, увійти -> увійти́, уїжджати -> уїжджа́ти,
+    уїхати -> уї́хати). Convention decision by Craig: euphony fields always carry stress,
+    and there is deliberately NO *_Euphony_Typing companion field -- the unstressed form is
+    derived by stripping, never stored, so the two cannot drift apart. Inert when stored (both
+    feedback scripts stripStress()''d the stored alternates AND the typed answer before comparing)
+    but required by the Option B refactor, where a fully-stressed euphonic alternate earns
+    PERFECT and therefore needs the stressed form on hand. Also unifies with UA_Lexeme, which
+    already stored all its euphony values stressed. уїжджа́ти and уї́хати taken verbatim from
+    ua-lexeme-0124 (same words, already verified there), not re-sourced from Gorokh. 2026-08-20:
+    the stored stress is no longer inert -- FEEDBACK_SCRIPT now runs both stressed comparisons
+    above both unstressed ones, so a fully-stressed euphonic alternate earns PERFECT instead
+    of being capped at CORRECT. Validated live on this note''s Walking (Multi) card: ухо́дити
+    -> PERFECT, уходити -> CORRECT, вхо́дити -> PERFECT, вхо́дит -> INCORRECT. 2026-08-20:
+    Craig checked the two Claude-drafted placements against Горох and confirmed both -- ухо́дити
+    (stress on -хо́-) and увійти́ (stress on -йти́). уїжджа́ти and уї́хати inherit ua-lexeme-0124''s
+    verification. All four *_Euphony stress placements are therefore accounted for and the
+    earlier NEEDS CRAIG RE-CHECK is closed. The red flag on the Walking (Uni) card was cleared
+    the same day: it marked the в-/у- primary-form question, resolved 2026-08-18 via Shevchuk,
+    with nothing outstanding behind it.'
 ---
 
