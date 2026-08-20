@@ -50,7 +50,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: завдавати
+  TypingAnswer: завдавати / завдати
   UA_Example: Боксер завдавав ударів один за одним.
   EN_Example: The boxer was dealing blows one after another.
   Tags_Ch: ch:2.9.3

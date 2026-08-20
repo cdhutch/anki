@@ -81,9 +81,13 @@ fully verified on both axes as of 2026-08-19.
   for automatic pickup once that word is added, not written into `ConfusableSet`/`CompareA-D`
   yet; the 0482 aspect-pairing gap and the раз-counting/мандрівка-vs-подорож questions were
   discussed and answered in conversation but not yet written into any field.
-- **11 flagged notes** exist in the corpus. The audit/fix tooling (`ua_flag_audit.py`,
-  Phase 1 query + Phase 3 apply) is built and tested; Phase 2 (the actual interactive
-  walkthrough with Claude) hasn't happened yet.
+- **40 flagged notes** exist in the corpus — **14 red + 26 orange**, read straight off
+  the 2026-08-18 `make ua-pvom` output. The "11 flagged notes" figure this file carried
+  until 2026-08-20 was stale, and so is `flagged_cards_manifest.json`, which holds 28
+  from an older `--query` run; re-run `python tools/anki/inspect/ua_flag_audit.py --query`
+  to refresh the manifest before Phase 2, which needs the note list rather than the count.
+  The audit/fix tooling (`ua_flag_audit.py`, Phase 1 query + Phase 3 apply) is built and
+  tested; Phase 2 (the actual interactive walkthrough with Claude) hasn't happened yet.
 - **Dangling branch `archive/ua-verb-participle-merge-and-stress-pass` found 2026-08-04**
   (see CLAUDE.md item 13 under "Remaining Work"). A locally-deleted branch, still live as
   `origin/chore/ua-verb-participle-merge-and-stress-pass` (`f907726`), holds a real
@@ -121,7 +125,10 @@ fully verified on both axes as of 2026-08-19.
    vocabulary left to run it against unless a new subsection/chapter is added.
 3. Finish the 55 draft `UA_Verb` conjugation notes (`ua-verb-0033`–`0085`, spanning
    ch:2.9.2–2.9.7 and a ch:2.8.x batch): Craig is running the Горох stress-verification
-   pass directly (only 0033–0037 and 0086/0087 are currently `stress:verified`); once
+   pass directly (only 0033–0037 are currently `stress:verified` — **corrected 2026-08-20**,
+   this line used to include 0086/0087, which are in fact still `stress:unverified` +
+   `status:draft`; confirmed by reading their tags, and by an unstressed-multisyllabic-Lemma
+   sweep that surfaced both alongside the 0033–0085 range); once
    that lands, fill the required `Participle_Adverbial_Past` field (currently blank on
    all 55) plus other participles/examples where findable, then flip to `status:verified`
    and re-sync with `make ua-verb`.

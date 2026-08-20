@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: битися
+  TypingAnswer: битися / побитися
   UA_Example: Хлопці билися на деревʼяних шаблях.
   EN_Example: The boys fought with wooden sabers.
   Tags_Ch: ch:2.9.3

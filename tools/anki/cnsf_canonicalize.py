@@ -32,6 +32,7 @@ from tools.anki.setup.setup_ua_note_types import (  # noqa: E402
     VERB_FIELDS as _VERB_FIELDS,
 )
 from tools.anki.setup.setup_ua_pvom_note_type import FIELDS as _PVOM_FIELDS  # noqa: E402
+from tools.anki.lib.typing_target import compute_typing_target  # noqa: E402
 
 
 CANON_TOP_KEYS = [
@@ -68,6 +69,49 @@ CANON_FIELD_ORDER: dict[str, list[str]] = {
     "ua_verb": _VERB_FIELDS,
     "ua_pvom_infinitive": _PVOM_FIELDS,
 }
+
+
+def _sync_typing_answer(fields: dict[str, Any]) -> bool:
+    """Bring a UA_Lexeme note's authored `TypingAnswer` in line with the join
+    the importer actually sends. Returns True if it changed anything.
+
+    Added 2026-08-20. Found during the `_TypingSpec` rollout (2026-08-19): 62
+    CNSF notes held a `TypingAnswer` that disagreed with the stress-stripped
+    slot join. `ua-lexeme-0114` stored `приходити` for a doublet whose card
+    asks for `приходити / прийти`; `ua-lexeme-0488` stored the Perfective in
+    place of the Lemma.
+
+    **This was never a live bug**, and it is worth being precise about why,
+    because that is what makes this a canonicalisation and not a fix.
+    `import_note()` recomputes `TypingAnswer` from `compute_typing_target()[1]`
+    for every doublet and triplet and overwrites whatever the file said, so
+    Anki has always had the correct value. Zero learner impact, and running
+    this changes nothing about what any card asks for.
+
+    What it costs is CNSF's standing as the source of truth. The file is what
+    a person reads -- and what Claude reads when sourcing a related note -- so
+    a `TypingAnswer` that contradicts the card is a trap for a reader, not for
+    the pipeline.
+
+    Deliberately scoped to the case the importer overwrites, i.e. where
+    `compute_typing_target()` returns a join. For singlets it returns None and
+    the importer leaves `TypingAnswer` exactly as authored -- so for those the
+    file IS authoritative and this must not touch it. Getting that backwards
+    would turn a documentation problem into a data-loss one: every phrase note
+    and every non-verb note is a singlet, and their `TypingAnswer` values are
+    hand-written and not derivable from `Lemma` alone.
+    """
+    target = compute_typing_target(
+        fields.get("Lemma", "") or "",
+        fields.get("ImperfectiveUnidirectional", "") or "",
+        fields.get("Perfective", "") or "",
+    )
+    if target is None:
+        return False
+    if fields.get("TypingAnswer") == target[1]:
+        return False
+    fields["TypingAnswer"] = target[1]
+    return True
 
 
 def _canonical_field_order(note_type: str, fields: dict[str, Any]) -> dict[str, Any]:
@@ -296,6 +340,9 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
         ):
             fields.setdefault(key, "")
 
+    if note_type == "ua_lexeme":
+        _sync_typing_answer(fields)
+
     # Fix YAML boolean coercion in Choice fields: unquoted True/False in YAML is
     # loaded as Python bool by yaml.safe_load, then dumped as lowercase true/false.
     # Preserve the intended string value for all Choice slots.
@@ -448,6 +495,25 @@ def _has_field_order_drift(old_text: str, path: Path) -> bool:
         return False
 
 
+def _has_typing_answer_drift(old_text: str, path: Path) -> bool:
+    """True when the authored `TypingAnswer` disagrees with the derived join.
+
+    Same best-effort contract as _has_field_order_drift: any parse failure
+    returns False and the caller falls back to the generic message.
+    """
+    try:
+        fm = split_frontmatter(old_text, path)
+        meta = yaml.safe_load(fm.yaml_text)
+        if meta.get("note_type") != "ua_lexeme":
+            return False
+        fields = meta.get("fields")
+        if not isinstance(fields, dict):
+            return False
+        return _sync_typing_answer(dict(fields))
+    except Exception:
+        return False
+
+
 def cmd_check(paths: list[Path]) -> int:
     bad = 0
     for p in paths:
@@ -459,6 +525,14 @@ def cmd_check(paths: list[Path]) -> int:
             old_order = _top_level_key_order(fm.yaml_text)
             if old_order != [k for k in CANON_TOP_KEYS if k in old_order]:
                 print(f"FAIL (YAML order drift): {p}")
+            elif _has_typing_answer_drift(old_text, p):
+                # Reported separately (2026-08-20) for the same reason field
+                # order is: --write resolves it outright, no content decision
+                # needed, and the value being rewritten is one the importer
+                # already overwrites at sync time. Checked BEFORE field order
+                # so the more specific cause wins the message when a note has
+                # both.
+                print(f"FAIL (TypingAnswer drift): {p}")
             elif _has_field_order_drift(old_text, p):
                 # Distinguished from generic canonicalization drift (2026-08-18)
                 # so the fix is obvious from the message alone: field-order

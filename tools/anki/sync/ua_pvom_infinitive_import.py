@@ -53,12 +53,23 @@ from tools.anki.sync.tsv_to_anki import (  # noqa: E402
     FLAG_RED,
     anki_request,
     describe_note_ids,
+    flag_query_for_model,
     get_flagged_note_ids_by_color,
 )
 
-# Deck query scope for the red/orange-flag suspend check -- same query
-# string used across every UA sync script; see ua_lexeme_import.py.
-FLAG_DECK_QUERY = "deck:UA::*"
+# Named here for the first time 2026-08-20. Every other UA importer already had
+# a MODEL_NAME constant; this one only ever spelled the model inline, as
+# anki_config.get("model", "UA_PVOM_Infinitive") in build_note(). That default
+# still reads from the note's own `anki.model`, which stays the authority for
+# what gets WRITTEN -- this constant scopes flag QUERIES, which are per-run
+# rather than per-note.
+MODEL_NAME = "UA_PVOM_Infinitive"
+
+# Flag-query scope for the red/orange-flag check -- scoped to this note type
+# (2026-08-20); see flag_query_for_model() in tsv_to_anki.py. This importer is
+# where the problem was first seen: its first live run printed 26 orange-flagged
+# notes, not one of which was PVOM.
+FLAG_DECK_QUERY = flag_query_for_model(MODEL_NAME)
 
 ANKI_FIELDS = [
     "NoteID",

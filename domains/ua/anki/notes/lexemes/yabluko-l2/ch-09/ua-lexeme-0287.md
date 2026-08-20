@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: долати
+  TypingAnswer: долати / подолати
   UA_Example: Команда мала подолати бездоріжжя за одну годину.
   EN_Example: The team had to get through the off-road stretch in one hour.
   Tags_Ch: ch:2.9.5

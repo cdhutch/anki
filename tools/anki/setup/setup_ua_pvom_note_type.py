@@ -17,6 +17,10 @@ base) give each form independent FSRS scheduling.
 import json
 import urllib.request
 import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from tools.anki.lib.typeans_js import NORMALIZE_TYPEANS_JS  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_PVOM_Infinitive"
@@ -41,34 +45,64 @@ FIELDS = [
     "Verification Notes",  # unified 2026-08-11, per Craig -- was underscore-only
 ]
 
-FEEDBACK_SCRIPT = """\
+FEEDBACK_SCRIPT = (
+    """\
 <script>
 (function() {
   var feedback = document.getElementById('feedback');
-  var withStress = feedback.dataset.withStress;
-  var noStress = feedback.dataset.noStress;
 
-  // EuphonyNote acceptance (added 2026-07-25, ported from UA_Lexeme's EN_UA_BACK) --
-  // bare/pipe-delimited alternates, stress-stripped + NFC-normalized before comparison.
+  // Normalize to NFC before comparing (added 2026-08-20, mirroring EN_UA_BACK,
+  // which has done this since the Option B refactor). A combining stress mark
+  // can reach the reconstructed answer in a different normalization form than
+  // the field is stored in -- OS keyboard/IME-dependent, and visually
+  // identical either way -- so a raw === comparison can silently fail for an
+  // otherwise-correct accented answer. Not a reported bug here, but this
+  // script grades nothing BUT accented answers, so the exposure is total.
+  var withStress = (feedback.dataset.withStress || '').normalize('NFC');
+  var noStress = (feedback.dataset.noStress || '').normalize('NFC');
+
   function stripStress(s) { return s.replace(/\u0301/g, ''); }
+"""
+    + NORMALIZE_TYPEANS_JS
+    + """\
 
-  // Strip Anki's combining-mark isolation artifact out of a reconstructed
-  // #typeans string (added 2026-08-18) -- mirror of normalizeTypeansText() in
-  // setup_ua_note_types.py's EN_UA_BACK; see that copy for the full writeup.
-  // Short version: Anki's isolate_leading_mark() (rslib/src/typeanswer.rs)
-  // deliberately prepends U+00A0 to any diff chunk BEGINNING with a combining
-  // mark, and that nbsp lands inside a .typeGood/.typeBad span, so the
-  // reconstruction below swallows it. Found on UA_Lexeme (ua-lexeme-0532,
-  // 2026-08-08); this script uses the identical reconstruction technique, so
-  // it has the identical bug -- every PVOM typing answer carries a stress
-  // mark, so any stress-position mismatch here hits it too.
-  function normalizeTypeansText(s) {
-    return s.replace(/\\u00A0([\\u0300-\\u036F])/g, '$1').replace(/\\u00A0/g, ' ');
-  }
+  // *_Euphony acceptance (added 2026-07-25, ported from UA_Lexeme's
+  // EN_UA_BACK; regraded 2026-08-20).
+  //
+  // Alternates are kept STRESSED here. They used to be stress-stripped on the
+  // way in, and the typed answer stripped again at the comparison, which made
+  // `\u0443\u0445\u043e\u0301\u0434\u0438\u0442\u0438` and `\u0443\u0445\u043e\u0434\u0438\u0442\u0438` literally indistinguishable -- so a euphonic
+  // alternate could never rise above CORRECT no matter how it was typed. That
+  // is the same defect Option B fixed on UA_Lexeme (bug (a)); the one-slot
+  // version needs no _TypingSpec, because each of the four card templates
+  // tests exactly one form and there is nothing to keep index-aligned.
+  //
+  // Craig's call, recorded for UA_Lexeme and applied here unchanged: a fully
+  // stressed euphonic alternate is not a lesser answer than the primary, just
+  // a different attested one, so it earns PERFECT. The stored values are
+  // already stressed under the 2026-08-18 authoring convention, enforced by
+  // check_euphony_stress.py -- so this is a template change only, with no
+  // data migration and no `make ua-pvom` needed.
   var euphonyRaw = feedback.dataset.euphony || '';
   var euphonyAlts = euphonyRaw.split('|')
-    .map(function(s) { return stripStress(s.trim()).normalize('NFC'); })
+    .map(function(s) { return s.trim().normalize('NFC'); })
     .filter(function(s) { return s.length > 0; });
+
+  // Exact match against a stored alternate, stress and all.
+  function matchesAlternateWithStress(typed) {
+    return euphonyAlts.indexOf(typed) !== -1;
+  }
+
+  // Right letters, wrong-or-absent stress. Checked only AFTER the stressed
+  // comparisons above have all missed, so it can no longer mask a perfect
+  // answer the way the single stripped comparison did.
+  function matchesAlternateWithoutStress(typed) {
+    var plain = stripStress(typed);
+    for (var i = 0; i < euphonyAlts.length; i++) {
+      if (plain === stripStress(euphonyAlts[i])) { return true; }
+    }
+    return false;
+  }
 
   // Anki's own type-answer field replaces the front's <input> with a #typeans
   // diff (spans classed typeGood/typeBad/typeMissed) once the answer side
@@ -98,7 +132,7 @@ FEEDBACK_SCRIPT = """\
     if (chunks.length) {
       typedAnswer = normalizeTypeansText(
         chunks.map(function(el) { return el.textContent; }).join('')
-      );
+      ).normalize('NFC');
     }
     // Hide Anki's raw per-character diff here (answer side only -- this
     // script never runs on the front, so the front's input box is untouched).
@@ -109,43 +143,70 @@ FEEDBACK_SCRIPT = """\
 
   var html = '';
 
-  if (typedAnswer === withStress) {
+  // Tier ladder (reordered 2026-08-20). Both STRESSED comparisons run before
+  // either unstressed one, which is the whole fix: previously the single
+  // stress-stripping alternate check sat below the noStress branch and above
+  // nothing useful, so it caught every euphonic answer -- stressed or not --
+  // and hardcoded CORRECT.
+  //
+  //   PERFECT    the primary with its stress, OR a stored alternate with its
+  //              stress (Craig: `ввійти́` is not a lesser answer than `уві́йти`)
+  //   CORRECT    right letters, stress missing or misplaced -- primary or
+  //              alternate
+  //   INCORRECT  matched nothing acceptable
+  //
+  // The null check is hoisted to the top rather than left as the final else:
+  // if the reconstruction ever fails on a note whose fields are blank, `null
+  // === ''` is false but the intent was never to grade an unreadable answer
+  // against an empty target.
+  if (typedAnswer === null) {
+    // Couldn't determine what was typed at all (e.g. #typeans markup ever
+    // changes shape) -- show the answer neutrally rather than guessing.
+    html = '<div class="fb-headline status-info">' +
+           withStress + '</div>' +
+           '<div class="fb-note status-neutral">(no stress: ' + noStress + ')</div>';
+  } else if (typedAnswer === withStress) {
     html = '<div class="fb-headline status-success">' +
            withStress + ' ✓ PERFECT</div>' +
            '<div class="fb-sub status-success">Correct with stress marks</div>';
+  } else if (matchesAlternateWithStress(typedAnswer)) {
+    // Reachable as of 2026-08-20: fully-stressed euphonic alternate, e.g.
+    // ухо́дити on ua-pvom-0012's Walking (Multi) card. Before the reorder this
+    // fell into the CORRECT branch below and could not be told apart from the
+    // unstressed уходити.
+    html = '<div class="fb-headline status-success">' +
+           typedAnswer + ' ✓ PERFECT</div>' +
+           '<div class="fb-sub status-success">Correct with stress marks — accepted variant form</div>' +
+           '<div class="fb-label status-info">Primary form:</div>' +
+           '<div class="fb-value status-info"><b>' + withStress + '</b></div>';
   } else if (typedAnswer === noStress) {
     html = '<div class="fb-headline status-warning">' +
            noStress + ' ~ CORRECT</div>' +
            '<div class="fb-sub status-warning">Correct letters, missing stress</div>' +
            '<div class="fb-label status-info">With stress:</div>' +
            '<div class="fb-value status-info"><b>' + withStress + '</b></div>';
-  } else if (typedAnswer !== null && euphonyAlts.indexOf(stripStress(typedAnswer).normalize('NFC')) !== -1) {
-    // Accepted alternate spelling (*_Euphony) -- genuinely correct, not just noted.
-    html = '<div class="fb-headline status-success">' +
-           typedAnswer + ' ✓ CORRECT</div>' +
-           '<div class="fb-sub status-success">Accepted alternate spelling</div>' +
+  } else if (matchesAlternateWithoutStress(typedAnswer)) {
+    // Accepted alternate spelling (*_Euphony), stress missing or misplaced.
+    html = '<div class="fb-headline status-warning">' +
+           typedAnswer + ' ~ CORRECT</div>' +
+           '<div class="fb-sub status-warning">Accepted variant form, missing or misplaced stress</div>' +
            '<div class="fb-label status-info">Primary form:</div>' +
            '<div class="fb-value status-info"><b>' + withStress + '</b></div>';
-  } else if (typedAnswer !== null) {
-    // Reconstruction succeeded and it's neither of the accepted answers --
+  } else {
+    // Reconstruction succeeded and it's none of the accepted answers --
     // genuinely wrong.
     html = '<div class="fb-headline status-error">' +
            typedAnswer + ' ✗ INCORRECT</div>' +
            '<div class="fb-sub status-error">Not quite right</div>' +
            '<div class="fb-label status-info">Correct answer:</div>' +
            '<div class="fb-value status-info"><b>' + withStress + '</b></div>';
-  } else {
-    // Couldn't determine what was typed at all (e.g. #typeans markup ever
-    // changes shape) -- show the answer neutrally rather than guessing.
-    html = '<div class="fb-headline status-info">' +
-           withStress + '</div>' +
-           '<div class="fb-note status-neutral">(no stress: ' + noStress + ')</div>';
   }
 
   feedback.innerHTML = html;
 })();
 </script>
 """
+)
 
 
 def make_front(label, typing_field):
@@ -170,7 +231,7 @@ def make_back(with_stress_field, no_stress_field, euphony_field):
 
 CARD_TEMPLATES = [
     {
-        "name": "Walking (Multi)",
+        "Name": "Walking (Multi)",
         # Typing target is the STRESSED field: typing it correctly is then a
         # clean exact match (no insertion); typing without stress becomes a
         # clean omission instead. Both are well-behaved for Anki's diff --
@@ -179,17 +240,17 @@ CARD_TEMPLATES = [
         "Back": make_back("Walking_Multi_UA", "Walking_Multi_Typing", "Walking_Multi_Euphony"),
     },
     {
-        "name": "Walking (Uni)",
+        "Name": "Walking (Uni)",
         "Front": make_front("іти", "Walking_Uni_UA"),
         "Back": make_back("Walking_Uni_UA", "Walking_Uni_Typing", "Walking_Uni_Euphony"),
     },
     {
-        "name": "Vehicle (Multi)",
+        "Name": "Vehicle (Multi)",
         "Front": make_front("їздити", "Vehicle_Multi_UA"),
         "Back": make_back("Vehicle_Multi_UA", "Vehicle_Multi_Typing", "Vehicle_Multi_Euphony"),
     },
     {
-        "name": "Vehicle (Uni)",
+        "Name": "Vehicle (Uni)",
         "Front": make_front("їхати", "Vehicle_Uni_UA"),
         "Back": make_back("Vehicle_Uni_UA", "Vehicle_Uni_Typing", "Vehicle_Uni_Euphony"),
     },
@@ -336,7 +397,7 @@ def setup_model():
     existing = anki_request("modelNames")
     model_names = existing.get("result", []) if existing else []
 
-    templates_dict = {t["name"]: {"Front": t["Front"], "Back": t["Back"]} for t in CARD_TEMPLATES}
+    templates_dict = {t["Name"]: {"Front": t["Front"], "Back": t["Back"]} for t in CARD_TEMPLATES}
 
     if MODEL_NAME in model_names:
         print(f"✓ Model '{MODEL_NAME}' exists, updating...")
@@ -378,13 +439,13 @@ def setup_model():
         ok = True
 
         for t in CARD_TEMPLATES:
-            if t["name"] not in existing_template_names:
-                print(f"  Adding new template: {t['name']}")
+            if t["Name"] not in existing_template_names:
+                print(f"  Adding new template: {t['Name']}")
                 result = anki_request(
                     "modelTemplateAdd",
                     {
                         "modelName": MODEL_NAME,
-                        "template": {"Name": t["name"], "Front": t["Front"], "Back": t["Back"]},
+                        "template": {"Name": t["Name"], "Front": t["Front"], "Back": t["Back"]},
                     },
                 )
                 if not result or result.get("error"):

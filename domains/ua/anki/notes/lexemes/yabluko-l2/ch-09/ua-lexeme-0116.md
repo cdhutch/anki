@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выходить / выйти'
-  TypingAnswer: виходити
+  TypingAnswer: виходити / вийти
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4

@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: відрізнятися
+  TypingAnswer: відрізнятися / відрізнитися
   UA_Example: Ці два готелі значно відрізняються один від одного.
   EN_Example: These two hotels differ significantly from each other.
   Tags_Ch: ch:2.8.3

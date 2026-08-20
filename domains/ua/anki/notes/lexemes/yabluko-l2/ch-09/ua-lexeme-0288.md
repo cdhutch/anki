@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: приваблювати
+  TypingAnswer: приваблювати / привабити
   UA_Example: Пригодницька гонка щороку приваблює нових учасників.
   EN_Example: The adventure race attracts new participants every year.
   Tags_Ch: ch:2.9.5

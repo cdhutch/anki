@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: підніматися
+  TypingAnswer: підніматися / піднятися
   UA_Example: Найважче було підніматися на скелі під дощем.
   EN_Example: The hardest part was climbing on the cliffs in the rain.
   Tags_Ch: ch:2.9.5, ch:2.9.7

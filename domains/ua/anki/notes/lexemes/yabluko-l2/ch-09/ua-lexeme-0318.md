@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: чути
+  TypingAnswer: чути / почути
   UA_Example: Перепрошую, я не почув, з якої платформи відправлення.
   EN_Example: Excuse me, I didn't hear which platform the departure is from.
   Tags_Ch: ch:2.9.6

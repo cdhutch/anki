@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: казати
+  TypingAnswer: казати / сказати
   UA_Example: Вибачте, Ви сказали, що поїзд запізнюється?
   EN_Example: Sorry, did you say the train is running late?
   Tags_Ch: ch:2.9.6

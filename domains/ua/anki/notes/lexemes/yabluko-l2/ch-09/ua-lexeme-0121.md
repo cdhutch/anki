@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: переходить / перейти'
-  TypingAnswer: переходити
+  TypingAnswer: переходити / перейти
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4

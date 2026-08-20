@@ -50,7 +50,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: набирати
+  TypingAnswer: набирати / набрати
   UA_Example: Команда швидко набирає очки в другому таймі.
   EN_Example: The team is quickly racking up points in the second half.
   Tags_Ch: ch:2.9.3

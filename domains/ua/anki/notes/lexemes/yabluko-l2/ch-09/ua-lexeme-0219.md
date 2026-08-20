@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: перекидати
+  TypingAnswer: перекидати / перекинути
   UA_Example: Діти перекидали мʼяч через сітку.
   EN_Example: The kids were tossing the ball back and forth over the net.
   Tags_Ch: ch:2.9.3

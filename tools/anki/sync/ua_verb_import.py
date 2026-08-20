@@ -44,6 +44,7 @@ from tools.anki.sync.tsv_to_anki import (  # noqa: E402
     FLAG_RED,
     anki_request,
     describe_note_ids,
+    flag_query_for_model,
     get_flagged_note_ids_by_color,
 )
 
@@ -51,9 +52,9 @@ ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Verb"
 DECK_NAME = "UA::Verbs"
 
-# Deck query scope for the red/orange-flag suspend check -- same query
-# string used across every UA sync script; see ua_lexeme_import.py.
-FLAG_DECK_QUERY = "deck:UA::*"
+# Flag-query scope for the red/orange-flag check -- scoped to this note type
+# (2026-08-20); see flag_query_for_model() in tsv_to_anki.py.
+FLAG_DECK_QUERY = flag_query_for_model(MODEL_NAME)
 
 
 # ---------------------------------------------------------------------------

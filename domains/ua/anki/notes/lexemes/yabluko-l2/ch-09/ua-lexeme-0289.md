@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: розміщувати
+  TypingAnswer: розміщувати / розмістити
   UA_Example: Організатори розміщували учасників у наметовому таборі.
   EN_Example: The organizers accommodated the participants in a tent camp.
   Tags_Ch: ch:2.9.5

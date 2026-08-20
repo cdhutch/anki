@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: вирушати
+  TypingAnswer: вирушати / вирушити
   UA_Example: Вони вирушили в дорогу рано-вранці.
   EN_Example: They set off on the road very early in the morning.
   Tags_Ch: ch:2.9.7

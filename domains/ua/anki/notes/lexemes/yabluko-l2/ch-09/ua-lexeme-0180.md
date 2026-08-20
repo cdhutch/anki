@@ -38,7 +38,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: розминатися
+  TypingAnswer: розминатися / розминутися
   UA_Example: Ми часто розминаємося в коридорі.
   EN_Example: We often just miss each other in the hallway.
   Tags_Ch: ch:2.9.2

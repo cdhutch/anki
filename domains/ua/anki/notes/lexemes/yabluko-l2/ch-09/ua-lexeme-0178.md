@@ -38,7 +38,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: помічати
+  TypingAnswer: помічати / помітити
   UA_Example: Я помічаю кожну деталь.
   EN_Example: I notice every detail.
   Tags_Ch: ch:2.9.2

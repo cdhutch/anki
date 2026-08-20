@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: повторювати
+  TypingAnswer: повторювати / повторити
   UA_Example: Провідник любʼязно повторив час прибуття.
   EN_Example: The conductor kindly repeated the arrival time.
   Tags_Ch: ch:2.9.6

@@ -38,7 +38,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: програвати
+  TypingAnswer: програвати / програти
   UA_Example: Він рідко програє в шахи.
   EN_Example: He rarely loses at chess.
   Tags_Ch: ch:2.9.2

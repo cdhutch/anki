@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: дотримуватися
+  TypingAnswer: дотримуватися / дотриматися
   UA_Example: Туристи повинні дотримуватися місцевих законів.
   EN_Example: Tourists must abide by local laws.
   Tags_Ch: ch:2.8.3

@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: заробляти
+  TypingAnswer: заробляти / заробити
   UA_Example: Команда заробляє очки за кожну перемогу.
   EN_Example: The team earns points for every win.
   Tags_Ch: ch:2.9.3
