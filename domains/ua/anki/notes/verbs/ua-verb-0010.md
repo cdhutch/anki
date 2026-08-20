@@ -37,6 +37,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: 'Corrected 2026-08-04, per Craig -- stored Pres_*/Imperative_*/Past_*
     fields previously matched попити ("to drink up")/поплинути-adjacent forms, not попливти.
     Replaced with попливти''s own Горох Словозміна page (goroh.pp.ua/Словозміна/попливти),

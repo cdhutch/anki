@@ -263,3 +263,84 @@ class TestAlwaysPresentOptionalFields:
         )
         for k in self.PVOM_EUPHONY:
             assert k not in out["fields"], k
+
+
+class TestUaVerbSourceNoteAlwaysPresent:
+    """Source_Note on UA_Verb joins the always-present-blank set (Craig,
+    2026-08-20) -- the last STRICT=1 blocker for this note type.
+
+    Source_Note is canonical for all five UA note types and already sat at
+    100% on the other four. UA_Verb carried it on 1 of 87 notes: ua-verb-0001,
+    holding a planning to-do rather than a source record. The alternative --
+    declaring it legitimately sparse -- would have required a per-field
+    exemption mechanism check_cnsf_field_schema.py does not have.
+    """
+
+    def _verb(self, fields):
+        return {
+            "schema": "cnsf/v0",
+            "domain": "ua",
+            "note_type": "ua_verb",
+            "note_id": "ua-verb-0042",
+            "anki": {"model": "UA_Verb", "deck": "UA::Recognition::Verbs"},
+            "tags": ["domain:ua"],
+            "fields": fields,
+        }
+
+    def test_missing_source_note_is_added_blank(self):
+        out = cc.canonicalize_meta(
+            self._verb({"NoteID": "ua-verb-0042", "Lemma": "ходи́ти"}),
+            Path("ua-verb-0042.md"),
+        )
+        assert out["fields"]["Source_Note"] == ""
+
+    def test_populated_source_note_is_not_clobbered(self):
+        val = "Class leader for motion walking prefix pattern."
+        out = cc.canonicalize_meta(
+            self._verb({"NoteID": "ua-verb-0001", "Source_Note": val}),
+            Path("ua-verb-0001.md"),
+        )
+        assert out["fields"]["Source_Note"] == val
+
+    def test_added_key_lands_in_constant_order_not_appended(self):
+        """setdefault appends, so the reorder pass has to run after it. Without
+        that, the backfilled key strands at the end of all 86 notes -- which is
+        the same drift that produced this item in the first place."""
+        out = cc.canonicalize_meta(
+            self._verb({"NoteID": "ua-verb-0042", "Lemma": "ходи́ти"}),
+            Path("ua-verb-0042.md"),
+        )
+        keys = list(out["fields"].keys())
+        const = [f for f in cc.CANON_FIELD_ORDER["ua_verb"] if f in set(keys)]
+        assert keys == const
+        assert keys[-1] != "Source_Note" or const[-1] == "Source_Note"
+
+    def test_b737_notes_do_not_gain_source_note(self):
+        """The scoping that matters: B737 notes carry 'Source Document', not
+        'Source_Note'. A global setdefault -- the shape used for Verification
+        Notes -- would have injected the wrong key across the B737 corpus."""
+        out = cc.canonicalize_meta(
+            {
+                "schema": "cnsf/v0", "domain": "b737", "note_type": "b737_systems",
+                "note_id": "sv-hydraulics-001",
+                "anki": {"model": "B737_Structured", "deck": "B737::Test"},
+                "tags": ["domain:b737"], "fields": {"NoteID": "sv-hydraulics-001"},
+            },
+            Path("sv-hydraulics-001.md"),
+        )
+        assert "Source_Note" not in out["fields"]
+
+    def test_other_ua_note_types_are_unaffected_by_this_block(self):
+        """ua_grammar already satisfies Source_Note on every note, so the
+        ua_verb-scoped block must not be what puts it there -- otherwise the
+        scoping is decorative and a future edit could widen it unnoticed."""
+        out = cc.canonicalize_meta(
+            {
+                "schema": "cnsf/v0", "domain": "ua", "note_type": "ua_grammar",
+                "note_id": "ua-grammar-0001",
+                "anki": {"model": "UA_Grammar", "deck": "UA::Test"},
+                "tags": ["domain:ua"], "fields": {"NoteID": "ua-grammar-0001"},
+            },
+            Path("ua-grammar-0001.md"),
+        )
+        assert "Source_Note" not in out["fields"]

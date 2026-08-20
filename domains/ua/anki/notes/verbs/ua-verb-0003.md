@@ -38,6 +38,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: ''
 ---
 

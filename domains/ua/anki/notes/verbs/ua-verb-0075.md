@@ -36,6 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: Reflexive, 1st conjugation. Govs 'від + genitive'. See lexeme ua-lexeme-0480.
 ---
 

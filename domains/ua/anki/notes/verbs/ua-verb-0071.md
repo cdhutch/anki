@@ -36,6 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: Pairs with perfective ви́кликати (stress-differentiated pair, see ua-lexeme-0338).
 ---
 

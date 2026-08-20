@@ -39,6 +39,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: 'Re-sourced from Горох (goroh.pp.ua/Словозміна) 2026-08-19 after `make
     ua-unverified` surfaced an unstressed multisyllabic Lemma on all of ua-verb-0017-0032
     -- CLAUDE.md''s own documented signature of a bad extraction. The Lemma was the visible

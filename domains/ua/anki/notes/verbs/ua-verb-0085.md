@@ -36,6 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: Non-reflexive. Stress-based aspect pair with perfective пахну́ти ('to
     waft suddenly'), not drafted here. No 1pl imperative form surfaced on Горох. See lexeme
     ua-lexeme-0552.

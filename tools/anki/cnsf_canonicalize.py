@@ -340,6 +340,24 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
         ):
             fields.setdefault(key, "")
 
+    # Same always-present convention extended to UA_Verb's Source_Note (Craig,
+    # 2026-08-20) -- the last STRICT=1 blocker for this note type. Source_Note
+    # is canonical for all five UA note types and already sits at 100% on the
+    # other four; UA_Verb carried it on exactly 1 of 87 notes. That one is
+    # ua-verb-0001, whose content was a planning to-do ("Verify all forms
+    # against Горох") discharged by the 2026-08-19 re-sourcing pass, not a
+    # record of where the data came from -- one leftover, not evidence of a
+    # sparse field in real use. Declaring it legitimately sparse instead would
+    # have meant building a per-field exemption mechanism that
+    # check_cnsf_field_schema.py does not have: --strict there is one global
+    # boolean, not a per-field allowlist.
+    #
+    # Scoped to ua_verb rather than applied globally like Verification Notes
+    # above, because a bare setdefault would also inject Source_Note into B737
+    # notes, which carry "Source Document" instead (see _normalize_meta).
+    if note_type == "ua_verb":
+        fields.setdefault("Source_Note", "")
+
     if note_type == "ua_lexeme":
         _sync_typing_answer(fields)
 

@@ -36,6 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: Perfective; Pres_* fields hold the future-tense forms Горох lists (standard
     for perfective verbs). No attested direct imperfective pair -- see ua-lexeme-0333.
 ---

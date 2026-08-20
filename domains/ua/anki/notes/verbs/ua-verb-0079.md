@@ -36,6 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: 'Non-reflexive. Pres_* fields hold the perfective future here (standard
     corpus convention for perfective conjugation notes, cf. ua-verb-0004). Imperfective partner
     is па́дати (the general unprefixed "to fall" pair); Горох also shows an unrelated, much

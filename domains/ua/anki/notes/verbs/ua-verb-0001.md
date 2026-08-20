@@ -39,7 +39,7 @@ fields:
   Participle_Impersonal_Past: хо́джено
   Participle_Adverbial_Past: ходи́вши
   Source_Note: Class leader for motion walking prefix pattern. Base for ходити, походити,
-    заходити, виходити, перейходити. Verify all forms against Горох.
+    заходити, виходити, переходити. Verify all forms against Горох.
   Verification Notes: ''
 ---
 
