@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: перепливати
+  TypingAnswer: перепливати / переплисти
   UA_Example: Останній етап -- переплисти озеро.
   EN_Example: The last stage is swimming across the lake.
   Tags_Ch: ch:2.9.5

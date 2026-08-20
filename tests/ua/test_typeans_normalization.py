@@ -44,6 +44,7 @@ sys.path.insert(0, str(REPO_ROOT))
 
 import tools.anki.setup.setup_ua_note_types as setup  # noqa: E402
 import tools.anki.setup.setup_ua_pvom_note_type as pvom_setup  # noqa: E402
+from tools.anki.lib.typeans_js import NORMALIZE_TYPEANS_JS  # noqa: E402
 
 # Built with chr() rather than written as literals ON PURPOSE. An earlier draft
 # of this very file wrote them as literal characters and immediately hit the
@@ -95,10 +96,25 @@ class TestEmittedJavaScript:
             )
 
     def test_both_scripts_emit_identical_helper_bodies(self):
-        """They are deliberate copies -- if one is fixed and the other isn't,
-        that is the failure this catches."""
+        """They used to be deliberate copies, and this caught the case where
+        one was fixed and the other wasn't. Since 2026-08-20 there is one
+        shared body (tools/anki/lib/typeans_js.py), so this is now a guard
+        against a copy being reintroduced rather than against drift."""
         bodies = {label: _helper_body(js) for label, js in SCRIPTS}
         assert len(set(bodies.values())) == 1, bodies
+
+    def test_both_scripts_embed_the_shared_constant_verbatim(self):
+        """The point of hoisting the helper into tools/anki/lib/typeans_js.py
+        is that "the two copies drifted" stops being a reachable state. A
+        substring check, not an equality one, because each script splices the
+        constant into a larger template. If someone re-inlines the helper this
+        fails even if the two inlined bodies happen to agree with each other --
+        which is exactly the state we just left."""
+        for label, js in SCRIPTS:
+            assert NORMALIZE_TYPEANS_JS in js, (
+                f"{label}: does not embed NORMALIZE_TYPEANS_JS verbatim -- the "
+                f"helper looks re-inlined"
+            )
 
 
 def _helper_body(js: str) -> str:

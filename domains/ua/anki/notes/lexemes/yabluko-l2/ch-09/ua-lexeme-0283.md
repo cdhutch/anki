@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: перелітати
+  TypingAnswer: перелітати / перелетіти
   UA_Example: Наступний етап -- перелетіти через річку на мотузці.
   EN_Example: The next stage is flying across the river on a rope.
   Tags_Ch: ch:2.9.5

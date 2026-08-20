@@ -50,7 +50,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: вигравати
+  TypingAnswer: вигравати / виграти
   UA_Example: Вона любить вигравати навіть у дружніх іграх.
   EN_Example: She likes to win even in friendly games.
   Tags_Ch: ch:2.9.3

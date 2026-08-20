@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: впадати
+  TypingAnswer: впадати / впасти
   UA_Example: Яблуко впало з дерева просто йому під ноги.
   EN_Example: An apple fell from the tree right at his feet.
   Tags_Ch: ch:2.8.3

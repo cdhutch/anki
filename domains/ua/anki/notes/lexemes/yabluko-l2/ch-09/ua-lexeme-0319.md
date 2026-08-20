@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: вибачати
+  TypingAnswer: вибачати / вибачити
   UA_Example: Вибачте, повторіть, будь ласка, номер вагона.
   EN_Example: Sorry, please repeat the train car number.
   Tags_Ch: ch:2.9.6

@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: посідати
+  TypingAnswer: посідати / посісти
   UA_Example: Наша команда щороку посідає перше місце.
   EN_Example: Our team takes first place every year.
   Tags_Ch: ch:2.9.3

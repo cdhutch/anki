@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: використовувати
+  TypingAnswer: використовувати / використати
   UA_Example: Учасники використовують спорядження для дайвінгу.
   EN_Example: The participants use equipment for diving.
   Tags_Ch: ch:2.9.3

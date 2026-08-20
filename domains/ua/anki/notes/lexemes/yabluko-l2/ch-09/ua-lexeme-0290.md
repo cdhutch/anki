@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: спускатися
+  TypingAnswer: спускатися / спуститися
   UA_Example: Спускатися вниз зі скелі довелося повільно, крок за кроком.
   EN_Example: They had to descend the cliff slowly, step by step.
   Tags_Ch: ch:2.9.5, ch:2.9.7

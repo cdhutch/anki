@@ -51,7 +51,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: перемагати
+  TypingAnswer: перемагати / перемогти
   UA_Example: Наша команда перемагає у більшості матчів.
   EN_Example: Our team wins most of its matches.
   Tags_Ch: ch:2.9.2, ch:2.9.3

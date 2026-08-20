@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: викликати
+  TypingAnswer: викликати / викликати
   UA_Example: Треба викликати таксі до готелю.
   EN_Example: We need to call a taxi to the hotel.
   Tags_Ch: ch:2.9.7

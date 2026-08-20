@@ -50,7 +50,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: відбивати
+  TypingAnswer: відбивати / відбити
   UA_Example: Воротар щоразу відбиває мʼяч.
   EN_Example: The goalkeeper deflects the ball every time.
   Tags_Ch: ch:2.9.3

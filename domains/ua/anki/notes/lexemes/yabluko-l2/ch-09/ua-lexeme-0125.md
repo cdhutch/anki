@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выезжать / выехать'
-  TypingAnswer: виїжджати
+  TypingAnswer: виїжджати / виїхати
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4

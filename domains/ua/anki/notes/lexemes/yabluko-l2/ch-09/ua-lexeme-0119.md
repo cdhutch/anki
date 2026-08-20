@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: доходить / дойти (до- + іти → дійти)'
-  TypingAnswer: доходити
+  TypingAnswer: доходити / дійти
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4

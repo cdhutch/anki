@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: простягати
+  TypingAnswer: простягати / простягнути
   UA_Example: Продавчиня простягала букет через прилавок.
   EN_Example: The saleswoman was reaching the bouquet across the counter.
   Tags_Ch: ch:2.9.4

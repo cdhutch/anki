@@ -49,7 +49,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: прибувати
+  TypingAnswer: прибувати / прибути
   UA_Example: Поїзд прибуває на станцію за розкладом.
   EN_Example: The train arrives at the station on schedule.
   Tags_Ch: ch:2.9.6

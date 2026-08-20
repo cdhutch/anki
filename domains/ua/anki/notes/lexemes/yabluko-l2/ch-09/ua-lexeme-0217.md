@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: кидати
+  TypingAnswer: кидати / кинути
   UA_Example: Гравці кидають мʼяч один одному.
   EN_Example: The players throw the ball to each other.
   Tags_Ch: ch:2.9.3

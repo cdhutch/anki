@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: переправлятися
+  TypingAnswer: переправлятися / переправитися
   UA_Example: Команди переправлялися через річку по черзі.
   EN_Example: The teams crossed the river one after another.
   Tags_Ch: ch:2.9.5

@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: розводити
+  TypingAnswer: розводити / розвести
   UA_Example: Тут місцеві родини здавна розводять овець.
   EN_Example: Local families have long bred sheep here.
   Tags_Ch: ch:2.8.5

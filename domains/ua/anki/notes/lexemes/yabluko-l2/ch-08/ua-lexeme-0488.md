@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: впасти в очі
+  TypingAnswer: впадати в очі / впасти в очі
   UA_Example: Її яскрава сукня одразу впала в очі.
   EN_Example: Her bright dress immediately caught everyone's eye.
   Tags_Ch: ch:2.8.3

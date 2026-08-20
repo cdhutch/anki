@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: підвозити
+  TypingAnswer: підвозити / підвезти
   UA_Example: Місцевий фермер погодився підвезти їх до сироварні.
   EN_Example: A local farmer agreed to give them a ride to the cheese dairy.
   Tags_Ch: ch:2.9.7

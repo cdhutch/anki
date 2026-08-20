@@ -38,7 +38,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: насолоджуватися
+  TypingAnswer: насолоджуватися / насолодитися
   UA_Example: Ми насолоджуємося відпочинком на морі.
   EN_Example: We are enjoying our vacation by the sea.
   Tags_Ch: ch:2.9.2

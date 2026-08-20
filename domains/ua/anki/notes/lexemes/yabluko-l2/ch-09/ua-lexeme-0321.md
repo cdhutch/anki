@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: перепрошувати
+  TypingAnswer: перепрошувати / перепросити
   UA_Example: Перепрошую, я не почула, коли відправляється поїзд.
   EN_Example: Excuse me, I didn't hear when the train departs.
   Tags_Ch: ch:2.9.6

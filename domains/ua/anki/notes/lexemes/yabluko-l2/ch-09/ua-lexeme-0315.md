@@ -47,7 +47,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: відправлятися
+  TypingAnswer: відправлятися / відправитися
   UA_Example: Поїзд відправляється з другої платформи.
   EN_Example: The train departs from platform two.
   Tags_Ch: ch:2.9.6

@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: ночувати
+  TypingAnswer: ночувати / переночувати
   UA_Example: Команди мали ночувати просто неба між етапами.
   EN_Example: The teams had to spend the night outdoors between stages.
   Tags_Ch: ch:2.9.5

@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: отъезжать / отъехать (ʼ corresponds to RU ъ)'
-  TypingAnswer: відʼїжджати
+  TypingAnswer: відʼїжджати / відʼїхати
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4

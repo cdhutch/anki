@@ -32,7 +32,7 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: іти / ходити
-  ConfusableSet: ви́ходити (directional opposite)
+  ConfusableSet: вихо́дити (directional opposite)
   Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
   CompareScenario: Someone walks into a building through the front door, on foot.
   CompareA: входити
@@ -42,7 +42,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: входить / войти'
-  TypingAnswer: входити
+  TypingAnswer: входити / ввійти
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4

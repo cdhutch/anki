@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: топити
+  TypingAnswer: топити / втопити
   UA_Example: Течія намагалася топити човен на переправі.
   EN_Example: The current kept trying to sink the boat during the crossing.
   Tags_Ch: ch:2.9.5

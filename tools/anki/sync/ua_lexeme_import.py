@@ -56,21 +56,27 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from tools.anki.lib.typing_target import (  # noqa: E402,F401
+    compute_typing_target,
+    strip_stress,
+)
 from tools.anki.sync.tsv_to_anki import (  # noqa: E402
     FLAG_ORANGE,
     FLAG_RED,
     anki_request,
     describe_note_ids,
+    flag_query_for_model,
     get_flagged_note_ids_by_color,
 )
 
 ANKI_URL = "http://127.0.0.1:8765"
 MODEL_NAME = "UA_Lexeme"
 
-# Deck query scope for the red/orange-flag suspend check -- the whole UA
-# deck tree, not just this note type's own two decks, so the same query
-# string is reusable verbatim across every UA sync script.
-FLAG_DECK_QUERY = "deck:UA::*"
+# Flag-query scope for the red/orange-flag check. Scoped to THIS note type
+# as of 2026-08-20 -- it used to be the bare UA deck tree, which made every
+# import print the whole corpus's orange call-out. See flag_query_for_model()
+# in tsv_to_anki.py for the symptom and the reasoning.
+FLAG_DECK_QUERY = flag_query_for_model(MODEL_NAME)
 
 # Full CNSF root, independent of whatever `targets` a given invocation passes
 # (e.g. a single file or one subdirectory) -- orphan detection (--prune-orphans,
@@ -218,47 +224,13 @@ def parse_note_file(path: Path) -> dict | None:
 # ---------------------------------------------------------------------------
 
 
-def strip_stress(s: str) -> str:
-    """Remove the combining acute accent (U+0301) used for stress marks."""
-    return s.replace("́", "")
-
-
-def compute_typing_target(lemma: str, impf_uni: str, perfective: str) -> tuple[str, str] | None:
-    """Build the EN->UA typing target for a verb's full stressed aspect set.
-
-    Restored 2026-07-28 (git archaeology, commit a5b4a15 -- the last version
-    before the 2026-07-25 Lemma_Euphony redesign made this require typing
-    both a primary and euphonic form together; see setup_ua_note_types.py's
-    EN_UA_FRONT/EN_UA_BACK for the template side of this restoration).
-
-    For verb notes, the EN->UA card should require typing the entire aspect
-    singlet/couplet/triplet, not just Lemma alone -- e.g. "ходи́ти / йти /
-    піти́" (multidirectional-imperfective / unidirectional-imperfective /
-    perfective triplet) or "перекида́ти / переки́нути" (imperfective/perfective
-    doublet). Order is always Lemma, then ImperfectiveUnidirectional (if
-    populated), then Perfective (if populated) -- matching the multi-imp ->
-    uni-imp -> perfective progression. Any missing slot is dropped, not left
-    blank, so a doublet renders as "Lemma / Perfective", never
-    "Lemma / / Perfective".
-
-    Returns None when fewer than two forms are populated (a plain singlet,
-    e.g. an imperfective-only verb like мати with no aspectual counterpart,
-    or any non-verb note where Perfective/ImperfectiveUnidirectional are
-    simply not applicable) -- callers should leave TypingTarget_UA/
-    TypingAnswer as Lemma-only in that case.
-
-    Computed here (at sync time) rather than hand-authored into a new CNSF
-    field, by design: Lemma/ImperfectiveUnidirectional/Perfective are already
-    the authored source of truth, and deriving the join avoids a second,
-    independently-authored field silently drifting out of sync with -- or
-    being clobbered relative to -- the fields it's derived from.
-    """
-    parts = [p for p in (lemma, impf_uni, perfective) if p]
-    if len(parts) < 2:
-        return None
-    stressed = " / ".join(parts)
-    unstressed = " / ".join(strip_stress(p) for p in parts)
-    return stressed, unstressed
+# strip_stress() and compute_typing_target() moved to tools/anki/lib/
+# typing_target.py on 2026-08-20 and are re-exported here, unchanged, so every
+# existing caller and test keeps working. They moved because
+# cnsf_canonicalize.py needs the same join to keep CNSF's authored
+# `TypingAnswer` from drifting away from what import_note() actually sends --
+# and it runs under a pre-commit hook whose venv declares only pyyaml, so it
+# cannot safely import this module. See typing_target.py's docstring.
 
 
 def compute_typing_spec(

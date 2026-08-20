@@ -50,7 +50,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: забивати
+  TypingAnswer: забивати / забити
   UA_Example: Він часто забиває голи з кутового удару.
   EN_Example: He often scores goals from a corner kick.
   Tags_Ch: ch:2.9.3

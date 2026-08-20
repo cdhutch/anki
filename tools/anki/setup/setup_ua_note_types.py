@@ -21,6 +21,7 @@ import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from tools.anki.lib.typeans_js import NORMALIZE_TYPEANS_JS  # noqa: E402
 from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
@@ -600,7 +601,15 @@ EN_UA_FRONT = """\
 </div>
 """
 
-EN_UA_BACK = """\
+# NOTE: this is a concatenation, not one literal. The middle piece is
+# NORMALIZE_TYPEANS_JS, shared with setup_ua_pvom_note_type.py so the two
+# feedback scripts cannot drift apart again (see tools/anki/lib/typeans_js.py
+# for what went wrong when they were separate copies). Keep the `"""` /
+# `+ NORMALIZE_TYPEANS_JS` / `+ """` seam byte-exact: the JS on either side of
+# it is whitespace-sensitive only in that it must stay valid, but
+# test_typeans_normalization.py asserts the emitted body matches PVOM's.
+EN_UA_BACK = (
+    """\
 {{FrontSide}}
 <hr id="answer">
 <!-- Color-coded typing feedback.
@@ -646,22 +655,9 @@ EN_UA_BACK = """\
   var targetNoStress = (feedback.dataset.noStress || '').normalize('NFC');
   function stripStress(s) { return s.replace(/́/g, ''); }
 
-  // Strip Anki's combining-mark isolation artifact out of a reconstructed
-  // #typeans string (added 2026-08-18, restored 2026-08-19 -- the Option B
-  // rewrite of this block dropped it, silently reverting a fix that had
-  // already merged; test_typeans_normalization.py is what caught that, and
-  // is why it checks the emitted JS rather than only the Python).
-  // Anki's isolate_leading_mark() (rslib/src/typeanswer.rs) deliberately
-  // prepends U+00A0 to any diff chunk BEGINNING with a combining mark, so
-  // the mark renders on its own instead of stacking onto the previous
-  // chunk's last letter. That nbsp lands INSIDE a .typeGood/.typeBad span,
-  // so the reconstruction below swallows it into the typed answer and an
-  // otherwise-perfect answer compares unequal. Found on ua-lexeme-0532
-  // (2026-08-08). Restore the mark to its base letter; any remaining bare
-  // nbsp was a real space.
-  function normalizeTypeansText(s) {
-    return s.replace(/\\u00A0([\\u0300-\\u036F])/g, '$1').replace(/\\u00A0/g, ' ');
-  }
+"""
+    + NORMALIZE_TYPEANS_JS
+    + """\
 
   // NB: never write a doubled curly brace in a template comment, even inside
   // a // JS comment or an HTML comment. Anki scans the whole template text
@@ -885,6 +881,7 @@ EN_UA_BACK = """\
 <div class="note-id">{{NoteID}} · {{Tags_Ch}}</div>
 {{#Source_URL}}<div class="source-link"><a href="{{Source_URL}}">Горох ↗</a></div>{{/Source_URL}}
 """
+)
 
 # Template 3: Confusable Comparison (scenario-based, bidirectional)
 # Optional, only shown when ConfusableSet is populated
@@ -913,17 +910,22 @@ COMPARISON_FRONT = """\
      see comment above CARD_TEMPLATES. A blank CompareA here means the note
      has ConfusableSet populated but Compare fields were never authored
      (e.g. a homograph:true note where CompareA/B got skipped), or some
-     other data gap. Tested 2026-08-01 (see CLAUDE.md item 6): this warning
-     text is pure static markup with no field substitution, so Anki's own
-     empty-card-generation rule refuses to create this card at all when
-     CompareA is blank -- the warning below can never actually be seen in
-     Anki, in study or in preview/QA, and the importer's suspend call for
-     this exact case is a no-op against a card that doesn't exist. Left here
-     as a readable marker of the data-gap condition, not a functioning
-     safeguard. -->
+     other data gap.
+     UNREACHABLE, deliberately kept. Tested 2026-08-01 (see CLAUDE.md item 6):
+     everything this branch emits is static markup with no field substitution,
+     so Anki's own empty-card rule refuses to generate the card at all when
+     CompareA is blank. The block below can never render -- not in study, not
+     in preview, not in QA -- and the importer's suspend call for this exact
+     case is a no-op against a card that does not exist.
+     Its wording used to say "this card should be suspended", which read as a
+     live safeguard and was the one misleading thing about it: nothing is
+     suspending anything here, because there is nothing to suspend. Reworded
+     2026-08-20 to describe the data gap and say plainly that seeing it at all
+     would mean Anki's empty-card behaviour had changed. Find the real gaps
+     with `make ua-check`, not with this. -->
 {{^CompareA}}
 <div class="compare-warning">
-⚠ Compare card has no CompareA/B/C/D authored yet -- this card should be suspended.
+⚠ ConfusableSet is populated but no CompareA/B/C/D was authored. If you are reading this in Anki, the empty-card rule has changed -- see COMPARISON_FRONT in setup_ua_note_types.py.
 </div>
 {{/CompareA}}
 {{#CompareA}}
@@ -988,9 +990,13 @@ COMPARISON_BACK = """\
 </div>
 {{/_IsHomograph}}
 {{/CompareA}}
+<!-- Same unreachable branch as COMPARISON_FRONT's; see the long comment
+     there. The back can only render if the front did, and the front cannot.
+     Kept in step with it so the two never disagree about what a data gap
+     looks like. -->
 {{^CompareA}}
 <div class="compare-warning">
-⚠ Compare card has no CompareA/B/C/D authored yet -- this card should be suspended.
+⚠ ConfusableSet is populated but no CompareA/B/C/D was authored. If you are reading this in Anki, the empty-card rule has changed -- see COMPARISON_FRONT in setup_ua_note_types.py.
 </div>
 {{/CompareA}}
 {{/ConfusableSet}}

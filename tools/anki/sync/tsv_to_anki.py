@@ -77,6 +77,39 @@ TRACKED_FLAG_COLORS = (FLAG_RED, FLAG_ORANGE)
 # silently dropping out of review.
 SUSPEND_FLAG_COLORS = (FLAG_RED,)
 
+# The whole UA deck tree. Kept as its own constant because the flag query is
+# built from it rather than being it -- see flag_query_for_model().
+UA_DECK_TREE = "deck:UA::*"
+
+
+def flag_query_for_model(model_name: str, deck_query: str = UA_DECK_TREE) -> str:
+    """Flag-query scope for one note type's sync run.
+
+    Added 2026-08-20. Every UA importer used to pass the bare deck tree, so
+    each one queried flags across ALL five note types. That was harmless for
+    the red/suspend set -- an importer only ever consults it for notes it is
+    actually touching, so the intersection happened anyway -- but the orange
+    call-out is printed unconditionally, and it printed the whole tree's worth.
+
+    The symptom, from the first live `make ua-pvom` (2026-08-18): a PVOM sync
+    listed 26 orange-flagged notes, none of them PVOM -- all ua-lexeme-* plus
+    ua-verb-0016 and ua-visual-0001. Every UA import printed the same 26
+    unrelated notes, which is how a call-out worth reading turns into
+    scrollback you learn to skip.
+
+    Scoping by note type rather than by the specific files in `--targets` is
+    deliberate. A targeted run (`make ua-lexeme TARGETS=...`) is still working
+    within one note type, and a flagged sibling in that type is exactly the
+    kind of thing worth seeing; a flagged UA_Visual note during a PVOM sync is
+    not. It also keeps this a single up-front query rather than one per note --
+    see get_flagged_note_ids_by_color on why that matters.
+
+    Note-type names in this repo are plain identifiers (UA_Lexeme,
+    UA_PVOM_Infinitive), so they need no quoting in Anki's search syntax. If a
+    name ever grows a space, quote it here rather than at each call site.
+    """
+    return f"{deck_query} note:{model_name}"
+
 
 def get_flagged_note_ids_by_color(
     deck_query: str,
@@ -84,7 +117,8 @@ def get_flagged_note_ids_by_color(
     flags: Tuple[int, ...] = TRACKED_FLAG_COLORS,
 ) -> Dict[int, set]:
     """Return {flag_color: {note_ids}} for cards flagged red or orange within
-    *deck_query* (e.g. "deck:UA::*").
+    *deck_query* (e.g. "deck:UA::* note:UA_Lexeme" -- build it with
+    flag_query_for_model() rather than passing the bare deck tree).
 
     Added 2026-07-31 per Craig (originally a single merged set -- see git
     history for the pre-2026-08-10 get_flagged_note_ids): a mistyped keystroke

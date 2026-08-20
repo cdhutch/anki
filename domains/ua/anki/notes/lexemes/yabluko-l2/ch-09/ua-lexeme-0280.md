@@ -39,7 +39,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: вилазити
+  TypingAnswer: вилазити / вилізти
   UA_Example: Гострий схил не давав вилазити на скелю без мотузки.
   EN_Example: The steep slope made it impossible to climb out onto the rock without a rope.
   Tags_Ch: ch:2.9.5

@@ -40,7 +40,7 @@ fields:
   Homograph_SenseA: ''
   Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: въезжать / въехать (ʼ corresponds to RU ъ)'
-  TypingAnswer: вʼїжджати
+  TypingAnswer: вʼїжджати / вʼїхати
   UA_Example: ''
   EN_Example: ''
   Tags_Ch: ch:2.9.4
