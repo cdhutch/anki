@@ -36,6 +36,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: Pairs with perfective спусти́тися. See ua-lexeme-0290. Reused (tag-appended)
     for ch.9.7's bare 'спуститися' -- see the ch.9.7 section below.
 ---

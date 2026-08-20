@@ -37,6 +37,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: бі́гши
+  Source_Note: ''
   Verification Notes: ''
 ---
 

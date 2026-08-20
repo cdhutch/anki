@@ -37,6 +37,7 @@ fields:
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
+  Source_Note: ''
   Verification Notes: 'Corrected 2026-08-04, per Craig -- stored Pres_*/Imperative_*/Past_*
     fields previously matched плинути ("to flow/stream," an unrelated -нути verb), not пливти.
     Replaced with the Горох-verified пливти paradigm sourced 2026-07-31 while drafting ua-verb-0086
