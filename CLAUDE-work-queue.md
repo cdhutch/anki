@@ -354,16 +354,19 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   orange), read straight off the 2026-08-18 `make ua-pvom` output, so no separate
   `ua_flag_audit.py --query` run is needed to know the number — only to get the note
   list for Phase 2.
-- [ ] **`UA_Verb`'s `Tags_Conj` / `Source_Note` sparse-vs-always-present decision**
-  — 1/87 notes each. This is now **the only thing left** blocking `STRICT=1` by
-  default on `ua-check-fields`; `UA_Lexeme` (item 17) and `UA_PVOM_Infinitive`
-  (above) are both settled. Note the 6 `UA_Lexeme` fields the checker also reports
-  as "not present on every note" are **not** a gap — five are computed at sync time
-  and one (`ImperfectiveUnidirectional`) is deliberately sparse; authoring them
-  would write values the import script overwrites. See the Makefile comment above
-  `ua-check-fields`.
+- [ ] **`UA_Verb`'s `Source_Note` sparse-vs-always-present decision** — the last
+  `STRICT=1` blocker for this note type. `Source_Note` is populated on **1 of 87** notes.
+  Either backfill it corpus-wide (blank where unknown, per the always-present convention
+  settled for `UA_Lexeme` in item 17) or declare it legitimately sparse and teach the
+  checker so; until one or the other, `make ua-check STRICT=1` cannot be turned on for
+  `UA_Verb`.
 
-## UA Domain — Confusable-set / Compare-card content queue
+  **`Tags_Conj` is no longer part of this item — the field was deleted 2026-08-19**
+  (`7657034`). It was a hand-maintained space-joined mirror of the note's own tags,
+  rendered in the `UA_Verb` footer, present on 1/87 notes and already drifted (`ch:2.9`
+  stored against an actual `ch:2.9.2` tag). The footer now renders Anki's built-in
+  `{{Tags}}`, so the duplication is gone by construction and the footer names every
+  suspend reason (`conj:`, `status:`, `stress:`) rather than just one.
 
 - [ ] **виступ** — anticipated confusable cluster (performance/presentation/
   appearance senses). Not yet sourced. See `docs/ua-confusables-queue.md`.
@@ -451,7 +454,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 - [ ] **`gen_ch09_subsection.py` exercised end-to-end** against a real batch
   (built 2026-07-25, still untested — currently nothing left to run it against
   unless new ch-09+ content is added).
-- [ ] **`main` merged into `maint/verb-review`** — resolved 2026-08-19 by running the
+- [x] **`main` merged into `maint/verb-review`** — resolved 2026-08-19 by running the
   merge for real (`git merge --no-commit --no-ff main`) instead of predicting it.
   **15** conflicts, not the 14 previously recorded here:
 
@@ -516,7 +519,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `main`, and restoring them silently reverts Option B — exactly the failure mode that bit
   us twice on 2026-08-19.
 
-- [ ] **PVOM `status:` tag — APPLIED 2026-08-19, commit `53680f4`, needs only your tick.**
+- [x] **PVOM `status:` tag — APPLIED 2026-08-19, commit `53680f4`, needs only your tick.**
   Craig stated he was setting `status:verified`; all 13 notes tagged, one line each
   (`- status:verified`, after the existing `- stress:` tag), no field values or other tags
   touched. Confirmed working: PVOM no longer appears in `make ua-unverified` at all, and
@@ -524,7 +527,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `status:draft`. This closes `e53f14d`'s original goal (PVOM notes were falling into
   `list_unverified.py`'s "no status tag" bucket) without its side effect.
 
-- [ ] **`ua-verb-0017`–`0032` re-sourced from Горох — DONE 2026-08-19, Craig verified and
+- [x] **`ua-verb-0017`–`0032` re-sourced from Горох — DONE 2026-08-19, Craig verified and
   tagged. Needs only your tick.** The unstressed Lemma that `make ua-unverified` surfaced
   was the visible symptom of a much larger defect: **182 of 224 conjugation fields were
   wrong**, not merely unmarked.
@@ -549,14 +552,14 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   that cleared and no `status:` tag present — not a suspend reason for `ua_verb` — up to
   **64 cards** (16 × 4 templates) unsuspend on the next sync.
 
-- [ ] **`ua-verb-0001`–`0032` carry no `status:` tag at all** — the same gap PVOM had before
+- [x] **`ua-verb-0001`–`0032` carry no `status:` tag at all** — the same gap PVOM had before
   `53680f4`. `0001`–`0032` are now all stress-verified but statusless, so they keep
   reporting under `[no status tag]` in `make ua-unverified` even though the data is sound.
   Same fix shape as PVOM: `status:verified` satisfies the report without changing suspension
   (for `ua_verb`, `should_suspend()` trips on `stress:unverified`, `status:draft`, or
   `conj:suspended` — never on absence). Craig's tag to set.
 
-- [ ] **`ua-lexeme-0116` lemma corrected to `вихо́дити` — DONE 2026-08-19 by Craig. Needs
+- [x] **`ua-lexeme-0116` lemma corrected to `вихо́дити` — DONE 2026-08-19 by Craig. Needs
   only your tick.** Surfaced while re-sourcing `ua-verb-0018`: the note had stored
   `ви́ходити` against the gloss "to go out, exit (on foot)". Горох's Тлумачення page carries
   three homographs — **ВИХО́ДИТИ**, imperfective, first sense "Іти звідки-небудь назовні, за
@@ -569,6 +572,41 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   is touched: `Source_Note` still reads "Stress verified 2026-07-06 via Горох" though the
   lemma changed 2026-08-19, and its `Verification Notes` ends "Needs your review" on a note
   tagged `status:verified`.
+
+- [x] **`conj:` curation axis added to PVOM and applied to both corpora — DONE
+  2026-08-19, verified live. Needs only your tick.** `UA_PVOM_Infinitive`'s
+  `should_suspend()` had only two axes (`stress:unverified`, `status:draft`), so a note
+  that was reviewed and correct could be kept out of the drilling rotation only by
+  asserting it was unreviewed — which would pull it back into `list_unverified.py`'s
+  report. Added `conj:suspended`, mirroring `ua_verb_import.py`. Three independent axes
+  on both note types now: `stress:` = data confirmed, `status:` = content reviewed,
+  `conj:` = drilled at all.
+
+  Tagged per Craig's selection, chosen to cover the gamut of stress patterns (regular,
+  prefix-stressed `ви́йти`/`ви́їхати`, `-ій-` epenthesis with apostrophe, and the в-/у-
+  euphonic alternation): `conj:drill` on `при-`/`в-`/`ви-`/`під-` in PVOM and on
+  `при-`/`ви-`/`під-` in both `UA_Verb` motion sets; `conj:suspended` on the rest.
+  9 new tests pin the axis separation, including that `conj:drill` is not caught by a
+  substring match. **Verified live:** `note:UA_PVOM_Infinitive -is:suspended` = 12 cards
+  (not 16 — `ua-pvom-0012`'s red flag suspends the whole note regardless of tags).
+
+- [ ] **`ua-pvom-0012`'s red-flagged card** — `card_id 1784997131493`, `ord: 1`, the
+  Walking (Uni) template (`ввійти́`). It is `conj:drill` and verified on both quality
+  axes, so the red flag is the *only* thing keeping the в-/у- euphony note — the one note
+  in the corpus with populated `*_Euphony` values — out of the rotation. Worth knowing why
+  before clearing it: `05d8e74` flipped this note's Walking-Uni slot so в- became primary,
+  and flagged `ухо́дити` as the weakest value with `NEEDS CRAIG DECISION`. A red flag on
+  exactly that card looks like it motivated the flip rather than being unrelated. Find it
+  with `flag:1 note:UA_PVOM_Infinitive`. If stale, clearing it in Anki is all that's
+  needed — the next `make ua-pvom` unsuspends from the tags alone, no repo change.
+
+- [ ] **`в-` has no `UA_Verb` conjugation note** — noticed 2026-08-19 while mapping the
+  PVOM prefix selection onto the verb corpus. `UA_Verb` covers
+  `при/ви/під/до/про/пере/за/від` only; `входити`/`вʼїхати` exist solely as
+  `ua-lexeme-0115`/`0124`. So the в-/у- alternation is drilled at PVOM and lexeme level
+  but has no paradigm note. Not obviously wrong — prefixed paradigms are derivable from
+  the leader — but it is the one gap in an otherwise symmetric set, and it compounds with
+  the red flag above.
 
 - [ ] **Sweep the corpus for any other `ви́ходити`-shaped lemma** — the 0116 error was a
   prefix-stressed spelling standing in for a `-хо́-` imperfective, which is the same class of
