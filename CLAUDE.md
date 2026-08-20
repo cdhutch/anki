@@ -823,6 +823,103 @@ resumed for the rest of the session and visible in how the commit/PR/sync sequen
 was run: Claude authors files and delivers them over the file bridge, Craig runs every
 command, and Claude provides **one** set at a time and waits.
 
+2026-08-20 (later same day): **Three small merges closing four work-queue items —
+`ua-pvom-0012`'s verification record and red flag, `ua-lexeme-0116`'s stale leftovers,
+and `Source_Note` joining the always-present set for `UA_Verb`.** PRs #80–#82. Each
+landed on its own branch; none of them are import-coupled the way `fe4efcc` was, so
+there was no reason to combine them.
+
+**Correction to the entry above.** It says of `ua-pvom-0012`'s hand-unsuspended cards
+that "the next `make ua-pvom` re-suspends them." That stopped being true the same day:
+the red flag was cleared, so the sync released them instead. Live counts after it:
+`note:UA_PVOM_Infinitive -is:suspended` = **16** (was 12), `is:suspended` = **36**.
+
+**1. `ua-pvom-0012`'s red flag — settled before cleared, and the order was the point.**
+`flag:1 note:UA_PVOM_Infinitive` returned exactly one card, the Walking (Uni) `ввійти́`
+slot — the one `05d8e74` flipped, confirming the work queue's guess that the flag
+motivated the flip rather than being unrelated. It marked the в-/у- primary-form
+question, which Shevchuk settled 2026-08-18, so nothing was outstanding behind it.
+
+But reading the note first changed the sequence. Its `Verification Notes` carried a
+standing `NEEDS CRAIG RE-CHECK` on the four `*_Euphony` stress placements, written
+2026-08-18 on a note already tagged `stress:verified`. Clearing the flag puts all four
+cards into rotation, so an unchecked mark would have gone straight into study — the same
+shape as the open `ua-lexeme-0115` item. Craig checked the two Claude-drafted values
+against Горох: `ухо́дити` (stress on `-хо́-`) and `увійти́` (on `-йти́`), both confirmed.
+`уїжджа́ти`/`уї́хати` were taken verbatim from `ua-lexeme-0124` and inherit its
+verification, so only two of the four ever needed him. Then the flag was cleared and the
+record written. **Generalise this:** when an item's stated action would activate content,
+check whether anything on that content is unverified *before* doing it, not after.
+
+Two other lines in that field had gone stale and were corrected rather than left to
+mislead: "Drafted by Claude, not verified" (no longer true of `уходити`), and "Inert
+today … required by the planned Option B refactor" — overtaken by `fe4efcc` the same
+morning, since the stored stress is now live.
+
+**2. `ua-lexeme-0116`'s two cosmetic leftovers**, flagged 2026-08-19 as "fold them in
+next time this note is touched." `Source_Note` read "Stress verified 2026-07-06 via
+Горох" — boilerplate shared **verbatim** with 0114 and 0115 from the ch-09 batch, so not
+wrong as history, but on this note it implied the current lemma was checked then, when
+what was checked then was `ви́ходити`, the wrong homograph. Rewritten to record the
+2026-08-19 re-verification while keeping the earlier date; 0114 and 0115 keep the
+boilerplate untouched, since neither lemma changed. `Verification Notes` no longer ends
+"Needs your review" on a `status:verified` note.
+
+`Source_URL` was **deliberately left alone** — it points at the unstressed
+`goroh.pp.ua/Словозміна/виходити`, which does not distinguish the homographs, so it is
+not wrong but is not evidence for the corrected lemma either. Craig repoints `Source_URL`s
+himself; the same restraint as 0153/0379 on 2026-08-19.
+
+Also checked and found *clean*, so it needs no action: `CompareA`/`CompareB` on 0116 are
+unstressed while `ConfusableSet` carries stress. That looks like drift until you notice
+0114 and 0115 do exactly the same — **unstressed Compare values are the house
+convention**, and no checker covers those fields, so it was worth confirming rather than
+assuming.
+
+**3. `Source_Note` joins the always-present set for `UA_Verb`** (`3a3c7f8`, PR #80) —
+the last item under "YAML/CNSF schema consistency". Per Craig: **Option A**,
+blank-backfill corpus-wide, matching item 17's `UA_Lexeme` convention. `make ua-verb-fix`
+wrote `Source_Note: ''` into 86 notes, one line each; `ua-verb-0001` already had the key.
+`make ua-check` now reports all 25 canonical fields present on all 87 notes. Four of the
+five note types are clean.
+
+**The two options in the work queue were not equal weight, and the item's framing hid
+that.** Option A reuses machinery `cnsf_canonicalize.py` already has — per-note-type
+`setdefault` blocks, 12 keys for `ua_lexeme`, 4 for `ua_pvom_infinitive`, `Verification
+Notes` globally. Option B, "declare it legitimately sparse and teach the checker," would
+have meant *building* a per-field exemption mechanism that does not exist:
+`check_cnsf_field_schema.py`'s `--strict` is one global boolean. Read the enforcement
+code before treating two documented alternatives as comparable.
+
+**The 1-of-87 note was not evidence of a sparse field in use.** It is `ua-verb-0001`,
+holding a planning to-do — "Verify all forms against Горох", with a typo (`перейходити`
+for `переходити`) — discharged by the 2026-08-19 re-sourcing pass. Craig fixed the typo;
+the text is otherwise kept as history. A single leftover in a field nothing else uses is
+not a convention.
+
+The new block is scoped to `note_type == "ua_verb"`, **not** global like `Verification
+Notes`: a bare `setdefault` would also inject `Source_Note` into B737 notes, which carry
+`Source Document`. One test pins that, and a second pins that `ua_grammar` is unaffected,
+so the scoping is not decorative.
+
+**`make ua-check STRICT=1` is still not reachable, and never was** — recorded because the
+item's own goal was written as if it were. `ua-check-fields` passes a bare
+`$(if $(STRICT),--strict,)` with no `--note-type`, and `--strict` fails on any canonical
+field missing from any note in the scanned set. `UA_Lexeme` holds five fields at 0/585 —
+`_AspectLabel`, `_UA_EN_DisplayLemma`, `_IsHomograph`, `TypingTarget_UA`, `_TypingSpec` —
+computed at import and never authored, so global strict can never pass. The per-note-type
+form does, and now passes for `UA_Verb`:
+
+    $ python tools/anki/inspect/check_cnsf_field_schema.py --note-type UA_Verb --strict
+    OK: no unknown field keys found.
+
+Wiring that into the Makefile is now its own work-queue item.
+
+`make ua-test`: **442 passed** (was 437) — 5 new in `test_cnsf_field_order.py`. No Anki
+re-sync was needed for any of the three: `Verification Notes`/`Source_Note` do not render
+on a card, and the importer sends fields as a name-keyed dict, so a blank `Source_Note` is
+what Anki already held.
+
 ## Workflow Notes
 
 This repo builds and maintains Anki flashcard decks across three top-level decks:
