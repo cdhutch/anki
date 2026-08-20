@@ -37,7 +37,16 @@ chapter by chapter (ch-09 imported and polished; ch-08 verification in progress)
 vocabulary (subsections 9.1–9.7, all of it) is fully sourced and `UA_Lexeme`-verified —
 only `ua-lexeme-0369`/`0584`/`0585` remain draft. The linked `UA_Verb` conjugation notes
 are the real gap: **50** of them (`ua-verb-0038`–`0085`, plus `0086`/`0087`) are still
-`status:draft` and `stress:unverified`, missing participles/examples. `0033`–`0037` moved
+`status:draft` and `stress:unverified`, missing participles/examples.
+**NEEDS CRAIG — the draft-verb counts do not reconcile across the docs (noticed
+2026-08-20).** Three labels are in play for the same set: this line's **50**
+(`0038`–`0085` = 48, plus `0086`/`0087`); Next Action #3's **55** for the range
+`0033`–`0085`, which actually contains **53** and only reaches 55 by silently pulling in
+`0086`/`0087`; and the work queue's "55 draft … **48** still `stress:unverified`", whose
+48 matches `0038`–`0085` alone. The underlying facts look consistent — `0033`–`0037`
+stress-verified, `0038`–`0085` = 48 unverified, `0086`/`0087` = 2 more — but the labels
+are not, and the scope of `0086`/`0087` shifts line to line. Left unresolved on purpose
+rather than picking a number and making it look settled. `0033`–`0037` moved
 to `status:verified` 2026-08-19 (they were already stress-verified); they stay suspended
 via `conj:suspended`, which is now a separate axis from review state. `0001`–`0032` are
 fully verified on both axes as of 2026-08-19.
@@ -59,11 +68,12 @@ fully verified on both axes as of 2026-08-19.
   `Perfective_Euphony`/`_EuphonySlots`/`_UA_EN_DisplayLemma` fields, per-slot tolerance in
   `EN_UA_BACK`'s feedback script, `EN_Example` added to `EN_UA_FRONT`. 12/12 new tests pass
   (`tests/ua/test_lexeme_import.py`, `TestComputeEuphonySlots`/`TestComputeUaEnDisplay`).
-  **Not yet confirmed:** `make ua-setup-lexeme`/`make ua-lexeme` haven't been run and no
-  card has been eyeballed in Anki yet — same "shipped, not yet validated" status as the
-  Gruvbox item above, until spot-checked.
-- **Two pre-existing `tests/ua/test_lexeme_import.py` failure groups found 2026-08-04,
-  parked** (unrelated to the euphony work above): `TestComputeTypingTarget` (8 failures)
+  ~~**Not yet confirmed:** `make ua-setup-lexeme`/`make ua-lexeme` haven't been run and no
+  card has been eyeballed in Anki yet~~ — **stale; both were run and spot-checked
+  2026-08-18** (work queue, `make ua-lexeme` 585 updated / 0 errors). Superseded outright
+  by the 2026-08-19 Option B refactor, which replaced `_EuphonySlots` with `_TypingSpec`.
+- **~~Two pre-existing `tests/ua/test_lexeme_import.py` failure groups found 2026-08-04,
+  parked~~ — RESOLVED 2026-08-11** (unrelated to the euphony work above): `TestComputeTypingTarget` (8 failures)
   tests the shelved 2026-07-25 `Lemma_Euphony` redesign (`881ac25`/`2e93202`, dict-returning
   `compute_typing_target()`) that was reverted back to the simpler `a5b4a15` design by
   2026-07-28 — the test file was never updated to match. `TestPruneOrphansSafetyGate`
@@ -99,7 +109,8 @@ fully verified on both axes as of 2026-08-19.
   archive/ua-verb-participle-merge-and-stress-pass`. Full reconciliation (0086/0087's
   -мо-only sweep, the participle-field schema migration, the remaining 0002–0087 data) is
   still open — see Future Projects.
-- **Two-branch plan for today's #3/#4/#5 + conjugation work (per Craig):** structure and
+- **~~Two-branch plan for today's #3/#4/#5 + conjugation work (per Craig)~~ — superseded;
+  this was 2026-08-04 and both branches merged long since.** structure and
   content stay on separate branches, not just separate commits.
   `feature/ua-lexeme-aspect-euphony-cards` stays scoped to the #3/#4/#5 code/tests only;
   a second, stacked branch (working name
@@ -116,9 +127,9 @@ fully verified on both axes as of 2026-08-19.
 
 ### Next Actions
 
-1. Confirm the Gruvbox on-device validation (three-pass walkthrough, `palette-compare-status`
-   card specifically) and report back. Any fixes go on `feature/anki-mobile-night-mode`
-   (kept alive for exactly this), then PR into `main` again.
+1. ~~Confirm the Gruvbox on-device validation (three-pass walkthrough,
+   `palette-compare-status` card specifically) and report back.~~ **Done — ticked in the
+   work queue**, confirmed against live `UA_Lexeme`/`UA_Verb` cards.
 2. **Corrected 2026-08-02 — no longer accurate, see below.** ~~Continue sourcing Yabluko
    L2 ch.9.3 onward~~ — all of ch:2.9.1–2.9.7 is already sourced and lexeme-verified.
    `gen_ch09_subsection.py` remains unexercised on a real batch, but there's no more ch-09
@@ -134,8 +145,11 @@ fully verified on both axes as of 2026-08-19.
    and re-sync with `make ua-verb`.
 4. Continue the ch-08 verification pass — write the confirmed confusable-set/aspect-pairing
    decisions into fields once Craig signs off on each.
-5. Work through the 11 flagged notes with Claude (Phase 2 of the flagged-card workflow)
-   whenever you're ready.
+5. Work through the **40** flagged notes with Claude (Phase 2 of the flagged-card
+   workflow) whenever you're ready. **Corrected 2026-08-20** — this line said 11, which
+   contradicted the "40 flagged notes" finding above in this same file. The live figure is
+   14 red + 26 orange; `flagged_cards_manifest.json`'s 28 is also stale. Re-run
+   `ua_flag_audit.py --query` for the note list before starting.
 6. ~~Apply the ua-verb-0009/0010 conjugation-table fix~~ — **Done 2026-08-04.** See
    Completed Projects below.
 7. Review `status:draft` content pending verification: ua-lexeme-0581–0585 (motion-verb
@@ -143,18 +157,19 @@ fully verified on both axes as of 2026-08-19.
 8. Decide whether to revisit `UA_Grammar` 0001–0007 against the atomicity principles, and
    whether the two 2026-07-22 loose ends above (motion-verb tagging, EN→UA deck-routing
    count) still need checking.
-9. Confirm the #3/#4/#5 on-device validation (per-slot euphony tolerance/display + EN→UA
-   example sentence, `feature/ua-lexeme-aspect-euphony-cards`): run `make ua-setup-lexeme`
-   then `make ua-lexeme`, spot-check 0115 (входити/увійти) and 0124 (уїжджати/уїхати) for
-   the new per-slot euphony behavior, 0581 (ходити/йти/піти, no-euphony control) to confirm
-   no regression, and the `EN_UA_FRONT` example-sentence addition on any note with a
-   populated `EN_Example`.
-10. Troubleshoot the two pre-existing `tests/ua/test_lexeme_import.py` failure groups
-    parked 2026-08-04 (see Current Findings above and the 2026-08-04 `CLAUDE.md` log
-    entry) — likely both trace back to the `maint/lexeme-review` merge (PR #63).
-11. Run the two-branch commit sequence for today's #3/#4/#5 + conjugation work (commands
-    given in conversation), then the `archive/ua-verb-participle-merge-and-stress-pass`
-    tag + push commands, so the dangling commit can't be lost.
+9. ~~Confirm the #3/#4/#5 on-device validation (per-slot euphony tolerance/display + EN→UA
+   example sentence).~~ **Done 2026-08-18**, and the mechanism it describes no longer
+   exists — `_EuphonySlots` was replaced by `_TypingSpec` in the 2026-08-19 Option B
+   refactor, validated across 14 typed cases. The `EN_UA_FRONT` example sentence is
+   confirmed working and ticked.
+10. ~~Troubleshoot the two pre-existing `tests/ua/test_lexeme_import.py` failure groups
+    parked 2026-08-04.~~ **Done 2026-08-11** — `TestComputeTypingTarget` rewritten against
+    the live behaviour, `TestPruneOrphansSafetyGate` deleted per Craig. Ticked in the work
+    queue.
+11. ~~Run the two-branch commit sequence for today's #3/#4/#5 + conjugation work~~ —
+    superseded (2026-08-04; both merged). **The `archive/ua-verb-participle-merge-and-stress-pass`
+    tag + push is still outstanding** and is the part worth keeping: it is the only thing
+    protecting `f907726` from garbage collection.
 12. Plan and execute the full reconciliation of `archive/ua-verb-participle-merge-and-stress-pass`
     into `main` — see CLAUDE.md item 13 under "Remaining Work" for the three open pieces
     (0086/0087 -мо-only sweep, `Participle_Passive_Past` schema migration, remaining
@@ -209,6 +224,34 @@ fully verified on both axes as of 2026-08-19.
   taxonomy — and the perfective прибу́ти doesn't have its own `UA_Verb` note yet.
 
 ## Completed Projects
+
+- **`ua-pvom-0012` verification record + red flag cleared** (2026-08-20, PR #82). The
+  flag sat on the Walking (Uni) `ввійти́` card — the slot `05d8e74` flipped — and marked the
+  в-/у- primary-form question Shevchuk settled 2026-08-18, so nothing was outstanding
+  behind it. **Settled before cleared, deliberately:** the note carried a standing
+  `NEEDS CRAIG RE-CHECK` on its four `*_Euphony` stress placements, and clearing the flag
+  activates all four cards. Craig confirmed `ухо́дити` (`-хо́-`) and `увійти́` (`-йти́`)
+  against Горох; `уїжджа́ти`/`уї́хати` inherit `ua-lexeme-0124`. Two stale lines in that
+  field also corrected. Live after `make ua-pvom`: `-is:suspended` = **16** (was 12),
+  `is:suspended` = 36 — the note is drilling for the first time since the type was built.
+
+- **`ua-lexeme-0116` stale verification leftovers closed** (2026-08-20, PR #81), flagged
+  2026-08-19 as "fold in next time this note is touched." `Source_Note` no longer implies
+  the current lemma was checked 2026-07-06 (what was checked then was the superseded
+  `ви́ходити`); `Verification Notes` no longer ends "Needs your review" on a
+  `status:verified` note. `Source_URL` deliberately left for Craig — the unstressed URL
+  does not distinguish the homographs. 0114/0115 keep the shared boilerplate, their lemmas
+  being unchanged.
+
+- **`Source_Note` joins the always-present set for `UA_Verb`** (2026-08-20, `3a3c7f8`,
+  PR #80) — the last item under YAML/CNSF schema consistency. Option A per Craig:
+  blank-backfill, 86 notes, one inserted line each. `make ua-check` now reports all 25
+  canonical fields present on all 87 notes, and **four of five note types are clean**. The
+  1-of-87 note holding the field turned out to be a discharged planning to-do, not a source
+  record. Scoped to `ua_verb` so B737's `Source Document` is untouched. `make ua-test` 442.
+  Note the item's own goal — "turn on `make ua-check STRICT=1`" — was never reachable:
+  `--strict` is global and `UA_Lexeme`'s five computed fields can never be present. The
+  per-note-type form passes; wiring it into the Makefile is a new work-queue item.
 
 - **PVOM euphony PERFECT tier + two shared-code hoists + flag scoping + `TypingAnswer`
   canonicalization** (2026-08-20, commit `fe4efcc`, PR #79, merged and live-validated).
