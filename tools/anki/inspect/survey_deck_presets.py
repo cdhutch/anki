@@ -194,13 +194,14 @@ def main() -> int:
             source, degraded = f"AnkiConnect '{action}'", False
             break
 
-    db_note = None
+    db_note, db_names = None, {}
     if degraded and not args.no_db:
         found = find_collection()
         if not found:
             db_note = "no collection.anki2 found in the standard locations"
         else:
             names, mode, err = presets_from_db(found[0])
+            db_names = names
             if names:
                 for cid, name in names.items():
                     all_presets.setdefault(cid, name)
@@ -224,11 +225,22 @@ def main() -> int:
     for deck, cid in deck_to_cfg.items():
         usage.setdefault(cid, []).append(deck)
 
+    # A filtered deck has no deck config: getDeckConfig returns the DECK where a
+    # config would be, so its id shows up here but is absent from deck_config.
+    # Counting those as presets inflates the total -- it reported 96 on
+    # 2026-08-20 when the collection held 85 presets and 11 filtered decks.
+    db_ids = set(db_names) if not degraded and db_note else None
+    filtered_ids = ({cid for cid in usage if cid not in db_ids}
+                    if db_ids is not None else set())
+    real_ids = [cid for cid in all_presets if cid not in filtered_ids]
+
     print("=" * 78)
     print("  PRESETS")
     print("=" * 78)
     orphans = []
     for cid in sorted(all_presets, key=lambda c: (-len(usage.get(c, [])), all_presets[c])):
+        if cid in filtered_ids:
+            continue
         name, used = all_presets[cid], sorted(usage.get(cid, []))
         tag = "  ← ORPHAN, no deck uses it" if not used else ""
         print(f"\n  {name}   [id={cid}]   {len(used)} deck(s){tag}")
@@ -257,8 +269,16 @@ def main() -> int:
         print(f"  {'  ' * depth}{leaf:<44s} → {pname}")
 
     # ---- 5. summary --------------------------------------------------------
+    if filtered_ids:
+        print("\n" + "=" * 78)
+        print("  FILTERED DECKS — not presets, never deletable as orphans")
+        print("=" * 78)
+        for cid in sorted(filtered_ids, key=lambda c: all_presets.get(c, "")):
+            print(f"  {all_presets.get(cid, '?')}   [id={cid}]")
+
     print("\n" + "=" * 78)
-    print(f"  {len(decks)} decks · {len(all_presets)} presets · {len(orphans)} orphan(s)")
+    print(f"  {len(decks)} decks · {len(real_ids)} presets · {len(orphans)} orphan(s)"
+          + (f" · {len(filtered_ids)} filtered deck(s)" if filtered_ids else ""))
     if orphans:
         print("  Orphans: " + ", ".join(sorted(orphans)))
     print("=" * 78)
