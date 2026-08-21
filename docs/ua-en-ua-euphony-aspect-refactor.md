@@ -238,6 +238,28 @@ phrase notes, not how the result is graded. Recommend keeping it separate and
 deciding it on its own; folding it in is what made the 2026-07-29 plan feel
 like one project when it was always two.
 
+**DECIDED 2026-08-20 by Craig: this stays authoring guidance. It will not be
+built, and it will not become a checker.**
+
+The convention, as scoped 2026-07-29: on a verb-phrase note, `Lemma` carries the
+**imperfective** unless the phrase clearly calls for the perfective, and
+`Perfective` is filled only where the pair genuinely exists for the phrase as a
+whole rather than for the bare verb.
+
+Why it is not enforced in code: enforcement would require detecting aspect
+programmatically from the form, which is a harder and less reliable problem than
+the one it would be guarding. The reasoning above — that this governs authoring
+input rather than grading — is what makes a convention the right instrument.
+
+**Known non-conformance, recorded rather than resolved.** The `make ua-check`
+aspect audit lists verb-phrase singlets in both aspects: `ua-lexeme-0299`
+(ви́лізти на ске́лю), `0300` (перелеті́ти через рі́чку…) and `0301` (переплисти́
+о́зеро) are perfective, while `0302` (підніма́тися на ске́лі) and `0303`
+(спуска́тися вниз) are imperfective. Whether the perfective ones violate the
+convention or are legitimately perfective phrases is a content question for
+Craig, not a mechanical one. They sit on the audit's existing singlet-review
+list; this decision does not clear them.
+
 ---
 
 ## 6. Recommended sequence
@@ -427,7 +449,25 @@ alternate happened to sit on slot 0 or slot 2.
 
 ### 9.5 Open, deferred
 
-- **Option C** (per-slot cards) — still unscoped, unchanged from §5.
+- **Option C** (per-slot cards) — **deferred 2026-08-20 by Craig, blocked behind
+  the deck-preset cleanup.** Option C is an FSRS-scheduling change to the UA
+  tree, and that tree's preset architecture is unresolved as of 2026-08-20:
+  `UA FSRS` sits on 0 decks, `B737 FSRS Core` on 14 under a name no document
+  mentions, and `CLAUDE-fsrs-deck-configs.md` and `DECK_PRESET_MAPPING.md`
+  specify incompatible designs for the same decks. Deciding per-slot cards
+  before knowing which preset those cards live under stacks two unknowns on the
+  same notes.
+
+  **Correction to this document's own cost estimate, in Option C's favour.** §5
+  says "FSRS history implications for 585 notes." The 2026-08-20 aspect audit
+  gives the real shape: **61 doublets + 5 triplets = 66 multi-slot notes.** The
+  other 519 lexemes and 21 single-slot verbs generate one EN→UA card either way,
+  so the change adds roughly **71 new cards across 66 notes** — provided the
+  existing EN→UA template keeps its ordinal, so current cards survive as slot 1.
+  That ordinal-preservation assumption is Claude's reasoning about Anki's card
+  generation and **must be verified against Anki before acting on it**. The
+  precedent argument from §5 is unchanged and still favours doing this
+  eventually.
 - **Port `_TypingSpec` to `UA_PVOM_Infinitive`.** That note type still uses the
   older single-slot `EuphonyNote`/`data-euphony` mechanism, and its
   `normalizeTypeansText()` is a hand-maintained copy rather than a shared

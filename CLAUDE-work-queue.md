@@ -26,7 +26,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ## UA Domain — Structural / card & note-type work
 
-- [ ] **Per-slot euphony tolerance — partially confirmed, real gap found (2026-08-11).**
+- [x] **Per-slot euphony tolerance — partially confirmed, real gap found (2026-08-11).**
   EN→UA typing accepts either в-/у- (etc.) form independently per aspect slot, not just
   at the whole-string level. The template had never actually been pushed live until this
   session (`make ua` doesn't push templates — see the field-order item below); after
@@ -45,7 +45,23 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   Option B (structured `_TypingSpec`) over patching in place. See
   `docs/ua-en-ua-euphony-aspect-refactor.md` §4(a).
 
-- [ ] **UA→EN front multi-aspect display — format endorsed, one open judgement call**
+  **CLOSED 2026-08-20 — absorbed, not separately fixed.** This item said as much itself
+  ("folded into the EN→UA euphony + verbal-aspect refactor item below"); it stayed open
+  only because the strike never happened. Both defects it names died with the mechanism:
+  `everySlotPerfect`'s ordering is moot because `_EuphonySlots` no longer exists, and
+  `euphonyAltsForSlot()`'s symmetric stress-stripping is gone because alternates are now
+  stored stressed. Closed by `_TypingSpec` on 2026-08-19 (bugs (a)/(c)/(d)), validated
+  across 14 typed cases — see the refactor item below and §9.4 of the design doc.
+
+  ~~One residue survives:~~ **Residue closed 2026-08-20 — Craig typed `ua-lexeme-0124`
+  and it graded ✓ PERFECT**, "accepted variant form", with `вʼїжджа́ти / вʼї́хати` shown as
+  the primary. This was the last untested piece of the euphony work, and it is a stronger
+  case than 0115's: both slots carry alternates, and the alternates differ from the
+  primaries by more than one letter — `вʼїжджа́ти` → `уїжджа́ти` drops the U+02BC apostrophe
+  entirely, so `_TypingSpec` is matching across a differing character count, not a в-/у-
+  swap. 0124 remains orange-flagged and stays on the Phase 2 list on its own merits.
+
+- [x] **UA→EN front multi-aspect display — format endorsed, one open judgement call**
   (2026-08-18). Craig looked at `ua-lexeme-0115` and objected to
   `вхо́дити / увійти́ (ввійти́)` — but that was the **pre-flip data**, not the format:
   `make ua-lexeme` had not been run, so Anki still had увійти́ as primary. His stated
@@ -55,13 +71,57 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   same day, the computed value post-sync is four forms, not three:
       `вхо́дити (ухо́дити) / ввійти́ (увійти́)`
   0115 is the first note in the corpus with euphony on *both* slots, so this is the
-  first time the front line carries four. Craig to decide once he sees it live: keep
+  first time the front line carries four. ~~Craig to decide once he sees it live: keep
   as-is, show parentheticals only where a slot is genuinely ambiguous, or drop them
-  from the UA→EN front entirely and leave euphony purely as typing tolerance.
+  from the UA→EN front entirely and leave euphony purely as typing tolerance.~~
 
-- [ ] **Verb-phrase aspect defaulting** (EN→UA typing target defaults to imperfective
+  **DECIDED 2026-08-20 by Craig, after `make ua` put the four-form line live: keep
+  as-is.** No code change; the `primary (euphonic)` format stands at any length.
+
+  The affected population is small: per the 2026-08-08 field census `Lemma_Euphony` was
+  6/585, `Perfective_Euphony` 5/585, `ImperfectiveUnidirectional_Euphony` 2/585 — so
+  roughly a dozen notes show any parenthetical at all.
+
+  **Correction, same day:** an earlier draft of this closure claimed 0115 was the *only*
+  note with euphony on both slots and therefore the only four-form card. That was wrong —
+  it upgraded this item's own word "first" to "only" without checking. `ua-lexeme-0124`
+  (`Lemma_Euphony: уїжджа́ти`, `Perfective_Euphony: уї́хати`) is a second, found when Craig
+  typed it the same afternoon. The census caps `Perfective_Euphony` at 5 notes, so the
+  four-form population is **somewhere between 2 and 5, and has not been counted**. Settle
+  it with a corpus pass if the display question is ever reopened:
+
+      python - <<'EOF'
+      import pathlib, yaml
+      for f in sorted(pathlib.Path('domains/ua/anki/notes/lexemes').rglob('ua-lexeme-*.md')):
+          d = yaml.safe_load(f.read_text(encoding='utf-8').split('---')[1])['fields']
+          if (d.get('Lemma_Euphony') or '') and (d.get('Perfective_Euphony') or ''):
+              print(f.stem, d['Lemma'], '/', d['Perfective'])
+      EOF
+
+  The decision stands regardless — Craig looked at a live four-form line and accepted the
+  format. Only the "population of one" justification was wrong, not the call.
+
+- [x] **Verb-phrase aspect defaulting** (EN→UA typing target defaults to imperfective
   when a verb-phrase note doesn't clearly call for perfective) — scoped 2026-07-29,
-  never coded. Authoring-guidance-only right now. Decide if/when this gets built.
+  never coded. Authoring-guidance-only right now. ~~Decide if/when this gets built.~~
+
+  **DECIDED 2026-08-20 by Craig: it stays authoring guidance. Not built, not a checker.**
+  Recorded in `docs/ua-en-ua-euphony-aspect-refactor.md` §5, which already owns the
+  question, rather than in this queue.
+
+  The design doc's own reasoning is why: this governs *what goes in* `Lemma`/`Perfective`
+  on phrase notes, not how the answer is graded, so it is independent of bugs (a)–(d) and
+  of Options A–C. Enforcing it in code would mean detecting aspect programmatically,
+  which is a harder problem than the one being solved. Per §5: "folding it in is what
+  made the 2026-07-29 plan feel like one project when it was always two."
+
+  **Known non-conformance, flagged rather than swept in:** today's `make ua-check` aspect
+  audit lists phrase singlets in *both* aspects — `ua-lexeme-0299` (ви́лізти на ске́лю),
+  `0300` (перелеті́ти…), `0301` (переплисти́ о́зеро) are perfective, while `0302`
+  (підніма́тися на ске́лі) and `0303` (спуска́тися вниз) are imperfective. Whether the
+  perfective ones are convention violations or legitimately perfective phrases is a
+  content question, not a mechanical one. Closing this item does not resolve them; they
+  belong to the singlet-review list the aspect audit already prints.
 
 - [ ] **EN→UA euphony + verbal-aspect refactor** (broader than the item above) —
   flagged 2026-08-11: Craig recalls abandoning a prior effort in this area and wants
@@ -92,6 +152,28 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   fallback deleted. 14 typed cases confirmed by Craig against live cards — matrix in
   `docs/ua-en-ua-euphony-aspect-refactor.md` §9.4. Option C remains undecided.
   **Leaving this box for Craig**, as the header requires.
+
+  **Option C deferred 2026-08-20 by Craig — blocked behind the deck-preset cleanup**
+  (see the FSRS item under Cross-domain / infra). Option C is an FSRS-scheduling change
+  to the UA tree, and that tree's preset architecture is currently unresolved: `UA FSRS`
+  sits on 0 decks and two repo documents specify incompatible designs. Deciding per-slot
+  cards before knowing which preset those cards live under stacks two unknowns on the
+  same notes. Settle the presets first.
+
+  **Correction to the design doc's cost estimate, in Option C's favour.** §5 says
+  "FSRS history implications for 585 notes." Today's aspect audit gives the real shape:
+  **61 doublets + 5 triplets = 66 multi-slot notes.** The other 519 lexemes and 21
+  single-slot verbs generate one EN→UA card either way. So the change adds roughly **71
+  new cards across 66 notes**, not a 585-note upheaval — *provided* the existing EN→UA
+  template keeps its ordinal so current cards survive as slot 1. That
+  ordinal-preservation assumption is Claude's reasoning about Anki's card generation and
+  **wants verifying against Anki before anyone acts on it**, not taking on trust.
+
+  The precedent argument still cuts toward doing it eventually: `UA_PVOM_Infinitive`
+  deliberately rejected the compound card because "the four forms are not equally hard"
+  and separate templates allow independent suspend and leech tracking — and §5 says that
+  reasoning "applies verbatim to aspect slots." A learner solid on `ходи́ти`/`піти́` but
+  shaky on `йти` currently fails and re-drills all three.
 
 - [ ] **ua-lexeme-0153 / 0379 — example sentences after the в-/у- flip** (2026-08-19,
   needs Craig, not code). Both notes had their headword direction corrected to в- per
