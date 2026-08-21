@@ -1,49 +1,52 @@
 #!/usr/bin/env python3
-"""tools/anki/setup/create_deck_presets.py — apply the managed deck presets.
+"""tools/anki/setup/create_deck_presets.py — apply presets/*.json to Anki.
 
-Idempotent: run it twice and the second run reports no changes. Definitions come
-from tools/anki/lib/deck_presets.py, which is the single source of truth;
-DECK_PRESETS.md is its human-facing rendering.
+Idempotent: run twice and the second run reports nothing to do. The repo files
+are the source of truth; export_deck_presets.py produces them from live Anki.
 
 WHY THIS WAS REWRITTEN (2026-08-20)
 -----------------------------------
 The previous version's create_or_update_preset() called cloneDeckConfigId
 unconditionally -- there was no lookup anywhere in it. Anki permits duplicate
 preset names, so every run minted a fresh set and abandoned the last. Six runs
-left 53 orphan presets; the nine live UA presets ended up drawn from five
+left 53 orphan presets, and the nine live UA presets ended up drawn from five
 different batches. See DECK_PRESETS.md section 6.
 
-Its JSON inputs were stale too, specifying review limits of 100/6/8/10/8 where
-live Anki has 9999. Simply adding a lookup would have made the script reliably
-revert the live state instead of accidentally preserving it.
+Its JSON inputs were stale as well, specifying review limits of 100/6/8/10/8
+against a live 9999. Adding a lookup alone would have made the script reliably
+revert live state rather than accidentally preserve it, so the values now come
+from an export of Anki itself.
 
 HOW IDEMPOTENCE IS ACHIEVED
 ---------------------------
 AnkiConnect cannot do this alone. Its deck-config actions are getDeckConfig (by
 DECK, not by name), saveDeckConfig, setDeckConfigId, cloneDeckConfigId and
-removeDeckConfigId -- there is no get-by-name and no list-all. The probe in
+removeDeckConfigId. There is no get-by-name and no list-all -- the probe in
 survey_deck_presets.py confirmed the latter empirically.
 
-So the name -> id index is built from two sources at start:
-  * AnkiConnect, by walking every deck -- authoritative but sees only presets
-    that are currently ASSIGNED to something;
+So the name -> id index comes from two sources:
+  * AnkiConnect, walking every deck -- authoritative, but sees only presets that
+    are currently ASSIGNED to something;
   * collection.anki2's deck_config table -- catches a preset that exists but is
     unassigned, which is exactly what a crashed earlier run leaves behind.
 
-Without the second source, an unassigned preset is invisible and the next run
-duplicates it. That is the bug this script exists to not have.
+Without the second source an unassigned preset is invisible and the next run
+duplicates it. That is the bug this script exists not to have.
 
-WHAT IT WILL NOT TOUCH
-----------------------
-Only MANAGED_KEYS are written. fsrsParams6 is excluded on purpose: FSRS
-parameters are earned from a preset's own review history and are configuration
-output, not input. Six B737 presets created by other means are left alone --
-see UNMANAGED in the lib module.
+SCOPE
+-----
+Writes every key in the file's `config` block. FSRS parameters are absent from
+those files by construction (see EXCLUDE in the lib module), so an apply can
+never clobber an optimization.
+
+--only NAME restricts the run to one preset, which is how the write path gets
+proven on a throwaway before it is pointed at real decks.
 
 Usage
 -----
-  python tools/anki/setup/create_deck_presets.py            # dry run
-  python tools/anki/setup/create_deck_presets.py --apply
+  python tools/anki/setup/create_deck_presets.py                       # dry run, all
+  python tools/anki/setup/create_deck_presets.py --only "ZZ Test"      # dry run, one
+  python tools/anki/setup/create_deck_presets.py --only "ZZ Test" --apply
 """
 from __future__ import annotations
 
@@ -56,7 +59,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
 from tools.anki.lib.deck_presets import (  # noqa: E402
-    PRESETS, UNMANAGED, dig, put, wanted,
+    EXCLUDE, dig, flatten, load_presets, put,
 )
 
 DEFAULT_URL = "http://127.0.0.1:8765"
@@ -77,7 +80,6 @@ def anki(action, params=None, *, url=DEFAULT_URL, timeout=15):
 
 
 def presets_from_db():
-    """{name: id} for every preset, including unassigned ones."""
     roots = [
         Path.home() / "Library/Application Support/Anki2",
         Path.home() / ".local/share/Anki2",
@@ -89,6 +91,7 @@ def presets_from_db():
             files.extend(sorted(r.glob("*/collection.anki2")))
     if not files:
         return {}, "no collection.anki2 found"
+    last = None
     for uri in (f"file:{files[0]}?mode=ro", f"file:{files[0]}?mode=ro&immutable=1"):
         try:
             conn = sqlite3.connect(uri, uri=True, timeout=5)
@@ -106,6 +109,9 @@ def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--url", default=DEFAULT_URL)
+    ap.add_argument("--dir", default="presets", help="directory of preset files")
+    ap.add_argument("--only", action="append", default=None,
+                    help="apply just this preset name; repeatable")
     ap.add_argument("--apply", action="store_true",
                     help="write changes; without this it is a dry run")
     args = ap.parse_args()
@@ -116,93 +122,107 @@ def main() -> int:
         print(f"ERROR: cannot reach AnkiConnect at {args.url}: {e}", file=sys.stderr)
         return 1
 
+    try:
+        files = load_presets(args.dir)
+    except (OSError, ValueError) as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+    if not files:
+        print(f"ERROR: no preset files in {args.dir}/", file=sys.stderr)
+        return 1
+
+    if args.only:
+        unknown = [n for n in args.only if n not in files]
+        if unknown:
+            print(f"ERROR: no file defines: {', '.join(unknown)}", file=sys.stderr)
+            print(f"Known: {', '.join(sorted(files))}", file=sys.stderr)
+            return 1
+        files = {n: files[n] for n in args.only}
+
     decks = set(anki("deckNames", url=args.url) or [])
 
-    # --- name -> id index, from both sources -------------------------------
     index, deck_of = {}, {}
     for deck in sorted(decks):
         try:
             cfg = anki("getDeckConfig", {"deck": deck}, url=args.url)
         except Exception:  # noqa: BLE001
             continue
-        name, cid = cfg.get("name", "?"), int(cfg["id"])
-        index.setdefault(name, cid)
-        deck_of.setdefault(cid, deck)
+        index.setdefault(cfg.get("name", "?"), int(cfg["id"]))
+        deck_of.setdefault(int(cfg["id"]), deck)
 
     db_index, db_err = presets_from_db()
     if db_err:
         print(f"WARNING: {db_err}", file=sys.stderr)
-        print("An existing but UNASSIGNED preset cannot be seen; this run could "
-              "create a duplicate. Fix before using --apply.", file=sys.stderr)
+        print("An existing but UNASSIGNED preset cannot be seen, so this run could "
+              "create a duplicate. Refusing to --apply.", file=sys.stderr)
         if args.apply:
             return 1
     for name, cid in db_index.items():
         index.setdefault(name, cid)
 
-    print(f"{len(decks)} decks · {len(index)} presets known "
-          f"({len(db_index)} from the collection file)\n")
+    print(f"{len(decks)} decks · {len(index)} presets known · "
+          f"{len(files)} file(s) selected\n")
 
     created, changed, unchanged, problems = [], [], [], []
 
-    for name, spec in PRESETS.items():
-        missing = [d for d in spec["decks"] if d not in decks]
-        if missing:
-            problems.append(f"{name}: deck(s) do not exist: {', '.join(missing)}")
-        targets = [d for d in spec["decks"] if d in decks]
+    for name, doc in files.items():
+        want = {k: v for k, v in flatten(doc["config"]).items()
+                if k.split(".")[0] not in EXCLUDE}
+        targets = [d for d in doc["meta"].get("decks", []) if d in decks]
+        absent = [d for d in doc["meta"].get("decks", []) if d not in decks]
+        if absent:
+            problems.append(f"{name}: deck(s) do not exist: {', '.join(absent)}")
 
         cid = index.get(name)
         if cid is None:
             print(f"  {name}: NOT FOUND — would create")
-            if args.apply:
-                cid = anki("cloneDeckConfigId", {"name": name, "cloneFrom": 1},
-                           url=args.url)
-                if not cid:
-                    problems.append(f"{name}: clone failed")
-                    continue
-                cid = int(cid)
-                index[name] = cid
             created.append(name)
             if not args.apply:
                 continue
+            cid = anki("cloneDeckConfigId", {"name": name, "cloneFrom": 1},
+                       url=args.url)
+            if not cid:
+                problems.append(f"{name}: clone failed")
+                continue
+            cid = int(cid)
+            index[name] = cid
 
-        # assign first, so the config can be read back through a real deck
-        for deck in targets:
-            if args.apply:
+        if args.apply:
+            for deck in targets:
                 anki("setDeckConfigId", {"decks": [deck], "configId": cid},
                      url=args.url)
                 deck_of[cid] = deck
 
         read_deck = deck_of.get(cid) or (targets[0] if targets else None)
         if not read_deck:
-            problems.append(f"{name}: no deck to read its config through")
+            problems.append(f"{name}: no existing deck to read its config through")
             continue
-        cfg = anki("getDeckConfig", {"deck": read_deck}, url=args.url)
-        if int(cfg["id"]) != cid:
-            problems.append(f"{name}: {read_deck} uses {cfg.get('name')}, not this preset")
+        live = anki("getDeckConfig", {"deck": read_deck}, url=args.url)
+        if int(live["id"]) != cid:
+            problems.append(
+                f"{name}: {read_deck} uses {live.get('name')!r}, not this preset")
             continue
 
-        deltas = {k: (dig(cfg, k), v) for k, v in wanted(name).items()
-                  if dig(cfg, k) != v}
+        deltas = {k: (dig(live, k), v) for k, v in want.items() if dig(live, k) != v}
         if not deltas:
-            unchanged.append(name)
+            if name not in created:
+                unchanged.append(name)
             continue
 
         print(f"  {name}:")
         for k, (was, now) in sorted(deltas.items()):
-            print(f"      {k:<22s} {json.dumps(was)} → {json.dumps(now)}")
+            print(f"      {k:<26s} {json.dumps(was)} → {json.dumps(now)}")
         if args.apply:
             for k, (_, now) in deltas.items():
-                put(cfg, k, now)
-            anki("saveDeckConfig", {"config": cfg}, url=args.url)
-        changed.append(name)
+                put(live, k, now)
+            anki("saveDeckConfig", {"config": live}, url=args.url)
+        if name not in created:
+            changed.append(name)
 
     print()
     print(f"  created:   {len(created)}   {', '.join(created) or '—'}")
     print(f"  changed:   {len(changed)}   {', '.join(changed) or '—'}")
     print(f"  unchanged: {len(unchanged)}")
-    if UNMANAGED:
-        print(f"  untouched by design: {len(UNMANAGED)} preset(s) — see "
-              f"UNMANAGED in tools/anki/lib/deck_presets.py")
     if problems:
         print("\nPROBLEMS:")
         for p in problems:
