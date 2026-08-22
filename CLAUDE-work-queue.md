@@ -155,10 +155,20 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
   **Option C deferred 2026-08-20 by Craig — blocked behind the deck-preset cleanup**
   (see the FSRS item under Cross-domain / infra). Option C is an FSRS-scheduling change
-  to the UA tree, and that tree's preset architecture is currently unresolved: `UA FSRS`
-  sits on 0 decks and two repo documents specify incompatible designs. Deciding per-slot
+  to the UA tree, and that tree's preset architecture was unresolved at the time: `UA FSRS`
+  sat on 0 decks and two repo documents specified incompatible designs. Deciding per-slot
   cards before knowing which preset those cards live under stacks two unknowns on the
   same notes. Settle the presets first.
+
+  **Blocker cleared 2026-08-20 — Option C is decidable again, on its own merits.** The UA
+  tree runs on nine per-deck presets, one file each under `presets/`, specified in
+  `DECK_PRESETS.md`. New per-slot cards inherit the preset of the deck they land in, and
+  that is now a known quantity rather than an open question. Nothing else about Option C
+  changed: the ordinal-preservation assumption below is still Claude's reasoning about
+  Anki's card generation and still wants verifying against Anki before anyone acts on it.
+  One consideration the preset work adds — FSRS optimizes per preset, so ~71 new cards
+  land in one preset's training pool, which is a scheduling question on top of the
+  card-count one.
 
   **Correction to the design doc's cost estimate, in Option C's favour.** §5 says
   "FSRS history implications for 585 notes." Today's aspect audit gives the real shape:
@@ -296,7 +306,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ## Cross-domain / infra
 
-- [ ] **FSRS deck configs actually created in Anki** ("B737 FSRS" / "UA FSRS" /
+- [x] **FSRS deck configs actually created in Anki** ("B737 FSRS" / "UA FSRS" /
   "Legacy FSRS" presets, assigned to the three top-level decks). No confirmation
   found anywhere in the log that this was ever done in Anki itself — full spec in
   `CLAUDE-fsrs-deck-configs.md`.
@@ -358,7 +368,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   other content. Both are recorded in `CLAUDE-active-status.md` under FSRS Deck
   Configuration, and neither is a preset-inventory problem.
 
-- [ ] **Deck presets + limits actually applied** in Anki
+- [x] **Deck presets + limits actually applied** in Anki
   ~~(`create_deck_presets.py` → `update_deck_limits.py` →
   `update_b737_deck_limits.py`)~~ — confirm these were run against live Anki, not
   just written to the repo.
@@ -370,10 +380,18 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   `update_b737_deck_limits.py` no longer exist.
 
   This is no longer a thing to confirm by hand: `export_deck_presets.py` + `git diff`
-  reports any drift, because the export carries no timestamp and is byte-stable. **Blocked on the architecture decision in the FSRS item
-  above** (2026-08-20): the live collection appears to follow `DECK_PRESET_MAPPING.md`,
-  but that cannot be confirmed deck-by-deck until a survey tool exists that sees all
-  domains and reports zero-deck presets.
+  reports any drift, because the export carries no timestamp and is byte-stable.
+
+  ~~**Blocked on the architecture decision in the FSRS item above** (2026-08-20): the live
+  collection appears to follow `DECK_PRESET_MAPPING.md`, but that cannot be confirmed
+  deck-by-deck until a survey tool exists that sees all domains and reports zero-deck
+  presets.~~ **Unblocked 2026-08-20 — both halves of that sentence are now answered.**
+  The architecture item above resolved to Option A, and the survey tool it was waiting on
+  exists: `survey_deck_presets.py` reads `deck_config` directly, covers every domain, and
+  reports zero-deck presets. The deck-by-deck confirmation that could not be made is now
+  one command. `DECK_PRESET_MAPPING.md` is superseded and bannered, so "the live collection
+  appears to follow" it is no longer the right frame — the collection follows
+  `presets/*.json`, which was exported *from* it.
 
 - [ ] **B737 desired retention is 0.9, against 0.93–0.95 for safety-critical material.**
   Raised by the now-superseded `CLAUDE-fsrs-deck-configs.md`, whose *architecture* was
