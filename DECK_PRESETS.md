@@ -32,7 +32,18 @@ Four tools, and nothing else should touch presets:
 **`presets/<slug>.json` is the source of truth for values.** The tables in §1–§3 are a
 human-readable summary of those files; where they disagree, the files win.
 
-**22 superseded tools were deleted 2026-08-20**, none of which was wired into `make`.
+**Superseded documents, all bannered rather than deleted:** `DECK_PRESET_MAPPING.md`,
+`CLAUDE-fsrs-deck-configs.md`, `CLAUDE-deck-architecture.md`,
+`docs/anki/options/b737_limits_options.md`, `docs/anki/options/b737_limits_trivia_options.md`,
+`domains/b737/anki/presets/FSRS_Preset__B737_Systems.md`. That last one is worth singling
+out: its policy section says *"do not attempt to automate FSRS settings via AnkiConnect"*
+and *"this file is the source of truth; Anki is configured manually to match"* — the exact
+inverse of what this repo now does. Its banner says so.
+`docs/anki/options/anki_card_option_fields.md` is **not** superseded; it is a neutral list
+of Anki's option fields and remains accurate.
+
+**23 superseded tools and data files were deleted 2026-08-20**, none of which was wired
+into `make`.
 Thirteen wrote to Anki outside this pipeline — including `setup_fsrs_deck_configs.py`,
 which recreated `UA FSRS` and `B737 FSRS` after they had been pruned as orphans, and four
 `create_*_preset.py` scripts carrying the same clone-without-lookup bug that produced the

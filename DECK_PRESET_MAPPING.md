@@ -1,5 +1,12 @@
 # Deck to Preset Mapping
 
+> **SUPERSEDED 2026-08-20 — history only, not current.**
+> `DECK_PRESETS.md` is the single authority for deck presets, generated from live Anki.
+> Its UA structure matched live, but every review limit here (8/6/10/100) is wrong —
+> live is 9999 throughout. Its B737 rows target `FO Systems` and `FO Challenges`, which
+> do not exist, and it points at `list_deck_presets.py`, now deleted.
+> Kept because the reasoning behind these decisions is still worth reading.
+
 ## UA Domain
 
 | Deck | Preset | New | Review | Notes |
@@ -28,4 +35,6 @@
 - **Pass-through presets** (9999/9999) allow child decks with explicit presets to set their own limits
 - **Senior parent** (UA) sets overall budget cap
 - Child decks must have explicit preset assignments to override parent/middle parent
-- Verify assignments with: `python tools/anki/inspect/list_deck_presets.py`
+- ~~Verify assignments with: `python tools/anki/inspect/list_deck_presets.py`~~ — that
+  tool was deleted 2026-08-20. Use `python tools/anki/inspect/survey_deck_presets.py`,
+  which covers both domains and can see presets on zero decks.

@@ -24,7 +24,9 @@ acars, adverse, air_conditioning, apu, atc_tcas_trans, communications, electrica
 - Script: `tools/anki/setup/update_sv_exam_templates.py`
 
 ✅ Step 2: Create "B737 SV Exam" preset (COMPLETED)
-- Script: `tools/anki/setup/create_sv_exam_preset.py`
+- Script: `tools/anki/setup/create_sv_exam_preset.py` — **deleted 2026-08-20**; it cloned
+  without a lookup and would mint a duplicate preset on every run. The preset it made is
+  live and its parameters are in `presets/b737-sv-exam.json`.
 - Settings: 100 new/day · 9999 reviews/day · FSRS on · 90% desired retention
 
 ⏳ Step 3: Delete legacy cloze notes (PENDING)
