@@ -42,6 +42,12 @@ inverse of what this repo now does. Its banner says so.
 `docs/anki/options/anki_card_option_fields.md` is **not** superseded; it is a neutral list
 of Anki's option fields and remains accurate.
 
+Bannered 2026-08-21, after a sweep for surviving references: `CLAUDE.md`'s "Deck Presets
+and Limit Configuration (2026-07-20)" subsection, which still presented the deleted tools
+as a runnable workflow, and both `domains/*/anki/config/deck_limits.yaml`, which no code
+reads any more — the two tools that read them were among the 23 deleted. The YAML files
+are kept for their commentary; every live limit is a parameter in `presets/<slug>.json`.
+
 **23 superseded tools and data files were deleted 2026-08-20**, none of which was wired
 into `make`.
 Thirteen wrote to Anki outside this pipeline — including `setup_fsrs_deck_configs.py`,

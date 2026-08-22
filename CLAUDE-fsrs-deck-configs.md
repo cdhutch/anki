@@ -1,5 +1,13 @@
 # FSRS Deck Configurations — B737, UA, Legacy
 
+> **SUPERSEDED 2026-08-20 — history only, not current.**
+> `DECK_PRESETS.md` is the single authority for deck presets, generated from live Anki.
+> The three-preset architecture here was never applied: `UA FSRS` and `B737 FSRS` sat on
+> zero decks and were pruned as orphans 2026-08-20. **The retention reasoning survives**
+> and is still an open question — live is 0.9 everywhere, against the 0.93–0.95 this
+> file argues for on B737 as safety-critical. See DECK_PRESETS.md section 5.
+> Kept because the reasoning behind these decisions is still worth reading.
+
 **Principle:** Each top-level deck has completely isolated FSRS parameters. Cards in one deck tree do not influence scheduling algorithm for another.
 
 ---

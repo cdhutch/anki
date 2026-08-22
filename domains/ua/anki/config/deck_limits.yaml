@@ -1,3 +1,12 @@
+# SUPERSEDED 2026-08-20 — history only, not current, and read by nothing.
+# ======================================================================
+# Deck presets, including every daily limit, are specified in DECK_PRESETS.md and
+# carried in presets/<slug>.json, exported from live Anki. The two tools that read
+# this file (update_deck_limits.py, update_b737_deck_limits.py) were deleted
+# 2026-08-20 because they wrote to Anki outside that pipeline. The review limits
+# below were never live — live is 9999 throughout. Kept for the cognitive-load
+# tier commentary, which is still the reasoning of record.
+#
 # UA Deck Limits Configuration
 # ============================
 #

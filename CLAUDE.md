@@ -920,6 +920,79 @@ re-sync was needed for any of the three: `Verification Notes`/`Source_Note` do n
 on a card, and the importer sends fields as a name-keyed dict, so a blank `Source_Note` is
 what Anki already held.
 
+2026-08-20 (deck presets): **The repo now mirrors Anki's presets instead of describing
+them.** 85 presets → 32; one file per preset under `presets/`; 22 superseded tools
+deleted. PRs #86 onward.
+
+**The problem was never the presets, it was that four documents described four
+incompatible architectures and none was marked current.** `CLAUDE-fsrs-deck-configs.md`
+wanted three presets carrying retention; `DECK_PRESET_MAPPING.md` wanted nine carrying
+daily limits; `CLAUDE-deck-architecture.md` described a `B737::Systems`/`Flows`/
+`Knowledge_Base` tree that mostly does not exist; `docs/anki/options/*.md` described
+`B737::Core::Limits`, which does. A deck has exactly one preset and that object holds
+both `desiredRetention` and `new/rev perDay`, so the first two could never both be
+satisfied. All four are now bannered as superseded; `DECK_PRESETS.md` is the authority.
+
+**Root cause of 53 orphan presets: `create_deck_presets.py` created rather than
+found-or-created.** Its `create_or_update_preset()` called `cloneDeckConfigId`
+unconditionally — no lookup anywhere in the function. Anki permits duplicate preset names,
+so six runs each minted the same set and abandoned the previous one, in six ~1-second id
+clusters. The nine live UA presets ended up drawn from **five different batches**, though
+they turned out parameter-identical apart from `new.perDay`, which is why adopting them
+wholesale was safe.
+
+**AnkiConnect cannot do find-or-create alone, and this is worth remembering.** Its
+deck-config actions are `getDeckConfig` (by DECK, not by name), `saveDeckConfig`,
+`setDeckConfigId`, `cloneDeckConfigId`, `removeDeckConfigId`. There is no get-by-name and
+no list-all — probing three candidate action names confirmed the latter empirically. So
+the name→id index has to come from AnkiConnect (assigned presets) **plus**
+`collection.anki2`'s `deck_config` table (unassigned ones). Without the second source an
+unassigned preset is invisible and the next run duplicates it, which is exactly what a
+crashed run leaves behind.
+
+**`presets/<slug>.json` carries every parameter except the FSRS ones.** FSRS parameters
+are earned from a preset's own review history — configuration output, not input — so
+committing them would let an apply overwrite an optimization with a stale vector. The
+export carries **no timestamp**, so re-running produces byte-identical files and
+`export + git diff` is a drift detector.
+
+**The write path was proven on a throwaway before touching anything real.** A
+`ZZ Preset Test` preset was diverged from its file in seven places chosen to cover every
+value type — top-level float, nested list of floats, nested and top-level bools, nested
+ints, an enum. Dry run found exactly seven and reported `created: 0`, proving the lookup.
+Apply converged; a second apply reported 0 changed; re-export produced a byte-identical
+1694-byte file. Nothing was normalised on save.
+
+**Five corrections to my own reporting during this work, all caught rather than shipped:**
+
+1. Claimed FSRS had never been optimized — that read the legacy `fsrsWeights` key. This
+   Anki stores parameters in **`fsrsParams6`**, which is populated. Reading the old key
+   makes an optimized collection look untouched.
+2. Counted 11 filtered decks as presets. `getDeckConfig` on a filtered deck returns the
+   **deck** where a config would be; those ids never appear in `deck_config`.
+3. The pruner skipped configs whose **name** matched a deck name, meaning to protect
+   filtered decks. `B737` and `UA` are both deck names *and* preset names, so it silently
+   protected ten real orphans. Caught by its own `--expect` guard, not by luck.
+4. The pruner re-read `collection.anki2` immediately after deleting and reported
+   `remaining: 84 (was 84)` — Anki had not flushed. A post-mutation file read is not a
+   verification.
+5. Wrote a `deck_presets.py` module holding preset values, which made it a second copy of
+   what `presets/*.json` already held — the same drift being eliminated. It is now helpers
+   only.
+
+**Display-order enums, pinned from GUI labels rather than guessed** (the decode table in
+the since-deleted `inspect_deck_configs.py` was wrong): `newGatherPriority` 0=Deck,
+3=Random Notes; `newSortOrder` 0=Card type then order gathered, 4=Random; `reviewOrder`
+0=Due date then random, 3=Ascending intervals. Audio is inverted and easy to misread:
+`autoplay: true` shows "Don't play audio automatically" **unchecked**.
+
+**Left open, deliberately:** retention is 0.9 everywhere against the superseded file's
+0.93–0.95 for safety-critical B737; eight UA presets and `B737` share one bit-identical
+`fsrsParams6` that can only be a clone artifact; 15 Legacy presets are unspecified; and
+`DECK_PRESETS.md` §5 holds two approved-but-unapplied changes — normalising the two older
+B737 presets and renaming `B737 FSRS Core (0n_200r)`, whose name promises 200 reviews/day
+against an actual 9999.
+
 ## Workflow Notes
 
 This repo builds and maintains Anki flashcard decks across three top-level decks:
@@ -2095,19 +2168,33 @@ buckets. Triage deliberately — do not assume from spelling alone.
   and `Perfective` both blank) and no `aspect:imperfective-only`/`aspect:perfective-only` tag.
   Never applies either tag itself — see "Aspect-only tags" above. Wired into `make ua-check`.
 
-### Deck Presets and Limit Configuration (2026-07-20)
+### Deck Presets and Limit Configuration (2026-07-20) — SUPERSEDED 2026-08-20
 
-**Strategy:** Differentiated daily limits by cognitive load tier + data-driven preset creation.
+> **History only. Nothing in this subsection is runnable, and none of its numbers are
+> live.** `DECK_PRESETS.md` is the single authority for what presets exist and what they
+> carry; `presets/<slug>.json` is the source of truth for their values. Both
+> `preset_definitions.json` files and two of the three tools below were deleted
+> 2026-08-20. `create_deck_presets.py` survives but was rewritten: it reads
+> `presets/*.json`, resolves a preset by name before creating one, and is dry-run by
+> default. The old version cloned without any lookup, which is what produced 53 orphan
+> presets over six runs — see `DECK_PRESETS.md` §6. Kept because the cognitive-load
+> reasoning below is still worth reading.
 
-**Preset configuration files:**
-- `domains/ua/anki/presets/preset_definitions.json` — UA domain presets (6 presets: parent + 5 child tiers)
-- `domains/b737/anki/presets/preset_definitions.json` — B737 domain preset (1 preset: review-only)
+**Strategy (as designed 2026-07-20):** Differentiated daily limits by cognitive load tier
++ data-driven preset creation.
 
-**Limit configuration files:**
+**Preset configuration files** — ~~`domains/ua/anki/presets/preset_definitions.json`~~ and
+~~`domains/b737/anki/presets/preset_definitions.json`~~, both deleted 2026-08-20. They
+specified review limits of 100/6/8/10/8 against a live 9999, so an apply reverted rather
+than preserved live state.
+
+**Limit configuration files** — still on disk, but nothing reads them: their readers were
+deleted 2026-08-20, and they are not the source of truth for any live value. Retained for
+the commentary only, and bannered accordingly.
 - `domains/ua/anki/config/deck_limits.yaml` — UA domain limit strategy with commentary
 - `domains/b737/anki/config/deck_limits.yaml` — B737 domain limit strategy with role-based suspension
 
-**Key concepts:**
+**Key concepts (2026-07-20 design rationale — see `DECK_PRESETS.md` §1–§3 for live values):**
 - **Parent limit:** 50 new / 100 review per day (UA domain). Child decks cannot exceed this.
 - **Cognitive load tiers:**
   - High (PVOM, Lexeme EN→UA): 15–18 new/day (typing/production)
@@ -2117,33 +2204,31 @@ buckets. Triage deliberately — do not assume from spelling alone.
 - **B737 limits:** 0 new / 200 review (review-only, no new cards for type-rating study)
 - **Suspension tagging:** Decks suspended with tags documenting reason (role:captain, scope:out-of-scope, etc.)
 
-**Preset creation workflow:**
-1. `tools/anki/setup/create_deck_presets.py` — Reads JSON preset definitions, creates/updates presets via AnkiConnect
-2. `tools/anki/inspect/update_deck_limits.py` — Reads YAML limits, updates existing deck configs, applies to UA decks
-3. `tools/anki/inspect/update_b737_deck_limits.py` — Same pattern for B737 (honors suspension flags)
-
-**Execution order (Craig runs these):**
-```bash
-python tools/anki/setup/create_deck_presets.py      # Create all presets
-python tools/anki/inspect/update_deck_limits.py     # Apply UA limits
-python tools/anki/inspect/update_b737_deck_limits.py # Apply B737 limits
-```
+**Preset creation workflow** — replaced. The current pipeline is the four tools listed in
+`DECK_PRESETS.md` §0: survey (read) → export (Anki → `presets/`) → create (`presets/` →
+Anki, idempotent) → prune (zero-deck presets, by id). ~~`update_deck_limits.py`~~ and
+~~`update_b737_deck_limits.py`~~ no longer exist; limits are parameters inside the preset
+files like any other.
 
 ### Tooling status
 | Path | Status | Purpose |
 |---|---|---|
 | Rename `UA` → `UA_Legacy` in Anki GUI | ✓ done | One-time manual rename; frees UA:: namespace |
 | `tools/anki/setup/setup_ua_note_types.py` | ✓ done | Creates/updates UA_Lexeme + UA_Grammar + UA_Visual |
-| `tools/anki/setup/create_deck_presets.py` | ✓ new (2026-07-20) | Data-driven preset creation from JSON definitions |
+| `tools/anki/setup/create_deck_presets.py` | ✓ rewritten (2026-08-20) | `presets/*.json` → Anki. Idempotent (name lookup via AnkiConnect **and** `deck_config`), dry-run by default, `--only NAME` to scope. Never writes FSRS parameters |
+| `tools/anki/inspect/survey_deck_presets.py` | ✓ new (2026-08-20) | Decks, presets, usage, orphans — the only tool that can see a preset on zero decks. Read-only |
+| `tools/anki/inspect/export_deck_presets.py` | ✓ new (2026-08-20) | Anki → `presets/<slug>.json`, all parameters except FSRS. No timestamp, so re-export + `git diff` is a drift detector |
+| `tools/anki/setup/prune_orphan_presets.py` | ✓ new (2026-08-20) | Delete zero-deck presets by id, never by name. Dry-run default, `--expect N` guard |
+| `tools/anki/lib/deck_presets.py` | ✓ new (2026-08-20) | Shared helpers only (`EXCLUDE`, `slug`, `dig`, `put`, `flatten`, `load_presets`). Holds no preset values by design |
 | `tools/anki/sync/ua_lexeme_import.py` | ✓ done | CNSF notes → Anki via AnkiConnect (upsert) |
 | `tools/anki/sync/ua_grammar_import.py` | ✓ done | UA_Grammar CNSF notes → Anki (upsert) |
 | `tools/anki/sync/ua_visual_import.py` | ✓ done | UA_Visual CNSF notes → Anki (upsert) |
 | `tools/anki/extract/gen_ua_lexemes_vstup.py` | ✓ done | One-shot generator for Вступ batch |
-| `tools/anki/inspect/update_deck_limits.py` | ✓ new (2026-07-20) | Apply UA domain limits from YAML config |
-| `tools/anki/inspect/update_b737_deck_limits.py` | ✓ new (2026-07-20) | Apply B737 domain limits, honor suspension tags |
+| ~~`tools/anki/inspect/update_deck_limits.py`~~ | ✗ deleted (2026-08-20) | Wrote to Anki outside the preset pipeline. Limits now live in `presets/*.json` |
+| ~~`tools/anki/inspect/update_b737_deck_limits.py`~~ | ✗ deleted (2026-08-20) | Same; suspension handling is unaffected — it is a tag concern, not a preset one |
 | `tools/anki/inspect/backfill_source_url.py` | ✓ done | Add Source_URL + Source_Note to all lexeme notes |
 | `tools/anki/inspect/verify_stress_goroh.py` | ✓ done | Stress verification vs Горох; Вступ pass complete |
-| `tools/anki/inspect/test_preset_creation.py` | ✓ new (2026-07-20) | Diagnostic tool for testing preset creation approaches |
+| ~~`tools/anki/inspect/test_preset_creation.py`~~ | ✗ deleted (2026-08-20) | Diagnostic for the clone-without-lookup approach that produced the 53 orphans |
 | `tools/anki/generate/ua_generate_examples.py` | ✓ done | Populate UA_Example/EN_Example via Anthropic API |
 | `tools/anki/inspect/patch_ch09_conj_tables.py` | ✓ done | One-shot: Verb_Conj_Table for notes 0117–0131 |
 | `tools/anki/lib/lexeme_dedup.py` | ✓ new (2026-07-24) | `create_or_link_lexeme()` — dedup/homograph create-or-link API (new/homograph/duplicate) |
