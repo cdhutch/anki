@@ -1,5 +1,12 @@
 # B737::Core::Limits::Trivia — Option Preset
 
+> **SUPERSEDED 2026-08-20 — history only, not current.**
+> `DECK_PRESETS.md` is the single authority for deck presets, and
+> `presets/<slug>.json` holds the live values, exported from Anki.
+> No preset named `B737::Core::Limits::Trivia` exists — that deck also runs on
+> `B737 FSRS Core`. The values here (3 new, 50 review, 0.88 retention, leech 6)
+> describe an arrangement that was never built.
+
 ## Philosophy
 
 - Low-priority knowledge

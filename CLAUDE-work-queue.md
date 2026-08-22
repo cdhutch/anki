@@ -155,10 +155,20 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
   **Option C deferred 2026-08-20 by Craig — blocked behind the deck-preset cleanup**
   (see the FSRS item under Cross-domain / infra). Option C is an FSRS-scheduling change
-  to the UA tree, and that tree's preset architecture is currently unresolved: `UA FSRS`
-  sits on 0 decks and two repo documents specify incompatible designs. Deciding per-slot
+  to the UA tree, and that tree's preset architecture was unresolved at the time: `UA FSRS`
+  sat on 0 decks and two repo documents specified incompatible designs. Deciding per-slot
   cards before knowing which preset those cards live under stacks two unknowns on the
   same notes. Settle the presets first.
+
+  **Blocker cleared 2026-08-20 — Option C is decidable again, on its own merits.** The UA
+  tree runs on nine per-deck presets, one file each under `presets/`, specified in
+  `DECK_PRESETS.md`. New per-slot cards inherit the preset of the deck they land in, and
+  that is now a known quantity rather than an open question. Nothing else about Option C
+  changed: the ordinal-preservation assumption below is still Claude's reasoning about
+  Anki's card generation and still wants verifying against Anki before anyone acts on it.
+  One consideration the preset work adds — FSRS optimizes per preset, so ~71 new cards
+  land in one preset's training pool, which is a scheduling question on top of the
+  card-count one.
 
   **Correction to the design doc's cost estimate, in Option C's favour.** §5 says
   "FSRS history implications for 585 notes." Today's aspect audit gives the real shape:
@@ -296,7 +306,7 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ## Cross-domain / infra
 
-- [ ] **FSRS deck configs actually created in Anki** ("B737 FSRS" / "UA FSRS" /
+- [x] **FSRS deck configs actually created in Anki** ("B737 FSRS" / "UA FSRS" /
   "Legacy FSRS" presets, assigned to the three top-level decks). No confirmation
   found anywhere in the log that this was ever done in Anki itself — full spec in
   `CLAUDE-fsrs-deck-configs.md`.
@@ -337,13 +347,83 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   to the root. The rollout script could never have run from this state — it needs an
   undocumented manual GUI step first.
 
-- [ ] **Deck presets + limits actually applied** in Anki
-  (`create_deck_presets.py` → `update_deck_limits.py` →
-  `update_b737_deck_limits.py`) — confirm these were run against live Anki, not
-  just written to the repo. **Blocked on the architecture decision in the FSRS item
-  above** (2026-08-20): the live collection appears to follow `DECK_PRESET_MAPPING.md`,
-  but that cannot be confirmed deck-by-deck until a survey tool exists that sees all
-  domains and reports zero-deck presets.
+  **RESOLVED 2026-08-20 — Option A, and the architecture question is closed.** Neither
+  competing document is current. `DECK_PRESETS.md` supersedes both, plus
+  `CLAUDE-deck-architecture.md` and `docs/anki/options/*.md`, and is generated from live
+  Anki rather than describing an intention. `presets/<slug>.json` holds one file per
+  preset with all parameters except the FSRS ones, which Anki derives itself.
+
+  `UA FSRS` and `B737 FSRS` were pruned as orphans along with 51 others — 85 presets down
+  to 32. Every script that could recreate them is deleted, including
+  `apply_ua_fsrs_to_subdecks.py` and `setup_fsrs_deck_configs.py`; the four survey tools
+  named above are gone too, replaced by `survey_deck_presets.py`, which reads
+  `deck_config` directly and so *can* see a zero-deck preset.
+
+  Verified: `create_deck_presets.py` reports 0 created, 0 changed, 32 unchanged — the
+  repo and Anki agree exactly. Idempotence was proven on a throwaway preset first, with a
+  byte-identical round trip.
+
+  **What is NOT resolved and does not belong to this item:** retention is 0.9 everywhere,
+  against this file's 0.93–0.95 for B737; and nine presets carry `fsrsParams6` cloned from
+  other content. Both are recorded in `CLAUDE-active-status.md` under FSRS Deck
+  Configuration, and neither is a preset-inventory problem.
+
+- [x] **Deck presets + limits actually applied** in Anki
+  ~~(`create_deck_presets.py` → `update_deck_limits.py` →
+  `update_b737_deck_limits.py`)~~ — confirm these were run against live Anki, not
+  just written to the repo.
+
+  **ANSWERED 2026-08-20: yes, and the question is now permanently answerable.**
+  `create_deck_presets.py` dry run reports **0 created, 0 changed, 32 unchanged** — every
+  preset in Anki matches its file in `presets/` exactly. The two other scripts named above
+  were deleted; they wrote limits outside the pipeline. `update_deck_limits.py` and
+  `update_b737_deck_limits.py` no longer exist.
+
+  This is no longer a thing to confirm by hand: `export_deck_presets.py` + `git diff`
+  reports any drift, because the export carries no timestamp and is byte-stable.
+
+  ~~**Blocked on the architecture decision in the FSRS item above** (2026-08-20): the live
+  collection appears to follow `DECK_PRESET_MAPPING.md`, but that cannot be confirmed
+  deck-by-deck until a survey tool exists that sees all domains and reports zero-deck
+  presets.~~ **Unblocked 2026-08-20 — both halves of that sentence are now answered.**
+  The architecture item above resolved to Option A, and the survey tool it was waiting on
+  exists: `survey_deck_presets.py` reads `deck_config` directly, covers every domain, and
+  reports zero-deck presets. The deck-by-deck confirmation that could not be made is now
+  one command. `DECK_PRESET_MAPPING.md` is superseded and bannered, so "the live collection
+  appears to follow" it is no longer the right frame — the collection follows
+  `presets/*.json`, which was exported *from* it.
+
+- [ ] **B737 desired retention is 0.9, against 0.93–0.95 for safety-critical material.**
+  Raised by the now-superseded `CLAUDE-fsrs-deck-configs.md`, whose *architecture* was
+  wrong but whose *retention reasoning* was not. All seven B737 presets sit at Anki's 0.9
+  default. UA's 0.9 is at the top of its own 0.85–0.90 band, so UA is arguably compliant;
+  B737 is below its. Note the same file argues 0.97–0.98 only in the weeks before a
+  checkride, so a permanent 0.95 may not be what you want either. Retention cost is
+  steeply nonlinear — 0.90 → 0.95 roughly doubles reviews.
+
+- [ ] **Nine presets carry FSRS parameters optimized for other content.** Eight UA presets
+  and `B737` share one **bit-identical** `fsrsParams6` vector. A real optimization runs
+  against a preset's own review history, so identical vectors across Ukrainian vocabulary
+  and a B737 preset can only be a `cloneDeckConfigId` artifact. `B737 Checklists` is on
+  FSRS-6 stock defaults. Wants an Optimize pass per preset — and per
+  `FSRS_Preset__B737_Systems.md`, roughly 1,000 reviews or 2–4 weeks of use makes that
+  meaningful. `presets/*.json` deliberately excludes these, so an apply cannot clobber the
+  result.
+
+- [ ] **15 Legacy presets are unspecified** — `DECK_PRESETS.md` §4. They have files like
+  everything else, but no decision has been made about whether the repo should enforce
+  them. The tree is mixed: `Legacy::Flight Training Active` carries 11 decks and is live,
+  while `Legacy::Inactive::*` is dormant.
+
+- [ ] **Two approved-but-unapplied changes in `DECK_PRESETS.md` §5.** (a) Normalize the two
+  older B737 presets — five fields, of which only `reviewOrder 3→0` changes behaviour,
+  moving 17 decks off *Ascending intervals* onto *Due date, then random*. **`fsrs` is
+  excluded and still unresolved**: it is `null` on three presets and `true` on four, and
+  the split does not follow the old/modern line. (b) Rename
+  `B737 FSRS Core (0n_200r)`, whose name promises 200 reviews/day against an actual 9999.
+
+- [ ] **`query_anki_db.py` searches for `collection.db`**, a filename modern Anki has not
+  used in years — it has probably never found a collection. Fix the path or delete it.
 
 - [ ] **`gen_ch09_subsection.py` exercised end-to-end** against a real batch
   (built 2026-07-25, still untested — currently nothing left to run it against

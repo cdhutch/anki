@@ -4,11 +4,12 @@
 Written 2026-08-20 for the deck-preset cleanup. Answers three questions the
 existing tools cannot:
 
-  1. Which preset does every deck use?  (all domains -- list_deck_presets.py
-     covers UA only, inspect_deck_configs.py filters to B737)
-  2. Which presets exist but are used by NO deck?  Neither existing tool can
-     see one: both enumerate presets by iterating decks and collecting what
-     they point at, so a zero-deck preset is structurally invisible. That is
+  1. Which preset does every deck use?  All domains -- the tools this replaced
+     were domain-scoped (list_deck_presets.py covered UA, inspect_deck_configs.py
+     filtered to B737); both were deleted 2026-08-20.
+  2. Which presets exist but are used by NO deck?  None of the old tools could
+     see one: they enumerated presets by iterating decks and collecting what
+     those pointed at, so a zero-deck preset was structurally invisible. That is
      exactly how `UA FSRS` sat unnoticed on 0 decks for six weeks.
   3. What is the live deck tree?  Four repo documents describe four different
      B737 architectures; only Anki knows which one exists.

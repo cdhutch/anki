@@ -211,7 +211,11 @@ def main() -> int:
         )
         print("    css: updated")
 
-    print("\nDone. Run create_checklists_preset.py next to set up the deck preset.")
+    print("\nDone. The B737 Checklists deck preset already exists; its parameters\n"
+          "live in presets/b737-checklists.json. Apply with:\n"
+          "  python tools/anki/setup/create_deck_presets.py --only 'B737 Checklists'\n"
+          "(create_checklists_preset.py was deleted 2026-08-20 -- it cloned without a\n"
+          "lookup and would mint a duplicate preset on every run.)")
     return 0
 
 

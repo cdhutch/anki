@@ -18,6 +18,53 @@ Rebuild the survey any time with:
 
 ---
 
+## 0. Tooling
+
+Four tools, and nothing else should touch presets:
+
+| Tool | Direction | Notes |
+|---|---|---|
+| `tools/anki/inspect/survey_deck_presets.py` | read | Decks, presets, usage, orphans. The only one that can see a preset on zero decks. |
+| `tools/anki/inspect/export_deck_presets.py` | Anki → `presets/` | One file per preset, all parameters except FSRS. No timestamp, so re-export + `git diff` is a drift detector. |
+| `tools/anki/setup/create_deck_presets.py` | `presets/` → Anki | Idempotent. `--only NAME` to scope. Dry-run by default. |
+| `tools/anki/setup/prune_orphan_presets.py` | delete | Zero-deck presets only, by id. Dry-run by default. |
+
+**`presets/<slug>.json` is the source of truth for values.** The tables in §1–§3 are a
+human-readable summary of those files; where they disagree, the files win.
+
+**Superseded documents, all bannered rather than deleted:** `DECK_PRESET_MAPPING.md`,
+`CLAUDE-fsrs-deck-configs.md`, `CLAUDE-deck-architecture.md`,
+`docs/anki/options/b737_limits_options.md`, `docs/anki/options/b737_limits_trivia_options.md`,
+`domains/b737/anki/presets/FSRS_Preset__B737_Systems.md`. That last one is worth singling
+out: its policy section says *"do not attempt to automate FSRS settings via AnkiConnect"*
+and *"this file is the source of truth; Anki is configured manually to match"* — the exact
+inverse of what this repo now does. Its banner says so.
+`docs/anki/options/anki_card_option_fields.md` is **not** superseded; it is a neutral list
+of Anki's option fields and remains accurate.
+
+Bannered 2026-08-21, after a sweep for surviving references: `CLAUDE.md`'s "Deck Presets
+and Limit Configuration (2026-07-20)" subsection, which still presented the deleted tools
+as a runnable workflow, and both `domains/*/anki/config/deck_limits.yaml`, which no code
+reads any more — the two tools that read them were among the 23 deleted. The YAML files
+are kept for their commentary; every live limit is a parameter in `presets/<slug>.json`.
+
+**23 superseded tools and data files were deleted 2026-08-20**, none of which was wired
+into `make`.
+Thirteen wrote to Anki outside this pipeline — including `setup_fsrs_deck_configs.py`,
+which recreated `UA FSRS` and `B737 FSRS` after they had been pruned as orphans, and four
+`create_*_preset.py` scripts carrying the same clone-without-lookup bug that produced the
+53 orphans. Also removed: `verify_b737_deck_configs.py`, which called `saveDeckConfig`
+despite its name, and both `preset_definitions.json` files, which specified review limits
+of 100/6/8/10/8 against a live 9999.
+
+Kept because they are read-only and still accurate: `audit_ua_decks.py`,
+`check_deck_hierarchy.py`, `survey_ua_decks.py`, `analyze_display_order.py`,
+`configure_line_flying_decks.py` (read-only despite the name, and the one `make` target).
+`query_anki_db.py` is left in place but searches for `collection.db`, a filename modern
+Anki has not used in years — it has probably never found a collection.
+
+---
+
 ## 1. Shared baseline
 
 Every UA preset carries these identically — 44 of 46 parameters. The five modern B737

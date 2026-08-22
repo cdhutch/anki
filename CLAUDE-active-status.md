@@ -383,16 +383,27 @@ whenever it resumes is Phase A distractor authoring.
 
 # FSRS Deck Configuration (cross-domain)
 
-**Status (2026-07-10, no later update found):** recommended FSRS parameters drafted for
-all three top-level decks (B737, UA, Legacy). Full specs in
-[CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md).
+**Status 2026-08-20: the three-preset plan is dead; the repo now mirrors Anki instead.**
+[DECK_PRESETS.md](DECK_PRESETS.md) is the single authority, with one file per preset under
+`presets/`. ~~[CLAUDE-fsrs-deck-configs.md](CLAUDE-fsrs-deck-configs.md)~~ is superseded and
+bannered as history.
 
-**Next Actions:**
-1. Create three deck configs in Anki: "B737 FSRS", "UA FSRS", "Legacy FSRS".
-2. Assign each to its top-level deck (the deck tree inherits the config).
-3. Verify isolation — card history should be completely disjoint across the three trees.
-4. Monitor actual retention after 2–3 weeks and adjust if needed. Focus area: UA FSRS
-   (0.85–0.90 desired retention), since that's the domain with active daily use.
+What actually happened: `UA FSRS` and `B737 FSRS` were created but never assigned to
+anything, sat on **zero decks**, and were pruned as orphans along with 51 others. The
+collection went from 85 presets to 32. `Legacy FSRS` survives on one deck. No preset was
+ever "assigned to its top-level deck" as the plan below described — the UA tree runs on
+nine per-deck presets and B737 on seven, which is a different architecture entirely.
 
-No confirmation found in `CLAUDE.md`'s log that this was actually implemented in Anki —
-treat as still outstanding unless you know otherwise.
+**Still open, and genuinely unresolved:**
+
+1. **Retention is 0.9 everywhere.** The superseded file argued 0.93–0.95 for B737 as
+   safety-critical and 0.85–0.90 for UA. UA's 0.9 sits at the top of its band; B737 is
+   below its. Worth deciding on its own merits — see DECK_PRESETS.md section 5.
+2. **Nine presets carry FSRS parameters optimized for other content.** Eight UA presets and
+   `B737` share one bit-identical `fsrsParams6` vector, which can only be a clone artifact;
+   `B737 Checklists` is on stock defaults. Wants a re-optimization pass.
+3. **15 Legacy presets are unspecified** — DECK_PRESETS.md section 4.
+
+**Isolation, the plan's original goal, is already satisfied** — the UA and B737 preset sets
+are disjoint, so no preset is shared across trees. It did not need three dedicated presets
+to achieve.

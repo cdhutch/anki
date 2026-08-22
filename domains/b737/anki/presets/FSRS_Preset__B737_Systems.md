@@ -1,5 +1,19 @@
 # FSRS Configuration (Anki) — B737 Systems
 
+> **SUPERSEDED 2026-08-20 — history only, not current.**
+> `DECK_PRESETS.md` is the single authority for deck presets, and
+> `presets/<slug>.json` holds the live values, exported from Anki.
+> Describes `B737 Systems (FSRS)`, which sat on zero decks and was pruned as an orphan
+> 2026-08-20.
+> **Its policy section is now inverted and must not be followed.** It says "Do not
+> attempt to automate FSRS settings via AnkiConnect" and "this file is the source of
+> truth; Anki is configured manually to match". The opposite now holds: Anki's live
+> state is exported to `presets/*.json`, and `create_deck_presets.py` applies them
+> back idempotently. FSRS *parameters* are still excluded — but because Anki derives
+> them from review history, not because automation is disallowed.
+> Worth keeping: the rule of thumb that FSRS Optimize needs roughly 1,000 reviews or
+> 2–4 weeks of use before it is meaningful.
+
 **Repo:** `b737-anki`  
 **Applies to:** B737 Systems note imports (e.g., `systems-737-electrical.tsv`)  
 **Anki version observed:** 25.09.2 (3890e12c)  

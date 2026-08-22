@@ -1,5 +1,12 @@
 # Deck Architecture
 
+> **SUPERSEDED 2026-08-20 — history only, not current.**
+> `DECK_PRESETS.md` is the single authority for deck presets, generated from live Anki.
+> Describes a B737 tree that largely does not exist: `B737::Systems` is real, but
+> `B737::Flows` and `B737::Knowledge_Base` are not, and all four presets it names were
+> orphans, deleted 2026-08-20. The live tree is `B737::Core::*` — see DECK_PRESETS.md.
+> Kept because the reasoning behind these decisions is still worth reading.
+
 **Rule**: Never study from `B737` (root) directly — it bypasses pool limits.
 
 ## Pool 1 — Systems (study from `B737::Systems`)

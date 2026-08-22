@@ -1,5 +1,12 @@
 # B737::Core::Limits — Option Preset
 
+> **SUPERSEDED 2026-08-20 — history only, not current.**
+> `DECK_PRESETS.md` is the single authority for deck presets, and
+> `presets/<slug>.json` holds the live values, exported from Anki.
+> No preset named `B737::Core::Limits` exists — that deck runs on `B737 FSRS Core`,
+> shared with 13 others. The values here also disagree with live: 15 new and 0.92
+> retention against an actual 20 and 0.9.
+
 ## Philosophy
 
 - High-importance operational knowledge
