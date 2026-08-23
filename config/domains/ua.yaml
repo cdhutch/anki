@@ -1,0 +1,178 @@
+# Ukrainian domain configuration
+# Reference implementation for domain-aware CNSF canonicalization and import
+
+domain: ua
+display_name: Ukrainian
+
+note_types:
+  ua_lexeme:
+    fields:
+      - NoteID
+      - Lemma
+      - Lemma_Euphony
+      - PartOfSpeech
+      - Gender
+      - ImperfectiveUnidirectional
+      - ImperfectiveUnidirectional_Euphony
+      - Perfective
+      - Perfective_Euphony
+      - _AspectLabel
+      - _UA_EN_DisplayLemma
+      - _IsHomograph
+      - EN_Gloss
+      - Govt_Case
+      - IrregularForms
+      - CounterpartForm
+      - VerbMotion_Pair
+      - ConfusableSet
+      - Mnemonic_EN
+      - CompareScenario
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - Homograph_SenseA
+      - Homograph_SenseB
+      - CrossLang_Analog
+      - TypingTarget_UA
+      - TypingAnswer
+      - _TypingSpec
+      - UA_Example
+      - EN_Example
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+
+    computed_fields:
+      - _AspectLabel
+      - _UA_EN_DisplayLemma
+      - _IsHomograph
+      - TypingTarget_UA
+      - _TypingSpec
+
+    always_present_fields:
+      - Lemma_Euphony
+      - Perfective_Euphony
+      - ImperfectiveUnidirectional_Euphony
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - CompareScenario
+      - Homograph_SenseA
+      - Homograph_SenseB
+      - AspectCue
+      - Mnemonic_EN
+      - Verification Notes
+
+    sparse_fields:
+      - ImperfectiveUnidirectional
+      - Govt_Case
+      - IrregularForms
+      - CounterpartForm
+      - VerbMotion_Pair
+      - ConfusableSet
+      - Homograph_SenseA
+      - Homograph_SenseB
+      - CrossLang_Analog
+
+    compare_card_enabled: true
+
+  ua_grammar:
+    fields:
+      - NoteID
+      - Topic
+      - Declension_Type
+      - EN_Description
+      - UA_Examples
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+
+    computed_fields: []
+    always_present_fields:
+      - Verification Notes
+    sparse_fields: []
+    compare_card_enabled: false
+
+  ua_visual:
+    fields:
+      - NoteID
+      - Description
+      - Image_Description
+      - Declension_Pattern
+      - EN_Gloss
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+
+    computed_fields: []
+    always_present_fields:
+      - Verification Notes
+    sparse_fields: []
+    compare_card_enabled: false
+
+  ua_verb:
+    fields:
+      - NoteID
+      - Lemma
+      - Aspect
+      - EN_Gloss
+      - Conjugation_Pattern
+      - Tags_Ch
+      - Source_Note
+      - Source_URL
+      - Verification Notes
+
+    computed_fields: []
+    always_present_fields:
+      - Source_Note
+      - Verification Notes
+    sparse_fields: []
+    compare_card_enabled: false
+
+  ua_pvom_infinitive:
+    fields:
+      - NoteID
+      - Lemma
+      - Motion_Type
+      - Walking_Multi_Euphony
+      - Walking_Uni_Euphony
+      - Vehicle_Multi_Euphony
+      - Vehicle_Uni_Euphony
+      - EN_Gloss
+      - Examples
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+
+    computed_fields: []
+    always_present_fields:
+      - Walking_Multi_Euphony
+      - Walking_Uni_Euphony
+      - Vehicle_Multi_Euphony
+      - Vehicle_Uni_Euphony
+      - Verification Notes
+    sparse_fields: []
+    compare_card_enabled: false
+
+# Suspension policy: when to suspend/unsuspend notes
+suspension_policy:
+  tag_suspend:
+    - status:draft
+    - stress:unverified
+  tag_no_suspend:
+    - conj:drill  # Override suspension for drilling
+  flag_suspend:
+    - 1  # Red flag = suspend
+  compare_card_suspend: true  # Suspend Compare card if ConfusableSet but no Compare fields
+
+# Text normalization
+apostrophe_normalization: u02bc  # U+02BC standard for Slavic
+
+# Styling
+css_theme: gruvbox

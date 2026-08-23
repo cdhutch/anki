@@ -1,0 +1,63 @@
+# IPA (International Phonetic Alphabet) domain configuration
+# Language-agnostic phoneme and phone inventory
+
+domain: ipa
+display_name: IPA
+
+note_types:
+  ipa_phoneme:
+    fields:
+      - NoteID
+      - Phoneme
+      - IPA_Symbol
+      - Type
+      - Description
+      - Manner_of_Articulation
+      - Place_of_Articulation
+      - Voicing
+      - Airflow
+      - Example_Words
+      - Language_Analogs
+      - Minimal_Pairs
+      - Confusable_With
+      - Mnemonic_EN
+      - EN_Gloss
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+
+    computed_fields: []
+
+    always_present_fields:
+      - Phoneme
+      - IPA_Symbol
+      - Type
+      - Verification Notes
+
+    sparse_fields:
+      - Manner_of_Articulation
+      - Place_of_Articulation
+      - Voicing
+      - Airflow
+      - Minimal_Pairs
+      - Confusable_With
+      - Description
+
+    compare_card_enabled: false
+
+# Suspension policy
+suspension_policy:
+  tag_suspend:
+    - status:draft
+    - stress:unverified
+  tag_no_suspend: []
+  flag_suspend:
+    - 1  # Red flag
+  compare_card_suspend: false
+
+# Text normalization
+apostrophe_normalization: u02bc
+
+# Styling
+css_theme: gruvbox
