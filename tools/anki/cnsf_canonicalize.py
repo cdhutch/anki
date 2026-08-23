@@ -34,6 +34,12 @@ from tools.anki.setup.setup_ua_note_types import (  # noqa: E402
 from tools.anki.setup.setup_ua_pvom_note_type import FIELDS as _PVOM_FIELDS  # noqa: E402
 from tools.anki.lib.typing_target import compute_typing_target  # noqa: E402
 
+# Import domain_config for multi-domain support
+try:
+    from tools.anki.lib.domain_config import DomainConfig  # noqa: E402
+except ImportError:
+    DomainConfig = None  # Will handle gracefully below
+
 
 CANON_TOP_KEYS = [
     "schema",
@@ -69,6 +75,38 @@ CANON_FIELD_ORDER: dict[str, list[str]] = {
     "ua_verb": _VERB_FIELDS,
     "ua_pvom_infinitive": _PVOM_FIELDS,
 }
+
+
+def _load_multi_domain_field_orders(config_dir: Path) -> dict[str, list[str]]:
+    """Load field orders from all domain config YAML files.
+
+    Returns a dict mapping note_type -> field_order for all non-UA domains.
+    Returns empty dict if DomainConfig or configs are unavailable.
+    """
+    if DomainConfig is None or not config_dir.exists():
+        return {}
+
+    additional_orders: dict[str, list[str]] = {}
+    for config_file in sorted(config_dir.glob("*.yaml")):
+        domain = config_file.stem
+        # Skip UA - it uses hardcoded constants
+        if domain == "ua":
+            continue
+        try:
+            config = DomainConfig.load(domain, config_dir)
+            for note_type, nt_config in config.note_types.items():
+                additional_orders[note_type] = nt_config.fields
+        except Exception:
+            # Silently skip malformed configs - don't break the hook
+            pass
+
+    return additional_orders
+
+
+# Load multi-domain field orders at module initialization
+_config_dir = Path(__file__).resolve().parents[2] / "config" / "domains"
+_additional_orders = _load_multi_domain_field_orders(_config_dir)
+CANON_FIELD_ORDER.update(_additional_orders)
 
 
 def _sync_typing_answer(fields: dict[str, Any]) -> bool:
