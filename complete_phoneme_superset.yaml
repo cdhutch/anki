@@ -1,0 +1,694 @@
+---
+title: "Phonetic Superset for EN, FR, DE, UA, RU, SK, CS"
+description: "Complete inventory of all unique phonemes across seven languages with representative words"
+languages: [en, fr, de, ua, ru, cs, sk]
+
+phonemes:
+  # Stops/Plosives
+  - phoneme_id: "p"
+    ipa: "[p]"
+    xsampa: "p"
+    articulation:
+      place: "bilabial"
+      manner: "stop"
+      voicing: "voiceless"
+    description: "Voiceless bilabial stop"
+    examples:
+      en: ["pea", "pin", "apple"]
+      fr: ["papi (grandfather)", "pur (pure)", "tapis (carpet)"]
+      de: ["Punkt (point)", "Platz (place)", "Puppe (doll)"]
+      ua: ["палка (stick)", "паска (Easter bread)"]
+      ru: ["палка (stick)", "парк (park)"]
+      cs: ["palec (finger)", "páska (tape)"]
+      sk: ["palec (finger)", "páska (tape)"]
+
+  - phoneme_id: "b"
+    ipa: "[b]"
+    xsampa: "b"
+    articulation:
+      place: "bilabial"
+      manner: "stop"
+      voicing: "voiced"
+    description: "Voiced bilabial stop"
+    examples:
+      en: ["bat", "bed", "number"]
+      fr: ["bébé (baby)", "bord (edge)", "nombre (number)"]
+      de: ["Bett (bed)", "Liebe (love)", "Ball (ball)"]
+      ua: ["баба (grandmother)", "борщ (borscht)"]
+      ru: ["баба (grandmother)", "борщ (borscht)"]
+      cs: ["bílý (white)", "batoh (backpack)"]
+      sk: ["batoh (backpack)", "banka (bank)"]
+
+  - phoneme_id: "t"
+    ipa: "[t]"
+    xsampa: "t"
+    articulation:
+      place: "alveolar"
+      manner: "stop"
+      voicing: "voiceless"
+    description: "Voiceless alveolar stop"
+    examples:
+      en: ["tea", "tap", "eat"]
+      fr: ["tête (head)", "tapis (carpet)", "tante (aunt)"]
+      de: ["Tisch (table)", "Bett (bed)", "Tante (aunt)"]
+      ua: ["тато (father)", "твій (your)", "тепло (warm)"]
+      ru: ["тата (papa)", "твой (your)", "теплый (warm)"]
+      cs: ["tato (father)", "stůl (table)", "teplo (warm)"]
+      sk: ["tabuľa (board)", "stôl (table)", "teplo (warm)"]
+
+  - phoneme_id: "d"
+    ipa: "[d]"
+    xsampa: "d"
+    articulation:
+      place: "alveolar"
+      manner: "stop"
+      voicing: "voiced"
+    description: "Voiced alveolar stop"
+    examples:
+      en: ["day", "do", "made"]
+      fr: ["dent (tooth)", "monde (world)", "donner (to give)"]
+      de: ["Dach (roof)", "Lied (song)", "Dorf (village)"]
+      ua: ["дар (gift)", "дім (house)", "давай (come on)"]
+      ru: ["дом (house)", "дар (gift)", "давай (come on)"]
+      cs: ["dům (house)", "dva (two)", "dar (gift)"]
+      sk: ["dom (house)", "dva (two)", "dar (gift)"]
+
+  - phoneme_id: "k"
+    ipa: "[k]"
+    xsampa: "k"
+    articulation:
+      place: "velar"
+      manner: "stop"
+      voicing: "voiceless"
+    description: "Voiceless velar stop"
+    examples:
+      en: ["cat", "key", "back"]
+      fr: ["cou (neck)", "kilo (kilo)", "car (bus)"]
+      de: ["Katze (cat)", "Bach (stream)", "Kind (child)"]
+      ua: ["кит (whale)", "кількість (quantity)", "кот (cat)"]
+      ru: ["кот (cat)", "кино (cinema)", "квадрат (square)"]
+      cs: ["kůň (horse)", "koleno (knee)", "kniha (book)"]
+      sk: ["kôň (horse)", "koleno (knee)", "kniha (book)"]
+
+  - phoneme_id: "g"
+    ipa: "[ɡ]"
+    xsampa: "g"
+    articulation:
+      place: "velar"
+      manner: "stop"
+      voicing: "voiced"
+    description: "Voiced velar stop"
+    examples:
+      en: ["go", "gate", "big"]
+      fr: ["gare (station)", "golf (golf)", "gâteau (cake)"]
+      de: ["Gast (guest)", "Lager (camp)", "Grund (reason)"]
+      ru: ["газ (gas)", "гараж (garage)", "гром (thunder)"]
+      cs: ["gól (goal)"]
+      sk: ["guma (rubber)"]
+
+  # Fricatives - Labiodental
+  - phoneme_id: "f"
+    ipa: "[f]"
+    xsampa: "f"
+    articulation:
+      place: "labiodental"
+      manner: "fricative"
+      voicing: "voiceless"
+    description: "Voiceless labiodental fricative"
+    examples:
+      en: ["fit", "fun", "leaf"]
+      fr: ["feu (fire)", "fin (end)", "café (coffee)"]
+      de: ["Fuß (foot)", "Schiff (ship)", "Fein (fine)"]
+      ua: ["фільм (film)", "фото (photo)"]
+      ru: ["факт (fact)", "фонарь (lantern)", "форма (form)"]
+      cs: ["fan (fan)"]
+      sk: ["fúzy (whiskers)"]
+
+  - phoneme_id: "v"
+    ipa: "[v]"
+    xsampa: "v"
+    articulation:
+      place: "labiodental"
+      manner: "fricative"
+      voicing: "voiced"
+    description: "Voiced labiodental fricative"
+    examples:
+      en: ["van", "vote", "seven"]
+      fr: ["vin (wine)", "voiture (car)", "neuf (nine)"]
+      de: ["Vater (father)", "Wagen (car)", "Wort (word)"]
+      ua: ["вода (water)", "вільний (free)", "вітер (wind)"]
+      ru: ["вода (water)", "волна (wave)", "ветер (wind)"]
+      cs: ["voda (water)", "slovo (word)", "věk (age)"]
+      sk: ["voda (water)", "slovo (word)", "vek (age)"]
+
+  # Fricatives - Alveolar
+  - phoneme_id: "s"
+    ipa: "[s]"
+    xsampa: "s"
+    articulation:
+      place: "alveolar"
+      manner: "fricative"
+      voicing: "voiceless"
+    description: "Voiceless alveolar fricative"
+    examples:
+      en: ["sit", "sun", "cats"]
+      fr: ["sac (bag)", "passe (pass)", "seul (alone)"]
+      de: ["Sonne (sun)", "Haus (house)", "Satz (sentence)"]
+      ua: ["сім (seven)", "сюжет (plot)", "сніг (snow)"]
+      ru: ["сын (son)", "сок (juice)", "снег (snow)"]
+      cs: ["sůl (salt)", "slovo (word)", "slunce (sun)"]
+      sk: ["sol (salt)", "slovo (word)", "slnko (sun)"]
+
+  - phoneme_id: "z"
+    ipa: "[z]"
+    xsampa: "z"
+    articulation:
+      place: "alveolar"
+      manner: "fricative"
+      voicing: "voiced"
+    description: "Voiced alveolar fricative"
+    examples:
+      en: ["zoo", "zero", "rose"]
+      fr: ["zèbre (zebra)", "rose (rose)", "maison (house)"]
+      de: ["Zahn (tooth)", "Zimmer (room)", "Zeit (time)"]
+      ua: ["зима (winter)", "змія (snake)", "звук (sound)"]
+      ru: ["зима (winter)", "зелень (greens)", "звук (sound)"]
+      cs: ["zub (tooth)", "zima (winter)", "zdraví (health)"]
+      sk: ["zima (winter)", "zub (tooth)", "zdravie (health)"]
+
+  # Fricatives - Postalveolar
+  - phoneme_id: "ʃ"
+    ipa: "[ʃ]"
+    xsampa: "S"
+    articulation:
+      place: "postalveolar"
+      manner: "fricative"
+      voicing: "voiceless"
+    description: "Voiceless postalveolar fricative (sh)"
+    examples:
+      en: ["shoe", "ship", "wash"]
+      fr: ["chat (cat)", "champ (field)", "ache (pain)"]
+      de: ["Schuh (shoe)", "Schatten (shadow)", "Schrank (closet)"]
+      ua: ["шапка (hat)", "шахта (mine)", "шум (noise)"]
+      ru: ["шапка (hat)", "шумно (noisily)", "школа (school)"]
+      cs: ["šunka (ham)", "škola (school)", "šestadesát (sixty)"]
+      sk: ["šunka (ham)", "škola (school)", "šesťdesiat (sixty)"]
+
+  - phoneme_id: "ʒ"
+    ipa: "[ʒ]"
+    xsampa: "Z"
+    articulation:
+      place: "postalveolar"
+      manner: "fricative"
+      voicing: "voiced"
+    description: "Voiced postalveolar fricative (zh)"
+    examples:
+      en: ["measure", "vision", "garage"]
+      fr: ["je (I)", "jeu (game)", "rouge (red)"]
+      de: ["Garage (garage)", "Genie (genius)"]
+      ua: ["жива (alive)", "журнал (journal)", "жовтий (yellow)"]
+      ru: ["жива (alive)", "журнал (magazine)", "желтый (yellow)"]
+      cs: ["život (life)", "žena (woman)", "žába (frog)"]
+      sk: ["život (life)", "žena (woman)", "žaba (frog)"]
+
+  # Velar Fricative
+  - phoneme_id: "x"
+    ipa: "[x]"
+    xsampa: "x"
+    articulation:
+      place: "velar"
+      manner: "fricative"
+      voicing: "voiceless"
+    description: "Voiceless velar fricative"
+    examples:
+      de: ["Buch (book)", "Bach (stream)", "Nacht (night)"]
+      cs: ["chlapec (boy)", "chudý (poor)", "chlad (cold)"]
+      sk: ["chlapec (boy)", "chudý (poor)", "chlad (cold)"]
+
+  # Glottal Fricatives
+  - phoneme_id: "ç"
+    ipa: "[ç]"
+    xsampa: "C"
+    articulation:
+      place: "palatal"
+      manner: "fricative"
+      voicing: "voiceless"
+    description: "Voiceless palatal fricative"
+    examples:
+      de: ["Dich (you)", "Tächter (daughters)", "Bücher (books)"]
+      cs: ["chci (I want)", "chyba (error)"]
+      sk: ["chcem (I want)", "chyba (error)"]
+
+  - phoneme_id: "h"
+    ipa: "[h]"
+    xsampa: "h"
+    articulation:
+      place: "glottal"
+      manner: "fricative"
+      voicing: "voiceless"
+    description: "Voiceless glottal fricative"
+    examples:
+      en: ["hat", "hot", "house"]
+      de: ["Haus (house)", "Herr (mister)", "Hut (hat)"]
+      cs: ["hora (mountain)", "hra (game)", "horký (hot)"]
+      sk: ["hore (up)", "hra (game)", "horúci (hot)"]
+
+  - phoneme_id: "ɦ"
+    ipa: "[ɦ]"
+    xsampa: "X"
+    articulation:
+      place: "glottal"
+      manner: "fricative"
+      voicing: "voiced"
+    description: "Voiced glottal fricative (Ukrainian g)"
+    examples:
+      ua: ["гра (game)", "грати (to play)", "гроза (storm)"]
+
+  # Affricates
+  - phoneme_id: "tʃ"
+    ipa: "[tʃ]"
+    xsampa: "tS"
+    articulation:
+      place: "postalveolar"
+      manner: "affricate"
+      voicing: "voiceless"
+    description: "Voiceless postalveolar affricate (ch)"
+    examples:
+      en: ["chat", "church", "catch"]
+      de: ["Deutsch (German)", "Kitsch (kitsch)"]
+      ua: ["час (time)", "часто (often)", "чай (tea)"]
+      ru: ["час (hour)", "часто (often)", "чай (tea)"]
+      cs: ["čas (time)", "účast (participation)", "čaj (tea)"]
+      sk: ["čas (time)", "počas (during)", "čaj (tea)"]
+
+  - phoneme_id: "dʒ"
+    ipa: "[dʒ]"
+    xsampa: "dZ"
+    articulation:
+      place: "postalveolar"
+      manner: "affricate"
+      voicing: "voiced"
+    description: "Voiced postalveolar affricate (j)"
+    examples:
+      en: ["judge", "jump", "edge"]
+      de: ["Dschungel (jungle)"]
+      ua: ["джерело (source)", "джинси (jeans)"]
+      ru: ["джерелло (source)", "джинсы (jeans)"]
+      cs: ["džus (juice)", "džin (gin)"]
+      sk: ["džús (juice)"]
+
+  - phoneme_id: "pf"
+    ipa: "[pf]"
+    xsampa: "pf"
+    articulation:
+      place: "bilabial-labiodental"
+      manner: "affricate"
+      voicing: "voiceless"
+    description: "Voiceless German pf affricate"
+    examples:
+      de: ["Pferd (horse)", "Pfeffer (pepper)", "Pfifferling (chanterelle)"]
+
+  # Nasals
+  - phoneme_id: "m"
+    ipa: "[m]"
+    xsampa: "m"
+    articulation:
+      place: "bilabial"
+      manner: "nasal"
+      voicing: "voiced"
+    description: "Voiced bilabial nasal"
+    examples:
+      en: ["mom", "make", "home"]
+      fr: ["mère (mother)", "moi (me)", "maison (house)"]
+      de: ["Mama (mom)", "Mund (mouth)", "Mann (man)"]
+      ua: ["мама (mama)", "море (sea)", "муха (fly)"]
+      ru: ["мама (mama)", "море (sea)", "муха (fly)"]
+      cs: ["máma (mama)", "most (bridge)", "muž (man)"]
+      sk: ["mama (mama)", "most (bridge)", "muž (man)"]
+
+  - phoneme_id: "n"
+    ipa: "[n]"
+    xsampa: "n"
+    articulation:
+      place: "alveolar"
+      manner: "nasal"
+      voicing: "voiced"
+    description: "Voiced alveolar nasal"
+    examples:
+      en: ["nose", "not", "sun"]
+      fr: ["nez (nose)", "non (no)", "bonne (good)"]
+      de: ["Nase (nose)", "Nacht (night)", "Nein (no)"]
+      ua: ["нос (nose)", "новий (new)", "ніч (night)"]
+      ru: ["нос (nose)", "новый (new)", "ночь (night)"]
+      cs: ["nos (nose)", "noc (night)", "nový (new)"]
+      sk: ["nos (nose)", "noc (night)", "nový (new)"]
+
+  - phoneme_id: "ŋ"
+    ipa: "[ŋ]"
+    xsampa: "N"
+    articulation:
+      place: "velar"
+      manner: "nasal"
+      voicing: "voiced"
+    description: "Voiced velar nasal"
+    examples:
+      en: ["sing", "ring", "thing"]
+      fr: ["camping (camping)", "parking (parking)"]
+      de: ["Sänger (singer)", "Finger (finger)", "Ding (thing)"]
+      ua: ["ринг (ring)"]
+      ru: ["ринг (ring)"]
+      cs: ["ring (ring)"]
+      sk: ["ring (ring)"]
+
+  # Approximants/Liquids
+  - phoneme_id: "l"
+    ipa: "[l]"
+    xsampa: "l"
+    articulation:
+      place: "alveolar"
+      manner: "lateral approximant"
+      voicing: "voiced"
+    description: "Voiced alveolar lateral approximant"
+    examples:
+      en: ["love", "light", "ball"]
+      fr: ["lent (slow)", "lune (moon)", "balle (ball)"]
+      de: ["Lampe (lamp)", "Lied (song)", "Laster (vice)"]
+      ua: ["лис (fox)", "лист (leaf)", "ліс (forest)"]
+      ru: ["лис (fox)", "лист (leaf)", "лес (forest)"]
+      cs: ["lení (laziness)", "stůl (table)", "les (forest)"]
+      sk: ["lení (laziness)", "stôl (table)", "les (forest)"]
+
+  - phoneme_id: "ɹ"
+    ipa: "[ɹ]"
+    xsampa: "r\\"
+    articulation:
+      place: "alveolar"
+      manner: "approximant"
+      voicing: "voiced"
+    description: "Voiced alveolar approximant (English r)"
+    examples:
+      en: ["run", "red", "car"]
+      fr: ["rue (street)", "riche (rich)", "père (father)"]
+      de: ["Ratte (rat)", "Rot (red)"]
+
+  - phoneme_id: "r_tap"
+    ipa: "[r]"
+    xsampa: "r"
+    articulation:
+      place: "alveolar"
+      manner: "tap"
+      voicing: "voiced"
+    description: "Voiced alveolar tap (Czech/Slovak r)"
+    examples:
+      ua: ["река (river)"]
+      ru: ["река (river)"]
+      cs: ["řeka (river)", "ruka (hand)", "rok (year)"]
+      sk: ["rieka (river)", "ruka (hand)", "rok (year)"]
+
+  - phoneme_id: "w"
+    ipa: "[w]"
+    xsampa: "w"
+    articulation:
+      place: "labial-velar"
+      manner: "approximant"
+      voicing: "voiced"
+    description: "Voiced labial-velar approximant"
+    examples:
+      en: ["we", "was", "away"]
+      de: ["Wagen (car)", "Wort (word)", "Wunsch (wish)"]
+      fr: ["oui (yes)", "Louis (Louis)"]
+      ua: ["вай (wail)"]
+      ru: ["уай (wail)"]
+
+  - phoneme_id: "j"
+    ipa: "[j]"
+    xsampa: "j"
+    articulation:
+      place: "palatal"
+      manner: "approximant"
+      voicing: "voiced"
+    description: "Voiced palatal approximant"
+    examples:
+      en: ["yes", "you", "onion"]
+      fr: ["yeux (eyes)", "raille (rail)", "pied (foot)"]
+      de: ["ja (yes)", "Jahr (year)", "Junge (boy)"]
+      ua: ["я (I)", "яйце (egg)", "ясно (clearly)"]
+      ru: ["я (I)", "яйцо (egg)", "ясно (clearly)"]
+      cs: ["já (I)", "jazyk (language)", "jaro (spring)"]
+      sk: ["ja (I)", "jazyk (language)", "jar (spring)"]
+
+  # VOWELS - Front unrounded
+  - phoneme_id: "i"
+    ipa: "[i]"
+    xsampa: "i"
+    articulation:
+      place: "front"
+      height: "close"
+      rounding: "unrounded"
+    description: "Close front unrounded vowel"
+    examples:
+      en: ["fleece", "beat", "see"]
+      fr: ["si (if)", "livre (book)", "lic (lice)"]
+      de: ["Liebe (love)", "Lied (song)"]
+      ua: ["сім (seven)", "їжа (food)", "ідея (idea)"]
+      ru: ["сын (son)", "жизнь (life)"]
+      cs: ["síl (strength)", "říze (guided)", "sír (sulfur)"]
+      sk: ["síl (strength)", "riadeč (driver)"]
+
+  - phoneme_id: "ɪ"
+    ipa: "[ɪ]"
+    xsampa: "I"
+    articulation:
+      place: "front"
+      height: "near-close"
+      rounding: "unrounded"
+    description: "Near-close front unrounded vowel"
+    examples:
+      en: ["kit", "bit", "sit"]
+      de: ["Bitte (please)", "Fitte (fit)", "Sitze (seat)"]
+
+  - phoneme_id: "e"
+    ipa: "[e]"
+    xsampa: "e"
+    articulation:
+      place: "front"
+      height: "close-mid"
+      rounding: "unrounded"
+    description: "Close-mid front unrounded vowel"
+    examples:
+      en: ["face", "made", "say"]
+      fr: ["été (summer)", "café (coffee)", "mécanique (mechanic)"]
+      de: ["See (lake)", "Beet (bed)", "Beere (berry)"]
+      ua: ["сед (sediment)"]
+      cs: ["léto (summer)"]
+      sk: ["léto (summer)"]
+
+  - phoneme_id: "ɛ"
+    ipa: "[ɛ]"
+    xsampa: "E"
+    articulation:
+      place: "front"
+      height: "open-mid"
+      rounding: "unrounded"
+    description: "Open-mid front unrounded vowel"
+    examples:
+      en: ["dress", "bed", "let"]
+      fr: ["mère (mother)", "bête (animal)", "Hèlène (Helena)"]
+      de: ["Kette (chain)", "Bett (bed)"]
+      ua: ["сів (sat)"]
+      cs: ["sestra (sister)"]
+      sk: ["sestra (sister)"]
+
+  - phoneme_id: "ae"
+    ipa: "[æ]"
+    xsampa: "a{"
+    articulation:
+      place: "front"
+      height: "near-open"
+      rounding: "unrounded"
+    description: "Near-open front unrounded vowel"
+    examples:
+      en: ["trap", "cat", "hand"]
+
+  # Vowels - Front rounded
+  - phoneme_id: "y"
+    ipa: "[y]"
+    xsampa: "y"
+    articulation:
+      place: "front"
+      height: "close"
+      rounding: "rounded"
+    description: "Close front rounded vowel"
+    examples:
+      fr: ["tu (you)", "rue (street)", "sur (on)"]
+      de: ["über (over)", "Künstler (artist)"]
+      ua: ["юг (south)"]
+      ru: ["юг (south)"]
+
+  - phoneme_id: "ʏ"
+    ipa: "[ʏ]"
+    xsampa: "Y"
+    articulation:
+      place: "front"
+      height: "near-close"
+      rounding: "rounded"
+    description: "Near-close front rounded vowel"
+    examples:
+      de: ["Hütte (cottage)", "Glück (luck)", "Stück (piece)"]
+
+  - phoneme_id: "ø"
+    ipa: "[ø]"
+    xsampa: "2"
+    articulation:
+      place: "front"
+      height: "close-mid"
+      rounding: "rounded"
+    description: "Close-mid front rounded vowel"
+    examples:
+      fr: ["peu (little)", "peur (fear)", "bleu (blue)"]
+      de: ["Köln (Cologne)", "Schöne (beauty)"]
+      ua: ["езда (ride)"]
+      cs: ["moře (sea)"]
+      sk: ["more (sea)"]
+
+  - phoneme_id: "oe"
+    ipa: "[œ]"
+    xsampa: "9"
+    articulation:
+      place: "front"
+      height: "open-mid"
+      rounding: "rounded"
+    description: "Open-mid front rounded vowel"
+    examples:
+      fr: ["peur (fear)", "sœur (sister)", "heure (hour)"]
+      de: ["Hölle (hell)", "Köpfe (heads)"]
+
+  # Vowels - Central
+  - phoneme_id: "schwa"
+    ipa: "[ə]"
+    xsampa: "@"
+    articulation:
+      place: "central"
+      height: "mid"
+      rounding: "unrounded"
+    description: "Mid central vowel (schwa)"
+    examples:
+      en: ["about", "sofa", "comma"]
+      fr: ["le (the)", "de (of)", "que (that)"]
+      de: ["bitte (please)", "Bruder (brother)"]
+      ua: ["про (about)"]
+      ru: ["про (about)"]
+
+  - phoneme_id: "near_open_central"
+    ipa: "[ɐ]"
+    xsampa: "6"
+    articulation:
+      place: "central"
+      height: "near-open"
+      rounding: "unrounded"
+    description: "Near-open central unrounded vowel"
+    examples:
+      en: ["strut", "but", "cup"]
+      de: ["Herr (mister)", "Bär (bear)", "Nummer (number)"]
+
+  # Vowels - Back rounded
+  - phoneme_id: "op"
+    ipa: "[ɔ]"
+    xsampa: "O"
+    articulation:
+      place: "back"
+      height: "open-mid"
+      rounding: "rounded"
+    description: "Open-mid back rounded vowel"
+    examples:
+      en: ["lot", "dog", "thought"]
+      fr: ["mort (death)", "sort (fate)", "or (gold)"]
+      de: ["Gott (God)", "Offen (open)", "Loch (hole)"]
+      ua: ["козак (Cossack)"]
+      cs: ["mohu (can)"]
+      sk: ["mohu (can)"]
+
+  - phoneme_id: "o"
+    ipa: "[o]"
+    xsampa: "o"
+    articulation:
+      place: "back"
+      height: "close-mid"
+      rounding: "rounded"
+    description: "Close-mid back rounded vowel"
+    examples:
+      en: ["goat", "go", "toe"]
+      fr: ["eau (water)", "beau (beautiful)", "rôle (role)"]
+      de: ["Boot (boat)", "Lob (praise)", "Brot (bread)"]
+      ua: ["козак (Cossack)"]
+      cs: ["rozum (sense)"]
+      sk: ["rozum (sense)"]
+
+  - phoneme_id: "u"
+    ipa: "[u]"
+    xsampa: "u"
+    articulation:
+      place: "back"
+      height: "close"
+      rounding: "rounded"
+    description: "Close back rounded vowel"
+    examples:
+      en: ["goose", "blue", "who"]
+      fr: ["tout (all)", "jour (day)", "nous (us)"]
+      de: ["Fuß (foot)", "Zug (train)", "Mut (courage)"]
+      ua: ["сум (sadness)", "ум (mind)"]
+      ru: ["сум (sadness)", "ум (mind)"]
+      cs: ["dům (house)"]
+      sk: ["dom (house)"]
+
+  - phoneme_id: "uu"
+    ipa: "[ʊ]"
+    xsampa: "U"
+    articulation:
+      place: "back"
+      height: "near-close"
+      rounding: "rounded"
+    description: "Near-close back rounded vowel"
+    examples:
+      en: ["foot", "look", "good"]
+      de: ["Lust (desire)", "Mutter (mother)", "Suppe (soup)"]
+
+  # Diphthongs
+  - phoneme_id: "diphthong_ai"
+    ipa: "[ai̯]"
+    xsampa: "ai_^"
+    articulation:
+      type: "diphthong"
+    description: "Diphthong open front to close-mid front"
+    examples:
+      en: ["price", "time", "my"]
+      fr: ["aie (have)", "rail (rail)", "paille (straw)"]
+      de: ["Wein (wine)", "weit (far)", "Eis (ice)"]
+      ua: ["май (May)"]
+      ru: ["май (May)"]
+
+  - phoneme_id: "diphthong_oi"
+    ipa: "[ɔi̯]"
+    xsampa: "Oi_^"
+    articulation:
+      type: "diphthong"
+    description: "Diphthong open-mid back to close-mid front"
+    examples:
+      en: ["choice", "boy", "voice"]
+      fr: ["roi (king)", "voie (way)", "soie (silk)"]
+      ua: ["той (that)"]
+      ru: ["той (that)"]
+
+  - phoneme_id: "diphthong_au"
+    ipa: "[au̯]"
+    xsampa: "au_^"
+    articulation:
+      type: "diphthong"
+    description: "Diphthong open front to close back"
+    examples:
+      en: ["mouth", "now", "how"]
+      de: ["Haus (house)", "Laut (sound)", "Baum (tree)"]
+      ua: ["авто (auto)"]
+      ru: ["авто (auto)"]
+      cs: ["auto (car)"]
+      sk: ["auto (car)"]
