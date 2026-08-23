@@ -1,0 +1,161 @@
+domain: ua
+display_name: Ukrainian
+apostrophe: "ʼ"  # U+02BC MODIFIER LETTER APOSTROPHE
+
+note_types:
+  ua_lexeme:
+    fields:
+      - NoteID
+      - Lemma
+      - Lemma_Euphony
+      - PartOfSpeech
+      - Gender
+      - Perfective
+      - Perfective_Euphony
+      - ImperfectiveUnidirectional
+      - ImperfectiveUnidirectional_Euphony
+      - EN_Gloss
+      - Govt_Case
+      - IrregularForms
+      - CounterpartForm
+      - VerbMotion_Pair
+      - ConfusableSet
+      - CrossLang_Analog
+      - EuphonyNote
+      - CompareScenario
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - Homograph_SenseA
+      - Homograph_SenseB
+      - AspectCue
+      - Mnemonic_EN
+      - TypingAnswer
+      - UA_Example
+      - EN_Example
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields:
+      - _AspectLabel
+      - _UA_EN_DisplayLemma
+      - _IsHomograph
+      - TypingTarget_UA
+      - _TypingSpec
+    always_present:
+      - Lemma_Euphony
+      - Perfective_Euphony
+      - ImperfectiveUnidirectional_Euphony
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - CompareScenario
+      - Homograph_SenseA
+      - Homograph_SenseB
+      - AspectCue
+      - Mnemonic_EN
+      - Verification Notes
+
+  ua_grammar:
+    fields:
+      - NoteID
+      - Cloze_Text
+      - Extra
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - Verification Notes
+
+  ua_verb:
+    fields:
+      - NoteID
+      - Lemma
+      - PartOfSpeech
+      - Aspect
+      - Pres_1sg
+      - Pres_2sg
+      - Pres_3sg
+      - Pres_1pl
+      - Pres_2pl
+      - Pres_3pl
+      - Imperative_2sg
+      - Imperative_1pl
+      - Imperative_2pl
+      - Past_m
+      - Past_f
+      - Past_n
+      - Past_pl
+      - Participle_Active_Present
+      - Participle_Active_Past
+      - Participle_Passive_Present
+      - Participle_Passive_Past
+      - Participle_Adverbial_Present
+      - Participle_Adverbial_Past
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - Source_Note
+      - Verification Notes
+
+  ua_visual:
+    fields:
+      - NoteID
+      - Diagram
+      - Prefix
+      - Verb_Impf_Sg
+      - Verb_Perf_Sg
+      - Verb_Impf_Pl
+      - Verb_Perf_Pl
+      - Government_Notes
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - Verification Notes
+
+  ua_pvom_infinitive:
+    fields:
+      - NoteID
+      - Prefix
+      - Walking_Multi_UA
+      - Walking_Multi_Typing
+      - Walking_Multi_Euphony
+      - Walking_Uni_UA
+      - Walking_Uni_Typing
+      - Walking_Uni_Euphony
+      - Vehicle_Multi_UA
+      - Vehicle_Multi_Typing
+      - Vehicle_Multi_Euphony
+      - Vehicle_Uni_UA
+      - Vehicle_Uni_Typing
+      - Vehicle_Uni_Euphony
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - Walking_Multi_Euphony
+      - Walking_Uni_Euphony
+      - Vehicle_Multi_Euphony
+      - Vehicle_Uni_Euphony
+      - Verification Notes
+
+suspension_policy:
+  tag_suspend:
+    - status:draft
+    - stress:unverified
+    - conj:suspended
+  flag_suspend:
+    - 1  # red flag only

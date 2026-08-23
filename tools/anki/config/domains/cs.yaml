@@ -1,0 +1,66 @@
+domain: cs
+display_name: Czech
+apostrophe: "'"  # ASCII apostrophe (Czech uses ASCII)
+
+note_types:
+  cs_lexeme:
+    fields:
+      - NoteID
+      - Lemma
+      - PartOfSpeech
+      - Gender
+      - EN_Gloss
+      - DE_Gloss
+      - FR_Gloss
+      - SK_Gloss
+      - PL_Gloss
+      - UA_Gloss
+      - Govt_Case
+      - IrregularForms
+      - Mnemonic_EN
+      - ConfusableSet
+      - CompareScenario
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - CS_Example
+      - EN_Example
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - CompareScenario
+      - Mnemonic_EN
+      - Verification Notes
+
+  cs_alphabet:
+    fields:
+      - NoteID
+      - Letter
+      - IPA_Symbol
+      - Type
+      - Description
+      - Example_Word
+      - EN_Gloss
+      - Language_Analogs
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - Verification Notes
+
+suspension_policy:
+  tag_suspend:
+    - status:draft
+    - stress:unverified
+  flag_suspend:
+    - 1  # red flag only

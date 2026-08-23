@@ -172,8 +172,14 @@ class TestSingleSourceOfTruth:
         assert cc.CANON_FIELD_ORDER["ua_pvom_infinitive"] is PVOM_FIELDS
 
     def test_all_five_ua_note_types_are_covered(self):
+        # Multi-domain support (added 2026-08-23): CANON_FIELD_ORDER now includes
+        # all domains (UA, CS, SK, DE, IPA), not just UA note types.
         assert set(cc.CANON_FIELD_ORDER) == {
             "ua_lexeme", "ua_grammar", "ua_visual", "ua_verb", "ua_pvom_infinitive",
+            "cs_lexeme", "cs_alphabet",
+            "sk_lexeme", "sk_alphabet",
+            "de_lexeme",
+            "ipa_phoneme",
         }
 
     def test_import_chain_stays_stdlib_only(self):

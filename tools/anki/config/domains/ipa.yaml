@@ -1,0 +1,35 @@
+domain: ipa
+display_name: IPA Phonemes
+apostrophe: "'"  # ASCII apostrophe
+
+note_types:
+  ipa_phoneme:
+    fields:
+      - NoteID
+      - Phoneme
+      - IPA_Symbol
+      - Type
+      - Description
+      - Manner_of_Articulation
+      - Place_of_Articulation
+      - Voicing
+      - Airflow
+      - Example_Words
+      - Language_Analogs
+      - Minimal_Pairs
+      - Confusable_With
+      - Mnemonic_EN
+      - EN_Gloss
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - Verification Notes
+
+suspension_policy:
+  tag_suspend:
+    - status:draft
+  flag_suspend:
+    - 1  # red flag only

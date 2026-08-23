@@ -1,0 +1,49 @@
+domain: de
+display_name: German
+apostrophe: "'"  # ASCII apostrophe
+
+note_types:
+  de_lexeme:
+    fields:
+      - NoteID
+      - Lemma
+      - PartOfSpeech
+      - Gender
+      - Article
+      - EN_Gloss
+      - CS_Gloss
+      - SK_Gloss
+      - UA_Gloss
+      - Govt_Case
+      - IrregularForms
+      - Mnemonic_EN
+      - ConfusableSet
+      - CompareScenario
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - DE_Example
+      - EN_Example
+      - Tags_Ch
+      - Source_URL
+      - Source_Note
+      - Verification Notes
+    computed_fields: []
+    always_present:
+      - Gender
+      - Article
+      - CompareA
+      - CompareB
+      - CompareC
+      - CompareD
+      - CompareScenario
+      - Mnemonic_EN
+      - Verification Notes
+
+suspension_policy:
+  tag_suspend:
+    - status:draft
+    - stress:unverified
+  flag_suspend:
+    - 1  # red flag only
