@@ -71,6 +71,8 @@ MODEL_NAME = "UA_PVOM_Infinitive"
 # notes, not one of which was PVOM.
 FLAG_DECK_QUERY = flag_query_for_model(MODEL_NAME)
 
+ANKI_URL = "http://127.0.0.1:8765"
+
 ANKI_FIELDS = [
     "NoteID",
     "Prefix",
@@ -202,7 +204,7 @@ def upsert_notes(pvom_dir, dry_run=False):
     # One bulk query for the whole sync run -- see get_flagged_note_ids_by_color.
     # Red still forces suspension; orange is a call-out only (2026-08-10, per
     # Craig -- see SUSPEND_FLAG_COLORS in tsv_to_anki.py).
-    flags_by_color = get_flagged_note_ids_by_color(FLAG_DECK_QUERY)
+    flags_by_color = get_flagged_note_ids_by_color(FLAG_DECK_QUERY, ANKI_URL)
     flagged_note_ids = flags_by_color[FLAG_RED]
     if flagged_note_ids:
         print(f"Found {len(flagged_note_ids)} note(s) with a red-flagged card -- keeping suspended.")

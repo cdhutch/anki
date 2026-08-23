@@ -68,6 +68,7 @@ class DomainConfig:
         if config_dir is None:
             config_dir = Path(__file__).parent.parent / "config" / "domains"
 
+
         config_path = config_dir / f"{domain}.yaml"
         if not config_path.exists():
             raise FileNotFoundError(f"Domain config not found: {config_path}")

@@ -32,8 +32,8 @@ from tools.anki.lib.domain_config import DomainConfig  # noqa: E402
 from tools.anki.sync.tsv_to_anki import anki_request  # noqa: E402
 
 ANKI_URL = "http://127.0.0.1:8765"
-DOMAINS_DIR = Path(__file__).resolve().parents[2] / "config" / "domains"
-NOTES_DIR = Path(__file__).resolve().parents[2] / "notes"
+DOMAINS_DIR = Path(__file__).resolve().parents[1] / "config" / "domains"
+NOTES_DIR = Path(__file__).resolve().parents[3] / "domains"
 
 # Mapping from note type to directory category
 NOTE_TYPE_CATEGORIES = {
@@ -148,18 +148,46 @@ def sync_notes_to_anki(
             continue
 
         anki_note = build_anki_note(cnsf_data, model_name, fields_list)
+        note_id = cnsf_data.get("note_id", "")
 
         try:
-            anki_request(
-                "addNote",
-                {
-                    "note": {
-                        **anki_note,
-                        "deckName": deck_name,
-                    }
-                },
-                url=ANKI_URL,
-            )
+            # Check if note already exists by NoteID
+            existing_anki_id = None
+            if note_id:
+                print(f"  DEBUG: Looking for existing note with NoteID={note_id}")
+                query = f'note:"{model_name}" NoteID:"{note_id}"'
+                results = anki_request("findNotes", {"query": query}, url=ANKI_URL) or []
+                if results:
+                    print(f"  DEBUG: Found existing note ID {results[0]}")
+                    existing_anki_id = int(results[0])
+
+            if existing_anki_id:
+                # Update existing note
+                print(f"  DEBUG: Updating note {existing_anki_id} with fields: {anki_note['fields']}")
+                anki_request(
+                    "updateNoteFields",
+                    {"note": {"id": existing_anki_id, "fields": anki_note["fields"]}},
+                    url=ANKI_URL,
+                )
+                # Update tags if present
+                if anki_note.get("tags"):
+                    existing_tags = anki_request("getNoteTags", {"note": existing_anki_id}, url=ANKI_URL) or []
+                    if existing_tags:
+                        anki_request("removeTags", {"notes": [existing_anki_id], "tags": " ".join(existing_tags)}, url=ANKI_URL)
+                    anki_request("addTags", {"notes": [existing_anki_id], "tags": " ".join(anki_note["tags"])}, url=ANKI_URL)
+            else:
+                # Create new note
+                anki_request(
+                    "addNote",
+                    {
+                        "note": {
+                            **anki_note,
+                            "deckName": deck_name,
+                            "options": {"allowDuplicate": False, "duplicateScope": "deck"},
+                        }
+                    },
+                    url=ANKI_URL,
+                )
             print(f"  ✓ {cnsf_path.name}")
             synced += 1
         except Exception as e:
@@ -188,7 +216,7 @@ def main():
     if not model_name:
         # Default: CS_Lexeme, SK_Alphabet, IPA_Phoneme, etc.
         parts = args.note_type.split("_")
-        model_name = "_".join(p.capitalize() for p in parts)
+        model_name = "_".join([parts[0].upper()] + [p.capitalize() for p in parts[1:]])
 
     # Determine category
     category = get_category_for_note_type(args.note_type)
