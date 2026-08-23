@@ -16,8 +16,8 @@ fields:
   CS_Gloss: slovo
   FR_Gloss: mot
   SK_Gloss: slovo
-  UA_Gloss: слово́
-  RU_Gloss: слово́
+  UA_Gloss: сло́во
+  RU_Gloss: сло́во
   Source_URL: https://der-die-das-train.com/Wort/
   Source_Note: Gender verified via Der-Die-Das Training
   Verification Notes: ''

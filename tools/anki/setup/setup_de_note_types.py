@@ -70,8 +70,26 @@ DE_LEXEME_BACK = """\
 <div style="font-size: 10px; color: #999; margin-top: 16px;">{{NoteID}}</div>
 """
 
+EN_DE_FRONT = """\
+<div style="font-size: 22px; font-weight: bold; margin-bottom: 8px;">{{EN_Gloss}}</div>
+{{#EN_Example}}<div style="font-size: 15px; margin-top: 10px; font-style: italic;">{{EN_Example}}</div>{{/EN_Example}}
+"""
+
+EN_DE_BACK = """\
+{{FrontSide}}
+<hr>
+<div style="font-size: 28px; font-weight: bold; margin-bottom: 8px;">{{Lemma}}</div>
+<div style="font-size: 13px; color: #666;">{{PartOfSpeech}}{{#Gender}} · {{Gender}}{{/Gender}}</div>
+{{#CS_Gloss}}<div style="font-size: 14px; color: #666;">CS: {{CS_Gloss}}</div>{{/CS_Gloss}}
+{{#FR_Gloss}}<div style="font-size: 14px; color: #666;">FR: {{FR_Gloss}}</div>{{/FR_Gloss}}
+{{#SK_Gloss}}<div style="font-size: 14px; color: #666;">SK: {{SK_Gloss}}</div>{{/SK_Gloss}}
+{{#DE_Example}}<div style="font-size: 13px; color: #999; margin-top: 10px;">{{DE_Example}}</div>{{/DE_Example}}
+<div style="font-size: 10px; color: #999; margin-top: 16px;">{{NoteID}}</div>
+"""
+
 DE_LEXEME_CARD_TEMPLATES = [
-    {"Name": "Recognition", "Front": DE_LEXEME_FRONT, "Back": DE_LEXEME_BACK},
+    {"Name": "DE→EN", "Front": DE_LEXEME_FRONT, "Back": DE_LEXEME_BACK},
+    {"Name": "EN→DE", "Front": EN_DE_FRONT, "Back": EN_DE_BACK},
 ]
 
 # ---------------------------------------------------------------------------

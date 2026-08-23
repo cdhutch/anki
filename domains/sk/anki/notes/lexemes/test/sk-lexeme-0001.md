@@ -16,8 +16,8 @@ fields:
   CS_Gloss: slovo
   DE_Gloss: Wort
   FR_Gloss: mot
-  UA_Gloss: слово́
-  RU_Gloss: слово́
+  UA_Gloss: сло́во
+  RU_Gloss: сло́во
   Source_URL: https://m.dict.cc/slovak-english/slovo.html
   Source_Note: Gender verified via dict.cc Slovak-English Dictionary
   Verification Notes: ''
