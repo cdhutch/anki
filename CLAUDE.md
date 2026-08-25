@@ -1,10 +1,6 @@
 # CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
-**Current work**: UA domain -- Ch-09 motion-verb polish punch list (7/7 items) complete as of
-2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling
-built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see
-[CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring
-(item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
+**Current work**: UA domain -- Class G homograph audit (ua-lexeme-0143/0182, вид) complete and synced as of 2026-08-25. Ch-09 motion-verb polish punch list (7/7 items) complete as of 2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring (item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
 2026-07-27: Fixed `audit_legacy_lexeme.py` to filter for chapter 2.9.x notes only (was comparing
 against all 569 canonical notes, now correctly compares against 259 ch-09 notes); audit now
 shows 59 safe-to-delete legacy vocabulary matches. Created дорогий polysemy split following the
@@ -992,6 +988,16 @@ the since-deleted `inspect_deck_configs.py` was wrong): `newGatherPriority` 0=De
 `DECK_PRESETS.md` §5 holds two approved-but-unapplied changes — normalising the two older
 B737 presets and renaming `B737 FSRS Core (0n_200r)`, whose name promises 200 reviews/day
 against an actual 9999.
+
+2026-08-25: **Class G audit error fixed — homograph pair ua-lexeme-0143/0182 (вид) made structurally symmetric.** Found during canonicalization that the homograph siblings had mismatched `CompareA`/`CompareB` field structures. ua-lexeme-0143 (вид = "kind/type") held bare word `вид` repeated in both fields, while ua-lexeme-0182 (вид = "grammatical aspect") held Ukrainian example sentences. Per Shape 1 (homograph mode) Compare-card design, both notes must have **identical** CompareA/B — namely, example sentences that demonstrate each sense of the homograph, with the distinction between which sense is "correct" coming from each note's individual `CompareScenario` and `Homograph_SenseA`/`SenseB` fields. Fixed by updating ua-lexeme-0143's `CompareA` and `CompareB` from bare `вид` to the matching example sentences:
+- **CompareA:** "Який вид спорту ти любиш?" (demonstrating kind/type sense)
+- **CompareB:** "Дієслово "читати" має недоконаний вид." (demonstrating aspect sense)
+
+Both notes now have identical example sentences, with each note's `CompareScenario` guiding which sense is pedagogically relevant for that note's context. ua-lexeme-0143 retained as the kind/type sense note, 0182 as the aspect sense note. Synced via `make ua-lexeme` after canonicalization; red flags cleared, Compare cards now render identically on both siblings. Spot-checked in Anki browser — rendering correct.
+
+Also created two audit scripts (not yet exercised on the full corpus, filed for future use):
+- `tools/anki/inspect/audit_registry_vs_cnsf.py` — validates that `confusable_clusters.yaml` registry members exist in CNSF, CNSF Compare-data notes are listed in registry, and lemma consistency between registry and CNSF.
+- `tools/anki/inspect/analyze_registry_compare_data.py` — surveys registry structure and CNSF Compare-field population to identify gaps in field coverage.
 
 ## Workflow Notes
 

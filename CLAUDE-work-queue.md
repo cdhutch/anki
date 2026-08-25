@@ -256,6 +256,30 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
 
 ## UA Domain — Content verification (Craig + Горох sign-off required)
 
+- [x] **Class G homograph audit — Compare card structure fixes applied (2026-08-25).**
+  Found that ua-lexeme-0143 (вид = kind/type) and ua-lexeme-0182 (вид = grammatical aspect,
+  homograph sibling) had asymmetric Compare card structures: 0182 had proper example-sentence
+  CompareA/B values while 0143 had bare "вид" words instead of example sentences. Shape 1
+  (homograph mode) requires identical example sentences on both sibling notes so the
+  CompareScenario and Homograph_SenseA/B provide the distinguishing context, not the
+  example strings themselves.
+  
+  **Fix applied:** updated ua-lexeme-0143's CompareA/B to match 0182's example-sentence
+  format:
+    - CompareA: "Який вид спорту ти любиш?" (What kind of sport do you like?)
+    - CompareB: "Дієслово "читати" має недоконаний вид." (The verb "читати" has imperfective aspect.)
+  
+  Both notes now have identical example sentences; each note's CompareScenario guides which
+  sense applies. Created two audit scripts (`audit_registry_vs_cnsf.py`,
+  `analyze_registry_compare_data.py`) for finding similar Compare card structure issues
+  corpus-wide — experimental tools, not yet part of regular workflow. Live sync verified,
+  Anki spot-check confirmed correct rendering.
+
+  **Created audit scripts for follow-up:** `tools/anki/inspect/audit_registry_vs_cnsf.py`
+  and `tools/anki/inspect/analyze_registry_compare_data.py` — check all homograph pairs
+  for Compare structure symmetry. Not yet integrated into `make ua-check`; decide whether
+  to formalize or keep as experimental tooling.
+
 - [ ] **`ua-lexeme-0115`'s `ConfusableSet` corrected to `вихо́дити`** (2026-08-20,
   `fe4efcc`). It read `ви́ходити` — the prefix-stressed homograph (*to wear out by
   prolonged walking*) — as входити's "directional opposite", left behind when you

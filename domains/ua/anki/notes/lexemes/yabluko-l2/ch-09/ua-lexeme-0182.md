@@ -31,19 +31,20 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: "вид (1st sense, homograph - unrelated meaning: kind, type) - see ua-lexeme-0143\n\
-    Scenario A: Describing whether a verb is perfective or imperfective, e.g. in a grammar\
-    \ explanation\n-> Use: вид (grammatical aspect - this note's sense)\nScenario B: Describing\
-    \ what kind of sport someone does, e.g. вид спорту\n-> Use: вид (kind/type - see ua-lexeme-0143)\n\
-    Key distinction: same spelling, unrelated meanings - a true homograph. This sense is the\
-    \ grammatical term underlying every Perfective/imperfective verb pair in this corpus.\n\
-    Also note: ua-lexeme-0143's kind/type sense of вид (not this note's sense) is a convergent\
-    \ synonym with тип (ua-lexeme-0306) -- see 0306's own Compare card for that тип/вид discrimination.\
-    \ This grammatical-aspect sense doesn't participate in that pairing; тип has no meaningful\
-    \ overlap with 'aspect,' only with the OTHER (homograph) sense of вид.\n"
+  ConfusableSet: 'вид (1st sense, homograph - unrelated meaning: kind, type) - see ua-lexeme-0143
+    Scenario A: Describing whether a verb is perfective or imperfective, e.g. in a grammar
+    explanation -> Use: вид (grammatical aspect - this note''s sense) Scenario B: Describing
+    what kind of sport someone does, e.g. вид спорту -> Use: вид (kind/type - see ua-lexeme-0143)
+    Key distinction: same spelling, unrelated meanings - a true homograph. This sense is the
+    grammatical term underlying every Perfective/imperfective verb pair in this corpus. Also
+    note: ua-lexeme-0143''s kind/type sense of вид (not this note''s sense) is a convergent
+    synonym with тип (ua-lexeme-0306) -- see 0306''s own Compare card for that тип/вид discrimination.
+    This grammatical-aspect sense doesn''t participate in that pairing; тип has no meaningful
+    overlap with ''aspect,'' only with the OTHER (homograph) sense of вид. '
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: ''
+  CompareScenario: You're learning about verb grammar—what word describes whether a verb is
+    completed or ongoing?
   CompareA: Який вид спорту ти любиш?
   CompareB: Дієслово "читати" має недоконаний вид.
   CompareC: ''
@@ -79,6 +80,8 @@ fields:
     can''t hold two identically-spelled вид chips distinguishing different senses). The тип/вид
     confusables card lives entirely on 0306''s own note, same division of labor as the existing
     0143/0306 precedent. Flagged this constraint to Craig; a real 3-way card would require
-    a template change, not just a content edit.'
+    a template change, not just a content edit. 2026-08-25: updated CompareScenario to be
+    more specific and contextual, signaling the grammatical-aspect sense rather than a generic
+    homograph-sense-disambiguation prompt.'
 ---
 
