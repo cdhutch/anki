@@ -80,9 +80,25 @@ def get_required_compare_fields(cluster_size):
     return required
 
 
-def get_referenced_lemmas(note_ids, notes_by_id):
-    """Get all Lemma values from referenced notes."""
+def get_referenced_lemmas(note_ids, notes_by_id, own_lemma=None):
+    """
+    Get all Lemma values from referenced notes, plus the note's own Lemma.
+
+    Args:
+        note_ids: List of note IDs to look up
+        notes_by_id: Dict mapping note_id → note_data
+        own_lemma: The validating note's own Lemma value (included in the set)
+
+    Returns:
+        Set of Lemma strings from referenced notes plus own_lemma
+    """
     lemmas = set()
+
+    # Add the note's own Lemma first (CompareA should match this)
+    if own_lemma:
+        lemmas.add(own_lemma)
+
+    # Add Lemmas from all referenced notes (for CompareB/C/D)
     for note_id in note_ids:
         if note_id in notes_by_id:
             lemma = notes_by_id[note_id]['data'].get('fields', {}).get('Lemma', '').strip()
@@ -152,8 +168,9 @@ class TestClusterDetectionViaBFS:
         """
         Test that pending-confusable tagged notes are excluded from cluster size.
 
-        Two-item cluster: 0463 (рух) + pending reference to затор
-        With exclude_pending=True, cluster size = 1
+        Two-item cluster: 0463 (рух) + затор (0464)
+        With exclude_pending=True, both are included initially.
+        After marking 0464 as pending, cluster size = 1 (0464 excluded)
         """
         notes_by_id = {
             'ua-lexeme-0463': {
@@ -162,7 +179,7 @@ class TestClusterDetectionViaBFS:
                         'Lemma': 'рух',
                         'ConfusableSet': 'ua-lexeme-0464'
                     },
-                    'tags': ['pending-confusable:затор']
+                    'tags': []
                 }
             },
             'ua-lexeme-0464': {
@@ -176,8 +193,7 @@ class TestClusterDetectionViaBFS:
             }
         }
 
-        # With exclude_pending=True, 0464 is skipped if it were pending
-        # Here 0464 is not pending, so it's included
+        # With exclude_pending=True, both notes are not pending, so both included
         cluster = bfs_cluster('ua-lexeme-0463', notes_by_id, exclude_pending=True)
         assert len(cluster) == 2
 
@@ -273,7 +289,8 @@ class TestCompareFieldValidation:
         }
 
         referenced_ids = extract_note_ids_from_confusable(notes_by_id['ua-lexeme-0099']['data']['fields']['ConfusableSet'])
-        referenced_lemmas = get_referenced_lemmas(referenced_ids, notes_by_id)
+        own_lemma = notes_by_id['ua-lexeme-0099']['data']['fields']['Lemma'].strip()
+        referenced_lemmas = get_referenced_lemmas(referenced_ids, notes_by_id, own_lemma)
 
         # All three Compare values should be in referenced_lemmas
         for field_name in ['CompareA', 'CompareB', 'CompareC']:
@@ -347,7 +364,8 @@ class TestCompareFieldValidation:
         }
 
         referenced_ids = extract_note_ids_from_confusable(notes_by_id['ua-lexeme-0200']['data']['fields']['ConfusableSet'])
-        referenced_lemmas = get_referenced_lemmas(referenced_ids, notes_by_id)
+        own_lemma = notes_by_id['ua-lexeme-0200']['data']['fields']['Lemma'].strip()
+        referenced_lemmas = get_referenced_lemmas(referenced_ids, notes_by_id, own_lemma)
 
         # Invalid Compare value
         compare_value = 'неправильный'
