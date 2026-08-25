@@ -11,7 +11,6 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adjective
-- stress:unverified
 - status:draft
 - needs-confusable-set
 fields:

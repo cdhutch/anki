@@ -10,9 +10,6 @@ Suspension policy:
     - status:draft → suspend cards after import (inactive verbs)
     - status:verified → unsuspend cards (active verbs, used in current chapters)
     - conj:suspended tag → keep suspended (reference only, not for drilling)
-    - stress:unverified tag → keep suspended (stress not yet confirmed against Горох,
-      2026-07-25) — takes precedence over status:verified; a verb isn't ready for
-      drilling if its stress marks haven't been confirmed, verified content or not
     - note has a red-flagged card → keep suspended (added 2026-07-31, per Craig
       -- see get_flagged_note_ids_by_color in tsv_to_anki.py). Only checked
       for existing notes; a brand-new note can't already have a flagged card.
@@ -154,18 +151,13 @@ def parse_note_file(path: Path) -> dict | None:
 
 def should_suspend(tags: list[str]) -> bool:
     """Suspension policy for UA_Verb cards (see module docstring):
-        - conj:suspended tag    → always suspend (reference verbs, not for drilling)
-        - status:draft tag      → suspend (inactive/unreviewed)
-        - stress:unverified tag → suspend (stress not yet confirmed against Горох,
-          2026-07-25) -- independent of status:draft/verified, since a verb can be
-          content-verified but still carry unconfirmed stress marks
-        - otherwise (status:verified, no unverified stress) → unsuspend, ready for
-          drilling
+        - conj:suspended tag → always suspend (reference verbs, not for drilling)
+        - status:draft tag   → suspend (inactive/unreviewed)
+        - otherwise (status:verified) → unsuspend, ready for drilling
     """
     return (
         "conj:suspended" in tags
         or "status:draft" in tags
-        or "stress:unverified" in tags
     )
 
 

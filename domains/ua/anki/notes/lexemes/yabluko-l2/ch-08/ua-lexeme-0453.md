@@ -11,7 +11,6 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adverb
-- stress:verified
 - status:verified
 - pending-confusable:зазвичай
 - pending-confusable:звичайно

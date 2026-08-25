@@ -12,7 +12,6 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:pvom_infinitive
-- stress:verified
 - status:verified
 - conj:drill
 fields:

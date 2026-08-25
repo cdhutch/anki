@@ -12,7 +12,6 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- stress:unverified
 - status:draft
 fields:
   NoteID: ua-verb-0087
@@ -50,8 +49,8 @@ fields:
     forms look like a mismatched/corrupted verb (possibly a truncated "поплинути," by the
     same pattern as the ua-verb-0009/плинути mix-up flagged on ua-verb-0086''s note), and
     the past-tense forms (попи́в/попи́ла/попи́ло/попи́ли) match "попити" (to drink up), not
-    попливти. ua-verb-0010 is tagged stress:unverified. Flagging alongside the ua-verb-0009
-    finding for your review/decision rather than editing that existing note myself. This new
-    note (0087) uses the Горох-verified поплисти paradigm.'
+    попливти. ua-verb-0010 is unverified. Flagging alongside the ua-verb-0009 finding for
+    your review/decision rather than editing that existing note myself. This new note (0087)
+    uses the Горох-verified поплисти paradigm.'
 ---
 

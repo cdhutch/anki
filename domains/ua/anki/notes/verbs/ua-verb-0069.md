@@ -11,7 +11,6 @@ tags:
 - ch:2.9.6
 - conj:suspended
 - status:draft
-- stress:unverified
 fields:
   NoteID: ua-verb-0069
   Lemma: перепрошувати

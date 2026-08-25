@@ -12,7 +12,6 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
-- stress:verified
 - status:verified
 - conj:drill
 fields:
@@ -52,7 +51,7 @@ fields:
     in the -мо form only, per the 2026-08-04 decision; primary forms only, so the -но emphatic
     imperative and colloquial variants (приходе, приходіть) are not stored; apostrophe normalised
     to U+02BC. Claude sourced and drafted these. 2026-08-19: Craig independently verified
-    all sixteen notes (ua-verb-0017-0032) against Горох and set stress:verified himself; he
+    all sixteen notes (ua-verb-0017-0032) against Горох and marked as verified himself; he
     separately confirmed the rule that the prefixed imperfectives carry stress on -хо́-. No
     field values changed as part of that pass, only the tag.'
 ---

@@ -12,7 +12,6 @@ tags:
 - ch:2.8.3
 - pos:phrase
 - phrase:verb
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0488

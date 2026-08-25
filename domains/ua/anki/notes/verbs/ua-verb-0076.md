@@ -11,7 +11,6 @@ tags:
 - ch:2.8.3
 - conj:suspended
 - status:draft
-- stress:unverified
 fields:
   NoteID: ua-verb-0076
   Lemma: стосуватися

@@ -13,7 +13,6 @@ tags:
 - pos:adverb
 - fixed-phrase
 - ch:2.9.7
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0247

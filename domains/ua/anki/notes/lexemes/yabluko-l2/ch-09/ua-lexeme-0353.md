@@ -11,7 +11,6 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - pos:adverb
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0353
@@ -54,6 +53,6 @@ fields:
     that looked live. With the alternate in its proper field the fallback had zero users and
     was deleted in the same commit; EuphonyNote keeps the prose as human explanation. Drafted
     by Claude, NOT verified -- the alternate is Craig''s own earlier Горох-sourced wording,
-    but the field placement is new and stress:verified predates it.'
+    but the field placement is new and verification predates it.'
 ---
 

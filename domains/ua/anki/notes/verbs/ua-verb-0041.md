@@ -11,7 +11,6 @@ tags:
 - ch:2.9.3
 - conj:suspended
 - status:draft
-- stress:unverified
 fields:
   NoteID: ua-verb-0041
   Lemma: відбивати

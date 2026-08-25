@@ -11,7 +11,6 @@ tags:
 - ch:2.9.2
 - conj:suspended
 - status:verified
-- stress:verified
 fields:
   NoteID: ua-verb-0036
   Lemma: програвати

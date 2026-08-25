@@ -12,7 +12,6 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
 - pending-confusable:погода
 - pending-confusable:природа

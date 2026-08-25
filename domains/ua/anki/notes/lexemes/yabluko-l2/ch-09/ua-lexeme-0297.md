@@ -13,7 +13,6 @@ tags:
 - pos:adjective
 - phrase:adjective
 - ch09-phrase
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0297

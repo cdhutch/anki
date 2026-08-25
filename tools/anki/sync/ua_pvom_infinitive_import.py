@@ -10,10 +10,6 @@ needed, unlike the old single-form schema this replaced.
 Suspension policy (added 2026-07-31 -- this script previously had none at
 all, so a card suspended by accident here, e.g. a mistyped Command-1/Alt-1
 during review, stayed suspended forever; nothing ever re-asserted a state):
-    - stress:unverified tag → suspend (stress not yet confirmed against Горох,
-      matching the "not ready for drilling until confirmed" rationale used in
-      ua_verb_import.py. Cleared on all 13 by Craig's 2026-08-18 Горох pass in
-      05d8e74; the check stays, since a future note starts unverified.)
     - status:draft tag → suspend (inactive/unreviewed)
     - conj:suspended tag → always suspend (added 2026-08-19, per Craig --
       reference only, not for drilling). Mirrors ua_verb_import.py, where the
@@ -114,17 +110,15 @@ def anki_connect(action, params=None):
 def should_suspend(tags):
     """Suspension policy for UA_PVOM_Infinitive cards -- see module docstring.
 
-    Three independent axes, matching ua_verb_import.py:
-        - stress:unverified → data not confirmed against Горох
+    Two independent axes, matching ua_verb_import.py:
         - status:draft      → content not reviewed
         - conj:suspended    → reviewed and correct, but deliberately not drilled
     Any one of them suspends. Keeping them separate is what lets a note be
-    verified on both quality axes and still held out of the rotation without
+    verified on quality axis and still held out of the rotation without
     lying about its review state.
     """
     return (
-        "stress:unverified" in tags
-        or "status:draft" in tags
+        "status:draft" in tags
         or "conj:suspended" in tags
     )
 
