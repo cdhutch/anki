@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - pos:adverb
 - status:verified
+- cluster:intensifier-adverbs
 fields:
   NoteID: ua-lexeme-0468
   Lemma: набага́то
@@ -28,12 +29,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: 'значно (ua-lexeme-0467) -- convergent synonym, not a homograph: both intensify
-    a comparative ("significantly/much X-er"), but differ in register. набагато is the everyday
-    conversational intensifier -- common in casual spoken comparisons. значно is the more
-    formal, measured intensifier -- common in written or analytical comparisons (prices, statistics,
-    official descriptions). Key distinction: набагато = everyday "much/by far"; значно = formal/measured
-    "significantly."'
+  ConfusableSet: Satellite note in intensifier-adverbs cluster; hub is ua-lexeme-0467 (значно).
+    See domains/ua/anki/confusable_clusters.yaml for full cluster. набагато = everyday, conversational
+    intensity; значно = formal, measured intensity. Both intensify comparatives but differ
+    markedly in register.
   Mnemonic_EN: значно = measured, written-register "significantly"; набагато = everyday spoken
     "much/by far" -- same job (intensifying a comparative), different register.
   CompareScenario: Comparing two hotel rooms right after checking in, you tell a friend casually
@@ -51,9 +50,10 @@ fields:
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/набагато
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
-  Verification Notes: 'Convergent synonym with значно (ua-lexeme-0467); cross-linked per bucket
-    4. 2026-07-28: found during a corpus-wide Compare-card audit that ConfusableSet had been
-    populated with just the bare cross-reference word and no CompareScenario/CompareA/CompareB
+  Verification Notes: 'Satellite note in intensifier-adverbs cluster per 2026-08-25 registry
+    migration; hub is ua-lexeme-0467. Convergent synonym with значно (ua-lexeme-0467); cross-linked
+    per bucket 4. 2026-07-28: found during a corpus-wide Compare-card audit that ConfusableSet
+    had been populated with just the bare cross-reference word and no CompareScenario/CompareA/CompareB
     -- same authoring gap that caused the ua-lexeme-0305 bug (importer auto-derive fallback
     firing instead of a hand-authored card). Built out a proper Shape 2 confusables card:
     CompareScenario tailored to elicit набагато''s everyday spoken register, CompareA/CompareB

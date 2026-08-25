@@ -115,6 +115,7 @@ FIELDS = [
     "CompareB",
     "CompareC",
     "CompareD",
+    "CompareMembers",  # JSON array of cluster member lemmas; overrides CompareA-D for clusters
     "Homograph_SenseA",  # EN sense for CompareA (homographs only)
     "Homograph_SenseB",  # EN sense for CompareB (homographs only)
     "CrossLang_Analog",

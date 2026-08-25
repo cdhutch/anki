@@ -56,10 +56,13 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from typing import List  # noqa: E402
+
 from tools.anki.lib.typing_target import (  # noqa: E402,F401
     compute_typing_target,
     strip_stress,
 )
+from tools.anki.lib.confusable_clusters import ClusterRegistry  # noqa: E402,F401
 from tools.anki.sync.tsv_to_anki import (  # noqa: E402
     FLAG_ORANGE,
     FLAG_RED,
@@ -373,6 +376,40 @@ def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[
     return confusable, lemma
 
 
+def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
+    """Serialize cluster members to JSON array for Compare card rendering.
+
+    Returns JSON string of member lemmas if note is a cluster member,
+    empty string otherwise. Only includes sourced (active) members.
+
+    Args:
+        note_id: The note's ID (e.g., 'ua-lexeme-0467')
+        tags: List of tags from the note (used only for _IsHomograph flag)
+
+    Returns:
+        JSON string like '["значно", "набагато"]' or '' if not clustered
+    """
+    try:
+        registry = ClusterRegistry()
+        # Query by note_id to see if this note is in any cluster
+        cluster = registry.get_cluster_by_note_id(note_id)
+        if not cluster:
+            return ""
+
+        # Get compare card members (hub shows all; satellites show hub + self)
+        members = registry.get_compare_card_members(note_id)
+        if not members:
+            return ""
+
+        # Extract lemmas and serialize to JSON
+        lemmas = [member.lemma for member in members]
+        return json.dumps(lemmas, ensure_ascii=False)
+    except Exception as e:
+        # Log warning but don't fail import
+        print(f"Warning: Failed to load cluster members for {note_id}: {e}")
+        return ""
+
+
 def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:
     """Import a single parsed note. Returns 'added', 'updated', or 'skipped'.
 
@@ -462,13 +499,26 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     # side chip via {{CompareB}}, leaking the answer. compute_compare_options
     # is now only a fallback for notes that predate that redesign and have
     # never had CompareA/CompareB authored.
-    already_authored = fields.get("CompareA", "").strip() and fields.get("CompareB", "").strip()
-    if not is_homograph and not already_authored:
-        compare_a, compare_b = compute_compare_options(
-            note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
-        )
-        fields["CompareA"] = compare_a
-        fields["CompareB"] = compare_b
+    # Handle Compare field logic: cluster members, legacy fields, or fallback
+    cluster_members_json = get_cluster_compare_members_json(note_id, tags)
+
+    if cluster_members_json:
+        # Cluster members populate CompareMembers, leave Compare fields blank
+        fields["CompareMembers"] = cluster_members_json
+        fields["CompareA"] = ""
+        fields["CompareB"] = ""
+        fields["CompareC"] = ""
+        fields["CompareD"] = ""
+    else:
+        # Legacy logic: auto-derive CompareA/B from ConfusableSet if not already authored
+        already_authored = fields.get("CompareA", "").strip() and fields.get("CompareB", "").strip()
+        if not is_homograph and not already_authored:
+            compare_a, compare_b = compute_compare_options(
+                note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
+            )
+            fields["CompareA"] = compare_a
+            fields["CompareB"] = compare_b
+        fields["CompareMembers"] = ""
 
     # Suspension policy -- see module docstring.
     suspend = "status:draft" in tags
