@@ -3,13 +3,11 @@
 
 Scans all UA note-type corpora (lexemes, verbs, grammar, visual, pvom) for notes
 carrying any of these "not verified" signals:
-  - stress:unverified tag — stress marks not yet confirmed against Горох
   - status:draft tag       — content not yet reviewed by Craig
   - no status tag at all   — neither status:draft nor status:verified present; flagged
     separately so it's never silently conflated with a deliberate status:draft
 
-A note can have more than one reason at once (e.g. status:verified content whose
-stress is still stress:unverified — see ua_verb_import.py's should_suspend()).
+A note can have more than one reason at once.
 
 Usage:
     python -m tools.anki.inspect.list_unverified
@@ -52,8 +50,6 @@ def _read_meta(path: Path) -> dict[str, Any] | None:
 
 def _reasons(tags: list[str]) -> list[str]:
     reasons = []
-    if "stress:unverified" in tags:
-        reasons.append("stress:unverified")
     if "status:draft" in tags:
         reasons.append("status:draft")
     elif "status:verified" not in tags:
