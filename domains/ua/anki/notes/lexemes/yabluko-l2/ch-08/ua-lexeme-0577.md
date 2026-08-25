@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:f
 - animate:true
-- stress:unverified
 - status:draft
 fields:
   NoteID: ua-lexeme-0577

@@ -12,7 +12,6 @@ tags:
 - phase:2a
 - class:prefixed
 - ch:2.9.4
-- stress:verified
 - status:verified
 - conj:suspended
 fields:

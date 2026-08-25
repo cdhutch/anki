@@ -12,7 +12,6 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- stress:unverified
 - status:draft
 fields:
   NoteID: ua-verb-0087

@@ -11,7 +11,6 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adjective
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0446

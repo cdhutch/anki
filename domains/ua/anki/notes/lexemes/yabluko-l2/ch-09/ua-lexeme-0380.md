@@ -12,7 +12,6 @@ tags:
 - ch:2.9.6
 - pos:noun
 - gender:n
-- stress:verified
 - status:verified
 - homograph:true
 fields:

@@ -12,7 +12,6 @@ tags:
 - ch:2.8.3
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
 - pending-confusable:вигляд
 - pending-confusable:доглядати

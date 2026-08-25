@@ -11,7 +11,6 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:numeral
-- stress:verified
 - status:verified
 - pending-confusable:скільки
 - pending-confusable:декілька

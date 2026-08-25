@@ -12,7 +12,6 @@ tags:
 - ch:2.9.4
 - pos:verb
 - motion:base
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0582

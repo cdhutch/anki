@@ -13,7 +13,6 @@ tags:
 - pos:preposition
 - phrase:preposition
 - ch09-phrase
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0365

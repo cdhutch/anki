@@ -12,7 +12,6 @@ tags:
 - ch:2.8.5
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-lexeme-0508

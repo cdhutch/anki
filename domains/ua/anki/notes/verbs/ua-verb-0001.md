@@ -12,7 +12,6 @@ tags:
 - phase:2a
 - conj:drill
 - ch:2.9.2
-- stress:verified
 - status:verified
 fields:
   NoteID: ua-verb-0001
