@@ -17,8 +17,33 @@ UA_DECK_TREE = {
 }
 
 def anki_request(action, params=None, url="http://localhost:8765"):
-    """Stub AnkiConnect request (would connect to real Anki)"""
-    pass
+    """Make an HTTP POST request to AnkiConnect and return the response."""
+    import json
+    import urllib.request
+
+    request_body = {
+        "jsonrpc": "2.0",
+        "action": action,
+        "version": 6
+    }
+    if params:
+        request_body["params"] = params
+
+    try:
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(request_body).encode('utf-8'),
+            headers={'Content-Type': 'application/json'}
+        )
+        with urllib.request.urlopen(req, timeout=10) as response:
+            result = json.loads(response.read().decode('utf-8'))
+            if result.get("error"):
+                print(f"AnkiConnect error: {result['error']}")
+                return None
+            return result.get("result")
+    except Exception as e:
+        print(f"AnkiConnect request failed: {e}")
+        return None
 
 def describe_note_ids(note_ids, note_type=None):
     """Convert note IDs to human-readable format"""
