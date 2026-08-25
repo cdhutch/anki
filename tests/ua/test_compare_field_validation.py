@@ -22,18 +22,25 @@ def extract_note_ids_from_confusable(confusable_set_text):
     return re.findall(note_id_pattern, confusable_set_text)
 
 
-def get_referenced_lemmas(note_ids: List[str], all_notes_by_id: Dict) -> set:
+def get_referenced_lemmas(note_ids: List[str], all_notes_by_id: Dict, own_lemma: str = None) -> set:
     """
-    Get all Lemma values from referenced notes.
+    Get all Lemma values from referenced notes, plus the note's own Lemma.
 
     Args:
         note_ids: List of note IDs to look up
         all_notes_by_id: Dict mapping note_id → note_data
+        own_lemma: The validating note's own Lemma value (included in the set)
 
     Returns:
-        Set of Lemma strings from referenced notes
+        Set of Lemma strings from referenced notes plus own_lemma
     """
     lemmas = set()
+
+    # Add the note's own Lemma first (CompareA should match this)
+    if own_lemma:
+        lemmas.add(own_lemma)
+
+    # Add Lemmas from all referenced notes (for CompareB/C/D)
     for note_id in note_ids:
         if note_id in all_notes_by_id:
             note_data = all_notes_by_id[note_id]
@@ -78,6 +85,9 @@ def validate_compare_fields(
     if is_pending:
         return True, []  # Skip validation for pending-confusable notes
 
+    # Get the note's own Lemma (for CompareA validation)
+    own_lemma = note_data.get('fields', {}).get('Lemma', '').strip()
+
     # Get ConfusableSet
     confusable_set = note_data.get('fields', {}).get('ConfusableSet', '').strip()
     if not confusable_set:
@@ -89,10 +99,13 @@ def validate_compare_fields(
         # Old format only (bare lemmas) — skip for now, will be migrated
         return True, []
 
-    # Get referenced lemmas
-    referenced_lemmas = get_referenced_lemmas(referenced_ids, all_notes_by_id)
-    if not referenced_lemmas:
-        errors.append(f"ConfusableSet references note IDs {referenced_ids} but none exist in corpus")
+    # Get referenced lemmas (includes own_lemma + lemmas from referenced notes)
+    referenced_lemmas = get_referenced_lemmas(referenced_ids, all_notes_by_id, own_lemma)
+
+    # Check if any of the referenced note IDs actually exist in the corpus
+    any_exist = any(note_id in all_notes_by_id for note_id in referenced_ids)
+    if not any_exist:
+        errors.append(f"ConfusableSet references note IDs {referenced_ids} but does not exist in corpus")
         return False, errors
 
     # Validate each Compare field
