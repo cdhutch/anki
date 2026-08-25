@@ -40,16 +40,18 @@ fields:
     Also note: ua-lexeme-0143's kind/type sense of вид (not this note's sense) is a convergent\
     \ synonym with тип (ua-lexeme-0306) -- see 0306's own Compare card for that тип/вид discrimination.\
     \ This grammatical-aspect sense doesn't participate in that pairing; тип has no meaningful\
-    \ overlap with 'aspect,' only with the OTHER (homograph) sense of вид."
+    \ overlap with 'aspect,' only with the OTHER (homograph) sense of вид.\n"
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: Which sense of вид is being used?
+  CompareScenario: ''
   CompareA: Який вид спорту ти любиш?
   CompareB: Дієслово "читати" має недоконаний вид.
   CompareC: ''
   CompareD: ''
-  Homograph_SenseA: kind, type
-  Homograph_SenseB: grammatical aspect (perfective/imperfective)
+  Homograph_SenseA: 'kind or type of something (noun: a category or variety, as in different
+    sports)'
+  Homograph_SenseB: 'grammatical property of verbs (noun: whether a verb action is completed
+    or ongoing)'
   CrossLang_Analog: 'EN: aspect (grammatical category) · RU: вид (same term, cognate) - English
     verbs don''t mark aspect morphologically the way Slavic languages do; this is often the
     single hardest grammatical concept for English-speaking learners of Ukrainian.'
@@ -74,9 +76,9 @@ fields:
     card is committed to Shape 1 homograph-disambiguation with 0143, and that template shape
     only defines Homograph_SenseA/B (no C slot) -- a genuine 3-way interactive card combining
     тип with both senses of вид isn''t structurally supported (Shape 2 confusables mode also
-    can''t hold two identically-spelled "вид" chips distinguishing different senses). The
-    тип/вид confusables card lives entirely on 0306''s own note, same division of labor as
-    the existing 0143/0306 precedent. Flagged this constraint to Craig; a real 3-way card
-    would require a template change, not just a content edit.'
+    can''t hold two identically-spelled вид chips distinguishing different senses). The тип/вид
+    confusables card lives entirely on 0306''s own note, same division of labor as the existing
+    0143/0306 precedent. Flagged this constraint to Craig; a real 3-way card would require
+    a template change, not just a content edit.'
 ---
 

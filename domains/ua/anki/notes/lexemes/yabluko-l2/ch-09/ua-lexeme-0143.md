@@ -42,13 +42,15 @@ fields:
     \ with this note's active homograph pairing with ua-lexeme-0182."
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: Which sense of вид is being used?
+  CompareScenario: ''
   CompareA: Який вид спорту ти любиш?
   CompareB: Дієслово "читати" має недоконаний вид.
   CompareC: ''
   CompareD: ''
-  Homograph_SenseA: kind, type
-  Homograph_SenseB: grammatical aspect (perfective/imperfective)
+  Homograph_SenseA: 'kind or type of something (noun: a category or variety, as in different
+    sports)'
+  Homograph_SenseB: 'grammatical property of verbs (noun: whether a verb action is completed
+    or ongoing)'
   CrossLang_Analog: ''
   TypingAnswer: вид
   UA_Example: Який вид спорту тобі найбільше подобається?
