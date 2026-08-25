@@ -1,0 +1,22 @@
+---
+# Confusable word cluster registry
+# Defines semantic groupings of related/confusable words for comparison cards
+# Hub notes show all active cluster members; satellites show only the hub
+
+clusters:
+  intensifier-adverbs:
+    description: |
+      Intensifiers and adverbial comparatives: formal/measured (значно) vs everyday (набагато).
+      Both calibrate comparatives but differ in register and usage context.
+    canonical_note: ua-lexeme-0467
+    members:
+      - note_id: ua-lexeme-0467
+        lemma: значно
+        status: sourced
+        chapter: 2.8.3
+        comment: Formal, measured intensifier for written/analytical comparisons (Горох-verified)
+      - note_id: ua-lexeme-0468
+        lemma: набагато
+        status: sourced
+        chapter: 2.8.3
+        comment: Everyday conversational intensifier (Горох-verified)
