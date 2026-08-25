@@ -69,9 +69,14 @@ class TestEuphonyFieldCoverage:
 
 
 class TestShouldSuspend:
-    """Three independent suspend axes, mirroring test_ua_verb_import.py.
+    """Two independent suspend axes: status:draft and conj:suspended.
 
-    conj:suspended was added 2026-08-19. Before it, curation had no lever on
+    Per Option A refactoring (2026-08-25), stress:unverified is decoupled from
+    suspension logic. It is tracked as documentation but does not trigger
+    suspension.
+
+    conj:suspended was added 2026-08-19 as a third independent axis, but
+    stress:unverified is no longer one. Before it, curation had no lever on
     this note type: holding a note out of the drilling rotation meant tagging
     it status:draft, which asserts "unreviewed" and pulls a verified note back
     into list_unverified.py's report. These tests pin the separation so a
@@ -84,8 +89,9 @@ class TestShouldSuspend:
     def test_status_draft_suspends(self):
         assert should_suspend(["domain:ua", "status:draft"]) is True
 
-    def test_stress_unverified_suspends(self):
-        assert should_suspend(["stress:unverified"]) is True
+    def test_stress_unverified_does_not_suspend(self):
+        # Option A: stress:unverified is for documentation, not suspension.
+        assert should_suspend(["stress:unverified"]) is False
 
     def test_conj_suspended_suspends(self):
         assert should_suspend(["domain:ua", "status:verified", "conj:suspended"]) is True
@@ -105,13 +111,15 @@ class TestShouldSuspend:
             ["domain:ua", "stress:verified", "status:verified", "conj:drill"]
         ) is False
 
-    def test_stress_unverified_suspends_even_if_status_verified(self):
-        assert should_suspend(["status:verified", "stress:unverified"]) is True
+    def test_status_verified_and_stress_unverified_does_not_suspend(self):
+        # Option A: stress:unverified does not suspend even alongside status:verified.
+        assert should_suspend(["status:verified", "stress:unverified"]) is False
 
     def test_no_tags_unsuspends(self):
         assert should_suspend([]) is False
 
     def test_multiple_suspend_reasons_still_suspends(self):
+        # status:draft alone suspends; stress:unverified no longer does (Option A).
         assert should_suspend(
             ["status:draft", "stress:unverified", "conj:suspended"]
         ) is True

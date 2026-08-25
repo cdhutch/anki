@@ -4,7 +4,7 @@ tests/ua/test_list_unverified.py
 Unit tests for tools/anki/inspect/list_unverified.py.
 
 Covers:
-  - _reasons(): the three signals (stress:unverified, status:draft, no status tag)
+  - _reasons(): the two signals (status:draft, no status tag)
     and their combinations
   - find_unverified(): scanning a fixture corpus, verified-clean notes excluded
   - collect(): multiple note types aggregated
@@ -55,9 +55,6 @@ class TestReasons:
     def test_verified_no_stress_flag_is_clean(self):
         assert _reasons(["domain:ua", "status:verified"]) == []
 
-    def test_stress_unverified_flagged(self):
-        assert _reasons(["status:verified", "stress:unverified"]) == ["stress:unverified"]
-
     def test_status_draft_flagged(self):
         assert _reasons(["status:draft"]) == ["status:draft"]
 
@@ -65,7 +62,9 @@ class TestReasons:
         assert _reasons(["domain:ua"]) == ["no status tag"]
 
     def test_both_stress_and_draft_flagged_together(self):
-        assert _reasons(["status:draft", "stress:unverified"]) == ["stress:unverified", "status:draft"]
+        # Under Option A, stress:unverified is decoupled from suspension logic.
+        # Only status:draft is a reason for unverification.
+        assert _reasons(["status:draft", "stress:unverified"]) == ["status:draft"]
 
     def test_draft_and_verified_both_present_prefers_draft_not_no_status(self):
         # Malformed/legacy data with both tags -- status:draft still wins the
@@ -88,7 +87,7 @@ class TestFindUnverified:
             _note("ua-lexeme-0001", ["status:verified"], lemma="добре"), encoding="utf-8"
         )
         (root / "ua-lexeme-0002.md").write_text(
-            _note("ua-lexeme-0002", ["status:verified", "stress:unverified"], lemma="непогано"),
+            _note("ua-lexeme-0002", ["status:verified"], lemma="непогано"),
             encoding="utf-8",
         )
         (root / "ua-lexeme-0003.md").write_text(
@@ -105,24 +104,23 @@ class TestFindUnverified:
         ids = {r["note_id"] for r in results}
         assert "ua-lexeme-0001" not in ids
 
-    def test_three_unverified_notes_found(self, tmp_path):
+    def test_two_unverified_notes_found(self, tmp_path):
         root = self._corpus(tmp_path)
         results = find_unverified("ua_lexeme", root, "ua-lexeme-*.md")
-        assert len(results) == 3
+        assert len(results) == 2
         ids = {r["note_id"] for r in results}
-        assert ids == {"ua-lexeme-0002", "ua-lexeme-0003", "ua-lexeme-0004"}
+        assert ids == {"ua-lexeme-0003", "ua-lexeme-0004"}
 
     def test_reasons_attached_correctly(self, tmp_path):
         root = self._corpus(tmp_path)
         results = {r["note_id"]: r for r in find_unverified("ua_lexeme", root, "ua-lexeme-*.md")}
-        assert results["ua-lexeme-0002"]["reasons"] == ["stress:unverified"]
         assert results["ua-lexeme-0003"]["reasons"] == ["status:draft"]
         assert results["ua-lexeme-0004"]["reasons"] == ["no status tag"]
 
     def test_lemma_label_populated(self, tmp_path):
         root = self._corpus(tmp_path)
         results = {r["note_id"]: r for r in find_unverified("ua_lexeme", root, "ua-lexeme-*.md")}
-        assert results["ua-lexeme-0002"]["label"] == "непогано"
+        assert results["ua-lexeme-0003"]["label"] == "чудово"
 
     def test_missing_root_returns_empty(self, tmp_path):
         assert find_unverified("ua_lexeme", tmp_path / "does-not-exist", "*.md") == []
@@ -134,7 +132,7 @@ class TestFindUnverified:
         verb_root = tmp_path / "verbs"
         verb_root.mkdir()
         (verb_root / "ua-verb-0001.md").write_text(
-            _note("ua-verb-0001", ["stress:unverified"], lemma="ходити"), encoding="utf-8"
+            _note("ua-verb-0001", ["status:verified"], lemma="ходити"), encoding="utf-8"
         )
         monkeypatch.setitem(lu.NOTE_ROOTS, "ua_lexeme", (lexeme_root, "ua-lexeme-*.md"))
         monkeypatch.setitem(lu.NOTE_ROOTS, "ua_verb", (verb_root, "ua-verb-*.md"))
@@ -143,8 +141,8 @@ class TestFindUnverified:
         assert {r["note_type"] for r in lexeme_only} == {"ua_lexeme"}
 
         both = collect(["ua_lexeme", "ua_verb"])
-        assert {r["note_type"] for r in both} == {"ua_lexeme", "ua_verb"}
-        assert len(both) == 4  # 3 lexeme + 1 verb
+        assert {r["note_type"] for r in both} == {"ua_lexeme"}
+        assert len(both) == 2  # 2 lexeme (0003, 0004), 0 verbs
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -162,15 +160,15 @@ class TestPrintReport:
         results = [
             {
                 "note_type": "ua_lexeme",
-                "note_id": "ua-lexeme-0002",
-                "label": "непогано",
-                "reasons": ["stress:unverified"],
-                "path": tmp_path / "ua-lexeme-0002.md",
+                "note_id": "ua-lexeme-0003",
+                "label": "чудово",
+                "reasons": ["status:draft"],
+                "path": tmp_path / "ua-lexeme-0003.md",
             }
         ]
         print_report(results)
         out = capsys.readouterr().out
-        assert "ua-lexeme-0002" in out
-        assert "непогано" in out
-        assert "stress:unverified" in out
+        assert "ua-lexeme-0003" in out
+        assert "чудово" in out
+        assert "status:draft" in out
         assert "Total: 1 unverified" in out
