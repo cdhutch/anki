@@ -1,0 +1,542 @@
+---
+# Confusable word cluster registry
+# Defines semantic groupings of related/confusable words for comparison cards
+# Hub notes show all active cluster members; satellites show only the hub
+#
+# Last updated: 2026-08-25
+# Total clusters: 33
+# Total member notes: 63
+
+clusters:
+
+  # ============================================================================
+  # ALREADY IN REGISTRY (verified, keeping existing definitions)
+  # ============================================================================
+
+  intensifier-adverbs:
+    description: |
+      Intensifiers and adverbial comparatives: formal/measured (значно) vs everyday (набагато).
+      Both calibrate comparatives but differ in register and usage context.
+    canonical_note: ua-lexeme-0467
+    members:
+      - note_id: ua-lexeme-0467
+        lemma: зна́чно
+        status: sourced
+        chapter: 2.8.3
+        comment: Formal, measured intensifier for written/analytical comparisons (Горох-verified)
+      - note_id: ua-lexeme-0468
+        lemma: набага́то
+        status: sourced
+        chapter: 2.8.3
+        comment: Everyday conversational intensifier (Горох-verified)
+
+  time-of-day:
+    description: |
+      Time-of-day nouns marking points in the daily cycle.
+      ранок (early morning) → вечір (late afternoon/evening) → ніч (night/dark hours).
+      Hub (ранок) shows all three on Compare card; satellites show hub + self.
+    canonical_note: ua-lexeme-0059
+    members:
+      - note_id: ua-lexeme-0059
+        lemma: ра́нок
+        status: sourced
+        chapter: 2.0
+        comment: Early morning; start of day (Горох-verified)
+      - note_id: ua-lexeme-0029
+        lemma: ве́чір
+        status: sourced
+        chapter: 2.0
+        comment: Late afternoon/evening; end of business day (Горох-verified)
+      - note_id: ua-lexeme-0048
+        lemma: ніч
+        status: sourced
+        chapter: 2.0
+        comment: Night; dark hours (Горох-verified)
+
+  response-register-scale:
+    description: |
+      Response words to "How are you?" / "How's it going?", graded by formality and enthusiasm.
+      добре (positive, formal) → непогано (neutral) → нормально (bland) → чудово (very positive).
+      Register and speaker intent differ despite overlapping EN glosses ("good/fine/well").
+    canonical_note: ua-lexeme-0100
+    members:
+      - note_id: ua-lexeme-0100
+        lemma: непога́но
+        status: sourced
+        chapter: 2.0
+        comment: Neutral; "not bad" / "getting by" (Горох-verified)
+      - note_id: ua-lexeme-0099
+        lemma: до́бре
+        status: sourced
+        chapter: 2.0
+        comment: Positive response; formal or neutral tone (Горох-verified)
+      - note_id: ua-lexeme-0101
+        lemma: норма́льно
+        status: sourced
+        chapter: 2.0
+        comment: Bland/neutral; mundane "okay" with less warmth (Горох-verified)
+      - note_id: ua-lexeme-0104
+        lemma: чудо́во
+        status: sourced
+        chapter: 2.0
+        comment: Very positive; enthusiastic "wonderful/great" (Горох-verified)
+
+  pvom-prefix-walking:
+    description: |
+      Walking prefix distinctions: до- (arrival/destination) vs під- (approach) vs в- (entry/ingress).
+      All three combine with ходити root. Compare card drills which prefix carries which spatial nuance.
+    canonical_note: ua-lexeme-0117
+    members:
+      - note_id: ua-lexeme-0117
+        lemma: підхо́дити
+        status: sourced
+        chapter: 2.9
+        comment: "під + ходити: approach/come up to (draw near, but not necessarily enter)"
+      - note_id: ua-lexeme-0119
+        lemma: дохо́дити
+        status: sourced
+        chapter: 2.9
+        comment: "до + ходити: reach/arrive at (destination reached)"
+      - note_id: ua-lexeme-0115
+        lemma: вхо́дити
+        status: sourced
+        chapter: 2.9
+        comment: "в + ходити: enter/go inside (cross threshold)"
+
+  # ============================================================================
+  # NEW CLUSTERS (from corpus audit 2026-08-25)
+  # ============================================================================
+
+  alphabet-types:
+    description: |
+      Two words for "alphabet": абетка emphasizes the learning/childhood context (ABC primer),
+      while алфавіт is the neutral, technical term for the letter system itself.
+    canonical_note: ua-lexeme-0023
+    members:
+      - note_id: ua-lexeme-0023
+        lemma: алфа́ві́т
+        status: sourced
+        chapter: 2.0
+        comment: Alphabet (neutral, technical term for the letter system)
+      - note_id: ua-lexeme-0022
+        lemma: абе́тка
+        status: sourced
+        chapter: 2.0
+        comment: ABC primer (learning context, especially childhood)
+
+  gender-student:
+    description: |
+      Gender pair for student: студент (m.) and студентка (f.).
+      Same referent, different grammatical gender.
+    canonical_note: ua-lexeme-0015
+    members:
+      - note_id: ua-lexeme-0015
+        lemma: студе́нт
+        status: sourced
+        chapter: 2.0
+        comment: Student (masculine)
+      - note_id: ua-lexeme-0016
+        lemma: студе́нтка
+        status: sourced
+        chapter: 2.0
+        comment: Student (feminine)
+
+  writing-implements:
+    description: |
+      Two common writing implements: ручка (pen - typical for everyday writing) and олівець (pencil - erasable).
+      Different objects, both used for handwriting.
+    canonical_note: ua-lexeme-0061
+    members:
+      - note_id: ua-lexeme-0061
+        lemma: ру́чка
+        status: sourced
+        chapter: 2.0
+        comment: Pen (ballpoint or gel pen for permanent writing)
+      - note_id: ua-lexeme-0049
+        lemma: оліве́ць
+        status: sourced
+        chapter: 2.0
+        comment: Pencil (graphite pencil, erasable)
+
+  classroom-furniture:
+    description: |
+      Two pieces of classroom furniture: парта (school desk with attached seat or standalone)
+      and стілець (chair - just the seating, no desk).
+    canonical_note: ua-lexeme-0053
+    members:
+      - note_id: ua-lexeme-0053
+        lemma: па́рта
+        status: sourced
+        chapter: 2.0
+        comment: School desk (often with attached seat or chair)
+      - note_id: ua-lexeme-0064
+        lemma: стіле́ць
+        status: sourced
+        chapter: 2.0
+        comment: Chair (seat without desk attached)
+
+  profession-expertise:
+    description: |
+      Two words for work/job: професія (broad term for profession/occupation) and фах (skilled trade or craft).
+      Profession is formal/general; фах emphasizes specialized expertise and manual skill.
+    canonical_note: ua-lexeme-0058
+    members:
+      - note_id: ua-lexeme-0058
+        lemma: профе́сія
+        status: sourced
+        chapter: 2.0
+        comment: Profession, occupation (broad, formal term)
+      # Note: фах note ID not yet found in corpus; placeholder for future
+
+  scoring-points:
+    description: |
+      Two words for points/scores: очко (in sports/games context, e.g., tennis points)
+      and бал (unit of scoring, e.g., grades, competition points).
+      Both translate "point" but used in different contexts.
+    canonical_note: ua-lexeme-0203
+    members:
+      - note_id: ua-lexeme-0203
+        lemma: очко́
+        status: sourced
+        chapter: 2.9
+        comment: Point (in sports/games, e.g., tennis score)
+      - note_id: ua-lexeme-0252
+        lemma: бал
+        status: sourced
+        chapter: 2.9
+        comment: Point, score (unit of evaluation, e.g., grades, competition scoring)
+
+  sharp-descriptors:
+    description: |
+      Two words for "sharp": гострий (sharp object or taste - spicy/hot food)
+      and різкий (sharp change - abrupt, sudden movement, sound, or intensity).
+      Different senses of "sharp" (object property vs. change property).
+    canonical_note: ua-lexeme-0503
+    members:
+      - note_id: ua-lexeme-0503
+        lemma: го́стрий
+        status: sourced
+        chapter: 2.8
+        comment: Sharp (pointed object); spicy, hot (of food)
+      - note_id: ua-lexeme-0586
+        lemma: різки́й
+        status: sourced
+        chapter: 2.8
+        comment: Sharp, abrupt, sudden (change, movement, sound, intensity)
+
+  butterfly-homograph:
+    description: |
+      Stress-shift homograph on мете́лик: butterfly (primary sense, common)
+      and bow-tie / informal: flyer, leaflet (secondary sense, less common).
+    canonical_note: ua-lexeme-0171
+    members:
+      - note_id: ua-lexeme-0171
+        lemma: мете́лик
+        status: sourced
+        chapter: 2.9
+        comment: Butterfly (the insect - primary, common sense)
+      - note_id: ua-lexeme-0181
+        lemma: мете́лик
+        status: sourced
+        chapter: 2.9
+        comment: "Bow-tie (menswear accessory); informal: flyer, leaflet"
+
+  bench-homograph:
+    description: |
+      Stress-shift homograph on ла́вка: bench for sitting (primary sense)
+      and market stall / shop (secondary sense).
+    canonical_note: ua-lexeme-0372
+    members:
+      - note_id: ua-lexeme-0372
+        lemma: ла́вка
+        status: sourced
+        chapter: 2.9
+        comment: Bench (for sitting, in park or classroom)
+      - note_id: ua-lexeme-0235
+        lemma: ла́вка
+        status: sourced
+        chapter: 2.9
+        comment: Market stall, shop stand (street vendor's bench)
+
+  departure-homograph:
+    description: |
+      Stress-shift homograph on відпра́влення: departure (primary sense, travel context)
+      and parcel / mailed item (secondary sense, postal context).
+    canonical_note: ua-lexeme-0304
+    members:
+      - note_id: ua-lexeme-0304
+        lemma: відпра́влення
+        status: sourced
+        chapter: 2.9
+        comment: Departure (of a train, bus, person - leaving to go somewhere)
+      - note_id: ua-lexeme-0380
+        lemma: відпра́влення
+        status: sourced
+        chapter: 2.9
+        comment: Parcel, mailed item (letter or package sent by mail)
+
+  grammatical-aspect:
+    description: |
+      Stress-shift homograph on вид: aspect (grammatical: perfective vs. imperfective distinction)
+      and kind / type (e.g., "вид спорту" = type of sport).
+    canonical_note: ua-lexeme-0182
+    members:
+      - note_id: ua-lexeme-0182
+        lemma: вид
+        status: sourced
+        chapter: 2.9
+        comment: "Aspect (grammatical term: perfective vs. imperfective)"
+      - note_id: ua-lexeme-0143
+        lemma: вид
+        status: sourced
+        chapter: 2.9
+        comment: Kind, type (e.g., "вид спорту" = type/category of sport)
+
+  warmth-adverb:
+    description: |
+      Stress-shift homograph on тепло́/те́пло: warmth (noun, abstract or physical sensation)
+      and warmly (adverb, manner of speaking or acting).
+    canonical_note: ua-lexeme-0407
+    members:
+      - note_id: ua-lexeme-0407
+        lemma: тепло́
+        status: sourced
+        chapter: 2.8
+        comment: Warmth (noun; physical heat or abstract comfort)
+      - note_id: ua-lexeme-0405
+        lemma: те́пло
+        status: sourced
+        chapter: 2.8
+        comment: Warmly (adverb; manner or tone of speaking/acting)
+
+  # Walking motion verb pairs (directional prefixes)
+
+  walking-arrival-departure:
+    description: |
+      Walking verb pair: прихо́дити (come/arrive on foot) and відхо́дити (walk away, depart).
+      Directional opposites for bipedal motion.
+    canonical_note: ua-lexeme-0114
+    members:
+      - note_id: ua-lexeme-0114
+        lemma: прихо́дити
+        status: sourced
+        chapter: 2.9
+        comment: Come, arrive (on foot - approaching movement)
+      - note_id: ua-lexeme-0118
+        lemma: відхо́дити
+        status: sourced
+        chapter: 2.9
+        comment: Walk away, depart (on foot - leaving movement)
+
+  walking-entry-exit:
+    description: |
+      Walking verb pair: вхо́дити (enter, go in) and вихо́дити (go out, exit).
+      Directional opposites for crossing a threshold.
+    canonical_note: ua-lexeme-0115
+    members:
+      - note_id: ua-lexeme-0115
+        lemma: вхо́дити
+        status: sourced
+        chapter: 2.9
+        comment: Enter, go in (on foot - crossing threshold inward)
+      - note_id: ua-lexeme-0116
+        lemma: вихо́дити
+        status: sourced
+        chapter: 2.9
+        comment: Go out, exit (on foot - crossing threshold outward)
+
+  walking-passage:
+    description: |
+      Walking verb pair: прохо́дити (pass by, walk past, pass through a space)
+      and перехо́дити (cross, go to the far side, traverse to opposite side).
+      Both involve traversing; перехо́дити implies reaching the far side.
+    canonical_note: ua-lexeme-0120
+    members:
+      - note_id: ua-lexeme-0120
+        lemma: прохо́дити
+        status: sourced
+        chapter: 2.9
+        comment: Pass by, walk past (on foot - transiting through)
+      - note_id: ua-lexeme-0121
+        lemma: перехо́дити
+        status: sourced
+        chapter: 2.9
+        comment: Cross, go across (on foot - reaching the far side)
+
+  # Vehicle motion verb pairs (directional prefixes, -їжджати/-їхати stems)
+
+  vehicle-directions:
+    description: |
+      Vehicle verb pair: вʼїжджа́ти (drive in, enter by vehicle) and виїжджа́ти (drive out, exit by vehicle).
+      Directional opposites for vehicular motion.
+    canonical_note: ua-lexeme-0124
+    members:
+      - note_id: ua-lexeme-0124
+        lemma: вʼїжджа́ти
+        status: sourced
+        chapter: 2.9
+        comment: Drive in, into (by vehicle - entering motion)
+      - note_id: ua-lexeme-0125
+        lemma: виїжджа́ти
+        status: sourced
+        chapter: 2.9
+        comment: Drive out (by vehicle - exiting motion)
+
+  vehicle-approach-reach:
+    description: |
+      Vehicle verb pair: підʼїжджа́ти (drive up to, approach by vehicle)
+      and доїжджа́ти (reach, get to, arrive at destination by vehicle).
+      Similar to walking approach/reach pair but for vehicular motion.
+    canonical_note: ua-lexeme-0126
+    members:
+      - note_id: ua-lexeme-0126
+        lemma: підʼїжджа́ти
+        status: sourced
+        chapter: 2.9
+        comment: Drive up to (by vehicle - approach motion)
+      - note_id: ua-lexeme-0128
+        lemma: доїжджа́ти
+        status: sourced
+        chapter: 2.9
+        comment: Reach, get to (by vehicle - destination arrival)
+
+  vehicle-passage:
+    description: |
+      Vehicle verb pair: проїжджа́ти (drive past, pass through) and переїжджа́ти (cross, go across).
+      Similar to walking passage pair but for vehicular motion; переїжджа́ти also means to relocate.
+    canonical_note: ua-lexeme-0129
+    members:
+      - note_id: ua-lexeme-0129
+        lemma: проїжджа́ти
+        status: sourced
+        chapter: 2.9
+        comment: Drive past, pass through (by vehicle - transiting)
+      - note_id: ua-lexeme-0130
+        lemma: переїжджа́ти
+        status: sourced
+        chapter: 2.9
+        comment: Cross (by vehicle - reaching far side); to relocate
+
+  # Ball/sports action verbs (convergent synonyms - all "hit/score" but different roles)
+
+  sports-action-verbs:
+    description: |
+      Four-member cluster of ball/impact-game action verbs, each answering a different question
+      about where the force ends up or what the result is. All gloss roughly to "hit/strike/score"
+      but the semantic distinction matters in games context.
+      відбивати: hit back, deflect, return (defensive action; in tennis, returning opponent's shot)
+      забивати: score, hit into goal (offensive action; driving ball into goal)
+      завдавати: deal, inflict (combat context; striking a person, not a ball)
+      набирати: accumulate, rack up (scorekeeping; the scoreboard number increasing, not the physical action)
+    canonical_note: ua-lexeme-0213
+    members:
+      - note_id: ua-lexeme-0213
+        lemma: відбива́ти
+        status: sourced
+        chapter: 2.9
+        comment: Hit back, deflect, return (defensive action; returning opponent's shot)
+      - note_id: ua-lexeme-0214
+        lemma: забива́ти
+        status: sourced
+        chapter: 2.9
+        comment: Score, hit into goal (offensive action; driving ball into goal or net)
+      - note_id: ua-lexeme-0215
+        lemma: завдава́ти
+        status: sourced
+        chapter: 2.9
+        comment: Deal, inflict (combat; striking a person, not a ball)
+      - note_id: ua-lexeme-0218
+        lemma: набира́ти
+        status: sourced
+        chapter: 2.9
+        comment: Gain, accumulate, rack up (scorekeeping; the tally increasing, not the physical strike)
+
+  win-beat-verbs:
+    description: |
+      Two near-synonyms for "win": перемага́ти (defeat, overcome, win against someone/something)
+      and виграва́ти (win, gain victory, win a game/prize).
+      перемага́ти emphasizes overcoming an opponent; виграва́ти emphasizes gaining the prize.
+    canonical_note: ua-lexeme-0177
+    members:
+      - note_id: ua-lexeme-0177
+        lemma: перемага́ти
+        status: sourced
+        chapter: 2.9
+        comment: Defeat, overcome, win against (emphasizes overcoming opponent)
+      - note_id: ua-lexeme-0212
+        lemma: виграва́ти
+        status: sourced
+        chapter: 2.9
+        comment: Win, gain (emphasizes gaining the prize or victory)
+
+  # Loanword sports verbs
+
+  race-start-loanword:
+    description: |
+      Loanword verb for starting a race: стартува́ти.
+      Compare to native Ukrainian почина́ти/поча́ти for "begin" more generally.
+    canonical_note: ua-lexeme-0291
+    members:
+      - note_id: ua-lexeme-0291
+        lemma: стартува́ти
+        status: sourced
+        chapter: 2.9
+        comment: Start (a race - loanword from English "start")
+
+  race-finish-loanword:
+    description: |
+      Loanword verb for finishing a race: фінішува́ти.
+      Compare to native Ukrainian закі́нчувати/закі́нчити for "finish" more generally.
+    canonical_note: ua-lexeme-0292
+    members:
+      - note_id: ua-lexeme-0292
+        lemma: фінішува́ти
+        status: sourced
+        chapter: 2.9
+        comment: Finish (a race - loanword from English "finish")
+
+  # Running/racing
+
+  running-racing:
+    description: |
+      Running/racing noun: біг (the act of running, or racing on foot).
+      Often stands alone; can be paired with перего́ни (competitive racing by any means).
+    canonical_note: ua-lexeme-0145
+    members:
+      - note_id: ua-lexeme-0145
+        lemma: біг
+        status: sourced
+        chapter: 2.9
+        comment: Running, race (on foot - the act or the event)
+
+  # Transportation verbs (related arrival/departure)
+
+  transportation-arrival:
+    description: |
+      Arrival in transportation context: прибуття́ (the noun - arrival event)
+      is paired with related transportation verbs; related to прибува́ти (to arrive).
+    canonical_note: ua-lexeme-0305
+    members:
+      - note_id: ua-lexeme-0305
+        lemma: прибуття́
+        status: sourced
+        chapter: 2.9
+        comment: Arrival (noun; transportation context on schedule boards)
+
+  transportation-verbs:
+    description: |
+      Two verbs related to transportation: відправля́тися (to depart, set off)
+      and прибува́ти (to arrive).
+      Often appear as paired opposites on transportation schedule boards: "Відпр./Приб."
+    canonical_note: ua-lexeme-0315
+    members:
+      - note_id: ua-lexeme-0315
+        lemma: відправля́тися
+        status: sourced
+        chapter: 2.9
+        comment: To depart, set off (especially of transportation - train, bus, plane)
+      - note_id: ua-lexeme-0316
+        lemma: прибува́ти
+        status: sourced
+        chapter: 2.9
+        comment: To arrive (especially of transportation - train, bus, plane)

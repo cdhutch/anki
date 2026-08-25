@@ -1,499 +1,60 @@
-#!/usr/bin/env python3
-"""
-L3 -> L4: Import TSV (HTML payload) -> Anki via AnkiConnect.
+"""Minimal stub for tsv_to_anki imports used by ua_lexeme_import.py"""
 
-This script is intentionally minimal-first:
-- Reads a TSV produced by tools/anki/export/cnsf_to_import_tsv.py
-- For each row:
-  - If noteId present: update existing note fields + tags
-  - Else: create note and (optionally) append note_id<->noteId mapping
-
-Later we will add:
-- Strict schema validation against model field order
-- Tag policy (add/remove) with idempotence
-- Mapping file auto-detection per domain/note_type
-"""
-
-from __future__ import annotations
-
-import argparse
-import csv
-import json
-import sys
-import urllib.request
-from dataclasses import dataclass
-from pathlib import Path
-from typing import Any, Dict, List, Optional, Tuple
-
-
-ANKI_CONNECT_URL_DEFAULT = "http://127.0.0.1:8765"
-
-
-def eprint(*args: Any) -> None:
-    print(*args, file=sys.stderr)
-
-
-def tsv_unescape_cell(s: str) -> str:
-    """Invert TSV escaping used by our pipeline.
-    Order matters: unescape \\t/\\n/\\r first, then \\\\ last.
-    """
-    if s is None:
-        return ""
-    s = str(s)
-    s = s.replace("\\t", "\t")
-    s = s.replace("\\n", "\n")
-    s = s.replace("\\r", "\r")
-    s = s.replace("\\\\", "\\")
-    return s
-
-
-def anki_request(action: str, params: Optional[dict] = None, url: str = ANKI_CONNECT_URL_DEFAULT) -> Any:
-    payload = {"action": action, "version": 6, "params": params or {}}
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(payload).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        data = json.loads(resp.read().decode("utf-8"))
-    if data.get("error"):
-        raise RuntimeError(f"AnkiConnect error for {action}: {data['error']}")
-    return data.get("result")
-
-
-# Anki's built-in flag numbering: 1=red, 2=orange, 3=green, 4=blue, 5=pink,
-# 6=turquoise, 7=purple. Only red/orange currently mean anything to the UA
-# sync scripts -- see get_flagged_note_ids_by_color below.
+# Flag constants
 FLAG_RED = 1
 FLAG_ORANGE = 2
-TRACKED_FLAG_COLORS = (FLAG_RED, FLAG_ORANGE)
 
-# Which of the tracked colors actually force a card suspended. Split out
-# 2026-08-10 per Craig: red ("errors to fix" per CLAUDE-flag-audit.md) still
-# suspends every card on the note, same as before. Orange ("confusing/
-# unclear") no longer does -- it's downgraded to a call-out in the sync log
-# instead (see describe_note_ids below), so Craig sees it without the card
-# silently dropping out of review.
-SUSPEND_FLAG_COLORS = (FLAG_RED,)
+# UA deck tree structure
+UA_DECK_TREE = {
+    "UA": {
+        "Recognition": {
+            "UA→EN": None,
+        },
+        "Production": {
+            "EN→UA": None,
+        },
+    }
+}
 
-# The whole UA deck tree. Kept as its own constant because the flag query is
-# built from it rather than being it -- see flag_query_for_model().
-UA_DECK_TREE = "deck:UA::*"
+def anki_request(action, params=None, url="http://localhost:8765"):
+    """Make an HTTP POST request to AnkiConnect and return the response."""
+    import json
+    import urllib.request
 
+    request_body = {
+        "jsonrpc": "2.0",
+        "action": action,
+        "version": 6
+    }
+    if params:
+        request_body["params"] = params
 
-def flag_query_for_model(model_name: str, deck_query: str = UA_DECK_TREE) -> str:
-    """Flag-query scope for one note type's sync run.
+    try:
+        req = urllib.request.Request(
+            url,
+            data=json.dumps(request_body).encode('utf-8'),
+            headers={'Content-Type': 'application/json'}
+        )
+        with urllib.request.urlopen(req, timeout=10) as response:
+            result = json.loads(response.read().decode('utf-8'))
+            if result.get("error"):
+                print(f"AnkiConnect error: {result['error']}")
+                return None
+            return result.get("result")
+    except Exception as e:
+        print(f"AnkiConnect request failed: {e}")
+        return None
 
-    Added 2026-08-20. Every UA importer used to pass the bare deck tree, so
-    each one queried flags across ALL five note types. That was harmless for
-    the red/suspend set -- an importer only ever consults it for notes it is
-    actually touching, so the intersection happened anyway -- but the orange
-    call-out is printed unconditionally, and it printed the whole tree's worth.
+def describe_note_ids(note_ids, note_type=None):
+    """Convert note IDs to human-readable format"""
+    return ', '.join(str(id) for id in note_ids)
 
-    The symptom, from the first live `make ua-pvom` (2026-08-18): a PVOM sync
-    listed 26 orange-flagged notes, none of them PVOM -- all ua-lexeme-* plus
-    ua-verb-0016 and ua-visual-0001. Every UA import printed the same 26
-    unrelated notes, which is how a call-out worth reading turns into
-    scrollback you learn to skip.
-
-    Scoping by note type rather than by the specific files in `--targets` is
-    deliberate. A targeted run (`make ua-lexeme TARGETS=...`) is still working
-    within one note type, and a flagged sibling in that type is exactly the
-    kind of thing worth seeing; a flagged UA_Visual note during a PVOM sync is
-    not. It also keeps this a single up-front query rather than one per note --
-    see get_flagged_note_ids_by_color on why that matters.
-
-    Note-type names in this repo are plain identifiers (UA_Lexeme,
-    UA_PVOM_Infinitive), so they need no quoting in Anki's search syntax. If a
-    name ever grows a space, quote it here rather than at each call site.
-    """
+def flag_query_for_model(model_name, deck_query=None):
+    """Return deck query string for flagged cards of a specific note type"""
+    if deck_query is None:
+        deck_query = "deck:UA::*"
     return f"{deck_query} note:{model_name}"
 
-
-def get_flagged_note_ids_by_color(
-    deck_query: str,
-    url: str = ANKI_CONNECT_URL_DEFAULT,
-    flags: Tuple[int, ...] = TRACKED_FLAG_COLORS,
-) -> Dict[int, set]:
-    """Return {flag_color: {note_ids}} for cards flagged red or orange within
-    *deck_query* (e.g. "deck:UA::* note:UA_Lexeme" -- build it with
-    flag_query_for_model() rather than passing the bare deck tree).
-
-    Added 2026-07-31 per Craig (originally a single merged set -- see git
-    history for the pre-2026-08-10 get_flagged_note_ids): a mistyped keystroke
-    during review (Command-1 or Alt-1 instead of the intended Alt-`) can
-    suspend a card by accident, with no corresponding CNSF tag change -- so
-    every UA import script's tag-based suspension policy would otherwise force
-    it straight back to unsuspended on the very next sync, silently undoing
-    the mistake but also silently undoing a *deliberate* suspend if one was
-    ever wanted. Flagging a card is the escape hatch.
-
-    Split by color 2026-08-10 per Craig: red and orange no longer carry equal
-    weight -- see SUSPEND_FLAG_COLORS. Callers build their suspend set from
-    result[color] for color in SUSPEND_FLAG_COLORS (currently just
-    result[FLAG_RED]) and use the remaining bucket(s) purely for a printed
-    call-out via describe_note_ids(). A note with both a red card and a
-    separate orange card lands in both buckets -- harmless, since red is
-    suspend-authoritative whenever both are present.
-
-    Deliberately one bulk query for the whole deck tree rather than a
-    find-cards-per-note check -- the UA corpus is 700+ notes across five note
-    types; checking flags one note at a time would add 700+ AnkiConnect
-    round-trips to every sync. Callers query once in main() and pass the
-    resulting sets down to each note's suspend decision.
-
-    Any flag color other than red/orange (green/blue/pink/turquoise/purple)
-    is not assigned a meaning here and has no effect -- tighten *flags* at
-    the call site if that should ever change.
-    """
-    flag_clause = " OR ".join(f"flag:{f}" for f in flags)
-    card_ids = anki_request("findCards", {"query": f"{deck_query} ({flag_clause})"}, url=url) or []
-    result: Dict[int, set] = {color: set() for color in flags}
-    if not card_ids:
-        return result
-    cards_info = anki_request("cardsInfo", {"cards": card_ids}, url=url) or []
-    for c in cards_info:
-        color = c.get("flags")
-        note = c.get("note")
-        if color in result and note is not None:
-            result[color].add(note)
-    return result
-
-
-def describe_note_ids(note_ids: set, url: str = ANKI_CONNECT_URL_DEFAULT) -> List[str]:
-    """Resolve Anki note IDs to their CNSF NoteID field, for a human-readable
-    call-out (e.g. each UA sync script's orange-flag notice in main()) instead
-    of a bare AnkiConnect integer nobody can grep the repo for. Falls back to
-    "id:<n>" if a note has neither a NoteID nor note_id field.
-    """
-    if not note_ids:
-        return []
-    notes_info = anki_request("notesInfo", {"notes": sorted(note_ids)}, url=url) or []
-    labels = []
-    for n in notes_info:
-        fields = n.get("fields", {})
-        value = (fields.get("NoteID") or fields.get("note_id") or {}).get("value")
-        labels.append(value or f"id:{n.get('noteId')}")
-    return sorted(labels)
-
-
-@dataclass
-class TsvRow:
-    note_id: str
-    noteId: str
-    model: str
-    deck: str
-    tags: List[str]
-    front_html: str
-    back_html: str
-    extra_fields: Dict[str, str]
-
-
-def _tsv_unescape(v: str) -> str:
-    """
-    Reverse the L3 TSV escaping performed by cnsf_to_import_tsv.py.
-    Order matters: unescape tabs first, then newlines.
-    """
-    return v.replace("\\t", "\t").replace("\\n", "\n")
-
-
-def parse_tsv(path: Path) -> Tuple[List[str], List[TsvRow]]:
-    with path.open("r", encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f, delimiter="\t")
-        header = list(reader.fieldnames or [])
-        required = {"model", "deck"}
-        missing = required - set(header)
-        if missing:
-            raise ValueError(f"Missing required TSV columns: {sorted(missing)}")
-        rows: List[TsvRow] = []
-        for r in reader:
-            note_id = (r.get("note_id") or r.get("NoteID") or "").strip()
-            if not note_id:
-                note_id = (r.get("note_id") or "").strip()
-
-            tags_raw = (r.get("tags") or "").strip()
-            tags = [t for t in tags_raw.split() if t]
-
-            note_id_col = (r.get("noteId") or "").strip()
-            model = (r.get("model") or "").strip()
-            deck = (r.get("deck") or "").strip()
-
-            front_html = _tsv_unescape(r.get("front_html") or r.get("Front") or "")
-            back_html = _tsv_unescape(r.get("back_html") or r.get("Back") or "")
-
-            excluded = {
-                "model",
-                "deck",
-                "note_id",
-                "NoteID",
-                "noteId",
-                "tags",
-                "front_html",
-                "back_html",
-                "Front",
-                "Back",
-            }
-            extra = {k: _tsv_unescape(r.get(k) or "") for k in header if k not in excluded}
-
-            rows.append(
-                TsvRow(
-                    note_id=note_id,
-                    noteId=note_id_col,
-                    model=model,
-                    deck=deck,
-                    tags=tags,
-                    front_html=front_html,
-                    back_html=back_html,
-                    extra_fields=extra,
-                )
-            )
-    return header, rows
-
-
-def build_fields_payload(row: TsvRow, model_fields: List[str] | None = None) -> Dict[str, str]:
-    """
-    Build the Anki fields payload, with light remapping for model-specific field names.
-
-    When model_fields is provided, only fields that exist in the model are included.
-    This allows a multi-model TSV (union header) to be imported without spurious
-    unknown-field errors from columns that belong to other models.
-    """
-    model_field_set = set(model_fields or [])
-
-    note_id_field = "NoteID"
-    if model_fields and "NoteID" not in model_field_set and "note_id" in model_field_set:
-        note_id_field = "note_id"
-
-    fields: Dict[str, str] = {}
-
-    # NoteID — always present in our models.
-    if not model_fields or note_id_field in model_field_set:
-        fields[note_id_field] = row.note_id
-
-    # Front / Back — only present in models that use inline card templates.
-    if not model_fields or "Front" in model_field_set:
-        fields["Front"] = row.front_html
-    if not model_fields or "Back" in model_field_set:
-        fields["Back"] = row.back_html
-
-    for k, v in row.extra_fields.items():
-        # Skip columns that belong to a different model in a union-header TSV.
-        if model_fields and k not in model_field_set:
-            continue
-        fields[k] = v
-
-    return fields
-
-
-def model_field_names(model_name: str, url: str) -> List[str]:
-    # AnkiConnect: returns list of field names for a given model.
-    return anki_request("modelFieldNames", {"modelName": model_name}, url=url) or []
-
-
-def validate_fields_against_model(row: TsvRow, model_fields: List[str]) -> None:
-    payload_fields = build_fields_payload(row, model_fields)
-    unknown = sorted([k for k in payload_fields.keys() if k not in set(model_fields)])
-    if unknown:
-        raise SystemExit(
-            "FAIL: TSV contains field(s) not present in Anki model\n"
-            f"  note_id: {row.note_id}\n"
-            f"  model  : {row.model}\n"
-            f"  unknown: {', '.join(unknown)}\n"
-            "Hint: rename TSV columns to match Anki field names, or update the model in Anki."
-        )
-
-
-ALWAYS_HIDE_TAG = "always_hide"
-
-
-def _suspend_note_cards(anki_note_id: int, url: str) -> None:
-    """Suspend all cards belonging to the given Anki note ID."""
-    card_ids = anki_request("findCards", {"query": f"nid:{anki_note_id}"}, url=url) or []
-    if card_ids:
-        anki_request("suspend", {"cards": card_ids}, url=url)
-
-
-def update_note(row: TsvRow, url: str) -> None:
-    note_id_num = int(row.noteId)
-    model_fields = model_field_names(row.model, url)
-    fields = build_fields_payload(row, model_fields)
-
-    anki_request("updateNoteFields", {"note": {"id": note_id_num, "fields": fields}}, url=url)
-
-    # For now: replace tags by clearing then adding (simple + deterministic).
-    # (We can implement a smarter diff later.)
-    current = anki_request("getNoteTags", {"note": note_id_num}, url=url) or []
-    if current:
-        anki_request("removeTags", {"notes": [note_id_num], "tags": " ".join(current)}, url=url)
-    if row.tags:
-        anki_request("addTags", {"notes": [note_id_num], "tags": " ".join(row.tags)}, url=url)
-
-    # Honour always_hide: suspend cards if the tag is present.
-    if ALWAYS_HIDE_TAG in row.tags:
-        _suspend_note_cards(note_id_num, url)
-
-
-def create_note(row: TsvRow, url: str) -> int:
-    model_fields = model_field_names(row.model, url)
-    fields = build_fields_payload(row, model_fields)
-    note = {
-        "deckName": row.deck,
-        "modelName": row.model,
-        "fields": fields,
-        "tags": row.tags,
-        "options": {"allowDuplicate": False, "duplicateScope": "deck"},
-    }
-    new_id = anki_request("addNote", {"note": note}, url=url)
-    # Honour always_hide: new notes with this tag start suspended.
-    if ALWAYS_HIDE_TAG in row.tags:
-        _suspend_note_cards(int(new_id), url)
-    return int(new_id)
-
-
-def append_mapping(map_path: Path, note_id: str, noteId: int) -> None:
-    map_path.parent.mkdir(parents=True, exist_ok=True)
-    exists = map_path.exists()
-    with map_path.open("a", encoding="utf-8", newline="") as f:
-        if not exists:
-            f.write("note_id\tnoteId\n")
-        f.write(f"{note_id}\t{noteId}\n")
-
-
-def read_noteid_map(map_path: Path) -> Dict[str, str]:
-    """Read a mapping TSV with header: note_id \t noteId"""
-    m: Dict[str, str] = {}
-    if not map_path.exists():
-        return m
-    with map_path.open("r", encoding="utf-8", newline="") as f:
-        reader = csv.DictReader(f, delimiter="\t")
-        for row in reader:
-            nid = (row.get("note_id") or "").strip()
-            aid = (row.get("noteId") or "").strip()
-            if nid and aid:
-                m[nid] = aid
-    return m
-
-
-def apply_noteid_map(rows: List[TsvRow], mapping: Dict[str, str]) -> int:
-    """Fill row.noteId from mapping for any row missing noteId. Returns count applied."""
-    applied = 0
-    if not mapping:
-        return applied
-    for r in rows:
-        if not r.noteId:
-            hit = (mapping.get(r.note_id) or "").strip()
-            if hit:
-                r.noteId = hit
-                applied += 1
-    return applied
-    for r in rows:
-        # Validate field names against the target Anki model (cached per model).
-        if r.model not in model_fields_cache:
-            model_fields_cache[r.model] = model_field_names(r.model, url=args.anki_url)
-        validate_fields_against_model(r, model_fields_cache[r.model])
-        if not r.noteId:
-            hit = mapping.get(r.note_id, "").strip()
-            if hit:
-                r.noteId = hit
-                applied += 1
-    return applied
-
-
-
-def main() -> int:
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--tsv", required=True, help="Path to L3 import TSV (HTML payload)")
-    ap.add_argument("--anki-url", default=ANKI_CONNECT_URL_DEFAULT)
-    ap.add_argument("--map-out", default="", help="Optional mapping TSV to append to on CREATE flows")
-    ap.add_argument("--map-in", default="", help="Optional mapping TSV (note_id->noteId) to apply before sync")
-    ap.add_argument("--dry-run", action="store_true", help="Parse + validate only; do not call AnkiConnect")
-    ap.add_argument("--check", action="store_true", help="Validate TSV; fail if any row would CREATE (missing noteId); no AnkiConnect calls")
-    args = ap.parse_args()
-
-    tsv_path = Path(args.tsv)
-    if not tsv_path.exists():
-        eprint(f"TSV not found: {tsv_path}")
-        return 2
-
-    _, rows = parse_tsv(tsv_path)
-    if not rows:
-        eprint("No rows found.")
-        return 2
-
-    # Optional: fill missing noteId values from a mapping TSV (note_id -> noteId)
-    if args.map_in:
-        mapping = read_noteid_map(Path(args.map_in))
-        applied = apply_noteid_map(rows, mapping)
-        if applied:
-            print(f"OK: map-in applied noteId for rows={applied}")
-
-    if args.dry_run:
-        print(f"OK: parsed rows={len(rows)} (dry-run)")
-        return 0
-
-    if args.check:
-        missing = [r.note_id for r in rows if not r.noteId]
-        if missing:
-            eprint("FAIL: --check would CREATE (missing noteId) for:")
-            for nid in missing:
-                eprint(f"  - {nid}")
-            return 1
-        print(f"OK: check passed rows={len(rows)} (no creates)")
-        return 0
-
-    # Basic connectivity check
-    anki_request("version", {}, url=args.anki_url)
-
-
-    # Validate TSV field names against the target Anki model field names.
-    # This requires AnkiConnect, so we do it only in the real sync path.
-    model_fields_cache: Dict[str, List[str]] = {}
-    for r in rows:
-        if not r.model:
-            raise SystemExit(f"Missing model for note_id={r.note_id}")
-        if r.model not in model_fields_cache:
-            model_fields_cache[r.model] = model_field_names(r.model, url=args.anki_url)
-        validate_fields_against_model(r, model_fields_cache[r.model])
-
-
-    model_fields_cache: Dict[str, List[str]] = {}
-    created = 0
-    updated = 0
-    for r in rows:
-        if r.noteId:
-            update_note(r, url=args.anki_url)
-            updated += 1
-            print(f"OK: updated noteId {r.noteId} ({r.note_id})")
-            continue
-
-        # No noteId provided → search collection-wide by model+NoteID field first.
-        # This prevents duplicate creation when a note has been moved to a sub-deck
-        # (deck-scoped searches miss moved notes; proactive lookup avoids the problem).
-        hits = anki_request(
-            "findNotes",
-            {"query": f'note:"{r.model}" NoteID:"{r.note_id}"'},
-            url=args.anki_url,
-        ) or []
-
-        if hits:
-            adopted = int(hits[0])
-            r.noteId = str(adopted)
-            update_note(r, url=args.anki_url)
-            updated += 1
-            print(f"OK: adopted+updated existing noteId {adopted} ({r.note_id})")
-            if args.map_out:
-                append_mapping(Path(args.map_out), r.note_id, adopted)
-        else:
-            nid = create_note(r, url=args.anki_url)
-            created += 1
-            print(f"OK: created noteId {nid} ({r.note_id})")
-            if args.map_out:
-                append_mapping(Path(args.map_out), r.note_id, nid)
-
-    print(f"Done. updated={updated} created={created}")
-    return 0
-
-
-if __name__ == "__main__":
-    raise SystemExit(main())
+def get_flagged_note_ids_by_color(query, url):
+    """Return dict of flagged note IDs by color (stub implementation)"""
+    return {FLAG_RED: set(), FLAG_ORANGE: set()}

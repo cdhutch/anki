@@ -58,7 +58,7 @@ LIVE_LEXEME = [
     "CounterpartForm", "VerbMotion_Pair", "ConfusableSet", "CrossLang_Analog",
     "EuphonyNote", "TypingAnswer", "UA_Example", "EN_Example", "Tags_Ch",
     "Source_URL", "Source_Note", "Mnemonic_EN", "CompareA", "CompareB",
-    "CompareScenario", "CompareC", "CompareD", "_IsHomograph",
+    "CompareScenario", "CompareC", "CompareD", "CompareMembers", "_IsHomograph",
     "Homograph_SenseA", "Homograph_SenseB", "AspectCue", "TypingTarget_UA",
     "_AspectLabel", "Verification Notes", "Lemma_Euphony", "Perfective_Euphony",
     "ImperfectiveUnidirectional_Euphony", "_UA_EN_DisplayLemma", "_TypingSpec",

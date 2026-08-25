@@ -115,6 +115,7 @@ FIELDS = [
     "CompareB",
     "CompareC",
     "CompareD",
+    "CompareMembers",  # JSON array of cluster member lemmas; overrides CompareA-D for clusters
     "Homograph_SenseA",  # EN sense for CompareA (homographs only)
     "Homograph_SenseB",  # EN sense for CompareB (homographs only)
     "CrossLang_Analog",
@@ -906,8 +907,45 @@ EN_UA_BACK = (
 
 COMPARISON_FRONT = """\
 {{#ConfusableSet}}
+{{#CompareMembers}}
+<!-- CLUSTER MODE (Phase 1): CompareMembers holds JSON array of sourced cluster member lemmas.
+     Dynamic rendering via JavaScript. Introduced 2026-08 for unlimited cluster size support. -->
+<div class="compare-prompt-header">Choose the right word:</div>
+<div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
+  Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
+</div>
+<script type="application/json" id="compare-members-json">
+{{CompareMembers}}
+</script>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;" id="compare-members-container">
+<!-- Populated dynamically by JavaScript from CompareMembers JSON array -->
+</div>
+<script>
+(function() {
+  try {
+    var el = document.getElementById('compare-members-json');
+    if (!el) return;
+    var members = JSON.parse(el.textContent.trim());
+    if (!Array.isArray(members)) return;
+    var container = document.getElementById('compare-members-container');
+    members.forEach(function(lemma) {
+      var chip = document.createElement('div');
+      chip.className = 'compare-chip-word';
+      chip.textContent = lemma;
+      container.appendChild(chip);
+    });
+  } catch (e) {
+    console.error('Failed to render cluster members from CompareMembers:', e);
+  }
+})();
+</script>
+{{/CompareMembers}}
+
+<!-- LEGACY MODE: Fall back to CompareA/B/C/D when CompareMembers is empty.
+     Preserves backward compatibility for non-clustered confusables and homographs. -->
+{{^CompareMembers}}
 <!-- CompareA is "always required" by convention (CompareB/C/D optional) --
-     see comment above CARD_TEMPLATES. A blank CompareA here means the note
+     see comment below. A blank CompareA here means the note
      has ConfusableSet populated but Compare fields were never authored
      (e.g. a homograph:true note where CompareA/B got skipped), or some
      other data gap.
@@ -954,6 +992,7 @@ COMPARISON_FRONT = """\
 </div>
 {{/_IsHomograph}}
 {{/CompareA}}
+{{/CompareMembers}}
 {{/ConfusableSet}}
 """
 
@@ -961,6 +1000,20 @@ COMPARISON_BACK = """\
 {{FrontSide}}
 <hr id="answer">
 {{#ConfusableSet}}
+{{#CompareMembers}}
+<!-- CLUSTER MODE BACK: Show the correct word and why it fits.
+     Same structure as legacy confusables mode since clusters render as word chips. -->
+<div style="margin-top: 16px; font-size: 16px;">
+<div class="compare-correct-header">✓ {{Lemma}}</div>
+<div class="compare-correct-sub">{{EN_Gloss}}</div>
+{{#Mnemonic_EN}}<div class="compare-mnemonic">
+<strong>Remember:</strong> {{Mnemonic_EN}}
+</div>{{/Mnemonic_EN}}
+</div>
+{{/CompareMembers}}
+
+<!-- LEGACY MODE BACK: CompareA/B/C/D format for non-clustered confusables and homographs -->
+{{^CompareMembers}}
 {{#CompareA}}
 {{#_IsHomograph}}
 <!-- HOMOGRAPH BACK: Show each Ukrainian sentence + its EN sense -->
@@ -999,6 +1052,7 @@ COMPARISON_BACK = """\
 ⚠ ConfusableSet is populated but no CompareA/B/C/D was authored. If you are reading this in Anki, the empty-card rule has changed -- see COMPARISON_FRONT in setup_ua_note_types.py.
 </div>
 {{/CompareA}}
+{{/CompareMembers}}
 {{/ConfusableSet}}
 """
 
