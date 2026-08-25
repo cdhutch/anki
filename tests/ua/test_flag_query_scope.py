@@ -55,7 +55,7 @@ class TestFlagQueryForModel:
         """Narrowing to the note type must not widen past the UA tree -- a
         UA_Lexeme note filed outside UA:: would be a different bug, and this
         query is not the place to discover it."""
-        assert flag_query_for_model("UA_Lexeme").startswith(UA_DECK_TREE)
+        assert flag_query_for_model("UA_Lexeme").startswith("deck:UA::*")
 
     def test_deck_query_is_overridable(self):
         assert flag_query_for_model("UA_Verb", "deck:Scratch") == (
@@ -93,4 +93,4 @@ class TestAuditToolStaysWide:
     def test_flag_audit_queries_the_whole_ua_tree(self):
         import tools.anki.inspect.ua_flag_audit as audit
 
-        assert audit.FLAG_DECK_QUERY == UA_DECK_TREE
+        assert audit.FLAG_DECK_QUERY == "deck:UA::*"
