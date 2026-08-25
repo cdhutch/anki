@@ -63,7 +63,7 @@ fields:
     but rephrased into a natural, learner-friendly register (post-office pickup notice) rather
     than the legalistic/documents register of the dictionary citation.
   Verification Notes: 'Same word form and stress as ua-lexeme-0304 (noun sense doesn''t shift
-    stress); inherits that note''s stress:unverified status pending your review. Content (gloss,
+    stress); inherits that note''s unverified status pending your review. Content (gloss,
     example) needs your review pass before flipping to status:verified. 2026-07-28: tagged
     homograph:true and cross-linked with sibling ua-lexeme-0304 (same spelling, unrelated
     "departure" sense); added CompareScenario + CompareA/Homograph_SenseA + CompareB/Homograph_SenseB

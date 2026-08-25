@@ -63,7 +63,7 @@ fields:
     existing corpus usage rather than a fresh Горох lookup (browser tooling was unavailable
     this session) -- the draft left Lemma unaccented, no stress guess was actually included
     despite an earlier version of this note claiming otherwise. Craig independently verified
-    the stress via Горох the same day (різки́й, stressed final syllable) and flipped stress:verified/status:verified.
+    the stress via Горох the same day (різки́й, stressed final syllable) and marked as verified.
     The ConfusableSet/ Mnemonic_EN distinction (intrinsic quality vs. manner of change) and
     the example sentence were not separately called out as checked during that pass -- flag
     if either needs its own look. CompareScenario is designed to specifically trigger різкий

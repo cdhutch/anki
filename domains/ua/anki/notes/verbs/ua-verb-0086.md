@@ -50,10 +50,10 @@ fields:
     fields (плину́/пли́неш/пли́не/пли́нем/пли́нете/плину́ть, пли́ни/пли́німе/пли́ніте) do
     NOT match пливти -- they match a different verb, плинути ("to flow/stream," a -нути verb),
     not пливти ("to swim," пливу́/пливе́ш/пливе́.../пливу́ть per Горох, matching the forms
-    on this note). ua-verb-0009 is tagged stress:unverified, so this may be a pre-existing
-    data-entry mix-up rather than anything introduced today -- flagging for your review/decision
-    rather than editing that existing note myself. This new note (0086) uses the Горох-verified
-    пливти paradigm, so if 0009 gets corrected the two should end up matching on everything
-    except the Lemma/fem./neut./plural-past/future-stem differences noted above.'
+    on this note). ua-verb-0009 is unverified, so this may be a pre-existing data-entry mix-up
+    rather than anything introduced today -- flagging for your review/decision rather than
+    editing that existing note myself. This new note (0086) uses the Горох-verified пливти
+    paradigm, so if 0009 gets corrected the two should end up matching on everything except
+    the Lemma/fem./neut./plural-past/future-stem differences noted above.'
 ---
 
