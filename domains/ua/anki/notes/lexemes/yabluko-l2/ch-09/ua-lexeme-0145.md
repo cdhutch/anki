@@ -37,14 +37,6 @@ fields:
     \ word for competitive racing regardless of mode."
   Mnemonic_EN: перегони = racing, any mode; біг = racing specifically on foot (cf. бігти,
     'to run').
-  CompareScenario: You're describing training for or watching a marathon or a school sprint
-    event -- a competition specifically involving running on foot.
-  CompareA: перего́ни
-  CompareB: біг
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: біг
   UA_Example: Біг — чудовий спосіб залишатися у формі.

@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: actor · RU: актёр · FR: acteur · DE: Akteur'
   TypingAnswer: актор
   UA_Example: Цей актор грає головну роль у новому фільмі.

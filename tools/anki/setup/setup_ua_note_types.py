@@ -110,14 +110,7 @@ FIELDS = [
     # -- 6. Semantic relations & Compare card --------------------------------
     "ConfusableSet",
     "Mnemonic_EN",
-    "CompareScenario",
-    "CompareA",
-    "CompareB",
-    "CompareC",
-    "CompareD",
     "CompareMembers",  # JSON array of cluster member lemmas; overrides CompareA-D for clusters
-    "Homograph_SenseA",  # EN sense for CompareA (homographs only)
-    "Homograph_SenseB",  # EN sense for CompareB (homographs only)
     "CrossLang_Analog",
 
     # -- 7. Typing & examples -------------------------------------------------
@@ -912,7 +905,7 @@ COMPARISON_FRONT = """\
      Dynamic rendering via JavaScript. Introduced 2026-08 for unlimited cluster size support. -->
 <div class="compare-prompt-header">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
-  Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
+  Scenario: <span id="compare-scenario">{{EN_Gloss}}</span>
 </div>
 <script type="application/json" id="compare-members-json">
 {{CompareMembers}}
@@ -925,8 +918,19 @@ COMPARISON_FRONT = """\
   try {
     var el = document.getElementById('compare-members-json');
     if (!el) return;
-    var members = JSON.parse(el.textContent.trim());
-    if (!Array.isArray(members)) return;
+    var data = JSON.parse(el.textContent.trim());
+    
+    // Handle both old array format (for backward compat) and new object format
+    var members = Array.isArray(data) ? data : (data.members || []);
+    var scenario = (typeof data === 'object' && data.scenario) ? data.scenario : '';
+    
+    // Update scenario if available
+    if (scenario) {
+      var scenarioEl = document.getElementById('compare-scenario');
+      if (scenarioEl) scenarioEl.textContent = scenario;
+    }
+    
+    // Render member chips
     var container = document.getElementById('compare-members-container');
     members.forEach(function(lemma) {
       var chip = document.createElement('div');
@@ -935,64 +939,12 @@ COMPARISON_FRONT = """\
       container.appendChild(chip);
     });
   } catch (e) {
-    console.error('Failed to render cluster members from CompareMembers:', e);
+    console.error('Failed to render cluster data from CompareMembers:', e);
   }
 })();
 </script>
 {{/CompareMembers}}
 
-<!-- LEGACY MODE: Fall back to CompareA/B/C/D when CompareMembers is empty.
-     Preserves backward compatibility for non-clustered confusables and homographs. -->
-{{^CompareMembers}}
-<!-- CompareA is "always required" by convention (CompareB/C/D optional) --
-     see comment below. A blank CompareA here means the note
-     has ConfusableSet populated but Compare fields were never authored
-     (e.g. a homograph:true note where CompareA/B got skipped), or some
-     other data gap.
-     UNREACHABLE, deliberately kept. Tested 2026-08-01 (see CLAUDE.md item 6):
-     everything this branch emits is static markup with no field substitution,
-     so Anki's own empty-card rule refuses to generate the card at all when
-     CompareA is blank. The block below can never render -- not in study, not
-     in preview, not in QA -- and the importer's suspend call for this exact
-     case is a no-op against a card that does not exist.
-     Its wording used to say "this card should be suspended", which read as a
-     live safeguard and was the one misleading thing about it: nothing is
-     suspending anything here, because there is nothing to suspend. Reworded
-     2026-08-20 to describe the data gap and say plainly that seeing it at all
-     would mean Anki's empty-card behaviour had changed. Find the real gaps
-     with `make ua-check`, not with this. -->
-{{^CompareA}}
-<div class="compare-warning">
-⚠ ConfusableSet is populated but no CompareA/B/C/D was authored. If you are reading this in Anki, the empty-card rule has changed -- see COMPARISON_FRONT in setup_ua_note_types.py.
-</div>
-{{/CompareA}}
-{{#CompareA}}
-{{#_IsHomograph}}
-<!-- HOMOGRAPH MODE: UA→EN direction. Show Ukrainian sentences, student deduces EN meaning -->
-<div class="compare-prompt-header">Which sense is being used?</div>
-<div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
-  {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}[Homograph scenario]{{/CompareScenario}}
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
-<div class="compare-chip-sentence">{{CompareA}}</div>
-{{#CompareB}}<div class="compare-chip-sentence">{{CompareB}}</div>{{/CompareB}}
-</div>
-{{/_IsHomograph}}
-{{^_IsHomograph}}
-<!-- CONFUSABLES MODE: EN→UA direction. Show English scenario, student picks Ukrainian word -->
-<div class="compare-prompt-header">Choose the right word:</div>
-<div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
-  Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
-</div>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;">
-<div class="compare-chip-word">{{CompareA}}</div>
-{{#CompareB}}<div class="compare-chip-word">{{CompareB}}</div>{{/CompareB}}
-{{#CompareC}}<div class="compare-chip-word">{{CompareC}}</div>{{/CompareC}}
-{{#CompareD}}<div class="compare-chip-word">{{CompareD}}</div>{{/CompareD}}
-</div>
-{{/_IsHomograph}}
-{{/CompareA}}
-{{/CompareMembers}}
 {{/ConfusableSet}}
 """
 
@@ -1012,47 +964,6 @@ COMPARISON_BACK = """\
 </div>
 {{/CompareMembers}}
 
-<!-- LEGACY MODE BACK: CompareA/B/C/D format for non-clustered confusables and homographs -->
-{{^CompareMembers}}
-{{#CompareA}}
-{{#_IsHomograph}}
-<!-- HOMOGRAPH BACK: Show each Ukrainian sentence + its EN sense -->
-<div style="margin-top: 16px; font-size: 16px;">
-<div class="compare-reveal-header">Senses of {{Lemma}}:</div>
-<div class="compare-sense-block">
-  <div class="compare-sense-ua">{{CompareA}}</div>
-  <div class="compare-sense-en">{{Homograph_SenseA}}</div>
-</div>
-<div class="compare-sense-block">
-  <div class="compare-sense-ua">{{CompareB}}</div>
-  <div class="compare-sense-en">{{Homograph_SenseB}}</div>
-</div>
-{{#Mnemonic_EN}}<div class="compare-mnemonic">
-<strong>Remember:</strong> {{Mnemonic_EN}}
-</div>{{/Mnemonic_EN}}
-</div>
-{{/_IsHomograph}}
-{{^_IsHomograph}}
-<!-- CONFUSABLES BACK: Show the correct word and why it fits -->
-<div style="margin-top: 16px; font-size: 16px;">
-<div class="compare-correct-header">✓ {{Lemma}}</div>
-<div class="compare-correct-sub">{{EN_Gloss}}</div>
-{{#Mnemonic_EN}}<div class="compare-mnemonic">
-<strong>Remember:</strong> {{Mnemonic_EN}}
-</div>{{/Mnemonic_EN}}
-</div>
-{{/_IsHomograph}}
-{{/CompareA}}
-<!-- Same unreachable branch as COMPARISON_FRONT's; see the long comment
-     there. The back can only render if the front did, and the front cannot.
-     Kept in step with it so the two never disagree about what a data gap
-     looks like. -->
-{{^CompareA}}
-<div class="compare-warning">
-⚠ ConfusableSet is populated but no CompareA/B/C/D was authored. If you are reading this in Anki, the empty-card rule has changed -- see COMPARISON_FRONT in setup_ua_note_types.py.
-</div>
-{{/CompareA}}
-{{/CompareMembers}}
 {{/ConfusableSet}}
 """
 

@@ -39,14 +39,6 @@ fields:
   Mnemonic_EN: Formal/schedule register, mode unspecified -> прибувати (timetables, announcements).
     Everyday, on-foot arrival with a specific person -> приходити (PVOM при-, walking family).
     See ua-lexeme-0315/відправлятися for the departure-side mirror of this same distinction.
-  CompareScenario: A conductor makes an announcement over the station loudspeaker about when
-    the train gets in.
-  CompareA: прибува́ти
-  CompareB: прихо́дити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: прибувати / прибути
   UA_Example: Поїзд прибуває на станцію за розкладом.

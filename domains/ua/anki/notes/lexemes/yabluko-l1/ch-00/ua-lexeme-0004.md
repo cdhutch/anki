@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: journalist · RU: журналист · FR: journaliste · DE: Journalist'
   TypingAnswer: журналіст
   UA_Example: Журналіст пише статтю для газети.

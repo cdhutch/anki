@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Україна
   UA_Example: Україна — незалежна держава у серці Європи.

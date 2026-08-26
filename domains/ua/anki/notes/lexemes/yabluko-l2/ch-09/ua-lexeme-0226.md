@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: виграти партію
   UA_Example: Йому знадобилося пів години, щоб виграти партію.

@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: address · RU: адрес · FR: adresse · DE: Adresse'
   TypingAnswer: адреса
   UA_Example: Будь ласка, напишіть свою адресу в анкеті.

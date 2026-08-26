@@ -40,14 +40,6 @@ fields:
   Mnemonic_EN: Where does the force end up? відбивати = away (deflect an incoming ball); забивати
     = into the goal (score the shot); завдавати = onto a person (a blow); набирати = onto
     the scoreboard (the number goes up).
-  CompareScenario: During a long volleyball rally, what does a player keep doing every time
-    the ball comes flying at them?
-  CompareA: відбива́ти
-  CompareB: забива́ти
-  CompareC: завдава́ти
-  CompareD: набира́ти
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: відбивати / відбити
   UA_Example: Воротар щоразу відбиває мʼяч.

@@ -31,14 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ру́чка
   Mnemonic_EN: олівець = pencil (erasable, graphite); ручка = pen (permanent ink).
-  CompareScenario: Sketching a drawing you plan to revise, or filling in a standardized test
-    form that requires erasable marks.
-  CompareA: олівець
-  CompareB: ручка
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '← DE: Bleiweiß · ≠ RU: карандаш ← Turkic'
   TypingAnswer: олівець
   UA_Example: Напишіть своє прізвище олівцем на першій сторінці.

@@ -38,14 +38,6 @@ fields:
   Mnemonic_EN: гострий = sharp as in WHAT something intrinsically is (a blade, spicy food,
     a keen mind) -- not how it changed. Contrast різкий (ua-lexeme-0586), which describes
     HOW something changed (a jolt, a swerve, a sudden drop).
-  CompareScenario: The chef warns that the soup is far too spicy, there is too much pepper
-    in it.
-  CompareA: гострий
-  CompareB: різкий
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: гострий
   UA_Example: Ця страва занадто гостра для мене.

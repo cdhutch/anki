@@ -28,14 +28,6 @@ fields:
   ConfusableSet: вид (grammatical aspect marker, ua-lexeme-0182) — homograph pair
   Mnemonic_EN: The homograph pair distinguishes 'type of thing' (0143) from 'verb aspect character'
     (0182) by context.
-  CompareScenario: You're discussing different categories of something—what word means a specific
-    type or variety?
-  CompareA: Який вид спорту ти любиш?
-  CompareB: Дієслово "читати" має недоконаний вид.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: kind/type
-  Homograph_SenseB: grammatical aspect marker
   CrossLang_Analog: ''
   TypingAnswer: вид
   UA_Example: ''

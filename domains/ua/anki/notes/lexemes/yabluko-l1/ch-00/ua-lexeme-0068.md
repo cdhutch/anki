@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: firm · RU: фирма · DE: Firma ← Lat: firma'
   TypingAnswer: фірма
   UA_Example: Він працює у великій міжнародній фірмі.

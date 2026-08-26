@@ -37,13 +37,6 @@ fields:
     -- e.g. commutes, makes repeated trips). ї́хати = "is riding/driving, headed one way,
     right now" (unidirectional). пої́хати = "set off (by vehicle) / departed" (perfective
     -- the trip as a completed whole).
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English "go/drive/travel" covers both їздити and їхати without marking
     the habitual-vs-single-trip distinction -- closest analogy is "used to drive out there"
     (multi) vs "was driving there" (uni) vs "set off driving" (perf).

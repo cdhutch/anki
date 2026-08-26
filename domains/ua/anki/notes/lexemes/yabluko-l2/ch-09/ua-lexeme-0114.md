@@ -33,13 +33,6 @@ fields:
     mode of motion — see ua-lexeme-0123)
   Mnemonic_EN: при- = arrival (toward the speaker/reference point); від- = departure (away
     from it).
-  CompareScenario: A guest arrives at your door, on foot, for a party you're hosting.
-  CompareA: приходити
-  CompareB: відходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: приходить / прийти'
   TypingAnswer: приходити / прийти
   UA_Example: ''

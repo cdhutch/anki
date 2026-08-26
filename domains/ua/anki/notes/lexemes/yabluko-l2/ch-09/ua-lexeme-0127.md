@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: отъезжать / отъехать (ʼ corresponds to RU ъ)'
   TypingAnswer: відʼїжджати / відʼїхати
   UA_Example: ''

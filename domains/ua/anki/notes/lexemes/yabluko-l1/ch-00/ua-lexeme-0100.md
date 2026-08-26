@@ -37,14 +37,6 @@ fields:
     \ how you feel."
   Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
     < добре (positive, unmarked) < чудово (enthusiastic).'
-  CompareScenario: A coworker asks how your week went. It was fine but unremarkable -- you
-    don't want to oversell it, just acknowledge it wasn't bad.
-  CompareA: непога́но
-  CompareB: норма́льно
-  CompareC: до́бре
-  CompareD: чудо́во
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: непогано
   UA_Example: Вона непогано малює, але хоче вчитися більше.

@@ -38,14 +38,6 @@ fields:
   Mnemonic_EN: різкий = sharp as in HOW something changed (a jolt, a swerve, a sudden drop)
     -- not what a thing intrinsically is. Contrast гострий (ua-lexeme-0503), which describes
     WHAT a thing is (a blade, spicy food, a keen mind).
-  CompareScenario: The driver swerves hard and sudden to dodge a dog that darted into the
-    road.
-  CompareA: різкий
-  CompareB: гострий
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: різкий
   UA_Example: Він відчув різкий біль у нозі, коли підвернув ногу.

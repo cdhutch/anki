@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: іти / ходити
   ConfusableSet: вхо́дити (directional opposite)
   Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
-  CompareScenario: Someone walks out of a building through the front door, on foot.
-  CompareA: входити
-  CompareB: виходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выходить / выйти'
   TypingAnswer: виходити / вийти
   UA_Example: ''

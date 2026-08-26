@@ -36,13 +36,6 @@ fields:
   Mnemonic_EN: бі́гати = "runs/jogs habitually, no set direction" (multidirectional -- e.g.
     goes running regularly, runs around). бі́гти = "is running, headed one way, right now"
     (unidirectional). побі́гти = "set off running" (perfective -- the run as a completed whole).
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English "run" covers both бігати and бігти without marking the habitual-vs-
     single-run distinction -- closest analogy is "used to run around here" (multi) vs "was
     running there" (uni) vs "took off running" (perf).

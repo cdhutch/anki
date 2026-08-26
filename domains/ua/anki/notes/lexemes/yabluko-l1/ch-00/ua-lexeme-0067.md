@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU/DE/FR: film/фильм/Film/film'
   TypingAnswer: фільм
   UA_Example: Учора ввечері ми дивилися цікавий фільм.

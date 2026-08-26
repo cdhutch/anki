@@ -34,14 +34,6 @@ fields:
     linguistic term for the letter system itself.
   Mnemonic_EN: абетка = the learner's ABC book/context (children, beginners); алфавіт = the
     neutral term for the letter system itself.
-  CompareScenario: Stating a neutral linguistic fact, such as how many letters a language's
-    writing system has.
-  CompareA: абетка
-  CompareB: алфавіт
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU: alphabet/алфавит ← Gk ἄλφα + βῆτα'
   TypingAnswer: алфавіт
   UA_Example: В українському алфавіті тридцять три букви.

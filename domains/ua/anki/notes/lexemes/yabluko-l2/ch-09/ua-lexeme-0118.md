@@ -32,14 +32,6 @@ fields:
   ConfusableSet: прихо́дити (directional opposite)
   Mnemonic_EN: при- = arrival (toward the speaker/reference point); від- = departure (away
     from it).
-  CompareScenario: A guest says goodbye and walks away from your door, on foot, at the end
-    of the evening.
-  CompareA: приходити
-  CompareB: відходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: отходить / отойти (від- ≈ от-)'
   TypingAnswer: відходити / відійти
   UA_Example: ''

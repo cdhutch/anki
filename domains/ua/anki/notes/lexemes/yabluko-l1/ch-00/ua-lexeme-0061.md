@@ -31,14 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: олі́вець
   Mnemonic_EN: олівець = pencil (erasable, graphite); ручка = pen (permanent ink).
-  CompareScenario: Signing an official document or writing a permanent note that shouldn't
-    be erased.
-  CompareA: олівець
-  CompareB: ручка
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: ручка
   UA_Example: Дай мені, будь ласка, ручку написати адресу.

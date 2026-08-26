@@ -38,13 +38,6 @@ fields:
   Mnemonic_EN: стартува́ти = leaving the starting line (races, launches only); почина́ти =
     beginning anything at all (the general-purpose verb). See ua-lexeme-0292/фінішувати for
     the finish-line mirror of this same distinction.
-  CompareScenario: The referee fires the starting pistol and the runners take off.
-  CompareA: стартува́ти
-  CompareB: почина́ти
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: стартувати
   UA_Example: Команди стартували рівно о восьмій ранку.

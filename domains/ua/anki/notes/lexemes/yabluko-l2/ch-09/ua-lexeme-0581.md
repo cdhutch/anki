@@ -42,13 +42,6 @@ fields:
     around, habitually, no set direction" (multidirectional). йти = "be walking, headed one
     way, right now" (unidirectional). піти́ = "set off walking / to have gone" (perfective
     -- the trip as a completed whole). Think "wanders" vs "is walking there" vs "went."
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English does not grammaticalize the multidirectional/unidirectional distinction
     -- "walk" and "go" cover both ходити and йти. The closest analogy is aspectual, not lexical
     -- compare "used to walk over there" (multi) vs "was walking there" (uni) vs "set off

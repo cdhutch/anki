@@ -40,14 +40,6 @@ fields:
   Mnemonic_EN: Where does the force end up? відбивати = away (deflect an incoming ball); забивати
     = into the goal (score the shot); завдавати = onto a person (a blow); набирати = onto
     the scoreboard (the number goes up).
-  CompareScenario: As the second half goes on, what keeps happening to the leading team's
-    number on the scoreboard?
-  CompareA: відбива́ти
-  CompareB: забива́ти
-  CompareC: завдава́ти
-  CompareD: набира́ти
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: набирати / набрати
   UA_Example: Команда швидко набирає очки в другому таймі.

@@ -38,13 +38,6 @@ fields:
   Mnemonic_EN: фінішувати = crossing the finish line (races only); закінчувати = finishing
     anything at all (the general-purpose verb). See ua-lexeme-0291/стартувати for the starting-line
     mirror of this same distinction.
-  CompareScenario: The first runner breaks the tape at the finish line.
-  CompareA: фінішува́ти
-  CompareB: закі́нчувати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: фінішувати
   UA_Example: Перша команда фінішувала за три дні.

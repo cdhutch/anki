@@ -35,15 +35,6 @@ fields:
     intensify comparatives but differ markedly in register.'
   Mnemonic_EN: значно = measured, written-register "significantly"; набагато = everyday spoken
     "much/by far" -- same job (intensifying a comparative), different register.
-  CompareScenario: A market report states that prices this year are considerably higher than
-    last year -- the kind of measured comparison you'd read in a news analysis or official
-    statistics.
-  CompareA: зна́чно
-  CompareB: набага́то
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: значно
   UA_Example: Цей готель значно дорожчий за той.

@@ -166,6 +166,73 @@ def check_note_type(config: dict, verbose: bool) -> dict:
     return {"missing": any_missing, "extra": extra_counts, "total": total}
 
 
+# Compare/Homograph fields dropped from the canonical FIELDS constant by the
+# Phase 6 confusable-registry consolidation (2026-08-26) -- CompareMembers,
+# backed 100% by confusable_clusters.yaml, now supersedes all of them. Kept
+# here, separately from NOTE_TYPE_CONFIGS' canonical sets, so a note that
+# still carries one from before the migration (populated OR blanked -- either
+# is a stale leftover, never a typo) is tolerated rather than flagged as an
+# UNKNOWN key. Never required: they don't appear in canonical_fields, so
+# --strict's MISSING check doesn't ask for them either.
+DEPRECATED_FIELDS: dict[str, set[str]] = {
+    "UA_Lexeme": {
+        "CompareA", "CompareB", "CompareC", "CompareD", "CompareScenario",
+        "Homograph_SenseA", "Homograph_SenseB",
+    },
+}
+
+
+def check_note_fields(
+    note_type: str,
+    fields: dict,
+    note_id: str,
+    strict: bool = False,
+) -> dict:
+    """Validate a single note's fields dict against this note type's canonical set.
+
+    Thin, single-note wrapper around the same NOTE_TYPE_CONFIGS this module's
+    corpus-wide check_note_type() uses -- same canonical-field source (the real
+    FIELDS-style constants imported above), so it can't drift from either the
+    live models or the bulk checker. Added 2026-08 for Phase 6 deprecated-field
+    removal tests, which need to assert against one synthetic note at a time
+    rather than scanning the CNSF corpus.
+
+    Tolerates DEPRECATED_FIELDS (see above) on top of the canonical set, so a
+    note left over from before the migration doesn't get flagged just for
+    still carrying one -- see DEPRECATED_FIELDS' docstring.
+
+    Returns a dict with "status": "ok", or "unknown_keys" / "missing_fields"
+    (only when strict=True) plus the offending key list, mirroring the
+    MISSING/UNKNOWN distinction check_note_type() reports for the corpus scan.
+    """
+    config = next((c for c in NOTE_TYPE_CONFIGS if c["label"] == note_type), None)
+    if config is None:
+        return {"status": "unknown_note_type", "note_type": note_type}
+
+    canonical_set = set(config["canonical_fields"])
+    tolerated_set = canonical_set | DEPRECATED_FIELDS.get(note_type, set())
+    present = set(fields.keys())
+
+    unknown = present - tolerated_set
+    if unknown:
+        return {
+            "status": "unknown_keys",
+            "unknown_keys": sorted(unknown),
+            "note_id": note_id,
+        }
+
+    if strict:
+        missing = canonical_set - present
+        if missing:
+            return {
+                "status": "missing_fields",
+                "missing_fields": sorted(missing),
+                "note_id": note_id,
+            }
+
+    return {"status": "ok", "note_id": note_id}
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Check CNSF note field-key consistency per note type against this "

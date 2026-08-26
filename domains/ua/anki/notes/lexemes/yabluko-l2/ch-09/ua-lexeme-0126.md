@@ -32,14 +32,6 @@ fields:
   ConfusableSet: доїжджа́ти (approach vs. actually reach, by vehicle)
   Mnemonic_EN: під- = approaching by vehicle, getting close; до- = actually reaching the destination
     by vehicle (same під-/до- opposition as підходити/доходити, applied to vehicles).
-  CompareScenario: A taxi slowly pulls up next to the curb where you're waiting, not yet having
-    arrived at the final destination.
-  CompareA: підʼїжджати
-  CompareB: доїжджати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: подъезжать / подъехать (ʼ corresponds to RU ъ)'
   TypingAnswer: підʼїжджати / підʼїхати
   UA_Example: ''

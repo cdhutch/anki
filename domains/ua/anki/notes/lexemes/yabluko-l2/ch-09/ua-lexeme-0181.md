@@ -38,13 +38,6 @@ fields:
     \ range of one word."
   Mnemonic_EN: Same spelling either way (метелик) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: Which sense of метелик is being used?
-  CompareA: Червоний метелик сів на білу квітку.
-  CompareB: На вечірці він носив чорний метелик.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: butterfly (insect)
-  Homograph_SenseB: bow-tie (menswear accessory)
   CrossLang_Analog: ''
   TypingAnswer: метелик
   UA_Example: Він одягнув чорний метелик до смокінга.

@@ -60,6 +60,7 @@ from tools.anki.sync.tsv_to_anki import (  # noqa: E402
 # what gets WRITTEN -- this constant scopes flag QUERIES, which are per-run
 # rather than per-note.
 MODEL_NAME = "UA_PVOM_Infinitive"
+ANKI_URL = "http://127.0.0.1:8765"
 
 # Flag-query scope for the red/orange-flag check -- scoped to this note type
 # (2026-08-20); see flag_query_for_model() in tsv_to_anki.py. This importer is
@@ -196,7 +197,7 @@ def upsert_notes(pvom_dir, dry_run=False):
     # One bulk query for the whole sync run -- see get_flagged_note_ids_by_color.
     # Red still forces suspension; orange is a call-out only (2026-08-10, per
     # Craig -- see SUSPEND_FLAG_COLORS in tsv_to_anki.py).
-    flags_by_color = get_flagged_note_ids_by_color(FLAG_DECK_QUERY)
+    flags_by_color = get_flagged_note_ids_by_color(FLAG_DECK_QUERY, ANKI_URL)
     flagged_note_ids = flags_by_color[FLAG_RED]
     if flagged_note_ids:
         print(f"Found {len(flagged_note_ids)} note(s) with a red-flagged card -- keeping suspended.")

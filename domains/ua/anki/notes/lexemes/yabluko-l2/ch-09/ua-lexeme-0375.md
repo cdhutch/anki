@@ -34,13 +34,6 @@ fields:
     (It's easy to blend with вчасно "on time," or with the Russian часть "part" -- Ukrainian
     uses частина for "part," and участь for "participation" is its own root, not built on
     "часть" at all.)
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: участь
   UA_Example: Шестеро гравців беруть участь у змаганні, а четверо -- запасні.

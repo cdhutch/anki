@@ -37,14 +37,6 @@ fields:
     \ how you feel."
   Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
     < добре (positive, unmarked) < чудово (enthusiastic).'
-  CompareScenario: A friend asks how your exam went. You did solidly and feel satisfied --
-    no fireworks, just a plain, straightforwardly positive result.
-  CompareA: непога́но
-  CompareB: норма́льно
-  CompareC: до́бре
-  CompareD: чудо́во
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: добре
   UA_Example: Він добре знає свою роботу.

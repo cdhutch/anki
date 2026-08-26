@@ -36,14 +36,6 @@ fields:
     \ фах = skilled expertise + craft\n"
   Mnemonic_EN: професія = formal career identity/credentials; фах = a specific skilled trade
     or craft expertise.
-  CompareScenario: Filling out an official form that asks for your occupation, or introducing
-    yourself formally by career at a professional networking event.
-  CompareA: професія
-  CompareB: фах
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: profession · RU: профессия · FR: profession · DE: Profession'
   TypingAnswer: професія
   UA_Example: Яка ваша професія? Я лікар.

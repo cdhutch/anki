@@ -41,13 +41,6 @@ fields:
   Mnemonic_EN: вигравати = WHAT you win (a match/prize/thing, never a person); перемагати
     = WHO you beat (a person/team, direct object). See ua-lexeme-0177/перемагати for the mirror
     note.
-  CompareScenario: At the poker table, what does a player do to walk away with the whole pot?
-  CompareA: перемогти́ (перемага́ти)
-  CompareB: ви́грати (виграва́ти)
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вигравати / виграти
   UA_Example: Вона любить вигравати навіть у дружніх іграх.
