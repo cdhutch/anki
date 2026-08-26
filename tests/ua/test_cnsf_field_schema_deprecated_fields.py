@@ -5,12 +5,46 @@ fields gracefully. Verifies that field removal does not trigger validation error
 does not require --strict mode, and that canonicalization passes with fields removed.
 """
 
+import copy
+
 import pytest
 from pathlib import Path
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 
 from tools.anki.cnsf_canonicalize import _normalize_meta
 from tools.anki.inspect.check_cnsf_field_schema import check_note_fields
+
+
+def _valid_ua_lexeme_meta(extra_fields: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    """Build a minimal-but-valid ua_lexeme CNSF meta dict.
+
+    _normalize_meta() validates the full CNSF envelope (schema/note_id/anki/
+    tags/fields), not just a bare fields dict -- it raises ValueError on a
+    missing schema, note_id, anki.model/deck, or tags. The original versions
+    of the tests below passed bare fields-only dicts and never got past that
+    first check, which is why they were marked @pytest.mark.skip instead of
+    actually running. Centralizing a real, passing-shape fixture here lets
+    them exercise the thing they're named for instead.
+    """
+    fields: Dict[str, Any] = {
+        "NoteID": "ua-lexeme-0115",
+        "Lemma": "входити",
+        "EN_Gloss": "to enter",
+        "PartOfSpeech": "verb",
+        "ConfusableSet": "входити vs вхідний",
+        # No CompareA/B/C/D, CompareScenario, or Homograph_SenseA/B -- target
+        # state for every note in the corpus post Phase 6.
+    }
+    if extra_fields:
+        fields.update(extra_fields)
+    return {
+        "schema": "cnsf/v0",
+        "note_type": "ua_lexeme",
+        "note_id": "ua-lexeme-0115",
+        "anki": {"model": "UA_Lexeme", "deck": "UA::Recognition::UA\u2192EN"},
+        "tags": ["domain:ua", "topic:vocabulary"],
+        "fields": fields,
+    }
 
 
 class TestMissingCompareFieldsNotErrors:
@@ -143,85 +177,52 @@ class TestDeprecatedFieldsOptionalInSchema:
 
 
 class TestCanonicalizeHandlesRemovedFields:
-    """Verify that cnsf_canonicalize.py works with deprecated fields removed."""
+    """Verify that cnsf_canonicalize.py works with deprecated fields removed.
 
-    @pytest.mark.skip(reason="Requires full CNSF YAML structure with schema field")
+    The third test that used to live here, test_canonicalize_no_error_mixed_removal_states,
+    was removed (2026-08-26) rather than rewritten: it exercised a corpus that mixes
+    legacy/transitional/target Compare-field states, which was a real concern during
+    Phase 6's rollout but isn't an invariant of the system going forward -- the corpus
+    is uniformly at target state now. Per-field tolerance of a stray deprecated field
+    turning up is already covered, more rigorously, by
+    TestDeprecatedFieldsOptionalInSchema above.
+    """
+
     def test_normalize_meta_no_error_without_compare_fields(self):
         """_normalize_meta() handles notes with no Compare fields without error."""
-        meta = {
-            "NoteID": "ua-lexeme-0115",
-            "Lemma": "входити",
-            "EN_Gloss": "to enter",
-            "PartOfSpeech": "verb",
-            "ConfusableSet": "входити vs вхідний",
-            # No Compare* or Homograph_Sense* fields
-        }
+        meta = _valid_ua_lexeme_meta()
 
         # Should not raise
         result = _normalize_meta(meta, Path("test"))
 
-        # Result should be valid normalized meta
         assert isinstance(result, dict)
-        assert "NoteID" in result
-        assert "Lemma" in result
+        fields = result["fields"]
+        assert fields["NoteID"] == "ua-lexeme-0115"
+        assert fields["Lemma"] == "входити"
 
-    @pytest.mark.skip(reason="Requires full CNSF YAML structure with schema field")
+        # The "always-present optional field" setdefault() convention in
+        # _normalize_meta must NOT reintroduce any of the 7 fields Phase 6
+        # removed -- that's exactly the regression this test exists to catch.
+        for deprecated in (
+            "CompareA", "CompareB", "CompareC", "CompareD", "CompareScenario",
+            "Homograph_SenseA", "Homograph_SenseB",
+        ):
+            assert deprecated not in fields, \
+                f"_normalize_meta reintroduced deprecated field {deprecated!r}"
+
     def test_normalize_meta_idempotent_with_fields_removed(self):
-        """Running _normalize_meta twice (fields removed first time) is idempotent."""
-        meta_original = {
-            "NoteID": "ua-lexeme-0116",
-            "Lemma": "вхідний",
-            "EN_Gloss": "entering",
-            "PartOfSpeech": "adjective",
-            "CompareA": "",
-            "CompareB": "",
-        }
+        """Running _normalize_meta twice (fields already removed) is idempotent."""
+        meta = _valid_ua_lexeme_meta()
 
-        # First pass: normalizes
-        result1 = _normalize_meta(dict(meta_original))
+        # deepcopy on each call -- _normalize_meta mutates its `fields` dict
+        # in place, so reusing the same nested dict across both calls would
+        # make idempotency trivially true regardless of whether the function
+        # actually behaves idempotently.
+        result1 = _normalize_meta(copy.deepcopy(meta), Path("test"))
+        result2 = _normalize_meta(copy.deepcopy(result1), Path("test"))
 
-        # Second pass on the result
-        result2 = _normalize_meta(dict(result1), Path("test"))
-
-        # Should be identical (or at least, no fields appear/disappear)
-        assert set(result1.keys()) == set(result2.keys()), \
-            "Idempotency broken: keys changed between passes"
-
-    @pytest.mark.skip(reason="Requires full CNSF YAML structure with schema field")
-    def test_canonicalize_no_error_mixed_removal_states(self):
-        """Canonicalize handles notes in different field removal states (legacy/transitional/target)."""
-        # This test verifies the behavior when a corpus contains a mix of states
-        # (as would happen during a gradual migration)
-
-        test_notes = [
-            # Legacy state
-            {
-                "NoteID": "ua-lexeme-0001",
-                "Lemma": "слово1",
-                "CompareA": "test",
-                "CompareB": "test2",
-                "CompareScenario": "scenario",
-            },
-            # Transitional state
-            {
-                "NoteID": "ua-lexeme-0002",
-                "Lemma": "слово2",
-                "CompareA": "",
-                "CompareB": "",
-                "CompareScenario": "",
-            },
-            # Target state
-            {
-                "NoteID": "ua-lexeme-0003",
-                "Lemma": "слово3",
-                # No Compare fields
-            },
-        ]
-
-        for meta in test_notes:
-            # Should not raise for any state
-            result = _normalize_meta(dict(meta), Path("test"))
-            assert isinstance(result, dict)
+        assert result1 == result2, \
+            "Idempotency broken: normalizing an already-normalized meta changed it"
 
 
 class TestFieldRemovalNoStrictRequired:
