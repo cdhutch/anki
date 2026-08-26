@@ -1054,7 +1054,6 @@ in this repo -- all run by Craig, not Claude:
 | **Ch-09 vocabulary sourcing workflow** | [CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md) |
 | **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
 | **Vocab dedup/homograph audit tooling** | [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) |
-| **Compare card field mapping (homograph vs confusables)** | [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) |
 
 ---
 
@@ -1647,8 +1646,17 @@ This shows the learner that the same Ukrainian word spans multiple semantic doma
 CompareA-D + CompareScenario -- this section previously described the pre-redesign flat-prose
 format; corrected 2026-07-28)**
 
-**See [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) for the
-full field-by-field spec** (added 2026-07-28 after two authoring bugs were found in the same
+> **SUPERSEDED 2026-08-26.** The `CompareA`/`CompareB`/`CompareC`/`CompareD`/`CompareScenario`/
+> `Homograph_SenseA`/`Homograph_SenseB` fields this section describes were removed from
+> `UA_Lexeme` and replaced by a single registry-driven `CompareMembers` JSON field sourced
+> from `domains/ua/anki/confusable_clusters.yaml` (see this file's 2026-08-26 dated entry
+> and `tools/anki/lib/confusable_clusters.py`'s `ClusterRegistry`/`ClusterMember`). The rest
+> of this section is kept as historical design record of the pre-registry mechanism --
+> do not author `CompareA-D` or `CompareScenario` in CNSF going forward.
+
+**See the now-removed `CLAUDE-compare-card-field-mapping.md` (deleted 2026-08-26 along with
+the fields it documented) for the full field-by-field spec that was in effect** (added
+2026-07-28 after two authoring bugs were found in the same
 session: ua-lexeme-0305 got `ConfusableSet` populated with no `CompareA`/`CompareB` authored,
 which the importer's legacy fallback then filled with the raw `ConfusableSet` prose paragraph
 -- rendered live, unsuspended, as a fake front-side answer chip; ua-lexeme-0181 had never been
