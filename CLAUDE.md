@@ -1,6 +1,6 @@
 # CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
-**Current work**: UA domain -- Class G homograph audit (ua-lexeme-0143/0182, вид) complete and synced as of 2026-08-25. Ch-09 motion-verb polish punch list (7/7 items) complete as of 2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring (item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
+**Current work**: Confusable-cluster registry consolidation (Phases 1-7) complete and merged to main as of 2026-08-26 -- the seven deprecated `CompareA`/`CompareB`/`CompareC`/`CompareD`/`CompareScenario`/`Homograph_SenseA`/`Homograph_SenseB` fields removed from `UA_Lexeme` (schema, CNSF corpus, and Anki note type) in favor of a single registry-driven `CompareMembers` JSON field sourced from `confusable_clusters.yaml`; 548 tests passing, verified live in Anki by Craig. UA domain -- Class G homograph audit (ua-lexeme-0143/0182, вид) complete and synced as of 2026-08-25. Ch-09 motion-verb polish punch list (7/7 items) complete as of 2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring (item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
 2026-07-27: Fixed `audit_legacy_lexeme.py` to filter for chapter 2.9.x notes only (was comparing
 against all 569 canonical notes, now correctly compares against 259 ch-09 notes); audit now
 shows 59 safe-to-delete legacy vocabulary matches. Created дорогий polysemy split following the
@@ -999,6 +999,8 @@ Also created two audit scripts (not yet exercised on the full corpus, filed for 
 - `tools/anki/inspect/audit_registry_vs_cnsf.py` — validates that `confusable_clusters.yaml` registry members exist in CNSF, CNSF Compare-data notes are listed in registry, and lemma consistency between registry and CNSF.
 - `tools/anki/inspect/analyze_registry_compare_data.py` — surveys registry structure and CNSF Compare-field population to identify gaps in field coverage.
 
+2026-08-26: **Confusable-cluster registry consolidation (Phases 1-7) complete, merged to main, and personally verified by Craig.** Removed the seven deprecated `UA_Lexeme` Compare/Homograph fields (`CompareA`, `CompareB`, `CompareC`, `CompareD`, `CompareScenario`, `Homograph_SenseA`, `Homograph_SenseB`) everywhere they existed -- the `FIELDS` constant and Compare-card templates in `setup_ua_note_types.py`, the `_normalize_meta()` setdefault block in `cnsf_canonicalize.py` (which had been silently reintroducing them as blanks), the live Anki `UA_Lexeme` note type (`make ua-setup-lexeme`), and all 585 CNSF note files in `domains/ua/anki/notes/lexemes/` -- replacing them with a single registry-driven `CompareMembers` JSON field (`{"scenario": ..., "members": [...]}`) populated from `domains/ua/anki/confusable_clusters.yaml` (100% coverage, 59/59 cluster members) via a new `ClusterRegistry`/`ClusterMember` API in `tools/anki/lib/confusable_clusters.py` and a new `tools/anki/lib/registry_validator.py`. `check_cnsf_field_schema.py` tolerates the seven old keys as deprecated (not unknown) for any note that still carries them going forward. Two commits (`bf5a8a77`, `f4679e84`), 548 tests passing (0 skipped -- two of the three previously-skipped tests in `test_cnsf_field_schema_deprecated_fields.py` were rewritten against real fixtures, one redundant one removed), merged via PR reviewed and completed by Craig on GitHub. Craig verified Anki sync and spot-checked rendered cards personally before merging. The two audit scripts logged under 2026-08-25 above (`audit_registry_vs_cnsf.py`, `analyze_registry_compare_data.py`) predate this consolidation and describe the old CNSF-carries-Compare-data shape; treat their descriptions as historical. All Compare/Homograph field references in this file's earlier dated entries (2026-07-27 through 2026-08-25) are historical record of the now-removed fields, not current schema.
+
 ## Workflow Notes
 
 This repo builds and maintains Anki flashcard decks across three top-level decks:
@@ -1052,7 +1054,6 @@ in this repo -- all run by Craig, not Claude:
 | **Ch-09 vocabulary sourcing workflow** | [CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md) |
 | **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
 | **Vocab dedup/homograph audit tooling** | [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) |
-| **Compare card field mapping (homograph vs confusables)** | [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) |
 
 ---
 
@@ -1645,8 +1646,17 @@ This shows the learner that the same Ukrainian word spans multiple semantic doma
 CompareA-D + CompareScenario -- this section previously described the pre-redesign flat-prose
 format; corrected 2026-07-28)**
 
-**See [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) for the
-full field-by-field spec** (added 2026-07-28 after two authoring bugs were found in the same
+> **SUPERSEDED 2026-08-26.** The `CompareA`/`CompareB`/`CompareC`/`CompareD`/`CompareScenario`/
+> `Homograph_SenseA`/`Homograph_SenseB` fields this section describes were removed from
+> `UA_Lexeme` and replaced by a single registry-driven `CompareMembers` JSON field sourced
+> from `domains/ua/anki/confusable_clusters.yaml` (see this file's 2026-08-26 dated entry
+> and `tools/anki/lib/confusable_clusters.py`'s `ClusterRegistry`/`ClusterMember`). The rest
+> of this section is kept as historical design record of the pre-registry mechanism --
+> do not author `CompareA-D` or `CompareScenario` in CNSF going forward.
+
+**See the now-removed `CLAUDE-compare-card-field-mapping.md` (deleted 2026-08-26 along with
+the fields it documented) for the full field-by-field spec that was in effect** (added
+2026-07-28 after two authoring bugs were found in the same
 session: ua-lexeme-0305 got `ConfusableSet` populated with no `CompareA`/`CompareB` authored,
 which the importer's legacy fallback then filled with the raw `ConfusableSet` prose paragraph
 -- rendered live, unsuspended, as a fake front-side answer chip; ua-lexeme-0181 had never been

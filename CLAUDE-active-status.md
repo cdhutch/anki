@@ -88,8 +88,9 @@ fully verified on both axes as of 2026-08-19.
   (0482 дотримуватися missing its `Perfective`), and 1 open usage question were raised.
   Of these: the 0484 (впасти→впадати) correction is done; the confusable-set candidates
   whose partner word isn't sourced yet are watchlist-tagged (`pending-confusable:<lemma>`)
-  for automatic pickup once that word is added, not written into `ConfusableSet`/`CompareA-D`
-  yet; the 0482 aspect-pairing gap and the раз-counting/мандрівка-vs-подорож questions were
+  for automatic pickup once that word is added, not yet written into `ConfusableSet` or added
+  as a member to `domains/ua/anki/confusable_clusters.yaml` (the `CompareA-D` mechanism this
+  used to name was removed 2026-08-26); the 0482 aspect-pairing gap and the раз-counting/мандрівка-vs-подорож questions were
   discussed and answered in conversation but not yet written into any field.
 - **40 flagged notes** exist in the corpus — **14 red + 26 orange**, read straight off
   the 2026-08-18 `make ua-pvom` output. The "11 flagged notes" figure this file carried
