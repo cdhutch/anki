@@ -36,14 +36,6 @@ fields:
     as a rating; очко́ is scored in the action.'
   Mnemonic_EN: очко́ is won IN the game (running score); бал is given ABOUT the performance
     (a grade or rating).
-  CompareScenario: A gymnast finishes her routine, and the judges hold up number cards showing
-    how they rated her performance.
-  CompareA: очко́
-  CompareB: бал
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: бал
   UA_Example: Команда отримала додаткові бали за швидкість.

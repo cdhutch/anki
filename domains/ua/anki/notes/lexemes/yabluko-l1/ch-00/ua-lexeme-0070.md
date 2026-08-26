@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: circus · RU: цирк · DE: Zirkus · FR: cirque ← Lat: circus'
   TypingAnswer: цирк
   UA_Example: Ми з дітьми ходили до цирку у суботу.

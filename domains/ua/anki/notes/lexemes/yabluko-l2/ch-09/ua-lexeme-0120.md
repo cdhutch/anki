@@ -31,14 +31,6 @@ fields:
   VerbMotion_Pair: іти / ходити
   ConfusableSet: перехо́дити (pass by/through vs. cross to the far side)
   Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
-  CompareScenario: Someone is walking along a street, passing several shops without stopping,
-    on the way somewhere else.
-  CompareA: проходити
-  CompareB: переходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: проходить / пройти'
   TypingAnswer: проходити / пройти
   UA_Example: ''

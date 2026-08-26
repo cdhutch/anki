@@ -44,14 +44,6 @@ fields:
     confusable pair tested on this card.'
   Mnemonic_EN: тип = what KIND of thing/object/document (тип вагона); вид = what KIND of activity/category
     (вид спорту) -- same job, different collocation family.
-  CompareScenario: Filling out a train ticket booking form and picking which category of train
-    car you want -- deluxe, compartment, or open-plan sleeper.
-  CompareA: тип
-  CompareB: вид
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: тип
   UA_Example: 'Оберіть тип вагона: люкс, купе чи плацкарта.'

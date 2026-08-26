@@ -377,17 +377,22 @@ def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[
 
 
 def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
-    """Serialize cluster members to JSON array for Compare card rendering.
+    """Serialize cluster scenario + members to JSON for Compare card rendering.
 
-    Returns JSON string of member lemmas if note is a cluster member,
-    empty string otherwise. Only includes sourced (active) members.
+    Returns JSON string of {"scenario": ..., "members": [...]} if note is a
+    cluster member, empty string otherwise. Only includes sourced (active)
+    members. The scenario comes from this note's own compare_scenario field
+    in the registry (Phase 6: confusable_clusters.yaml is now 100% backfilled
+    with compare_scenario per member, so CompareScenario no longer needs to
+    be hand-authored per CNSF note).
 
     Args:
         note_id: The note's ID (e.g., 'ua-lexeme-0467')
         tags: List of tags from the note (used only for _IsHomograph flag)
 
     Returns:
-        JSON string like '["значно", "набагато"]' or '' if not clustered
+        JSON string like '{"scenario": "...", "members": ["значно", "набагато"]}'
+        or '' if not clustered
     """
     try:
         registry = ClusterRegistry()
@@ -401,9 +406,18 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
         if not members:
             return ""
 
-        # Extract lemmas and serialize to JSON
-        lemmas = [member.lemma for member in members]
-        return json.dumps(lemmas, ensure_ascii=False)
+        # Get scenario from the member of this cluster matching this note_id
+        scenario = ""
+        for member in cluster.members:
+            if member.note_id == note_id:
+                scenario = member.compare_scenario
+                break
+
+        data = {
+            "scenario": scenario,
+            "members": [member.lemma for member in members],
+        }
+        return json.dumps(data, ensure_ascii=False)
     except Exception as e:
         # Log warning but don't fail import
         print(f"Warning: Failed to load cluster members for {note_id}: {e}")
@@ -499,26 +513,13 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     # side chip via {{CompareB}}, leaking the answer. compute_compare_options
     # is now only a fallback for notes that predate that redesign and have
     # never had CompareA/CompareB authored.
-    # Handle Compare field logic: cluster members, legacy fields, or fallback
+    # Handle Compare field logic: only registry-driven clusters
+    # (Phase 6: CompareA/B/C/D/CompareScenario/Homograph_SenseA/B removed from
+    # schema; legacy auto-derive fallback removed. The confusable cluster
+    # registry -- confusable_clusters.yaml, 100% backfilled as of Phase 2 --
+    # is now the single source of truth for every Compare card.)
     cluster_members_json = get_cluster_compare_members_json(note_id, tags)
-
-    if cluster_members_json:
-        # Cluster members populate CompareMembers, leave Compare fields blank
-        fields["CompareMembers"] = cluster_members_json
-        fields["CompareA"] = ""
-        fields["CompareB"] = ""
-        fields["CompareC"] = ""
-        fields["CompareD"] = ""
-    else:
-        # Legacy logic: auto-derive CompareA/B from ConfusableSet if not already authored
-        already_authored = fields.get("CompareA", "").strip() and fields.get("CompareB", "").strip()
-        if not is_homograph and not already_authored:
-            compare_a, compare_b = compute_compare_options(
-                note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
-            )
-            fields["CompareA"] = compare_a
-            fields["CompareB"] = compare_b
-        fields["CompareMembers"] = ""
+    fields["CompareMembers"] = cluster_members_json if cluster_members_json else ""
 
     # Suspension policy -- see module docstring.
     suspend = "status:draft" in tags
@@ -541,9 +542,10 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     # later has that data retracted (ConfusableSet/CompareA/CompareB cleared)
     # -- confirmed working end-to-end via a two-phase test (see CLAUDE.md
     # item 6), so the already-existing card does get suspended on re-sync.
-    confusable_set = fields.get("ConfusableSet", "").strip()
-    compare_a_content = fields.get("CompareA", "").strip()
-    suspend_compare_card = not confusable_set or not compare_a_content
+    # Compare card suspension: suspend if no cluster members
+    # (Phase 6: CompareA/B logic removed; registry is single source of truth)
+    compare_members = fields.get("CompareMembers", "").strip()
+    suspend_compare_card = not compare_members
 
     existing_id = find_note_by_id(note_id)
 

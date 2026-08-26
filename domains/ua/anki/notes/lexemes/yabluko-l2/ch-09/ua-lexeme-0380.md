@@ -39,13 +39,6 @@ fields:
   Mnemonic_EN: Same spelling either way (відправлення) — the card tests which SENSE fits,
     not which word. Both senses trace to відправляти "to send off" — a train is "sent off"
     (departs), a parcel is "sent off" (mailed).
-  CompareScenario: Which sense of відправлення is being used?
-  CompareA: Час відправлення поїзда -- девʼята вечора.
-  CompareB: Ваше відправлення готове до отримання на пошті.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: departure
-  Homograph_SenseB: parcel, mailed item (letter/package)
   CrossLang_Analog: ''
   TypingAnswer: відправлення
   UA_Example: Ваше відправлення готове до отримання на пошті.

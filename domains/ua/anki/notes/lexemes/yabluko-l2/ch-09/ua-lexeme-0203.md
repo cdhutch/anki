@@ -38,14 +38,6 @@ fields:
     Key distinction: очко́ is scored in the action; бал is assigned as a rating.'
   Mnemonic_EN: очко́ is won IN the game (running score); бал is given ABOUT the performance
     (a grade or rating).
-  CompareScenario: A basketball game is tied with five seconds left on the clock, and a player
-    sinks a shot right at the buzzer.
-  CompareA: очко́
-  CompareB: бал
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: очко
   UA_Example: Команда набрала останнє очко за секунду до кінця.

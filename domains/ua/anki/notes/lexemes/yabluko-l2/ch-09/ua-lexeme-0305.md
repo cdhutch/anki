@@ -37,14 +37,6 @@ fields:
     \ lexeme in\nthis corpus) the way there is on the verb side (see ua-lexeme-0316/прибувати)."
   Mnemonic_EN: прибуття = coming IN (arrival); відправлення = going OUT (departure) -- see
     ua-lexeme-0304 for the paired note.
-  CompareScenario: At the station, the 9pm train from Lviv pulls in and stops at the platform.
-    What just happened to it?
-  CompareA: прибуття́
-  CompareB: відпра́влення
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: прибуття
   UA_Example: Прибуття очікується завтра вранці.

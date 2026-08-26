@@ -40,15 +40,6 @@ fields:
     \ foot."
   Mnemonic_EN: перегони = racing, any mode; біг = racing specifically on foot (cf. бігти,
     'to run').
-  CompareScenario: You're describing a Formula 1 race, a horse derby, or a downhill skiing
-    competition -- any competitive event where the competitors aren't specifically running
-    on foot.
-  CompareA: перего́ни
-  CompareB: біг
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: перегони
   UA_Example: Лижні перегони відбудуться в неділю.

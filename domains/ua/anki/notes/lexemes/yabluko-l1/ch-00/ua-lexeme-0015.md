@@ -33,14 +33,6 @@ fields:
   ConfusableSet: студе́нтка
   Mnemonic_EN: студент = male student; студентка = female student — the counterpart form,
     not a different word.
-  CompareScenario: Introducing a male university student to a group of people who haven't
-    met him before.
-  CompareA: студент
-  CompareB: студентка
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU/DE: student/студент/Student'
   TypingAnswer: студент
   UA_Example: Студент читає підручник у бібліотеці.

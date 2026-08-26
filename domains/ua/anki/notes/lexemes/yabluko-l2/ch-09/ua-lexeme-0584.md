@@ -45,13 +45,6 @@ fields:
     -- e.g. swims around, can swim). пливти́ = "is swimming, headed one way, right now" (unidirectional
     -- e.g. swimming across/toward something). попливти́ = "set off swimming" (perfective
     -- the swim as a completed whole).
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English "swim" covers both плавати and пливти without marking the habitual-vs-
     single-swim distinction -- closest analogy is "used to swim around here" (multi) vs "was
     swimming toward shore" (uni) vs "set off swimming" (perf).

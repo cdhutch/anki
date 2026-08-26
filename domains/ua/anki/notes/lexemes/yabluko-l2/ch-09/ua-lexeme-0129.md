@@ -31,14 +31,6 @@ fields:
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: переїжджа́ти (pass by/through vs. cross to the far side, by vehicle)
   Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
-  CompareScenario: Driving along a highway, passing several towns without stopping, on a long
-    road trip.
-  CompareA: проїжджати
-  CompareB: переїжджати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: проезжать / проехать'
   TypingAnswer: проїжджати / проїхати
   UA_Example: ''

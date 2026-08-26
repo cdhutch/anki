@@ -31,14 +31,6 @@ fields:
   VerbMotion_Pair: іти / ходити
   ConfusableSet: прохо́дити (pass by/through vs. cross to the far side)
   Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
-  CompareScenario: Someone is walking across a street at a crosswalk, from one side to the
-    other.
-  CompareA: проходити
-  CompareB: переходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: переходить / перейти'
   TypingAnswer: переходити / перейти
   UA_Example: ''

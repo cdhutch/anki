@@ -37,13 +37,6 @@ fields:
     flying around, someone who flies often). леті́ти = "is flying, headed one way, right now"
     (unidirectional). полеті́ти = "set off flying / departed by air" (perfective -- the flight
     as a completed whole).
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English "fly" covers both літати and летіти without marking the habitual-vs-
     single-flight distinction -- closest analogy is "used to fly around up there" (multi)
     vs "was flying there" (uni) vs "took off / set off flying" (perf).

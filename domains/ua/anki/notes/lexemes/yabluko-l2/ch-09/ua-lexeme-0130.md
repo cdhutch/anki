@@ -31,14 +31,6 @@ fields:
   VerbMotion_Pair: їхати / їздити
   ConfusableSet: проїжджа́ти (pass by/through vs. cross to the far side, by vehicle)
   Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
-  CompareScenario: Driving across a bridge from one side of a river to the other -- or, in
-    its extended sense, a family moving their household to a new city.
-  CompareA: проїжджати
-  CompareB: переїжджати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: переезжать / переехать'
   TypingAnswer: переїжджати / переїхати
   UA_Example: ''

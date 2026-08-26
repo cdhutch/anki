@@ -34,14 +34,6 @@ fields:
     (children, new-language learners; cf. "ABC book").
   Mnemonic_EN: абетка = the learner's ABC book/context (children, beginners); алфавіт = the
     neutral term for the letter system itself.
-  CompareScenario: Describing a colorful picture book aimed at small children who are just
-    learning their letters for the first time.
-  CompareA: абетка
-  CompareB: алфавіт
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: абетка
   UA_Example: Діти вчать абетку вже у першому класі.

@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: pensioner · RU: пенсионер · FR: pensionnaire'
   TypingAnswer: пенсіонер
   UA_Example: Пенсіонер живе у невеликому будинку біля парку.

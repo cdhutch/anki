@@ -30,6 +30,7 @@ class ClusterMember:
     status: ClusterMemberStatus
     chapter: Optional[str]  # "2.8.3" or "?" if unknown
     comment: str
+    compare_scenario: str = ""  # Usage context distinguishing this word from cluster-mates
 
     def is_active(self) -> bool:
         """Return True if this member has been sourced (note_id is not None)."""
@@ -163,7 +164,8 @@ class ClusterRegistry:
                 lemma=member_data.get('lemma', ''),
                 status=status,
                 chapter=member_data.get('chapter'),
-                comment=member_data.get('comment', '')
+                comment=member_data.get('comment', ''),
+                compare_scenario=member_data.get('compare_scenario', '')
             )
             members.append(member)
 

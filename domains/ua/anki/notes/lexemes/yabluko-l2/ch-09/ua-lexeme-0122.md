@@ -32,13 +32,6 @@ fields:
   ConfusableSet: заїжджа́ти (same за- "stop by" sense, different mode of motion)
   Mnemonic_EN: 'Same за- prefix (''stop by''), different base verb for the mode of motion:
     заходити = on foot; заїжджати = by vehicle.'
-  CompareScenario: Dropping by a friend's apartment on foot, on your way home from work.
-  CompareA: заходити
-  CompareB: заїжджати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: заходить / зайти'
   TypingAnswer: заходити / зайти
   UA_Example: ''

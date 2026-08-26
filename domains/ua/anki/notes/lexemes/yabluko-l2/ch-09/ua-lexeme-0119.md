@@ -32,13 +32,6 @@ fields:
   ConfusableSet: підхо́дити (approach vs. actually reach)
   Mnemonic_EN: під- = approaching, getting close but not necessarily arriving; до- = actually
     reaching/arriving at the destination.
-  CompareScenario: Someone finally arrives at their destination, on foot, after a long walk.
-  CompareA: підходити
-  CompareB: доходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: доходить / дойти (до- + іти → дійти)'
   TypingAnswer: доходити / дійти
   UA_Example: ''

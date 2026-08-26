@@ -43,16 +43,6 @@ fields:
     overlap with ''aspect,'' only with the OTHER (homograph) sense of вид. '
   Mnemonic_EN: Same spelling either way (вид) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: You're learning about verb grammar—what word describes whether a verb is
-    completed or ongoing?
-  CompareA: Який вид спорту ти любиш?
-  CompareB: Дієслово "читати" має недоконаний вид.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: 'kind or type of something (noun: a category or variety, as in different
-    sports)'
-  Homograph_SenseB: 'grammatical property of verbs (noun: whether a verb action is completed
-    or ongoing)'
   CrossLang_Analog: 'EN: aspect (grammatical category) · RU: вид (same term, cognate) - English
     verbs don''t mark aspect morphologically the way Slavic languages do; this is often the
     single hardest grammatical concept for English-speaking learners of Ukrainian.'

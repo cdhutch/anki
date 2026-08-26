@@ -32,14 +32,6 @@ fields:
   ConfusableSet: ра́нок, ніч — time-of-day cluster (day/night cycle). See ua-lexeme-0048 (ніч),
     ua-lexeme-0059 (ранок).
   Mnemonic_EN: 'Time-of-day sequence: ранок (morning) → вечір (evening) → ніч (night).'
-  CompareScenario: The sun has just set and people are finishing dinner, but it's not yet
-    late enough for most people to be asleep.
-  CompareA: вечір
-  CompareB: ніч
-  CompareC: ранок
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вечір
   UA_Example: Увечері ми любимо гуляти у парку.

@@ -42,14 +42,6 @@ fields:
   Mnemonic_EN: перемагати = WHO you beat (a person/team, direct object); вигравати = WHAT
     you win (a match/prize/thing, never a person). See ua-lexeme-0212/вигравати for the mirror
     note.
-  CompareScenario: In the championship boxing match, what did the challenger do to the reigning
-    champion?
-  CompareA: перемогти́ (перемага́ти)
-  CompareB: ви́грати (виграва́ти)
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: перемагати / перемогти
   UA_Example: Наша команда перемагає у більшості матчів.

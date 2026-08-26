@@ -32,13 +32,6 @@ fields:
   ConfusableSet: прихо́дити (same "arrive" sense, different mode of motion — see ua-lexeme-0114)
   Mnemonic_EN: 'Same significance (''arrive''), different mode: приходити = on foot; приїжджати
     = by vehicle.'
-  CompareScenario: A friend arrives in your city by train or car after a long trip.
-  CompareA: приїжджати
-  CompareB: приходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: приезжать / приехать'
   TypingAnswer: приїжджати / приїхати
   UA_Example: ''

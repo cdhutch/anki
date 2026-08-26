@@ -32,13 +32,6 @@ fields:
   ConfusableSet: вʼїжджа́ти (directional opposite)
   Mnemonic_EN: вʼ- = driving into (same в-/ви- opposition as входити/виходити, applied to
     vehicles); ви- = driving out of.
-  CompareScenario: A car pulls out of a parking garage or driveway onto the street.
-  CompareA: вʼїжджати
-  CompareB: виїжджати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выезжать / выехать'
   TypingAnswer: виїжджати / виїхати
   UA_Example: ''

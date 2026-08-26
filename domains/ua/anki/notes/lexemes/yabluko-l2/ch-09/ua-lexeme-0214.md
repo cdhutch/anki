@@ -40,14 +40,6 @@ fields:
   Mnemonic_EN: Where does the force end up? відбивати = away (deflect an incoming ball); забивати
     = into the goal (score the shot); завдавати = onto a person (a blow); набирати = onto
     the scoreboard (the number goes up).
-  CompareScenario: Game after game, this striker has a habit of doing what to the ball --
-    putting it in the back of the net?
-  CompareA: відбива́ти
-  CompareB: забива́ти
-  CompareC: завдава́ти
-  CompareD: набира́ти
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: забивати / забити
   UA_Example: Він часто забиває голи з кутового удару.

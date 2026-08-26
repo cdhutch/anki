@@ -37,14 +37,6 @@ fields:
   Mnemonic_EN: Formal/schedule register, mode unspecified -> відправлятися (timetables, announcements).
     Everyday, on-foot departure -> відходити (PVOM від-, walking family). Pairs with прибувати/приходити
     the same way -- see ua-lexeme-0316.
-  CompareScenario: The departures board at the station shows what a train does at exactly
-    nine in the evening.
-  CompareA: відправля́тися
-  CompareB: відхо́дити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: відправлятися / відправитися
   UA_Example: Поїзд відправляється з другої платформи.

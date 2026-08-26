@@ -32,14 +32,6 @@ fields:
   ConfusableSet: па́рта
   Mnemonic_EN: парта = school desk (classroom-specific, often a desk+bench unit); стілець
     = a general standalone chair/seat.
-  CompareScenario: Describing a standalone seat with no attached desk surface, such as at
-    a dinner table or in a waiting room.
-  CompareA: парта
-  CompareB: стілець
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: стілець
   UA_Example: Сядьте, будь ласка, на стілець коло столу.

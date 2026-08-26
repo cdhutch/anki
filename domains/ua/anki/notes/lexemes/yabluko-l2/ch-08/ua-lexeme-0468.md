@@ -35,14 +35,6 @@ fields:
     markedly in register.
   Mnemonic_EN: значно = measured, written-register "significantly"; набагато = everyday spoken
     "much/by far" -- same job (intensifying a comparative), different register.
-  CompareScenario: Comparing two hotel rooms right after checking in, you tell a friend casually
-    that this room is way comfier than the other one.
-  CompareA: зна́чно
-  CompareB: набага́то
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: набагато
   UA_Example: Тут набагато затишніше, ніж у нашому готелі.

@@ -37,14 +37,6 @@ fields:
     \ how you feel."
   Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
     < добре (positive, unmarked) < чудово (enthusiastic).'
-  CompareScenario: Someone asks how you're doing on an ordinary Tuesday. Nothing noteworthy
-    happened either way -- this is the reflexive, default reply to a routine "how are you?"
-  CompareA: непога́но
-  CompareB: норма́льно
-  CompareC: до́бре
-  CompareD: чудо́во
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: нормально
   UA_Example: — Як справи? — Нормально, дякую.
