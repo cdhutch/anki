@@ -236,8 +236,11 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   goodbye-words aren't distinguished yet. Flagged 2026-08-03, not started.
 
 - [ ] **Pending-confusable watchlist** — run `make ua-check`
-  (`check_pending_confusables.py`) and write real `ConfusableSet`/`CompareA-D`
-  content for any `pending-confusable:<lemma>` tag whose target word now exists.
+  (`check_pending_confusables.py`) and, for any `pending-confusable:<lemma>` tag
+  whose target word now exists, write real `ConfusableSet` content and add a member
+  entry (with `compare_scenario`/`compare_a`/`compare_b`) to
+  `domains/ua/anki/confusable_clusters.yaml` -- not `CompareA-D` in CNSF, which was
+  removed 2026-08-26 in favor of the registry (see `CLAUDE.md`'s 2026-08-26 entry).
   Known tagged lemmas from the ch-08 pass: зазвичай, затор, забагато, вигляд,
   доглянати, скільки, декілька, погода/природа/порода (off пригода), подорож
   (off мандрівка).
@@ -852,6 +855,8 @@ Anki, in the repo, or against Горох — not that a log entry claimed it.
       python tools/anki/inspect/check_cnsf_field_schema.py --note-type UA_Verb --strict
 
   Wiring that into the Makefile is a separate open item, below.
+
+- [x] **Seven deprecated Compare/Homograph fields removed corpus-wide, replaced by registry-driven `CompareMembers`.** Builds on the fields surveyed in the item above (`CompareA`/`CompareB` at 63/585, `CompareC`/`CompareD` at 11/585 and 8/585, `CompareScenario` at 63/585, `Homograph_SenseA`/`SenseB` at 10/585 each) -- rather than backfilling those keys to always-present per this section's convention, Craig's call was to remove them entirely in favor of a single `CompareMembers` JSON field sourced from `confusable_clusters.yaml` (`ClusterRegistry`/`ClusterMember`, `tools/anki/lib/confusable_clusters.py`). Removed from the `FIELDS` constant and Compare-card templates in `setup_ua_note_types.py`, the `_normalize_meta()` setdefault list in `cnsf_canonicalize.py`, the live `UA_Lexeme` Anki note type, and all 585 CNSF note files. `check_cnsf_field_schema.py` now tolerates the seven old keys as deprecated rather than unknown. **Personally verified by Craig 2026-08-26** -- Anki sync checked and cards spot-checked in the browser before merging PR (`bf5a8a77`, `f4679e84`); 548 tests passing. See `CLAUDE.md`'s 2026-08-26 entry for the full account. The "Pending-confusable watchlist" open item above has been updated to point at the new registry-based workflow instead of authoring `CompareA-D` directly.
 
 ## UA Domain — Content verification (Craig + Горох sign-off required)
 
