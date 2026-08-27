@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- needs-confusable-set
 fields:
   NoteID: ua-lexeme-0042
   Lemma: малю́нок
@@ -38,6 +39,10 @@ fields:
   Tags_Ch: ch:1.0
   Source_URL: https://goroh.pp.ua/Словозміна/малюнок
   Source_Note: verified 2026-07-06 via Горох
-  Verification Notes: ''
+  Verification Notes: '2026-08-27 Craig: will eventually join a confusable set with at least
+    two other drawing/painting-related words (not yet sourced as their own notes). No single
+    known target spelling yet, so tagged `needs-confusable-set` (the generic marker, see ua-lexeme-0321/0436/0440)
+    rather than a specific pending-confusable:<lemma> tag -- re-tag with the more specific
+    mechanism once the actual cluster members are sourced and their exact spellings are known.'
 ---
 
