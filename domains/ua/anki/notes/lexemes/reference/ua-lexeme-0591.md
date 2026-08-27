@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:reference
 - pos:adjective
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0591
   Lemma: могу́тній
