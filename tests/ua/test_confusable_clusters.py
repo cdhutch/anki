@@ -184,9 +184,17 @@ class TestConfusableClustersYAML(unittest.TestCase):
                            f"Cluster name '{cluster_name}' should be kebab-case")
 
     def test_chapter_format(self):
-        """Test that chapter values are in expected format."""
+        """Test that chapter values are in expected format.
+
+        Accepts chapter numbers 1-3 (e.g. "2.8", "2.8.6") since the corpus
+        spans yabluko-l1 (ch:1.x) and yabluko-l2 (ch:2.x/3.x). Also accepts
+        the literal "reference" sentinel (2026-08-27, per Craig) for
+        reference-only notes with no textbook chapter -- e.g.
+        crayfish-cancer-homograph's ua-lexeme-0588 (рак, "cancer"), added
+        purely to complete a confusable pair.
+        """
         import re
-        chapter_pattern = re.compile(r'^2\.[0-9]+(\.[0-9]+)?$')
+        chapter_pattern = re.compile(r'^(?:[123]\.[0-9]+(\.[0-9]+)?|reference)$')
 
         invalid_chapters = []
         for cluster_name, cluster_data in self.registry['clusters'].items():
