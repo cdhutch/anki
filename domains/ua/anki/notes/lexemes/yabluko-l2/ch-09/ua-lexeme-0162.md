@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
 - status:verified
 fields:
   NoteID: ua-lexeme-0162
   Lemma: спорти́вна ходьба́
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''

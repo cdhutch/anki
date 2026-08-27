@@ -12,7 +12,7 @@ tags:
 - ch:2.8.6
 - pos:noun
 - gender:f
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0541
   Lemma: капу́ста

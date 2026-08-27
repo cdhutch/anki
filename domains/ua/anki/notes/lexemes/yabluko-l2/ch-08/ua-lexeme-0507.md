@@ -13,7 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - animate:true
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0507
   Lemma: носорі́г

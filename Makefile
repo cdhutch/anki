@@ -1002,6 +1002,7 @@ _ua:
 	printf "\n\033[1;32m✓  All UA note types synced successfully.\033[0m\n"
 	$(MAKE) ua-unverified
 	$(MAKE) ua-check-flags
+	$(MAKE) ua-check-pending-confusables
 
 ua:
 	$(call log_wrap,ua,ua)

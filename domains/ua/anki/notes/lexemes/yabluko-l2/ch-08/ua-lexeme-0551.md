@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.6
 - pos:verb
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0551
   Lemma: звуча́ти
@@ -19,7 +19,7 @@ fields:
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: прозвуча́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -31,13 +31,16 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: звучати
+  TypingAnswer: звучати / прозвучати
   UA_Example: Назва страви звучала для нас незнайомо.
   EN_Example: The name of the dish sounded unfamiliar to us.
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/звучати
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
-  Verification Notes: Imperfective, non-reflexive, 2nd conjugation. Full conjugation lives
-    on ua-verb-0084.
+  Verification Notes: Imperfective, non-reflexive, 2nd conjugation. Perfective partner прозвуча́ти
+    confirmed 2026-08-27 (per Craig) -- звучати's extended figurative sense ("to be pronounced/come
+    across a certain way", e.g. this note's example) has an attested perfective pair ("Ця
+    фраза прозвучала дивно"), so this is not imperfectiva tantum. Full conjugation lives on
+    ua-verb-0084.
 ---
 

@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
-- pos:phrase
+- pos:verb-phrase
 - phrase:verb
 - status:verified
 fields:
   NoteID: ua-lexeme-0489
   Lemma: дотри́муватися зако́ну
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''

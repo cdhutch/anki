@@ -19,8 +19,8 @@ fields:
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: переплисти́
-  Perfective_Euphony: ''
+  Perfective: перепливти́
+  Perfective_Euphony: переплисти́
   EuphonyNote: ''
   AspectCue: ''
   EN_Gloss: to swim across
@@ -31,7 +31,7 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: перепливати / переплисти
+  TypingAnswer: перепливати / перепливти
   UA_Example: Останній етап -- переплисти озеро.
   EN_Example: The last stage is swimming across the lake.
   Tags_Ch: ch:2.9.5

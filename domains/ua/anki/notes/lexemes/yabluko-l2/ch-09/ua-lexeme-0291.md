@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
+- aspect:biaspectual
 - status:verified
 fields:
   NoteID: ua-lexeme-0291
@@ -19,7 +20,7 @@ fields:
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: стартува́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -39,7 +40,7 @@ fields:
     beginning anything at all (the general-purpose verb). See ua-lexeme-0292/фінішувати for
     the finish-line mirror of this same distinction.
   CrossLang_Analog: ''
-  TypingAnswer: стартувати
+  TypingAnswer: стартувати / стартувати
   UA_Example: Команди стартували рівно о восьмій ранку.
   EN_Example: The teams started right at eight in the morning.
   Tags_Ch: ch:2.9.5
@@ -50,7 +51,11 @@ fields:
     Горох''s Синонімія page for стартувати lists починати directly. No standalone Lexeme or
     PVOM note exists for починати; ConfusableSet only needs the string value, not a note reference.
     2026-07-28: completed the Compare card -- added CompareScenario + CompareA/CompareB. Cross-links
-    with ua-lexeme-0292 (фінішувати), the finish-line mirror of the same distinction. Needs
-    your review.'
+    with ua-lexeme-0292 (фінішувати), the finish-line mirror of the same distinction. 2026-08-27:
+    added aspect:biaspectual tag and duplicated the lemma spelling into Perfective (per Craig
+    -- data-level duplication chosen over a code-level special case) so the Recognition card
+    and EN->UA typing target both show/require "стартувати / стартувати", consistent with
+    how genuine doublets already render via compute_typing_target()/compute_ua_en_display()
+    -- no import-script changes needed. TypingAnswer updated to match. Needs your review.'
 ---
 

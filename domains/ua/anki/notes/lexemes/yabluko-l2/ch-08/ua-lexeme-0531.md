@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.5
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
 - status:verified
 fields:
   NoteID: ua-lexeme-0531
   Lemma: пере́пад температу́ри
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''

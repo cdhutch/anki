@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0391
   Lemma: мінли́ва хма́рність
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''

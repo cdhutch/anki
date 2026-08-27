@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
-- pos:verb
+- pos:verb-phrase
 - phrase:verb
 - ch09-phrase
 - status:verified
@@ -18,7 +18,7 @@ fields:
   NoteID: ua-lexeme-0251
   Lemma: вихо́дити назу́стріч
   Lemma_Euphony: ''
-  PartOfSpeech: verb
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -57,8 +57,7 @@ fields:
     Notes content had drifted to a stray top-level key (sibling of `fields:` rather than nested
     inside it) at some point -- content unchanged, just moved back into fields.Verification
     Notes where it belongs; the empty in-fields copy that existed alongside it is gone too.
-    Flipped back to status:draft since content changed materially after the 2026-07-26 verification
-    -- only needs a quick reglance (Lemma/TypingAnswer/stress are all unchanged), not a fresh
-    Горох check.'
+    Content changed materially after the 2026-07-26 verification, but Lemma/TypingAnswer/stress
+    were all unchanged, so no fresh Горох check was needed -- reglanced and reverified 2026-08-27.'
 ---
 

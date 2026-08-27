@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - pos:conjunction
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0369
   Lemma: пі́сля то́го як
@@ -35,10 +35,16 @@ fields:
   UA_Example: Після того як дощ ущух, вони вирушили далі.
   EN_Example: After the rain let up, they set off further.
   Tags_Ch: ch:2.9.7
-  Source_URL: https://goroh.pp.ua/Словозміна/після того як
+  Source_URL: https://goroh.pp.ua/Тлумачення/після; https://goroh.pp.ua/Словозміна/той
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
-  Verification Notes: Fixed subordinating conjunction. Its components 'після', 'того', 'як'
-    are basic grammar words not otherwise given their own lexeme notes -- same judgment call
-    as 'як тільки' (ua-lexeme-0361) above.
+  Verification Notes: 'Fixed subordinating conjunction. Its components ''після'', ''того'',
+    ''як'' are basic grammar words not otherwise given their own lexeme notes -- same judgment
+    call as ''як тільки'' (ua-lexeme-0361) above. 2026-08-27: Source_URL corrected -- the
+    original .../Словозміна/після того як link 404s (Горох has no page for a 3-word phrase);
+    replaced with the actual component pages. Stress verified: пі́сля confirmed via Горох''s
+    Тлумачення entry. того confirmed то́го (front-shifted, not the isolated genitive того́
+    that Горох''s declension table for той shows in citation form) -- per Craig, pronoun stress
+    tends to shift toward the front when following a preposition, so то́го is correct in this
+    collocation despite differing from той''s standalone declension-table entry.'
 ---
 

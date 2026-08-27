@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
+- aspect:biaspectual
 - status:verified
 fields:
   NoteID: ua-lexeme-0292
@@ -19,7 +20,7 @@ fields:
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: фінішува́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -39,7 +40,7 @@ fields:
     anything at all (the general-purpose verb). See ua-lexeme-0291/стартувати for the starting-line
     mirror of this same distinction.
   CrossLang_Analog: ''
-  TypingAnswer: фінішувати
+  TypingAnswer: фінішувати / фінішувати
   UA_Example: Перша команда фінішувала за три дні.
   EN_Example: The first team finished in three days.
   Tags_Ch: ch:2.9.5
@@ -52,6 +53,11 @@ fields:
     colloquial vulgar connotation (not documented by Горох but common knowledge). No standalone
     Lexeme or PVOM note exists for закінчувати. 2026-07-28: completed the Compare card --
     added CompareScenario + CompareA/CompareB. Cross-links with ua-lexeme-0291 (стартувати),
-    the starting-line mirror of the same distinction. Needs your review.'
+    the starting-line mirror of the same distinction. 2026-08-27: added aspect:biaspectual
+    tag and duplicated the lemma spelling into Perfective (per Craig -- data-level duplication
+    chosen over a code-level special case) so the Recognition card and EN->UA typing target
+    both show/require "фінішувати / фінішувати", consistent with how genuine doublets already
+    render via compute_typing_target()/compute_ua_en_display() -- no import-script changes
+    needed. TypingAnswer updated to match. Needs your review.'
 ---
 

@@ -283,6 +283,25 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   for Compare structure symmetry. Not yet integrated into `make ua-check`; decide whether
   to formalize or keep as experimental tooling.
 
+- [ ] **8 new drawing/painting-cluster notes need review** (2026-08-27):
+  ua-lexeme-0596–0603 (малювання, малярство, живопис, картина, розпис, малювати/намалювати,
+  розписувати/розписати, фарбувати/пофарбувати), plus ua-lexeme-0042 (малюнок)'s updated
+  `ConfusableSet`/tags. All 8 new notes are `status:draft`, same review pattern as
+  0589–0594 — sourced from Горох and from a cloze-card set Craig supplied, but not yet
+  personally checked. See `CLAUDE.md`'s Vocabulary dedup & homograph handling section,
+  "2026-08-27 new clusters," for the full breakdown.
+
+- [ ] **ua-lexeme-0306 (тип) ↔ ua-lexeme-0143 (вид) needs a registry decision** (2026-08-27):
+  0306's `ConfusableSet` already documents a тип/вид synonym relationship in prose (from a
+  2026-07-30/08-02 pass, predating the registry), but it has no live Compare card — 0143 is
+  already the `grammatical-aspect` cluster's satellite (paired with ua-lexeme-0182, the
+  aspect-homograph sense of вид), and the registry only lets a note belong to one cluster.
+  Wiring тип/вид in for real means either (a) accepting that 0143's card flips away from the
+  aspect-homograph pairing to the тип/вид pairing, sacrificing the aspect disambiguation, or
+  (b) extending `ClusterRegistry.note_to_cluster` to support multiple clusters per note plus
+  deciding how such a note's `CompareMembers` actually renders. Recommended holding off
+  rather than picking (a) — see `CLAUDE.md` for the full reasoning. Needs your call.
+
 - [ ] **`ua-lexeme-0115`'s `ConfusableSet` corrected to `вихо́дити`** (2026-08-20,
   `fe4efcc`). It read `ви́ходити` — the prefix-stressed homograph (*to wear out by
   prolonged walking*) — as входити's "directional opposite", left behind when you

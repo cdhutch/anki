@@ -13,7 +13,6 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
-- pending-confusable:подорож
 fields:
   NoteID: ua-lexeme-0330
   Lemma: мандрі́вка
@@ -30,7 +29,8 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster journey-trip-synonyms (confusable_clusters.yaml): мандрівка
+    (adventurous/wandering connotation) vs подорож (the neutral, general-purpose word).'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: мандрівка
@@ -48,6 +48,9 @@ fields:
     differing on register/connotation (мандрівка leans wandering/adventurous, подорож is the
     neutral general word) -- worth Craig's judgment on the exact discriminator once подорож
     is sourced. подорож doesn't have its own note yet; tagged pending-confusable:подорож.
-    See CLAUDE.md Vocabulary dedup & homograph handling, bucket 5.
+    See CLAUDE.md Vocabulary dedup & homograph handling, bucket 5. 2026-08-27 -- подорож sourced
+    as ua-lexeme-0595 (по́дорож, ch:reference) -- Горох confirms it as the neutral general-purpose
+    term, exactly as predicted above. Clustered as journey-trip-synonyms in confusable_clusters.yaml,
+    canonical on this note; pending-confusable:подорож tag removed.
 ---
 

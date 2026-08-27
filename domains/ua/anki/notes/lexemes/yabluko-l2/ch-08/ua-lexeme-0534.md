@@ -12,7 +12,8 @@ tags:
 - ch:2.8.6
 - pos:noun
 - gender:n
-- status:draft
+- status:verified
+- pending-confusable:почуття
 fields:
   NoteID: ua-lexeme-0534
   Lemma: відчуття́

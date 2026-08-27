@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.1
 - pos:adjective
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0389
   Lemma: мінли́вий

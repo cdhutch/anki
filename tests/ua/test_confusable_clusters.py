@@ -184,9 +184,17 @@ class TestConfusableClustersYAML(unittest.TestCase):
                            f"Cluster name '{cluster_name}' should be kebab-case")
 
     def test_chapter_format(self):
-        """Test that chapter values are in expected format."""
+        """Test that chapter values are in expected format.
+
+        Accepts chapter numbers 1-3 (e.g. "2.8", "2.8.6") since the corpus
+        spans yabluko-l1 (ch:1.x) and yabluko-l2 (ch:2.x/3.x). Also accepts
+        the literal "reference" sentinel (2026-08-27, per Craig) for
+        reference-only notes with no textbook chapter -- e.g.
+        crayfish-cancer-homograph's ua-lexeme-0588 (рак, "cancer"), added
+        purely to complete a confusable pair.
+        """
         import re
-        chapter_pattern = re.compile(r'^2\.[0-9]+(\.[0-9]+)?$')
+        chapter_pattern = re.compile(r'^(?:[123]\.[0-9]+(\.[0-9]+)?|reference)$')
 
         invalid_chapters = []
         for cluster_name, cluster_data in self.registry['clusters'].items():
@@ -261,9 +269,14 @@ class TestClusterRegistryIntegrity(unittest.TestCase):
         print(f"Registry has {total_members} total members across all clusters")
 
     def test_compare_field_structure(self):
-        """Test that Compare fields exist and have correct types."""
-        compare_fields = {'compare_scenario', 'compare_a', 'compare_b', 'compare_c', 'compare_d',
-                         'homograph_sense_a', 'homograph_sense_b'}
+        """Test that Compare fields exist and have correct types.
+
+        compare_a/b/c/d and homograph_sense_a/b were removed from the schema
+        2026-08-27 (dead data -- never read by get_cluster_compare_members_json()
+        or any card template; compare_scenario + lemma are the only per-member
+        fields a Compare card actually needs).
+        """
+        compare_fields = {'compare_scenario'}
 
         for cluster_name, cluster_data in self.registry['clusters'].items():
             for i, member in enumerate(cluster_data['members']):
@@ -289,68 +302,25 @@ class TestClusterRegistryIntegrity(unittest.TestCase):
         self.assertEqual(len(unpopulated), 0,
                        f"Found {len(unpopulated)} members with empty compare_scenario: {unpopulated}")
 
-    def test_compare_a_b_consistency(self):
-        """Test that compare_a and compare_b are populated together (if at all)."""
-        mismatched = []
-
-        for cluster_name, cluster_data in self.registry['clusters'].items():
-            for member in cluster_data['members']:
-                a_populated = bool(member.get('compare_a', '').strip())
-                b_populated = bool(member.get('compare_b', '').strip())
-
-                # If one is populated, both should be (for confusable pairs)
-                # Exception: homograph pairs might only need senses, not A/B
-                if a_populated != b_populated:
-                    # Only flag if there's also no homograph_sense data
-                    if not (member.get('homograph_sense_a', '').strip() and
-                           member.get('homograph_sense_b', '').strip()):
-                        mismatched.append((cluster_name, member['note_id'], 'compare_a/b mismatch'))
-
-        self.assertEqual(len(mismatched), 0,
-                       f"Found {len(mismatched)} members with inconsistent Compare fields: {mismatched}")
-
-    def test_homograph_sense_for_homographs(self):
-        """Test that homograph clusters have Homograph_Sense fields populated."""
-        for cluster_name, cluster_data in self.registry['clusters'].items():
-            # Only check clusters with 'homograph' in name
-            if 'homograph' not in cluster_name.lower():
-                continue
-
-            for member in cluster_data['members']:
-                sense_a = member.get('homograph_sense_a', '').strip()
-                sense_b = member.get('homograph_sense_b', '').strip()
-
-                self.assertTrue(sense_a and sense_b,
-                              f"Homograph cluster '{cluster_name}' member '{member['note_id']}' "
-                              f"should have both Homograph_SenseA and SenseB populated")
-
     def test_coverage_statistics(self):
-        """Report coverage statistics for Compare fields."""
+        """Report coverage statistics for Compare fields.
+
+        compare_a/b and homograph_sense_a/b tracking removed 2026-08-27 along
+        with the fields themselves -- compare_scenario is the only per-member
+        field a Compare card needs (via CompareMembers JSON).
+        """
         total_members = 0
         populated_scenarios = 0
-        populated_a = 0
-        populated_b = 0
-        populated_senses = 0
 
         for cluster_data in self.registry['clusters'].values():
             for member in cluster_data['members']:
                 total_members += 1
                 if member.get('compare_scenario', '').strip():
                     populated_scenarios += 1
-                if member.get('compare_a', '').strip():
-                    populated_a += 1
-                if member.get('compare_b', '').strip():
-                    populated_b += 1
-                if (member.get('homograph_sense_a', '').strip() and
-                    member.get('homograph_sense_b', '').strip()):
-                    populated_senses += 1
 
         print(f"\n  Compare Field Coverage:")
         print(f"    Total members: {total_members}")
         print(f"    Scenarios: {populated_scenarios}/{total_members} ({int(populated_scenarios/total_members*100)}%)")
-        print(f"    Compare_a: {populated_a}/{total_members} ({int(populated_a/total_members*100)}%)")
-        print(f"    Compare_b: {populated_b}/{total_members} ({int(populated_b/total_members*100)}%)")
-        print(f"    Homograph_Senses: {populated_senses}/{total_members} ({int(populated_senses/total_members*100)}%)")
 
 
 if __name__ == '__main__':

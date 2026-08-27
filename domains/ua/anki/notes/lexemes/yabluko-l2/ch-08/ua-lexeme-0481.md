@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - pos:verb
 - status:verified
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0481
   Lemma: стосува́тися
@@ -37,8 +38,9 @@ fields:
   Tags_Ch: ch:2.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/стосуватися
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
-  Verification Notes: Imperfective, reflexive, 1st conjugation; effectively reflexivum tantum
-    (no attested perfective partner). Full conjugation lives on ua-verb-0076. Component of
-    phrase ua-lexeme-0495 (що стосується).
+  Verification Notes: Imperfective, reflexive, 1st conjugation. Tagged aspect:imperfective-only
+    2026-08-27 (per Craig) -- stative/relational verb describing an ongoing relationship between
+    two things, not an event with a completion point; no attested perfective partner. Full
+    conjugation lives on ua-verb-0076. Component of phrase ua-lexeme-0495 (що стосується).
 ---
 

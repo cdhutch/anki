@@ -12,6 +12,7 @@ tags:
 - ch:2.9.3
 - pos:verb
 - status:verified
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0377
   Lemma: вболіва́ти
@@ -48,6 +49,8 @@ fields:
     2026-07-25: Горох''s Словозміна entry tags вболівати/уболівати недоконаний вид only (not
     двовидове), and a differently-spelled candidate (уболіти) 404s. See ua-lexeme-0211''s
     Verification Notes for the full evidence writeup; not repeated here. Content (gloss, example)
-    reviewed and confirmed correct by Craig 2026-08-02; status:verified is accurate.'
+    reviewed and confirmed correct by Craig 2026-08-02; status:verified is accurate. aspect:imperfective-only
+    tag applied 2026-08-27 -- reasoning above already covered this, the tag itself had simply
+    not been added yet.'
 ---
 

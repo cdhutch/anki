@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
-- pos:phrase
+- pos:verb-phrase
 - phrase:verb
 - status:verified
 fields:
   NoteID: ua-lexeme-0488
   Lemma: впада́ти в о́чі
   Lemma_Euphony: упада́ти в о́чі
-  PartOfSpeech: phrase
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: впа́сти в о́чі

@@ -11,7 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.6
 - pos:verb
-- status:draft
+- status:verified
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0550
   Lemma: вигляда́ти
@@ -37,7 +38,13 @@ fields:
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/виглядати
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
-  Verification Notes: Imperfective, non-reflexive, 1st conjugation. Full conjugation lives
-    on ua-verb-0083.
+  Verification Notes: Imperfective, non-reflexive, 1st conjugation. Tagged aspect:imperfective-only
+    2026-08-27 (per Craig) -- this note is scoped to Горох's sense 5, "мати певний зовнішній
+    вигляд" (to have a certain appearance), a stative sense with no attested perfective partner.
+    виглядати is genuinely polysemous -- a separate sense, "to look out, emerge, become visible"
+    (Горох senses 1-2), pairs with the perfective ви́глянути and is a distinct lexeme, ua-lexeme-0587,
+    added 2026-08-27. Both share the same conjugation paradigm on ua-verb-0083 (this is pure
+    polysemy, not a stress-shift homograph). Homograph-clustered with ua-lexeme-0587 in confusable_clusters.yaml
+    (seem-emerge-homograph).
 ---
 

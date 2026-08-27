@@ -23,9 +23,6 @@ class RegistryValidator:
             'clusters': 0,
             'members': 0,
             'populated_scenarios': 0,
-            'populated_compare_a': 0,
-            'populated_compare_b': 0,
-            'populated_senses': 0,
         }
     
     def validate_all(self) -> bool:
@@ -112,10 +109,15 @@ class RegistryValidator:
         return len(self.errors) == 0
     
     def _validate_fields(self) -> bool:
-        """Validate that all required fields exist."""
+        """Validate that all required fields exist.
+
+        compare_a/b/c/d and homograph_sense_a/b were removed from the schema
+        2026-08-27 (dead data superseded by the CompareMembers JSON field,
+        computed at import time from compare_scenario + lemma alone -- see
+        get_cluster_compare_members_json() in ua_lexeme_import.py).
+        """
         required_member_fields = {'note_id', 'lemma', 'status', 'chapter'}
-        compare_fields = {'compare_scenario', 'compare_a', 'compare_b', 'compare_c', 
-                         'compare_d', 'homograph_sense_a', 'homograph_sense_b'}
+        compare_fields = {'compare_scenario'}
         
         for cluster_name, cluster_data in self.registry['clusters'].items():
             for i, member in enumerate(cluster_data['members']):
@@ -138,8 +140,7 @@ class RegistryValidator:
         """Validate field types."""
         for cluster_name, cluster_data in self.registry['clusters'].items():
             for i, member in enumerate(cluster_data['members']):
-                for field in ['compare_scenario', 'compare_a', 'compare_b', 'compare_c', 
-                             'compare_d', 'homograph_sense_a', 'homograph_sense_b']:
+                for field in ['compare_scenario']:
                     value = member.get(field)
                     if value is not None and not isinstance(value, str):
                         self.errors.append(
@@ -192,13 +193,6 @@ class RegistryValidator:
             for member in cluster_data['members']:
                 if member.get('compare_scenario', '').strip():
                     self.stats['populated_scenarios'] += 1
-                if member.get('compare_a', '').strip():
-                    self.stats['populated_compare_a'] += 1
-                if member.get('compare_b', '').strip():
-                    self.stats['populated_compare_b'] += 1
-                if (member.get('homograph_sense_a', '').strip() and 
-                    member.get('homograph_sense_b', '').strip()):
-                    self.stats['populated_senses'] += 1
         
         # Check 100% scenario coverage
         if self.stats['populated_scenarios'] < self.stats['members']:
@@ -219,9 +213,6 @@ class RegistryValidator:
         print(f"  Clusters: {self.stats['clusters']}")
         print(f"  Total members: {self.stats['members']}")
         print(f"  Compare scenarios: {self.stats['populated_scenarios']}/{self.stats['members']} ({int(self.stats['populated_scenarios']/self.stats['members']*100 if self.stats['members'] else 0)}%)")
-        print(f"  Compare_a populated: {self.stats['populated_compare_a']}/{self.stats['members']}")
-        print(f"  Compare_b populated: {self.stats['populated_compare_b']}/{self.stats['members']}")
-        print(f"  Homograph_Senses: {self.stats['populated_senses']}/{self.stats['members']}")
         
         if self.errors:
             print(f"\n❌ ERRORS ({len(self.errors)}):")

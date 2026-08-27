@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adjective
-- status:draft
-- needs-confusable-set
+- status:verified
+- pending-confusable:тяжкий
 fields:
   NoteID: ua-lexeme-0436
   Lemma: важки́й
@@ -38,6 +38,11 @@ fields:
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/важкий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
-  Verification Notes: ''
+  Verification Notes: '2026-08-27: Горох Синонімія lists тяжкий as the dominant near-synonym
+    across nearly every sense (physical weight and emotional/life-hardship alike) -- важкий
+    leans literal/general-difficulty, тяжкий leans toward serious/severe hardship, a heavier
+    register. No standalone note or cluster exists yet for тяжкий; tagged pending-confusable:тяжкий
+    per Craig so make ua flags it once that note is authored, per the same anchor pattern
+    as ua-lexeme-0534/0542.'
 ---
 

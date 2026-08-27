@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.7
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0579
   Lemma: мура́шки по шкі́рі
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
