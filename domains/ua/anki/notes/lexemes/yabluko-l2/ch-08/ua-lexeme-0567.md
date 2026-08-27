@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
 - status:draft
 fields:
   NoteID: ua-lexeme-0567
   Lemma: цукро́ва ва́та
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''

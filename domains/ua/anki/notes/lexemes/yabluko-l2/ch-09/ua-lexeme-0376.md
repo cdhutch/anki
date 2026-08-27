@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
-- pos:phrase
+- pos:verb-phrase
 - phrase:verb
 - status:verified
 fields:
   NoteID: ua-lexeme-0376
   Lemma: бра́ти у́часть у змага́ннях
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''

@@ -10,14 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0565
   Lemma: сире́ ті́сто
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
