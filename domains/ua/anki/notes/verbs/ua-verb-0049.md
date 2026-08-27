@@ -10,17 +10,17 @@ tags:
 - class:regular-1
 - ch:2.9.4
 - conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0049
-  Lemma: простягати
+  Lemma: простяга́ти
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.9
   Pres_1sg: простяга́ю
   Pres_2sg: простяга́єш
   Pres_3sg: простяга́є
-  Pres_1pl: простяга́єм, простяга́ємо
+  Pres_1pl: простяга́ємо
   Pres_2pl: простяга́єте
   Pres_3pl: простяга́ють
   Imperative_2sg: простяга́й
@@ -31,10 +31,10 @@ fields:
   Past_1sg_n: простяга́ло
   Past_3pl: простяга́ли
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: простяга́ючи
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: простяга́вши
   Source_Note: ''
   Verification Notes: Pairs with perfective простягну́ти. See ua-lexeme-0248.
 ---

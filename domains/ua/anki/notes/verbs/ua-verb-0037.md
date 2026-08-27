@@ -13,7 +13,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-verb-0037
-  Lemma: розминатися
+  Lemma: розмина́тися
   Aspect: imperfective
   VerbClass: reflexive-reciprocal
   FreqSource: ch:2.9

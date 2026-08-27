@@ -12,10 +12,10 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0086
-  Lemma: плисти
+  Lemma: плисти́
   Aspect: imperfective
   VerbClass: motion-swimming-new
   FreqSource: ch:2.9
@@ -33,10 +33,10 @@ fields:
   Past_1sg_n: плило́
   Past_3pl: плили́
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: пливучи́
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: пли́вши
   Source_Note: ''
   Verification Notes: 'Free-variant/"phonetic-variant" of пливти (ua-verb-0009), parallel
     to йти (ua-verb-0003) vs іти (ua-verb-0002). Горох-verified 2026-07-31: плисти́ and пливти́

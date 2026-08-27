@@ -9,18 +9,18 @@ tags:
 - domain:ua
 - class:irregular
 - ch:2.9.7
-- conj:suspended
-- status:draft
+- conj:drill
+- status:verified
 fields:
   NoteID: ua-verb-0073
-  Lemma: мати
+  Lemma: ма́ти
   Aspect: imperfective
   VerbClass: irregular
   FreqSource: ch:2.9
   Pres_1sg: ма́ю
   Pres_2sg: ма́єш
   Pres_3sg: ма́є
-  Pres_1pl: ма́єм, ма́ємо
+  Pres_1pl: ма́ємо
   Pres_2pl: ма́єте
   Pres_3pl: ма́ють
   Imperative_2sg: май
@@ -34,7 +34,7 @@ fields:
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: ма́вши
   Source_Note: ''
   Verification Notes: Imperfective-only (stative verb). See ua-lexeme-0341.
 ---

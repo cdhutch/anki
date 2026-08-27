@@ -13,7 +13,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-verb-0036
-  Lemma: програвати
+  Lemma: програва́ти
   Aspect: imperfective
   VerbClass: regular
   FreqSource: ch:2.9

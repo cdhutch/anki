@@ -10,20 +10,20 @@ tags:
 - class:regular-1
 - ch:2.9.3
 - conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0048
-  Lemma: посідати
+  Lemma: посіда́ти
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.9
   Pres_1sg: посіда́ю
   Pres_2sg: посіда́єш
-  Pres_3sg: посіда́є, посіда
-  Pres_1pl: посіда́єм, посіда́ємо
+  Pres_3sg: посіда́є
+  Pres_1pl: посіда́ємо
   Pres_2pl: посіда́єте
   Pres_3pl: посіда́ють
-  Imperative_2sg: посіда́й, посіда́й-но
+  Imperative_2sg: посіда́й
   Imperative_1pl: посіда́ймо
   Imperative_2pl: посіда́йте
   Past_1sg_m: посіда́в
@@ -34,7 +34,7 @@ fields:
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: посіда́вши
   Source_Note: ''
   Verification Notes: 'Perfective: посі́сти. Lemma is the ''брати у своє володіння'' (take
     possession/occupy) sense at this spelling -- a second, unrelated ''посідати'' sense (''сісти

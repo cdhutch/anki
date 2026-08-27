@@ -10,31 +10,31 @@ tags:
 - class:regular-1
 - ch:2.8.3
 - conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0078
-  Lemma: складатися
+  Lemma: склада́тися
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.8
-  Pres_1sg: складаюсь, складаюся
-  Pres_2sg: складаєшся
+  Pres_1sg: ''
+  Pres_2sg: ''
   Pres_3sg: склада́ється
-  Pres_1pl: складаємось, складаємося, складаємся
-  Pres_2pl: складаєтесь, складаєтеся
+  Pres_1pl: ''
+  Pres_2pl: ''
   Pres_3pl: склада́ються
-  Imperative_2sg: складайсь, складайся
+  Imperative_2sg: ''
   Imperative_1pl: ''
-  Imperative_2pl: складайтесь, складайтеся
-  Past_1sg_m: складавсь, складався
-  Past_1sg_f: складалась, складалася
-  Past_1sg_n: складалось, складалося
-  Past_3pl: складались, складалися
+  Imperative_2pl: ''
+  Past_1sg_m: склада́вся
+  Past_1sg_f: склада́лася
+  Past_1sg_n: склада́лося
+  Past_3pl: склада́лися
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: склада́ючись
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: склада́вшись
   Source_Note: ''
   Verification Notes: Reflexive, 1st conjugation. Govs 'з + genitive'. No 1pl imperative form
     surfaced on Горох (left blank rather than guessed). See lexeme ua-lexeme-0483.

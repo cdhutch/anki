@@ -10,17 +10,17 @@ tags:
 - class:regular-2
 - ch:2.9.5
 - conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0050
-  Lemma: вилазити
+  Lemma: вила́зити
   Aspect: imperfective
   VerbClass: regular-2
   FreqSource: ch:2.9
   Pres_1sg: вила́жу
   Pres_2sg: вила́зиш
   Pres_3sg: вила́зить
-  Pres_1pl: вила́зим, вила́зимо
+  Pres_1pl: вила́зимо
   Pres_2pl: вила́зите
   Pres_3pl: вила́зять
   Imperative_2sg: вила́зь
@@ -31,10 +31,10 @@ fields:
   Past_1sg_n: вила́зило
   Past_3pl: вила́зили
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: вила́зячи
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: вила́зивши
   Source_Note: ''
   Verification Notes: Pairs with perfective ви́лізти. See ua-lexeme-0280.
 ---

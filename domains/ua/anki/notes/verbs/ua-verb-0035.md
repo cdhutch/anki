@@ -13,7 +13,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-verb-0035
-  Lemma: помічати
+  Lemma: поміча́ти
   Aspect: imperfective
   VerbClass: regular
   FreqSource: ch:2.9

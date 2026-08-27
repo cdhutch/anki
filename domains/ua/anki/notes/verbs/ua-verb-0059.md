@@ -10,17 +10,17 @@ tags:
 - class:regular-1
 - ch:2.9.5
 - conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0059
-  Lemma: розміщувати
+  Lemma: розмі́щувати
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.9
   Pres_1sg: розмі́щую
   Pres_2sg: розмі́щуєш
   Pres_3sg: розмі́щує
-  Pres_1pl: розмі́щуєм, розмі́щуємо
+  Pres_1pl: розмі́щуємо
   Pres_2pl: розмі́щуєте
   Pres_3pl: розмі́щують
   Imperative_2sg: розмі́щуй
@@ -31,10 +31,10 @@ fields:
   Past_1sg_n: розмі́щувало
   Past_3pl: розмі́щували
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: розмі́щуючи
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: розмі́щувавши
   Source_Note: ''
   Verification Notes: Pairs with perfective розмісти́ти. See ua-lexeme-0289.
 ---

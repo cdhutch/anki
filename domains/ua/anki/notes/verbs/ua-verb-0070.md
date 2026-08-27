@@ -10,17 +10,17 @@ tags:
 - class:regular-3
 - ch:2.9.7
 - conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0070
-  Lemma: заночувати
+  Lemma: заночува́ти
   Aspect: perfective
   VerbClass: regular-3
   FreqSource: ch:2.9
   Pres_1sg: заночу́ю
   Pres_2sg: заночу́єш
   Pres_3sg: заночу́є
-  Pres_1pl: заночу́єм, заночу́ємо
+  Pres_1pl: аночу́ємо
   Pres_2pl: заночу́єте
   Pres_3pl: заночу́ють
   Imperative_2sg: заночу́й
@@ -33,7 +33,7 @@ fields:
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
-  Participle_Impersonal_Past: ''
+  Participle_Impersonal_Past: заночува́вши
   Participle_Adverbial_Past: ''
   Source_Note: ''
   Verification Notes: Perfective; Pres_* fields hold the future-tense forms Горох lists (standard

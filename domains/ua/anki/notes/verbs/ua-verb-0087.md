@@ -12,10 +12,10 @@ tags:
 - phonetic-variant
 - conj:drill
 - ch:2.9.2
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0087
-  Lemma: поплисти
+  Lemma: поплисти́
   Aspect: perfective
   VerbClass: motion-swimming-new
   FreqSource: ch:2.9
@@ -36,7 +36,7 @@ fields:
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: попли́вши
   Source_Note: ''
   Verification Notes: 'Free-variant/"phonetic-variant" of попливти (ua-verb-0010), parallel
     to плисти (ua-verb-0086) vs пливти (ua-verb-0009), and to йти (ua-verb-0003) vs іти (ua-verb-0002).

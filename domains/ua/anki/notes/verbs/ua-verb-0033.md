@@ -13,7 +13,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-verb-0033
-  Lemma: насолоджуватися
+  Lemma: насоло́джуватися
   Aspect: imperfective
   VerbClass: reflexive
   FreqSource: ch:2.9
