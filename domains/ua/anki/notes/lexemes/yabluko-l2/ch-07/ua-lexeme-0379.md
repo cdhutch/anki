@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.9.7
+- ch:2.7.1
 - pos:verb
 - status:verified
 fields:
@@ -34,21 +34,21 @@ fields:
   TypingAnswer: встановлювати / встановити
   UA_Example: Технік установлює нове обладнання в лабораторії.
   EN_Example: The technician is installing new equipment in the lab.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/встановлювати; https://goroh.pp.ua/Словозміна/встановити;
     https://goroh.pp.ua/Синонімія/встановити
   Source_Note: 'Added 2026-07-25 specifically to validate the aspect+euphony nested TypingTarget_UA
     join (both Lemma and Perfective slots have an attested euphonic partner, unlike 0211''s
     single-slot case) -- учити/вчити -> навчити was considered first and rejected: Горох''s
     own навчити entry cross-references навчати, not учити, as its formal aspect pair, so that
-    pairing wasn''t cleanly confirmable. Actual Яблуко chapter placement TBD; status:draft
-    pending Craig''s review.'
+    pairing wasn''t cleanly confirmable. Chapter placement resolved 2026-08-27 (per Craig):
+    ch:2.7.1, moved from yabluko-l2/ch-09 to a new yabluko-l2/ch-07 folder.'
   Verification Notes: '2026-08-19: headword direction flipped -- Lemma/Lemma_Euphony and Perfective/Perfective_Euphony
     each exchanged so the в- forms are the headwords and the у- forms the euphonic partners,
     per Craig''s collocational dictionary (Shevchuk) and matching ua-lexeme-0115/0484/0488.
     TypingAnswer and Govt_Case follow Lemma. All four stresses were already Горох-confirmed
     in both directions (see PRIOR below), so no stress claim is new here. Source_URL and UA_Example
-    deliberately NOT changed -- see below. Drafted by Claude, NOT verified. PRIOR: Горох-verified
+    deliberately NOT changed -- see below. Reviewed and verified 2026-08-27. PRIOR: Горох-verified
     2026-07-25. установлювати/установити: устано́влювати''s Тлумачення entry lists senses
     place/install, organize/establish, determine, create/enact. установи́ти''s own Тлумачення
     entry redirects "Див. устано́влювати" -- Горох''s standard aspect-pair cross-reference
