@@ -9,7 +9,9 @@ Deck layout:
 Suspension policy:
     - status:draft → suspend cards after import (inactive verbs)
     - status:verified → unsuspend cards (active verbs, used in current chapters)
-    - conj:suspended tag → keep suspended (reference only, not for drilling)
+    - (conj:drill/conj:suspended curation axis removed 2026-08-27, per Craig --
+      all verified verbs are now active for drilling, not just class leaders,
+      since class leaders trickle in gradually as older chapters are backfilled)
     - note has a red-flagged card → keep suspended (added 2026-07-31, per Craig
       -- see get_flagged_note_ids_by_color in tsv_to_anki.py). Only checked
       for existing notes; a brand-new note can't already have a flagged card.
@@ -151,14 +153,15 @@ def parse_note_file(path: Path) -> dict | None:
 
 def should_suspend(tags: list[str]) -> bool:
     """Suspension policy for UA_Verb cards (see module docstring):
-        - conj:suspended tag → always suspend (reference verbs, not for drilling)
-        - status:draft tag   → suspend (inactive/unreviewed)
-        - otherwise (status:verified) → unsuspend, ready for drilling
+        - status:draft tag             → suspend (inactive/unreviewed)
+        - otherwise (status:verified)  → unsuspend, ready for drilling
+
+    The conj:drill/conj:suspended curation axis was removed 2026-08-27 (per
+    Craig): all verified verbs are meant to be actively drillable, not just a
+    hand-picked set of class leaders, since class leaders will keep arriving
+    gradually as earlier chapters are backfilled into the corpus.
     """
-    return (
-        "conj:suspended" in tags
-        or "status:draft" in tags
-    )
+    return "status:draft" in tags
 
 
 def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:

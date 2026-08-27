@@ -81,8 +81,129 @@ Use these tags in `Tags_Conj`:
 | `phase:2b` | Authored in Phase 2b (high-freq regulars) | `phase:2b` |
 | `ch:2.9` | Used in ch-09 curriculum (or other chapter) | `ch:2.9` |
 | `conj:motion-walking-ходити` | Linking tag: all verbs following this pattern | (see Linking Strategy) |
-| `conj:drill` | Unsuspended on import (active conjugation drill) | `conj:drill` |
-| `conj:suspended` | Suspended on import (reference only) | `conj:suspended` |
+| `conj:drill` | ~~Unsuspended on import (active conjugation drill)~~ **Removed 2026-08-27** | ~~`conj:drill`~~ |
+| `conj:suspended` | ~~Suspended on import (reference only)~~ **Removed 2026-08-27** | ~~`conj:suspended`~~ |
+
+> **`conj:drill`/`conj:suspended` removed 2026-08-27, per Craig.** The curation axis that
+> suspended "reference only, not for drilling" verbs regardless of review status is gone --
+> all `status:verified` verbs are now active for drilling. Rationale: Craig's goal is fluent
+> conjugation of the whole verb corpus, not just a hand-picked set of class leaders, and class
+> leaders will keep arriving gradually as earlier textbook chapters are backfilled -- so
+> "not a class leader yet" is no longer a reason to keep a verified verb suspended. Suspension
+> is now purely `status:draft` (see `ua_verb_import.py`'s `should_suspend()`). All 87 corpus
+> notes had their `conj:*` tag stripped the same day. The `conj:motion-walking-<verb>` linking
+> tag proposal in the Linking Strategy section above is unrelated and unaffected (it was never
+> adopted at all -- see the live corpus, which has no `conj:motion-*` tag anywhere).
+
+---
+
+## Verb Classification: Pugh & Press Conjugation Classes (2026-08-27)
+
+**Status:** finalized classification scheme, established through direct review with Craig against
+the live 87-note corpus in `domains/ua/anki/notes/verbs/`. **Not yet applied to the CNSF notes** --
+the `class:` tag values below are pending Craig's sign-off on the note-by-note assignment before
+they replace the ad hoc values currently in the corpus (`class:regular-1`, `class:prefixed`, etc. --
+see the Tag Convention table above, which still reflects the *current* live values). This section
+documents the target scheme and the full mapping for reference.
+
+**Source:** class boundaries are Pugh & Press's *Ukrainian: A Comprehensive Grammar* Conjugation
+I/II subclasses, adapted to the actual present-tense formation mechanism (rather than raw
+infinitive spelling) and grounded against real conjugation data pulled from every note's
+`Pres_1sg`/`Pres_3sg`/`Pres_3pl` fields. Conjugation (I vs II) is determined by the 3rd-person-plural
+ending (`-уть`/`-ють` = I, `-ать`/`-ять` = II), not by infinitive shape, since infinitive spelling
+can mislead (e.g. вируша́ти looks like it could take Conjugation II hushing treatment but is a plain
+Conjugation I `-ати` vowel verb; бі́гти looks like a Conjugation I consonant stem but conjugates as
+Conjugation II).
+
+### Tag values
+
+**Naming convention:** English grammar terms for the category, Cyrillic for any specific
+spelling/ending being referenced (e.g. `consonant+ти`, `vowel+й`, `ояти`) -- consistent with the
+domain's existing Cyrillic tag precedent (`pending-confusable:вигляд` on `UA_Lexeme`).
+
+#### Conjugation I
+
+| Class | Tag value | Corpus count |
+|---|---|---|
+| Vowel stem + /j/ | `class:conj1-vowel+й` | 47 |
+| Consonant stem (plain) | `class:conj1-consonant+ти` | 5 |
+| Consonant stem with mutation | `class:conj1-consonant-mutation` | 0 |
+| -нути | `class:conj1-нути` | 1 |
+| Irregulars | `class:conj1-irregular` | 13 |
+| Бути | `class:conj1-бути` | 0 |
+
+#### Conjugation II
+
+| Class | Tag value | Corpus count |
+|---|---|---|
+| -ити | `class:conj2-ити` | 16 |
+| -жати, -чати, -шати | `class:conj2-hushing+ати` | 1 |
+| -іти | `class:conj2-іти` | 2 |
+| -ояти | `class:conj2-ояти` | 0 |
+| Consonant + -ти (бі́гти family) | `class:conj2-consonant+ти` | 2 |
+| Irregulars | `class:conj2-irregular` | 0 |
+
+**Design notes on specific classes:**
+
+- **`conj1-vowel+й` absorbs five of Pugh & Press's original ten Conjugation I bullets** (`-ати`,
+  `-яти`, `-іти`, `-ити`, `-ути`, `-авати`/`-явати`, `-увати`/`-ювати`) plus `мати`, because all of
+  them share the same present-tense mechanism: the stem ends in a vowel and the present tense adds
+  a glide `-й-` before the personal ending (spelled ю/є). The `-авати`/`-увати` family additionally
+  deletes the `-ва-` formant before the glide is added (дава́ти → даю́) -- **except verbs built on
+  the бу́ти/бува́ти root**, which keep `-ва-` throughout (прибува́ти → прибува́ю, not "прибую").
+  `-ити` verbs are included only when they're genuinely this vowel-stem type (пи́ти, би́ти, ви́ти,
+  ли́ти, уми́ти) -- most `-ити` verbs are Conjugation II and stay in `conj2-ити`.
+- **`conj1-consonant-mutation`** is `-ати`/`-іти` verbs whose stem consonant mutates through the
+  *entire* present paradigm, not just 1sg (писа́ти/пишу́, каза́ти/кажу́, рі́зати/рі́жу, хоті́ти/хочу́
+  -- note хоті́ти is the concrete proof this pattern exists for `-іти`, not just `-ати`). No corpus
+  member currently.
+- **`conj1-consonant+ти`** and **`conj2-consonant+ти`** both cover the automatic к/г/х→ч/ж/ш
+  alternation before a front-vowel ending (могти́, пекти́, лягти́ in Conjugation I) as a predictable
+  phonological rule, not a distinguishing lexical property -- so it does *not* trigger
+  `consonant-mutation` classification. **`conj2-consonant+ти` is a closed, single-root class**: per
+  Pugh, бі́гти (and its prefixed family) is the *only* Conjugation II verb with a consonant-stem
+  structure at all -- it is not a productive pattern, despite the naming parallelism with the
+  Conjugation I tag.
+- **`conj1-irregular`** covers suppletive/unpredictable stems, including the ї́хати family and the
+  іти́/йти́/піти́ family (which insert a consonant -- д -- in the present rather than just a glide,
+  so they don't qualify for `conj1-vowel+й` even though the infinitive ends in a vowel).
+
+### Full corpus mapping (87/87 notes, 2026-08-27)
+
+**Conjugation I**
+
+- `conj1-vowel+й` (47): 0008 пла́вати, 0011 бі́гати, 0014 літа́ти, 0033 насоло́джуватися, 0034
+  перемага́ти, 0035 поміча́ти, 0036 програва́ти, 0037 розмина́тися, 0038 би́тися, 0039 вболіва́ти,
+  0040 виграва́ти, 0041 відбива́ти, 0042 забива́ти, 0043 завдава́ти, 0044 заробля́ти, 0045 ки́дати,
+  0046 набира́ти, 0047 перекида́ти, 0048 посіда́ти, 0049 простяга́ти, 0052 ночува́ти, 0053
+  переліта́ти, 0054 переплива́ти, 0055 переправля́тися, 0056 підніма́тися, 0057 дола́ти, 0058
+  прива́блювати, 0059 розмі́щувати, 0060 спуска́тися, 0061 стартува́ти, 0062 фінішува́ти, 0063
+  відправля́тися, 0064 прибува́ти, 0066 чу́ти, 0067 вибача́ти, 0068 повто́рювати, 0069
+  перепро́шувати, 0070 заночува́ти, 0071 виклика́ти, 0072 вируша́ти, 0073 ма́ти, 0075 відрізня́тися,
+  0076 стосува́тися, 0077 дотри́муватися, 0078 склада́тися, 0081 пірна́ти, 0083 вигляда́ти.
+- `conj1-consonant+ти` (5): 0009 пливти́, 0010 попливти́, 0079 впа́сти, 0086 плисти́, 0087
+  поплисти́.
+- `conj1-consonant-mutation` (0): no corpus member.
+- `conj1-нути` (1): 0085 па́хнути.
+- `conj1-irregular` (13): 0002 іти́, 0003 йти, 0004 піти́, 0006 ї́хати, 0007 пої́хати, 0025
+  приї́хати, 0026 ви́їхати, 0027 підʼї́хати, 0028 дої́хати, 0029 прої́хати, 0030 переї́хати, 0031
+  заї́хати, 0032 відʼї́хати.
+- `conj1-бути` (0): no corpus member.
+
+**Conjugation II**
+
+- `conj2-ити` (16): 0001 ходи́ти, 0005 ї́здити, 0017 прихо́дити, 0018 вихо́дити, 0019 підхо́дити,
+  0020 дохо́дити, 0021 прохо́дити, 0022 перехо́дити, 0023 захо́дити, 0024 відхо́дити, 0050
+  вила́зити, 0051 топи́ти, 0065 говори́ти, 0074 підво́зити, 0080 звари́тися, 0082 розво́дити.
+- `conj2-hushing+ати` (1): 0084 звуча́ти.
+- `conj2-іти` (2): 0015 леті́ти, 0016 полеті́ти.
+- `conj2-ояти` (0): no corpus member.
+- `conj2-consonant+ти` (2): 0012 бі́гти, 0013 побі́гти -- mutates г→ж through the *entire*
+  paradigm (біжу́...біжа́ть), unlike Conjugation II's usual 1sg-only mutation pattern; treated as
+  this closed class's own idiosyncrasy rather than a reason to split the class further.
+- `conj2-irregular` (0): no corpus member.
+
+**66 + 21 = 87 -- every corpus verb accounted for.**
 
 ---
 

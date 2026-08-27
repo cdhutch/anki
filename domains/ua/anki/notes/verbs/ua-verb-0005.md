@@ -7,9 +7,9 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj2-ити
 - motion:vehicle
 - phase:2a
-- conj:drill
 - ch:2.9.2
 - status:verified
 fields:

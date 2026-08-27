@@ -10,10 +10,9 @@ tags:
 - motion:vehicle
 - prefixed
 - phase:2a
-- class:prefixed
+- class:conj1-irregular
 - ch:2.9.4
 - status:verified
-- conj:drill
 fields:
   NoteID: ua-verb-0026
   Lemma: ви́їхати

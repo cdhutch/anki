@@ -7,21 +7,20 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:reflexive
+- class:conj1-vowel+й
 - ch:2.9.5
-- conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0056
-  Lemma: підніматися
+  Lemma: підніма́тися
   Aspect: imperfective
   VerbClass: reflexive
   FreqSource: ch:2.9
-  Pres_1sg: підніма́юсь, підніма́юся
+  Pres_1sg: підніма́юся
   Pres_2sg: підніма́єшся
   Pres_3sg: підніма́ється
-  Pres_1pl: підніма́ємось, підніма́ємося
-  Pres_2pl: підніма́єтесь, підніма́єтеся
+  Pres_1pl: підніма́ємося
+  Pres_2pl: підніма́єтеся
   Pres_3pl: підніма́ються
   Imperative_2sg: підніма́йся
   Imperative_1pl: підніма́ймося
@@ -31,10 +30,10 @@ fields:
   Past_1sg_n: підніма́лося
   Past_3pl: підніма́лися
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: підніма́ючись
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: підніма́вшись
   Source_Note: ''
   Verification Notes: Pairs with perfective підня́тися. See ua-lexeme-0286.
 ---

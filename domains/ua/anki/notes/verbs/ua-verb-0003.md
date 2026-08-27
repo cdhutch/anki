@@ -7,10 +7,10 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-irregular
 - motion:walking
 - phase:2a
 - phonetic-variant
-- conj:drill
 - ch:2.9.2
 - status:verified
 fields:

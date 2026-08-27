@@ -7,20 +7,19 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-2
+- class:conj2-ити
 - ch:2.9.7
-- conj:suspended
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0074
-  Lemma: підвозити
+  Lemma: підво́зити
   Aspect: imperfective
   VerbClass: regular-2
   FreqSource: ch:2.9
   Pres_1sg: підво́жу
   Pres_2sg: підво́зиш
   Pres_3sg: підво́зить
-  Pres_1pl: підво́зим, підво́зимо
+  Pres_1pl: підво́зимо
   Pres_2pl: підво́зите
   Pres_3pl: підво́зять
   Imperative_2sg: підво́зь
@@ -34,7 +33,7 @@ fields:
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: підво́зивши
   Source_Note: ''
   Verification Notes: Pairs with perfective підвезти́. See ua-lexeme-0342.
 ---
