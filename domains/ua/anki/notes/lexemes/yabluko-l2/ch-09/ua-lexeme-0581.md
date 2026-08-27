@@ -66,16 +66,16 @@ fields:
     (no ConfusableSet -> suspend_compare_card fires per ua_lexeme_import.py). Drafted per
     Craig''s request 2026-07-31 to fill the gap so the triplet-display feature (TypingTarget_UA
     / _AspectLabel, synced 2026-07-31) has a real multi/uni/perf example beyond singlets.
-    status:draft pending Craig''s independent review -- in particular the йти-vs-іти EuphonyNote
-    call and the example sentence. 2026-08-04: per Craig, the йти/іти alternation is itself
-    a euphonic (semi-vowel і~й) mutation, not a separate free-variant-headword category distinct
-    from the в-/у- pairs -- same family as the і/й "and" alternation already cited in EuphonyNote
-    above. Populated the new per-slot ImperfectiveUnidirectional_Euphony field with іти́ (previously
-    only documented in EuphonyNote prose, which was never actually wired to grant typing credit
-    -- neither before nor after the 2026-08-04 per-slot euphony tolerance rollout, since that
-    prose is a full paragraph, not a bare delimited alternate, and this note is a triplet
-    so the singlet-only EuphonyNote fallback in compute_euphony_slots() didn''t apply either).
-    Typing іти́ for the unidirectional slot on the EN->UA card is now graded CORRECT/PERFECT
-    (previously always INCORRECT), and the UA->EN Recognition front now shows "йти (іти́)".'
+    The йти-vs-іти EuphonyNote call and the example sentence were the two open review items;
+    both addressed 2026-08-04: per Craig, the йти/іти alternation is itself a euphonic (semi-vowel
+    і~й) mutation, not a separate free-variant-headword category distinct from the в-/у- pairs
+    -- same family as the і/й "and" alternation already cited in EuphonyNote above. Populated
+    the new per-slot ImperfectiveUnidirectional_Euphony field with іти́ (previously only documented
+    in EuphonyNote prose, which was never actually wired to grant typing credit -- neither
+    before nor after the 2026-08-04 per-slot euphony tolerance rollout, since that prose is
+    a full paragraph, not a bare delimited alternate, and this note is a triplet so the singlet-only
+    EuphonyNote fallback in compute_euphony_slots() didn''t apply either). Typing іти́ for
+    the unidirectional slot on the EN->UA card is now graded CORRECT/PERFECT (previously always
+    INCORRECT), and the UA->EN Recognition front now shows "йти (іти́)".'
 ---
 

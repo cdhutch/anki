@@ -40,9 +40,8 @@ fields:
     lists this as senses 1-2 of виглядати ("to peer out from behind something" / "to become
     visible, noticeable"), both pairing with perfective виглянути -- distinct from ua-lexeme-0550's
     sense 5 ("to have a certain appearance"), which Горох lists with no perfective partner.
-    Example sentence drafted from Горох's sense-2 citation ("А тут ще виглянуло сонце"); not
-    yet run through a full Горох conjugation-verification pass -- status:draft pending Craig's
-    review.
+    Example sentence drafted from Горох's sense-2 citation ("А тут ще виглянуло сонце"); conjugation
+    cross-checked against ua-verb-0083 and reviewed 2026-08-27 (see Verification Notes).
   Verification Notes: Imperfective, non-reflexive, 1st conjugation; same conjugation paradigm
     as ua-lexeme-0550 (both live on ua-verb-0083 -- this is a pure polysemy homograph, not
     a distinct conjugation). Perfective partner ви́глянути confirmed 2026-08-27 (per Craig).

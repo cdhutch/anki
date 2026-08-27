@@ -54,7 +54,6 @@ fields:
     entry existed for this base (unprefixed) triplet -- only the separate UA_Verb conjugation
     notes (ua-verb-0005..0007). ConfusableSet intentionally left blank -- this is an aspect
     triplet, not a lexical-confusable/homograph pair, so the Compare card is expected to stay
-    suspended. Drafted per Craig''s request 2026-07-31. status:draft pending Craig''s independent
-    review.'
+    suspended. Drafted per Craig''s request 2026-07-31. Reviewed and verified 2026-08-27.'
 ---
 

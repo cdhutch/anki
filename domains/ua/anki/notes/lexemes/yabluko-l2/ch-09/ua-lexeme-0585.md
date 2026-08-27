@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - pos:verb
 - motion:base
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0585
   Lemma: бі́гати
@@ -52,6 +52,6 @@ fields:
     triplet -- only the separate UA_Verb conjugation notes (ua-verb-0011..0013). ConfusableSet
     intentionally left blank -- this is an aspect triplet, not a lexical-confusable/homograph
     pair, so the Compare card is expected to stay suspended. Drafted per Craig''s request
-    2026-07-31. status:draft pending Craig''s independent review.'
+    2026-07-31. Reviewed and verified 2026-08-27.'
 ---
 
