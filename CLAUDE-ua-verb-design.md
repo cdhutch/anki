@@ -81,7 +81,22 @@ Use these tags in `Tags_Conj`:
 | `phase:2b` | Authored in Phase 2b (high-freq regulars) | `phase:2b` |
 | `ch:2.9` | Used in ch-09 curriculum (or other chapter) | `ch:2.9` |
 | `conj:motion-walking-ходити` | Linking tag: all verbs following this pattern | (see Linking Strategy) |
-| `conj:drill` | Unsuspended on import (active conjugation drill) | `conj:drill` |
+| `conj:drill` | ~~Unsuspended on import (active conjugation drill)~~ **Removed 2026-08-27** | ~~`conj:drill`~~ |
+| `conj:suspended` | ~~Suspended on import (reference only)~~ **Removed 2026-08-27** | ~~`conj:suspended`~~ |
+
+> **`conj:drill`/`conj:suspended` removed 2026-08-27, per Craig.** The curation axis that
+> suspended "reference only, not for drilling" verbs regardless of review status is gone --
+> all `status:verified` verbs are now active for drilling. Rationale: Craig's goal is fluent
+> conjugation of the whole verb corpus, not just a hand-picked set of class leaders, and class
+> leaders will keep arriving gradually as earlier textbook chapters are backfilled -- so
+> "not a class leader yet" is no longer a reason to keep a verified verb suspended. Suspension
+> is now purely `status:draft` (see `ua_verb_import.py`'s `should_suspend()`). All 87 corpus
+> notes had their `conj:*` tag stripped the same day. The `conj:motion-walking-<verb>` linking
+> tag proposal in the Linking Strategy section above is unrelated and unaffected (it was never
+> adopted at all -- see the live corpus, which has no `conj:motion-*` tag anywhere).
+
+---
+
 ## Verb Classification: Pugh & Press Conjugation Classes (2026-08-27)
 
 **Status:** finalized classification scheme, established through direct review with Craig against
