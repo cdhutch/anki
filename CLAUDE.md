@@ -2145,6 +2145,82 @@ buckets. Triage deliberately — do not assume from spelling alone.
    tag instead (see ua-lexeme-0436/0440) — `check_pending_confusables.py` reports a plain count
    of these as a reminder but doesn't try to resolve them.
 
+**Compare card architecture — CompareA-D/CompareScenario/Homograph_SenseA/B retired in
+favor of a registry (landed 2026-08-26, cleaned up 2026-08-27).** Everything above in this
+section describes the pre-2026-08-26 design (per-note `CompareA`/`CompareB`/`CompareC`/
+`CompareD`/`CompareScenario`/`Homograph_SenseA`/`Homograph_SenseB` fields on the CNSF note
+itself) and is kept as-written for historical record — do not follow it for new work.
+`domains/ua/anki/confusable_clusters.yaml` (`tools/anki/lib/confusable_clusters.py`'s
+`ClusterRegistry`) is now the single source of truth for every Compare card: a cluster has
+a `canonical_note` (hub) and a list of `members`, each with `note_id`/`lemma`/`status`
+(`sourced`/`not-sourced`/`pending`, a registry-internal axis, distinct from the CNSF note's
+own `status:draft`/`status:verified` tag)/`chapter`/`comment`/`compare_scenario`. At import
+time, `get_cluster_compare_members_json()` (`tools/anki/sync/ua_lexeme_import.py`) looks up
+the note's cluster and writes a single `CompareMembers` JSON field —
+`{"scenario": ..., "members": [lemma, ...]}` — computed fresh from the registry every sync;
+nothing is hand-authored per note beyond the registry entry itself and (optionally) a
+prose-only `ConfusableSet` string for the hub note's UA→EN card-back "cf. ..." line (blank
+on satellites is fine — it doesn't affect their Compare card, which is entirely
+`CompareMembers`-driven). A cluster's member count is not capped at four/two the way the
+old `CompareA-D`/Shape-1-vs-Shape-2 split was — see `power-strength-synonyms` below, 6
+members in one cluster. **Real limitation, not yet fixed:** a note can belong to only one
+cluster (`ClusterRegistry.note_to_cluster` is a `note_id -> single cluster name` dict); a
+note listed as a member of two clusters silently renders whichever cluster is later in the
+YAML, dropping the other pairing's card entirely with no error. Hit this 2026-08-27 trying
+to wire ua-lexeme-0306 (тип) into a synonym pairing with ua-lexeme-0143 (вид, kind/type
+sense) — 0143 already anchors the `grammatical-aspect` homograph cluster with ua-lexeme-0182
+(вид, grammar-aspect sense), and adding it to a second cluster would silently steal that
+card. Left unresolved on purpose (0306's `ConfusableSet` documents the тип/вид relationship
+in prose only, no live card) rather than picking a side; needs `note_to_cluster` extended to
+a list plus a decision on how a note with two live clusters actually renders (concatenated
+`CompareMembers`, or a template change for two Compare sections) before either pairing can
+be built without sacrificing the other.
+
+**2026-08-27 registry cleanup:** the registry's own `compare_a`/`compare_b`/`compare_c`/
+`compare_d`/`homograph_sense_a`/`homograph_sense_b` per-member keys — carried over from the
+pre-2026-08-26 design and never actually read by `get_cluster_compare_members_json()`
+(confirmed by grep; it only reads `compare_scenario` and `lemma`) — were dead data kept
+alive solely by three stale tests. Stripped from all 33 then-existing clusters (426
+key-lines), rewrote the registry's own schema-header comment to match, and fixed the tests
+(`tests/ua/test_confusable_integration.py`, `tests/ua/test_confusable_clusters.py`) plus the
+standalone `tools/anki/lib/registry_validator.py` (not wired into pytest/Makefile, but
+runnable directly) to stop requiring them. One real bug surfaced along the way: "is this a
+true homograph cluster" can't be keyed off the cluster dict *name* — `grammatical-aspect`
+(вид/вид, ua-lexeme-0182/0143) and `warmth-adverb` (тепло́/те́пло) are true homographs
+without a `-homograph` suffix — so detection is keyed off the cluster's `description` text
+instead, which every homograph cluster's prose does say. Also deleted
+`tests/ua/test_compare_field_validation.py` and `tests/ua/test_compare_cluster_audit.py` —
+both tested locally-reimplemented copies of an even older `CompareA-D`-on-CNSF-notes
+validation design, never importing real production code, fully decoupled from anything live
+(one of them, `audit_compare_clusters.py`, is itself an orphaned script — not wired into the
+Makefile, referenced only by its own dead test and one migration script's help text). Full
+suite went from 548 (pre-cleanup) through several intermediate counts to 523 passing.
+
+**2026-08-27 new clusters** (all via the registry, `CompareMembers`-driven, none using the
+old fields): `crayfish-cancer-homograph` (ра́к crayfish/cancer, ua-lexeme-0542/0588),
+`smooth-plump-homograph` (гла́дкий/гладки́й stress-shift, ua-lexeme-0555/0589),
+`power-strength-synonyms` (6-way: поту́жний/си́льний/могу́тній/ду́жий/міцни́й/відчу́тний,
+ua-lexeme-0574/0590–0594), `journey-trip-synonyms` (мандрівка adventurous/wandering vs
+подорож neutral-general, ua-lexeme-0330/0595 — resolves the `pending-confusable:подорож`
+tag bucket 5 describes), and three clusters from one old cloze-card set Craig supplied for
+малюнок's family: `drawing-nouns` (малюнок product / малювання act / малярство
+discipline-craft, ua-lexeme-0042/0596/0597, resolving 0042's `needs-confusable-set` tag),
+`painting-nouns` (живопис art-form / картина a-painting / розпис mural,
+ua-lexeme-0598/0599/0600, canonical on картина), `painting-verbs` (малювати draw /
+розписувати decorate-or-sign / фарбувати solid-color-or-dye, ua-lexeme-0601/0602/0603,
+canonical on малювати — 0601/0603 are real Яблуко chapters, 1.11.1/1.11.4 per Craig, in a
+new `yabluko-l1/ch-11/` folder; the other 6 new notes have no textbook chapter and live in
+`domains/ua/anki/notes/lexemes/reference/`). All 8 new notes are `status:draft` pending
+Craig's review, same pattern as 0589–0594.
+
+**`ch:reference` convention (new 2026-08-26/27):** a chapter tag/folder for notes with no
+real Яблуко textbook placement, existing purely to complete a confusable pair or cluster
+(e.g. ра́к "cancer", the си́льний-family, малювання/малярство/живопис/картина/розпис/
+розписувати). Lives in its own `domains/ua/anki/notes/lexemes/reference/` folder, outside
+the `yabluko-l1`/`yabluko-l2` tree. `tests/ua/test_confusable_clusters.py::test_chapter_format`
+accepts it alongside the normal chapter-number pattern (which itself was widened this same
+pass to accept chapters starting with 1 or 3, not just 2).
+
 **Tooling:**
 - `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate
   lemmas, stress-strips them (NFD/NFC method) and recursively scans every `ua-lexeme-*.md`
