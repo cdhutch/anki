@@ -49,26 +49,19 @@ class TestConfusableRegistryIntegration(unittest.TestCase):
         except Exception as e:
             self.fail(f"Registry JSON serialization failed: {e}")
 
-    def test_compare_fields_match_cnsf_format(self):
-        """Test that registry Compare fields match CNSF field names."""
-        # CNSF uses CamelCase: CompareScenario, CompareA, Homograph_SenseA
-        # Registry uses snake_case: compare_scenario, compare_a, homograph_sense_a
-        field_mapping = {
-            'compare_scenario': 'CompareScenario',
-            'compare_a': 'CompareA',
-            'compare_b': 'CompareB',
-            'compare_c': 'CompareC',
-            'compare_d': 'CompareD',
-            'homograph_sense_a': 'Homograph_SenseA',
-            'homograph_sense_b': 'Homograph_SenseB',
-        }
-        
-        # Verify all registry members have snake_case fields
+    def test_compare_scenario_present_on_every_member(self):
+        """Test that every registry member has compare_scenario populated.
+
+        (Formerly test_compare_fields_match_cnsf_format: compare_a/b/c/d and
+        homograph_sense_a/b were removed from the schema 2026-08-27 -- they
+        mirrored CNSF note fields that Phase 6 had already removed from the
+        UA_Lexeme note type. compare_scenario is now the only per-member field
+        that feeds a Compare card, via CompareMembers JSON.)
+        """
         for cluster_data in self.registry['clusters'].values():
             for member in cluster_data['members']:
-                for snake_field in field_mapping.keys():
-                    self.assertIn(snake_field, member,
-                                f"Registry field '{snake_field}' missing in member")
+                self.assertIn('compare_scenario', member,
+                            "Registry member missing 'compare_scenario'")
 
     def test_registry_member_round_trip(self):
         """Test that registry member data survives round-trip (load → modify → save)."""
@@ -88,16 +81,6 @@ class TestConfusableRegistryIntegration(unittest.TestCase):
         
         self.assertEqual(original_count, reloaded_count,
             "Member count changed during round-trip")
-
-    def test_registry_handles_empty_optional_fields(self):
-        """Test that optional Compare fields (c, d) don't break parsing."""
-        # All members should have empty string defaults for optional fields
-        for cluster_data in self.registry['clusters'].values():
-            for member in cluster_data['members']:
-                for field in ['compare_c', 'compare_d']:
-                    value = member.get(field, '')
-                    self.assertIsInstance(value, str,
-                        f"Optional field '{field}' should be string, got {type(value)}")
 
     def test_registry_unicode_handling(self):
         """Test that registry handles Ukrainian Unicode (stress marks, Cyrillic)."""
@@ -123,14 +106,15 @@ class TestConfusableRegistryIntegration(unittest.TestCase):
         for cluster_name, cluster_data in self.registry['clusters'].items():
             lemmas = [m.get('lemma', '') for m in cluster_data['members']]
             
-            # Detect homographs: same lemma (no stress) with different homograph_senses
+            # Detect homographs: same lemma (no stress), cluster description says
+            # "homograph" (homograph_sense_a/b, the field this used to key off, was
+            # removed from the schema 2026-08-27; the cluster dict *key* isn't a
+            # reliable signal either -- grammatical-aspect and warmth-adverb are
+            # true homographs without a "-homograph" suffix on their name -- but
+            # every homograph cluster's description says so, by convention).
             lemmas_no_stress = [l.replace('́', '') for l in lemmas]
             has_duplicate_base_lemmas = len(set(lemmas_no_stress)) < len(lemmas_no_stress)
-            has_homograph_senses = any(
-                m.get('homograph_sense_a', '').strip() and m.get('homograph_sense_b', '').strip()
-                for m in cluster_data['members']
-            )
-            is_true_homograph = has_duplicate_base_lemmas and has_homograph_senses
+            is_true_homograph = has_duplicate_base_lemmas and 'homograph' in cluster_data.get('description', '').lower()
             
             # Allow legitimate pairs:
             # 1. True homographs (same base lemma, different senses)
@@ -165,27 +149,24 @@ class TestConfusableRegistryIntegration(unittest.TestCase):
                 f"Cluster '{cluster_name}' canonical note not in members")
 
     def test_registry_can_generate_compare_cards(self):
-        """Test that registry has sufficient data to generate Compare cards."""
+        """Test that registry has sufficient data to generate Compare cards.
+
+        Card generation (get_cluster_compare_members_json) builds
+        {"scenario": <compare_scenario>, "members": [<lemma>, ...]} straight from
+        the registry -- so "sufficient data" means every member has both fields
+        populated. compare_a/b and homograph_sense_a/b (removed 2026-08-27) fed
+        the pre-Phase-6 fixed CompareA-D/Homograph_SenseA-B note fields and are
+        no longer part of that path.
+        """
         for cluster_name, cluster_data in self.registry['clusters'].items():
             for member in cluster_data['members']:
-                # Every member should have scenario (required for Compare card)
                 scenario = member.get('compare_scenario', '').strip()
                 self.assertTrue(scenario,
                     f"Cluster '{cluster_name}' member missing compare_scenario")
-                
-                # Homograph clusters need sense descriptions
-                if 'homograph' in cluster_name.lower():
-                    sense_a = member.get('homograph_sense_a', '').strip()
-                    sense_b = member.get('homograph_sense_b', '').strip()
-                    self.assertTrue(sense_a and sense_b,
-                        f"Homograph '{cluster_name}' member missing sense descriptions")
-                
-                # Non-homograph clusters need compare_a and compare_b
-                else:
-                    compare_a = member.get('compare_a', '').strip()
-                    compare_b = member.get('compare_b', '').strip()
-                    self.assertTrue(compare_a and compare_b,
-                        f"Confusable '{cluster_name}' member missing compare_a/b")
+
+                lemma = member.get('lemma', '').strip()
+                self.assertTrue(lemma,
+                    f"Cluster '{cluster_name}' member missing lemma")
 
     def test_registry_scenario_text_quality(self):
         """Test that compare_scenario text meets quality standards."""

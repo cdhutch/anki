@@ -2,23 +2,33 @@
 #
 # SCHEMA STRUCTURE
 # ================
-# 
+#
 # This registry organizes confusable Ukrainian words into semantic clusters for Compare cards.
-# Two card design modes are supported:
+# All clusters render through a single mechanism at Anki-sync time: for a given note_id,
+# get_cluster_compare_members_json() (tools/anki/sync/ua_lexeme_import.py) looks up the
+# cluster, reads compare_scenario for that member, and JSON-encodes {scenario, members:
+# [lemma, ...]} into the note's CompareMembers field. The member list is not size-limited
+# to two/three/four -- a cluster can have as many members as make sense (see
+# power-strength-synonyms, 6 members).
+#
+# Two semantic cluster shapes are still distinguished for authoring/description purposes,
+# but both use the exact same fields and the exact same JSON rendering path:
 #
 # Shape 1 (Homographs): Same word, different meanings (stress-shift or polysemy)
-#   - compare_scenario: Disambiguating question or usage context
-#   - homograph_sense_a: Definition/explanation of first sense
-#   - homograph_sense_b: Definition/explanation of second sense
 #   Example: лавка (bench) vs лавка (market stall) — two note_ids for same lemma
 #
 # Shape 2 (Confusables): Different words, similar meanings or usage patterns
-#   - compare_scenario: Concrete usage situation that forces distinction
-#   - compare_a: First word being compared
-#   - compare_b: Second word being compared
-#   - compare_c: Optional third word
-#   - compare_d: Optional fourth word
 #   Example: значно (formal) vs набагато (everyday) — two different words, same cluster
+#
+# REMOVED FIELDS (2026-08-27): compare_a/b/c/d and homograph_sense_a/b were per-member
+# fields from an earlier (pre-JSON) Compare card design that rendered up to four fixed
+# CompareA-D note fields plus Homograph_SenseA/B. The 2026-07/08 migration removed
+# CompareA/B/C/D, CompareScenario, and Homograph_SenseA/B from the UA_Lexeme note type
+# entirely (see setup_ua_note_types.py) in favor of the single CompareMembers JSON field.
+# Since then, compare_a/b/c/d and homograph_sense_a/b in this registry were dead data --
+# never read by get_cluster_compare_members_json() or any card template -- kept alive only
+# by stale tests. They have been stripped from every cluster; compare_scenario and lemma
+# are now the only per-member fields that feed a Compare card.
 #
 # FIELD DEFINITIONS
 # =================
@@ -38,26 +48,18 @@
 #   chapter: {string} Textbook chapter reference
 #   comment: {string} Editorial notes on sourcing or verification
 #   compare_scenario: {string} Usage context that distinguishes this word from cluster-mates
-#   compare_a: {string} Lemma of first word in comparison (often self)
-#   compare_b: {string} Lemma of second word in comparison
-#   compare_c: {string} Lemma of third word (optional)
-#   compare_d: {string} Lemma of fourth word (optional)
-#   homograph_sense_a: {string} English description of first sense (homographs only)
-#   homograph_sense_b: {string} English description of second sense (homographs only)
 #
 # VALIDATION RULES
 # ================
-# 
+#
 # - All members MUST have compare_scenario populated (100% coverage required)
-# - Homograph clusters MUST have homograph_sense_a and homograph_sense_b on both members
-# - If compare_a is populated, compare_b MUST also be populated
 # - All note_ids must exist in domains/ua/anki/notes/lexemes/
 # - Lemmas must match corpus lemmas (stress-stripped comparison)
 # - canonical_note must be a member of the cluster
 # - No duplicate note_ids within a single cluster
 #
-# LAST UPDATED: 2026-08-26 (Phase 1: Schema extension, Phase 2: Backfill from CNSF)
-# COVERAGE: 59/59 members (100%)
+# LAST UPDATED: 2026-08-27 (removed vestigial compare_a-d / homograph_sense_a-b fields)
+# COVERAGE: 71/71 members (100%)
 #
 
 clusters:
@@ -78,12 +80,6 @@ clusters:
       compare_scenario: A market report states that prices this year are considerably
         higher than last year -- the kind of measured comparison you'd read in a news
         analysis or official statistics.
-      compare_a: зна́чно
-      compare_b: набага́то
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0468
       lemma: набага́то
       status: sourced
@@ -91,12 +87,6 @@ clusters:
       comment: Everyday conversational intensifier (Горох-verified)
       compare_scenario: Comparing two hotel rooms right after checking in, you tell
         a friend casually that this room is way comfier than the other one.
-      compare_a: зна́чно
-      compare_b: набага́то
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   time-of-day:
     description: 'Time-of-day nouns marking points in the daily cycle.
 
@@ -114,12 +104,6 @@ clusters:
       comment: Early morning; start of day (Горох-verified)
       compare_scenario: The sun has just risen and people are having their first coffee
         or getting ready for the day.
-      compare_a: вечір
-      compare_b: ніч
-      compare_c: ранок
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0029
       lemma: ве́чір
       status: sourced
@@ -127,12 +111,6 @@ clusters:
       comment: Late afternoon/evening; end of business day (Горох-verified)
       compare_scenario: The sun has just set and people are finishing dinner, but
         it's not yet late enough for most people to be asleep.
-      compare_a: вечір
-      compare_b: ніч
-      compare_c: ранок
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0048
       lemma: ніч
       status: sourced
@@ -140,12 +118,6 @@ clusters:
       comment: Night; dark hours (Горох-verified)
       compare_scenario: It's the middle of the dark hours, well past midnight, when
         most people are asleep.
-      compare_a: вечір
-      compare_b: ніч
-      compare_c: ранок
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   response-register-scale:
     description: 'Response words to "How are you?" / "How''s it going?", graded by
       formality and enthusiasm.
@@ -165,12 +137,6 @@ clusters:
       comment: Neutral; "not bad" / "getting by" (Горох-verified)
       compare_scenario: A coworker asks how your week went. It was fine but unremarkable
         -- you don't want to oversell it, just acknowledge it wasn't bad.
-      compare_a: непога́но
-      compare_b: норма́льно
-      compare_c: до́бре
-      compare_d: чудо́во
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0099
       lemma: до́бре
       status: sourced
@@ -178,12 +144,6 @@ clusters:
       comment: Positive response; formal or neutral tone (Горох-verified)
       compare_scenario: A friend asks how your exam went. You did solidly and feel
         satisfied -- no fireworks, just a plain, straightforwardly positive result.
-      compare_a: непога́но
-      compare_b: норма́льно
-      compare_c: до́бре
-      compare_d: чудо́во
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0101
       lemma: норма́льно
       status: sourced
@@ -192,12 +152,6 @@ clusters:
       compare_scenario: Someone asks how you're doing on an ordinary Tuesday. Nothing
         noteworthy happened either way -- this is the reflexive, default reply to
         a routine "how are you?"
-      compare_a: непога́но
-      compare_b: норма́льно
-      compare_c: до́бре
-      compare_d: чудо́во
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0104
       lemma: чудо́во
       status: sourced
@@ -205,12 +159,6 @@ clusters:
       comment: Very positive; enthusiastic "wonderful/great" (Горох-verified)
       compare_scenario: A friend asks how your vacation was. It exceeded expectations
         and you want to convey real excitement, not just satisfaction.
-      compare_a: непога́но
-      compare_b: норма́льно
-      compare_c: до́бре
-      compare_d: чудо́во
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   pvom-prefix-walking:
     description: 'Walking prefix distinctions: до- (arrival/destination) vs під- (approach)
       vs в- (entry/ingress).
@@ -229,12 +177,6 @@ clusters:
         enter)'
       compare_scenario: Someone is walking closer and closer to a friend waiting across
         the room, but hasn't arrived yet.
-      compare_a: підходити
-      compare_b: доходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0119
       lemma: дохо́дити
       status: sourced
@@ -242,24 +184,12 @@ clusters:
       comment: 'до + ходити: reach/arrive at (destination reached)'
       compare_scenario: Someone finally arrives at their destination, on foot, after
         a long walk.
-      compare_a: підходити
-      compare_b: доходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0115
       lemma: вхо́дити
       status: sourced
       chapter: 2.9
       comment: 'в + ходити: enter/go inside (cross threshold)'
       compare_scenario: Someone walks into a building through the front door, on foot.
-      compare_a: входити
-      compare_b: виходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   alphabet-types:
     description: 'Two words for "alphabet": абетка emphasizes the learning/childhood
       context (ABC primer),
@@ -276,12 +206,6 @@ clusters:
       comment: Alphabet (neutral, technical term for the letter system)
       compare_scenario: Stating a neutral linguistic fact, such as how many letters
         a language's writing system has.
-      compare_a: абетка
-      compare_b: алфавіт
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0022
       lemma: абе́тка
       status: sourced
@@ -289,12 +213,6 @@ clusters:
       comment: ABC primer (learning context, especially childhood)
       compare_scenario: Describing a colorful picture book aimed at small children
         who are just learning their letters for the first time.
-      compare_a: абетка
-      compare_b: алфавіт
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   gender-student:
     description: 'Gender pair for student: студент (m.) and студентка (f.).
 
@@ -310,12 +228,6 @@ clusters:
       comment: Student (masculine)
       compare_scenario: Introducing a male university student to a group of people
         who haven't met him before.
-      compare_a: студент
-      compare_b: студентка
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0016
       lemma: студе́нтка
       status: sourced
@@ -323,12 +235,6 @@ clusters:
       comment: Student (feminine)
       compare_scenario: Introducing a female university student to a group of people
         who haven't met her before.
-      compare_a: студент
-      compare_b: студентка
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   writing-implements:
     description: 'Two common writing implements: ручка (pen - typical for everyday
       writing) and олівець (pencil - erasable).
@@ -345,12 +251,6 @@ clusters:
       comment: Pen (ballpoint or gel pen for permanent writing)
       compare_scenario: Signing an official document or writing a permanent note that
         shouldn't be erased.
-      compare_a: олівець
-      compare_b: ручка
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0049
       lemma: оліве́ць
       status: sourced
@@ -358,12 +258,6 @@ clusters:
       comment: Pencil (graphite pencil, erasable)
       compare_scenario: Sketching a drawing you plan to revise, or filling in a standardized
         test form that requires erasable marks.
-      compare_a: олівець
-      compare_b: ручка
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   classroom-furniture:
     description: 'Two pieces of classroom furniture: парта (school desk with attached
       seat or standalone)
@@ -380,12 +274,6 @@ clusters:
       comment: School desk (often with attached seat or chair)
       compare_scenario: Describing the classroom furniture where a student sits and
         places their notebook during a lesson.
-      compare_a: парта
-      compare_b: стілець
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0064
       lemma: стіле́ць
       status: sourced
@@ -393,12 +281,6 @@ clusters:
       comment: Chair (seat without desk attached)
       compare_scenario: Describing a standalone seat with no attached desk surface,
         such as at a dinner table or in a waiting room.
-      compare_a: парта
-      compare_b: стілець
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   profession-expertise:
     description: 'Two words for work/job: професія (broad term for profession/occupation)
       and фах (skilled trade or craft).
@@ -416,12 +298,6 @@ clusters:
       comment: Profession, occupation (broad, formal term)
       compare_scenario: Filling out an official form that asks for your occupation,
         or introducing yourself formally by career at a professional networking event.
-      compare_a: професія
-      compare_b: фах
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   scoring-points:
     description: 'Two words for points/scores: очко (in sports/games context, e.g.,
       tennis points)
@@ -440,12 +316,6 @@ clusters:
       comment: Point (in sports/games, e.g., tennis score)
       compare_scenario: A basketball game is tied with five seconds left on the clock,
         and a player sinks a shot right at the buzzer.
-      compare_a: очко́
-      compare_b: бал
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0252
       lemma: бал
       status: sourced
@@ -453,12 +323,6 @@ clusters:
       comment: Point, score (unit of evaluation, e.g., grades, competition scoring)
       compare_scenario: A gymnast finishes her routine, and the judges hold up number
         cards showing how they rated her performance.
-      compare_a: очко́
-      compare_b: бал
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   sharp-descriptors:
     description: 'Two words for "sharp": гострий (sharp object or taste - spicy/hot
       food)
@@ -477,12 +341,6 @@ clusters:
       comment: Sharp (pointed object); spicy, hot (of food)
       compare_scenario: The chef warns that the soup is far too spicy, there is too
         much pepper in it.
-      compare_a: гострий
-      compare_b: різкий
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0586
       lemma: різки́й
       status: sourced
@@ -490,12 +348,6 @@ clusters:
       comment: Sharp, abrupt, sudden (change, movement, sound, intensity)
       compare_scenario: The driver swerves hard and sudden to dodge a dog that darted
         into the road.
-      compare_a: різкий
-      compare_b: гострий
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   butterfly-homograph:
     description: 'Stress-shift homograph on мете́лик: butterfly (primary sense, common)
 
@@ -510,24 +362,12 @@ clusters:
       chapter: 2.9
       comment: Butterfly (the insect - primary, common sense)
       compare_scenario: Which sense of метелик is being used?
-      compare_a: Червоний метелик сів на білу квітку.
-      compare_b: На вечірці він носив чорний метелик.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: butterfly (insect)
-      homograph_sense_b: bow-tie (menswear accessory)
     - note_id: ua-lexeme-0181
       lemma: мете́лик
       status: sourced
       chapter: 2.9
       comment: 'Bow-tie (menswear accessory); informal: flyer, leaflet'
       compare_scenario: Which sense of метелик is being used?
-      compare_a: Червоний метелик сів на білу квітку.
-      compare_b: На вечірці він носив чорний метелик.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: butterfly (insect)
-      homograph_sense_b: bow-tie (menswear accessory)
   crayfish-cancer-homograph:
     description: 'Pure polysemy homograph (no stress shift) on ра́к: the crustacean
 
@@ -546,24 +386,12 @@ clusters:
       chapter: 2.8
       comment: Crayfish (animal, animate)
       compare_scenario: Which sense of рак is being used?
-      compare_a: На ринку продавали свіжих раків.
-      compare_b: У нього діагностували рак легенів.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: crayfish (animal)
-      homograph_sense_b: cancer (disease)
     - note_id: ua-lexeme-0588
       lemma: ра́к
       status: sourced
       chapter: reference
       comment: Cancer (disease, inanimate)
       compare_scenario: Which sense of рак is being used?
-      compare_a: У нього діагностували рак легенів.
-      compare_b: На ринку продавали свіжих раків.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: cancer (disease)
-      homograph_sense_b: crayfish (animal)
   smooth-plump-homograph:
     description: 'Pure stress-shift homograph on гладкий: smooth, even, without
 
@@ -582,24 +410,12 @@ clusters:
       chapter: 2.8
       comment: Smooth, even (texture)
       compare_scenario: Which stress/sense of гладкий is being used?
-      compare_a: Шкірка яблука була гладкою і блискучою.
-      compare_b: Сусідський кіт був такий гладкий, що ледве ходив.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: smooth, even (гла́дкий)
-      homograph_sense_b: fat, well-fed, plump (гладки́й)
     - note_id: ua-lexeme-0589
       lemma: гладки́й
       status: sourced
       chapter: reference
       comment: Fat, well-fed, plump
       compare_scenario: Which stress/sense of гладкий is being used?
-      compare_a: Сусідський кіт був такий гладкий, що ледве ходив.
-      compare_b: Шкірка яблука була гладкою і блискучою.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: fat, well-fed, plump (гладки́й)
-      homograph_sense_b: smooth, even (гла́дкий)
   power-strength-synonyms:
     description: 'Near-synonym cluster for "strong/powerful," per Горох''s Синонімія
 
@@ -621,12 +437,6 @@ clusters:
       comment: Powerful -- raw mechanical/operational capacity, technical register
       compare_scenario: You're describing an engine, a loudspeaker, or a machine with a lot of raw output
         capacity -- which word fits best?
-      compare_a: поту́жний
-      compare_b: си́льний
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0590
       lemma: си́льний
       status: sourced
@@ -634,12 +444,6 @@ clusters:
       comment: Strong -- the broadest, most general-purpose term
       compare_scenario: You want the single most general, all-purpose word for 'strong' -- physical,
         character, or intensity, with no special nuance implied.
-      compare_a: си́льний
-      compare_b: поту́жний
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0591
       lemma: могу́тній
       status: sourced
@@ -647,12 +451,6 @@ clusters:
       comment: Mighty -- authority and grandeur, commanding scale
       compare_scenario: You're describing an empire, a ruler, or an ancient forest -- something commanding
         and grand in scale, not just physically strong.
-      compare_a: могу́тній
-      compare_b: си́льний
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0592
       lemma: ду́жий
       status: sourced
@@ -660,12 +458,6 @@ clusters:
       comment: Robust, vigorous -- embodied physical build, literary register
       compare_scenario: You're describing someone's robust physical build in a folk-tale or literary style --
         less formal/grand than могутній, more concretely physical than сильний.
-      compare_a: ду́жий
-      compare_b: си́льний
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0593
       lemma: міцни́й
       status: sourced
@@ -673,12 +465,6 @@ clusters:
       comment: Sturdy, durable -- resistance to breaking, structural integrity
       compare_scenario: You're describing a rope, fabric, or friendship that resists breaking or wearing out --
         durability and structural integrity, not raw force.
-      compare_a: міцни́й
-      compare_b: си́льний
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0594
       lemma: відчу́тний
       status: sourced
@@ -686,12 +472,6 @@ clusters:
       comment: Noticeable, perceptible -- detectability, not force
       compare_scenario: You want to say an effect or difference was noticeable/perceptible enough to register --
         not that it was powerful or strong, just detectable.
-      compare_a: відчу́тний
-      compare_b: поту́жний
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   bench-homograph:
     description: 'Stress-shift homograph on ла́вка: bench for sitting (primary sense)
 
@@ -706,24 +486,12 @@ clusters:
       chapter: 2.9
       comment: Bench (for sitting, in park or classroom)
       compare_scenario: Which sense of лавка is being used?
-      compare_a: На парку було багато лавок, де люди могли сидіти.
-      compare_b: Вона купила букет троянд у квітковій лавці на ринку.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: bench (for sitting)
-      homograph_sense_b: market stall, shop stand
     - note_id: ua-lexeme-0235
       lemma: ла́вка
       status: sourced
       chapter: 2.9
       comment: Market stall, shop stand (street vendor's bench)
       compare_scenario: Which sense of лавка is being used?
-      compare_a: Вона купила букет троянд у квітковій лавці на ринку.
-      compare_b: На парку було багато лавок, де люди могли сидіти.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: market stall, shop stand
-      homograph_sense_b: bench (for sitting)
   seem-emerge-homograph:
     description: 'Pure polysemy homograph (no stress shift) on вигляда́ти: to seem, to have
 
@@ -740,24 +508,12 @@ clusters:
       chapter: '2.8'
       comment: To seem, to appear a certain way (stative/copular, imperfective-only)
       compare_scenario: Which sense of виглядати is being used?
-      compare_a: Ця страва виглядає досить незвично.
-      compare_b: Сонце виглядало з-за хмар.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: to seem, to appear (a certain way)
-      homograph_sense_b: to look out, to emerge, to become visible
     - note_id: ua-lexeme-0587
       lemma: вигляда́ти
       status: sourced
       chapter: '2.8'
       comment: To look out, emerge, become visible (event sense, pairs with perfective ви́глянути)
       compare_scenario: Which sense of виглядати is being used?
-      compare_a: Сонце виглядало з-за хмар.
-      compare_b: Ця страва виглядає досить незвично.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: to look out, to emerge, to become visible
-      homograph_sense_b: to seem, to appear (a certain way)
   departure-homograph:
     description: 'Stress-shift homograph on відпра́влення: departure (primary sense,
       travel context)
@@ -773,24 +529,12 @@ clusters:
       chapter: 2.9
       comment: Departure (of a train, bus, person - leaving to go somewhere)
       compare_scenario: Which sense of відправлення is being used?
-      compare_a: Час відправлення поїзда -- девʼята вечора.
-      compare_b: Ваше відправлення готове до отримання на пошті.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: departure
-      homograph_sense_b: parcel, mailed item (letter/package)
     - note_id: ua-lexeme-0380
       lemma: відпра́влення
       status: sourced
       chapter: 2.9
       comment: Parcel, mailed item (letter or package sent by mail)
       compare_scenario: Which sense of відправлення is being used?
-      compare_a: Час відправлення поїзда -- девʼята вечора.
-      compare_b: Ваше відправлення готове до отримання на пошті.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: departure
-      homograph_sense_b: parcel, mailed item (letter/package)
   grammatical-aspect:
     description: 'Stress-shift homograph on вид: aspect (grammatical: perfective vs.
       imperfective distinction)
@@ -807,14 +551,6 @@ clusters:
       comment: 'Aspect (grammatical term: perfective vs. imperfective)'
       compare_scenario: You're learning about verb grammar—what word describes whether
         a verb is completed or ongoing?
-      compare_a: Який вид спорту ти любиш?
-      compare_b: Дієслово "читати" має недоконаний вид.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: 'kind or type of something (noun: a category or variety,
-        as in different sports)'
-      homograph_sense_b: 'grammatical property of verbs (noun: whether a verb action
-        is completed or ongoing)'
     - note_id: ua-lexeme-0143
       lemma: вид
       status: sourced
@@ -822,12 +558,6 @@ clusters:
       comment: Kind, type (e.g., "вид спорту" = type/category of sport)
       compare_scenario: You're discussing different categories of something—what word
         means a specific type or variety?
-      compare_a: Який вид спорту ти любиш?
-      compare_b: Дієслово "читати" має недоконаний вид.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: kind/type
-      homograph_sense_b: grammatical aspect marker
   warmth-adverb:
     description: 'Stress-shift homograph on тепло́/те́пло: warmth (noun, abstract
       or physical sensation)
@@ -843,24 +573,12 @@ clusters:
       chapter: 2.8
       comment: Warmth (noun; physical heat or abstract comfort)
       compare_scenario: Which sense of тепло is being used?
-      compare_a: Одягайся тепло, надворі холодно.
-      compare_b: Від каміна йшло приємне тепло.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: warmly (adverb)
-      homograph_sense_b: warmth (noun)
     - note_id: ua-lexeme-0405
       lemma: те́пло
       status: sourced
       chapter: 2.8
       comment: Warmly (adverb; manner or tone of speaking/acting)
       compare_scenario: Which sense of тепло is being used?
-      compare_a: Одягайся тепло, надворі холодно.
-      compare_b: Від каміна йшло приємне тепло.
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: warmly (adverb)
-      homograph_sense_b: warmth (noun)
   walking-arrival-departure:
     description: 'Walking verb pair: прихо́дити (come/arrive on foot) and відхо́дити
       (walk away, depart).
@@ -877,12 +595,6 @@ clusters:
       comment: Come, arrive (on foot - approaching movement)
       compare_scenario: A guest arrives at your door, on foot, for a party you're
         hosting.
-      compare_a: приходити
-      compare_b: відходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0118
       lemma: відхо́дити
       status: sourced
@@ -890,12 +602,6 @@ clusters:
       comment: Walk away, depart (on foot - leaving movement)
       compare_scenario: A guest says goodbye and walks away from your door, on foot,
         at the end of the evening.
-      compare_a: приходити
-      compare_b: відходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   walking-entry-exit:
     description: 'Walking verb pair: вхо́дити (enter, go in) and вихо́дити (go out,
       exit).
@@ -911,12 +617,6 @@ clusters:
       chapter: 2.9
       comment: Enter, go in (on foot - crossing threshold inward)
       compare_scenario: Someone walks into a building through the front door, on foot.
-      compare_a: входити
-      compare_b: виходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0116
       lemma: вихо́дити
       status: sourced
@@ -924,12 +624,6 @@ clusters:
       comment: Go out, exit (on foot - crossing threshold outward)
       compare_scenario: Someone walks out of a building through the front door, on
         foot.
-      compare_a: входити
-      compare_b: виходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   walking-passage:
     description: 'Walking verb pair: прохо́дити (pass by, walk past, pass through
       a space)
@@ -948,12 +642,6 @@ clusters:
       comment: Pass by, walk past (on foot - transiting through)
       compare_scenario: Someone is walking along a street, passing several shops without
         stopping, on the way somewhere else.
-      compare_a: проходити
-      compare_b: переходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0121
       lemma: перехо́дити
       status: sourced
@@ -961,12 +649,6 @@ clusters:
       comment: Cross, go across (on foot - reaching the far side)
       compare_scenario: Someone is walking across a street at a crosswalk, from one
         side to the other.
-      compare_a: проходити
-      compare_b: переходити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   vehicle-directions:
     description: 'Vehicle verb pair: вʼїжджа́ти (drive in, enter by vehicle) and виїжджа́ти
       (drive out, exit by vehicle).
@@ -982,24 +664,12 @@ clusters:
       chapter: 2.9
       comment: Drive in, into (by vehicle - entering motion)
       compare_scenario: A car turns into a parking garage or driveway.
-      compare_a: вʼїжджати
-      compare_b: виїжджати
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0125
       lemma: виїжджа́ти
       status: sourced
       chapter: 2.9
       comment: Drive out (by vehicle - exiting motion)
       compare_scenario: A car pulls out of a parking garage or driveway onto the street.
-      compare_a: вʼїжджати
-      compare_b: виїжджати
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   vehicle-approach-reach:
     description: 'Vehicle verb pair: підʼїжджа́ти (drive up to, approach by vehicle)
 
@@ -1017,24 +687,12 @@ clusters:
       comment: Drive up to (by vehicle - approach motion)
       compare_scenario: A taxi slowly pulls up next to the curb where you're waiting,
         not yet having arrived at the final destination.
-      compare_a: підʼїжджати
-      compare_b: доїжджати
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0128
       lemma: доїжджа́ти
       status: sourced
       chapter: 2.9
       comment: Reach, get to (by vehicle - destination arrival)
       compare_scenario: A car finally arrives at the destination after a long drive.
-      compare_a: підʼїжджати
-      compare_b: доїжджати
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   vehicle-passage:
     description: 'Vehicle verb pair: проїжджа́ти (drive past, pass through) and переїжджа́ти
       (cross, go across).
@@ -1052,12 +710,6 @@ clusters:
       comment: Drive past, pass through (by vehicle - transiting)
       compare_scenario: Driving along a highway, passing several towns without stopping,
         on a long road trip.
-      compare_a: проїжджати
-      compare_b: переїжджати
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0130
       lemma: переїжджа́ти
       status: sourced
@@ -1065,12 +717,6 @@ clusters:
       comment: Cross (by vehicle - reaching far side); to relocate
       compare_scenario: Driving across a bridge from one side of a river to the other
         -- or, in its extended sense, a family moving their household to a new city.
-      compare_a: проїжджати
-      compare_b: переїжджати
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   sports-action-verbs:
     description: 'Four-member cluster of ball/impact-game action verbs, each answering
       a different question
@@ -1099,12 +745,6 @@ clusters:
       comment: Hit back, deflect, return (defensive action; returning opponent's shot)
       compare_scenario: During a long volleyball rally, what does a player keep doing
         every time the ball comes flying at them?
-      compare_a: відбива́ти
-      compare_b: забива́ти
-      compare_c: завдава́ти
-      compare_d: набира́ти
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0214
       lemma: забива́ти
       status: sourced
@@ -1112,12 +752,6 @@ clusters:
       comment: Score, hit into goal (offensive action; driving ball into goal or net)
       compare_scenario: Game after game, this striker has a habit of doing what to
         the ball -- putting it in the back of the net?
-      compare_a: відбива́ти
-      compare_b: забива́ти
-      compare_c: завдава́ти
-      compare_d: набира́ти
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0215
       lemma: завдава́ти
       status: sourced
@@ -1125,12 +759,6 @@ clusters:
       comment: Deal, inflict (combat; striking a person, not a ball)
       compare_scenario: Round after round, what does this boxer keep doing with his
         fists -- not to a ball, but to the man across from him?
-      compare_a: відбива́ти
-      compare_b: забива́ти
-      compare_c: завдава́ти
-      compare_d: набира́ти
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0218
       lemma: набира́ти
       status: sourced
@@ -1139,12 +767,6 @@ clusters:
         the physical strike)
       compare_scenario: As the second half goes on, what keeps happening to the leading
         team's number on the scoreboard?
-      compare_a: відбива́ти
-      compare_b: забива́ти
-      compare_c: завдава́ти
-      compare_d: набира́ти
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   win-beat-verbs:
     description: 'Two near-synonyms for "win": перемага́ти (defeat, overcome, win
       against someone/something)
@@ -1164,12 +786,6 @@ clusters:
       comment: Defeat, overcome, win against (emphasizes overcoming opponent)
       compare_scenario: In the championship boxing match, what did the challenger
         do to the reigning champion?
-      compare_a: перемогти́ (перемага́ти)
-      compare_b: ви́грати (виграва́ти)
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0212
       lemma: виграва́ти
       status: sourced
@@ -1177,12 +793,6 @@ clusters:
       comment: Win, gain (emphasizes gaining the prize or victory)
       compare_scenario: At the poker table, what does a player do to walk away with
         the whole pot?
-      compare_a: перемогти́ (перемага́ти)
-      compare_b: ви́грати (виграва́ти)
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   race-start-loanword:
     description: 'Loanword verb for starting a race: стартува́ти.
 
@@ -1198,12 +808,6 @@ clusters:
       comment: Start (a race - loanword from English "start")
       compare_scenario: The referee fires the starting pistol and the runners take
         off.
-      compare_a: стартува́ти
-      compare_b: почина́ти
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   race-finish-loanword:
     description: 'Loanword verb for finishing a race: фінішува́ти.
 
@@ -1218,12 +822,6 @@ clusters:
       chapter: 2.9
       comment: Finish (a race - loanword from English "finish")
       compare_scenario: The first runner breaks the tape at the finish line.
-      compare_a: фінішува́ти
-      compare_b: закі́нчувати
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   running-racing:
     description: 'Running/racing noun: біг (the act of running, or racing on foot).
 
@@ -1240,12 +838,6 @@ clusters:
       comment: Running, race (on foot - the act or the event)
       compare_scenario: You're describing training for or watching a marathon or a
         school sprint event -- a competition specifically involving running on foot.
-      compare_a: перего́ни
-      compare_b: біг
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   transportation-arrival:
     description: 'Arrival in transportation context: прибуття́ (the noun - arrival
       event)
@@ -1262,12 +854,6 @@ clusters:
       comment: Arrival (noun; transportation context on schedule boards)
       compare_scenario: At the station, the 9pm train from Lviv pulls in and stops
         at the platform. What just happened to it?
-      compare_a: прибуття́
-      compare_b: відпра́влення
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
   transportation-verbs:
     description: 'Two verbs related to transportation: відправля́тися (to depart,
       set off)
@@ -1286,12 +872,6 @@ clusters:
       comment: To depart, set off (especially of transportation - train, bus, plane)
       compare_scenario: The departures board at the station shows what a train does
         at exactly nine in the evening.
-      compare_a: відправля́тися
-      compare_b: відхо́дити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
     - note_id: ua-lexeme-0316
       lemma: прибува́ти
       status: sourced
@@ -1299,9 +879,3 @@ clusters:
       comment: To arrive (especially of transportation - train, bus, plane)
       compare_scenario: A conductor makes an announcement over the station loudspeaker
         about when the train gets in.
-      compare_a: прибува́ти
-      compare_b: прихо́дити
-      compare_c: ''
-      compare_d: ''
-      homograph_sense_a: ''
-      homograph_sense_b: ''
