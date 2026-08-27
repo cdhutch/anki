@@ -12,7 +12,7 @@ tags:
 - ch:2.8.7
 - pos:noun
 - gender:f
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0570
   Lemma: сопі́лка
