@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
-- pos:verb
+- pos:verb-phrase
 - phrase:verb
 - ch09-phrase
 - status:verified
@@ -18,7 +18,7 @@ fields:
   NoteID: ua-lexeme-0300
   Lemma: перелеті́ти че́рез рі́чку на моту́зці
   Lemma_Euphony: ''
-  PartOfSpeech: verb
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''

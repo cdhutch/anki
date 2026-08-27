@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
-- pos:verb
+- pos:verb-phrase
 - phrase:verb
 - ch09-phrase
 - status:verified
@@ -18,7 +18,7 @@ fields:
   NoteID: ua-lexeme-0303
   Lemma: спуска́тися вниз
   Lemma_Euphony: ''
-  PartOfSpeech: verb
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
