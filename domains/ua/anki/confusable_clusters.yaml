@@ -560,6 +560,40 @@ clusters:
       compare_d: ''
       homograph_sense_a: market stall, shop stand
       homograph_sense_b: bench (for sitting)
+  seem-emerge-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on вигляда́ти: to seem, to have
+
+      a certain appearance (stative sense, no perfective partner) and to look out, to emerge,
+
+      to become visible (event sense, pairs with perfective ви́глянути).
+
+      '
+    canonical_note: ua-lexeme-0550
+    members:
+    - note_id: ua-lexeme-0550
+      lemma: вигляда́ти
+      status: sourced
+      chapter: '2.8'
+      comment: To seem, to appear a certain way (stative/copular, imperfective-only)
+      compare_scenario: Which sense of виглядати is being used?
+      compare_a: Ця страва виглядає досить незвично.
+      compare_b: Сонце виглядало з-за хмар.
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: to seem, to appear (a certain way)
+      homograph_sense_b: to look out, to emerge, to become visible
+    - note_id: ua-lexeme-0587
+      lemma: вигляда́ти
+      status: sourced
+      chapter: '2.8'
+      comment: To look out, emerge, become visible (event sense, pairs with perfective ви́глянути)
+      compare_scenario: Which sense of виглядати is being used?
+      compare_a: Сонце виглядало з-за хмар.
+      compare_b: Ця страва виглядає досить незвично.
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: to look out, to emerge, to become visible
+      homograph_sense_b: to seem, to appear (a certain way)
   departure-homograph:
     description: 'Stress-shift homograph on відпра́влення: departure (primary sense,
       travel context)
