@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:leader
+- class:conj2-ити
 - motion:walking
 - phase:2a
 - conj:drill

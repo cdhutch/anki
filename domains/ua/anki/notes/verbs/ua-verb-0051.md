@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-2
+- class:conj2-ити
 - ch:2.9.5
 - conj:suspended
 - status:verified

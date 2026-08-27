@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-2
+- class:conj2-hushing+ати
 - ch:2.8.6
 - conj:suspended
 - status:verified
@@ -17,16 +17,16 @@ fields:
   Aspect: imperfective
   VerbClass: regular-2
   FreqSource: ch:2.8
-  Pres_1sg: ''
-  Pres_2sg: ''
+  Pres_1sg: звучу́
+  Pres_2sg: звучи́ш
   Pres_3sg: звучи́ть
-  Pres_1pl: ''
-  Pres_2pl: ''
+  Pres_1pl: звучимо́
+  Pres_2pl: звуча́ть
   Pres_3pl: звуча́ть
-  Imperative_2sg: null
-  Imperative_1pl: null
-  Imperative_2pl: null
-  Past_1sg_m: звуча́в
+  Imperative_2sg: звучи́
+  Imperative_1pl: звучі́мо
+  Imperative_2pl: звучі́ть
+  Past_1sg_m: звучи́
   Past_1sg_f: звуча́ла
   Past_1sg_n: звуча́ло
   Past_3pl: звуча́ли

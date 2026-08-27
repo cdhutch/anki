@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-3
+- class:conj1-vowel+й
 - ch:2.9.7
 - conj:suspended
 - status:verified
@@ -20,7 +20,7 @@ fields:
   Pres_1sg: заночу́ю
   Pres_2sg: заночу́єш
   Pres_3sg: заночу́є
-  Pres_1pl: аночу́ємо
+  Pres_1pl: заночу́ємо
   Pres_2pl: заночу́єте
   Pres_3pl: заночу́ють
   Imperative_2sg: заночу́й

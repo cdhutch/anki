@@ -7,6 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-irregular
 - motion:walking
 - phase:2a
 - phonetic-variant

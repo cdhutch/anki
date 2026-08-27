@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:irregular
+- class:conj1-vowel+й
 - ch:2.9.7
 - conj:drill
 - status:verified

@@ -7,6 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-vowel+й
 - motion:swimming
 - phase:2a
 - conj:drill

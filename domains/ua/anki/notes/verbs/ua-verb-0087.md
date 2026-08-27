@@ -7,6 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-consonant+ти
 - motion:swimming
 - phase:2a
 - phonetic-variant

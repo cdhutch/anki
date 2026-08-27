@@ -7,6 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj2-consonant+ти
 - motion:running
 - phase:2a
 - conj:drill
