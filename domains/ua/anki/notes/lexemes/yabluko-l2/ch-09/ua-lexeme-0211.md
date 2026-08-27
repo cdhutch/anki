@@ -61,6 +61,8 @@ fields:
     ua-lexeme-0225 ("вболіва́ти за") was retired as a duplicate -- its Lemma bare-dangled
     the preposition with no complement (mixing Govt_Case government into the headword), and
     this note already covers "вболівати за + Acc." correctly via Govt_Case + its own live
-    example.'
+    example. 2026-08-27: confirmed ua-lexeme-0377 now also carries aspect:imperfective-only
+    -- the reasoning above always applied to both sibling notes; the tag had simply not been
+    added to 0377 until this pass.'
 ---
 

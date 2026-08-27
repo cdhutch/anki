@@ -12,6 +12,7 @@ tags:
 - ch:2.9.7
 - pos:verb
 - status:verified
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0341
   Lemma: ма́ти
@@ -37,7 +38,8 @@ fields:
   Tags_Ch: ch:2.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/мати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
-  Verification Notes: Imperfective-only (stative verb, no perfective counterpart). Filtered
-    out homographs 'мати' (noun, mother), 'мат' (checkmate) and 'мата' (mat).
+  Verification Notes: Tagged aspect:imperfective-only 2026-08-27 (per Craig) -- stative possession
+    verb, no perfective counterpart, consistent across Slavic. Filtered out homographs 'мати'
+    (noun, mother), 'мат' (checkmate) and 'мата' (mat).
 ---
 
