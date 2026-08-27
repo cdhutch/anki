@@ -59,7 +59,7 @@
 # - No duplicate note_ids within a single cluster
 #
 # LAST UPDATED: 2026-08-27 (removed vestigial compare_a-d / homograph_sense_a-b fields)
-# COVERAGE: 73/73 members (100%)
+# COVERAGE: 82/82 members (100%)
 #
 
 clusters:
@@ -906,3 +906,101 @@ clusters:
       compare_scenario: You're describing a business trip or a flight to visit
         family -- ordinary, purposeful travel with no wandering or adventurous
         connotation -- which is the default, all-purpose word for "trip"?
+  drawing-nouns:
+    description: 'Near-synonyms for drawing as product, act, and craft: малюнок
+      (the finished picture) vs малювання (the act of drawing) vs малярство (the
+      discipline/craft of painting or drawing broadly).
+
+      '
+    canonical_note: ua-lexeme-0042
+    members:
+    - note_id: ua-lexeme-0042
+      lemma: малю́нок
+      status: sourced
+      chapter: '1.0'
+      comment: The finished drawing/picture itself (product of малювати).
+      compare_scenario: Your child hands you the finished piece of paper with
+        colored pencil marks on it -- what do you call the actual picture they
+        made?
+    - note_id: ua-lexeme-0596
+      lemma: малюва́ння
+      status: sourced
+      chapter: reference
+      comment: The act/process of drawing or painting (verbal noun of малювати).
+      compare_scenario: You're describing what your child was doing for the last
+        hour with a box of pencils, not what they produced -- what word names
+        the activity itself?
+    - note_id: ua-lexeme-0597
+      lemma: маля́рство
+      status: sourced
+      chapter: reference
+      comment: The discipline or craft of painting/drawing broadly (also, the house-painting
+        trade).
+      compare_scenario: You're describing painting as a discipline or craft someone
+        studies and practices, not a specific picture or the single act of making
+        one -- what word names the art/craft as a whole?
+  painting-nouns:
+    description: 'Near-synonyms for painting as art form, product, and mural: живопис
+      (the art form/medium) vs картина (a specific painting/canvas) vs розпис
+      (painted decoration on a wall or building).
+
+      '
+    canonical_note: ua-lexeme-0599
+    members:
+    - note_id: ua-lexeme-0598
+      lemma: живо́пис
+      status: sourced
+      chapter: reference
+      comment: Painting as an art form/genre (paint medium), largely synonymous
+        with малярство sense 1.
+      compare_scenario: You're talking about painting as an entire art form/genre,
+        not any single piece -- what word names the medium itself?
+    - note_id: ua-lexeme-0599
+      lemma: карти́на
+      status: sourced
+      chapter: reference
+      comment: A specific painting/picture as a physical object (canvas).
+      compare_scenario: You're pointing at a specific framed piece hanging on
+        the wall in a museum -- what do you call that individual object?
+    - note_id: ua-lexeme-0600
+      lemma: ро́зпис
+      status: sourced
+      chapter: reference
+      comment: A painted mural or ornamental design on a wall/surface/object.
+      compare_scenario: You're looking at a painted design covering a church
+        ceiling or the side of a building, not a framed canvas -- what word names
+        that kind of painted decoration?
+  painting-verbs:
+    description: 'Near-synonyms for applying paint/color: малювати (to draw, basic
+      picture-making) vs розписувати (to decorate/sign) vs фарбувати (to apply
+      solid color or dye).
+
+      '
+    canonical_note: ua-lexeme-0601
+    members:
+    - note_id: ua-lexeme-0601
+      lemma: малюва́ти
+      status: sourced
+      chapter: '1.11.1'
+      comment: Basic verb for making a picture/drawing with pencil, crayon, paint,
+        etc.
+      compare_scenario: A child is making a picture with a pencil or crayons --
+        what's the basic verb for making that kind of image?
+    - note_id: ua-lexeme-0602
+      lemma: розпи́сувати
+      status: sourced
+      chapter: reference
+      comment: To cover a surface with an ornamental painted design, or to sign/register
+        officially.
+      compare_scenario: Someone is covering a wall or ceramic surface with an
+        ornamental painted pattern, or signing an official document -- which verb
+        names that specific action, distinct from plain drawing?
+    - note_id: ua-lexeme-0603
+      lemma: фарбува́ти
+      status: sourced
+      chapter: '1.11.4'
+      comment: To apply a solid coat of paint (or dye), e.g. a fence, wall, or
+        fabric.
+      compare_scenario: Someone is covering a fence or wall in a single solid
+        color with a paint roller, or dyeing fabric -- which verb names that
+        action, distinct from making a picture?
