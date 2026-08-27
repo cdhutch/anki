@@ -10,7 +10,6 @@ tags:
 - class:conj2-іти
 - motion:flying
 - phase:2a
-- conj:drill
 - ch:2.9.2
 - status:verified
 fields:

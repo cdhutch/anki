@@ -9,7 +9,6 @@ tags:
 - domain:ua
 - class:conj2-ити
 - ch:2.8.4
-- conj:suspended
 - status:verified
 fields:
   NoteID: ua-verb-0080

@@ -13,7 +13,6 @@ tags:
 - class:conj2-ити
 - ch:2.9.4
 - status:verified
-- conj:drill
 fields:
   NoteID: ua-verb-0018
   Lemma: вихо́дити

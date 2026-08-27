@@ -9,7 +9,6 @@ tags:
 - domain:ua
 - class:conj1-vowel+й
 - ch:2.9.6
-- conj:drill
 - status:verified
 fields:
   NoteID: ua-verb-0066

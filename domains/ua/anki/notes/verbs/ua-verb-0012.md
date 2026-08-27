@@ -10,7 +10,6 @@ tags:
 - class:conj2-consonant+ти
 - motion:running
 - phase:2a
-- conj:drill
 - ch:2.9.2
 - status:verified
 fields:

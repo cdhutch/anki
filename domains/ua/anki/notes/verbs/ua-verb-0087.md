@@ -11,7 +11,6 @@ tags:
 - motion:swimming
 - phase:2a
 - phonetic-variant
-- conj:drill
 - ch:2.9.2
 - status:verified
 fields:

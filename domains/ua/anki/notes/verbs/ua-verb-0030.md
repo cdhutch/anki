@@ -13,7 +13,6 @@ tags:
 - class:conj1-irregular
 - ch:2.9.4
 - status:verified
-- conj:suspended
 fields:
   NoteID: ua-verb-0030
   Lemma: переї́хати

@@ -13,7 +13,6 @@ tags:
 - class:conj1-irregular
 - ch:2.9.4
 - status:verified
-- conj:drill
 fields:
   NoteID: ua-verb-0025
   Lemma: приї́хати
