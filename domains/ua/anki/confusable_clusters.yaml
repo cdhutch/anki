@@ -59,7 +59,7 @@
 # - No duplicate note_ids within a single cluster
 #
 # LAST UPDATED: 2026-08-27 (removed vestigial compare_a-d / homograph_sense_a-b fields)
-# COVERAGE: 71/71 members (100%)
+# COVERAGE: 73/73 members (100%)
 #
 
 clusters:
@@ -879,3 +879,30 @@ clusters:
       comment: To arrive (especially of transportation - train, bus, plane)
       compare_scenario: A conductor makes an announcement over the station loudspeaker
         about when the train gets in.
+  journey-trip-synonyms:
+    description: 'Near-synonyms for journey/trip: мандрівка (adventurous, wandering
+      connotation) vs подорож (the neutral, general-purpose word). Горох defines
+      мандрівка sense 1 directly as "подорож (у 1 знач.)", with sense 2 adding a
+      "constant change of location, wandering" (блукання) nuance подорож lacks.
+
+      '
+    canonical_note: ua-lexeme-0330
+    members:
+    - note_id: ua-lexeme-0330
+      lemma: мандрі́вка
+      status: sourced
+      chapter: 2.9.7
+      comment: Adventurous/wandering connotation; Горох's sense 2 adds "constant
+        change of location, wandering" that подорож lacks.
+      compare_scenario: You're describing backpacking through a few different
+        towns with no fixed itinerary, just following your curiosity -- which
+        word for "trip" carries that wandering, adventurous feel?
+    - note_id: ua-lexeme-0595
+      lemma: по́дорож
+      status: sourced
+      chapter: reference
+      comment: The neutral, general-purpose word for journey/trip; Горох's sense
+        1 of мандрівка is defined directly as this word.
+      compare_scenario: You're describing a business trip or a flight to visit
+        family -- ordinary, purposeful travel with no wandering or adventurous
+        connotation -- which is the default, all-purpose word for "trip"?
