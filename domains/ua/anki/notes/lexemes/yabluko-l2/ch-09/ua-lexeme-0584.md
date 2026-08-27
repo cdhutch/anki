@@ -12,7 +12,7 @@ tags:
 - ch:2.9.4
 - pos:verb
 - motion:base
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0584
   Lemma: пла́вати
@@ -22,7 +22,7 @@ fields:
   ImperfectiveUnidirectional: пливти́
   ImperfectiveUnidirectional_Euphony: плисти́
   Perfective: попливти́
-  Perfective_Euphony: ''
+  Perfective_Euphony: поплисти́
   EuphonyNote: 'пливти́ and плисти́ are free variants of the same unidirectional imperfective
     "to swim" verb -- both Горох-verified as valid headwords (недоконаний вид, нерефлексивне,
     1 дієвідміна for both). Paradigms are near-identical: present tense (пливу́/пливе́ш/.../пливу́ть),
@@ -31,7 +31,10 @@ fields:
     and the synthetic future stem (пливти́му vs плисти́му). пливти́ is used here, matching
     the corpus''s existing UA_Verb conjugation note (ua-verb-0009, headworded пливти). Treat
     the two as free variants of one lexeme, not separate words -- parallels the йти/іти alternation
-    documented on ua-lexeme-0581 (ходити group).'
+    documented on ua-lexeme-0581 (ходити group). The same alternation carries through to the
+    по- prefixed perfective: поплисти́ is Горох-confirmed as a valid headword (доконаний вид,
+    stress on the final syllable), the same free-variant relationship to попливти́ that плисти́
+    has to пливти́ -- populated as Perfective_Euphony per Craig''s catch 2026-08-27.'
   AspectCue: ''
   EN_Gloss: to swim
   Govt_Case: ''
@@ -73,6 +76,11 @@ fields:
     ImperfectiveUnidirectional_Euphony field with плисти́ -- previously only documented in
     EuphonyNote prose, never wired to grant typing credit. Typing плисти́ for the unidirectional
     slot on the EN->UA card is now graded CORRECT/PERFECT (previously always INCORRECT), and
-    the UA->EN Recognition front now shows "пливти́ (плисти́)".'
+    the UA->EN Recognition front now shows "пливти́ (плисти́)". 2026-08-27, per Craigs catch:
+    the file did not yet populate Perfective_Euphony to match -- Горох confirms поплисти́
+    as a valid perfective headword (по- + плисти́), the same free-variant relationship попливти́s
+    uni-imperfective counterpart has. Populated Perfective_Euphony with поплисти́; typing
+    it for the perfective slot on the EN->UA card now also grades CORRECT/PERFECT, and the
+    UA->EN Recognition front shows "попливти́ (поплисти́)".'
 ---
 
