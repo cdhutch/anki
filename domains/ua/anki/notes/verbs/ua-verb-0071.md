@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - class:conj1-vowel+й
 - ch:2.9.7
-- status:draft
+- status:verified
 fields:
   NoteID: ua-verb-0071
   Lemma: виклика́ти
