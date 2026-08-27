@@ -528,6 +528,170 @@ clusters:
       compare_d: ''
       homograph_sense_a: butterfly (insect)
       homograph_sense_b: bow-tie (menswear accessory)
+  crayfish-cancer-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on ра́к: the crustacean
+
+      (crayfish, animate) and the disease (cancer, inanimate). Distinguished
+
+      grammatically, not just semantically -- genitive singular ра́ка (crayfish)
+
+      vs. ра́ку (cancer), animate vs. inanimate accusative.
+
+      '
+    canonical_note: ua-lexeme-0542
+    members:
+    - note_id: ua-lexeme-0542
+      lemma: ра́к
+      status: sourced
+      chapter: 2.8
+      comment: Crayfish (animal, animate)
+      compare_scenario: Which sense of рак is being used?
+      compare_a: На ринку продавали свіжих раків.
+      compare_b: У нього діагностували рак легенів.
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: crayfish (animal)
+      homograph_sense_b: cancer (disease)
+    - note_id: ua-lexeme-0588
+      lemma: ра́к
+      status: sourced
+      chapter: reference
+      comment: Cancer (disease, inanimate)
+      compare_scenario: Which sense of рак is being used?
+      compare_a: У нього діагностували рак легенів.
+      compare_b: На ринку продавали свіжих раків.
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: cancer (disease)
+      homograph_sense_b: crayfish (animal)
+  smooth-plump-homograph:
+    description: 'Pure stress-shift homograph on гладкий: smooth, even, without
+
+      irregularities (root-stressed гла́дкий) vs. fat, well-fed, plump, full-faced
+
+      (suffix-stressed гладки́й). No shared etymology beyond the spelling --
+
+      distinguished purely by stress placement.
+
+      '
+    canonical_note: ua-lexeme-0555
+    members:
+    - note_id: ua-lexeme-0555
+      lemma: гла́дкий
+      status: sourced
+      chapter: 2.8
+      comment: Smooth, even (texture)
+      compare_scenario: Which stress/sense of гладкий is being used?
+      compare_a: Шкірка яблука була гладкою і блискучою.
+      compare_b: Сусідський кіт був такий гладкий, що ледве ходив.
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: smooth, even (гла́дкий)
+      homograph_sense_b: fat, well-fed, plump (гладки́й)
+    - note_id: ua-lexeme-0589
+      lemma: гладки́й
+      status: sourced
+      chapter: reference
+      comment: Fat, well-fed, plump
+      compare_scenario: Which stress/sense of гладкий is being used?
+      compare_a: Сусідський кіт був такий гладкий, що ледве ходив.
+      compare_b: Шкірка яблука була гладкою і блискучою.
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: fat, well-fed, plump (гладки́й)
+      homograph_sense_b: smooth, even (гла́дкий)
+  power-strength-synonyms:
+    description: 'Near-synonym cluster for "strong/powerful," per Горох''s Синонімія
+
+      page for потужний. Six words sharing overlapping EN glosses but distinct emphases:
+
+      raw capacity (потужний), general strength (сильний), authority/grandeur (могутній),
+
+      embodied physicality (дужий), durability (міцний), and mere perceptibility
+
+      (відчутний, the outlier -- not about force at all).
+
+      '
+    canonical_note: ua-lexeme-0574
+    members:
+    - note_id: ua-lexeme-0574
+      lemma: поту́жний
+      status: sourced
+      chapter: 2.8
+      comment: Powerful -- raw mechanical/operational capacity, technical register
+      compare_scenario: You're describing an engine, a loudspeaker, or a machine with a lot of raw output
+        capacity -- which word fits best?
+      compare_a: поту́жний
+      compare_b: си́льний
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: ''
+      homograph_sense_b: ''
+    - note_id: ua-lexeme-0590
+      lemma: си́льний
+      status: sourced
+      chapter: reference
+      comment: Strong -- the broadest, most general-purpose term
+      compare_scenario: You want the single most general, all-purpose word for 'strong' -- physical,
+        character, or intensity, with no special nuance implied.
+      compare_a: си́льний
+      compare_b: поту́жний
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: ''
+      homograph_sense_b: ''
+    - note_id: ua-lexeme-0591
+      lemma: могу́тній
+      status: sourced
+      chapter: reference
+      comment: Mighty -- authority and grandeur, commanding scale
+      compare_scenario: You're describing an empire, a ruler, or an ancient forest -- something commanding
+        and grand in scale, not just physically strong.
+      compare_a: могу́тній
+      compare_b: си́льний
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: ''
+      homograph_sense_b: ''
+    - note_id: ua-lexeme-0592
+      lemma: ду́жий
+      status: sourced
+      chapter: reference
+      comment: Robust, vigorous -- embodied physical build, literary register
+      compare_scenario: You're describing someone's robust physical build in a folk-tale or literary style --
+        less formal/grand than могутній, more concretely physical than сильний.
+      compare_a: ду́жий
+      compare_b: си́льний
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: ''
+      homograph_sense_b: ''
+    - note_id: ua-lexeme-0593
+      lemma: міцни́й
+      status: sourced
+      chapter: reference
+      comment: Sturdy, durable -- resistance to breaking, structural integrity
+      compare_scenario: You're describing a rope, fabric, or friendship that resists breaking or wearing out --
+        durability and structural integrity, not raw force.
+      compare_a: міцни́й
+      compare_b: си́льний
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: ''
+      homograph_sense_b: ''
+    - note_id: ua-lexeme-0594
+      lemma: відчу́тний
+      status: sourced
+      chapter: reference
+      comment: Noticeable, perceptible -- detectability, not force
+      compare_scenario: You want to say an effect or difference was noticeable/perceptible enough to register --
+        not that it was powerful or strong, just detectable.
+      compare_a: відчу́тний
+      compare_b: поту́жний
+      compare_c: ''
+      compare_d: ''
+      homograph_sense_a: ''
+      homograph_sense_b: ''
   bench-homograph:
     description: 'Stress-shift homograph on ла́вка: bench for sitting (primary sense)
 
