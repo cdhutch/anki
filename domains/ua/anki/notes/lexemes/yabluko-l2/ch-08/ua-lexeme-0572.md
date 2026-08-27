@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.7
 - pos:adjective
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0572
   Lemma: дивови́жний

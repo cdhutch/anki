@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.7
 - pos:adverb
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0576
   Lemma: професі́йно

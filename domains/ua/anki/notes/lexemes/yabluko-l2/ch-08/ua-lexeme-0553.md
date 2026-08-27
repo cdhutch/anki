@@ -12,7 +12,7 @@ tags:
 - ch:2.8.6
 - pos:noun
 - gender:m
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0553
   Lemma: сма́к

@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.6
 - pos:adjective
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0537
   Lemma: жа́бʼячий

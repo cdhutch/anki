@@ -12,7 +12,7 @@ tags:
 - ch:2.8.6
 - pos:noun
 - gender:n
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0546
   Lemma: де́рево

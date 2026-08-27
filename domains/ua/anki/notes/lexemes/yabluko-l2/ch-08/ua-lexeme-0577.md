@@ -13,7 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - animate:true
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0577
   Lemma: мура́шка

@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.6
 - pos:adverb
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0562
   Lemma: споку́сливо

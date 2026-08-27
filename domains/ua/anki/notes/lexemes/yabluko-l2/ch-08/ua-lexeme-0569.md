@@ -12,7 +12,7 @@ tags:
 - ch:2.8.6
 - pos:phrase
 - phrase:discourse
-- status:draft
+- status:verified
 fields:
   NoteID: ua-lexeme-0569
   Lemma: на до́тик
