@@ -19,7 +19,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
-| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1 done) |
+| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.2 done) |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
@@ -637,14 +637,45 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   than the regular consonant/vowel-final buckets.
 - Next NoteIDs: ua-lexeme-1688, ua-verb-0359.
 
+### Ch.6.2 (daily routine; imperfective-perfective verb pairs; frequency adverbs)
+
+- Lexemes: **ua-lexeme-1688 - ua-lexeme-1726** (39 notes: 2 standalone nouns, 5 frequency
+  adverbs, 4 lexeme upgrades for pre-existing verb-only notes (годувати, іти, піти,
+  працювати), 28 new verb-pair lexemes).
+- Verbs: **ua-verb-0359 - ua-verb-0387** (29 notes: 1 verb-note upgrade for the pre-existing
+  lexeme-only повертатися, 28 new verb-pair notes covering 19 aspect pairs: вставати/встати,
+  годувати/нагодувати, грати/пограти, гуляти/погуляти, закінчуватися/закінчитися,
+  змінюватися/змінитися, іти/піти, лягати/лягти, обідати/пообідати, одягатися/одягнутися,
+  повертатися/повернутися, починатися/початися, працювати/попрацювати, приймати/прийняти,
+  прокидатися/прокинутися, сідати/сісти, слухати/послухати, снідати/поснідати,
+  спізнюватися/спізнитися). Proper Pugh & Press class tags throughout (conj1-irregular for
+  лягти/сісти/початися/прийняти's suppletive or ablaut alternations; mobile-stress conj2-ити
+  for змінитися/спізнитися; conj1-нути for the -нутися perfectives).
+- All `status:draft`. Tag `ch:2.6.2`.
+- Reused without new notes (retagged ch:2.6.2, independently bulleted again here): обідати
+  (ua-lexeme-0874/ua-verb-0158, ch:2.1), повертатися (ua-lexeme-0611, ch:2.9 -- lexeme
+  reused, new verb note added), приймати (ua-lexeme-0775/ua-verb-0127, ch:2.10), сідати
+  (ua-lexeme-1093/ua-verb-0231, ch:2.2), послухати (ua-lexeme-0773/ua-verb-0125, ch:2.10),
+  снідати (ua-lexeme-0876/ua-verb-0160, ch:2.1), зазвичай (ua-lexeme-0952, ch:2.1), постійно
+  (ua-lexeme-0847, ch:2.1). читати/прочитати (ua-lexeme-1682/1683, ua-verb-0357/0358, both new
+  this session in ch.6.1) also retagged ch:2.6.2 -- the wordlist's читати-прочитати pair
+  appears to recur at the end of both 6.1's and 6.2's verb-pair lists in the source PDF.
+- Judgment calls: повернутися/одягнутися stress normalized to a consistent mobile pattern
+  (1sg/3pl end-stressed, middle forms stressed on -не-) after Горох flagged internal
+  disagreement; прокинутися kept fixed-stress (differs from the -нутися mobile family) per
+  the well-attested "я прокинувся" pronunciation; прийняти (душ) textbook parenthetical
+  treated as a sense-note on the existing приймати/прийняти pair rather than a separate
+  phrase, since no new phrase-specific vocabulary is introduced.
+- Next NoteIDs: ua-lexeme-1727, ua-verb-0388.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1688**
-- Next `ua-verb-` ID: **0359**
+- Next `ua-lexeme-` ID: **1727**
+- Next `ua-verb-` ID: **0388**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
