@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.5
+- ch:2.6.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: брати / взяти
   UA_Example: Учні беруть участь у шкільному конкурсі.
   EN_Example: The students are taking part in the school competition.
-  Tags_Ch: ch:2.1.5
+  Tags_Ch: ch:2.1.5, ch:2.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/брати; https://goroh.pp.ua/Словозміна/взяти
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

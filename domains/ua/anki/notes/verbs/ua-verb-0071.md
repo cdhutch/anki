@@ -9,13 +9,14 @@ tags:
 - domain:ua
 - class:conj1-vowel+й
 - ch:2.9.7
+- ch:2.6.1
 - status:verified
 fields:
   NoteID: ua-verb-0071
   Lemma: виклика́ти
   Aspect: imperfective
   VerbClass: regular-1
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.6.1
   Pres_1sg: виклика́ю
   Pres_2sg: виклика́єш
   Pres_3sg: виклика́є

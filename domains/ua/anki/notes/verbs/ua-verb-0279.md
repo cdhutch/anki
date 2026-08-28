@@ -10,13 +10,14 @@ tags:
 - class:conj1-vowel+й
 - ch:2.4.3
 - ch:2.4
+- ch:2.6.1
 - status:draft
 fields:
   NoteID: ua-verb-0279
   Lemma: спійма́ти
   Aspect: perfective
   VerbClass: conj1-vowel+й
-  FreqSource: ch:2.4
+  FreqSource: ch:2.4, ch:2.6.1
   Pres_1sg: спійма́ю
   Pres_2sg: спійма́єш
   Pres_3sg: спійма́є
