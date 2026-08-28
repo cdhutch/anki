@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.6
+- ch:2.3.6
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: Що Ви можете порадити?
   UA_Example: Що Ви можете порадити для початківця?
   EN_Example: What can you recommend for a beginner?
-  Tags_Ch: ch:2.2.6
+  Tags_Ch: ch:2.2.6, ch:2.3.6
   Source_URL: https://goroh.pp.ua/Словозміна/Що Ви можете порадити?
   Source_Note: Горох-verified 2026-08-28, ch.2.6 sourcing pass (book genres/plots).
   Verification Notes: New. Fixed polite-register (Ви) request-for-recommendation formula.
