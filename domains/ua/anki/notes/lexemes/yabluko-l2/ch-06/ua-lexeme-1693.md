@@ -12,6 +12,7 @@ tags:
 - ch:2.6.2
 - pos:adverb
 - status:draft
+- ch:2.7.2
 fields:
   NoteID: ua-lexeme-1693
   Lemma: регуля́рно
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: регулярно
   UA_Example: Я регулярно займаюся спортом.
   EN_Example: I exercise regularly.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:2.7.2
   Source_URL: https://goroh.pp.ua/Словозміна/регулярно
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

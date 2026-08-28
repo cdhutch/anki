@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- ch:2.7.2
 fields:
   NoteID: ua-lexeme-0263
   Lemma: рі́вень
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: рівень
   UA_Example: Рівень складності траси зростав з кожним етапом.
   EN_Example: The course's level of difficulty increased with every stage.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:2.7.2
   Source_URL: https://goroh.pp.ua/Словозміна/рівень
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''
