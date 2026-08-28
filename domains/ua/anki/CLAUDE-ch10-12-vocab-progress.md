@@ -16,7 +16,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 |---|---|---|---|
 | 1 Будні та свята | 1–2 | 1.1–1.7 | **done** (row was stale -- all of 1.1-1.7 completed earlier, see Ch.1.7 entry below; corrected 2026-08-28) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
-| 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | in progress (3.1-3.5 done) |
+| 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | in progress (3.1-3.6 done) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
@@ -409,9 +409,25 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1303** (1302 consumed by замо́к, the castle-lock-homograph
-  companion note, per Craig's request)
-- Next `ua-verb-` ID: **0270**
+- Next `ua-lexeme-` ID: **1336**
+- Next `ua-verb-` ID: **0271**
+
+### Ch.3.6 (restaurant/cafe: menu items, ordering formulas) -- commit (see git log)
+
+- Lexemes: **ua-lexeme-1303 - ua-lexeme-1335** (33 notes): закуска, салат, гарнір,
+  десерт, напій, замовлення, вершки, відбивна, голубці, деруни, млинці, морозиво,
+  оселедець, родзинки, чорнослив, шашлик, юшка, нежирний, смажений, тушкований
+  (standalone), plus 13 phrase notes (перші страви/на перше, другі страви/на друге,
+  щось пити, вільний столик, риба на грилі, стейк з яловичини, стейк зі свинини,
+  (не)газована вода, напівсолодке вино, трав'яний чай, Проходьте за мною.,
+  Принесіть відразу рахунок., Скільки з мене / з нас?).
+- Verbs: **ua-verb-0270** (принести, perfective, imperfective приносити not
+  drafted separately).
+- All `status:draft`. Tag `ch:2.3.6`.
+- Dedup (bucket-3, tag appended): келих (ua-lexeme-1065, ch:2.2.5), Що ви можете
+  порадити? (ua-lexeme-1117, ch:2.2.6). Reused without retag (compositional only):
+  страва, проходити, скільки, вода, стіл.
+- Verified against literal PDF pages 205-206, not reconstructed memory.
 
 ## Environment notes for whoever continues this
 
