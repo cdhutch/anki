@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.6
+- ch:1.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: нудити / знудити
   UA_Example: Мене нудить від цих ліків.
   EN_Example: This medicine makes me feel nauseous.
-  Tags_Ch: ch:2.10.6
+  Tags_Ch: ch:2.10.6, ch:1.5
   Source_URL: https://goroh.pp.ua/Словозміна/нудити; https://goroh.pp.ua/Словозміна/знудити
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
@@ -43,6 +44,8 @@ fields:
     medical-symptom sense it is almost always used impersonally with an accusative experiencer
     ('мене нудить'). Full conjugation (all persons) recorded on paired ua-verb-0131 since
     Горох marks stress throughout. Perfective зну́ди́ти added (aspect-pairing review, yabluko-l2-verb-dictionary
-    + Горох, 2026-08-28).
+    + Горох, 2026-08-28). ch:1.5 wordlist item "нудити від" -- same impersonal verb, governing
+    "від + Gen" to express the cause ("мене нудить від цього" = "this makes me sick/fed up");
+    same lexeme, retagged rather than redrafted.
 ---
 
