@@ -15,7 +15,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | Chapter | PDF pages | Subsections | Status |
 |---|---|---|---|
 | 1 Будні та свята | 1–2 | 1.1–1.7 | in progress (1.1, 1.2 done) |
-| 2 Вечірка | 2–4 | 2.1–2.7 | in progress (2.1–2.2 done) |
+| 2 Вечірка | 2–4 | 2.1–2.7 | in progress (2.1–2.3 done) |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | not started |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
@@ -356,10 +356,30 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
 - скляний flagged: recurs in ch.2.3's materials wordlist, expect a
   bucket-3 retag there.
 
+### Ch.2.3 (crafts/toys; materials) — commit `8f8fe59d`
+
+- Lexemes: **ua-lexeme-1005 – ua-lexeme-1038** (34 notes): craft/toy nouns
+  (візерунок, дірка, картон, колесо, крапка, курча, майстер, майстриня,
+  механізм, кораблик, літачок, прикраса, стрічка, ознака, іграшка
+  [resolves ch:2.1 gap], крило), характерний, 7 material adjectives, 2
+  adverbs, and verb-lexeme pairs виготовляти/вирізати/в'язати/ліпити/
+  малювати/махати/розмічати/шити.
+- Verbs: **ua-verb-0201 – ua-verb-0208**.
+- All `status:draft`. Tag `ch:2.3`.
+- Dedup (bucket-3, tag appended): малярство (ua-lexeme-0597, ch:reference),
+  використовувати (ua-lexeme-0373, ch:2.9.3), вишивати (ua-lexeme-0841,
+  ch:1.2), розписувати (ua-lexeme-0602, ch:reference), фарбувати
+  (ua-lexeme-0603, ch:1.11.4), скляний (ua-lexeme-0997, ch:2.2).
+- Judgment calls flagged: вирізати's perfective ви́різати is spelled
+  identically to the impf, differs only by stress; малювати's perfective
+  (намалювати) came via Горох fallback (not in the verb dictionary);
+  махати's perfective chosen as махнути (semelfactive) over a co-listed
+  delimitative помахати.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1005**
-- Next `ua-verb-` ID: **0201**
+- Next `ua-lexeme-` ID: **1039**
+- Next `ua-verb-` ID: **0209**
 
 ## Environment notes for whoever continues this
 
