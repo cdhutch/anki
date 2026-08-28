@@ -16,7 +16,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 |---|---|---|---|
 | 1 Будні та свята | 1–2 | 1.1–1.7 | **done** (row was stale -- all of 1.1-1.7 completed earlier, see Ch.1.7 entry below; corrected 2026-08-28) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
-| 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | in progress (3.1-3.6 done) |
+| 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
@@ -409,8 +409,17 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1336**
-- Next `ua-verb-` ID: **0271**
+- Next `ua-lexeme-` ID: **1366**
+- Next `ua-verb-` ID: **0274**
+
+### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
+
+- Lexemes: **ua-lexeme-1336 - ua-lexeme-1365** (30 notes). Verbs: **ua-verb-0271 -
+  ua-verb-0273** (стверджувати, дивувати, зрадити).
+- Dedup (bucket-3, tag appended): рух (ua-lexeme-0463, ch:2.8.3). Reused without
+  retag: радість, час, справжній.
+- **All of chapter 3 (3.1-3.7) is now done.** Per Craig's processing order,
+  next up: chapters 4-7, then 11-12.
 
 ### Ch.3.6 (restaurant/cafe: menu items, ordering formulas) -- commit (see git log)
 
