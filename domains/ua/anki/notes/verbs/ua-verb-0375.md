@@ -11,12 +11,13 @@ tags:
 - ch:2.6
 - ch:2
 - status:draft
+- ch:2.6.5
 fields:
   NoteID: ua-verb-0375
   Lemma: поверта́тися
   Aspect: imperfective
   VerbClass: conj1-vowel+й
-  FreqSource: ch:2.6
+  FreqSource: ch:2.6, ch:2.6.5
   Pres_1sg: поверта́юся
   Pres_2sg: поверта́єшся
   Pres_3sg: поверта́ється

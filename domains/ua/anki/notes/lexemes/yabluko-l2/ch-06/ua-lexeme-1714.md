@@ -12,6 +12,7 @@ tags:
 - ch:2.6.2
 - pos:verb
 - status:draft
+- ch:2.6.5
 fields:
   NoteID: ua-lexeme-1714
   Lemma: поверну́тися
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: повернутися
   UA_Example: Він повернеться з відрядження у пʼятницю.
   EN_Example: He'll be back from his business trip on Friday.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:2.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/повернутися
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

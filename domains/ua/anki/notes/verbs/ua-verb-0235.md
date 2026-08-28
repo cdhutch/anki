@@ -10,12 +10,13 @@ tags:
 - class:1
 - ch:2.2.7
 - status:draft
+- ch:2.6.5
 fields:
   NoteID: ua-verb-0235
   Lemma: запро́шувати
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2.2
+  FreqSource: ch:2.2, ch:2.6.5
   Pres_1sg: запро́шую
   Pres_2sg: запро́шуєш
   Pres_3sg: запро́шує

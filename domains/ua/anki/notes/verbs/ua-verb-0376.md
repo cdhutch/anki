@@ -11,12 +11,13 @@ tags:
 - ch:2.6.2
 - ch:2.6
 - status:draft
+- ch:2.6.5
 fields:
   NoteID: ua-verb-0376
   Lemma: поверну́тися
   Aspect: perfective
   VerbClass: conj1-нути
-  FreqSource: ch:2.6.2
+  FreqSource: ch:2.6.2, ch:2.6.5
   Pres_1sg: поверну́ся
   Pres_2sg: поверне́шся
   Pres_3sg: поверне́ться

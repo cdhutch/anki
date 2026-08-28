@@ -12,6 +12,7 @@ tags:
 - ch:2.2.4
 - pos:verb
 - status:draft
+- ch:2.6.5
 fields:
   NoteID: ua-lexeme-1048
   Lemma: виганя́ти
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: виганяти / вигнати
   UA_Example: Вона виганяє кота з кухні.
   EN_Example: She is chasing the cat out of the kitchen.
-  Tags_Ch: ch:2.2.4
+  Tags_Ch: ch:2.2.4, ch:2.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/виганяти; https://goroh.pp.ua/Словозміна/вигнати
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

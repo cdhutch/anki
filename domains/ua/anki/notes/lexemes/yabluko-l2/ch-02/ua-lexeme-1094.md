@@ -12,6 +12,7 @@ tags:
 - ch:2.2.5
 - pos:verb
 - status:draft
+- ch:2.6.5
 fields:
   NoteID: ua-lexeme-1094
   Lemma: про́бувати
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: пробувати / спробувати
   UA_Example: Вона завжди пробує кожну страву на столі.
   EN_Example: She always tastes every dish on the table.
-  Tags_Ch: ch:2.2.5
+  Tags_Ch: ch:2.2.5, ch:2.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/пробувати; https://goroh.pp.ua/Словозміна/спробувати
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb;
