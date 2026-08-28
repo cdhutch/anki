@@ -20,7 +20,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
-| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1 done) |
+| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.2 done) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
@@ -802,14 +802,29 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   (ua-lexeme-1786, ch:2.6.4), різко (ua-lexeme-1785, ch:2.6.4).
 - Next NoteIDs: ua-lexeme-1906, ua-verb-0483.
 
+### Ch.7.2 (accounts/passwords vocabulary)
+
+- Lexemes: **ua-lexeme-1906 - ua-lexeme-1926** (21 notes: 3 nouns, 5 adjectives, 5 adverbs/
+  discourse markers, 8 verb-pair lexemes/upgrades).
+- Verbs: **ua-verb-0483 - ua-verb-0489** (7 notes covering 4 aspect pairs/upgrades:
+  обмінюватися/обмінятися, дізнаватися/дізнатися, змінювати/змінити, продавати/продати).
+- All `status:draft`. Tag `ch:2.7.2`.
+- дізнатися gets its first lexeme note (verb note ua-verb-0280 already existed from ch.4.3).
+  продавати/продати are давати/дати-family -авати verbs (theme -ва- drops in the non-past);
+  продати's suppletive дати-style paradigm classified `conj1-irregular`.
+- Reused without new notes (retagged ch:2.7.2): рівень (ua-lexeme-0263, ch:2.9), часто
+  (ua-lexeme-1690, ch:2.6.2), рідко (ua-lexeme-1691, ch:2.6.2), завжди (ua-lexeme-1692,
+  ch:2.6.2), регулярно (ua-lexeme-1693, ch:2.6.2), щодня (ua-lexeme-0834, ch:2.1).
+- Next NoteIDs: ua-lexeme-1927, ua-verb-0490.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1906**
-- Next `ua-verb-` ID: **0483**
+- Next `ua-lexeme-` ID: **1927**
+- Next `ua-verb-` ID: **0490**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
