@@ -1102,14 +1102,57 @@ older chapters).
 - All `status:draft`. Tag `ch:2.11.4`.
 - Next NoteIDs: ua-lexeme-2154, ua-verb-0581 (unchanged -- no new verb notes this pass).
 
+### Ch.11.5 (disaster/crisis vocabulary: natural & man-made catastrophes,
+evacuation/cleanup response, narrative & political-suppression terms)
+
+- Lexemes: **ua-lexeme-2154 - ua-lexeme-2173** (20 notes: аварія, вибух, виверження
+  вулкана, витік радіації, землетрус, пандемія, повінь, радіаційний фон,
+  радіоактивне ураження, техногенна катастрофа, евакуація, ліквідація, сценарій,
+  сюжет, брехня, небезпека, підлеглий, придушення критики, непридатний, вийти
+  з-під контролю). All new, no dedup hits.
+- 3 new verb pairs (**ua-lexeme-2174-2179** / **ua-verb-0581-0586**), each
+  cross-checked against yabluko-l2-verb-dictionary.pdf per Craig's instruction to
+  include perfective partners for imperfective lemmas:
+  - вибухати/вибухнути ("to explode") -- dictionary line 90 ("вибухати вибухнути
+    М. Ор."). Note: Горох's own page for the bare spelling "вибухати" is a
+    homograph-by-stress pair (root-stressed вибуха́ти = this regular imperfective;
+    a separately-listed prefix-stressed ви́бухати is a rare perfective variant,
+    parallel to the ви́писати/виписувати stress pattern documented earlier this
+    chapter) -- used the root-stressed imperfective as confirmed by the dictionary.
+  - гинути/загинути ("to perish, die") -- dictionary line 388 ("гинути загинути
+    від + Р, під час + Р"). Exceptional tagging note: гинути is an underived
+    imperfective that happens to carry the -нути suffix shape normally reserved
+    for perfectives in this corpus's class scheme -- classified conj1-нути purely
+    by conjugational form, with the aspect direction (impf) noted explicitly in
+    the lexeme's Verification Notes to avoid confusion with e.g. вибухнути/
+    вимкнути (both perfective -нути verbs).
+  - захищатися/захиститися ("to protect/defend oneself") -- dictionary line 621
+    ("захищатися захиститися Ор., від + Р"). захиститися shows a ст→щ mutation in
+    1sg only (захищу́ся vs захисти́шся/захисти́ться...) -- this corpus's first
+    drafted example of that specific mutation (простити/пустити-family pattern),
+    documented in the verb note for future reference. Reflexive -сь colloquial
+    contractions from Горох normalized to standard -ся/-теся/-мося throughout
+    (matches established convention, cf. відмовитися ch.11.1).
+- Reused without new notes (retagged ch:2.11.5, plain retags -- same senses as the
+  existing notes, no gap in aspect-pair coverage): пожежа (ua-lexeme-0173, ch.9.2,
+  "fire"), очищення (ua-lexeme-1245, ch.3.4, "cleaning/purification"), скасувати/
+  скасовувати (ua-lexeme-1837/1836, ch.6.6 -- already a complete, cross-referenced
+  aspect pair via CounterpartForm; confirms full compliance with Craig's
+  perfective-partner instruction rather than finding a gap).
+- All `status:draft`. Tag `ch:2.11.5`.
+- Verified against direct visual read of PDF page 223 (Read tool, image mode), not
+  reconstructed memory.
+- `pytest tests/ua/ -q`: 547 passed (aspect-tag validation gate included).
+- Next NoteIDs: ua-lexeme-2180, ua-verb-0587.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2154**
-- Next `ua-verb-` ID: **0581**
+- Next `ua-lexeme-` ID: **2180**
+- Next `ua-verb-` ID: **0587**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
