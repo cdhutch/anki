@@ -1195,14 +1195,34 @@ subchapters with no new vocabulary bullets). Processing order: 12.1, 12.3, 12.5,
 - `pytest tests/ua/ -q`: 547 passed.
 - Next NoteIDs: ua-lexeme-2195, ua-verb-0593.
 
+### Ch.12.3 (migration/adaptation; settling-in and worry verbs)
+
+- Lexemes: **ua-lexeme-2195 - ua-lexeme-2209** (15 notes): адаптація, мігрант,
+  міграція, населення (nouns); взяти на себе + догляд (idiom + its illustrative
+  collocation noun, drafted standalone); зближуватися/зблизитися,
+  облаштовуватися/облаштуватися, тривожитися/стривожитися,
+  хвилюватися/розхвилюватися (4 new verb pairs); підвищити кваліфікацію (fixed
+  collocation, not in the verb dictionary, no partner drafted).
+- Verbs: **ua-verb-0593 - ua-verb-0600** (8 notes). Two pairs -- облаштовуватися/
+  облаштуватися and тривожитися/стривожитися -- are cases where the textbook only
+  bullets one member (облаштуватися, тривожитися through) and the partner was added
+  per Craig's instruction. verb-dictionary line 1698 prints тривожитися's
+  government as "за/черєз + Зн." (OCR-garbled є), corrected to "через".
+- Reused via retag: необхідність (ua-lexeme-0618, ch.10.1), переїзд
+  (ua-lexeme-1197, ch.3.3), дратувати (ua-lexeme-0672, ch.10.2), почуватися
+  (ua-lexeme-0781, ch.10.6).
+- All `status:draft`. Tag `ch:2.12.3`.
+- `pytest tests/ua/ -q`: 547 passed.
+- Next NoteIDs: ua-lexeme-2210, ua-verb-0601.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2195**
-- Next `ua-verb-` ID: **0593**
+- Next `ua-lexeme-` ID: **2210**
+- Next `ua-verb-` ID: **0601**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
