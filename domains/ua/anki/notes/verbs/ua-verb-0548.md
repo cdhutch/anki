@@ -11,12 +11,13 @@ tags:
 - ch:2.7.7
 - ch:2.7
 - status:draft
+- ch:2.11.1
 fields:
   NoteID: ua-verb-0548
   Lemma: еконо́мити
   Aspect: imperfective
   VerbClass: conj2-ity
-  FreqSource: ch:2.7.7
+  FreqSource: ch:2.7.7,ch:2.11.1
   Pres_1sg: еконо́млю
   Pres_2sg: еконо́миш
   Pres_3sg: еконо́мить

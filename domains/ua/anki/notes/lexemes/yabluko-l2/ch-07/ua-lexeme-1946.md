@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:noun
 - status:draft
+- ch:2.11.1
 fields:
   NoteID: ua-lexeme-1946
   Lemma: на́фта
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: нафта
   UA_Example: У майбутньому людство менше залежатиме від нафти.
   EN_Example: In the future humanity will depend less on oil.
-  Tags_Ch: ch:2.7.3
+  Tags_Ch: ch:2.7.3,ch:2.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/нафта
   Source_Note: Горох-verified 2026-08-28, ch.7.3 sourcing pass (future tech/robotics/medicine
     nouns and adjectives; a large, page-spanning sub-chapter per the two-independent-columns

@@ -10,12 +10,13 @@ tags:
 - class:1
 - ch:2.1.5
 - status:draft
+- ch:2.11.1
 fields:
   NoteID: ua-verb-0184
   Lemma: відмовля́тися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2.1
+  FreqSource: ch:2.1,ch:2.11.1
   Pres_1sg: відмовля́юся
   Pres_2sg: відмовля́єшся
   Pres_3sg: відмовля́ється

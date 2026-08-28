@@ -14,6 +14,7 @@ tags:
 - ch:2.3.3
 - pos:verb
 - status:draft
+- ch:2.11.1
 fields:
   NoteID: ua-lexeme-0924
   Lemma: відмовля́тися
@@ -37,13 +38,15 @@ fields:
   TypingAnswer: відмовлятися / відмовитися
   UA_Example: Він відмовляється їсти мʼясо в піст.
   EN_Example: He refuses to eat meat during the fast.
-  Tags_Ch: ch:2.1.5, ch:2.2.5, ch:2.3.3
+  Tags_Ch: ch:2.1.5, ch:2.2.5, ch:2.3.3,ch:2.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/відмовлятися; https://goroh.pp.ua/Словозміна/відмовитися
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).
-  Verification Notes: New. impf., reflexive, 1 conj. Горох canonicalizes the -сь variant (відмовля́тись)
-    as primary headword; відмовля́тися (-ся) used here to match the wordlist spelling. Paired
-    with ua-verb-0184. Perfective відмо́витися added (yabluko-l2-verb-dictionary primary pairing,
-    Горох stress-verified, 2026-08-28, ch.1.5 drafting pass).
+  Verification Notes: 'New. impf., reflexive, 1 conj. Горох canonicalizes the -сь variant
+    (відмовля́тись) as primary headword; відмовля́тися (-ся) used here to match the wordlist
+    spelling. Paired with ua-verb-0184. Perfective відмо́витися added (yabluko-l2-verb-dictionary
+    primary pairing, Горох stress-verified, 2026-08-28, ch.1.5 drafting pass). Note (ch.11.1):
+    perfective partner відмовитися (ua-lexeme-2110/ua-verb-0568) added this pass, per Craig''s
+    instruction to include perfective partners for imperfective lemmas.'
 ---
 

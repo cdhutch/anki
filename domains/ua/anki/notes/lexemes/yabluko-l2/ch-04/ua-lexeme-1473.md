@@ -12,6 +12,7 @@ tags:
 - ch:2.4.5
 - pos:noun
 - status:draft
+- ch:2.11.1
 fields:
   NoteID: ua-lexeme-1473
   Lemma: поколі́ння
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: покоління
   UA_Example: Це вже третє покоління, яке живе в цьому будинку.
   EN_Example: This is already the third generation living in this house.
-  Tags_Ch: ch:2.4.5
+  Tags_Ch: ch:2.4.5,ch:2.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/покоління
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).
