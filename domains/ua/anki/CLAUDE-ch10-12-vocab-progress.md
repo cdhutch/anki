@@ -24,7 +24,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
-| 11 Якби всі люди... | 22–23 | 11.1–11.7 | not started |
+| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1 done) |
 | 12 Не журись! | 23–24 | 12.1–12.7 | not started |
 
 ## Generated this pass
@@ -1012,14 +1012,61 @@ larger set of verb notes with no such prose signal (pre-existing corpus debt,
 consistent with this project's established practice of not retroactively fixing
 older chapters).
 
+### Ch.11.1 (Наше довкілля -- pollution sources & conservation actions)
+
+- Confirmed the full chapter 11 wordlist (11.1-11.7) via a DIRECT VISUAL READ of PDF
+  pages 221-223 (Read tool, image mode) rather than relying on the pdftotext -layout
+  two-column text dump -- the dump's per-line widest-gap heuristic produced real
+  column-attribution errors (e.g. mis-split "саморобний"/"тьмяний" and mixed up which
+  subchapter several disaster-vocabulary items belonged to). Visual page reads resolved
+  every ambiguity cleanly; recommend this method over pdftotext -layout reconstruction
+  for any future multi-column subchapter that still has open attribution questions.
+- Lexemes: **ua-lexeme-2079 - ua-lexeme-2110** (32 notes: 11 pollution-source nouns/
+  adjectives, 6 more nouns/adjective/adverb (ресурси, свідомість, свідомий, сталий
+  розвиток, благочинний, переробка, повторно), 7 full new verb pairs, 1 new perfective
+  singleton).
+- Verbs: **ua-verb-0554 - ua-verb-0568** (15 notes).
+- All `status:draft`. Tag `ch:2.11.1`.
+- **Every verb aspect pair cross-checked against yabluko-l2-verb-dictionary.pdf**
+  (per Craig's explicit instruction this segment) -- this corrected two Горох-based
+  guesses: сортувати's perfective is **посортувати** (not відсортувати), and
+  вимикати's is **вимкнути** (Горох had wrongly suggested висмикнути, an unrelated
+  word meaning "to yank out").
+- **задовольняти/задовольнити spelling call**: the verb-dictionary PDF prints the
+  perfective as "задовільнити", but this doesn't match any standard Ukrainian word
+  family (задовільний/задовільно "satisfactory" is unrelated to задоволення/
+  задовольняти "satisfaction"). Горох confirms задовольнити as a real, regularly-
+  formed word. Judged the PDF's spelling an OCR/typo artifact (о/і confusion) and
+  drafted задовольнити; documented the discrepancy in the note's own Verification
+  Notes in case this needs revisiting.
+- **відмовитися added as a new perfective partner for a PRE-EXISTING imperfective-only
+  lexeme**: відмовлятися (ua-lexeme-0924, drafted ch.1.5, several chapters ago) never
+  had a perfective partner. Per Craig's instruction ("make sure you're including the
+  perfective aspect verbs with the imperfective lemmas") this applies retroactively
+  whenever an already-corpus imperfective without a partner shows up again in a later
+  chapter's wordlist -- not just to newly-drafted imperfectives. Added ua-lexeme-2110/
+  ua-verb-0568 and retagged/annotated ua-lexeme-0924/ua-verb-0184.
+- Reused without new notes (retagged ch:2.11.1): нафта (ua-lexeme-1946, ch.7.5),
+  покоління (ua-lexeme-1473, ch.4.5), сміття (ua-lexeme-1647, ch.6.1), кран
+  (ua-lexeme-0812, ch.10.7, + sense note for закривати кран), економити/зекономити
+  (ua-lexeme-2065/2066, ch.7.7).
+- **Process fix**: the retag script's `append_verification_note` helper had a real bug
+  -- converting an unquoted plain YAML scalar to a single-quoted one requires doubling
+  any literal internal apostrophes ('crane (lifting device)', Craig's), which it didn't
+  do. Corrupted ua-lexeme-0812.md and ua-lexeme-0924.md this pass; caught by the
+  standing yaml.safe_load safety sweep (run before every canonicalize since ch.7.3),
+  fixed by hand with content verified unchanged via yaml.safe_load re-check. Future
+  retag scripts need this fixed in the helper itself before reuse.
+- Next NoteIDs: ua-lexeme-2111, ua-verb-0569.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2079**
-- Next `ua-verb-` ID: **0554**
+- Next `ua-lexeme-` ID: **2111**
+- Next `ua-verb-` ID: **0569**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
