@@ -114,6 +114,14 @@ clusters:
       compare_scenario: One person has been handed way more work than they can
         reasonably manage alone -- not compared to anyone else's workload, just an
         excessive amount in itself. What word says that?
+    - note_id: ua-lexeme-1231
+      lemma: зама́ло
+      status: sourced
+      chapter: '3.3'
+      comment: Fused "too little/not enough" -- the negative-polarity counterpart of
+        забагато, same absolute-excess-vs-deficit category, no comparison (Горох-verified)
+      compare_scenario: Only a handful of people showed up to the community meeting --
+        nowhere near enough to make any real decisions. What word says that?
   time-of-day:
     description: 'Time-of-day nouns marking points in the daily cycle.
 
