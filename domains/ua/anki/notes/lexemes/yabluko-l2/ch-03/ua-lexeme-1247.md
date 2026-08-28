@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:noun
 - status:draft
+- ch:2.11.3
 fields:
   NoteID: ua-lexeme-1247
   Lemma: про́стір
@@ -35,10 +36,11 @@ fields:
   TypingAnswer: простір
   UA_Example: На площі звільнили простір для громадських зібрань.
   EN_Example: They cleared a space for public gatherings on the square.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4,ch:2.11.3
   Source_URL: https://goroh.pp.ua/Словозміна/простір
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).
-  Verification Notes: New. Masc., 2nd decl., hard group.
+  Verification Notes: 'New. Masc., 2nd decl., hard group. Sense note (ch.11.3): reused for
+    the compositional NP громадський простір = "public space".'
 ---
 

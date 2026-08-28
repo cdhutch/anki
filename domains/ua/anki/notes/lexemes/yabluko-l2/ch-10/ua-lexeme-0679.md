@@ -12,6 +12,7 @@ tags:
 - ch:2.10.3
 - pos:adjective
 - status:draft
+- ch:2.11.3
 fields:
   NoteID: ua-lexeme-0679
   Lemma: надмі́рний
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: надмірний
   UA_Example: Надмірна вага створює додаткове навантаження на суглоби.
   EN_Example: Excess weight puts extra strain on the joints.
-  Tags_Ch: ch:2.10.3
+  Tags_Ch: ch:2.10.3,ch:2.11.3
   Source_URL: https://goroh.pp.ua/Словозміна/надмірний
   Source_Note: Горох-verified 2026-08-28, ch.10.3 sourcing pass (health/wellbeing; coping
     & effort verbs).
