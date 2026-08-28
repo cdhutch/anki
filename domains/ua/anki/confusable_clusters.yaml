@@ -65,7 +65,7 @@
 # - No duplicate note_ids within a single cluster
 #
 # LAST UPDATED: 2026-08-27 (removed vestigial compare_a-d / homograph_sense_a-b fields)
-# COVERAGE: 82/82 members (100%)
+# COVERAGE: 84/84 members (100%)
 #
 
 clusters:
@@ -1216,3 +1216,32 @@ clusters:
         or gathering
       compare_scenario: You're camping with friends and someone lights a fire on purpose so
         everyone can sit around it and tell stories. What word describes that fire?
+  law-right-vs-statute:
+    description: 'Convergent near-synonym PAIR both glossable as "law" in English:
+      пра́во (neut.) is law in the abstract/systemic sense -- the legal system,
+      jurisprudence, or an entitlement (a right, e.g. пра́во на осві́ту "the right to
+      education"; вивча́ти пра́во "to study law" as a discipline); зако́н (masc.) is a
+      specific enacted statute -- a law passed by a legislature (ухвали́ти зако́н "to
+      pass a law", поруши́ти зако́н "to break the law"). Craig flagged this pair
+      2026-08-28 while ch.10.5 civics vocabulary (пра́во) was being drafted alongside
+      the pre-existing зако́н note.
+
+      '
+    canonical_note: ua-lexeme-0708
+    members:
+    - note_id: ua-lexeme-0708
+      lemma: пра́во
+      status: sourced
+      chapter: '2.10.5'
+      comment: Law in the abstract/systemic sense, or an entitlement/right -- not a
+        specific statute
+      compare_scenario: You want to say everyone has the right to education, or that
+        your friend is studying law at university -- which word for "law/right" fits?
+    - note_id: ua-lexeme-0473
+      lemma: зако́н
+      status: sourced
+      chapter: '2.8.3'
+      comment: A specific enacted statute -- a law passed by a legislature, that can
+        be broken or passed
+      compare_scenario: Parliament just passed a new law, or someone got arrested for
+        breaking one -- which word for "law" fits here?
