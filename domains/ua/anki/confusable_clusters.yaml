@@ -970,6 +970,49 @@ clusters:
       compare_scenario: You're looking at a painted design covering a church
         ceiling or the side of a building, not a framed canvas -- what word names
         that kind of painted decoration?
+  party-game-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on па́ртія: political party
+      (primary, most common sense) and a single round of a board/card game -- "a game
+      (chess, cards, etc.) from start to finish" per Горох''s Тлумачення entry.
+
+      '
+    canonical_note: ua-lexeme-0378
+    members:
+    - note_id: ua-lexeme-0378
+      lemma: па́ртія
+      status: sourced
+      chapter: '2.9.3'
+      comment: Political party (common, general-purpose sense)
+      compare_scenario: Which sense of партія is being used?
+    - note_id: ua-lexeme-0186
+      lemma: па́ртія
+      status: sourced
+      chapter: '2.9.3'
+      comment: A single round of a board/card game (chess, cards), start to finish
+      compare_scenario: Which sense of партія is being used?
+  game-match-phrases:
+    description: 'Near-synonym verb-phrases for winning a game: ви́грати па́ртію (a single
+      round of a board/card game -- chess, cards) vs ви́грати матч (a scheduled athletic
+      contest -- football, tennis, boxing). Mirrors the underlying па́ртія/матч noun-level
+      distinction (see party-game-homograph and the standalone матч note, ua-lexeme-0604).
+
+      '
+    canonical_note: ua-lexeme-0226
+    members:
+    - note_id: ua-lexeme-0226
+      lemma: ви́грати па́ртію
+      status: sourced
+      chapter: '2.9.3'
+      comment: To win a single round of a board/card game (chess, cards)
+      compare_scenario: After a long, close game of chess, one player finally checkmates
+        the other -- what's the natural way to say they won?
+    - note_id: ua-lexeme-0605
+      lemma: ви́грати матч
+      status: sourced
+      chapter: '2.9.3'
+      comment: To win a scheduled athletic contest (football, tennis, boxing)
+      compare_scenario: A football team scores the winning goal in the final minute
+        of a scheduled match -- what's the natural way to say they won?
   painting-verbs:
     description: 'Near-synonyms for applying paint/color: малювати (to draw, basic
       picture-making) vs розписувати (to decorate/sign) vs фарбувати (to apply
