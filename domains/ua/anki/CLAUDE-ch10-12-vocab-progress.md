@@ -20,7 +20,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
-| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.4 done) |
+| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.5 done) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
@@ -899,13 +899,26 @@ page-spanning sub-chapter
   retroactively, which cost two follow-up commits.
 - Next NoteIDs: ua-lexeme-2024, ua-verb-0536.
 
+### Ch.7.5 (energy/space/invention nouns) -- compact noun-only
+sub-chapter
+
+- Lexemes: **ua-lexeme-2024 - ua-lexeme-2035** (12 notes, all nouns: USB-кабель, блютуз,
+  вертоліт, винахідник, відкриття, візок, галактика, генна інженерія, дріт, електрика,
+  енергоощадна лампа, заряджання).
+- No verbs. All `status:draft`. Tag `ch:2.7.5`.
+- Reused without a new note (retagged ch:2.7.5): енергія (ua-lexeme-0274).
+- Confirmed via `pdftotext -f 13 -l 17 -layout`: the LEFT-column stream's 7.5 section
+  ends at заряджання with no verb pairs, adjectives, or discourse phrases before the
+  page break into 7.6 -- genuinely a short, noun-only sub-chapter, not a truncated read.
+- Next NoteIDs: ua-lexeme-2036, ua-verb-0536 (unchanged, no new verbs this sub-chapter).
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2024**
+- Next `ua-lexeme-` ID: **2036**
 - Next `ua-verb-` ID: **0536**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
