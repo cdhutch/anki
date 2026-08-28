@@ -19,7 +19,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
-| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.4 done) |
+| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.5 done) |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
@@ -702,14 +702,43 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
 - All `status:draft`. Tag `ch:2.6.4`. No dedup collisions -- everything new.
 - Next NoteIDs: ua-lexeme-1797, ua-verb-0420.
 
+### Ch.6.5 (crime/danger anecdote; imperfective-perfective verb pairs)
+
+- Lexemes: **ua-lexeme-1797 - ua-lexeme-1834** (38 notes: 4 nouns, 32 verb-pair lexemes, 2 lexeme
+  upgrades (вирішити, принести)).
+- Verbs: **ua-verb-0420 - ua-verb-0451** (32 notes covering 16 aspect pairs: вбивати/вбити,
+  вигнати (partner of existing виганяти), вирішувати/вирішити, вити/завити,
+  віситися/повіситися, гавкати/загавкати, голодніти/зголодніти, запросити (partner of existing
+  запрошувати), лізти/залізти, лякатися/злякатися, напиватися/напитися, полювати/вполювати,
+  приносити/принести, спробувати (partner of existing пробувати), рятувати/врятувати,
+  служити/послужити, старіти/постаріти, потерпіти (partner of existing терпіти),
+  хапати/схопити). Ablaut families вбити (бити-group) and напитися (пити-group) classified
+  conj1-irregular; вигнати (гнати-group ablaut) also conj1-irregular; лізти
+  conj1-consonant+ти (нести/вести/лізти-family).
+- All `status:draft`. Tag `ch:2.6.5`.
+- **Judgment call**: голодніти is another orphaned-imperfective OCR gap (Горох's own entry also
+  404'd), reconstructed by analogy with its confirmed perfective partner зголодніти, matching
+  the ch.6.3 блукати-заблудитися precedent.
+- **Lower-confidence reconstructions** (flagged in Verification Notes): віситися/повіситися
+  (base verb ви́сіти's reflexive, paradigm inferred rather than directly confirmed) and
+  потерпіти (Горох's table was garbled/mislabeled; reconstructed via the standard п->пл
+  mobile-stress mutation shared with терпіти).
+- **Double-accent artifact** normalized to a single stress mark for старіти/постаріти
+  (старі́ти/постарі́ти), matching prior corrections this chapter (смітник, сміття, красти).
+- Reused without new notes (retagged ch:2.6.5): виганяти (ua-lexeme-1048/ua-verb-0209, ch:2.2),
+  запрошувати (ua-lexeme-1143/ua-verb-0235, ch:2.2), пробувати (ua-lexeme-1094/ua-verb-0232,
+  ch:2.2), терпіти (ua-lexeme-0937/ua-verb-0191, ch:2.1), повертатися (ua-lexeme-0611/
+  ua-verb-0375, ch:2.9), повернутися (ua-lexeme-1714/ua-verb-0376, ch:2.6.2 -- second retag).
+- Next NoteIDs: ua-lexeme-1835, ua-verb-0452.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1797**
-- Next `ua-verb-` ID: **0420**
+- Next `ua-lexeme-` ID: **1835**
+- Next `ua-verb-` ID: **0452**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
