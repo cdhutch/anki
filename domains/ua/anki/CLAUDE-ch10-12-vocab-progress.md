@@ -871,14 +871,22 @@ page-spanning sub-chapter
   files only, not the whole tree.
 - Next NoteIDs: ua-lexeme-2004, ua-verb-0530.
 
+### Ch.7.3 supplement -- аналізувати/проаналізувати
+
+- Caught via a full `pdftotext -layout` re-read of pages 212-213 cross-checking the
+  committed ch.7.3 generator against the actual wordlist, before starting ch.7.4.
+  аналізувати - проаналізувати ("to analyze") was missed in the initial pass.
+- Lexemes: **ua-lexeme-2004 - ua-lexeme-2005**. Verbs: **ua-verb-0530 - ua-verb-0531**.
+- Next NoteIDs: ua-lexeme-2006, ua-verb-0532.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2004**
-- Next `ua-verb-` ID: **0530**
+- Next `ua-lexeme-` ID: **2006**
+- Next `ua-verb-` ID: **0532**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
