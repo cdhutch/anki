@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.5
+- ch:2.4.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: влада
   UA_Example: Влада прийняла новий закон.
   EN_Example: The authorities passed a new law.
-  Tags_Ch: ch:2.10.5
+  Tags_Ch: ch:2.10.5, ch:2.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/влада
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

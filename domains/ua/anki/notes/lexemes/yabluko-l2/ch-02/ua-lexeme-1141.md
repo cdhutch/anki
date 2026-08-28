@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.7
+- ch:2.4.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: радий
   UA_Example: Я радий вас бачити.
   EN_Example: I'm glad to see you.
-  Tags_Ch: ch:2.2.7
+  Tags_Ch: ch:2.2.7, ch:2.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/радий
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).
