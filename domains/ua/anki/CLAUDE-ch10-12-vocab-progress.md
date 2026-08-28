@@ -19,7 +19,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
-| 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
+| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1 done) |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
@@ -609,14 +609,42 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   order (2-7, then 11-12), chapter 6 (Що сталося?) is next.
 - Next NoteIDs: ua-lexeme-1645, ua-verb-0326.
 
+### Ch.6.1 (household mishaps; imperfective-perfective verb pairs; frequency-adverb phrases) -- chapter 6 started, first use of ch-06 directory
+
+- Lexemes: **ua-lexeme-1645 - ua-lexeme-1687** (43 notes: 3 standalone nouns, 3 adverbs, 33
+  verb-pair lexemes, 1 lexeme upgrade for a pre-existing verb-only note (спіймати), 4
+  frequency phrases).
+- Verbs: **ua-verb-0326 - ua-verb-0358** (33 notes covering 17 imperfective-perfective pairs:
+  давати/дати, брати/взяти, викликати/ви́кликати [stress-differentiated], виміряти/ви́міряти
+  [stress-differentiated], готувати/приготувати, допомагати/допомогти, купувати/купити,
+  ламатися/зламатися, ловити/спіймати, мити/помити, писати/написати, прасувати/випрасувати,
+  прати/випрати, прибирати/прибрати, ремонтувати/відремонтувати, смердіти/засмердіти,
+  телефонувати/зателефонувати, чистити/почистити, читати/прочитати). Proper Pugh & Press
+  class tags throughout (writа́ти/пишу́-type conj1-consonant-mutation for писати/написати;
+  mobile-stress conj2-ити for купити/ловити/смердіти pairs; conj1-irregular for the
+  suppletive/ablaut verbs дати, взяти, допомогти, прати/випрати, прибрати).
+- All `status:draft`. Tag `ch:2.6.1`.
+- Reused without new notes (retagged ch:2.6.1, independently bulleted again here as this
+  sub-chapter's aspect-pair items): давати (ua-lexeme-1508, ch:2.4.5 -- upgraded from
+  lexeme-only to a full verb note here), брати (ua-lexeme-0914/ua-verb-0174, ch:2.1),
+  викликати (ua-lexeme-0338/ua-verb-0071, ch:2.9), допомагати (ua-lexeme-0669/ua-verb-0097,
+  ch:2.10), спіймати (ua-verb-0279, ch:2.4.3 -- given its first lexeme note here), чистити
+  (ua-lexeme-0896/ua-verb-0173, ch:2.1), черевик (ua-lexeme-1128, ch:2.2.7).
+- Judgment calls: виміряти/ви́міряти corrected from Горох's garbled "и"-spelling to the
+  standard і-spelling (мі́ряти root); прибрати's past tense kept fixed-stress (при-family
+  ablaut precedent) unlike the unprefixed брати/взяти's mobile past; допомогти and
+  прати/прибрати classified conj1-irregular for their non-thematic/ablaut alternations rather
+  than the regular consonant/vowel-final buckets.
+- Next NoteIDs: ua-lexeme-1688, ua-verb-0359.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1645**
-- Next `ua-verb-` ID: **0326**
+- Next `ua-lexeme-` ID: **1688**
+- Next `ua-verb-` ID: **0359**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
