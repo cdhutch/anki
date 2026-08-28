@@ -12,6 +12,7 @@ tags:
 - ch:1.2
 - pos:verb
 - status:draft
+- ch:2.3
 fields:
   NoteID: ua-lexeme-0841
   Lemma: вишива́ти
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: вишивати / вишити
   UA_Example: Бабуся любить вишивати рушники.
   EN_Example: Grandma loves embroidering towels.
-  Tags_Ch: ch:1.2
+  Tags_Ch: ch:1.2, ch:2.3
   Source_URL: https://goroh.pp.ua/Словозміна/вишивати; https://goroh.pp.ua/Словозміна/вишити
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0144. Perfective
