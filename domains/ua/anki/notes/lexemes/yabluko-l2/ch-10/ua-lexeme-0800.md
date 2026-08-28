@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.7
+- ch:1.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: кордон
   UA_Example: Ми перетнули кордон рано вранці.
   EN_Example: We crossed the border early in the morning.
-  Tags_Ch: ch:2.10.7
+  Tags_Ch: ch:2.10.7, ch:1.3
   Source_URL: https://goroh.pp.ua/Словозміна/кордон
   Source_Note: Горох-verified 2026-08-28, ch.10.7 sourcing pass (consular services; border/customs;
     travel health).
