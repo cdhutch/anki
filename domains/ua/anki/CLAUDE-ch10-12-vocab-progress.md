@@ -24,7 +24,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
-| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1-11.2 done) |
+| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1-11.3 done) |
 | 12 Не журись! | 23–24 | 12.1–12.7 | not started |
 
 ## Generated this pass
@@ -1071,14 +1071,37 @@ older chapters).
   the посісти/зрости irregular pattern from ch.7.3.
 - Next NoteIDs: ua-lexeme-2122, ua-verb-0577.
 
+### Ch.11.3 (greening, recycling improvement, urban environment)
+
+- Lexemes: **ua-lexeme-2122 - ua-lexeme-2135** (14 notes: озеленення/покращення/
+  сортування verbal nouns, брак/викид/парникові гази/корок/сміттєвоз/промінь/
+  яскравість nouns, 2 full new verb pairs).
+- Verbs: **ua-verb-0577 - ua-verb-0580** (4 notes).
+- All `status:draft`. Tag `ch:2.11.3`.
+- **брак**: Горох lists two senses ('shortage/lack' and 'defective product'); drafted
+  with the 'shortage, lack' sense; checked and ruled out a feared homograph with
+  'marriage' (not attested in Горох at all).
+- **корок**: homograph with 'cork (stopper)' exists in Горох, not drafted -- this note
+  is the 'traffic jam' sense only.
+- запобігти classified `conj1-irregular` (г->ж mutation, matches берегти/зберегти
+  from ch.11.1).
+- **поглинути**: Горох's fetched conjugation had garbled double-stress marks on
+  several forms (recurring resource issue, cf. ch.7.3/7.6) -- resolved by hand to the
+  regular conj1-нути pattern.
+- Reused without new notes (retagged ch:2.11.3, with sense notes for their
+  collocations): переробка (ua-lexeme-2094, ch.11.1, for переробка відходів),
+  громадський + простір (ua-lexeme-0457/1247, for громадський простір), сонячний
+  (ua-lexeme-0400, for сонячний промінь), надмірний (ua-lexeme-0679, plain reuse).
+- Next NoteIDs: ua-lexeme-2136, ua-verb-0581.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2122**
-- Next `ua-verb-` ID: **0577**
+- Next `ua-lexeme-` ID: **2136**
+- Next `ua-verb-` ID: **0581**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
