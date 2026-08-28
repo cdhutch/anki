@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:3.2
 - pos:adverb
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: трохи
   UA_Example: Вони трохи заблукали перед поворотом.
   EN_Example: They got a little lost before the turn.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:3.2
   Source_URL: https://goroh.pp.ua/Словозміна/трохи
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Filtered out unrelated homograph nouns 'троха'/'троха́'.
