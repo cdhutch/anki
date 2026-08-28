@@ -11,12 +11,13 @@ tags:
 - ch:2.6.3
 - ch:2.6
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-verb-0394
   Lemma: довести́
   Aspect: perfective
   VerbClass: conj1-consonant+ти
-  FreqSource: ch:2.6.3
+  FreqSource: ch:2.6.3,ch:2.7.3
   Pres_1sg: доведу́
   Pres_2sg: доведе́ш
   Pres_3sg: доведе́

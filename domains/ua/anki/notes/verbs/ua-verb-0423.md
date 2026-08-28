@@ -11,12 +11,13 @@ tags:
 - ch:2.6.5
 - ch:2.6
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-verb-0423
   Lemma: вирі́шувати
   Aspect: imperfective
   VerbClass: conj1-vowel+й
-  FreqSource: ch:2.6.5
+  FreqSource: ch:2.6.5,ch:2.7.3
   Pres_1sg: вирі́шую
   Pres_2sg: вирі́шуєш
   Pres_3sg: вирі́шує

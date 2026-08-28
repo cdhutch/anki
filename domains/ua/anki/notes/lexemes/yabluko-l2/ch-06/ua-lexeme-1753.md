@@ -12,6 +12,7 @@ tags:
 - ch:2.6.3
 - pos:verb
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-1753
   Lemma: дово́дити
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: доводити
   UA_Example: Він завжди доводить свою правоту фактами.
   EN_Example: He always proves his point with facts.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/доводити
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

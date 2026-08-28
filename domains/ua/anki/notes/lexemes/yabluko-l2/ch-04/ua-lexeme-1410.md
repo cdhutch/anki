@@ -12,6 +12,7 @@ tags:
 - ch:2.4.3
 - pos:phrase
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-1410
   Lemma: обмежені можливості
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: обмежені можливості
   UA_Example: У таборі люди мали дуже обмежені можливості.
   EN_Example: In the camp, people had very limited options.
-  Tags_Ch: ch:2.4.3
+  Tags_Ch: ch:2.4.3,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/можливості
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'

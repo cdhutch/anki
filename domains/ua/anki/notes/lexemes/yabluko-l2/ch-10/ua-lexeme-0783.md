@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - status:draft
 - ch:2.10.7
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-0783
   Lemma: уника́ти
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: уникати / уникнути
   UA_Example: Лікарі радять уникати фізичних навантажень після операції.
   EN_Example: Doctors advise avoiding physical exertion after surgery.
-  Tags_Ch: ch:2.10.6, ch:2.10.7
+  Tags_Ch: ch:2.10.6, ch:2.10.7,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/уникати; https://goroh.pp.ua/Словозміна/уникнути
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

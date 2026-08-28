@@ -10,12 +10,13 @@ tags:
 - class:conj1-vowel+й
 - ch:2.9.3
 - status:verified
+- ch:2.7.3
 fields:
   NoteID: ua-verb-0048
   Lemma: посіда́ти
   Aspect: imperfective
   VerbClass: regular-1
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9,ch:2.7.3
   Pres_1sg: посіда́ю
   Pres_2sg: посіда́єш
   Pres_3sg: посіда́є

@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:verb
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-1266
   Lemma: зроста́ти
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: зростати / зрости
   UA_Example: Кількість туристів щороку зростає.
   EN_Example: The number of tourists grows every year.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/зростати; https://goroh.pp.ua/Словозміна/зрости
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

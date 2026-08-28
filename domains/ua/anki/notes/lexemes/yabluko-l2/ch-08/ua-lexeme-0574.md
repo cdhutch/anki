@@ -12,6 +12,7 @@ tags:
 - ch:2.8.7
 - pos:adjective
 - status:verified
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-0574
   Lemma: поту́жний
@@ -39,7 +40,7 @@ fields:
   TypingAnswer: потужний
   UA_Example: У соліста був потужний голос.
   EN_Example: The soloist had a powerful voice.
-  Tags_Ch: ch:2.8.7
+  Tags_Ch: ch:2.8.7,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/потужний
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.
   Verification Notes: '2026-08-27: Горох Синонімія lists си́льний, могу́тній, ду́жий, міцни́й,

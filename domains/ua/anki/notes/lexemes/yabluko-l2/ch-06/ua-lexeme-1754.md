@@ -12,6 +12,7 @@ tags:
 - ch:2.6.3
 - pos:verb
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-1754
   Lemma: довести́
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: довести
   UA_Example: Вона довела свою тезу на практиці.
   EN_Example: She proved her thesis in practice.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/довести
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

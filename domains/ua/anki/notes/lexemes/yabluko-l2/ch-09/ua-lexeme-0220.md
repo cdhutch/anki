@@ -12,6 +12,7 @@ tags:
 - ch:2.9.3
 - pos:verb
 - status:verified
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-0220
   Lemma: посіда́ти
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: посідати / посісти
   UA_Example: Наша команда щороку посідає перше місце.
   EN_Example: Our team takes first place every year.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/посідати; https://goroh.pp.ua/Словозміна/посісти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

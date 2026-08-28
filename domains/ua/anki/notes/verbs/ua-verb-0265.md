@@ -10,12 +10,13 @@ tags:
 - class:1
 - ch:2.3.4
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-verb-0265
   Lemma: зроста́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2.3
+  FreqSource: ch:2.3,ch:2.7.3
   Pres_1sg: зроста́ю
   Pres_2sg: зроста́єш
   Pres_3sg: зроста́є

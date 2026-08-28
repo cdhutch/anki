@@ -11,12 +11,13 @@ tags:
 - ch:2.6.1
 - ch:2.6
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-verb-0331
   Lemma: ви́міряти
   Aspect: perfective
   VerbClass: conj1-vowel+й
-  FreqSource: ch:2.6.1
+  FreqSource: ch:2.6.1,ch:2.7.3
   Pres_1sg: ви́міряю
   Pres_2sg: ви́міряєш
   Pres_3sg: ви́міряє

@@ -12,6 +12,7 @@ tags:
 - ch:2.10.3
 - pos:noun
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-0685
   Lemma: тиск
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: тиск
   UA_Example: У нього високий кровʼяний тиск.
   EN_Example: He has high blood pressure.
-  Tags_Ch: ch:2.10.3
+  Tags_Ch: ch:2.10.3,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/тиск
   Source_Note: Горох-verified 2026-08-28, ch.10.3 sourcing pass (health/wellbeing; coping
     & effort verbs).

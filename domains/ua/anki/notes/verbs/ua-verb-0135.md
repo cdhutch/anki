@@ -10,12 +10,13 @@ tags:
 - class:regular-1
 - ch:2.10.6
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-verb-0135
   Lemma: уника́ти
   Aspect: imperfective
   VerbClass: regular-1
-  FreqSource: ch:2.10
+  FreqSource: ch:2.10,ch:2.7.3
   Pres_1sg: уника́ю
   Pres_2sg: уника́єш
   Pres_3sg: уника́є

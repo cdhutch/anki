@@ -11,12 +11,13 @@ tags:
 - ch:2.6.3
 - ch:2.6
 - status:draft
+- ch:2.7.3
 fields:
   NoteID: ua-verb-0393
   Lemma: дово́дити
   Aspect: imperfective
   VerbClass: conj2-ити
-  FreqSource: ch:2.6.3
+  FreqSource: ch:2.6.3,ch:2.7.3
   Pres_1sg: дово́джу
   Pres_2sg: дово́диш
   Pres_3sg: дово́дить
