@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.2
+- ch:2.7
 - pos:noun
 - gender:m
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: океан
   UA_Example: Атлантичний океан дуже глибокий.
   EN_Example: The Atlantic Ocean is very deep.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:2.7
   Source_URL: https://goroh.pp.ua/Словозміна/океан
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''
