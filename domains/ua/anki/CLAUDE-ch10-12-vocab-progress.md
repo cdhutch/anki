@@ -23,7 +23,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
-| 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **10.1–10.6 done**, 10.7 not started |
+| 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
 | 11 Якби всі люди... | 22–23 | 11.1–11.7 | not started |
 | 12 Не журись! | 23–24 | 12.1–12.7 | not started |
 
@@ -124,10 +124,25 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
   members as "not found in corpus" regardless of correctness. Does not
   affect `pytest tests/ua/` (523/523 still green). Left for Craig.
 
+### Ch.10.7 (consular services; border/customs; travel health) — commit `47e518b7`
+
+- Lexemes: **ua-lexeme-0795 – ua-lexeme-0827** (33 notes: 22 standalone
+  nouns/adjectives, 3 verb-lexeme entries, 8 bundled phrases)
+- Verbs: **ua-verb-0137 – ua-verb-0139** (звернутися, перебувати,
+  підтвердити)
+- All `status:draft`. Tag `ch:2.10.7`.
+- Dedup (bucket-3, tag appended rather than redrafted): контроль →
+  ua-lexeme-0640 (ch:2.10.1); уникати → ua-lexeme-0783 (ch:2.10.6, appears
+  in both 10.6 and 10.7 wordlists).
+- Referenced but not re-tagged (basic ch:1.0 vocab embedded in a longer
+  VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0006) in
+  звернутися до лікаря; країна (ua-lexeme-0041) in перебувати в країні.
+- **Chapter 10 (Суворо заборонено!) is now fully done, all of 10.1–10.7.**
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0795**
-- Next `ua-verb-` ID: **0137**
+- Next `ua-lexeme-` ID: **0828**
+- Next `ua-verb-` ID: **0140**
 
 ## Environment notes for whoever continues this
 
