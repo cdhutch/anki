@@ -29,7 +29,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: Often confused with па́чка (ua-lexeme-1162, "pack, carton"); паке́т denotes
+    a wrapped or bagged single unit (a packet, or colloquially a plastic bag), while па́чка
+    denotes a compact bundle/carton (e.g. a pack of cigarettes, a carton of milk or butter)
+    -- distinct container types, not interchangeable.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: пакет
