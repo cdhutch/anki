@@ -20,7 +20,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
-| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.5 done) |
+| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.6 done) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
@@ -912,14 +912,36 @@ sub-chapter
   page break into 7.6 -- genuinely a short, noun-only sub-chapter, not a truncated read.
 - Next NoteIDs: ua-lexeme-2036, ua-verb-0536 (unchanged, no new verbs this sub-chapter).
 
+### Ch.7.6 (virtual reality; invitations)
+
+- Lexemes: **ua-lexeme-2036 - ua-lexeme-2052** (17 notes: 1 noun NP, 6 verb-pair lexemes
+  (3 full pairs), 10 discourse-formula phrases).
+- Verbs: **ua-verb-0536 - ua-verb-0541** (6 notes: узгоджувати/узгодити,
+  збиратися/зібратися, відхиляти/відхилити (запрошення)).
+- All `status:draft`. Tag `ch:2.7.6`.
+- **зібратися**: irregular non-past стем збер- (брати-family ablaut), classified
+  conj1-irregular; normalized from Горох's colloquial `-сь` reflexive endings to
+  standard `-ся`.
+- **відхилити**: Горох's 1sg output was garbled (duplicated the 1pl form); corrected to
+  the regular mobile-stress 1sg відхилю́ (matches хилити's paradigm).
+- Reused without new notes (retagged ch:2.7.6, with a sense note for the "(запрошення)"
+  = "to accept an invitation" collocation): приймати/прийняти (ua-lexeme-0775/
+  ua-verb-0127 and ua-lexeme-1719/ua-verb-0380).
+- **Process fix**: rewrote the retag script's Verification-Notes-append helper to scan
+  the full multi-line YAML folded scalar block (not just the first line) before
+  appending -- this is what caused the ch.7.3 corruption of ua-lexeme-1804/1805.
+  Verified clean with a `yaml.safe_load` check on the retagged files before
+  canonicalize/test this time.
+- Next NoteIDs: ua-lexeme-2053, ua-verb-0542.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2036**
-- Next `ua-verb-` ID: **0536**
+- Next `ua-lexeme-` ID: **2053**
+- Next `ua-verb-` ID: **0542**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
