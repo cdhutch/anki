@@ -17,7 +17,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 1 Будні та свята | 1–2 | 1.1–1.7 | **done** (row was stale -- all of 1.1-1.7 completed earlier, see Ch.1.7 entry below; corrected 2026-08-28) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
-| 4 Люди та історії | 7–9 | 4.1–4.7 | in progress (4.1-4.6 done) |
+| 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
@@ -494,7 +494,26 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   lexeme-only каза́ти (ua-lexeme-0317).
 - Reused without new notes (retagged ch:2.4.6): досвід (ua-lexeme-1397, was ch:2.4.3
   only -- independently bulleted again here).
-- Next NoteIDs: ua-lexeme-1512, ua-verb-0314.
+
+### Ch.4.7 (qualifications/education; civic activity; family-status forms) -- commit `d9f2feca` -- **chapter 4 complete**
+
+- Lexemes: **ua-lexeme-1512 - ua-lexeme-1523** (12 notes: 1 lexeme-only verb entry
+  захистити, 11 phrase notes). No new UA_Verb notes -- entirely NP/VP bureaucratic-form
+  and academic-qualification collocations, no bare verb-infinitive bullets.
+- All `status:draft`. Tag `ch:2.4.7`.
+- Reused without new notes (component embedded in a longer NP/VP, not independently
+  bulleted, no retag): вміння (ua-lexeme-1467, ch:2.4.5), громадський (ua-lexeme-0457,
+  ch:2.8), сім'я (ua-lexeme-0062, ch:1.0), нагорода (ua-lexeme-0258, ch:2.9), отримати
+  (lexeme-only ua-lexeme-1263 + full-conjugation ua-verb-0262, ch:2.3).
+- "до моїх наукових зацікавлень входить" treated as one fixed formulaic-sentence phrase
+  note (same precedent as Проходьте за мною., ch.3.6) rather than splitting out входити
+  as a separate verb-component note.
+- захистити drafted as a lexeme-only VP-embedded support-verb entry, per the extended
+  VP-component rule (ua-lexeme-1263 отримати precedent) -- not independently
+  bare-bulleted this sub-chapter, only inside захистити дисертацію.
+- **All of chapter 4 (Люди та історії, 4.1-4.7) is now done.** Per Craig's processing
+  order (2-7, then 11-12), chapter 5 (Скажи де, скажи коли) is next.
+- Next NoteIDs: ua-lexeme-1524, ua-verb-0314.
 
 ### Deadline update
 
@@ -502,7 +521,7 @@ Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1512**
+- Next `ua-lexeme-` ID: **1524**
 - Next `ua-verb-` ID: **0314**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
