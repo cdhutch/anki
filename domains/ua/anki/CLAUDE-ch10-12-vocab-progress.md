@@ -19,7 +19,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
-| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.3 done) |
+| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.4 done) |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
@@ -693,14 +693,23 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   (ua-lexeme-0593, ch:reference).
 - Next NoteIDs: ua-lexeme-1789, ua-verb-0416.
 
+### Ch.6.4 (magic trick anecdote vocabulary) -- small sub-chapter
+
+- Lexemes: **ua-lexeme-1789 - ua-lexeme-1796** (8 notes: 4 nouns, 4 verb-pair lexemes).
+- Verbs: **ua-verb-0416 - ua-verb-0419** (4 notes: вистрибувати/вистрибнути,
+  лунати/пролунати -- the latter pair's imperative left blank, as a "sound resounding" is not
+  naturally commanded).
+- All `status:draft`. Tag `ch:2.6.4`. No dedup collisions -- everything new.
+- Next NoteIDs: ua-lexeme-1797, ua-verb-0420.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1789**
-- Next `ua-verb-` ID: **0416**
+- Next `ua-lexeme-` ID: **1797**
+- Next `ua-verb-` ID: **0420**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
