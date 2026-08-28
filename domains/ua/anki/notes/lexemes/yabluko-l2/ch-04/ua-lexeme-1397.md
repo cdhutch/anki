@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.3
+- ch:2.4.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: досвід
   UA_Example: У нього великий досвід роботи з дітьми.
   EN_Example: He has a lot of experience working with children.
-  Tags_Ch: ch:2.4.3
+  Tags_Ch: ch:2.4.3, ch:2.4.6
   Source_URL: https://goroh.pp.ua/Словозміна/досвід
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'
