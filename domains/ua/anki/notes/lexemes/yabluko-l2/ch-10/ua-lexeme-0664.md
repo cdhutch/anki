@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.2
+- ch:2.4.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: бажати / побажати
   UA_Example: Я бажаю тобі щастя й здоровʼя.
   EN_Example: I wish you happiness and health.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2, ch:2.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/бажати; https://goroh.pp.ua/Словозміна/побажати
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

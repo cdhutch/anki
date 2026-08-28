@@ -9,6 +9,7 @@ tags:
 - domain:ua
 - class:regular-1
 - ch:2.10.2
+- ch:2.4.5
 - status:draft
 fields:
   NoteID: ua-verb-0092
