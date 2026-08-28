@@ -24,7 +24,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
-| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1 done) |
+| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1-11.2 done) |
 | 12 Не журись! | 23–24 | 12.1–12.7 | not started |
 
 ## Generated this pass
@@ -1059,14 +1059,26 @@ older chapters).
   retag scripts need this fixed in the helper itself before reuse.
 - Next NoteIDs: ua-lexeme-2111, ua-verb-0569.
 
+### Ch.11.2 (landfills & waste generation)
+
+- Lexemes: **ua-lexeme-2111 - ua-lexeme-2121** (11 notes: сміттєзвалище/звалище nouns,
+  4 full new verb pairs, пересічний adjective). All new, no dedup hits.
+- Verbs: **ua-verb-0569 - ua-verb-0576** (8 notes).
+- All `status:draft`. Tag `ch:2.11.2`.
+- продукувати -> **випродукувати** confirmed via yabluko-l2-verb-dictionary.pdf.
+- розкладатися/розкластися classified `conj1-irregular` (д retained in non-past
+  розкладу́ся, simplified before the past-tense -вся cluster: розкла́вся) -- matches
+  the посісти/зрости irregular pattern from ch.7.3.
+- Next NoteIDs: ua-lexeme-2122, ua-verb-0577.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2111**
-- Next `ua-verb-` ID: **0569**
+- Next `ua-lexeme-` ID: **2122**
+- Next `ua-verb-` ID: **0577**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
