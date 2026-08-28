@@ -964,6 +964,54 @@ sub-chapter
   pages total and printed page numbers do not equal PDF page indices.
 - Next NoteIDs: ua-lexeme-2079, ua-verb-0554.
 
+### Process addition: aspect-tantum tag validation (2026-08-28)
+
+Craig, mid-chapter-11 prep: "Make sure that your including the perfective aspect
+verbs with the imperfective lemmas" + "Remember your resources for perfective verb
+forms" (pointing at `yabluko-l2-verb-dictionary.pdf`) + "Update the testing suite to
+identify verbs that only contain one aspect which also don't have specific
+properties identifying the verb as specifically single-aspect" + "Decide whether
+this would be a code testing process or a data validation process then implement
+it" + "This process should be a prerequisite for committing tranches of lexeme
+YAML files."
+
+**Decision**: data-validation concern, implemented as a pytest test (matches the
+existing `test_confusable_clusters.py`/`test_confusable_integration.py` pattern of
+scanning the live corpus directly), so it's a native part of `pytest tests/ua/ -q`
+-- already run before every commit in this pipeline. No extra step needed.
+
+**New**: `tools/anki/inspect/audit_verb_aspect_tags.py` + `tests/ua/
+test_audit_verb_aspect_tags.py`. Flags any `ua_verb` note or `pos:verb`-tagged
+`ua_lexeme` note whose own Verification Notes/Source_Note prose claims
+single-aspect (tantum) status but lacks the structured `aspect:imperfective-only`/
+`aspect:perfective-only` tag (the pre-existing convention from
+`audit_verb_aspect_forms.py`, now extended to verb notes and to prose-only claims
+-- the original script only checked lexeme `Perfective`/`ImperfectiveUnidirectional`
+fields, which this project's two-notes-per-pair convention doesn't populate).
+Real-corpus integration test is the actual commit gate; a documented
+`KNOWN_NOT_TANTUM` allowlist covers three confirmed false positives (звучати,
+казати, виписати -- all genuinely paired; the word "tantum" only appears in a
+negated or third-party context in their prose).
+
+**Backfilled** the tag onto 21 pre-existing notes (9 lexemes + 12 verb notes,
+chapters 1/2/3/7/10) whose prose already stated tantum status but never got the
+tag -- includes this session's own ch.7.3 tantum verbs (виглядати, коштувати,
+пишатися, сподіватися). Also fixed a real stale-data bug the check surfaced:
+ua-verb-0069 (перепрошувати) still claimed imperfective-only after its lexeme
+sibling ua-lexeme-0321 had already been corrected (2026-07-28) to add the
+perfective partner перепросити.
+
+**Going forward (chapter 11+)**: every new tantum verb note/lexeme drafted from
+here on must get the `aspect:imperfective-only`/`aspect:perfective-only` tag at
+creation time (not just prose) -- `pytest tests/ua/` will now fail the commit
+otherwise. Committed separately (409b257b), before resuming chapter 11 vocab.
+
+Scope note: this backfill only covers notes whose own prose already claimed
+tantum status. It does not retroactively determine aspect-pairing for the much
+larger set of verb notes with no such prose signal (pre-existing corpus debt,
+consistent with this project's established practice of not retroactively fixing
+older chapters).
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
