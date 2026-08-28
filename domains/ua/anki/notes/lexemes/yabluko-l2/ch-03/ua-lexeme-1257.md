@@ -29,8 +29,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: Near-synonym of древній (ua-lexeme-1254, this sub-chapter) — Горох lists
-    them as synonyms; both mean 'ancient/age-old', minimal EN-distinguishable difference.
+  ConfusableSet: 'Near-synonym cluster ancient-synonyms (confusable_clusters.yaml): старода́вній
+    (this note) vs. дре́вній (ua-lexeme-1254) — Горох lists them as synonyms; both mean "ancient/age-old",
+    minimal EN-distinguishable difference.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: стародавній

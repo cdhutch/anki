@@ -31,8 +31,9 @@ fields:
   IrregularForms: 'gen: но́жа; pl: но́жі'
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: Homograph of ніж ‘than’ (comparative conjunction, ua-lexeme-1270, ch.3.4)
-    — unrelated word, same spelling.
+  ConfusableSet: 'Homograph cluster knife-than-homograph (confusable_clusters.yaml): ніж "knife"
+    (this note) vs. ніж "than" (comparative conjunction, ua-lexeme-1270, ch.3.4) — unrelated
+    word, same spelling.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: ніж
