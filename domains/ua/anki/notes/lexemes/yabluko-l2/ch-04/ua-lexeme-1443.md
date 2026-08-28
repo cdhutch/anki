@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.3
+- ch:2.4.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: стати
   UA_Example: Він хотів стати лікарем.
   EN_Example: He wanted to become a doctor.
-  Tags_Ch: ch:2.4.3
+  Tags_Ch: ch:2.4.3, ch:2.4.4
   Source_URL: https://goroh.pp.ua/Словозміна/стати
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'
