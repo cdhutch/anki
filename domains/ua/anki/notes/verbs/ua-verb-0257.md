@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0257
   Lemma: руба́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: руба́ю
   Pres_2sg: руба́єш
   Pres_3sg: руба́є

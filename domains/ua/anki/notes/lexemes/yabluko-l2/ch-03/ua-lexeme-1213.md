@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вирощувати / виростити
   UA_Example: Вони вирощують овочі на своєму городі.
   EN_Example: They grow vegetables in their garden.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/вирощувати; https://goroh.pp.ua/Словозміна/виростити
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective, 1st conjugation. Perfective виро́стити added

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0248
   Lemma: залиша́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: залиша́ю
   Pres_2sg: залиша́єш
   Pres_3sg: залиша́є

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.4
+- ch:2.3.4
 - status:draft
 fields:
   NoteID: ua-verb-0264
   Lemma: перетво́рювати
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: перетво́рюю
   Pres_2sg: перетво́рюєш
   Pres_3sg: перетво́рює

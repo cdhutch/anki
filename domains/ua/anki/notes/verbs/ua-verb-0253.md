@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0253
   Lemma: народи́тися
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: народжу́сь, народжу́ся
   Pres_2sg: наро́дишся
   Pres_3sg: наро́диться

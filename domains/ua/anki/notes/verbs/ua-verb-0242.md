@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0242
   Lemma: забрудни́ти
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: забрудню́
   Pres_2sg: забрудни́ш
   Pres_3sg: забрудни́ть

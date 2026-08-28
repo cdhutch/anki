@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.1
+- ch:2.3.1
 - pos:noun
 - status:draft
 fields:
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: склянка
   UA_Example: Випий склянку води.
   EN_Example: Drink a glass of water.
-  Tags_Ch: ch:3.1
+  Tags_Ch: ch:2.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/склянка
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Fem., 1st decl., hard group.

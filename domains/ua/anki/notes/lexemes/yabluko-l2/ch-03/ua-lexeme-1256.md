@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: спільний
   UA_Example: Мешканці зібралися на спільний простір біля школи.
   EN_Example: The residents gathered in the shared space near the school.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/спільний
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

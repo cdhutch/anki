@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:3.4
+- ch:2.3.4
 - status:draft
 fields:
   NoteID: ua-verb-0268
   Lemma: ті́шитися
   Aspect: imperfective
   VerbClass: '2'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: ті́шусь
   Pres_2sg: ті́шишся
   Pres_3sg: ті́шиться

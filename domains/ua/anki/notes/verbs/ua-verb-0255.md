@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0255
   Lemma: приєдна́тися
   Aspect: perfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: приєдна́юсь, приєдна́юся
   Pres_2sg: приєдна́єшся
   Pres_3sg: приєдна́ється

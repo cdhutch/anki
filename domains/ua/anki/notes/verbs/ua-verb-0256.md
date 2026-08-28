@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0256
   Lemma: розчарува́тися
   Aspect: perfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: розчару́юсь, розчару́юся
   Pres_2sg: розчару́єшся
   Pres_3sg: розчару́ється

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.1
+- ch:2.3.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: кількість
   UA_Example: Яка кількість цукру потрібна?
   EN_Example: What quantity of sugar is needed?
-  Tags_Ch: ch:3.1
+  Tags_Ch: ch:2.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/кількість
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Fem., 3rd decl.

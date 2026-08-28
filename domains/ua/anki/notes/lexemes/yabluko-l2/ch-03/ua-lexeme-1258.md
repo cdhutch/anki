@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: згодний
   UA_Example: Керівник згоден підтримати цей проєкт.
   EN_Example: The leader is willing to support this project.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/згодний
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

@@ -117,7 +117,7 @@ clusters:
     - note_id: ua-lexeme-1231
       lemma: зама́ло
       status: sourced
-      chapter: '3.3'
+      chapter: '2.3.3'
       comment: Fused "too little/not enough" -- the negative-polarity counterpart of
         забагато, same absolute-excess-vs-deficit category, no comparison (Горох-verified)
       compare_scenario: Only a handful of people showed up to the community meeting --
@@ -1238,7 +1238,7 @@ clusters:
     - note_id: ua-lexeme-1161
       lemma: паке́т
       status: sourced
-      chapter: '3.1'
+      chapter: '2.3.1'
       comment: A wrapped/bagged single unit -- a packet, or colloquially a plastic bag
       compare_scenario: You're at the store and need something to carry loose
         groceries home in, or you're asking for a packet of sugar -- which word
@@ -1246,7 +1246,7 @@ clusters:
     - note_id: ua-lexeme-1162
       lemma: па́чка
       status: sourced
-      chapter: '3.1'
+      chapter: '2.3.1'
       comment: A compact bundle or carton -- e.g. a pack of cigarettes, a carton of
         milk or butter
       compare_scenario: You're buying a carton of butter or a pack of cigarettes at

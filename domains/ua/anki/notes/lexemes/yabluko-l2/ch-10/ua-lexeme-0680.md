@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.3
-- ch:3.1
+- ch:2.3.1
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: вага
   UA_Example: Лікар порадив стежити за вагою.
   EN_Example: The doctor advised keeping an eye on my weight.
-  Tags_Ch: ch:2.10.3, ch:3.1
+  Tags_Ch: ch:2.10.3, ch:2.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/вага
   Source_Note: Горох-verified 2026-08-28, ch.10.3 sourcing pass (health/wellbeing; coping
     & effort verbs).

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: визначитися
   UA_Example: Громада має визначитися щодо майбутнього вигляду паркану.
   EN_Example: The community must decide on the future appearance of the fence.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/визначитися
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

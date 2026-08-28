@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: замало
   UA_Example: Замало людей знають про екопоселення.
   EN_Example: Too few people know about eco-villages.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/замало
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Invariable adverb/predicative, same category as забагато (ua-lexeme-0615,

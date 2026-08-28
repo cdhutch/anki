@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:preposition
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: замість
   UA_Example: Вони пʹють відвар замість кави.
   EN_Example: They drink an herbal decoction instead of coffee.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/замість
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Invariable preposition, governs Р. (genitive).

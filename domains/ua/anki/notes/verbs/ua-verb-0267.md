@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:3.4
+- ch:2.3.4
 - status:draft
 fields:
   NoteID: ua-verb-0267
   Lemma: ви́значитися
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: ви́значусь
   Pres_2sg: ви́значишся
   Pres_3sg: ви́значиться

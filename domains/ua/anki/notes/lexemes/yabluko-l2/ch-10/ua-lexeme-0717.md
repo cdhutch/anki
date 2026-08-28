@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.5
-- ch:3.3
+- ch:2.3.3
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: спілкування
   UA_Example: Особисте спілкування важливіше за листування.
   EN_Example: Personal communication is more important than correspondence.
-  Tags_Ch: ch:2.10.5, ch:3.3
+  Tags_Ch: ch:2.10.5, ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/спілкування
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

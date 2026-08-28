@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:preposition
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: крім
   UA_Example: Крім овочів, вони вирощують і фрукти.
   EN_Example: Besides vegetables, they also grow fruit.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/крім
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Invariable preposition, governs Р. (genitive).

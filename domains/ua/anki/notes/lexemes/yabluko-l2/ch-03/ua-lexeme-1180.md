@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.2
+- ch:2.3.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: рахувати / порахувати
   UA_Example: Дитина вчиться рахувати до десяти.
   EN_Example: The child is learning to count to ten.
-  Tags_Ch: ch:3.2
+  Tags_Ch: ch:2.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/рахувати; https://goroh.pp.ua/Словозміна/порахувати
   Source_Note: Горох-verified 2026-08-28, ch.3.2 sourcing pass (quantifiers/negation).
   Verification Notes: New. Regular imperfective, 1st conjugation. Perfective порахува́ти added

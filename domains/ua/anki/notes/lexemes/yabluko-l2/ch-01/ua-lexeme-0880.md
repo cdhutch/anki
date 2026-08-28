@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.3
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: залишатися / залишитися
   UA_Example: Ми вирішили залишатися вдома цими вихідними.
   EN_Example: We decided to stay home this weekend.
-  Tags_Ch: ch:1.3, ch:3.3
+  Tags_Ch: ch:1.3, ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/залишатися; https://goroh.pp.ua/Словозміна/залишитися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

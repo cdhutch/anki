@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: особливо
   UA_Example: Особливо важливо зберегти стародавній фасад.
   EN_Example: It's especially important to preserve the ancient facade.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/особливо
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: рубати / зрубати
   UA_Example: Взимку він рубає дрова.
   EN_Example: In winter he chops firewood.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/рубати; https://goroh.pp.ua/Словозміна/зрубати
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective, 1st conjugation. Perfective зру́бати added

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: мета
   UA_Example: Наша мета — відновити старий фасад.
   EN_Example: Our goal is to restore the old facade.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/мета
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

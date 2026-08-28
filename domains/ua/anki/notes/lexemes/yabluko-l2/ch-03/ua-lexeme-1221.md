@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: поширюватися / поширитися
   UA_Example: Ідея екопоселень поширюється по всій країні.
   EN_Example: The idea of eco-villages is spreading across the whole country.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/поширюватися; https://goroh.pp.ua/Словозміна/поширитися
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective reflexive, 1st conjugation. Perfective поши́ритися

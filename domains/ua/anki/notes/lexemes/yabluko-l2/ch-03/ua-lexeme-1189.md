@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: екопоселення
   UA_Example: Вони переїхали жити в екопоселення.
   EN_Example: They moved to live in an eco-village.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/екопоселення
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Neut., inanimate, 2nd decl., soft group (-ення). This chapter’s

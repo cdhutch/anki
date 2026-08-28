@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: прихильник
   UA_Example: Він прихильник екологічного способу життя.
   EN_Example: He is a supporter of an eco-friendly lifestyle.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/прихильник
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Masc., animate, 2nd decl., hard group.

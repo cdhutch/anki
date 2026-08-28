@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.1
+- ch:2.3.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: бракувати / забракнути
   UA_Example: Нам бракує часу на відпочинок.
   EN_Example: We lack time to rest.
-  Tags_Ch: ch:3.1
+  Tags_Ch: ch:2.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/бракувати; https://goroh.pp.ua/Словозміна/забракнути
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Impersonal, defective verb (Горох gives only 3sg present/future

@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - motion:prefixed
 - status:verified
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: переїжджати / переїхати
   UA_Example: ''
   EN_Example: ''
-  Tags_Ch: ch:2.9.4, ch:3.3
+  Tags_Ch: ch:2.9.4, ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/переїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare

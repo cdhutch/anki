@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:conjunction
 - homograph:true
 - status:draft
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: ніж
   UA_Example: Цей фасад гарніший, ніж той.
   EN_Example: This facade is more beautiful than that one.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/ніж
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0258
   Lemma: створи́ти
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: створю́
   Pres_2sg: ство́риш
   Pres_3sg: ство́рить

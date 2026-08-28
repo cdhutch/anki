@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.2
+- ch:2.3.2
 - status:draft
 fields:
   NoteID: ua-verb-0241
   Lemma: рахува́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: раху́ю
   Pres_2sg: раху́єш
   Pres_3sg: раху́є

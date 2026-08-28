@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.1
+- ch:2.3.1
 - status:draft
 fields:
   NoteID: ua-verb-0240
   Lemma: бракува́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: ''
   Pres_2sg: ''
   Pres_3sg: браку́є

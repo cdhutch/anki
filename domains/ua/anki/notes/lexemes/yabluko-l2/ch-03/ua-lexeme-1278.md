@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: більше ніж
   UA_Example: У місті живе більше ніж десять тисяч людей.
   EN_Example: More than ten thousand people live in the town.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/більше ніж
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

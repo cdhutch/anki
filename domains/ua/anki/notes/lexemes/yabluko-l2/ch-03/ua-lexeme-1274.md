@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: навпаки
   UA_Example: Він не проти ремонту, навпаки, він його підтримує.
   EN_Example: He isn't against the renovation — on the contrary, he supports it.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/навпаки
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.1
+- ch:2.3.1
 - pos:numeral
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: пів
   UA_Example: Купи пів кіла цукру.
   EN_Example: Buy half a kilo of sugar.
-  Tags_Ch: ch:3.1
+  Tags_Ch: ch:2.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/пів
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: 'New. Invariable numeral (Горох: невідмінюване), used compounded with

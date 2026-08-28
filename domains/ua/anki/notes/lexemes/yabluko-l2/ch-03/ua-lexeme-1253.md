@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: архітектурний
   UA_Example: Це будівля має велику архітектурну цінність.
   EN_Example: This building has great architectural value.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/архітектурний
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

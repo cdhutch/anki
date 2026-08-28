@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0243
   Lemma: втоми́тися
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: втомлю́сь, втомлю́ся
   Pres_2sg: вто́мишся
   Pres_3sg: вто́миться

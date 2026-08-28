@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:noun-phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: побутова техніка
   UA_Example: Вони намагаються менше використовувати побутову техніку.
   EN_Example: They try to use household appliances less.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/побутова техніка
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Adjective + fem. noun collocation (техніка used collectively/uncountably

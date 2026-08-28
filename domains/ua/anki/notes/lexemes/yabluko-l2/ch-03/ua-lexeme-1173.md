@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.2
+- ch:2.3.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: порція
   UA_Example: Офіціант приніс велику порцію салату.
   EN_Example: The waiter brought a large portion of salad.
-  Tags_Ch: ch:3.2
+  Tags_Ch: ch:2.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/порція
   Source_Note: Горох-verified 2026-08-28, ch.3.2 sourcing pass (quantifiers/negation).
   Verification Notes: New. Fem., 1st decl., soft group.

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:3.4
+- ch:2.3.4
 - status:draft
 fields:
   NoteID: ua-verb-0266
   Lemma: ви́передити
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: ви́переджу
   Pres_2sg: ви́передиш
   Pres_3sg: ви́передить

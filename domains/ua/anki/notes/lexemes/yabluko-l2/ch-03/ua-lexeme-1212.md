@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: робити / зробити
   UA_Example: Вона робить мило з натуральних інгредієнтів.
   EN_Example: She makes soap from natural ingredients.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/робити; https://goroh.pp.ua/Словозміна/зробити
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Very common irregular-stress 2nd-conj. imperfective ("робити з"

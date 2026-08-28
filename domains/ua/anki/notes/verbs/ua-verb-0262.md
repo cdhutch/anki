@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.4
+- ch:2.3.4
 - status:draft
 fields:
   NoteID: ua-verb-0262
   Lemma: отри́мати
   Aspect: perfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: отри́маю
   Pres_2sg: отри́маєш
   Pres_3sg: отри́має

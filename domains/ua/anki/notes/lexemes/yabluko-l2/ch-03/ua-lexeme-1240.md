@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: останнім часом
   UA_Example: Останнім часом багато хто переїжджає за місто.
   EN_Example: Lately many people are moving out of the city.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/останнім часом
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Fixed adverbial idiom, instrumental case (останнім часом, lit.

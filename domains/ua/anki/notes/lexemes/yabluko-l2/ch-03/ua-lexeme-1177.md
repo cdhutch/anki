@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.2
+- ch:2.3.2
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: немає
   UA_Example: У холодильнику немає молока.
   EN_Example: There is no milk in the fridge.
-  Tags_Ch: ch:3.2
+  Tags_Ch: ch:2.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/немає
   Source_Note: Горох-verified 2026-08-28, ch.3.2 sourcing pass (quantifiers/negation).
   Verification Notes: 'New. Invariable negative-existential predicate word (Горох: присудкове

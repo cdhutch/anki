@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - status:verified
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: дотримуватися / дотриматися
   UA_Example: Туристи повинні дотримуватися місцевих законів.
   EN_Example: Tourists must abide by local laws.
-  Tags_Ch: ch:2.8.3, ch:3.3
+  Tags_Ch: ch:2.8.3, ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/дотримуватися; https://goroh.pp.ua/Словозміна/дотриматися
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass. Perfective дотри́матися Горох-verified
     2026-07-30.

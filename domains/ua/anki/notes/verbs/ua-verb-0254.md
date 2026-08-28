@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:3.3
+- ch:2.3.3
 - status:draft
 fields:
   NoteID: ua-verb-0254
   Lemma: поши́рюватися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:3
+  FreqSource: ch:2.3
   Pres_1sg: поширю́юсь, поширю́юся
   Pres_2sg: поширю́єшся
   Pres_3sg: поши́рюється

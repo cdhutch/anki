@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.1
+- ch:2.3.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: грам
   UA_Example: Рецепт вимагає 200 грамів борошна.
   EN_Example: The recipe calls for 200 grams of flour.
-  Tags_Ch: ch:3.1
+  Tags_Ch: ch:2.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/грам
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Masc., 2nd decl., hard group.

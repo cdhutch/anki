@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: всеукраїнський
   UA_Example: Це було всеукраїнське опитування про збереження спадщини.
   EN_Example: This was a nationwide survey on heritage preservation.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/всеукраїнський
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

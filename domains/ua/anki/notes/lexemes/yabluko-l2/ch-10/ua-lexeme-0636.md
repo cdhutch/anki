@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.1
-- ch:3.4
+- ch:2.3.4
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: торгівля
   UA_Example: Зона вільної торгівлі відкрита цілодобово.
   EN_Example: The duty-free zone is open around the clock.
-  Tags_Ch: ch:2.10.1, ch:3.4
+  Tags_Ch: ch:2.10.1, ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/торгівля
   Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
   Verification Notes: New. Fem., 1st decl., soft group.

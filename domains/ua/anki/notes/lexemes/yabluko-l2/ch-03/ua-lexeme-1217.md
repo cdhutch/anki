@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: зʼявлятися / зʼявитися
   UA_Example: У селі зʼявляється все більше екопоселенців.
   EN_Example: More and more eco-village residents are appearing in the village.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/зʼявлятися; https://goroh.pp.ua/Словозміна/зʼявитися
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective reflexive, 1st conjugation. Perfective зʼяви́тися

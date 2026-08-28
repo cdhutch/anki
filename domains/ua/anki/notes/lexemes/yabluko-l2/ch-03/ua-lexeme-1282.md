@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:noun
 - homograph:true
 - status:draft
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: замок
   UA_Example: Стародавній замок приваблює багато туристів.
   EN_Example: The ancient castle attracts many tourists.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/замок
   Source_Note: 'Горох-verified 2026-08-28, ch.3.4 addendum (two items missed on first pass:
     виступ, замок).'

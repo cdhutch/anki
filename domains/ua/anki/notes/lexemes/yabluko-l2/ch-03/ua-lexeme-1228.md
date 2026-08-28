@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.3
+- ch:2.3.3
 - pos:adjective
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: босий
   UA_Example: Влітку діти часто ходять босі.
   EN_Example: In summer children often go barefoot.
-  Tags_Ch: ch:3.3
+  Tags_Ch: ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/босий
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Hard-group adjective, standard declension.

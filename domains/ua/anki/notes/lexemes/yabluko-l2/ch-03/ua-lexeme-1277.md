@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.4
+- ch:2.3.4
 - pos:preposition
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: понад
   UA_Example: У опитуванні взяли участь понад тисяча мешканців.
   EN_Example: Over a thousand residents took part in the survey.
-  Tags_Ch: ch:3.4
+  Tags_Ch: ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/понад
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

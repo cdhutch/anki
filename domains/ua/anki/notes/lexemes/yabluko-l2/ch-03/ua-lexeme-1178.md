@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.2
-- ch:3.3
+- ch:2.3.2
+- ch:2.3.3
 - pos:adverb
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: повно
   UA_Example: У кімнаті повно людей.
   EN_Example: The room is full of people.
-  Tags_Ch: ch:3.2, ch:3.3
+  Tags_Ch: ch:2.3.2, ch:2.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/повно
   Source_Note: Горох-verified 2026-08-28, ch.3.2 sourcing pass (quantifiers/negation).
   Verification Notes: New. Invariable adverb/predicative (Прислівник, предикатив), same category

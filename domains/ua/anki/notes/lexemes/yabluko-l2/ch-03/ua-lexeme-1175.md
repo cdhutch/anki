@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:3.2
+- ch:2.3.2
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: декілька
   UA_Example: Я купив декілька яблук на ринку.
   EN_Example: I bought a few apples at the market.
-  Tags_Ch: ch:3.2
+  Tags_Ch: ch:2.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/декілька
   Source_Note: Горох-verified 2026-08-28, ch.3.2 sourcing pass (quantifiers/negation).
   Verification Notes: 'New. Горох lists декілька ONLY as числівник кількісний (quantitative
