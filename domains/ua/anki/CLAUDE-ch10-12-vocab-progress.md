@@ -1145,13 +1145,25 @@ evacuation/cleanup response, narrative & political-suppression terms)
 - `pytest tests/ua/ -q`: 547 passed (aspect-tag validation gate included).
 - Next NoteIDs: ua-lexeme-2180, ua-verb-0587.
 
+### Ch.11.6 (crisis-response planning discourse questions)
+
+- Lexemes: **ua-lexeme-2180 - ua-lexeme-2182** (3 notes: fixed discourse-formula
+  questions "Як би нам переконати їх?", "Що ми їм приготуємо?", "Що нам робити?").
+  No verb notes (fixed idioms, matches ch.7.6/ch.11.4 discourse-formula pattern).
+  переконати not drafted separately (appears only inside this fixed phrase);
+  приготувати (ua-lexeme-1657, ch.6.1) and робити (ua-lexeme-1212, ch.3.3) already
+  exist and are reused compositionally.
+- All `status:draft`. Tag `ch:2.11.6`.
+- `pytest tests/ua/ -q`: 547 passed.
+- Next NoteIDs: ua-lexeme-2183, ua-verb-0587 (unchanged -- no new verb notes this pass).
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2180**
+- Next `ua-lexeme-` ID: **2183**
 - Next `ua-verb-` ID: **0587**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
