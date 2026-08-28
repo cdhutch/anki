@@ -17,7 +17,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 1 Будні та свята | 1–2 | 1.1–1.7 | **done** (row was stale -- all of 1.1-1.7 completed earlier, see Ch.1.7 entry below; corrected 2026-08-28) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
-| 4 Люди та історії | 7–9 | 4.1–4.7 | in progress (4.1-4.4 done) |
+| 4 Люди та історії | 7–9 | 4.1–4.7 | in progress (4.1-4.5 done) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
@@ -467,6 +467,18 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   own bare-infinitive bullet here.
 - Per Craig: progress index is now updated after every sub-chapter (this entry and
   onward), not batched across a whole chapter.
+
+### Ch.4.5 (upbringing/community/generations, character traits) -- commit `202f5bbc`
+
+- Lexemes: **ua-lexeme-1465 - ua-lexeme-1508** (44 notes: 12 nouns, 12 phrase notes, 12
+  adjectives, 2 adverbs, 6 lexeme-only verb entries).
+- Verbs: **ua-verb-0303 - ua-verb-0307** (виховати, впоратися, дбати, об'єднувати,
+  поширитися). Proper Pugh & Press class tags.
+- All `status:draft`. Tag `ch:2.4.5`.
+- Reused without new notes (retagged ch:2.4.5): мандрівка (ua-lexeme-0330), проголошення
+  незалежності (ua-lexeme-0739, whole phrase reused), бажати (ua-lexeme-0664 +
+  ua-verb-0092).
+- Next NoteIDs: ua-lexeme-1509, ua-verb-0308.
 
 ### Deadline update
 
