@@ -15,7 +15,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | Chapter | PDF pages | Subsections | Status |
 |---|---|---|---|
 | 1 Будні та свята | 1–2 | 1.1–1.7 | in progress (1.1, 1.2 done) |
-| 2 Вечірка | 2–4 | 2.1–2.7 | in progress (2.1 done) |
+| 2 Вечірка | 2–4 | 2.1–2.7 | in progress (2.1–2.2 done) |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | not started |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
@@ -344,10 +344,22 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
   in order (whole textbook chapters, each with its own N.1–N.7 sub-parts),
   THEN chapters 11–12. Deadline extended to 23:59Z 2026-08-28.**
 
+### Ch.2.2 (beach picnic; tableware) — commit `638dad7c`
+
+- Lexemes: **ua-lexeme-0994 – ua-lexeme-1004** (11 notes): крем-брюле,
+  посуд, одноразовий, скляний, пляж, серце, ковбаска, смішний, історія,
+  and verb-lexeme pairs смажити/розбивати.
+- Verbs: **ua-verb-0199** (смажити, impf, Perfective посмажити),
+  **ua-verb-0200** (розбивати, impf, Perfective розбити -- irregular
+  perfective future розіб'ю/розіб'єш...).
+- All `status:draft`. Tag `ch:2.2`. No dedup collisions.
+- скляний flagged: recurs in ch.2.3's materials wordlist, expect a
+  bucket-3 retag there.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0994**
-- Next `ua-verb-` ID: **0199**
+- Next `ua-lexeme-` ID: **1005**
+- Next `ua-verb-` ID: **0201**
 
 ## Environment notes for whoever continues this
 
