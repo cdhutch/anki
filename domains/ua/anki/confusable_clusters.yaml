@@ -507,6 +507,28 @@ clusters:
       comment: Noticeable, perceptible -- detectability, not force
       compare_scenario: You want to say an effect or difference was noticeable/perceptible enough to register --
         not that it was powerful or strong, just detectable.
+  castle-lock-homograph:
+    description: 'Stress-shift homograph on замок: за́мок castle (primary Яблуко
+
+      vocabulary sense, ch.2.3.4) and замо́к lock/latch (reference-only companion,
+
+      added to complete the pair).
+
+      '
+    canonical_note: ua-lexeme-1282
+    members:
+    - note_id: ua-lexeme-1282
+      lemma: за́мок
+      status: sourced
+      chapter: '2.3.4'
+      comment: Castle (heritage architecture, ch.3.4 wordlist item)
+      compare_scenario: Which sense of замок is being used?
+    - note_id: ua-lexeme-1302
+      lemma: замо́к
+      status: sourced
+      chapter: reference
+      comment: Lock, latch (reference-only companion note, not itself a wordlist item)
+      compare_scenario: Which sense of замок is being used?
   bench-homograph:
     description: 'Stress-shift homograph on ла́вка: bench for sitting (primary sense)
 

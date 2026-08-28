@@ -30,8 +30,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: Stress-differentiated homograph of замо́к 'lock, latch' (за́мок = castle,
-    замо́к = lock) — same spelling, different stress and meaning.
+  ConfusableSet: 'Homograph cluster castle-lock-homograph (confusable_clusters.yaml): за́мок
+    the castle (this note, ch.2.3.4) vs. замо́к the lock/latch (ua-lexeme-1302, reference-only).
+    Same spelling, different stress and meaning -- a stress-shift homograph, not a semantic
+    split.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: замок
