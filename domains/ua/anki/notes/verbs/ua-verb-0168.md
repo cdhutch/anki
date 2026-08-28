@@ -10,12 +10,13 @@ tags:
 - class:1
 - ch:2.1.4
 - status:draft
+- ch:2.7.7
 fields:
   NoteID: ua-verb-0168
   Lemma: оці́нювати
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:2.1
+  FreqSource: ch:2.1,ch:2.7.7
   Pres_1sg: оці́нюю
   Pres_2sg: оці́нюєш
   Pres_3sg: оці́нює

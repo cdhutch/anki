@@ -13,6 +13,7 @@ tags:
 - ch:2.4.4
 - pos:verb
 - status:draft
+- ch:2.7.7
 fields:
   NoteID: ua-lexeme-1443
   Lemma: ста́ти
@@ -36,11 +37,12 @@ fields:
   TypingAnswer: стати
   UA_Example: Він хотів стати лікарем.
   EN_Example: He wanted to become a doctor.
-  Tags_Ch: ch:2.4.3, ch:2.4.4
+  Tags_Ch: ch:2.4.3, ch:2.4.4,ch:2.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/стати
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'
-  Verification Notes: New. Perfective. Very high-frequency copula-like verb; textbook wordlist
-    targets the collocation стати успішним у житті (this sub-chapter, ua-lexeme-1420).
+  Verification Notes: 'New. Perfective. Very high-frequency copula-like verb; textbook wordlist
+    targets the collocation стати успішним у житті (this sub-chapter, ua-lexeme-1420). Sense
+    note (ch.7.7): collocation ставати/стати друзями = "to become friends".'
 ---
 

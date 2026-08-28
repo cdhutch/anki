@@ -11,12 +11,13 @@ tags:
 - ch:2.4.4
 - ch:2.4
 - status:draft
+- ch:2.7.7
 fields:
   NoteID: ua-verb-0296
   Lemma: ста́ти
   Aspect: perfective
   VerbClass: conj1-irregular
-  FreqSource: ch:2.4
+  FreqSource: ch:2.4,ch:2.7.7
   Pres_1sg: ста́ну
   Pres_2sg: ста́неш
   Pres_3sg: ста́не
