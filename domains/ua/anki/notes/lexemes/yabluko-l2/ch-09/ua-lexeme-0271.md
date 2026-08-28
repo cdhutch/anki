@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
+- ch:2.5.1
 - pos:noun
 - gender:n
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: озеро
   UA_Example: Наступний етап -- переплисти озеро.
   EN_Example: The next stage is swimming across the lake.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:2.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/озеро
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Filtered out proper-noun homographs (a village and a river both named
