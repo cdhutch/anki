@@ -18,7 +18,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
-| 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | in progress (5.1 done) |
+| 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | in progress (5.1-5.2 done) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
@@ -531,14 +531,31 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   lexeme, no cluster registered since the noun sense isn't bulleted here.
 - Next NoteIDs: ua-lexeme-1545, ua-verb-0314.
 
+### Ch.5.2 (train travel/station; house features; sightseeing verbs and adjectives) -- commit `3d8ea97a`
+
+- Lexemes: **ua-lexeme-1545 - ua-lexeme-1564** (20 notes: 11 nouns, 2 phrases, 1
+  lexeme-only verb entry вилізти + its phrase, 5 adjectives).
+- Verbs: **ua-verb-0314 - ua-verb-0317** (забути, залишити, перевірити, побувати). All
+  proper Pugh & Press class tags -- забути classified conj1-irregular (non-past stem
+  parallels irregular бути's future with a за- prefix); побувати classified
+  conj1-vowel+й as the documented бувати-rooted -увати exception that keeps -ва-.
+- All `status:draft`. Tag `ch:2.5.2`.
+- Reused without new notes (retagged ch:2.5.2, independently bulleted again here): вагон
+  (ua-lexeme-0307, ch:2.9.6), виставка (ua-lexeme-1126, ch:2.2.7), ринок (ua-lexeme-0241,
+  ch:2.9.4), останній (ua-lexeme-0277, ch:2.9.5).
+- Two Горох summarizer garblings caught and corrected via cross-check: підлога (fetch's
+  own prose contradicted its rendered accented form), залишити (reconstructed the
+  mobile-stress paradigm from the попросити precedent after a badly garbled fetch).
+- Next NoteIDs: ua-lexeme-1565, ua-verb-0318.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1545**
-- Next `ua-verb-` ID: **0314**
+- Next `ua-lexeme-` ID: **1565**
+- Next `ua-verb-` ID: **0318**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
