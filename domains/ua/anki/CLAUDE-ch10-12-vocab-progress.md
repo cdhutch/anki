@@ -15,7 +15,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | Chapter | PDF pages | Subsections | Status |
 |---|---|---|---|
 | 1 Будні та свята | 1–2 | 1.1–1.7 | in progress (1.1, 1.2 done) |
-| 2 Вечірка | 2–4 | 2.1–2.7 | in progress (2.1–2.5 done) |
+| 2 Вечірка | 2–4 | 2.1–2.7 | in progress (2.1–2.6 done) |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | not started |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
@@ -389,8 +389,8 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1099**
-- Next `ua-verb-` ID: **0234**
+- Next `ua-lexeme-` ID: **1118**
+- Next `ua-verb-` ID: **0235**
 
 ## Environment notes for whoever continues this
 
