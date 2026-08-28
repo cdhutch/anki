@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.6
+- ch:2.6.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: приймати / прийняти
   UA_Example: Приймайте ці таблетки двічі на день.
   EN_Example: Take these pills twice a day.
-  Tags_Ch: ch:2.10.6
+  Tags_Ch: ch:2.10.6, ch:2.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/приймати; https://goroh.pp.ua/Словозміна/прийняти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

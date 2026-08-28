@@ -9,13 +9,14 @@ tags:
 - domain:ua
 - class:1
 - ch:2.2.5
+- ch:2.6.2
 - status:draft
 fields:
   NoteID: ua-verb-0231
   Lemma: сіда́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2.2
+  FreqSource: ch:2.2, ch:2.6.2
   Pres_1sg: сіда́ю
   Pres_2sg: сіда́єш
   Pres_3sg: сіда́є

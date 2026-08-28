@@ -10,13 +10,14 @@ tags:
 - class:conj1-vowel+й
 - ch:2.6.1
 - ch:2.6
+- ch:2.6.2
 - status:draft
 fields:
   NoteID: ua-verb-0357
   Lemma: чита́ти
   Aspect: imperfective
   VerbClass: conj1-vowel+й
-  FreqSource: ch:2.6.1
+  FreqSource: ch:2.6.1, ch:2.6.2
   Pres_1sg: чита́ю
   Pres_2sg: чита́єш
   Pres_3sg: чита́є

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.3
+- ch:2.6.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: снідати / поснідати
   UA_Example: Зазвичай я снідаю о сьомій.
   EN_Example: I usually have breakfast at seven.
-  Tags_Ch: ch:2.1.3
+  Tags_Ch: ch:2.1.3, ch:2.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/снідати; https://goroh.pp.ua/Словозміна/поснідати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

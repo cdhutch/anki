@@ -10,13 +10,14 @@ tags:
 - class:conj1-vowel+й
 - ch:2.4.4
 - ch:2.4
+- ch:2.6.2
 - status:draft
 fields:
   NoteID: ua-verb-0297
   Lemma: працю́вати
   Aspect: imperfective
   VerbClass: conj1-vowel+й
-  FreqSource: ch:2.4
+  FreqSource: ch:2.4, ch:2.6.2
   Pres_1sg: працю́ю
   Pres_2sg: працю́єш
   Pres_3sg: працю́є

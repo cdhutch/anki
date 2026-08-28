@@ -10,13 +10,14 @@ tags:
 - class:conj1-vowel+й
 - ch:2.6.1
 - ch:2.6
+- ch:2.6.2
 - status:draft
 fields:
   NoteID: ua-verb-0358
   Lemma: прочита́ти
   Aspect: perfective
   VerbClass: conj1-vowel+й
-  FreqSource: ch:2.6.1
+  FreqSource: ch:2.6.1, ch:2.6.2
   Pres_1sg: прочита́ю
   Pres_2sg: прочита́єш
   Pres_3sg: прочита́є

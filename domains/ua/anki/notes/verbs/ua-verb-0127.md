@@ -9,13 +9,14 @@ tags:
 - domain:ua
 - class:regular-1
 - ch:2.10.6
+- ch:2.6.2
 - status:draft
 fields:
   NoteID: ua-verb-0127
   Lemma: прийма́ти
   Aspect: imperfective
   VerbClass: regular-1
-  FreqSource: ch:2.10
+  FreqSource: ch:2.10, ch:2.6.2
   Pres_1sg: прийма́ю
   Pres_2sg: прийма́єш
   Pres_3sg: прийма́є

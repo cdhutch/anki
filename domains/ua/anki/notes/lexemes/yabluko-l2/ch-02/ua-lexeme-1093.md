@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.5
+- ch:2.6.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сідати / сісти
   UA_Example: Гості сідають за стіл.
   EN_Example: The guests sit down at the table.
-  Tags_Ch: ch:2.2.5
+  Tags_Ch: ch:2.2.5, ch:2.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/сідати; https://goroh.pp.ua/Словозміна/сісти
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

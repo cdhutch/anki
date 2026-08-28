@@ -11,13 +11,14 @@ tags:
 - motion:walking
 - phase:2a
 - ch:2.9.2
+- ch:2.6.2
 - status:verified
 fields:
   NoteID: ua-verb-0002
   Lemma: іти́
   Aspect: imperfective
   VerbClass: motion-walking-new
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.6.2
   Pres_1sg: іду́
   Pres_2sg: іде́ш
   Pres_3sg: іде́
