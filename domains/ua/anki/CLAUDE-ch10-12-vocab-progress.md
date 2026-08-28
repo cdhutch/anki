@@ -248,10 +248,46 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
   оцінювати, пекти, плакати, платити, різати, чистити, "чистити зуби перед
   сном" all confirmed brand new (no corpus matches).
 
+### Ch.1.5 (Christmas customs/traditions; celebration verbs) — commit `fb44960f`
+
+- Lexemes: **ua-lexeme-0897 – ua-lexeme-0928** (32 notes: 10 nouns, 5
+  adjectives, 2 adverbs, 11 impf-headword verb-lexeme pairs, 4 pf-headword
+  verb-lexeme entries)
+- Verbs: **ua-verb-0174 – ua-verb-0188** (брати, дарувати, обливати,
+  очищувати, запалювати, підтримувати, святкувати, сприймати, ставитися,
+  стрибати, відмовлятися, відзначити, скуштувати, надурити, змокнути)
+- All `status:draft`. Tag `ch:1.5`.
+- 4 pf-headword verbs drafted directly as perfective (no impf partner yet
+  in corpus): відзначити (impf. відзначати undrafted), скуштувати (impf.
+  куштувати undrafted), надурити (impf. дурити undrafted, not in the
+  verb-dictionary either, confirmed via Горох), змокнути (impf. мокнути
+  undrafted). дарувati Горох-classified "двовидове"/biaspectual but still
+  paired with подарувати per Craig's aspect-pairing instruction.
+- 5 existing notes retagged `ch:1.5` (dedup bucket 3, same meaning): смак
+  (ua-lexeme-0553), участь (ua-lexeme-0375), вогонь (ua-lexeme-0329),
+  жартувати (ua-lexeme-0845, Perfective пожартувати already present from
+  the aspect-pairing review pass), нудити (ua-lexeme-0779, also got a
+  short addendum documenting the "нудити від" construction).
+- Bundled-phrase precedent applied twice more (all components freshly
+  drafted this pass, use as example sentence instead of a phrase note):
+  "почуття гумору" (on почуття), "змокнути до нитки" (on змокнути).
+  Two more collocations reuse existing corpus entries as their example
+  sentence without redrafting: "запалювати бенгальські вогні" (on
+  запалювати), "стрибати через вогонь" (on стрибати).
+- відзначити flagged for review: Горох's table shows two acute accents
+  through most of the paradigm (відзна́чи́ти) -- read as two accepted
+  stress placements; standard root-stress відзна́чити used pending review.
+- **Aspect field convention change starting this sub-chapter**: full words
+  `imperfective`/`perfective`/`biaspectual` used for the UA_Verb `Aspect`
+  field (matching the majority of the pre-existing corpus, 106 notes),
+  not the `impf`/`pf` abbreviations used in ch.1.1-1.4 (34 notes) --
+  those 34 are a known, harmless inconsistency (no schema validator
+  enforces an enum here) left as-is unless Craig asks for a cleanup pass.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0897**
-- Next `ua-verb-` ID: **0174**
+- Next `ua-lexeme-` ID: **0929**
+- Next `ua-verb-` ID: **0189**
 
 ## Environment notes for whoever continues this
 
