@@ -2,7 +2,10 @@
 
 Manages canonical groupings of semantically-related words (confusable clusters).
 Each cluster has a hub (canonical reference note) and satellites. Hub notes show
-all active cluster members on their Compare card; satellites show only the hub.
+all active cluster members on their Compare card; satellites show only the hub
+and themselves -- UNLESS the cluster sets show_all_members: true, in which case
+every member's card (hub or satellite) shows the full active member list. See
+ConfusableCluster.show_all_members and get_compare_card_members().
 
 Registry is loaded from domains/ua/anki/confusable_clusters.yaml
 """
@@ -49,6 +52,11 @@ class ConfusableCluster:
     description: str
     canonical_note_id: str  # ua-lexeme-0467 (hub)
     members: List[ClusterMember]
+    show_all_members: bool = False  # opt-in: every member's card shows the
+    # full active member list, not just hub-shows-all/satellite-shows-hub+self.
+    # Set via show_all_members: true at the cluster level in the YAML registry.
+    # Default False preserves existing hub/satellite behavior for every
+    # cluster that doesn't opt in.
 
     def get_active_members(self) -> List[ClusterMember]:
         """Return only sourced members (those with note_id not None)."""
@@ -173,7 +181,8 @@ class ClusterRegistry:
             name=cluster_name,
             description=description,
             canonical_note_id=canonical_note_id,
-            members=members
+            members=members,
+            show_all_members=bool(cluster_data.get('show_all_members', False))
         )
 
     def get_cluster(self, cluster_name: str) -> Optional[ConfusableCluster]:
@@ -227,7 +236,9 @@ class ClusterRegistry:
         """Return the member list for Compare card generation on this note.
 
         Hub notes show all active (sourced) members as chips.
-        Satellite notes show only the hub and themselves.
+        Satellite notes show only the hub and themselves -- UNLESS the
+        cluster has show_all_members: true set, in which case every member
+        (hub or satellite) shows the full active member list.
         Non-clustered notes return an empty list.
 
         Args:
@@ -240,8 +251,9 @@ class ClusterRegistry:
         if not cluster:
             return []
 
-        if cluster.is_hub(note_id):
-            # Hub shows all active members
+        if cluster.show_all_members or cluster.is_hub(note_id):
+            # show_all_members clusters: every member shows the full list.
+            # Otherwise, hub shows all active members.
             return cluster.get_active_members()
         else:
             # Satellite shows hub + self

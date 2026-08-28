@@ -40,6 +40,12 @@
 #   description: {string} Prose description of semantic relationship and usage context
 #   canonical_note: {string} Primary note_id that shows all cluster members on Compare card
 #   members: {list} All notes belonging to this cluster
+#   show_all_members: {bool, optional, default false} When true, EVERY member's Compare
+#     card shows the full active member list (not just the hub's). Use for clusters where
+#     every member should see every other member -- e.g. a semantic triplet where each
+#     word should be distinguished against both siblings, not just the hub. Added
+#     2026-08-28 (fire-general-vs-blaze-vs-campfire) -- see confusable_clusters.py
+#     get_compare_card_members().
 #
 # Member level (per cluster member):
 #   note_id: {string} Unique identifier (ua-lexeme-XXXX)
@@ -64,12 +70,16 @@
 
 clusters:
   intensifier-adverbs:
-    description: 'Intensifiers and adverbial comparatives: formal/measured (значно)
-      vs everyday (набагато).
-
-      Both calibrate comparatives but differ in register and usage context.
+    description: 'Two related pairs of degree/intensity adverbs sharing overlapping EN
+      glosses ("very/much/too"): значно (formal, measured) and набагато (everyday,
+      conversational) both intensify a COMPARATIVE ("X-er than Y"); занадто (general
+      "too/excessively," for adjectives/adverbs) and забагато (fused "too much," specific
+      to quantity/amount) both mark an ABSOLUTE excess past an acceptable limit, with no
+      comparison implied. Grouped per Craig''s request (2026-08-28) to cluster занадто
+      with terms of similar EN meaning or UA spelling.
 
       '
+    show_all_members: true
     canonical_note: ua-lexeme-0467
     members:
     - note_id: ua-lexeme-0467
@@ -87,6 +97,23 @@ clusters:
       comment: Everyday conversational intensifier (Горох-verified)
       compare_scenario: Comparing two hotel rooms right after checking in, you tell
         a friend casually that this room is way comfier than the other one.
+    - note_id: ua-lexeme-0417
+      lemma: зана́дто
+      status: sourced
+      chapter: '2.8.1'
+      comment: General "too/excessively" -- adjectives/adverbs, absolute excess, no
+        comparison (Горох-verified)
+      compare_scenario: It's so hot out today that nobody wants to go for a walk --
+        the heat has crossed past a comfortable point. What word says that?
+    - note_id: ua-lexeme-0615
+      lemma: забага́то
+      status: sourced
+      chapter: 2.8.3
+      comment: Fused "too much" -- quantity/amount excess specifically, no comparison
+        (Горох-verified)
+      compare_scenario: One person has been handed way more work than they can
+        reasonably manage alone -- not compared to anyone else's workload, just an
+        excessive amount in itself. What word says that?
   time-of-day:
     description: 'Time-of-day nouns marking points in the daily cycle.
 
@@ -1047,3 +1074,145 @@ clusters:
       compare_scenario: Someone is covering a fence or wall in a single solid
         color with a paint roller, or dyeing fabric -- which verb names that
         action, distinct from making a picture?
+
+  positional-vs-absolute-lower:
+    description: 'Convergent near-synonym TRIPLET (not homographs) on "low/lower": ни́жній is
+      a positional/relative adjective (the bottom one of a pair or ordered set -- a lower
+      berth, a lower shelf); низьки́й is the absolute POSITIVE degree, describing an object''s
+      own height (a low ceiling, a low table), independent of any pairing; ни́жчий is the
+      absolute COMPARATIVE degree, for a direct comparison between two things ("X нижчий
+      за/ніж Y"). Craig''s own stated confusion (2026-08-28), refined once he noted нижчий
+      is the true comparative of низький (not нижній) and that нижчий/нижній -- sharing the
+      "ниж-" root -- are the sharper, easier-to-confuse pair. Mirrors positional-vs-absolute-upper
+      (ве́рхній/висо́кий/ви́щий).
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0312
+    members:
+    - note_id: ua-lexeme-0312
+      lemma: ни́жній
+      status: sourced
+      chapter: '2.8.2'
+      comment: Positional/relative -- the bottom one of a pair or ordered set (a lower berth,
+        a lower shelf)
+      compare_scenario: You're comparing the bottom bunk to the top bunk on a train -- what
+        word describes the bottom one?
+    - note_id: ua-lexeme-0433
+      lemma: низьки́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute positive degree -- an object's own height/magnitude (a low ceiling,
+        a low table)
+      compare_scenario: A ceiling is uncomfortably close to your head -- what word describes
+        it?
+    - note_id: ua-lexeme-0606
+      lemma: ни́жчий
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute comparative degree -- a direct comparison between two things ("X is
+        lower than Y")
+      compare_scenario: You're comparing two rooms directly -- one ceiling is lower than the
+        other. What word says that comparison?
+
+  positional-vs-absolute-upper:
+    description: 'Convergent near-synonym TRIPLET (not homographs) on "upper/tall": ве́рхній is
+      a positional/relative adjective (the top one of a pair or ordered set -- an upper berth,
+      an upper shelf); висо́кий is the absolute POSITIVE degree, describing an object''s own
+      height (a tall building, a high ceiling), independent of any pairing; ви́щий is the
+      absolute COMPARATIVE degree, for a direct comparison between two things ("X вищий за/ніж
+      Y"). Mirrors positional-vs-absolute-lower (ни́жній/низьки́й/ни́жчий).
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0313
+    members:
+    - note_id: ua-lexeme-0313
+      lemma: ве́рхній
+      status: sourced
+      chapter: '2.8.2'
+      comment: Positional/relative -- the top one of a pair or ordered set (an upper berth,
+        an upper shelf)
+      compare_scenario: You're comparing the top bunk to the bottom bunk on a train -- what
+        word describes the top one?
+    - note_id: ua-lexeme-0438
+      lemma: висо́кий
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute positive degree -- an object's own height/magnitude (a tall building,
+        a high ceiling)
+      compare_scenario: A building towers over everything else on the street -- what word
+        describes it?
+    - note_id: ua-lexeme-0607
+      lemma: ви́щий
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute comparative degree -- a direct comparison between two things ("X is
+        taller than Y")
+      compare_scenario: You're comparing two buildings directly -- one is taller than the
+        other. What word says that comparison?
+  greeting-genitive-vs-fixed-night:
+    description: 'Convergent near-synonym pair, not homographs, both meaning "good night" as
+      a parting farewell: на добраніч / добраніч is a frozen, uninflected interjection (Горох
+      tags it вигук, невідмінювана словникова одиниця) and is the far more traditional default;
+      доброї ночі is grammatically live -- the same genitive-of-wish construction as доброго
+      ранку/дня/вечора (genitive standing in for an implied elided verb, "[бажаю тобі] ...").
+      добра ніч (bare nominative) is deliberately NOT a cluster member -- it is not used as a
+      greeting at all, just the descriptive phrase "a good night," so there is nothing to test
+      productively.
+
+      '
+    canonical_note: ua-lexeme-0108
+    members:
+    - note_id: ua-lexeme-0108
+      lemma: на добра́ніч
+      status: sourced
+      chapter: '1.0'
+      comment: Frozen, uninflected interjection -- the traditional default farewell for parting
+        at night
+      compare_scenario: You're saying goodbye to your host family as you head to bed for the
+        night -- what's the standard, most traditional thing to say?
+    - note_id: ua-lexeme-0608
+      lemma: доброї но́чі
+      status: sourced
+      chapter: '1.0'
+      comment: Genitive-of-wish alternate, same construction as доброго ранку/дня/вечора --
+        grammatically live, less traditional than добраніч
+      compare_scenario: You want to wish someone a good night using the same construction as
+        "доброго ранку" -- what's the genitive form of ніч?
+  fire-general-vs-blaze-vs-campfire:
+    description: 'Convergent near-synonym TRIPLET (not homographs) on "fire": пожежа is
+      specifically a destructive, uncontrolled fire -- a blaze or conflagration, the kind
+      firefighters put out; вого́нь is the broad, general/elemental word for fire itself (a
+      flame, a campfire''s light, bodily heat, gunfire) -- the umbrella term, not implying
+      harm or intent; ва́тра is specifically a campfire/bonfire (Горох defines it as вогнище),
+      a controlled, intentional fire built for warmth, light, or gathering.
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0173
+    members:
+    - note_id: ua-lexeme-0173
+      lemma: поже́жа
+      status: sourced
+      chapter: '2.9.2'
+      comment: A destructive, uncontrolled fire -- a blaze or conflagration, the kind firefighters
+        put out
+      compare_scenario: A building is burning out of control and firefighters are rushing to
+        put it out -- what word describes this fire?
+    - note_id: ua-lexeme-0329
+      lemma: вого́нь
+      status: sourced
+      chapter: '2.9.7'
+      comment: The broad, general/elemental word for fire itself -- a flame, gunfire, bodily
+        heat, not implying harm or intent
+      compare_scenario: You want the plain, general word for "fire" -- not a disaster, not a
+        specific campfire, just fire itself. What word do you use?
+    - note_id: ua-lexeme-0610
+      lemma: ва́тра
+      status: sourced
+      chapter: '2.9.2'
+      comment: A campfire/bonfire -- a controlled, intentional fire built for warmth, light,
+        or gathering
+      compare_scenario: You're camping with friends and someone lights a fire on purpose so
+        everyone can sit around it and tell stories. What word describes that fire?
