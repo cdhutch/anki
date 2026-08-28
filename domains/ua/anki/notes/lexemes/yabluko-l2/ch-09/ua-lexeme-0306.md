@@ -73,6 +73,12 @@ fields:
     = EN senses, capped at 2 slots) -- neither shape can cleanly add a third, genuinely distinct
     participant: Shape 1 has no Homograph_SenseC field, and Shape 2 can''t hold two identically-spelled
     "вид" chips for two different senses. A true 3-way card would need a template change.
-    Flagged this to Craig rather than silently building something structurally broken.'
+    Flagged this to Craig rather than silently building something structurally broken. 2026-08-27:
+    this note''s existing UA_Example/EN_Example (тип вагона -- type of train car) already
+    illustrates тип''s vehicle/document/mechanism collocation family, so left unchanged; added
+    a matching UA_Example/EN_Example to ua-lexeme-0143 (вид спорту -- type of sport) so the
+    вид side of the distinction now has a concrete example too. The two are not a live contrastive
+    pair on either card (still no registry cluster between 0306 and 0143 -- see above), but
+    a learner reading both notes now sees one example from each collocation family.'
 ---
 

@@ -30,11 +30,17 @@ fields:
     (0182) by context.
   CrossLang_Analog: ''
   TypingAnswer: вид
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Який вид спорту тобі найбільше подобається?
+  EN_Example: What type of sport do you like the most?
   Tags_Ch: ch:2.9
   Source_URL: ''
   Source_Note: ''
-  Verification Notes: ''
+  Verification Notes: '2026-08-27: added UA_Example/EN_Example ("вид спорту" -- type of sport)
+    to give this note a real example in its own collocation family, matching the activity/species/category
+    pattern documented in ua-lexeme-0306''s ConfusableSet (as opposed to тип''s vehicle/document/mechanism
+    family, e.g. тип вагона on 0306). Not a contrastive pair sentence -- 0143 and 0306 still
+    have no live Compare card together (see 0306''s Verification Notes on the registry gap)
+    -- but this at least gives 0143 a concrete example a learner can compare against 0306''s
+    тип вагона example when reading both cards.'
 ---
 
