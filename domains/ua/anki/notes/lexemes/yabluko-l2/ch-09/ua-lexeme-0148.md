@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
+- ch:2.5.6
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ходьба
   UA_Example: Спортивна ходьба — це олімпійська дисципліна.
   EN_Example: Race walking is an Olympic discipline.
-  Tags_Ch: ch:2.9.1
+  Tags_Ch: ch:2.9.1, ch:2.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/ходьба
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''
