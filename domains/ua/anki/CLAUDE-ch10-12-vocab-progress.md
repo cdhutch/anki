@@ -18,7 +18,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
-| 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
+| 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | in progress (5.1 done) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
@@ -513,7 +513,23 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   bare-bulleted this sub-chapter, only inside захистити дисертацію.
 - **All of chapter 4 (Люди та історії, 4.1-4.7) is now done.** Per Craig's processing
   order (2-7, then 11-12), chapter 5 (Скажи де, скажи коли) is next.
-- Next NoteIDs: ua-lexeme-1524, ua-verb-0314.
+
+### Ch.5.1 (street/urban infrastructure; natural/property features; locative prepositions) -- commit `8446e59b`
+
+- Lexemes: **ua-lexeme-1524 - ua-lexeme-1544** (21 notes: 9 street/infrastructure nouns
+  incl. 2 phrases, 6 natural/property-feature nouns, 6 locative-preposition entries incl.
+  3 phrases and one bundled synonym-pair preposition note).
+- No new verbs -- pure nouns/prepositions sub-chapter.
+- All `status:draft`. Tag `ch:2.5.1`.
+- Reused without new notes (retagged ch:2.5.1, independently bulleted again here): будинок
+  (ua-lexeme-0027, ch:1.0), озеро (ua-lexeme-0271, ch:2.9.5), паркан (ua-lexeme-1246,
+  ch:2.3.4), поле (ua-lexeme-0192, ch:2.9.3).
+- біля / коло bundled as one preposition note per the textbook's own pairing (same
+  precedent as обидва/обидві/обоє, ch.1.1).
+- Adverbial спра́ва (in справа від) flagged as a true homograph of the existing noun
+  спра́ва (ua-lexeme-0799, ch:2.10.7, "matter, affair, case") -- not retagged, distinct
+  lexeme, no cluster registered since the noun sense isn't bulleted here.
+- Next NoteIDs: ua-lexeme-1545, ua-verb-0314.
 
 ### Deadline update
 
@@ -521,7 +537,7 @@ Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1524**
+- Next `ua-lexeme-` ID: **1545**
 - Next `ua-verb-` ID: **0314**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
