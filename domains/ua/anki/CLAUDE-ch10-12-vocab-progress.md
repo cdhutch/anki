@@ -300,10 +300,33 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
   UA_Verb notes were briefly written with `Aspect: impf` instead of the
   `imperfective`/`perfective` convention adopted starting ch.1.5.
 
+### Ch.1.7 (adventures/reasons; narrating verbs) — commit `a9b25c6e` — **chapter 1 complete**
+
+- Lexemes: **ua-lexeme-0939 – ua-lexeme-0961** (23 notes: 9 nouns, 1
+  pronoun, 3 adjectives, 5 adverbs, 5 impf-headword verb-lexeme pairs)
+- Verbs: **ua-verb-0193 – ua-verb-0197** (зупиняти, розказувати, снитися,
+  сумувати, тривати)
+- All `status:draft`. Tag `ch:1.7`.
+- 5 existing notes retagged ch:1.7: пригода (ua-lexeme-0272), кілька
+  (ua-lexeme-0477), почуття (ua-lexeme-0902, ch:1.5), казати
+  (ua-lexeme-0317, ch:2.9.6/ch:1.6), сон (ua-lexeme-0886, ch:1.4 --
+  resolves its own forward-reference to this sub-chapter).
+- брати (ua-lexeme-0914, ch:1.5) referenced in "брати інтерв'ю" but NOT
+  retagged (basic light verb in a longer VP, лікар/країна precedent).
+- тривати drafted in its defective "last/occur over time" sense only
+  (3rd person + future forms); снитися almost always impersonal
+  (dative experiencer), same pattern as нудити.
+- Caught and fixed a YAML-breaking bug immediately (before any file was
+  corrupted): an unescaped colon in raw-appended Verification Notes text
+  on сон broke cnsf_canonicalize.py's YAML parse; rephrased to avoid it.
+- **All of chapter 1 (1.1-1.7) is now done.** Per Craig's processing
+  order (10, then 1-7, then 11-12), chapters 11 and 12 are next -- their
+  wordlists have not yet been transcribed from the page images.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0939**
-- Next `ua-verb-` ID: **0193**
+- Next `ua-lexeme-` ID: **0962**
+- Next `ua-verb-` ID: **0198**
 
 ## Environment notes for whoever continues this
 
