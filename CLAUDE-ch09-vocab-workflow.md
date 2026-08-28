@@ -39,7 +39,7 @@ Agreed plan (2026-07-22), documented here before any note files were generated.
 - **ID scheme**: continue sequential numbering in the *existing* folder
   (`domains/ua/anki/notes/lexemes/yabluko-l2/ch-09/`) — no new subfolder. Next
   `ua-lexeme-` ID is `0132`. Next `ua-verb-` ID (if any subsection turns up a new verb)
-  is `0033`.
+  is `0033`. **[Both numbers stale — see "Status update — 2026-08-28" at the bottom of this file for the current ID/dedup/Compare-card process.]**
 - **Adjective lexeme schema** (no prior precedent in the corpus): `PartOfSpeech:
   adjective`, `Lemma` = masculine nominative singular (Горох's citation form), `Gender`
   left blank (adjectives inflect for all three, doesn't fit the single-value field).
@@ -104,3 +104,65 @@ notes there are the richest source of prior confusable-word context, since that'
 he originally called out contrasts directly. Run this before drafting a note for a word
 that might already have legacy context, or when deciding what a `confusable:candidate`
 flag was actually about.
+
+## Status update — 2026-08-28 (lessons learned since this doc was written)
+
+This doc dates from 2026-07-22/26, before the ch.8/ch.9 passes finished. The 5 rules and
+the per-subchapter process below are still the right shape, but several specifics have
+changed. Superseding details:
+
+- **Dedup is now a formal 5-bucket triage**, not just "check for an existing lemma match."
+  See CLAUDE.md → "Vocabulary dedup & homograph handling" for the canonical description:
+  (1) brand new, (2) homograph — same spelling, unrelated meaning, (3) true duplicate —
+  same spelling and meaning, reused across chapters (append `ch:2.X.Y` + `Tags_Ch` + a
+  dated `Verification Notes` line rather than creating a new note), (4) convergent
+  synonyms — different spellings, overlapping `EN_Gloss` (not spelling-based, judgment
+  call, audited periodically rather than per-candidate), (5) pending-confusable watchlist —
+  tag an existing note `pending-confusable:<bare-spelling>` when Craig names a not-yet-
+  sourced future partner.
+- **Dedup tooling exists now** (all Craig-run, per the Big 3 Rules — Claude reads/greps the
+  corpus directly instead): `tools/anki/inspect/check_lexeme_dedup.py` (per-candidate
+  spelling check), `tools/anki/lib/lexeme_dedup.py` (library, `create_or_link_lexeme()`,
+  `strip_stress()`), `tools/anki/inspect/build_lexeme_index.py` (whole-corpus TSV dump —
+  built specifically because per-file device-bridge staging hit HTTP 429 rate limits
+  around ~180 files; don't stage note files one at a time at scale, read them via
+  `device_bash cat`/`grep` instead or ask Craig to run the index script), `tools/anki/
+  inspect/check_pending_confusables.py` (bucket-5 watchlist scanner, wired into
+  `make ua-check`), `tools/anki/extract/gen_ch09_subsection.py` (routes a drafted batch
+  through `create_or_link_lexeme()` so no candidate skips the dedup check — never
+  exercised against a real batch yet as of this writing).
+- **Compare-card architecture was replaced (landed 2026-08-26, cleaned up 2026-08-27).**
+  The per-note `CompareA`/`CompareB`/`CompareC`/`CompareD`/`CompareScenario`/
+  `Homograph_SenseA`/`Homograph_SenseB` fields described implicitly by the old dedup
+  buckets above are **retired** — do not hand-author them on new notes. The single source
+  of truth is now `domains/ua/anki/confusable_clusters.yaml` (`ClusterRegistry`): a
+  cluster has a `canonical_note` (hub) + `members` (each `note_id`/`lemma`/`status`/
+  `chapter`/`comment`/`compare_scenario`). At import time `get_cluster_compare_members_json()`
+  computes a single `CompareMembers` JSON field from the registry — nothing per-note beyond
+  the registry entry itself and an optional prose `ConfusableSet` string for the hub's
+  card-back "cf. ..." line. Clusters aren't capped at 2-4 members. **Known limitation:** a
+  note can only belong to one cluster (`note_to_cluster` is a single-value dict) — a second
+  clustering silently steals the card with no error, so check
+  `domains/ua/anki/confusable_clusters.yaml` before adding a note that already anchors a
+  cluster to a second one, and flag the conflict in prose instead of picking a side if it
+  comes up.
+- **`ch:reference` convention (2026-08-26/27):** a note with no real textbook placement —
+  existing purely to complete a confusable cluster — gets `ch:reference` and lives in
+  `domains/ua/anki/notes/lexemes/reference/`, outside the `yabluko-l1`/`yabluko-l2` tree.
+  Not expected to be needed for this pass (every word here has a real chapter), but relevant
+  if a cluster partner turns out to need a component word with no textbook home.
+- **`status:verified` is now the sole gatekeeper tag** (confirmed against live
+  `ua_lexeme_import.py` 2026-08-28) — the old `stress:verified`/`stress:unverified` two-tag
+  scheme mentioned nowhere in this doc but present in some ch.8 notes is retired. Every new
+  note in this pass lands `status:draft`, same as this doc already said.
+- **Euphony stress-mark convention** (`check_euphony_stress.py`, new 2026-08-18, wired into
+  `make ua-check`): any populated `*_Euphony` field with a multisyllabic word must carry a
+  stress mark. Monosyllables are exempt.
+- **Orange flags no longer suspend cards** (2026-08-10) — only red does. Doesn't change
+  drafting (everything here starts `status:draft` regardless), but relevant if Craig flags
+  something during his review pass.
+- **Chapter-tag format was widened** (`tests/ua/test_confusable_clusters.py::test_chapter_format`)
+  to `^(?:[123]\.[0-9]+(\.[0-9]+)?|reference)$` — i.e. `1.`/`2.`/`3.`-prefixed chapter
+  numbers, or the literal `reference`. This pass's tags (`ch:2.1.X` through `ch:2.7.X`,
+  `ch:2.10.X`, `ch:2.11.X`, `ch:2.12.X`) all fit the existing `2.`-prefix pattern already
+  used for ch.8/ch.9.
