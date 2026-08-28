@@ -1512,12 +1512,18 @@ hr#answer {
 .nightMode .card svg [stroke="#7c6f64"] { stroke: #a89984; }
 """
 
-# Single card: diagram + a 2-column table (prompt labels, blanks) on front.
+# Single card: diagram + English gloss, then a 2-column table (prompt labels,
+# blanks) on front -- 2026-08-27, per Craig: Meaning_EN moved onto the front
+# so the diagram and the specific English phrasing prompt recall together,
+# rather than the gloss only appearing after the answer is already revealed.
 # Back re-renders the SAME table in place with the answer column filled in --
 # no {{FrontSide}} reproduction, no second table, no hr divider -- so it reads
 # as one table getting filled in rather than a duplicate answer block below.
+# vis-meaning is kept in the same position (right after the diagram, before
+# the table) on both sides so the layout doesn't shift when the card flips.
 VISUAL_FRONT_1 = """\
 <div>{{Diagram_SVG}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
 <table class="vis-prompt-table">
 <tr><td>Verbal prefix?</td><td>?</td></tr>
 <tr><td>Preposition + case?</td><td>?</td></tr>
@@ -1526,11 +1532,11 @@ VISUAL_FRONT_1 = """\
 
 VISUAL_BACK_1 = """\
 <div>{{Diagram_SVG}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
 <table class="vis-prompt-table">
 <tr><td>Verbal prefix?</td><td>{{Prefix}}</td></tr>
 <tr><td>Preposition + case?</td><td>{{Govt}}</td></tr>
 </table>
-<div class="vis-meaning">{{Meaning_EN}}</div>
 <div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
 {{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
 {{#Example_EN}}<div class="vis-example-en">{{Example_EN}}</div>{{/Example_EN}}

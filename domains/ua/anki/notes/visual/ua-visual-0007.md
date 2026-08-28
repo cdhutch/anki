@@ -16,7 +16,8 @@ tags:
 fields:
   NoteID: ua-visual-0007
   Prefix: про-
-  Meaning_EN: passing by or through
+  Meaning_EN: passing by or through -- moving along a path past or through something, without
+    necessarily ending up on "the other side" of it
   Govt: через + Зн.в. / повз + Зн.в.
   Walking_Pair: прохо́дити / пройти́
   Vehicle_Pair: проїжджа́ти / прої́хати
@@ -35,6 +36,11 @@ fields:
   Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 --
     a hatched square set above the path, with a plain arrow passing by/along beneath it without
     touching, matching the textbook''s icon exactly (replacing the previous solid red square
-    sitting on the arrow''s line). Reviewed and approved by Craig.'
+    sitting on the arrow''s line). Reviewed and approved by Craig. 2026-08-27: as part of
+    the до-/при- Meaning_EN pass, rewrote Meaning_EN to distinguish this from ua-visual-0008
+    (пере-, crossing) -- both can govern через, but про- is passing along/past/through without
+    the "other side" implication (this note''s own example, пройшов через парк, has no clear
+    far side), while пере- specifically ends on the opposite side of what''s crossed (перейшла
+    через вулицю -- crossed the street). My own draft, needs your review.'
 ---
 

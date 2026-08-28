@@ -16,7 +16,8 @@ tags:
 fields:
   NoteID: ua-visual-0006
   Prefix: до-
-  Meaning_EN: reaching (a destination point)
+  Meaning_EN: reaching the final destination -- the specific point being aimed for, not just
+    any stop along the way
   Govt: до + Р.в.
   Walking_Pair: дохо́дити / дійти́
   Vehicle_Pair: доїжджа́ти / дої́хати
@@ -32,11 +33,17 @@ fields:
     marker-end="url(#arrG)"/><line x1="125" y1="50" x2="145" y2="70" stroke="#586e75" stroke-width="3"/><line
     x1="145" y1="50" x2="125" y2="70" stroke="#586e75" stroke-width="3"/></svg>
   Tags_Ch: ch:2.9.4
-  Source_Note: до- — reach/get to destination
+  Source_Note: до- — reach/get to the final destination (endpoint of the journey)
   Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 --
     a dashed arrow reaching an X mark, no continuation past it. This replaces the previous
     solid-arrow-to-diamond design; the dashed line (vs. при-''s solid line to the same X mark)
     is the textbook''s own way of distinguishing до- (reach as far as, more effortful) from
-    при- (simple arrival). Reviewed and approved by Craig.'
+    при- (simple arrival). Reviewed and approved by Craig. 2026-08-27: per Craig, the diagram
+    alone wasn''t distinguishing enough from при- (ua-visual-0001) -- rewrote Meaning_EN to
+    state the actual motion contrast in words: до- focuses on reaching the specific final
+    destination, while при- is simple arrival at a place that isn''t necessarily the final
+    stop. Companion edit made to ua-visual-0001''s Meaning_EN for the при- side of the same
+    contrast. Craig''s own framing, not independently re-verified against Горох -- needs your
+    review like any other content change.'
 ---
 
