@@ -284,10 +284,26 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
   those 34 are a known, harmless inconsistency (no schema validator
   enforces an enum here) left as-is unless Craig asks for a cleanup pass.
 
+### Ch.1.6 (conversation; communication verbs) — commit `ac15cf9f`
+
+- Lexemes: **ua-lexeme-0929 – ua-lexeme-0938** (10 notes: 1 noun, 5
+  adverbs, 4 impf-headword verb-lexeme pairs)
+- Verbs: **ua-verb-0189 – ua-verb-0192** (зустрічатися, спілкуватися,
+  терпіти, могти)
+- All `status:draft`. Tag `ch:1.6`.
+- казати (ua-lexeme-0317, ch:2.9.6) retagged ch:1.6 (dedup bucket 3) --
+  already had Perfective сказати from the earlier aspect-pairing pass;
+  reused as важко's example ("важко сказати") rather than redrafted.
+- могти (modal) has no imperative forms per Горох's defective paradigm --
+  left blank rather than guessed.
+- Caught and fixed a copy-paste regression before validating: the 4 new
+  UA_Verb notes were briefly written with `Aspect: impf` instead of the
+  `imperfective`/`perfective` convention adopted starting ch.1.5.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0929**
-- Next `ua-verb-` ID: **0189**
+- Next `ua-lexeme-` ID: **0939**
+- Next `ua-verb-` ID: **0193**
 
 ## Environment notes for whoever continues this
 
