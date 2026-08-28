@@ -17,7 +17,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 1 Будні та свята | 1–2 | 1.1–1.7 | **done** (row was stale -- all of 1.1-1.7 completed earlier, see Ch.1.7 entry below; corrected 2026-08-28) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
-| 4 Люди та історії | 7–9 | 4.1–4.7 | in progress (4.1-4.3 done) |
+| 4 Люди та історії | 7–9 | 4.1–4.7 | in progress (4.1-4.4 done) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
@@ -452,6 +452,21 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
 - Flagged for Craig: літній професор uses літній="elderly" sense, homograph with
   літній="summery" (not yet drafted) -- flagged for future cluster.
 - **Largest sub-chapter to date (75 new/retagged notes total).**
+
+### Ch.4.4 (sports/competition, appearance, hosting verbs) -- commit `b8deb5f2`
+
+- Lexemes: **ua-lexeme-1447 - ua-lexeme-1464** (18 notes: 7 phrase notes, 3 standalone
+  nouns, 5 adjectives, 1 adverb, 2 lexeme-only verb entries for VP components).
+- Verbs: **ua-verb-0295 - ua-verb-0302** (бути, стати, працювати, захоплюватися,
+  цікавитися, займатися, попрощатися, годувати). All proper Pugh & Press class tags.
+- All `status:draft`. Tag `ch:2.4.4`.
+- бути drafted with modern zero-copula usage noted (Горох's є/єсть/єси present paradigm
+  is largely archaic/emphatic-only in contemporary speech).
+- стати's existing lexeme-only entry (ua-lexeme-1443, from ch.4.3) retagged ch:2.4.4
+  alongside the new full UA_Verb conjugation note, since стати now also appears as its
+  own bare-infinitive bullet here.
+- Per Craig: progress index is now updated after every sub-chapter (this entry and
+  onward), not batched across a whole chapter.
 
 ### Deadline update
 
