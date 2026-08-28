@@ -12,6 +12,7 @@ tags:
 - ch:2.3.3
 - pos:noun
 - status:draft
+- ch:2.12.3
 fields:
   NoteID: ua-lexeme-1197
   Lemma: переї́зд
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: переїзд
   UA_Example: Переїзд до екопоселення змінив їхнє життя.
   EN_Example: The move to the eco-village changed their life.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3,ch:2.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/переїзд
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: 'New. Masc., 2nd decl., hard group. Горох lists THREE headwords under

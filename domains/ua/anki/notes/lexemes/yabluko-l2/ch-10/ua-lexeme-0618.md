@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
+- ch:2.12.3
 fields:
   NoteID: ua-lexeme-0618
   Lemma: необхі́дність
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: необхідність
   UA_Example: Немає необхідності поспішати.
   EN_Example: There's no necessity to rush.
-  Tags_Ch: ch:2.10.1
+  Tags_Ch: ch:2.10.1,ch:2.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/необхідність
   Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
   Verification Notes: 'New. Fem., 3rd decl. Genitive has a doublet: необхі́дності / необхі́дности
