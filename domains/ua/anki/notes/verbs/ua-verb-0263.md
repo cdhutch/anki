@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.3.4
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0263
   Lemma: пасува́ти

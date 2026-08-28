@@ -35,7 +35,9 @@ fields:
   Participle_Impersonal_Past: перепро́шувано
   Participle_Adverbial_Past: перепро́шувавши
   Source_Note: ''
-  Verification Notes: Imperfective-only (no attested perfective for the 'excuse me' discourse-marker
-    sense). See ua-lexeme-0321.
+  Verification Notes: Correction 2026-08-28 -- earlier draft wrongly treated this as a single-aspect
+    verb. ua-lexeme-0321 was corrected 2026-07-28 to add Perfective перепроси́ти (Горох confirms
+    a matching перепросити1/перепрошувати1 pair for the apologize sense). This verb is genuinely
+    paired. No separate ua-verb/ua-lexeme note exists yet for перепросити itself. See ua-lexeme-0321.
 ---
 

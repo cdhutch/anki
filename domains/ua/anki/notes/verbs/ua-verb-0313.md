@@ -11,6 +11,7 @@ tags:
 - ch:2.4.6
 - ch:2.4
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0313
   Lemma: володі́ти

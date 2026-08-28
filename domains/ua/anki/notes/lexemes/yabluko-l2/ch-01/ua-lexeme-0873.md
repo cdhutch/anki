@@ -12,6 +12,7 @@ tags:
 - ch:2.1.3
 - pos:verb
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0873
   Lemma: намага́тися

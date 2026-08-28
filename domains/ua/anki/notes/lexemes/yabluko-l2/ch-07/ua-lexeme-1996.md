@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:verb
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-1996
   Lemma: сподіва́тися

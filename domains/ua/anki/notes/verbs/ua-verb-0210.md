@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.2.4
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0210
   Lemma: вимага́ти

@@ -11,6 +11,7 @@ tags:
 - ch:2.7.4
 - ch:2.7
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0520
   Lemma: вигляда́ти

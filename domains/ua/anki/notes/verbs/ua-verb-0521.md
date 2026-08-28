@@ -11,6 +11,7 @@ tags:
 - ch:2.7.3
 - ch:2.7
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0521
   Lemma: кошту́вати

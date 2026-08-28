@@ -12,6 +12,7 @@ tags:
 - ch:2.2.4
 - pos:verb
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-1049
   Lemma: вимага́ти

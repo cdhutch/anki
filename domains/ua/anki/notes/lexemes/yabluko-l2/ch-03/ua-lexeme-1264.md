@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:verb
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-1264
   Lemma: пасува́ти

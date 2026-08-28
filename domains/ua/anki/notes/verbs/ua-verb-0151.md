@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.1.3
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0151
   Lemma: вважа́ти

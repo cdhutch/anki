@@ -10,6 +10,7 @@ tags:
 - class:regular-1
 - ch:2.10.7
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0138
   Lemma: перебува́ти

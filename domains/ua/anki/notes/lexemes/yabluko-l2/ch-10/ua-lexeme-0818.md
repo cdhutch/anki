@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:verb
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0818
   Lemma: перебува́ти

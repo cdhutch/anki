@@ -10,6 +10,7 @@ tags:
 - class:conj1-vowel+й
 - ch:2.8.3
 - status:verified
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0076
   Lemma: стосува́тися
