@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7
+- ch:2.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: випадок
   UA_Example: У більшості випадків усе минається добре.
   EN_Example: In most cases everything turns out fine.
-  Tags_Ch: ch:1.7
+  Tags_Ch: ch:1.7, ch:2.6
   Source_URL: https://goroh.pp.ua/Словозміна/випадок
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).
