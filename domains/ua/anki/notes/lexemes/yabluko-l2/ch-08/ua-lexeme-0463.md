@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
+- ch:2.3.7
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: рух
   UA_Example: Рух у центрі міста був дуже інтенсивним.
   EN_Example: Traffic in the city center was very heavy.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:2.3.7
   Source_URL: https://goroh.pp.ua/Тлумачення/рух
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: 'Тлумачення sense 3 (фізичне переміщення внаслідок обертання/коливання/переміщення)
