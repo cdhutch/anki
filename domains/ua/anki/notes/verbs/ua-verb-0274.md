@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:conj1
+- class:conj1-нути
 - ch:2.4.2
 - ch:2.4
 - status:draft
@@ -15,7 +15,7 @@ fields:
   NoteID: ua-verb-0274
   Lemma: ви́никнути
   Aspect: perfective
-  VerbClass: regular-1
+  VerbClass: conj1-нути
   FreqSource: ch:2.4
   Pres_1sg: ви́никну
   Pres_2sg: ви́никнеш

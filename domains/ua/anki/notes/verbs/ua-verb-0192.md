@@ -7,14 +7,14 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:1
+- class:conj1-consonant+ти
 - ch:2.1.6
 - status:draft
 fields:
   NoteID: ua-verb-0192
   Lemma: могти́
   Aspect: imperfective
-  VerbClass: '1'
+  VerbClass: conj1-consonant+ти
   FreqSource: ch:2.1
   Pres_1sg: мо́жу
   Pres_2sg: мо́жеш

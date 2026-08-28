@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:conj1
+- class:conj1-vowel+й
 - ch:2.3.7
 - ch:2.3
 - status:draft
@@ -15,7 +15,7 @@ fields:
   NoteID: ua-verb-0271
   Lemma: стве́рджувати
   Aspect: imperfective
-  VerbClass: regular-1
+  VerbClass: conj1-vowel+й
   FreqSource: ch:2.3
   Pres_1sg: стве́рджую
   Pres_2sg: стве́рджуєш

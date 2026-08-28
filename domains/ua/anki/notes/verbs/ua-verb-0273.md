@@ -7,7 +7,7 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:conj2
+- class:conj2-ити
 - ch:2.3.7
 - ch:2.3
 - status:draft
@@ -15,7 +15,7 @@ fields:
   NoteID: ua-verb-0273
   Lemma: зра́дити
   Aspect: perfective
-  VerbClass: regular-2
+  VerbClass: conj2-ити
   FreqSource: ch:2.3
   Pres_1sg: зра́джу
   Pres_2sg: зра́диш
