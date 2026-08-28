@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
+- ch:3.3
 - pos:adverb
 - status:verified
 - cluster:intensifier-adverbs
@@ -43,7 +44,7 @@ fields:
   TypingAnswer: забагато
   UA_Example: Одній людині тут забагато роботи.
   EN_Example: There's too much work here for one person.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:3.3
   Source_URL: https://goroh.pp.ua/Тлумачення/забагато; https://goroh.pp.ua/Словозміна/забагато
   Source_Note: Горох-checked 2026-08-28 via WebFetch (not yet Claude-in-Chrome DOM extraction).
     забага́то, adverb / предикатив (predicative use), невідмінювана словникова одиниця (uninflected),
