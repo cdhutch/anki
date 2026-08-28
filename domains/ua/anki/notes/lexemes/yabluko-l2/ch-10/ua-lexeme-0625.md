@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
+- ch:2.10.6
 fields:
   NoteID: ua-lexeme-0625
   Lemma: рідина́
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: рідина
   UA_Example: У ручній поклажі рідину можна брати лише в малих ємностях.
   EN_Example: In hand luggage, liquid may only be carried in small containers.
-  Tags_Ch: ch:2.10.1
+  Tags_Ch: ch:2.10.1, ch:2.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/рідина
   Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
   Verification Notes: 'New. Fem., 1st decl., hard group. Mobile stress: рідина́ (nom.sg) but
