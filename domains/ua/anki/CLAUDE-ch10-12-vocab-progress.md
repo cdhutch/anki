@@ -1169,14 +1169,40 @@ evacuation/cleanup response, narrative & political-suppression terms)
   all committed.**
 - Next NoteIDs: ua-lexeme-2184, ua-verb-0587.
 
+## Chapter 12 (Не журись!)
+
+Confirmed via direct visual read of PDF pages 222-223 (Read tool, image mode) that
+chapter 12's vocabulary-bearing subchapters are **12.1, 12.3, 12.5, 12.6, 12.7 only**
+-- 12.2 and 12.4 do not appear in the compiled wordlist PDF (likely grammar-only
+subchapters with no new vocabulary bullets). Processing order: 12.1, 12.3, 12.5,
+12.6, 12.7.
+
+### Ch.12.1 (emotion verbs; impersonal-predicate feeling adverbs)
+
+- Lexemes: **ua-lexeme-2184 - ua-lexeme-2194** (11 notes): боятися/побоятися,
+  злитися/розізлитися, нудьгувати/занудьгувати (3 new verb pairs), весело, страшно,
+  сумно (impersonal-predicate adverbs, join нудно/цікаво), здивований, злий
+  (predicate adjectives).
+- Verbs: **ua-verb-0587 - ua-verb-0592** (6 notes, one per verb-pair member).
+- Govt-case correction: злитися/розізлитися -- yabluko-l2-verb-dictionary.pdf lists
+  "на + Р" (line 685), corrected to "на + Зн." (Accusative is the standard case for
+  "злитися на когось"; judged an OCR/transcription slip, same category of fix as
+  ch.11.1's задовольнити spelling correction).
+- Reused via retag: дивуватися (ua-lexeme-0667, ch.10.2), радіти (ua-lexeme-0671,
+  ch.10.2), сумувати (ua-lexeme-0960, ch.1.7), нудно (ua-lexeme-0450, ch.8.2), цікаво
+  (ua-lexeme-0103, ch.1.0).
+- All `status:draft`. Tag `ch:2.12.1`.
+- `pytest tests/ua/ -q`: 547 passed.
+- Next NoteIDs: ua-lexeme-2195, ua-verb-0593.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2184**
-- Next `ua-verb-` ID: **0587**
+- Next `ua-lexeme-` ID: **2195**
+- Next `ua-verb-` ID: **0593**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
