@@ -23,7 +23,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: relating to horseback riding; upper (adj.)
+  EN_Gloss: relating to horseback riding; equestrian
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
