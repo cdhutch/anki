@@ -12,6 +12,7 @@ tags:
 - ch:2.10.2
 - pos:verb
 - status:draft
+- ch:2.12.1
 fields:
   NoteID: ua-lexeme-0671
   Lemma: раді́ти
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: радіти / зрадіти
   UA_Example: Ми радіємо твоєму успіху.
   EN_Example: We're glad about your success.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2,ch:2.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/радіти; https://goroh.pp.ua/Словозміна/зрадіти
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

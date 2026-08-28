@@ -12,6 +12,7 @@ tags:
 - ch:2.1.7
 - pos:verb
 - status:draft
+- ch:2.12.1
 fields:
   NoteID: ua-lexeme-0960
   Lemma: сумува́ти
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сумувати / засумувати
   UA_Example: Вона сумує за домом, коли подорожує.
   EN_Example: She misses home when she travels.
-  Tags_Ch: ch:2.1.7
+  Tags_Ch: ch:2.1.7,ch:2.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/сумувати; https://goroh.pp.ua/Словозміна/засумувати
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

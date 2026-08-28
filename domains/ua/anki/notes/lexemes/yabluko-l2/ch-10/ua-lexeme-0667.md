@@ -12,6 +12,7 @@ tags:
 - ch:2.10.2
 - pos:verb
 - status:draft
+- ch:2.12.1
 fields:
   NoteID: ua-lexeme-0667
   Lemma: дивува́тися
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дивуватися / здивуватися
   UA_Example: Я дивуюся твоїй терпеливості.
   EN_Example: I'm amazed by your patience.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2,ch:2.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/дивуватися; https://goroh.pp.ua/Словозміна/здивуватися
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).
