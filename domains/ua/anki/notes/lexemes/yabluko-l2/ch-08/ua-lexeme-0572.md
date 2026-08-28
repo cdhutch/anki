@@ -23,7 +23,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: amazing, astonishing
+  EN_Gloss: marvelous, amazing, astonishing
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
