@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
+- ch:2.10.7
 fields:
   NoteID: ua-lexeme-0640
   Lemma: контро́ль
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: контроль
   UA_Example: Пройдіть, будь ласка, паспортний контроль.
   EN_Example: Please go through passport control.
-  Tags_Ch: ch:2.10.1
+  Tags_Ch: ch:2.10.1, ch:2.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/контроль
   Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
   Verification Notes: New. Masc., 2nd decl., soft group. Singular-only on Горох (all plural
