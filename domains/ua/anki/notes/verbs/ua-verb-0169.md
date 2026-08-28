@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.4
+- ch:2.1.4
 - status:draft
 fields:
   NoteID: ua-verb-0169
   Lemma: пекти́
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: печу́
   Pres_2sg: пече́ш
   Pres_3sg: пече́

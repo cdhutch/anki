@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:2.6
+- ch:2.2.6
 - status:draft
 fields:
   NoteID: ua-verb-0234
   Lemma: ра́дити
   Aspect: imperfective
   VerbClass: '2'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: ра́джу
   Pres_2sg: ра́диш
   Pres_3sg: ра́дить

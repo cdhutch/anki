@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.1
+- ch:2.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: новосілля
   UA_Example: Сусіди запросили нас на новосілля.
   EN_Example: The neighbors invited us to their housewarming.
-  Tags_Ch: ch:2.1
+  Tags_Ch: ch:2.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/новосілля
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Neut., 2nd decl., soft group. Горох also lists an unrelated village

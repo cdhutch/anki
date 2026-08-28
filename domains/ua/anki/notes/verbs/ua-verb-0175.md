@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0175
   Lemma: дарува́ти
   Aspect: biaspectual
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: дару́ю
   Pres_2sg: дару́єш
   Pres_3sg: дару́є

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.2
+- ch:2.2.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: ковбаска
   UA_Example: Ми смажили ковбаски на вогні.
   EN_Example: We grilled sausages over the fire.
-  Tags_Ch: ch:2.2
+  Tags_Ch: ch:2.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/ковбаска
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Fem., 1st decl., hard group (diminutive of ковбаса, "sausage" --

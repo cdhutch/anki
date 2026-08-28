@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.7
+- ch:2.1.7
 - status:draft
 fields:
   NoteID: ua-verb-0196
   Lemma: сумува́ти
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: суму́ю
   Pres_2sg: суму́єш
   Pres_3sg: суму́є

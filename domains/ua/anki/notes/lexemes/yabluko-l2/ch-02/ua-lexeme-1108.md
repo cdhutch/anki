@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.6
+- ch:2.2.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: злочин
   UA_Example: Поліція розслідує злочин.
   EN_Example: The police are investigating the crime.
-  Tags_Ch: ch:2.6
+  Tags_Ch: ch:2.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/злочин
   Source_Note: Горох-verified 2026-08-28, ch.2.6 sourcing pass (book genres/plots).
   Verification Notes: New. Masc., 2nd decl., hard group, "негативне" (negative-register) tag

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.7
+- ch:2.2.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: зігрівати / зігріти
   UA_Example: Сонце зігріває землю навесні.
   EN_Example: The sun warms the earth in spring.
-  Tags_Ch: ch:2.7
+  Tags_Ch: ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/зігрівати; https://goroh.pp.ua/Словозміна/зігріти
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

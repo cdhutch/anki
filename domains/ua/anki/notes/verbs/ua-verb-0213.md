@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.5
+- ch:2.2.5
 - status:draft
 fields:
   NoteID: ua-verb-0213
   Lemma: кла́нятися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: кла́няюся
   Pres_2sg: кла́няєшся
   Pres_3sg: кла́няється

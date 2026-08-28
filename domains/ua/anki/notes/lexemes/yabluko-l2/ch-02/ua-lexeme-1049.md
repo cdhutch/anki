@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.4
+- ch:2.2.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вимагати
   UA_Example: Начальник вимагає звіт до пʼятниці.
   EN_Example: The boss demands the report by Friday.
-  Tags_Ch: ch:2.4
+  Tags_Ch: ch:2.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/вимагати
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

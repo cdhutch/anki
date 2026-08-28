@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
+- ch:2.2.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: виготовляти / виготовити
   UA_Example: Майстер виготовляє прикраси власноруч.
   EN_Example: The craftsman makes decorations by hand.
-  Tags_Ch: ch:2.3
+  Tags_Ch: ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/виготовляти; https://goroh.pp.ua/Словозміна/виготовити
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

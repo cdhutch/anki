@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: соромно
   UA_Example: Мені соромно за таку поведінку.
   EN_Example: I'm ashamed of such behavior.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/соромно
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: 'New. Invariable predicative adverb (Горох: наднегативне, предикатив).'

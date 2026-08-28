@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.5
+- ch:2.1.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: святвечір
   UA_Example: На Святвечір готують дванадцять страв.
   EN_Example: On Christmas Eve, twelve dishes are prepared.
-  Tags_Ch: ch:1.5
+  Tags_Ch: ch:2.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/святвечір
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

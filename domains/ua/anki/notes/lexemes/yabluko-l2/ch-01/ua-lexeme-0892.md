@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.4
+- ch:2.1.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: пекти / спекти
   UA_Example: Мама пече пиріг на вихідні.
   EN_Example: Mom is baking a pie for the weekend.
-  Tags_Ch: ch:1.4
+  Tags_Ch: ch:2.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/пекти; https://goroh.pp.ua/Словозміна/спекти
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

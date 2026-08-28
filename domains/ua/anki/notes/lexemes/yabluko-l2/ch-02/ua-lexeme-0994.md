@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.2
+- ch:2.2.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: крем-брюле
   UA_Example: На десерт подали крем-брюле.
   EN_Example: For dessert they served crème brûlée.
-  Tags_Ch: ch:2.2
+  Tags_Ch: ch:2.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/крем-брюле
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Neut., indeclinable per Горох.

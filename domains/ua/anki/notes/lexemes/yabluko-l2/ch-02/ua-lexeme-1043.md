@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.4
+- ch:2.2.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: список
   UA_Example: Мама складає список покупок.
   EN_Example: Mom is making a shopping list.
-  Tags_Ch: ch:2.4
+  Tags_Ch: ch:2.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/список
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. Masc., 2nd decl., hard group. Example bundles склада́ти (ua-lexeme-1050,

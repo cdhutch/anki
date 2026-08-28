@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.6
+- ch:2.1.6
 - status:draft
 fields:
   NoteID: ua-verb-0190
   Lemma: спілкува́тися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: спілку́юся
   Pres_2sg: спілку́єшся
   Pres_3sg: спілку́ється

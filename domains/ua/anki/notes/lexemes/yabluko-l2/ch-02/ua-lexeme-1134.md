@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.7
+- ch:2.2.7
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: шановний
   UA_Example: Шановні гості, ласкаво просимо!
   EN_Example: Dear guests, welcome!
-  Tags_Ch: ch:2.7
+  Tags_Ch: ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/шановний
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

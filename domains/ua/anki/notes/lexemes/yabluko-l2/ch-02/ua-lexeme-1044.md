@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.4
+- ch:2.2.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вчорашній
   UA_Example: Це вчорашня газета.
   EN_Example: This is yesterday's newspaper.
-  Tags_Ch: ch:2.4
+  Tags_Ch: ch:2.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/вчорашній
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. Soft-group adjective (-ій pronominal-type declension).

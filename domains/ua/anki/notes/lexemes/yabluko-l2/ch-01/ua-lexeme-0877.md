@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.3
+- ch:2.1.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: створювати / створити
   UA_Example: Вона створює власний бізнес.
   EN_Example: She is creating her own business.
-  Tags_Ch: ch:1.3
+  Tags_Ch: ch:2.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/створювати; https://goroh.pp.ua/Словозміна/створити
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

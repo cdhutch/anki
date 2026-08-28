@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.5
+- ch:2.1.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: підтримувати / підтримати
   UA_Example: Родина завжди підтримує одне одного у важкі часи.
   EN_Example: The family always supports each other in hard times.
-  Tags_Ch: ch:1.5
+  Tags_Ch: ch:2.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/підтримувати; https://goroh.pp.ua/Словозміна/підтримати
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

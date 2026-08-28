@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
-- ch:2.5
+- ch:2.2.5
 - pos:adjective
 - status:verified
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: незручний
   UA_Example: Ліжко в номері було досить незручне.
   EN_Example: The bed in the room was rather uncomfortable.
-  Tags_Ch: ch:2.8.2, ch:2.5
+  Tags_Ch: ch:2.8.2, ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/незручний
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

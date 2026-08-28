@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.7
+- ch:2.1.7
 - status:draft
 fields:
   NoteID: ua-verb-0193
   Lemma: зупиня́ти
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: зупиня́ю
   Pres_2sg: зупиня́єш
   Pres_3sg: зупиня́є

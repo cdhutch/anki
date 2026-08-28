@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:irregular
-- ch:2.5
+- ch:2.2.5
 - status:draft
 fields:
   NoteID: ua-verb-0221
   Lemma: ї́сти
   Aspect: imperfective
   VerbClass: irregular
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: їм
   Pres_2sg: їси́ (alt. їсиш)
   Pres_3sg: їсть

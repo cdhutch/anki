@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.4
+- ch:2.1.4
 - status:draft
 fields:
   NoteID: ua-verb-0168
   Lemma: оці́нювати
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: оці́нюю
   Pres_2sg: оці́нюєш
   Pres_3sg: оці́нює

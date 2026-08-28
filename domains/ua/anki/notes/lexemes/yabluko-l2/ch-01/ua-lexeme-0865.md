@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.3
+- ch:2.1.3
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: упевнено
   UA_Example: Вона впевнено відповіла на всі питання.
   EN_Example: She confidently answered all the questions.
-  Tags_Ch: ch:1.3
+  Tags_Ch: ch:2.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/упевнено
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

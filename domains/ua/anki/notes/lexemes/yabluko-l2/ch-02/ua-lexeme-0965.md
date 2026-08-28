@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.1
+- ch:2.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: продуктовий магазин
   UA_Example: Я йду в продуктовий магазин за хлібом.
   EN_Example: I'm going to the grocery store for bread.
-  Tags_Ch: ch:2.1
+  Tags_Ch: ch:2.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/продуктовий магазин
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Compound noun phrase, masc. by магазин.

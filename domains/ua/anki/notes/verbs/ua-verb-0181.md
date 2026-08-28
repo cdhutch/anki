@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0181
   Lemma: сприйма́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: сприйма́ю
   Pres_2sg: сприйма́єш
   Pres_3sg: сприйма́є

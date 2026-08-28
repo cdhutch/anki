@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.7
+- ch:2.1.7
 - status:draft
 fields:
   NoteID: ua-verb-0197
   Lemma: трива́ти
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: ''
   Pres_2sg: ''
   Pres_3sg: трива́є

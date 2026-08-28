@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.4
+- ch:2.2.4
 - status:draft
 fields:
   NoteID: ua-verb-0210
   Lemma: вимага́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: вимага́ю
   Pres_2sg: вимага́єш
   Pres_3sg: вимага́є

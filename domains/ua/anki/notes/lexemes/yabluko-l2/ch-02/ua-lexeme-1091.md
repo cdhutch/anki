@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: роззуватися / роззутися
   UA_Example: У нас в гостях прийнято роззуватися при вході.
   EN_Example: At our place, it's customary to take off your shoes at the door.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/роззуватися; https://goroh.pp.ua/Словозміна/роззутися
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., reflexive, 1 conj. Regular 1st-conj. reflexive verb.

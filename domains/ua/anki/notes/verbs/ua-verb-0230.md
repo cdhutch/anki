@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.5
+- ch:2.2.5
 - status:draft
 fields:
   NoteID: ua-verb-0230
   Lemma: розставля́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: розставля́ю
   Pres_2sg: розставля́єш
   Pres_3sg: розставля́є

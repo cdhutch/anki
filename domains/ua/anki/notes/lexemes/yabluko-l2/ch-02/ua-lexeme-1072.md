@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: прийнято
   UA_Example: У нас не прийнято приходити в гості без подарунка.
   EN_Example: It's not customary here to visit without a gift.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/прийнято
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. This is the безособова форма (impersonal predicate form) of прийня́ти

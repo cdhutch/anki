@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.2
+- ch:2.2.2
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: одноразовий
   UA_Example: На пляжі ми використовуємо одноразовий посуд.
   EN_Example: At the beach we use disposable tableware.
-  Tags_Ch: ch:2.2
+  Tags_Ch: ch:2.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/одноразовий
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Hard-group adjective. Example bundles по́суд (ua-lexeme-0995, this

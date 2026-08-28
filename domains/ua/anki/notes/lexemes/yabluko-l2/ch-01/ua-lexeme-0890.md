@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.4
+- ch:2.1.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: носити / поносити
   UA_Example: Взимку я ношу теплу куртку.
   EN_Example: In winter I wear a warm jacket.
-  Tags_Ch: ch:1.4
+  Tags_Ch: ch:2.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/носити; https://goroh.pp.ua/Словозміна/поносити
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

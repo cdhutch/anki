@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: спина
   UA_Example: Він поплескав друга по спині.
   EN_Example: He patted his friend on the back.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/спина
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Fem., 1st decl., hard group. Example bundles плескати/поплескати

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.7
+- ch:2.1.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: більшість
   UA_Example: Більшість студентів здали іспит.
   EN_Example: Most of the students passed the exam.
-  Tags_Ch: ch:1.7
+  Tags_Ch: ch:2.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/більшість
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

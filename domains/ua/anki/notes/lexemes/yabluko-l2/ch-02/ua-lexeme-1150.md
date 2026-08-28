@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.7
+- ch:2.2.7
 - pos:proper-noun
 - pos:geography
 - status:draft
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: Тихий океан
   UA_Example: Тихий океан — найбільший океан у світі.
   EN_Example: The Pacific Ocean is the largest ocean in the world.
-  Tags_Ch: ch:2.7
+  Tags_Ch: ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/Тихий океан
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

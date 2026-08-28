@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.7
+- ch:2.2.7
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вхід за запрошеннями
   UA_Example: На виставку вхід за запрошеннями.
   EN_Example: Entry to the exhibition is by invitation only.
-  Tags_Ch: ch:2.7
+  Tags_Ch: ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/вхід за запрошеннями
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

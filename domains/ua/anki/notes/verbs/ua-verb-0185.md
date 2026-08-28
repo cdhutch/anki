@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0185
   Lemma: відзна́чи́ти
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: відзна́чу
   Pres_2sg: відзна́чиш
   Pres_3sg: відзна́чить

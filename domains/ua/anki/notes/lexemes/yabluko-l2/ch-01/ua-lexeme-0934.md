@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.6
+- ch:2.1.6
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: ясно
   UA_Example: Ясно, я зрозумів твою думку.
   EN_Example: Got it, I understood your point.
-  Tags_Ch: ch:1.6
+  Tags_Ch: ch:2.1.6
   Source_URL: https://goroh.pp.ua/Словозміна/ясно
   Source_Note: Горох-verified 2026-08-28, ch.1.6 sourcing pass (conversation; communication
     verbs).

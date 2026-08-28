@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.4
+- ch:2.1.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: заважати / завадити
   UA_Example: Не заважай мені, будь ласка, я працюю.
   EN_Example: Please don't bother me, I'm working.
-  Tags_Ch: ch:1.4
+  Tags_Ch: ch:2.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/заважати; https://goroh.pp.ua/Словозміна/завадити
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

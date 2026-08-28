@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.5
+- ch:2.1.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: сприймати / сприйняти
   UA_Example: Люди по-різному сприймають цю традицію.
   EN_Example: People perceive this tradition differently.
-  Tags_Ch: ch:1.5
+  Tags_Ch: ch:2.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/сприймати; https://goroh.pp.ua/Словозміна/сприйняти
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.6
+- ch:2.2.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: жах
   UA_Example: Цей фільм жахів наводить справжній жах.
   EN_Example: This horror film brings real terror.
-  Tags_Ch: ch:2.6
+  Tags_Ch: ch:2.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/жах
   Source_Note: Горох-verified 2026-08-28, ch.2.6 sourcing pass (book genres/plots).
   Verification Notes: New. Masc., 2nd decl., hard group. Example bundles роман (ua-lexeme-1103,

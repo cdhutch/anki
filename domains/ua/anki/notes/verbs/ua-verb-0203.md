@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.3
+- ch:2.2.3
 - status:draft
 fields:
   NoteID: ua-verb-0203
   Lemma: вʼяза́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: вʼяжу́
   Pres_2sg: вʼя́жеш
   Pres_3sg: вʼя́же

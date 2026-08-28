@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.6
+- ch:2.2.6
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: любовний
   UA_Example: Це класичний любовний роман.
   EN_Example: This is a classic romance novel.
-  Tags_Ch: ch:2.6
+  Tags_Ch: ch:2.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/любовний
   Source_Note: Горох-verified 2026-08-28, ch.2.6 sourcing pass (book genres/plots).
   Verification Notes: New. Hard-group adjective. Example bundles роман (ua-lexeme-1103, this

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
+- ch:2.2.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: майстер
   UA_Example: Цей стілець зробив справжній майстер.
   EN_Example: A true craftsman made this chair.
-  Tags_Ch: ch:2.3
+  Tags_Ch: ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/майстер
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. Masc., 2nd decl., hard group, istota.

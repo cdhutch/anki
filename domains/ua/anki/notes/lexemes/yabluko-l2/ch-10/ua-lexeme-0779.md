@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.6
-- ch:1.5
+- ch:2.1.5
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: нудити / знудити
   UA_Example: Мене нудить від цих ліків.
   EN_Example: This medicine makes me feel nauseous.
-  Tags_Ch: ch:2.10.6, ch:1.5
+  Tags_Ch: ch:2.10.6, ch:2.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/нудити; https://goroh.pp.ua/Словозміна/знудити
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

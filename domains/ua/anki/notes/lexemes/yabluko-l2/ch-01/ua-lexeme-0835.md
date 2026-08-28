@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.1
+- ch:2.1.1
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: займатися спортом
   UA_Example: Він щодня займається спортом після роботи.
   EN_Example: He does sports every day after work.
-  Tags_Ch: ch:1.1
+  Tags_Ch: ch:2.1.1
   Source_URL: https://goroh.pp.ua/Словозміна/займатися спортом
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

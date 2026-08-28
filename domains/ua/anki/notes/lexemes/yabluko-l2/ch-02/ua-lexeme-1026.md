@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
+- ch:2.2.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: шерстяний
   UA_Example: Узимку я ношу шерстяний светр.
   EN_Example: In winter I wear a woolen sweater.
-  Tags_Ch: ch:2.3
+  Tags_Ch: ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/шерстяний
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. Hard-group adjective.

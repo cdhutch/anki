@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.1
+- ch:2.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: роликові ковзани
   UA_Example: Влітку ми катаємося на роликових ковзанах у парку.
   EN_Example: In summer we go roller skating in the park.
-  Tags_Ch: ch:2.1
+  Tags_Ch: ch:2.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/роликові ковзани
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Compound noun phrase (adj+noun), used in the plural as a paired

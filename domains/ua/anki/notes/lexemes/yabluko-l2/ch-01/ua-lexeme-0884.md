@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.4
+- ch:2.1.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: настрій
   UA_Example: У мене сьогодні гарний настрій.
   EN_Example: I am in a good mood today.
-  Tags_Ch: ch:1.4
+  Tags_Ch: ch:2.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/настрій
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

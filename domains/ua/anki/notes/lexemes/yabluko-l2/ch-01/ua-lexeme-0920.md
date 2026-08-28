@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.5
+- ch:2.1.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: святкувати / відсвяткувати
   UA_Example: Ми святкуємо Різдво з родиною щороку.
   EN_Example: We celebrate Christmas with family every year.
-  Tags_Ch: ch:1.5
+  Tags_Ch: ch:2.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/святкувати; https://goroh.pp.ua/Словозміна/відсвяткувати
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

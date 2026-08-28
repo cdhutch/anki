@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.4
+- ch:2.1.4
 - status:draft
 fields:
   NoteID: ua-verb-0172
   Lemma: рі́зати
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: рі́жу
   Pres_2sg: рі́жеш
   Pres_3sg: рі́же

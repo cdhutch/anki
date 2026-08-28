@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
+- ch:2.2.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вирізати / вирізати
   UA_Example: Дитина вирізає сніжинку з паперу.
   EN_Example: The child is cutting a snowflake out of paper.
-  Tags_Ch: ch:2.3
+  Tags_Ch: ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/вирізати; https://goroh.pp.ua/Словозміна/вирізати
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb (imperfective);

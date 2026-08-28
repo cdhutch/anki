@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.3
+- ch:2.1.3
 - status:draft
 fields:
   NoteID: ua-verb-0164
   Lemma: залиша́тися
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: залиша́юся
   Pres_2sg: залиша́єшся
   Pres_3sg: залиша́ється

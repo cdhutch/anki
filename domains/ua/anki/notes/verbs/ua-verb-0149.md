@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.2
+- ch:2.1.2
 - status:draft
 fields:
   NoteID: ua-verb-0149
   Lemma: здава́тися
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: здаю́ся
   Pres_2sg: здає́шся
   Pres_3sg: здає́ться

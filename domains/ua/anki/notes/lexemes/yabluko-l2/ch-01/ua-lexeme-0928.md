@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.5
+- ch:2.1.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: змокнути
   UA_Example: Ми змокли до нитки під дощем.
   EN_Example: We got soaked to the bone in the rain.
-  Tags_Ch: ch:1.5
+  Tags_Ch: ch:2.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/змокнути
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

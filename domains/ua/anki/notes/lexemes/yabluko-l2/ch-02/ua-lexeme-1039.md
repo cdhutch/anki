@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.4
+- ch:2.2.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: несподіванка
   UA_Example: Це буде приємна несподіванка для тебе.
   EN_Example: This will be a pleasant surprise for you.
-  Tags_Ch: ch:2.4
+  Tags_Ch: ch:2.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/несподіванка
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. Fem., 1st decl., hard group.

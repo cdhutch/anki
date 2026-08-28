@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0177
   Lemma: очи́щувати
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: очи́щую
   Pres_2sg: очи́щуєш
   Pres_3sg: очи́щує

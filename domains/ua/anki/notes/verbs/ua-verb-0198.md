@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.1
+- ch:2.2.1
 - status:draft
 fields:
   NoteID: ua-verb-0198
   Lemma: отри́мувати
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: отри́мую
   Pres_2sg: отри́муєш
   Pres_3sg: отри́мує

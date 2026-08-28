@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.1
+- ch:2.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: магазин іграшок
   UA_Example: Діти люблять ходити в магазин іграшок.
   EN_Example: Children love going to the toy store.
-  Tags_Ch: ch:2.1
+  Tags_Ch: ch:2.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/магазин іграшок
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Compound noun phrase (магазин + gen. pl.), masc. і́грашка (fem.,

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.1
+- ch:2.1.1
 - status:draft
 fields:
   NoteID: ua-verb-0142
   Lemma: розважа́тися
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: розважа́юся
   Pres_2sg: розважа́єшся
   Pres_3sg: розважа́ється

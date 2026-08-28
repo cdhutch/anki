@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0183
   Lemma: стриба́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: стриба́ю
   Pres_2sg: стриба́єш
   Pres_3sg: стриба́є

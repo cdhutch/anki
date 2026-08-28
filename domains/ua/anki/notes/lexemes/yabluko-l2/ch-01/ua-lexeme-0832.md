@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.1
+- ch:2.1.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: розважатися / розважитися
   UA_Example: Діти люблять розважатися на дитячому майданчику.
   EN_Example: Children love having fun at the playground.
-  Tags_Ch: ch:1.1
+  Tags_Ch: ch:2.1.1
   Source_URL: https://goroh.pp.ua/Словозміна/розважатися; https://goroh.pp.ua/Словозміна/розважитися
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

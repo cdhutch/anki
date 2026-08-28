@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0188
   Lemma: змо́кнути
   Aspect: perfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: змо́кну
   Pres_2sg: змо́кнеш
   Pres_3sg: змо́кне

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.5
+- ch:2.2.5
 - status:draft
 fields:
   NoteID: ua-verb-0232
   Lemma: про́бувати
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: про́бую
   Pres_2sg: про́буєш
   Pres_3sg: про́бує

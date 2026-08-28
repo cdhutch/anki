@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.2
+- ch:2.2.2
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: смішний
   UA_Example: Він розповів смішну історію.
   EN_Example: He told a funny story.
-  Tags_Ch: ch:2.2
+  Tags_Ch: ch:2.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/смішний
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Hard-group adjective. Example bundles істо́рія (ua-lexeme-1002,

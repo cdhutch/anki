@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.7
+- ch:2.1.7
 - pos:pronoun
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: себе
   UA_Example: Він завжди говорить лише про себе.
   EN_Example: He always talks only about himself.
-  Tags_Ch: ch:1.7
+  Tags_Ch: ch:2.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/себе
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

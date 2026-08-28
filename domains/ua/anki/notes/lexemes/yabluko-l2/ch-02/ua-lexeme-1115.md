@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.6
+- ch:2.2.6
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: страшний
   UA_Example: Це дуже страшний фільм.
   EN_Example: This is a very scary movie.
-  Tags_Ch: ch:2.6
+  Tags_Ch: ch:2.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/страшний
   Source_Note: Горох-verified 2026-08-28, ch.2.6 sourcing pass (book genres/plots).
   Verification Notes: New. Hard-group adjective, "наднегативне" (super-negative-register)

@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
-- ch:2.5
+- ch:2.2.3
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: махати / махнути
   UA_Example: Гуска махає крилами.
   EN_Example: The goose flaps its wings.
-  Tags_Ch: ch:2.3, ch:2.5
+  Tags_Ch: ch:2.2.3, ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/махати; https://goroh.pp.ua/Словозміна/махнути
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

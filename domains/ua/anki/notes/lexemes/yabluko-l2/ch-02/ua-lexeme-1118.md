@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.7
+- ch:2.2.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: запрошення
   UA_Example: Ми отримали запрошення на виставку.
   EN_Example: We received an invitation to the exhibition.
-  Tags_Ch: ch:2.7
+  Tags_Ch: ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/запрошення
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

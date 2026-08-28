@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
-- ch:1.5
+- ch:2.1.5
 - pos:noun
 - gender:f
 - status:verified
@@ -39,7 +39,7 @@ fields:
   TypingAnswer: участь
   UA_Example: Шестеро гравців беруть участь у змаганні, а четверо -- запасні.
   EN_Example: Six players take part in the competition, and four are substitutes.
-  Tags_Ch: ch:2.9.3, ch:1.5
+  Tags_Ch: ch:2.9.3, ch:2.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/участь
   Source_Note: Drafted 2026-07-27 -- see ua-lexeme-0376's Source_Note for the fuller context.
   Verification Notes: '2026-07-27: Горох-verified via Chrome -- у́часть confirmed exactly

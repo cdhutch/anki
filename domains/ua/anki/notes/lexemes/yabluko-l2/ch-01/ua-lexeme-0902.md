@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.5
-- ch:1.7
+- ch:2.1.5
+- ch:2.1.7
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: почуття
   UA_Example: У нього чудове почуття гумору.
   EN_Example: He has a great sense of humor.
-  Tags_Ch: ch:1.5, ch:1.7
+  Tags_Ch: ch:2.1.5, ch:2.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/почуття
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

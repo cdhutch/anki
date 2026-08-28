@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.3
+- ch:2.1.3
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: потроху
   UA_Example: Потроху я звикаю до нового міста.
   EN_Example: Little by little I am getting used to the new city.
-  Tags_Ch: ch:1.3
+  Tags_Ch: ch:2.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/потроху
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

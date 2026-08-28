@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.4
+- ch:2.1.4
 - status:draft
 fields:
   NoteID: ua-verb-0166
   Lemma: заважа́ти
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: заважа́ю
   Pres_2sg: заважа́єш
   Pres_3sg: заважа́є

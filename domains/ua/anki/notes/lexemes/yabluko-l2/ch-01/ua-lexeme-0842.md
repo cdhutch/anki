@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.2
+- ch:2.1.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: відкривати / відкрити
   UA_Example: Не забудь відкривати вікно вранці.
   EN_Example: Don't forget to open the window in the morning.
-  Tags_Ch: ch:1.2
+  Tags_Ch: ch:2.1.2
   Source_URL: https://goroh.pp.ua/Словозміна/відкривати; https://goroh.pp.ua/Словозміна/відкрити
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0145. Perfective

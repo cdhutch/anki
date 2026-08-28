@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.3
+- ch:2.1.3
 - status:draft
 fields:
   NoteID: ua-verb-0155
   Lemma: знайо́митися
   Aspect: impf
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: знайо́млюся
   Pres_2sg: знайо́мишся
   Pres_3sg: знайо́миться

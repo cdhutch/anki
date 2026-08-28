@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: поводитися / повестися
   UA_Example: Діти добре поводяться на вечірці.
   EN_Example: The children are behaving well at the party.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/поводитися; https://goroh.pp.ua/Словозміна/повестися
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., reflexive, 2 conj. Regular 2nd-conj. reflexive verb,

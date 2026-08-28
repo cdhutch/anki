@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
+- ch:2.2.3
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: здавна
   UA_Example: Здавна тут виготовляли гончарний посуд.
   EN_Example: Since ancient times, pottery has been made here.
-  Tags_Ch: ch:2.3
+  Tags_Ch: ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/здавна
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. Adverb, indeclinable. Example bundles виготовля́ти (ua-lexeme-1030,

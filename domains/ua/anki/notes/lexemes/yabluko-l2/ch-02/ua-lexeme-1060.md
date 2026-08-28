@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:noun
 - status:draft
 fields:
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: голова
   UA_Example: Вона кивнула головою на знак згоди.
   EN_Example: She nodded her head in agreement.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/голова
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Fem., 1st decl., hard group. Example bundles кивати/кивнути (ua-lexeme-1074/ua-verb-0212,

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.4
+- ch:2.2.4
 - status:draft
 fields:
   NoteID: ua-verb-0211
   Lemma: склада́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: склада́ю
   Pres_2sg: склада́єш
   Pres_3sg: склада́є

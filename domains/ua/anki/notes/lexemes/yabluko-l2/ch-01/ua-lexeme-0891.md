@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.4
+- ch:2.1.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: оцінювати / оцінити
   UA_Example: Вчителька оцінює наші твори.
   EN_Example: The teacher is evaluating our essays.
-  Tags_Ch: ch:1.4
+  Tags_Ch: ch:2.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/оцінювати; https://goroh.pp.ua/Словозміна/оцінити
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

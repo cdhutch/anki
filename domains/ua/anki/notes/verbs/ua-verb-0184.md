@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0184
   Lemma: відмовля́тися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: відмовля́юся
   Pres_2sg: відмовля́єшся
   Pres_3sg: відмовля́ється

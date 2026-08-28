@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
-- ch:2.6
+- ch:2.2.5
+- ch:2.2.6
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: запаковувати / запакувати
   UA_Example: Мама запаковує подарунки в кольоровий папір.
   EN_Example: Mom wraps the presents in colored paper.
-  Tags_Ch: ch:2.5, ch:2.6
+  Tags_Ch: ch:2.2.5, ch:2.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/запаковувати; https://goroh.pp.ua/Словозміна/запакувати
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вітатися / привітатися
   UA_Example: Гості вітаються з господарями біля дверей.
   EN_Example: The guests greet the hosts at the door.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/вітатися; https://goroh.pp.ua/Словозміна/привітатися
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., reflexive, 1 conj. Regular 1st-conj. reflexive verb,

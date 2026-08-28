@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.2
+- ch:2.1.2
 - status:draft
 fields:
   NoteID: ua-verb-0146
   Lemma: впізнава́ти
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: впізнаю́
   Pres_2sg: впізнає́ш
   Pres_3sg: впізнає́

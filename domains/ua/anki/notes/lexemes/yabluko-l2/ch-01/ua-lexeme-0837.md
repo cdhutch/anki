@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.1
+- ch:2.1.1
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: сидіти в інтернеті
   UA_Example: Він забагато сидить в інтернеті.
   EN_Example: He spends too much time online.
-  Tags_Ch: ch:1.1
+  Tags_Ch: ch:2.1.1
   Source_URL: https://goroh.pp.ua/Словозміна/сидіти в інтернеті
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

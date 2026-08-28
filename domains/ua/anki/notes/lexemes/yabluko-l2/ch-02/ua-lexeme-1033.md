@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
+- ch:2.2.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: ліпити / зліпити
   UA_Example: Діти люблять ліпити фігурки з глини.
   EN_Example: Children love molding figures out of clay.
-  Tags_Ch: ch:2.3
+  Tags_Ch: ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/ліпити; https://goroh.pp.ua/Словозміна/зліпити
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. imperfective., non-reflexive, 2 conj. Irregular 2nd-conj. verb

@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.5
+- ch:2.2.5
 - status:draft
 fields:
   NoteID: ua-verb-0229
   Lemma: роззува́тися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: роззу́ваюся
   Pres_2sg: роззу́ваєшся
   Pres_3sg: роззу́вається

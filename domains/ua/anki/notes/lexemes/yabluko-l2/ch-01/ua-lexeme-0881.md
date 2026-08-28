@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.3
+- ch:2.1.3
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: сидіти годинами за компʼютером
   UA_Example: Він любить сидіти годинами за компʼютером.
   EN_Example: He likes to sit at the computer for hours.
-  Tags_Ch: ch:1.3
+  Tags_Ch: ch:2.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/сидіти годинами за компʼютером
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

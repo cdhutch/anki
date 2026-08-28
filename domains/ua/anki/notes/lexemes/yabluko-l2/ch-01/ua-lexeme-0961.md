@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.7
+- ch:2.1.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: тривати / протривати
   UA_Example: Урок триває сорок пʼять хвилин.
   EN_Example: The lesson lasts forty-five minutes.
-  Tags_Ch: ch:1.7
+  Tags_Ch: ch:2.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/тривати; https://goroh.pp.ua/Словозміна/протривати
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

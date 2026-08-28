@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.4
-- ch:1.7
+- ch:2.1.4
+- ch:2.1.7
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: сон
   UA_Example: Дитині потрібно багато сну.
   EN_Example: The child needs a lot of sleep.
-  Tags_Ch: ch:1.4, ch:1.7
+  Tags_Ch: ch:2.1.4, ch:2.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/сон
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

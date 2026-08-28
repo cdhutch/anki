@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.6
+- ch:2.1.6
 - status:draft
 fields:
   NoteID: ua-verb-0191
   Lemma: терпі́ти
   Aspect: imperfective
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: терплю́
   Pres_2sg: те́рпиш
   Pres_3sg: те́рпить

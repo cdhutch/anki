@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.6
+- ch:2.1.6
 - status:draft
 fields:
   NoteID: ua-verb-0189
   Lemma: зустріча́тися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: зустріча́юся
   Pres_2sg: зустріча́єшся
   Pres_3sg: зустріча́ється

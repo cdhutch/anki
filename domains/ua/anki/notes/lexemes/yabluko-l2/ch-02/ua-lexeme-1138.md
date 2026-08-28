@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.7
+- ch:2.2.7
 - pos:preposition
 - status:draft
 fields:
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: протягом
   UA_Example: Виставка триватиме протягом місяця.
   EN_Example: The exhibition will run for a month.
-  Tags_Ch: ch:2.7
+  Tags_Ch: ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/протягом
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

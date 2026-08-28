@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.4
+- ch:2.1.4
 - status:draft
 fields:
   NoteID: ua-verb-0167
   Lemma: носи́ти
   Aspect: impf
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: ношу́
   Pres_2sg: но́сиш
   Pres_3sg: но́сить

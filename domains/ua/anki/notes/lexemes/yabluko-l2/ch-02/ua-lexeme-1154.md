@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.7
+- ch:2.2.7
 - pos:phrase
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: Радий/-а Вас повідомити...
   UA_Example: Радий Вас повідомити, що виставку продовжено.
   EN_Example: I am glad to inform you that the exhibition has been extended.
-  Tags_Ch: ch:2.7
+  Tags_Ch: ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/Радий/-а Вас повідомити...
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

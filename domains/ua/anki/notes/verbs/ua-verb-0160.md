@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.3
+- ch:2.1.3
 - status:draft
 fields:
   NoteID: ua-verb-0160
   Lemma: сні́дати
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: сні́даю
   Pres_2sg: сні́даєш
   Pres_3sg: сні́дає

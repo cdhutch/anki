@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.6
+- ch:2.1.6
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: однаково
   UA_Example: Мені однаково, який фільм дивитися.
   EN_Example: It's all the same to me which movie to watch.
-  Tags_Ch: ch:1.6
+  Tags_Ch: ch:2.1.6
   Source_URL: https://goroh.pp.ua/Словозміна/однаково
   Source_Note: Горох-verified 2026-08-28, ch.1.6 sourcing pass (conversation; communication
     verbs).

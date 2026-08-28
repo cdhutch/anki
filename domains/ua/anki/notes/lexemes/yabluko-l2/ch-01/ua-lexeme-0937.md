@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.6
+- ch:2.1.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: терпіти / стерпіти
   UA_Example: Я терпіти не можу, коли спізнюються.
   EN_Example: I can't stand it when people are late.
-  Tags_Ch: ch:1.6
+  Tags_Ch: ch:2.1.6
   Source_URL: https://goroh.pp.ua/Словозміна/терпіти; https://goroh.pp.ua/Словозміна/стерпіти
   Source_Note: Горох-verified 2026-08-28, ch.1.6 sourcing pass (conversation; communication
     verbs).

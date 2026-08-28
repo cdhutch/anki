@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.4
+- ch:2.2.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: рибка
   UA_Example: У нас вдома акваріум із золотою рибкою.
   EN_Example: We have an aquarium with a goldfish at home.
-  Tags_Ch: ch:2.4
+  Tags_Ch: ch:2.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/рибка
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. Fem., 1st decl., hard group, istota (diminutive of риба, "fish"

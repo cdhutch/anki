@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.1
+- ch:2.1.1
 - pos:numeral
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: обидва, обидві, обоє
   UA_Example: Обидва брати живуть у Львові.
   EN_Example: Both brothers live in Lviv.
-  Tags_Ch: ch:1.1
+  Tags_Ch: ch:2.1.1
   Source_URL: https://goroh.pp.ua/Словозміна/обидва, обидві, обоє
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

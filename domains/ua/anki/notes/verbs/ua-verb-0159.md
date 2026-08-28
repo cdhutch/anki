@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.3
+- ch:2.1.3
 - status:draft
 fields:
   NoteID: ua-verb-0159
   Lemma: склада́тися
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: ''
   Pres_2sg: ''
   Pres_3sg: склада́ється

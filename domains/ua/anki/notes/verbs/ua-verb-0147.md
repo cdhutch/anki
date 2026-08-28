@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.2
+- ch:2.1.2
 - status:draft
 fields:
   NoteID: ua-verb-0147
   Lemma: додава́ти
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: додаю́
   Pres_2sg: додає́ш
   Pres_3sg: додає́

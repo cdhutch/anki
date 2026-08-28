@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.1
+- ch:2.1.1
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: ходити в гості
   UA_Example: Ми любимо ходити в гості до бабусі.
   EN_Example: We like to go visit grandma.
-  Tags_Ch: ch:1.1
+  Tags_Ch: ch:2.1.1
   Source_URL: https://goroh.pp.ua/Словозміна/ходити в гості
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

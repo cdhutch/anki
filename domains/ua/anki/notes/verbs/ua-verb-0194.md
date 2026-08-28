@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.7
+- ch:2.1.7
 - status:draft
 fields:
   NoteID: ua-verb-0194
   Lemma: розка́зувати
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: розка́зую
   Pres_2sg: розка́зуєш
   Pres_3sg: розка́зує

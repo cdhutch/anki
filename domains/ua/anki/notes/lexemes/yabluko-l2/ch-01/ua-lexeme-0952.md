@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.7
+- ch:2.1.7
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: зазвичай
   UA_Example: Зазвичай я встаю о сьомій.
   EN_Example: I usually get up at seven.
-  Tags_Ch: ch:1.7
+  Tags_Ch: ch:2.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/зазвичай
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

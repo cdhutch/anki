@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.3
+- ch:2.2.3
 - status:draft
 fields:
   NoteID: ua-verb-0201
   Lemma: виготовля́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: виготовля́ю
   Pres_2sg: виготовля́єш
   Pres_3sg: виготовля́є

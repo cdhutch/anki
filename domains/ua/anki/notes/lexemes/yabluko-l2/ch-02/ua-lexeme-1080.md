@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: цілуватися / поцілуватися
   UA_Example: Гості цілуються в щоку на знак вітання.
   EN_Example: The guests kiss each other on the cheek as a greeting.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/цілуватися; https://goroh.pp.ua/Словозміна/поцілуватися
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., reflexive, 1 conj. Regular 1st-conj. reflexive (reciprocal)

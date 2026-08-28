@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.4
+- ch:2.1.4
 - status:draft
 fields:
   NoteID: ua-verb-0171
   Lemma: плати́ти
   Aspect: impf
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: плачу́
   Pres_2sg: пла́тиш
   Pres_3sg: пла́тить

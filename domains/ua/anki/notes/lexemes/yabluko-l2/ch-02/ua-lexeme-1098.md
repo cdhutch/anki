@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:phrase
 - pos:interjection
 - status:draft
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: Будьмо!
   UA_Example: 'Підняли келихи й крикнули: "Будьмо!"'
   EN_Example: They raised their glasses and shouted "Cheers!"
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/Будьмо!
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Frozen first-person-plural imperative-type form of бути ("to be"),

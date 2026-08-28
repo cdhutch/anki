@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: стукатися / постукатися
   UA_Example: Гості стукаються келихами й вигукують "Будьмо!"
   EN_Example: The guests clink glasses and shout "Cheers!"
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/стукатися; https://goroh.pp.ua/Словозміна/постукатися
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., reflexive, 1 conj. Regular 1st-conj. reflexive verb.

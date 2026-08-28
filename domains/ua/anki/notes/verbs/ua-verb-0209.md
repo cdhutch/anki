@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.4
+- ch:2.2.4
 - status:draft
 fields:
   NoteID: ua-verb-0209
   Lemma: виганя́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: виганя́ю
   Pres_2sg: виганя́єш
   Pres_3sg: виганя́є

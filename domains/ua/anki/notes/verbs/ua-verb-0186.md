@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0186
   Lemma: скушту́вати
   Aspect: perfective
   VerbClass: '1'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: скушту́ю
   Pres_2sg: скушту́єш
   Pres_3sg: скушту́є

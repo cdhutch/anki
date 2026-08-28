@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.7
+- ch:2.1.7
 - status:draft
 fields:
   NoteID: ua-verb-0195
   Lemma: сни́тися
   Aspect: impf
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: сню́ся
   Pres_2sg: сни́шся
   Pres_3sg: сни́ться

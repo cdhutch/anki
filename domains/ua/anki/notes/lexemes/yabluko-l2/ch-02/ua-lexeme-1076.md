@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: обійматися / обійнятися
   UA_Example: Друзі радо обіймаються при зустрічі.
   EN_Example: Friends happily hug each other when they meet.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/обійматися; https://goroh.pp.ua/Словозміна/обійнятися
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., reflexive, 1 conj. Regular 1st-conj. reflexive (reciprocal)

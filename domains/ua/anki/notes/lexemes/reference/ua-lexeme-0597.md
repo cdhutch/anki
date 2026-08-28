@@ -13,7 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:draft
-- ch:2.3
+- ch:2.2.3
 fields:
   NoteID: ua-lexeme-0597
   Lemma: маля́рство
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: малярство
   UA_Example: Він вивчає малярство в художній школі вже три роки.
   EN_Example: He has been studying painting at art school for three years.
-  Tags_Ch: ch:reference, ch:2.3
+  Tags_Ch: ch:reference, ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/малярство; https://goroh.pp.ua/Тлумачення/малярство
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- companion to ua-lexeme-0042
     (малюнок), added to complete the drawing-nouns near-synonym cluster. No Яблуко textbook

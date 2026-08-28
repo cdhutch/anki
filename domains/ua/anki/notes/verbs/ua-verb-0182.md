@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0182
   Lemma: ста́витися
   Aspect: imperfective
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: ста́влюся
   Pres_2sg: ста́вишся
   Pres_3sg: ста́виться

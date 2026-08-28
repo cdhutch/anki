@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:2.2
+- ch:2.2.2
 - status:draft
 fields:
   NoteID: ua-verb-0199
   Lemma: сма́жити
   Aspect: imperfective
   VerbClass: '2'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: сма́жу
   Pres_2sg: сма́жиш
   Pres_3sg: сма́жить

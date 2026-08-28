@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.5
+- ch:2.1.5
 - status:draft
 fields:
   NoteID: ua-verb-0187
   Lemma: надури́ти
   Aspect: perfective
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: надурю́
   Pres_2sg: наду́риш
   Pres_3sg: наду́рить

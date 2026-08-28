@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.4
+- ch:2.1.4
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: платити / заплатити
   UA_Example: Я плачу за квиток карткою.
   EN_Example: I pay for the ticket with a card.
-  Tags_Ch: ch:1.4
+  Tags_Ch: ch:2.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/платити; https://goroh.pp.ua/Словозміна/заплатити
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

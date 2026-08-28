@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.5
+- ch:2.2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: подавати / подати
   UA_Example: Він подає їй руку, допомагаючи вийти з машини.
   EN_Example: He offers her his hand, helping her out of the car.
-  Tags_Ch: ch:2.5
+  Tags_Ch: ch:2.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/подавати; https://goroh.pp.ua/Словозміна/подати
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb (передавати

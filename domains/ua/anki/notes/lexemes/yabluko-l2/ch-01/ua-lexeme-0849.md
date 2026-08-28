@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.2
+- ch:2.1.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: здаватися
   UA_Example: Здається, буде дощ.
   EN_Example: It seems it will rain.
-  Tags_Ch: ch:1.2
+  Tags_Ch: ch:2.1.2
   Source_URL: https://goroh.pp.ua/Словозміна/здаватися
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: 'New. Impf., reflexive, 1st conj. This is the "уявлятися" (to seem/appear)

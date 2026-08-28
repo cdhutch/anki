@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.3
+- ch:2.2.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: шити / пошити
   UA_Example: Мама шиє сукню для доньки.
   EN_Example: Mom is sewing a dress for her daughter.
-  Tags_Ch: ch:2.3
+  Tags_Ch: ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/шити; https://goroh.pp.ua/Словозміна/пошити
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Irregular 1st-conj. verb

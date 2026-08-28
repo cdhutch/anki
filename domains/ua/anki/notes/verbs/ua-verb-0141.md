@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:1.1
+- ch:2.1.1
 - status:draft
 fields:
   NoteID: ua-verb-0141
   Lemma: нена́видіти
   Aspect: impf
   VerbClass: '2'
-  FreqSource: ch:1
+  FreqSource: ch:2.1
   Pres_1sg: нена́виджу
   Pres_2sg: нена́видиш
   Pres_3sg: нена́видить

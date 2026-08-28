@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.2
+- ch:2.1.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: впізнавати / впізнати
   UA_Example: Я завжди впізнаю твій голос по телефону.
   EN_Example: I always recognize your voice on the phone.
-  Tags_Ch: ch:1.2
+  Tags_Ch: ch:2.1.2
   Source_URL: https://goroh.pp.ua/Словозміна/впізнавати; https://goroh.pp.ua/Словозміна/впізнати
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0146. Perfective

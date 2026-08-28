@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:1
-- ch:2.7
+- ch:2.2.7
 - status:draft
 fields:
   NoteID: ua-verb-0239
   Lemma: зверта́тися
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: зверта́юся
   Pres_2sg: зверта́єшся
   Pres_3sg: зверта́ється

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.3
+- ch:2.1.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: триматися / протриматися
   UA_Example: Компанія тримається на вершині ринку вже пʼять років.
   EN_Example: The company has stayed at the top of the market for five years already.
-  Tags_Ch: ch:1.3
+  Tags_Ch: ch:2.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/триматися; https://goroh.pp.ua/Словозміна/протриматися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

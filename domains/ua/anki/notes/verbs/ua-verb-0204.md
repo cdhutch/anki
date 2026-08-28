@@ -8,14 +8,14 @@ anki:
 tags:
 - domain:ua
 - class:2
-- ch:2.3
+- ch:2.2.3
 - status:draft
 fields:
   NoteID: ua-verb-0204
   Lemma: ліпи́ти
   Aspect: imperfective
   VerbClass: '2'
-  FreqSource: ch:2
+  FreqSource: ch:2.2
   Pres_1sg: ліплю́
   Pres_2sg: лі́пиш
   Pres_3sg: лі́пить

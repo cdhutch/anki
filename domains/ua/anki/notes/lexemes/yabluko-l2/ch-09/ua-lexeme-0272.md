@@ -10,7 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
-- ch:1.7
+- ch:2.1.7
 - pos:noun
 - gender:f
 - status:verified
@@ -39,7 +39,7 @@ fields:
   TypingAnswer: пригода
   UA_Example: Гонка була справжньою пригодою для всіх учасників.
   EN_Example: The race was a real adventure for all the participants.
-  Tags_Ch: ch:2.9.5, ch:1.7
+  Tags_Ch: ch:2.9.5, ch:2.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/пригода
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: 'Filtered out a proper-noun (surname) homograph. 2026-07-30 Craig: will
