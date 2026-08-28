@@ -1,7 +1,7 @@
 ---
 schema: cnsf/v0
 note_type: ua_lexeme
-note_id: ua-lexeme-0616
+note_id: ua-lexeme-1250
 anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
@@ -9,13 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.10.1
 - ch:3.4
 - pos:noun
 - status:draft
 fields:
-  NoteID: ua-lexeme-0616
-  Lemma: до́звіл
+  NoteID: ua-lexeme-1250
+  Lemma: ти́ждень
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
@@ -25,7 +24,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: permission, permit
+  EN_Gloss: week
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
@@ -33,12 +32,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: дозвіл
-  UA_Example: Вам потрібен дозвіл на виліт.
-  EN_Example: You need permission to depart.
-  Tags_Ch: ch:2.10.1, ch:3.4
-  Source_URL: https://goroh.pp.ua/Словозміна/дозвіл
-  Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
-  Verification Notes: New. Masc., 2nd decl., hard group. No homograph/dedup hits in the corpus.
+  TypingAnswer: тиждень
+  UA_Example: Ремонт фасаду тривав цілий тиждень.
+  EN_Example: Repairing the facade took a whole week.
+  Tags_Ch: ch:3.4
+  Source_URL: https://goroh.pp.ua/Словозміна/тиждень
+  Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
+    architecture, public opinion).
+  Verification Notes: New. Masc., 2nd decl., soft group.
 ---
 

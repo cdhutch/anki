@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.3
+- ch:3.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: відчувати / відчути
   UA_Example: Я відчуваю, що щось не так.
   EN_Example: I feel that something is wrong.
-  Tags_Ch: ch:1.3
+  Tags_Ch: ch:1.3, ch:3.4
   Source_URL: https://goroh.pp.ua/Словозміна/відчувати; https://goroh.pp.ua/Словозміна/відчути
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

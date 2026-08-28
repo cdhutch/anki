@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:3.4
 - pos:adverb
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: приблизно
   UA_Example: Вони прибули приблизно після півночі.
   EN_Example: They arrived sometime after midnight.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:3.4
   Source_URL: https://goroh.pp.ua/Словозміна/приблизно
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: ''

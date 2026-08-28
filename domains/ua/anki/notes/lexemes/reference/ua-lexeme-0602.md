@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - status:draft
 - ch:2.3
+- ch:3.4
 fields:
   NoteID: ua-lexeme-0602
   Lemma: розпи́сувати
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: розписувати / розписати
   UA_Example: Майстри розписали стелю візерунками вручну.
   EN_Example: The craftsmen hand-painted the ceiling with ornamental patterns.
-  Tags_Ch: ch:reference, ch:2.3
+  Tags_Ch: ch:reference, ch:2.3, ch:3.4
   Source_URL: https://goroh.pp.ua/Словозміна/розписувати; https://goroh.pp.ua/Словозміна/розписати;
     https://goroh.pp.ua/Тлумачення/розписувати
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- companion to ua-lexeme-0601
