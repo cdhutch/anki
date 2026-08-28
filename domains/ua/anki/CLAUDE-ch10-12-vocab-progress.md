@@ -20,7 +20,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
-| 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
+| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1 done) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
@@ -770,14 +770,46 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
 - **Chapter 6 (Що сталося?) is now fully complete, sub-chapters 6.1-6.7.**
 - Next NoteIDs: ua-lexeme-1868, ua-verb-0464.
 
+### Ch.7.1 (devices/tech vocabulary) -- start of chapter 7
+
+- **Workflow note**: `device_stage_files` hit a stale-session auth error this pass (session
+  needs re-login on the linked computer); switched to `pdftotext -layout` run directly via
+  `device_bash` on the source PDF instead of staging it for image-based `Read`. This works well
+  for this text-layer PDF and avoids staging entirely -- use it for the remaining chapters
+  (7.2-7.7, 11, 12) too, retrying `device_stage_files` only if image-level inspection is ever
+  needed.
+- Lexemes: **ua-lexeme-1868 - ua-lexeme-1905** (38 notes: 16 nouns, 5 adverbs/discourse
+  markers, 17 verb-pair lexemes/upgrades).
+- Verbs: **ua-verb-0464 - ua-verb-0482** (19 notes covering 9 aspect pairs/upgrades:
+  використовувати/використати, встановлювати/встановити, доводитися/довестися,
+  дряпати/подряпати, заряджати/зарядити, з'являтися/з'явитися, користуватися/покористуватися,
+  поповнювати/поповнити, розбити (partner of existing розбивати),
+  розряджатися/розрядитися).
+- All `status:draft`. Tag `ch:2.7.1`.
+- **встановлювати and використовувати get their first-ever verb notes** (lexeme notes already
+  existed from earlier chapters) since their perfective partners are newly bulleted here --
+  resolves the progress index's previously-flagged "stray lexeme" ua-lexeme-0379
+  (встановлювати, from an unrelated grammar-guide PDF source).
+- **доводитися/довестися drafted as impersonal-only modal verbs** (dative experiencer +
+  infinitive, "to have to"): only 3sg present/future and neuter past are grammatical, all
+  other paradigm slots deliberately left blank, extending the лунати/пролунати precedent
+  (ch.6.4) to a full-paradigm case.
+- Reused without new notes (retagged ch:2.7.1): мишка (ua-lexeme-0983, ch:2.2), розбивати
+  (ua-lexeme-1004/ua-verb-0200, ch:2.2.2), чистити (ua-lexeme-0896/ua-verb-0173,
+  ch:2.1.4/2.6.1), почистити (ua-lexeme-1681/ua-verb-0356, ch:2.6.1), довго (ua-lexeme-1778,
+  ch:2.6.3), нарешті (ua-lexeme-1135, ch:2.2), як тільки (ua-lexeme-0361, ch:2.9.3), одного
+  разу (ua-lexeme-1686, ch:2.6.3), випадково (ua-lexeme-1650, ch:2.6.3), раптом
+  (ua-lexeme-1786, ch:2.6.4), різко (ua-lexeme-1785, ch:2.6.4).
+- Next NoteIDs: ua-lexeme-1906, ua-verb-0483.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1868**
-- Next `ua-verb-` ID: **0464**
+- Next `ua-lexeme-` ID: **1906**
+- Next `ua-verb-` ID: **0483**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
