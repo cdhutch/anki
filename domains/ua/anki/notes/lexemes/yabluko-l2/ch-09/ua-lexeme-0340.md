@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:2.6.3
 - pos:verb
 - status:verified
 fields:
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: вирушати / вирушити
   UA_Example: Вони вирушили в дорогу рано-вранці.
   EN_Example: They set off on the road very early in the morning.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:2.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/вирушати; https://goroh.pp.ua/Словозміна/вирушити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: '2026-08-28: per Craig''s request to add a family of manner-neutral

@@ -10,13 +10,14 @@ tags:
 - class:conj2-ити
 - ch:2.4.3
 - ch:2.4
+- ch:2.6.3
 - status:draft
 fields:
   NoteID: ua-verb-0289
   Lemma: потра́пити
   Aspect: perfective
   VerbClass: conj2-ити
-  FreqSource: ch:2.4
+  FreqSource: ch:2.4, ch:2.6.3
   Pres_1sg: потра́плю
   Pres_2sg: потра́пиш
   Pres_3sg: потра́пить

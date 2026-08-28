@@ -12,6 +12,7 @@ tags:
 - ch:2.9.5
 - pos:verb
 - ch:2.9.7
+- ch:2.6.3
 - status:verified
 fields:
   NoteID: ua-lexeme-0286
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: підніматися / піднятися
   UA_Example: Найважче було підніматися на скелі під дощем.
   EN_Example: The hardest part was climbing on the cliffs in the rain.
-  Tags_Ch: ch:2.9.5, ch:2.9.7
+  Tags_Ch: ch:2.9.5, ch:2.9.7, ch:2.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/підніматися; https://goroh.pp.ua/Словозміна/піднятися
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: '2026-07-26: reused for ch.9.7, which cites the bare perfective ''піднятися''

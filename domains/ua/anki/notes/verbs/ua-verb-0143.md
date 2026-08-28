@@ -9,13 +9,14 @@ tags:
 - domain:ua
 - class:1
 - ch:2.1.2
+- ch:2.6.3
 - status:draft
 fields:
   NoteID: ua-verb-0143
   Lemma: вжива́ти
   Aspect: impf
   VerbClass: '1'
-  FreqSource: ch:2.1
+  FreqSource: ch:2.1, ch:2.6.3
   Pres_1sg: вжива́ю
   Pres_2sg: вжива́єш
   Pres_3sg: вжива́є

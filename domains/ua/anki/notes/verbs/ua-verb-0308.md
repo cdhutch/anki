@@ -10,13 +10,14 @@ tags:
 - class:conj1-irregular
 - ch:2.4.6
 - ch:2.4
+- ch:2.6.3
 - status:draft
 fields:
   NoteID: ua-verb-0308
   Lemma: відповісти́
   Aspect: perfective
   VerbClass: conj1-irregular
-  FreqSource: ch:2.4
+  FreqSource: ch:2.4, ch:2.6.3
   Pres_1sg: відпові́м
   Pres_2sg: відповіси́
   Pres_3sg: відпові́сть

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.2
+- ch:2.6.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: вживати / вжити
   UA_Example: Він рідко вживає алкоголь.
   EN_Example: He rarely consumes alcohol.
-  Tags_Ch: ch:2.1.2
+  Tags_Ch: ch:2.1.2, ch:2.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/вживати; https://goroh.pp.ua/Словозміна/вжити
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0143. Perfective
