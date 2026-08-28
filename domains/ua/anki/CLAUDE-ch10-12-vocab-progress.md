@@ -19,7 +19,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
-| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.5 done) |
+| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.6 done) |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
@@ -731,14 +731,30 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   ua-verb-0375, ch:2.9), повернутися (ua-lexeme-1714/ua-verb-0376, ch:2.6.2 -- second retag).
 - Next NoteIDs: ua-lexeme-1835, ua-verb-0452.
 
+### Ch.6.6 (UFO anecdote) -- small sub-chapter
+
+- Lexemes: **ua-lexeme-1835 - ua-lexeme-1846** (12 notes: 1 noun (НЛО), 2 verb-pair lexemes,
+  9 storytelling discourse formulas).
+- Verbs: **ua-verb-0452 - ua-verb-0453** (2 notes: скасовувати/скасувати).
+- **New pattern this sub-chapter**: fixed discourse/storytelling formulas (Уявляєш, ...; Ти не
+  повіриш; І це ще не все; Виявилося...; Що, серйозно?; Не може бути!; Здуріти!; Ого!;
+  Жартуєш?) drafted as single `pos:phrase` (+ `pos:interjection` where exclamatory) notes, each
+  frozen as one lemma with no verb-conjugation component split, following the established
+  Будьмо!/приvіт precedent (ua-lexeme-1098, ua-lexeme-0105).
+- All `status:draft`. Tag `ch:2.6.6`.
+- Reused without new notes (retagged ch:2.6.6): справді (ua-lexeme-0846, ch:2.1.2 -- adverb
+  sense reused for its exclamatory "Справді?" reaction use), неймовірно (ua-lexeme-0575,
+  ch:2.8.7 -- same, for "Неймовірно!").
+- Next NoteIDs: ua-lexeme-1847, ua-verb-0454.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1835**
-- Next `ua-verb-` ID: **0452**
+- Next `ua-lexeme-` ID: **1847**
+- Next `ua-verb-` ID: **0454**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
