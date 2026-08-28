@@ -15,7 +15,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | Chapter | PDF pages | Subsections | Status |
 |---|---|---|---|
 | 1 Будні та свята | 1–2 | 1.1–1.7 | in progress (1.1, 1.2 done) |
-| 2 Вечірка | 2–4 | 2.1–2.7 | not started |
+| 2 Вечірка | 2–4 | 2.1–2.7 | in progress (2.1 done) |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | not started |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
@@ -323,10 +323,31 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
   order (10, then 1-7, then 11-12), chapters 11 and 12 are next -- their
   wordlists have not yet been transcribed from the page images.
 
+### Ch.2.1 (shops; party/gift items) — commit `478c9cd6`
+
+- Lexemes: **ua-lexeme-0962 – ua-lexeme-0993** (32 notes): shop-type compounds
+  (зоомагазин, квітковий/комп'ютерний/продуктовий/ювелірний магазин,
+  канцтовари, спорттовари, магазин взуття/електроніки/іграшок/косметики/
+  одягу/сувенірів, кіоск, книгарня, супермаркет) and party/gift nouns
+  (вазонок, вечірка, газета, краватка, листівка, мишка [comp. mouse sense],
+  надувна кулька, папка, помада, парфуми, роликові ковзани, сережка,
+  футболка, новосілля, отримувати, подарунок).
+- Verbs: **ua-verb-0198** (отримувати, impf, Perfective отримати).
+- All `status:draft`. Tag `ch:2.1`.
+- Dedup (bucket-3, tag appended): магазин → ua-lexeme-0628 (was ch:2.10.1);
+  дарувати → ua-lexeme-0915 (was ch:1.5).
+- Known gaps flagged in Verification Notes (not silently dropped): several
+  compound-phrase component nouns/adjectives (взуття, електроніка,
+  іграшка, косметика, одяг, сувенір, канцелярський, надувний, ковзан) not
+  separately drafted standalone this pass.
+- **Craig's pivot instruction this pass: after chapter 1, do chapters 2–7
+  in order (whole textbook chapters, each with its own N.1–N.7 sub-parts),
+  THEN chapters 11–12. Deadline extended to 23:59Z 2026-08-28.**
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0962**
-- Next `ua-verb-` ID: **0198**
+- Next `ua-lexeme-` ID: **0994**
+- Next `ua-verb-` ID: **0199**
 
 ## Environment notes for whoever continues this
 
