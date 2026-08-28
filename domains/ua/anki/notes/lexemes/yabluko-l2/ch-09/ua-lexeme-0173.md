@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- ch:2.11.5
 fields:
   NoteID: ua-lexeme-0173
   Lemma: поже́жа
@@ -44,7 +45,7 @@ fields:
   TypingAnswer: пожежа
   UA_Example: Пожежники загасили пожежу.
   EN_Example: The firefighters put out the fire.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2,ch:2.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/пожежа
   Source_Note: Горох lists a 2nd, capitalized homograph entry ('Поже́жа', a populated place
     in Ukraine) alongside this common noun; verified the lowercase common-noun sense ('fire')

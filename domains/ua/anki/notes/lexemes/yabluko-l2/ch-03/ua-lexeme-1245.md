@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:noun
 - status:draft
+- ch:2.11.5
 fields:
   NoteID: ua-lexeme-1245
   Lemma: очи́щення
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: очищення
   UA_Example: Очищення вулиць відбудеться у суботу.
   EN_Example: The street cleaning will take place on Saturday.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4,ch:2.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/очищення
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

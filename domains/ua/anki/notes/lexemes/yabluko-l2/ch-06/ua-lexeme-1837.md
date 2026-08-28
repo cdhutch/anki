@@ -12,6 +12,7 @@ tags:
 - ch:2.6.6
 - pos:verb
 - status:draft
+- ch:2.11.5
 fields:
   NoteID: ua-lexeme-1837
   Lemma: скасува́ти
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: скасувати
   UA_Example: Рейс скасували через негоду.
   EN_Example: The flight was cancelled because of bad weather.
-  Tags_Ch: ch:2.6.6
+  Tags_Ch: ch:2.6.6,ch:2.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/скасувати
   Source_Note: Горох-verified 2026-08-28, ch.6.6 sourcing pass (UFO anecdote; storytelling
     discourse formulas).

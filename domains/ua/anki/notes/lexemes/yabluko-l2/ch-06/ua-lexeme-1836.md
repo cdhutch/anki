@@ -12,6 +12,7 @@ tags:
 - ch:2.6.6
 - pos:verb
 - status:draft
+- ch:2.11.5
 fields:
   NoteID: ua-lexeme-1836
   Lemma: скасо́вувати
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: скасовувати
   UA_Example: Організатори не люблять скасовувати заходи в останню хвилину.
   EN_Example: The organizers don't like cancelling events at the last minute.
-  Tags_Ch: ch:2.6.6
+  Tags_Ch: ch:2.6.6,ch:2.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/скасовувати
   Source_Note: Горох-verified 2026-08-28, ch.6.6 sourcing pass (UFO anecdote; storytelling
     discourse formulas).
