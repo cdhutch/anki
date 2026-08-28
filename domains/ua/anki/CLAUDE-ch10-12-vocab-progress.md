@@ -19,7 +19,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
-| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.2 done) |
+| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.3 done) |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
@@ -668,14 +668,39 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   phrase, since no new phrase-specific vocabulary is introduced.
 - Next NoteIDs: ua-lexeme-1727, ua-verb-0388.
 
+### Ch.6.3 (crime/prison; getting lost; solitude; imperfective-perfective verb pairs; duration/manner adverbs)
+
+- Lexemes: **ua-lexeme-1727 - ua-lexeme-1788** (62 notes: 19 nouns/NP phrases, 2 adjectives,
+  32 verb-pair lexemes, 1 lexeme upgrade (потрапити), 6 duration phrases, 5 manner adverbs).
+- Verbs: **ua-verb-0388 - ua-verb-0415** (28 notes covering 16 aspect pairs: вживати/вжити,
+  виливати/вилити, вирушати/вирушити, відповідати/відповісти, доводити/довести (+ довести до
+  кінця idiom), доглядати/доглянути, блукати/заблудитися, задумуватися/задуматися,
+  занурюватися/зануритися, зачинятися/зачинитися, зловживати/зловжити, красти/вкрасти,
+  курити/покурити, наказувати/наказати, підніматися/піднятися, турбуватися/потурбуватися).
+  Proper Pugh & Press class tags (conj1-irregular for the жи-/жив- ablaut family
+  вжити/зловжити/вилити and the -няти family піднятися; conj1-consonant+ти for
+  красти/вкрасти/довести).
+- All `status:draft`. Tag `ch:2.6.3`.
+- **Judgment call**: the source PDF's wordlist has an orphaned line "– заблудитися" with no
+  legible left-hand word (two-column OCR artifact after "доглядати – доглянути"). Reconstructed
+  as блукати-заблудитися, a well-attested real aspect pair fitting the chapter's "getting lost"
+  theme.
+- Reused without new notes (retagged ch:2.6.3): вживати (ua-lexeme-0840/ua-verb-0143, ch:2.1),
+  вирушати (ua-lexeme-0340/ua-verb-0072, ch:2.9), відповісти (ua-verb-0308, ch:2.4.6 -- verb
+  only, its imperfective partner відповідати drafted fresh here), підніматися
+  (ua-lexeme-0286/ua-verb-0056, ch:2.9), потрапляти (ua-lexeme-1087/ua-verb-0225, ch:2.2),
+  потрапити (ua-verb-0289, ch:2.4.3 -- given its first lexeme note here), міцний
+  (ua-lexeme-0593, ch:reference).
+- Next NoteIDs: ua-lexeme-1789, ua-verb-0416.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1727**
-- Next `ua-verb-` ID: **0388**
+- Next `ua-lexeme-` ID: **1789**
+- Next `ua-verb-` ID: **0416**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
