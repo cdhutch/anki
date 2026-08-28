@@ -20,7 +20,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
-| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.2 done) |
+| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.3 done) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
@@ -817,14 +817,68 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   ch:2.6.2), регулярно (ua-lexeme-1693, ch:2.6.2), щодня (ua-lexeme-0834, ch:2.1).
 - Next NoteIDs: ua-lexeme-1927, ua-verb-0490.
 
+### Ch.7.3 (future tech/robotics/medicine vocabulary) -- large,
+page-spanning sub-chapter
+
+- **Workflow confirmation**: the source PDF's left and right print columns run as two
+  independent, non-synchronized content streams (each column has its own continuous
+  sequence of sub-chapter headers across page breaks). Ch.7.3 is unusually large because
+  it spans two PDF pages' worth of right-column content with no intervening sub-chapter
+  header; the "7.4" header visible nearby belongs to the LEFT column's independent stream,
+  not to this content. This will need re-verifying when ch.7.4 is written.
+- Lexemes: **ua-lexeme-1927 - ua-lexeme-2003** (77 notes: 28 nouns, 5 adjectives, 3
+  discourse phrases, 30 verb-pair lexemes (15 full pairs), 4 imperfectiva-tantum verb
+  lexemes, 7 pair-member-only/upgrade verb lexemes).
+- Verbs: **ua-verb-0490 - ua-verb-0529** (40 notes: 15 full aspect pairs, 4 imperfectiva
+  tantum verbs, 6 new pair-member verbs whose partners already existed).
+- All `status:draft`. Tag `ch:2.7.3`.
+- **Imperfectiva-tantum pattern** (confirmed via Горох, not an OCR gap): виглядати,
+  коштувати, пишатися, сподіватися have no aspectual partner. A dash-only wordlist entry
+  ("виглядати -") signals no partner exists, distinct from the OCR-gap reconstructions of
+  ch.6 (блукати-заблудитися, голодніти-зголодніти, торопіти-сторопіти) where the dash
+  entry really was a missing word to reconstruct.
+- **дивувати gets its first-ever lexeme note** (verb note ua-verb-0272 already existed)
+  since its perfective partner здивувати is newly bulleted here -- a lexeme upgrade,
+  same pattern as вирішити/принести/встановлювати/використовувати in earlier
+  sub-chapters.
+- **6 pair-member-only new verbs**, existing partners retagged `ch:2.7.3` alongside them:
+  опублікувати (partner публікувати, ua-lexeme-0731/ua-verb-0116), уникнути (partner
+  уникати, ua-lexeme-0783/ua-verb-0135), вимірювати (new, more common imperfective
+  spelling; partner ви́міряти, ua-lexeme-1655/ua-verb-0331 -- NOT ua-lexeme-1654/
+  ua-verb-0330, a different-spelling imperfective виміря́ти left untouched), здивувати
+  (partner дивувати, upgraded above), зрости (partner зростати, ua-lexeme-1266/
+  ua-verb-0265), посісти (partner посідати, ua-lexeme-0220/ua-verb-0048).
+- **Горох summarizer garbling corrected via native-level Ukrainian knowledge**: вразити
+  (double-accented, normalized to mobile-stress вражу́/вра́зиш/вра́зить/вра́зимо/
+  вра́зите/вра́зять), полегшити (double-accented, normalized to fixed root-stress
+  поле́гшу/поле́гшиш/поле́гшить/поле́гшимо/поле́гшите/поле́гшать), розповісти
+  (garbled/typo'd, reconstructed as a suppletive -вісти-family verb parallel to дати:
+  розповім/розповіси́/розпові́сть/розповімо́/розповісте́/розповідя́ть).
+- Reused without new notes (retagged ch:2.7.3): обмежені можливості (ua-lexeme-1410),
+  температура (ua-lexeme-0516), тиск (ua-lexeme-0685), потужний (ua-lexeme-0574),
+  вирішувати/вирішити (ua-lexeme-1804/ua-verb-0423 and ua-lexeme-1805, ch:2.6.5 --
+  added a sense note for the "(завдання)" = "solve a task/problem" collocation),
+  доводити/довести (ua-lexeme-1753/ua-verb-0393 and ua-lexeme-1754/ua-verb-0394,
+  ch:2.6.3).
+- **Process note**: an early retag-script bug (a Verification Notes field-append regex
+  that didn't account for multi-line YAML folded scalars) corrupted ua-lexeme-1804 and
+  ua-lexeme-1805 before the commit; caught via a full-corpus YAML parse sweep
+  (`yaml.safe_load` over every note file) before canonicalize/test, and fixed by hand.
+  Also: running `cnsf_canonicalize.py --write` over the *entire* notes tree reformatted
+  ~120 unrelated pre-existing `notes/verbs/exported/` stub files (field reordering only);
+  these were reverted with `git checkout --` before committing, since they were not part
+  of this sub-chapter's work. Going forward, canonicalize should be scoped to changed
+  files only, not the whole tree.
+- Next NoteIDs: ua-lexeme-2004, ua-verb-0530.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1927**
-- Next `ua-verb-` ID: **0490**
+- Next `ua-lexeme-` ID: **2004**
+- Next `ua-verb-` ID: **0530**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
