@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: відрізни́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,17 +32,18 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: відрізняти
+  TypingAnswer: відрізняти / відрізнити
   UA_Example: Важко відрізняти правду від чуток.
   EN_Example: It's hard to distinguish truth from rumors.
   Tags_Ch: ch:2.10.5
-  Source_URL: https://goroh.pp.ua/Словозміна/відрізняти
+  Source_URL: https://goroh.pp.ua/Словозміна/відрізняти; https://goroh.pp.ua/Словозміна/відрізнити
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).
   Verification Notes: 'New. Imperfective, non-reflexive, 1st conjugation. Governs accusative
     + ''від'' + genitive: відрізняти щось від чогось. Distinct headword from the reflexive
     відрізнятися/відрізнитися (ua-lexeme-0480/ua-verb-0075, ''to differ'') already in the
     corpus -- this is the non-reflexive transitive ''distinguish X'' sense, not a duplicate.
-    Full conjugation on the paired ua-verb-0112 note.'
+    Full conjugation on the paired ua-verb-0112 note. Perfective відрізни́ти added (aspect-pairing
+    review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).'
 ---
 

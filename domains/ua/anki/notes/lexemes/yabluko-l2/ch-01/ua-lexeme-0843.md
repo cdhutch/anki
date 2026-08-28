@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: впізна́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +32,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: впізнавати
+  TypingAnswer: впізнавати / впізнати
   UA_Example: Я завжди впізнаю твій голос по телефону.
   EN_Example: I always recognize your voice on the phone.
   Tags_Ch: ch:1.2
-  Source_URL: https://goroh.pp.ua/Словозміна/впізнавати
+  Source_URL: https://goroh.pp.ua/Словозміна/впізнавати; https://goroh.pp.ua/Словозміна/впізнати
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
-  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0146.
+  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0146. Perfective
+    впізна́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

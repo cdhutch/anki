@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: дода́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +32,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: додавати
+  TypingAnswer: додавати / додати
   UA_Example: Не забудь додавати сіль за смаком.
   EN_Example: Don't forget to add salt to taste.
   Tags_Ch: ch:1.2
-  Source_URL: https://goroh.pp.ua/Словозміна/додавати
+  Source_URL: https://goroh.pp.ua/Словозміна/додавати; https://goroh.pp.ua/Словозміна/додати
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
-  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0147.
+  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0147. Perfective
+    дода́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

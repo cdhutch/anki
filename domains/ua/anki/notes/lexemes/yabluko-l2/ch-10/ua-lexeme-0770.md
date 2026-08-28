@@ -42,5 +42,7 @@ fields:
   Verification Notes: New. Perfective. Imperfective counterpart робити checked against the
     corpus (NO MATCH, genuinely absent) but not drafted this pass -- flagged as a gap for
     a future pass since робити is extremely high-frequency. Full conjugation on paired ua-verb-0122.
+    Imperfective counterpart роби́ти added (aspect-pairing review, yabluko-l2-verb-dictionary
+    + Горох, 2026-08-28).
 ---
 

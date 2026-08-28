@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: опублікува́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,14 +32,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: публікувати
+  TypingAnswer: публікувати / опублікувати
   UA_Example: Газета публікує статті про права людини.
   EN_Example: The newspaper publishes articles about human rights.
   Tags_Ch: ch:2.10.5
-  Source_URL: https://goroh.pp.ua/Словозміна/публікувати
+  Source_URL: https://goroh.pp.ua/Словозміна/публікувати; https://goroh.pp.ua/Словозміна/опублікувати
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).
   Verification Notes: New. Imperfective, non-reflexive, 1st conjugation. Full conjugation
-    on the paired ua-verb-0116 note.
+    on the paired ua-verb-0116 note. Perfective опублікува́ти added (aspect-pairing review,
+    yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: посні́дати
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: снідати
+  TypingAnswer: снідати / поснідати
   UA_Example: Зазвичай я снідаю о сьомій.
   EN_Example: I usually have breakfast at seven.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/снідати
+  Source_URL: https://goroh.pp.ua/Словозміна/снідати; https://goroh.pp.ua/Словозміна/поснідати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0160.
+  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0160. Perfective
+    посні́дати added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

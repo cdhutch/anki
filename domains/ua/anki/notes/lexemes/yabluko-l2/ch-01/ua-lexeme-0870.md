@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: заванта́жити
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: завантажувати
+  TypingAnswer: завантажувати / завантажити
   UA_Example: Я завантажую нову програму.
   EN_Example: I am downloading a new program.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/завантажувати
+  Source_URL: https://goroh.pp.ua/Словозміна/завантажувати; https://goroh.pp.ua/Словозміна/завантажити
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0154.
+  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0154. Perfective
+    заванта́жити added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

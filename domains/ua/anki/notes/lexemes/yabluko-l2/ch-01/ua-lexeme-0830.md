@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: відпочи́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: відпочивати
+  TypingAnswer: відпочивати / відпочити
   UA_Example: Влітку я люблю відпочивати на морі.
   EN_Example: In summer I like to rest by the sea.
   Tags_Ch: ch:1.1
-  Source_URL: https://goroh.pp.ua/Словозміна/відпочивати
+  Source_URL: https://goroh.pp.ua/Словозміна/відпочивати; https://goroh.pp.ua/Словозміна/відпочити
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).
-  Verification Notes: New. Impf., non-reflexive, 1st conj. Paired with ua-verb-0140.
+  Verification Notes: New. Impf., non-reflexive, 1st conj. Paired with ua-verb-0140. Perfective
+    відпочи́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

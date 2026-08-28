@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: прийня́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,15 +32,16 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: приймати
+  TypingAnswer: приймати / прийняти
   UA_Example: Приймайте ці таблетки двічі на день.
   EN_Example: Take these pills twice a day.
   Tags_Ch: ch:2.10.6
-  Source_URL: https://goroh.pp.ua/Словозміна/приймати
+  Source_URL: https://goroh.pp.ua/Словозміна/приймати; https://goroh.pp.ua/Словозміна/прийняти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Imperfective. Perfective counterpart прийняти not drafted this
     pass (very common verb, flagged as a gap for a future pass). Full conjugation on paired
-    ua-verb-0127.
+    ua-verb-0127. Perfective прийня́ти added (aspect-pairing review, yabluko-l2-verb-dictionary
+    + Горох, 2026-08-28).
 ---
 

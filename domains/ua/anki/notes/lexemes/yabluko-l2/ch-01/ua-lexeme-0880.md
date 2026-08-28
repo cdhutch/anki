@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: зали́ши́тися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: залишатися
+  TypingAnswer: залишатися / залишитися
   UA_Example: Ми вирішили залишатися вдома цими вихідними.
   EN_Example: We decided to stay home this weekend.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/залишатися
+  Source_URL: https://goroh.pp.ua/Словозміна/залишатися; https://goroh.pp.ua/Словозміна/залишитися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., reflexive, 1 conj.  Paired with ua-verb-0164.
+  Verification Notes: New. impf., reflexive, 1 conj.  Paired with ua-verb-0164. Perfective
+    зали́ши́тися added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

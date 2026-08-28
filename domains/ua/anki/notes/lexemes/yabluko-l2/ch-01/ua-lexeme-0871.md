@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: познайо́митися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: знайомитися
+  TypingAnswer: знайомитися / познайомитися
   UA_Example: Ми познайомилися на вечірці.
   EN_Example: We met at the party.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/знайомитися
+  Source_URL: https://goroh.pp.ua/Словозміна/знайомитися; https://goroh.pp.ua/Словозміна/познайомитися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., reflexive, 2 conj.  Paired with ua-verb-0155.
+  Verification Notes: New. impf., reflexive, 2 conj.  Paired with ua-verb-0155. Perfective
+    познайо́митися added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

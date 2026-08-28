@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: почу́тися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: почуватися
+  TypingAnswer: почуватися / почутися
   UA_Example: Як ти почуваєшся сьогодні?
   EN_Example: How are you feeling today?
   Tags_Ch: ch:2.10.6
-  Source_URL: https://goroh.pp.ua/Словозміна/почуватися
+  Source_URL: https://goroh.pp.ua/Словозміна/почуватися; https://goroh.pp.ua/Словозміна/почутися
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Reflexive, imperfective, 1st conj. Full conjugation on paired ua-verb-0133.
+    Perfective почу́тися added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох,
+    2026-08-28).
 ---
 

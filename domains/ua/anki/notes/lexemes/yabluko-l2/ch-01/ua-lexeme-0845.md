@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: пожартува́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +32,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: жартувати
+  TypingAnswer: жартувати / пожартувати
   UA_Example: Він завжди жартує на роботі.
   EN_Example: He always jokes around at work.
   Tags_Ch: ch:1.2
-  Source_URL: https://goroh.pp.ua/Словозміна/жартувати
+  Source_URL: https://goroh.pp.ua/Словозміна/жартувати; https://goroh.pp.ua/Словозміна/пожартувати
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
-  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0148.
+  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0148. Perfective
+    пожартува́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

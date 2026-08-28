@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: дотри́матися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,15 +32,16 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: дотримуватися
+  TypingAnswer: дотримуватися / дотриматися
   UA_Example: Дотримуйтеся правил дорожнього руху.
   EN_Example: Follow the traffic rules.
   Tags_Ch: ch:2.10.5
-  Source_URL: https://goroh.pp.ua/Словозміна/дотримуватися
+  Source_URL: https://goroh.pp.ua/Словозміна/дотримуватися; https://goroh.pp.ua/Словозміна/дотриматися
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).
   Verification Notes: 'New. Imperfective, reflexive, 1st conjugation. Governs genitive: дотримуватися
     чогось. Drafted as a standalone component of the ch.10.5 phrase дотримуватися правил (ua-lexeme-0742).
-    Full conjugation on the paired ua-verb-0113 note.'
+    Full conjugation on the paired ua-verb-0113 note. Perfective дотри́матися added (aspect-pairing
+    review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).'
 ---
 

@@ -42,6 +42,10 @@ fields:
   Verification Notes: 'New. Reflexive, used impersonally; Горох marks stress reliably only
     on the infinitive, 3rd-person present/future, and past forms -- 1st/2nd-person forms are
     given unmarked on the source page, so only the sourced (stressed) forms are recorded on
-    paired ua-verb-0132, per the never-guess-stress rule. No imperative exists (Горох: ''—'').'
+    paired ua-verb-0132, per the never-guess-stress rule. No imperative exists (Горох: ''—'').
+    Not listed in yabluko-l2-verb-dictionary at all. Checked Горох directly per Craig''s fallback
+    instruction: Горох''s Словозміна page for паморочитися shows no perfective cross-reference
+    either (impersonal/defective conjugation, imperative blank) -- treated as imperfective-only
+    pending further evidence.'
 ---
 

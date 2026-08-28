@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: створи́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: створювати
+  TypingAnswer: створювати / створити
   UA_Example: Вона створює власний бізнес.
   EN_Example: She is creating her own business.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/створювати
+  Source_URL: https://goroh.pp.ua/Словозміна/створювати; https://goroh.pp.ua/Словозміна/створити
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0161.
+  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0161. Perfective
+    створи́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

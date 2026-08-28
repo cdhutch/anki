@@ -39,6 +39,9 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/намагатися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., reflexive, 1 conj.  Paired with ua-verb-0157.
+  Verification Notes: 'New. impf., reflexive, 1 conj.  Paired with ua-verb-0157. Checked against
+    yabluko-l2-verb-dictionary: намагатися has no listed perfective (blank entry) -- confirmed
+    imperfectiva tantum, consistent with ordinary Ukrainian usage (''to try'' has no single-word
+    perfective).'
 ---
 

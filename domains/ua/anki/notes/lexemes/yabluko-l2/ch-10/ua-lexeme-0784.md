@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: чхну́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,14 +32,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: чхати
+  TypingAnswer: чхати / чхнути
   UA_Example: Він постійно чхає через алергію.
   EN_Example: He keeps sneezing because of an allergy.
   Tags_Ch: ch:2.10.6
-  Source_URL: https://goroh.pp.ua/Словозміна/чхати
+  Source_URL: https://goroh.pp.ua/Словозміна/чхати; https://goroh.pp.ua/Словозміна/чхнути
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Imperfective, non-reflexive, 1st conj. Full conjugation on paired
-    ua-verb-0136.
+    ua-verb-0136. Perfective чхну́ти added (aspect-pairing review, yabluko-l2-verb-dictionary
+    + Горох, 2026-08-28).
 ---
 

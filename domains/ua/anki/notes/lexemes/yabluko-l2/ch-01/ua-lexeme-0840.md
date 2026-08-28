@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: вжи́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +32,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: вживати
+  TypingAnswer: вживати / вжити
   UA_Example: Він рідко вживає алкоголь.
   EN_Example: He rarely consumes alcohol.
   Tags_Ch: ch:1.2
-  Source_URL: https://goroh.pp.ua/Словозміна/вживати
+  Source_URL: https://goroh.pp.ua/Словозміна/вживати; https://goroh.pp.ua/Словозміна/вжити
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
-  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0143.
+  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0143. Perfective
+    вжи́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

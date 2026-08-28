@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: ви́шити
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +32,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: вишивати
+  TypingAnswer: вишивати / вишити
   UA_Example: Бабуся любить вишивати рушники.
   EN_Example: Grandma loves embroidering towels.
   Tags_Ch: ch:1.2
-  Source_URL: https://goroh.pp.ua/Словозміна/вишивати
+  Source_URL: https://goroh.pp.ua/Словозміна/вишивати; https://goroh.pp.ua/Словозміна/вишити
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
-  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0144.
+  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0144. Perfective
+    ви́шити added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

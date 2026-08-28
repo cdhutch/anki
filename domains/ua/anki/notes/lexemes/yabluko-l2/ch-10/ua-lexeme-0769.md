@@ -40,6 +40,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Perfective. No imperfective counterpart (виписувати) drafted this
-    pass. Full conjugation on paired ua-verb-0121.
+    pass. Full conjugation on paired ua-verb-0121. Imperfective counterpart випи́сувати added
+    (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

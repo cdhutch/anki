@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: надрукува́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,14 +32,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: друкувати
+  TypingAnswer: друкувати / надрукувати
   UA_Example: Видавництво друкує нову книгу.
   EN_Example: The publishing house is printing a new book.
   Tags_Ch: ch:2.10.5
-  Source_URL: https://goroh.pp.ua/Словозміна/друкувати
+  Source_URL: https://goroh.pp.ua/Словозміна/друкувати; https://goroh.pp.ua/Словозміна/надрукувати
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).
   Verification Notes: New. Imperfective, non-reflexive, 1st conjugation. Full conjugation
-    on the paired ua-verb-0114 note.
+    on the paired ua-verb-0114 note. Perfective надрукува́ти added (aspect-pairing review,
+    yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

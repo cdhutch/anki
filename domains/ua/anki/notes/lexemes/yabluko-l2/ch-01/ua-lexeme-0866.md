@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: збожево́літи
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: божеволіти
+  TypingAnswer: божеволіти / збожеволіти
   UA_Example: Він просто божеволіє від цієї музики.
   EN_Example: He is simply going crazy over this music.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/божеволіти
+  Source_URL: https://goroh.pp.ua/Словозміна/божеволіти; https://goroh.pp.ua/Словозміна/збожеволіти
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0150.
+  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0150. Perfective
+    збожево́літи added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

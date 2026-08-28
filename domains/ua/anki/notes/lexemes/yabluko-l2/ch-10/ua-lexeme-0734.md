@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: охрести́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,11 +32,11 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: хрестити
+  TypingAnswer: хрестити / охрестити
   UA_Example: Дитину хрестили в маленькій церкві.
   EN_Example: The child was baptized in a small church.
   Tags_Ch: ch:2.10.5
-  Source_URL: https://goroh.pp.ua/Словозміна/хрестити
+  Source_URL: https://goroh.pp.ua/Словозміна/хрестити; https://goroh.pp.ua/Словозміна/охрестити
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).
   Verification Notes: New. Горох marks this verb 'двовидове' (biaspectual) -- the same form
@@ -46,6 +46,7 @@ fields:
     rather than 'imperfective'/'perfective', reflecting Горох's own classification. A user
     comment on Горох's page also flags a stress variant (хре́стиш per Бусел, vs хрести́ш per
     this Словники-України-based table) -- the latter is used here as this corpus's primary
-    source.
+    source. Perfective охрести́ти added (aspect-pairing review, yabluko-l2-verb-dictionary
+    + Горох, 2026-08-28).
 ---
 

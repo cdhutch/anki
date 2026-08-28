@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: проми́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,14 +32,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: промивати
+  TypingAnswer: промивати / промити
   UA_Example: Треба промивати рану щодня.
   EN_Example: You need to rinse the wound every day.
   Tags_Ch: ch:2.10.6
-  Source_URL: https://goroh.pp.ua/Словозміна/промивати
+  Source_URL: https://goroh.pp.ua/Словозміна/промивати; https://goroh.pp.ua/Словозміна/промити
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Imperfective. Perfective counterpart промити not drafted this pass.
-    Full conjugation on paired ua-verb-0126.
+    Full conjugation on paired ua-verb-0126. Perfective проми́ти added (aspect-pairing review,
+    yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

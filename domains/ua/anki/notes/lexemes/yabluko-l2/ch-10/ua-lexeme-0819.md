@@ -40,6 +40,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.10.7 sourcing pass (consular services; border/customs;
     travel health).
   Verification Notes: New. Perfective. Drafted for the phrase підтвердити фінансове забезпечення
-    (ua-lexeme-0827). Full conjugation on paired ua-verb-0139.
+    (ua-lexeme-0827). Full conjugation on paired ua-verb-0139. Imperfective counterpart підтве́рджувати
+    added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

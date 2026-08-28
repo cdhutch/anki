@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: спакува́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,15 +32,16 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: пакувати
+  TypingAnswer: пакувати / спакувати
   UA_Example: Пакуйте валізу щільно, щоб усе помістилося.
   EN_Example: Pack your suitcase tightly so everything fits.
   Tags_Ch: ch:2.10.1
-  Source_URL: https://goroh.pp.ua/Словозміна/пакувати
+  Source_URL: https://goroh.pp.ua/Словозміна/пакувати; https://goroh.pp.ua/Словозміна/спакувати
   Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
   Verification Notes: New. Imperfective, non-reflexive, 1st conjugation. Covers the textbook
     phrase 'пакувати щільно' (pack tightly) via the example sentence rather than a separate
     phrase note -- щільно is a plain manner adverb, not sourced as its own lexeme in this
-    pass. Full conjugation on the paired ua-verb-0091 note.
+    pass. Full conjugation on the paired ua-verb-0091 note. Perfective спакува́ти added (aspect-pairing
+    review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

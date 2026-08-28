@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: протри́ма́тися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,15 +32,16 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: триматися
+  TypingAnswer: триматися / протриматися
   UA_Example: Компанія тримається на вершині ринку вже пʼять років.
   EN_Example: The company has stayed at the top of the market for five years already.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/триматися
+  Source_URL: https://goroh.pp.ua/Словозміна/триматися; https://goroh.pp.ua/Словозміна/протриматися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
   Verification Notes: New. impf., reflexive, 1 conj. Distinct from the existing non-reflexive
     тримати (ua-verb-0088, "to hold"), which is used transitively; триматися is its own reflexive
-    lexeme. Paired with ua-verb-0162.
+    lexeme. Paired with ua-verb-0162. Perfective протри́ма́тися added (aspect-pairing review,
+    yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

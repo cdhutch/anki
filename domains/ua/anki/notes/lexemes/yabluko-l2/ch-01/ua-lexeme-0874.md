@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: пообі́дати
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: обідати
+  TypingAnswer: обідати / пообідати
   UA_Example: Ми обідаємо о першій годині.
   EN_Example: We have lunch at one o'clock.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/обідати
+  Source_URL: https://goroh.pp.ua/Словозміна/обідати; https://goroh.pp.ua/Словозміна/пообідати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0158.
+  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0158. Perfective
+    пообі́дати added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

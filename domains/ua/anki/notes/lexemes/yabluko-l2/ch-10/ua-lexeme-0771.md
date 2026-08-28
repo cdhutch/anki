@@ -40,6 +40,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Perfective. Imperfective counterpart оглядати not drafted this
-    pass. Full conjugation on paired ua-verb-0123.
+    pass. Full conjugation on paired ua-verb-0123. Imperfective counterpart огляда́ти added
+    (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

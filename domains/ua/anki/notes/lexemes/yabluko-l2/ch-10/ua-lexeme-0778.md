@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: пока́шляти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,14 +32,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: кашляти
+  TypingAnswer: кашляти / покашляти
   UA_Example: Дитина кашляє вже три дні.
   EN_Example: The child has been coughing for three days already.
   Tags_Ch: ch:2.10.6
-  Source_URL: https://goroh.pp.ua/Словозміна/кашляти
+  Source_URL: https://goroh.pp.ua/Словозміна/кашляти; https://goroh.pp.ua/Словозміна/покашляти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Imperfective, non-reflexive, 1st conj. Full conjugation on paired
-    ua-verb-0130.
+    ua-verb-0130. Perfective пока́шляти added (aspect-pairing review, yabluko-l2-verb-dictionary
+    + Горох, 2026-08-28).
 ---
 

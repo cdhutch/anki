@@ -42,6 +42,7 @@ fields:
   Verification Notes: New. Perfective, reflexive. Drafted for the phrase звернутися до лікаря
     (ua-lexeme-0825); the pre-existing лікар (ua-lexeme-0006, ch:1.0) is referenced as a component
     there but not re-tagged, same precedent as кинути палити in ch.10.3. Full conjugation
-    on paired ua-verb-0137.
+    on paired ua-verb-0137. Imperfective counterpart зверта́тися added (aspect-pairing review,
+    yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

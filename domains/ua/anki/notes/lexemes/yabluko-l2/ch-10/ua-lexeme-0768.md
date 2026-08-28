@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: заболі́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,16 +32,17 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: боліти
+  TypingAnswer: боліти / заболіти
   UA_Example: У мене болить голова.
   EN_Example: My head hurts.
   Tags_Ch: ch:2.10.6
-  Source_URL: https://goroh.pp.ua/Словозміна/боліти
+  Source_URL: https://goroh.pp.ua/Словозміна/боліти; https://goroh.pp.ua/Словозміна/заболіти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: 'New. Горох lists 3 homographs sharing болі́ти: (1) ''cause pain'' --
     defective, 3rd-person-only (боли́ть/боля́ть) -- drafted here; (2) ''worry/care about'';
     (3) ''be ill'' -- both fully conjugated, not drafted (no sibling notes exist, flagged
-    rather than silently dropped). Full conjugation on paired ua-verb-0120.'
+    rather than silently dropped). Full conjugation on paired ua-verb-0120. Perfective заболі́ти
+    added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).'
 ---
 

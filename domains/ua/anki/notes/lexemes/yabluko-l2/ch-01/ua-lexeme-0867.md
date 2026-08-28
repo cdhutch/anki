@@ -39,6 +39,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/вважати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0151.
+  Verification Notes: 'New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0151. Checked
+    against yabluko-l2-verb-dictionary: вважати has no listed perfective (blank entry, confirming
+    its status as an opinion verb of the imperfectiva-tantum type).'
 ---
 

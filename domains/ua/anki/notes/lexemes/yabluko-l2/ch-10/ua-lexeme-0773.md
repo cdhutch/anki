@@ -42,6 +42,7 @@ fields:
   Verification Notes: New. Горох lists послу́хати ('to listen/perceive by ear', drafted here,
     the medical-exam sense) vs послуха́ти ('to obey', related to reflexive послухатися) as
     stress-shift homographs. Not tagged homograph:true (no sibling note exists for послуха́ти).
-    Full conjugation on paired ua-verb-0125.
+    Full conjugation on paired ua-verb-0125. Imperfective counterpart слу́хати added (aspect-pairing
+    review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 

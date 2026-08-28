@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: розва́житися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,15 +32,16 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: розважатися
+  TypingAnswer: розважатися / розважитися
   UA_Example: Діти люблять розважатися на дитячому майданчику.
   EN_Example: Children love having fun at the playground.
   Tags_Ch: ch:1.1
-  Source_URL: https://goroh.pp.ua/Словозміна/розважатися
+  Source_URL: https://goroh.pp.ua/Словозміна/розважатися; https://goroh.pp.ua/Словозміна/розважитися
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).
   Verification Notes: New. Impf., reflexive, 1st conj. Горох headword is розважа́тись; -ся/-сь
     variants are free alternants, drafted as розважа́тися to match wordlist spelling. Paired
-    with ua-verb-0142.
+    with ua-verb-0142. Perfective розва́житися added (aspect-pairing review, yabluko-l2-verb-dictionary
+    + Горох, 2026-08-28).
 ---
 

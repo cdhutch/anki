@@ -41,5 +41,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
   Verification Notes: New. Perfective, irregular -нути class. Full conjugation on paired ua-verb-0129.
+    Imperfective counterpart ме́рзнути added (aspect-pairing review, yabluko-l2-verb-dictionary
+    + Горох, 2026-08-28).
 ---
 

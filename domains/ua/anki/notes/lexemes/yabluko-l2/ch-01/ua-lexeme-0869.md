@@ -20,7 +20,7 @@ fields:
   Gender: ''
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: відчу́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,13 +32,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: відчувати
+  TypingAnswer: відчувати / відчути
   UA_Example: Я відчуваю, що щось не так.
   EN_Example: I feel that something is wrong.
   Tags_Ch: ch:1.3
-  Source_URL: https://goroh.pp.ua/Словозміна/відчувати
+  Source_URL: https://goroh.pp.ua/Словозміна/відчувати; https://goroh.pp.ua/Словозміна/відчути
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0153.
+  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0153. Perfective
+    відчу́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
 ---
 
