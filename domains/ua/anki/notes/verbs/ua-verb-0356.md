@@ -11,12 +11,13 @@ tags:
 - ch:2.6.1
 - ch:2.6
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-verb-0356
   Lemma: почи́стити
   Aspect: perfective
   VerbClass: conj2-ити
-  FreqSource: ch:2.6.1
+  FreqSource: ch:2.6.1, ch:2.7.1
   Pres_1sg: почи́щу
   Pres_2sg: почи́стиш
   Pres_3sg: почи́стить

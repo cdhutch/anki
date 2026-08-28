@@ -11,12 +11,13 @@ tags:
 - ch:2.1.4
 - ch:2.6.1
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-verb-0173
   Lemma: чи́стити
   Aspect: impf
   VerbClass: '2'
-  FreqSource: ch:2.1, ch:2.6.1
+  FreqSource: ch:2.1, ch:2.6.1, ch:2.7.1
   Pres_1sg: чи́щу
   Pres_2sg: чи́стиш
   Pres_3sg: чи́стить

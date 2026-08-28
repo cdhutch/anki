@@ -12,6 +12,7 @@ tags:
 - ch:2.6.3
 - pos:adverb
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-lexeme-1778
   Lemma: до́вго
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: довго
   UA_Example: Ми довго чекали на автобус.
   EN_Example: We waited a long time for the bus.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3, ch:2.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/довго
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

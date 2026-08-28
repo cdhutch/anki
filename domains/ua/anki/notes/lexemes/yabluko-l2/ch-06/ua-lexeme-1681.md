@@ -12,6 +12,7 @@ tags:
 - ch:2.6.1
 - pos:verb
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-lexeme-1681
   Lemma: почи́стити
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: почистити
   UA_Example: Почисти, будь ласка, взуття перед виходом.
   EN_Example: Please clean your shoes before you go out.
-  Tags_Ch: ch:2.6.1
+  Tags_Ch: ch:2.6.1, ch:2.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/почистити
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).

@@ -12,6 +12,7 @@ tags:
 - ch:2.2.1
 - pos:noun
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-lexeme-0983
   Lemma: ми́шка
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мишка
   UA_Example: Ця мишка бездротова.
   EN_Example: This mouse is wireless.
-  Tags_Ch: ch:2.2.1
+  Tags_Ch: ch:2.2.1, ch:2.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/мишка
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Fem. Drafted in the "comp. pristrij" (computer mouse) sense --

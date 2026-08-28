@@ -10,12 +10,13 @@ tags:
 - class:1
 - ch:2.2.2
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-verb-0200
   Lemma: розбива́ти
   Aspect: imperfective
   VerbClass: '1'
-  FreqSource: ch:2.2
+  FreqSource: ch:2.2, ch:2.7.1
   Pres_1sg: розбива́ю
   Pres_2sg: розбива́єш
   Pres_3sg: розбива́є

@@ -12,6 +12,7 @@ tags:
 - ch:2.2.2
 - pos:verb
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-lexeme-1004
   Lemma: розбива́ти
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: розбивати / розбити
   UA_Example: Дитина випадково розбиває тарілки, коли миє посуд.
   EN_Example: The child accidentally breaks plates while washing the dishes.
-  Tags_Ch: ch:2.2.2
+  Tags_Ch: ch:2.2.2, ch:2.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/розбивати; https://goroh.pp.ua/Словозміна/розбити
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

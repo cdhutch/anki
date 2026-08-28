@@ -12,6 +12,7 @@ tags:
 - ch:2.6.1
 - pos:phrase
 - status:draft
+- ch:2.7.1
 fields:
   NoteID: ua-lexeme-1686
   Lemma: одного́ ра́зу
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: одного разу
   UA_Example: Одного разу я забув парасольку в автобусі.
   EN_Example: Once, I left my umbrella on the bus.
-  Tags_Ch: ch:2.6.1
+  Tags_Ch: ch:2.6.1, ch:2.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/раз
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).
