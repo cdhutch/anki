@@ -14,7 +14,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 
 | Chapter | PDF pages | Subsections | Status |
 |---|---|---|---|
-| 1 Будні та свята | 1–2 | 1.1–1.7 | in progress (1.1, 1.2 done) |
+| 1 Будні та свята | 1–2 | 1.1–1.7 | **done** (row was stale -- all of 1.1-1.7 completed earlier, see Ch.1.7 entry below; corrected 2026-08-28) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | in progress (3.1-3.5 done) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
@@ -387,9 +387,30 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
 - Dedup (bucket-3, tag appended): водій (ua-lexeme-0003, ch:1.0), кухар
   (ua-lexeme-0005, ch:1.0).
 
+### Tagging-convention corrections (2026-08-28)
+
+Craig clarified the `ch:` tag convention: all Level-2 (яблуко-l2) chapters use the
+3-component form `ch:2.<chapter>.<subchapter>` (e.g. `ch:2.3.5`), no exceptions among
+chapters 1-12. `ch:1.0` (Level-1 book's вступ chapter) is a different book and stays
+2-component, per Craig. Two corpus-wide corrective passes were needed since earlier work
+(mine and pre-existing) had used a bare `ch:<chapter>.<subchapter>` form (missing the book
+prefix) for chapters 1, 2, and 3.1-3.4:
+
+- Commit `20aece3b`: fixed chapter 3 (`ch:3.N` -> `ch:2.3.N`, 174 files).
+- Commit `0de89753`: fixed chapters 1 and 2 (`ch:1.N` -> `ch:2.1.N`, `ch:2.N` -> `ch:2.2.N`,
+  450 files) -- these two chapters were completed before the correction and had never been
+  swept. Verb `FreqSource` fields (chapter-level, no subchapter, e.g. `ch:2.1`) were already
+  using the corrected 2-component book.chapter form for chapters 8/9/10 and are now
+  consistent for 1/2/3 too.
+
+Also added this session (commit `afe2a001`): a `castle-lock-homograph` confusable cluster
+for за́мок (castle, ua-lexeme-1282, ch.2.3.4) / замо́к (lock, ua-lexeme-1302, new
+reference-only companion note, `ch:reference` -- not itself a wordlist item).
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1302**
+- Next `ua-lexeme-` ID: **1303** (1302 consumed by замо́к, the castle-lock-homograph
+  companion note, per Craig's request)
 - Next `ua-verb-` ID: **0270**
 
 ## Environment notes for whoever continues this
