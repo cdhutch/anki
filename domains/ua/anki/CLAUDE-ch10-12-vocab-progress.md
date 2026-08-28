@@ -19,7 +19,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
-| 6 Що сталося? | 11–13 | 6.1–6.7 | in progress (6.1-6.6 done) |
+| 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
@@ -747,14 +747,37 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   ch:2.8.7 -- same, for "Неймовірно!").
 - Next NoteIDs: ua-lexeme-1847, ua-verb-0454.
 
+### Ch.6.7 (bear/berry-picking anecdote) -- small sub-chapter -- **chapter 6 complete**
+
+- Lexemes: **ua-lexeme-1847 - ua-lexeme-1867** (21 notes: 4 nouns, 1 adjective, 6 augmentative
+  intensive adjectives (-езн-/-елезн- suffix), 10 verb-pair lexemes).
+- Verbs: **ua-verb-0454 - ua-verb-0463** (10 notes covering 5 aspect pairs:
+  милуватися/помилуватися, плямкати/заплямкати, ревіти/заревіти, торопіти/сторопіти,
+  сяяти/засяяти).
+- All `status:draft`. Tag `ch:2.6.7`.
+- **Judgment call**: торопіти resolves the OCR-dropped-imperfective gap flagged after
+  ревіти-заревіти in the wordlist (third such gap this chapter, after блукати-заблудитися in
+  6.3 and голодніти-зголодніти in 6.5); unlike those two, торопіти's own Горох entry exists
+  and confirms the reconstruction directly rather than by pure analogy.
+- ревіти/заревіти classified `conj1-irregular`: -іти infinitive shape but conjugation-I
+  non-past endings (реву...ревуть), distinct from the regular conj2-іти verbs (e.g. летіти)
+  already in this corpus.
+- Augmentative adjectives (височезний, величезний, глибочезний, широчезний, довжелезний,
+  старезний) cross-referenced to their base adjectives where already drafted (високий,
+  великий, широкий, довгий, старий); глибокий not yet in the corpus, so глибочезний has no
+  cross-reference.
+- Reused without new notes (retagged ch:2.6.7): спина (ua-lexeme-1061, ch:2.2.5).
+- **Chapter 6 (Що сталося?) is now fully complete, sub-chapters 6.1-6.7.**
+- Next NoteIDs: ua-lexeme-1868, ua-verb-0464.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1847**
-- Next `ua-verb-` ID: **0454**
+- Next `ua-lexeme-` ID: **1868**
+- Next `ua-verb-` ID: **0464**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
