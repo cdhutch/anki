@@ -20,7 +20,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
-| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.3 done) |
+| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.4 done) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
@@ -879,14 +879,34 @@ page-spanning sub-chapter
 - Lexemes: **ua-lexeme-2004 - ua-lexeme-2005**. Verbs: **ua-verb-0530 - ua-verb-0531**.
 - Next NoteIDs: ua-lexeme-2006, ua-verb-0532.
 
+### Ch.7.4 (robots/devices vocabulary) -- left-column stream
+
+- Lexemes: **ua-lexeme-2006 - ua-lexeme-2023** (18 notes: 7 nouns, 4 verb-pair lexemes
+  (2 full pairs), 5 adjectives, 1 adverb, 1 discourse phrase).
+- Verbs: **ua-verb-0532 - ua-verb-0535** (4 notes: підключати/підключити,
+  реєструвати/зареєструвати).
+- All `status:draft`. Tag `ch:2.7.4`.
+- **Correction to ch.7.3**: виглядати (ua-lexeme-1993/ua-verb-0520) was tagged
+  `ch:2.7.3` in the previous commit, but a closer pdftotext re-read (comparing column
+  x-positions in the `-layout` dump) confirmed it belongs to the LEFT-column stream
+  (ch.7.4, alongside підключати/реєструвати), not the RIGHT-column stream (ch.7.3,
+  where коштувати/пишатися/сподіватися correctly remain). Retagged `ch:2.7.4`
+  accordingly; the correction is documented in both notes' Verification Notes.
+- **Process improvement going forward**: cross-check every generator script's word list
+  against a fresh `pdftotext -layout` dump of the actual page range *before* running it,
+  not just before starting the *next* sub-chapter -- this segment caught both the
+  missed ch.7.3 item (аналізувати) and the ch.7.4 misattribution (виглядати) only
+  retroactively, which cost two follow-up commits.
+- Next NoteIDs: ua-lexeme-2024, ua-verb-0536.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2006**
-- Next `ua-verb-` ID: **0532**
+- Next `ua-lexeme-` ID: **2024**
+- Next `ua-verb-` ID: **0536**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
