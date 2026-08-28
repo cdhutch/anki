@@ -24,7 +24,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
-| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1-11.3 done) |
+| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1-11.4 done) |
 | 12 Не журись! | 23–24 | 12.1–12.7 | not started |
 
 ## Generated this pass
@@ -1094,13 +1094,21 @@ older chapters).
   (ua-lexeme-0400, for сонячний промінь), надмірний (ua-lexeme-0679, plain reuse).
 - Next NoteIDs: ua-lexeme-2136, ua-verb-0581.
 
+### Ch.11.4 (climate-change effects & solution-proposal discourse)
+
+- Lexemes: **ua-lexeme-2136 - ua-lexeme-2153** (18 notes: 6 nouns, 12 discourse-formula
+  phrases for proposing/agreeing/disagreeing with solutions). No verb notes (fixed
+  idioms, matches ch.7.6 discourse-formula pattern). All new, no dedup hits.
+- All `status:draft`. Tag `ch:2.11.4`.
+- Next NoteIDs: ua-lexeme-2154, ua-verb-0581 (unchanged -- no new verb notes this pass).
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2136**
+- Next `ua-lexeme-` ID: **2154**
 - Next `ua-verb-` ID: **0581**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
