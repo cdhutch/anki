@@ -23,7 +23,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
-| 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **10.1 done**, 10.2–10.7 not started |
+| 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **10.1–10.2 done**, 10.3–10.7 not started |
 | 11 Якби всі люди... | 22–23 | 11.1–11.7 | not started |
 | 12 Не журись! | 23–24 | 12.1–12.7 | not started |
 
@@ -44,10 +44,30 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 - 3 homograph collisions resolved to a single sense with the other sense(s) documented in
   `Verification Notes` but not drafted (посадка, магазин, палити) — see individual notes.
 
+### Ch.10.2 (family/games; feelings & social verbs) — commit `93b62449`
+
+- Lexemes: **ua-lexeme-0654 – ua-lexeme-0674** (21 notes: 5 family/fairy-tale
+  nouns, 1 board-game phrase, 2 adjectives, 2 predicative adverbs, 1
+  pillow-fight phrase, 10 social/feeling/conflict verbs)
+- Verbs: **ua-verb-0092 – ua-verb-0102** (бажати, вірити, дзвонити,
+  дивуватися, довіряти, допомагати, дякувати, радіти, дратувати, нападати,
+  ображатися)
+- All `status:draft`. Tag `ch:2.10.2`.
+- Dedup: вибачати = bucket-3 true duplicate of **ua-lexeme-0319** (existing
+  ch:2.9.6 note) — appended `ch:2.10.2` to its tags/Tags_Ch rather than
+  creating a new note.
+- Known gaps, flagged in Verification Notes, not silently dropped:
+  насті́льна гра́ and би́тися поду́шками bundled as phrase notes without
+  standalone component notes (насті́льний, гра́, би́тися, поду́шка) — same
+  scope-management call as ua-lexeme-0653 in 10.1.
+- нападати (напада́ти, impf, "to attack") homograph-flagged against an
+  unrelated stress-shifted напа́дати (pf, "to fall in quantity, e.g. leaves")
+  — not tagged homograph:true since no sibling note exists for that sense.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0654**
-- Next `ua-verb-` ID: **0092**
+- Next `ua-lexeme-` ID: **0675**
+- Next `ua-verb-` ID: **0103**
 
 ## Environment notes for whoever continues this
 
