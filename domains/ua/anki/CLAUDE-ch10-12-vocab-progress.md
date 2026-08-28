@@ -18,7 +18,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
-| 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | in progress (5.1-5.4 done) |
+| 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | in progress (5.1-5.5 done) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
@@ -580,14 +580,29 @@ reference-only companion note, `ch:reference` -- not itself a wordlist item).
   same precedent as житель/мешканець.
 - Next NoteIDs: ua-lexeme-1603, ua-verb-0321.
 
+### Ch.5.5 (festival/craft-fair vocabulary; joining/announcing verbs; descriptive adjectives) -- commit `d7996e4c`
+
+- Lexemes: **ua-lexeme-1603 - ua-lexeme-1629** (27 notes: 16 standalone nouns, 2 phrases,
+  1 lexeme-only verb entry збільшувати + its phrase, 7 adjectives/adverb).
+- Verbs: **ua-verb-0321 - ua-verb-0323** (долучитися, заявити, приєднувати). All proper
+  Pugh & Press class tags.
+- All `status:draft`. Tag `ch:2.5.5`.
+- захід drafted in its "event, function, measure" sense -- a third homograph layer on
+  top of the existing "west" and "sunset" senses (ua-lexeme-1557, ch:2.5.2).
+- Reused without new notes (retagged ch:2.5.5, independently bulleted again here):
+  проходити (ua-lexeme-0120 + ua-verb-0021, ch:2.9.4), відбуватися (ua-lexeme-0868 +
+  ua-verb-0152, ch:2.1.3 -- textbook-listed pair, same treatment as житель/мешканець),
+  солодкий (ua-lexeme-0424, ch:2.8.2).
+- Next NoteIDs: ua-lexeme-1630, ua-verb-0324.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1603**
-- Next `ua-verb-` ID: **0321**
+- Next `ua-lexeme-` ID: **1630**
+- Next `ua-verb-` ID: **0324**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
