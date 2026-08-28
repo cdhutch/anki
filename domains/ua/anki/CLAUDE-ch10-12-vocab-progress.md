@@ -166,10 +166,92 @@ VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0
   wordlist's здається ("it seems"); unrelated "admit defeat" sense not
   drafted.
 
+### Ch.1.3 (time/weather/profession; opinion & routine verbs) — commit `354bdf23`
+
+- Lexemes: **ua-lexeme-0850 – ua-lexeme-0882** (33 notes: 15 standalone
+  nouns/adverbs, 14 verb-lexeme entries, 2 bundled phrases, plus 2
+  pre-existing notes patched with an added `ch:1.3` tag)
+- Verbs: **ua-verb-0150 – ua-verb-0164** (божеволіти, вважати, відбуватися,
+  відчувати, завантажувати, знайомитися, називати, намагатися, обідати,
+  снідати, створювати, триматися, шукати, залишатися)
+- All `status:draft`. Tag `ch:1.3`.
+- Dedup (referenced, retagged per dedup bucket 3 -- compound-phrase content
+  word): сонячний (ua-lexeme-0400) in сонячна погода; кордон
+  (ua-lexeme-0800) in їздити за кордон, both got `ch:1.3` appended to
+  Tags_Ch/tags.
+- Dedup (referenced, NOT retagged -- basic ch:1.0 word inside a longer VP,
+  same precedent as лікар/країна in ch.10.7): рік, їздити, ходити, спорт,
+  час, лікар, країна.
+- New precedent established: when ALL components of a would-be bundled
+  phrase are themselves freshly drafted in the same pass (not pre-existing
+  gaps), skip the bundled phrase note and use the phrase as the example
+  sentence on the relevant standalone entry instead (applied to
+  "залишатися вдома", ua-lexeme-0880). Contrast with a genuine unresolved
+  gap component (сидіти) -- still bundle as a phrase note in that case
+  ("сидіти годинами за комп'ютером", "сидіти в інтернеті").
+
+### Aspect-pairing review pass (ch.1.1–1.3, ch.10.1–10.7) — commit `96992818`
+
+- Craig's instruction: systematically review every UA_Lexeme verb note
+  drafted so far for missing perfective/imperfective aspect-partner
+  cross-references, using `yabluko-l2-verb-dictionary.pdf` as the primary
+  source (Горох as fallback), even where the vocabulary list doesn't
+  explicitly call out the pairing. Where a headword has multiple listed
+  perfectives (esp. PVOM), use the dictionary's primary/first-listed
+  pairing.
+- Lightweight convention (no separate note pairs created for the partner):
+  imperfective headword -> fill `Perfective` field with the stressed
+  perfective lemma, update `TypingAnswer` to `"{impf} / {pf}"`, extend
+  `Source_URL` with the partner's Горох page, append a sentence to
+  `Verification Notes`. Perfective headword -> just append a
+  "Imperfective counterpart X added" sentence to `Verification Notes`
+  (TypingAnswer/Perfective field untouched). Tantum verbs (no partner
+  exists) -> append a note confirming the dictionary/Горох check found
+  none.
+- 52 existing lexeme notes patched (spanning ch:1.1, ch:1.2, ch:1.3,
+  ch:2.10.1, ch:2.10.3, ch:2.10.5, ch:2.10.6, ch:2.10.7).
+- Recovered from a self-inflicted duplicate-patch bug (importing the patch
+  script from a diagnostic script re-executed all its top-level code,
+  double-applying the Verification Notes addendum) — reverted all 52 files
+  to HEAD and re-ran the patch script via direct execution only.
+- Validated clean (schema/euphony/pytest 523/523) after the fix.
+- **Going forward: this convention is now applied proactively at initial
+  verb-drafting time (see ch.1.4 below), not deferred to a later review
+  pass.**
+
+### Ch.1.4 (mood/dental-care; everyday verbs) — commit `0a1ee745`
+
+- Lexemes: **ua-lexeme-0883 – ua-lexeme-0896** (14 notes: 4 standalone
+  nouns, 1 predicative adverb, 9 verb-lexeme entries)
+- Verbs: **ua-verb-0165 – ua-verb-0173** (вставляти, заважати, носити,
+  оцінювати, пекти, плакати, платити, різати, чистити)
+- All `status:draft`. Tag `ch:1.4`.
+- **First sub-chapter with aspect pairings applied at initial drafting
+  time** (per Craig's instruction, see review pass above): вставляти ->
+  вставити, заважати -> завадити, носити -> поносити (delimitative
+  "carry/wear for a while" -- dictionary's primary listed pairing for
+  multidirectional носити), оцінювати -> оцінити, пекти -> спекти,
+  плакати -> заплакати, платити -> заплатити, різати -> порізати,
+  чистити -> почистити. All sourced from `yabluko-l2-verb-dictionary.pdf`
+  primary pairing, stress-verified via Горох.
+- носити drafted with `VerbMotion_Pair: не́сти / носи́ти` per design.md's
+  motion-verb convention (cf. доїжджати, ua-lexeme-0128) -- multidirectional
+  partner of unidirectional нести, textbook context favors the extended
+  "wear clothing" sense.
+- плакати/платити cross-linked via `ConfusableSet` (similar spelling,
+  unrelated meaning, stress-only 1sg minimal pair плачу́/пла́чу).
+- New precedent reused: "чистити зуби перед сном" used as чистити's example
+  sentence rather than a bundled phrase note, since зуб and сон are both
+  freshly drafted in this same pass (not pre-existing gaps) -- same as
+  залишатися вдома in ch.1.3.
+- Dedup: конкурс, настрій, зуб, сон, важливо, вставляти, заважати, носити,
+  оцінювати, пекти, плакати, платити, різати, чистити, "чистити зуби перед
+  сном" all confirmed brand new (no corpus matches).
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0850**
-- Next `ua-verb-` ID: **0150**
+- Next `ua-lexeme-` ID: **0897**
+- Next `ua-verb-` ID: **0174**
 
 ## Environment notes for whoever continues this
 
