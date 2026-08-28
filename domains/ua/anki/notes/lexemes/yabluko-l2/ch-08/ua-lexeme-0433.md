@@ -28,8 +28,15 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
-  Mnemonic_EN: ''
+  ConfusableSet: 'ни́жній (ua-lexeme-0312) -- convergent near-synonym, not a homograph: низьки́й
+    is an absolute adjective describing an object''s own height (a low ceiling, a low table),
+    while ни́жній is a positional/relative adjective (the bottom one of a pair or ordered
+    set -- a lower berth, a lower shelf), independent of the object''s actual size. Also see
+    висо́кий (ua-lexeme-0438) -- низьки́й''s actual opposite, a separate, easier distinction
+    from the ни́жній confusion.'
+  Mnemonic_EN: низьки́й = an object is short/low on its own (a low ceiling); ни́жній = the
+    BOTTOM one of a pair/set (lower berth, lower shelf) -- see висо́кий (ua-lexeme-0438) for
+    низьки́й''s true opposite.
   CrossLang_Analog: ''
   TypingAnswer: низький
   UA_Example: У кімнаті були низькі стелі.
@@ -37,6 +44,12 @@ fields:
   Tags_Ch: ch:2.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/низький
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
-  Verification Notes: ''
+  Verification Notes: '2026-08-28: per Craig ("I''m confusing ни́жній with низьки́й..."),
+    added ConfusableSet + Mnemonic_EN distinguishing низьки́й (absolute height quality) from
+    ни́жній (ua-lexeme-0312, positional/relative -- bottom of a pair/set). Registered a new
+    confusable_clusters.yaml cluster (positional-vs-absolute-lower) pairing this note with
+    ua-lexeme-0312 for a live Compare card. Checked ua-lexeme-0433 had no prior cluster membership
+    before registering. 2026-08-28: Craig confirmed Group 4 (нижній/верхній/низький/високий/нижчий/вищий)
+    is good in Anki after the show_all_members Compare-card fix.'
 ---
 

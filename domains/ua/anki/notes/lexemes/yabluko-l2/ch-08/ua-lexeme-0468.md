@@ -29,10 +29,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: Satellite note in intensifier-adverbs cluster; hub is ua-lexeme-0467 (значно).
-    See domains/ua/anki/confusable_clusters.yaml for full cluster. набагато = everyday, conversational
-    intensity; значно = formal, measured intensity. Both intensify comparatives but differ
-    markedly in register.
+  ConfusableSet: 'Satellite note in intensifier-adverbs cluster; hub is ua-lexeme-0467 (значно).
+    See domains/ua/anki/confusable_clusters.yaml for full cluster (now 4 members: значно,
+    набагато, занадто ua-lexeme-0417, забагато ua-lexeme-0615). набагато = everyday, conversational
+    intensity; значно = formal, measured intensity. Both intensify comparatives -- unlike
+    занадто/забагато, which mark absolute excess with no comparison implied.'
   Mnemonic_EN: значно = measured, written-register "significantly"; набагато = everyday spoken
     "much/by far" -- same job (intensifying a comparative), different register.
   CrossLang_Analog: ''
@@ -49,7 +50,9 @@ fields:
     -- same authoring gap that caused the ua-lexeme-0305 bug (importer auto-derive fallback
     firing instead of a hand-authored card). Built out a proper Shape 2 confusables card:
     CompareScenario tailored to elicit набагато''s everyday spoken register, CompareA/CompareB
-    the two stressed lemmas (same chip set/order as ua-lexeme-0467). Still status:draft --
-    needs your review, including stress verification.'
+    the two stressed lemmas (same chip set/order as ua-lexeme-0467). 2026-08-28: Craig confirmed
+    Group 3 (значно/набагато/занадто/забагато) is good in Anki after the show_all_members
+    Compare-card fix -- status:verified (the tag already carried over from an earlier pass;
+    the stale "still status:draft" note above is superseded by this line).'
 ---
 

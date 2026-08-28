@@ -30,11 +30,15 @@ fields:
   CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: 'Hub note for intensifier-adverbs cluster (see domains/ua/anki/confusable_clusters.yaml).
-    Members: ua-lexeme-0467 (значно), ua-lexeme-0468 (набагато), and pending: забагато, занадто.
-    значно = formal, measured intensity; набагато = everyday, conversational intensity. Both
-    intensify comparatives but differ markedly in register.'
+    Members: ua-lexeme-0467 (значно), ua-lexeme-0468 (набагато), ua-lexeme-0417 (занадто),
+    ua-lexeme-0615 (забагато). Two related pairs sharing overlapping EN glosses ("very/much/too"):
+    значно (formal, measured) and набагато (everyday, conversational) both intensify a COMPARATIVE
+    ("X-er than Y"); занадто (general "too/excessively," adjectives/adverbs) and забагато
+    (fused "too much," quantity-specific) both mark an ABSOLUTE excess past an acceptable
+    limit, no comparison implied.'
   Mnemonic_EN: значно = measured, written-register "significantly"; набагато = everyday spoken
-    "much/by far" -- same job (intensifying a comparative), different register.
+    "much/by far" -- same job (intensifying a comparative), different register. занадто/забагато
+    (ua-lexeme-0417/0615) are a different job entirely -- absolute excess, not comparison.
   CrossLang_Analog: ''
   TypingAnswer: значно
   UA_Example: Цей готель значно дорожчий за той.
@@ -50,6 +54,11 @@ fields:
     bug (importer auto-derive fallback firing instead of a hand-authored card). Built out
     a proper Shape 2 confusables card: CompareScenario tailored to elicit значно''s formal/written
     register, CompareA/CompareB the two stressed lemmas (same chip set/order as ua-lexeme-0468).
-    Still status:draft -- needs your review, including stress verification.'
+    2026-08-28: per Craig''s request, completed the cluster this note''s own ConfusableSet
+    had flagged as "pending" -- added занадто (ua-lexeme-0417, pre-existing note) and забагато
+    (ua-lexeme-0615, newly created) as satellites. Orange flag was on занадто, not this note;
+    updated here only to reflect the now-complete 4-member family. 2026-08-28: Craig confirmed
+    Group 3 (значно/набагато/занадто/забагато) is good in Anki after the show_all_members
+    Compare-card fix.'
 ---
 
