@@ -1157,13 +1157,25 @@ evacuation/cleanup response, narrative & political-suppression terms)
 - `pytest tests/ua/ -q`: 547 passed.
 - Next NoteIDs: ua-lexeme-2183, ua-verb-0587 (unchanged -- no new verb notes this pass).
 
+### Ch.11.7 (concessive discourse connectors) -- **chapter 11 complete**
+
+- Lexemes: **ua-lexeme-2183** (new: хоча, "although, even though", pos:adverb per this
+  corpus's convention for connector words -- cf. однак). Reused via retag: однак
+  (ua-lexeme-1914, ch.7.2, "however"). No verb notes.
+- All `status:draft`. Tag `ch:2.11.7`.
+- `pytest tests/ua/ -q`: 547 passed.
+- **Chapter 11 (Якби всі люди) is now fully complete: 11.1-11.7, ua-lexeme-2079 through
+  ua-lexeme-2183 (105 lexeme notes) + ua-verb-0554 through ua-verb-0586 (33 verb notes),
+  all committed.**
+- Next NoteIDs: ua-lexeme-2184, ua-verb-0587.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2183**
+- Next `ua-lexeme-` ID: **2184**
 - Next `ua-verb-` ID: **0587**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
