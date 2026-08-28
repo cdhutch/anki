@@ -14,7 +14,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 
 | Chapter | PDF pages | Subsections | Status |
 |---|---|---|---|
-| 1 Будні та свята | 1–2 | 1.1–1.7 | not started |
+| 1 Будні та свята | 1–2 | 1.1–1.7 | in progress (1.1, 1.2 done) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | not started |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | not started |
 | 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
@@ -135,14 +135,41 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
   ua-lexeme-0640 (ch:2.10.1); уникати → ua-lexeme-0783 (ch:2.10.6, appears
   in both 10.6 and 10.7 wordlists).
 - Referenced but not re-tagged (basic ch:1.0 vocab embedded in a longer
-  VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0006) in
+VP phrase, same precedent as кинути палити): лікар (ua-lexeme-0006) in
   звернутися до лікаря; країна (ua-lexeme-0041) in перебувати в країні.
 - **Chapter 10 (Суворо заборонено!) is now fully done, all of 10.1–10.7.**
 
+### Ch.1.1 (weekdays/holidays; leisure verbs) — commit `e69d17f1`
+
+- Lexemes: **ua-lexeme-0828 – ua-lexeme-0838** (11 notes: 2 standalone
+  nouns, 3 verb-lexeme entries, 1 collective numeral, 1 adverb, 4 bundled
+  phrases)
+- Verbs: **ua-verb-0140 – ua-verb-0142** (відпочивати, ненавидіти,
+  розважатися)
+- All `status:draft`. Tag `ch:1.1`.
+- обидва/обидві/обоє drafted as one lexeme note per the textbook's grouping.
+- Dedup (referenced, NOT re-tagged — basic word inside a longer VP, same
+  precedent as лікар/країна in ch.10.7): спорт (ua-lexeme-0142, ch:2.9.1) in
+  займатися спортог; час (ua-lexeme-0356, ch:2.9.7) in проводити час;
+  ходити (ua-lexeme-0581, ch:2.9.4) in ходити в гості.
+- Known gaps flagged (not drafted, scope management): займатися,
+  проводити, сидіти, інтернет, гість.
+
+### Ch.1.2 (voice/speech; everyday verbs) — commit `041ddcfd`
+
+- Lexemes: **ua-lexeme-0839 – ua-lexeme-0849** (11 notes: 1 noun, 7
+  verb-lexeme entries, 3 adverbs)
+- Verbs: **ua-verb-0143 – ua-verb-0149** (вживати, вишивати, відкривати,
+  впізнавати, додавати, жартувати, здаватися)
+- All `status:draft`. Tag `ch:1.2`.
+- здаватися drafted for its "уявлятися" (to seem) sense only, matching the
+  wordlist's здається ("it seems"); unrelated "admit defeat" sense not
+  drafted.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **0828**
-- Next `ua-verb-` ID: **0140**
+- Next `ua-lexeme-` ID: **0850**
+- Next `ua-verb-` ID: **0150**
 
 ## Environment notes for whoever continues this
 
