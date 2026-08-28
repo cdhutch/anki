@@ -17,7 +17,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 1 Будні та свята | 1–2 | 1.1–1.7 | **done** (row was stale -- all of 1.1-1.7 completed earlier, see Ch.1.7 entry below; corrected 2026-08-28) |
 | 2 Вечірка | 2–4 | 2.1–2.7 | done |
 | 3 Чого нам бракує до повного щастя | 4–7 | 3.1–3.7 | **done** (all of 3.1-3.7 complete) |
-| 4 Люди та історії | 7–9 | 4.1–4.7 | not started |
+| 4 Люди та історії | 7–9 | 4.1–4.7 | in progress (4.1-4.3 done) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | not started |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | not started |
 | 7 Наше майбутнє | 13–16 | 7.1–7.7 | not started (1 stray lexeme, ua-lexeme-0379, already exists from the grammar-guide PDF — unrelated source, will surface again in dedup) |
@@ -407,10 +407,60 @@ Also added this session (commit `afe2a001`): a `castle-lock-homograph` confusabl
 for за́мок (castle, ua-lexeme-1282, ch.2.3.4) / замо́к (lock, ua-lexeme-1302, new
 reference-only companion note, `ch:reference` -- not itself a wordlist item).
 
+### Ch.4.1 (centuries, era markers, everyday inventions) -- commit `5586ec84`
+
+- Lexemes: **ua-lexeme-1366 - ua-lexeme-1374** (9 notes): століття, до нашої ери / до
+  Різдва Христового, нашої ери / від Різдва Христового, винахід, мило, монета,
+  книгодрукування, черга, котрий.
+- All `status:draft`. Tag `ch:2.4.1`.
+- Dedup (bucket-3, tag appended): виделка (ua-lexeme-1063, was ch:2.2.5).
+- Flagged for Craig: plain який (котрий's near-synonym) not yet drafted -- only
+  compounds якийсь/якийсь час exist -- so no confusable cluster registered yet.
+
+### Ch.4.2 (months, dates, founding/proclaiming events) -- commit `b7d76377`
+
+- Lexemes: **ua-lexeme-1375 - ua-lexeme-1391** (17 notes): 12 months, дата, хрещення,
+  заснований, коронований, проголошений (deverbal adjectives, base verbs not drafted).
+- Verbs: **ua-verb-0274** (виникнути, perfective, class:conj1-нути).
+- All `status:draft`. Tag `ch:2.4.2`.
+- Flagged for Craig: лютий (February) is a homograph with adjective лютий "fierce" (not
+  yet drafted) -- flagged for future confusable-cluster registration.
+
+### Verb-class tag fix (per Craig) -- commit `2818c10a`
+
+- Confirmed the Pugh & Press verb-class scheme (PR #92, `d04ac539`/`02176dab`,
+  `CLAUDE-ua-verb-design.md`) is merged to main and an ancestor of this branch, but only
+  the original 87-note corpus was migrated -- verbs added by this vocab-expansion project
+  (ch.1-4) mostly kept old ad-hoc `class:N`/`VerbClass: regular-N` values. Fixed the 5
+  verb notes touched by today's session (ua-verb-0192, 0271-0274) to proper Pugh & Press
+  tags. **Per Craig's explicit direction: ~120 other pre-existing verb notes across
+  ch.1-3 still need a dedicated retroactive-fix pass later — deferred in favor of
+  continuing ch.4-12 vocab work.** All new verb notes from here forward use correct
+  Pugh & Press class tags (see ch.4.3 below for examples: conj1-vowel+й, conj1-нути,
+  conj1-consonant+ти, conj2-ити).
+
+### Ch.4.3 (WWII/occupation, emigration, education, timeline expressions) -- commit `28c6805e`
+
+- Lexemes: **ua-lexeme-1392 - ua-lexeme-1446** (55 notes: 11 standalone nouns, 22 phrase
+  notes, 4 deverbal adjectives, 12 timeline-expression phrases, 6 lexeme-only verb
+  entries for VP components).
+- Verbs: **ua-verb-0275 - ua-verb-0294** (20 notes, all proper Pugh & Press class tags).
+- All `status:draft`. Tag `ch:2.4.3`.
+- Dedup (bucket-3, tag appended): влада (ua-lexeme-0704), стаття (ua-lexeme-0063), табір
+  (ua-lexeme-0265), радий (ua-lexeme-1141), розстріляний (ua-lexeme-0723), пізніше
+  (ua-lexeme-0344).
+- Flagged for Craig: літній професор uses літній="elderly" sense, homograph with
+  літній="summery" (not yet drafted) -- flagged for future cluster.
+- **Largest sub-chapter to date (75 new/retagged notes total).**
+
+### Deadline update
+
+Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
+
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **1366**
-- Next `ua-verb-` ID: **0274**
+- Next `ua-lexeme-` ID: **1447**
+- Next `ua-verb-` ID: **0295**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
