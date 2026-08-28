@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- homograph:true
 fields:
   NoteID: ua-lexeme-0378
   Lemma: па́ртія
@@ -29,8 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
-  Mnemonic_EN: ''
+  ConfusableSet: партія (game/round sense, ua-lexeme-0186) — homograph pair, same spelling,
+    unrelated meanings. Political party (this note) vs. a single round of a board/card game,
+    start to finish.
+  Mnemonic_EN: The homograph pair distinguishes 'political organization' (this note) from
+    'one round of chess/cards' (ua-lexeme-0186) by context.
   CrossLang_Analog: ''
   TypingAnswer: партія
   UA_Example: Ця партія перемогла на виборах.
@@ -42,7 +46,11 @@ fields:
     sense -- by far the most common of Горох's other listed senses for партія (a batch of
     goods, a musical voice-part, a marriage match, a group with shared interests, all excluded
     as out-of-scope/rare -- see ua-lexeme-0186's Verification Notes).
-  Verification Notes: Same Lemma/stress as ua-lexeme-0186, already Горох-verified there. Content
-    (gloss, example) still needs your review pass before flipping to status:verified.
+  Verification Notes: 'Same Lemma/stress as ua-lexeme-0186, already Горох-verified there.
+    2026-08-27: content (gloss, example) reviewed and confirmed by Craig while building the
+    party-game-homograph Compare-card cluster with ua-lexeme-0186 -- the stale "still needs
+    your review" note (written 2026-07-25, never actually resolved despite status:verified
+    already being set) is now genuinely closed rather than left open under a contradictory
+    tag. Tagged homograph:true and cross-linked with ua-lexeme-0186 in confusable_clusters.yaml.'
 ---
 

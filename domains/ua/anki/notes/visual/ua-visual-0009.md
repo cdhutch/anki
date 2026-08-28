@@ -16,7 +16,8 @@ tags:
 fields:
   NoteID: ua-visual-0009
   Prefix: за-
-  Meaning_EN: stopping by briefly
+  Meaning_EN: stopping by briefly on the way to somewhere else -- ducking in and back out
+    again before continuing your journey, not settling in
   Govt: до + Р.в. / в + Зн.в.
   Walking_Pair: захо́дити / зайти́
   Vehicle_Pair: заїжджа́ти / заї́хати
@@ -39,6 +40,10 @@ fields:
     hook at low resolution turned out, on close zoom, to be these two crossing diagonal arrows
     plus the page''s decorative corner-bracket graphic (excluded here, not part of the diagram
     -- see Craig''s note). Replaces the previous single arrow passing straight through the
-    box. Reviewed and approved by Craig.'
+    box. Reviewed and approved by Craig. 2026-08-27: as part of the до-/при- Meaning_EN pass,
+    rewrote Meaning_EN to name the in-and-back-out motion the diagram''s two crossing arrows
+    already show -- distinguishes за- from в-/у- (entering, ua-visual-0002, no implied exit)
+    and from при- (arriving, ua-visual-0001, no implied continuation elsewhere). My own draft,
+    needs your review.'
 ---
 

@@ -16,7 +16,7 @@ tags:
 fields:
   NoteID: ua-visual-0002
   Prefix: в-/у-
-  Meaning_EN: entering
+  Meaning_EN: entering -- going into an enclosed space, ending up inside it
   Govt: у/в + Зн.в.
   Walking_Pair: входи́ти / увійти́
   Vehicle_Pair: вʼїжджа́ти / вʼї́хати
@@ -34,6 +34,8 @@ fields:
   Source_Note: в-/у- — enter inside
   Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 (arrow
     entering a plain square) to match the textbook''s enclosed-space icon exactly. Reviewed
-    and approved by Craig.'
+    and approved by Craig. 2026-08-27: as part of the до-/при- Meaning_EN pass, rewrote Meaning_EN
+    to state the "ending up inside" endpoint the diagram shows, mirroring ua-visual-0003 (ви-,
+    ending up outside). My own draft, needs your review.'
 ---
 
