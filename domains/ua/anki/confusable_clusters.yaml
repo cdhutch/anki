@@ -1216,6 +1216,33 @@ clusters:
         or gathering
       compare_scenario: You're camping with friends and someone lights a fire on purpose so
         everyone can sit around it and tell stories. What word describes that fire?
+  container-nouns-packet-vs-pack:
+    description: 'Two container nouns both loosely glossable as "pack" in English:
+      паке́т (masc.) is a wrapped or bagged single unit -- a packet, or colloquially
+      a plastic bag; па́чка (fem.) is a compact bundle or carton -- e.g. a pack of
+      cigarettes, a carton of milk or butter. Different container shapes, not
+      interchangeable. Craig-requested 2026-08-28 while both were being drafted in
+      ch.3.1 (quantities/containers).
+
+      '
+    canonical_note: ua-lexeme-1161
+    members:
+    - note_id: ua-lexeme-1161
+      lemma: паке́т
+      status: sourced
+      chapter: '3.1'
+      comment: A wrapped/bagged single unit -- a packet, or colloquially a plastic bag
+      compare_scenario: You're at the store and need something to carry loose
+        groceries home in, or you're asking for a packet of sugar -- which word
+        for "pack" fits?
+    - note_id: ua-lexeme-1162
+      lemma: па́чка
+      status: sourced
+      chapter: '3.1'
+      comment: A compact bundle or carton -- e.g. a pack of cigarettes, a carton of
+        milk or butter
+      compare_scenario: You're buying a carton of butter or a pack of cigarettes at
+        the store -- which word for "pack" fits?
   law-right-vs-statute:
     description: 'Convergent near-synonym PAIR both glossable as "law" in English:
       пра́во (neut.) is law in the abstract/systemic sense -- the legal system,
