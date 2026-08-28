@@ -20,7 +20,7 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 4 Люди та історії | 7–9 | 4.1–4.7 | **done** (all of 4.1-4.7 complete) |
 | 5 Скажи де, скажи коли | 9–11 | 5.1–5.6 | **done** (all of 5.1-5.6 complete) |
 | 6 Що сталося? | 11–13 | 6.1–6.7 | **done** (all of 6.1-6.7 complete) |
-| 7 Наше майбутнє | 13–16 | 7.1–7.7 | in progress (7.1-7.6 done) |
+| 7 Наше майбутнє | 13–16 | 7.1–7.7 | **done** (all of 7.1-7.7 complete) |
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
@@ -934,14 +934,44 @@ sub-chapter
   canonicalize/test this time.
 - Next NoteIDs: ua-lexeme-2053, ua-verb-0542.
 
+### Ch.7.7 (final sub-chapter of chapter 7) -- CHAPTER 7 COMPLETE
+
+- Lexemes: **ua-lexeme-2053 - ua-lexeme-2078** (26 notes: 6 nouns, 10 verb-pair lexemes
+  (5 full pairs), 2 pair-member-only verb lexemes, 1 adjective, 7 connector
+  adverbs/conjunctions).
+- Verbs: **ua-verb-0542 - ua-verb-0553** (12 notes: випробовувати/випробувати,
+  дозволяти/дозволити, домовлятися/домовитися, економити/зекономити (кошти),
+  зводити/звести).
+- All `status:draft`. Tag `ch:2.7.7`.
+- **звести**: вести-family ablaut non-past stem (зведу/зведеш...), classified
+  conj1-irregular, matching довести's paradigm (cf. ch.6.3/6.4).
+- **оцінити** (partner of existing оцінювати, ua-lexeme-0891/ua-verb-0168, ch:2.1.4):
+  confirmed via Горох as FIXED-stress conj2-ity (оці́ню throughout) -- note this
+  contradicts the mobile-stress choice made for переоцінити in ch.7.3, which was an
+  educated guess without a direct Горох citation at the time; переоцінити was not
+  retroactively changed since Ukrainian citation dictionaries do show real variation
+  here and both are defensible.
+- **ставати** (partner of existing стати, ua-lexeme-1443/ua-verb-0296, ch:2.4.3/2.4.4):
+  давати-family -авати verb (стаю́, not *ставаю). Sense note added to стати for the
+  ставати/стати друзями = "to become friends" collocation.
+- Reused without new notes (retagged ch:2.7.7): оцінювати (ua-lexeme-0891/
+  ua-verb-0168), стати (ua-lexeme-1443/ua-verb-0296).
+- **CHAPTER 7 (Наше майбутнє) IS NOW FULLY COMPLETE**, all of 7.1-7.7.
+- Next up per processing order (2-7, then 11-12): **chapter 11**. Wordlist needs a
+  fresh dedup re-run and re-verification against the PDF via `pdftotext -layout`
+  (not yet read this segment) -- do not reuse any page-number assumptions from
+  chapters 2-10, since this segment's ch.7 work revealed the actual PDF is only 24
+  pages total and printed page numbers do not equal PDF page indices.
+- Next NoteIDs: ua-lexeme-2079, ua-verb-0554.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2053**
-- Next `ua-verb-` ID: **0542**
+- Next `ua-lexeme-` ID: **2079**
+- Next `ua-verb-` ID: **0554**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
