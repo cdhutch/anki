@@ -14,7 +14,7 @@ tags:
 - status:verified
 fields:
   NoteID: ua-lexeme-0608
-  Lemma: Доброї ночі
+  Lemma: Доброї но́чі
   Lemma_Euphony: ''
   PartOfSpeech: phrase
   Gender: ''

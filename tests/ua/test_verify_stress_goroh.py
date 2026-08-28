@@ -790,10 +790,15 @@ fields:
         # CounterpartForm: f: воді́йка
         assert "CounterpartForm" in fields_found
 
-    def test_real_notes_directory_has_113_notes(self):
-        """Sanity check: ch-00 contains exactly 113 note files."""
+    def test_real_notes_directory_has_114_notes(self):
+        """Sanity check: ch-00 contains exactly 114 note files.
+
+        Was 113; bumped to 114 on 2026-08-28 when ua-lexeme-0608 (Доброї ночі)
+        was added to the corpus as the counterpart of ua-lexeme-0108 (На добраніч)
+        in the greeting-genitive-vs-fixed-night confusable cluster.
+        """
         note_files = sorted(NOTES_CH00.glob("ua-lexeme-*.md"))
-        assert len(note_files) == 113, f"Expected 113 notes, found {len(note_files)}"
+        assert len(note_files) == 114, f"Expected 114 notes, found {len(note_files)}"
 
     def test_all_notes_have_source_url(self):
         """After backfill_source_url ran, every note must have Source_URL set.

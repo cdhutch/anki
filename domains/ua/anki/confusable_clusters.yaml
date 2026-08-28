@@ -1165,7 +1165,7 @@ clusters:
     canonical_note: ua-lexeme-0108
     members:
     - note_id: ua-lexeme-0108
-      lemma: на добра́ніч
+      lemma: На добра́ніч
       status: sourced
       chapter: '1.0'
       comment: Frozen, uninflected interjection -- the traditional default farewell for parting
@@ -1173,7 +1173,7 @@ clusters:
       compare_scenario: You're saying goodbye to your host family as you head to bed for the
         night -- what's the standard, most traditional thing to say?
     - note_id: ua-lexeme-0608
-      lemma: доброї но́чі
+      lemma: Доброї но́чі
       status: sourced
       chapter: '1.0'
       comment: Genitive-of-wish alternate, same construction as доброго ранку/дня/вечора --
