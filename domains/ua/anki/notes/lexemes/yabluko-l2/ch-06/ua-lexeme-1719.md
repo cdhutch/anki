@@ -12,6 +12,7 @@ tags:
 - ch:2.6.2
 - pos:verb
 - status:draft
+- ch:2.7.6
 fields:
   NoteID: ua-lexeme-1719
   Lemma: прийня́ти
@@ -35,15 +36,16 @@ fields:
   TypingAnswer: прийняти
   UA_Example: Він прийняв душ і ліг спати.
   EN_Example: He took a shower and went to bed.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2,ch:2.7.6
   Source_URL: https://goroh.pp.ua/Словозміна/прийняти
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).
-  Verification Notes: New. Perfective partner of прийма́ти (ua-lexeme-0775, whose Perfective
+  Verification Notes: 'New. Perfective partner of прийма́ти (ua-lexeme-0775, whose Perfective
     field already cross-references прийня́ти). Textbook wordlist gives the pair as "приймати
     – прийняти (душ)", flagging the "take a shower" collocation as the relevant sense here
     rather than introducing a separate phrase note (приймати душ compositionally reuses the
     existing verb, per the "one phrase note" rule not applying when no new phrase-specific
-    vocabulary is introduced).
+    vocabulary is introduced). Sense note (ch.7.6): collocation приймати/прийняти запрошення
+    = "to accept an invitation".'
 ---
 

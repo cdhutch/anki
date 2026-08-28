@@ -11,12 +11,13 @@ tags:
 - ch:2.6.2
 - ch:2.6
 - status:draft
+- ch:2.7.6
 fields:
   NoteID: ua-verb-0380
   Lemma: прийня́ти
   Aspect: perfective
   VerbClass: conj1-irregular
-  FreqSource: ch:2.6.2
+  FreqSource: ch:2.6.2,ch:2.7.6
   Pres_1sg: прийму́
   Pres_2sg: при́ймеш
   Pres_3sg: при́йме

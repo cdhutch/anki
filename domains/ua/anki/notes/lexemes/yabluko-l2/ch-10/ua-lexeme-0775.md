@@ -13,6 +13,7 @@ tags:
 - ch:2.6.2
 - pos:verb
 - status:draft
+- ch:2.7.6
 fields:
   NoteID: ua-lexeme-0775
   Lemma: прийма́ти
@@ -36,13 +37,14 @@ fields:
   TypingAnswer: приймати / прийняти
   UA_Example: Приймайте ці таблетки двічі на день.
   EN_Example: Take these pills twice a day.
-  Tags_Ch: ch:2.10.6, ch:2.6.2
+  Tags_Ch: ch:2.10.6, ch:2.6.2,ch:2.7.6
   Source_URL: https://goroh.pp.ua/Словозміна/приймати; https://goroh.pp.ua/Словозміна/прийняти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
-  Verification Notes: New. Imperfective. Perfective counterpart прийняти not drafted this
+  Verification Notes: 'New. Imperfective. Perfective counterpart прийняти not drafted this
     pass (very common verb, flagged as a gap for a future pass). Full conjugation on paired
     ua-verb-0127. Perfective прийня́ти added (aspect-pairing review, yabluko-l2-verb-dictionary
-    + Горох, 2026-08-28).
+    + Горох, 2026-08-28). Sense note (ch.7.6): collocation приймати/прийняти запрошення =
+    "to accept an invitation".'
 ---
 
