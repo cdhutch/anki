@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:2.5
 - pos:noun
 - gender:m
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ніж
   UA_Example: Кухар ріже хліб гострим ножем.
   EN_Example: The cook cuts bread with a sharp knife.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:2.5
   Source_URL: https://goroh.pp.ua/Словозміна/ніж
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

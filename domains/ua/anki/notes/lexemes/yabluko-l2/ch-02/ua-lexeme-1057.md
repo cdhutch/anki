@@ -1,7 +1,7 @@
 ---
 schema: cnsf/v0
 note_type: ua_lexeme
-note_id: ua-lexeme-0689
+note_id: ua-lexeme-1057
 anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
@@ -9,13 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:2.10.3
 - ch:2.5
 - pos:noun
 - status:draft
 fields:
-  NoteID: ua-lexeme-0689
-  Lemma: ситуа́ція
+  NoteID: ua-lexeme-1057
+  Lemma: тарі́лка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
@@ -25,7 +24,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: situation
+  EN_Gloss: plate
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
@@ -33,13 +32,12 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: ситуація
-  UA_Example: Це доволі складна ситуація.
-  EN_Example: This is quite a complicated situation.
-  Tags_Ch: ch:2.10.3, ch:2.5
-  Source_URL: https://goroh.pp.ua/Словозміна/ситуація
-  Source_Note: Горох-verified 2026-08-28, ch.10.3 sourcing pass (health/wellbeing; coping
-    & effort verbs).
-  Verification Notes: New. Fem., 1st decl., soft group.
+  TypingAnswer: тарілка
+  UA_Example: Постав тарілку на стіл.
+  EN_Example: Put the plate on the table.
+  Tags_Ch: ch:2.5
+  Source_URL: https://goroh.pp.ua/Словозміна/тарілка
+  Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
+  Verification Notes: New. Fem., 1st decl., hard group.
 ---
 

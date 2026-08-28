@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.4
+- ch:2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: різати / порізати
   UA_Example: Вона ріже овочі гострим ножем.
   EN_Example: She is cutting vegetables with a sharp knife.
-  Tags_Ch: ch:1.4
+  Tags_Ch: ch:1.4, ch:2.5
   Source_URL: https://goroh.pp.ua/Словозміна/різати; https://goroh.pp.ua/Словозміна/порізати
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

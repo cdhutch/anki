@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5
+- ch:2.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: відмовлятися / відмовитися
   UA_Example: Він відмовляється їсти мʼясо в піст.
   EN_Example: He refuses to eat meat during the fast.
-  Tags_Ch: ch:1.5
+  Tags_Ch: ch:1.5, ch:2.5
   Source_URL: https://goroh.pp.ua/Словозміна/відмовлятися; https://goroh.pp.ua/Словозміна/відмовитися
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).
