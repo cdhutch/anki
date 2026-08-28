@@ -529,6 +529,30 @@ clusters:
       chapter: reference
       comment: Lock, latch (reference-only companion note, not itself a wordlist item)
       compare_scenario: Which sense of замок is being used?
+  amazing-impressive-synonyms:
+    description: 'Convergent near-synonym pair (not homographs), both translatable as
+
+      "amazing"/"impressive" in English: вражаючий emphasizes the effect of impressing
+
+      through scale, quality, or skill, while дивовижний emphasizes wonder or surprise.
+
+      '
+    canonical_note: ua-lexeme-0571
+    members:
+    - note_id: ua-lexeme-0571
+      lemma: вража́ючий
+      status: sourced
+      chapter: '2.8.7'
+      comment: Impressive, striking -- effect of impressing through scale/quality/skill
+      compare_scenario: Do you mean something that impresses through its scale, quality,
+        or skill (вражаючий), or something that provokes wonder/surprise (дивовижний)?
+    - note_id: ua-lexeme-0572
+      lemma: дивови́жний
+      status: sourced
+      chapter: '2.8.7'
+      comment: Amazing, astonishing -- emphasizes wonder or surprise
+      compare_scenario: Do you mean something that provokes wonder/surprise (дивовижний),
+        or something that impresses through its scale, quality, or skill (вражаючий)?
   bench-homograph:
     description: 'Stress-shift homograph on ла́вка: bench for sitting (primary sense)
 

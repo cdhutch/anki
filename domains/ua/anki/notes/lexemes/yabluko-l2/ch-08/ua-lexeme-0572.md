@@ -28,7 +28,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster amazing-impressive-synonyms (confusable_clusters.yaml):
+    дивови́жний emphasizes wonder or surprise (this note) vs. вража́ючий (ua-lexeme-0571),
+    which emphasizes the effect of impressing through scale, quality, or skill.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: дивовижний
