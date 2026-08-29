@@ -13,6 +13,7 @@ tags:
 - ch:1.10.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2403
   Lemma: відмо́витися

@@ -10,6 +10,7 @@ tags:
 - class:conj1-нути
 - ch:2.11.1
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0557
   Lemma: ви́мкнути

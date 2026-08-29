@@ -15,6 +15,7 @@ tags:
 - pos:noun
 - gender:n
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1314
   Lemma: моро́зиво

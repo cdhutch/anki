@@ -14,6 +14,8 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0030
   Lemma: вік

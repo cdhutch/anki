@@ -13,6 +13,7 @@ tags:
 - pos:conjunction
 - homograph:true
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1270
   Lemma: ніж

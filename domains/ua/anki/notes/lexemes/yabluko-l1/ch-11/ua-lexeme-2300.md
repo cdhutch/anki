@@ -12,6 +12,7 @@ tags:
 - ch:1.11.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2300
   Lemma: зупиня́тися

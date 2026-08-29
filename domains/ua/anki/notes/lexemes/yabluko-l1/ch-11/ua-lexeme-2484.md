@@ -13,6 +13,7 @@ tags:
 - ch:1.2.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2484
   Lemma: одру́жуватися

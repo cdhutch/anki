@@ -13,6 +13,7 @@ tags:
 - ch:1.2.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2771
   Lemma: собо́р

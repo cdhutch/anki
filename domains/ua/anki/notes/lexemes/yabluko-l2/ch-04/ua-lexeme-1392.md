@@ -14,6 +14,7 @@ tags:
 - ch:1.5.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1392
   Lemma: батьківщи́на

@@ -12,6 +12,7 @@ tags:
 - ch:1.11.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2533
   Lemma: був / була́ собі́

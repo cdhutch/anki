@@ -13,6 +13,7 @@ tags:
 - ch:1.12.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3328
   Lemma: до́гори нога́ми

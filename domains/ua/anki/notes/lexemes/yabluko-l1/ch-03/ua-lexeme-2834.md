@@ -13,6 +13,7 @@ tags:
 - ch:1.3.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2834
   Lemma: прива́тний

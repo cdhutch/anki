@@ -12,6 +12,7 @@ tags:
 - ch:1.5.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3001
   Lemma: сніда́нок

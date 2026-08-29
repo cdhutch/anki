@@ -10,6 +10,7 @@ tags:
 - class:conj2-hushing+ати
 - ch:2.8.6
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0084
   Lemma: звуча́ти

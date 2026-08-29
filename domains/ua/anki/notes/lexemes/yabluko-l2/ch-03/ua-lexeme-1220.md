@@ -14,6 +14,7 @@ tags:
 - ch:1.11.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1220
   Lemma: народи́тися

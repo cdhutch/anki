@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:aspect
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0006
   Topic: піти — Three Meanings (PFV of іти)

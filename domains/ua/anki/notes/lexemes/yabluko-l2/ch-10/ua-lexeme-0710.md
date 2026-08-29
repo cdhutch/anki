@@ -12,6 +12,7 @@ tags:
 - ch:2.10.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0710
   Lemma: ста́тус

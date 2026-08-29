@@ -12,6 +12,7 @@ tags:
 - ch:1.8.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3461
   Lemma: посі́сти

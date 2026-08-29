@@ -15,6 +15,7 @@ tags:
 - ch:1.5.4
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0345
   Lemma: тро́хи

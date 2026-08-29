@@ -12,6 +12,7 @@ tags:
 - ch:1.6.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3221
   Lemma: Ням-ням!

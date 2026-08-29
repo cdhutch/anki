@@ -12,6 +12,7 @@ tags:
 - ch:1.10.3
 - pos:proper-noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3646
   Lemma: А́встрія

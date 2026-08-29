@@ -12,6 +12,7 @@ tags:
 - ch:1.1.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2567
   Lemma: моло́дший

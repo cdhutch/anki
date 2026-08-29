@@ -12,6 +12,7 @@ tags:
 - ch:2.7.1
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0379
   Lemma: встано́влювати

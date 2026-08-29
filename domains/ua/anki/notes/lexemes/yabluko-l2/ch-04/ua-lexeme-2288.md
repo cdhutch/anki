@@ -13,6 +13,7 @@ tags:
 - ch:1.11.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2288
   Lemma: ви́конати

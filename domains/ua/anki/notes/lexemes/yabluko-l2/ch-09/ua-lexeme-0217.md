@@ -14,6 +14,7 @@ tags:
 - ch:2.10.3
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0217
   Lemma: ки́дати

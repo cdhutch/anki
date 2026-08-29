@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2005
   Lemma: проаналізува́ти

@@ -10,6 +10,7 @@ tags:
 - class:conj1-vowel+й
 - ch:2.9.3
 - status:verified
+- release:active
 - ch:2.7.3
 fields:
   NoteID: ua-verb-0048

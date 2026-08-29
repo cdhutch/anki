@@ -16,6 +16,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
 - pending-confusable:затор
 fields:
   NoteID: ua-lexeme-0463

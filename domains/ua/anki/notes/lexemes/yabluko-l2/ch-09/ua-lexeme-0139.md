@@ -15,6 +15,7 @@ tags:
 - ch:1.12.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0139
   Lemma: спорти́вний

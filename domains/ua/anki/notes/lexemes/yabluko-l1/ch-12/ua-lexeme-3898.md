@@ -12,6 +12,7 @@ tags:
 - ch:1.12.5
 - pos:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3898
   Lemma: незалежно від

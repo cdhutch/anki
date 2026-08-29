@@ -12,6 +12,7 @@ tags:
 - ch:2.10.2
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0661
   Lemma: бо́ляче

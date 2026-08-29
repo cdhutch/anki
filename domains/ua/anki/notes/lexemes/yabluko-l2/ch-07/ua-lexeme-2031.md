@@ -12,6 +12,7 @@ tags:
 - ch:2.7.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2031
   Lemma: ге́нна інжене́рія

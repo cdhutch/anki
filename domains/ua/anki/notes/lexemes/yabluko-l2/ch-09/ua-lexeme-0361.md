@@ -12,6 +12,7 @@ tags:
 - ch:2.9.7
 - pos:conjunction
 - status:verified
+- release:active
 - ch:2.7.1
 fields:
   NoteID: ua-lexeme-0361

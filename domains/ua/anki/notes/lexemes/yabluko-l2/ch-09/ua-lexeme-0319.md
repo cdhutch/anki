@@ -14,6 +14,7 @@ tags:
 - ch:1.12.7
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0319
   Lemma: вибача́ти

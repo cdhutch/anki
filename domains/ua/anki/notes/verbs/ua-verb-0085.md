@@ -10,6 +10,7 @@ tags:
 - class:conj1-нути
 - ch:2.8.6
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0085
   Lemma: пахну́ти

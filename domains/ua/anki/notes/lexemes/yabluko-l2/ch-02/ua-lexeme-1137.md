@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:conjunction
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1137
   Lemma: оскі́льки

@@ -15,6 +15,7 @@ tags:
 - ch:1.4.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2310
   Lemma: сказа́ти

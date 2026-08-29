@@ -14,6 +14,7 @@ tags:
 - ch:1.5.5
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0415
   Lemma: холо́дний

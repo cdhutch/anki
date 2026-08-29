@@ -12,6 +12,7 @@ tags:
 - ch:1.4.5
 - pos:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2928
   Lemma: про

@@ -13,6 +13,7 @@ tags:
 - ch:2.5.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1546
   Lemma: дах

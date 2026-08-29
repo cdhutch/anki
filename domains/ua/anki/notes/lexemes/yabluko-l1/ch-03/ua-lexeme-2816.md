@@ -14,6 +14,7 @@ tags:
 - ch:1.3.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2816
   Lemma: виклада́ч

@@ -14,6 +14,7 @@ tags:
 - ch:1.4.3
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0429
   Lemma: молоди́й

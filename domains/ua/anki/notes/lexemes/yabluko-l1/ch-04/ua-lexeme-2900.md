@@ -12,6 +12,7 @@ tags:
 - ch:1.4.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2900
   Lemma: ка́рти

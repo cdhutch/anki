@@ -13,6 +13,7 @@ tags:
 - ch:1.1.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1489
   Lemma: акти́вний

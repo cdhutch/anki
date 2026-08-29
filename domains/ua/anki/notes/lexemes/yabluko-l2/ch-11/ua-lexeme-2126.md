@@ -12,6 +12,7 @@ tags:
 - ch:2.11.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2126
   Lemma: ви́кид

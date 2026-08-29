@@ -14,6 +14,7 @@ tags:
 - phrase:noun
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0324
   Lemma: ве́рхня поли́ця

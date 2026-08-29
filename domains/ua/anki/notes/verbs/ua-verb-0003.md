@@ -13,6 +13,7 @@ tags:
 - phonetic-variant
 - ch:2.9.2
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0003
   Lemma: йти

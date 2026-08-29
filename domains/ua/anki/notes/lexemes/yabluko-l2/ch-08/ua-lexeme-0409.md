@@ -12,6 +12,7 @@ tags:
 - ch:2.8.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0409
   Lemma: тума́нний

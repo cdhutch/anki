@@ -12,6 +12,7 @@ tags:
 - ch:1.12.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3845
   Lemma: літерату́ра

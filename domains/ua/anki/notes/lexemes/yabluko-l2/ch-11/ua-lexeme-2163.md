@@ -12,6 +12,7 @@ tags:
 - ch:2.11.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2163
   Lemma: техноге́нна катастро́фа

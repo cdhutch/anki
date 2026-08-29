@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.2.7
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0239
   Lemma: зверта́тися

@@ -13,6 +13,7 @@ tags:
 - ch:1.4.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2551
   Lemma: одру́жений

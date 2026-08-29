@@ -12,6 +12,7 @@ tags:
 - ch:2.9.3
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0214
   Lemma: забива́ти

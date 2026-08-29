@@ -13,6 +13,7 @@ tags:
 - ch:1.12.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1105
   Lemma: ро́зповідь

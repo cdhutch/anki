@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2279
   Lemma: випереджа́ти

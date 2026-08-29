@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0650
   Lemma: посадко́вий тало́н

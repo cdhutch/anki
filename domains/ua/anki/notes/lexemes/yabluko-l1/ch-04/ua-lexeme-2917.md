@@ -12,6 +12,7 @@ tags:
 - ch:1.4.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2917
   Lemma: зго́дом

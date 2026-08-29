@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1932
   Lemma: куліна́рний шеде́вр

@@ -12,6 +12,7 @@ tags:
 - ch:2.11.4
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2142
   Lemma: Як щодо того, щоб приготувати...

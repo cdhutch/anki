@@ -14,6 +14,7 @@ tags:
 - homograph:true
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2690
   Lemma: пло́ща

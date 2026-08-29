@@ -12,6 +12,7 @@ tags:
 - ch:2.4.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1513
   Lemma: вміння і навички

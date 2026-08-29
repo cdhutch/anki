@@ -13,6 +13,7 @@ tags:
 - ch:1.5.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1171
   Lemma: скі́льки

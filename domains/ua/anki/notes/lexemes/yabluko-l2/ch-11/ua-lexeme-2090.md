@@ -12,6 +12,7 @@ tags:
 - ch:2.11.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2090
   Lemma: свідо́мість

@@ -12,6 +12,7 @@ tags:
 - ch:1.2.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2744
   Lemma: за́втра

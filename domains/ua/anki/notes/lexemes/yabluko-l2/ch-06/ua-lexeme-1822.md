@@ -12,6 +12,7 @@ tags:
 - ch:2.6.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1822
   Lemma: вполюва́ти

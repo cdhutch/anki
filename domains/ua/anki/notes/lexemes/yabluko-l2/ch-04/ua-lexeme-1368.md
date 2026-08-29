@@ -12,6 +12,7 @@ tags:
 - ch:2.4.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1368
   Lemma: нашої ери / від Різдва Христового

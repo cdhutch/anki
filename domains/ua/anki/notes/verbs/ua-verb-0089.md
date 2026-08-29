@@ -10,6 +10,7 @@ tags:
 - class:regular-1
 - ch:2.10.1
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0089
   Lemma: витяга́ти

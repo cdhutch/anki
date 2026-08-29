@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.3.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0257
   Lemma: руба́ти

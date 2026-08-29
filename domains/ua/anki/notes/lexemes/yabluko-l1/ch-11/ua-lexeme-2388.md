@@ -14,6 +14,7 @@ tags:
 - ch:1.4.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2388
   Lemma: співа́ти

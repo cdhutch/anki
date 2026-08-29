@@ -12,6 +12,7 @@ tags:
 - ch:2.11.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2181
   Lemma: Що ми їм приготу́ємо?

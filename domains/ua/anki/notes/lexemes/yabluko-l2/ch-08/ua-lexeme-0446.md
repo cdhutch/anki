@@ -13,6 +13,7 @@ tags:
 - ch:2.2.5
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0446
   Lemma: незру́чний

@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0794
   Lemma: у жо́дному ви́падку

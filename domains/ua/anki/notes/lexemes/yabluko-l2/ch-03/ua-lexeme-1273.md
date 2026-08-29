@@ -15,6 +15,7 @@ tags:
 - ch:1.12.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1273
   Lemma: ма́бу́ть

@@ -12,6 +12,7 @@ tags:
 - ch:2.10.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0740
   Lemma: релігі́йний обря́д

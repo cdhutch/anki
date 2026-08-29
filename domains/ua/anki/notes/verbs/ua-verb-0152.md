@@ -11,6 +11,7 @@ tags:
 - ch:2.1.3
 - ch:2.5.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0152
   Lemma: відбува́тися

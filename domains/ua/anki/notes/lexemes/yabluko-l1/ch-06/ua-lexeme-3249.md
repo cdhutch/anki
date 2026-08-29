@@ -12,6 +12,7 @@ tags:
 - ch:1.6.6
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3249
   Lemma: Я б хоті́в/хоті́ла...

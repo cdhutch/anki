@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1280
   Lemma: кілька разів на ти́ждень/мі́сяць

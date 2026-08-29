@@ -12,6 +12,7 @@ tags:
 - ch:1.8.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3426
   Lemma: пʼя́тий

@@ -12,6 +12,7 @@ tags:
 - ch:1.6.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3237
   Lemma: ку́бик

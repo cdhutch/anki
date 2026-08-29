@@ -12,6 +12,7 @@ tags:
 - ch:2.7.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1920
   Lemma: обміня́тися

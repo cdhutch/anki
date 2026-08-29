@@ -13,6 +13,7 @@ tags:
 - pos:noun-phrase
 - phrase:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0159
   Lemma: марафо́нський біг

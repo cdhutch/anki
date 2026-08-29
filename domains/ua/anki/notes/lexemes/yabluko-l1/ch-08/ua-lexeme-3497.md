@@ -12,6 +12,7 @@ tags:
 - ch:1.8.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3497
   Lemma: декоро́ваний

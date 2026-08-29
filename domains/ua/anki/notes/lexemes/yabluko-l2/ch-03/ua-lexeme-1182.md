@@ -12,6 +12,7 @@ tags:
 - ch:2.3.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1182
   Lemma: відва́р

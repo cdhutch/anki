@@ -12,6 +12,7 @@ tags:
 - ch:2.6.6
 - pos:interjection
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1845
   Lemma: О́го!

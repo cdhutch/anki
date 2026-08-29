@@ -15,6 +15,8 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0072
   Lemma: Аме́рика

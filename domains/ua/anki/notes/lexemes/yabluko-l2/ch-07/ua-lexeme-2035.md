@@ -12,6 +12,7 @@ tags:
 - ch:2.7.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2035
   Lemma: заряджа́ння

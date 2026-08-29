@@ -13,6 +13,7 @@ tags:
 - ch:1.7.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3071
   Lemma: па́ста

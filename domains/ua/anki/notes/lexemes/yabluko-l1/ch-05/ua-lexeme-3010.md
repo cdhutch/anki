@@ -12,6 +12,7 @@ tags:
 - ch:1.5.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3010
   Lemma: апельси́новий

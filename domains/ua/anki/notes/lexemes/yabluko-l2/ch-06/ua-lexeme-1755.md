@@ -12,6 +12,7 @@ tags:
 - ch:2.6.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1755
   Lemma: довести́ до кінця́

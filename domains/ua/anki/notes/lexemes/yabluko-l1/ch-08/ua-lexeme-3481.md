@@ -12,6 +12,7 @@ tags:
 - ch:1.8.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3481
   Lemma: День Конститу́ції Украї́ни

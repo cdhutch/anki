@@ -12,6 +12,7 @@ tags:
 - ch:2.4
 - ch:2.6.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0302
   Lemma: годува́ти

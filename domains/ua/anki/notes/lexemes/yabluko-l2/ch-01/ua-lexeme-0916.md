@@ -13,6 +13,7 @@ tags:
 - ch:2.1.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0916
   Lemma: облива́ти

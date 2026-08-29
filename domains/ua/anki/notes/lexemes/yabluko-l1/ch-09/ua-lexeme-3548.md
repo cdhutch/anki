@@ -12,6 +12,7 @@ tags:
 - ch:1.9.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3548
   Lemma: по́тяг

@@ -12,6 +12,7 @@ tags:
 - ch:1.10.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3642
   Lemma: тяжки́й

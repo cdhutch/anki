@@ -12,6 +12,7 @@ tags:
 - ch:1.10.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3634
   Lemma: жира́фа

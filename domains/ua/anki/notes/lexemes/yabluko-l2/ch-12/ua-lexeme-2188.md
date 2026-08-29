@@ -12,6 +12,7 @@ tags:
 - ch:2.12.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2188
   Lemma: нудьгува́ти

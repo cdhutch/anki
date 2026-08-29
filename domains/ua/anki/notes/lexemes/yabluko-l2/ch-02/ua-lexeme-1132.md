@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1132
   Lemma: честь

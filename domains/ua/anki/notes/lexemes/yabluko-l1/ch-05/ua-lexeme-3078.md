@@ -12,6 +12,7 @@ tags:
 - ch:1.5.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3078
   Lemma: сті́льки

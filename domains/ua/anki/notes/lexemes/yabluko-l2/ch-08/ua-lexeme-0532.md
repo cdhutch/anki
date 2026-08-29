@@ -13,6 +13,7 @@ tags:
 - pos:noun-phrase
 - phrase:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0532
   Lemma: розве́дення ове́ць

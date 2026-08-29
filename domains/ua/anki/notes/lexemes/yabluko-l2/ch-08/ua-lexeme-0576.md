@@ -12,6 +12,7 @@ tags:
 - ch:2.8.7
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0576
   Lemma: професі́йно

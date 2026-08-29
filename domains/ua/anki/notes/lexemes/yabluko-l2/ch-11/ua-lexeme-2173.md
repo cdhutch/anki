@@ -12,6 +12,7 @@ tags:
 - ch:2.11.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2173
   Lemma: ви́йти з-під контро́лю

@@ -12,6 +12,7 @@ tags:
 - ch:2.12.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2266
   Lemma: вимовля́тися

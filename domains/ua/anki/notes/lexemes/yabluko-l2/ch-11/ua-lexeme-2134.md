@@ -12,6 +12,7 @@ tags:
 - ch:2.11.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2134
   Lemma: поглина́ти

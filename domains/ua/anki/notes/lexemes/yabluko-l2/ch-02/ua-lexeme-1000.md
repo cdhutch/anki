@@ -12,6 +12,7 @@ tags:
 - ch:2.2.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1000
   Lemma: ковба́ска

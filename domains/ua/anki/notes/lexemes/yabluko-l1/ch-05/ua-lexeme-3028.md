@@ -12,6 +12,7 @@ tags:
 - ch:1.5.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3028
   Lemma: сві́тло

@@ -14,6 +14,7 @@ tags:
 - ch:1.5.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0424
   Lemma: соло́дкий

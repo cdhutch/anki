@@ -12,6 +12,7 @@ tags:
 - ch:1.9.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3563
   Lemma: запи́ска

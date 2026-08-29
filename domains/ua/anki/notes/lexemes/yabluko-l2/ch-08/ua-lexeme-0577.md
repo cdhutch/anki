@@ -14,6 +14,7 @@ tags:
 - gender:f
 - animate:true
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0577
   Lemma: мура́шка

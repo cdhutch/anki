@@ -12,6 +12,7 @@ tags:
 - ch:1.10.1
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3775
   Lemma: Як він виглядає?

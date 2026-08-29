@@ -12,6 +12,7 @@ tags:
 - ch:1.8.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3476
   Lemma: сіме́йний

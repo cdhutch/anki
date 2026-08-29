@@ -10,6 +10,7 @@ tags:
 - class:regular-1
 - ch:2.10.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0109
   Lemma: упо́ратися

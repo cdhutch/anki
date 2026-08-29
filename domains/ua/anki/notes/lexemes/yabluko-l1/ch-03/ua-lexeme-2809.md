@@ -14,6 +14,7 @@ tags:
 - ch:1.3.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2809
   Lemma: стоя́ти

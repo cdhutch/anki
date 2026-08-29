@@ -10,6 +10,7 @@ tags:
 - class:2
 - ch:2.1.7
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0195
   Lemma: сни́тися

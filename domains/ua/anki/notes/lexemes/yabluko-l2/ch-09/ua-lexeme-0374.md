@@ -13,6 +13,7 @@ tags:
 - pos:verb-phrase
 - phrase:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0374
   Lemma: використо́вувати споря́дження

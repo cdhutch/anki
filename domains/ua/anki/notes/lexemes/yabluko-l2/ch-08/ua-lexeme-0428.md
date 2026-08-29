@@ -14,6 +14,7 @@ tags:
 - ch:1.3.5
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0428
   Lemma: деше́вий

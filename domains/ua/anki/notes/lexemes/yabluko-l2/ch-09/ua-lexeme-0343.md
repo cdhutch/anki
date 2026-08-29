@@ -14,6 +14,7 @@ tags:
 - ch:1.4.7
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0343
   Lemma: відра́зу

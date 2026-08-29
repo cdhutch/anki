@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0784
   Lemma: чха́ти

@@ -12,6 +12,7 @@ tags:
 - ch:2.8.5
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0520
   Lemma: розво́дити

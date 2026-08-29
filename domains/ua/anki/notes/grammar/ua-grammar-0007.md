@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:aspect
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0007
   Topic: ходити — Three Meanings (IPFV Group 2)

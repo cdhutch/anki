@@ -12,6 +12,7 @@ tags:
 - ch:2.2.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1033
   Lemma: ліпи́ти

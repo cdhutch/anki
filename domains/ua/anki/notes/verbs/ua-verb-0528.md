@@ -11,6 +11,7 @@ tags:
 - ch:2.7.3
 - ch:2.7
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0528
   Lemma: зрости́

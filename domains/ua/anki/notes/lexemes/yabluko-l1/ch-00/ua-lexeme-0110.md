@@ -12,6 +12,8 @@ tags:
 - ch:1.0.1
 - pos:phrase
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0110
   Lemma: Як спра́ви?

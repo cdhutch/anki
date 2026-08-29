@@ -13,6 +13,7 @@ tags:
 - ch:1.4.6
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1784
   Lemma: шви́дко

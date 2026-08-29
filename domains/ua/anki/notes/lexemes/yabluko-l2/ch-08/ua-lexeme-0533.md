@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - phrase:discourse
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0533
   Lemma: у порівня́нні

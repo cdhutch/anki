@@ -12,6 +12,7 @@ tags:
 - ch:1.5.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2954
   Lemma: гаря́чий

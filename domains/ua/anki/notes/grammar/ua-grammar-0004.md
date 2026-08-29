@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:phonetics
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0004
   Topic: Prefixed Motion Verbs — Phonetic Changes (Foot)

@@ -12,6 +12,7 @@ tags:
 - ch:2.7.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2036
   Lemma: віртуа́льна реа́льність

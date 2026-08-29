@@ -10,6 +10,7 @@ tags:
 - class:conj2-ity
 - ch:2.11.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0586
   Lemma: захисти́тися

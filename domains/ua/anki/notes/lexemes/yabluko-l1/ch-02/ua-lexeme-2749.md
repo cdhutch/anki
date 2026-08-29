@@ -14,6 +14,7 @@ tags:
 - ch:1.2.4
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2749
   Lemma: романти́чний

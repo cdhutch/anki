@@ -15,6 +15,7 @@ tags:
 - gender:m
 - animate:true
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0514
   Lemma: ма́монт

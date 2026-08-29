@@ -12,6 +12,7 @@ tags:
 - ch:1.12.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3812
   Lemma: зако́ханий

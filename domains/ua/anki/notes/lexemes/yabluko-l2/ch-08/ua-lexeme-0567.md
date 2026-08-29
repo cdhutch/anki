@@ -13,6 +13,7 @@ tags:
 - pos:noun-phrase
 - phrase:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0567
   Lemma: цукро́ва ва́та

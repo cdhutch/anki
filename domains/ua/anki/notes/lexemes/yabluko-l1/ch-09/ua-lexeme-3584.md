@@ -12,6 +12,7 @@ tags:
 - ch:1.9.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3584
   Lemma: попроща́тися

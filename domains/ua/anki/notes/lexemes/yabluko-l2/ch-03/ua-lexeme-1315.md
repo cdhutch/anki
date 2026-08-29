@@ -14,6 +14,7 @@ tags:
 - gender:m
 - animate:true
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1315
   Lemma: оселе́дець

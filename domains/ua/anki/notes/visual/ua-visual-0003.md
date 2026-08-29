@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:prefix
 - status:verified
+- release:active
 fields:
   NoteID: ua-visual-0003
   Prefix: ви-

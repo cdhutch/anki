@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - aspect:biaspectual
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0292
   Lemma: фінішува́ти

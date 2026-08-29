@@ -12,6 +12,7 @@ tags:
 - ch:2.6.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1685
   Lemma: раз на ти́ждень

@@ -14,6 +14,7 @@ tags:
 - phrase:preposition
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0365
   Lemma: че́рез (три годи́ни)

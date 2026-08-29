@@ -10,6 +10,7 @@ tags:
 - class:conj2-ити
 - ch:2.9.7
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0074
   Lemma: підво́зити

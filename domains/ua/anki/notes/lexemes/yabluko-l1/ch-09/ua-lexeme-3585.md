@@ -12,6 +12,7 @@ tags:
 - ch:1.9.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3585
   Lemma: улю́бленець

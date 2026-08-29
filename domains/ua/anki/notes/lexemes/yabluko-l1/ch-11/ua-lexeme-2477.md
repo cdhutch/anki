@@ -13,6 +13,7 @@ tags:
 - ch:1.3.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2477
   Lemma: фото́граф

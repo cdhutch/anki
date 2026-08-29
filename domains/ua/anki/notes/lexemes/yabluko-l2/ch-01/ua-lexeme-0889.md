@@ -12,6 +12,7 @@ tags:
 - ch:2.1.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0889
   Lemma: заважа́ти

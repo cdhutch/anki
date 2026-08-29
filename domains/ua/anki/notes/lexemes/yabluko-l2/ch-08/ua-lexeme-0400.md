@@ -13,6 +13,7 @@ tags:
 - ch:2.8.1
 - pos:adjective
 - status:verified
+- release:active
 - ch:2.10.6
 - ch:2.1.3
 - ch:2.11.3

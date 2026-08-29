@@ -12,6 +12,7 @@ tags:
 - ch:2.4.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1390
   Lemma: короно́ваний

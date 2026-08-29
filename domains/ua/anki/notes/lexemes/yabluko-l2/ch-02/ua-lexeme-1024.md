@@ -13,6 +13,7 @@ tags:
 - ch:2.2.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1024
   Lemma: паперо́вий

@@ -13,6 +13,7 @@ tags:
 - ch:1.12.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1139
   Lemma: ти́хий

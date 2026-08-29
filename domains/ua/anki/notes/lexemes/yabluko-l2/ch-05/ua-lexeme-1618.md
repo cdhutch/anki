@@ -13,6 +13,7 @@ tags:
 - ch:2.5.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1618
   Lemma: я́рмарок

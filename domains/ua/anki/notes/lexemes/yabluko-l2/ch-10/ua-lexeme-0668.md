@@ -13,6 +13,7 @@ tags:
 - ch:2.3.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0668
   Lemma: довіря́ти

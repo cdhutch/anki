@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0009
   Topic: Motion Verbs — від vs з/із/зі for Source/Departure

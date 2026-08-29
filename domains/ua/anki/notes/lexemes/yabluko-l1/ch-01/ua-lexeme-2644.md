@@ -13,6 +13,7 @@ tags:
 - ch:1.2.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2644
   Lemma: кана́л

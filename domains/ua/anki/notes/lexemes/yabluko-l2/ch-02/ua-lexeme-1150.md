@@ -14,6 +14,7 @@ tags:
 - pos:proper-noun
 - pos:geography
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1150
   Lemma: Ти́хий океа́н

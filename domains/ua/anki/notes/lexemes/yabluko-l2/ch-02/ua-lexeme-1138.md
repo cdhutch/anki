@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1138
   Lemma: про́тягом

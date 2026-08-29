@@ -12,6 +12,7 @@ tags:
 - ch:2.4.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1515
   Lemma: громадська організація

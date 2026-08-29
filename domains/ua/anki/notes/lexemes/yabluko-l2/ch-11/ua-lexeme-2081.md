@@ -12,6 +12,7 @@ tags:
 - ch:2.11.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2081
   Lemma: вуглеце́вий слід

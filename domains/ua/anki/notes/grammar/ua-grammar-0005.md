@@ -14,6 +14,7 @@ tags:
 - grammar:phonetics
 - grammar:apostrophe
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0005
   Topic: Prefixed Motion Verbs — Spelling at the Prefix/Root Boundary

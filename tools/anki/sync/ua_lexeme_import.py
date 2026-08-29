@@ -11,8 +11,12 @@ Deck layout:
 Suspension policy (applied on every import, add or update -- declarative and
 self-healing, so a re-import always converges to this state regardless of
 prior manual suspend/unsuspend actions taken outside this script):
-    - status:draft    → suspend every card on the note
-    - status:verified → unsuspend every card on the note
+    - status:draft OR release:pending      → suspend every card on the note
+    - status:verified AND release:active   → unsuspend every card on the note
+      (release: added 2026-08-29, per Craig -- a second, independent gate.
+      status tracks content-quality/review state; release tracks study-
+      pacing, i.e. whether this note has been let into rotation yet. Both
+      axes must clear for a note to be active; either one suspends.)
     - ConfusableSet empty/blank → suspend the Compare card (card #3)
     - ConfusableSet populated   → unsuspend the Compare card (card #3)
     - note has a red-flagged card (any card) → suspend every card on the
@@ -521,8 +525,9 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     cluster_members_json = get_cluster_compare_members_json(note_id, tags)
     fields["CompareMembers"] = cluster_members_json if cluster_members_json else ""
 
-    # Suspension policy -- see module docstring.
-    suspend = "status:draft" in tags
+    # Suspension policy -- see module docstring. AND gate: both status:verified
+    # and release:active must be present to unsuspend; either missing suspends.
+    suspend = not (("status:verified" in tags) and ("release:active" in tags))
 
     # Compare card suspension: suspend if ConfusableSet is empty (no confusables/
     # homographs), OR if it's populated but CompareA never got authored --

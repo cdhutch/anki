@@ -12,6 +12,7 @@ tags:
 - ch:2.2.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1096
   Lemma: з поро́жніми рука́ми

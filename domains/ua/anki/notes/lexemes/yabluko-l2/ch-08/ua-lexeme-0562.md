@@ -12,6 +12,7 @@ tags:
 - ch:2.8.6
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0562
   Lemma: споку́сливо

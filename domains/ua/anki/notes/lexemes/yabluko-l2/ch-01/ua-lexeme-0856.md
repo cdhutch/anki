@@ -12,6 +12,7 @@ tags:
 - ch:2.1.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0856
   Lemma: пора́

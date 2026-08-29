@@ -10,6 +10,7 @@ tags:
 - class:conj1-vowel+й
 - ch:2.9.6
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0063
   Lemma: відправля́тися

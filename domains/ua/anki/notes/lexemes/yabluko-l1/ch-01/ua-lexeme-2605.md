@@ -13,6 +13,7 @@ tags:
 - ch:1.3.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2605
   Lemma: футбо́л

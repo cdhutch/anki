@@ -12,6 +12,7 @@ tags:
 - ch:1.7.4
 - pos:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3329
   Lemma: бі́ля

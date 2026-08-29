@@ -16,6 +16,7 @@ tags:
 - ch:1.4.7
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0437
   Lemma: дороги́й

@@ -12,6 +12,7 @@ tags:
 - ch:2.3.6
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1320
   Lemma: нежи́рний

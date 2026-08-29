@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - pos:pronoun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0478
   Lemma: таки́й

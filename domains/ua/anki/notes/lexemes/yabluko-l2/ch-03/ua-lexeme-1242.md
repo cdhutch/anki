@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1242
   Lemma: мета́

@@ -11,6 +11,7 @@ tags:
 - ch:2.2.5
 - ch:2.6.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0225
   Lemma: потрапля́ти

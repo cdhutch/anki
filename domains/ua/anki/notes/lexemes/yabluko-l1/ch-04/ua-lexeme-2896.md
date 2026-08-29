@@ -12,6 +12,7 @@ tags:
 - ch:1.4.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2896
   Lemma: вмі́ти

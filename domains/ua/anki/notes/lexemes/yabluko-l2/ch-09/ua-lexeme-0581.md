@@ -18,6 +18,7 @@ tags:
 - pos:verb
 - motion:base
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0581
   Lemma: ходи́ти

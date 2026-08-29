@@ -12,6 +12,7 @@ tags:
 - ch:2.8.7
 - pos:adverb
 - status:verified
+- release:active
 - ch:2.6.6
 fields:
   NoteID: ua-lexeme-0575

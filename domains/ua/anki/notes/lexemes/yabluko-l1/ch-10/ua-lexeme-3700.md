@@ -12,6 +12,7 @@ tags:
 - ch:1.10.5
 - pos:proper-noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3700
   Lemma: Таїла́нд

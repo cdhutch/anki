@@ -13,6 +13,7 @@ tags:
 - ch:1.2.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2790
   Lemma: пала́ц

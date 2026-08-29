@@ -14,6 +14,7 @@ tags:
 - ch:2.3.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0869
   Lemma: відчува́ти

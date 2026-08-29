@@ -13,6 +13,7 @@ tags:
 - ch:1.4.2
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2905
   Lemma: ди́вно

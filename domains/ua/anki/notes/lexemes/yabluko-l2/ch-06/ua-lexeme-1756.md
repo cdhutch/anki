@@ -13,6 +13,7 @@ tags:
 - ch:1.3.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1756
   Lemma: догляда́ти

@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0465
   Lemma: жахли́вий

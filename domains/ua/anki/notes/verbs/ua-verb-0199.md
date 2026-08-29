@@ -10,6 +10,7 @@ tags:
 - class:2
 - ch:2.2.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0199
   Lemma: сма́жити

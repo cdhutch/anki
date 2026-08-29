@@ -12,6 +12,7 @@ tags:
 - ch:2.7.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2037
   Lemma: узго́джувати

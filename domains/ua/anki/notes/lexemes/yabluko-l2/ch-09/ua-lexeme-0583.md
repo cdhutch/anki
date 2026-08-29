@@ -14,6 +14,7 @@ tags:
 - pos:verb
 - motion:base
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0583
   Lemma: літа́ти

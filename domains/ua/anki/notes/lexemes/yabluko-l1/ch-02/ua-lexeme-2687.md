@@ -12,6 +12,7 @@ tags:
 - ch:1.2.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2687
   Lemma: назива́тися

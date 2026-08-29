@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 - ch:2.10.6
 - ch:2.7.3
 - ch:1.5.1

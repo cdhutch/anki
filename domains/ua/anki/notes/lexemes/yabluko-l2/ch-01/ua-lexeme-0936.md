@@ -12,6 +12,7 @@ tags:
 - ch:2.1.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0936
   Lemma: спілкува́тися

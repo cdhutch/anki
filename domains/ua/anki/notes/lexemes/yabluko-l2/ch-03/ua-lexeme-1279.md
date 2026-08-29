@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1279
   Lemma: менше ніж

@@ -12,6 +12,7 @@ tags:
 - ch:2.10.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0660
   Lemma: зни́клий

@@ -12,6 +12,7 @@ tags:
 - ch:2.7.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2014
   Lemma: підключи́ти

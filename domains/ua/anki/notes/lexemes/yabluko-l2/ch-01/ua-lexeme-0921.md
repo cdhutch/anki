@@ -13,6 +13,7 @@ tags:
 - ch:2.4.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0921
   Lemma: сприйма́ти

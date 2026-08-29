@@ -12,6 +12,7 @@ tags:
 - ch:2.7.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2011
   Lemma: сфе́ра охоро́ни здоро́вʼя

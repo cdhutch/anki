@@ -13,6 +13,7 @@ tags:
 - ch:2.4.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0723
   Lemma: розстрі́ляний

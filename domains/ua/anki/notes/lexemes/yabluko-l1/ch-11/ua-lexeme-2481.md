@@ -15,6 +15,7 @@ tags:
 - ch:1.12.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2481
   Lemma: ката́тися

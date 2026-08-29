@@ -12,6 +12,7 @@ tags:
 - ch:2.8.1
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0398
   Lemma: сні́жно

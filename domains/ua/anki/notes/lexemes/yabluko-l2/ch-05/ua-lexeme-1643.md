@@ -12,6 +12,7 @@ tags:
 - ch:2.5.6
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1643
   Lemma: незабу́тній

@@ -12,6 +12,7 @@ tags:
 - ch:1.2.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2729
   Lemma: гре́цький

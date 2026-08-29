@@ -13,6 +13,7 @@ tags:
 - ch:2.2.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1081
   Lemma: запако́вувати

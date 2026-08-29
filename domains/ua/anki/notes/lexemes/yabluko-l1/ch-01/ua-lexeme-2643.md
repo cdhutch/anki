@@ -12,6 +12,7 @@ tags:
 - ch:1.1.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2643
   Lemma: жі́нка

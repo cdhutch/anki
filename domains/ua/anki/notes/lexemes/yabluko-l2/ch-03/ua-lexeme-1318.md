@@ -14,6 +14,7 @@ tags:
 - pos:noun
 - gender:m
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1318
   Lemma: шашли́к

@@ -13,6 +13,7 @@ tags:
 - ch:2.7.4
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2017
   Lemma: брудни́й

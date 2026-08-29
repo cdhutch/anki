@@ -14,6 +14,7 @@ tags:
 - ch:1.12.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2882
   Lemma: коха́ти

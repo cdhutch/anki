@@ -13,6 +13,7 @@ tags:
 - ch:1.12.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3283
   Lemma: вазо́н

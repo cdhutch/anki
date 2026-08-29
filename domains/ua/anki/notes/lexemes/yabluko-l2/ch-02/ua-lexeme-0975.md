@@ -12,6 +12,7 @@ tags:
 - ch:2.2.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0975
   Lemma: кіо́ск

@@ -12,6 +12,7 @@ tags:
 - ch:1.12.6
 - pos:interjection
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3885
   Lemma: По́вір!

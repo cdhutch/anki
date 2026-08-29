@@ -12,6 +12,7 @@ tags:
 - ch:1.10.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3677
   Lemma: навча́льний

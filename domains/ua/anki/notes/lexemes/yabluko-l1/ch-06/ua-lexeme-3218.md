@@ -15,6 +15,7 @@ tags:
 - ch:1.7.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3218
   Lemma: прикраша́ти

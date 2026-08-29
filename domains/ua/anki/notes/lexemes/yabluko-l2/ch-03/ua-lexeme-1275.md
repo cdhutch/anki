@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1275
   Lemma: однозна́чно

@@ -12,6 +12,7 @@ tags:
 - ch:2.6.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1794
   Lemma: ви́стрибнути

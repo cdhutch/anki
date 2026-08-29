@@ -12,6 +12,7 @@ tags:
 - ch:1.8.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3432
   Lemma: фі́тнес-це́нтр

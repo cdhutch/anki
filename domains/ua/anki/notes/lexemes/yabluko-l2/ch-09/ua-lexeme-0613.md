@@ -12,6 +12,7 @@ tags:
 - ch:2.9.6
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0613
   Lemma: віддаля́тися

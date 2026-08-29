@@ -14,6 +14,7 @@ tags:
 - ch:2.9.7
 - ch:2.6.3
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0286
   Lemma: підніма́тися

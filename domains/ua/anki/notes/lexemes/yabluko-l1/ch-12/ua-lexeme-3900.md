@@ -12,6 +12,7 @@ tags:
 - ch:1.12.5
 - pos:interjection
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3900
   Lemma: З днем народження!

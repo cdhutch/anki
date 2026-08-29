@@ -14,6 +14,7 @@ tags:
 - ch:1.12.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2447
   Lemma: обіця́ти

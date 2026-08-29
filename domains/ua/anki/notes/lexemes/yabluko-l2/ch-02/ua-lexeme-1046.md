@@ -15,6 +15,7 @@ tags:
 - ch:1.12.4
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1046
   Lemma: коли́шній

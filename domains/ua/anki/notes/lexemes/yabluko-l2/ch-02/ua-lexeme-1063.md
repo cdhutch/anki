@@ -15,6 +15,7 @@ tags:
 - ch:1.6.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1063
   Lemma: виде́лка

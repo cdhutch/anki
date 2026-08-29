@@ -12,6 +12,7 @@ tags:
 - ch:2.6.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1654
   Lemma: виміря́ти

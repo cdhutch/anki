@@ -13,6 +13,7 @@ tags:
 - class:conj2-ити
 - ch:2.9.4
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0022
   Lemma: перехо́дити

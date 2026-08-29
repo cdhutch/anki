@@ -12,6 +12,7 @@ tags:
 - ch:1.9.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3596
   Lemma: за кордо́н

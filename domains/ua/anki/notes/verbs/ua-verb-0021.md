@@ -14,6 +14,7 @@ tags:
 - ch:2.9.4
 - ch:2.5.5
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0021
   Lemma: прохо́дити

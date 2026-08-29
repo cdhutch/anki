@@ -14,6 +14,7 @@ tags:
 - gender:m
 - animate:true
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0542
   Lemma: ра́к

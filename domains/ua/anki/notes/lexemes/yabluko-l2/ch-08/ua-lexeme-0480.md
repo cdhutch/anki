@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0480
   Lemma: відрізня́тися

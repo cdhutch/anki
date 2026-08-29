@@ -12,6 +12,7 @@ tags:
 - ch:1.5.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3111
   Lemma: покара́ти

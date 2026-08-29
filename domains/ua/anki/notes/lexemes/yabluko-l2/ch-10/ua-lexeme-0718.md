@@ -12,6 +12,7 @@ tags:
 - ch:2.10.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0718
   Lemma: ви́селений

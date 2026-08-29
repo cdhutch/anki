@@ -12,6 +12,7 @@ tags:
 - ch:2.1.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0887
   Lemma: важли́во

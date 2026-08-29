@@ -13,6 +13,7 @@ tags:
 - ch:1.6.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1919
   Lemma: обмі́нюватися

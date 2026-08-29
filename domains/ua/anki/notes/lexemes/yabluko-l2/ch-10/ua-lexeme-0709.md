@@ -12,6 +12,7 @@ tags:
 - ch:2.10.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0709
   Lemma: ри́са

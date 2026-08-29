@@ -14,6 +14,7 @@ tags:
 - ch:2.2.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0689
   Lemma: ситуа́ція

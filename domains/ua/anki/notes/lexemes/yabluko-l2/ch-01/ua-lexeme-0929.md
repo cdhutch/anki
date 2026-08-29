@@ -12,6 +12,7 @@ tags:
 - ch:2.1.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0929
   Lemma: розмо́ва

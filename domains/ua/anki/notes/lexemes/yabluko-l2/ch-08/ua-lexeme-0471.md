@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
 - pending-confusable:вигляд
 - pending-confusable:доглядати
 fields:

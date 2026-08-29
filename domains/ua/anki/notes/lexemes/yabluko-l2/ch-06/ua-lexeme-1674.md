@@ -13,6 +13,7 @@ tags:
 - ch:1.11.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1674
   Lemma: прибра́ти

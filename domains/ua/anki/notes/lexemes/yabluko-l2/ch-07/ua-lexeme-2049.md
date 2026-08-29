@@ -12,6 +12,7 @@ tags:
 - ch:2.7.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2049
   Lemma: Чом би й ні?

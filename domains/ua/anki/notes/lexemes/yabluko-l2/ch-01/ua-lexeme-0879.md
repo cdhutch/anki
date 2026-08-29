@@ -16,6 +16,7 @@ tags:
 - ch:1.4.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0879
   Lemma: шука́ти

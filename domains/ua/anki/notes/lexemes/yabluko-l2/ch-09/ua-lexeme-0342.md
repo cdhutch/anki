@@ -12,6 +12,7 @@ tags:
 - ch:2.9.7
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0342
   Lemma: підво́зити

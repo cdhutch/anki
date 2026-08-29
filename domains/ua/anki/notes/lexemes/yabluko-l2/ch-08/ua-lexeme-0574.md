@@ -12,6 +12,7 @@ tags:
 - ch:2.8.7
 - pos:adjective
 - status:verified
+- release:active
 - ch:2.7.3
 fields:
   NoteID: ua-lexeme-0574

@@ -12,6 +12,7 @@ tags:
 - ch:1.11.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2469
   Lemma: запи́сник

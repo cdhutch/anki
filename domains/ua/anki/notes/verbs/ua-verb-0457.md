@@ -11,6 +11,7 @@ tags:
 - ch:2.6.7
 - ch:2.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0457
   Lemma: запля́мкати

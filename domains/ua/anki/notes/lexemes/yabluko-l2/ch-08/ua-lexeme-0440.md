@@ -15,6 +15,7 @@ tags:
 - ch:1.10.1
 - pos:adjective
 - status:verified
+- release:active
 - needs-confusable-set
 fields:
   NoteID: ua-lexeme-0440

@@ -12,6 +12,7 @@ tags:
 - ch:2.2.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1082
   Lemma: розгорта́ти

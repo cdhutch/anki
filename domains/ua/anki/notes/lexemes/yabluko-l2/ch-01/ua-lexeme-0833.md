@@ -12,6 +12,7 @@ tags:
 - ch:2.1.1
 - pos:numeral
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0833
   Lemma: оби́два, оби́дві, обо́є

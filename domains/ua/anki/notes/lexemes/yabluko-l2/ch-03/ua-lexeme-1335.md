@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1335
   Lemma: Скі́льки з ме́не / з нас?

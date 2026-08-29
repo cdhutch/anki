@@ -12,6 +12,7 @@ tags:
 - ch:1.9.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3556
   Lemma: нерву́вати

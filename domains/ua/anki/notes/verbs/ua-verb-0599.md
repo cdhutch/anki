@@ -10,6 +10,7 @@ tags:
 - class:conj1-vowel+й
 - ch:2.12.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0599
   Lemma: хвилюва́тися

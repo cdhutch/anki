@@ -13,6 +13,7 @@ tags:
 - ch:2.5.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1569
   Lemma: балко́н

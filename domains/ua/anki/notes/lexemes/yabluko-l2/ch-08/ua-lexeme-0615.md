@@ -13,6 +13,7 @@ tags:
 - ch:2.3.3
 - pos:adverb
 - status:verified
+- release:active
 - cluster:intensifier-adverbs
 fields:
   NoteID: ua-lexeme-0615

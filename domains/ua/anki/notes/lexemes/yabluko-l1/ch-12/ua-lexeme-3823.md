@@ -12,6 +12,7 @@ tags:
 - ch:1.12.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3823
   Lemma: кора́лі

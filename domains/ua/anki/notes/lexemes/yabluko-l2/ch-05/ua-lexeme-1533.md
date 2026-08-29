@@ -14,6 +14,7 @@ tags:
 - ch:1.5.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1533
   Lemma: горо́д

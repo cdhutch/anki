@@ -13,6 +13,7 @@ tags:
 - ch:2.4.1
 - pos:pronoun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1374
   Lemma: котрий

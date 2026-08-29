@@ -14,6 +14,8 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0011
   Lemma: полі́тик

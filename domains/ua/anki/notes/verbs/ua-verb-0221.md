@@ -10,6 +10,7 @@ tags:
 - class:irregular
 - ch:2.2.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0221
   Lemma: ї́сти

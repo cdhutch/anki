@@ -12,6 +12,7 @@ tags:
 - ch:2.12.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2195
   Lemma: адапта́ція

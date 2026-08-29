@@ -12,6 +12,7 @@ tags:
 - ch:2.7.1
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1902
   Lemma: ці́лий ра́нок

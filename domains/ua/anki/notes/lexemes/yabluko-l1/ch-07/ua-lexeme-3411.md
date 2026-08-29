@@ -13,6 +13,7 @@ tags:
 - ch:1.7.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3411
   Lemma: са́уна

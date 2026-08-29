@@ -10,6 +10,7 @@ tags:
 - class:conj1-нути
 - ch:2.12.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0608
   Lemma: надихну́ти

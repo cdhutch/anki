@@ -13,6 +13,7 @@ tags:
 - ch:1.12.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2864
   Lemma: рі́дний

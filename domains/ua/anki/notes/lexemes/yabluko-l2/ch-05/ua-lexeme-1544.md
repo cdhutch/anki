@@ -12,6 +12,7 @@ tags:
 - ch:2.5.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1544
   Lemma: справа від

@@ -12,6 +12,7 @@ tags:
 - ch:2.4
 - ch:2.6.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0297
   Lemma: працю́вати

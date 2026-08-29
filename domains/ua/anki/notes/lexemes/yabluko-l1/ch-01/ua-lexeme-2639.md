@@ -13,6 +13,7 @@ tags:
 - ch:1.10.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2639
   Lemma: шта́ни

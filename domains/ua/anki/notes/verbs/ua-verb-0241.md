@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.3.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0241
   Lemma: рахува́ти

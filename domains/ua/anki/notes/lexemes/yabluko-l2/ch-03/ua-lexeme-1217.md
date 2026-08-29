@@ -13,6 +13,7 @@ tags:
 - ch:2.7.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1217
   Lemma: зʼявля́тися

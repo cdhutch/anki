@@ -13,6 +13,7 @@ tags:
 - ch:1.3.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2804
   Lemma: лежа́ти

@@ -14,6 +14,7 @@ tags:
 - ch:1.11.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0893
   Lemma: пла́кати

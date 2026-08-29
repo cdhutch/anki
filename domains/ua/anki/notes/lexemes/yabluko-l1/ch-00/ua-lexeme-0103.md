@@ -12,6 +12,8 @@ tags:
 - ch:1.0.5
 - pos:adverb
 - status:verified
+- release:active
+- relearn:pending
 - ch:2.12.1
 fields:
   NoteID: ua-lexeme-0103

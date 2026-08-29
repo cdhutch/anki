@@ -12,6 +12,7 @@ tags:
 - ch:2.8.2
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0451
   Lemma: похму́ро

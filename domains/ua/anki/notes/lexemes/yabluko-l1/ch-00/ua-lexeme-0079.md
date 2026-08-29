@@ -14,6 +14,8 @@ tags:
 - gender:m
 - pos:country
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0079
   Lemma: Кита́й

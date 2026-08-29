@@ -14,6 +14,7 @@ tags:
 - ch:1.5.5
 - pos:verb
 - status:verified
+- release:active
 - aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0483

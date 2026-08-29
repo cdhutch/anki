@@ -13,6 +13,7 @@ tags:
 - ch:1.12.7
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0178
   Lemma: поміча́ти

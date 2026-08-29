@@ -12,6 +12,7 @@ tags:
 - ch:2.10.2
 - pos:verb
 - status:draft
+- release:pending
 - ch:2.12.3
 fields:
   NoteID: ua-lexeme-0672

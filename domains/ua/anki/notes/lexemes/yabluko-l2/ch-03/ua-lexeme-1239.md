@@ -12,6 +12,7 @@ tags:
 - ch:2.3.3
 - pos:noun-phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1239
   Lemma: приро́дне середо́вище

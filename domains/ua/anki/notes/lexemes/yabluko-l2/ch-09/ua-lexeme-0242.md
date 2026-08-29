@@ -12,6 +12,7 @@ tags:
 - ch:2.9.4
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0242
   Lemma: бурхли́вий

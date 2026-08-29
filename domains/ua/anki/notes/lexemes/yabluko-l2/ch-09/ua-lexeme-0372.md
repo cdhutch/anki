@@ -14,6 +14,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 - homograph:true
 fields:
   NoteID: ua-lexeme-0372

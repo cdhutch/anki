@@ -14,6 +14,8 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0033
   Lemma: ву́лиця

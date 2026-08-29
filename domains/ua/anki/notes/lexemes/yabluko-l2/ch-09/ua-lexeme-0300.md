@@ -14,6 +14,7 @@ tags:
 - phrase:verb
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0300
   Lemma: перелеті́ти че́рез рі́чку на моту́зці

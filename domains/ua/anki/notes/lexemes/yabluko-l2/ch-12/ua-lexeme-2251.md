@@ -12,6 +12,7 @@ tags:
 - ch:2.12.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2251
   Lemma: докона́ний і недокона́ний вид

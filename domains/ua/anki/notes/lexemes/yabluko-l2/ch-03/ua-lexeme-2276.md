@@ -12,6 +12,7 @@ tags:
 - ch:2.3.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2276
   Lemma: приєднува́тися

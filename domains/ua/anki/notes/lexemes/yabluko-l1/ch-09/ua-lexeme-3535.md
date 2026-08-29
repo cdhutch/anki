@@ -12,6 +12,7 @@ tags:
 - ch:1.9.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3535
   Lemma: захова́тися

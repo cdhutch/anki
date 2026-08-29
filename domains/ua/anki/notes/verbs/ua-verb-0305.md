@@ -11,6 +11,7 @@ tags:
 - ch:2.4.5
 - ch:2.4
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0305
   Lemma: дба́ти
