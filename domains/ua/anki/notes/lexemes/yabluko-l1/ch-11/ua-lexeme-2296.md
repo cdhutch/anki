@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.11.1
 - ch:1.3.1
+- ch:1.6.1
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: говорити / поговорити
   UA_Example: Ми довго говорили про майбутнє.
   EN_Example: We talked for a long time about the future.
-  Tags_Ch: ch:1.11.1, ch:1.3.1
+  Tags_Ch: ch:1.11.1, ch:1.3.1, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/говорити
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj2-ity); yabluko-l1 vocabulary expansion pass, 2026-08-29.

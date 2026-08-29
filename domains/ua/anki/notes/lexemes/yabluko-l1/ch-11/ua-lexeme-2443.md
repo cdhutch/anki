@@ -12,6 +12,7 @@ tags:
 - ch:1.11.4
 - ch:1.3.5
 - ch:1.4.1
+- ch:1.6.4
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: займатися / позайматися
   UA_Example: Вона займається спортом щодня.
   EN_Example: She does sports every day.
-  Tags_Ch: ch:1.11.4, ch:1.3.5, ch:1.4.1
+  Tags_Ch: ch:1.11.4, ch:1.3.5, ch:1.4.1, ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/займатися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

@@ -15,6 +15,7 @@ tags:
 - ch:1.4.5
 - ch:1.4.6
 - ch:1.4.7
+- ch:1.6.2
 - pos:verb
 - status:draft
 fields:
@@ -40,7 +41,7 @@ fields:
   TypingAnswer: запросити
   UA_Example: Вона запросила друзів на день народження.
   EN_Example: She invited friends to her birthday.
-  Tags_Ch: ch:1.11.3, ch:1.4.2, ch:1.4.4, ch:1.4.5, ch:1.4.6, ch:1.4.7
+  Tags_Ch: ch:1.11.3, ch:1.4.2, ch:1.4.4, ch:1.4.5, ch:1.4.6, ch:1.4.7, ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/запросити
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an

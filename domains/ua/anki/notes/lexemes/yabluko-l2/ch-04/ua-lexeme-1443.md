@@ -15,6 +15,7 @@ tags:
 - status:draft
 - ch:2.7.7
 - ch:1.11.6
+- ch:1.6.4
 fields:
   NoteID: ua-lexeme-1443
   Lemma: ста́ти
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: стати
   UA_Example: Він хотів стати лікарем.
   EN_Example: He wanted to become a doctor.
-  Tags_Ch: ch:2.4.3, ch:2.4.4,ch:2.7.7, ch:1.11.6
+  Tags_Ch: ch:2.4.3, ch:2.4.4,ch:2.7.7, ch:1.11.6, ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/стати
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'

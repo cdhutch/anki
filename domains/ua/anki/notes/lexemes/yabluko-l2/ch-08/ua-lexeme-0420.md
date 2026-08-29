@@ -12,6 +12,7 @@ tags:
 - ch:2.8.2
 - ch:1.5.3
 - ch:1.5.5
+- ch:1.6.3
 - pos:noun
 - gender:f
 - status:verified
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: страва
   UA_Example: Ця страва дуже смачна.
   EN_Example: This dish is very tasty.
-  Tags_Ch: ch:2.8.2, ch:1.5.3, ch:1.5.5
+  Tags_Ch: ch:2.8.2, ch:1.5.3, ch:1.5.5, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/страва
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: Component of phrase note ua-lexeme-0421 (вибір страв).

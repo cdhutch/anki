@@ -12,6 +12,7 @@ tags:
 - ch:2.8.6
 - ch:1.5.1
 - ch:1.5.3
+- ch:1.6.3
 - pos:noun
 - gender:f
 - status:verified
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: капуста
   UA_Example: Капуста росте майже в кожному городі.
   EN_Example: Cabbage grows in almost every garden.
-  Tags_Ch: ch:2.8.6, ch:1.5.1, ch:1.5.3
+  Tags_Ch: ch:2.8.6, ch:1.5.1, ch:1.5.3, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/капуста
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0564 (квашена капуста).

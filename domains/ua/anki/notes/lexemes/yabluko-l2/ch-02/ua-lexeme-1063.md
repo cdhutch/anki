@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.5
 - ch:2.4.1
+- ch:1.6.4
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: виделка
   UA_Example: Їж виделкою, а не руками.
   EN_Example: Eat with a fork, not with your hands.
-  Tags_Ch: ch:2.2.5, ch:2.4.1
+  Tags_Ch: ch:2.2.5, ch:2.4.1, ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/виделка
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Fem., 1st decl., hard group. Example bundles їсти (ua-lexeme-1083,

@@ -14,6 +14,7 @@ tags:
 - status:draft
 - ch:2.6.5
 - ch:1.11.3
+- ch:1.6.5
 fields:
   NoteID: ua-lexeme-1143
   Lemma: запро́шувати
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: запрошувати / запросити
   UA_Example: Ми запрошуємо вас на відкриття виставки.
   EN_Example: We are inviting you to the exhibition opening.
-  Tags_Ch: ch:2.2.7, ch:2.6.5, ch:1.11.3
+  Tags_Ch: ch:2.2.7, ch:2.6.5, ch:1.11.3, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/запрошувати; https://goroh.pp.ua/Словозміна/запросити
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

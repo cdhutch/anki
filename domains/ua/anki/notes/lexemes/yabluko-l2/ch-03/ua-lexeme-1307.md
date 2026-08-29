@@ -12,6 +12,8 @@ tags:
 - ch:2.3.6
 - ch:1.5.1
 - ch:1.5.3
+- ch:1.6.1
+- ch:1.6.6
 - pos:noun
 - gender:m
 - status:draft
@@ -38,7 +40,7 @@ fields:
   TypingAnswer: напій
   UA_Example: Який напій ви будете пити?
   EN_Example: Which drink will you have?
-  Tags_Ch: ch:2.3.6, ch:1.5.1, ch:1.5.3
+  Tags_Ch: ch:2.3.6, ch:1.5.1, ch:1.5.3, ch:1.6.1, ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/напій
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.6.2
 - ch:1.11.4
+- ch:1.6.3
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: закінчуватися
   UA_Example: Урок закінчується о другій годині.
   EN_Example: The lesson ends at two o'clock.
-  Tags_Ch: ch:2.6.2, ch:1.11.4
+  Tags_Ch: ch:2.6.2, ch:1.11.4, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/закінчуватися
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

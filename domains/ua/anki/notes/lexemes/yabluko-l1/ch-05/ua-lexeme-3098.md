@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.6
+- ch:1.6.6
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сухий
   UA_Example: Хліб зовсім сухий.
   EN_Example: The bread is completely сухий.
-  Tags_Ch: ch:1.5.6
+  Tags_Ch: ch:1.5.6, ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/сухий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

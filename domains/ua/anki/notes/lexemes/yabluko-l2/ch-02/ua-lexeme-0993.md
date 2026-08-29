@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.1
 - ch:1.4.4
+- ch:1.6.5
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: подарунок
   UA_Example: Це найкращий подарунок, який я коли-небудь отримувала.
   EN_Example: This is the best gift I've ever received.
-  Tags_Ch: ch:2.2.1, ch:1.4.4
+  Tags_Ch: ch:2.2.1, ch:1.4.4, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/подарунок
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Masc., 2nd decl., hard group, positive/diminutive-capable form

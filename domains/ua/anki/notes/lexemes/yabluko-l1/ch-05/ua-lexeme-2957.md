@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.1
+- ch:1.6.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: їжа
   UA_Example: Свіжий їжа дуже смачний.
   EN_Example: Fresh їжа is very tasty.
-  Tags_Ch: ch:1.5.1
+  Tags_Ch: ch:1.5.1, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/їжа
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

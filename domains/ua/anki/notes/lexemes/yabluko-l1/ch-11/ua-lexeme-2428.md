@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.3
+- ch:1.6.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дріжджі
   UA_Example: Для тіста потрібні дріжджі.
   EN_Example: The dough needs yeast.
-  Tags_Ch: ch:1.11.3
+  Tags_Ch: ch:1.11.3, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/дріжджі
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.3
+- ch:1.6.5
+- ch:1.6.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: пиріг
   UA_Example: Мама спекла яблучний пиріг.
   EN_Example: Mom baked an apple pie.
-  Tags_Ch: ch:1.11.3
+  Tags_Ch: ch:1.11.3, ch:1.6.5, ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/пиріг
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

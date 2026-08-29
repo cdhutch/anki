@@ -12,6 +12,7 @@ tags:
 - ch:1.1.4
 - ch:1.4.5
 - ch:1.5.4
+- ch:1.6.5
 - pos:noun
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: окуляри
   UA_Example: Він носить окуляри для читання.
   EN_Example: He wears reading glasses.
-  Tags_Ch: ch:1.1.4, ch:1.4.5, ch:1.5.4
+  Tags_Ch: ch:1.1.4, ch:1.4.5, ch:1.5.4, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/окуляри
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

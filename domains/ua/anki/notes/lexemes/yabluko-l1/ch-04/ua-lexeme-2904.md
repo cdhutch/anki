@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.4.2
 - ch:1.5.2
+- ch:1.6.6
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: вино
   UA_Example: Ми замовили пляшку червоного вина.
   EN_Example: We ordered a bottle of red wine.
-  Tags_Ch: ch:1.4.2, ch:1.5.2
+  Tags_Ch: ch:1.4.2, ch:1.5.2, ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/вино
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

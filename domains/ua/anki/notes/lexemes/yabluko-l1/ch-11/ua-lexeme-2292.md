@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.6.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: варити / зварити
   UA_Example: Мама варить суп на обід.
   EN_Example: Mom is cooking soup for lunch.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/варити
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj2-ity); yabluko-l1 vocabulary expansion pass, 2026-08-29.
