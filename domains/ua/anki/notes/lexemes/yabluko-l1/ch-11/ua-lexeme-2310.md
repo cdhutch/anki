@@ -1,0 +1,46 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-2310
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.11.1
+- pos:verb
+- status:draft
+fields:
+  NoteID: ua-lexeme-2310
+  Lemma: сказа́ти
+  Lemma_Euphony: ''
+  PartOfSpeech: verb
+  Gender: ''
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: null
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: to say, tell (perfective)
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: каза́ти (ua-lexeme-0317, imperfective)
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: сказати
+  UA_Example: Він сказав правду.
+  EN_Example: He told the truth.
+  Tags_Ch: ch:1.11.1
+  Source_URL: https://goroh.pp.ua/Словозміна/сказати
+  Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
+    annotation (see counterpart note); yabluko-l1 vocabulary expansion pass, 2026-08-29.
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an
+    existing corpus pair; cross-referenced via CounterpartForm rather than duplicating the
+    paired note's content.
+---
+
