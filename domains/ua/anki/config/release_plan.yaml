@@ -1,0 +1,58 @@
+# Study-pacing plan for tools/anki/release_wave.py.
+#
+# Independent of content status (status:draft/verified). A note can be fully
+# authored and status:verified while still sitting release:pending -- this
+# file controls when it actually gets let into Anki rotation, one batch at a
+# time, so a large backlog never dumps into FSRS all at once.
+#
+# Each group: a name, a list of tag glob patterns (fnmatch-style; matched
+# against every tag on a note -- typically ch:<level>.<chapter>.<section>),
+# and a batch_size: the max number of that group's still-pending notes
+# promoted to release:active per run of release_wave.py. Run the script
+# again whenever you're ready for the next slice; a group with nothing left
+# pending is a no-op. Edit freely -- add a group for the next chapter you
+# want to bring in, raise/lower a batch_size, or delete a group once it's
+# fully released.
+#
+# Starter groups below reflect where things stood 2026-08-29: 2.8, 2.9, and
+# part of 2.10 already active in Anki; 1.0 (vstup) just fully released.
+# Replace/extend these as you decide what's next -- they're illustrative,
+# not authoritative.
+
+groups:
+  - name: "L1 vstup remainder (ch 1.1-1.12; 1.0 already released)"
+    match:
+      - "ch:1.1.*"
+      - "ch:1.2.*"
+      - "ch:1.3.*"
+      - "ch:1.4.*"
+      - "ch:1.5.*"
+      - "ch:1.6.*"
+      - "ch:1.7.*"
+      - "ch:1.8.*"
+      - "ch:1.9.*"
+      - "ch:1.10.*"
+      - "ch:1.11.*"
+      - "ch:1.12.*"
+    batch_size: 20
+
+  - name: "L2 forward: rest of 2.10, plus 2.11-2.12"
+    match:
+      - "ch:2.10.*"
+      - "ch:2.11.*"
+      - "ch:2.12.*"
+    batch_size: 15
+
+  # Example relearn group -- old chapters you want to resurface a bit at a
+  # time. Fill in the actual chapter range once you've decided how far back
+  # "forgotten" goes; left at batch_size: 0 (no-op) until then.
+  - name: "L2 backlog relearn (adjust chapter range + batch_size)"
+    match:
+      - "ch:2.1.*"
+      - "ch:2.2.*"
+      - "ch:2.3.*"
+      - "ch:2.4.*"
+      - "ch:2.5.*"
+      - "ch:2.6.*"
+      - "ch:2.7.*"
+    batch_size: 0
