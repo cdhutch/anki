@@ -1,0 +1,36 @@
+ISSUE: Line 99 in complete_phoneme_superset.yaml
+
+INCORRECT:
+  - phoneme_id: "g"
+    ...
+    examples:
+      en: ["go", "gate", "big"]
+      fr: ["gare (station)", "golf (golf)", "gâteau (cake)"]
+      de: ["Gast (guest)", "Lager (camp)", "Grund (reason)"]
+      ua: ["гра (game)", "грати (to play)", "гроза (storm)"]  ← WRONG - these are [ɦ] not [ɡ]
+      ru: ["газ (gas)", "гараж (garage)", "гром (thunder)"]
+      cs: ["gól (goal)"]
+      sk: ["guma (rubber)"]
+
+CORRECT - Remove UA from [ɡ] phoneme, as Ukrainian doesn't have this phoneme in modern speech:
+  - phoneme_id: "g"
+    ...
+    examples:
+      en: ["go", "gate", "big"]
+      fr: ["gare (station)", "golf (golf)", "gâteau (cake)"]
+      de: ["Gast (guest)", "Lager (camp)", "Grund (reason)"]
+      ru: ["газ (gas)", "гараж (garage)", "гром (thunder)"]
+      cs: ["gól (goal)"]
+      sk: ["guma (rubber)"]
+
+ACTION: Add a separate [ɦ] phoneme entry for Ukrainian "г":
+  - phoneme_id: "ɦ"
+    ipa: "[ɦ]"
+    xsampa: "X"
+    articulation:
+      place: "glottal"
+      manner: "fricative"
+      voicing: "voiced"
+    description: "Voiced glottal fricative (Ukrainian g)"
+    examples:
+      ua: ["гра (game)", "грати (to play)", "гроза (storm)"]
