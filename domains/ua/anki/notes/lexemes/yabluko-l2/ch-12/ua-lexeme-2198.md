@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.3
+- ch:1.10.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: населення
   UA_Example: Населення міста зросло за останнє десятиліття.
   EN_Example: The city's population has grown over the last decade.
-  Tags_Ch: ch:2.12.3
+  Tags_Ch: ch:2.12.3, ch:1.10.3
   Source_URL: https://goroh.pp.ua/Словозміна/населення
   Source_Note: Горох-verified 2026-08-29, ch.12.3 sourcing pass (migration/adaptation vocabulary;
     settling-in and worry/anxiety verbs), cross-checked against yabluko-l2-verb-dictionary.pdf

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
+- ch:1.10.3
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: гірський
   UA_Example: Гірський масив тягнеться на десятки кілометрів.
   EN_Example: The mountain range stretches for dozens of kilometers.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:1.10.3
   Source_URL: https://goroh.pp.ua/Словозміна/гірський
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: 'Горох lists two full declension paradigms for this spelling with different

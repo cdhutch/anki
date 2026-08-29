@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.1
+- homograph:true
 - pos:noun
 - status:draft
 fields:
@@ -30,7 +31,7 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: площа (ua-lexeme-3774, homograph -- area (geographic/mathematical, e.g. km²))
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: площа

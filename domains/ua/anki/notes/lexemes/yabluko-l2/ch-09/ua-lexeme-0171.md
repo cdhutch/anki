@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.2
+- ch:1.10.5
 - pos:noun
 - gender:m
 - status:verified
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: метелик
   UA_Example: Метелик сів на квітку.
   EN_Example: The butterfly landed on the flower.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/метелик
   Source_Note: 'Горох lists 2 senses for ''мете́лик'' (identical spelling): ''комаха'' (insect/butterfly,
     used here) and ''краватка; листівка - розм.'' (informal: bow-tie; flyer/leaflet). Verified

@@ -9,6 +9,7 @@ tags:
 - status:verified
 - homograph:true
 - ch:2.9
+- ch:1.10.4
 fields:
   NoteID: ua-lexeme-0143
   Lemma: вид
@@ -32,7 +33,7 @@ fields:
   TypingAnswer: вид
   UA_Example: Який вид спорту тобі найбільше подобається?
   EN_Example: What type of sport do you like the most?
-  Tags_Ch: ch:2.9
+  Tags_Ch: ch:2.9, ch:1.10.4
   Source_URL: ''
   Source_Note: ''
   Verification Notes: '2026-08-27: added UA_Example/EN_Example ("вид спорту" -- type of sport)

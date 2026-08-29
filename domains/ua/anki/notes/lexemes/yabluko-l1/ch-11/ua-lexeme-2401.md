@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.3
+- ch:1.10.2
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: рости / вирости
   UA_Example: Дерево росте біля будинку.
   EN_Example: The tree grows near the house.
-  Tags_Ch: ch:1.11.3, ch:1.8.3
+  Tags_Ch: ch:1.11.3, ch:1.8.3, ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/рости
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

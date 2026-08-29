@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7.4
+- ch:1.10.1
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: світлий
   UA_Example: Це світла кімната.
   EN_Example: This is a bright room.
-  Tags_Ch: ch:1.7.4
+  Tags_Ch: ch:1.7.4, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/світлий
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

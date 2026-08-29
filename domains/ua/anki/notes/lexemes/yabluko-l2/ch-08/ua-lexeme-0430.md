@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.10.2
 - pos:adjective
 - status:verified
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мʼякий
   UA_Example: Ліжко в номері дуже мʼяке.
   EN_Example: The bed in the room is very soft.
-  Tags_Ch: ch:2.8.2, ch:1.7.4
+  Tags_Ch: ch:2.8.2, ch:1.7.4, ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/мʼякий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

@@ -13,6 +13,7 @@ tags:
 - ch:1.1.4
 - ch:1.4.5
 - ch:1.4.7
+- ch:1.10.1
 - pos:noun
 - gender:n
 - status:verified
@@ -39,7 +40,7 @@ fields:
   TypingAnswer: око
   UA_Example: Це кафе легко впадає в очі завдяки яскравій вивісці.
   EN_Example: This café easily catches the eye thanks to its bright sign.
-  Tags_Ch: ch:2.8.3, ch:1.1.4, ch:1.4.5, ch:1.4.7
+  Tags_Ch: ch:2.8.3, ch:1.1.4, ch:1.4.5, ch:1.4.7, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/око
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0488 (впасти в очі), which uses the irregular

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.6
+- ch:1.10.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: поміряти
   UA_Example: Медсестра поміряла мені температуру.
   EN_Example: The nurse took my temperature.
-  Tags_Ch: ch:2.10.6
+  Tags_Ch: ch:2.10.6, ch:1.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/поміряти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

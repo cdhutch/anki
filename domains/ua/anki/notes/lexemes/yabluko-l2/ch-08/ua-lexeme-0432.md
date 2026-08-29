@@ -12,6 +12,7 @@ tags:
 - ch:2.8.2
 - ch:1.1.5
 - ch:1.2.7
+- ch:1.10.4
 - pos:adjective
 - status:verified
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: багатий
   UA_Example: Це багатий на визначні памʼятки регіон.
   EN_Example: This is a region rich in landmarks.
-  Tags_Ch: ch:2.8.2, ch:1.1.5, ch:1.2.7
+  Tags_Ch: ch:2.8.2, ch:1.1.5, ch:1.2.7, ch:1.10.4
   Source_URL: https://goroh.pp.ua/Словозміна/багатий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

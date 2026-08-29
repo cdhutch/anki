@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.2
+- ch:1.10.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дискотека
   UA_Example: Молодь пішла на дискотеку.
   EN_Example: The young people went to the disco.
-  Tags_Ch: ch:1.2.2
+  Tags_Ch: ch:1.2.2, ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/дискотека
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

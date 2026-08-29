@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.2
+- ch:1.10.7
 - pos:noun
 - gender:n
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: змагання
   UA_Example: Змагання відбудуться завтра.
   EN_Example: The competition will take place tomorrow.
-  Tags_Ch: ch:2.9.2, ch:1.8.3
+  Tags_Ch: ch:2.9.2, ch:1.8.3, ch:1.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/змагання
   Source_Note: Горох lists a 2nd, capitalized homograph entry ('Змагання') alongside this
     common noun; verified the lowercase common-noun sense was used. Verified 2026-07-22.

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.7
+- ch:1.10.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: шкарпетка
   UA_Example: Він загубив одну шкарпетку.
   EN_Example: He lost one sock.
-  Tags_Ch: ch:2.2.7
+  Tags_Ch: ch:2.2.7, ch:1.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/шкарпетка
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

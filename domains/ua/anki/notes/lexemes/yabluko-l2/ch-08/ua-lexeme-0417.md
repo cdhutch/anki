@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
+- ch:1.10.6
 - pos:adverb
 - status:verified
 - cluster:intensifier-adverbs
@@ -46,7 +47,7 @@ fields:
   TypingAnswer: занадто
   UA_Example: Сьогодні занадто спекотно, щоб гуляти.
   EN_Example: It's too hot today to go for a walk.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/занадто
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: 'Orange-flagged (no ConfusableSet despite being one of a well-known

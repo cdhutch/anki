@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7.5
+- ch:1.10.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: квадратний
   UA_Example: Квартира має пʼятдесят квадратних метрів.
   EN_Example: The apartment is fifty square meters.
-  Tags_Ch: ch:1.7.5
+  Tags_Ch: ch:1.7.5, ch:1.10.3
   Source_URL: https://goroh.pp.ua/Словозміна/квадратний
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

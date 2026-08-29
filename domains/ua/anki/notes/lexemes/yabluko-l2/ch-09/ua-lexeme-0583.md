@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.10.5
 - pos:verb
 - motion:base
 - status:verified
@@ -43,7 +44,7 @@ fields:
   TypingAnswer: літати / летіти / полетіти
   UA_Example: Птахи літають високо в небі, а орел летів прямо над нами.
   EN_Example: Birds fly high in the sky, and an eagle was flying right above us.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/літати; https://goroh.pp.ua/Словозміна/летіти;
     https://goroh.pp.ua/Словозміна/полетіти
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).

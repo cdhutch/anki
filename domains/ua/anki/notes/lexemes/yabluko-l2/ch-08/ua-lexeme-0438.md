@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.10.1
 - pos:adjective
 - status:verified
 fields:
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: високий
   UA_Example: Ми зупинилися у високому готелі біля моря.
   EN_Example: We stayed at a tall hotel by the sea.
-  Tags_Ch: ch:2.8.2, ch:1.7.2
+  Tags_Ch: ch:2.8.2, ch:1.7.2, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/високий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: '2026-08-28: added ConfusableSet + Mnemonic_EN distinguishing висо́кий

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.8.3
+- homograph:true
 - pos:noun
 - status:draft
 fields:
@@ -29,7 +30,8 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: корона (ua-lexeme-3772, homograph -- krone, corona (historical Austro-Hungarian
+    currency unit))
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: корона

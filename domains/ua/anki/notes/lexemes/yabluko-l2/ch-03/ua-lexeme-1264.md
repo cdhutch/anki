@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.4
+- ch:1.10.6
 - pos:verb
 - status:draft
 - aspect:imperfective-only
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: пасувати
   UA_Example: Цей колір пасує до стародавнього фасаду.
   EN_Example: This color suits the ancient facade.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4, ch:1.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/пасувати
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.4.5
 - ch:1.11.6
+- ch:1.10.1
 - pos:adjective
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: чесний
   UA_Example: Він завжди був чесним зі мною.
   EN_Example: He was always honest with me.
-  Tags_Ch: ch:2.4.5, ch:1.11.6
+  Tags_Ch: ch:2.4.5, ch:1.11.6, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/чесний
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).

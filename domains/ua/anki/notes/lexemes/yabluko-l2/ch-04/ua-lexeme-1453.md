@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.4
+- ch:1.10.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: стрункий
   UA_Example: Вона завжди мала струнку фігуру.
   EN_Example: She always had a slender figure.
-  Tags_Ch: ch:2.4.4
+  Tags_Ch: ch:2.4.4, ch:1.10.4
   Source_URL: https://goroh.pp.ua/Словозміна/стрункий
   Source_Note: Горох-verified 2026-08-28, ch.4.4 sourcing pass (sports/competition; appearance
     description; feeding/hosting verbs).

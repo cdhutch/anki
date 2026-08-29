@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.4
+- ch:1.10.1
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: худий (худенький)
   UA_Example: Кіт був худий і голодний.
   EN_Example: The cat was thin and hungry.
-  Tags_Ch: ch:2.4.4
+  Tags_Ch: ch:2.4.4, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/худий
   Source_Note: Горох-verified 2026-08-28, ch.4.4 sourcing pass (sports/competition; appearance
     description; feeding/hosting verbs).

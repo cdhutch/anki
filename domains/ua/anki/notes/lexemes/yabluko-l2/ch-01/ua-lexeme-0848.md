@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.2
+- ch:1.10.2
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: взагалі
   UA_Example: Взагалі, я не люблю холодну погоду.
   EN_Example: In general, I don't like cold weather.
-  Tags_Ch: ch:2.1.2
+  Tags_Ch: ch:2.1.2, ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/взагалі
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Indeclinable adverb / parenthetical word (вставне слово).

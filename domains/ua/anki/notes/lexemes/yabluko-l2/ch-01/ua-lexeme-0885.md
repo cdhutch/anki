@@ -13,6 +13,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.4
+- ch:1.10.1
 - pos:noun
 - status:draft
 fields:
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: зуб
   UA_Example: У мене болить зуб.
   EN_Example: I have a toothache (lit. my tooth hurts).
-  Tags_Ch: ch:2.1.4, ch:1.7.5, ch:1.8.7, ch:1.9.5
+  Tags_Ch: ch:2.1.4, ch:1.7.5, ch:1.8.7, ch:1.9.5, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/зуб
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

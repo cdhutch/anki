@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.2
+- homograph:true
 - pos:noun
 - status:draft
 fields:
@@ -29,7 +30,7 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: курс (ua-lexeme-3773, homograph -- exchange rate (курс валют))
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: курс

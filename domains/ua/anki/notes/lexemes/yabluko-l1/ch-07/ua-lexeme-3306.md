@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7.3
+- ch:1.10.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: костюм
   UA_Example: Він одягнув новий костюм.
   EN_Example: He put on a new suit.
-  Tags_Ch: ch:1.7.3
+  Tags_Ch: ch:1.7.3, ch:1.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/костюм
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

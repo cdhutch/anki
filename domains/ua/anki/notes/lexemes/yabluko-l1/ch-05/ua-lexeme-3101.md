@@ -12,6 +12,7 @@ tags:
 - ch:1.5.7
 - ch:1.7.5
 - ch:1.9.5
+- ch:1.10.1
 - pos:noun
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: вухо
   UA_Example: У ельфа гострі вуха.
   EN_Example: The elf has pointy ears.
-  Tags_Ch: ch:1.5.7, ch:1.7.5, ch:1.9.5
+  Tags_Ch: ch:1.5.7, ch:1.7.5, ch:1.9.5, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/вухо
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate

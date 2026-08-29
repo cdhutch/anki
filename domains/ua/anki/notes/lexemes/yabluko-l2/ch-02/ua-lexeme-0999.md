@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.2
+- ch:1.10.5
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: серце
   UA_Example: У нього добре серце.
   EN_Example: He has a good heart.
-  Tags_Ch: ch:2.2.2, ch:1.9.5
+  Tags_Ch: ch:2.2.2, ch:1.9.5, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/серце
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Neut., 2nd decl., soft group.

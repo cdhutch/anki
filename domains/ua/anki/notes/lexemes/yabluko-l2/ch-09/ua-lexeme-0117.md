@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.10.6
 - pos:verb
 - motion:prefixed
 - status:verified
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: підходити / підійти
   UA_Example: ''
   EN_Example: ''
-  Tags_Ch: ch:2.9.4, ch:1.7.6
+  Tags_Ch: ch:2.9.4, ch:1.7.6, ch:1.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/підходити
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.10.1
 - pos:adjective
 - status:verified
 fields:
@@ -41,7 +42,7 @@ fields:
   TypingAnswer: низький
   UA_Example: У кімнаті були низькі стелі.
   EN_Example: The room had low ceilings.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/низький
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: '2026-08-28: per Craig ("I''m confusing ни́жній with низьки́й..."),

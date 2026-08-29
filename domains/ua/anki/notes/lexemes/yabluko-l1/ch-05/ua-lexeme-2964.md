@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.1
+- ch:1.10.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: розмір
   UA_Example: Свіжий розмір дуже смачний.
   EN_Example: What size do you need?
-  Tags_Ch: ch:1.5.1
+  Tags_Ch: ch:1.5.1, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/розмір
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

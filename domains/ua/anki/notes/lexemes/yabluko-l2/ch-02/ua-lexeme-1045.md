@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.4
+- ch:1.10.7
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: давній
   UA_Example: Вони давні друзі.
   EN_Example: They are old (longstanding) friends.
-  Tags_Ch: ch:2.2.4
+  Tags_Ch: ch:2.2.4, ch:1.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/давній
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. Soft-group adjective (-ій pronominal-type declension).

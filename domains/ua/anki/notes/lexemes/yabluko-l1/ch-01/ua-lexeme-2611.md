@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.4
+- ch:1.10.5
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: взуття
   UA_Example: Зніми взуття біля дверей.
   EN_Example: Take off your shoes by the door.
-  Tags_Ch: ch:1.1.4, ch:1.8.5
+  Tags_Ch: ch:1.1.4, ch:1.8.5, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/взуття
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.5
 - ch:2.3.6
+- ch:1.10.7
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: келих
   UA_Example: Ми підняли келихи і сказали "Будьмо!"
   EN_Example: We raised our glasses and said "Cheers!"
-  Tags_Ch: ch:2.2.5, ch:2.3.6
+  Tags_Ch: ch:2.2.5, ch:2.3.6, ch:1.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/келих
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Masc., 2nd decl., hard group. Example bundles Будьмо (ua-lexeme-1098,
