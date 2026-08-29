@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: букет
   UA_Example: Букет троянд пахнув на всю кімнату.
   EN_Example: The bouquet of roses filled the whole room with scent.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/букет
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.
   Verification Notes: ''

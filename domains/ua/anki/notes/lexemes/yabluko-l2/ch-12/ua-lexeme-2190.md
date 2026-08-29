@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: весело
   UA_Example: Мені весело на цій вечірці.
   EN_Example: I'm having fun at this party.
-  Tags_Ch: ch:2.12.1
+  Tags_Ch: ch:2.12.1, ch:1.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/весело
   Source_Note: Горох-verified 2026-08-29, ch.12.1 sourcing pass (basic emotion verbs; impersonal-predicate
     feeling adverbs; predicate adjectives of emotional state), cross-checked against yabluko-l2-verb-dictionary.pdf

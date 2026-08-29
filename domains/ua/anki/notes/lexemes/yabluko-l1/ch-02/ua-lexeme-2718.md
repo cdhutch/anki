@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: порт
   UA_Example: Корабель прибув у порт.
   EN_Example: The ship arrived at the port.
-  Tags_Ch: ch:1.2.2
+  Tags_Ch: ch:1.2.2, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/порт
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

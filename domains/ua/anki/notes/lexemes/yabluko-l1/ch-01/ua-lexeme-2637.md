@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: трамвай
   UA_Example: Ми їдемо на роботу трамваєм.
   EN_Example: We go to work by tram.
-  Tags_Ch: ch:1.1.4
+  Tags_Ch: ch:1.1.4, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/трамвай
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

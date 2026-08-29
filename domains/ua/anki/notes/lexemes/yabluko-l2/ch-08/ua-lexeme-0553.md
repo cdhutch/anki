@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.7
 - ch:1.7.5
 - domain:ua
 - topic:vocabulary
@@ -39,7 +40,7 @@ fields:
   TypingAnswer: смак
   UA_Example: У цієї страви дуже насичений смак.
   EN_Example: This dish has a very rich taste.
-  Tags_Ch: ch:2.8.6, ch:2.1.5, ch:1.5.1, ch:1.6.5, ch:1.7.5
+  Tags_Ch: ch:2.8.6, ch:2.1.5, ch:1.5.1, ch:1.6.5, ch:1.7.5, ch:1.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/смак
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0568 (на смак).

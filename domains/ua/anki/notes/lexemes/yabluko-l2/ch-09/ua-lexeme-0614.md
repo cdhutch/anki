@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -54,7 +55,7 @@ fields:
   TypingAnswer: рухатися / рушитися
   UA_Example: Потяг почав рухатися повільно.
   EN_Example: The train started to move slowly.
-  Tags_Ch: ch:2.9.6
+  Tags_Ch: ch:2.9.6, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/рухатися; https://goroh.pp.ua/Словозміна/рушитися
   Source_Note: 'Горох-checked 2026-08-28 via Claude-in-Chrome DOM extraction (see Verification
     Notes for the correction history -- earlier passes used WebFetch, which proved unreliable

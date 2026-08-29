@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: сміятися / сміюся
   UA_Example: Діти сміються з жарту.
   EN_Example: The children are laughing at the joke.
-  Tags_Ch: ch:1.3.4, ch:1.4.2, ch:1.4.5
+  Tags_Ch: ch:1.3.4, ch:1.4.2, ch:1.4.5, ch:1.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/сміятися_/_сміюся
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

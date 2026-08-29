@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: готель
   UA_Example: Ми зупинилися в готелі біля моря.
   EN_Example: We stayed at a hotel by the sea.
-  Tags_Ch: ch:1.2.2
+  Tags_Ch: ch:1.2.2, ch:1.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/готель
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

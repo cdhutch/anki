@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: усміхатися / усміхнутися
   UA_Example: Дитина усміхається до мами.
   EN_Example: The child smiles at mom.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/усміхатися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj1-vowel+й / conj1-нути); yabluko-l1 vocabulary expansion pass, 2026-08-29.

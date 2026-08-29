@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - ch:1.7.5
 - domain:ua
 - topic:vocabulary
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: сміливий
   UA_Example: Це було сміливе рішення.
   EN_Example: It was a brave decision.
-  Tags_Ch: ch:2.4.5, ch:1.7.5
+  Tags_Ch: ch:2.4.5, ch:1.7.5, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/сміливий
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).

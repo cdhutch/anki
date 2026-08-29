@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: квиток
   UA_Example: Мені потрібен квиток на виставку.
   EN_Example: I need a ticket to the exhibition.
-  Tags_Ch: ch:2.2.7, ch:1.1.4
+  Tags_Ch: ch:2.2.7, ch:1.1.4, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/квиток
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

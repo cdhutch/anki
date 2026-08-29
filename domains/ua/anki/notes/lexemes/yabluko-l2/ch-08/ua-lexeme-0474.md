@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: раз
   UA_Example: Це вже другий раз, коли ми відвідуємо це місто.
   EN_Example: This is already the second time we've visited this city.
-  Tags_Ch: ch:2.8.3, ch:1.3.4, ch:1.4.5
+  Tags_Ch: ch:2.8.3, ch:1.3.4, ch:1.4.5, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/раз
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: Горох also lists раз as an adverb/subordinating-conjunction homonym

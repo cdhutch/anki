@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: хвилюватися / розхвилюватися
   UA_Example: Не хвилюйся, усе буде добре.
   EN_Example: Don't worry, everything will be fine.
-  Tags_Ch: ch:2.12.3, ch:1.11.2
+  Tags_Ch: ch:2.12.3, ch:1.11.2, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/хвилюватися
   Source_Note: Горох-verified 2026-08-29, ch.12.3 sourcing pass (migration/adaptation vocabulary;
     settling-in and worry/anxiety verbs), cross-checked against yabluko-l2-verb-dictionary.pdf

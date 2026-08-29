@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: нога
   UA_Example: У нього болить нога.
   EN_Example: His leg hurts.
-  Tags_Ch: ch:1.1.6
+  Tags_Ch: ch:1.1.6, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/нога
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

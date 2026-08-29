@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: поштівка
   UA_Example: Я надіслала поштівку з Венеції.
   EN_Example: I sent a postcard from Venice.
-  Tags_Ch: ch:1.2.7
+  Tags_Ch: ch:1.2.7, ch:1.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/поштівка
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

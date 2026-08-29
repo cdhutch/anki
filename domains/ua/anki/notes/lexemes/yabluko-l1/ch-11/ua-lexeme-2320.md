@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: сісти
   UA_Example: Він сів на стілець.
   EN_Example: He sat down on the chair.
-  Tags_Ch: ch:1.11.1, ch:1.2.6
+  Tags_Ch: ch:1.11.1, ch:1.2.6, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/сісти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (see counterpart note); yabluko-l1 vocabulary expansion pass, 2026-08-29.

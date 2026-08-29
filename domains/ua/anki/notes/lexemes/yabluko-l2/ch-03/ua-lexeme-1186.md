@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: дорога
   UA_Example: Дорога до екопоселення веде через ліс.
   EN_Example: The road to the eco-village leads through the forest.
-  Tags_Ch: ch:2.3.3, ch:1.2.2
+  Tags_Ch: ch:2.3.3, ch:1.2.2, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/дорога
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Fem., 1st decl., hard group. Merged duplicate note(s) ua-lexeme-2707

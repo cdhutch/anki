@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: машина
   UA_Example: Нова машина стоїть перед будинком.
   EN_Example: The new car is parked in front of the house.
-  Tags_Ch: ch:1.1.4, ch:1.3.3, ch:1.4.6
+  Tags_Ch: ch:1.1.4, ch:1.3.3, ch:1.4.6, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/машина
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

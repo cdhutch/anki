@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -39,7 +40,7 @@ fields:
   TypingAnswer: пакет
   UA_Example: Дай мені пакет цукру.
   EN_Example: Give me a packet of sugar.
-  Tags_Ch: ch:2.3.1, ch:1.5.6
+  Tags_Ch: ch:2.3.1, ch:1.5.6, ch:1.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/пакет
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Masc., 2nd decl., hard group.

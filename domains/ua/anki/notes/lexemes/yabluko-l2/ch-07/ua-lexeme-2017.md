@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: брудний
   UA_Example: Робот-пилосос не боїться прибирати найбрудніші кутки.
   EN_Example: The robot vacuum isn't afraid to clean the dirtiest corners.
-  Tags_Ch: ch:2.7.4
+  Tags_Ch: ch:2.7.4, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/брудний
   Source_Note: Горох-verified 2026-08-28, ch.7.4 sourcing pass (robots/devices nouns; connect/register
     verb pair; humanoid-robot adjectives), left-column stream of the two-independent-columns

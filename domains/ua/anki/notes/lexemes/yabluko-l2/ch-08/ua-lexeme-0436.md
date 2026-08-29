@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: важкий
   UA_Example: Наша валіза була занадто важка.
   EN_Example: Our suitcase was too heavy.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/важкий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: '2026-08-27: Горох Синонімія lists тяжкий as the dominant near-synonym

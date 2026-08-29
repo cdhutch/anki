@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: домовитися
   UA_Example: Вони домовилися зустрітися о шостій.
   EN_Example: They agreed to meet at six.
-  Tags_Ch: ch:2.7.7
+  Tags_Ch: ch:2.7.7, ch:1.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/домовитися
   Source_Note: Горох-verified 2026-08-28, ch.7.7 sourcing pass (consumption/ownership nouns;
     test/allow/arrange/save/build verb pairs; connector adverbs) -- final sub-chapter of chapter

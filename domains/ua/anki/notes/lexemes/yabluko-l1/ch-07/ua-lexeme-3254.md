@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дзеркало
   UA_Example: У ванній кімнаті велике дзеркало.
   EN_Example: There is a big mirror in the bathroom.
-  Tags_Ch: ch:1.7.1
+  Tags_Ch: ch:1.7.1, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/дзеркало
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

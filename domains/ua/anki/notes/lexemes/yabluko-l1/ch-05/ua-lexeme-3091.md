@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: швидкий
   UA_Example: Це дуже швидкий.
   EN_Example: This is very fast.
-  Tags_Ch: ch:1.5.5, ch:1.6.1
+  Tags_Ch: ch:1.5.5, ch:1.6.1, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/швидкий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

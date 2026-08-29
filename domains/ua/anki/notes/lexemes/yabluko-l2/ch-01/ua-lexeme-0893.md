@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: плакати / заплакати
   UA_Example: Дитина плаче через втому.
   EN_Example: The child is crying from tiredness.
-  Tags_Ch: ch:2.1.4, ch:1.11.6
+  Tags_Ch: ch:2.1.4, ch:1.11.6, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/плакати; https://goroh.pp.ua/Словозміна/заплакати
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

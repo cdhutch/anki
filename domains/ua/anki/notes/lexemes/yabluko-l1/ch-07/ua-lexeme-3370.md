@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сам
   UA_Example: Він живе сам.
   EN_Example: He lives alone.
-  Tags_Ch: ch:1.7.5
+  Tags_Ch: ch:1.7.5, ch:1.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/сам
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

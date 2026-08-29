@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: човен
   UA_Example: Ми попливли на човні по річці.
   EN_Example: We sailed on a boat down the river.
-  Tags_Ch: ch:2.9.2, ch:2.9.7, ch:1.2.3
+  Tags_Ch: ch:2.9.2, ch:2.9.7, ch:1.2.3, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/човен
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: '2026-07-26: reused for ch.9.7 (''надувний човен'') — see ua-lexeme-0357.'

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.6
 - ch:1.7.7
 - domain:ua
 - topic:vocabulary
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: купатися / скупатися
   UA_Example: Влітку діти купаються в річці.
   EN_Example: In summer the children swim in the river.
-  Tags_Ch: ch:2.3.3, ch:1.11.2, ch:1.3.4, ch:1.7.7
+  Tags_Ch: ch:2.3.3, ch:1.11.2, ch:1.3.4, ch:1.7.7, ch:1.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/купатися; https://goroh.pp.ua/Словозміна/скупатися
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective reflexive, 1st conjugation. Perfective скупа́тися

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - ch:1.7.7
 - domain:ua
 - topic:vocabulary
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: збиратися
   UA_Example: Друзі збираються на вечірку в пʼятницю.
   EN_Example: The friends are gathering for a party on Friday.
-  Tags_Ch: ch:2.7.6, ch:1.7.7
+  Tags_Ch: ch:2.7.6, ch:1.7.7, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/збиратися
   Source_Note: Горох-verified 2026-08-28, ch.7.6 sourcing pass (virtual reality; coordinate/gather/decline
     verb pairs; invitation discourse formulas).

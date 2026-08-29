@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: собор
   UA_Example: Собор Святого Юра розташований у Львові.
   EN_Example: St. George''s Cathedral is located in Lviv.
-  Tags_Ch: ch:1.2.5
+  Tags_Ch: ch:1.2.5, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/собор
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

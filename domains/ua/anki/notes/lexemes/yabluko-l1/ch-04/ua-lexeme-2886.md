@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: памʼятати
   UA_Example: Я добре пам''ятаю той день.
   EN_Example: I remember that day well.
-  Tags_Ch: ch:1.4.2, ch:1.4.7
+  Tags_Ch: ch:1.4.2, ch:1.4.7, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/памятати
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

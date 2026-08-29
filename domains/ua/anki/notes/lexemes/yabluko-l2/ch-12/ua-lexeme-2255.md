@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - ch:1.7.7
 - domain:ua
 - topic:vocabulary
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: особа
   UA_Example: Дієслово тут стоїть у третій особі.
   EN_Example: The verb here is in the third person.
-  Tags_Ch: ch:2.12.7, ch:1.7.7
+  Tags_Ch: ch:2.12.7, ch:1.7.7, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/особа
   Source_Note: Горох-verified 2026-08-29, ch.12.7 sourcing pass (grammar terminology; pronunciation/dictation
     verbs; suffering verbs; manner adverbs), cross-checked against yabluko-l2-verb-dictionary.pdf

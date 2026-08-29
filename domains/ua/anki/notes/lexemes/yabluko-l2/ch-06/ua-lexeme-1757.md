@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: доглянути
   UA_Example: Сусідка доглянула наших котів, поки ми були у відпустці.
   EN_Example: The neighbor looked after our cats while we were on vacation.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3, ch:1.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/доглянути
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

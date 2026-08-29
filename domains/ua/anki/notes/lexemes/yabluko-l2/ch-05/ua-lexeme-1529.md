@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: памʼятник
   UA_Example: У центрі площі стоїть памʼятник засновнику міста.
   EN_Example: In the center of the square stands a monument to the city's founder.
-  Tags_Ch: ch:2.5.1
+  Tags_Ch: ch:2.5.1, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/памʼятник
   Source_Note: Горох-verified 2026-08-28, ch.5.1 sourcing pass (street/urban infrastructure;
     natural/property features; locative prepositions).

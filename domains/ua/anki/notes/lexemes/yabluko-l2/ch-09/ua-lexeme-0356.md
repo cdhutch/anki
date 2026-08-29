@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.4
 - ch:1.7.4
 - domain:ua
 - topic:vocabulary
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: час
   UA_Example: Їм довелося чекати на потяг якийсь час.
   EN_Example: They had to wait for the train for some time.
-  Tags_Ch: ch:2.9.7, ch:1.4.3, ch:1.5.4, ch:1.7.4
+  Tags_Ch: ch:2.9.7, ch:1.4.3, ch:1.5.4, ch:1.7.4, ch:1.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/час
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Monosyllabic -- no stress mark.

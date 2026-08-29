@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: транспорт
   UA_Example: Ми обрали громадський транспорт замість таксі.
   EN_Example: We chose public transportation instead of a taxi.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/транспорт
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: Горох shows a stress-based homograph транспо́рт (accounting/bookkeeping

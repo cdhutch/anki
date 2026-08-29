@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: додому
   UA_Example: Вже пізно, час іти додому.
   EN_Example: It''s late already, time to go home.
-  Tags_Ch: ch:1.4.3
+  Tags_Ch: ch:1.4.3, ch:1.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/додому
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: соромно
   UA_Example: Мені соромно за таку поведінку.
   EN_Example: I'm ashamed of such behavior.
-  Tags_Ch: ch:2.2.5
+  Tags_Ch: ch:2.2.5, ch:1.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/соромно
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: 'New. Invariable predicative adverb (Горох: наднегативне, предикатив).'

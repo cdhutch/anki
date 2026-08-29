@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: туман
   UA_Example: Уранці над річкою стояв густий туман.
   EN_Example: In the morning a thick fog hung over the river.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/туман
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: Горох lists a second homograph sense (кол. грошова одиниця Ірану, an
