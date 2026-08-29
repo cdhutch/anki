@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.7
 - ch:2.5.2
+- ch:1.2.1
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: виставка
   UA_Example: Виставка триватиме два тижні.
   EN_Example: The exhibition will run for two weeks.
-  Tags_Ch: ch:2.2.7, ch:2.5.2
+  Tags_Ch: ch:2.2.7, ch:2.5.2, ch:1.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/виставка
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

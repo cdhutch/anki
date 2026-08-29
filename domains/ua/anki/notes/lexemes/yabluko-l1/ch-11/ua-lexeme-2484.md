@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.5
+- ch:1.2.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: одружуватися / одружитися
   UA_Example: Вони одружуються восени.
   EN_Example: They are getting married in the fall.
-  Tags_Ch: ch:1.11.5
+  Tags_Ch: ch:1.11.5, ch:1.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/одружуватися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.2.2
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сторінка
   UA_Example: Відкрийте підручник на сторінці двадцять.
   EN_Example: Open the textbook to page twenty.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/сторінка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

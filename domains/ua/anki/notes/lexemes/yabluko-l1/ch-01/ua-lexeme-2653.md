@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.6
+- ch:1.2.6
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: будь ласка
   UA_Example: Дай мені воду, будь ласка.
   EN_Example: Give me some water, please.
-  Tags_Ch: ch:1.1.6
+  Tags_Ch: ch:1.1.6, ch:1.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/будь_ласка
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

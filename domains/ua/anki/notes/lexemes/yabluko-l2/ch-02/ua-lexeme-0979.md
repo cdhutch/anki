@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.1
+- ch:1.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: вечірка
   UA_Example: У суботу ми йдемо на вечірку.
   EN_Example: On Saturday we're going to a party.
-  Tags_Ch: ch:2.2.1
+  Tags_Ch: ch:2.2.1, ch:1.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/вечірка
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Fem., 1st decl., hard group. Horokh also lists an unrelated masc.

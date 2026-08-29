@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:1.2.2
 - pos:noun
 - gender:n
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: таксі
   UA_Example: Таксі приїхало через пʼять хвилин.
   EN_Example: The taxi arrived in five minutes.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/таксі
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: 'Indeclinable. Filtered out an unrelated homograph ''такса'' (fee/rate;

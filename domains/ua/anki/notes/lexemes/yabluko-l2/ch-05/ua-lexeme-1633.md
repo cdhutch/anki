@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.6
+- ch:1.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: стоянка
   UA_Example: Біля готелю є безкоштовна стоянка.
   EN_Example: There's free parking near the hotel.
-  Tags_Ch: ch:2.5.6
+  Tags_Ch: ch:2.5.6, ch:1.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/стоянка
   Source_Note: Горох-verified 2026-08-28, ch.5.6 sourcing pass (resort/recreation vocabulary;
     arranging/overnighting verbs; hospitality formulas) -- chapter 5 complete.

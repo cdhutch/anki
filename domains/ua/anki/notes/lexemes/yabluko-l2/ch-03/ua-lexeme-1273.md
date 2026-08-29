@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.4
+- ch:1.2.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мабуть
   UA_Example: Мабуть, ремонт закінчиться до осені.
   EN_Example: The renovation will probably be finished by autumn.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4, ch:1.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/мабуть
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

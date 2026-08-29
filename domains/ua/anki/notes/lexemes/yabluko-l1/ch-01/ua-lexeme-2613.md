@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.4
+- ch:1.2.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: гроші
   UA_Example: У мене немає грошей.
   EN_Example: I don''t have any money.
-  Tags_Ch: ch:1.1.4
+  Tags_Ch: ch:1.1.4, ch:1.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/гроші
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

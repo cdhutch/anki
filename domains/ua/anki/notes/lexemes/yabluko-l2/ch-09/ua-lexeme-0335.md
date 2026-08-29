@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:1.2.5
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: гора
   UA_Example: Гора здавалася ще вищою у вечірньому світлі.
   EN_Example: The mountain seemed even taller in the evening light.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:1.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/гора
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Filtered out proper-noun homographs (multiple villages/surnames named

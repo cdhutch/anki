@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.1
+- ch:1.2.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: город
   UA_Example: Бабуся вирощує картоплю та моркву на городі.
   EN_Example: Grandma grows potatoes and carrots in the vegetable garden.
-  Tags_Ch: ch:2.5.1
+  Tags_Ch: ch:2.5.1, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/город
   Source_Note: Горох-verified 2026-08-28, ch.5.1 sourcing pass (street/urban infrastructure;
     natural/property features; locative prepositions).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.7
+- ch:1.2.3
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: острів
   UA_Example: Вони поїхали відпочивати на острів.
   EN_Example: They went to vacation on an island.
-  Tags_Ch: ch:2.2.7
+  Tags_Ch: ch:2.2.7, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/острів
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

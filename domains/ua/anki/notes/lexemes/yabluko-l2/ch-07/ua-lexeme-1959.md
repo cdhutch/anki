@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.3
+- ch:1.2.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: унікальний
   UA_Example: Кожен відбиток пальця -- унікальний.
   EN_Example: Every fingerprint is unique.
-  Tags_Ch: ch:2.7.3
+  Tags_Ch: ch:2.7.3, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/унікальний
   Source_Note: Горох-verified 2026-08-28, ch.7.3 sourcing pass (future tech/robotics/medicine
     nouns and adjectives; a large, page-spanning sub-chapter per the two-independent-columns

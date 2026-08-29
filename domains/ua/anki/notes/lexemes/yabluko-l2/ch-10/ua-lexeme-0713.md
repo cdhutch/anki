@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.5
+- ch:1.2.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: держава
   UA_Example: Україна -- незалежна держава.
   EN_Example: Ukraine is an independent state.
-  Tags_Ch: ch:2.10.5
+  Tags_Ch: ch:2.10.5, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/держава
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

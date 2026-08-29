@@ -13,6 +13,7 @@ tags:
 - pos:adverb
 - status:draft
 - ch:2.6.6
+- ch:1.2.4
 fields:
   NoteID: ua-lexeme-0846
   Lemma: спра́вді
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: справді
   UA_Example: Справді, це дуже цікава історія.
   EN_Example: Indeed, this is a very interesting story.
-  Tags_Ch: ch:2.1.2, ch:2.6.6
+  Tags_Ch: ch:2.1.2, ch:2.6.6, ch:1.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/справді
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Indeclinable adverb / parenthetical word (вставне слово). Горох

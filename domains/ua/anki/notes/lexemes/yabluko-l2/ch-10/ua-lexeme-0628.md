@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - status:draft
 - ch:2.2.1
+- ch:1.2.1
 fields:
   NoteID: ua-lexeme-0628
   Lemma: магази́н
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: магазин
   UA_Example: У аеропорту є магазин безмитної торгівлі.
   EN_Example: There's a duty-free shop at the airport.
-  Tags_Ch: ch:2.10.1, ch:2.2.1
+  Tags_Ch: ch:2.10.1, ch:2.2.1, ch:1.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/магазин
   Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
   Verification Notes: 'Горох lists two homograph senses sharing one spelling/stress: (1) ''пристрій''

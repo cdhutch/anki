@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.2
+- ch:1.2.6
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: Перепрошую
   UA_Example: Перепрошую за запізнення.
   EN_Example: I apologize for being late.
-  Tags_Ch: ch:1.1.2
+  Tags_Ch: ch:1.1.2, ch:1.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/Перепрошую
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

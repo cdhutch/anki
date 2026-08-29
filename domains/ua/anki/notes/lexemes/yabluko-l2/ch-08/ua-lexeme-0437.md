@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.2.7
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: дорогий
   UA_Example: Цей номер у готелі занадто дорогий.
   EN_Example: This hotel room is too expensive.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/дорогий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: 'Same-lemma polysemy split: дорогий has two disjoint senses (expensive

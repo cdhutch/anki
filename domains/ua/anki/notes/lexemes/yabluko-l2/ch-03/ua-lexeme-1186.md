@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.3
+- ch:1.2.2
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: дорога
   UA_Example: Дорога до екопоселення веде через ліс.
   EN_Example: The road to the eco-village leads through the forest.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/дорога
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Fem., 1st decl., hard group.

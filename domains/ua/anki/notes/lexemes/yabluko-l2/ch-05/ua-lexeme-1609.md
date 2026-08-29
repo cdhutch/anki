@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.5
+- ch:1.2.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: захід
   UA_Example: У місті відбудеться благодійний захід.
   EN_Example: A charity event will take place in the city.
-  Tags_Ch: ch:2.5.5
+  Tags_Ch: ch:2.5.5, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/захід
   Source_Note: Горох-verified 2026-08-28, ch.5.5 sourcing pass (festival/craft-fair vocabulary;
     joining/announcing verbs; descriptive adjectives).

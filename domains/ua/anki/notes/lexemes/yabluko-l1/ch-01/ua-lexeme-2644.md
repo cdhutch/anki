@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.5
+- ch:1.2.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: канал
   UA_Example: Вона дивиться новини на цьому каналі.
   EN_Example: She watches the news on this channel.
-  Tags_Ch: ch:1.1.5
+  Tags_Ch: ch:1.1.5, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/канал
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
