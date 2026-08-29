@@ -32,7 +32,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 7 | 15-16 | 112-113 | 7.1-7.7 | **done** |
 | 8 | 17-18 | 130-131 | 8.1-8.7 | **done** |
 | 9 | 19-20 | 145-146 | 9.1-9.7 | **done** |
-| 10 | 21-22 | 162-163 | 10.1-10.7 | pending |
+| 10 | 21-22 | 162-163 | 10.1-10.7 | **done** |
 | 11 | 23-26 | 180-183 | 11.1-11.7 (all verb aspect-pairs) | **done** |
 | 12 | 27-28 | 198-199 | 12.1-12.7 | pending |
 
@@ -217,3 +217,63 @@ wants prioritized.
   `f4f24bdc` (EN_Example fix), `63fe6231` (duplicate cleanup), `808d02d1` (ch.9
   tags), `e25410c3` (ch.9 drafts), progress index this commit. All 547 tests green
   throughout.
+
+- **ch.10 (all 7 subsections, complete)**: 301 unique single-word candidates (293
+  from initial visual transcription, corrected to 301 after re-reading the source
+  pages a second time -- caught 7 transcription omissions: палець, навчальний,
+  історична, квадратний, Сонячна, кров'яний, вечірня, all parts of collocations that
+  were only partially decomposed on first pass; fixed one misspelling, Пренеї ->
+  Піренеї) plus 11 multi-word phrases (10 new + Тихий океан, which turned out to
+  already exist). Dedup-checked via `check_lexeme_dedup --file` (the `--file` flag
+  reads one candidate per line, avoiding the shell word-splitting hazard from ch.9's
+  `$(cat ...)` invocation entirely -- no subprocess workaround needed this chapter).
+
+  183 new notes drafted (ua-lexeme-3602 through ua-lexeme-3784): 170 plain new notes,
+  3 homographs, 10 multi-word atomic phrases. 130 existing notes tagged: 127 true
+  duplicates (bucket 3) + 3 homograph partners updated with `homograph:true` +
+  ConfusableSet.
+
+  Two new verification techniques added to the pipeline this chapter, both catching
+  real issues that `check_lexeme_dedup` structurally cannot see (it only matches the
+  `Lemma` field):
+  - **Perfective-field cross-check**: grepped existing notes' `Perfective:` field for
+    each new-chapter perfective verb before drafting. Caught 3 cases where the
+    perfective form was already recorded on an existing imperfective partner's note
+    (вирости -> ua-lexeme-2401's Perfective field; встигнути -> ua-lexeme-2441;
+    підійти -> ua-lexeme-0117) -- these were tagged onto the existing note instead of
+    drafted as new notes.
+  - **Masculine-citation-form cross-check**: several words were transcribed in
+    feminine agreement form because that's how they appeared in the source
+    collocation (гірська система, історична пам'ятка, Сонячна система, народна
+    пісня, спортивна програма). Checking the masculine citation form of each before
+    drafting found that гірський/історичний/сонячний/народний/спортивний already
+    exist in the corpus -- so гірська/історична/Сонячна/народна/спортивна were tagged
+    onto those existing notes rather than drafted as new (inflected-form) duplicates.
+    Two adjectives that did NOT already exist (культурна -> культурний, транспортна
+    -> транспортний, вечірня -> вечірній) were drafted under their masculine
+    citation form per dictionary-headword convention, not the feminine form as
+    transcribed.
+
+  3 new homograph pairs found (all in 10.3's country/geography/currency context,
+  where the existing note's meaning didn't fit): корона (currency/krone, vs.
+  ua-lexeme-3450 crown/headwear), курс (exchange rate, vs. ua-lexeme-2715
+  course/academic-year), площа (geographic area, vs. ua-lexeme-2690 city
+  square/plaza) -- all cross-linked via ConfusableSet + `homograph:true` on both
+  notes.
+
+  1 uncertain-transcription flag: шкірина (10.3, positioned after Чехія in the
+  countries list) does not parse as a standard Ukrainian word even after a second
+  careful re-read of the source page; drafted with placeholder gloss/examples and an
+  explicit Verification Notes flag for Craig's review, following the
+  штам/гайка/трембіта precedent. (трембіта itself, flagged uncertain during
+  transcription, resolved cleanly via dedup to an existing L2 note -- confirmed
+  correct.)
+
+  One comparative-form word (вищий, from "вищий навчальний заклад" = institution of
+  higher education) was skipped entirely -- not drafted, not tagged -- since it's
+  just the comparative of the already-existing високий (ua-lexeme-0438), per the
+  established convention that comparative forms aren't separately drafted (see
+  близький/ближчий etc. in the source list itself).
+
+  547/547 tests passing throughout. Commits: 8fb2ee92 (183 new notes),
+  b5547881 (130 existing-note tag/homograph updates).
