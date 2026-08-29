@@ -136,6 +136,8 @@ help:
 	@echo "  ua-check-pending-confusables  Report pending-confusable:<lemma> tags whose target now exists in the corpus"
 	@echo "  ua-check-flags      Report red/orange-flagged UA cards (report-only; runs automatically at the end of 'make ua')"
 	@echo "  ua-audit            Full report sweep: unverified + compare-check + check (logged to /tmp/anki-sync-logs)"
+	@echo "  ua-seed-mature           Seed mature FSRS interval on relearn:pending notes (requires Anki+AnkiConnect)"
+	@echo "  ua-seed-mature-dry-run   Preview ua-seed-mature; touches nothing"
 	@echo ""
 	@echo "Ukrainian (UA) — stress verification"
 	@echo "  ua-stress           Full automated pipeline: extract → fetch → compare"
