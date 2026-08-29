@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.5
 - ch:1.11.6
+- ch:1.1.5
 - pos:adjective
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: розумний
   UA_Example: Це розумне рішення.
   EN_Example: This is a smart/reasonable decision.
-  Tags_Ch: ch:2.2.5, ch:1.11.6
+  Tags_Ch: ch:2.2.5, ch:1.11.6, ch:1.1.5
   Source_URL: https://goroh.pp.ua/Словозміна/розумний
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Hard-group adjective. Example bundles межа (ua-lexeme-1054, this

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.3
 - ch:2.3.4
+- ch:1.1.3
 - pos:noun
 - gender:n
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: мистецтво
   UA_Example: Бойове мистецтво вимагає років тренувань.
   EN_Example: A martial art requires years of training.
-  Tags_Ch: ch:2.9.3, ch:2.3.4
+  Tags_Ch: ch:2.9.3, ch:2.3.4, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/мистецтво
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

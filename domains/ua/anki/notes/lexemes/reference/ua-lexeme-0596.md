@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:reference
+- ch:1.1.3
 - pos:noun
 - gender:n
 - status:draft
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: малювання
   UA_Example: Малювання олівцями допомагає їй розслабитися ввечері.
   EN_Example: Drawing with pencils helps her relax in the evening.
-  Tags_Ch: ch:reference
+  Tags_Ch: ch:reference, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/малювання; https://goroh.pp.ua/Тлумачення/малювання
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- companion to ua-lexeme-0042
     (малюнок), added to complete the drawing-nouns near-synonym cluster. No Яблуко textbook

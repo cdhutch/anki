@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
+- ch:1.1.3
 - pos:noun
 - gender:m
 - status:draft
@@ -39,7 +40,7 @@ fields:
   TypingAnswer: матч
   UA_Example: Матч почався о сьомій вечора.
   EN_Example: The match started at seven in the evening.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/матч
   Source_Note: Горох-checked 2026-08-27 via WebFetch (not yet Claude-in-Chrome DOM extraction
     -- see CLAUDE.md's 2026-08-19 note on WebFetch reliability for Горох; worth a DOM spot-check

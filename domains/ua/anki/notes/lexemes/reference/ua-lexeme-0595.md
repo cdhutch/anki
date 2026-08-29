@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:reference
+- ch:1.1.3
 - pos:noun
 - gender:f
 - status:draft
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: подорож
   UA_Example: Наступного місяця ми плануємо подорож до Карпат.
   EN_Example: Next month we're planning a trip to the Carpathians.
-  Tags_Ch: ch:reference
+  Tags_Ch: ch:reference, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/подорож; https://goroh.pp.ua/Тлумачення/подорож
   Source_Note: New 2026-08-27 (per Craig) -- reference-only companion to ua-lexeme-0330 (мандрівка),
     added to complete the pending-confusable:подорож pairing (tagged 2026-07-30). No Яблуко

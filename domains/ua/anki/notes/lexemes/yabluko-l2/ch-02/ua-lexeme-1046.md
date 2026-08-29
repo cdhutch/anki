@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.4
+- ch:1.1.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: колишній
   UA_Example: Це мій колишній учитель.
   EN_Example: This is my former teacher.
-  Tags_Ch: ch:2.2.4
+  Tags_Ch: ch:2.2.4, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/колишній
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. Soft-group adjective (-ій pronominal-type declension).

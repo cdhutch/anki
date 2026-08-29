@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.1.3
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мова
   UA_Example: Я вивчаю українську мову вже рік.
   EN_Example: I have been studying the Ukrainian language for a year already.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/мова
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

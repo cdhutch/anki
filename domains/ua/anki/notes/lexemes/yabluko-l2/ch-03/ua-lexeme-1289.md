@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.5
+- ch:1.1.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: спів
   UA_Example: Спів пташок будив нас щоранку.
   EN_Example: The birdsong (singing of birds) woke us every morning.
-  Tags_Ch: ch:2.3.5
+  Tags_Ch: ch:2.3.5, ch:1.1.7
   Source_URL: https://goroh.pp.ua/Словозміна/спів
   Source_Note: Горох-verified 2026-08-28, ch.3.5 sourcing pass (civic life, leisure, and fractions).
   Verification Notes: New. Masc., 2nd decl., hard group. Горох also lists a homograph спіти

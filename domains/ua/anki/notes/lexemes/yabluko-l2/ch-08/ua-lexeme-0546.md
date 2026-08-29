@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
+- ch:1.1.2
 - pos:noun
 - gender:n
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дерево
   UA_Example: Ми сховались у затінку старого дерева.
   EN_Example: We took shelter in the shade of an old tree.
-  Tags_Ch: ch:2.8.6
+  Tags_Ch: ch:2.8.6, ch:1.1.2
   Source_URL: https://goroh.pp.ua/Словозміна/дерево
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0566 (стовбур дерева).

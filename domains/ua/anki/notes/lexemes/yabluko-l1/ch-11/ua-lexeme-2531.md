@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.6
+- ch:1.1.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сусідка
   UA_Example: Моя сусідка дуже привітна.
   EN_Example: My neighbor is very friendly.
-  Tags_Ch: ch:1.11.6
+  Tags_Ch: ch:1.11.6, ch:1.1.1
   Source_URL: https://goroh.pp.ua/Словозміна/сусідка
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

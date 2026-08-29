@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.1.4
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: стілець
   UA_Example: Сядьте, будь ласка, на стілець коло столу.
   EN_Example: Please sit down on the chair near the table.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/стілець
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the
