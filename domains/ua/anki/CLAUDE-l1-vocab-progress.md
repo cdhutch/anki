@@ -30,7 +30,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 5 | 11-12 | 89-90 | 5.1-5.7 | **done** |
 | 6 | 13-14 | 100-101 | 6.1-6.7 | **done** |
 | 7 | 15-16 | 112-113 | 7.1-7.7 | **done** |
-| 8 | 17-18 | 130-131 | 8.1-8.7 | pending |
+| 8 | 17-18 | 130-131 | 8.1-8.7 | **done** |
 | 9 | 19-20 | 145-146 | 9.1-9.7 | pending |
 | 10 | 21-22 | 162-163 | 10.1-10.7 | pending |
 | 11 | 23-26 | 180-183 | 11.1-11.7 (all verb aspect-pairs) | **done** |
@@ -174,3 +174,19 @@ wants prioritized.
   merges), `aca2807f` (113 tags), `e379b0ee` (+4 tags), `31603eb3` (+1 tag),
   `cec22a26` (drafts), progress index this commit. All 547 tests green throughout.
 
+- **ch.8 (all 7 subsections, complete)**: ~220 unique words/phrases after
+  within-chapter dedup (months/calendar, ordinals/shopping, competitions/materials/
+  jewelry, official holidays, Christmas/New Year folk traditions, opening-hours,
+  daily routine -- the heaviest-reuse chapter yet). 128 distinct existing notes
+  tagged, mostly basic vocabulary already drafted in the L2 pass (months, ordinals,
+  common verbs) plus reuse of L1 ch.4/6/7/11 notes -- including a spelling-variant
+  match ("Святвечір" matched to the already-existing hyphenated "Свят-вечір" from
+  ch.6) and an apostrophe-encoding-fixed match (деревʼяний). 97 new UA_Lexeme notes
+  drafted (3419-3515), including 9 fixed official-holiday-name notes (День
+  Конституції України, День матері, День незалежності, День Перемоги, День Святої
+  Трійці, День солідарності трударів, Міжнародний жіночий день, Зелені свята,
+  Веселих свят!) and 2 fixed question-phrase notes (Котра година?, О котрій
+  годині?). Flagged "гайка" (hardware nut) for Craig's review -- glossed literally
+  per its plain reading, though it sits among otherwise Christmas/household
+  vocabulary in the source list. Commits: `27d9148d` (tags), `74be4f49` (drafts),
+  progress index this commit. All 547 tests green throughout.
