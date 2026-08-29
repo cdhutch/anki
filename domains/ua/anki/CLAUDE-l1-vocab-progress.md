@@ -24,7 +24,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 |---|---|---|---|---|
 | 0 Вступ | 1-2 | 23-24 | 1-10 | **trusted done** (114 words, flat `ch:1.0`) |
 | 1 | 3-4 | 36-37 | 1.1-1.7 | **done** |
-| 2 | 5-6 | 50-51 | 2.1-2.7 | pending |
+| 2 | 5-6 | 50-51 | 2.1-2.7 | **done** |
 | 3 | 7-8 | 64-65 | 3.1-3.7 | pending |
 | 4 | 9-10 | 75-76 | 4.1-4.7 | pending |
 | 5 | 11-12 | 89-90 | 5.1-5.7 | pending |
@@ -80,3 +80,26 @@ wants prioritized.
   genuinely new -> 243 new UA_Lexeme notes drafted (combined pairs + pair-completing +
   standalone), cutting word-count to note-count via pairing. Commits: `86923f4c` (tags),
   `fc640550`..`6d1a6db5` (11.1 through 11.6/11.7 drafts). All 547 tests green throughout.
+- **ch.1 (all 7 subsections, complete)**: 186 words bulk dedup-checked. 37 already existed
+  (mostly from L2) -> tagged `ch:1.1.X`. 149 initially looked new; corrected to 147 after
+  fixing a phrase-tokenization false positive (see below) and 2 inflected-form/infinitive
+  dedup misses handled by manual tag instead of a redundant note. 140 new UA_Lexeme notes
+  drafted (mostly standalone nouns/adjectives, essentially no verb-pair complexity).
+  Commits: `0013ad07` (tags, includes stash-based fix for the false positive),
+  `570f63aa` (drafts), `59ff4f92` (progress index). **Bug found and fixed post-hoc**:
+  12 of the ch.1.2 drafts were tagged `ch:1.2.1` instead of `ch:1.1.2` (a sub-string
+  transposition in the generator script) -- corrected in `dc2d141d`. All 547 tests green
+  throughout.
+- **ch.2 (all 7 subsections, complete)**: 240 words bulk dedup-checked (travel/geography
+  theme: places in town, university life, ancient-world wonders, directions, Venice).
+  89 already existed -> tagged `ch:1.2.X`, including 6 words the literal-string dedup tool
+  missed due to punctuated/inflected lemma forms (Перепрошую!, Побачимося!, Ідіть->іти́,
+  Поверніть->поверта́ти/поверну́ти, Повертайтеся->поверта́тися, Скажіть->сказати) plus
+  a pre-existing "будь ласка" note, resolved by manual lookup. 2 ambiguous homograph
+  matches resolved by context (озеро: tagged the lower-id of two pre-existing duplicate
+  "lake" notes; дорогий: picked the "expensive" sense). The imperative/directional
+  subsection (2.6) decomposed entirely into existing-note tags + new standalone words --
+  no atomic phrase notes needed there, unlike ch.1's greeting subsection. 128 new
+  UA_Lexeme notes drafted (2674-2801), including 6 fixed multi-word phrase/idiom notes
+  (Ісус Христос, Стародавній Рим, Статуя Свободи, на жаль, Щасливої дороги, До зустрічі).
+  Commits: `76f328de` (tags), `c761f81d` (drafts). All 547 tests green throughout.
