@@ -34,7 +34,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 9 | 19-20 | 145-146 | 9.1-9.7 | **done** |
 | 10 | 21-22 | 162-163 | 10.1-10.7 | **done** |
 | 11 | 23-26 | 180-183 | 11.1-11.7 (all verb aspect-pairs) | **done** |
-| 12 | 27-28 | 198-199 | 12.1-12.7 | pending |
+| 12 | 27-28 | 198-199 | 12.1-12.7 | **done** |
 
 Order: finish ch.11, then 1-10, then 12.
 
@@ -277,3 +277,57 @@ wants prioritized.
 
   547/547 tests passing throughout. Commits: 8fb2ee92 (183 new notes),
   b5547881 (130 existing-note tag/homograph updates).
+
+- **ch.12 (all 7 subsections, complete -- final chapter of this pass)**: 386
+  single-word candidates transcribed from the source pages, plus 13 multi-word
+  phrase candidates. A PDF re-verification pass after the initial dedup run caught
+  3 more missed words (поважати, Повір! -- both sit at the very bottom of the 12.6
+  column, right before the 12.7 header, easy to miss; обов'язково, which turned out
+  to already exist as two separate L2 notes) and one transcription vowel slip
+  (повисити -> повисіти, confirmed against висіти(I)/повисіти(I) in the source).
+
+  Dedup-checked via `check_lexeme_dedup --file`: 156 no_match, 230 matched
+  (single-word); 9 new, 4 matched (multi-word).
+
+  120 new notes drafted (ua-lexeme-3785 through ua-lexeme-3904): 111 single-word
+  notes (99 plain + 12 aspect-pairs drafted as combined notes) covering 123 words,
+  plus 9 new multi-word phrases. 4 matched multi-word phrases tagged onto existing
+  notes (схожий на, догори ногами, День незалежності, Ласкаво просимо!).
+
+  Both verification techniques introduced in ch.10 were run proactively from the
+  start this chapter and both paid off heavily, reflecting how vocabulary-dense
+  ch.12 is:
+  - **Perfective-field cross-check**: found 25 new-by-spelling perfective verbs
+    already recorded on an existing imperfective partner's `Perfective` field --
+    tagged onto those notes instead of drafted separately.
+  - A related but distinct gap, found this chapter for the first time: 8 more
+    new-by-spelling perfective verbs (прикрасити, засміятися, навчити, повисіти,
+    прожити, здійснитися, захопитися, полюбити) turned out to be the perfective
+    partner of an existing **matched** imperfective note whose `Perfective` field
+    was still `null` -- i.e. the pair already existed in the corpus but was never
+    linked. Rather than draft a redundant new note, filled the existing note's
+    `Perfective` field and updated its `TypingAnswer` to the combined `impf / perf`
+    form (matching the ch.11 combined-note convention), and left the `EN_Gloss`
+    untouched (ch.11 precedent keeps the "(imperfective)" qualifier even once
+    `Perfective` is filled).
+
+  Full manual review of the entire 230-entry matched-word dictionary (not sampled)
+  surfaced two more categories `check_lexeme_dedup`'s Lemma-only matching cannot
+  see on its own:
+  - **3 pre-existing same-book (L1) true duplicates**, predating this project:
+    прикрашати (ua-lexeme-3218, ch.6, kept vs. ua-lexeme-3363, ch.7, deleted),
+    різний (ua-lexeme-3026, ch.5, kept vs. ua-lexeme-3369, ch.7, deleted), двері
+    (ua-lexeme-3042, ch.5, kept vs. ua-lexeme-3253, ch.7, deleted). Same merge
+    treatment as ch.9's вухо: lower ID kept, higher ID's chapter tags migrated
+    onto it, duplicate file removed, no dangling references left.
+  - **2 legitimate pre-existing homograph pairs** needing a sense pick rather than
+    a blanket tag-both: тепло (ua-lexeme-0405, adverb "warmly," matches 12.3's
+    nature/weather context -- picked over ua-lexeme-0407, noun "warmth") and
+    дорогий (ua-lexeme-0580, "dear, affectionate," matches 12.4's love-vocab
+    context -- picked over ua-lexeme-0437, "expensive").
+
+  This is the final chapter of the L1 vocabulary-expansion pass (order was: finish
+  ch.11, then 1-10, then 12). 547/547 tests passing throughout. Commits: `bd66005b`
+  (120 new notes), `6116dad1` (226 existing-note tag updates), `f3eecb7a` (8
+  Perfective-field fills), `46001262` (3 duplicate merges), progress index this
+  commit.
