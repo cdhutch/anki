@@ -136,6 +136,8 @@ help:
 	@echo "  ua-check-pending-confusables  Report pending-confusable:<lemma> tags whose target now exists in the corpus"
 	@echo "  ua-check-flags      Report red/orange-flagged UA cards (report-only; runs automatically at the end of 'make ua')"
 	@echo "  ua-audit            Full report sweep: unverified + compare-check + check (logged to /tmp/anki-sync-logs)"
+	@echo "  ua-release-wave          Promote release:pending -> active per release_plan.yaml (verified notes only)"
+	@echo "  ua-release-wave-dry-run  Preview ua-release-wave; touches nothing"
 	@echo "  ua-seed-mature           Seed mature FSRS interval on relearn:pending notes (requires Anki+AnkiConnect)"
 	@echo "  ua-seed-mature-dry-run   Preview ua-seed-mature; touches nothing"
 	@echo ""
@@ -742,6 +744,7 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-compare-check
 .PHONY: ua-check ua-check-aspect ua-check-pending-confusables ua-check-flags
 .PHONY: ua-seed-mature ua-seed-mature-dry-run
+.PHONY: ua-release-wave ua-release-wave-dry-run
 .PHONY: ua-audit _ua-audit
 .PHONY: ua ua-fix _ua
 
@@ -1051,6 +1054,21 @@ ua-audit:
 ua-check-flags:
 	@printf "\033[1;36m\n— Flagged card check —\033[0m\n"
 	$(PYTHON) tools/anki/inspect/ua_flag_audit.py --query
+
+# ── Release wave (batch pacing) ──────────────────────────────────────────────
+# New 2026-08-29, Craig -- wraps release_wave.py as a proper make target
+# (previously only invoked as a raw script). Pure file edits, no Anki
+# needed. Promotes release:pending -> release:active per
+# domains/ua/anki/config/release_plan.yaml, requiring status:verified (see
+# release_wave.py's own docstring) -- and warns if a whole side (new-content
+# groups, or type: relearn groups) has nothing verified-and-ready this run,
+# naming how many notes are waiting on verification. Always follow with a
+# sync target (ua-lexeme, or ua) to actually unsuspend what this promotes.
+ua-release-wave:
+	$(PYTHON) tools/anki/release_wave.py
+
+ua-release-wave-dry-run:
+	$(PYTHON) tools/anki/release_wave.py --dry-run
 
 # ── Mature-interval seeding for relearn notes ────────────────────────────────
 # New 2026-08-29, Craig. Seeds newly-released `type: relearn` notes (see

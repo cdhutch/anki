@@ -4,9 +4,18 @@
 Reads domains/ua/anki/config/release_plan.yaml, a small set of named groups
 (each a list of tag glob patterns + a per-run batch size). For each group,
 finds every note under --root (default: domains/ua/anki/notes/lexemes) that
-is release:pending and has at least one tag matching the group's patterns,
-sorts the matches by NoteID, and flips up to `batch_size` of them from
-release:pending to release:active -- oldest NoteID first, one flip per note.
+is release:pending, status:verified, and has at least one tag matching the
+group's patterns, sorts the matches by NoteID, and flips up to `batch_size`
+of them from release:pending to release:active -- oldest NoteID first, one
+flip per note.
+
+status:verified is required for promotion (added 2026-08-29, Craig) -- a
+note that's release:pending but still status:draft is real backlog, just
+not curated yet, and is reported separately as "blocked on verification"
+rather than promoted. If an entire side (new-content groups, or type:
+relearn groups) has nothing verified-and-ready this run, a warning prints
+at the end naming how many notes are waiting on verification, so a quiet
+run reads as "go verify something" rather than silently doing nothing.
 
 This is the "config stored in the repo" pacing lever: status:draft/verified
 (content quality) and release:pending/active (study-pacing, see
@@ -125,6 +134,48 @@ def apply_promotion(text: str, relearn: bool) -> tuple[str, bool]:
     return new_text, relearn_tagged
 
 
+def eligible_candidates(
+    parsed: list[tuple[Path, str, list[str], str]],
+    patterns: list[str],
+    already_promoted_paths: set[Path],
+) -> list[tuple[Path, str, str]]:
+    """Notes matching `patterns` that are release:pending AND status:verified,
+    not already promoted earlier this run. Sorted by NoteID (oldest first).
+
+    status:verified is required here, not just release:pending -- release:
+    is a pacing gate independent of content quality, but a note that's
+    never been verified has no business entering rotation regardless of
+    pacing. (Added 2026-08-29, Craig -- see the module docstring.)
+    """
+    candidates = [
+        (fp, nid, text)
+        for fp, nid, tags, text in parsed
+        if fp not in already_promoted_paths
+        and "release:pending" in tags
+        and "status:verified" in tags
+        and matches_group(tags, patterns)
+    ]
+    candidates.sort(key=lambda t: t[1])
+    return candidates
+
+
+def count_blocked_on_verification(
+    parsed: list[tuple[Path, str, list[str], str]], patterns: list[str]
+) -> int:
+    """Count of release:pending + status:draft notes matching `patterns` --
+    real backlog that isn't verified yet, so it never shows up in
+    eligible_candidates() no matter how large batch_size is. Reported per
+    group and aggregated by side (new vs relearn) so a whole side showing
+    zero available prompts a "go verify something" nudge instead of
+    silently doing nothing.
+    """
+    return sum(
+        1
+        for _, _, tags, _ in parsed
+        if "release:pending" in tags and "status:draft" in tags and matches_group(tags, patterns)
+    )
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--plan", type=Path, default=DEFAULT_PLAN, help="Path to release_plan.yaml")
@@ -160,20 +211,29 @@ def main() -> int:
     # reused across an L1 and an L2 chapter), and it must only be promoted once
     # per run, by whichever group processes it first.
 
+    new_side_exists = False
+    new_side_available = 0
+    new_side_blocked = 0
+    relearn_side_exists = False
+    relearn_side_available = 0
+    relearn_side_blocked = 0
+
     for g in groups:
         name = g["name"]
         patterns = g["match"]
         batch_size = g["batch_size"]
         group_type = g.get("type")
+        is_relearn = group_type == "relearn"
 
-        candidates = [
-            (fp, nid, text)
-            for fp, nid, tags, text in parsed
-            if fp not in already_promoted_paths
-            and "release:pending" in tags
-            and matches_group(tags, patterns)
-        ]
-        candidates.sort(key=lambda t: t[1])  # by NoteID
+        # 2026-08-29, Craig: a real run promoted 21 still-draft notes to
+        # release:active before eligible_candidates() required
+        # status:verified -- harmless in Anki itself (the sync AND-gate
+        # still kept those notes' cards suspended), but it let
+        # seed_mature_interval.py waste a mature-interval seed on cards
+        # that were never actually live. Fixed there too; this is the real
+        # fix -- don't offer an unverified note as promotable at all.
+        candidates = eligible_candidates(parsed, patterns, already_promoted_paths)
+        blocked = count_blocked_on_verification(parsed, patterns)
 
         already_active = sum(
             1
@@ -182,15 +242,32 @@ def main() -> int:
         )
         total_matching = len(candidates) + already_active
 
-        if total_matching == 0:
+        if is_relearn:
+            relearn_side_exists = True
+            relearn_side_available += len(candidates)
+            relearn_side_blocked += blocked
+        else:
+            new_side_exists = True
+            new_side_available += len(candidates)
+            new_side_blocked += blocked
+
+        if total_matching == 0 and blocked == 0:
             any_zero_match_group = True
             print(f"[{name}] no notes match {patterns!r} at all -- check for a typo?")
             continue
 
+        if len(candidates) == 0 and blocked > 0:
+            print(
+                f"[{name}] 0 verified notes ready -- {blocked} pending note(s) "
+                "are still status:draft. Verify some to make them available."
+            )
+            continue
+
         to_promote = candidates[:batch_size] if batch_size else []
+        blocked_note = f", {blocked} more pending but still status:draft" if blocked else ""
         print(
-            f"[{name}] {len(candidates)} pending / {total_matching} total match "
-            f"-- promoting {len(to_promote)} this run"
+            f"[{name}] {len(candidates)} verified & pending / {total_matching} total match"
+            f"{blocked_note} -- promoting {len(to_promote)} this run"
         )
 
         for fp, nid, text in to_promote:
@@ -228,6 +305,24 @@ def main() -> int:
             )
     if any_zero_match_group:
         print("Note: one or more groups matched zero notes -- see warnings above.", file=sys.stderr)
+
+    # Per-side (new vs relearn) verification nudge, per Craig 2026-08-29:
+    # warn when a whole side has nothing verified-and-ready, but only if
+    # that's because of a real backlog stuck on status:draft -- not because
+    # the side is simply empty or fully caught up, which needs no action.
+    print()
+    if new_side_exists and new_side_available == 0 and new_side_blocked > 0:
+        print(
+            f"⚠ New-content groups: 0 notes verified & ready this run -- "
+            f"{new_side_blocked} pending note(s) are still status:draft. "
+            "Verify some to keep new content flowing."
+        )
+    if relearn_side_exists and relearn_side_available == 0 and relearn_side_blocked > 0:
+        print(
+            f"⚠ Relearn groups: 0 notes verified & ready this run -- "
+            f"{relearn_side_blocked} pending note(s) are still status:draft. "
+            "Verify some to keep relearn releases flowing."
+        )
 
     return 0
 

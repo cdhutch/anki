@@ -155,13 +155,22 @@ only.
 
 | Command | What it does | Requires Anki? |
 |---|---|---|
-| `python tools/anki/release_wave.py --dry-run` | Preview what `release_plan.yaml` would promote this run. **Not a `make` target** — invoke the script directly. | No |
-| `python tools/anki/release_wave.py` | Apply: flips `release:pending` → `release:active` per the batch sizes in `domains/ua/anki/config/release_plan.yaml`; stamps `relearn:pending` on notes from a `type: relearn` group. | No (edits `.md` files only) |
+| `make ua-release-wave-dry-run` | Preview what `release_plan.yaml` would promote this run — per group, how many notes are verified & ready vs. still blocked on `status:draft`. | No |
+| `make ua-release-wave` | Apply: flips `release:pending` → `release:active` on verified notes per the batch sizes in `domains/ua/anki/config/release_plan.yaml`; stamps `relearn:pending` on notes from a `type: relearn` group. Warns if a whole side (new-content groups, or relearn groups) has nothing verified-and-ready this run. | No (edits `.md` files only) |
 | `make ua-seed-mature-dry-run` | Preview mature-interval seeding — which relearn notes are eligible, and how many cards each has, without calling `setDueDate` or touching any file. | **Yes** — even dry-run needs live AnkiConnect to show real card counts. |
-| `make ua-seed-mature` | Seed eligible notes (`release:active` + `relearn:pending`, not yet `relearn:seeded`) with a mature FSRS interval via `setDueDate`, then flip the tag to `relearn:seeded`. | **Yes.** |
+| `make ua-seed-mature` | Seed eligible notes (`status:verified` + `release:active` + `relearn:pending`, not yet `relearn:seeded`) with a mature FSRS interval via `setDueDate`, then flip the tag to `relearn:seeded`. | **Yes.** |
+
+> [!note] `status:verified` is required to promote, not just `release:pending`
+> Added 2026-08-29 after a real run promoted 21 still-`status:draft` notes
+> to `release:active` — harmless in Anki itself (the sync AND-gate still
+> kept those notes' cards suspended), but it let `ua-seed-mature` waste a
+> mature-interval seed on cards that were never actually live. A note
+> that's `release:pending` but still `status:draft` is now reported as
+> "blocked on verification" instead of promoted, and if an entire side has
+> nothing else ready, `ua-release-wave` says so explicitly.
 
 > [!warning] Order matters
-> `release_wave.py` only edits files. The notes it promotes don't actually
+> `ua-release-wave` only edits files. The notes it promotes don't actually
 > unsuspend in Anki until you run the matching sync target (`make
 > ua-lexeme`, typically). `ua-seed-mature` needs the cards to already exist
 > and be unsuspended in Anki, so it always comes *after* the sync, never
@@ -244,6 +253,8 @@ Requires `ANTHROPIC_API_KEY` set and `pip install anthropic`.
 | `ua-inject-examples` | §8 examples | No |
 | `ua-lexeme` / `-check` / `-fix` | §3 per-type sync | sync only |
 | `ua-pvom` / `-check` / `-fix` | §3 per-type sync | sync only |
+| `ua-release-wave` | §5 pacing | No |
+| `ua-release-wave-dry-run` | §5 pacing | No |
 | `ua-seed-mature` | §5 pacing | Yes |
 | `ua-seed-mature-dry-run` | §5 pacing | Yes |
 | `ua-setup` / `-lexeme` / `-grammar` / `-visual` / `-verb` / `-pvom` | §1 setup | Yes |
@@ -253,8 +264,7 @@ Requires `ANTHROPIC_API_KEY` set and `pip install anthropic`.
 | `ua-verb` / `-check` / `-fix` | §3 per-type sync | sync only |
 | `ua-visual` / `-check` / `-fix` | §3 per-type sync | sync only |
 
-*(`release_wave.py` and `seed_mature_interval.py`'s underlying calls aren't
-`make` targets except where wrapped — see §5.)*
+
 
 ---
 

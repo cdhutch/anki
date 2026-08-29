@@ -26,6 +26,8 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from tools.anki.release_wave import (  # noqa: E402
     apply_promotion,
+    count_blocked_on_verification,
+    eligible_candidates,
     load_plan,
     matches_group,
     note_id,
@@ -183,3 +185,68 @@ groups:
     def test_no_groups_key_returns_empty_list(self, tmp_path):
         p = self._write_plan(tmp_path, "{}\n")
         assert load_plan(p) == []
+
+
+class TestEligibleCandidates:
+    """status:verified is required for promotion, added 2026-08-29 after a
+    real run promoted 21 still-draft notes to release:active. Regression
+    coverage for that gate.
+    """
+
+    def _row(self, path, note_id_, tags, text=NOTE_TEXT):
+        return (Path(path), note_id_, tags, text)
+
+    def test_verified_and_pending_is_eligible(self):
+        parsed = [self._row("a.md", "ua-lexeme-0001", ["release:pending", "status:verified", "ch:1.1.1"])]
+        result = eligible_candidates(parsed, ["ch:1.1.*"], set())
+        assert [nid for _, nid, _ in result] == ["ua-lexeme-0001"]
+
+    def test_pending_but_draft_is_excluded(self):
+        parsed = [self._row("a.md", "ua-lexeme-0001", ["release:pending", "status:draft", "ch:1.1.1"])]
+        assert eligible_candidates(parsed, ["ch:1.1.*"], set()) == []
+
+    def test_verified_but_not_pending_is_excluded(self):
+        # Already active -- nothing to promote.
+        parsed = [self._row("a.md", "ua-lexeme-0001", ["release:active", "status:verified", "ch:1.1.1"])]
+        assert eligible_candidates(parsed, ["ch:1.1.*"], set()) == []
+
+    def test_non_matching_tags_excluded(self):
+        parsed = [self._row("a.md", "ua-lexeme-0001", ["release:pending", "status:verified", "ch:2.1.1"])]
+        assert eligible_candidates(parsed, ["ch:1.1.*"], set()) == []
+
+    def test_already_promoted_this_run_excluded(self):
+        fp = Path("a.md")
+        parsed = [(fp, "ua-lexeme-0001", ["release:pending", "status:verified", "ch:1.1.1"], NOTE_TEXT)]
+        assert eligible_candidates(parsed, ["ch:1.1.*"], {fp}) == []
+
+    def test_sorted_by_note_id(self):
+        parsed = [
+            self._row("b.md", "ua-lexeme-0099", ["release:pending", "status:verified", "ch:1.1.1"]),
+            self._row("a.md", "ua-lexeme-0001", ["release:pending", "status:verified", "ch:1.1.1"]),
+        ]
+        result = eligible_candidates(parsed, ["ch:1.1.*"], set())
+        assert [nid for _, nid, _ in result] == ["ua-lexeme-0001", "ua-lexeme-0099"]
+
+
+class TestCountBlockedOnVerification:
+    def _row(self, path, note_id_, tags, text=NOTE_TEXT):
+        return (Path(path), note_id_, tags, text)
+
+    def test_counts_pending_draft_matches(self):
+        parsed = [
+            self._row("a.md", "ua-lexeme-0001", ["release:pending", "status:draft", "ch:1.1.1"]),
+            self._row("b.md", "ua-lexeme-0002", ["release:pending", "status:draft", "ch:1.1.2"]),
+        ]
+        assert count_blocked_on_verification(parsed, ["ch:1.1.*"]) == 2
+
+    def test_verified_notes_not_counted(self):
+        parsed = [self._row("a.md", "ua-lexeme-0001", ["release:pending", "status:verified", "ch:1.1.1"])]
+        assert count_blocked_on_verification(parsed, ["ch:1.1.*"]) == 0
+
+    def test_already_active_not_counted(self):
+        parsed = [self._row("a.md", "ua-lexeme-0001", ["release:active", "status:draft", "ch:1.1.1"])]
+        assert count_blocked_on_verification(parsed, ["ch:1.1.*"]) == 0
+
+    def test_non_matching_not_counted(self):
+        parsed = [self._row("a.md", "ua-lexeme-0001", ["release:pending", "status:draft", "ch:2.1.1"])]
+        assert count_blocked_on_verification(parsed, ["ch:1.1.*"]) == 0
