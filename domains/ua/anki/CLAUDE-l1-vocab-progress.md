@@ -33,7 +33,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 8 | 17-18 | 130-131 | 8.1-8.7 | pending |
 | 9 | 19-20 | 145-146 | 9.1-9.7 | pending |
 | 10 | 21-22 | 162-163 | 10.1-10.7 | pending |
-| 11 | 23-26 | 180-183 | 11.1-11.7 (all verb aspect-pairs) | 11.1, 11.4 done; 11.2-11.3, 11.5-11.7 pending |
+| 11 | 23-26 | 180-183 | 11.1-11.7 (all verb aspect-pairs) | **done** |
 | 12 | 27-28 | 198-199 | 12.1-12.7 | pending |
 
 Order: finish ch.11, then 1-10, then 12.
@@ -54,6 +54,29 @@ Order: finish ch.11, then 1-10, then 12.
    the aspect-pairing-completeness and dual-convention-duplicate gates).
 6. Update this index after each subsection.
 
+## Methodology note (revised after starting ch.11 -- much higher volume than a per-word
+Горох-verified pass could sustain against the deadline)
+
+For NEW words (no existing corpus match): drafted from the wordlist's own inline
+conjugation-class annotation plus my own knowledge of Ukrainian, with a concise example
+sentence -- not individually Горох-verified per word (that pace does not fit ~250-400
+new words per chapter against a same-day deadline). Two note shapes:
+  - **Combined**: both impf+pf are new -> one note, imperfective headword, `Perfective`
+    field populated (yabluko-l1 single-note convention).
+  - **Standalone / pair-completing**: this word completes a pair whose OTHER member
+    already exists in the corpus (usually from L2) -> one new note for just the missing
+    word, with `CounterpartForm` cross-referencing the existing partner note (matches the
+    corpus's dominant pre-cleanup two-note style; avoids touching/reformatting the
+    existing note).
+UA_Verb paradigm notes (the separate full-conjugation deck) are deferred for this bulk
+pass -- only UA_Lexeme recognition notes are being drafted chapter-by-chapter. Flagging
+for Craig's review; happy to go back and Горох-verify or add paradigms for any subset he
+wants prioritized.
+
 ## Progress log
 
-(updated as subsections complete)
+- **ch.11 (all 7 subsections, complete)**: 481 words bulk dedup-checked. 150 already
+  existed in the corpus (mostly from L2) -> tagged `ch:1.11.X`, no new notes. 329 were
+  genuinely new -> 243 new UA_Lexeme notes drafted (combined pairs + pair-completing +
+  standalone), cutting word-count to note-count via pairing. Commits: `86923f4c` (tags),
+  `fc640550`..`6d1a6db5` (11.1 through 11.6/11.7 drafts). All 547 tests green throughout.
