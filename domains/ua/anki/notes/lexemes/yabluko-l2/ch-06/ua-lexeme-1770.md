@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.3
+- ch:1.11.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: курити
   UA_Example: Він кинув курити два роки тому.
   EN_Example: He quit smoking two years ago.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3, ch:1.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/курити
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

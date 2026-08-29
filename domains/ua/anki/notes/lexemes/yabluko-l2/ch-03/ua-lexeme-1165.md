@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.3.1
 - ch:2.3.5
+- ch:1.11.4
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: половина
   UA_Example: Половина яблука лежить на тарілці.
   EN_Example: Half an apple is lying on the plate.
-  Tags_Ch: ch:2.3.1, ch:2.3.5
+  Tags_Ch: ch:2.3.1, ch:2.3.5, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/половина
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Fem., 1st decl., hard group. Example bundles пів (ua-lexeme-1164,

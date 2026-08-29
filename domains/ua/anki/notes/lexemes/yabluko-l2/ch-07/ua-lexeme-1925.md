@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.2
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: продавати
   UA_Example: Цей магазин продає вживані ноутбуки.
   EN_Example: This shop sells used laptops.
-  Tags_Ch: ch:2.7.2
+  Tags_Ch: ch:2.7.2, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/продавати
   Source_Note: Горох-verified 2026-08-28, ch.7.2 sourcing pass (accounts/passwords tech vocabulary;
     frequency adverbs; descriptive adjectives).

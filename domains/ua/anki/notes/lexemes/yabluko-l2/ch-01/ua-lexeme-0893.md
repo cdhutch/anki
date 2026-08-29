@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.4
+- ch:1.11.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: плакати / заплакати
   UA_Example: Дитина плаче через втому.
   EN_Example: The child is crying from tiredness.
-  Tags_Ch: ch:2.1.4
+  Tags_Ch: ch:2.1.4, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/плакати; https://goroh.pp.ua/Словозміна/заплакати
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

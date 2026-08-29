@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - status:draft
 - ch:2.7.3
+- ch:1.11.4
 fields:
   NoteID: ua-lexeme-0731
   Lemma: публікува́ти
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: публікувати / опублікувати
   UA_Example: Газета публікує статті про права людини.
   EN_Example: The newspaper publishes articles about human rights.
-  Tags_Ch: ch:2.10.5,ch:2.7.3
+  Tags_Ch: ch:2.10.5,ch:2.7.3, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/публікувати; https://goroh.pp.ua/Словозміна/опублікувати
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

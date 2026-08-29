@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.5
+- ch:1.11.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: принести
   UA_Example: Він приніс букет квітів до столу.
   EN_Example: He brought a bouquet of flowers to the table.
-  Tags_Ch: ch:2.6.5
+  Tags_Ch: ch:2.6.5, ch:1.11.3
   Source_URL: https://goroh.pp.ua/Словозміна/принести
   Source_Note: Горох-verified 2026-08-28, ch.6.5 sourcing pass (crime/danger anecdote; imperfective-perfective
     verb pairs).

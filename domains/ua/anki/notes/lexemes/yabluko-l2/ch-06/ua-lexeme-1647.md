@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - status:draft
 - ch:2.11.1
+- ch:1.11.6
 fields:
   NoteID: ua-lexeme-1647
   Lemma: сміття́
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: сміття
   UA_Example: Не забудь винести сміття ввечері.
   EN_Example: Don't forget to take out the trash in the evening.
-  Tags_Ch: ch:2.6.1,ch:2.11.1
+  Tags_Ch: ch:2.6.1,ch:2.11.1, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/сміття
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).

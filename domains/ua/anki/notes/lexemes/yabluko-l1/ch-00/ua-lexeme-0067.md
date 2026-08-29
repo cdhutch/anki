@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.11.5
 - pos:noun
 - gender:m
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: фільм
   UA_Example: Учора ввечері ми дивилися цікавий фільм.
   EN_Example: Yesterday evening we watched an interesting film.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/фільм
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

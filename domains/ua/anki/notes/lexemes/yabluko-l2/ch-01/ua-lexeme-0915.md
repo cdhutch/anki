@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - status:draft
 - ch:2.2.1
+- ch:1.11.5
 fields:
   NoteID: ua-lexeme-0915
   Lemma: дарува́ти
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: дарувати / подарувати
   UA_Example: Батьки дарують дітям подарунки на Різдво.
   EN_Example: Parents give children gifts for Christmas.
-  Tags_Ch: ch:2.1.5, ch:2.2.1
+  Tags_Ch: ch:2.1.5, ch:2.2.1, ch:1.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/дарувати; https://goroh.pp.ua/Словозміна/подарувати
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

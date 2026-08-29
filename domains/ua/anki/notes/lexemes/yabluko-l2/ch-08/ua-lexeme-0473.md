@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - ch:2.10.5
+- ch:1.11.5
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: закон
   UA_Example: Тут туристи повинні дотримуватися місцевого закону.
   EN_Example: Tourists here must abide by local law.
-  Tags_Ch: ch:2.8.3, ch:2.10.5
+  Tags_Ch: ch:2.8.3, ch:2.10.5, ch:1.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/закон
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0489 (дотримуватися закону).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.2
+- ch:1.11.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: видавництво
   UA_Example: Ця книжка вийшла у великому видавництві.
   EN_Example: This book was published by a major publishing house.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/видавництво
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

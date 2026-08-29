@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.2
 - ch:2.6.1
+- ch:1.11.3
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: допомагати / допомогти
   UA_Example: Він завжди допомагає друзям.
   EN_Example: He always helps his friends.
-  Tags_Ch: ch:2.10.2, ch:2.6.1
+  Tags_Ch: ch:2.10.2, ch:2.6.1, ch:1.11.3
   Source_URL: https://goroh.pp.ua/Словозміна/допомагати; https://goroh.pp.ua/Словозміна/допомогти
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

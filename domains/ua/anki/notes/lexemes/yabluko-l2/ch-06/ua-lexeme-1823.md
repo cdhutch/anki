@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.5
+- ch:1.11.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: приносити
   UA_Example: Поштарка щоранку приносить нам листи.
   EN_Example: The postwoman brings us letters every morning.
-  Tags_Ch: ch:2.6.5
+  Tags_Ch: ch:2.6.5, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/приносити
   Source_Note: Горох-verified 2026-08-28, ch.6.5 sourcing pass (crime/danger anecdote; imperfective-perfective
     verb pairs).

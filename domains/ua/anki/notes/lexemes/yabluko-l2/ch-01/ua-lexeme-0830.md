@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.1
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: відпочивати / відпочити
   UA_Example: Влітку я люблю відпочивати на морі.
   EN_Example: In summer I like to rest by the sea.
-  Tags_Ch: ch:2.1.1
+  Tags_Ch: ch:2.1.1, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/відпочивати; https://goroh.pp.ua/Словозміна/відпочити
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

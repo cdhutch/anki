@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.3
+- ch:1.11.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: блукати
   UA_Example: Вони довго блукали лісом, шукаючи дорогу.
   EN_Example: They wandered through the forest for a long time, looking for the way.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3, ch:1.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/блукати
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

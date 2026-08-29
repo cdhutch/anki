@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.7
+- ch:1.11.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дозволяти
   UA_Example: Батьки не дозволяють дітям користуватися телефоном за столом.
   EN_Example: Parents don't allow children to use their phones at the table.
-  Tags_Ch: ch:2.7.7
+  Tags_Ch: ch:2.7.7, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/дозволяти
   Source_Note: Горох-verified 2026-08-28, ch.7.7 sourcing pass (consumption/ownership nouns;
     test/allow/arrange/save/build verb pairs; connector adverbs) -- final sub-chapter of chapter

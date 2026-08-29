@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.5
+- ch:1.11.4
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: втрачати
   UA_Example: Він ніколи не втрачав надії.
   EN_Example: He never lost hope.
-  Tags_Ch: ch:2.4.5
+  Tags_Ch: ch:2.4.5, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/втрачати
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).

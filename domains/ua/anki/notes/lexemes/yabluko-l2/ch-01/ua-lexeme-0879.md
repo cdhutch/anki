@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.3
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: шукати / пошукати
   UA_Example: Я шукаю нову квартиру.
   EN_Example: I am looking for a new apartment.
-  Tags_Ch: ch:2.1.3
+  Tags_Ch: ch:2.1.3, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/шукати; https://goroh.pp.ua/Словозміна/пошукати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

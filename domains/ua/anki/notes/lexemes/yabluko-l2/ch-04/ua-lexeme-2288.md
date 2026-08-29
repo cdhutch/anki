@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.5
+- ch:1.11.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: виконати
   UA_Example: Він завжди виконав свою роботу вчасно.
   EN_Example: He always carried out his work on time.
-  Tags_Ch: ch:2.4.5
+  Tags_Ch: ch:2.4.5, ch:1.11.7
   Source_URL: https://goroh.pp.ua/Словозміна/виконати
   Source_Note: Горох-verified 2026-08-29, aspect-pairing completeness pass (fixing incomplete
     verb aspect pairs flagged by count-incomplete-aspect-pairs audit), cross-checked against

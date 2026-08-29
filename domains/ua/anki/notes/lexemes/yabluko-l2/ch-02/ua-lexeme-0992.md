@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.1
 - ch:2.3.4
+- ch:1.11.4
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: отримувати / отримати
   UA_Example: Щороку на день народження я отримую багато листівок.
   EN_Example: Every year on my birthday I receive many postcards.
-  Tags_Ch: ch:2.2.1, ch:2.3.4
+  Tags_Ch: ch:2.2.1, ch:2.3.4, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/отримувати; https://goroh.pp.ua/Словозміна/отримати
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb;

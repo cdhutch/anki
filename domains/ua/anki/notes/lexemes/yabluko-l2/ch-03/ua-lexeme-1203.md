@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.3
+- ch:1.11.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: реклама
   UA_Example: Надмірна реклама дратує людей.
   EN_Example: Excessive advertising annoys people.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/реклама
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: 'New. Fem., 1st decl., hard group. Горох lists two headwords: "популяризація

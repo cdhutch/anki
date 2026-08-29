@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - ch:2.1.5
+- ch:1.11.4
 - pos:noun
 - gender:m
 - status:verified
@@ -44,7 +45,7 @@ fields:
   TypingAnswer: вогонь
   UA_Example: Вони розпалили вогонь біля намету.
   EN_Example: They lit a fire next to the tent.
-  Tags_Ch: ch:2.9.7, ch:2.1.5
+  Tags_Ch: ch:2.9.7, ch:2.1.5, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/вогонь
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: 'Горох lists several closely related senses (flame/fig. passion; bonfire/light;

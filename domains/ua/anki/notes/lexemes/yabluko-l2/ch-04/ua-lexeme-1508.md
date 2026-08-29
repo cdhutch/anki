@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.4.5
 - ch:2.6.1
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: давати
   UA_Example: Вона завжди давала слушні поради.
   EN_Example: She always gave sound advice.
-  Tags_Ch: ch:2.4.5, ch:2.6.1
+  Tags_Ch: ch:2.4.5, ch:2.6.1, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/давати
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).

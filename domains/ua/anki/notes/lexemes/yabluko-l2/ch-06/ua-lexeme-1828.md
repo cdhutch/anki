@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.5
+- ch:1.11.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: служити
   UA_Example: Цей ніж служить йому вже двадцять років.
   EN_Example: This knife has served him for twenty years already.
-  Tags_Ch: ch:2.6.5
+  Tags_Ch: ch:2.6.5, ch:1.11.5
   Source_URL: https://goroh.pp.ua/Словозміна/служити
   Source_Note: Горох-verified 2026-08-28, ch.6.5 sourcing pass (crime/danger anecdote; imperfective-perfective
     verb pairs).

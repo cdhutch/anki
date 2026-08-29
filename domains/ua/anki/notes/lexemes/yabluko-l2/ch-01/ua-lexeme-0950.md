@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.7
+- ch:1.11.6
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: справжній
   UA_Example: Він справжній друг.
   EN_Example: He is a true friend.
-  Tags_Ch: ch:2.1.7
+  Tags_Ch: ch:2.1.7, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/справжній
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.6
+- ch:1.11.2
 - pos:verb
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: чути / почути
   UA_Example: Перепрошую, я не почув, з якої платформи відправлення.
   EN_Example: Excuse me, I didn't hear which platform the departure is from.
-  Tags_Ch: ch:2.9.6
+  Tags_Ch: ch:2.9.6, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/чути
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: Filtered out a homograph 'чутити' (to sense/smell), a different word.

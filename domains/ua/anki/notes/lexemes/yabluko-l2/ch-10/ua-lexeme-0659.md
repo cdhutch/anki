@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.2
+- ch:1.11.2
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: зайнятий
   UA_Example: Вибач, я зараз дуже зайнятий.
   EN_Example: Sorry, I'm very busy right now.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/зайнятий
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

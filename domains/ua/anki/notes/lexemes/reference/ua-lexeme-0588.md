@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:reference
+- ch:1.11.4
 - pos:noun
 - gender:m
 - status:verified
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: рак
   UA_Example: У нього діагностували рак легенів.
   EN_Example: He was diagnosed with lung cancer.
-  Tags_Ch: ch:reference
+  Tags_Ch: ch:reference, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Тлумачення/рак; https://goroh.pp.ua/Словозміна/рак
   Source_Note: New 2026-08-27 (per Craig) -- reference-only companion to ua-lexeme-0542 (crayfish
     sense), added purely to complete the рак homograph confusable pair. No Яблуко textbook

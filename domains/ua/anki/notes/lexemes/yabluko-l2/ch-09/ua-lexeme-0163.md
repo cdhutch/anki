@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.2
+- ch:1.11.6
 - pos:noun
 - gender:m
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: велосипедист
   UA_Example: Велосипедист їхав по узбіччю дороги.
   EN_Example: The cyclist rode along the side of the road.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/велосипедист
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''
