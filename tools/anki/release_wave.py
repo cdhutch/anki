@@ -104,6 +104,27 @@ def matches_group(tags: list[str], patterns: list[str]) -> bool:
     return any(fnmatch.fnmatch(tag, pat) for tag in tags for pat in patterns)
 
 
+def apply_promotion(text: str, relearn: bool) -> tuple[str, bool]:
+    """Flip one note's release:pending -> release:active in its raw text.
+
+    If `relearn` is set, also inserts a relearn:pending tag immediately
+    after release:active, unless the note already carries one (idempotent --
+    a note can't end up double-tagged even if this were ever called twice).
+
+    Assumes PENDING_LINE is present in `text` -- callers check that first so
+    they can warn on a match with no bare release:pending line instead of
+    silently no-op'ing here.
+
+    Returns (new_text, relearn_tagged).
+    """
+    new_text = text.replace(PENDING_LINE, ACTIVE_LINE, 1)
+    relearn_tagged = False
+    if relearn and RELEARN_LINE not in new_text:
+        new_text = new_text.replace(ACTIVE_LINE, ACTIVE_LINE + RELEARN_LINE, 1)
+        relearn_tagged = True
+    return new_text, relearn_tagged
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--plan", type=Path, default=DEFAULT_PLAN, help="Path to release_plan.yaml")
@@ -176,11 +197,7 @@ def main() -> int:
             if PENDING_LINE not in text:
                 print(f"  WARNING: {fp} matched but has no bare '- release:pending' line -- skipped", file=sys.stderr)
                 continue
-            new_text = text.replace(PENDING_LINE, ACTIVE_LINE, 1)
-            relearn_tagged = False
-            if group_type == "relearn" and RELEARN_LINE not in new_text:
-                new_text = new_text.replace(ACTIVE_LINE, ACTIVE_LINE + RELEARN_LINE, 1)
-                relearn_tagged = True
+            new_text, relearn_tagged = apply_promotion(text, group_type == "relearn")
             if not args.dry_run:
                 write(fp, new_text)
             already_promoted_paths.add(fp)
