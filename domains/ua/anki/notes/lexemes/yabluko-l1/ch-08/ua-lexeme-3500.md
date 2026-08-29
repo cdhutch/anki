@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.8.5
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -20,7 +21,7 @@ fields:
   Gender: null
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: null
+  Perfective: поси́пати
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +33,14 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: сипати
+  TypingAnswer: сипати / посипати
   UA_Example: Вона сипала цукор у чай.
   EN_Example: She was sprinkling sugar into the tea.
-  Tags_Ch: ch:1.8.5
+  Tags_Ch: ch:1.8.5, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/сипати
   Source_Note: yabluko-l1-vocabulary.pdf ch.8, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective поси́пати
+    merged in from ua-lexeme-3861 (final corpus-wide aspect-pairing audit, ch.12 pass, 2026-08-29);
+    that note's own drafting missed that сипати already existed in ch.8.
 ---
 

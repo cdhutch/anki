@@ -20,7 +20,7 @@ fields:
   Gender: null
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: null
+  Perfective: поцілува́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +32,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: цілувати
+  TypingAnswer: цілувати / поцілувати
   UA_Example: Він ніжно цілує її руку.
   EN_Example: He gently kisses her hand.
   Tags_Ch: ch:1.4.2
   Source_URL: https://goroh.pp.ua/Словозміна/цілувати
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective поцілува́ти
+    linked from the pre-existing standalone note ua-lexeme-2812 (final corpus-wide aspect-pairing
+    audit, ch.12 pass, 2026-08-29); kept ua-lexeme-2812 as its own note rather than merging/deleting
+    it, since it predates this pass and may already carry review history.
 ---
 
