@@ -29,7 +29,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 4 | 9-10 | 75-76 | 4.1-4.7 | **done** |
 | 5 | 11-12 | 89-90 | 5.1-5.7 | **done** |
 | 6 | 13-14 | 100-101 | 6.1-6.7 | **done** |
-| 7 | 15-16 | 112-113 | 7.1-7.7 | pending |
+| 7 | 15-16 | 112-113 | 7.1-7.7 | **done** |
 | 8 | 17-18 | 130-131 | 8.1-8.7 | pending |
 | 9 | 19-20 | 145-146 | 9.1-9.7 | pending |
 | 10 | 21-22 | 162-163 | 10.1-10.7 | pending |
@@ -141,3 +141,36 @@ wants prioritized.
   proverb, Свят-вечір, Щедрий вечір, День подяки, пора року, Ням-ням!, Я б хотів/
   хотіла...). Commits: `7fa14a0b` (tags), `4857c648` (drafts), progress index this
   commit. All 547 tests green throughout.
+- **ch.7 (all 7 subsections, complete)**: 288 unique words/phrases after
+  within-chapter dedup (home/furniture/rooms theme transitioning into vacation-rental
+  and hotel-amenities vocabulary). 118 distinct existing notes tagged (across three
+  commits: 113 initial matches, +4 recovered after the mixed-script/apostrophe
+  corruption fixes below, +1 more for "подвір'я"). 169 new UA_Lexeme notes drafted
+  (3250-3418), including 4 fixed multi-word notes (Полярне коло, номер люкс, номер
+  напівлюкс, догори ногами) and one combined aspect pair (організовувати/
+  організувати). Flagged "штам" for Craig's review -- glossed with its botanical
+  sense (tree trunk/bole) as the best fit for the vacation-property context, though
+  an unrelated microbiology sense (strain) also exists.
+
+  **Significant corpus-integrity findings and fixes made during this chapter's dedup
+  pass** (affecting the whole corpus, not just ch.7): discovered that 259 `Lemma`
+  fields across yabluko-l1 ch.2-6/ch.11 and 4 pre-existing yabluko-l2 notes used
+  precomposed Latin accented vowels (e.g. Latin á/é/í/ó/ú/ý) instead of Cyrillic
+  vowel + combining acute (U+0301), silently breaking `check_lexeme_dedup`'s
+  exact-match lookups for those words; fixed by position-aligning each corrupted
+  Lemma against its own clean `TypingAnswer` field and substituting the correct
+  Cyrillic base letter. Also discovered the corpus consistently uses U+02BC
+  (modifier letter apostrophe) rather than a straight quote in apostrophe-bearing
+  Lemmas -- any dedup search using a straight apostrophe silently misses real
+  matches; this must be accounted for in all remaining chapters (search with
+  U+02BC, or manually cross-check against the corpus). Because both bugs had
+  defeated dedup, a corpus-wide audit found real accumulated duplicate notes;
+  merged 49 true duplicates into their canonical notes (same-book: lower note ID
+  kept; cross-book L1-draft-vs-already-merged-L2: the L2 note always kept, since it
+  may already be imported into Craig's live collection), migrating `ch:` tags and
+  appending merge annotations before deleting the duplicate files. Also fixed a
+  confusable-cluster cross-reference (`painting-verbs`) and 2 prose references that
+  pointed at a deleted duplicate note ID. Commits: `1d6f0ebe` (corruption fix +
+  merges), `aca2807f` (113 tags), `e379b0ee` (+4 tags), `31603eb3` (+1 tag),
+  `cec22a26` (drafts), progress index this commit. All 547 tests green throughout.
+
