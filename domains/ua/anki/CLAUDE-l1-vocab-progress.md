@@ -25,7 +25,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 0 Вступ | 1-2 | 23-24 | 1-10 | **trusted done** (114 words, flat `ch:1.0`) |
 | 1 | 3-4 | 36-37 | 1.1-1.7 | **done** |
 | 2 | 5-6 | 50-51 | 2.1-2.7 | **done** |
-| 3 | 7-8 | 64-65 | 3.1-3.7 | pending |
+| 3 | 7-8 | 64-65 | 3.1-3.7 | **done** |
 | 4 | 9-10 | 75-76 | 4.1-4.7 | pending |
 | 5 | 11-12 | 89-90 | 5.1-5.7 | pending |
 | 6 | 13-14 | 100-101 | 6.1-6.7 | pending |
@@ -103,3 +103,15 @@ wants prioritized.
   UA_Lexeme notes drafted (2674-2801), including 6 fixed multi-word phrase/idiom notes
   (Ісус Христос, Стародавній Рим, Статуя Свободи, на жаль, Щасливої дороги, До зустрічі).
   Commits: `76f328de` (tags), `c761f81d` (drafts). All 547 tests green throughout.
+- **ch.3 (all 7 subsections, complete)**: 186 unique words after within-chapter dedup
+  (heavy internal repetition -- many verbs/words recur across 2-4 subsections; theme:
+  daily routine, hobbies, days/seasons). 98 distinct existing notes tagged (116
+  tag-applications across recurring words), including 9 verb+object collocations
+  (грати у футбол, слухати музику, їздити на природу, ходити до церкви, займатися
+  спортом, кататися на велосипеді/лижах, робити барбекю, ходити на екскурсії,
+  розмовляти по телефону) decomposed into head-verb + object-noun tags rather than
+  drafted as atomic phrases, and 3 euphonic в-/у- variant pairs merged onto one
+  existing note. 79 new UA_Lexeme notes drafted (2802-2880), including 3 notes using
+  Lemma_Euphony for new euphonic variant pairs and 6 fixed noun-phrase notes.
+  Commits: `081d662f` (tags), `f7ea84a5` (drafts), progress index this commit.
+  All 547 tests green throughout.
