@@ -15,7 +15,7 @@ tags:
 - pos:adjective
 - status:draft
 - release:active
-- relearn:seeded
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0635
   Lemma: ві́льний

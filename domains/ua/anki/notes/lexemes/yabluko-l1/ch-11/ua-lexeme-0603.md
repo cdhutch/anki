@@ -13,7 +13,7 @@ tags:
 - pos:verb
 - status:draft
 - release:active
-- relearn:seeded
+- relearn:pending
 - ch:2.2.3
 fields:
   NoteID: ua-lexeme-0603

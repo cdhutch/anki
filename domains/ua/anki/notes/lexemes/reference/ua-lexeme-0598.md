@@ -15,7 +15,7 @@ tags:
 - gender:m
 - status:draft
 - release:active
-- relearn:seeded
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0598
   Lemma: живо́пис
