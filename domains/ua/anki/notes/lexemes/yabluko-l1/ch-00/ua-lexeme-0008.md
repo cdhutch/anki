@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:f
 - pos:profession
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: офіціантка
   UA_Example: Офіціантка приносить нам меню і посміхається.
   EN_Example: The waitress brings us the menu and smiles.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/офіціантка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

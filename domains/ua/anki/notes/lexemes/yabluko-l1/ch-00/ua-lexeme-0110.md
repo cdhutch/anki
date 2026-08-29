@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:phrase
 - status:verified
 fields:
@@ -34,7 +34,7 @@ fields:
   TypingAnswer: Як справи?
   UA_Example: — Привіт! Як справи? — Все добре, дякую.
   EN_Example: — Hi! How are things? — Everything is fine, thanks.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''

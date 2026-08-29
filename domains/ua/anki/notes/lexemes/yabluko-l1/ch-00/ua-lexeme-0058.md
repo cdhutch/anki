@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:f
 - status:verified
@@ -40,7 +40,7 @@ fields:
   TypingAnswer: професія
   UA_Example: Яка ваша професія? Я лікар.
   EN_Example: What is your profession? I am a doctor.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/професія
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare

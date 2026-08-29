@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - ch:1.2.3
 - pos:noun
 - gender:n
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: місто
   UA_Example: Наше місто велике і дуже красиве.
   EN_Example: Our city is large and very beautiful.
-  Tags_Ch: ch:1.0, ch:1.2.3
+  Tags_Ch: ch:1.0.10, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/місто
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

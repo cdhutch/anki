@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - ch:1.3.2
 - pos:noun
 - gender:m
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: продавець
   UA_Example: Продавець показує мені нові товари.
   EN_Example: The salesperson is showing me new goods.
-  Tags_Ch: ch:1.0, ch:1.3.2
+  Tags_Ch: ch:1.0.5, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/продавець
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

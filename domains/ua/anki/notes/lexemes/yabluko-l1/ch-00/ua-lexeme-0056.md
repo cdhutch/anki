@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - ch:1.2.5
 - ch:1.12.3
 - pos:noun
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: прапор
   UA_Example: На будівлі висить синьо-жовтий прапор.
   EN_Example: A blue-and-yellow flag hangs on the building.
-  Tags_Ch: ch:1.0, ch:1.2.5, ch:1.12.3
+  Tags_Ch: ch:1.0.9, ch:1.2.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/прапор
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

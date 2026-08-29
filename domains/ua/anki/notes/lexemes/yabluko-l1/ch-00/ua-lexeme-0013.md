@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - ch:1.3.2
 - pos:noun
 - gender:m
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: співак
   UA_Example: Цей співак має дуже гарний голос.
   EN_Example: This singer has a very beautiful voice.
-  Tags_Ch: ch:1.0, ch:1.3.2
+  Tags_Ch: ch:1.0.5, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/співак
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

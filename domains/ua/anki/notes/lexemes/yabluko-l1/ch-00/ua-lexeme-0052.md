@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - ch:1.12.1
 - ch:1.12.2
 - pos:noun
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: парасоля
   UA_Example: Вона взяла парасолю, бо надворі дощ.
   EN_Example: She took an umbrella because it is raining outside.
-  Tags_Ch: ch:1.0, ch:1.12.1, ch:1.12.2
+  Tags_Ch: ch:1.0.10, ch:1.12.1, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/парасоля
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

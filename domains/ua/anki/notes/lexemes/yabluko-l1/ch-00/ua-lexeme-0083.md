@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - pos:proper-noun
 - gender:f
 - pos:country
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: Туреччина
   UA_Example: Вони відпочивали в Туреччині минулого літа.
   EN_Example: They vacationed in Turkey last summer.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/Туреччина
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

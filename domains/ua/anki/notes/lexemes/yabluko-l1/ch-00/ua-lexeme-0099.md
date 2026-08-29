@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - ch:1.3.4
 - pos:adverb
 - status:verified
@@ -42,7 +42,7 @@ fields:
   TypingAnswer: добре
   UA_Example: Він добре знає свою роботу.
   EN_Example: He knows his work well.
-  Tags_Ch: ch:1.0, ch:1.3.4
+  Tags_Ch: ch:1.0.3, ch:1.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/добре
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: ранок
   UA_Example: Уранці ми снідаємо разом і говоримо про плани.
   EN_Example: In the morning we have breakfast together and talk about plans.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/ранок
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added cross-link to ніч by ID, Mnemonic_EN, CompareScenario

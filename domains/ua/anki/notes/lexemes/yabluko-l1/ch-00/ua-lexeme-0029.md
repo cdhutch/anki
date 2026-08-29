@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: вечір
   UA_Example: Увечері ми любимо гуляти у парку.
   EN_Example: In the evening we like to walk in the park.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.3
   Source_URL: https://goroh.pp.ua/Словозміна/вечір
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added CrossLink to ніч/ранок by ID, Mnemonic_EN, CompareScenario

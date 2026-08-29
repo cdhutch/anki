@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: опера
   UA_Example: Ми були на опері у Львівському театрі.
   EN_Example: We were at the opera at the Lviv theatre.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2
   Source_URL: https://goroh.pp.ua/Словозміна/опера
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

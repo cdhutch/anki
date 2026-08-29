@@ -10,7 +10,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: конверт
   UA_Example: Він кладе листа в конверт і відправляє.
   EN_Example: He puts the letter in an envelope and sends it.
-  Tags_Ch: ch:1.0, ch:1.9.6
+  Tags_Ch: ch:1.0.10, ch:1.9.6
   Source_URL: https://goroh.pp.ua/Словозміна/конверт
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

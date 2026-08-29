@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - ch:1.2.1
 - pos:noun
 - gender:f
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: вулиця
   UA_Example: На нашій вулиці є гарний маленький парк.
   EN_Example: On our street there is a lovely little park.
-  Tags_Ch: ch:1.0, ch:1.2.1
+  Tags_Ch: ch:1.0.10, ch:1.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/вулиця
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

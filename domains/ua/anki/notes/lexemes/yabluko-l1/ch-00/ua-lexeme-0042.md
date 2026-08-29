@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.4
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: малюнок
   UA_Example: Дитина намалювала гарний малюнок олівцями.
   EN_Example: The child drew a beautiful picture with pencils.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.4
   Source_URL: https://goroh.pp.ua/Словозміна/малюнок
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-08-27 Craig: will eventually join a confusable set with at least

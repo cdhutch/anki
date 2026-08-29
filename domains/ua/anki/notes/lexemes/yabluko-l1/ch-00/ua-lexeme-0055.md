@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - ch:1.4.5
 - ch:1.4.6
 - ch:1.5.4
@@ -38,7 +38,7 @@ fields:
   TypingAnswer: підручник
   UA_Example: Відкрийте підручник на сторінці десять.
   EN_Example: Open the textbook to page ten.
-  Tags_Ch: ch:1.0, ch:1.4.5, ch:1.4.6, ch:1.5.4
+  Tags_Ch: ch:1.0.10, ch:1.4.5, ch:1.4.6, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/підручник
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

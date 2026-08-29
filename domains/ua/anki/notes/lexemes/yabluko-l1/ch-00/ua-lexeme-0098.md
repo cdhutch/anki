@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - pos:adjective
 - pos:nationality-adj
 - status:verified
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: японський
   UA_Example: Японська кухня дуже популярна в Україні.
   EN_Example: Japanese cuisine is very popular in Ukraine.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/японський
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

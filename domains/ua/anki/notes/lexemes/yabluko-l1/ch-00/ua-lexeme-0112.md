@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.8
 - pos:phrase
 - status:verified
 fields:
@@ -34,7 +34,7 @@ fields:
   TypingAnswer: Який Ваш телефон?
   UA_Example: — Який Ваш телефон? — 050-123-45-67.
   EN_Example: — What is your phone number? — 050-123-45-67.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.8
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''

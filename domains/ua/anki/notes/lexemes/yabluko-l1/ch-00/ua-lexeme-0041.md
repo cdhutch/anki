@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - ch:1.2.2
 - pos:noun
 - gender:f
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: країна
   UA_Example: Україна — велика і красива країна.
   EN_Example: Ukraine is a large and beautiful country.
-  Tags_Ch: ch:1.0, ch:1.2.2
+  Tags_Ch: ch:1.0.9, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/країна
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

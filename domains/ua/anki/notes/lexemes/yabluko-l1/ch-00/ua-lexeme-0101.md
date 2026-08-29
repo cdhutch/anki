@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:adverb
 - status:verified
 fields:
@@ -41,7 +41,7 @@ fields:
   TypingAnswer: нормально
   UA_Example: — Як справи? — Нормально, дякую.
   EN_Example: — How are things? — Fine, thanks.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/нормально
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

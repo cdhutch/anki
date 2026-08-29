@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.4
 - pos:phrase
 - status:verified
 fields:
@@ -34,7 +34,7 @@ fields:
   TypingAnswer: Як Вас звати?
   UA_Example: — Як Вас звати? — Мене звати Іван.
   EN_Example: — What is your name? — My name is Ivan.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.4
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - pos:adverb
 - status:verified
 fields:
@@ -41,7 +41,7 @@ fields:
   TypingAnswer: непогано
   UA_Example: Вона непогано малює, але хоче вчитися більше.
   EN_Example: She draws not badly, but wants to study more.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.3
   Source_URL: https://goroh.pp.ua/Словозміна/непогано
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

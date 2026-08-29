@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.6
 - ch:1.3.4
 - ch:1.5.4
 - pos:noun
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: зошит
   UA_Example: Я пишу відповіді в зошиті олівцем.
   EN_Example: I write the answers in my notebook with a pencil.
-  Tags_Ch: ch:1.0, ch:1.3.4, ch:1.5.4
+  Tags_Ch: ch:1.0.6, ch:1.3.4, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/зошит
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

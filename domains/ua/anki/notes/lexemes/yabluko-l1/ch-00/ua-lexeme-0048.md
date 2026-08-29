@@ -9,7 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
+- ch:1.0.10
 - pos:noun
 - gender:f
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: ніч
   UA_Example: Вночі вулиці міста стають тихими.
   EN_Example: At night the city streets become quiet.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.3, ch:1.0.10
   Source_URL: https://goroh.pp.ua/Словозміна/ніч
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added cross-link to ранок by ID, Mnemonic_EN, CompareScenario

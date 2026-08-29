@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - ch:1.2.2
 - pos:noun
 - gender:m
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: цирк
   UA_Example: Ми з дітьми ходили до цирку у суботу.
   EN_Example: We went to the circus with the children on Saturday.
-  Tags_Ch: ch:1.0, ch:1.2.2
+  Tags_Ch: ch:1.0.2, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/цирк
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

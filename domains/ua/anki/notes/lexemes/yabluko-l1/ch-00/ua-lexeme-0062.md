@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: сімʼя
   UA_Example: Наша сімʼя живе у великій квартирі.
   EN_Example: Our family lives in a large apartment.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.10
   Source_URL: https://goroh.pp.ua/Словозміна/сімʼя
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

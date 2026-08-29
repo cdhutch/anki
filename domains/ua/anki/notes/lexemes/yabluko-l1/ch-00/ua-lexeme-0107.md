@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - pos:phrase
 - status:verified
 fields:
@@ -34,7 +34,7 @@ fields:
   TypingAnswer: Дуже приємно
   UA_Example: — Мене звати Оля. — Дуже приємно, я Тарас.
   EN_Example: — My name is Olya. — Very pleased to meet you, I'm Taras.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.3
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''
