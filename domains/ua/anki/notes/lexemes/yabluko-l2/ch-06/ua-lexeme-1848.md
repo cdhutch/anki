@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.7
+- ch:1.5.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: малина
   UA_Example: Ми пішли в ліс по малину.
   EN_Example: We went to the forest to pick raspberries.
-  Tags_Ch: ch:2.6.7
+  Tags_Ch: ch:2.6.7, ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/малина
   Source_Note: Горох-verified 2026-08-28, ch.6.7 sourcing pass (bear/berry-picking anecdote;
     imperfective-perfective verb pairs; augmentative adjectives).

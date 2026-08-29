@@ -12,6 +12,7 @@ tags:
 - ch:2.1.2
 - ch:2.1.5
 - ch:1.11.2
+- ch:1.5.5
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: жартувати / пожартувати
   UA_Example: Він завжди жартує на роботі.
   EN_Example: He always jokes around at work.
-  Tags_Ch: ch:2.1.2, ch:2.1.5, ch:1.11.2
+  Tags_Ch: ch:2.1.2, ch:2.1.5, ch:1.11.2, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/жартувати; https://goroh.pp.ua/Словозміна/пожартувати
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0148. Perfective

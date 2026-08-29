@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.4.3
 - ch:1.2.2
+- ch:1.5.5
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: батьківщина
   UA_Example: Він ніколи не забував свою батьківщину.
   EN_Example: He never forgot his homeland.
-  Tags_Ch: ch:2.4.3, ch:1.2.2
+  Tags_Ch: ch:2.4.3, ch:1.2.2, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/батьківщина
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'

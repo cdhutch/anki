@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.2
+- ch:1.5.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: заплатити
   UA_Example: Він заплатив за квитки карткою.
   EN_Example: He paid for the tickets with a card.
-  Tags_Ch: ch:1.11.2
+  Tags_Ch: ch:1.11.2, ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/заплатити
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an

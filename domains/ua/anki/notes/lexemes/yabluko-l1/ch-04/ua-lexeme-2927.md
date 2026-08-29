@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.4.5
+- ch:1.5.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: день
   UA_Example: Кожного дня вона п''є каву.
   EN_Example: Every day she drinks coffee.
-  Tags_Ch: ch:1.4.5
+  Tags_Ch: ch:1.4.5, ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/день
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.4
+- ch:1.5.1
 - pos:adjective
 - status:verified
 fields:
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: гострий
   UA_Example: Ця страва занадто гостра для мене.
   EN_Example: This dish is too spicy for me.
-  Tags_Ch: ch:2.8.4
+  Tags_Ch: ch:2.8.4, ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/гострий
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.
   Verification Notes: '2026-08-05: added ConfusableSet/Mnemonic_EN/CompareScenario/CompareA/

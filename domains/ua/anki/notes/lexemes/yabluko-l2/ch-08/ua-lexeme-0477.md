@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - ch:2.3.2
 - ch:2.1.7
+- ch:1.5.4
 - pos:numeral
 - status:verified
 - pending-confusable:скільки
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: кілька
   UA_Example: Ми провели в місті кілька днів.
   EN_Example: We spent several days in the city.
-  Tags_Ch: ch:2.8.3, ch:2.1.7, ch:2.3.2
+  Tags_Ch: ch:2.8.3, ch:2.1.7, ch:2.3.2, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/кілька
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: 'Component of phrase ua-lexeme-0492 (у кілька разів). 2026-07-30 Craig:

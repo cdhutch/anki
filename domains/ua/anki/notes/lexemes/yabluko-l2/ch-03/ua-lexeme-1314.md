@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.5.2
+- ch:1.5.3
 - pos:noun
 - gender:n
 - status:draft
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: морозиво
   UA_Example: Діти дуже люблять морозиво.
   EN_Example: Children love ice cream very much.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.5.2, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/морозиво
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

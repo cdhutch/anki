@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.7
+- ch:1.5.6
 - pos:noun
 - gender:f
 - status:draft
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: решта
   UA_Example: Візьміть решту здачі.
   EN_Example: Take the rest of the change.
-  Tags_Ch: ch:2.3.7
+  Tags_Ch: ch:2.3.7, ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/решта
   Source_Note: Горох-verified 2026-08-28, ch.3.7 sourcing pass (opinion formulas; happiness/values;
     trust and friendship).

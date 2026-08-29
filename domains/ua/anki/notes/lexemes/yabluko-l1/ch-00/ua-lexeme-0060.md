@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.5.7
 - pos:noun
 - gender:m
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: рік
   UA_Example: Цього року він почав вивчати українську мову.
   EN_Example: This year he started learning the Ukrainian language.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/рік
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

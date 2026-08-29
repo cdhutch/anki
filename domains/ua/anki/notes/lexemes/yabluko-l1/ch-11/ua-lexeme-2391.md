@@ -13,6 +13,7 @@ tags:
 - ch:1.3.7
 - ch:1.4.5
 - ch:1.4.7
+- ch:1.5.3
 - pos:verb
 - status:draft
 fields:
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: чекати / почекати
   UA_Example: Ми чекаємо на автобус.
   EN_Example: We are waiting for the bus.
-  Tags_Ch: ch:1.11.3, ch:1.3.7, ch:1.4.5, ch:1.4.7
+  Tags_Ch: ch:1.11.3, ch:1.3.7, ch:1.4.5, ch:1.4.7, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/чекати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

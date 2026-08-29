@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.4.1
+- ch:1.5.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: пиво
   UA_Example: Він п''є пиво з друзями.
   EN_Example: He drinks beer with friends.
-  Tags_Ch: ch:1.4.1
+  Tags_Ch: ch:1.4.1, ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/пиво
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

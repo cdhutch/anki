@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.0
 - ch:1.4.7
+- ch:1.5.4
 - pos:noun
 - gender:m
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: олівець
   UA_Example: Напишіть своє прізвище олівцем на першій сторінці.
   EN_Example: Write your surname in pencil on the first page.
-  Tags_Ch: ch:1.0, ch:1.4.7
+  Tags_Ch: ch:1.0, ch:1.4.7, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/олівець
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

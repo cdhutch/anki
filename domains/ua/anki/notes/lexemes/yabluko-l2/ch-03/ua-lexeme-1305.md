@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.5.3
 - pos:noun
 - gender:m
 - status:draft
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: гарнір
   UA_Example: До стейка подають гарнір з овочів.
   EN_Example: The steak is served with a vegetable side dish.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/гарнір
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

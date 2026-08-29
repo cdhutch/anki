@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.3.2
+- ch:1.5.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: офіціант
   UA_Example: Офіціант приніс меню.
   EN_Example: The waiter brought the menu.
-  Tags_Ch: ch:1.3.2
+  Tags_Ch: ch:1.3.2, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/офіціант
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

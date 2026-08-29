@@ -16,6 +16,7 @@ tags:
 - ch:2.6.5
 - ch:1.11.1
 - ch:1.2.6
+- ch:1.5.3
 fields:
   NoteID: ua-lexeme-0611
   Lemma: поверта́тися
@@ -47,7 +48,7 @@ fields:
   TypingAnswer: повертатися / повернутися
   UA_Example: Вона повертається додому пізно ввечері.
   EN_Example: She returns home late in the evening.
-  Tags_Ch: ch:2.9.6, ch:2.6.2, ch:2.6.5, ch:1.11.1, ch:1.2.6
+  Tags_Ch: ch:2.9.6, ch:2.6.2, ch:2.6.5, ch:1.11.1, ch:1.2.6, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/повертатися; https://goroh.pp.ua/Словозміна/повернутися
   Source_Note: Горох-checked 2026-08-28 via WebFetch (not yet Claude-in-Chrome DOM extraction).
     поверта́тися, imperfective, 1st conjugation, reflexive; Горох lists two senses at this

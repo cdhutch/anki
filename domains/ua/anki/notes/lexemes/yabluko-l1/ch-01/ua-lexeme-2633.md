@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.4
+- ch:1.5.2
+- ch:1.5.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: сік
   UA_Example: Я п''ю апельсиновий сік.
   EN_Example: I drink orange juice.
-  Tags_Ch: ch:1.1.4
+  Tags_Ch: ch:1.1.4, ch:1.5.2, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/сік
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

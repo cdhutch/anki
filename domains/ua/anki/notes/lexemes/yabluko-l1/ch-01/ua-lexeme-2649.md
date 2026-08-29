@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.5
+- ch:1.5.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: популярний
   UA_Example: Це дуже популярна пісня.
   EN_Example: This is a very popular song.
-  Tags_Ch: ch:1.1.5
+  Tags_Ch: ch:1.1.5, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/популярний
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

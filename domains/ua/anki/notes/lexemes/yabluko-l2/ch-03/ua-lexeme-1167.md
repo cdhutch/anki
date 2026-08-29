@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.1
+- ch:1.5.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: чашка
   UA_Example: Налий каву в чашку.
   EN_Example: Pour the coffee into the cup.
-  Tags_Ch: ch:2.3.1
+  Tags_Ch: ch:2.3.1, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/чашка
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Fem., 1st decl., hard group.

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.5
+- ch:1.5.6
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: потрібно
   UA_Example: Потрібно купити хліб.
   EN_Example: We need to buy bread.
-  Tags_Ch: ch:1.11.5
+  Tags_Ch: ch:1.11.5, ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/потрібно
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

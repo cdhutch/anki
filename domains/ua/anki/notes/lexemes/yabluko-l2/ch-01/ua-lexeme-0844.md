@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.2
+- ch:1.5.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: додавати / додати
   UA_Example: Не забудь додавати сіль за смаком.
   EN_Example: Don't forget to add salt to taste.
-  Tags_Ch: ch:2.1.2
+  Tags_Ch: ch:2.1.2, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/додавати; https://goroh.pp.ua/Словозміна/додати
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0147. Perfective

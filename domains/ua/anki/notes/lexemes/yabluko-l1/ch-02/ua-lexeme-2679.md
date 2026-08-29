@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.1
+- ch:1.5.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: вечеря
   UA_Example: Вечеря готова о сьомій.
   EN_Example: Dinner is ready at seven.
-  Tags_Ch: ch:1.2.1
+  Tags_Ch: ch:1.2.1, ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/вечеря
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.1, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

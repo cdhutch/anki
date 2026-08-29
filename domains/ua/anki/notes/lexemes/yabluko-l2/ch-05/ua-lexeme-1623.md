@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.5
+- ch:1.5.7
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: безкоштовний
   UA_Example: Вхід на виставку безкоштовний.
   EN_Example: Admission to the exhibition is free.
-  Tags_Ch: ch:2.5.5
+  Tags_Ch: ch:2.5.5, ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/безкоштовний
   Source_Note: Горох-verified 2026-08-28, ch.5.5 sourcing pass (festival/craft-fair vocabulary;
     joining/announcing verbs; descriptive adjectives).

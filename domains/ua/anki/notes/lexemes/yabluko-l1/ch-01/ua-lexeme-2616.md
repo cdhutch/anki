@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.1.4
 - ch:1.2.1
+- ch:1.5.3
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: кафе
   UA_Example: Ми зустрілися в кафе.
   EN_Example: We met at a cafe.
-  Tags_Ch: ch:1.1.4, ch:1.2.1
+  Tags_Ch: ch:1.1.4, ch:1.2.1, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/кафе
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.4.3
+- ch:1.5.1
+- ch:1.5.3
+- ch:1.5.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +38,7 @@ fields:
   TypingAnswer: гіркий
   UA_Example: Ця кава дуже гірка.
   EN_Example: This coffee is very bitter.
-  Tags_Ch: ch:1.4.3
+  Tags_Ch: ch:1.4.3, ch:1.5.1, ch:1.5.3, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/гіркий
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
+- ch:1.5.1
+- ch:1.5.5
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +36,7 @@ fields:
   TypingAnswer: холодний
   UA_Example: Вода в озері дуже холодна.
   EN_Example: The water in the lake is very cold.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.5.1, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/холодний
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: Горох's Словозміна page also has a homograph, Холо́дний (a surname)

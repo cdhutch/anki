@@ -16,6 +16,7 @@ tags:
 - ch:1.11.1
 - ch:1.4.3
 - ch:1.4.7
+- ch:1.5.3
 fields:
   NoteID: ua-lexeme-1805
   Lemma: ви́рішити
@@ -39,7 +40,7 @@ fields:
   TypingAnswer: вирішити
   UA_Example: Вона вирішила більше нічого не казати.
   EN_Example: She decided not to say anything else.
-  Tags_Ch: ch:2.6.5,ch:2.7.3, ch:1.11.1, ch:1.4.3, ch:1.4.7
+  Tags_Ch: ch:2.6.5,ch:2.7.3, ch:1.11.1, ch:1.4.3, ch:1.4.7, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/вирішити
   Source_Note: Горох-verified 2026-08-28, ch.6.5 sourcing pass (crime/danger anecdote; imperfective-perfective
     verb pairs).

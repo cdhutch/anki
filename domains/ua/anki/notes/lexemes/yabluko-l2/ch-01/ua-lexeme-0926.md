@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.5
+- ch:1.5.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: скуштувати
   UA_Example: Гості скуштували традиційну кутю.
   EN_Example: The guests tasted the traditional kutia.
-  Tags_Ch: ch:2.1.5
+  Tags_Ch: ch:2.1.5, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/скуштувати
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.5.5
 - pos:noun
 - gender:f
 - status:draft
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: родзинка
   UA_Example: У кекс додали родзинки.
   EN_Example: Raisins were added to the cake.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/родзинка
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

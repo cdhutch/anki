@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.5.2
 - pos:adverb
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: правильно
   UA_Example: Ти написав усі слова правильно.
   EN_Example: You wrote all the words correctly.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/правильно
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''
