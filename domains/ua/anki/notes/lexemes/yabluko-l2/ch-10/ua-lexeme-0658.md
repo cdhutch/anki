@@ -13,7 +13,8 @@ tags:
 - ch:2.10.2
 - pos:noun
 - status:draft
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0658
   Lemma: фе́я

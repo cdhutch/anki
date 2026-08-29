@@ -14,7 +14,7 @@ tags:
 - gender:f
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0068
   Lemma: фі́рма

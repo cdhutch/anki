@@ -4,9 +4,13 @@ release_plan.yaml group, via AnkiConnect's setDueDate -- so Craig doesn't have
 to re-earn a practical review interval from a fresh Learning card on
 vocabulary he already knows.
 
-Selection: every ua_lexeme note that is release:active AND relearn:pending
-AND not yet relearn:seeded. release_wave.py stamps relearn:pending on every
-note it promotes from a `type: relearn` group; a note can also become
+Selection: every ua_lexeme note that is status:verified AND release:active
+AND relearn:pending AND not yet relearn:seeded -- the full AND-gate, not
+just release:active, because release_wave.py promotes purely on tag-glob
+match and doesn't check status: at all. A release:active + status:draft
+note is still suspended in Anki; seeding it would waste the interval (see
+gather_candidates' docstring). release_wave.py stamps relearn:pending on
+every note it promotes from a `type: relearn` group; a note can also become
 eligible via a direct one-time backfill (e.g. ch:1.0/vstup, which was
 already release:active before this system existed and so never goes through
 release_wave.py's promotion path).
@@ -101,7 +105,19 @@ def note_id(text: str, fallback: str) -> str:
 
 
 def gather_candidates(root: Path) -> list[tuple[Path, str, str]]:
-    """(file_path, note_id, file_text) for every note eligible to seed."""
+    """(file_path, note_id, file_text) for every note eligible to seed.
+
+    Requires status:verified explicitly, not just release:active -- the two
+    are independent axes (see ua_lexeme_import.py's AND-gate), and
+    release_wave.py promotes release:pending -> active purely on tag-glob
+    match, without checking status at all. A note can be release:active
+    while still status:draft (not yet proofread), in which case its cards
+    are suspended in Anki regardless of the release: tag. Seeding a
+    suspended card's due date wastes the seed: the interval may have
+    already elapsed by the time the note is eventually verified and
+    unsuspended, so the "mature interval" heads never actually apply.
+    Found 2026-08-29 after a real run seeded 21 still-draft notes this way.
+    """
     candidates = []
     for fp in sorted(root.rglob("ua-lexeme-*.md")):
         text = read(fp)
@@ -111,6 +127,7 @@ def gather_candidates(root: Path) -> list[tuple[Path, str, str]]:
         if (
             "relearn:pending" in tags
             and "release:active" in tags
+            and "status:verified" in tags
             and "relearn:seeded" not in tags
         ):
             candidates.append((fp, note_id(text, fp.stem), text))

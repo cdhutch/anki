@@ -13,7 +13,8 @@ tags:
 - ch:1.12.2
 - pos:verb
 - status:draft
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0670
   Lemma: дя́кувати

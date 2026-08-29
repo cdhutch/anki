@@ -17,7 +17,8 @@ tags:
 - pos:noun
 - gender:f
 - status:draft
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0599
   Lemma: карти́на

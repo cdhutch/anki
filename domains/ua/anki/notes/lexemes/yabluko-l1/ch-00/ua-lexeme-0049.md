@@ -16,7 +16,7 @@ tags:
 - gender:m
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0049
   Lemma: оліве́ць

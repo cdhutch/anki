@@ -107,6 +107,21 @@ class TestGatherCandidates:
         )
         assert gather_candidates(tmp_path) == []
 
+    def test_release_active_but_still_status_draft_is_excluded(self, tmp_path):
+        # Regression guard, added 2026-08-29 after a real release_wave.py
+        # run promoted a still-draft note to release:active (it promotes
+        # purely on tag-glob match, never checks status:) and the seeder
+        # then seeded it anyway -- 21 notes affected in one run. A
+        # release:active + status:draft note is still suspended in Anki
+        # under the AND-gate, so seeding its due date would be wasted: the
+        # interval may elapse before the note is ever verified and
+        # actually unsuspended.
+        write_note(
+            tmp_path, "ua-lexeme-0008",
+            ["domain:ua", "status:draft", "release:active", "relearn:pending"],
+        )
+        assert gather_candidates(tmp_path) == []
+
     def test_mixed_directory_only_returns_eligible_notes(self, tmp_path):
         write_note(
             tmp_path, "ua-lexeme-0005",

@@ -17,7 +17,7 @@ tags:
 - gender:m
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0055
   Lemma: підру́чник

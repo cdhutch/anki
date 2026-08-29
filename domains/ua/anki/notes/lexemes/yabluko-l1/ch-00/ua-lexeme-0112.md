@@ -13,7 +13,7 @@ tags:
 - pos:phrase
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0112
   Lemma: Яки́й Ваш телефо́н?

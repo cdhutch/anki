@@ -13,7 +13,8 @@ tags:
 - ch:1.11.2
 - pos:adjective
 - status:draft
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0659
   Lemma: за́йнятий

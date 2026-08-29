@@ -14,7 +14,8 @@ tags:
 - ch:1.6.6
 - pos:adjective
 - status:draft
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0635
   Lemma: ві́льний

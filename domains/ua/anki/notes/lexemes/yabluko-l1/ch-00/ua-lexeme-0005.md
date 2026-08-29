@@ -15,7 +15,7 @@ tags:
 - pos:profession
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 - ch:2.2.4
 - ch:1.3.2
 fields:

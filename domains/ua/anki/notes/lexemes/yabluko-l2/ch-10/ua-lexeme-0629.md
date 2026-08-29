@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0629
   Lemma: безпе́ка

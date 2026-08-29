@@ -16,7 +16,7 @@ tags:
 - pos:profession
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0014
   Lemma: спортсме́н

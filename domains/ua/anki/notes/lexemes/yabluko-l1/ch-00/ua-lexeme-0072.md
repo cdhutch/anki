@@ -16,7 +16,7 @@ tags:
 - pos:country
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0072
   Lemma: Аме́рика

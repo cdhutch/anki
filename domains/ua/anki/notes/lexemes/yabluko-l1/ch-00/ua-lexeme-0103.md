@@ -13,7 +13,7 @@ tags:
 - pos:adverb
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 - ch:2.12.1
 fields:
   NoteID: ua-lexeme-0103

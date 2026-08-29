@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0621
   Lemma: ви́літ

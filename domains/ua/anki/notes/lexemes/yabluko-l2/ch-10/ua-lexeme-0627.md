@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:adverb
 - status:draft
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0627
   Lemma: суво́ро

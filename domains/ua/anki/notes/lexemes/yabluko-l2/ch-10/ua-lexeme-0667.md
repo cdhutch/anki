@@ -12,7 +12,8 @@ tags:
 - ch:2.10.2
 - pos:verb
 - status:draft
-- release:pending
+- release:active
+- relearn:pending
 - ch:2.12.1
 - ch:1.11.6
 - ch:1.12.2
