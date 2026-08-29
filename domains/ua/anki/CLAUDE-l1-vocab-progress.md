@@ -28,7 +28,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 3 | 7-8 | 64-65 | 3.1-3.7 | **done** |
 | 4 | 9-10 | 75-76 | 4.1-4.7 | **done** |
 | 5 | 11-12 | 89-90 | 5.1-5.7 | **done** |
-| 6 | 13-14 | 100-101 | 6.1-6.7 | pending |
+| 6 | 13-14 | 100-101 | 6.1-6.7 | **done** |
 | 7 | 15-16 | 112-113 | 7.1-7.7 | pending |
 | 8 | 17-18 | 130-131 | 8.1-8.7 | pending |
 | 9 | 19-20 | 145-146 | 9.1-9.7 | pending |
@@ -132,3 +132,12 @@ wants prioritized.
   items atomic (жаб'яча лапка, родом з, Новий рік, 3 exclamations). 173 new UA_Lexeme
   notes drafted (2951-3123). Commits: `70964197` (tags), `ac9cc91d` (drafts), progress
   index this commit. All 547 tests green throughout.
+- **ch.6 (all 7 subsections, complete)**: 205 unique words/phrases after within-chapter
+  dedup (Easter/Christmas traditions, diet, careers, seasonal holidays, cooking). 79
+  distinct existing notes tagged (85 tag-applications), including reuse of ch.5's food
+  adjective+noun vocabulary. Resolved a genuine homograph (ніж = knife vs. than) by
+  context. 126 new UA_Lexeme notes drafted (3124-3249), including 9 fixed proverb/
+  greeting/compound notes (the two Easter/Christmas call-response greetings, a
+  proverb, Свят-вечір, Щедрий вечір, День подяки, пора року, Ням-ням!, Я б хотів/
+  хотіла...). Commits: `7fa14a0b` (tags), `4857c648` (drafts), progress index this
+  commit. All 547 tests green throughout.
