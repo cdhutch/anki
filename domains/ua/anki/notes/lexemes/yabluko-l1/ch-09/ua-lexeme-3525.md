@@ -12,6 +12,7 @@ tags:
 - ch:1.9.2
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3525
   Lemma: зві́дки

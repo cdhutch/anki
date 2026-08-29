@@ -16,6 +16,7 @@ tags:
 - ch:1.5.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0845
   Lemma: жартува́ти

@@ -11,6 +11,7 @@ tags:
 - ch:2.9.7
 - ch:2.6.3
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0072
   Lemma: вируша́ти

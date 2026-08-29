@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1353
   Lemma: Пра́вду ка́жучи, …

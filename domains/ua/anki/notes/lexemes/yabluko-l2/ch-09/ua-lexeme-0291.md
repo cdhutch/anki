@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - aspect:biaspectual
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0291
   Lemma: стартува́ти

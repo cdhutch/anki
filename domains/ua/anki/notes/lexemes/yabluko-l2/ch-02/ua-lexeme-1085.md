@@ -16,6 +16,7 @@ tags:
 - ch:1.5.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1085
   Lemma: пи́ти

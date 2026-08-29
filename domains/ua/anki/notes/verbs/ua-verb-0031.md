@@ -13,6 +13,7 @@ tags:
 - class:conj1-irregular
 - ch:2.9.4
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0031
   Lemma: заї́хати

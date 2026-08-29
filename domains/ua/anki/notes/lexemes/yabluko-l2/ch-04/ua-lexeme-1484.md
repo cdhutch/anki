@@ -12,6 +12,7 @@ tags:
 - ch:2.4.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1484
   Lemma: давати собі раду

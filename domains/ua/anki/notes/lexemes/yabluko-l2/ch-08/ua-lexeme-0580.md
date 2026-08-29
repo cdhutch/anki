@@ -13,6 +13,7 @@ tags:
 - ch:1.12.4
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0580
   Lemma: дороги́й

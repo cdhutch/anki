@@ -11,6 +11,7 @@ tags:
 - ch:2.7.2
 - ch:2.7
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0485
   Lemma: дізнава́тися

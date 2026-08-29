@@ -12,6 +12,7 @@ tags:
 - ch:1.11.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2520
   Lemma: бага́жник

@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0821
   Lemma: ми́тний контро́ль

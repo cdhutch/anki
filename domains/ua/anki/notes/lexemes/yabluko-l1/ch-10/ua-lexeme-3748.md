@@ -12,6 +12,7 @@ tags:
 - ch:1.10.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3748
   Lemma: готі́вка

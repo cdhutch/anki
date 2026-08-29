@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.1.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0147
   Lemma: додава́ти

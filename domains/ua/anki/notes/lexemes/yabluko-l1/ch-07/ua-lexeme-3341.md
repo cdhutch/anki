@@ -12,6 +12,7 @@ tags:
 - ch:1.7.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3341
   Lemma: право́руч

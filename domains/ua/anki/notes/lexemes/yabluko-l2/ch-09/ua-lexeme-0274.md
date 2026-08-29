@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 - ch:2.7.5
 fields:
   NoteID: ua-lexeme-0274

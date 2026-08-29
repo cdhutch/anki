@@ -12,6 +12,7 @@ tags:
 - ch:2.9.4
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0246
   Lemma: назу́стріч

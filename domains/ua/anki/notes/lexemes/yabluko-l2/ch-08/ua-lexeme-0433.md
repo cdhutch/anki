@@ -13,6 +13,7 @@ tags:
 - ch:1.10.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0433
   Lemma: низьки́й

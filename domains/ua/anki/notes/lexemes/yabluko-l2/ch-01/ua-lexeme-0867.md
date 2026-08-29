@@ -13,6 +13,7 @@ tags:
 - ch:1.12.5
 - pos:verb
 - status:draft
+- release:pending
 - aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0867

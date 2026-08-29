@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1277
   Lemma: по́над

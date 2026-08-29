@@ -15,6 +15,7 @@ tags:
 - ch:2.9.7
 - ch:1.12.3
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0278
   Lemma: си́ла

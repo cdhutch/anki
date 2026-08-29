@@ -12,6 +12,7 @@ tags:
 - ch:2.12.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2205
   Lemma: триво́житися

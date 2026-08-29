@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0807
   Lemma: меди́чний

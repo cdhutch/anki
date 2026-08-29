@@ -13,6 +13,7 @@ tags:
 - ch:1.3.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1294
   Lemma: дома́шня твари́на

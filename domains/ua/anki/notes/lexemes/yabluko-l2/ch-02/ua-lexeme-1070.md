@@ -12,6 +12,7 @@ tags:
 - ch:2.2.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1070
   Lemma: невві́чливо

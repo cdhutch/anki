@@ -15,6 +15,7 @@ tags:
 - ch:2.5.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1551
   Lemma: подві́рʼя

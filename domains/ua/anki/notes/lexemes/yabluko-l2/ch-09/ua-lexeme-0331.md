@@ -12,6 +12,7 @@ tags:
 - ch:2.9.7
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0331
   Lemma: надувни́й

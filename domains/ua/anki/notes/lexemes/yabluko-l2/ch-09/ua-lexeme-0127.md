@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - motion:prefixed
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0127
   Lemma: відʼїжджа́ти

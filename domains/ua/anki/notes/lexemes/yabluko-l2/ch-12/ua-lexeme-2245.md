@@ -12,6 +12,7 @@ tags:
 - ch:2.12.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2245
   Lemma: ба́нківська ка́ртка

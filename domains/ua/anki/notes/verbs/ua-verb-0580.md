@@ -10,6 +10,7 @@ tags:
 - class:conj1-нути
 - ch:2.11.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0580
   Lemma: поглину́ти

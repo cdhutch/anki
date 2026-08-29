@@ -13,6 +13,7 @@ tags:
 - ch:1.10.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3075
   Lemma: пого́джуватися

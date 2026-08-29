@@ -14,6 +14,7 @@ tags:
 - ch:1.5.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1053
   Lemma: пе́чиво

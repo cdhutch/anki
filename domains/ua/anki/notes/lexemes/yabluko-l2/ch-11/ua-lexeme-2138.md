@@ -12,6 +12,7 @@ tags:
 - ch:2.11.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2138
   Lemma: наслі́док

@@ -12,6 +12,7 @@ tags:
 - ch:2.5.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1604
   Lemma: видаве́ць

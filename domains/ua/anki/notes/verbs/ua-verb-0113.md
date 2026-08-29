@@ -10,6 +10,7 @@ tags:
 - class:regular-1
 - ch:2.10.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0113
   Lemma: дотри́муватися

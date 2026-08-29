@@ -12,6 +12,7 @@ tags:
 - ch:2.9.4
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0248
   Lemma: простяга́ти

@@ -12,6 +12,7 @@ tags:
 - ch:2.12.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2274
   Lemma: напа́мʼять

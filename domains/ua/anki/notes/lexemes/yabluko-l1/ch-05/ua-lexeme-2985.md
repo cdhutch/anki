@@ -14,6 +14,7 @@ tags:
 - ch:1.5.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2985
   Lemma: ки́слий

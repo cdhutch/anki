@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0078
   Lemma: Кана́да

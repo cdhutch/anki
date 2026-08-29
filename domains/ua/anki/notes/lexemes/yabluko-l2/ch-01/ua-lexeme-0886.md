@@ -15,6 +15,7 @@ tags:
 - ch:1.11.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0886
   Lemma: сон

@@ -12,6 +12,7 @@ tags:
 - ch:2.5.1
 - pos:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1541
   Lemma: довко́ла

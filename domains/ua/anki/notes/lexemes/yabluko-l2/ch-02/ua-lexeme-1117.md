@@ -13,6 +13,7 @@ tags:
 - ch:2.3.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1117
   Lemma: Що Ви мо́жете пора́дити?

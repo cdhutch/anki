@@ -15,6 +15,7 @@ tags:
 - ch:1.3.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1663
   Lemma: лови́ти

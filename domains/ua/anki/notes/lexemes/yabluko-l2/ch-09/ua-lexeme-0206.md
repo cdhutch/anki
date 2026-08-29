@@ -12,6 +12,7 @@ tags:
 - ch:2.9.3
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0206
   Lemma: видо́вищний

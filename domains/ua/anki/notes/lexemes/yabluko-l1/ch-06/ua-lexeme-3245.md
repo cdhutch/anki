@@ -12,6 +12,7 @@ tags:
 - ch:1.6.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3245
   Lemma: Христо́с воскре́с! – Воі́стину воскре́с!

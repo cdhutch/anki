@@ -13,6 +13,7 @@ tags:
 - ch:2.9.4
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0243
   Lemma: квітко́вий

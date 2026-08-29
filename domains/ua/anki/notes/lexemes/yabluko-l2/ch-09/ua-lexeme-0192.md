@@ -16,6 +16,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0192
   Lemma: по́ле

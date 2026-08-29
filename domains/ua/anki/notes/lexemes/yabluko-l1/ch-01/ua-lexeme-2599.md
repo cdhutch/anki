@@ -12,6 +12,7 @@ tags:
 - ch:1.1.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2599
   Lemma: професі́йний

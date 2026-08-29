@@ -12,6 +12,7 @@ tags:
 - ch:1.12.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3804
   Lemma: тренува́тися

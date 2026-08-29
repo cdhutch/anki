@@ -12,6 +12,7 @@ tags:
 - ch:2.7.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1888
   Lemma: дря́пати

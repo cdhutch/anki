@@ -12,6 +12,7 @@ tags:
 - ch:reference
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0594
   Lemma: відчу́тний

@@ -12,6 +12,7 @@ tags:
 - ch:1.10.4
 - pos:proper-noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3777
   Lemma: День свято́го Валенти́на

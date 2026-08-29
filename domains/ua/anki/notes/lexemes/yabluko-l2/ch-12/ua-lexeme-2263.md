@@ -12,6 +12,7 @@ tags:
 - ch:2.12.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2263
   Lemma: бра́ти в ла́пки

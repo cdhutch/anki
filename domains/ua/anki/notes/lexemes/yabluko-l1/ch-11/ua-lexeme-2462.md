@@ -18,6 +18,7 @@ tags:
 - ch:1.12.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2462
   Lemma: отримати

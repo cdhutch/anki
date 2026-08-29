@@ -11,6 +11,7 @@ tags:
 - ch:2.1.3
 - ch:2.6.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0160
   Lemma: сні́дати

@@ -15,6 +15,7 @@ tags:
 - gender:f
 - pos:country
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0084
   Lemma: Украї́на

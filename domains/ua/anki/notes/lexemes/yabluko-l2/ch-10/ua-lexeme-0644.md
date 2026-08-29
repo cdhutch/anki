@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - aspect:imperfective-only
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0644
   Lemma: пали́ти

@@ -13,6 +13,7 @@ tags:
 - ch:1.11.4
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2471
   Lemma: неслухня́ний

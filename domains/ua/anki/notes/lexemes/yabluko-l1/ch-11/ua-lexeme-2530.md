@@ -13,6 +13,7 @@ tags:
 - ch:1.2.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2530
   Lemma: сумни́й

@@ -14,6 +14,7 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- release:active
 - ch:2.2.4
 - ch:1.3.2
 fields:

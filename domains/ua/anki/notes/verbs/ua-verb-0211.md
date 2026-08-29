@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.2.4
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0211
   Lemma: склада́ти

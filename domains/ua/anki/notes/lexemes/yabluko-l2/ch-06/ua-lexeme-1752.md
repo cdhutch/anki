@@ -16,6 +16,7 @@ tags:
 - ch:1.4.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1752
   Lemma: відповіда́ти

@@ -14,6 +14,7 @@ tags:
 - ch:1.11.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1203
   Lemma: рекла́ма

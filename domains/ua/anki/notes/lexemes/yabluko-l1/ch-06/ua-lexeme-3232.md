@@ -12,6 +12,7 @@ tags:
 - ch:1.6.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3232
   Lemma: тера́са

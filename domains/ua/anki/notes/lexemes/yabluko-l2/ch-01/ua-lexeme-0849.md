@@ -12,6 +12,7 @@ tags:
 - ch:2.1.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0849
   Lemma: здава́тися

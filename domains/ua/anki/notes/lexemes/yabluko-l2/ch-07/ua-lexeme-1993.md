@@ -12,6 +12,7 @@ tags:
 - ch:2.7.4
 - pos:verb
 - status:draft
+- release:pending
 - aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-1993

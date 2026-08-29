@@ -13,6 +13,7 @@ tags:
 - ch:2.8.1
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0401
   Lemma: со́нячно

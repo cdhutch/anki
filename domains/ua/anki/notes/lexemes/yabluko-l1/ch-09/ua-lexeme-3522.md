@@ -12,6 +12,7 @@ tags:
 - ch:1.9.1
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3522
   Lemma: пі́шки

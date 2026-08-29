@@ -10,6 +10,7 @@ tags:
 - class:conj1-vowel+й
 - ch:2.8.3
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0078
   Lemma: склада́тися

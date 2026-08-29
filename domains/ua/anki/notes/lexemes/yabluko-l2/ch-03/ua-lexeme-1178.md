@@ -13,6 +13,7 @@ tags:
 - ch:2.3.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1178
   Lemma: по́вно

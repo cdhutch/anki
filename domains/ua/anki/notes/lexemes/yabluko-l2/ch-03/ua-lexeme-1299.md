@@ -12,6 +12,7 @@ tags:
 - ch:2.3.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1299
   Lemma: стосу́нки з близько́ю люди́ною

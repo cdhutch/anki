@@ -12,6 +12,7 @@ tags:
 - ch:1.12.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3893
   Lemma: щопра́вда

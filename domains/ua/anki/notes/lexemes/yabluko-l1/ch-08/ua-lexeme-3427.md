@@ -12,6 +12,7 @@ tags:
 - ch:1.8.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3427
   Lemma: пре́са

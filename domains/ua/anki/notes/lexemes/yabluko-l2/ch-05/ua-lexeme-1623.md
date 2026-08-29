@@ -13,6 +13,7 @@ tags:
 - ch:1.5.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1623
   Lemma: безкошто́вний

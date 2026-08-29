@@ -10,6 +10,7 @@ tags:
 - class:conj1-vowel+й
 - ch:2.4.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0634
   Lemma: ви́конати

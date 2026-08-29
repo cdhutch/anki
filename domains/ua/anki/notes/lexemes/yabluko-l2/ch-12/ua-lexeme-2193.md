@@ -12,6 +12,7 @@ tags:
 - ch:2.12.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2193
   Lemma: здиво́ваний

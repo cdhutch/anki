@@ -13,6 +13,7 @@ tags:
 - ch:1.11.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1826
   Lemma: ряту́вати

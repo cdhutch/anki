@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.2.7
 - status:draft
+- release:pending
 - ch:2.6.5
 fields:
   NoteID: ua-verb-0235

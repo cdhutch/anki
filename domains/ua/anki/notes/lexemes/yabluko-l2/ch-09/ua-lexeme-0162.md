@@ -13,6 +13,7 @@ tags:
 - pos:noun-phrase
 - phrase:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0162
   Lemma: спорти́вна ходьба́

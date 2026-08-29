@@ -12,6 +12,7 @@ tags:
 - ch:2.3.4
 - pos:noun
 - status:draft
+- release:pending
 - ch:2.11.3
 fields:
   NoteID: ua-lexeme-1247

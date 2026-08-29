@@ -12,6 +12,7 @@ tags:
 - ch:2.9.5
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0276
   Lemma: зале́жно

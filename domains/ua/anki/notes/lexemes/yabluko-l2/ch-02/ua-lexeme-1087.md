@@ -14,6 +14,7 @@ tags:
 - ch:2.12.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1087
   Lemma: потрапля́ти

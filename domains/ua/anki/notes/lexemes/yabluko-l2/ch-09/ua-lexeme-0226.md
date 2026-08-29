@@ -13,6 +13,7 @@ tags:
 - pos:verb-phrase
 - phrase:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0226
   Lemma: ви́грати па́ртію

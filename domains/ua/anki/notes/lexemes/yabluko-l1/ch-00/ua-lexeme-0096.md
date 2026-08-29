@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0096
   Lemma: украї́нський

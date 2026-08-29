@@ -14,6 +14,7 @@ tags:
 - ch:1.6.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2296
   Lemma: говори́ти

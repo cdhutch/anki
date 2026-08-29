@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - ch:2.9.6
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0313
   Lemma: ве́рхній

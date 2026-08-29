@@ -11,6 +11,7 @@ tags:
 - ch:2.7.4
 - ch:2.7
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0533
   Lemma: підключи́ти

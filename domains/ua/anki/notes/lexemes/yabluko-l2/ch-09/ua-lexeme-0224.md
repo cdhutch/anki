@@ -13,6 +13,7 @@ tags:
 - pos:verb-phrase
 - phrase:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0224
   Lemma: би́тися з реа́льним супе́рником

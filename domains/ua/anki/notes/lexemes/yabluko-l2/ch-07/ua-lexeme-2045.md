@@ -12,6 +12,7 @@ tags:
 - ch:2.7.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2045
   Lemma: Мо́же, піде́мо...

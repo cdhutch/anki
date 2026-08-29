@@ -12,6 +12,7 @@ tags:
 - ch:2.11.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2088
   Lemma: тьмя́ний

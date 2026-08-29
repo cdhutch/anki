@@ -12,6 +12,7 @@ tags:
 - ch:1.8.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3487
   Lemma: Міжнаро́дний жіно́чий день

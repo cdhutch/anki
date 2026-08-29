@@ -12,6 +12,7 @@ tags:
 - ch:2.6.1
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1649
   Lemma: вдру́ге

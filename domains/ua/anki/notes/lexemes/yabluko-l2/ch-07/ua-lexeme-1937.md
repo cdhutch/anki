@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1937
   Lemma: про́даж

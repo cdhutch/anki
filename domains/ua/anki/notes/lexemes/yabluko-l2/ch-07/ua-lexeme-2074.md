@@ -12,6 +12,7 @@ tags:
 - ch:2.7.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2074
   Lemma: завдяки́

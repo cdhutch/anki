@@ -12,6 +12,7 @@ tags:
 - ch:2.2.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1029
   Lemma: зда́вна

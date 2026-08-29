@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1310
   Lemma: відбивна́

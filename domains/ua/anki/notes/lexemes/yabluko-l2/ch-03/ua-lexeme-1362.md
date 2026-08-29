@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1362
   Lemma: спра́вжній друг

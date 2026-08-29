@@ -12,6 +12,7 @@ tags:
 - ch:2.8.6
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0587
   Lemma: вигляда́ти

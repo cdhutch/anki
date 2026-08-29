@@ -13,6 +13,7 @@ tags:
 - ch:1.4.3
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0347
   Lemma: по́тім

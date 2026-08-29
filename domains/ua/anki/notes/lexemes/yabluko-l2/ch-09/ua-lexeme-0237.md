@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0237
   Lemma: перехре́стя

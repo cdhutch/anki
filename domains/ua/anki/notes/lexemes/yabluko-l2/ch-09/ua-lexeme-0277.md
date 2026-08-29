@@ -14,6 +14,7 @@ tags:
 - ch:1.5.7
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0277
   Lemma: оста́нній

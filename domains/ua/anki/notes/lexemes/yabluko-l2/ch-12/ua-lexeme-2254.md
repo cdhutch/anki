@@ -12,6 +12,7 @@ tags:
 - ch:2.12.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2254
   Lemma: одни́на

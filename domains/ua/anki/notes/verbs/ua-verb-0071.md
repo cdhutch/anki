@@ -11,6 +11,7 @@ tags:
 - ch:2.9.7
 - ch:2.6.1
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0071
   Lemma: виклика́ти

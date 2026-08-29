@@ -12,6 +12,7 @@ tags:
 - ch:2.6.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1792
   Lemma: фо́кус

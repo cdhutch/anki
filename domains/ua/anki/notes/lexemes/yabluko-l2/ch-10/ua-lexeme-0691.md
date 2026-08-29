@@ -12,6 +12,7 @@ tags:
 - ch:2.10.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0691
   Lemma: загро́злива або́ напру́жена ситуа́ція

@@ -13,6 +13,7 @@ tags:
 - ch:1.3.4
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0099
   Lemma: до́бре

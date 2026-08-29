@@ -12,6 +12,7 @@ tags:
 - ch:2.7.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1872
   Lemma: мобі́льний телефо́н

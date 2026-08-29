@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0008
   Topic: Motion Verbs — до vs в/у vs на for Destination

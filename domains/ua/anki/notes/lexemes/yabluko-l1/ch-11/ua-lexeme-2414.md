@@ -14,6 +14,7 @@ tags:
 - ch:1.6.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2414
   Lemma: коли́сь

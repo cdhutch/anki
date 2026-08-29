@@ -11,6 +11,7 @@ tags:
 - ch:2.5.2
 - ch:2.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0317
   Lemma: побува́ти

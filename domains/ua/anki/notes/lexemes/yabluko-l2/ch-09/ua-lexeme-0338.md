@@ -14,6 +14,7 @@ tags:
 - ch:2.6.1
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0338
   Lemma: виклика́ти

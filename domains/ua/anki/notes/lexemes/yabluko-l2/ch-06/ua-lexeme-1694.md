@@ -14,6 +14,7 @@ tags:
 - ch:1.5.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1694
   Lemma: щоро́ку

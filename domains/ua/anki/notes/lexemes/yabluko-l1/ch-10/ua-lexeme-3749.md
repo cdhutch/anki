@@ -12,6 +12,7 @@ tags:
 - ch:1.10.6
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3749
   Lemma: елега́нтний

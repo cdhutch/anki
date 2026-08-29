@@ -13,6 +13,7 @@ tags:
 - ch:2.4.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0739
   Lemma: проголо́шення незале́жності

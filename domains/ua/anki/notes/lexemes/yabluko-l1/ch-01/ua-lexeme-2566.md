@@ -12,6 +12,7 @@ tags:
 - ch:1.1.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2566
   Lemma: економі́ст

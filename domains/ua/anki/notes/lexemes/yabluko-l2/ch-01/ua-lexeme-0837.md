@@ -12,6 +12,7 @@ tags:
 - ch:2.1.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0837
   Lemma: сиді́ти в інтерне́ті

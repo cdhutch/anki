@@ -10,6 +10,7 @@ tags:
 - class:conj2-ity
 - ch:2.11.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0570
   Lemma: ви́ділити

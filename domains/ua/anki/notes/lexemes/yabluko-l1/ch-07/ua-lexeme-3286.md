@@ -12,6 +12,7 @@ tags:
 - ch:1.7.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3286
   Lemma: лю́стра

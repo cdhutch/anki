@@ -13,6 +13,7 @@ tags:
 - ch:1.11.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2496
   Lemma: держа́вний

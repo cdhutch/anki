@@ -13,6 +13,7 @@ tags:
 - class:conj1-irregular
 - ch:2.9.4
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0029
   Lemma: прої́хати

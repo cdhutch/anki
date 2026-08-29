@@ -13,6 +13,7 @@ tags:
 - ch:1.7.5
 - pos:pronoun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3370
   Lemma: сам

@@ -12,6 +12,7 @@ tags:
 - ch:1.2.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2755
   Lemma: ду́же

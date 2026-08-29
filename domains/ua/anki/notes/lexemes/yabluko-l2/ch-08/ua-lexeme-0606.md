@@ -12,6 +12,7 @@ tags:
 - ch:2.8.2
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0606
   Lemma: ни́жчий

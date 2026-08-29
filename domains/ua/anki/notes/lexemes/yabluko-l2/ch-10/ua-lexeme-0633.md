@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0633
   Lemma: покла́жа

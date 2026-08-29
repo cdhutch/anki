@@ -14,6 +14,7 @@ tags:
 - phrase:adverb
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0363
   Lemma: тро́хи пізні́ше

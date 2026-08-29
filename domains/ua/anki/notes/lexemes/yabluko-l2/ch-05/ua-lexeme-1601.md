@@ -12,6 +12,7 @@ tags:
 - ch:2.5.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1601
   Lemma: опі́вдні

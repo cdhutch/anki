@@ -12,6 +12,7 @@ tags:
 - ch:1.1.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2635
   Lemma: соба́ка

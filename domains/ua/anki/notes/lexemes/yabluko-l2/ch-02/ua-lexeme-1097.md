@@ -12,6 +12,7 @@ tags:
 - ch:2.2.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1097
   Lemma: у вас нічо́го не ви́йде

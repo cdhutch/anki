@@ -14,6 +14,7 @@ tags:
 - ch:1.10.5
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0614
   Lemma: ру́хатися

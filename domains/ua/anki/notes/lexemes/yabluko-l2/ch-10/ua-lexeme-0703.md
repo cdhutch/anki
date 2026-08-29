@@ -12,6 +12,7 @@ tags:
 - ch:2.10.4
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0703
   Lemma: застеля́ти лі́жко

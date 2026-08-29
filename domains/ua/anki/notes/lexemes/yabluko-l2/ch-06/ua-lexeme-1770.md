@@ -14,6 +14,7 @@ tags:
 - ch:1.6.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1770
   Lemma: кури́ти

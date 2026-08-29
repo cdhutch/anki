@@ -12,6 +12,7 @@ tags:
 - ch:2.10.2
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0663
   Lemma: би́тися поду́шками

@@ -13,6 +13,7 @@ tags:
 - ch:1.11.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2435
   Lemma: пові́льний

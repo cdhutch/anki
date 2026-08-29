@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.3.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0269
   Lemma: зме́ншуватися

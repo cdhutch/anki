@@ -12,6 +12,7 @@ tags:
 - ch:2.3.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1300
   Lemma: ко́жен шо́стий

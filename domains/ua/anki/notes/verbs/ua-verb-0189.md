@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.1.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0189
   Lemma: зустріча́тися

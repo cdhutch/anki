@@ -12,6 +12,7 @@ tags:
 - ch:1.8.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3485
   Lemma: День Свято́ї Трі́йці

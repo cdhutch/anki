@@ -13,6 +13,7 @@ tags:
 - ch:1.11.1
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0320
   Lemma: повто́рювати

@@ -13,6 +13,7 @@ tags:
 - ch:1.11.4
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0216
   Lemma: заробля́ти

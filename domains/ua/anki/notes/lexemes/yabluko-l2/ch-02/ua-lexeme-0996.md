@@ -12,6 +12,7 @@ tags:
 - ch:2.2.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0996
   Lemma: одноразо́вий

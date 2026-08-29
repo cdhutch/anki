@@ -11,6 +11,7 @@ tags:
 - ch:2.6.5
 - ch:2.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0442
   Lemma: спро́бувати

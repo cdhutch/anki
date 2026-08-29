@@ -14,6 +14,7 @@ tags:
 - ch:1.2.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1567
   Lemma: теа́тр

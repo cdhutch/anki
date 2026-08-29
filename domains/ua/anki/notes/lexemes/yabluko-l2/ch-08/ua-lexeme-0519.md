@@ -14,6 +14,7 @@ tags:
 - gender:f
 - animate:true
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0519
   Lemma: вівця́

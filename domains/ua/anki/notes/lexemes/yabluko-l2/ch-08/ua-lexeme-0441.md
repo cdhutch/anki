@@ -13,6 +13,7 @@ tags:
 - ch:1.10.2
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0441
   Lemma: пога́ний

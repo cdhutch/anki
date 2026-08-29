@@ -10,6 +10,7 @@ tags:
 - class:2
 - ch:2.1.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0155
   Lemma: знайо́митися

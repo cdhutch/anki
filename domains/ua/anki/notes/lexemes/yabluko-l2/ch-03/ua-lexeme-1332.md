@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1332
   Lemma: травʼяни́й ча́й

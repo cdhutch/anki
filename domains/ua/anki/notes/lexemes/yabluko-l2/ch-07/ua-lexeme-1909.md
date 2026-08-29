@@ -12,6 +12,7 @@ tags:
 - ch:2.7.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1909
   Lemma: пропу́щений

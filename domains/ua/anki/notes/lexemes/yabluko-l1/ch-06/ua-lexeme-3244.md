@@ -12,6 +12,7 @@ tags:
 - ch:1.6.2
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3244
   Lemma: хто пі́зно прихо́дить, той сам собі́ шко́дить

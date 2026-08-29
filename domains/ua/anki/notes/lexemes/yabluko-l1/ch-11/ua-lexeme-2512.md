@@ -13,6 +13,7 @@ tags:
 - ch:1.6.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2512
   Lemma: мі́шати

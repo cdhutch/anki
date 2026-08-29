@@ -12,6 +12,7 @@ tags:
 - ch:2.12.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2229
   Lemma: добува́ти

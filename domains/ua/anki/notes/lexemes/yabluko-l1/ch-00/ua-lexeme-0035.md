@@ -15,6 +15,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0035
   Lemma: зо́шит

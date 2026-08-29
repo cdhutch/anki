@@ -12,6 +12,7 @@ tags:
 - ch:2.7.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1923
   Lemma: змі́нювати

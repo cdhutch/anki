@@ -12,6 +12,7 @@ tags:
 - ch:2.12.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2239
   Lemma: оспі́ваний

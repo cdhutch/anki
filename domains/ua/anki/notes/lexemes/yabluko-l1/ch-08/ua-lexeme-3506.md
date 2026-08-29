@@ -12,6 +12,7 @@ tags:
 - ch:1.8.6
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3506
   Lemma: О ко́трій годи́ні?

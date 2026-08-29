@@ -12,6 +12,7 @@ tags:
 - ch:2.11.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2171
   Lemma: приду́шення кри́тики

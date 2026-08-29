@@ -13,6 +13,7 @@ tags:
 - ch:2.2.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0942
   Lemma: ви́падок

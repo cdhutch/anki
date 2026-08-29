@@ -13,6 +13,7 @@ tags:
 - ch:2.4.3
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0344
   Lemma: пізні́ше

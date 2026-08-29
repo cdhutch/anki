@@ -12,6 +12,7 @@ tags:
 - ch:2.7.4
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2023
   Lemma: У тако́му ви́падку...

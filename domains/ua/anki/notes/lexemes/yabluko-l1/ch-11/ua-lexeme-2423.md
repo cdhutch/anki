@@ -14,6 +14,7 @@ tags:
 - ch:1.11.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2423
   Lemma: схо́ди

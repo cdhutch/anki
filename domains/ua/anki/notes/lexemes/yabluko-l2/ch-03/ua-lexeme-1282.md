@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - homograph:true
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1282
   Lemma: за́мок

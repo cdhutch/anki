@@ -15,6 +15,7 @@ tags:
 - ch:1.12.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0923
   Lemma: стриба́ти

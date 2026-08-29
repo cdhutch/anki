@@ -12,6 +12,7 @@ tags:
 - ch:2.7.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2051
   Lemma: На жаль, мені́ не ви́йде.

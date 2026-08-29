@@ -13,6 +13,7 @@ tags:
 - ch:2.1.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0902
   Lemma: почуття́

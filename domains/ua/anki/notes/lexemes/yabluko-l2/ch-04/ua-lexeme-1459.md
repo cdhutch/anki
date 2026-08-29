@@ -12,6 +12,7 @@ tags:
 - ch:2.4.4
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1459
   Lemma: наполе́гливо

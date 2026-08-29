@@ -12,6 +12,7 @@ tags:
 - ch:1.0.3
 - pos:phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0106
   Lemma: До поба́чення

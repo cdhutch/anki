@@ -12,6 +12,7 @@ tags:
 - ch:1.0.1
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0104
   Lemma: чудо́во

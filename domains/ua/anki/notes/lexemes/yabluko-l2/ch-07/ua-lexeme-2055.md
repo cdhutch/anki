@@ -12,6 +12,7 @@ tags:
 - ch:2.7.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2055
   Lemma: моде́ль екологі́чного спожива́ння

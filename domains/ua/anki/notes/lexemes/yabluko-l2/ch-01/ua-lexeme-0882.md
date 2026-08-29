@@ -12,6 +12,7 @@ tags:
 - ch:2.1.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0882
   Lemma: ї́здити за кордо́н

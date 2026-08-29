@@ -14,6 +14,7 @@ tags:
 - ch:1.12.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2021
   Lemma: схо́жий

@@ -14,6 +14,7 @@ tags:
 - phrase:adverb
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0370
   Lemma: пі́зно вве́чері

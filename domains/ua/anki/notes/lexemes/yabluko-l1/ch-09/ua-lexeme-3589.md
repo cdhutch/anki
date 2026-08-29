@@ -12,6 +12,7 @@ tags:
 - ch:1.9.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3589
   Lemma: пікні́к

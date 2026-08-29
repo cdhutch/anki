@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0787
   Lemma: грудна́ клі́тка

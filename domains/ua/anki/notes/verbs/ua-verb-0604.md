@@ -10,6 +10,7 @@ tags:
 - class:conj1-irregular
 - ch:2.12.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0604
   Lemma: добу́ти

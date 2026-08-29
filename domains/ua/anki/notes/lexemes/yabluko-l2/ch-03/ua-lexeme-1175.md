@@ -12,6 +12,7 @@ tags:
 - ch:2.3.2
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1175
   Lemma: де́кілька

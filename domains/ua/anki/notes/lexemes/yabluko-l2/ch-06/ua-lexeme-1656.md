@@ -14,6 +14,7 @@ tags:
 - ch:1.3.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1656
   Lemma: готува́ти

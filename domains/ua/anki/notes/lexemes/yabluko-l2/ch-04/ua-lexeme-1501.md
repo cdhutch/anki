@@ -12,6 +12,7 @@ tags:
 - ch:2.4.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1501
   Lemma: зві́дти

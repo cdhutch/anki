@@ -15,6 +15,7 @@ tags:
 - ch:1.12.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1216
   Lemma: збира́ти

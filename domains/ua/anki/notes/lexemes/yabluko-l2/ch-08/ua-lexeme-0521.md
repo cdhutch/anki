@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0521
   Lemma: скелела́зіння

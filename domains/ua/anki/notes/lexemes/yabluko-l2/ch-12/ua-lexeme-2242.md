@@ -12,6 +12,7 @@ tags:
 - ch:2.12.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2242
   Lemma: автомобі́льна ава́рія

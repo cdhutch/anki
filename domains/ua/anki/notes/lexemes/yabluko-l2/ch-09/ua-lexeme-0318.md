@@ -14,6 +14,7 @@ tags:
 - ch:1.11.2
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0318
   Lemma: чу́ти

@@ -13,6 +13,7 @@ tags:
 - ch:2.12.1
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2190
   Lemma: ве́село

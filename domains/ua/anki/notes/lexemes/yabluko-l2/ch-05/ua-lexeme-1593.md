@@ -12,6 +12,7 @@ tags:
 - ch:2.5.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1593
   Lemma: оглядовий майданчик

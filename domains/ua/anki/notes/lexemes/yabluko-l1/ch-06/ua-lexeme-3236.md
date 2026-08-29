@@ -12,6 +12,7 @@ tags:
 - ch:1.6.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3236
   Lemma: наріза́ти

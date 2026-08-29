@@ -13,6 +13,7 @@ tags:
 - ch:2.1.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0884
   Lemma: на́стрій

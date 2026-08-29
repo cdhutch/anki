@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0518
   Lemma: розве́дення

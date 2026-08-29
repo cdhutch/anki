@@ -12,6 +12,7 @@ tags:
 - ch:2.9.7
 - pos:conjunction
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0369
   Lemma: пі́сля то́го як

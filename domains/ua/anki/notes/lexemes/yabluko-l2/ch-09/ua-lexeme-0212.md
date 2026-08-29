@@ -14,6 +14,7 @@ tags:
 - ch:1.12.6
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0212
   Lemma: виграва́ти

@@ -12,6 +12,7 @@ tags:
 - ch:2.12.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2219
   Lemma: підпи́сання догово́ру

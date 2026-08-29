@@ -13,6 +13,7 @@ tags:
 - ch:1.5.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2452
   Lemma: рекомендува́ти

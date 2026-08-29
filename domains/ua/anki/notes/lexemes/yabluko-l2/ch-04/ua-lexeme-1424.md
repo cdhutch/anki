@@ -13,6 +13,7 @@ tags:
 - ch:1.6.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1424
   Lemma: небезпе́чний

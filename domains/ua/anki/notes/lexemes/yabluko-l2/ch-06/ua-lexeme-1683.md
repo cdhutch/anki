@@ -14,6 +14,7 @@ tags:
 - ch:1.11.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1683
   Lemma: прочита́ти

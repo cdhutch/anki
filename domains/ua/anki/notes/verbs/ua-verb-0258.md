@@ -10,6 +10,7 @@ tags:
 - class:2
 - ch:2.3.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0258
   Lemma: створи́ти

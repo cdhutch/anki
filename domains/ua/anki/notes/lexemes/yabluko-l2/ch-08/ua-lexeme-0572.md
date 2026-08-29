@@ -12,6 +12,7 @@ tags:
 - ch:2.8.7
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0572
   Lemma: дивови́жний

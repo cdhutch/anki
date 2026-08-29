@@ -12,6 +12,7 @@ tags:
 - ch:1.10.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3641
   Lemma: страхува́ти

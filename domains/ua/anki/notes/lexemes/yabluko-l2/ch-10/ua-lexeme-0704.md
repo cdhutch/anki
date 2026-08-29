@@ -13,6 +13,7 @@ tags:
 - ch:2.4.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0704
   Lemma: вла́да

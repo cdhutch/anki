@@ -12,6 +12,7 @@ tags:
 - ch:2.1.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0875
   Lemma: склада́тися

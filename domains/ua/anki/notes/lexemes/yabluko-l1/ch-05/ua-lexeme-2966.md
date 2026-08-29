@@ -12,6 +12,7 @@ tags:
 - ch:1.5.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2966
   Lemma: смакува́ти

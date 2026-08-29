@@ -10,6 +10,7 @@ tags:
 - class:conj1-consonant+ти
 - ch:2.8.3
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0079
   Lemma: впа́сти

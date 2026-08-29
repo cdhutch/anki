@@ -14,6 +14,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 - pending-confusable:погода
 - pending-confusable:природа
 - pending-confusable:порода

@@ -13,6 +13,7 @@ tags:
 - ch:1.3.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2870
   Lemma: но́мер

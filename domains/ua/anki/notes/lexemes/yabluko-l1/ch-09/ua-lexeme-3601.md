@@ -12,6 +12,7 @@ tags:
 - ch:1.9.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3601
   Lemma: швидка́ допомо́га

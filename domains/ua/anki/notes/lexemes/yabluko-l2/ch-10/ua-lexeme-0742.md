@@ -12,6 +12,7 @@ tags:
 - ch:2.10.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0742
   Lemma: дотри́муватися пра́вил

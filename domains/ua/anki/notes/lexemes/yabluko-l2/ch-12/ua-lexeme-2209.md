@@ -12,6 +12,7 @@ tags:
 - ch:2.12.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2209
   Lemma: підви́щити кваліфіка́цію

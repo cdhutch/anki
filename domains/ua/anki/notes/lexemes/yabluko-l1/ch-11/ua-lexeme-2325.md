@@ -15,6 +15,7 @@ tags:
 - ch:1.12.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2325
   Lemma: вибира́ти

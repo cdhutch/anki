@@ -12,6 +12,7 @@ tags:
 - ch:1.3.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2814
   Lemma: взи́мку

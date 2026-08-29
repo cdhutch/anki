@@ -10,6 +10,7 @@ tags:
 - class:conj1-vowel+й
 - ch:2.11.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0572
   Lemma: згенерува́ти

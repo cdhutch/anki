@@ -10,6 +10,7 @@ tags:
 - class:conj1-нути
 - ch:2.4.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0636
   Lemma: розви́нути

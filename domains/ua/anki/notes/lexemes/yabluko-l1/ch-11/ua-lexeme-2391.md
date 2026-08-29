@@ -18,6 +18,7 @@ tags:
 - ch:1.6.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2391
   Lemma: чека́ти

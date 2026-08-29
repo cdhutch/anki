@@ -12,6 +12,7 @@ tags:
 - ch:1.9.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3557
   Lemma: шеф-ку́хар

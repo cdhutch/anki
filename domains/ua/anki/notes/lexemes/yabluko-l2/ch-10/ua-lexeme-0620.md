@@ -13,6 +13,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0620
   Lemma: валі́за

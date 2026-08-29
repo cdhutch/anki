@@ -13,6 +13,7 @@ tags:
 - ch:1.12.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3475
   Lemma: схо́жий на

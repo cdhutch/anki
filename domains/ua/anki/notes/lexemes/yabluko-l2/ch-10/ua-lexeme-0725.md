@@ -12,6 +12,7 @@ tags:
 - ch:2.10.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0725
   Lemma: шту́чно

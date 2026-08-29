@@ -13,6 +13,7 @@ tags:
 - ch:1.7.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3174
   Lemma: сві́чка

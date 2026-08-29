@@ -15,6 +15,7 @@ tags:
 - ch:1.4.2
 - pos:verb
 - status:draft
+- release:pending
 - aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-1996

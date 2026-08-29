@@ -13,6 +13,7 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0095
   Lemma: туре́цький

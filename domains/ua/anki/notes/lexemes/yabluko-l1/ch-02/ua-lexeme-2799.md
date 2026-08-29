@@ -12,6 +12,7 @@ tags:
 - ch:1.2.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2799
   Lemma: Старода́вній Рим

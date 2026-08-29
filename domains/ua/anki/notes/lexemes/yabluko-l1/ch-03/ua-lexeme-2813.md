@@ -13,6 +13,7 @@ tags:
 - ch:1.3.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2813
   Lemma: вчи́тися

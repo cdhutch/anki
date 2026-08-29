@@ -12,6 +12,7 @@ tags:
 - ch:2.1.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0957
   Lemma: зупиня́ти

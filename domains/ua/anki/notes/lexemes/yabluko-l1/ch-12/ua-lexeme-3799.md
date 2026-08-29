@@ -12,6 +12,7 @@ tags:
 - ch:1.12.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3799
   Lemma: потрі́бний

@@ -12,6 +12,7 @@ tags:
 - ch:2.7.4
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2020
   Lemma: нестанда́ртний

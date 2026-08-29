@@ -12,6 +12,7 @@ tags:
 - ch:1.1.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2668
   Lemma: кла́сний

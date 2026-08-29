@@ -12,6 +12,7 @@ tags:
 - ch:2.11.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2084
   Lemma: мийні́ засо́би з фосфа́тами

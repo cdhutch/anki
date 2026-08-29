@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0826
   Lemma: перебува́ти в краї́ні

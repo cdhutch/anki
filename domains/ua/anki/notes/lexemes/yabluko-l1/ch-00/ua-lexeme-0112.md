@@ -12,6 +12,7 @@ tags:
 - ch:1.0.8
 - pos:phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0112
   Lemma: Яки́й Ваш телефо́н?

@@ -12,6 +12,7 @@ tags:
 - ch:2.6.2
 - pos:adverb
 - status:draft
+- release:pending
 - ch:2.7.2
 - ch:1.1.3
 - ch:1.3.4

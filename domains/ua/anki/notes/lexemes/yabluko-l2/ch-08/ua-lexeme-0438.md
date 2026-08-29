@@ -14,6 +14,7 @@ tags:
 - ch:1.10.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0438
   Lemma: висо́кий

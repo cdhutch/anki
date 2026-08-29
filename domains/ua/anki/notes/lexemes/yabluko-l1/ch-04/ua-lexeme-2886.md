@@ -14,6 +14,7 @@ tags:
 - ch:1.4.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2886
   Lemma: памʼята́ти

@@ -7,6 +7,7 @@ anki:
   deck: UA::Recognition::UA→EN
 tags:
 - status:verified
+- release:active
 - homograph:true
 - ch:2.9
 - ch:1.10.4

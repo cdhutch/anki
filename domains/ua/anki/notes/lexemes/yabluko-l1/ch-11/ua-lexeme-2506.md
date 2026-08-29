@@ -13,6 +13,7 @@ tags:
 - ch:1.5.6
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2506
   Lemma: потрі́бно

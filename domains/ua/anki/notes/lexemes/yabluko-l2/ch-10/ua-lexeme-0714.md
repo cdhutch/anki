@@ -15,6 +15,7 @@ tags:
 - ch:1.12.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0714
   Lemma: пра́вило

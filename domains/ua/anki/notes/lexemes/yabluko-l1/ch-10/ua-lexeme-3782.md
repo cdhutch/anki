@@ -12,6 +12,7 @@ tags:
 - ch:1.10.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3782
   Lemma: як..., так і...

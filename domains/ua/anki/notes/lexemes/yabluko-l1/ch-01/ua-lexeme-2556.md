@@ -12,6 +12,7 @@ tags:
 - ch:1.1.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2556
   Lemma: прабабу́ся

@@ -12,6 +12,7 @@ tags:
 - ch:1.11.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2363
   Lemma: глухи́й

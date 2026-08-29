@@ -12,6 +12,7 @@ tags:
 - ch:1.4.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2950
   Lemma: на ща́стя

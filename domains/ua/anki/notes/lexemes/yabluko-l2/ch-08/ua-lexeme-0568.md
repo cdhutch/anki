@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - phrase:discourse
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0568
   Lemma: на сма́к

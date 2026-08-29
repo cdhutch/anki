@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0066
   Lemma: ува́га

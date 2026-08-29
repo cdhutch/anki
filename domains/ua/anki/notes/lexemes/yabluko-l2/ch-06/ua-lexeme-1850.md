@@ -13,6 +13,7 @@ tags:
 - ch:2.6.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1850
   Lemma: я́года

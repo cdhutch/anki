@@ -14,6 +14,7 @@ tags:
 - ch:2.4.4
 - pos:verb
 - status:draft
+- release:pending
 - ch:2.7.7
 - ch:1.11.6
 - ch:1.6.4

@@ -12,6 +12,7 @@ tags:
 - ch:2.10.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0693
   Lemma: зосере́дитися

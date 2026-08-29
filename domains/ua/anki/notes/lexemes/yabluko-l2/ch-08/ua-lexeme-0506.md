@@ -12,6 +12,7 @@ tags:
 - ch:2.8.5
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0506
   Lemma: волоха́тий

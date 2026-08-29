@@ -12,6 +12,7 @@ tags:
 - ch:1.7.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3391
   Lemma: ліфт

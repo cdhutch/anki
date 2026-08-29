@@ -10,6 +10,7 @@ tags:
 - class:conj1-consonant+ти
 - ch:2.1.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0192
   Lemma: могти́

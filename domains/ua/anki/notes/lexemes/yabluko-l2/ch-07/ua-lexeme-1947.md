@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1947
   Lemma: опромі́нення ультрафіоле́товою ла́мпою

@@ -13,6 +13,7 @@ tags:
 - ch:2.1.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0901
   Lemma: поду́шка

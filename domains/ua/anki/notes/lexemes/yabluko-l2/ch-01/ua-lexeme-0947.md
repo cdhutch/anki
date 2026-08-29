@@ -13,6 +13,7 @@ tags:
 - ch:1.2.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0947
   Lemma: пра́вда

@@ -15,6 +15,7 @@ tags:
 - ch:1.5.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1083
   Lemma: ї́сти

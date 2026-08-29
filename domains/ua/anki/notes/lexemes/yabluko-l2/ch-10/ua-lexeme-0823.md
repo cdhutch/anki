@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0823
   Lemma: вода́ з-під кра́на

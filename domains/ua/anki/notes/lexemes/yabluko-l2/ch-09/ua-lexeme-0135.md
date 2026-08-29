@@ -13,6 +13,7 @@ tags:
 - ch:2.2.7
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0135
   Lemma: ли́жний

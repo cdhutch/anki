@@ -13,6 +13,7 @@ tags:
 - ch:1.7.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2906
   Lemma: диза́йн

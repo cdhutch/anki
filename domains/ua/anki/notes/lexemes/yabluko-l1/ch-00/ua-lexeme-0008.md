@@ -14,6 +14,7 @@ tags:
 - gender:f
 - pos:profession
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0008
   Lemma: офіціа́нтка

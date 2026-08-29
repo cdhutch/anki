@@ -13,6 +13,7 @@ tags:
 - ch:2.3.3
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0482
   Lemma: дотри́муватися

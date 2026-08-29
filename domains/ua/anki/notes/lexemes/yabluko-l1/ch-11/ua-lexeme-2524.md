@@ -12,6 +12,7 @@ tags:
 - ch:1.11.6
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2524
   Lemma: краси́вий

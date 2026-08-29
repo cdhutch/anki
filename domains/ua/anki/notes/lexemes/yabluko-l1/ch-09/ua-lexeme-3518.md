@@ -12,6 +12,7 @@ tags:
 - ch:1.9.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3518
   Lemma: комфо́ртний

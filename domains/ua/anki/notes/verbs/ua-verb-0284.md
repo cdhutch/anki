@@ -11,6 +11,7 @@ tags:
 - ch:2.4.3
 - ch:2.4
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0284
   Lemma: забра́ти

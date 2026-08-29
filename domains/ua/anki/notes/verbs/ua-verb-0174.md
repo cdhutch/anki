@@ -11,6 +11,7 @@ tags:
 - ch:2.1.5
 - ch:2.6.1
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0174
   Lemma: бра́ти

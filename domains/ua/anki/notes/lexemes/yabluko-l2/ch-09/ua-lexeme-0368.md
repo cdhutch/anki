@@ -14,6 +14,7 @@ tags:
 - phrase:adverb
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0368
   Lemma: прибли́зно пі́сля (пі́вночі)

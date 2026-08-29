@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0466
   Lemma: приві́тний

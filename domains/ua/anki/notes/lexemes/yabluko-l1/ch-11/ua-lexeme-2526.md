@@ -13,6 +13,7 @@ tags:
 - ch:1.10.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2526
   Lemma: лі́нивий

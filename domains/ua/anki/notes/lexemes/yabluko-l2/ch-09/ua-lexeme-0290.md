@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - ch:2.9.7
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0290
   Lemma: спуска́тися

@@ -12,6 +12,7 @@ tags:
 - ch:2.5.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1639
   Lemma: остання спроба

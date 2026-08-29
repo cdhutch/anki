@@ -12,6 +12,7 @@ tags:
 - ch:1.7.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3396
   Lemma: орендува́ти

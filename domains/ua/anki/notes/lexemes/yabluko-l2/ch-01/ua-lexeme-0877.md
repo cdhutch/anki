@@ -13,6 +13,7 @@ tags:
 - ch:2.3.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0877
   Lemma: ство́рювати

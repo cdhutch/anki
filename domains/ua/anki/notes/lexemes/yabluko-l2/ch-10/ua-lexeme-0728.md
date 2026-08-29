@@ -12,6 +12,7 @@ tags:
 - ch:2.10.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0728
   Lemma: дотри́муватися

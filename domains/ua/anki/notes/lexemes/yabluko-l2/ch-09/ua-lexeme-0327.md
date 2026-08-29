@@ -14,6 +14,7 @@ tags:
 - phrase:conversational
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0327
   Lemma: Вибачте, Ви сказа́ли...?

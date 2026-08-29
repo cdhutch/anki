@@ -13,6 +13,7 @@ tags:
 - ch:1.6.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3092
   Lemma: я́блучний

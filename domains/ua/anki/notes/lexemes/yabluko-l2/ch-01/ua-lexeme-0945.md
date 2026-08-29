@@ -14,6 +14,7 @@ tags:
 - ch:1.12.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0945
   Lemma: бі́льшість

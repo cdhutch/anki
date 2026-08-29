@@ -12,6 +12,7 @@ tags:
 - ch:2.11.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2098
   Lemma: вимика́ти

@@ -14,6 +14,7 @@ tags:
 - phrase:conversational
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0328
   Lemma: Вибачте, повтори́ть, будь ла́ска...

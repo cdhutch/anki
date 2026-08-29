@@ -12,6 +12,7 @@ tags:
 - ch:2.3.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1229
   Lemma: доста́тньо

@@ -12,6 +12,7 @@ tags:
 - ch:2.11.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2085
   Lemma: надмі́рне забру́днення

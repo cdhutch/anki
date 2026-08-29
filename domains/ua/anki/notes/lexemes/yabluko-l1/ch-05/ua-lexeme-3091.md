@@ -14,6 +14,7 @@ tags:
 - ch:1.6.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3091
   Lemma: швидки́й

@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1308
   Lemma: замо́влення
