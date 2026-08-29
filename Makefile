@@ -95,7 +95,10 @@ help:
 	@echo "  ua-book BOOK=<book>       Canonicalize + sync whole textbook (e.g. BOOK=yabluko-l1)"
 	@echo "  ua-book-check BOOK=…      Check whole textbook"
 	@echo "  ua-book-fix BOOK=…        Canonicalize whole textbook"
-	@echo "  ua-lexeme                 Canonicalize + sync all UA lexeme notes"
+	@echo "  ua-lexeme                 Canonicalize + sync all UA lexeme notes (incremental --"
+	@echo "                            only notes changed since the last sync; FULL=1 forces"
+	@echo "                            a full resync). Same FULL=1 applies to ua-grammar,"
+	@echo "                            ua-visual, ua-verb, ua-pvom below."
 	@echo "  ua-lexeme-check           Check all UA lexeme notes"
 	@echo "  ua-lexeme-fix             Canonicalize all UA lexeme notes"
 	@echo ""
@@ -810,7 +813,20 @@ ua-lexeme-fix:
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 _ua-lexeme: ua-lexeme-fix
-	$(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/
+	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_lexeme --root $(UA_LEXEME_ROOT) $(if $(FULL),--full,))"; \
+	rc=$$?; \
+	if [ $$rc -eq 3 ]; then \
+	  echo "==> Full sync of $(UA_LEXEME_ROOT)/ (no incremental baseline yet, or FULL=1)"; \
+	  $(PYTHON) tools/anki/sync/ua_lexeme_import.py $(UA_LEXEME_ROOT)/ && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_lexeme; \
+	elif [ -z "$$files" ]; then \
+	  echo "==> No ua_lexeme notes changed since last sync -- nothing to do (FULL=1 forces a full resync)."; \
+	else \
+	  n=$$(printf '%s\n' "$$files" | wc -l | tr -d ' '); \
+	  echo "==> Incremental sync: $$n changed ua_lexeme note(s)"; \
+	  printf '%s\n' "$$files" | xargs $(PYTHON) tools/anki/sync/ua_lexeme_import.py && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_lexeme; \
+	fi
 
 ua-lexeme:
 	$(call log_wrap,ua,ua-lexeme)
@@ -826,7 +842,20 @@ ua-grammar-fix:
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 _ua-grammar: ua-grammar-fix
-	$(PYTHON) tools/anki/sync/ua_grammar_import.py $(UA_GRAMMAR_ROOT)/
+	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_grammar --root $(UA_GRAMMAR_ROOT) $(if $(FULL),--full,))"; \
+	rc=$$?; \
+	if [ $$rc -eq 3 ]; then \
+	  echo "==> Full sync of $(UA_GRAMMAR_ROOT)/ (no incremental baseline yet, or FULL=1)"; \
+	  $(PYTHON) tools/anki/sync/ua_grammar_import.py $(UA_GRAMMAR_ROOT)/ && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_grammar; \
+	elif [ -z "$$files" ]; then \
+	  echo "==> No ua_grammar notes changed since last sync -- nothing to do (FULL=1 forces a full resync)."; \
+	else \
+	  n=$$(printf '%s\n' "$$files" | wc -l | tr -d ' '); \
+	  echo "==> Incremental sync: $$n changed ua_grammar note(s)"; \
+	  printf '%s\n' "$$files" | xargs $(PYTHON) tools/anki/sync/ua_grammar_import.py && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_grammar; \
+	fi
 
 ua-grammar:
 	$(call log_wrap,ua,ua-grammar)
@@ -843,7 +872,20 @@ ua-visual-fix:
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 _ua-visual: ua-visual-fix
-	$(PYTHON) tools/anki/sync/ua_visual_import.py $(UA_VISUAL_ROOT)/
+	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_visual --root $(UA_VISUAL_ROOT) $(if $(FULL),--full,))"; \
+	rc=$$?; \
+	if [ $$rc -eq 3 ]; then \
+	  echo "==> Full sync of $(UA_VISUAL_ROOT)/ (no incremental baseline yet, or FULL=1)"; \
+	  $(PYTHON) tools/anki/sync/ua_visual_import.py $(UA_VISUAL_ROOT)/ && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_visual; \
+	elif [ -z "$$files" ]; then \
+	  echo "==> No ua_visual notes changed since last sync -- nothing to do (FULL=1 forces a full resync)."; \
+	else \
+	  n=$$(printf '%s\n' "$$files" | wc -l | tr -d ' '); \
+	  echo "==> Incremental sync: $$n changed ua_visual note(s)"; \
+	  printf '%s\n' "$$files" | xargs $(PYTHON) tools/anki/sync/ua_visual_import.py && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_visual; \
+	fi
 
 ua-visual:
 	$(call log_wrap,ua,ua-visual)
@@ -859,7 +901,20 @@ ua-verb-fix:
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 _ua-verb: ua-verb-fix
-	$(PYTHON) tools/anki/sync/ua_verb_import.py $(UA_VERB_ROOT)/
+	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_verb --root $(UA_VERB_ROOT) $(if $(FULL),--full,) --exclude '*/exported/*')"; \
+	rc=$$?; \
+	if [ $$rc -eq 3 ]; then \
+	  echo "==> Full sync of $(UA_VERB_ROOT)/ (no incremental baseline yet, or FULL=1)"; \
+	  $(PYTHON) tools/anki/sync/ua_verb_import.py $(UA_VERB_ROOT)/ && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_verb; \
+	elif [ -z "$$files" ]; then \
+	  echo "==> No ua_verb notes changed since last sync -- nothing to do (FULL=1 forces a full resync)."; \
+	else \
+	  n=$$(printf '%s\n' "$$files" | wc -l | tr -d ' '); \
+	  echo "==> Incremental sync: $$n changed ua_verb note(s)"; \
+	  printf '%s\n' "$$files" | xargs $(PYTHON) tools/anki/sync/ua_verb_import.py && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_verb; \
+	fi
 
 ua-verb:
 	$(call log_wrap,ua,ua-verb)
@@ -875,7 +930,20 @@ ua-pvom-fix:
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 _ua-pvom: ua-setup-pvom ua-pvom-fix
-	$(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/
+	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_pvom --root $(UA_PVOM_ROOT) $(if $(FULL),--full,))"; \
+	rc=$$?; \
+	if [ $$rc -eq 3 ]; then \
+	  echo "==> Full sync of $(UA_PVOM_ROOT)/ (no incremental baseline yet, or FULL=1)"; \
+	  $(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py $(UA_PVOM_ROOT)/ && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_pvom; \
+	elif [ -z "$$files" ]; then \
+	  echo "==> No ua_pvom notes changed since last sync -- nothing to do (FULL=1 forces a full resync)."; \
+	else \
+	  n=$$(printf '%s\n' "$$files" | wc -l | tr -d ' '); \
+	  echo "==> Incremental sync: $$n changed ua_pvom note(s)"; \
+	  printf '%s\n' "$$files" | xargs $(PYTHON) tools/anki/sync/ua_pvom_infinitive_import.py && \
+	  $(PYTHON) tools/anki/sync/sync_scope.py commit --state-key ua_pvom; \
+	fi
 
 ua-pvom:
 	$(call log_wrap,ua,ua-pvom)
