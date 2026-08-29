@@ -1,8 +1,9 @@
 # Ch.10-12 + Ch.1-7 Vocabulary Expansion — Progress Index
 
-Tracks the 2026-08-28 autonomous pass sourcing `yabluko-l2-vocabulary.pdf` chapters other
-than 8/9 (already done). Branch: `feature/yabluko-l2-vocab-expansion`. Order per Craig:
-ch.10, then ch.1–7, then ch.11–12.
+Tracks the 2026-08-28/29 autonomous pass sourcing `yabluko-l2-vocabulary.pdf` chapters
+other than 8/9 (already done). Branch: `feature/yabluko-l2-vocab-expansion`. Order per
+Craig: ch.10, then ch.1-7, then ch.11-12. **As of 2026-08-29, all chapters (1-12) are
+complete** -- this was the last remaining scope for the pass.
 
 **Purpose:** a lightweight, committed, human-readable index of exactly which NoteIDs this
 pass has generated, so a later session (me or Craig) can pick up mid-chapter without
@@ -24,8 +25,8 @@ tracker, not the dedup source of truth — dedup still re-scans the live corpus 
 | 8 Риба шукає, де глибше | 16–17 | 8.1–8.7 | **done** (pre-existing) |
 | 9 Рух — це життя | 17–20 | 9.1–9.7 | **done** (pre-existing) |
 | 10 Суворо заборонено! | 20–22 | 10.1–10.7 | **done** |
-| 11 Якби всі люди... | 22–23 | 11.1–11.7 | in progress (11.1-11.4 done) |
-| 12 Не журись! | 23–24 | 12.1–12.7 | not started |
+| 11 Якби всі люди... | 22–23 | 11.1–11.7 | **done** (all of 11.1-11.7 complete) |
+| 12 Не журись! | 23–24 | 12.1–12.7 | **done** (12.1/12.3/12.5/12.6/12.7 complete -- 12.2/12.4 have no vocabulary) |
 
 ## Generated this pass
 
@@ -1257,14 +1258,45 @@ personality traits)
 - `pytest tests/ua/ -q`: 547 passed.
 - Next NoteIDs: ua-lexeme-2248, ua-verb-0613.
 
+### Ch.12.7 (grammar terminology; pronunciation/dictation verbs; manner adverbs)
+-- **chapter 12 complete**
+
+- Lexemes: **ua-lexeme-2248 - ua-lexeme-2274** (27 notes): 13 grammar-terminology
+  nouns/phrases (артикль, відмінок, дієслово, доконаний і недоконаний вид,
+  займенник, іменник, однина, особа, прикметник, прислівник, розділові знаки,
+  розмовний рівень, транскрипція); лапки + літера (collocation nouns drafted
+  standalone); брати в лапки (reuses брати ua-lexeme-0914 compositionally); 4 new
+  verb pairs (вимовляти/вимовити, вимовлятися/вимовитися -- distinct verbs, both
+  bulleted separately; диктувати/продиктувати; мучитися/помучитися); 3 manner
+  adverbs (кардинально, мовчки, напам'ять).
+- Verbs: **ua-verb-0613 - ua-verb-0620** (8 notes).
+- Process note: помучитися is independently attested on Горох as a real,
+  fully-conjugated perfective even though neither мучитися's own Горох page nor
+  the verb dictionary cross-references it -- drafted as a genuine pair rather than
+  tagging мучитися tantum. The aspect-tag gate flagged the literal word "tantum"
+  appearing in that note's own prose explaining this decision (a false positive,
+  since мучитися does have a real perfective) -- resolved by rewording the prose,
+  not by adding the tag. This is the second time this session the gate has
+  surfaced a real editorial question (see ch.12.5's true positive) rather than
+  just noise, which is the intended behavior.
+- Reused via retag: лякатися (ua-lexeme-1817, ch.6.5, already has a complete
+  partner злякатися), вголос (ua-lexeme-1787, ch.6.3).
+- All `status:draft`. Tag `ch:2.12.7`.
+- `pytest tests/ua/ -q`: 547 passed.
+- **Chapter 12 (Не журись!) is now fully complete: 12.1, 12.3, 12.5, 12.6, 12.7
+  (12.2/12.4 have no vocabulary), ua-lexeme-2184 through ua-lexeme-2274 (91
+  lexeme notes) + ua-verb-0587 through ua-verb-0620 (34 verb notes), all
+  committed.**
+- Next NoteIDs: ua-lexeme-2275, ua-verb-0621.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2248**
-- Next `ua-verb-` ID: **0613**
+- Next `ua-lexeme-` ID: **2275**
+- Next `ua-verb-` ID: **0621**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
