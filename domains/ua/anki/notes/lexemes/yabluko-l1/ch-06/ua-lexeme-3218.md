@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.6.5
+- ch:1.12.3
+- ch:1.12.5
+- ch:1.7.5
 - pos:verb
 - status:draft
 fields:
@@ -20,7 +23,7 @@ fields:
   Gender: null
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: null
+  Perfective: прикра́сити
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +35,15 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: прикрашати
+  TypingAnswer: прикрашати / прикрасити
   UA_Example: Діти люблять прикрашати.
   EN_Example: Kids love to decorate.
-  Tags_Ch: ch:1.6.5
+  Tags_Ch: ch:1.6.5, ch:1.12.3, ch:1.12.5, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/прикрашати
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective прикра́сити
+    added (ch.12 PDF re-verification / Perfective-field cross-check, 2026-08-29). Merged duplicate
+    ua-lexeme-3363 into this note (ch.12 dedup review, 2026-08-29); its chapter tags migrated
+    here.
 ---
 

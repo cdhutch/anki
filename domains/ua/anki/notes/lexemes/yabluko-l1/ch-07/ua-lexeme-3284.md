@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7.2
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -20,7 +21,7 @@ fields:
   Gender: null
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: null
+  Perfective: повисі́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +33,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: висіти
+  TypingAnswer: висіти / повисіти
   UA_Example: Картина висить на стіні.
   EN_Example: The picture hangs on the wall.
-  Tags_Ch: ch:1.7.2
+  Tags_Ch: ch:1.7.2, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/висіти
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective повисі́ти
+    added (ch.12 PDF re-verification / Perfective-field cross-check, 2026-08-29).
 ---
 

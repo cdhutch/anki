@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.3.1
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -20,7 +21,7 @@ fields:
   Gender: null
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: null
+  Perfective: прожи́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +33,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: жити / живу
+  TypingAnswer: жити / прожити
   UA_Example: Він живе у Львові.
   EN_Example: He lives in Lviv.
-  Tags_Ch: ch:1.3.1
+  Tags_Ch: ch:1.3.1, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/жити_/_живу
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective прожи́ти
+    added (ch.12 PDF re-verification / Perfective-field cross-check, 2026-08-29).
 ---
 

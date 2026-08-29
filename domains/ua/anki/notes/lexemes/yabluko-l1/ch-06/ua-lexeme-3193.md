@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.6.4
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -20,7 +21,7 @@ fields:
   Gender: null
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: null
+  Perfective: здійсни́тися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +33,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: здійснюватися
+  TypingAnswer: здійснюватися / здійснитися
   UA_Example: Він хоче здійснюватися.
   EN_Example: He wants his dream to come true.
-  Tags_Ch: ch:1.6.4
+  Tags_Ch: ch:1.6.4, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/здійснюватися
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective здійсни́тися
+    added (ch.12 PDF re-verification / Perfective-field cross-check, 2026-08-29).
 ---
 

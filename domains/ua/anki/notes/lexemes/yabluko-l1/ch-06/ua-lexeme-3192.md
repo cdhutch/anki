@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.6.4
+- ch:1.12.7
 - pos:verb
 - status:draft
 fields:
@@ -20,7 +21,7 @@ fields:
   Gender: null
   ImperfectiveUnidirectional: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: null
+  Perfective: захо́питися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -32,12 +33,13 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: захоплюватися
+  TypingAnswer: захоплюватися / захопитися
   UA_Example: Він хоче захоплюватися.
   EN_Example: He wants to get into a new hobby.
-  Tags_Ch: ch:1.6.4
+  Tags_Ch: ch:1.6.4, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/захоплюватися
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective захо́питися
+    added (ch.12 PDF re-verification / Perfective-field cross-check, 2026-08-29).
 ---
 
