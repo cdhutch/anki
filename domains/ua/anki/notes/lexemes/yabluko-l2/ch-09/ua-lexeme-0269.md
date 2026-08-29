@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - ch:1.2.2
+- ch:1.3.3
 - pos:noun
 - gender:f
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: річка
   UA_Example: Команда мала перелетіти через річку на мотузці.
   EN_Example: The team had to fly across the river on a rope.
-  Tags_Ch: ch:2.9.5, ch:1.2.2
+  Tags_Ch: ch:2.9.5, ch:1.2.2, ch:1.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/річка
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''

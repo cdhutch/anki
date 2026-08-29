@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.0
 - ch:1.2.5
+- ch:1.3.2
 - pos:noun
 - gender:m
 - pos:profession
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: художник
   UA_Example: Художник малює красивий краєвид у парку.
   EN_Example: The artist is painting a beautiful landscape in the park.
-  Tags_Ch: ch:1.0, ch:1.2.5
+  Tags_Ch: ch:1.0, ch:1.2.5, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/художник
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.5
+- ch:1.3.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: депутат
   UA_Example: Він депутат міської ради.
   EN_Example: He is a member of the city council.
-  Tags_Ch: ch:1.1.5
+  Tags_Ch: ch:1.1.5, ch:1.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/депутат
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

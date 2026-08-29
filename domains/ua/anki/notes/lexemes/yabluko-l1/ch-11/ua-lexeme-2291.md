@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.3.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: бачити / побачити
   UA_Example: Я бачу гарний краєвид з вікна.
   EN_Example: I see a beautiful view from the window.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/бачити
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj2-ity); yabluko-l1 vocabulary expansion pass, 2026-08-29.

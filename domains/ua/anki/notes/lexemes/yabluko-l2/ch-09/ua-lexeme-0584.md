@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.3.1
+- ch:1.3.2
 - pos:verb
 - motion:base
 - status:verified
@@ -55,7 +57,7 @@ fields:
   UA_Example: Діти люблять плавати в озері, а вчора один хлопчик плив до берега.
   EN_Example: Children love to swim in the lake, and yesterday one boy was swimming toward
     the shore.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.3.1, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/плавати; https://goroh.pp.ua/Словозміна/пливти;
     https://goroh.pp.ua/Словозміна/плисти; https://goroh.pp.ua/Словозміна/попливти
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).

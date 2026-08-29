@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.2
+- ch:1.3.2
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: багато
   UA_Example: У мене багато роботи сьогодні.
   EN_Example: I have a lot of work today.
-  Tags_Ch: ch:2.3.2
+  Tags_Ch: ch:2.3.2, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/багато
   Source_Note: Горох-verified 2026-08-28, ch.3.2 sourcing pass (quantifiers/negation).
   Verification Notes: 'New. Горох lists two readings under the same headword: an invariable

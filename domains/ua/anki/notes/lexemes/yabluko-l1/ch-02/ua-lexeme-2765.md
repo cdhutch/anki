@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.5
+- ch:1.3.7
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: новий
   UA_Example: Він купив новий будинок.
   EN_Example: He bought a new house.
-  Tags_Ch: ch:1.2.5
+  Tags_Ch: ch:1.2.5, ch:1.3.7
   Source_URL: https://goroh.pp.ua/Словозміна/новий
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.1
+- ch:1.3.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: внук
   UA_Example: Внук приїхав у гості.
   EN_Example: The grandson came to visit.
-  Tags_Ch: ch:1.1.1
+  Tags_Ch: ch:1.1.1, ch:1.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/внук
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.1, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

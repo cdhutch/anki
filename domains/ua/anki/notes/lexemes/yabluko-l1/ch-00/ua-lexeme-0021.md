@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.0
 - ch:1.2.4
+- ch:1.3.7
 - pos:noun
 - gender:m
 - pos:profession
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: школяр
   UA_Example: Школяр іде до школи з великим портфелем.
   EN_Example: The schoolboy goes to school with a large schoolbag.
-  Tags_Ch: ch:1.0, ch:1.2.4
+  Tags_Ch: ch:1.0, ch:1.2.4, ch:1.3.7
   Source_URL: https://goroh.pp.ua/Словозміна/школяр
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

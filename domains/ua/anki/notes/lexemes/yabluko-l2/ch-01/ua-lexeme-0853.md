@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.3
+- ch:1.3.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: година
   UA_Example: Зустріч триватиме одну годину.
   EN_Example: The meeting will last one hour.
-  Tags_Ch: ch:2.1.3
+  Tags_Ch: ch:2.1.3, ch:1.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/година
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

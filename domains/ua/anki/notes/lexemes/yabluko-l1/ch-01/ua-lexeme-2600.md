@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.3
+- ch:1.3.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: разом
   UA_Example: Ми граємо разом.
   EN_Example: We play together.
-  Tags_Ch: ch:1.1.3
+  Tags_Ch: ch:1.1.3, ch:1.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/разом
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

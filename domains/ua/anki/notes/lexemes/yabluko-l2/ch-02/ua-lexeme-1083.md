@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.5
 - ch:1.11.1
+- ch:1.3.1
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: їсти / зʼїсти
   UA_Example: В Україні їдять суп ложкою, а не виделкою.
   EN_Example: In Ukraine, soup is eaten with a spoon, not a fork.
-  Tags_Ch: ch:2.2.5, ch:1.11.1
+  Tags_Ch: ch:2.2.5, ch:1.11.1, ch:1.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/їсти; https://goroh.pp.ua/Словозміна/зʼїсти
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., non-reflexive, irregular conj. Irregular athematic

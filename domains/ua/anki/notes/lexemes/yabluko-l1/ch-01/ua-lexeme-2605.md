@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.3
+- ch:1.3.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: футбол
   UA_Example: Він любить дивитися футбол.
   EN_Example: He likes watching football.
-  Tags_Ch: ch:1.1.3
+  Tags_Ch: ch:1.1.3, ch:1.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/футбол
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

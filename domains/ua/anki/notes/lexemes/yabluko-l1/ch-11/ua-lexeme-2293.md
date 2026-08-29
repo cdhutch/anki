@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.3.1
+- ch:1.3.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: вивчати / вивчити
   UA_Example: Я вивчаю українську мову вже два роки.
   EN_Example: I have been studying Ukrainian for two years.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.3.1, ch:1.3.7
   Source_URL: https://goroh.pp.ua/Словозміна/вивчати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj1-vowel+й); yabluko-l1 vocabulary expansion pass, 2026-08-29.

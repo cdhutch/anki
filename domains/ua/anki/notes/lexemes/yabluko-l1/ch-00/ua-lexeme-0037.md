@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.3.3
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: квартира
   UA_Example: Ми знімаємо квартиру у центрі міста.
   EN_Example: We rent an apartment in the city centre.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/квартира
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

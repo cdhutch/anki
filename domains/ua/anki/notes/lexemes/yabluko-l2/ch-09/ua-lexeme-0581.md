@@ -11,6 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.4
 - ch:2.6.2
+- ch:1.3.3
+- ch:1.3.7
 - pos:verb
 - motion:base
 - status:verified
@@ -50,7 +52,7 @@ fields:
   TypingAnswer: ходити / йти / піти
   UA_Example: Я щодня ходжу до школи пішки, а сьогодні йшов і думав про іспит.
   EN_Example: I walk to school every day, and today I was walking and thinking about the exam.
-  Tags_Ch: ch:2.9.4, ch:2.6.2
+  Tags_Ch: ch:2.9.4, ch:2.6.2, ch:1.3.3, ch:1.3.7
   Source_URL: https://goroh.pp.ua/Словозміна/ходити; https://goroh.pp.ua/Словозміна/йти; https://goroh.pp.ua/Словозміна/іти;
     https://goroh.pp.ua/Словозміна/піти
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.4
+- ch:1.3.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: звичайно
   UA_Example: Звичайно, я допоможу тобі.
   EN_Example: Of course, I''ll help you.
-  Tags_Ch: ch:1.2.4
+  Tags_Ch: ch:1.2.4, ch:1.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/звичайно
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

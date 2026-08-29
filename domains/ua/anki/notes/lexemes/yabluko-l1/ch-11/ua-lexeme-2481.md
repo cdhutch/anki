@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.5
+- ch:1.3.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: кататися / покататися
   UA_Example: Діти катаються на велосипедах.
   EN_Example: The children ride their bikes.
-  Tags_Ch: ch:1.11.5
+  Tags_Ch: ch:1.11.5, ch:1.3.5
   Source_URL: https://goroh.pp.ua/Словозміна/кататися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

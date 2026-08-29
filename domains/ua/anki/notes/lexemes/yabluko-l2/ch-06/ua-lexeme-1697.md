@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.6.2
 - ch:1.11.1
+- ch:1.3.4
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: вставати
   UA_Example: Я встаю щодня о шостій ранку.
   EN_Example: I get up every day at six in the morning.
-  Tags_Ch: ch:2.6.2, ch:1.11.1
+  Tags_Ch: ch:2.6.2, ch:1.11.1, ch:1.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/вставати
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

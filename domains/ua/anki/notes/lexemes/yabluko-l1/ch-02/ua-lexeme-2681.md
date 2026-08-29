@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.1
+- ch:1.3.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: екскурсія
   UA_Example: Завтра в нас екскурсія містом.
   EN_Example: Tomorrow we have a city tour.
-  Tags_Ch: ch:1.2.1
+  Tags_Ch: ch:1.2.1, ch:1.3.7
   Source_URL: https://goroh.pp.ua/Словозміна/екскурсія
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.1, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

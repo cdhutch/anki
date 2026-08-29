@@ -15,6 +15,7 @@ tags:
 - pos:profession
 - status:verified
 - ch:2.2.4
+- ch:1.3.2
 fields:
   NoteID: ua-lexeme-0005
   Lemma: ку́хар
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: кухар
   UA_Example: Кухар готує смачний обід для гостей.
   EN_Example: The cook is preparing a delicious lunch for the guests.
-  Tags_Ch: ch:1.0, ch:2.2.4
+  Tags_Ch: ch:1.0, ch:2.2.4, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/кухар
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

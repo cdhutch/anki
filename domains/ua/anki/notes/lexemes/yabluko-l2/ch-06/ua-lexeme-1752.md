@@ -11,6 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.6.3
 - ch:1.11.1
+- ch:1.3.1
+- ch:1.3.2
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: відповідати
   UA_Example: Вона завжди відповідає на листи швидко.
   EN_Example: She always answers letters quickly.
-  Tags_Ch: ch:2.6.3, ch:1.11.1
+  Tags_Ch: ch:2.6.3, ch:1.11.1, ch:1.3.1, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/відповідати
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

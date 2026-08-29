@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.3.2
 - pos:noun
 - gender:m
 - pos:profession
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: лікар
   UA_Example: Лікар каже, що я цілком здоровий.
   EN_Example: The doctor says I am completely healthy.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.3.2
   Source_URL: https://goroh.pp.ua/Словозміна/лікар
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

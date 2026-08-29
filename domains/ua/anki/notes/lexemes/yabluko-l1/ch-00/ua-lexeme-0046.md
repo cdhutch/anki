@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:1.3.1
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: музика
   UA_Example: Він слухає музику кожного вечора.
   EN_Example: He listens to music every evening.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:1.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/музика
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.6
+- ch:1.3.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: телефон
   UA_Example: Вона заблокувала телефон, щоб ніхто не міг ним скористатися.
   EN_Example: She locked her phone so no one could use it.
-  Tags_Ch: ch:2.12.6
+  Tags_Ch: ch:2.12.6, ch:1.3.6
   Source_URL: https://goroh.pp.ua/Словозміна/телефон
   Source_Note: Горох-verified 2026-08-29, ch.12.6 sourcing pass (car-accident vocabulary;
     blocking a phone/bank card), cross-checked against yabluko-l2-verb-dictionary.pdf for
