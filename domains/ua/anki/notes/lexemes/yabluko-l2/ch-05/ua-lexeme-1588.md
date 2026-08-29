@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: камʼяний
   UA_Example: Місто оточене старовинною камʼяною стіною.
   EN_Example: The city is surrounded by an ancient stone wall.
-  Tags_Ch: ch:2.5.3
+  Tags_Ch: ch:2.5.3, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/камʼяний
   Source_Note: Горох-verified 2026-08-28, ch.5.3 sourcing pass (public buildings/monuments;
     architectural detail nouns; sightseeing adjectives).
