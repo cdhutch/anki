@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.2.1
+- ch:1.1.2
 - pos:adjective
 - status:draft
 fields:
@@ -35,9 +35,9 @@ fields:
   TypingAnswer: молодший
   UA_Example: Вона молодша за мене.
   EN_Example: She is younger than me.
-  Tags_Ch: ch:1.2.1
+  Tags_Ch: ch:1.1.2
   Source_URL: https://goroh.pp.ua/Словозміна/молодший
-  Source_Note: yabluko-l1-vocabulary.pdf ch.2.1, yabluko-l1 vocabulary expansion pass, 2026-08-29.
+  Source_Note: yabluko-l1-vocabulary.pdf ch.1.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
 ---
 
