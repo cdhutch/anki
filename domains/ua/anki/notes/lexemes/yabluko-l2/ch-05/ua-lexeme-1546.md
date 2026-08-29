@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дах
   UA_Example: На даху будинку стоїть антена.
   EN_Example: There's an antenna on the roof of the house.
-  Tags_Ch: ch:2.5.2
+  Tags_Ch: ch:2.5.2, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/дах
   Source_Note: Горох-verified 2026-08-28, ch.5.2 sourcing pass (train travel/station; house
     features; sightseeing verbs and adjectives).

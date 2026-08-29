@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.5
+- ch:1.1.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: прізвисько
   UA_Example: У селі йому дали прізвисько за його сміливість.
   EN_Example: In the village they gave him a nickname for his bravery.
-  Tags_Ch: ch:2.12.5
+  Tags_Ch: ch:2.12.5, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/прізвисько
   Source_Note: 'Горох-verified 2026-08-29, ch.12.5 sourcing pass (community/history & character
     vocabulary: ancestry, village life, civic/political terms, personality traits), cross-checked

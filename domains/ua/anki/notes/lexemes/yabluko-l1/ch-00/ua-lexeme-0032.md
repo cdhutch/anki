@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.4
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вправа
   UA_Example: Зробіть вправу номер шість у зошиті.
   EN_Example: Do exercise number six in your notebook.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.4
   Source_URL: https://goroh.pp.ua/Словозміна/вправа
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

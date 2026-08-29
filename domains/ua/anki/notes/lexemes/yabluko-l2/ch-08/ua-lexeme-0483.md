@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
+- ch:1.5.5
 - pos:verb
 - status:verified
 - aspect:imperfective-only
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: складатися
   UA_Example: Тур складається з трьох днів у горах.
   EN_Example: The tour consists of three days in the mountains.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:1.5.5, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/складатися
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: Imperfective, reflexive, 1st conjugation. Tagged aspect:imperfective-only

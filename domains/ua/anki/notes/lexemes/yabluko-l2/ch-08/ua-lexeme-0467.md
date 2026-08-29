@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
+- ch:1.10.3
 - pos:adverb
 - status:verified
 - cluster:intensifier-adverbs
@@ -43,7 +44,7 @@ fields:
   TypingAnswer: значно
   UA_Example: Цей готель значно дорожчий за той.
   EN_Example: This hotel is significantly more expensive than that one.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:1.10.3
   Source_URL: https://goroh.pp.ua/Словозміна/значно
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: 'Hub note for intensifier-adverbs cluster per 2026-08-25 registry migration.

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.6
+- ch:1.11.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: страшенно
   UA_Example: Вона страшенно втомилася після подорожі.
   EN_Example: She got terribly tired after the trip.
-  Tags_Ch: ch:2.1.6
+  Tags_Ch: ch:2.1.6, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/страшенно
   Source_Note: Горох-verified 2026-08-28, ch.1.6 sourcing pass (conversation; communication
     verbs).

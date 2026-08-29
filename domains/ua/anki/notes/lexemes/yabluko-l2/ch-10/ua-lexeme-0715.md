@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.5
+- ch:1.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: вистава
   UA_Example: Ми ходили на виставу в театр.
   EN_Example: We went to a play at the theater.
-  Tags_Ch: ch:2.10.5
+  Tags_Ch: ch:2.10.5, ch:1.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/вистава
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

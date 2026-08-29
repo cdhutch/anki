@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: проспект
   UA_Example: Готель розташований на головному проспекті міста.
   EN_Example: The hotel is located on the city's main avenue.
-  Tags_Ch: ch:2.5.3
+  Tags_Ch: ch:2.5.3, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/проспект
   Source_Note: Горох-verified 2026-08-28, ch.5.3 sourcing pass (public buildings/monuments;
     architectural detail nouns; sightseeing adjectives).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.1
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -35,11 +36,12 @@ fields:
   TypingAnswer: прасувати
   UA_Example: Я прасую сорочки щонеділі.
   EN_Example: I iron shirts every Sunday.
-  Tags_Ch: ch:2.6.1
+  Tags_Ch: ch:2.6.1, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/прасувати
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).
   Verification Notes: New. Imperfective, "to iron (clothes)". Textbook aspect pair прасувати-випрасувати,
-    this sub-chapter.
+    this sub-chapter. Merged duplicate note(s) ua-lexeme-2340 into this canonical note during
+    corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

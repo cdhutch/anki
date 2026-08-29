@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.1
+- ch:1.5.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: скільки
   UA_Example: Скільки коштує кілограм яблук?
   EN_Example: How much does a kilogram of apples cost?
-  Tags_Ch: ch:2.3.1
+  Tags_Ch: ch:2.3.1, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/скільки
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Invariable interrogative/relative quantifier; Горох classifies

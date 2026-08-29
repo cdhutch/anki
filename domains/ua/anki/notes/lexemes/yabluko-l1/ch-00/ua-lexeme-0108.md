@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - pos:phrase
 - status:verified
 fields:
@@ -46,7 +46,7 @@ fields:
   TypingAnswer: На добраніч
   UA_Example: — На добраніч! — Солодких снів!
   EN_Example: — Good night! — Sweet dreams!
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.3
   Source_URL: https://goroh.pp.ua/Словозміна/добраніч; https://goroh.pp.ua/Словозміна/ніч
   Source_Note: Горох-checked 2026-08-28 via WebFetch (not yet Claude-in-Chrome DOM extraction).
     добраніч is its own headword, tagged вигук (interjection), Невідмінювана словникова одиниця

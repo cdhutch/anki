@@ -9,7 +9,9 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
+- ch:1.10.1
 - ch:reference
+- ch:1.12.3
 - pos:adjective
 - status:verified
 fields:
@@ -38,7 +40,7 @@ fields:
   TypingAnswer: сильний
   UA_Example: У нього сильний характер -- він ніколи не здається.
   EN_Example: He has a strong character -- he never gives up.
-  Tags_Ch: ch:reference
+  Tags_Ch: ch:reference, ch:1.10.1, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Тлумачення/сильний
   Source_Note: New 2026-08-27 (per Craig) -- reference-only companion to ua-lexeme-0574 (потужний),
     added to complete the potужний/strength near-synonym cluster. No Яблуко textbook chapter

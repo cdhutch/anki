@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: увага
   UA_Example: Увага! Зараз починається урок.
   EN_Example: Attention! The lesson is about to begin.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2
   Source_URL: https://goroh.pp.ua/Словозміна/увага
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

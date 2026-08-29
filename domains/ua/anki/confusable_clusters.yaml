@@ -1148,9 +1148,9 @@ clusters:
       solid color or dye).
 
       '
-    canonical_note: ua-lexeme-0601
+    canonical_note: ua-lexeme-1034
     members:
-    - note_id: ua-lexeme-0601
+    - note_id: ua-lexeme-1034
       lemma: малюва́ти
       status: sourced
       chapter: '1.11.1'

@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - pos:phrase
 - status:verified
 fields:
@@ -44,7 +44,7 @@ fields:
   TypingAnswer: Доброї ночі
   UA_Example: — На все добре! — Доброї ночі!
   EN_Example: — Take care! — Good night!
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.3
   Source_URL: https://goroh.pp.ua/Словозміна/ніч
   Source_Note: Горох-checked 2026-08-28 via WebFetch (not yet Claude-in-Chrome DOM extraction).
     ніч declension confirms genitive singular = но́чі (stress on the "о"); доброї is the standard

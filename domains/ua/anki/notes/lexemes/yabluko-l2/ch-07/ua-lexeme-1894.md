@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.1
+- ch:1.12.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: користуватися
   UA_Example: Він рідко користується калькулятором.
   EN_Example: He rarely uses a calculator.
-  Tags_Ch: ch:2.7.1
+  Tags_Ch: ch:2.7.1, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/користуватися
   Source_Note: Горох-verified 2026-08-28, ch.7.1 sourcing pass (devices/tech vocabulary).
   Verification Notes: New. Imperfective, "to use", reflexive verb governing the instrumental

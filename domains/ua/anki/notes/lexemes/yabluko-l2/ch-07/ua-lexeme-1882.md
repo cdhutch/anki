@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.1
+- ch:1.12.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: рахунок
   UA_Example: Він забув поповнити рахунок на телефоні.
   EN_Example: He forgot to top up the balance on his phone account.
-  Tags_Ch: ch:2.7.1
+  Tags_Ch: ch:2.7.1, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/рахунок
   Source_Note: Горох-verified 2026-08-28, ch.7.1 sourcing pass (devices/tech vocabulary).
   Verification Notes: New. Masc., 2nd decl., hard group, fill-vowel (о) in the oblique stem

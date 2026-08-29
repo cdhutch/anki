@@ -6,10 +6,13 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.3
+- ch:1.12.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +38,7 @@ fields:
   TypingAnswer: збирати / зібрати
   UA_Example: Влітку вони збирають лікарські трави.
   EN_Example: In summer they gather medicinal herbs.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3, ch:1.7.7, ch:1.8.5, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/збирати; https://goroh.pp.ua/Словозміна/зібрати
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective, 1st conjugation. Perfective зібра́ти added

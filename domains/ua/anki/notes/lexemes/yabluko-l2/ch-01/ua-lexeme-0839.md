@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.2
+- ch:1.11.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: голос
   UA_Example: У неї дуже приємний голос.
   EN_Example: She has a very pleasant voice.
-  Tags_Ch: ch:2.1.2
+  Tags_Ch: ch:2.1.2, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/голос
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Masc., 2nd decl., hard group.

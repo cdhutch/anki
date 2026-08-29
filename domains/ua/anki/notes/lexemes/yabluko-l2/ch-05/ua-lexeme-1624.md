@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.5
+- ch:1.5.5
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: різноманітний
   UA_Example: На ярмарку представлені найрізноманітніші вироби.
   EN_Example: The fair features the most diverse array of crafts.
-  Tags_Ch: ch:2.5.5
+  Tags_Ch: ch:2.5.5, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/різноманітний
   Source_Note: Горох-verified 2026-08-28, ch.5.5 sourcing pass (festival/craft-fair vocabulary;
     joining/announcing verbs; descriptive adjectives).

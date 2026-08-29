@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.4
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: складати / скласти
   UA_Example: Мама складає список покупок.
   EN_Example: Mom is making a shopping list.
-  Tags_Ch: ch:2.2.4
+  Tags_Ch: ch:2.2.4, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/складати; https://goroh.pp.ua/Словозміна/скласти
   Source_Note: Горох-verified 2026-08-28, ch.2.4 sourcing pass (pets/staff; recency adjectives).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no

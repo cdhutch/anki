@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.1
+- ch:1.6.2
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: несподівано
   UA_Example: Несподівано зʼявилося повідомлення про оновлення.
   EN_Example: An update notification unexpectedly appeared.
-  Tags_Ch: ch:2.7.1
+  Tags_Ch: ch:2.7.1, ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/несподівано
   Source_Note: Горох-verified 2026-08-28, ch.7.1 sourcing pass (devices/tech vocabulary).
   Verification Notes: New. Manner adverb from несподі́ваний ("unexpected").

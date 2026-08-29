@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:noun
 - gender:m
 - status:verified
@@ -38,7 +38,7 @@ fields:
   TypingAnswer: алфавіт
   UA_Example: В українському алфавіті тридцять три букви.
   EN_Example: The Ukrainian alphabet has thirty-three letters.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/алфавіт
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare

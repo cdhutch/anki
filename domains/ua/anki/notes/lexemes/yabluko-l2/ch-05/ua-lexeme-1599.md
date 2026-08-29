@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.4
+- ch:1.2.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: південь
   UA_Example: Ми зустрінемося опівдні, десь о півдні.
   EN_Example: We'll meet at noon, sometime around midday.
-  Tags_Ch: ch:2.5.4
+  Tags_Ch: ch:2.5.4, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/південь
   Source_Note: Горох-verified 2026-08-28, ch.5.4 sourcing pass (noon/midnight time expressions).
   Verification Notes: New. Masc., 2nd decl., soft group. Stress пі́вдень (1st syllable). Homograph

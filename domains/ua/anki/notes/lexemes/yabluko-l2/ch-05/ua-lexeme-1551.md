@@ -6,6 +6,9 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
+- ch:1.7.3
+- ch:1.3.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,10 +38,12 @@ fields:
   TypingAnswer: подвірʼя
   UA_Example: Діти гралися на подвірʼї.
   EN_Example: The children were playing in the yard.
-  Tags_Ch: ch:2.5.2
+  Tags_Ch: ch:2.5.2, ch:1.3.5, ch:1.7.3, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/подвірʼя
   Source_Note: Горох-verified 2026-08-28, ch.5.2 sourcing pass (train travel/station; house
     features; sightseeing verbs and adjectives).
   Verification Notes: New. Neut., 2nd decl., soft group. Stress подві́рʼя (2nd syllable).
+    Merged duplicate note(s) ua-lexeme-2863 into this canonical note during corpus-wide dedup
+    audit (2026-08-29); their chapter tags were migrated here.
 ---
 

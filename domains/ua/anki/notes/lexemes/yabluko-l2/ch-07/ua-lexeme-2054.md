@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.7
+- ch:1.10.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: інструмент
   UA_Example: Штучний інтелект стане потужним інструментом для лікарів.
   EN_Example: Artificial intelligence will become a powerful tool for doctors.
-  Tags_Ch: ch:2.7.7
+  Tags_Ch: ch:2.7.7, ch:1.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/інструмент
   Source_Note: Горох-verified 2026-08-28, ch.7.7 sourcing pass (consumption/ownership nouns;
     test/allow/arrange/save/build verb pairs; connector adverbs) -- final sub-chapter of chapter

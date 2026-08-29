@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:adverb
 - status:verified
 fields:
@@ -41,7 +41,7 @@ fields:
   TypingAnswer: чудово
   UA_Example: — Ти чудово зіграв цю роль!
   EN_Example: — You played that role wonderfully!
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/чудово
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

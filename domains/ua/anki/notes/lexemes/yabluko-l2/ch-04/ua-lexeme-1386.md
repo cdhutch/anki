@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: грудень
   UA_Example: Різдво за григоріанським календарем святкують у грудні.
   EN_Example: Christmas by the Gregorian calendar is celebrated in December.
-  Tags_Ch: ch:2.4.2
+  Tags_Ch: ch:2.4.2, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/грудень
   Source_Note: 'Горох-verified 2026-08-28, ch.4.2 sourcing pass (history: months, dates, founding/proclaiming
     events).'

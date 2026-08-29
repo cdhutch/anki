@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
+- ch:1.11.3
 - pos:noun
 - gender:m
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: холод
   UA_Example: Узимку тут стоїть страшний холод.
   EN_Example: In winter there is terrible cold here.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.11.3
   Source_URL: https://goroh.pp.ua/Словозміна/холод
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: ''

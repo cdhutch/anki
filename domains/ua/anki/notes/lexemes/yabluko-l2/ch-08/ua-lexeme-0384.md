@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: вітряно
   UA_Example: Надворі сьогодні вітряно.
   EN_Example: It's windy outside today.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/вітряно
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: Predicative adverb, stress matches ві́тряний's weather sense (see ua-lexeme-0383).

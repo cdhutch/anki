@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: різкий
   UA_Example: Він відчув різкий біль у нозі, коли підвернув ногу.
   EN_Example: He felt a sharp pain in his leg when he twisted his ankle.
-  Tags_Ch: ch:2.8.4
+  Tags_Ch: ch:2.8.4, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/різкий
   Source_Note: 'New note, added 2026-08-05 -- not part of the original ch:2.8.4 Яблуко vocabulary
     list. різкий was already appearing correctly in three other notes'' example sentences

@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.1
+- ch:1.2.2
+- ch:1.4.4
+- ch:1.5.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +38,7 @@ fields:
   TypingAnswer: сад
   UA_Example: Навесні сад потопає у квітах.
   EN_Example: In spring the garden is awash in blossoms.
-  Tags_Ch: ch:2.5.1
+  Tags_Ch: ch:2.5.1, ch:1.2.2, ch:1.4.4, ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/сад
   Source_Note: Горох-verified 2026-08-28, ch.5.1 sourcing pass (street/urban infrastructure;
     natural/property features; locative prepositions).

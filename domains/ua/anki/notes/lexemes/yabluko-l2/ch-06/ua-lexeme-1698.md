@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.2
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: встати
   UA_Example: Встань, будь ласка, і зачини вікно.
   EN_Example: Please stand up and close the window.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/встати
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

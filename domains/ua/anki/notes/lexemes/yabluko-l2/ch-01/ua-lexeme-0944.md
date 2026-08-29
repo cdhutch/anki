@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: дім
   UA_Example: Це наш родинний дім.
   EN_Example: This is our family home.
-  Tags_Ch: ch:2.1.7
+  Tags_Ch: ch:2.1.7, ch:1.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/дім
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

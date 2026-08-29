@@ -9,7 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
+- ch:1.1.3
 - pos:noun
 - gender:m
 - pos:profession
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: спортсмен
   UA_Example: Молодий спортсмен тренується щодня.
   EN_Example: The young athlete trains every day.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/спортсмен
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

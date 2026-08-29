@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.7
+- ch:1.4.7
+- ch:1.12.4
 - pos:noun
 - gender:n
 - status:draft
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: щастя
   UA_Example: Гроші не приносять щастя.
   EN_Example: Money doesn’t bring happiness.
-  Tags_Ch: ch:2.3.7
+  Tags_Ch: ch:2.3.7, ch:1.4.7, ch:1.12.4
   Source_URL: https://goroh.pp.ua/Словозміна/щастя
   Source_Note: Горох-verified 2026-08-28, ch.3.7 sourcing pass (opinion formulas; happiness/values;
     trust and friendship).

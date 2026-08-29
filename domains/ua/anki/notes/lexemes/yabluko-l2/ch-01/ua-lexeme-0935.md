@@ -10,6 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.6
+- ch:1.11.1
+- ch:1.4.3
+- ch:1.4.5
+- ch:1.4.6
+- ch:1.4.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +40,7 @@ fields:
   TypingAnswer: зустрічатися / зустрітися
   UA_Example: Друзі нарешті зустрічаються наживо.
   EN_Example: The friends are finally meeting in person.
-  Tags_Ch: ch:2.1.6
+  Tags_Ch: ch:2.1.6, ch:1.11.1, ch:1.4.3, ch:1.4.5, ch:1.4.6, ch:1.4.7
   Source_URL: https://goroh.pp.ua/Словозміна/зустрічатися; https://goroh.pp.ua/Словозміна/зустрітися
   Source_Note: Горох-verified 2026-08-28, ch.1.6 sourcing pass (conversation; communication
     verbs).

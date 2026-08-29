@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: океан
   UA_Example: Атлантичний океан дуже глибокий.
   EN_Example: The Atlantic Ocean is very deep.
-  Tags_Ch: ch:2.9.2, ch:2.2.7
+  Tags_Ch: ch:2.9.2, ch:2.2.7, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/океан
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''

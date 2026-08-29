@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.7
+- ch:1.1.4
+- ch:1.4.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: слово
   UA_Example: Скажи кілька слів про себе.
   EN_Example: Say a few words about yourself.
-  Tags_Ch: ch:2.1.7
+  Tags_Ch: ch:2.1.7, ch:1.1.4, ch:1.4.4
   Source_URL: https://goroh.pp.ua/Словозміна/слово
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

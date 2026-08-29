@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: вниз
   UA_Example: Спускатися вниз було не менш складно, ніж підніматися.
   EN_Example: Going down was no less difficult than climbing up.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/вниз
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Monosyllabic -- no stress mark.

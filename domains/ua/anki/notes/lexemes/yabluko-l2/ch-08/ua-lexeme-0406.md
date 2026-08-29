@@ -6,10 +6,13 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
+- ch:1.3.5
+- ch:1.5.1
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +37,7 @@ fields:
   TypingAnswer: теплий
   UA_Example: Сьогодні теплий весняний день.
   EN_Example: Today is a warm spring day.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.3.5, ch:1.5.1, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/теплий
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: ''

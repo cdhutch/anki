@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.2
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: лягти
   UA_Example: Ляж на диван і відпочинь трохи.
   EN_Example: Lie down on the couch and rest a bit.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/лягти
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

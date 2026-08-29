@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.5.2
 - ch:2.5.3
+- ch:1.2.5
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: храм
   UA_Example: Цей храм побудували у сімнадцятому столітті.
   EN_Example: This temple/church was built in the seventeenth century.
-  Tags_Ch: ch:2.5.2, ch:2.5.3
+  Tags_Ch: ch:2.5.2, ch:2.5.3, ch:1.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/храм
   Source_Note: Горох-verified 2026-08-28, ch.5.2 sourcing pass (train travel/station; house
     features; sightseeing verbs and adjectives).

@@ -39,7 +39,7 @@ fields:
   Tags_Ch: ch:reference, ch:2.2.3, ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/розписувати; https://goroh.pp.ua/Словозміна/розписати;
     https://goroh.pp.ua/Тлумачення/розписувати
-  Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- companion to ua-lexeme-0601
+  Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- companion to ua-lexeme-1034
     (малювати), added to complete the painting-verbs near-synonym cluster. No Яблуко textbook
     chapter given for this one, hence ch:reference.
   Verification Notes: Горох lists six senses for розпи́сувати (imperfective, stress 2nd syllable)
@@ -50,6 +50,6 @@ fields:
     partner. This note captures Craig's gloss "to paint, decorate, or sign something", spanning
     the decorate and register-marriage senses. Distinct from малювати (plain drawing) and
     фарбувати (solid-color coating/dyeing). Clustered as painting-verbs in confusable_clusters.yaml,
-    canonical on ua-lexeme-0601 (малювати).
+    canonical on ua-lexeme-1034 (малювати).
 ---
 

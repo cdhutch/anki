@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.11.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
+- ch:1.12.6
 - pos:verb
 - status:verified
 fields:
@@ -45,7 +47,7 @@ fields:
   TypingAnswer: вигравати / виграти
   UA_Example: Вона любить вигравати навіть у дружніх іграх.
   EN_Example: She likes to win even in friendly games.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3, ch:1.11.3, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/вигравати; https://goroh.pp.ua/Словозміна/виграти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
@@ -54,6 +56,8 @@ fields:
     as in the regular -увати/-авати pattern). 2026-07-28: added ConfusableSet + CompareScenario
     + CompareA/CompareB cross-linking this note with ua-lexeme-0177 (перемагати) -- both gloss
     loosely to "win" but take structurally different objects. Also see ua-lexeme-0261 (переможець)
-    for the shared agent noun. Needs your review.'
+    for the shared agent noun. Needs your review. Merged duplicate note(s) ua-lexeme-2392
+    into this canonical note during corpus-wide dedup audit (2026-08-29); their chapter tags
+    were migrated here.'
 ---
 

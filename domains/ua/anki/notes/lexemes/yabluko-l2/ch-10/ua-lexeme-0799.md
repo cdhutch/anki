@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: справа
   UA_Example: Це дуже важлива справа.
   EN_Example: This is a very important matter.
-  Tags_Ch: ch:2.10.7
+  Tags_Ch: ch:2.10.7, ch:1.7.4
   Source_URL: https://goroh.pp.ua/Словозміна/справа
   Source_Note: Горох-verified 2026-08-28, ch.10.7 sourcing pass (consular services; border/customs;
     travel health).

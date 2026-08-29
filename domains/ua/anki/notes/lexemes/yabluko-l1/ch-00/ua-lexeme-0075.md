@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - pos:proper-noun
 - gender:f
 - pos:country
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: Європа
   UA_Example: Багато українців працюють у різних країнах Європи.
   EN_Example: Many Ukrainians work in various countries of Europe.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2
   Source_URL: https://goroh.pp.ua/Словозміна/Європа
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

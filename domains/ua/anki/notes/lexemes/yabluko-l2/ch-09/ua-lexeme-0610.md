@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -43,7 +44,7 @@ fields:
   TypingAnswer: ватра
   UA_Example: Увечері ми розпалили ватру й розповідали історії.
   EN_Example: In the evening we lit a campfire and told stories.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/ватра
   Source_Note: Горох-checked 2026-08-28 via WebFetch (not yet Claude-in-Chrome DOM extraction).
     Feminine, 1st declension hard group, stress ва́тра (first syllable) throughout the declension

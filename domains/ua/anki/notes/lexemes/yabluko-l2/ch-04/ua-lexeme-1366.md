@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.1
+- ch:1.11.2
+- ch:1.10.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: століття
   UA_Example: Ця церква була збудована у пʼятнадцятому столітті.
   EN_Example: This church was built in the fifteenth century.
-  Tags_Ch: ch:2.4.1
+  Tags_Ch: ch:2.4.1, ch:1.11.2, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/століття
   Source_Note: 'Горох-verified 2026-08-28, ch.4.1 sourcing pass (history: centuries, era markers,
     everyday inventions).'

@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.5
+- ch:1.11.5
+- ch:1.5.4
+- ch:1.12.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +38,7 @@ fields:
   TypingAnswer: правило
   UA_Example: Кожен має дотримуватися правил.
   EN_Example: Everyone must follow the rules.
-  Tags_Ch: ch:2.10.5
+  Tags_Ch: ch:2.10.5, ch:1.11.5, ch:1.5.4, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/правило
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

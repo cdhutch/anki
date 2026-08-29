@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: анкета
   UA_Example: Треба заповнити анкету і принести її завтра.
   EN_Example: You need to fill out the form and bring it tomorrow.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.10
   Source_URL: https://goroh.pp.ua/Словозміна/анкета
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

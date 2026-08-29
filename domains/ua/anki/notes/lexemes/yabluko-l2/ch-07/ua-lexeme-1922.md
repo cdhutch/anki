@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дізнатися
   UA_Example: Вона дізналася новину від подруги.
   EN_Example: She found out the news from her friend.
-  Tags_Ch: ch:2.7.2
+  Tags_Ch: ch:2.7.2, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/дізнатися
   Source_Note: Горох-verified 2026-08-28, ch.7.2 sourcing pass (accounts/passwords tech vocabulary;
     frequency adverbs; descriptive adjectives).

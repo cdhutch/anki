@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: подушка
   UA_Example: Я сплю на мʼякій подушці.
   EN_Example: I sleep on a soft pillow.
-  Tags_Ch: ch:2.1.5
+  Tags_Ch: ch:2.1.5, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/подушка
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: навпроти
   UA_Example: Зупинка знаходиться навпроти школи.
   EN_Example: The stop is across from the school.
-  Tags_Ch: ch:2.5.1
+  Tags_Ch: ch:2.5.1, ch:1.7.4
   Source_URL: https://goroh.pp.ua/Словозміна/навпроти
   Source_Note: Горох-verified 2026-08-28, ch.5.1 sourcing pass (street/urban infrastructure;
     natural/property features; locative prepositions).

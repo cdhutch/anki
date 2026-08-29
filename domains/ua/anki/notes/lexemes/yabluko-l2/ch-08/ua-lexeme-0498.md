@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.4
+- ch:1.11.2
 - pos:noun
 - gender:m
 - animate:true
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: верблюд
   UA_Example: У пустелі туристи їздять верхи на верблюдах.
   EN_Example: In the desert, tourists ride camels.
-  Tags_Ch: ch:2.8.4
+  Tags_Ch: ch:2.8.4, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/верблюд
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.
   Verification Notes: ''

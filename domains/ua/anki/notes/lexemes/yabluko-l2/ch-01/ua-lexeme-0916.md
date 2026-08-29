@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: обливати / облити
   UA_Example: Він випадково облив скатертину соком.
   EN_Example: He accidentally spilled juice on the tablecloth.
-  Tags_Ch: ch:2.1.5
+  Tags_Ch: ch:2.1.5, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/обливати; https://goroh.pp.ua/Словозміна/облити
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

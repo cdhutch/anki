@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: виглядати
   UA_Example: Ця страва виглядає досить незвично.
   EN_Example: This dish looks pretty unusual.
-  Tags_Ch: ch:2.8.6
+  Tags_Ch: ch:2.8.6, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/виглядати
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Imperfective, non-reflexive, 1st conjugation. Tagged aspect:imperfective-only

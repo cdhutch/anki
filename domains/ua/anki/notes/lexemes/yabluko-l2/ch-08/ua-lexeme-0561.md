@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
+- ch:1.10.2
 - pos:adverb
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: смішно
   UA_Example: Було смішно дивитися, як він куштує квашену капусту вперше.
   EN_Example: It was funny to watch him try sauerkraut for the first time.
-  Tags_Ch: ch:2.8.6
+  Tags_Ch: ch:2.8.6, ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/смішно
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: ''

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: паперовий
   UA_Example: Діти зробили паперові літачки.
   EN_Example: The children made paper airplanes.
-  Tags_Ch: ch:2.2.3
+  Tags_Ch: ch:2.2.3, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/паперовий
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. Hard-group adjective. Example bundles літачо́к (ua-lexeme-1015,

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.2
+- ch:1.6.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: обмінюватися
   UA_Example: Друзі обмінюються паролями від ігор.
   EN_Example: The friends exchange passwords for games.
-  Tags_Ch: ch:2.7.2
+  Tags_Ch: ch:2.7.2, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/обмінюватися
   Source_Note: Горох-verified 2026-08-28, ch.7.2 sourcing pass (accounts/passwords tech vocabulary;
     frequency adverbs; descriptive adjectives).

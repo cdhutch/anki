@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.1
+- ch:1.11.3
+- ch:1.5.6
 - pos:noun
 - status:draft
 fields:
@@ -37,7 +39,7 @@ fields:
   TypingAnswer: шматок
   UA_Example: Дай мені шматок хліба.
   EN_Example: Give me a piece of bread.
-  Tags_Ch: ch:2.3.1
+  Tags_Ch: ch:2.3.1, ch:1.11.3, ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/шматок
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Masc., 2nd decl., hard group.

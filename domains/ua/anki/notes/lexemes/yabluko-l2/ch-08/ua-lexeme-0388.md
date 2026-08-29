@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
+- ch:1.10.3
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: дощовий
   UA_Example: Восени часто буває дощова погода.
   EN_Example: In autumn the weather is often rainy.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.10.3
   Source_URL: https://goroh.pp.ua/Словозміна/дощовий
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: ''

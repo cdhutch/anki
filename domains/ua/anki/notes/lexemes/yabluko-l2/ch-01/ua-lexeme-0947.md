@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.7
+- ch:1.2.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: правда
   UA_Example: Правду кажучи, я не готовий до іспиту.
   EN_Example: To tell the truth, I'm not ready for the exam.
-  Tags_Ch: ch:2.1.7
+  Tags_Ch: ch:2.1.7, ch:1.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/правда
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

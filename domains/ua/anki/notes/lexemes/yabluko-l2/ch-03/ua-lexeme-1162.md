@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.1
+- ch:1.5.6
 - pos:noun
 - status:draft
 fields:
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: пачка
   UA_Example: Купи пачку масла.
   EN_Example: Buy a pack of butter.
-  Tags_Ch: ch:2.3.1
+  Tags_Ch: ch:2.3.1, ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/пачка
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Fem., 1st decl., hard group.

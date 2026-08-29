@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.4
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: витрачати / витратити
   UA_Example: Вони витрачають багато часу на відновлення фасаду.
   EN_Example: They spend a lot of time restoring the facade.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/витрачати; https://goroh.pp.ua/Словозміна/витратити
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

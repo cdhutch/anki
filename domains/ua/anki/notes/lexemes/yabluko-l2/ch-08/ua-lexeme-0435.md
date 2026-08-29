@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.10.2
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: близький
   UA_Example: Готель був близький до пляжу.
   EN_Example: The hotel was close to the beach.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/близький
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.1.2
 - ch:2.6.2
+- ch:1.11.2
 - pos:adverb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: постійно
   UA_Example: Він постійно спізнюється.
   EN_Example: He is constantly late.
-  Tags_Ch: ch:2.1.2, ch:2.6.2
+  Tags_Ch: ch:2.1.2, ch:2.6.2, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/постійно
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
   Verification Notes: New. Indeclinable adverb.

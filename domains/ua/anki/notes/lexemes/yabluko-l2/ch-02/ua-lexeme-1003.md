@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.2
+- ch:1.6.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: смажити / посмажити
   UA_Example: Ми смажимо ковбаски на вогнищі щоліта.
   EN_Example: We grill sausages over a campfire every summer.
-  Tags_Ch: ch:2.2.2
+  Tags_Ch: ch:2.2.2, ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/смажити; https://goroh.pp.ua/Словозміна/посмажити
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. imperfective., non-reflexive, 2 conj. Regular 2nd-conj. verb; no

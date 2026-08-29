@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:m
 - pos:profession
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: письменник
   UA_Example: Цей письменник написав багато цікавих книжок.
   EN_Example: This writer has written many interesting books.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/письменник
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

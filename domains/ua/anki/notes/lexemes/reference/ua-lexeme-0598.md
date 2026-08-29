@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: живопис
   UA_Example: Український живопис XIX століття відомий яскравими пейзажами.
   EN_Example: 19th-century Ukrainian painting is known for its vivid landscapes.
-  Tags_Ch: ch:reference
+  Tags_Ch: ch:reference, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/живопис; https://goroh.pp.ua/Тлумачення/живопис
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- companion to ua-lexeme-0599
     (картина), added to complete the painting-nouns near-synonym cluster. No Яблуко textbook

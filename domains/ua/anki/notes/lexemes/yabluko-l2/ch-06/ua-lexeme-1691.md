@@ -13,6 +13,9 @@ tags:
 - pos:adverb
 - status:draft
 - ch:2.7.2
+- ch:1.3.3
+- ch:1.3.4
+- ch:1.4.7
 fields:
   NoteID: ua-lexeme-1691
   Lemma: рі́дко
@@ -36,7 +39,7 @@ fields:
   TypingAnswer: рідко
   UA_Example: Ми рідко ходимо в кіно.
   EN_Example: We rarely go to the movies.
-  Tags_Ch: ch:2.6.2, ch:2.7.2
+  Tags_Ch: ch:2.6.2, ch:2.7.2, ch:1.3.3, ch:1.3.4, ch:1.4.7
   Source_URL: https://goroh.pp.ua/Словозміна/рідко
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

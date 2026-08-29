@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.1
+- ch:1.11.1
+- ch:1.5.2
+- ch:1.12.2
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +39,7 @@ fields:
   TypingAnswer: дати
   UA_Example: Дай мені, будь ласка, оцю книжку.
   EN_Example: Give me that book, please.
-  Tags_Ch: ch:2.6.1
+  Tags_Ch: ch:2.6.1, ch:1.11.1, ch:1.5.2, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/дати
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).

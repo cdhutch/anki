@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дата
   UA_Example: Яка сьогодні дата?
   EN_Example: What is today's date?
-  Tags_Ch: ch:2.4.2
+  Tags_Ch: ch:2.4.2, ch:1.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/дата
   Source_Note: 'Горох-verified 2026-08-28, ch.4.2 sourcing pass (history: months, dates, founding/proclaiming
     events).'

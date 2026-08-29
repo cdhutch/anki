@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: травень
   UA_Example: Свято перемоги відзначають девʼятого травня.
   EN_Example: Victory Day is observed on the ninth of May.
-  Tags_Ch: ch:2.4.2
+  Tags_Ch: ch:2.4.2, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/травень
   Source_Note: 'Горох-verified 2026-08-28, ch.4.2 sourcing pass (history: months, dates, founding/proclaiming
     events).'

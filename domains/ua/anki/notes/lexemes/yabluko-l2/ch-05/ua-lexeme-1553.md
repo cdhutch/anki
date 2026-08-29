@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.2
+- ch:1.2.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ріг
   UA_Example: Магазин знаходиться на розі вулиці.
   EN_Example: The store is located on the street corner.
-  Tags_Ch: ch:2.5.2
+  Tags_Ch: ch:2.5.2, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/ріг
   Source_Note: Горох-verified 2026-08-28, ch.5.2 sourcing pass (train travel/station; house
     features; sightseeing verbs and adjectives).

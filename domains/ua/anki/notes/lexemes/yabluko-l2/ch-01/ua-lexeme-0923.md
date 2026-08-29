@@ -6,10 +6,13 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.5
+- ch:1.11.1
+- ch:1.12.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +38,7 @@ fields:
   TypingAnswer: стрибати / стрибнути
   UA_Example: На святі молодь стрибає через вогонь.
   EN_Example: At the festival, young people jump over the fire.
-  Tags_Ch: ch:2.1.5
+  Tags_Ch: ch:2.1.5, ch:1.11.1, ch:1.8.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/стрибати; https://goroh.pp.ua/Словозміна/стрибнути
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).

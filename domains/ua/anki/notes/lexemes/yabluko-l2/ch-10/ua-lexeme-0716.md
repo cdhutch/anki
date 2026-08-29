@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.5
+- ch:1.2.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: група
   UA_Example: Це етнічна група з довгою історією.
   EN_Example: This is an ethnic group with a long history.
-  Tags_Ch: ch:2.10.5
+  Tags_Ch: ch:2.10.5, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/група
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

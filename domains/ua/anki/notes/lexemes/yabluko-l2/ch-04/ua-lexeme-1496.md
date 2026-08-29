@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.5
+- ch:1.10.1
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: успішний
   UA_Example: Це був дуже успішний рік для компанії.
   EN_Example: It was a very successful year for the company.
-  Tags_Ch: ch:2.4.5
+  Tags_Ch: ch:2.4.5, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/успішний
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).

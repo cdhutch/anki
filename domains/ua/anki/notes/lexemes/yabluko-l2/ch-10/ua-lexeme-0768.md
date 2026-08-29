@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.6
+- ch:1.4.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: боліти / заболіти
   UA_Example: У мене болить голова.
   EN_Example: My head hurts.
-  Tags_Ch: ch:2.10.6
+  Tags_Ch: ch:2.10.6, ch:1.4.6, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/боліти; https://goroh.pp.ua/Словозміна/заболіти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

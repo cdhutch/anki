@@ -6,6 +6,8 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: поїзд
   UA_Example: Ми запізнилися на поїзд.
   EN_Example: We were late for the train.
-  Tags_Ch: ch:2.5.2
+  Tags_Ch: ch:2.5.2, ch:1.9.1, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/поїзд
   Source_Note: Горох-verified 2026-08-28, ch.5.2 sourcing pass (train travel/station; house
     features; sightseeing verbs and adjectives).

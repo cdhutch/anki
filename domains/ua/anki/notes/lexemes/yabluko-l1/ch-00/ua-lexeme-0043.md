@@ -6,10 +6,11 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - pos:noun
 - gender:n
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: метро
   UA_Example: Ми їдемо до центру на метро.
   EN_Example: We go to the centre by metro.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/метро
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

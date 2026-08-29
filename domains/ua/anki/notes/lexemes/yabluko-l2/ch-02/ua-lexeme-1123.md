@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.7
+- ch:1.4.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: питання
   UA_Example: Це дуже цікаве питання.
   EN_Example: That's a very interesting question.
-  Tags_Ch: ch:2.2.7
+  Tags_Ch: ch:2.2.7, ch:1.4.2
   Source_URL: https://goroh.pp.ua/Словозміна/питання
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

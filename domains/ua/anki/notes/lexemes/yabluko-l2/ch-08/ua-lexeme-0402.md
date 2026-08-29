@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: спека
   UA_Example: Влітку тут страшна спека.
   EN_Example: The heat here in summer is terrible.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/спека
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: ''

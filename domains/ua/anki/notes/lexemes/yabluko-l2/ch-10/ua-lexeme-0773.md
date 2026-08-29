@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.6
 - ch:2.6.2
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: послухати
   UA_Example: Лікар попросив мене подихати глибше, щоб послухати легені.
   EN_Example: The doctor asked me to breathe deeply so he could listen to my lungs.
-  Tags_Ch: ch:2.10.6, ch:2.6.2
+  Tags_Ch: ch:2.10.6, ch:2.6.2, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/послухати
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

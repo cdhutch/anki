@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.2
+- ch:1.5.5
+- ch:1.5.7
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: щороку
   UA_Example: Ми щороку їздимо до бабусі на літо.
   EN_Example: Every year we go to grandma's for the summer.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:1.5.5, ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/щороку
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

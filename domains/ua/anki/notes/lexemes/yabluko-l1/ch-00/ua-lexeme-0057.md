@@ -9,7 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
+- ch:1.4.6
 - pos:noun
 - gender:n
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: прізвище
   UA_Example: Він написав своє прізвище та адресу в анкеті.
   EN_Example: He wrote his surname and address in the form.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1, ch:1.4.6
   Source_URL: https://goroh.pp.ua/Словозміна/прізвище
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

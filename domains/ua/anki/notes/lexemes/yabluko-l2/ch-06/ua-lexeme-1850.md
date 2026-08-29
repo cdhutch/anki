@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ягода
   UA_Example: Кожна ягода була соковита й стигла.
   EN_Example: Every berry was juicy and ripe.
-  Tags_Ch: ch:2.6.7
+  Tags_Ch: ch:2.6.7, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/ягода
   Source_Note: Горох-verified 2026-08-28, ch.6.7 sourcing pass (bear/berry-picking anecdote;
     imperfective-perfective verb pairs; augmentative adjectives).

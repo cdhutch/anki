@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.3
+- ch:1.11.4
+- ch:1.1.4
+- ch:1.4.2
 - pos:verb
 - status:draft
 - aspect:imperfective-only
@@ -36,7 +39,7 @@ fields:
   TypingAnswer: сподіватися
   UA_Example: Ми сподіваємося, що майбутнє буде кращим.
   EN_Example: We hope that the future will be better.
-  Tags_Ch: ch:2.7.3
+  Tags_Ch: ch:2.7.3, ch:1.11.4, ch:1.1.4, ch:1.4.2
   Source_URL: https://goroh.pp.ua/Словозміна/сподіватися
   Source_Note: Горох-verified 2026-08-28, ch.7.3 sourcing pass (future tech/robotics/medicine
     nouns and adjectives; a large, page-spanning sub-chapter per the two-independent-columns

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
+- ch:1.5.1
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: форма
   UA_Example: Уся команда вийшла на поле в новій формі.
   EN_Example: The whole team came out onto the field in new uniforms.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3, ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/форма
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

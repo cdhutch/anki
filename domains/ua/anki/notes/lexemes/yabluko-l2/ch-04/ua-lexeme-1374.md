@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: котрий
   UA_Example: Це той будинок, у котрому я народився.
   EN_Example: That's the house in which I was born.
-  Tags_Ch: ch:2.4.1
+  Tags_Ch: ch:2.4.1, ch:1.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/котрий
   Source_Note: 'Горох-verified 2026-08-28, ch.4.1 sourcing pass (history: centuries, era markers,
     everyday inventions).'

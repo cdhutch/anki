@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:1.1.1
 - pos:verb
 - status:verified
 - aspect:imperfective-only
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мати
   UA_Example: Щоб дістатися вершини, треба мати сили.
   EN_Example: To reach the summit, you need to have strength.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:1.1.1
   Source_URL: https://goroh.pp.ua/Словозміна/мати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Tagged aspect:imperfective-only 2026-08-27 (per Craig) -- stative possession

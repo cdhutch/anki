@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.5.5
+- ch:1.6.2
 - pos:noun
 - gender:f
 - status:draft
@@ -36,13 +38,14 @@ fields:
   TypingAnswer: родзинка
   UA_Example: У кекс додали родзинки.
   EN_Example: Raisins were added to the cake.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.5.5, ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/родзинка
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'
   Verification Notes: New. Fem., 1st decl., hard group. Горох lists a synonym ізюм (masc.,
     an alternate word for raisins, borrowed from Turkic via Russian) as a cross-reference
     on the same page -- not drafted as a separate note (not itself a wordlist item). Wordlist
-    bullet is the plural "родзинки".
+    bullet is the plural "родзинки". Merged duplicate note(s) ua-lexeme-3152 into this canonical
+    note during corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

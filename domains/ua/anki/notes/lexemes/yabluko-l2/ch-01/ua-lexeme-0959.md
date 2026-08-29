@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.7
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: снитися / приснитися
   UA_Example: Мені часто сниться море.
   EN_Example: I often dream about the sea.
-  Tags_Ch: ch:2.1.7
+  Tags_Ch: ch:2.1.7, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/снитися; https://goroh.pp.ua/Словозміна/приснитися
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: шашлик
   UA_Example: Влітку ми любимо смажити шашлик на природі.
   EN_Example: In summer we like to grill shashlik outdoors.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/шашлик
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

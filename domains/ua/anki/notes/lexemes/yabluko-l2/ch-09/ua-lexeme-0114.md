@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.11.3
 - pos:verb
 - motion:prefixed
 - status:verified
@@ -37,7 +39,7 @@ fields:
   TypingAnswer: приходити / прийти
   UA_Example: ''
   EN_Example: ''
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.11.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/приходити
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

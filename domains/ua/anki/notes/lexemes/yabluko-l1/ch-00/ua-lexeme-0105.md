@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:interjection
 - status:verified
 fields:
@@ -34,7 +34,7 @@ fields:
   TypingAnswer: привіт
   UA_Example: — Привіт! Як твої справи?
   EN_Example: — Hi! How are you?
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/привіт
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.5
+- ch:1.11.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: виконувати
   UA_Example: Він завжди виконував свою роботу вчасно.
   EN_Example: He always carried out his work on time.
-  Tags_Ch: ch:2.4.5
+  Tags_Ch: ch:2.4.5, ch:1.11.7, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/виконувати
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).

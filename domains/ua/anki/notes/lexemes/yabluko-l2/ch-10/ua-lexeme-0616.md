@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - ch:2.3.4
+- ch:1.11.2
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: дозвіл
   UA_Example: Вам потрібен дозвіл на виліт.
   EN_Example: You need permission to depart.
-  Tags_Ch: ch:2.10.1, ch:2.3.4
+  Tags_Ch: ch:2.10.1, ch:2.3.4, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/дозвіл
   Source_Note: Горох-verified 2026-08-28, ch.10.1 sourcing pass (airport/travel prohibitions).
   Verification Notes: New. Masc., 2nd decl., hard group. No homograph/dedup hits in the corpus.

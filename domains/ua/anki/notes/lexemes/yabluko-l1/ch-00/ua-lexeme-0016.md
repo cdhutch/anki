@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:f
 - pos:profession
@@ -37,7 +37,7 @@ fields:
   TypingAnswer: студентка
   UA_Example: Студентка живе в гуртожитку недалеко від університету.
   EN_Example: The female student lives in a dormitory not far from the university.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/студентка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

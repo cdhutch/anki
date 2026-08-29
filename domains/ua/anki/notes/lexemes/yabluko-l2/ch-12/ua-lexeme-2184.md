@@ -10,6 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.1
+- ch:1.11.2
+- ch:1.4.3
+- ch:1.4.5
+- ch:1.4.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +39,7 @@ fields:
   TypingAnswer: боятися / побоятися
   UA_Example: Я боюся темряви.
   EN_Example: I'm afraid of the dark.
-  Tags_Ch: ch:2.12.1
+  Tags_Ch: ch:2.12.1, ch:1.11.2, ch:1.4.3, ch:1.4.5, ch:1.4.7
   Source_URL: https://goroh.pp.ua/Словозміна/боятися
   Source_Note: Горох-verified 2026-08-29, ch.12.1 sourcing pass (basic emotion verbs; impersonal-predicate
     feeling adverbs; predicate adjectives of emotional state), cross-checked against yabluko-l2-verb-dictionary.pdf

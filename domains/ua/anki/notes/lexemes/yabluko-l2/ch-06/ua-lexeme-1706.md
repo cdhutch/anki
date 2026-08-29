@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: змінитися
   UA_Example: Він дуже змінився за останній рік.
   EN_Example: He's changed a lot over the past year.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/змінитися
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

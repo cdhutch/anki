@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.4
+- ch:1.12.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мешканець
   UA_Example: Мешканці міста часто відвідують стародавні будівлі.
   EN_Example: Residents of the town often visit the ancient buildings.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/мешканець
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

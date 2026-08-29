@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.6
+- ch:1.12.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: зібратися
   UA_Example: Ми зібралися разом уперше за рік.
   EN_Example: We gathered together for the first time in a year.
-  Tags_Ch: ch:2.7.6
+  Tags_Ch: ch:2.7.6, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/зібратися
   Source_Note: Горох-verified 2026-08-28, ch.7.6 sourcing pass (virtual reality; coordinate/gather/decline
     verb pairs; invitation discourse formulas).

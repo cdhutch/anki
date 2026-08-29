@@ -6,6 +6,8 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: скляний
   UA_Example: Не залишай скляний посуд на пляжі.
   EN_Example: Don't leave glass tableware at the beach.
-  Tags_Ch: ch:2.2.2, ch:2.2.3
+  Tags_Ch: ch:2.2.2, ch:2.2.3, ch:1.7.5, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/скляний
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Hard-group adjective. Example bundles по́суд (ua-lexeme-0995) and

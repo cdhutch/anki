@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.1
+- ch:1.10.1
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: злий
   UA_Example: Я злий, бо запізнився на потяг.
   EN_Example: I'm angry because I missed the train.
-  Tags_Ch: ch:2.12.1
+  Tags_Ch: ch:2.12.1, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/злий
   Source_Note: Горох-verified 2026-08-29, ch.12.1 sourcing pass (basic emotion verbs; impersonal-predicate
     feeling adverbs; predicate adjectives of emotional state), cross-checked against yabluko-l2-verb-dictionary.pdf

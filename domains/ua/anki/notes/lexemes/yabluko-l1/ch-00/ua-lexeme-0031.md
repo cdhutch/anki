@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.6
 - pos:noun
 - gender:n
 - status:verified
@@ -35,7 +35,7 @@ fields:
   TypingAnswer: вікно
   UA_Example: Він дивиться у вікно і бачить вулицю.
   EN_Example: He looks out the window and sees the street.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.6
   Source_URL: https://goroh.pp.ua/Словозміна/вікно
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

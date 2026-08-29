@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.5
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: вбити
   UA_Example: Він мало не вбив себе необережним рухом.
   EN_Example: He nearly killed himself with a careless move.
-  Tags_Ch: ch:2.6.5
+  Tags_Ch: ch:2.6.5, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/вбити
   Source_Note: Горох-verified 2026-08-28, ch.6.5 sourcing pass (crime/danger anecdote; imperfective-perfective
     verb pairs).

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: небезпека
   UA_Example: Небезпека ще не минула.
   EN_Example: The danger hasn't passed yet.
-  Tags_Ch: ch:2.11.5
+  Tags_Ch: ch:2.11.5, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/небезпека
   Source_Note: 'Горох-verified 2026-08-29, ch.11.5 sourcing pass (disaster/crisis vocabulary:
     natural and man-made catastrophes, evacuation/cleanup response, narrative and political-suppression

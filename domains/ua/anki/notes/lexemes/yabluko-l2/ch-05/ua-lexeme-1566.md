@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.3
+- ch:1.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: музей
   UA_Example: У неділю ми ходили до музею.
   EN_Example: On Sunday we went to the museum.
-  Tags_Ch: ch:2.5.3
+  Tags_Ch: ch:2.5.3, ch:1.2.1
   Source_URL: https://goroh.pp.ua/Словозміна/музей
   Source_Note: Горох-verified 2026-08-28, ch.5.3 sourcing pass (public buildings/monuments;
     architectural detail nouns; sightseeing adjectives).

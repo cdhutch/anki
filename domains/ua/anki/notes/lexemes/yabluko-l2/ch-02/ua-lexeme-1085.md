@@ -10,6 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.5
+- ch:1.11.1
+- ch:1.3.1
+- ch:1.4.1
+- ch:1.5.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +39,7 @@ fields:
   TypingAnswer: пити / випити
   UA_Example: Всі підняли келихи й пили за здоровʼя іменинника.
   EN_Example: Everyone raised their glasses and drank to the health of the birthday person.
-  Tags_Ch: ch:2.2.5
+  Tags_Ch: ch:2.2.5, ch:1.11.1, ch:1.3.1, ch:1.4.1, ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/пити; https://goroh.pp.ua/Словозміна/випити
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb per

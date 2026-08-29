@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.5
+- ch:1.11.6
+- ch:1.10.1
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: працьовитий
   UA_Example: Її батьки були простими, працьовитими людьми.
   EN_Example: Her parents were simple, hardworking people.
-  Tags_Ch: ch:2.4.5
+  Tags_Ch: ch:2.4.5, ch:1.11.6, ch:1.10.1
   Source_URL: https://goroh.pp.ua/Словозміна/працьовитий
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).

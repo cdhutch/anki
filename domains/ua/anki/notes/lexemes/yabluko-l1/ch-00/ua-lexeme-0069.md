@@ -6,10 +6,11 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.6
 - pos:noun
 - gender:n
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: число
   UA_Example: Напишіть число, місяць і рік свого народження.
   EN_Example: Write the number, month and year of your birth.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.6, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/число
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

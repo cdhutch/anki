@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.11.2
 - pos:verb
 - motion:prefixed
 - status:verified
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: виходити / вийти
   UA_Example: ''
   EN_Example: ''
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.11.2, ch:1.7.6
   Source_URL: https://goroh.pp.ua/Словозміна/виходити
   Source_Note: Lemma re-verified 2026-08-19 via Горох after the correction ви́ходити -> вихо́дити;
     the earlier 2026-07-06 check covered the superseded form.

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.5.2
 - pos:noun
 - gender:m
 - status:draft
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: салат
   UA_Example: Ми замовили овочевий салат.
   EN_Example: We ordered a vegetable salad.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/салат
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

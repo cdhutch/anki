@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:phrase
 - status:verified
 fields:
@@ -34,7 +34,7 @@ fields:
   TypingAnswer: Яка Ваша професія?
   UA_Example: — Яка Ваша професія? — Я лікар.
   EN_Example: — What is your profession? — I am a doctor.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''

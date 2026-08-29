@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: корабель
   UA_Example: Корабель відпливає рано-вранці.
   EN_Example: The ship departs early in the morning.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/корабель
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''

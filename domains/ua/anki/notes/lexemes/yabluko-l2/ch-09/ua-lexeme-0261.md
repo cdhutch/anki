@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: переможець
   UA_Example: Переможець гонки отримав кубок і нагороду.
   EN_Example: The winner of the race received a cup and a prize.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/переможець
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Filtered out a proper-noun homograph ('Переможець', a village in Ukraine).

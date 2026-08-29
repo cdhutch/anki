@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
+- ch:1.10.6
+- ch:1.10.2
+- ch:1.12.1
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +37,7 @@ fields:
   TypingAnswer: спортивний
   UA_Example: Він веде спортивний спосіб життя.
   EN_Example: He leads an athletic lifestyle.
-  Tags_Ch: ch:2.9.1
+  Tags_Ch: ch:2.9.1, ch:1.10.6, ch:1.10.2, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/спортивний
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''

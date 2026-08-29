@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.4
+- ch:1.2.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: кишеня
   UA_Example: Він поклав ключі в кишеню.
   EN_Example: He put the keys in his pocket.
-  Tags_Ch: ch:2.6.4
+  Tags_Ch: ch:2.6.4, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/кишеня
   Source_Note: Горох-verified 2026-08-28, ch.6.4 sourcing pass (magic trick anecdote vocabulary).
   Verification Notes: New. Fem., 1st decl., soft group.

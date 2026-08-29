@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: балкон
   UA_Example: Ми пʼємо каву на балконі щоранку.
   EN_Example: We drink coffee on the balcony every morning.
-  Tags_Ch: ch:2.5.3
+  Tags_Ch: ch:2.5.3, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/балкон
   Source_Note: Горох-verified 2026-08-28, ch.5.3 sourcing pass (public buildings/monuments;
     architectural detail nouns; sightseeing adjectives).

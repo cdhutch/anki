@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
+- ch:1.10.2
 - pos:adverb
 - status:verified
 - cluster:intensifier-adverbs
@@ -40,7 +41,7 @@ fields:
   TypingAnswer: набагато
   UA_Example: Тут набагато затишніше, ніж у нашому готелі.
   EN_Example: It's much cozier here than in our hotel.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/набагато
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: 'Satellite note in intensifier-adverbs cluster per 2026-08-25 registry

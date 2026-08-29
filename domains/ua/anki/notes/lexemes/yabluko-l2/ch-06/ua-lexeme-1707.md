@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.2
+- ch:1.2.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: іти
   UA_Example: Він іде на роботу пішки.
   EN_Example: He's walking to work.
-  Tags_Ch: ch:2.6.2
+  Tags_Ch: ch:2.6.2, ch:1.2.6, ch:1.9.2
   Source_URL: https://goroh.pp.ua/Словозміна/іти
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

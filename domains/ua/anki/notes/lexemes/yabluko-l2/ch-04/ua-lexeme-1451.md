@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.4
+- ch:1.10.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: пустеля
   UA_Example: Вони перетнули пустелю за три дні.
   EN_Example: They crossed the desert in three days.
-  Tags_Ch: ch:2.4.4
+  Tags_Ch: ch:2.4.4, ch:1.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/пустеля
   Source_Note: Горох-verified 2026-08-28, ch.4.4 sourcing pass (sports/competition; appearance
     description; feeding/hosting verbs).

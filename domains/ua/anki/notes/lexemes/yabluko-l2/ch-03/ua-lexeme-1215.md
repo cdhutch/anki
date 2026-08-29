@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.3
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: залишати / залишити
   UA_Example: Вони залишають менше сміття, ніж раніше.
   EN_Example: They leave less trash than before.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/залишати; https://goroh.pp.ua/Словозміна/залишити
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective, 1st conjugation. (Залишатися "to stay/remain"

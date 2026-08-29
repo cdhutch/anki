@@ -6,10 +6,11 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.6
 - pos:noun
 - gender:f
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ручка
   UA_Example: Дай мені, будь ласка, ручку написати адресу.
   EN_Example: Give me a pen, please, to write the address.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.6, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/ручка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

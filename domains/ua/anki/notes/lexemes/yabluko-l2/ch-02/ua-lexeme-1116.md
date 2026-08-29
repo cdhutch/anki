@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.6
+- ch:1.12.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: радити / порадити
   UA_Example: Бібліотекар завжди радить цікаві книги.
   EN_Example: The librarian always recommends interesting books.
-  Tags_Ch: ch:2.2.6
+  Tags_Ch: ch:2.2.6, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/радити; https://goroh.pp.ua/Словозміна/порадити
   Source_Note: Горох-verified 2026-08-28, ch.2.6 sourcing pass (book genres/plots).
   Verification Notes: New. imperfective., non-reflexive, 2 conj. Regular 2nd-conj. verb; no

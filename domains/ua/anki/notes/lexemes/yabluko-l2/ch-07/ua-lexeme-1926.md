@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.2
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: продати
   UA_Example: Він продав старий телефон і купив новий.
   EN_Example: He sold his old phone and bought a new one.
-  Tags_Ch: ch:2.7.2
+  Tags_Ch: ch:2.7.2, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/продати
   Source_Note: Горох-verified 2026-08-28, ch.7.2 sourcing pass (accounts/passwords tech vocabulary;
     frequency adverbs; descriptive adjectives).

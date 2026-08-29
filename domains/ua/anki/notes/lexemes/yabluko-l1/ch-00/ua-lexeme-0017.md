@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:m
 - pos:profession
@@ -36,7 +36,7 @@ fields:
   TypingAnswer: фермер
   UA_Example: Фермер працює на полі від ранку до вечора.
   EN_Example: The farmer works in the field from morning to evening.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/фермер
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

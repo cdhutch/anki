@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.1
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мити
   UA_Example: Він миє посуд щовечора.
   EN_Example: He washes the dishes every evening.
-  Tags_Ch: ch:2.6.1
+  Tags_Ch: ch:2.6.1, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/мити
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).

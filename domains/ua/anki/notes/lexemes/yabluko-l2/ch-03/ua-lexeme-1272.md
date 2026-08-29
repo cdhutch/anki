@@ -10,6 +10,9 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.4
+- ch:1.2.5
+- ch:1.3.3
+- ch:1.5.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +38,7 @@ fields:
   TypingAnswer: лише
   UA_Example: У опитуванні взяли участь лише кілька мешканців.
   EN_Example: Only a few residents took part in the survey.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4, ch:1.2.5, ch:1.3.3, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/лише
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

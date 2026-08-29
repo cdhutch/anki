@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.1
+- ch:1.11.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: написати
   UA_Example: Він написав листа своїй бабусі.
   EN_Example: He wrote a letter to his grandmother.
-  Tags_Ch: ch:2.6.1
+  Tags_Ch: ch:2.6.1, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/написати
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).

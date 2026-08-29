@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.1
+- ch:1.11.2
 - pos:verb
 - status:draft
 fields:
@@ -36,11 +37,12 @@ fields:
   TypingAnswer: прати
   UA_Example: Мама пере білизну щосуботи.
   EN_Example: Mom does the laundry every Saturday.
-  Tags_Ch: ch:2.6.1
+  Tags_Ch: ch:2.6.1, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/прати
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).
   Verification Notes: New. Imperfective, "to wash, launder (clothes)". Textbook aspect pair
-    прати-випрати, this sub-chapter.
+    прати-випрати, this sub-chapter. Merged duplicate note(s) ua-lexeme-2341 into this canonical
+    note during corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

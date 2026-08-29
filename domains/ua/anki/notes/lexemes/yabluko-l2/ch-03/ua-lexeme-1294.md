@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.5
+- ch:1.3.3
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: домашня тварина
   UA_Example: У них є домашня тварина — кіт.
   EN_Example: They have a pet — a cat.
-  Tags_Ch: ch:2.3.5
+  Tags_Ch: ch:2.3.5, ch:1.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/домашня тварина
   Source_Note: Горох-verified 2026-08-28, ch.3.5 sourcing pass (civic life, leisure, and fractions).
   Verification Notes: New. Adjective (домашній 'domestic, home-') + fem. noun (тварина 'animal')

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.4
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: влаштовувати
   UA_Example: Школа влаштовувала змагання щороку.
   EN_Example: The school held a competition every year.
-  Tags_Ch: ch:2.4.4
+  Tags_Ch: ch:2.4.4, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/влаштовувати
   Source_Note: Горох-verified 2026-08-28, ch.4.4 sourcing pass (sports/competition; appearance
     description; feeding/hosting verbs).

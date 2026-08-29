@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.7
+- ch:1.4.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: інформація
   UA_Example: Дякую за інформацію.
   EN_Example: Thanks for the information.
-  Tags_Ch: ch:2.2.7
+  Tags_Ch: ch:2.2.7, ch:1.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/інформація
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).

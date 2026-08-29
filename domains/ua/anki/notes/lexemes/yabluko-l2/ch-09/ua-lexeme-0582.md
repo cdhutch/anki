@@ -6,10 +6,15 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.4
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.3.3
+- ch:1.4.1
+- ch:1.5.5
 - pos:verb
 - motion:base
 - status:verified
@@ -44,7 +49,7 @@ fields:
   UA_Example: Ми часто їздимо на дачу влітку, а того дня ми їхали і слухали радіо.
   EN_Example: We often go (drive) to the dacha in summer, and that day we were driving and
     listening to the radio.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.3.3, ch:1.4.1, ch:1.5.5, ch:1.8.5, ch:1.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/їздити; https://goroh.pp.ua/Словозміна/їхати;
     https://goroh.pp.ua/Словозміна/поїхати
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).

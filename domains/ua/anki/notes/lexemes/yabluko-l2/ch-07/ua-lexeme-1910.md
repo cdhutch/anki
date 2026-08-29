@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: прозорий
   UA_Example: Пароль зберігається у прозорому файлі -- це небезпечно.
   EN_Example: The password is stored in a plain-text ("transparent") file -- that's not safe.
-  Tags_Ch: ch:2.7.2
+  Tags_Ch: ch:2.7.2, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/прозорий
   Source_Note: Горох-verified 2026-08-28, ch.7.2 sourcing pass (accounts/passwords tech vocabulary;
     frequency adverbs; descriptive adjectives).

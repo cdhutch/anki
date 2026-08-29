@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: їдальня
   UA_Example: Обід подають у їдальні готелю.
   EN_Example: Lunch is served in the hotel's dining hall.
-  Tags_Ch: ch:2.5.6
+  Tags_Ch: ch:2.5.6, ch:1.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/їдальня
   Source_Note: Горох-verified 2026-08-28, ch.5.6 sourcing pass (resort/recreation vocabulary;
     arranging/overnighting verbs; hospitality formulas) -- chapter 5 complete.

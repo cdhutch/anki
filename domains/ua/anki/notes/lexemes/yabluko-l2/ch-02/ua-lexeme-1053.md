@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.5
+- ch:1.5.4
+- ch:1.5.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: печиво
   UA_Example: Вона спекла печиво до чаю.
   EN_Example: She baked cookies for tea.
-  Tags_Ch: ch:2.2.5
+  Tags_Ch: ch:2.2.5, ch:1.5.4, ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/печиво
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Neut., 2nd decl., hard group.

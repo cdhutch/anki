@@ -6,10 +6,13 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.4
+- ch:1.4.7
+- ch:1.12.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +38,7 @@ fields:
   TypingAnswer: радість
   UA_Example: Відновлений фасад приніс жителям велику радість.
   EN_Example: The restored facade brought the residents great joy.
-  Tags_Ch: ch:2.3.4
+  Tags_Ch: ch:2.3.4, ch:1.4.7, ch:1.9.3, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/радість
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

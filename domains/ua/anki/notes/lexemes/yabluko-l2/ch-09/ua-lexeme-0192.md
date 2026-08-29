@@ -6,11 +6,13 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
 - ch:2.5.1
+- ch:1.11.6
 - pos:noun
 - gender:n
 - status:verified
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: поле
   UA_Example: Гравці вибігли на поле під оплески вболівальників.
   EN_Example: The players ran out onto the field to the fans' applause.
-  Tags_Ch: ch:2.9.3, ch:2.5.1
+  Tags_Ch: ch:2.9.3, ch:2.5.1, ch:1.11.6, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/поле
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: ситуація
   UA_Example: Це доволі складна ситуація.
   EN_Example: This is quite a complicated situation.
-  Tags_Ch: ch:2.10.3, ch:2.2.5
+  Tags_Ch: ch:2.10.3, ch:2.2.5, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/ситуація
   Source_Note: Горох-verified 2026-08-28, ch.10.3 sourcing pass (health/wellbeing; coping
     & effort verbs).

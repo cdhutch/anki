@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.3
+- ch:1.2.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мода
   UA_Example: Це не просто мода, а спосіб життя.
   EN_Example: It's not just a fashion trend, it's a way of life.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3, ch:1.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/мода
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Fem., 1st decl., hard group.

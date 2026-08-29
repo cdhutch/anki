@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.5.2
+- ch:1.5.3
 - pos:noun
 - gender:m
 - status:draft
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: млинець
   UA_Example: На десерт були млинці з медом.
   EN_Example: For dessert there were pancakes with honey.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.5.2, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/млинець
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

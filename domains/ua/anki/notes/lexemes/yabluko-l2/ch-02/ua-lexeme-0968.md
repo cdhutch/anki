@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: спорттовари
   UA_Example: У магазині спорттоварів продають ковзани і лижі.
   EN_Example: The sporting goods store sells skates and skis.
-  Tags_Ch: ch:2.2.1
+  Tags_Ch: ch:2.2.1, ch:1.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/спорттовари
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: 'New. Plural-only noun (Горох: множинний); Горох also lists a singular

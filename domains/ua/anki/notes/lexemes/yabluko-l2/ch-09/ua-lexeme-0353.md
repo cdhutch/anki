@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:1.3.3
 - pos:adverb
 - status:verified
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ввечері
   UA_Example: Пізно ввечері всі зібралися біля вогню.
   EN_Example: Late in the evening everyone gathered around the fire.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:1.3.3
   Source_URL: https://goroh.pp.ua/Словозміна/ввечері
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: '2026-08-19: Lemma_Euphony set to уве́чері, lifted verbatim from this

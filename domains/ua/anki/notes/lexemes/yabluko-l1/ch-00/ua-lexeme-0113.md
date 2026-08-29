@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.7
 - pos:phrase
 - status:verified
 fields:
@@ -34,7 +34,7 @@ fields:
   TypingAnswer: Скільки Вам років?
   UA_Example: — Скільки Вам років? — Мені тридцять.
   EN_Example: — How old are you? — I am thirty.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.7
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''

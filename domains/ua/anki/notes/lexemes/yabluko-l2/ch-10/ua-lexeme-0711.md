@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.5
+- ch:1.5.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: народ
   UA_Example: Український народ має багату історію.
   EN_Example: The Ukrainian people have a rich history.
-  Tags_Ch: ch:2.10.5
+  Tags_Ch: ch:2.10.5, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/народ
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

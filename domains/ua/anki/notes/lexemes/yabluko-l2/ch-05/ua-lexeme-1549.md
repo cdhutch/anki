@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.2
+- ch:1.12.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: підлога
   UA_Example: На підлозі лежав старий килим.
   EN_Example: An old rug lay on the floor.
-  Tags_Ch: ch:2.5.2
+  Tags_Ch: ch:2.5.2, ch:1.7.2, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/підлога
   Source_Note: Горох-verified 2026-08-28, ch.5.2 sourcing pass (train travel/station; house
     features; sightseeing verbs and adjectives).

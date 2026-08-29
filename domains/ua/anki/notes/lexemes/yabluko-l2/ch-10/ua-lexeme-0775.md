@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: приймати / прийняти
   UA_Example: Приймайте ці таблетки двічі на день.
   EN_Example: Take these pills twice a day.
-  Tags_Ch: ch:2.10.6, ch:2.6.2,ch:2.7.6
+  Tags_Ch: ch:2.10.6, ch:2.6.2, ch:2.7.6, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/приймати; https://goroh.pp.ua/Словозміна/прийняти
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

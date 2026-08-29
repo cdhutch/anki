@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: зоомагазин
   UA_Example: Ми купили корм для кота в зоомагазині.
   EN_Example: We bought cat food at the pet shop.
-  Tags_Ch: ch:2.2.1
+  Tags_Ch: ch:2.2.1, ch:1.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/зоомагазин
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: New. Masc., 2nd decl., hard group.

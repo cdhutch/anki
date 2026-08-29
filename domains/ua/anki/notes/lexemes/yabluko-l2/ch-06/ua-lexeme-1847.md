@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.6.7
+- ch:1.5.5
+- ch:1.10.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: ведмідь
   UA_Example: З-за кущів раптом вийшов величезний ведмідь.
   EN_Example: A huge bear suddenly came out from behind the bushes.
-  Tags_Ch: ch:2.6.7
+  Tags_Ch: ch:2.6.7, ch:1.5.5, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/ведмідь
   Source_Note: Горох-verified 2026-08-28, ch.6.7 sourcing pass (bear/berry-picking anecdote;
     imperfective-perfective verb pairs; augmentative adjectives).

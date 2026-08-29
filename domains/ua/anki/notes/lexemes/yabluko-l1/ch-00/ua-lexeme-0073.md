@@ -9,7 +9,8 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
+- ch:1.2.5
 - pos:proper-noun
 - gender:f
 - pos:country
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: Бразилія
   UA_Example: Карнавал у Бразилії відомий у всьому світі.
   EN_Example: The carnival in Brazil is known throughout the world.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9, ch:1.2.5
   Source_URL: https://goroh.pp.ua/Словозміна/Бразилія
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

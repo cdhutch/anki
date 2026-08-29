@@ -13,6 +13,7 @@ tags:
 - pos:adverb
 - status:draft
 - ch:2.7.2
+- ch:1.5.7
 fields:
   NoteID: ua-lexeme-0834
   Lemma: щодня́
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: щодня
   UA_Example: Я щодня займаюся спортом.
   EN_Example: I exercise every day.
-  Tags_Ch: ch:2.1.1, ch:2.7.2
+  Tags_Ch: ch:2.1.1, ch:2.7.2, ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/щодня
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

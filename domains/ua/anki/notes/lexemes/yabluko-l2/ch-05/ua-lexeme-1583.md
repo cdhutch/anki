@@ -6,10 +6,12 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.3
+- ch:1.2.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: ратуша
   UA_Example: На головній площі стоїть старовинна ратуша.
   EN_Example: An ancient town hall stands in the main square.
-  Tags_Ch: ch:2.5.3
+  Tags_Ch: ch:2.5.3, ch:1.2.1, ch:1.9.3
   Source_URL: https://goroh.pp.ua/Словозміна/ратуша
   Source_Note: Горох-verified 2026-08-28, ch.5.3 sourcing pass (public buildings/monuments;
     architectural detail nouns; sightseeing adjectives).

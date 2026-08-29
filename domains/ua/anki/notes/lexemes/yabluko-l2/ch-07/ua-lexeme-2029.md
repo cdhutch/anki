@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.5
+- ch:1.11.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: візок
   UA_Example: У майбутньому візок керуватиметься голосом.
   EN_Example: In the future, the wheelchair will be controlled by voice.
-  Tags_Ch: ch:2.7.5
+  Tags_Ch: ch:2.7.5, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/візок
   Source_Note: 'Горох-verified 2026-08-28, ch.7.5 sourcing pass (energy/space/invention nouns)
     -- a compact, noun-only sub-chapter: left-column stream of the two-independent-columns

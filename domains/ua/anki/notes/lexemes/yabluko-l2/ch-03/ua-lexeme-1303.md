@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.5.3
+- ch:1.6.1
 - pos:noun
 - gender:f
 - status:draft
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: закуска
   UA_Example: На закуску ми замовили брускету.
   EN_Example: For a starter, we ordered bruschetta.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.5.3, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/закуска
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

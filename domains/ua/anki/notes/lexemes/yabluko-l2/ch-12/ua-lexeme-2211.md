@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.5
+- ch:1.11.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: вибори
   UA_Example: Вибори відбудуться навесні.
   EN_Example: The elections will take place in the spring.
-  Tags_Ch: ch:2.12.5
+  Tags_Ch: ch:2.12.5, ch:1.11.6
   Source_URL: https://goroh.pp.ua/Словозміна/вибори
   Source_Note: 'Горох-verified 2026-08-29, ch.12.5 sourcing pass (community/history & character
     vocabulary: ancestry, village life, civic/political terms, personality traits), cross-checked
