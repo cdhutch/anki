@@ -31,7 +31,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 6 | 13-14 | 100-101 | 6.1-6.7 | **done** |
 | 7 | 15-16 | 112-113 | 7.1-7.7 | **done** |
 | 8 | 17-18 | 130-131 | 8.1-8.7 | **done** |
-| 9 | 19-20 | 145-146 | 9.1-9.7 | pending |
+| 9 | 19-20 | 145-146 | 9.1-9.7 | **done** |
 | 10 | 21-22 | 162-163 | 10.1-10.7 | pending |
 | 11 | 23-26 | 180-183 | 11.1-11.7 (all verb aspect-pairs) | **done** |
 | 12 | 27-28 | 198-199 | 12.1-12.7 | pending |
@@ -190,3 +190,30 @@ wants prioritized.
   per its plain reading, though it sits among otherwise Christmas/household
   vocabulary in the source list. Commits: `27d9148d` (tags), `74be4f49` (drafts),
   progress index this commit. All 547 tests green throughout.
+- **ch.9 (all 7 subsections, complete)**: 230 unique words/phrases after
+  within-chapter dedup (transportation/weather, directions, city sightseeing,
+  opinions/hotels, health/body/leisure/fairy-tale vocab, errands/farewells, daily
+  habits -- the second-heaviest-reuse chapter after ch.8). 144 distinct existing
+  notes tagged, including 4 same-spelling homograph/sense resolutions (дорогий ->
+  "expensive"; тепло -> weather-predicative "warmly"; обов'язково -> left matched to
+  one of two pre-existing near-duplicate L2 notes, out of scope to merge; вухо ->
+  the just-merged canonical note, see below). 86 new UA_Lexeme notes drafted
+  (3516-3601), including 10 fixed-phrase notes (Ласкаво просимо!, як на зло,
+  Обережно!, Хвилинку!, за кордон, бути за, бути проти, бабине літо, одним словом,
+  швидка допомога) and 3 pair-completing perfective verbs cross-referenced via
+  CounterpartForm to their ch.8 imperfective partners (відчинити -> відчинятися;
+  вмитися -> вмиватися; поснідати -> снідати).
+
+  **A second, unrelated data-quality issue was found and fixed during this
+  chapter's dedup pass**: the same Ukrainian-word-leaking-into-English-example bug
+  fixed going forward starting in ch.7 turned out to also affect the entire
+  already-committed ch.5 (158 notes) and ch.6 (89 notes) batches, undetected until
+  now because the test suite doesn't check example-sentence content. All 247
+  affected notes (plus 1 pre-existing L2 note) were fixed with correct, hand-
+  reviewed English sentences; a related bug where some notes had been plugged into
+  a template mismatched to their actual part of speech was fixed at the same time.
+  One further true duplicate was found and merged in the process (ua-lexeme-3351
+  "вухо"/ear, ch.7, merged into the pre-existing ua-lexeme-3101, ch.5). Commits:
+  `f4f24bdc` (EN_Example fix), `63fe6231` (duplicate cleanup), `808d02d1` (ch.9
+  tags), `e25410c3` (ch.9 drafts), progress index this commit. All 547 tests green
+  throughout.
