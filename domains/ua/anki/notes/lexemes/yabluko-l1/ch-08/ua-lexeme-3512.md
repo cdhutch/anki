@@ -12,6 +12,7 @@ tags:
 - ch:1.8.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3512
   Lemma: ста́тися

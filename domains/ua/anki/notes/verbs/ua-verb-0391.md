@@ -11,6 +11,7 @@ tags:
 - ch:2.6.3
 - ch:2.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0391
   Lemma: ви́рушити

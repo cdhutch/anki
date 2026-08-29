@@ -88,3 +88,7 @@ domains/**/anki/inbox/
 # Ignore build files
 build/*
 .claude/
+
+# Per-machine incremental-sync bookmarks (tools/anki/sync/sync_scope.py) --
+# tracks progress against *your* local Anki collection, not repo content.
+.anki_sync_state/

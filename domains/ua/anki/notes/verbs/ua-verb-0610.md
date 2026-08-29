@@ -11,6 +11,7 @@ tags:
 - aspect:imperfective-only
 - ch:2.12.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0610
   Lemma: соро́митися

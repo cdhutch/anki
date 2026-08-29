@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
 - pending-confusable:почуття
 fields:
   NoteID: ua-lexeme-0534

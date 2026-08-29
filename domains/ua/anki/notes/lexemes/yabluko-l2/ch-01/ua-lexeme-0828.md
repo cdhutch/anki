@@ -12,6 +12,7 @@ tags:
 - ch:2.1.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0828
   Lemma: бу́день

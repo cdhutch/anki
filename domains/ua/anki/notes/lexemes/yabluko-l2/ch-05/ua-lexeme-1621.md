@@ -12,6 +12,7 @@ tags:
 - ch:2.5.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1621
   Lemma: збі́льшувати

@@ -14,6 +14,7 @@ tags:
 - ch:1.6.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2330
   Lemma: готува́тися

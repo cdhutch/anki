@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0819
   Lemma: підтве́рдити

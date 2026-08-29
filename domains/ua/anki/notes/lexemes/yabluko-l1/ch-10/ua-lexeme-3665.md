@@ -12,6 +12,7 @@ tags:
 - ch:1.10.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3665
   Lemma: валю́та

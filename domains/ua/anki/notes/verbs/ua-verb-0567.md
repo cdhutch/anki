@@ -10,6 +10,7 @@ tags:
 - class:conj1-irregular
 - ch:2.11.1
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0567
   Lemma: спожи́ти

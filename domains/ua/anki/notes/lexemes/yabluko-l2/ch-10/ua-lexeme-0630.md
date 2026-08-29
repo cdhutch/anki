@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0630
   Lemma: па́спортний

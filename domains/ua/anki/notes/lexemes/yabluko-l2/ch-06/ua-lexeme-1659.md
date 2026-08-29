@@ -15,6 +15,7 @@ tags:
 - ch:1.3.4
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1659
   Lemma: купува́ти

@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0759
   Lemma: знебо́лювальний

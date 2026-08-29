@@ -13,6 +13,7 @@ tags:
 - ch:2.7.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1910
   Lemma: прозо́рий

@@ -12,6 +12,7 @@ tags:
 - ch:2.8.4
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0501
   Lemma: вари́тися

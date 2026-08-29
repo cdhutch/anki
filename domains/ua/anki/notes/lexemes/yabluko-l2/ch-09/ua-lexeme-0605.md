@@ -13,6 +13,7 @@ tags:
 - pos:verb-phrase
 - phrase:verb
 - status:draft
+- release:pending
 - stress:unverified
 fields:
   NoteID: ua-lexeme-0605

@@ -12,6 +12,7 @@ tags:
 - ch:2.5.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1562
   Lemma: легкова́жний

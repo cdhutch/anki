@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:pvom_infinitive
 - status:verified
+- release:active
 - conj:drill
 fields:
   NoteID: ua-pvom-0004

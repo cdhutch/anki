@@ -17,6 +17,7 @@ tags:
 - ch:1.12.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0914
   Lemma: бра́ти

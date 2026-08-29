@@ -12,6 +12,7 @@ tags:
 - ch:2.6.1
 - pos:noun
 - status:draft
+- release:pending
 - ch:2.11.1
 - ch:1.11.6
 fields:

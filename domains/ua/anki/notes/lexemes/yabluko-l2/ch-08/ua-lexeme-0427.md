@@ -13,6 +13,7 @@ tags:
 - ch:1.5.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0427
   Lemma: до́вгий

@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1988
   Lemma: поле́гшити

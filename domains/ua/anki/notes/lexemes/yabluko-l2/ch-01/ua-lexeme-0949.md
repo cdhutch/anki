@@ -12,6 +12,7 @@ tags:
 - ch:2.1.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0949
   Lemma: повсякде́нний

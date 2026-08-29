@@ -14,6 +14,7 @@ tags:
 - ch:1.10.2
 - pos:adjective
 - status:verified
+- release:active
 - pending-confusable:тяжкий
 fields:
   NoteID: ua-lexeme-0436

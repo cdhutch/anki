@@ -13,6 +13,7 @@ tags:
 - ch:1.12.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2402
   Lemma: свари́тися

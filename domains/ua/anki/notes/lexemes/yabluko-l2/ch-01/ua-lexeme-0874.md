@@ -16,6 +16,7 @@ tags:
 - ch:1.5.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0874
   Lemma: обі́дати

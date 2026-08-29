@@ -13,6 +13,7 @@ tags:
 - ch:2.1.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0779
   Lemma: ну́ди́ти

@@ -16,6 +16,7 @@ tags:
 - pos:verb
 - motion:base
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0584
   Lemma: пла́вати

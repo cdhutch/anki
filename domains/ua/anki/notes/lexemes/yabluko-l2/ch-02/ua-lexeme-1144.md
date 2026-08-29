@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1144
   Lemma: зігріва́ти

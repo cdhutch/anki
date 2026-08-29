@@ -12,6 +12,7 @@ tags:
 - ch:1.9.3
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3529
   Lemma: вго́ру

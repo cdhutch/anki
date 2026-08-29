@@ -13,6 +13,7 @@ tags:
 - ch:1.4.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2912
   Lemma: тому́

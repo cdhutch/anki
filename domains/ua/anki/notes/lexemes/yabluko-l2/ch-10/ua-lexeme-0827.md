@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0827
   Lemma: підтве́рдити фіна́нсове забезпе́чення

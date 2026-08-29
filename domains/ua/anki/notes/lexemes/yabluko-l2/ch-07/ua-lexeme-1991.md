@@ -13,6 +13,7 @@ tags:
 - ch:2.7.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1991
   Lemma: розповіда́ти

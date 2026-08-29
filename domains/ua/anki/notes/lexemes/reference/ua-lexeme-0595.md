@@ -15,6 +15,7 @@ tags:
 - pos:noun
 - gender:f
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0595
   Lemma: по́дорож

@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.2.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0228
   Lemma: припро́шувати

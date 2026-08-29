@@ -15,6 +15,7 @@ tags:
 - ch:1.12.3
 - pos:adverb
 - status:verified
+- release:active
 - homograph:true
 fields:
   NoteID: ua-lexeme-0405

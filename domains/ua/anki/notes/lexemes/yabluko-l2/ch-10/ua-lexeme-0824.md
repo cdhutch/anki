@@ -12,6 +12,7 @@ tags:
 - ch:2.10.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0824
   Lemma: меди́чне страхува́ння

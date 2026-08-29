@@ -10,6 +10,7 @@ tags:
 - class:conj1-consonant+ти
 - ch:2.4.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0631
   Lemma: провести́

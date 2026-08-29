@@ -12,6 +12,7 @@ tags:
 - ch:2.6.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1781
   Lemma: ці́лу годи́ну

@@ -16,6 +16,7 @@ tags:
 - ch:1.12.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1165
   Lemma: полови́на

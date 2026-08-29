@@ -13,6 +13,7 @@ tags:
 - ch:1.6.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2364
   Lemma: гото́вий

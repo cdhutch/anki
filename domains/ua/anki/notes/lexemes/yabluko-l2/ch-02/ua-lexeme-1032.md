@@ -12,6 +12,7 @@ tags:
 - ch:2.2.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1032
   Lemma: вʼяза́ти

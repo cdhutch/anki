@@ -12,6 +12,7 @@ tags:
 - ch:2.9.7
 - pos:pronoun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0354
   Lemma: яки́йсь

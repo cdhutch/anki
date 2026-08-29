@@ -12,6 +12,7 @@ tags:
 - ch:1.11.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2513
   Lemma: наїда́тися

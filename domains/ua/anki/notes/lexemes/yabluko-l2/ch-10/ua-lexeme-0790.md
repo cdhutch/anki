@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0790
   Lemma: послу́хати грудну́ клі́тку

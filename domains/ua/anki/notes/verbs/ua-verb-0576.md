@@ -10,6 +10,7 @@ tags:
 - class:conj1-irregular
 - ch:2.11.2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0576
   Lemma: розкла́стися

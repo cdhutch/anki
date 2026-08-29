@@ -15,6 +15,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0351
   Lemma: пі́вніч

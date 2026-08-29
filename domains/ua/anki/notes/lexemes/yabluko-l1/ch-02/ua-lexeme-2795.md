@@ -12,6 +12,7 @@ tags:
 - ch:1.2.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2795
   Lemma: карнава́льний

@@ -13,6 +13,7 @@ tags:
 - ch:2.9.2
 - pos:verb
 - status:verified
+- release:active
 - ch:2.9.3
 - ch:1.10.7
 fields:

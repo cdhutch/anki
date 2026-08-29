@@ -12,6 +12,7 @@ tags:
 - ch:2.9.2
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0176
   Lemma: насоло́джуватися

@@ -13,6 +13,7 @@ tags:
 - ch:1.1.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2637
   Lemma: трамва́й

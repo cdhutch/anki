@@ -14,6 +14,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0169
   Lemma: корабе́ль

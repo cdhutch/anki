@@ -11,6 +11,9 @@ Suspension policy (added 2026-07-31 -- this script previously had none at
 all, so a card suspended by accident here, e.g. a mistyped Command-1/Alt-1
 during review, stayed suspended forever; nothing ever re-asserted a state):
     - status:draft tag → suspend (inactive/unreviewed)
+    - release:pending tag → suspend (not yet released for study pacing;
+      added 2026-08-29, per Craig -- independent of status, see
+      should_suspend())
     - conj:suspended tag → always suspend (added 2026-08-19, per Craig --
       reference only, not for drilling). Mirrors ua_verb_import.py, where the
       same tag separates the motion-verb cores that get drilled from the
@@ -111,15 +114,17 @@ def anki_connect(action, params=None):
 def should_suspend(tags):
     """Suspension policy for UA_PVOM_Infinitive cards -- see module docstring.
 
-    Two independent axes, matching ua_verb_import.py:
+    Three independent axes, matching ua_verb_import.py plus the release gate:
         - status:draft      → content not reviewed
         - conj:suspended    → reviewed and correct, but deliberately not drilled
+        - release:pending   → reviewed and correct, but not yet released for
+          study pacing (added 2026-08-29, per Craig)
     Any one of them suspends. Keeping them separate is what lets a note be
     verified on quality axis and still held out of the rotation without
     lying about its review state.
     """
     return (
-        "status:draft" in tags
+        not (("status:verified" in tags) and ("release:active" in tags))
         or "conj:suspended" in tags
     )
 

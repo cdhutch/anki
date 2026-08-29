@@ -12,6 +12,7 @@ tags:
 - ch:1.12.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3856
   Lemma: жорсто́кий

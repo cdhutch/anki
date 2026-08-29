@@ -12,6 +12,7 @@ tags:
 - ch:1.10.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3707
   Lemma: двоповерхо́вий

@@ -13,6 +13,7 @@ tags:
 - ch:2.9.3
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0210
   Lemma: би́тися

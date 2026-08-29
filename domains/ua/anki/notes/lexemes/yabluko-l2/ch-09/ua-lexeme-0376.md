@@ -13,6 +13,7 @@ tags:
 - pos:verb-phrase
 - phrase:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0376
   Lemma: бра́ти у́часть у змага́ннях

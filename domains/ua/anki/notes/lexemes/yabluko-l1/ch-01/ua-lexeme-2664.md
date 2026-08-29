@@ -13,6 +13,7 @@ tags:
 - ch:1.6.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2664
   Lemma: архіте́ктор

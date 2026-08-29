@@ -12,6 +12,7 @@ tags:
 - ch:2.6.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1773
   Lemma: наказа́ти

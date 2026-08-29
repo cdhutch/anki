@@ -12,6 +12,7 @@ tags:
 - ch:2.6.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1718
   Lemma: попрацюва́ти

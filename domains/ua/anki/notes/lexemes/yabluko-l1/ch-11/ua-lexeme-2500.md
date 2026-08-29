@@ -13,6 +13,7 @@ tags:
 - ch:1.2.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2500
   Lemma: мо́жна

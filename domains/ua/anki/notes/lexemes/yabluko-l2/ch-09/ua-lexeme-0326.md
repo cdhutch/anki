@@ -14,6 +14,7 @@ tags:
 - phrase:conversational
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0326
   Lemma: Перепро́шую, я не почу́в/-ла...

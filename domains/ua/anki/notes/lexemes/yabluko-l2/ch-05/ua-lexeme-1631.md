@@ -12,6 +12,7 @@ tags:
 - ch:2.5.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1631
   Lemma: обгово́рення

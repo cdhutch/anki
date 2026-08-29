@@ -12,6 +12,7 @@ tags:
 - ch:2.8.3
 - pos:conjunction
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0476
   Lemma: як

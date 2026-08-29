@@ -13,6 +13,7 @@ tags:
 - ch:1.12.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0987
   Lemma: парфу́ми

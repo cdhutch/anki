@@ -14,6 +14,7 @@ tags:
 - phrase:adjective
 - ch09-phrase
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0297
   Lemma: заря́джений позити́вною ене́ргією приго́д

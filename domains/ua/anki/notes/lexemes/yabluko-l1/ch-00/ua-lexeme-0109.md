@@ -12,6 +12,8 @@ tags:
 - ch:1.0.4
 - pos:phrase
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0109
   Lemma: Як Вас зва́ти?

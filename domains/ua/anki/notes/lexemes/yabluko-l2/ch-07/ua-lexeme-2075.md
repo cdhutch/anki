@@ -12,6 +12,7 @@ tags:
 - ch:2.7.7
 - pos:conjunction
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2075
   Lemma: замі́сть того́, щоб

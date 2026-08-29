@@ -13,6 +13,7 @@ tags:
 - ch:1.5.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1624
   Lemma: різномані́тний

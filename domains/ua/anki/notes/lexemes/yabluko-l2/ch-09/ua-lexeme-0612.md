@@ -12,6 +12,7 @@ tags:
 - ch:2.9.6
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0612
   Lemma: наближа́тися

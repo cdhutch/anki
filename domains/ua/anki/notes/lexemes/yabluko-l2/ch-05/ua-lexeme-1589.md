@@ -12,6 +12,7 @@ tags:
 - ch:2.5.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1589
   Lemma: механі́чний

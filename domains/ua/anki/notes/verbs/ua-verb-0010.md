@@ -12,6 +12,7 @@ tags:
 - phase:2a
 - ch:2.9.2
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0010
   Lemma: попливти́

@@ -12,6 +12,7 @@ tags:
 - ch:2.9.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0134
   Lemma: вітри́льний

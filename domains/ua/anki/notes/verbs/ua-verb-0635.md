@@ -10,6 +10,7 @@ tags:
 - class:conj2-ity
 - ch:2.4.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0635
   Lemma: втра́тити

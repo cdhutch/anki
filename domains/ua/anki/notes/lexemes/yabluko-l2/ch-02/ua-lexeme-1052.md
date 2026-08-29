@@ -12,6 +12,7 @@ tags:
 - ch:2.2.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1052
   Lemma: імени́нник

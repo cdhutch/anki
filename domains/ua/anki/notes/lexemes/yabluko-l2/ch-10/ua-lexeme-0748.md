@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0748
   Lemma: не́жить

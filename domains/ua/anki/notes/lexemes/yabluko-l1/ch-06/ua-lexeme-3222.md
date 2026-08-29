@@ -12,6 +12,7 @@ tags:
 - ch:1.6.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3222
   Lemma: боро́тися

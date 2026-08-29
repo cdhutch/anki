@@ -13,6 +13,7 @@ tags:
 - ch:2.4.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1397
   Lemma: до́свід

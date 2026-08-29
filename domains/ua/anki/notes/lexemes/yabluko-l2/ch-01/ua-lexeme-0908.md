@@ -15,6 +15,7 @@ tags:
 - ch:1.10.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0908
   Lemma: наро́дний

@@ -13,6 +13,7 @@ tags:
 - ch:1.12.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2493
   Lemma: подарува́ти

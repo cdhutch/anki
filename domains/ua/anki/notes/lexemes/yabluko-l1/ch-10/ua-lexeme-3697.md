@@ -12,6 +12,7 @@ tags:
 - ch:1.10.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3697
   Lemma: слон

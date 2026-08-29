@@ -12,6 +12,7 @@ tags:
 - ch:1.11.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2516
   Lemma: роздава́ти

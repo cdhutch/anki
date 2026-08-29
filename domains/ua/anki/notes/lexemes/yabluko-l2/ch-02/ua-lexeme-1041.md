@@ -12,6 +12,7 @@ tags:
 - ch:2.2.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1041
   Lemma: цуценя́

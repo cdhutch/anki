@@ -12,6 +12,7 @@ tags:
 - ch:2.1.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0910
   Lemma: урочи́стий

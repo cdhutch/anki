@@ -12,6 +12,7 @@ tags:
 - ch:2.11.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2174
   Lemma: вибуха́ти

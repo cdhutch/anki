@@ -13,6 +13,7 @@ tags:
 - ch:1.5.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2354
   Lemma: заплати́ти

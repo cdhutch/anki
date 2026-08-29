@@ -13,6 +13,7 @@ tags:
 - ch:1.5.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0863
   Lemma: по-дру́ге

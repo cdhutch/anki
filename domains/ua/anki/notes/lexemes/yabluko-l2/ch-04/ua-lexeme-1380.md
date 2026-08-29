@@ -13,6 +13,7 @@ tags:
 - ch:2.4.2
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1380
   Lemma: че́рвень

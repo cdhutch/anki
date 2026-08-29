@@ -13,6 +13,7 @@ tags:
 - ch:1.11.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1669
   Lemma: прасува́ти

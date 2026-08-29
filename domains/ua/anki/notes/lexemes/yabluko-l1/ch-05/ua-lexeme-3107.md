@@ -13,6 +13,7 @@ tags:
 - ch:1.5.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3107
   Lemma: курʼєр

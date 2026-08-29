@@ -12,6 +12,7 @@ tags:
 - ch:1.12.3
 - pos:numeral
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3826
   Lemma: оби́дві

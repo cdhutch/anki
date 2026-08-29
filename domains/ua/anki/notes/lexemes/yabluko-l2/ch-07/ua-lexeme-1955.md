@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1955
   Lemma: нудни́й

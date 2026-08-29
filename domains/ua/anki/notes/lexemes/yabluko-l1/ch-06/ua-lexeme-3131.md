@@ -12,6 +12,7 @@ tags:
 - ch:1.6.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3131
   Lemma: го́рох

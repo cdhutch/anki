@@ -13,6 +13,7 @@ tags:
 - ch:1.4.7
 - pos:preposition
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0355
   Lemma: че́рез

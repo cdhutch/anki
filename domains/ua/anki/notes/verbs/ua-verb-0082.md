@@ -10,6 +10,7 @@ tags:
 - class:conj2-ити
 - ch:2.8.5
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0082
   Lemma: розво́дити

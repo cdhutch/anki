@@ -16,6 +16,7 @@ tags:
 - ch:1.12.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1441
   Lemma: прово́дити

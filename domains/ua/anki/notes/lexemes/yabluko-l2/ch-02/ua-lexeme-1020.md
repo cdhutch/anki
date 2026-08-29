@@ -15,6 +15,7 @@ tags:
 - ch:1.12.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1020
   Lemma: і́грашка

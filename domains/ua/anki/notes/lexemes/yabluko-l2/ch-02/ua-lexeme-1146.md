@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1146
   Lemma: попереджа́ти

@@ -12,6 +12,7 @@ tags:
 - ch:2.11.1
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2095
   Lemma: повто́рно

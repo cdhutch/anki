@@ -12,6 +12,7 @@ tags:
 - ch:2.1.6
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0932
   Lemma: одна́ково

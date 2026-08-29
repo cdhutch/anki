@@ -13,6 +13,7 @@ tags:
 - ch:1.1.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2660
   Lemma: нога́

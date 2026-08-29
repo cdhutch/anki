@@ -14,6 +14,7 @@ tags:
 - gender:m
 - topic:grammar-term
 - status:verified
+- release:active
 - homograph:true
 fields:
   NoteID: ua-lexeme-0182

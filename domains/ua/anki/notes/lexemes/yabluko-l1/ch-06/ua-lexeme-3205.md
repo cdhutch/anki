@@ -12,6 +12,7 @@ tags:
 - ch:1.6.4
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3205
   Lemma: флома́стер

@@ -12,6 +12,8 @@ tags:
 - ch:1.0.7
 - pos:phrase
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0113
   Lemma: Скі́льки Вам ро́ків?

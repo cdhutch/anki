@@ -12,6 +12,7 @@ tags:
 - ch:1.4.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2926
   Lemma: Інтерне́т

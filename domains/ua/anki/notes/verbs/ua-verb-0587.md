@@ -10,6 +10,7 @@ tags:
 - class:conj2-ity
 - ch:2.12.1
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0587
   Lemma: боя́тися

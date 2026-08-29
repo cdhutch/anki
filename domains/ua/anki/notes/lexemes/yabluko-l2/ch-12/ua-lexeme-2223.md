@@ -13,6 +13,7 @@ tags:
 - ch:1.1.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2223
   Lemma: прі́звисько

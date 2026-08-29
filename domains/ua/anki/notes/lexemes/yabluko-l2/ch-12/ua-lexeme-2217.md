@@ -12,6 +12,7 @@ tags:
 - ch:2.12.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2217
   Lemma: нащадок

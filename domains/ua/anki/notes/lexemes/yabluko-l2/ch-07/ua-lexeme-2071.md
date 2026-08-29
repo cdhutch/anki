@@ -12,6 +12,7 @@ tags:
 - ch:2.7.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2071
   Lemma: розважа́льний

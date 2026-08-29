@@ -13,6 +13,7 @@ tags:
 - ch:2.1.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0850
   Lemma: доба́

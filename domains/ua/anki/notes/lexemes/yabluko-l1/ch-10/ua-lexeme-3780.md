@@ -12,6 +12,7 @@ tags:
 - ch:1.10.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3780
   Lemma: з одно́го бо́ку

@@ -12,6 +12,7 @@ tags:
 - ch:2.8.1
 - pos:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0392
   Lemma: о́пади

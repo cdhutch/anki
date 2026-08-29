@@ -14,6 +14,7 @@ tags:
 - gender:m
 - homograph:true
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1302
   Lemma: замо́к

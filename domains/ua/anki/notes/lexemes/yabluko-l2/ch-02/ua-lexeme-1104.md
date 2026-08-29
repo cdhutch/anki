@@ -12,6 +12,7 @@ tags:
 - ch:2.2.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1104
   Lemma: пое́зія

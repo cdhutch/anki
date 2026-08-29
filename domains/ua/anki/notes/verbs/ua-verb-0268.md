@@ -10,6 +10,7 @@ tags:
 - class:2
 - ch:2.3.4
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0268
   Lemma: ті́шитися

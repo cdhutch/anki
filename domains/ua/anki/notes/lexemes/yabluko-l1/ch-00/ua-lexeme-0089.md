@@ -13,6 +13,8 @@ tags:
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0089
   Lemma: іспа́нський

@@ -12,6 +12,7 @@ tags:
 - ch:1.3.6
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2812
   Lemma: поцілува́ти

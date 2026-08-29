@@ -12,6 +12,7 @@ tags:
 - ch:2.7.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2058
   Lemma: очі́кувані результа́ти

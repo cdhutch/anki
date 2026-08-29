@@ -13,6 +13,7 @@ tags:
 - ch:2.5.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1246
   Lemma: парка́н

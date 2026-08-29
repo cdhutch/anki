@@ -11,6 +11,7 @@ tags:
 - ch:2.5.5
 - ch:2.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0323
   Lemma: приє́днувати

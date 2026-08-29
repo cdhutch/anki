@@ -12,6 +12,7 @@ tags:
 - ch:2.12.5
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2237
   Lemma: безстра́шний

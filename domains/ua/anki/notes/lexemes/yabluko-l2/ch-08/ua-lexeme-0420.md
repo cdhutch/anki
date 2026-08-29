@@ -17,6 +17,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0420
   Lemma: стра́ва

@@ -13,6 +13,7 @@ tags:
 - ch:1.11.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1698
   Lemma: вста́ти

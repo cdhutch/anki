@@ -12,6 +12,8 @@ tags:
 - ch:1.0.1
 - pos:interjection
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0105
   Lemma: приві́т

@@ -13,6 +13,7 @@ tags:
 - ch:2.9.2
 - ch:2.6.2
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0002
   Lemma: іти́

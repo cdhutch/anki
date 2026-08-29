@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.2.7
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0237
   Lemma: повідомля́ти

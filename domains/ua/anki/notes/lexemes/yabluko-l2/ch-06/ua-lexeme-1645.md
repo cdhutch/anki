@@ -12,6 +12,7 @@ tags:
 - ch:2.6.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1645
   Lemma: бе́злад

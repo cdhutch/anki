@@ -12,6 +12,7 @@ tags:
 - ch:2.3.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1228
   Lemma: бо́сий

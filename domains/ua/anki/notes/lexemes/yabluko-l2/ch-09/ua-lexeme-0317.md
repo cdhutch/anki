@@ -19,6 +19,7 @@ tags:
 - ch:1.4.5
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0317
   Lemma: каза́ти

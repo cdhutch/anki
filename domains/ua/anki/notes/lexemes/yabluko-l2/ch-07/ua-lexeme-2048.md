@@ -12,6 +12,7 @@ tags:
 - ch:2.7.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2048
   Lemma: Дя́кую за запро́шення, із задово́ленням!

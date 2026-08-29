@@ -12,6 +12,7 @@ tags:
 - ch:reference
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0591
   Lemma: могу́тній

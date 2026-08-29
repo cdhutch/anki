@@ -12,6 +12,7 @@ tags:
 - ch:1.2.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2699
   Lemma: шко́ла

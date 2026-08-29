@@ -13,6 +13,7 @@ tags:
 - ch:1.3.3
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0353
   Lemma: вве́чері

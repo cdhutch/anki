@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - pos:interjection
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1839
   Lemma: Ти не пові́риш

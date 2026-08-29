@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1153
   Lemma: Ма́ємо честь запроси́ти Вас...

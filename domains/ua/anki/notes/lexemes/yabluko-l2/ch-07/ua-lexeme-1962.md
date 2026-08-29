@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1962
   Lemma: До при́кладу

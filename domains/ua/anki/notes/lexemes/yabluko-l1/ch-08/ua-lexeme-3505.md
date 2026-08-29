@@ -12,6 +12,7 @@ tags:
 - ch:1.8.6
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3505
   Lemma: Ко́тра годи́на?

@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1151
   Lemma: Бу́демо ра́ді ба́чити Вас...

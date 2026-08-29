@@ -15,6 +15,8 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:pending
 - homograph:true
 fields:
   NoteID: ua-lexeme-0047

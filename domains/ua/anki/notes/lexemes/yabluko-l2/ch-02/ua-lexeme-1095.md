@@ -12,6 +12,7 @@ tags:
 - ch:2.2.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1095
   Lemma: сту́катися

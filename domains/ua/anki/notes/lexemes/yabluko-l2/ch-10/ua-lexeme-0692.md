@@ -12,6 +12,7 @@ tags:
 - ch:2.10.3
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0692
   Lemma: надмі́рна вага́

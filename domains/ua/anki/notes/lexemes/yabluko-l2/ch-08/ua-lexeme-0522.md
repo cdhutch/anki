@@ -14,6 +14,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0522
   Lemma: трембі́та

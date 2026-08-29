@@ -12,6 +12,7 @@ tags:
 - ch:2.1.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0928
   Lemma: змо́кнути

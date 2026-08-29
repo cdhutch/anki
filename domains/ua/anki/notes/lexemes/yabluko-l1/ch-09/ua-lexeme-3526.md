@@ -12,6 +12,7 @@ tags:
 - ch:1.9.2
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3526
   Lemma: опе́рний

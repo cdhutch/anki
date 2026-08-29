@@ -12,6 +12,7 @@ tags:
 - ch:2.5.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1608
   Lemma: залізни́ця

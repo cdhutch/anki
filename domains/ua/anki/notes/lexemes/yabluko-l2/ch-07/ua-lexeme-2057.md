@@ -12,6 +12,7 @@ tags:
 - ch:2.7.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2057
   Lemma: нерозу́мні витра́ти

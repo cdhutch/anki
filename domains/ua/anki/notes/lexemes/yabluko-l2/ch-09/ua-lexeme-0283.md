@@ -12,6 +12,7 @@ tags:
 - ch:2.9.5
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0283
   Lemma: переліта́ти

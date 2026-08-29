@@ -12,6 +12,7 @@ tags:
 - ch:2.12.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2241
   Lemma: поступо́во

@@ -11,6 +11,7 @@ tags:
 - ch:2.7.7
 - ch:2.7
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0550
   Lemma: зво́дити

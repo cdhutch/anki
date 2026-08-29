@@ -15,6 +15,7 @@ tags:
 - ch:1.10.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2601
   Lemma: світ

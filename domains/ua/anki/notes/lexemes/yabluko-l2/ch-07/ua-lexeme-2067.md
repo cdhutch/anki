@@ -12,6 +12,7 @@ tags:
 - ch:2.7.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2067
   Lemma: зво́дити

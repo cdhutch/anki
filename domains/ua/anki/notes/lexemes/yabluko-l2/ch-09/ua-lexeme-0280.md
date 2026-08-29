@@ -13,6 +13,7 @@ tags:
 - ch:2.5.2
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0280
   Lemma: вила́зити

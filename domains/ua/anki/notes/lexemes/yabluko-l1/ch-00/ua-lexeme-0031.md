@@ -13,6 +13,8 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0031
   Lemma: вікно́

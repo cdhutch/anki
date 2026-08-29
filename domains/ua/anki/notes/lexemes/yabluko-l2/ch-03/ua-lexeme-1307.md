@@ -17,6 +17,7 @@ tags:
 - pos:noun
 - gender:m
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1307
   Lemma: напі́й

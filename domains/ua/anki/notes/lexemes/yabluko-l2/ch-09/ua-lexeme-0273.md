@@ -13,6 +13,7 @@ tags:
 - ch:2.2.6
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0273
   Lemma: приго́дницький

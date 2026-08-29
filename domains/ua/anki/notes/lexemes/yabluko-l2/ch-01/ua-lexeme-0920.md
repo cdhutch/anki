@@ -16,6 +16,7 @@ tags:
 - ch:1.6.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0920
   Lemma: святкува́ти

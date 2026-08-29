@@ -12,6 +12,7 @@ tags:
 - ch:2.11.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2182
   Lemma: Що нам роби́ти?

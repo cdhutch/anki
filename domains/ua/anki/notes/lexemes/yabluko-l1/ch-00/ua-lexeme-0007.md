@@ -14,6 +14,8 @@ tags:
 - gender:f
 - pos:profession
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0007
   Lemma: медсестра́

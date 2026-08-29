@@ -12,6 +12,7 @@ tags:
 - ch:2.11.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2158
   Lemma: землетру́с

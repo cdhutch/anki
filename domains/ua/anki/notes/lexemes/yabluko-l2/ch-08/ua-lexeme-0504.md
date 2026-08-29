@@ -12,6 +12,7 @@ tags:
 - ch:2.8.4
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0504
   Lemma: попере́дній

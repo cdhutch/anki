@@ -12,6 +12,8 @@ tags:
 - ch:1.0.5
 - pos:phrase
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0111
   Lemma: Яка́ Ва́ша профе́сія?

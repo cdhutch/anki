@@ -11,6 +11,7 @@ tags:
 - ch:2.5.3
 - ch:2.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0318
   Lemma: вмі́щувати

@@ -15,6 +15,7 @@ tags:
 - ch:1.4.3
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0470
   Lemma: пе́рший

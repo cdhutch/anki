@@ -15,6 +15,7 @@ tags:
 - ch:1.12.6
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2846
   Lemma: ко́жен

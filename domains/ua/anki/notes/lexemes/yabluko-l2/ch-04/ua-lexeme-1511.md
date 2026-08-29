@@ -12,6 +12,7 @@ tags:
 - ch:2.4.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1511
   Lemma: стажува́ння

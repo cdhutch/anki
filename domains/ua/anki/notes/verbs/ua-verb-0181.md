@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.1.5
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0181
   Lemma: сприйма́ти

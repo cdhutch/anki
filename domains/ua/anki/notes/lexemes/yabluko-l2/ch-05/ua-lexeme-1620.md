@@ -12,6 +12,7 @@ tags:
 - ch:2.5.5
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1620
   Lemma: у рамках фестивалю

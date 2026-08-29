@@ -12,6 +12,7 @@ tags:
 - ch:2.3.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1284
   Lemma: відсо́ток

@@ -14,6 +14,8 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0057
   Lemma: прі́звище

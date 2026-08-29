@@ -12,6 +12,7 @@ tags:
 - ch:1.7.4
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3330
   Lemma: вхідни́й

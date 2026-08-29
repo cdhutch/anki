@@ -12,6 +12,7 @@ tags:
 - ch:2.6.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1857
   Lemma: старе́зний

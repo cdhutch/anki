@@ -14,6 +14,7 @@ tags:
 - ch:1.6.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0899
   Lemma: коля́дка

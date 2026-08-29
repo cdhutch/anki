@@ -12,6 +12,7 @@ tags:
 - ch:2.7.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2052
   Lemma: Ви́бач, але я не мо́жу. Мо́же, і́ншим ра́зом?

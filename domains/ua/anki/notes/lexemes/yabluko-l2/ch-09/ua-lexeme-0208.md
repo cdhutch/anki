@@ -12,6 +12,7 @@ tags:
 - ch:2.9.3
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0208
   Lemma: коза́цький

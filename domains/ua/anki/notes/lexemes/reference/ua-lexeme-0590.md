@@ -14,6 +14,7 @@ tags:
 - ch:1.12.3
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0590
   Lemma: си́льний

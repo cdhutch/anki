@@ -13,6 +13,7 @@ tags:
 - ch:1.10.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2891
   Lemma: створи́ти

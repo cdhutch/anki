@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0786
   Lemma: струс мо́зку

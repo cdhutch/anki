@@ -12,6 +12,7 @@ tags:
 - ch:2.2.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1012
   Lemma: майстри́ня

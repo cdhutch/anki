@@ -12,6 +12,7 @@ tags:
 - ch:2.8.6
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0555
   Lemma: гла́дкий

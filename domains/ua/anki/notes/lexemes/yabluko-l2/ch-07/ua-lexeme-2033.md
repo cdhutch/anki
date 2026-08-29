@@ -14,6 +14,7 @@ tags:
 - ch:1.3.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2033
   Lemma: електри́ка

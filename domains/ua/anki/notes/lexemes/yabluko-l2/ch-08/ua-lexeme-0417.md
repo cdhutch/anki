@@ -14,6 +14,7 @@ tags:
 - ch:1.12.3
 - pos:adverb
 - status:verified
+- release:active
 - cluster:intensifier-adverbs
 fields:
   NoteID: ua-lexeme-0417

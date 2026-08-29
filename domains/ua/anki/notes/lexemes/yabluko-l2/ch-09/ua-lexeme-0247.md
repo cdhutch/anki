@@ -14,6 +14,7 @@ tags:
 - fixed-phrase
 - ch:2.9.7
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0247
   Lemma: ра́но-вра́нці

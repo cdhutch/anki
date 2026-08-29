@@ -12,6 +12,7 @@ tags:
 - ch:2.10.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0677
   Lemma: зда́тність

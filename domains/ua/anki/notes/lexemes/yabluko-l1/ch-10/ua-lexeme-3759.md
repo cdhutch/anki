@@ -14,6 +14,7 @@ tags:
 - ch:1.12.7
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3759
   Lemma: соро́чка

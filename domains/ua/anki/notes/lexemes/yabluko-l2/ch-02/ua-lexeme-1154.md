@@ -12,6 +12,7 @@ tags:
 - ch:2.2.7
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1154
   Lemma: Ра́дий/-а Вас повідо́мити...

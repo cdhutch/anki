@@ -13,6 +13,8 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0025
   Lemma: анке́та

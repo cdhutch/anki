@@ -12,6 +12,7 @@ tags:
 - ch:1.6.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3163
   Lemma: колядува́ти

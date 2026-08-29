@@ -11,6 +11,7 @@ tags:
 - ch:2.6.1
 - ch:2.6
 - status:draft
+- release:pending
 - ch:2.7.1
 fields:
   NoteID: ua-verb-0356

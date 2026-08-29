@@ -12,6 +12,7 @@ tags:
 - ch:2.3.7
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1342
   Lemma: повноці́нний

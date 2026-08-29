@@ -14,6 +14,7 @@ tags:
 - gender:m
 - animate:true
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0539
   Lemma: їжа́к

@@ -12,6 +12,7 @@ tags:
 - ch:2.9.6
 - grammar:verb_motion
 - status:verified
+- release:active
 fields:
   NoteID: ua-grammar-0010
   Topic: Manner-Neutral Motion Verbs vs. the PVOM Prefix System

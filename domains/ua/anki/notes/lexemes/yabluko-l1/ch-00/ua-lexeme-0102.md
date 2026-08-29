@@ -13,6 +13,8 @@ tags:
 - ch:1.5.2
 - pos:adverb
 - status:verified
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0102
   Lemma: пра́вильно

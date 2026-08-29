@@ -13,6 +13,7 @@ tags:
 - ch:2.5.1
 - pos:preposition
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1543
   Lemma: навпро́ти

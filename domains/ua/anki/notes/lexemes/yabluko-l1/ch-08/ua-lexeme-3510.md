@@ -12,6 +12,7 @@ tags:
 - ch:1.8.6
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3510
   Lemma: перука́рня

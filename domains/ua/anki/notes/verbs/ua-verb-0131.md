@@ -10,6 +10,7 @@ tags:
 - class:regular-2
 - ch:2.10.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0131
   Lemma: ну́ди́ти

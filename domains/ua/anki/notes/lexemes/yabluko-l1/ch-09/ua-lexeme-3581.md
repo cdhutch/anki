@@ -12,6 +12,7 @@ tags:
 - ch:1.9.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3581
   Lemma: верхи́

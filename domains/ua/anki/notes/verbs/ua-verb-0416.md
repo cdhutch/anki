@@ -11,6 +11,7 @@ tags:
 - ch:2.6.4
 - ch:2.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0416
   Lemma: вистри́бувати

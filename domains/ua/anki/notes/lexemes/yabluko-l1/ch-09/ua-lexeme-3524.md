@@ -13,6 +13,7 @@ tags:
 - ch:1.9.2
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3524
   Lemma: куди́

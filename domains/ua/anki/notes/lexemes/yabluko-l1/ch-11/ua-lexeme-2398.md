@@ -12,6 +12,7 @@ tags:
 - ch:1.11.3
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2398
   Lemma: смішити

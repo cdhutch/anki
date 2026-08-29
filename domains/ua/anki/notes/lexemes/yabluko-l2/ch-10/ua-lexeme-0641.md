@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0641
   Lemma: табло́

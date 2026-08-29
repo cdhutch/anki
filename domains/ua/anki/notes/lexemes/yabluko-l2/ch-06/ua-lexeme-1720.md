@@ -15,6 +15,7 @@ tags:
 - ch:1.12.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1720
   Lemma: прокида́тися

@@ -12,6 +12,7 @@ tags:
 - ch:1.5.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3089
   Lemma: хот-до́г

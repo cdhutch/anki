@@ -12,6 +12,7 @@ tags:
 - ch:2.11.5
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2176
   Lemma: ги́нути

@@ -12,6 +12,7 @@ tags:
 - ch:2.3.1
 - pos:numeral
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1164
   Lemma: пів

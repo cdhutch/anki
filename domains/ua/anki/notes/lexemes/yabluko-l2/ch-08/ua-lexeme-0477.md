@@ -16,6 +16,7 @@ tags:
 - ch:1.12.3
 - pos:numeral
 - status:verified
+- release:active
 - pending-confusable:скільки
 - pending-confusable:декілька
 fields:

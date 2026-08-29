@@ -14,6 +14,7 @@ tags:
 - ch:1.4.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2278
   Lemma: уявля́ти

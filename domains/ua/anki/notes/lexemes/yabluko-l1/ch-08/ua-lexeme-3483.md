@@ -13,6 +13,7 @@ tags:
 - ch:1.12.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3483
   Lemma: День незале́жності

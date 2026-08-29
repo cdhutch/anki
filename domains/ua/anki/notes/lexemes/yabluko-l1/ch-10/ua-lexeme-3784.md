@@ -12,6 +12,7 @@ tags:
 - ch:1.10.5
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3784
   Lemma: окрі́м того

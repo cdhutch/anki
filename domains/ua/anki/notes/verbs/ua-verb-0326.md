@@ -11,6 +11,7 @@ tags:
 - ch:2.6
 - ch:2
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0326
   Lemma: дава́ти

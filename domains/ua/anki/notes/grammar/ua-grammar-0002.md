@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:aspect
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0002
   Topic: Prefixed Motion Verbs — Aspect Formation

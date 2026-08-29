@@ -12,6 +12,7 @@ tags:
 - ch:2.10.1
 - pos:phrase
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0647
   Lemma: контро́ль безпе́ки

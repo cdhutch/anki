@@ -12,6 +12,7 @@ tags:
 - ch:1.8.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-3456
   Lemma: перемо́га

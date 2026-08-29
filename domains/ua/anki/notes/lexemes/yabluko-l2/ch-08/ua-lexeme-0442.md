@@ -13,6 +13,7 @@ tags:
 - ch:1.1.4
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0442
   Lemma: вели́кий

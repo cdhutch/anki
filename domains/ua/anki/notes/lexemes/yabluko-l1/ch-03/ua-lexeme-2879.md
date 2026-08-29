@@ -12,6 +12,7 @@ tags:
 - ch:1.3.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2879
   Lemma: ста́рша люди́на

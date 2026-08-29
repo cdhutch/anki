@@ -10,6 +10,7 @@ tags:
 - class:1
 - ch:2.1.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0164
   Lemma: залиша́тися

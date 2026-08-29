@@ -15,6 +15,7 @@ tags:
 - ch:1.10.4
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0432
   Lemma: бага́тий

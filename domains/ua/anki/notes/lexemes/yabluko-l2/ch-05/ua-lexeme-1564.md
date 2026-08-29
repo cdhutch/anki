@@ -15,6 +15,7 @@ tags:
 - ch:1.10.3
 - pos:adjective
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1564
   Lemma: розташо́ваний

@@ -11,6 +11,7 @@ tags:
 - ch:2.6.1
 - ch:2.6
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0343
   Lemma: написа́ти

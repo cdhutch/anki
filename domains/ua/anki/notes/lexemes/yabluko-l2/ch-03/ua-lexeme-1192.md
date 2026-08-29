@@ -13,6 +13,7 @@ tags:
 - ch:1.12.3
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1192
   Lemma: мегапо́ліс

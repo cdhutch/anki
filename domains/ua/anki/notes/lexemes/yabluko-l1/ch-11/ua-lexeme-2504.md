@@ -12,6 +12,7 @@ tags:
 - ch:1.11.5
 - pos:noun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-2504
   Lemma: ре́мінь безпе́ки

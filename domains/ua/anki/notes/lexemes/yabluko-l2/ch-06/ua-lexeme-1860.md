@@ -12,6 +12,7 @@ tags:
 - ch:2.6.7
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1860
   Lemma: пля́мкати

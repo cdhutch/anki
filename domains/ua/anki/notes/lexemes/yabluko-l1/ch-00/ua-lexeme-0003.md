@@ -14,6 +14,8 @@ tags:
 - gender:m
 - pos:profession
 - status:verified
+- release:active
+- relearn:pending
 - ch:2.2.4
 fields:
   NoteID: ua-lexeme-0003

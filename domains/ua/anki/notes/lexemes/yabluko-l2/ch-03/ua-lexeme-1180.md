@@ -13,6 +13,7 @@ tags:
 - ch:2.3.2
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1180
   Lemma: рахува́ти

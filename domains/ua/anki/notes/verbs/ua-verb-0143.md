@@ -11,6 +11,7 @@ tags:
 - ch:2.1.2
 - ch:2.6.3
 - status:draft
+- release:pending
 fields:
   NoteID: ua-verb-0143
   Lemma: вжива́ти

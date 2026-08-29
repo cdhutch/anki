@@ -15,6 +15,7 @@ tags:
 - ch:1.10.5
 - pos:adverb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0350
   Lemma: прибли́зно

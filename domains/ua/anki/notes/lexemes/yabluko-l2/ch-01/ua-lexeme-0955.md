@@ -12,6 +12,7 @@ tags:
 - ch:2.1.7
 - pos:adverb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0955
   Lemma: щове́чора

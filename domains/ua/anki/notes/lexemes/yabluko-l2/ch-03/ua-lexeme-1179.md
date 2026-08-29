@@ -13,6 +13,7 @@ tags:
 - ch:1.12.6
 - pos:pronoun
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-1179
   Lemma: жо́дний

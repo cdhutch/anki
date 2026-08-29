@@ -12,6 +12,7 @@ tags:
 - ch:2.1.1
 - pos:verb
 - status:draft
+- release:pending
 fields:
   NoteID: ua-lexeme-0832
   Lemma: розважа́тися

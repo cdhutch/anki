@@ -12,6 +12,7 @@ tags:
 - ch:2.9.1
 - grammar:verb_motion
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0001
   Topic: Motion Verbs — Two Groups
