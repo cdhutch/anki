@@ -79,14 +79,26 @@ either way.
 ### Step 3: Preview, then apply
 
 ```bash
-python tools/anki/release_wave.py --dry-run     # preview, touches nothing
-python tools/anki/release_wave.py               # apply
+make ua-release-wave-dry-run     # preview, touches nothing
+make ua-release-wave             # apply
 ```
 
-This is a plain Python script, **not** a `make` target. Applying flips
-`release:pending` → `release:active` on up to `batch_size` notes per group
-(oldest `NoteID` first), and — for any group carrying `type: relearn` —
-also inserts a `relearn:pending` tag right after `release:active`.
+Applying flips `release:pending` → `release:active` on up to `batch_size`
+verified notes per group (oldest `NoteID` first), and — for any group
+carrying `type: relearn` — also inserts a `relearn:pending` tag right
+after `release:active`.
+
+> [!note] Only `status:verified` notes are promoted
+> A note that's `release:pending` but still `status:draft` is real
+> backlog, just not curated yet — it's reported as "blocked on
+> verification," not promoted. **If an entire side (all your new-content
+> groups, or all your relearn groups) has nothing verified-and-ready this
+> run, the command says so explicitly** — that's your cue to go verify
+> some notes before the next release wave has anything to work with.
+> Added 2026-08-29 after a real run promoted 21 still-draft notes to
+> `release:active` (harmless — they stayed suspended under the AND-gate
+> below regardless — but it let mature-interval seeding waste a seed on
+> cards that were never actually live).
 
 ### Step 4: Sync — this is what actually unsuspends the cards
 
@@ -299,17 +311,22 @@ often across the whole UA tree. Per-deck `new.perDay` limits differ (see
 ```bash
 git checkout main && git pull
 
-python tools/anki/release_wave.py --dry-run     # preview
-python tools/anki/release_wave.py               # apply
+make ua-release-wave-dry-run     # preview -- also flags any side with
+                                  # nothing verified-and-ready
+make ua-release-wave             # apply
 
-make ua                                          # sync everything, unsuspend
+make ua                          # sync everything, unsuspend
 
-make ua-seed-mature-dry-run                      # preview seeding
-make ua-seed-mature                              # apply seeding
+make ua-seed-mature-dry-run      # preview seeding
+make ua-seed-mature              # apply seeding
 
 git add -A
 git commit -m "Release wave + mature-interval seeding: <what you promoted>"
 git push
 ```
+
+> [!tip] Write the actual commit message
+> Fill in `<what you promoted>` — which groups, roughly how many notes.
+> Future-you (or `git log`) will thank you.
 
 See [[Make_UA_Commands_Reference]] for every command's individual detail.
