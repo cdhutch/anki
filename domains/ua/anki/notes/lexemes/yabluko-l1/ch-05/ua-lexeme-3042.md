@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.4
+- ch:1.12.5
+- ch:1.7.1
 - pos:noun
 - status:draft
 fields:
@@ -35,9 +37,11 @@ fields:
   TypingAnswer: двері
   UA_Example: Мені потрібен двері.
   EN_Example: Close the door, please.
-  Tags_Ch: ch:1.5.4
+  Tags_Ch: ch:1.5.4, ch:1.12.5, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/двері
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    ua-lexeme-3253 into this note (ch.12 dedup review, 2026-08-29); its chapter tags migrated
+    here.
 ---
 

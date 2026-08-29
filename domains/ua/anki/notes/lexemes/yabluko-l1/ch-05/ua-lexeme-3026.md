@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.3
+- ch:1.12.3
+- ch:1.7.5
 - pos:adjective
 - status:draft
 fields:
@@ -35,9 +37,11 @@ fields:
   TypingAnswer: різний
   UA_Example: Це дуже різний.
   EN_Example: This is very different.
-  Tags_Ch: ch:1.5.3
+  Tags_Ch: ch:1.5.3, ch:1.12.3, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/різний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    ua-lexeme-3369 into this note (ch.12 dedup review, 2026-08-29); its chapter tags migrated
+    here.
 ---
 
