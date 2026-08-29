@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: зуб
   UA_Example: У мене болить зуб.
   EN_Example: I have a toothache (lit. my tooth hurts).
-  Tags_Ch: ch:2.1.4
+  Tags_Ch: ch:2.1.4, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/зуб
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

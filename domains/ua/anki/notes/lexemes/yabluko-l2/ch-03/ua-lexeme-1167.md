@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: чашка
   UA_Example: Налий каву в чашку.
   EN_Example: Pour the coffee into the cup.
-  Tags_Ch: ch:2.3.1, ch:1.5.5
+  Tags_Ch: ch:2.3.1, ch:1.5.5, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/чашка
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
   Verification Notes: New. Fem., 1st decl., hard group.

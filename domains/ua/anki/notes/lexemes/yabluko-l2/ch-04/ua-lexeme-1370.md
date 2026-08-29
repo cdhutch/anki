@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мило
   UA_Example: Помий руки з милом перед їжею.
   EN_Example: Wash your hands with soap before eating.
-  Tags_Ch: ch:2.4.1
+  Tags_Ch: ch:2.4.1, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/мило
   Source_Note: 'Горох-verified 2026-08-28, ch.4.1 sourcing pass (history: centuries, era markers,
     everyday inventions).'

@@ -6,6 +6,8 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.6
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: квартира
   UA_Example: Ми знімаємо квартиру у центрі міста.
   EN_Example: We rent an apartment in the city centre.
-  Tags_Ch: ch:1.0, ch:1.3.3
+  Tags_Ch: ch:1.0, ch:1.3.3, ch:1.7.1, ch:1.7.6
   Source_URL: https://goroh.pp.ua/Словозміна/квартира
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

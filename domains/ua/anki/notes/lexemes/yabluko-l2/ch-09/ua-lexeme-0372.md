@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: лавка
   UA_Example: Він сід на лавку в парку, щоб трохи відпочити.
   EN_Example: He sat down on a bench in the park to rest for a bit.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/лавка
   Source_Note: Горох-verified 2026-07-26 -- same page as ua-lexeme-0235; this is the "для\
     сидіння"/bench sense, listed first on the Горох page.

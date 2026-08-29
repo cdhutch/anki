@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: кабінет
   UA_Example: Директор запросив мене до свого кабінету.
   EN_Example: The director invited me into his office.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/кабінет
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

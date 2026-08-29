@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: площа
   UA_Example: Пам''ятник стоїть на площі.
   EN_Example: The monument stands on the square.
-  Tags_Ch: ch:1.2.1
+  Tags_Ch: ch:1.2.1, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/площа
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.1, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

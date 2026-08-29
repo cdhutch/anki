@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: неслухняний
   UA_Example: Цей хлопчик дуже неслухняний.
   EN_Example: This boy is very disobedient.
-  Tags_Ch: ch:1.11.4
+  Tags_Ch: ch:1.11.4, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/неслухняний
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

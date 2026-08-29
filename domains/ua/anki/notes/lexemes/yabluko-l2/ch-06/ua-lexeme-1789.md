@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: годинник
   UA_Example: Годинник на стіні показував пів на восьму.
   EN_Example: The clock on the wall showed half past seven.
-  Tags_Ch: ch:2.6.4
+  Tags_Ch: ch:2.6.4, ch:1.7.2
   Source_URL: https://goroh.pp.ua/Словозміна/годинник
   Source_Note: Горох-verified 2026-08-28, ch.6.4 sourcing pass (magic trick anecdote vocabulary).
   Verification Notes: New. Masc., 2nd decl., hard group.

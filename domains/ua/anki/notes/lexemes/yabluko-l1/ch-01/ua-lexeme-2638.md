@@ -6,6 +6,8 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: шафа
   UA_Example: Одяг лежить у шафі.
   EN_Example: The clothes are in the closet.
-  Tags_Ch: ch:1.1.4
+  Tags_Ch: ch:1.1.4, ch:1.7.1, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/шафа
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

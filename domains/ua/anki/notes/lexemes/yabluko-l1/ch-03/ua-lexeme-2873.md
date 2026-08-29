@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: коли-небудь
   UA_Example: Ти коли-небудь був у Києві?
   EN_Example: Have you ever been to Kyiv?
-  Tags_Ch: ch:1.3.7
+  Tags_Ch: ch:1.3.7, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/коли-небудь
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

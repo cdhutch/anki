@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: річ
   UA_Example: Це дуже корисна річ.
   EN_Example: This is a very useful thing.
-  Tags_Ch: ch:1.11.3, ch:1.5.4
+  Tags_Ch: ch:1.11.3, ch:1.5.4, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/річ
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

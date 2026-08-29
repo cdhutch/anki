@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: сон
   UA_Example: Дитині потрібно багато сну.
   EN_Example: The child needs a lot of sleep.
-  Tags_Ch: ch:2.1.4, ch:2.1.7, ch:1.11.5
+  Tags_Ch: ch:2.1.4, ch:2.1.7, ch:1.11.5, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/сон
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

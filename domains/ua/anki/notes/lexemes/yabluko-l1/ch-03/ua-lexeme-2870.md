@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: номер
   UA_Example: У нас номер на другому поверсі.
   EN_Example: We have a room on the second floor.
-  Tags_Ch: ch:1.3.6
+  Tags_Ch: ch:1.3.6, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/номер
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

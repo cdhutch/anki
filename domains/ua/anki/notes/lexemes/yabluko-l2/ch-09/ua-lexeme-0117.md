@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: підходити / підійти
   UA_Example: ''
   EN_Example: ''
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.7.6
   Source_URL: https://goroh.pp.ua/Словозміна/підходити
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

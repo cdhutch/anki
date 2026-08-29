@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: доба
   UA_Example: Лікарня працює цілу добу.
   EN_Example: The hospital works around the clock.
-  Tags_Ch: ch:2.1.3
+  Tags_Ch: ch:2.1.3, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/доба
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

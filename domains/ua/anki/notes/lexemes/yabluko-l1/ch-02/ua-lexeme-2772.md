@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: стіна
   UA_Example: Велика Китайська стіна дуже довга.
   EN_Example: The Great Wall of China is very long.
-  Tags_Ch: ch:1.2.5
+  Tags_Ch: ch:1.2.5, ch:1.7.2
   Source_URL: https://goroh.pp.ua/Словозміна/стіна
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

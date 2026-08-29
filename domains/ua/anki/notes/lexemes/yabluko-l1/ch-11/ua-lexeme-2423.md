@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сходи
   UA_Example: Ми піднялися сходами на другий поверх.
   EN_Example: We went up the stairs to the second floor.
-  Tags_Ch: ch:1.11.3
+  Tags_Ch: ch:1.11.3, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/сходи
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

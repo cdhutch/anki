@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: залежати
   UA_Example: Все залежить від погоди.
   EN_Example: Everything depends on the weather.
-  Tags_Ch: ch:2.3.7
+  Tags_Ch: ch:2.3.7, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/залежати
   Source_Note: Горох-verified 2026-08-28, ch.3.7 sourcing pass (opinion formulas; happiness/values;
     trust and friendship).

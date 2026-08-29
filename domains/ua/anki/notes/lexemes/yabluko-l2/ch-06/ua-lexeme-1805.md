@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -40,7 +41,7 @@ fields:
   TypingAnswer: вирішити
   UA_Example: Вона вирішила більше нічого не казати.
   EN_Example: She decided not to say anything else.
-  Tags_Ch: ch:2.6.5,ch:2.7.3, ch:1.11.1, ch:1.4.3, ch:1.4.7, ch:1.5.3
+  Tags_Ch: ch:2.6.5,ch:2.7.3, ch:1.11.1, ch:1.4.3, ch:1.4.7, ch:1.5.3, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/вирішити
   Source_Note: Горох-verified 2026-08-28, ch.6.5 sourcing pass (crime/danger anecdote; imperfective-perfective
     verb pairs).

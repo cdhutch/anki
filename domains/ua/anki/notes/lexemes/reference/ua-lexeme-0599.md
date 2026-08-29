@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: картина
   UA_Example: У музеї висить картина відомого українського художника.
   EN_Example: A painting by a famous Ukrainian artist hangs in the museum.
-  Tags_Ch: ch:reference, ch:1.3.2, ch:1.4.1
+  Tags_Ch: ch:reference, ch:1.3.2, ch:1.4.1, ch:1.7.2
   Source_URL: https://goroh.pp.ua/Словозміна/картина
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- added to complete
     the painting-nouns near-synonym cluster with живопис and розпис. No Яблуко textbook chapter

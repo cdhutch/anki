@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: меблі
   UA_Example: Ми купили нові меблі.
   EN_Example: We bought new furniture.
-  Tags_Ch: ch:1.1.4
+  Tags_Ch: ch:1.1.4, ch:1.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/меблі
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

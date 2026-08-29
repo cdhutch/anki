@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: водоспад
   UA_Example: Ми зупинилися сфотографувати водоспад.
   EN_Example: We stopped to photograph the waterfall.
-  Tags_Ch: ch:2.8.5
+  Tags_Ch: ch:2.8.5, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/водоспад
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.
   Verification Notes: ''

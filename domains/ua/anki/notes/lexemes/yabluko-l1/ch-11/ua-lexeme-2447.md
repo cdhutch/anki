@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: обіцяти / пообіцяти
   UA_Example: Він обіцяє прийти вчасно.
   EN_Example: He promises to arrive on time.
-  Tags_Ch: ch:1.11.4
+  Tags_Ch: ch:1.11.4, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/обіцяти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

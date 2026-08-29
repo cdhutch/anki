@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: тарілка
   UA_Example: Постав тарілку на стіл.
   EN_Example: Put the plate on the table.
-  Tags_Ch: ch:2.2.5
+  Tags_Ch: ch:2.2.5, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/тарілка
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Fem., 1st decl., hard group.

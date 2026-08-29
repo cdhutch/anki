@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: почуватися / почутися
   UA_Example: Як ти почуваєшся сьогодні?
   EN_Example: How are you feeling today?
-  Tags_Ch: ch:2.10.6,ch:2.12.3
+  Tags_Ch: ch:2.10.6,ch:2.12.3, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/почуватися; https://goroh.pp.ua/Словозміна/почутися
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).

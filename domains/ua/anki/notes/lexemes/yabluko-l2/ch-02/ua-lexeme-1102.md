@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: казка
   UA_Example: Мама читає дитині казку на ніч.
   EN_Example: Mom reads the child a fairy tale at night.
-  Tags_Ch: ch:2.2.6, ch:1.2.3
+  Tags_Ch: ch:2.2.6, ch:1.2.3, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/казка
   Source_Note: Горох-verified 2026-08-28, ch.2.6 sourcing pass (book genres/plots).
   Verification Notes: New. Fem., 1st decl., hard group.

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -45,7 +46,7 @@ fields:
   TypingAnswer: вогонь
   UA_Example: Вони розпалили вогонь біля намету.
   EN_Example: They lit a fire next to the tent.
-  Tags_Ch: ch:2.9.7, ch:2.1.5, ch:1.11.4
+  Tags_Ch: ch:2.9.7, ch:2.1.5, ch:1.11.4, ch:1.7.4
   Source_URL: https://goroh.pp.ua/Словозміна/вогонь
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: 'Горох lists several closely related senses (flame/fig. passion; bonfire/light;

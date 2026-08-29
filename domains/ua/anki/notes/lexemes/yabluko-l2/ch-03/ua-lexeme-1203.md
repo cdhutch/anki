@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: реклама
   UA_Example: Надмірна реклама дратує людей.
   EN_Example: Excessive advertising annoys people.
-  Tags_Ch: ch:2.3.3, ch:1.11.4
+  Tags_Ch: ch:2.3.3, ch:1.11.4, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/реклама
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: 'New. Fem., 1st decl., hard group. Горох lists two headwords: "популяризація

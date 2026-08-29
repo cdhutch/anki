@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: берег
   UA_Example: Ми сиділи на березі моря.
   EN_Example: We sat on the seashore.
-  Tags_Ch: ch:1.2.4
+  Tags_Ch: ch:1.2.4, ch:1.7.7
   Source_URL: https://goroh.pp.ua/Словозміна/берег
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

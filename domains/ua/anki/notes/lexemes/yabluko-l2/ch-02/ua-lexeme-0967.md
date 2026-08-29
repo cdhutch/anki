@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: канцтовари
   UA_Example: Перед навчальним роком батьки купують канцтовари.
   EN_Example: Before the school year, parents buy school supplies.
-  Tags_Ch: ch:2.2.1
+  Tags_Ch: ch:2.2.1, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/канцтовари
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: 'New. Plural-only noun (Горох: множинний). Wordlist gives the full form
