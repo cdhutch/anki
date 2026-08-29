@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: швидкий
   UA_Example: Це дуже швидкий.
-  EN_Example: This is very швидкий.
+  EN_Example: This is very fast.
   Tags_Ch: ch:1.5.5, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/швидкий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

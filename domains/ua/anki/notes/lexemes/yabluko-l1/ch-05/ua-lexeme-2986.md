@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кукурудза
   UA_Example: Свіжий кукурудза дуже смачний.
-  EN_Example: Fresh кукурудза is very tasty.
+  EN_Example: Fresh corn is very tasty.
   Tags_Ch: ch:1.5.1, ch:1.5.4, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/кукурудза
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

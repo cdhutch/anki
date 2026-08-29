@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: суші
   UA_Example: 'Це популярна страва: суші.'
-  EN_Example: 'This is a popular dish: суші.'
+  EN_Example: 'This is a popular dish: sushi.'
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/суші
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

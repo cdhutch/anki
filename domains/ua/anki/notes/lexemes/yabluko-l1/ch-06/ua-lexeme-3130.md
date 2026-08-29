@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: горіховий
   UA_Example: Це дуже горіховий.
-  EN_Example: This is very горіховий.
+  EN_Example: This has a strong nutty flavor.
   Tags_Ch: ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/горіховий
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

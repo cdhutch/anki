@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: крейда
   UA_Example: Це моя крейда.
-  EN_Example: This is my крейда.
+  EN_Example: This is my chalk.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/крейда
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

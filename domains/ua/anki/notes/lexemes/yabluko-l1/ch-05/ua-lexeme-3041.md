@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: гривня
   UA_Example: Мені потрібен гривня.
-  EN_Example: I need гривня.
+  EN_Example: I need a few hryvnias.
   Tags_Ch: ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/гривня
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

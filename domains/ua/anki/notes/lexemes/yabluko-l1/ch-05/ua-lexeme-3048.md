@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: навіть
   UA_Example: Мені потрібен навіть.
-  EN_Example: I need навіть.
+  EN_Example: Even a child can do this.
   Tags_Ch: ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/навіть
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

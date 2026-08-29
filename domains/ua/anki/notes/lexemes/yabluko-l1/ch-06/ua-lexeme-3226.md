@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: столик
   UA_Example: Це столик.
-  EN_Example: This is столик.
+  EN_Example: This is a table.
   Tags_Ch: ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/столик
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

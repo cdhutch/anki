@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: гарбуз
   UA_Example: Це гарбуз.
-  EN_Example: This is гарбуз.
+  EN_Example: This is a pumpkin.
   Tags_Ch: ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/гарбуз
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: цукерка
   UA_Example: Я їм цукерка щоранку.
-  EN_Example: I eat цукерка every morning.
+  EN_Example: I eat candy every morning.
   Tags_Ch: ch:1.5.2, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/цукерка
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

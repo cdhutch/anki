@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: горох
   UA_Example: Я купив горох.
-  EN_Example: I bought горох.
+  EN_Example: I bought peas.
   Tags_Ch: ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/горох
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

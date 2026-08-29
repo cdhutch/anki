@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кетчуп
   UA_Example: Я їм кетчуп щоранку.
-  EN_Example: I eat кетчуп every morning.
+  EN_Example: I put ketchup on my food every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/кетчуп
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

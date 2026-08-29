@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: святий
   UA_Example: Це дуже святий.
-  EN_Example: This is very святий.
+  EN_Example: This is very holy.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/святий
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

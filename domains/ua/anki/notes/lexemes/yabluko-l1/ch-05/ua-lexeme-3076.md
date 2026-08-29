@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: простий
   UA_Example: Це дуже простий.
-  EN_Example: This is very простий.
+  EN_Example: This is very simple.
   Tags_Ch: ch:1.5.5, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/простий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

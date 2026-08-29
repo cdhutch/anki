@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: здійснюватися
   UA_Example: Він хоче здійснюватися.
-  EN_Example: He wants to здійснюватися.
+  EN_Example: He wants his dream to come true.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/здійснюватися
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

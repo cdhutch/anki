@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кефір
   UA_Example: Мені потрібна пачка кефір.
-  EN_Example: I need a pack of кефір.
+  EN_Example: I need a pack of kefir.
   Tags_Ch: ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/кефір
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

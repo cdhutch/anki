@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: повернути
   UA_Example: Він повернути щодня.
-  EN_Example: He повернутиs every day.
+  EN_Example: He returns it every day.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/повернути
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

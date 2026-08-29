@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: надавати
   UA_Example: Це дуже надавати.
-  EN_Example: This is very надавати.
+  EN_Example: I prefer tea to coffee.
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/надавати
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

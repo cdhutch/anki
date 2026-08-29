@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кубик
   UA_Example: Нарізаємо цибулю кубикками.
-  EN_Example: Cut the onion into кубик.
+  EN_Example: Cut the onion into cubes.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/кубик
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

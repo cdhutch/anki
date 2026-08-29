@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: гамбургер
   UA_Example: Я купив гамбургер.
-  EN_Example: I bought гамбургер.
+  EN_Example: I bought a hamburger.
   Tags_Ch: ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/гамбургер
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

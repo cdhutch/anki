@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: парад
   UA_Example: Це парад.
-  EN_Example: This is парад.
+  EN_Example: This is a parade.
   Tags_Ch: ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/парад
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

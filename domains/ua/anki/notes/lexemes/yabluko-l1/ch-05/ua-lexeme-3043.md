@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: копійка
   UA_Example: Мені потрібен копійка.
-  EN_Example: I need копійка.
+  EN_Example: I need a few kopiykas.
   Tags_Ch: ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/копійка
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

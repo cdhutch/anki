@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кур''єр
   UA_Example: Це кур''єр.
-  EN_Example: This is кур''єр.
+  EN_Example: This is a courier.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/курєр
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: директор
   UA_Example: Це директор.
-  EN_Example: This is директор.
+  EN_Example: This is a director.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/директор
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

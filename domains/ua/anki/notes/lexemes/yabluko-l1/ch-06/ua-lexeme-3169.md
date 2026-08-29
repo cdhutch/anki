@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: підлива
   UA_Example: На Різдво готують підлива.
-  EN_Example: They make підлива for Christmas.
+  EN_Example: They make gravy for Christmas.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/підлива
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

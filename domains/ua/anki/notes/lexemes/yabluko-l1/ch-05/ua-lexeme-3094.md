@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: варення
   UA_Example: Мені потрібна пачка варення.
-  EN_Example: I need a pack of варення.
+  EN_Example: I need a pack of jam.
   Tags_Ch: ch:1.5.6, ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/варення
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

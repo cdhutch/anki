@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: бажання
   UA_Example: Це бажання.
-  EN_Example: This is бажання.
+  EN_Example: This is a wish.
   Tags_Ch: ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/бажання
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

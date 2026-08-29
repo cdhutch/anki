@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: солоний
   UA_Example: Свіжий солоний дуже смачний.
-  EN_Example: Fresh солоний is very tasty.
+  EN_Example: This is very salty.
   Tags_Ch: ch:1.5.1, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/солоний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

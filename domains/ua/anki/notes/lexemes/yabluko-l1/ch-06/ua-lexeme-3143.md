@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: картопляний
   UA_Example: Це дуже картопляний.
-  EN_Example: This is very картопляний.
+  EN_Example: This is a potato dish.
   Tags_Ch: ch:1.6.1, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/картопляний
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

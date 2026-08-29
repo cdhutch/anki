@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: друге
   UA_Example: Ми замовили друге.
-  EN_Example: We ordered друге.
+  EN_Example: We ordered the second course.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/друге
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

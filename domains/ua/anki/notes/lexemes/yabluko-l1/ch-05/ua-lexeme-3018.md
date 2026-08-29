@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: інший
   UA_Example: Це дуже інший.
-  EN_Example: This is very інший.
+  EN_Example: This is a completely different dish.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/інший
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

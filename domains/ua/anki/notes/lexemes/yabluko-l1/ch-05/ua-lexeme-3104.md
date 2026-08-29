@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: електронний
   UA_Example: Це електронний.
-  EN_Example: This is електронний.
+  EN_Example: This is an electronic device.
   Tags_Ch: ch:1.5.7, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/електронний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

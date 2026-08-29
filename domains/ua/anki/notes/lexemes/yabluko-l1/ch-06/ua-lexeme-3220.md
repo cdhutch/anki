@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: ялинка
   UA_Example: Це ялинка.
-  EN_Example: This is ялинка.
+  EN_Example: This is a Christmas tree.
   Tags_Ch: ch:1.6.5, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/ялинка
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

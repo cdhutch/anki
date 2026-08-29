@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: боротися
   UA_Example: Він хоче боротися.
-  EN_Example: He wants to боротися.
+  EN_Example: He wants to fight for his rights.
   Tags_Ch: ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/боротися
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

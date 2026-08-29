@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: священик
   UA_Example: На Різдво готують священик.
-  EN_Example: They make священик for Christmas.
+  EN_Example: The priest blesses the Christmas meal.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/священик
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

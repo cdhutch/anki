@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: майонез
   UA_Example: Мені потрібен майонез.
-  EN_Example: I need майонез.
+  EN_Example: I need mayonnaise.
   Tags_Ch: ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/майонез
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

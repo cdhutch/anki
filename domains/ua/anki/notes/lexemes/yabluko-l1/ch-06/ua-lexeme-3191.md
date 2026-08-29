@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: душа
   UA_Example: Це моя душа.
-  EN_Example: This is my душа.
+  EN_Example: This is my soul.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/душа
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

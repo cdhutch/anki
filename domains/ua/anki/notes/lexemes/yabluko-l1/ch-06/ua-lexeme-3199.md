@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: маркер
   UA_Example: Це маркер.
-  EN_Example: This is маркер.
+  EN_Example: This is a marker.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/маркер
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

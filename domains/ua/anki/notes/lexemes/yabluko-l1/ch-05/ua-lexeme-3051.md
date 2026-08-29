@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: мед
   UA_Example: Мені потрібен мед.
-  EN_Example: I need мед.
+  EN_Example: I need honey.
   Tags_Ch: ch:1.5.4, ch:1.5.6, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/мед
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

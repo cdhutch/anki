@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: хліб
   UA_Example: Я їм хліб щоранку.
-  EN_Example: I eat хліб every morning.
+  EN_Example: I eat bread every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/хліб
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

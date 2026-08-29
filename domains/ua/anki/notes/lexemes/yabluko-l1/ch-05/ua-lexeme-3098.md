@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сухий
   UA_Example: Хліб зовсім сухий.
-  EN_Example: The bread is completely сухий.
+  EN_Example: The bread is completely dry.
   Tags_Ch: ch:1.5.6, ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/сухий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

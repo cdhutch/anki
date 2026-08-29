@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: стільки
   UA_Example: Це дуже стільки.
-  EN_Example: This is very стільки.
+  EN_Example: I have never eaten that much.
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/стільки
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

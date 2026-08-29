@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кисіль
   UA_Example: Мама додала кисіль.
-  EN_Example: Mom added кисіль.
+  EN_Example: Mom added kissel.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/кисіль
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

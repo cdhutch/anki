@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: писанка
   UA_Example: На Різдво готують писанка.
-  EN_Example: They make писанка for Christmas.
+  EN_Example: They make pysanka for Christmas.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/писанка
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

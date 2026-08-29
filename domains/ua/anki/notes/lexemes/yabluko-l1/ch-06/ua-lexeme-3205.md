@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: фломастер
   UA_Example: Це фломастер.
-  EN_Example: This is фломастер.
+  EN_Example: This is a felt-tip marker.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/фломастер
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

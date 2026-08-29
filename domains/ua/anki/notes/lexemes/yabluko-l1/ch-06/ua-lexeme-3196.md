@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: космонавт
   UA_Example: Це космонавт.
-  EN_Example: This is космонавт.
+  EN_Example: This is a cosmonaut.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/космонавт
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

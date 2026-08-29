@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: полуниця
   UA_Example: Свіжий полуниця дуже смачний.
-  EN_Example: Fresh полуниця is very tasty.
+  EN_Example: Fresh strawberries are very tasty.
   Tags_Ch: ch:1.5.1, ch:1.5.4, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/полуниця
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

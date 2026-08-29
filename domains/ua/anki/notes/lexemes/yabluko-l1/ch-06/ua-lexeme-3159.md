@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: вітамін
   UA_Example: На Різдво готують вітамін.
-  EN_Example: They make вітамін for Christmas.
+  EN_Example: Oranges are rich in vitamin C.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/вітамін
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

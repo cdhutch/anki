@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: покарати
   UA_Example: Він покарати щодня.
-  EN_Example: He покаратиs every day.
+  EN_Example: He punishes them every day.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/покарати
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

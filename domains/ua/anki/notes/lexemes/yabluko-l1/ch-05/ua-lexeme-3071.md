@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: паста
   UA_Example: 'Це популярна страва: паста.'
-  EN_Example: 'This is a popular dish: паста.'
+  EN_Example: 'This is a popular dish: paste.'
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/паста
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

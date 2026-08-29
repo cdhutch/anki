@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: борщ
   UA_Example: На Різдво готують борщ.
-  EN_Example: They make борщ for Christmas.
+  EN_Example: They make borscht for Christmas.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/борщ
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: тематичний
   UA_Example: Це дуже тематичний.
-  EN_Example: This is very тематичний.
+  EN_Example: This is very thematic.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/тематичний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

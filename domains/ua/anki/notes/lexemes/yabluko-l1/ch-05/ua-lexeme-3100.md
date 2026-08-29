@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: віддати
   UA_Example: Він віддати щодня.
-  EN_Example: He віддатиs every day.
+  EN_Example: He gives it back every day.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/віддати
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

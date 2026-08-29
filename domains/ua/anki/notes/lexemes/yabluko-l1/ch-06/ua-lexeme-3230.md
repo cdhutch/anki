@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: порекомендувати
   UA_Example: Він хоче порекомендувати.
-  EN_Example: He wants to порекомендувати.
+  EN_Example: He wants to recommend a good book.
   Tags_Ch: ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/порекомендувати
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

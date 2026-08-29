@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: пшениця
   UA_Example: На Різдво готують пшениця.
-  EN_Example: They make пшениця for Christmas.
+  EN_Example: They use wheat to make kutia for Christmas.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/пшениця
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

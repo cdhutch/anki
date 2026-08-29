@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сорт
   UA_Example: 'Це популярна страва: сорт.'
-  EN_Example: 'This is a popular dish: сорт.'
+  EN_Example: This is a rare sort of apple.
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/сорт
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

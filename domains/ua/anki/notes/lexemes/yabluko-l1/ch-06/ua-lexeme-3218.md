@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: прикрашати
   UA_Example: Діти люблять прикрашати.
-  EN_Example: Kids love to прикрашати.
+  EN_Example: Kids love to decorate.
   Tags_Ch: ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/прикрашати
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

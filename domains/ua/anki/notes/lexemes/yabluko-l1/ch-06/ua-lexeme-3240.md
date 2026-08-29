@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: тертка
   UA_Example: Постав тертка на плиту.
-  EN_Example: Put the тертка on the stove.
+  EN_Example: Put the grater on the stove.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/тертка
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

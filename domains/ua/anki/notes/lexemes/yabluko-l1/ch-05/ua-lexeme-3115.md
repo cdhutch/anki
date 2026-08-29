@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: щогодини
   UA_Example: Це щогодини.
-  EN_Example: This is щогодини.
+  EN_Example: The bus leaves every hour.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/щогодини
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

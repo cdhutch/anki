@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: органічний
   UA_Example: Це дуже органічний.
-  EN_Example: This is very органічний.
+  EN_Example: This is very organic.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/органічний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

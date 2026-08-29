@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сосиска
   UA_Example: 'Це популярна страва: сосиска.'
-  EN_Example: 'This is a popular dish: сосиска.'
+  EN_Example: 'This is a popular dish: sausage.'
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/сосиска
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

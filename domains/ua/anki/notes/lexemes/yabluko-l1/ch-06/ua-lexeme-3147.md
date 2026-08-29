@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: забути
   UA_Example: Він забути.
-  EN_Example: He забутиs.
+  EN_Example: He forgets.
   Tags_Ch: ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/забути
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

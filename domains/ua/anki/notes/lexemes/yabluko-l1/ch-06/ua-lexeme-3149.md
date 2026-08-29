@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кориця
   UA_Example: Я люблю кориця.
-  EN_Example: I love кориця.
+  EN_Example: I love cinnamon.
   Tags_Ch: ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/кориця
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

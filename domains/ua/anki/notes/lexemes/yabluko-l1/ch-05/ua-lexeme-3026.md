@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: різний
   UA_Example: Це дуже різний.
-  EN_Example: This is very різний.
+  EN_Example: This is very different.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/різний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

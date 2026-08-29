@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: рис
   UA_Example: Ми замовили рис.
-  EN_Example: We ordered рис.
+  EN_Example: We ordered rice.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/рис
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

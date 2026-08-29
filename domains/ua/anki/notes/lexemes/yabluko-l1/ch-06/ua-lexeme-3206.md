@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: цікавитися
   UA_Example: Він хоче цікавитися.
-  EN_Example: He wants to цікавитися.
+  EN_Example: He is very interested in music.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/цікавитися
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

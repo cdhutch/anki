@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сцена
   UA_Example: Це моя сцена.
-  EN_Example: This is my сцена.
+  EN_Example: She walked onto the stage.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/сцена
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

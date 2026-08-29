@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: секретний
   UA_Example: Це дуже секретний.
-  EN_Example: This is very секретний.
+  EN_Example: This is very secret.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/секретний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

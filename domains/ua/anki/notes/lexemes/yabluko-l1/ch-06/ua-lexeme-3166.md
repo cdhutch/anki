@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: мак
   UA_Example: На Різдво готують мак.
-  EN_Example: They make мак for Christmas.
+  EN_Example: They use poppy seed in the Christmas kutia.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/мак
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

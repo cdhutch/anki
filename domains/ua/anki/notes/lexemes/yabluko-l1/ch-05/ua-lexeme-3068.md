@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: мюслі
   UA_Example: 'Це популярна страва: мюслі.'
-  EN_Example: 'This is a popular dish: мюслі.'
+  EN_Example: 'This is a popular dish: muesli.'
   Tags_Ch: ch:1.5.5, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/мюслі
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

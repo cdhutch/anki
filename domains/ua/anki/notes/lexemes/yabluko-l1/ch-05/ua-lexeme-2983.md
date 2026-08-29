@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: чорниця
   UA_Example: Свіжий чорниця дуже смачний.
-  EN_Example: Fresh чорниця is very tasty.
+  EN_Example: Fresh blueberries are very tasty.
   Tags_Ch: ch:1.5.1, ch:1.5.4, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/чорниця
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: компот
   UA_Example: Ми замовили компот.
-  EN_Example: We ordered компот.
+  EN_Example: We ordered kompot.
   Tags_Ch: ch:1.5.3, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/компот
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

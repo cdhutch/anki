@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: розмір
   UA_Example: Свіжий розмір дуже смачний.
-  EN_Example: Fresh розмір is very tasty.
+  EN_Example: What size do you need?
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/розмір
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

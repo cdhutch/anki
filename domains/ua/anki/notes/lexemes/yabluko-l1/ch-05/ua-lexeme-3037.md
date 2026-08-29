@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: тістечко
   UA_Example: Ми замовили тістечко.
-  EN_Example: We ordered тістечко.
+  EN_Example: We ordered a small cake.
   Tags_Ch: ch:1.5.3, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/тістечко
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

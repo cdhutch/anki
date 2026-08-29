@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: піцерія
   UA_Example: Це піцерія.
-  EN_Example: This is піцерія.
+  EN_Example: This is a pizzeria.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/піцерія
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: оладка
   UA_Example: 'Це популярна страва: оладка.'
-  EN_Example: 'This is a popular dish: оладка.'
+  EN_Example: 'This is a popular dish: small pancakes.'
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/оладка
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

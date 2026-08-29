@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: м''ясо
   UA_Example: Я їм м''ясо щоранку.
-  EN_Example: I eat м''ясо every morning.
+  EN_Example: I eat meat every morning.
   Tags_Ch: ch:1.5.2, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/мясо
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: овочевий
   UA_Example: Це дуже овочевий.
-  EN_Example: This is very овочевий.
+  EN_Example: This is a vegetable dish.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/овочевий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: гречка
   UA_Example: Ми замовили гречка.
-  EN_Example: We ordered гречка.
+  EN_Example: We ordered buckwheat.
   Tags_Ch: ch:1.5.3, ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/гречка
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

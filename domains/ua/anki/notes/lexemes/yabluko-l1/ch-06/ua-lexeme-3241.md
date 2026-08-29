@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: оцет
   UA_Example: Спочатку оцет овочі.
-  EN_Example: First, оцет the vegetables.
+  EN_Example: Add a spoon of vinegar to the salad.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/оцет
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

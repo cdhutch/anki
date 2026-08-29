@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: зірка
   UA_Example: На Різдво готують зірка.
-  EN_Example: They make зірка for Christmas.
+  EN_Example: They make a star for Christmas.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/зірка
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

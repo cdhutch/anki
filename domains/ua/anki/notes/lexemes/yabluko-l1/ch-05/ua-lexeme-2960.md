@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: круглий
   UA_Example: Свіжий круглий дуже смачний.
-  EN_Example: Fresh круглий is very tasty.
+  EN_Example: This is very round.
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/круглий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

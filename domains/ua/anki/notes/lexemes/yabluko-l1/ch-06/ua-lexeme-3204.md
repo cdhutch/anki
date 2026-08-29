@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: фарба
   UA_Example: Це моя фарба.
-  EN_Example: This is my фарба.
+  EN_Example: This is my paint.
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/фарба
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

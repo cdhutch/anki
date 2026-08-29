@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: цибуля
   UA_Example: Свіжий цибуля дуже смачний.
-  EN_Example: Fresh цибуля is very tasty.
+  EN_Example: Fresh onions are very tasty.
   Tags_Ch: ch:1.5.1, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/цибуля
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.7
+- ch:1.7.5
+- ch:1.9.5
 - pos:noun
 - status:draft
 fields:
@@ -33,11 +35,15 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: вухо
-  UA_Example: Це вухо.
-  EN_Example: This is вухо.
-  Tags_Ch: ch:1.5.7
+  UA_Example: У ельфа гострі вуха.
+  EN_Example: The elf has pointy ears.
+  Tags_Ch: ch:1.5.7, ch:1.7.5, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/вухо
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    ua-lexeme-3351 (ch.7, identical lemma/gloss) into this note during ch.9 dedup on 2026-08-29;
+    tags migrated. Also fixed a broken placeholder UA_Example/EN_Example pair ("Це вухо."
+    / "This is вухо.") inherited from the original ch.5 draft, replacing it with ua-lexeme-3351's
+    example sentence.
 ---
 

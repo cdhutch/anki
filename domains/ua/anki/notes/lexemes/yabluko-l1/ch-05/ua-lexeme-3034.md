@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: фігурка
   UA_Example: Ми замовили фігурка.
-  EN_Example: We ordered фігурка.
+  EN_Example: We ordered a chocolate figurine.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/фігурка
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

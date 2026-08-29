@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: картопля-фрі
   UA_Example: 'Це популярна страва: картопля-фрі.'
-  EN_Example: 'This is a popular dish: картопля-фрі.'
+  EN_Example: 'This is a popular dish: french fries.'
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/картопля-фрі
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

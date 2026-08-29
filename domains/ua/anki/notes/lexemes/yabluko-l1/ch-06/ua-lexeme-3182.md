@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: хрін
   UA_Example: На Різдво готують хрін.
-  EN_Example: They make хрін for Christmas.
+  EN_Example: They make horseradish for Christmas.
   Tags_Ch: ch:1.6.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/хрін
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

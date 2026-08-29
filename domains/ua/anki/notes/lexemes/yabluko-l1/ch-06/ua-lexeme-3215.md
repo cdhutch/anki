@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: крем
   UA_Example: Це крем.
-  EN_Example: This is крем.
+  EN_Example: This is a cream.
   Tags_Ch: ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/крем
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

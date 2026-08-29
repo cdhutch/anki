@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: джем
   UA_Example: На Різдво готують джем.
-  EN_Example: They make джем for Christmas.
+  EN_Example: They make jam for Christmas.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/джем
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

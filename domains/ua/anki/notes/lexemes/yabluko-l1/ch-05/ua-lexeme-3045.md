@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: лід
   UA_Example: Мені потрібен лід.
-  EN_Example: I need лід.
+  EN_Example: I need ice.
   Tags_Ch: ch:1.5.4, ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/лід
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

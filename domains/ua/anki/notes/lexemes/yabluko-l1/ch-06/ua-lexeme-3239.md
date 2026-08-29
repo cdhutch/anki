@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: натирати
   UA_Example: Спочатку натирати овочі.
-  EN_Example: First, натирати the vegetables.
+  EN_Example: First, grate the vegetables.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/натирати
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

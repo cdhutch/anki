@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: світло
   UA_Example: Ми замовили світло.
-  EN_Example: We ordered світло.
+  EN_Example: Turn off the light, please.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/світло
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

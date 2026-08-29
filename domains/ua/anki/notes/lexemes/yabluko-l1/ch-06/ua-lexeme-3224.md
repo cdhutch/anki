@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: втомитися
   UA_Example: Він хоче втомитися.
-  EN_Example: He wants to втомитися.
+  EN_Example: He got tired after a long day.
   Tags_Ch: ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/втомитися
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

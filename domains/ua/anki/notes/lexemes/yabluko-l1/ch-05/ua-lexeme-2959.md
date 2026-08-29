@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: короткий
   UA_Example: Свіжий короткий дуже смачний.
-  EN_Example: Fresh короткий is very tasty.
+  EN_Example: This is very short.
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/короткий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

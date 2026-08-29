@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: паска
   UA_Example: На Різдво готують паска.
-  EN_Example: They make паска for Christmas.
+  EN_Example: They make paska for Christmas.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/паска
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

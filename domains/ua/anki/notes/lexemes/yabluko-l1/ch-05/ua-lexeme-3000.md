@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сир
   UA_Example: Я їм сир щоранку.
-  EN_Example: I eat сир every morning.
+  EN_Example: I eat cheese every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/сир
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

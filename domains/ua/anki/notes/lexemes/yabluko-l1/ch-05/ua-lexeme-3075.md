@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: погоджуватися
   UA_Example: Це дуже погоджуватися.
-  EN_Example: This is very погоджуватися.
+  EN_Example: He usually agrees with her.
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/погоджуватися
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

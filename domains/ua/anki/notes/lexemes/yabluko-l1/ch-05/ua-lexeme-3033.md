@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: третє
   UA_Example: Ми замовили третє.
-  EN_Example: We ordered третє.
+  EN_Example: We ordered the third course.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/третє
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

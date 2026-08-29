@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: святити
   UA_Example: Це дуже святити.
-  EN_Example: This is very святити.
+  EN_Example: The priest blesses the Easter baskets.
   Tags_Ch: ch:1.6.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/святити
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

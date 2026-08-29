@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: нарізати
   UA_Example: Спочатку нарізати овочі.
-  EN_Example: First, нарізати the vegetables.
+  EN_Example: First, slice the vegetables.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/нарізати
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

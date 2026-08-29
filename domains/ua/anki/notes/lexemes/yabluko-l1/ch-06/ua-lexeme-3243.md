@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: томатний
   UA_Example: Спочатку томатний овочі.
-  EN_Example: First, томатний the vegetables.
+  EN_Example: She likes tomato soup.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/томатний
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

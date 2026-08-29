@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: креветка
   UA_Example: 'Це популярна страва: креветка.'
-  EN_Example: 'This is a popular dish: креветка.'
+  EN_Example: 'This is a popular dish: shrimp.'
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/креветка
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

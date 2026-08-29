@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: соус
   UA_Example: 'Це популярна страва: соус.'
-  EN_Example: 'This is a popular dish: соус.'
+  EN_Example: 'This is a popular dish: sauce.'
   Tags_Ch: ch:1.5.5, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/соус
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

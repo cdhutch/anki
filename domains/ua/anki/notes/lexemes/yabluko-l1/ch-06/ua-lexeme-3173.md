@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: різдвяний
   UA_Example: Це дуже різдвяний.
-  EN_Example: This is very різдвяний.
+  EN_Example: This is a Christmas song.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/різдвяний
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

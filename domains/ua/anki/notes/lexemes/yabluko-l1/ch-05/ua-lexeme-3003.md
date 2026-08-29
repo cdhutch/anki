@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: чай
   UA_Example: Я їм чай щоранку.
-  EN_Example: I eat чай every morning.
+  EN_Example: I eat tea every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/чай
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

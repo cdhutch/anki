@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сіль
   UA_Example: Мені потрібна пачка сіль.
-  EN_Example: I need a pack of сіль.
+  EN_Example: I need a pack of salt.
   Tags_Ch: ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/сіль
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

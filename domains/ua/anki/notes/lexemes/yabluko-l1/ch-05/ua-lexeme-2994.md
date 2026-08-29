@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кока-кола
   UA_Example: Я їм кока-кола щоранку.
-  EN_Example: I eat кока-кола every morning.
+  EN_Example: I drink Coca-Cola every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/кока-кола
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

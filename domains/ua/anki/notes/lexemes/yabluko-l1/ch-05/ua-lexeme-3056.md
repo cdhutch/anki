@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: густий
   UA_Example: Це дуже густий.
-  EN_Example: This is very густий.
+  EN_Example: This is very thick.
   Tags_Ch: ch:1.5.5, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/густий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

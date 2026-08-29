@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: традиційний
   UA_Example: Це дуже традиційний.
-  EN_Example: This is very традиційний.
+  EN_Example: This is very traditional.
   Tags_Ch: ch:1.5.3, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/традиційний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: равлик
   UA_Example: 'Це популярна страва: равлик.'
-  EN_Example: 'This is a popular dish: равлик.'
+  EN_Example: 'This is a popular dish: snail.'
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/равлик
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

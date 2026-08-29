@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: ківі
   UA_Example: Я купив ківі.
-  EN_Example: I bought ківі.
+  EN_Example: I bought a kiwi.
   Tags_Ch: ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/ківі
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

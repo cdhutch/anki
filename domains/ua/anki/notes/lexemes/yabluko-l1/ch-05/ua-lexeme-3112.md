@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: по-третє
   UA_Example: Це по-третє.
-  EN_Example: This is по-третє.
+  EN_Example: Thirdly, we should check the schedule.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/по-третє
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: пісний
   UA_Example: Це дуже пісний.
-  EN_Example: This is very пісний.
+  EN_Example: This is very meatless.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/пісний
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

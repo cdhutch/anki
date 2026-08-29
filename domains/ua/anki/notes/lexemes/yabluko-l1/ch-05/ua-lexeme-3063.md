@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: курага
   UA_Example: 'Це популярна страва: курага.'
-  EN_Example: 'This is a popular dish: курага.'
+  EN_Example: 'This is a popular dish: dried apricots.'
   Tags_Ch: ch:1.5.5, ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/курага
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

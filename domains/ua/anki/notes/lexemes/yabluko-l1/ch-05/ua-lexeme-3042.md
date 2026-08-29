@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: двері
   UA_Example: Мені потрібен двері.
-  EN_Example: I need двері.
+  EN_Example: Close the door, please.
   Tags_Ch: ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/двері
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

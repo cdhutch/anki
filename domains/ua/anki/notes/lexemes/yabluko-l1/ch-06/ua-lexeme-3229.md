@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: негазований
   UA_Example: Це дуже негазований.
-  EN_Example: This is very негазований.
+  EN_Example: This is very still.
   Tags_Ch: ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/негазований
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

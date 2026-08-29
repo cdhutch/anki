@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кошик
   UA_Example: На Різдво готують кошик.
-  EN_Example: They make кошик for Christmas.
+  EN_Example: They weave a basket for Easter.
   Tags_Ch: ch:1.6.3, ch:1.7.5, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/кошик
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

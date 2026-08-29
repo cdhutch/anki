@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: кислий
   UA_Example: Свіжий кислий дуже смачний.
-  EN_Example: Fresh кислий is very tasty.
+  EN_Example: This is very sour.
   Tags_Ch: ch:1.5.1, ch:1.5.4, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/кислий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

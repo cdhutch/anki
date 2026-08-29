@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: макарони
   UA_Example: Я їм макарони щоранку.
-  EN_Example: I eat макарони every morning.
+  EN_Example: I eat pasta every morning.
   Tags_Ch: ch:1.5.2, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/макарони
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

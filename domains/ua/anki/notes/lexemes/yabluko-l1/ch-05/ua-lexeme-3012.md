@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: вареник
   UA_Example: Ми замовили вареник.
-  EN_Example: We ordered вареник.
+  EN_Example: We ordered varenyk.
   Tags_Ch: ch:1.5.3, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/вареник
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

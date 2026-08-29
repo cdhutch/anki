@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: стейк
   UA_Example: Це стейк.
-  EN_Example: This is стейк.
+  EN_Example: This is a steak.
   Tags_Ch: ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/стейк
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

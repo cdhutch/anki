@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: вишня
   UA_Example: Свіжий вишня дуже смачний.
-  EN_Example: Fresh вишня is very tasty.
+  EN_Example: Fresh sour cherries are very tasty.
   Tags_Ch: ch:1.5.1, ch:1.5.4, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/вишня
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

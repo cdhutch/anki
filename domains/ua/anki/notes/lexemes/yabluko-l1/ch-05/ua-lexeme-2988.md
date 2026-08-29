@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: желе
   UA_Example: Я їм желе щоранку.
-  EN_Example: I eat желе every morning.
+  EN_Example: I eat jelly every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/желе
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

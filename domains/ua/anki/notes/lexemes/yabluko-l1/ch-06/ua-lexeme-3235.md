@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: листок
   UA_Example: Спочатку листок овочі.
-  EN_Example: First, листок the vegetables.
+  EN_Example: A green leaf fell from the tree.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/листок
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

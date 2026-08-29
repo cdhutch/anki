@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: їжа
   UA_Example: Свіжий їжа дуже смачний.
-  EN_Example: Fresh їжа is very tasty.
+  EN_Example: Fresh food is very tasty.
   Tags_Ch: ch:1.5.1, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/їжа
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

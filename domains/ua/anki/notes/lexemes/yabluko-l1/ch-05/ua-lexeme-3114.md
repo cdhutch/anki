@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: чек
   UA_Example: Це чек.
-  EN_Example: This is чек.
+  EN_Example: This is a receipt.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/чек
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

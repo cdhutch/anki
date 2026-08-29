@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: апельсин
   UA_Example: Свіжий апельсин дуже смачний.
-  EN_Example: Fresh апельсин is very tasty.
+  EN_Example: Fresh oranges are very tasty.
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/апельсин
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

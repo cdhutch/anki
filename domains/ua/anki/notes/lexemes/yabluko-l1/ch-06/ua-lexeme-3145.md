@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: бульйон
   UA_Example: Я люблю бульйон.
-  EN_Example: I love бульйон.
+  EN_Example: I love broth.
   Tags_Ch: ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/бульйон
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

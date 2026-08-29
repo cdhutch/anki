@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: смачний
   UA_Example: Свіжий смачний дуже смачний.
-  EN_Example: Fresh смачний is very tasty.
+  EN_Example: This is very tasty.
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/смачний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

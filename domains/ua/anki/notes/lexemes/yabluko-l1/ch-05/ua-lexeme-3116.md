@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: щомісяця
   UA_Example: Це щомісяця.
-  EN_Example: This is щомісяця.
+  EN_Example: We pay rent every month.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/щомісяця
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

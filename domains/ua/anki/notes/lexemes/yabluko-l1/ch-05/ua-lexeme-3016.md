@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: домашній
   UA_Example: Це дуже домашній.
-  EN_Example: This is very домашній.
+  EN_Example: This is very home-made.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/домашній
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

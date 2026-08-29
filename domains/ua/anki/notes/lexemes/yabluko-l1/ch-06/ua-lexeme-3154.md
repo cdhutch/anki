@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: торт
   UA_Example: Я люблю торт.
-  EN_Example: I love торт.
+  EN_Example: I love cake.
   Tags_Ch: ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/торт
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

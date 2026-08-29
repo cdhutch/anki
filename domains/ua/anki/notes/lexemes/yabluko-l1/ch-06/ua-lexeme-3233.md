@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: звичка
   UA_Example: Це звичка.
-  EN_Example: This is звичка.
+  EN_Example: This is a habit.
   Tags_Ch: ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/звичка
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

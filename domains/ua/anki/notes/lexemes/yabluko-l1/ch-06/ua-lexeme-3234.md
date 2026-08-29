@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: каструля
   UA_Example: Постав каструля на плиту.
-  EN_Example: Put the каструля on the stove.
+  EN_Example: Put the pot on the stove.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/каструля
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

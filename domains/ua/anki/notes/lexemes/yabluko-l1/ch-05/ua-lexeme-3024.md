@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: покуштувати
   UA_Example: Ми замовили покуштувати.
-  EN_Example: We ordered покуштувати.
+  EN_Example: We wanted to taste it.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/покуштувати
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

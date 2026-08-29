@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: спеція
   UA_Example: Мама додала спеція.
-  EN_Example: Mom added спеція.
+  EN_Example: Mom added spice.
   Tags_Ch: ch:1.6.3, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/спеція
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

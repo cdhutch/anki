@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: борошно
   UA_Example: Я купив борошно.
-  EN_Example: I bought борошно.
+  EN_Example: I bought flour.
   Tags_Ch: ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/борошно
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

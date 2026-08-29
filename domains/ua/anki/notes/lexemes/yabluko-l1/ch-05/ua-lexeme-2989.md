@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: йогурт
   UA_Example: Я їм йогурт щоранку.
-  EN_Example: I eat йогурт every morning.
+  EN_Example: I eat a yogurt every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/йогурт
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: перець
   UA_Example: Мені потрібен перець.
-  EN_Example: I need перець.
+  EN_Example: I need pepper.
   Tags_Ch: ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/перець
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

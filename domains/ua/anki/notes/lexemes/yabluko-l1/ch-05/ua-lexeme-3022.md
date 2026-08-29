@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: суп
   UA_Example: Ми замовили суп.
-  EN_Example: We ordered суп.
+  EN_Example: We ordered soup.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/суп
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

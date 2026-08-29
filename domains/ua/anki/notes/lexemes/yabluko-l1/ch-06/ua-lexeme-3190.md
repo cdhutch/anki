@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: душ
   UA_Example: Це душ.
-  EN_Example: This is душ.
+  EN_Example: This is a shower.
   Tags_Ch: ch:1.6.4, ch:1.7.1, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/душ
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

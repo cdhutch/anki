@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: корисно
   UA_Example: Це дуже корисно.
-  EN_Example: This is very корисно.
+  EN_Example: It is very healthy to eat vegetables.
   Tags_Ch: ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/корисно
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

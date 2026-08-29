@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: гратися
   UA_Example: Діти люблять гратися.
-  EN_Example: Kids love to гратися.
+  EN_Example: Kids love to play.
   Tags_Ch: ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/гратися
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

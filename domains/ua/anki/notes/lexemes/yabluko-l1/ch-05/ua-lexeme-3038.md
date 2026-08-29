@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: замовити
   UA_Example: Ми замовили замовити.
-  EN_Example: We ordered замовити.
+  EN_Example: We ordered dinner.
   Tags_Ch: ch:1.5.3, ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/замовити
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

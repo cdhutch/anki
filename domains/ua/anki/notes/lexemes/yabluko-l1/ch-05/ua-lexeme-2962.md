@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: овальний
   UA_Example: Свіжий овальний дуже смачний.
-  EN_Example: Fresh овальний is very tasty.
+  EN_Example: This is very oval.
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/овальний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

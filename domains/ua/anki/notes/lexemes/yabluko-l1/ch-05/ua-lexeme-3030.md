@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: стереотип
   UA_Example: Ми замовили стереотип.
-  EN_Example: We ordered стереотип.
+  EN_Example: This is a common stereotype.
   Tags_Ch: ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/стереотип
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: ковбаса
   UA_Example: Я їм ковбаса щоранку.
-  EN_Example: I eat ковбаса every morning.
+  EN_Example: I eat a sausage every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/ковбаса
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

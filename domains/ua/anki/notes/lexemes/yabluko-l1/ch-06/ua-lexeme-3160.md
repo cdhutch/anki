@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: воскреснути
   UA_Example: Це дуже воскреснути.
-  EN_Example: This is very воскреснути.
+  EN_Example: Christians believe Christ rose from the dead.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/воскреснути
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: овоч
   UA_Example: Свіжий овоч дуже смачний.
-  EN_Example: Fresh овоч is very tasty.
+  EN_Example: Fresh vegetables are very tasty.
   Tags_Ch: ch:1.5.1, ch:1.5.3, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/овоч
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

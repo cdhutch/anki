@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: зелень
   UA_Example: Я купив зелень.
-  EN_Example: I bought зелень.
+  EN_Example: I bought greens.
   Tags_Ch: ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/зелень
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

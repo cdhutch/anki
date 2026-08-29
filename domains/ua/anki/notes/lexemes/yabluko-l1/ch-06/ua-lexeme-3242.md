@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сковорідка
   UA_Example: Постав сковорідка на плиту.
-  EN_Example: Put the сковорідка on the stove.
+  EN_Example: Put the frying pan on the stove.
   Tags_Ch: ch:1.6.7
   Source_URL: https://goroh.pp.ua/Словозміна/сковорідка
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

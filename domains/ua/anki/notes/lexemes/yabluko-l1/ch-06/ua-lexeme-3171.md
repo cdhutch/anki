@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: померти
   UA_Example: Це дуже померти.
-  EN_Example: This is very померти.
+  EN_Example: He died peacefully in his sleep.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/померти
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

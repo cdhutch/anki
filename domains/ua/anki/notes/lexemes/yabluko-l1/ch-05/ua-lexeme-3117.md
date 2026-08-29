@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: щохвилини
   UA_Example: Це щохвилини.
-  EN_Example: This is щохвилини.
+  EN_Example: The situation changes every minute.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/щохвилини
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

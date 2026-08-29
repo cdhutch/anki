@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: колядувати
   UA_Example: Це дуже колядувати.
-  EN_Example: This is very колядувати.
+  EN_Example: Children go caroling on Christmas Eve.
   Tags_Ch: ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/колядувати
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

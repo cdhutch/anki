@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: Великдень
   UA_Example: На Різдво готують Великдень.
-  EN_Example: They make Великдень for Christmas.
+  EN_Example: We celebrate Easter every spring.
   Tags_Ch: ch:1.6.3, ch:1.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/Великдень
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.

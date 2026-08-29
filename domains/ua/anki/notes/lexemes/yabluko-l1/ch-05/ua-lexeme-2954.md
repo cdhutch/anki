@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: гарячий
   UA_Example: Свіжий гарячий дуже смачний.
-  EN_Example: Fresh гарячий is very tasty.
+  EN_Example: This soup is very hot.
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/гарячий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: сушений
   UA_Example: Це дуже сушений.
-  EN_Example: This is very сушений.
+  EN_Example: This is very dried.
   Tags_Ch: ch:1.5.5, ch:1.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/сушений
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

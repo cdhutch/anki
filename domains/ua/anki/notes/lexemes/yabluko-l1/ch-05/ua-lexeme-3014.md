@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: газований
   UA_Example: Це дуже газований.
-  EN_Example: This is very газований.
+  EN_Example: This is very carbonated.
   Tags_Ch: ch:1.5.3, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/газований
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

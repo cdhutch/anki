@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: запізнитися
   UA_Example: Він запізнитися щодня.
-  EN_Example: He запізнитисяs every day.
+  EN_Example: He is late every day.
   Tags_Ch: ch:1.5.7, ch:1.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/запізнитися
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

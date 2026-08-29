@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: зберігати
   UA_Example: Він зберігати щодня.
-  EN_Example: He зберігатиs every day.
+  EN_Example: He preserves the harvest every autumn.
   Tags_Ch: ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/зберігати
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

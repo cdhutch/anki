@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: свіжий
   UA_Example: Свіжий свіжий дуже смачний.
-  EN_Example: Fresh свіжий is very tasty.
+  EN_Example: This is very fresh.
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/свіжий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

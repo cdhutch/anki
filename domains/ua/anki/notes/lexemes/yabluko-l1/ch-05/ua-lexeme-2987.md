@@ -34,7 +34,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: бутерброд
   UA_Example: Я їм бутерброд щоранку.
-  EN_Example: I eat бутерброд every morning.
+  EN_Example: I eat a sandwich every morning.
   Tags_Ch: ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/бутерброд
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

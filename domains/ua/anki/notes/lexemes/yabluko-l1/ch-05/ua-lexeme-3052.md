@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: цукор
   UA_Example: Мені потрібен цукор.
-  EN_Example: I need цукор.
+  EN_Example: I need sugar.
   Tags_Ch: ch:1.5.4, ch:1.5.6, ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/цукор
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

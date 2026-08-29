@@ -36,7 +36,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: продукт
   UA_Example: Ми замовили продукт.
-  EN_Example: We ordered продукт.
+  EN_Example: We ordered a food product.
   Tags_Ch: ch:1.5.3, ch:1.5.7, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/продукт
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

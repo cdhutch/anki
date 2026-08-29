@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: яблучний
   UA_Example: Це дуже яблучний.
-  EN_Example: This is very яблучний.
+  EN_Example: This pie has a strong apple flavor.
   Tags_Ch: ch:1.5.5, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/яблучний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.

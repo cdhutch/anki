@@ -35,7 +35,7 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: морква
   UA_Example: Свіжий морква дуже смачний.
-  EN_Example: Fresh морква is very tasty.
+  EN_Example: Fresh carrots are very tasty.
   Tags_Ch: ch:1.5.1, ch:1.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/морква
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
