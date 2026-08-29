@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.2
+- ch:1.12.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мачуха
   UA_Example: У казці мачуха була жорстока до дівчини.
   EN_Example: In the fairy tale, the stepmother was cruel to the girl.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/мачуха
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.12.4
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: дорогий
   UA_Example: Моя дорога́ мама! О, дорога́ подру́го!
   EN_Example: My dear mother! Oh, my dear friend!
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.12.4
   Source_URL: https://goroh.pp.ua/Словозміна/дорогий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass. Affectionate/sweet sense (parallel
     to French "cher").

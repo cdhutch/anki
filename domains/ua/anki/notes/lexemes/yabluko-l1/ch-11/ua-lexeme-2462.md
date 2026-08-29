@@ -14,6 +14,8 @@ tags:
 - ch:1.2.6
 - ch:1.5.6
 - ch:1.6.5
+- ch:1.12.1
+- ch:1.12.2
 - pos:verb
 - status:draft
 fields:
@@ -39,7 +41,7 @@ fields:
   TypingAnswer: отримати
   UA_Example: Вона отримала лист учора.
   EN_Example: She received a letter yesterday.
-  Tags_Ch: ch:1.11.4, ch:1.2.6, ch:1.5.6, ch:1.6.5, ch:1.7.5
+  Tags_Ch: ch:1.11.4, ch:1.2.6, ch:1.5.6, ch:1.6.5, ch:1.7.5, ch:1.12.1, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/отримати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an

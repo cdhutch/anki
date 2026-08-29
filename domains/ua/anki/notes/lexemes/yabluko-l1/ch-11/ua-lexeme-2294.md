@@ -12,6 +12,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.12.1
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: вітати / привітати
   UA_Example: Він завжди вітає сусідів зранку.
   EN_Example: He always greets his neighbors in the morning.
-  Tags_Ch: ch:1.11.1, ch:1.8.5, ch:1.9.5
+  Tags_Ch: ch:1.11.1, ch:1.8.5, ch:1.9.5, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/вітати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj1-vowel+й); yabluko-l1 vocabulary expansion pass, 2026-08-29.

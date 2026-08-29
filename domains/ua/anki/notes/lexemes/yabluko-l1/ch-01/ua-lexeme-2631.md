@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.4
+- ch:1.12.2
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: папуга
   UA_Example: Папуга повторює слова.
   EN_Example: The parrot repeats words.
-  Tags_Ch: ch:1.1.4
+  Tags_Ch: ch:1.1.4, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/папуга
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

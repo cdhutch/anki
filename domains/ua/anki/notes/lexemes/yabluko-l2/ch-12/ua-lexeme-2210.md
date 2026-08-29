@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.5
+- ch:1.12.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: біда
   UA_Example: Не одна біда спіткала цей рід.
   EN_Example: Not one misfortune befell this family line.
-  Tags_Ch: ch:2.12.5
+  Tags_Ch: ch:2.12.5, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/біда
   Source_Note: 'Горох-verified 2026-08-29, ch.12.5 sourcing pass (community/history & character
     vocabulary: ancestry, village life, civic/political terms, personality traits), cross-checked

@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.4
+- ch:1.12.3
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: обіцяти / пообіцяти
   UA_Example: Він обіцяє прийти вчасно.
   EN_Example: He promises to arrive on time.
-  Tags_Ch: ch:1.11.4, ch:1.7.7
+  Tags_Ch: ch:1.11.4, ch:1.7.7, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/обіцяти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

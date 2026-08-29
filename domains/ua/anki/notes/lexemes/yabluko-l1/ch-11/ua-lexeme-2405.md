@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.11.3
 - ch:1.4.7
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: допомогти
   UA_Example: Він допоміг сусідці донести сумки.
   EN_Example: He helped his neighbor carry the bags.
-  Tags_Ch: ch:1.11.3, ch:1.4.7
+  Tags_Ch: ch:1.11.3, ch:1.4.7, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/допомогти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an

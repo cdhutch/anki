@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.5.1
 - ch:1.5.4
+- ch:1.12.3
 - pos:adjective
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: солоний
   UA_Example: Свіжий солоний дуже смачний.
   EN_Example: This is very salty.
-  Tags_Ch: ch:1.5.1, ch:1.5.4
+  Tags_Ch: ch:1.5.1, ch:1.5.4, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/солоний
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.2
+- ch:1.12.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ображатися / образитися
   UA_Example: Не ображайся, я жартую.
   EN_Example: Don't be offended, I'm joking.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/ображатися; https://goroh.pp.ua/Словозміна/образитися
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

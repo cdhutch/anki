@@ -12,6 +12,7 @@ tags:
 - ch:2.3.7
 - ch:1.6.1
 - ch:1.6.6
+- ch:1.12.1
 - pos:adjective
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: шкідливий
   UA_Example: Куріння шкідливе для здоровʼя.
   EN_Example: Smoking is harmful to health.
-  Tags_Ch: ch:2.3.7, ch:1.6.1, ch:1.6.6
+  Tags_Ch: ch:2.3.7, ch:1.6.1, ch:1.6.6, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/шкідливий
   Source_Note: Горох-verified 2026-08-28, ch.3.7 sourcing pass (opinion formulas; happiness/values;
     trust and friendship).

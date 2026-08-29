@@ -12,6 +12,7 @@ tags:
 - ch:2.1.1
 - ch:1.4.1
 - ch:1.4.7
+- ch:1.12.4
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: ненавидіти / зненавидіти
   UA_Example: Я ненавиджу брехню.
   EN_Example: I hate lying.
-  Tags_Ch: ch:2.1.1, ch:1.4.1, ch:1.4.7
+  Tags_Ch: ch:2.1.1, ch:1.4.1, ch:1.4.7, ch:1.12.4
   Source_URL: https://goroh.pp.ua/Словозміна/ненавидіти; https://goroh.pp.ua/Словозміна/зненавидіти
   Source_Note: Горох-verified 2026-08-28, ch.1.1 sourcing pass (weekdays/holidays; leisure
     verbs).

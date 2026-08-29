@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.1.7
 - ch:1.10.5
+- ch:1.12.3
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: причина
   UA_Example: Яка причина твого запізнення?
   EN_Example: What is the reason for your lateness?
-  Tags_Ch: ch:2.1.7, ch:1.10.5
+  Tags_Ch: ch:2.1.7, ch:1.10.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/причина
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

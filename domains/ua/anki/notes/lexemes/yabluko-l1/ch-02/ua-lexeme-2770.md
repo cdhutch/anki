@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.5
+- ch:1.12.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: символ
   UA_Example: Це символ незалежності країни.
   EN_Example: This is a symbol of the country''s independence.
-  Tags_Ch: ch:1.2.5
+  Tags_Ch: ch:1.2.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/символ
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

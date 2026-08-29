@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.4
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: відбутися
   UA_Example: Концерт відбувся минулого тижня.
   EN_Example: The concert took place last week.
-  Tags_Ch: ch:1.11.4
+  Tags_Ch: ch:1.11.4, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/відбутися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an

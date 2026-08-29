@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.10.6
+- ch:1.12.3
+- ch:1.12.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: сорочка
   UA_Example: Він одягнув білу сорочку.
   EN_Example: He put on a white shirt.
-  Tags_Ch: ch:1.10.6
+  Tags_Ch: ch:1.10.6, ch:1.12.3, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/сорочка
   Source_Note: yabluko-l1-vocabulary.pdf ch.10, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.10.2
+- ch:1.12.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: дякувати / подякувати
   UA_Example: Дякую тобі за допомогу.
   EN_Example: Thank you for your help.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/дякувати; https://goroh.pp.ua/Словозміна/подякувати
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

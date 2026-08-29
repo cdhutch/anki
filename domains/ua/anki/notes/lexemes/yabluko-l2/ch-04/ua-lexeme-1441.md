@@ -13,6 +13,7 @@ tags:
 - textbook:яблуко
 - ch:2.4.3
 - ch:1.4.3
+- ch:1.12.3
 - pos:verb
 - status:draft
 fields:
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: проводити
   UA_Example: Вчителька проводила урок дуже цікаво.
   EN_Example: The teacher conducted the lesson very engagingly.
-  Tags_Ch: ch:2.4.3, ch:1.4.3, ch:1.7.4, ch:1.9.5
+  Tags_Ch: ch:2.4.3, ch:1.4.3, ch:1.7.4, ch:1.9.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/проводити
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'

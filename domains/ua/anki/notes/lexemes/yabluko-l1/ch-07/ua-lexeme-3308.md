@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7.3
+- ch:1.12.2
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: літній
   UA_Example: Улітку ми носимо літній одяг.
   EN_Example: In summer we wear summer clothes.
-  Tags_Ch: ch:1.7.3
+  Tags_Ch: ch:1.7.3, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/літній
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

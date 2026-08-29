@@ -12,6 +12,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.3
+- ch:1.12.1
 - pos:noun
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: прикраса
   UA_Example: На ялинці багато прикрас.
   EN_Example: The Christmas tree has many decorations.
-  Tags_Ch: ch:2.2.3, ch:1.7.5, ch:1.9.5
+  Tags_Ch: ch:2.2.3, ch:1.7.5, ch:1.9.5, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/прикраса
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. Fem., 1st decl., hard group.

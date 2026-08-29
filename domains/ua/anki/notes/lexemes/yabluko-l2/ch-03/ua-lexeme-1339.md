@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.3.7
 - ch:1.6.1
+- ch:1.12.1
 - pos:adjective
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: корисний
   UA_Example: Читання дуже корисне для розвитку.
   EN_Example: Reading is very beneficial for development.
-  Tags_Ch: ch:2.3.7, ch:1.6.1
+  Tags_Ch: ch:2.3.7, ch:1.6.1, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/корисний
   Source_Note: Горох-verified 2026-08-28, ch.3.7 sourcing pass (opinion formulas; happiness/values;
     trust and friendship).

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.5
 - ch:1.6.5
+- ch:1.12.7
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: ставити / поставити
   UA_Example: Театр ставить нову виставу.
   EN_Example: The theater is staging a new play.
-  Tags_Ch: ch:2.10.5, ch:1.6.5
+  Tags_Ch: ch:2.10.5, ch:1.6.5, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/ставити; https://goroh.pp.ua/Словозміна/поставити
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).

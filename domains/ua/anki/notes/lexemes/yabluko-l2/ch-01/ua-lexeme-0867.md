@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.3
+- ch:1.12.5
 - pos:verb
 - status:draft
 - aspect:imperfective-only
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: вважати
   UA_Example: Я вважаю, що це гарна ідея.
   EN_Example: I think this is a good idea.
-  Tags_Ch: ch:2.1.3
+  Tags_Ch: ch:2.1.3, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/вважати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

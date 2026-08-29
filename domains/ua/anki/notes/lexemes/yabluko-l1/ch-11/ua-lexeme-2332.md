@@ -13,6 +13,7 @@ tags:
 - ch:1.11.2
 - ch:1.6.7
 - ch:1.10.6
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: класти / покласти
   UA_Example: Вона кладе книжки на полицю.
   EN_Example: She puts the books on the shelf.
-  Tags_Ch: ch:1.11.2, ch:1.6.7, ch:1.8.5, ch:1.10.6
+  Tags_Ch: ch:1.11.2, ch:1.6.7, ch:1.8.5, ch:1.10.6, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/класти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

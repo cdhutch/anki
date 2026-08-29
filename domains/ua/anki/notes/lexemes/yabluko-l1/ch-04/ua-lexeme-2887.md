@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.4.2
+- ch:1.12.2
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: познайомитися
   UA_Example: Ми познайомилися на весіллі.
   EN_Example: We met at a wedding.
-  Tags_Ch: ch:1.4.2, ch:1.6.4
+  Tags_Ch: ch:1.4.2, ch:1.6.4, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/познайомитися
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate

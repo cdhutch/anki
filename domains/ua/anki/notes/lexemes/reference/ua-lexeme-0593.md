@@ -12,6 +12,7 @@ tags:
 - textbook:яблуко
 - ch:reference
 - ch:2.6.3
+- ch:1.12.4
 - pos:adjective
 - status:verified
 fields:
@@ -40,7 +41,7 @@ fields:
   TypingAnswer: міцний
   UA_Example: Йому потрібна міцна мотузка, яка витримає таку вагу.
   EN_Example: He needs a sturdy rope that can bear that much weight.
-  Tags_Ch: ch:reference, ch:2.6.3, ch:1.8.3
+  Tags_Ch: ch:reference, ch:2.6.3, ch:1.8.3, ch:1.12.4
   Source_URL: https://goroh.pp.ua/Тлумачення/міцний
   Source_Note: New 2026-08-27 (per Craig) -- reference-only companion to ua-lexeme-0574 (потужний),
     added to complete the потужний/strength near-synonym cluster. No Яблуко textbook chapter

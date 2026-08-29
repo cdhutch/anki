@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.4.1
 - ch:1.10.5
+- ch:1.12.5
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: монета
   UA_Example: Археологи знайшли стародавню золоту монету.
   EN_Example: Archaeologists found an ancient gold coin.
-  Tags_Ch: ch:2.4.1, ch:1.10.5
+  Tags_Ch: ch:2.4.1, ch:1.10.5, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/монета
   Source_Note: 'Горох-verified 2026-08-28, ch.4.1 sourcing pass (history: centuries, era markers,
     everyday inventions).'

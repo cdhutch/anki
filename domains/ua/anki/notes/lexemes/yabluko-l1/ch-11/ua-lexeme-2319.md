@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.12.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: розказати
   UA_Example: Вона розказала цікаву історію.
   EN_Example: She told an interesting story.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/розказати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (see counterpart note); yabluko-l1 vocabulary expansion pass, 2026-08-29.

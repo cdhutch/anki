@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.1
+- ch:1.12.1
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: покористуватися
   UA_Example: Можна покористуватися вашим зарядним пристроєм?
   EN_Example: May I use your charger for a bit?
-  Tags_Ch: ch:2.7.1
+  Tags_Ch: ch:2.7.1, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/покористуватися
   Source_Note: Горох-verified 2026-08-28, ch.7.1 sourcing pass (devices/tech vocabulary).
   Verification Notes: New. Perfective partner of користу́ватися (ua-lexeme-1894).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.5
+- ch:1.12.2
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: треба
   UA_Example: Мені треба йти на роботу.
   EN_Example: I need to go to work.
-  Tags_Ch: ch:1.11.5
+  Tags_Ch: ch:1.11.5, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/треба
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -13,6 +13,7 @@ tags:
 - ch:2.2.2
 - ch:1.1.4
 - ch:1.6.7
+- ch:1.12.1
 - pos:noun
 - status:draft
 fields:
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: посуд
   UA_Example: Після вечірки треба помити посуд.
   EN_Example: After the party we need to wash the dishes.
-  Tags_Ch: ch:2.2.2, ch:1.1.4, ch:1.6.7, ch:1.7.1
+  Tags_Ch: ch:2.2.2, ch:1.1.4, ch:1.6.7, ch:1.7.1, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/посуд
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Masc., 2nd decl., hard group. Example bundles вечі́рка (ua-lexeme-0979,

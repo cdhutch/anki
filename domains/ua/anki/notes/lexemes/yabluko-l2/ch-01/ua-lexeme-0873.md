@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.1.3
 - ch:1.11.2
+- ch:1.12.7
 - pos:verb
 - status:draft
 - aspect:imperfective-only
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: намагатися
   UA_Example: Я намагаюся вчити українську щодня.
   EN_Example: I try to study Ukrainian every day.
-  Tags_Ch: ch:2.1.3, ch:1.11.2
+  Tags_Ch: ch:2.1.3, ch:1.11.2, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/намагатися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

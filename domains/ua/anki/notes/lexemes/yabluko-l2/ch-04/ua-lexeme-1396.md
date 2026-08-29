@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.3
+- ch:1.12.6
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: доля
   UA_Example: Це була важка доля.
   EN_Example: It was a hard fate.
-  Tags_Ch: ch:2.4.3, ch:1.9.5
+  Tags_Ch: ch:2.4.3, ch:1.9.5, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/доля
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'

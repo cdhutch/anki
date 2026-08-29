@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.12.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: стрибнути
   UA_Example: Кіт стрибнув на стіл.
   EN_Example: The cat jumped onto the table.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/стрибнути
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (see counterpart note); yabluko-l1 vocabulary expansion pass, 2026-08-29.

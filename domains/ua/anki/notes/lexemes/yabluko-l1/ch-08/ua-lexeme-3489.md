@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.8.4
+- ch:1.12.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: іменини
   UA_Example: Сьогодні в мене іменини.
   EN_Example: Today is my name day.
-  Tags_Ch: ch:1.8.4
+  Tags_Ch: ch:1.8.4, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/іменини
   Source_Note: yabluko-l1-vocabulary.pdf ch.8, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
+- ch:1.12.6
 - pos:verb
 - status:verified
 fields:
@@ -46,7 +47,7 @@ fields:
   TypingAnswer: вигравати / виграти
   UA_Example: Вона любить вигравати навіть у дружніх іграх.
   EN_Example: She likes to win even in friendly games.
-  Tags_Ch: ch:2.9.3, ch:1.11.3
+  Tags_Ch: ch:2.9.3, ch:1.11.3, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/вигравати; https://goroh.pp.ua/Словозміна/виграти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.4.7
+- ch:1.12.4
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: коханий
   UA_Example: Мій коханий подарував мені квіти.
   EN_Example: My sweetheart gave me flowers.
-  Tags_Ch: ch:1.4.7
+  Tags_Ch: ch:1.4.7, ch:1.12.4
   Source_URL: https://goroh.pp.ua/Словозміна/коханий
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

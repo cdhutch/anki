@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.4.5
 - ch:1.4.7
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: подивитися
   UA_Example: Вона подивилася на нього і посміхнулася.
   EN_Example: She looked at him and smiled.
-  Tags_Ch: ch:1.4.5, ch:1.4.7
+  Tags_Ch: ch:1.4.5, ch:1.4.7, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/подивитися
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

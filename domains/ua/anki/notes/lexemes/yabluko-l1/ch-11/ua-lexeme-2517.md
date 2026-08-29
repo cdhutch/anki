@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.6
+- ch:1.12.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: здивуватися
   UA_Example: Він здивувався подарунку.
   EN_Example: He was surprised by the gift.
-  Tags_Ch: ch:1.11.6
+  Tags_Ch: ch:1.11.6, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/здивуватися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an

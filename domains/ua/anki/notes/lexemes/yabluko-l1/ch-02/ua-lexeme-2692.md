@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.1
+- ch:1.12.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: прогулянка
   UA_Example: Ми пішли на вечірню прогулянку.
   EN_Example: We went for an evening walk.
-  Tags_Ch: ch:1.2.1
+  Tags_Ch: ch:1.2.1, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/прогулянка
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.1, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

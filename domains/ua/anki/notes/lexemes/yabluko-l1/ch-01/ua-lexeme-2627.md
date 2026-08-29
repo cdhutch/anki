@@ -12,6 +12,7 @@ tags:
 - textbook:яблуко
 - ch:1.1.4
 - ch:1.3.4
+- ch:1.12.1
 - pos:noun
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: одяг
   UA_Example: У шафі багато одягу.
   EN_Example: There are many clothes in the closet.
-  Tags_Ch: ch:1.1.4, ch:1.3.4, ch:1.8.2
+  Tags_Ch: ch:1.1.4, ch:1.3.4, ch:1.8.2, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/одяг
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

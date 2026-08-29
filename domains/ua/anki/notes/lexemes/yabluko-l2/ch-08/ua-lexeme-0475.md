@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - ch:1.3.1
+- ch:1.12.6
 - pos:noun
 - gender:n
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: життя
   UA_Example: Рівень життя в цьому регіоні досить високий.
   EN_Example: The standard of living in this region is quite high.
-  Tags_Ch: ch:2.8.3, ch:1.3.1
+  Tags_Ch: ch:2.8.3, ch:1.3.1, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/життя
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0486 (рівень життя).

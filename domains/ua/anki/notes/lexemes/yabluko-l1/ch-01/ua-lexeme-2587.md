@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.3
+- ch:1.12.5
 - pos:adjective
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: золотий
   UA_Example: Вона виграла золоту медаль.
   EN_Example: She won a gold medal.
-  Tags_Ch: ch:1.1.3, ch:1.8.3
+  Tags_Ch: ch:1.1.3, ch:1.8.3, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/золотий
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

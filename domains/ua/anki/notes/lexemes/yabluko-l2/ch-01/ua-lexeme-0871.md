@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.3
+- ch:1.12.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: знайомитися / познайомитися
   UA_Example: Ми познайомилися на вечірці.
   EN_Example: We met at the party.
-  Tags_Ch: ch:2.1.3
+  Tags_Ch: ch:2.1.3, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/знайомитися; https://goroh.pp.ua/Словозміна/познайомитися
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

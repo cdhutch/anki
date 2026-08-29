@@ -12,6 +12,7 @@ tags:
 - ch:1.11.1
 - ch:1.2.6
 - ch:1.3.4
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: дивитися / подивитися
   UA_Example: Діти дивляться мультфільм.
   EN_Example: The children are watching a cartoon.
-  Tags_Ch: ch:1.11.1, ch:1.2.6, ch:1.3.4
+  Tags_Ch: ch:1.11.1, ch:1.2.6, ch:1.3.4, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/дивитися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj2-ity); yabluko-l1 vocabulary expansion pass, 2026-08-29.

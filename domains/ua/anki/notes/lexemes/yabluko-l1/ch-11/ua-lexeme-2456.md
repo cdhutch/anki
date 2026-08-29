@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.4
+- ch:1.12.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: хворіти / захворіти
   UA_Example: Він часто хворіє взимку.
   EN_Example: He often gets sick in winter.
-  Tags_Ch: ch:1.11.4
+  Tags_Ch: ch:1.11.4, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/хворіти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

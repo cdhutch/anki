@@ -12,6 +12,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.2
 - ch:1.11.2
+- ch:1.12.4
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: вірити / повірити
   UA_Example: Я вірю тобі.
   EN_Example: I believe you.
-  Tags_Ch: ch:2.10.2, ch:1.11.2, ch:1.8.5
+  Tags_Ch: ch:2.10.2, ch:1.11.2, ch:1.8.5, ch:1.12.4
   Source_URL: https://goroh.pp.ua/Словозміна/вірити; https://goroh.pp.ua/Словозміна/повірити
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

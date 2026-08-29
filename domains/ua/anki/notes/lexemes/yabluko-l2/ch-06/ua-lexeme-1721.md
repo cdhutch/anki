@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.6.2
 - ch:1.11.6
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: прокинутися
   UA_Example: Я прокинувся від гучного шуму.
   EN_Example: I woke up from a loud noise.
-  Tags_Ch: ch:2.6.2, ch:1.11.6
+  Tags_Ch: ch:2.6.2, ch:1.11.6, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/прокинутися
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

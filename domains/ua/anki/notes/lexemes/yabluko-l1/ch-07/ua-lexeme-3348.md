@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7.5
+- ch:1.12.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: антикварний
   UA_Example: Це антикварний годинник.
   EN_Example: This is an antique clock.
-  Tags_Ch: ch:1.7.5
+  Tags_Ch: ch:1.7.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/антикварний
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

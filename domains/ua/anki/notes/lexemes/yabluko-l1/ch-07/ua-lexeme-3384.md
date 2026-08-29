@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.7.5
 - ch:1.7.7
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: організовувати / організувати
   UA_Example: Вони організовують вечірку.
   EN_Example: They are organizing a party.
-  Tags_Ch: ch:1.7.5, ch:1.7.7
+  Tags_Ch: ch:1.7.5, ch:1.7.7, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/організовувати
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Aspect pair:

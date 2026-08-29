@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.8.3
+- ch:1.12.7
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: схожий на
   UA_Example: Цей будинок схожий на замок.
   EN_Example: This building looks like a castle.
-  Tags_Ch: ch:1.8.3
+  Tags_Ch: ch:1.8.3, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/схожий
   Source_Note: yabluko-l1-vocabulary.pdf ch.8, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

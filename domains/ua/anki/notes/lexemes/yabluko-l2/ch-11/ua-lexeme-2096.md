@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.11.1
+- ch:1.12.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: берегти / зберегти
   UA_Example: Ми повинні берегти природні ресурси.
   EN_Example: We must preserve natural resources.
-  Tags_Ch: ch:2.11.1
+  Tags_Ch: ch:2.11.1, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/берегти
   Source_Note: Горох-verified 2026-08-28/29, ch.11.1 sourcing pass (environmental pollution
     sources; conservation actions and sustainability), cross-checked against yabluko-l2-verb-dictionary.pdf

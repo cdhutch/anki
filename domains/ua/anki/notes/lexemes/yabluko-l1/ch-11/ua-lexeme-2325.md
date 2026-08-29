@@ -12,6 +12,7 @@ tags:
 - textbook:яблуко
 - ch:1.11.2
 - ch:1.5.5
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: вибирати / вибрати
   UA_Example: Вона вибирає сукню на весілля.
   EN_Example: She is choosing a dress for the wedding.
-  Tags_Ch: ch:1.11.2, ch:1.5.5, ch:1.7.7
+  Tags_Ch: ch:1.11.2, ch:1.5.5, ch:1.7.7, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/вибирати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

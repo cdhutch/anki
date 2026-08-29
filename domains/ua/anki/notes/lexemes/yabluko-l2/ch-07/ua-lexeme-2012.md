@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.4
+- ch:1.12.3
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: успіх
   UA_Example: Успіх нового винаходу перевершив усі очікування.
   EN_Example: The success of the new invention exceeded all expectations.
-  Tags_Ch: ch:2.7.4, ch:1.8.3
+  Tags_Ch: ch:2.7.4, ch:1.8.3, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/успіх
   Source_Note: Горох-verified 2026-08-28, ch.7.4 sourcing pass (robots/devices nouns; connect/register
     verb pair; humanoid-robot adjectives), left-column stream of the two-independent-columns

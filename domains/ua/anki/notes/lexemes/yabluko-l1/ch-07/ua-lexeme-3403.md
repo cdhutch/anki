@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.7.7
+- ch:1.12.3
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: відвідати
   UA_Example: Ми хочемо відвідати аквапарк.
   EN_Example: We want to visit the water park.
-  Tags_Ch: ch:1.7.7, ch:1.9.5
+  Tags_Ch: ch:1.7.7, ch:1.9.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/відвідати
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

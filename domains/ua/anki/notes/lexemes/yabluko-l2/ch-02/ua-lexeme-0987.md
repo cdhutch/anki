@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.1
+- ch:1.12.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: парфуми
   UA_Example: На день народження їй подарували парфуми.
   EN_Example: For her birthday she was given perfume.
-  Tags_Ch: ch:2.2.1
+  Tags_Ch: ch:2.2.1, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/парфуми
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
   Verification Notes: 'New. Plural-only noun (Горох: множинний); Горох also lists a singular

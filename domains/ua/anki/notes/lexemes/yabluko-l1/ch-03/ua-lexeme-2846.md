@@ -12,6 +12,7 @@ tags:
 - textbook:яблуко
 - ch:1.3.4
 - ch:1.4.7
+- ch:1.12.6
 - pos:adjective
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: кожен
   UA_Example: Кожен день він читає газету.
   EN_Example: Every day he reads the newspaper.
-  Tags_Ch: ch:1.3.4, ch:1.4.7, ch:1.9.4
+  Tags_Ch: ch:1.3.4, ch:1.4.7, ch:1.9.4, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/кожен
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

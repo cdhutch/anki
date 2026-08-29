@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.4
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: влаштувати
   UA_Example: Школа влаштувала змагання минулого тижня.
   EN_Example: The school held a competition last week.
-  Tags_Ch: ch:2.4.4
+  Tags_Ch: ch:2.4.4, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/влаштувати
   Source_Note: Горох-verified 2026-08-29, aspect-pairing completeness pass (fixing incomplete
     verb aspect pairs flagged by count-incomplete-aspect-pairs audit), cross-checked against

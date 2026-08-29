@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.10.1
+- ch:1.12.2
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мужній
   UA_Example: Мужній лицар врятував принцесу.
   EN_Example: The courageous knight saved the princess.
-  Tags_Ch: ch:1.10.1
+  Tags_Ch: ch:1.10.1, ch:1.12.2
   Source_URL: https://goroh.pp.ua/Словозміна/мужній
   Source_Note: yabluko-l1-vocabulary.pdf ch.10, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

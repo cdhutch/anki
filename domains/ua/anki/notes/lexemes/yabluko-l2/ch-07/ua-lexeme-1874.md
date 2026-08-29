@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.1
+- ch:1.12.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ноутбук
   UA_Example: Він працює за ноутбуком у кавʼярні.
   EN_Example: He works on his laptop in the cafe.
-  Tags_Ch: ch:2.7.1
+  Tags_Ch: ch:2.7.1, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/ноутбук
   Source_Note: Горох-verified 2026-08-28, ch.7.1 sourcing pass (devices/tech vocabulary).
   Verification Notes: New. Masc., 2nd decl., hard group.

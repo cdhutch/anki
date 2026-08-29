@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.2
+- ch:1.12.6
 - pos:pronoun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: жодний
   UA_Example: У кошику немає жодного яблука.
   EN_Example: There isn't a single apple in the basket.
-  Tags_Ch: ch:2.3.2
+  Tags_Ch: ch:2.3.2, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/жодний
   Source_Note: Горох-verified 2026-08-28, ch.3.2 sourcing pass (quantifiers/negation).
   Verification Notes: New. Negative pronoun (займенник, заперечний), declines by gender/number

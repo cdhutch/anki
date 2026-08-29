@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.11.3
 - ch:1.10.3
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: ділити / поділити
   UA_Example: Вони ділять торт порівну.
   EN_Example: They divide the cake equally.
-  Tags_Ch: ch:1.11.3, ch:1.10.3
+  Tags_Ch: ch:1.11.3, ch:1.10.3, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/ділити
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

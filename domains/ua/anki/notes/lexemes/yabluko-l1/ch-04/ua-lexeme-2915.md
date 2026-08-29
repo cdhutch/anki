@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.4.3
 - ch:1.4.7
+- ch:1.12.6
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: дружба
   UA_Example: Їхня дружба триває багато років.
   EN_Example: Their friendship has lasted many years.
-  Tags_Ch: ch:1.4.3, ch:1.4.7
+  Tags_Ch: ch:1.4.3, ch:1.4.7, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/дружба
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

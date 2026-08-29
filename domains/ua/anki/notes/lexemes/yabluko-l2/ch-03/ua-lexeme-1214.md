@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.3
+- ch:1.12.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: відвідувати / відвідати
   UA_Example: Ми часто відвідуємо екопоселення друзів.
   EN_Example: We often visit our friends' eco-village.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/відвідувати; https://goroh.pp.ua/Словозміна/відвідати
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective, 1st conjugation. Perfective відві́дати added

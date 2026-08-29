@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.8.3
+- ch:1.12.6
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: виграти
   UA_Example: Наша команда виграла матч.
   EN_Example: Our team won the match.
-  Tags_Ch: ch:1.8.3
+  Tags_Ch: ch:1.8.3, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/виграти
   Source_Note: yabluko-l1-vocabulary.pdf ch.8, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective verb;

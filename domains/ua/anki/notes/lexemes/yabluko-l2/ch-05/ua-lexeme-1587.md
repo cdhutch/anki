@@ -11,6 +11,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.5.3
+- ch:1.12.4
 - pos:adjective
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: затишний
   UA_Example: У кавʼярні дуже затишна атмосфера.
   EN_Example: The cafe has a very cozy atmosphere.
-  Tags_Ch: ch:2.5.3, ch:1.7.4
+  Tags_Ch: ch:2.5.3, ch:1.7.4, ch:1.12.4
   Source_URL: https://goroh.pp.ua/Словозміна/затишний
   Source_Note: Горох-verified 2026-08-28, ch.5.3 sourcing pass (public buildings/monuments;
     architectural detail nouns; sightseeing adjectives).

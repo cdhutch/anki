@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.2
+- ch:1.12.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: кава
   UA_Example: Я їм кава щоранку.
   EN_Example: I eat coffee every morning.
-  Tags_Ch: ch:1.5.2
+  Tags_Ch: ch:1.5.2, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/кава
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

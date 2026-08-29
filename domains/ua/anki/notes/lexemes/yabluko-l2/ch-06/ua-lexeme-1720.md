@@ -12,6 +12,7 @@ tags:
 - ch:2.6.2
 - ch:1.11.6
 - ch:1.6.5
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: прокидатися
   UA_Example: Я прокидаюся рано щодня.
   EN_Example: I wake up early every day.
-  Tags_Ch: ch:2.6.2, ch:1.11.6, ch:1.6.5
+  Tags_Ch: ch:2.6.2, ch:1.11.6, ch:1.6.5, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/прокидатися
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.9.3
+- ch:1.12.3
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: Ласкаво просимо!
   UA_Example: Ласкаво просимо до нашого готелю!
   EN_Example: Welcome to our hotel!
-  Tags_Ch: ch:1.9.3
+  Tags_Ch: ch:1.9.3, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/Ласкаво_просимо
   Source_Note: yabluko-l1-vocabulary.pdf ch.9, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

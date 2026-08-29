@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.5.3
 - ch:1.5.7
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: замовити
   UA_Example: Ми замовили замовити.
   EN_Example: We ordered dinner.
-  Tags_Ch: ch:1.5.3, ch:1.5.7
+  Tags_Ch: ch:1.5.3, ch:1.5.7, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/замовити
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

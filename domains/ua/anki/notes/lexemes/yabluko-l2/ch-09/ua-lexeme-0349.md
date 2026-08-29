@@ -12,6 +12,7 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - ch:1.4.2
+- ch:1.12.1
 - pos:adjective
 - status:verified
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: наступний
   UA_Example: Наступного дня вони вирушили до гірського масиву.
   EN_Example: The next day they set off for the mountain massif.
-  Tags_Ch: ch:2.9.7, ch:1.4.2, ch:1.7.3
+  Tags_Ch: ch:2.9.7, ch:1.4.2, ch:1.7.3, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/наступний
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: ''

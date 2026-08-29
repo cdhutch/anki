@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.9.5
+- ch:1.12.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: відчинити
   UA_Example: Відчини, будь ласка, вікно.
   EN_Example: Please open the window.
-  Tags_Ch: ch:1.9.5
+  Tags_Ch: ch:1.9.5, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/відчинити
   Source_Note: yabluko-l1-vocabulary.pdf ch.9, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Perfective counterpart
