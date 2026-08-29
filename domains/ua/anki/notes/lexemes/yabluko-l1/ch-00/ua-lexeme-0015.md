@@ -15,7 +15,7 @@ tags:
 - pos:profession
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0015
   Lemma: студе́нт

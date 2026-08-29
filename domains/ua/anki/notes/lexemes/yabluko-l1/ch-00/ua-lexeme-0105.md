@@ -13,7 +13,7 @@ tags:
 - pos:interjection
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0105
   Lemma: приві́т

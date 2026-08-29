@@ -14,7 +14,8 @@ tags:
 - pos:noun
 - gender:m
 - status:draft
-- release:pending
+- release:active
+- relearn:seeded
 - stress:unverified
 fields:
   NoteID: ua-lexeme-0604

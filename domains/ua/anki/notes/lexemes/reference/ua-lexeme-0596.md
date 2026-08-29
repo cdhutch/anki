@@ -14,7 +14,8 @@ tags:
 - pos:noun
 - gender:n
 - status:draft
-- release:pending
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0596
   Lemma: малюва́ння

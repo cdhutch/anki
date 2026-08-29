@@ -15,7 +15,7 @@ tags:
 - gender:f
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0045
   Lemma: мо́ва

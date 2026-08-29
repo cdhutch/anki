@@ -17,7 +17,8 @@ tags:
 - ch:1.12.6
 - pos:verb
 - status:draft
-- release:pending
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0669
   Lemma: допомага́ти

@@ -16,7 +16,7 @@ tags:
 - gender:m
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 - homograph:true
 fields:
   NoteID: ua-lexeme-0047

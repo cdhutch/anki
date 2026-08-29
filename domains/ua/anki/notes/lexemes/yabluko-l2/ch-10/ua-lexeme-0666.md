@@ -14,7 +14,8 @@ tags:
 - ch:1.12.2
 - pos:verb
 - status:draft
-- release:pending
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0666
   Lemma: дзвони́ти

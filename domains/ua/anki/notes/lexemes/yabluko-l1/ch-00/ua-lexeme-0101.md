@@ -13,7 +13,7 @@ tags:
 - pos:adverb
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0101
   Lemma: норма́льно

@@ -15,7 +15,8 @@ tags:
 - ch:1.12.4
 - pos:verb
 - status:draft
-- release:pending
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0664
   Lemma: бажа́ти

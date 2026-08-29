@@ -16,7 +16,7 @@ tags:
 - gender:f
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0063
   Lemma: стаття́

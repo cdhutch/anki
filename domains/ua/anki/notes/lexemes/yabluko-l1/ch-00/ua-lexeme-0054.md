@@ -15,7 +15,7 @@ tags:
 - gender:n
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0054
   Lemma: піані́но

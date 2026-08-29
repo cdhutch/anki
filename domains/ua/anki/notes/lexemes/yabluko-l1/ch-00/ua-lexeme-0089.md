@@ -14,7 +14,7 @@ tags:
 - pos:nationality-adj
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0089
   Lemma: іспа́нський

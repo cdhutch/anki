@@ -18,7 +18,7 @@ tags:
 - gender:m
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0027
   Lemma: буди́нок
