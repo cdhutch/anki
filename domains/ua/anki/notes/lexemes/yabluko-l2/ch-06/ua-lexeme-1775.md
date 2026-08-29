@@ -12,6 +12,7 @@ tags:
 - ch:2.6.3
 - pos:verb
 - status:draft
+- ch:2.12.6
 fields:
   NoteID: ua-lexeme-1775
   Lemma: потра́пити
@@ -35,12 +36,13 @@ fields:
   TypingAnswer: потрапити
   UA_Example: Через непорозуміння він потрапив під арешт.
   EN_Example: Due to a misunderstanding, he got arrested.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3,ch:2.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/потрапити
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).
-  Verification Notes: New lexeme note for the pre-existing verb-only note ua-verb-0289, now
+  Verification Notes: 'New lexeme note for the pre-existing verb-only note ua-verb-0289, now
     independently bulleted here as the потрапляти-потрапити aspect pair. Textbook parenthetical
-    "(під арешт)" flags the "get arrested" collocation as the relevant sense here.
+    "(під арешт)" flags the "get arrested" collocation as the relevant sense here. Sense note
+    (ch.12.6): reused for the collocation потрапити в аварію = "to get into an accident".'
 ---
 

@@ -12,6 +12,7 @@ tags:
 - ch:2.7.3
 - pos:verb
 - status:draft
+- ch:2.12.6
 fields:
   NoteID: ua-lexeme-1972
   Lemma: передба́чити
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: передбачити
   UA_Example: Науковці передбачили появу цієї технології ще 20 років тому.
   EN_Example: Scientists predicted the appearance of this technology 20 years ago already.
-  Tags_Ch: ch:2.7.3
+  Tags_Ch: ch:2.7.3,ch:2.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/передбачити
   Source_Note: Горох-verified 2026-08-28, ch.7.3 sourcing pass (future tech/robotics/medicine
     nouns and adjectives; a large, page-spanning sub-chapter per the two-independent-columns
