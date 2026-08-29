@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -38,7 +39,7 @@ fields:
   TypingAnswer: обідати / пообідати
   UA_Example: Ми обідаємо о першій годині.
   EN_Example: We have lunch at one o'clock.
-  Tags_Ch: ch:2.1.3, ch:2.6.2, ch:1.11.1, ch:1.5.3
+  Tags_Ch: ch:2.1.3, ch:2.6.2, ch:1.11.1, ch:1.5.3, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/обідати; https://goroh.pp.ua/Словозміна/пообідати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

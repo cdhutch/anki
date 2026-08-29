@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: гість
   UA_Example: На весілля прийшло багато гостей.
   EN_Example: Many guests came to the wedding.
-  Tags_Ch: ch:1.4.3, ch:1.5.4
+  Tags_Ch: ch:1.4.3, ch:1.5.4, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/гість
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

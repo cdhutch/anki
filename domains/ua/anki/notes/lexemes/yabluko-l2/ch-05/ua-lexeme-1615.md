@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сукня
   UA_Example: Вона одягла нову сукню на свято.
   EN_Example: She wore a new dress for the celebration.
-  Tags_Ch: ch:2.5.5
+  Tags_Ch: ch:2.5.5, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/сукня
   Source_Note: Горох-verified 2026-08-28, ch.5.5 sourcing pass (festival/craft-fair vocabulary;
     joining/announcing verbs; descriptive adjectives).

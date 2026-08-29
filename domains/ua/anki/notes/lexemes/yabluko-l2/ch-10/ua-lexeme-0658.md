@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: фея
   UA_Example: У цій казці фея виконує три бажання.
   EN_Example: In this fairy tale, the fairy grants three wishes.
-  Tags_Ch: ch:2.10.2
+  Tags_Ch: ch:2.10.2, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/фея
   Source_Note: Горох-verified 2026-08-28, ch.10.2 sourcing pass (family/games; feelings &
     social verbs).

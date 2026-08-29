@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: березень
   UA_Example: Весна в Україні починається у березні.
   EN_Example: Spring in Ukraine begins in March.
-  Tags_Ch: ch:2.4.2
+  Tags_Ch: ch:2.4.2, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/березень
   Source_Note: 'Горох-verified 2026-08-28, ch.4.2 sourcing pass (history: months, dates, founding/proclaiming
     events).'

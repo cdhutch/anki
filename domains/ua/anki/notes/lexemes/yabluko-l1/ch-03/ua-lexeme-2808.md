@@ -6,6 +6,8 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: спати / сплю
   UA_Example: Дитина спить у своїй кімнаті.
   EN_Example: The child is sleeping in their room.
-  Tags_Ch: ch:1.3.1
+  Tags_Ch: ch:1.3.1, ch:1.8.5, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/спати_/_сплю
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

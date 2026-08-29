@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: запізнитися
   UA_Example: Він запізнитися щодня.
   EN_Example: He запізнитисяs every day.
-  Tags_Ch: ch:1.5.7
+  Tags_Ch: ch:1.5.7, ch:1.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/запізнитися
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

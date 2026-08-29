@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: зачинятися
   UA_Example: Магазин зачиняється о девʼятій.
   EN_Example: The store closes at nine.
-  Tags_Ch: ch:2.6.3
+  Tags_Ch: ch:2.6.3, ch:1.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/зачинятися
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).

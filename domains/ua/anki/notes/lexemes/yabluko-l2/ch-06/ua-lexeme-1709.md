@@ -6,6 +6,8 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +38,7 @@ fields:
   TypingAnswer: лягати
   UA_Example: Я лягаю спати о десятій вечора.
   EN_Example: I go to bed at ten in the evening.
-  Tags_Ch: ch:2.6.2, ch:1.11.1
+  Tags_Ch: ch:2.6.2, ch:1.11.1, ch:1.8.5, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/лягати
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

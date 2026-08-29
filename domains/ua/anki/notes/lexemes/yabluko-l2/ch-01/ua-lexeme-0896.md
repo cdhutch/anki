@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -39,7 +40,7 @@ fields:
   TypingAnswer: чистити / почистити
   UA_Example: Я чищу зуби перед сном.
   EN_Example: I brush my teeth before bed.
-  Tags_Ch: ch:2.1.4, ch:2.6.1, ch:2.7.1, ch:1.11.2, ch:1.6.7
+  Tags_Ch: ch:2.1.4, ch:2.6.1, ch:2.7.1, ch:1.11.2, ch:1.6.7, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/чистити; https://goroh.pp.ua/Словозміна/почистити
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

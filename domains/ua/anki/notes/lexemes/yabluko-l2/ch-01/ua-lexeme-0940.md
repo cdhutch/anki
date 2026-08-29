@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: канікули
   UA_Example: Літні канікули тривають три місяці.
   EN_Example: Summer vacation lasts three months.
-  Tags_Ch: ch:2.1.7, ch:1.6.5
+  Tags_Ch: ch:2.1.7, ch:1.6.5, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/канікули
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

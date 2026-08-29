@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: змагання
   UA_Example: Змагання відбудуться завтра.
   EN_Example: The competition will take place tomorrow.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/змагання
   Source_Note: Горох lists a 2nd, capitalized homograph entry ('Змагання') alongside this
     common noun; verified the lowercase common-noun sense was used. Verified 2026-07-22.

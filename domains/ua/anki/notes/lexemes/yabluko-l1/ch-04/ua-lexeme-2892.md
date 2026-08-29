@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.7
 - ch:1.5.3
 - domain:ua
 - topic:vocabulary
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: вечеряти
   UA_Example: Ми вечеряємо о сьомій.
   EN_Example: We have dinner at seven.
-  Tags_Ch: ch:1.4.4, ch:1.4.5, ch:1.5.3
+  Tags_Ch: ch:1.4.4, ch:1.4.5, ch:1.5.3, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/вечеряти
   Source_Note: yabluko-l1-vocabulary.pdf ch.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate

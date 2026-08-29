@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сумка
   UA_Example: Де моя сумка?
   EN_Example: Where is my bag?
-  Tags_Ch: ch:1.7.5
+  Tags_Ch: ch:1.7.5, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/сумка
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

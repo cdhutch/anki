@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: місце
   UA_Example: Вона посіла третє місце на змаганнях.
   EN_Example: She took third place in the competition.
-  Tags_Ch: ch:2.9.3, ch:1.2.3
+  Tags_Ch: ch:2.9.3, ch:1.2.3, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/місце
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

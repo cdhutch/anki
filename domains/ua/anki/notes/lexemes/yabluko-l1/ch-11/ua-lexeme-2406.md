@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: нести
   UA_Example: Він несе важку валізу.
   EN_Example: He is carrying a heavy suitcase.
-  Tags_Ch: ch:1.11.3
+  Tags_Ch: ch:1.11.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/нести
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Completes an

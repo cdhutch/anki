@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: іграшка
   UA_Example: Це моя улюблена мʼяка іграшка.
   EN_Example: This is my favorite soft/stuffed toy.
-  Tags_Ch: ch:2.2.3, ch:1.6.5
+  Tags_Ch: ch:2.2.3, ch:1.6.5, ch:1.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/іграшка
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. Fem., 1st decl., hard group. Resolves a gap flagged in ch:2.1 (магазин

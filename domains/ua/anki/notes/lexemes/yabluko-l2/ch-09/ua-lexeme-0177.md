@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -46,7 +47,7 @@ fields:
   TypingAnswer: перемагати / перемогти
   UA_Example: Наша команда перемагає у більшості матчів.
   EN_Example: Our team wins most of its matches.
-  Tags_Ch: ch:2.9.2, ch:2.9.3
+  Tags_Ch: ch:2.9.2, ch:2.9.3, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/перемагати; https://goroh.pp.ua/Словозміна/перемогти
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects. Vocab list (9.2) cites
     the perfective 'перемогти' — this note uses the imperfective 'перемагати' as Lemma for

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: шкіряний
   UA_Example: Він купив шкіряну куртку.
   EN_Example: He bought a leather jacket.
-  Tags_Ch: ch:2.2.3
+  Tags_Ch: ch:2.2.3, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/шкіряний
   Source_Note: Горох-verified 2026-08-28, ch.2.3 sourcing pass (crafts/toys; materials).
   Verification Notes: New. Hard-group adjective. Горох also lists a related inanimate noun

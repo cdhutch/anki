@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: тканина
   UA_Example: Ця тканина дуже мʼяка.
   EN_Example: This fabric is very soft.
-  Tags_Ch: ch:1.7.3
+  Tags_Ch: ch:1.7.3, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/тканина
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

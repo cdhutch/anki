@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: державний
   UA_Example: Це державна установа.
   EN_Example: This is a state institution.
-  Tags_Ch: ch:1.11.5
+  Tags_Ch: ch:1.11.5, ch:1.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/державний
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: ярмарок
   UA_Example: На різдвяному ярмарку продають гарячий глінтвейн.
   EN_Example: They sell hot mulled wine at the Christmas fair.
-  Tags_Ch: ch:2.5.5
+  Tags_Ch: ch:2.5.5, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/ярмарок
   Source_Note: Горох-verified 2026-08-28, ch.5.5 sourcing pass (festival/craft-fair vocabulary;
     joining/announcing verbs; descriptive adjectives).

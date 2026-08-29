@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: відпустка
   UA_Example: Він поїде у відпустку в липні.
   EN_Example: He will go on vacation in July.
-  Tags_Ch: ch:2.3.5, ch:1.6.5
+  Tags_Ch: ch:2.3.5, ch:1.6.5, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/відпустка
   Source_Note: Горох-verified 2026-08-28, ch.3.5 sourcing pass (civic life, leisure, and fractions).
   Verification Notes: New. Fem., 1st decl., hard group.

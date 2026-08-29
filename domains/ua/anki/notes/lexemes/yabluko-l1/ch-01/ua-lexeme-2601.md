@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: світ
   UA_Example: Він подорожує світом.
   EN_Example: He travels the world.
-  Tags_Ch: ch:1.1.3, ch:1.2.5
+  Tags_Ch: ch:1.1.3, ch:1.2.5, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/світ
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

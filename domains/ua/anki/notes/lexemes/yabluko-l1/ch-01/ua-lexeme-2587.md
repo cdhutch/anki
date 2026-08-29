@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: золотий
   UA_Example: Вона виграла золоту медаль.
   EN_Example: She won a gold medal.
-  Tags_Ch: ch:1.1.3
+  Tags_Ch: ch:1.1.3, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/золотий
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

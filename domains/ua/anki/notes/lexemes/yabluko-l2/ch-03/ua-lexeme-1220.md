@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: народитися
   UA_Example: Він народився у великому місті.
   EN_Example: He was born in a big city.
-  Tags_Ch: ch:2.3.3, ch:1.11.4
+  Tags_Ch: ch:2.3.3, ch:1.11.4, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/народитися
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Perfective, reflexive -- the textbook targets this perfective form

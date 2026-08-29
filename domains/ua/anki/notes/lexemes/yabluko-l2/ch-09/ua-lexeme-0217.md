@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: кидати / кинути
   UA_Example: Гравці кидають мʼяч один одному.
   EN_Example: The players throw the ball to each other.
-  Tags_Ch: ch:2.9.3, ch:2.10.3
+  Tags_Ch: ch:2.9.3, ch:2.10.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/кидати; https://goroh.pp.ua/Словозміна/кинути
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

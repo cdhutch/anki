@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: конкурс
   UA_Example: У школі відбувся конкурс талантів.
   EN_Example: A talent contest took place at the school.
-  Tags_Ch: ch:2.1.4
+  Tags_Ch: ch:2.1.4, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/конкурс
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).

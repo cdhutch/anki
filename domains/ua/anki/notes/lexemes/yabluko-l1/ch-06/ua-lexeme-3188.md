@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: Свят-вечір
   UA_Example: На Свят-вечір готують дванадцять страв.
   EN_Example: On Christmas Eve, twelve dishes are prepared.
-  Tags_Ch: ch:1.6.3
+  Tags_Ch: ch:1.6.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/Свят-вечір
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

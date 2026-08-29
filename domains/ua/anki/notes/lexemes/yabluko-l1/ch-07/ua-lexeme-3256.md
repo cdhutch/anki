@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.2
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: другий
   UA_Example: Ми живемо на другому поверсі.
   EN_Example: We live on the second floor.
-  Tags_Ch: ch:1.7.1
+  Tags_Ch: ch:1.7.1, ch:1.8.2
   Source_URL: https://goroh.pp.ua/Словозміна/другий
   Source_Note: yabluko-l1-vocabulary.pdf ch.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

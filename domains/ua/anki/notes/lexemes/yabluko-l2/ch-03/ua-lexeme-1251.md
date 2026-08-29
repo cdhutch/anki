@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: місяць
   UA_Example: За один місяць вони побудували новий паркан.
   EN_Example: In one month they built a new fence.
-  Tags_Ch: ch:2.3.4, ch:1.3.4, ch:1.5.7
+  Tags_Ch: ch:2.3.4, ch:1.3.4, ch:1.5.7, ch:1.8.1
   Source_URL: https://goroh.pp.ua/Словозміна/місяць
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

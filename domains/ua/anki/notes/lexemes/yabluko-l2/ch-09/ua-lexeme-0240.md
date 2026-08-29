@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: троянда
   UA_Example: Червоні троянди -- її улюблені квіти.
   EN_Example: Red roses are her favorite flowers.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/троянда
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.
   Verification Notes: ''

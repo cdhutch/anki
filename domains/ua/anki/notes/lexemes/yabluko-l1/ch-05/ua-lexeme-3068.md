@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.7
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: мюслі
   UA_Example: 'Це популярна страва: мюслі.'
   EN_Example: 'This is a popular dish: мюслі.'
-  Tags_Ch: ch:1.5.5
+  Tags_Ch: ch:1.5.5, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/мюслі
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: хрін
   UA_Example: На Різдво готують хрін.
   EN_Example: They make хрін for Christmas.
-  Tags_Ch: ch:1.6.3
+  Tags_Ch: ch:1.6.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/хрін
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
