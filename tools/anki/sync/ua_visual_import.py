@@ -6,8 +6,9 @@ Upsert logic: adds new notes, updates fields on existing notes (matched by NoteI
 Deck: UA::Recognition::Visual
 
 Suspension policy:
-    - status:draft → suspend cards after import
-    - status:verified → unsuspend cards
+    - status:draft OR release:pending → suspend cards after import
+    - status:verified AND release:active → unsuspend cards (release: added
+      2026-08-29, per Craig -- a second, independent gate; see import_note())
     - note has a red-flagged card → keep suspended (added 2026-07-31, per Craig
       -- see get_flagged_note_ids_by_color in tsv_to_anki.py). Only checked
       for existing notes; a brand-new note can't already have a flagged card.
@@ -159,8 +160,9 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     if not isinstance(tags, list):
         tags = []
 
-    # status:draft → suspend cards after import
-    suspend = "status:draft" in tags
+    # AND gate: both status:verified and release:active must be present to
+    # unsuspend; either missing (e.g. status:draft, or release:pending) suspends.
+    suspend = not (("status:verified" in tags) and ("release:active" in tags))
 
     existing_id = find_note_by_id(note_id)
 

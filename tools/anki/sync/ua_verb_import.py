@@ -7,8 +7,11 @@ Deck layout:
     UA::Verbs    ← All verb conjugation paradigm cards
 
 Suspension policy:
-    - status:draft → suspend cards after import (inactive verbs)
-    - status:verified → unsuspend cards (active verbs, used in current chapters)
+    - status:draft OR release:pending → suspend cards after import
+      (inactive / not yet released)
+    - status:verified AND release:active → unsuspend cards (active verbs,
+      used in current chapters; release: added 2026-08-29 per Craig as a
+      second, independent gate -- see should_suspend())
     - (conj:drill/conj:suspended curation axis removed 2026-08-27, per Craig --
       all verified verbs are now active for drilling, not just class leaders,
       since class leaders trickle in gradually as older chapters are backfilled)
@@ -153,15 +156,20 @@ def parse_note_file(path: Path) -> dict | None:
 
 def should_suspend(tags: list[str]) -> bool:
     """Suspension policy for UA_Verb cards (see module docstring):
-        - status:draft tag             → suspend (inactive/unreviewed)
-        - otherwise (status:verified)  → unsuspend, ready for drilling
+        - status:draft OR release:pending     → suspend (inactive/not released)
+        - status:verified AND release:active  → unsuspend, ready for drilling
 
     The conj:drill/conj:suspended curation axis was removed 2026-08-27 (per
     Craig): all verified verbs are meant to be actively drillable, not just a
     hand-picked set of class leaders, since class leaders will keep arriving
     gradually as earlier chapters are backfilled into the corpus.
+
+    release: added 2026-08-29 (per Craig) as a second, independent gate --
+    status tracks content-quality/review state; release tracks study-pacing
+    (whether this note has been let into rotation yet). Both axes must clear
+    for a note to be active; either one suspends.
     """
-    return "status:draft" in tags
+    return not (("status:verified" in tags) and ("release:active" in tags))
 
 
 def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:
