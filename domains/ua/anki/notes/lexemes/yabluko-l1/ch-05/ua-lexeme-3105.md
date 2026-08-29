@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3105
-  Lemma: зaпiзни́тися
+  Lemma: запізни́тися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

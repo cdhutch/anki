@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3024
-  Lemma: покуштувáти
+  Lemma: покуштува́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3208
-  Lemma: гарбýз
+  Lemma: гарбу́з
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

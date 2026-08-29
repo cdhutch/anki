@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3061
-  Lemma: котлéта
+  Lemma: котле́та
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2949
-  Lemma: однé óдного
+  Lemma: одне́ о́дного
   Lemma_Euphony: ''
   PartOfSpeech: pronoun
   Gender: null

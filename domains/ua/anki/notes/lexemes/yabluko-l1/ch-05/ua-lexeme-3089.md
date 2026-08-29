@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3089
-  Lemma: хот-дóг
+  Lemma: хот-до́г
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2964
-  Lemma: розмíр
+  Lemma: розмі́р
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

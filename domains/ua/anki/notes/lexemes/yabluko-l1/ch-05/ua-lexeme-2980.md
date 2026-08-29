@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2980
-  Lemma: пéрсик
+  Lemma: пе́рсик
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

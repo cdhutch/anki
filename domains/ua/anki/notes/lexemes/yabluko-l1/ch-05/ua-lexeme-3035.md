@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3035
-  Lemma: шоколáдний
+  Lemma: шокола́дний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

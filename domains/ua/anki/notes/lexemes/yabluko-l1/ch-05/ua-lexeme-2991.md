@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2991
-  Lemma: какáо
+  Lemma: кака́о
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

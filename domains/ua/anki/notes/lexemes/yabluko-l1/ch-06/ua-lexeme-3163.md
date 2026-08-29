@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3163
-  Lemma: колядувáти
+  Lemma: колядува́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

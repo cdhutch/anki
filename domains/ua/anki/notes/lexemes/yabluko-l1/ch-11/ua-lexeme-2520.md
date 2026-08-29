@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2520
-  Lemma: багáжник
+  Lemma: бага́жник
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

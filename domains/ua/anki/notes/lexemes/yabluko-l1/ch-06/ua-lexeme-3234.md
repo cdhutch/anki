@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3234
-  Lemma: кастрýля
+  Lemma: кастру́ля
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

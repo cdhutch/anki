@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3230
-  Lemma: порекомендувáти
+  Lemma: порекомендува́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

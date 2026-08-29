@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3081
-  Lemma: сосíска
+  Lemma: соси́ска
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

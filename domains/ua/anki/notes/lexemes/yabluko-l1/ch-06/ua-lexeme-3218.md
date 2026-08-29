@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3218
-  Lemma: прикрашáти
+  Lemma: прикраша́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

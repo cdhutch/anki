@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2888
-  Lemma: цілувáти
+  Lemma: цілува́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

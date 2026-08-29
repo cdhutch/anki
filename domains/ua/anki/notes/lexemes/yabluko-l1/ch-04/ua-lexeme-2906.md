@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2906
-  Lemma: дизáйн
+  Lemma: диза́йн
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

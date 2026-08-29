@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3023
-  Lemma: органíчний
+  Lemma: органі́чний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

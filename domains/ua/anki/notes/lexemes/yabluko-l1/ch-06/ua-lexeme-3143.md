@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3143
-  Lemma: картóпляний
+  Lemma: карто́пляний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

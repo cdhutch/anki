@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3170
-  Lemma: пíсний
+  Lemma: пі́сний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

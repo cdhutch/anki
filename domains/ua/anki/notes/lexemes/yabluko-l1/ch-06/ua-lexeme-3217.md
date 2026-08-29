@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3217
-  Lemma: парáд
+  Lemma: пара́д
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

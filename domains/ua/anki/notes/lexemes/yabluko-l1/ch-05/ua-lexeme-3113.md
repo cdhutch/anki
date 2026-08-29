@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3113
-  Lemma: скáрга
+  Lemma: ска́рга
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

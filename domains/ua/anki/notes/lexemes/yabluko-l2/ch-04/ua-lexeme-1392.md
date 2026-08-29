@@ -43,6 +43,7 @@ fields:
     emigration, education, timeline expressions).'
   Verification Notes: New. Fem., 1st decl., hard group. Stress батьківщи́на (3rd syllable)
     in the "homeland" sense -- distinct from ба́тьківщина (1st syllable), the placename/settlement
-    sense, per Горох.
+    sense, per Горох. Merged duplicate note(s) ua-lexeme-2700 into this canonical note during
+    corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

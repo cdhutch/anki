@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2889
-  Lemma: поíхати
+  Lemma: пої́хати
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3006
-  Lemma: цукéрка
+  Lemma: цуке́рка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

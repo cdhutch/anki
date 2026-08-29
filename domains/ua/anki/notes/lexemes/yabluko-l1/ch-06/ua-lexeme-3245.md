@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3245
-  Lemma: Христóс воскрéс! – Воі́стину воскрéс!
+  Lemma: Христо́с воскре́с! – Воі́стину воскре́с!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

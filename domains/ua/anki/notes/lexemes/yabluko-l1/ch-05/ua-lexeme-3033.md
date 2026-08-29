@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3033
-  Lemma: трéтє
+  Lemma: тре́тє
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

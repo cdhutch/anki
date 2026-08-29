@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2938
-  Lemma: шампáнське
+  Lemma: шампа́нське
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

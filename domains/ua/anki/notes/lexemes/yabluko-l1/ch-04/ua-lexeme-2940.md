@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2940
-  Lemma: кохáний
+  Lemma: коха́ний
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

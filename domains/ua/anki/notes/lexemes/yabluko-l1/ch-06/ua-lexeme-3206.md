@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3206
-  Lemma: цíкавитися
+  Lemma: ці́кавитися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

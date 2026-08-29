@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3197
-  Lemma: крéйда
+  Lemma: кре́йда
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

@@ -16,7 +16,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2986
-  Lemma: кукурýдза
+  Lemma: кукуру́дза
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

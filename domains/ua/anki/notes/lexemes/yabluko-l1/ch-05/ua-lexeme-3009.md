@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3009
-  Lemma: алкогóль
+  Lemma: алкого́ль
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

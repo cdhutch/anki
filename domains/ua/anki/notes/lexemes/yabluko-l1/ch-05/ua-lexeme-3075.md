@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3075
-  Lemma: погóджуватися
+  Lemma: пого́джуватися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

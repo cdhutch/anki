@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2950
-  Lemma: на щáстя
+  Lemma: на ща́стя
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

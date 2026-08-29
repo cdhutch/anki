@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3226
-  Lemma: стóлик
+  Lemma: сто́лик
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

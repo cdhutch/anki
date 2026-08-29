@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3173
-  Lemma: рíздвяний
+  Lemma: рі́здвяний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

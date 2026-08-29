@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3227
-  Lemma: клiє́нт
+  Lemma: кліє́нт
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

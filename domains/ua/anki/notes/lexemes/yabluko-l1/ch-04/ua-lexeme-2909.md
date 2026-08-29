@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2909
-  Lemma: коктéйль
+  Lemma: кокте́йль
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

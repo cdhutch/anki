@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3111
-  Lemma: покарáти
+  Lemma: покара́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

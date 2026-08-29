@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2997
-  Lemma: молокó
+  Lemma: молоко́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

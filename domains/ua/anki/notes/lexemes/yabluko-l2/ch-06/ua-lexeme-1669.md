@@ -41,6 +41,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).
   Verification Notes: New. Imperfective, "to iron (clothes)". Textbook aspect pair прасувати-випрасувати,
-    this sub-chapter.
+    this sub-chapter. Merged duplicate note(s) ua-lexeme-2340 into this canonical note during
+    corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2993
-  Lemma: ковбасá
+  Lemma: ковбаса́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

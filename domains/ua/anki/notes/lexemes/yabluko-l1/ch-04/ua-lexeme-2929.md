@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2929
-  Lemma: проблéма
+  Lemma: пробле́ма
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

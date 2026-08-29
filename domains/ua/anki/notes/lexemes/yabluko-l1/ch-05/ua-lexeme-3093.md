@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3093
-  Lemma: штрýдель
+  Lemma: штру́дель
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

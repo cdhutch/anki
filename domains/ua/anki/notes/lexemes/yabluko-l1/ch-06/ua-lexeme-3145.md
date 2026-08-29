@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3145
-  Lemma: бульйóн
+  Lemma: бульйо́н
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

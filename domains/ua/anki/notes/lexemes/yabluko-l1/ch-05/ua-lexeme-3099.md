@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3099
-  Lemma: сьогóднішній
+  Lemma: сього́днішній
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

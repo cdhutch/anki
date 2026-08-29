@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3199
-  Lemma: мáркер
+  Lemma: ма́ркер
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

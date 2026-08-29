@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2962
-  Lemma: овáльний
+  Lemma: ова́льний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

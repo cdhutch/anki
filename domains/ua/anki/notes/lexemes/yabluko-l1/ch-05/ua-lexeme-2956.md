@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2956
-  Lemma: грýша
+  Lemma: гру́ша
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3134
-  Lemma: ківí
+  Lemma: ківі́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

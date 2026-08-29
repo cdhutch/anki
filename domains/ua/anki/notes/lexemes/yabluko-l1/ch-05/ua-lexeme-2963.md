@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2963
-  Lemma: помідóр
+  Lemma: помідо́р
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

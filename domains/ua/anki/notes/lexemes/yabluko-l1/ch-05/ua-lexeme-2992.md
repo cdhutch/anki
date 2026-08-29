@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2992
-  Lemma: кéтчуп
+  Lemma: ке́тчуп
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

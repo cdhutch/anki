@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3042
-  Lemma: двéрі
+  Lemma: две́рі
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: null

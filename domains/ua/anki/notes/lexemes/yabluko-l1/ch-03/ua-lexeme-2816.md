@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.5.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -15,7 +16,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2816
-  Lemma: викладáч
+  Lemma: виклада́ч
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
@@ -36,9 +37,11 @@ fields:
   TypingAnswer: викладач
   UA_Example: Наш викладач дуже вимогливий.
   EN_Example: Our instructor is very demanding.
-  Tags_Ch: ch:1.3.2, ch:1.3.7
+  Tags_Ch: ch:1.3.2, ch:1.3.7, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/викладач
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    note(s) ua-lexeme-3040 into this canonical note during corpus-wide dedup audit (2026-08-29);
+    their chapter tags were migrated here.
 ---
 

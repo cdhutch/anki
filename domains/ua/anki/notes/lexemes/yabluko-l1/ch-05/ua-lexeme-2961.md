@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2961
-  Lemma: лимóн
+  Lemma: лимо́н
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

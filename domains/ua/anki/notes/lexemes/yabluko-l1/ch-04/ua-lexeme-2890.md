@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2890
-  Lemma: покохáти
+  Lemma: покоха́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

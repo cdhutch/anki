@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3237
-  Lemma: кýбик
+  Lemma: ку́бик
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

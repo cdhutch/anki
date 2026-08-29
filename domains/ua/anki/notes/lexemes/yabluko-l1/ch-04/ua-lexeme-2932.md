@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2932
-  Lemma: бенкéт
+  Lemma: бенке́т
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

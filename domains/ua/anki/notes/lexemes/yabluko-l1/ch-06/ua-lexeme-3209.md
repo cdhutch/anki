@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3209
-  Lemma: грáтися
+  Lemma: гра́тися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

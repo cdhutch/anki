@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3129
-  Lemma: мобíлка
+  Lemma: мобі́лка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

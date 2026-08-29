@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3178
-  Lemma: сíно
+  Lemma: сі́но
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

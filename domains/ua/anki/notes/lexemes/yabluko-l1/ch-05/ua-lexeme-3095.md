@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3095
-  Lemma: кефíр
+  Lemma: кефі́р
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

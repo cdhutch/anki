@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3055
-  Lemma: Грузíя
+  Lemma: Грузі́я
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3174
-  Lemma: свíчка
+  Lemma: сві́чка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

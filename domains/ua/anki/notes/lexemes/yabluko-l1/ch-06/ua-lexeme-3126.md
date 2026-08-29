@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3126
-  Lemma: борошнó
+  Lemma: борошно́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

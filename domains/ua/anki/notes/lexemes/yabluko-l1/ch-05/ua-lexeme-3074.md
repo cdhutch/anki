@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3074
-  Lemma: пластíвці
+  Lemma: пласті́вці
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: null

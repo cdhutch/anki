@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2917
-  Lemma: згóдом
+  Lemma: зго́дом
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

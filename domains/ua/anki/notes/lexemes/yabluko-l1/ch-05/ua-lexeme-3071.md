@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3071
-  Lemma: пáста
+  Lemma: па́ста
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

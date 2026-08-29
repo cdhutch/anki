@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3038
-  Lemma: замóвити
+  Lemma: замо́вити
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

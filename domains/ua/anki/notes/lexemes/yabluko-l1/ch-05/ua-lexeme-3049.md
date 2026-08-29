@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3049
-  Lemma: пéрець
+  Lemma: пе́рець
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

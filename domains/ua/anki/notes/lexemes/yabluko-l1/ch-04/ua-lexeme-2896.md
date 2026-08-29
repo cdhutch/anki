@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2896
-  Lemma: вмíти
+  Lemma: вмі́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

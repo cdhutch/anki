@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3086
-  Lemma: сýші
+  Lemma: су́ші
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3067
-  Lemma: морепродýкти
+  Lemma: морепроду́кти
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: null

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3090
-  Lemma: цибуля-порéй
+  Lemma: цибуля-поре́й
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

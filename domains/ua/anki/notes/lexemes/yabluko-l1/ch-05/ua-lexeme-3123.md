@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3123
-  Lemma: жабʼя́ча лáпка
+  Lemma: жабʼя́ча ла́пка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
@@ -32,7 +32,7 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: жаб''яча лапка
+  TypingAnswer: жабʼяча лапка
   UA_Example: У Франції їдять жаб''ячі лапки.
   EN_Example: In France, people eat frog legs.
   Tags_Ch: ch:1.5.5

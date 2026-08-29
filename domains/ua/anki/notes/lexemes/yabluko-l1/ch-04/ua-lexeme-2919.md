@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2919
-  Lemma: пáра
+  Lemma: па́ра
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

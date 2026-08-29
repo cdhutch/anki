@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3183
-  Lemma: кисíль
+  Lemma: кисі́ль
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

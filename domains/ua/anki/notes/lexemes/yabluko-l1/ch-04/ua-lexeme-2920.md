@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2920
-  Lemma: додóму
+  Lemma: додо́му
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

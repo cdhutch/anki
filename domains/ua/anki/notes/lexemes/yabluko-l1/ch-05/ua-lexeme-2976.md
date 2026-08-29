@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2976
-  Lemma: виногрáд
+  Lemma: виногра́д
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

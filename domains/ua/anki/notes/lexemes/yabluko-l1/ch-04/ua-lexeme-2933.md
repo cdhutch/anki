@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2933
-  Lemma: гóрло
+  Lemma: го́рло
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3106
-  Lemma: зберігáти
+  Lemma: зберіга́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

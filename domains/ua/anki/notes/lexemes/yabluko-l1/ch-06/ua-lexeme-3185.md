@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3185
-  Lemma: спéція
+  Lemma: спе́ція
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

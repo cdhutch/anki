@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2999
-  Lemma: пíца
+  Lemma: пі́ца
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

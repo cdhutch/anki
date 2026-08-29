@@ -45,6 +45,7 @@ fields:
   Verification Notes: New. Fem., 1st decl., hard group. Горох lists a synonym ізюм (masc.,
     an alternate word for raisins, borrowed from Turkic via Russian) as a cross-reference
     on the same page -- not drafted as a separate note (not itself a wordlist item). Wordlist
-    bullet is the plural "родзинки".
+    bullet is the plural "родзинки". Merged duplicate note(s) ua-lexeme-3152 into this canonical
+    note during corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

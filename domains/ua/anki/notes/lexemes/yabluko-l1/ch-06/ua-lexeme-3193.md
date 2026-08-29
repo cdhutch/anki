@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3193
-  Lemma: здíйснюватися
+  Lemma: зді́йснюватися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

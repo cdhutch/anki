@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2971
-  Lemma: черéшня
+  Lemma: чере́шня
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

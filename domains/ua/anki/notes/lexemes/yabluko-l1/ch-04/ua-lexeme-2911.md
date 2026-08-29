@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2911
-  Lemma: пíсня
+  Lemma: пі́сня
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

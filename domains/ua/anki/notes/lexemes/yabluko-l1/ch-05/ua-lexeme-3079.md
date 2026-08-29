@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3079
-  Lemma: солодощí
+  Lemma: солодощі́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: null

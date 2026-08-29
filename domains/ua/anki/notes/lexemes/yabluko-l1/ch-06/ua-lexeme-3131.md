@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3131
-  Lemma: гóрох
+  Lemma: го́рох
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

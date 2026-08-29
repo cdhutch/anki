@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3240
-  Lemma: тéртка
+  Lemma: те́ртка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

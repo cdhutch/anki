@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3026
-  Lemma: рíзний
+  Lemma: рі́зний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

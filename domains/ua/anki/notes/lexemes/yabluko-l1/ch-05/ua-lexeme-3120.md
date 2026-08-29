@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3120
-  Lemma: Захóдьте щé!
+  Lemma: Захо́дьте ще́!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

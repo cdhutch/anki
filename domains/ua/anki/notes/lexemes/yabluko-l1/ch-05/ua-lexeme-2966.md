@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2966
-  Lemma: смакувáти
+  Lemma: смакува́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

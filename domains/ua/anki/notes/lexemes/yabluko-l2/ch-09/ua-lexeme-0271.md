@@ -42,6 +42,7 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/озеро
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Filtered out proper-noun homographs (a village and a river both named
-    'Озеро').
+    'Озеро'). Merged duplicate note(s) ua-lexeme-2628 into this canonical note during corpus-wide
+    dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3043
-  Lemma: копíйка
+  Lemma: копі́йка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

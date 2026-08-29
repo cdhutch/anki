@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2948
-  Lemma: Скажи́ чéсно!
+  Lemma: Скажи́ че́сно!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

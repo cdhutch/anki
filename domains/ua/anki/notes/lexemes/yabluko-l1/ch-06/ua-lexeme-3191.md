@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3191
-  Lemma: душá
+  Lemma: душа́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

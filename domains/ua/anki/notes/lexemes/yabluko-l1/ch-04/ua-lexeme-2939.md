@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2939
-  Lemma: давнó
+  Lemma: давно́
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

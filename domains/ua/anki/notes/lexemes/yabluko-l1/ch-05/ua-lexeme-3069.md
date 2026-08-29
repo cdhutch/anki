@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3069
-  Lemma: надавáти
+  Lemma: надава́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

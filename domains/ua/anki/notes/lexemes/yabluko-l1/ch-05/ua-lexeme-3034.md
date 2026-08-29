@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3034
-  Lemma: фігýрка
+  Lemma: фігу́рка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

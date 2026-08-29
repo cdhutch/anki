@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3160
-  Lemma: воскрéснути
+  Lemma: воскре́снути
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

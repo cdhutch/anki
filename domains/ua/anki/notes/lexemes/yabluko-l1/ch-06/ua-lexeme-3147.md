@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3147
-  Lemma: забýти
+  Lemma: забу́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

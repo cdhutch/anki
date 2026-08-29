@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3198
-  Lemma: лимонáд
+  Lemma: лимона́д
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

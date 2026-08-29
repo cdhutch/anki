@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2915
-  Lemma: дрýжба
+  Lemma: дру́жба
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

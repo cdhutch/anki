@@ -43,6 +43,7 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/мистецтво
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: ''
+  Verification Notes: ' Merged duplicate note(s) ua-lexeme-3066 into this canonical note during
+    corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.'
 ---
 

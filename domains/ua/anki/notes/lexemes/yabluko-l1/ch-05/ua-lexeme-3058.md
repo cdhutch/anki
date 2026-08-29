@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.6.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -14,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3058
-  Lemma: клéновий
+  Lemma: кле́новий
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null
@@ -35,9 +36,11 @@ fields:
   TypingAnswer: кленовий
   UA_Example: Це дуже кленовий.
   EN_Example: This is very кленовий.
-  Tags_Ch: ch:1.5.5
+  Tags_Ch: ch:1.5.5, ch:1.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/кленовий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    note(s) ua-lexeme-3213 into this canonical note during corpus-wide dedup audit (2026-08-29);
+    their chapter tags were migrated here.
 ---
 

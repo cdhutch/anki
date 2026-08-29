@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2885
-  Lemma: рибáлити
+  Lemma: риба́лити
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

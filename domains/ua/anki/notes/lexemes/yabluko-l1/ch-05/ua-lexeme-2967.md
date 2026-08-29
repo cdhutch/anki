@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2967
-  Lemma: смáчний
+  Lemma: сма́чний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

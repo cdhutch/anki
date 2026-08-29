@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3029
-  Lemma: секрéтний
+  Lemma: секре́тний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

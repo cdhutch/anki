@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3187
-  Lemma: пампушóк
+  Lemma: пампушо́к
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

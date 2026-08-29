@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2923
-  Lemma: журнáл
+  Lemma: журна́л
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

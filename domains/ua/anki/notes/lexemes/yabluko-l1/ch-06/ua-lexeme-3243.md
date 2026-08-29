@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3243
-  Lemma: томáтний
+  Lemma: тома́тний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

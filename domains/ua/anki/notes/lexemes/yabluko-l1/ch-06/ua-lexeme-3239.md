@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3239
-  Lemma: натирáти
+  Lemma: натира́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2886
-  Lemma: памʼятáти
+  Lemma: памʼята́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null
@@ -33,7 +33,7 @@ fields:
   ConfusableSet: ''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
-  TypingAnswer: пам''ятати
+  TypingAnswer: памʼятати
   UA_Example: Я добре пам''ятаю той день.
   EN_Example: I remember that day well.
   Tags_Ch: ch:1.4.2, ch:1.4.7

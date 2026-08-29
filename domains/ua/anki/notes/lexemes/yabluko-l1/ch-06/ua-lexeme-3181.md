@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3181
-  Lemma: узвáр
+  Lemma: узва́р
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

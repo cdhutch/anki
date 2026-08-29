@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3073
-  Lemma: пéкло
+  Lemma: пе́кло
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

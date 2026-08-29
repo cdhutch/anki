@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3207
-  Lemma: бажáння
+  Lemma: бажа́ння
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

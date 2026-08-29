@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3180
-  Lemma: травá
+  Lemma: трава́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

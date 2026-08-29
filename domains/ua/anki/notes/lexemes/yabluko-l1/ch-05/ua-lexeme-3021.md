@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3021
-  Lemma: овочéвий
+  Lemma: овоче́вий
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

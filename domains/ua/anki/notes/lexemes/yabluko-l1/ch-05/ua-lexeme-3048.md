@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3048
-  Lemma: навíть
+  Lemma: наві́ть
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

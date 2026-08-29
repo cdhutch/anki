@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2893
-  Lemma: закохáтися
+  Lemma: закоха́тися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

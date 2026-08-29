@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3167
-  Lemma: пáска
+  Lemma: па́ска
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

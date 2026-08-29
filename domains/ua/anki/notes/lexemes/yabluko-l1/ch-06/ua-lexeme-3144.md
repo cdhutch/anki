@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3144
-  Lemma: пюрé
+  Lemma: пюре́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

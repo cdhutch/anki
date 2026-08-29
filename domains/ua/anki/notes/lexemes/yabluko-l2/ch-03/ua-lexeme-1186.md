@@ -40,6 +40,8 @@ fields:
   Tags_Ch: ch:2.3.3, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/дорога
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
-  Verification Notes: New. Fem., 1st decl., hard group.
+  Verification Notes: New. Fem., 1st decl., hard group. Merged duplicate note(s) ua-lexeme-2707
+    into this canonical note during corpus-wide dedup audit (2026-08-29); their chapter tags
+    were migrated here.
 ---
 

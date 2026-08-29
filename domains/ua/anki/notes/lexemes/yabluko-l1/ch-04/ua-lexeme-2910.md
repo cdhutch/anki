@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2910
-  Lemma: скульптýра
+  Lemma: скульпту́ра
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

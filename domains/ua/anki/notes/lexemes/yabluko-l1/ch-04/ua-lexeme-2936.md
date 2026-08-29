@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2936
-  Lemma: перéрва
+  Lemma: пере́рва
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

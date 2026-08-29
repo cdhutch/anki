@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2982
-  Lemma: солóний
+  Lemma: соло́ний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

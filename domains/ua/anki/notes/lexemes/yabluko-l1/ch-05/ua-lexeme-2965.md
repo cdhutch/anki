@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2965
-  Lemma: свíжий
+  Lemma: сві́жий
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

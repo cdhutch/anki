@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3103
-  Lemma: достáвка
+  Lemma: доста́вка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

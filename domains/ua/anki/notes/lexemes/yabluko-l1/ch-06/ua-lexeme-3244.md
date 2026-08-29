@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3244
-  Lemma: хто пíзно прихóдить, той сам собí шкóдить
+  Lemma: хто пі́зно прихо́дить, той сам собі́ шко́дить
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

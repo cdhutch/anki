@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3119
-  Lemma: Смакотá!
+  Lemma: Смакота́!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

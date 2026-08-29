@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3018
-  Lemma: íнший
+  Lemma: і́нший
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

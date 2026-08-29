@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2908
-  Lemma: клáсно
+  Lemma: кла́сно
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

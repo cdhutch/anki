@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3242
-  Lemma: сковорíдка
+  Lemma: сковорі́дка
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

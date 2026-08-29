@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2990
-  Lemma: кáва
+  Lemma: ка́ва
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

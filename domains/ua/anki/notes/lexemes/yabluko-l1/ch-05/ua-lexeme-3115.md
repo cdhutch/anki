@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3115
-  Lemma: щогóдини
+  Lemma: щого́дини
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

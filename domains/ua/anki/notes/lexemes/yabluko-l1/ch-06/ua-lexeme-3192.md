@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3192
-  Lemma: захóплюватися
+  Lemma: захо́плюватися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

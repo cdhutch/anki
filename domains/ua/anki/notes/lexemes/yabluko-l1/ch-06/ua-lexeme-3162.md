@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3162
-  Lemma: зіркá
+  Lemma: зірка́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

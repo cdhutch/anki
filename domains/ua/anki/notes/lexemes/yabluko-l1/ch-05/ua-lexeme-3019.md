@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3019
-  Lemma: калорíйний
+  Lemma: калорі́йний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

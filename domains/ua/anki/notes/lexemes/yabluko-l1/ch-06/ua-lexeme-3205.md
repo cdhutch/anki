@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3205
-  Lemma: фломáстер
+  Lemma: флома́стер
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

@@ -42,6 +42,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/купатися; https://goroh.pp.ua/Словозміна/скупатися
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
   Verification Notes: New. Regular imperfective reflexive, 1st conjugation. Perfective скупа́тися
-    added (per yabluko-l2-verb-dictionary).
+    added (per yabluko-l2-verb-dictionary). Merged duplicate note(s) ua-lexeme-2333 into this
+    canonical note during corpus-wide dedup audit (2026-08-29); their chapter tags were migrated
+    here.
 ---
 

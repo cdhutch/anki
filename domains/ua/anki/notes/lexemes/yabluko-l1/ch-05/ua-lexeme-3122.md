@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3122
-  Lemma: родóм з
+  Lemma: родо́м з
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

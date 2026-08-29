@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3232
-  Lemma: терáса
+  Lemma: тера́са
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

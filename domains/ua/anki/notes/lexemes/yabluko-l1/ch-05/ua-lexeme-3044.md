@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3044
-  Lemma: кофеíн
+  Lemma: кофеї́н
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

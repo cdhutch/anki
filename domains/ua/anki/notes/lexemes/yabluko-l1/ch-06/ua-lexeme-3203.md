@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3203
-  Lemma: сцéна
+  Lemma: сце́на
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

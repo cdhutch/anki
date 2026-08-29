@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2926
-  Lemma: Інтернéт
+  Lemma: Інтерне́т
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

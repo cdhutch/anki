@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3125
-  Lemma: безпéчний
+  Lemma: безпе́чний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

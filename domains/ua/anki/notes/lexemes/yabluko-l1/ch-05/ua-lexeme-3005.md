@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.6.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -15,7 +16,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3005
-  Lemma: сметáна
+  Lemma: смета́на
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f
@@ -36,9 +37,11 @@ fields:
   TypingAnswer: сметана
   UA_Example: Я їм сметана щоранку.
   EN_Example: I eat сметана every morning.
-  Tags_Ch: ch:1.5.2, ch:1.5.3
+  Tags_Ch: ch:1.5.2, ch:1.5.3, ch:1.6.1
   Source_URL: https://goroh.pp.ua/Словозміна/сметана
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    note(s) ua-lexeme-3141 into this canonical note during corpus-wide dedup audit (2026-08-29);
+    their chapter tags were migrated here.
 ---
 

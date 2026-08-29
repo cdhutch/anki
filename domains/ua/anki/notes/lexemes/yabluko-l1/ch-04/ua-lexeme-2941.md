@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2941
-  Lemma: кохáння
+  Lemma: коха́ння
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

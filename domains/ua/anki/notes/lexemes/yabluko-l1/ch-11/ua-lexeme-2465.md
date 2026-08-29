@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2465
-  Lemma: відеооперáтор
+  Lemma: відеоопера́тор
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

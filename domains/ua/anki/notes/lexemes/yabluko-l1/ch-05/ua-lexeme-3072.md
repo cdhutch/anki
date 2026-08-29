@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3072
-  Lemma: паштéт
+  Lemma: паште́т
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

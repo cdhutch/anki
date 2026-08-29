@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2987
-  Lemma: бутербрóд
+  Lemma: бутербро́д
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

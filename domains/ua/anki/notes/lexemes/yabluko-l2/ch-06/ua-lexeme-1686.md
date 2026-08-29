@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.11.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -36,10 +37,12 @@ fields:
   TypingAnswer: одного разу
   UA_Example: Одного разу я забув парасольку в автобусі.
   EN_Example: Once, I left my umbrella on the bus.
-  Tags_Ch: ch:2.6.1, ch:2.7.1
+  Tags_Ch: ch:2.6.1, ch:2.7.1, ch:1.11.3
   Source_URL: https://goroh.pp.ua/Словозміна/раз
   Source_Note: Горох-verified 2026-08-28, ch.6.1 sourcing pass (household mishaps; imperfective-perfective
     verb pairs; frequency-adverb phrases).
   Verification Notes: New. Narrative frequency phrase (genitive-case idiom), reusing раз compositionally.
+    Merged duplicate note(s) ua-lexeme-2433 into this canonical note during corpus-wide dedup
+    audit (2026-08-29); their chapter tags were migrated here.
 ---
 

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2881
-  Lemma: колекціонувáти
+  Lemma: колекціонува́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

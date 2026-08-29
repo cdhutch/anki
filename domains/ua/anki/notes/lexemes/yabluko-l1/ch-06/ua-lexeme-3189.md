@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3189
-  Lemma: Щéдрий вéчір
+  Lemma: Ще́дрий ве́чір
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

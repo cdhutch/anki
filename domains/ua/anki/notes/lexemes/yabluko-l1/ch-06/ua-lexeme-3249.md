@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3249
-  Lemma: Я б хотíв/хотíла...
+  Lemma: Я б хоті́в/хоті́ла...
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

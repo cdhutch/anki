@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2958
-  Lemma: квасóля
+  Lemma: квасо́ля
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

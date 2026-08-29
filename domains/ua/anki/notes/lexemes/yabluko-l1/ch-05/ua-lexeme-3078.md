@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3078
-  Lemma: стíльки
+  Lemma: сті́льки
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

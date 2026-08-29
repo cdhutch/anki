@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2895
-  Lemma: усміхнýтися
+  Lemma: усміхну́тися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

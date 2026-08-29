@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3128
-  Lemma: гамбýргер
+  Lemma: гамбу́ргер
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3188
-  Lemma: Свят-вéчір
+  Lemma: Свят-ве́чір
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

@@ -42,6 +42,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).
   Verification Notes: New. Imperfective, "to smoke". Textbook aspect pair курити-покурити,
-    this sub-chapter.
+    this sub-chapter. Merged duplicate note(s) ua-lexeme-3228 into this canonical note during
+    corpus-wide dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

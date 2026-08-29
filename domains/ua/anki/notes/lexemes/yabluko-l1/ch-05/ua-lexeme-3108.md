@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3108
-  Lemma: несвíжий
+  Lemma: несві́жий
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

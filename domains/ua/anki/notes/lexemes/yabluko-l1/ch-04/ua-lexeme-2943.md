@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2943
-  Lemma: Бувáй!
+  Lemma: Бува́й!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

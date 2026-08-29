@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3037
-  Lemma: тістéчко
+  Lemma: тісте́чко
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

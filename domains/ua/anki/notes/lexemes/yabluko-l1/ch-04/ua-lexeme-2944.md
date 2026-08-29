@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2944
-  Lemma: Щасти́ тобí!
+  Lemma: Щасти́ тобі́!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3057
-  Lemma: картóпля-фрí
+  Lemma: карто́пля-фрі́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

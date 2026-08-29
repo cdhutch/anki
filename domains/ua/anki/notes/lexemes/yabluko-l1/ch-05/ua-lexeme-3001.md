@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3001
-  Lemma: снідáнок
+  Lemma: сніда́нок
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

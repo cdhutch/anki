@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2937
-  Lemma: скóро
+  Lemma: ско́ро
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2882
-  Lemma: кохáти
+  Lemma: коха́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3096
-  Lemma: сигарéта
+  Lemma: сигаре́та
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

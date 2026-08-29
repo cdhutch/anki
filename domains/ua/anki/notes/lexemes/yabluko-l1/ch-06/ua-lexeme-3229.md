@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3229
-  Lemma: негазóваний
+  Lemma: негазо́ваний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

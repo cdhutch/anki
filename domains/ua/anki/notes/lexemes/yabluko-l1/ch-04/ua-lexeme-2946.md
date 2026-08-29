@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2946
-  Lemma: Вихóдь за мéне!
+  Lemma: Вихо́дь за ме́не!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

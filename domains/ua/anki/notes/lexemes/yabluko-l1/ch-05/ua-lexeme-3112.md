@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3112
-  Lemma: по-трéтє
+  Lemma: по-тре́тє
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3246
-  Lemma: Христóс наро́дився! – Слáвімо йогó!
+  Lemma: Христо́с наро́дився! – Сла́вімо його́!
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

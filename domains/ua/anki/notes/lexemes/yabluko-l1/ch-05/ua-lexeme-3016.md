@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3016
-  Lemma: домáшній
+  Lemma: дома́шній
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

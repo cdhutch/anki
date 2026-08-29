@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2988
-  Lemma: желé
+  Lemma: желе́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

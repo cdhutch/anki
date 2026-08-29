@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2979
-  Lemma: кавýн
+  Lemma: каву́н
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3104
-  Lemma: електрóнний
+  Lemma: електро́нний
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

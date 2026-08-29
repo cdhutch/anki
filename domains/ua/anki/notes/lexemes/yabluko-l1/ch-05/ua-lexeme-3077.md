@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3077
-  Lemma: рáвлик
+  Lemma: ра́влик
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

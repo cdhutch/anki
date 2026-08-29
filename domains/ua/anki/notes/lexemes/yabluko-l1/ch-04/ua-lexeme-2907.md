@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2907
-  Lemma: інженéр
+  Lemma: інжене́р
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

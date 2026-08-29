@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3216
-  Lemma: пáнчоха
+  Lemma: па́нчоха
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

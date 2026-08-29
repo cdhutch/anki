@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2900
-  Lemma: кáрти
+  Lemma: ка́рти
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: null

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2953
-  Lemma: банáн
+  Lemma: бана́н
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

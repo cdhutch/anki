@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3248
-  Lemma: порá рóку
+  Lemma: пора́ ро́ку
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

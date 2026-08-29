@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3196
-  Lemma: космонáвт
+  Lemma: космона́вт
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

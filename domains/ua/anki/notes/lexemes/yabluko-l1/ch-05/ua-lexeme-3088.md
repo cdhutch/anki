@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3088
-  Lemma: тунéць
+  Lemma: туне́ць
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

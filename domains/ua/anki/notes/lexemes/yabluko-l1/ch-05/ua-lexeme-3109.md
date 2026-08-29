@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3109
-  Lemma: піцерíя
+  Lemma: піцері́я
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

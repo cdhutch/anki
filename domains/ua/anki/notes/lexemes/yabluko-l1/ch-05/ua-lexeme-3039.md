@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3039
-  Lemma: продýкт
+  Lemma: проду́кт
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

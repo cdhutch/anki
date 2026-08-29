@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3102
-  Lemma: директóр
+  Lemma: директо́р
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

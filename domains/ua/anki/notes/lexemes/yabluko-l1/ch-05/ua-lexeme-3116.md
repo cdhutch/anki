@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3116
-  Lemma: щомíсяця
+  Lemma: щомі́сяця
   Lemma_Euphony: ''
   PartOfSpeech: adverb
   Gender: null

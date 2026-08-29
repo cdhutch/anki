@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3008
-  Lemma: мáсло
+  Lemma: ма́сло
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

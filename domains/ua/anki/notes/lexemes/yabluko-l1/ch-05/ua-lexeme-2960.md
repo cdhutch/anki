@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2960
-  Lemma: крýглий
+  Lemma: кру́глий
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

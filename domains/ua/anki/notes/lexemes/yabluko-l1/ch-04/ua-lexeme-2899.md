@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2899
-  Lemma: вмивáтися
+  Lemma: вмива́тися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

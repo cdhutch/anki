@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2973
-  Lemma: картóпля
+  Lemma: карто́пля
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

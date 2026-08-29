@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3068
-  Lemma: мюслí
+  Lemma: мюслі́
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: null

@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3028
-  Lemma: свíтло
+  Lemma: сві́тло
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n

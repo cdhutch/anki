@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2959
-  Lemma: корóткий
+  Lemma: коро́ткий
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: null

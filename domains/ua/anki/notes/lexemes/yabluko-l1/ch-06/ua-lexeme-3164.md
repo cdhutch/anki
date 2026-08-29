@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3164
-  Lemma: кóшик
+  Lemma: ко́шик
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

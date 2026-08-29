@@ -15,7 +15,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2974
-  Lemma: мóрква
+  Lemma: мо́рква
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

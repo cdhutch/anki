@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3047
-  Lemma: майонéз
+  Lemma: майоне́з
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

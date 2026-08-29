@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3100
-  Lemma: віддáти
+  Lemma: відда́ти
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: null

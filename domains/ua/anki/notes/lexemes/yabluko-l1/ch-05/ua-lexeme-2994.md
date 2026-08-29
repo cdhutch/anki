@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2994
-  Lemma: кóка-кóла
+  Lemma: ко́ка-ко́ла
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

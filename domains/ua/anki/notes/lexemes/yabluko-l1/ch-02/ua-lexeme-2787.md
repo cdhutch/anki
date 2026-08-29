@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-2787
-  Lemma: гóлуб
+  Lemma: го́луб
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

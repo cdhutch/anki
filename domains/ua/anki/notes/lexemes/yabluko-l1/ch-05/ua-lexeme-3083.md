@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3083
-  Lemma: сýміш
+  Lemma: су́міш
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

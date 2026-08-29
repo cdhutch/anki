@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3235
-  Lemma: листóк
+  Lemma: листо́к
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

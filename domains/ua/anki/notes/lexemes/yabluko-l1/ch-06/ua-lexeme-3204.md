@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3204
-  Lemma: фáрба
+  Lemma: фа́рба
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

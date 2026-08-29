@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3194
-  Lemma: мрíя
+  Lemma: мрі́я
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: f

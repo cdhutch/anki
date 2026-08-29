@@ -6,6 +6,7 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.2.4
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
@@ -40,10 +41,12 @@ fields:
   TypingAnswer: чекати / почекати
   UA_Example: Ми чекаємо на автобус.
   EN_Example: We are waiting for the bus.
-  Tags_Ch: ch:1.11.3, ch:1.3.7, ch:1.4.5, ch:1.4.7, ch:1.5.3, ch:1.6.4
+  Tags_Ch: ch:1.11.3, ch:1.3.7, ch:1.4.5, ch:1.4.7, ch:1.5.3, ch:1.6.4, ch:1.2.4
   Source_URL: https://goroh.pp.ua/Словозміна/чекати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined
-    note; conjugation class per wordlist (conj1-vowel+й).
+    note; conjugation class per wordlist (conj1-vowel+й). Merged duplicate note(s) ua-lexeme-2753
+    into this canonical note during corpus-wide dedup audit (2026-08-29); their chapter tags
+    were migrated here.
 ---
 

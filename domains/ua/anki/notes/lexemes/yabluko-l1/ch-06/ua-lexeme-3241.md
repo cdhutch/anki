@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3241
-  Lemma: óцет
+  Lemma: о́цет
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

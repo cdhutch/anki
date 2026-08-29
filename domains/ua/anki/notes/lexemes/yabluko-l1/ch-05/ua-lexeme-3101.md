@@ -14,7 +14,7 @@ tags:
 - status:draft
 fields:
   NoteID: ua-lexeme-3101
-  Lemma: вýхо
+  Lemma: ву́хо
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: n
