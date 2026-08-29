@@ -14,6 +14,7 @@ tags:
 - pos:adverb
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0099
   Lemma: до́бре

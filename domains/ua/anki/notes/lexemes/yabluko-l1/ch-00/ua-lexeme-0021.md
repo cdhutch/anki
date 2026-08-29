@@ -17,6 +17,7 @@ tags:
 - pos:profession
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0021
   Lemma: школя́р

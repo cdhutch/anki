@@ -15,6 +15,7 @@ tags:
 - gender:n
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0044
   Lemma: мі́сто

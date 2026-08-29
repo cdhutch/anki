@@ -16,6 +16,7 @@ tags:
 - pos:country
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0073
   Lemma: Брази́лія

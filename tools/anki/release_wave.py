@@ -20,6 +20,13 @@ After running, re-canonicalize the touched files and run the normal Anki
 sync (cnsf_to_anki.sh) so the AND-gate's unsuspend logic picks up the newly
 released notes.
 
+A group with `type: relearn` set is re-releasing material you already know
+rather than brand-new vocabulary: every note promoted from such a group also
+gets a `relearn:pending` tag (in addition to the release:active flip). After
+the sync unsuspends those notes' cards, run
+`python tools/anki/seed_mature_interval.py` to seed them with a mature FSRS
+interval via AnkiConnect instead of re-earning it from a fresh Learning card.
+
 Usage:
     python tools/anki/release_wave.py                      # apply, using the plan
     python tools/anki/release_wave.py --dry-run             # show what would change
@@ -47,6 +54,7 @@ TAG_LIST_RE = re.compile(r"^tags:\s*\n((?:- .*\n)+)", re.M)
 NOTE_ID_RE = re.compile(r"^note_id:\s*(\S+)\s*$", re.M)
 PENDING_LINE = "- release:pending\n"
 ACTIVE_LINE = "- release:active\n"
+RELEARN_LINE = "- relearn:pending\n"
 
 
 def load_plan(plan_path: Path) -> list[dict]:
@@ -64,6 +72,11 @@ def load_plan(plan_path: Path) -> list[dict]:
             raise SystemExit(f"{plan_path}: group {g['name']!r} 'match' must be a non-empty list")
         if not isinstance(g["batch_size"], int) or g["batch_size"] < 0:
             raise SystemExit(f"{plan_path}: group {g['name']!r} 'batch_size' must be a non-negative int")
+        if "type" in g and g["type"] not in (None, "relearn"):
+            raise SystemExit(
+                f"{plan_path}: group {g['name']!r} has unknown type {g['type']!r} "
+                f"-- only 'relearn' is currently supported (or omit the field entirely)"
+            )
     return groups
 
 
@@ -119,6 +132,7 @@ def main() -> int:
         parsed.append((fp, nid, tags, text))
 
     total_promoted = 0
+    total_relearn_tagged = 0
     any_zero_match_group = False
     already_promoted_paths: set[Path] = set()  # across groups within this run --
     # a note can carry tags from more than one group's patterns (e.g. a word
@@ -129,6 +143,7 @@ def main() -> int:
         name = g["name"]
         patterns = g["match"]
         batch_size = g["batch_size"]
+        group_type = g.get("type")
 
         candidates = [
             (fp, nid, text)
@@ -162,22 +177,37 @@ def main() -> int:
                 print(f"  WARNING: {fp} matched but has no bare '- release:pending' line -- skipped", file=sys.stderr)
                 continue
             new_text = text.replace(PENDING_LINE, ACTIVE_LINE, 1)
+            relearn_tagged = False
+            if group_type == "relearn" and RELEARN_LINE not in new_text:
+                new_text = new_text.replace(ACTIVE_LINE, ACTIVE_LINE + RELEARN_LINE, 1)
+                relearn_tagged = True
             if not args.dry_run:
                 write(fp, new_text)
             already_promoted_paths.add(fp)
             marker = "(dry-run) " if args.dry_run else ""
-            print(f"  {marker}promoted {nid}  ({fp.relative_to(REPO_ROOT)})")
+            suffix = " [relearn:pending]" if relearn_tagged else ""
+            print(f"  {marker}promoted {nid}{suffix}  ({fp.relative_to(REPO_ROOT)})")
             total_promoted += 1
+            if relearn_tagged:
+                total_relearn_tagged += 1
 
     print()
     if args.dry_run:
         print(f"Dry run: would promote {total_promoted} note(s). Re-run without --dry-run to apply.")
+        if total_relearn_tagged:
+            print(f"({total_relearn_tagged} of those would be tagged relearn:pending.)")
     else:
         print(f"Promoted {total_promoted} note(s).")
         if total_promoted:
             print(
                 "Next: canonicalize the touched files, run the test suite, then re-run "
                 "the normal Anki sync (cnsf_to_anki.sh) to unsuspend them."
+            )
+        if total_relearn_tagged:
+            print(
+                f"{total_relearn_tagged} of those were tagged relearn:pending. After the "
+                "sync above, run `python tools/anki/seed_mature_interval.py` to seed them "
+                "with a mature interval instead of a fresh Learning card."
             )
     if any_zero_match_group:
         print("Note: one or more groups matched zero notes -- see warnings above.", file=sys.stderr)

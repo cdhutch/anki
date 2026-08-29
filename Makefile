@@ -739,6 +739,7 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-unverified
 .PHONY: ua-compare-check
 .PHONY: ua-check ua-check-aspect ua-check-pending-confusables ua-check-flags
+.PHONY: ua-seed-mature ua-seed-mature-dry-run
 .PHONY: ua-audit _ua-audit
 .PHONY: ua ua-fix _ua
 
@@ -1048,6 +1049,22 @@ ua-audit:
 ua-check-flags:
 	@printf "\033[1;36m\n— Flagged card check —\033[0m\n"
 	$(PYTHON) tools/anki/inspect/ua_flag_audit.py --query
+
+# ── Mature-interval seeding for relearn notes ────────────────────────────────
+# New 2026-08-29, Craig. Seeds newly-released `type: relearn` notes (see
+# release_plan.yaml) with a mature FSRS interval via AnkiConnect, instead of
+# making Craig re-earn a practical interval from a fresh Learning card on
+# vocabulary he already knows. Requires Anki running with AnkiConnect, and
+# requires the notes to already be synced + unsuspended (run ua-lexeme
+# first). Deliberately a manual, standalone step -- not chained into
+# ua-lexeme/_ua/ua-fix -- so Craig runs it right after release_wave.py +
+# a sync, on his own schedule, same reasoning as ua-check-flags above.
+# Safe to re-run: idempotent via the relearn:pending -> relearn:seeded tag.
+ua-seed-mature:
+	$(PYTHON) tools/anki/seed_mature_interval.py
+
+ua-seed-mature-dry-run:
+	$(PYTHON) tools/anki/seed_mature_interval.py --dry-run
 
 # ── All UA note types (aggregate) ────────────────────────────────────────────
 

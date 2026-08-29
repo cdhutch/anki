@@ -16,6 +16,7 @@ tags:
 - pos:country
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0084
   Lemma: Украї́на

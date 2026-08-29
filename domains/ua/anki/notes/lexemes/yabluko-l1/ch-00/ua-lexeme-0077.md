@@ -15,6 +15,7 @@ tags:
 - pos:country
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0077
   Lemma: Іта́лія

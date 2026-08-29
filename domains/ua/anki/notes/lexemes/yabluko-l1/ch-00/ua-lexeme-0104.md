@@ -13,6 +13,7 @@ tags:
 - pos:adverb
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0104
   Lemma: чудо́во

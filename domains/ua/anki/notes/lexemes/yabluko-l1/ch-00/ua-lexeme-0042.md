@@ -14,6 +14,7 @@ tags:
 - gender:m
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0042
   Lemma: малю́нок

@@ -13,6 +13,7 @@ tags:
 - pos:adverb
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0100
   Lemma: непога́но

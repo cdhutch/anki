@@ -16,6 +16,7 @@ tags:
 - pos:profession
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0013
   Lemma: співа́к

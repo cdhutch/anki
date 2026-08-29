@@ -15,6 +15,7 @@ tags:
 - gender:m
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0064
   Lemma: стіле́ць

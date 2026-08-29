@@ -14,6 +14,7 @@ tags:
 - pos:nationality-adj
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0096
   Lemma: украї́нський

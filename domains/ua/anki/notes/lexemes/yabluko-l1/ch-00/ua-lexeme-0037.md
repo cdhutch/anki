@@ -17,6 +17,7 @@ tags:
 - gender:f
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0037
   Lemma: кварти́ра

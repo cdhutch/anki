@@ -13,6 +13,7 @@ tags:
 - pos:phrase
 - status:verified
 - release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0107
   Lemma: Ду́же приє́мно
