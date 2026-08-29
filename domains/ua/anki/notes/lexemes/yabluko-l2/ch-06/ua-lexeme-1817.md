@@ -12,6 +12,7 @@ tags:
 - ch:2.6.5
 - pos:verb
 - status:draft
+- ch:2.12.7
 fields:
   NoteID: ua-lexeme-1817
   Lemma: ляка́тися
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: лякатися
   UA_Example: Вона завжди лякається гучних звуків.
   EN_Example: She always gets scared of loud noises.
-  Tags_Ch: ch:2.6.5
+  Tags_Ch: ch:2.6.5,ch:2.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/лякатися
   Source_Note: Горох-verified 2026-08-28, ch.6.5 sourcing pass (crime/danger anecdote; imperfective-perfective
     verb pairs).
