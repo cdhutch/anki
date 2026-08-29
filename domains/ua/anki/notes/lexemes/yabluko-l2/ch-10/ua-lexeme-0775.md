@@ -45,6 +45,8 @@ fields:
     pass (very common verb, flagged as a gap for a future pass). Full conjugation on paired
     ua-verb-0127. Perfective прийня́ти added (aspect-pairing review, yabluko-l2-verb-dictionary
     + Горох, 2026-08-28). Sense note (ch.7.6): collocation приймати/прийняти запрошення =
-    "to accept an invitation".'
+    "to accept an invitation". Merged duplicate standalone perfective note ua-lexeme-0775
+    (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Він
+    прийняв душ і ліг спати.'' = ''He took a shower and went to bed.''.'
 ---
 

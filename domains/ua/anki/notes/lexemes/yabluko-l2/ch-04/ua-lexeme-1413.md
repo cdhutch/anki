@@ -41,6 +41,6 @@ fields:
     emigration, education, timeline expressions).'
   Verification Notes: New. NP/VP wordlist bullet, drafted as one phrase note per the established
     "one phrase note, no component split" rule (components not independently bulleted in this
-    sub-chapter). Verb component вступити additionally drafted as ua-lexeme-1438 (lexeme-only).
+    sub-chapter). Verb component вступити additionally drafted as ua-lexeme-2282 (lexeme-only).
 ---
 

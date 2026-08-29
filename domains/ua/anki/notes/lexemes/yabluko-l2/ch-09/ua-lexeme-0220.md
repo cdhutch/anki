@@ -39,10 +39,13 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/посідати; https://goroh.pp.ua/Словозміна/посісти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: Горох lists 'посідати' with two distinct senses at the same spelling/stress
-    -- this note uses the 'брати у своє володіння' (take possession/occupy) sense, which pairs
-    with the perfective 'посісти' ('заволодіти' sense, used in the textbook's 'посісти третє
-    місце'). A separate, unrelated 'посідати' sense ('сісти -- про всіх або багатьох' = 'to
-    sit down, of everyone/many') is also perfective there and not relevant to this lexeme.
+  Verification Notes: 'Горох lists ''посідати'' with two distinct senses at the same spelling/stress
+    -- this note uses the ''брати у своє володіння'' (take possession/occupy) sense, which
+    pairs with the perfective ''посісти'' (''заволодіти'' sense, used in the textbook''s ''посісти
+    третє місце''). A separate, unrelated ''посідати'' sense (''сісти -- про всіх або багатьох''
+    = ''to sit down, of everyone/many'') is also perfective there and not relevant to this
+    lexeme. Merged duplicate standalone perfective note ua-lexeme-0220 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Ця країна посіла перше місце за темпами
+    діджиталізації.'' = ''This country took first place in the pace of digitalization.''.'
 ---
 

@@ -41,7 +41,7 @@ fields:
     civic activity; family-status bureaucratic forms).
   Verification Notes: New. VP wordlist bullet, drafted as one phrase note per the established
     rule. Verb component захистити additionally drafted as ua-lexeme-1512 (lexeme-only), per
-    the extended VP-component rule (ua-lexeme-1263, отримати, precedent). Component дисерта́ція
+    the extended VP-component rule (ua-lexeme-0992, отримати, precedent). Component дисерта́ція
     (fem., 1st decl. soft, "dissertation") new to the corpus but not independently bulleted,
     kept compositional.
 ---

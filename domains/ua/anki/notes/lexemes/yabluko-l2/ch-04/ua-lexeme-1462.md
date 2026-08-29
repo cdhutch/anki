@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to organize, arrange, hold (an event)
   Govt_Case: Зн. (влаштовувати щось)
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: влаштува́ти (ua-lexeme-2287, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

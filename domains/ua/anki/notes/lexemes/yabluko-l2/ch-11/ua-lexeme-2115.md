@@ -41,7 +41,10 @@ fields:
     cross-checked against yabluko-l2-verb-dictionary.pdf for every verb's aspect partner per
     Craig's explicit instruction. Confirmed via direct visual read of PDF page 221 (Read tool,
     image mode).
-  Verification Notes: New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
-    згенерувати confirmed via yabluko-l2-verb-dictionary.pdf and Горох.
+  Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
+    згенерувати confirmed via yabluko-l2-verb-dictionary.pdf and Горох. Merged duplicate standalone
+    perfective note ua-lexeme-2115 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Програма згенерувала звіт за кілька секунд.'' = ''The program
+    generated a report in a few seconds.''.'
 ---
 

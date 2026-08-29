@@ -44,6 +44,8 @@ fields:
   Verification Notes: 'New. impf., reflexive, regular conj1-vowel+й (-увати class). Perfective
     зблизитися confirmed via yabluko-l2-verb-dictionary.pdf (line 647: ''зближуватися зблизитися
     Д, з + Ор.''). Reflexive -сь colloquial contractions from Горох normalized to standard
-    -ся/-теся/-мося.'
+    -ся/-теся/-мося. Merged duplicate standalone perfective note ua-lexeme-2201 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Ми швидко зблизилися
+    під час подорожі.'' = ''We quickly grew close during the trip.''.'
 ---
 

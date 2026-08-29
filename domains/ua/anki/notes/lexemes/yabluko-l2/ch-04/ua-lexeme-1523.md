@@ -40,7 +40,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.4.7 sourcing pass (education/qualifications;
     civic activity; family-status bureaucratic forms).
   Verification Notes: New. VP wordlist bullet, drafted as one phrase note per the established
-    rule. Verb component отримати reuses the existing lexeme-only ua-lexeme-1263 (ch.3) and
+    rule. Verb component отримати reuses the existing lexeme-only ua-lexeme-0992 (ch.3) and
     full-conjugation ua-verb-0262 without retag, same as отримати нагороду above. Component
     ступінь (сту́пінь, masc., 2nd decl. soft, "degree, rank") new to the corpus but not independently
     bulleted, kept compositional.

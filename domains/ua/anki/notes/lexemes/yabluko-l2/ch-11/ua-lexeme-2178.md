@@ -47,6 +47,8 @@ fields:
     as its own reflexive entry). Perfective захиститися confirmed via yabluko-l2-verb-dictionary.pdf
     (line 621: ''захищатися захиститися Ор., від + Р''). Reflexive -сь colloquial contractions
     from Горох normalized to standard -ся/-теся/-мося throughout (matches established convention,
-    cf. відмовитися ch.11.1).'
+    cf. відмовитися ch.11.1). Merged duplicate standalone perfective note ua-lexeme-2178 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Він захистився від
+    небезпеки вчасно.'' = ''He protected himself from the danger in time.''.'
 ---
 

@@ -36,6 +36,6 @@ fields:
   Participle_Adverbial_Past: ''
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).
-  Verification Notes: Paired with ua-lexeme-1268. Perfective reflexive, class-2 pattern.
+  Verification Notes: Paired with ua-lexeme-2280. Perfective reflexive, class-2 pattern.
 ---
 

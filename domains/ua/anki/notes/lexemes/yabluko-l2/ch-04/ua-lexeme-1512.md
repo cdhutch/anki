@@ -41,7 +41,7 @@ fields:
     civic activity; family-status bureaucratic forms).
   Verification Notes: 'New. Perfective, "to defend, protect". Govt.: Зн. (захистити щось/когось).
     Lexeme-only entry (no full conjugation table) -- VP-embedded support verb, drafted per
-    the extended VP-component rule (precedent ua-lexeme-1263, отримати): захистити is not
+    the extended VP-component rule (precedent ua-lexeme-0992, отримати): захистити is not
     independently bare-bulleted in this sub-chapter, only inside захистити дисертацію (this
     sub-chapter, ua-lexeme-1521). Imperfective partner захищати not yet in corpus.'
 ---

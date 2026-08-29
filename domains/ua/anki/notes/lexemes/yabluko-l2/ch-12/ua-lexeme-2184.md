@@ -45,6 +45,8 @@ fields:
     augment я->ю in 1sg боюся, regular і-conjugation endings elsewhere: бої́шся, бої́ться...).
     Govern Genitive (боятися чогось/когось). Perfective побоятися confirmed via yabluko-l2-verb-dictionary.pdf
     (line 40: ''боятися побоятися р.''). Reflexive -сь colloquial contractions from Горох
-    normalized to standard -ся/-теся/-мося.'
+    normalized to standard -ся/-теся/-мося. Merged duplicate standalone perfective note ua-lexeme-2184
+    (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Він
+    не побоявся сказати правду.'' = ''He wasn''t afraid to tell the truth.''.'
 ---
 

@@ -43,6 +43,9 @@ fields:
     of PDF page 221 (Read tool, image mode).
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й. Govt.: dative (запобігати
     чомусь). Perfective запобігти confirmed via yabluko-l2-verb-dictionary.pdf (line 593:
-    ''запобігати запобігти (запобіжу запобіжиш) Д, Ор.'') and Горох.'
+    ''запобігати запобігти (запобіжу запобіжиш) Д, Ор.'') and Горох. Merged duplicate standalone
+    perfective note ua-lexeme-2132 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Вчасне попередження запобігло аварії.'' = ''Timely warning prevented
+    the accident.''.'
 ---
 

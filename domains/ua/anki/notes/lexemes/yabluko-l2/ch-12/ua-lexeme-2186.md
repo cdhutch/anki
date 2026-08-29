@@ -41,11 +41,14 @@ fields:
     feeling adverbs; predicate adjectives of emotional state), cross-checked against yabluko-l2-verb-dictionary.pdf
     for every verb's aspect partner per Craig's explicit instruction. Confirmed via direct
     visual read of PDF page 223 (Read tool, image mode).
-  Verification Notes: New. impf., reflexive, conj2-ity (augment и->ю in 1sg злюся, regular
-    elsewhere). Govt case 'на + Зн.' (Accusative) is the standard case for this verb's target
-    of anger ('злитися на когось') -- corrects yabluko-l2-verb-dictionary.pdf's listed 'на
-    + Р' (line 685), judged an OCR/transcription slip since 'на' does not govern the Genitive
-    in Ukrainian. Perfective розізлитися confirmed via the same dictionary line. Reflexive
-    -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.
+  Verification Notes: 'New. impf., reflexive, conj2-ity (augment и->ю in 1sg злюся, regular
+    elsewhere). Govt case ''на + Зн.'' (Accusative) is the standard case for this verb''s
+    target of anger (''злитися на когось'') -- corrects yabluko-l2-verb-dictionary.pdf''s
+    listed ''на + Р'' (line 685), judged an OCR/transcription slip since ''на'' does not govern
+    the Genitive in Ukrainian. Perfective розізлитися confirmed via the same dictionary line.
+    Reflexive -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.
+    Merged duplicate standalone perfective note ua-lexeme-2186 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Він раптом розізлився без причини.''
+    = ''He suddenly got angry for no reason.''.'
 ---
 

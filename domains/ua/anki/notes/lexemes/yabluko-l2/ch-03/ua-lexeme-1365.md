@@ -42,6 +42,6 @@ fields:
     trust and friendship).
   Verification Notes: New. таємниця ("secret") is not separately drafted -- it does not appear
     as its own bare wordlist bullet in this sub-chapter; used compositionally within this
-    phrase only. довірити additionally gets its own verb-lexeme note (ua-lexeme-1348).
+    phrase only. довірити additionally gets its own verb-lexeme note (ua-lexeme-0668).
 ---
 

@@ -46,6 +46,8 @@ fields:
     for мучитися lists no perfective -- however, помучитися is independently attested on Горох
     as a standard, fully-conjugated perfective (delimitative ''to suffer for a while''), so
     it is added here as the perfective partner per Craig''s instruction rather than treating
-    мучитися as single-aspect.'
+    мучитися as single-aspect. Merged duplicate standalone perfective note ua-lexeme-2270
+    (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Він
+    трохи помучився, але зрештою впорався.'' = ''He suffered a bit, but eventually managed.''.'
 ---
 

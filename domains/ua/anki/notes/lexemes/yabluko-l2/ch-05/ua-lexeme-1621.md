@@ -41,7 +41,7 @@ fields:
     joining/announcing verbs; descriptive adjectives).
   Verification Notes: 'New. Imperfective, "to increase, enlarge, expand". Lexeme-only entry
     (no full conjugation table) -- VP-embedded support verb, drafted per the extended VP-component
-    rule (ua-lexeme-1263 отримати precedent): збільшувати is not independently bare-bulleted
+    rule (ua-lexeme-0992 отримати precedent): збільшувати is not independently bare-bulleted
     in this sub-chapter, only inside збільшувати масштаби (this sub-chapter, ua-lexeme-1622).
     Perfective partner збільшити not yet in corpus.'
 ---

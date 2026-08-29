@@ -39,10 +39,13 @@ fields:
   Tags_Ch: ch:2.2.2, ch:2.7.1
   Source_URL: https://goroh.pp.ua/Словозміна/розбивати; https://goroh.pp.ua/Словозміна/розбити
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
-  Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no
-    reflexive. Governs Зн., Ор. per yabluko-l2-verb-dictionary. Perfective розбити has an
-    irregular future/perfective conjugation (розібʼю, розібʼєш...). Example bundles по́суд
+  Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb;
+    no reflexive. Governs Зн., Ор. per yabluko-l2-verb-dictionary. Perfective розбити has
+    an irregular future/perfective conjugation (розібʼю, розібʼєш...). Example bundles по́суд
     (ua-lexeme-0995, this chapter). Paired with ua-verb-0200. Perfective розби́ти added (yabluko-l2-verb-dictionary
-    primary pairing, Горох stress-verified, 2026-08-28, ch.2.2 drafting pass).
+    primary pairing, Горох stress-verified, 2026-08-28, ch.2.2 drafting pass). Merged duplicate
+    standalone perfective note ua-lexeme-1004 (aspect-pairing dual-convention cleanup, 2026-08-29).
+    That sub-chapter''s example: ''Він упустив телефон і розбив екран.'' = ''He dropped his
+    phone and shattered the screen.''.'
 ---
 

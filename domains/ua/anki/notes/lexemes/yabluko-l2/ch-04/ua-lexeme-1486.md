@@ -41,6 +41,6 @@ fields:
     character traits).
   Verification Notes: New. NP/VP wordlist bullet, drafted as one phrase note per the established
     "one phrase note, no component split" rule. Verb component дійти additionally drafted
-    as ua-lexeme-1506 (lexeme-only).
+    as ua-lexeme-0119 (lexeme-only).
 ---
 

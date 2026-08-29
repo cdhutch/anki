@@ -40,7 +40,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.4.7 sourcing pass (education/qualifications;
     civic activity; family-status bureaucratic forms).
   Verification Notes: New. VP wordlist bullet, drafted as one phrase note per the established
-    rule. Verb component отримати reuses the existing lexeme-only ua-lexeme-1263 (ch.3) and
+    rule. Verb component отримати reuses the existing lexeme-only ua-lexeme-0992 (ch.3) and
     full-conjugation ua-verb-0262 without retag -- not independently bulleted in this sub-chapter,
     same precedent as its earlier appearances (отримати добру освіту, отримати повідомлення,
     ch.4.3). Component нагорода reuses the existing ua-lexeme-0258 (ch.9) without retag.

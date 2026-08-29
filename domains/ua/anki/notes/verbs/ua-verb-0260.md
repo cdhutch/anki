@@ -35,7 +35,7 @@ fields:
   Participle_Impersonal_Past: уя́влено
   Participle_Adverbial_Past: ''
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
-  Verification Notes: 'Paired with ua-lexeme-1227. Perfective, class-2 pattern (вл-mutation
+  Verification Notes: 'Paired with ua-lexeme-2278. Perfective, class-2 pattern (вл-mutation
     in 1sg: уявлю́).'
 ---
 

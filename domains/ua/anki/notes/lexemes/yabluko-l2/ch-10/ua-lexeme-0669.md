@@ -44,6 +44,8 @@ fields:
   Verification Notes: 'New. Imperfective, non-reflexive, 1st conjugation. Governs dative:
     допомагати комусь. Perfective допомогти́ (Горох-confirmed, irregular -могти-type stem:
     допомі́г/допомогла́/допомогли́ in the past tense). Full conjugation on the paired ua-verb-0097
-    note.'
+    note. Merged duplicate standalone perfective note ua-lexeme-0669 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Ти можеш допомогти мені прибрати
+    кімнату?'' = ''Can you help me tidy up the room?''.'
 ---
 

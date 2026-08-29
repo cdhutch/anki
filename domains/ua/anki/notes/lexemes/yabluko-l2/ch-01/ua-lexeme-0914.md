@@ -40,11 +40,13 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/брати; https://goroh.pp.ua/Словозміна/взяти
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj. Irregular alternating stem (беру/береш...).
+  Verification Notes: 'New. impf., non-reflexive, 1 conj. Irregular alternating stem (беру/береш...).
     Example sentence uses the fixed collocation брати участь ("to take part") -- участь (ua-lexeme-0375,
     ch:2.9.3) already exists in the corpus and is retagged ch:1.5 rather than re-drafted;
     конкурс (ua-lexeme-0883, ch:1.4) also reused. Paired with ua-verb-0174. Perfective взя́ти
     added (yabluko-l2-verb-dictionary primary pairing, Горох stress-verified, 2026-08-28,
-    ch.1.5 drafting pass).
+    ch.1.5 drafting pass). Merged duplicate standalone perfective note ua-lexeme-0914 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Візьми парасольку,
+    бо надворі дощ.'' = ''Take an umbrella, because it''s raining outside.''.'
 ---
 

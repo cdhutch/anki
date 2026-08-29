@@ -40,7 +40,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.5.2 sourcing pass (train travel/station; house
     features; sightseeing verbs and adjectives).
   Verification Notes: New. VP wordlist bullet, drafted as one phrase note per the established
-    rule. Verb component вилізти additionally drafted as ua-lexeme-1558 (lexeme-only). Component
+    rule. Verb component вилізти additionally drafted as ua-lexeme-0280 (lexeme-only). Component
     дах reuses the existing ua-lexeme-1546 (this sub-chapter) without retag -- дах is independently
     bulleted in this same sub-chapter's noun list, so it already has its own full entry; only
     reused here as the phrase's object, not retagged again for the same ch:2.5.2 tag it already

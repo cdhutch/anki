@@ -40,7 +40,7 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.10.3 sourcing pass (health/wellbeing; coping
     & effort verbs).
   Verification Notes: 'Verb phrase (perfective verb + imperfective infinitive complement).
-    Components: ки́нути (ua-lexeme-0694, new this pass), пали́ти (ua-lexeme-0644, already
+    Components: ки́нути (ua-lexeme-0217, new this pass), пали́ти (ua-lexeme-0644, already
     exists from ch.10.1 -- not re-tagged with ch:2.10.3 since it''s referenced as a phrase
     component, not itself a standalone wordlist hit this sub-chapter, per the ua-lexeme-0653
     precedent for phrase-component cross-references).'

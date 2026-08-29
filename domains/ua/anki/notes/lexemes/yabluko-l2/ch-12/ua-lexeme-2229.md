@@ -44,6 +44,9 @@ fields:
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й. Sense note: textbook
     bullets this as the collocation ''добувати сіль'' = ''to mine/extract salt'' (сіль not
     drafted as a separate lexeme -- illustrative object only). Perfective добути confirmed
-    via yabluko-l2-verb-dictionary.pdf (line 455: ''добувати добути (добуде) Зн.'').'
+    via yabluko-l2-verb-dictionary.pdf (line 455: ''добувати добути (добуде) Зн.''). Merged
+    duplicate standalone perfective note ua-lexeme-2229 (aspect-pairing dual-convention cleanup,
+    2026-08-29). That sub-chapter''s example: ''Шахтарі добули тонну вугілля за зміну.'' =
+    ''The miners extracted a ton of coal per shift.''.'
 ---
 

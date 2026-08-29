@@ -45,6 +45,9 @@ fields:
     розхвилюватися confirmed via yabluko-l2-verb-dictionary.pdf (line 1734: ''хвилюватися
     розхвилюватися за/через + Зн.''). Near-synonym of тривожитися (ua-lexeme-2205); both bulleted
     separately in the textbook''s own wordlist, drafted here as distinct lexemes accordingly.
-    Reflexive -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.'
+    Reflexive -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.
+    Merged duplicate standalone perfective note ua-lexeme-2207 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Вона розхвилювалася перед іспитом.''
+    = ''She got nervous before the exam.''.'
 ---
 

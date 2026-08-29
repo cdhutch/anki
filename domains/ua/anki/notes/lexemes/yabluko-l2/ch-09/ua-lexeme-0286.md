@@ -52,6 +52,9 @@ fields:
     family of manner-neutral general movement verbs contrasted with the PVOM prefix system,
     added ConfusableSet + Mnemonic_EN cross-referencing спускатися (ua-lexeme-0290) and the
     new family overview, ua-grammar-0010. 2026-08-28: Craig confirmed Group 5 is good in Anki,
-    including the рухатися/рушитися correction on ua-lexeme-0614.'
+    including the рухатися/рушитися correction on ua-lexeme-0614. Merged duplicate standalone
+    perfective note ua-lexeme-0286 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Ми піднялися на гору за дві години.'' = ''We climbed the mountain
+    in two hours.''.'
 ---
 

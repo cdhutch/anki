@@ -40,7 +40,10 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/обідати; https://goroh.pp.ua/Словозміна/пообідати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0158. Perfective
+  Verification Notes: 'New. impf., non-reflexive, 1 conj. Paired with ua-verb-0158. Perfective
     пообі́дати added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
+    Merged duplicate standalone perfective note ua-lexeme-0874 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Ми пообідали разом у кафе.'' = ''We
+    had lunch together at a cafe.''.'
 ---
 

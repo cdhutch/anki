@@ -29,7 +29,7 @@ fields:
   EN_Gloss: to become
   Govt_Case: 'Ор. (predicate complement: стати +instrumental of the noun/adjective)'
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: става́ти (ua-lexeme-2070, imperfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

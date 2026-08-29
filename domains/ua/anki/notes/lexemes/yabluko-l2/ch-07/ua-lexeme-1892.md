@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to appear (imperfective)
   Govt_Case: ''
   IrregularForms: ''
-  CounterpartForm: зʼяви́тися (ua-lexeme-1893, perfective)
+  CounterpartForm: зʼяви́тися (ua-lexeme-1217, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

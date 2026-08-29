@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to conduct, hold, lead; to spend (time)
   Govt_Case: ''
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: провести́ (ua-lexeme-2285, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

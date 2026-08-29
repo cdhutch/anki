@@ -12,6 +12,7 @@ tags:
 - ch:2.10.6
 - pos:verb
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0780
   Lemma: па́морочитися
@@ -46,6 +47,8 @@ fields:
     Not listed in yabluko-l2-verb-dictionary at all. Checked Горох directly per Craig''s fallback
     instruction: Горох''s Словозміна page for паморочитися shows no perfective cross-reference
     either (impersonal/defective conjugation, imperative blank) -- treated as imperfective-only
-    pending further evidence.'
+    pending further evidence. Confirmed tantum (aspect-pairing completeness pass, 2026-08-29):
+    prose already noted ''treated as imperfective-only pending further evidence'' but the
+    tag itself had not been applied. Tagging now closes the gap.'
 ---
 

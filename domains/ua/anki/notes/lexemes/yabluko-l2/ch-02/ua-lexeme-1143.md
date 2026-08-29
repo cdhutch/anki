@@ -40,10 +40,13 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/запрошувати; https://goroh.pp.ua/Словозміна/запросити
   Source_Note: Горох-verified 2026-08-28, ch.2.7 sourcing pass (invitations/exhibitions, formal
     letters).
-  Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no
-    reflexive. Governs Зн. + у/в/на+Зн. per yabluko-l2-verb-dictionary. Example bundles the
-    formal formula "Маємо честь запросити Вас..." (ua-lexeme-1153, this chapter). Paired with
-    ua-verb-0235. Perfective запроси́ти added (yabluko-l2-verb-dictionary primary pairing,
-    Горох stress-verified, 2026-08-28, ch.2.7 drafting pass).
+  Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb;
+    no reflexive. Governs Зн. + у/в/на+Зн. per yabluko-l2-verb-dictionary. Example bundles
+    the formal formula "Маємо честь запросити Вас..." (ua-lexeme-1153, this chapter). Paired
+    with ua-verb-0235. Perfective запроси́ти added (yabluko-l2-verb-dictionary primary pairing,
+    Горох stress-verified, 2026-08-28, ch.2.7 drafting pass). Merged duplicate standalone
+    perfective note ua-lexeme-1143 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Господар запросив усіх сусідів на святкування.'' = ''The host
+    invited all the neighbors to the celebration.''.'
 ---
 

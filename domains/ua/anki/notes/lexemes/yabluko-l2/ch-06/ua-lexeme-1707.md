@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to go, walk (on foot, unidirectional, imperfective)
   Govt_Case: ''
   IrregularForms: ''
-  CounterpartForm: піти́ (ua-lexeme-1708, perfective)
+  CounterpartForm: піти́ (ua-lexeme-0581, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

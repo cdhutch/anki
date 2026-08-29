@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.3
+- ch:2.10.6
 - pos:verb
 - status:draft
 fields:
@@ -35,11 +36,14 @@ fields:
   TypingAnswer: робити / зробити
   UA_Example: Вона робить мило з натуральних інгредієнтів.
   EN_Example: She makes soap from natural ingredients.
-  Tags_Ch: ch:2.3.3
+  Tags_Ch: ch:2.3.3, ch:2.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/робити; https://goroh.pp.ua/Словозміна/зробити
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
-  Verification Notes: New. Very common irregular-stress 2nd-conj. imperfective ("робити з"
+  Verification Notes: 'New. Very common irregular-stress 2nd-conj. imperfective ("робити з"
     = to make something out of something). Perfective зроби́ти added (per yabluko-l2-verb-dictionary,
-    standard well-known pairing).
+    standard well-known pairing). Merged duplicate standalone perfective note ua-lexeme-1212
+    (aspect-pairing dual-convention cleanup, 2026-08-29). Also bulleted in ch:2.10.6. That
+    sub-chapter''s example: ''Мені треба зробити аналізи крові.'' = ''I need to have blood
+    tests done.''.'
 ---
 

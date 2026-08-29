@@ -46,6 +46,9 @@ fields:
     classification (cf. вибухнути, вимкнути) -- classified conj1-нути purely by conjugational
     shape (regular non-past ги́ну/ги́неш..., no vowel/consonant irregularity), while noting
     aspectually it is the imperfective member of the pair, with prefixed загинути as its perfective
-    (verb-dictionary line 388: ''гинути загинути від + Р, під час + Р'').'
+    (verb-dictionary line 388: ''гинути загинути від + Р, під час + Р''). Merged duplicate
+    standalone perfective note ua-lexeme-2176 (aspect-pairing dual-convention cleanup, 2026-08-29).
+    That sub-chapter''s example: ''У землетрусі загинуло багато людей.'' = ''Many people died
+    in the earthquake.''.'
 ---
 

@@ -49,6 +49,9 @@ fields:
     the root-stressed imperfective here as confirmed by yabluko-l2-verb-dictionary.pdf (line
     90: ''вибухати вибухнути М. Ор.''). Govt case ''М., Ор.'' carried over from the dictionary
     entry as listed (applies to figurative/locational senses, e.g. ''вибухати в повітрі''/''вибухати
-    сміхом''); the disaster-vocabulary sense drafted here is typically used intransitively.'
+    сміхом''); the disaster-vocabulary sense drafted here is typically used intransitively.
+    Merged duplicate standalone perfective note ua-lexeme-2174 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Бомба вибухнула серед ночі.'' = ''The
+    bomb exploded in the middle of the night.''.'
 ---
 

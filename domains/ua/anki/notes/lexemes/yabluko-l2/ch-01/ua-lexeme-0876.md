@@ -40,7 +40,10 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/снідати; https://goroh.pp.ua/Словозміна/поснідати
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0160. Perfective
+  Verification Notes: 'New. impf., non-reflexive, 1 conj. Paired with ua-verb-0160. Perfective
     посні́дати added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
+    Merged duplicate standalone perfective note ua-lexeme-0876 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Я поснідав і пішов на роботу.'' =
+    ''I had breakfast and went to work.''.'
 ---
 

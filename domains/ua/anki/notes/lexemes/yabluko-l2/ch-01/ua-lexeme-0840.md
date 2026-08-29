@@ -39,7 +39,10 @@ fields:
   Tags_Ch: ch:2.1.2, ch:2.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/вживати; https://goroh.pp.ua/Словозміна/вжити
   Source_Note: Горох-verified 2026-08-28, ch.1.2 sourcing pass (voice/speech; everyday verbs).
-  Verification Notes: New. Impf., non-reflexive, 1st conj.  Paired with ua-verb-0143. Perfective
+  Verification Notes: 'New. Impf., non-reflexive, 1st conj. Paired with ua-verb-0143. Perfective
     вжи́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
+    Merged duplicate standalone perfective note ua-lexeme-0840 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Лікарі вжили всіх можливих заходів.''
+    = ''The doctors took every possible measure.''.'
 ---
 

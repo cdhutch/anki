@@ -35,6 +35,6 @@ fields:
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
   Source_Note: ''
-  Verification Notes: Perfective, reflexive, -нутися class. See lexeme ua-lexeme-0817.
+  Verification Notes: Perfective, reflexive, -нутися class. See lexeme ua-lexeme-1147.
 ---
 

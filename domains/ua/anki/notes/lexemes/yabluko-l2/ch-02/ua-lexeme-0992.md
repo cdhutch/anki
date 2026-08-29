@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.1
+- ch:2.3.4
 - pos:verb
 - status:draft
 fields:
@@ -35,11 +36,14 @@ fields:
   TypingAnswer: отримувати / отримати
   UA_Example: Щороку на день народження я отримую багато листівок.
   EN_Example: Every year on my birthday I receive many postcards.
-  Tags_Ch: ch:2.2.1
+  Tags_Ch: ch:2.2.1, ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/отримувати; https://goroh.pp.ua/Словозміна/отримати
   Source_Note: Горох-verified 2026-08-28, ch.2.1 sourcing pass (shops; party/gift items).
-  Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no
-    reflexive, no motion sense. Paired with ua-verb-0198. Perfective отри́мати added (yabluko-l2-verb-dictionary
-    primary pairing, Горох stress-verified, 2026-08-28, ch.2.1 drafting pass).
+  Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb;
+    no reflexive, no motion sense. Paired with ua-verb-0198. Perfective отри́мати added (yabluko-l2-verb-dictionary
+    primary pairing, Горох stress-verified, 2026-08-28, ch.2.1 drafting pass). Merged duplicate
+    standalone perfective note ua-lexeme-0992 (aspect-pairing dual-convention cleanup, 2026-08-29).
+    Also bulleted in ch:2.3.4. That sub-chapter''s example: ''Керівник отримав дозвіл на ремонт.''
+    = ''The leader obtained permission for the renovation.''.'
 ---
 

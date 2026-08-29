@@ -62,6 +62,9 @@ fields:
     the register/theme of прибувати (0316) and відправлятися (0315), the two other formal-register
     siblings -- not tied to a confirmed textbook occurrence, so flag if this should move.
     2026-08-28: Craig confirmed Group 5 is good in Anki, including the рухатися/рушитися correction
-    on ua-lexeme-0614 -- flipped status:verified.'
+    on ua-lexeme-0614 -- flipped status:verified. Merged duplicate standalone perfective note
+    ua-lexeme-0611 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
+    example: ''Він повернеться з відрядження у пʼятницю.'' = ''He''ll be back from his business
+    trip on Friday.''.'
 ---
 

@@ -36,6 +36,6 @@ fields:
   Participle_Adverbial_Past: ''
   Source_Note: ''
   Verification Notes: Perfective, non-reflexive, б→бл mutation in 1sg (like робити). See lexeme
-    ua-lexeme-0770.
+    ua-lexeme-1212.
 ---
 

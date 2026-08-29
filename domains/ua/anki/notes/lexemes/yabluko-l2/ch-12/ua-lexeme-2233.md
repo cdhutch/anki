@@ -46,6 +46,8 @@ fields:
     = this regular imperfective; a separately-listed prefix-stressed нади́хати is a rare perfective
     variant), parallel to the ви́бухати/вибуха́ти and ви́писати/виписувати stress patterns
     already documented in this corpus. Perfective надихнути confirmed via yabluko-l2-verb-dictionary.pdf
-    (line 913: ''надихати надихнути Зн, Ор.'').'
+    (line 913: ''надихати надихнути Зн, Ор.''). Merged duplicate standalone perfective note
+    ua-lexeme-2233 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
+    example: ''Ця книга надихнула мене на подорож.'' = ''This book inspired me to travel.''.'
 ---
 

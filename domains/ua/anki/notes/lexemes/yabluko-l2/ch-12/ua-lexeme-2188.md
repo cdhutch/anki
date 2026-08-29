@@ -42,6 +42,9 @@ fields:
     for every verb's aspect partner per Craig's explicit instruction. Confirmed via direct
     visual read of PDF page 223 (Read tool, image mode).
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
-    занудьгувати confirmed via yabluko-l2-verb-dictionary.pdf (line 963: ''нудьгувати занудьгувати'').'
+    занудьгувати confirmed via yabluko-l2-verb-dictionary.pdf (line 963: ''нудьгувати занудьгувати'').
+    Merged duplicate standalone perfective note ua-lexeme-2188 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Гості швидко занудьгували без музики.''
+    = ''The guests quickly got bored without music.''.'
 ---
 

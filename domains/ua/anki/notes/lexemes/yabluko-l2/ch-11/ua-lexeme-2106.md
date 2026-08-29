@@ -48,6 +48,8 @@ fields:
     (satisfaction/to satisfy). Горох confirms ''задовольнити'' as a real, regularly-formed
     perfective (future задовольню́...) consistent with normal за- + довольняти/довольнити
     morphology; treating the PDF''s ''задовільнити'' as an OCR/typo artifact (о/і confusion)
-    and using задовольнити.'
+    and using задовольнити. Merged duplicate standalone perfective note ua-lexeme-2106 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Ми задовольнили всі
+    вимоги клієнта.'' = ''We satisfied all the client''s requirements.''.'
 ---
 

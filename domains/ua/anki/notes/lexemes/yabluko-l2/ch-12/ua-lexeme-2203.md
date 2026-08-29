@@ -45,6 +45,9 @@ fields:
     облаштуватися confirmed via yabluko-l2-verb-dictionary.pdf (line 987: ''облаштовуватися
     облаштуватися М.'') -- added per Craig''s instruction to include perfective partners for
     imperfective lemmas even where the textbook itself only bullets the perfective (here облаштуватися).
-    Reflexive -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.'
+    Reflexive -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.
+    Merged duplicate standalone perfective note ua-lexeme-2203 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Ми вже облаштувалися в новій квартирі.''
+    = ''We''ve already settled in at the new apartment.''.'
 ---
 

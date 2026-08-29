@@ -44,6 +44,9 @@ fields:
     under this infinitive: пробува́ти "перебувати" (to be present/reside -- different stress,
     not this sense) and a rare/dialectal perfective "пробувати=пробува́ти" tagged ВЕСУМ-only
     (not registered). Paired with ua-verb-0232. Perfective спро́бувати added (yabluko-l2-verb-dictionary
-    primary pairing, Горох stress-verified, 2026-08-28, ch.2.5 drafting pass).'
+    primary pairing, Горох stress-verified, 2026-08-28, ch.2.5 drafting pass). Merged duplicate
+    standalone perfective note ua-lexeme-1094 (aspect-pairing dual-convention cleanup, 2026-08-29).
+    That sub-chapter''s example: ''Вона спробувала відчинити двері, але вони були замкнені.''
+    = ''She tried to open the door, but it was locked.''.'
 ---
 

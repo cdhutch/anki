@@ -46,6 +46,8 @@ fields:
     ''відповідально споживати'' = ''to consume responsibly'' (відповідально not drafted as
     a separate lexeme -- adverb from the already-corpus adjective відповідальний, ua-lexeme-1490,
     bulleted only as part of this one collocation). Perfective спожити confirmed via yabluko-l2-verb-dictionary.pdf
-    and Горох.'
+    and Горох. Merged duplicate standalone perfective note ua-lexeme-2108 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Родина спожила весь
+    запас води за тиждень.'' = ''The family consumed the entire water supply in a week.''.'
 ---
 

@@ -41,8 +41,11 @@ fields:
     cross-checked against yabluko-l2-verb-dictionary.pdf for every verb's aspect partner per
     Craig's explicit instruction. Confirmed via direct visual read of PDF page 221 (Read tool,
     image mode).
-  Verification Notes: New. impf., reflexive, regular conj1-vowel+й. Reflexive normalized from
-    Горох's colloquial -сь endings to standard -ся (established convention, cf. зібратися
+  Verification Notes: 'New. impf., reflexive, regular conj1-vowel+й. Reflexive normalized
+    from Горох''s colloquial -сь endings to standard -ся (established convention, cf. зібратися
     ch.7.6). Perfective розкластися confirmed via yabluko-l2-verb-dictionary.pdf and Горох.
+    Merged duplicate standalone perfective note ua-lexeme-2119 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''За цей час сміття повністю розклалося
+    б.'' = ''In this time, the trash would have fully decomposed.''.'
 ---
 

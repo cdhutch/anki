@@ -39,7 +39,7 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/звернутися
   Source_Note: Горох-verified 2026-08-28, ch.10.7 sourcing pass (consular services; border/customs;
     travel health).
-  Verification Notes: References звернутися (ua-lexeme-0817, verb) and the pre-existing лікар
+  Verification Notes: References звернутися (ua-lexeme-1147, verb) and the pre-existing лікар
     (ua-lexeme-0006, ch:1.0 -- referenced as a component, not re-tagged, same precedent as
     кинути палити in ch.10.3).
 ---

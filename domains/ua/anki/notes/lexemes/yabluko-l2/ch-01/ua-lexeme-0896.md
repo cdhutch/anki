@@ -47,6 +47,8 @@ fields:
     are both freshly drafted in this same ch:1.4 pass, not pre-existing gaps -- per the "залишатися
     вдома" precedent (ua-lexeme-0880, ch:1.3). Paired with ua-verb-0173. Perfective почи́стити
     added (yabluko-l2-verb-dictionary primary pairing, Горох stress-verified, 2026-08-28,
-    ch.1.4 drafting pass).'
+    ch.1.4 drafting pass). Merged duplicate standalone perfective note ua-lexeme-0896 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Почисти, будь ласка,
+    взуття перед виходом.'' = ''Please clean your shoes before you go out.''.'
 ---
 

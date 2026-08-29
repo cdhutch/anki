@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.2.5
 - ch:2.6.3
+- ch:2.12.6
 - pos:verb
 - status:draft
 fields:
@@ -36,14 +37,17 @@ fields:
   TypingAnswer: потрапляти / потрапити
   UA_Example: Не хочеться потрапляти в незручну ситуацію на вечірці.
   EN_Example: One doesn't want to end up in an awkward situation at a party.
-  Tags_Ch: ch:2.2.5, ch:2.6.3
+  Tags_Ch: ch:2.2.5, ch:2.6.3, ch:2.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/потрапляти; https://goroh.pp.ua/Словозміна/потрапити
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
-  Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no
-    reflexive. Governs у/в, на +Зн. per yabluko-l2-verb-dictionary. Example bundles ситуація
+  Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb;
+    no reflexive. Governs у/в, на +Зн. per yabluko-l2-verb-dictionary. Example bundles ситуація
     (ua-lexeme-0689) and незручний (ua-lexeme-0446), both retagged ch:2.5 this pass -- wordlist
     item "потрапляти в незручну ситуацію". Paired with ua-verb-0225. Perfective потра́пити
     added (yabluko-l2-verb-dictionary primary pairing, Горох stress-verified, 2026-08-28,
-    ch.2.5 drafting pass).
+    ch.2.5 drafting pass). Merged duplicate standalone perfective note ua-lexeme-1087 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). Also bulleted in ch:2.12.6. That sub-chapter''s
+    example: ''Через непорозуміння він потрапив під арешт.'' = ''Due to a misunderstanding,
+    he got arrested.''.'
 ---
 

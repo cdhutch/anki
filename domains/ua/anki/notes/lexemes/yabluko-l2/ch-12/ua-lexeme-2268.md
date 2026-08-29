@@ -45,6 +45,8 @@ fields:
     note: textbook bullets this as the collocation ''диктувати по літерах'' = ''to spell out/dictate
     letter by letter'' (літера drafted standalone, ua-lexeme-2262). Perfective продиктувати
     confirmed via yabluko-l2-verb-dictionary.pdf (line 439: ''диктувати продиктувати Зн.,
-    Д.'').'
+    Д.''). Merged duplicate standalone perfective note ua-lexeme-2268 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Продиктуйте мені, будь ласка, свою
+    адресу.'' = ''Please dictate your address to me.''.'
 ---
 

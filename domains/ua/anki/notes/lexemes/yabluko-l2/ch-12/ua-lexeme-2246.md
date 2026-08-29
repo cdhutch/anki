@@ -46,6 +46,9 @@ fields:
     on its own; added as the imperfective/general-aspect counterpart of the textbook''s own
     bulleted заблокувати per Craig''s instruction to include perfective partners for imperfective
     lemmas -- here the ''partner'' is this biaspectual base verb, with заблокувати as its
-    dedicated, unambiguous prefixed perfective.'
+    dedicated, unambiguous prefixed perfective. Merged duplicate standalone perfective note
+    ua-lexeme-2246 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
+    example: ''Вона заблокувала телефон і банківську картку відразу після крадіжки.'' = ''She
+    blocked her phone and bank card right after the theft.''.'
 ---
 

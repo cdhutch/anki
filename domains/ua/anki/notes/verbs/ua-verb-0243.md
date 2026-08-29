@@ -35,6 +35,6 @@ fields:
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
-  Verification Notes: Paired with ua-lexeme-1210. Regular perfective reflexive, class-2 pattern.
+  Verification Notes: Paired with ua-lexeme-2275. Regular perfective reflexive, class-2 pattern.
 ---
 

@@ -41,9 +41,12 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/уникати; https://goroh.pp.ua/Словозміна/уникнути
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
-  Verification Notes: New. Imperfective, +Gen. Also appears in ch.10.7's wordlist -- will
+  Verification Notes: 'New. Imperfective, +Gen. Also appears in ch.10.7''s wordlist -- will
     pick up a second ch:2.10.7 tag when that sub-chapter is drafted (self-match expected,
     not a new note). Full conjugation on paired ua-verb-0135. Perfective уни́кнути added (aspect-pairing
-    review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
+    review, yabluko-l2-verb-dictionary + Горох, 2026-08-28). Merged duplicate standalone perfective
+    note ua-lexeme-0783 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
+    example: ''Завдяки прогнозу вдалося уникнути аварії.'' = ''Thanks to the forecast, an
+    accident was avoided.''.'
 ---
 

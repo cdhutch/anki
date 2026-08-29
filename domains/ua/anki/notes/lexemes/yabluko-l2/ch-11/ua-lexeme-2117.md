@@ -43,6 +43,9 @@ fields:
     image mode).
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
     випродукувати confirmed via yabluko-l2-verb-dictionary.pdf (line 1384: ''продукувати випродукувати
-    Зн.'') -- not a bare спродукувати as an earlier unverified guess had suggested.'
+    Зн.'') -- not a bare спродукувати as an earlier unverified guess had suggested. Merged
+    duplicate standalone perfective note ua-lexeme-2117 (aspect-pairing dual-convention cleanup,
+    2026-08-29). That sub-chapter''s example: ''Компанія випродукувала рекордну кількість
+    товару.'' = ''The company produced a record amount of goods.''.'
 ---
 

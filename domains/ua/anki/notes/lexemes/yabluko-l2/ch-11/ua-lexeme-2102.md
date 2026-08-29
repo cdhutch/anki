@@ -40,8 +40,11 @@ fields:
   Source_Note: Горох-verified 2026-08-28/29, ch.11.1 sourcing pass (environmental pollution
     sources; conservation actions and sustainability), cross-checked against yabluko-l2-verb-dictionary.pdf
     for every verb's aspect partner per Craig's explicit instruction.
-  Verification Notes: New. impf., non-reflexive, regular conj1-vowel+й. Related noun переробка
+  Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й. Related noun переробка
     (ua-lexeme-2094) bulleted as its own indented sub-entry. Perfective переробити confirmed
-    via yabluko-l2-verb-dictionary.pdf (line 1384 area) and Горох.
+    via yabluko-l2-verb-dictionary.pdf (line 1384 area) and Горох. Merged duplicate standalone
+    perfective note ua-lexeme-2102 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Завод переробив тонну макулатури.'' = ''The plant processed
+    a ton of waste paper.''.'
 ---
 

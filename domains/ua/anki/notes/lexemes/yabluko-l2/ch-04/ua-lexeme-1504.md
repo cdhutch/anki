@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to carry out, perform, fulfill
   Govt_Case: Зн.
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: ви́конати (ua-lexeme-2288, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

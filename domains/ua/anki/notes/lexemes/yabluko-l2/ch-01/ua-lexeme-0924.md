@@ -46,7 +46,9 @@ fields:
     (відмовля́тись) as primary headword; відмовля́тися (-ся) used here to match the wordlist
     spelling. Paired with ua-verb-0184. Perfective відмо́витися added (yabluko-l2-verb-dictionary
     primary pairing, Горох stress-verified, 2026-08-28, ch.1.5 drafting pass). Note (ch.11.1):
-    perfective partner відмовитися (ua-lexeme-2110/ua-verb-0568) added this pass, per Craig''s
-    instruction to include perfective partners for imperfective lemmas.'
+    perfective partner відмовитися (ua-lexeme-0924/ua-verb-0568) added this pass, per Craig''s
+    instruction to include perfective partners for imperfective lemmas. Merged duplicate standalone
+    perfective note ua-lexeme-0924 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Він відмовився від пропозиції.'' = ''He refused the offer.''.'
 ---
 

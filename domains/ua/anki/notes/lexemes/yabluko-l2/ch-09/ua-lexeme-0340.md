@@ -52,6 +52,8 @@ fields:
     + Mnemonic_EN distinguishing вирушати from its closest near-synonym відправлятися (ua-lexeme-0315,
     formal/schedule register), and cross-referenced the new family overview, ua-grammar-0010.
     2026-08-28: Craig confirmed Group 5 is good in Anki, including the рухатися/рушитися correction
-    on ua-lexeme-0614.'
+    on ua-lexeme-0614. Merged duplicate standalone perfective note ua-lexeme-0340 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Ми вирушили в подорож
+    рано-вранці.'' = ''We set off on our trip early in the morning.''.'
 ---
 

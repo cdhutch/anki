@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to develop
   Govt_Case: Зн.
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: розви́нути (ua-lexeme-2290, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

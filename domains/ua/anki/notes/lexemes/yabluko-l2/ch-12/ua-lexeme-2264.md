@@ -42,6 +42,9 @@ fields:
     for every verb's aspect partner per Craig's explicit instruction. Confirmed via direct
     visual read of PDF page 223 (Read tool, image mode).
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й. Perfective вимовити
-    confirmed via yabluko-l2-verb-dictionary.pdf (line 150: ''вимовляти вимовити Зн.'').'
+    confirmed via yabluko-l2-verb-dictionary.pdf (line 150: ''вимовляти вимовити Зн.''). Merged
+    duplicate standalone perfective note ua-lexeme-2264 (aspect-pairing dual-convention cleanup,
+    2026-08-29). That sub-chapter''s example: ''Дитина нарешті вимовила перше слово.'' = ''The
+    child finally uttered its first word.''.'
 ---
 

@@ -35,6 +35,6 @@ fields:
   Participle_Impersonal_Past: ство́рено
   Participle_Adverbial_Past: ''
   Source_Note: Горох-verified 2026-08-28, ch.3.3 sourcing pass (eco-village/village-life).
-  Verification Notes: Paired with ua-lexeme-1225. Perfective, class-2 pattern.
+  Verification Notes: Paired with ua-lexeme-0877. Perfective, class-2 pattern.
 ---
 

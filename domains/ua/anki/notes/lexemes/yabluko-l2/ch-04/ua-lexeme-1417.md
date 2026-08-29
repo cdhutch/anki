@@ -41,6 +41,6 @@ fields:
     emigration, education, timeline expressions).'
   Verification Notes: New. NP/VP wordlist bullet, drafted as one phrase note per the established
     "one phrase note, no component split" rule (components not independently bulleted in this
-    sub-chapter). Reuses отримати (ua-lexeme-1263, already drafted, ch.3.4) as the verb component.
+    sub-chapter). Reuses отримати (ua-lexeme-0992, already drafted, ch.3.4) as the verb component.
 ---
 

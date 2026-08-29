@@ -35,7 +35,7 @@ fields:
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: ''
   Source_Note: ''
-  Verification Notes: Perfective, non-reflexive, irregular -нути class. See lexeme ua-lexeme-0694
+  Verification Notes: Perfective, non-reflexive, irregular -нути class. See lexeme ua-lexeme-0217
     for the imperfective counterpart кидати (not separately conjugated this pass).
 ---
 

@@ -45,6 +45,9 @@ fields:
     ж already present: тривожуся). Perfective стривожитися confirmed via yabluko-l2-verb-dictionary.pdf
     (line 1698: ''тривожитися стривожитися за/через + Зн.'' -- PDF prints the preposition
     ''через'' with an OCR-garbled є (''черєз''), corrected here to the standard spelling).
-    Reflexive -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.'
+    Reflexive -сь colloquial contractions from Горох normalized to standard -ся/-теся/-мося.
+    Merged duplicate standalone perfective note ua-lexeme-2205 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Вона стривожилася, коли не отримала
+    відповіді.'' = ''She got worried when she didn''t get a reply.''.'
 ---
 

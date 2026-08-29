@@ -40,6 +40,6 @@ fields:
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).
   Verification Notes: New. Perfective partner of зловжива́ти (ua-lexeme-1766), same жи-/жив-
-    ablaut family as вжити (ua-lexeme-1748).
+    ablaut family as вжити (ua-lexeme-0840).
 ---
 

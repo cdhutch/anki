@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to share (something) with (someone)
   Govt_Case: Ор. (чим), з + Ор. (з ким)
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: поділи́тися (ua-lexeme-2281, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

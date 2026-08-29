@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to lose
   Govt_Case: Зн.
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: втра́тити (ua-lexeme-2289, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

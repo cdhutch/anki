@@ -40,8 +40,11 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/публікувати; https://goroh.pp.ua/Словозміна/опублікувати
   Source_Note: Горох-verified 2026-08-28, ch.10.5 sourcing pass (civics/rights/history; repression-era
     adjectives).
-  Verification Notes: New. Imperfective, non-reflexive, 1st conjugation. Full conjugation
+  Verification Notes: 'New. Imperfective, non-reflexive, 1st conjugation. Full conjugation
     on the paired ua-verb-0116 note. Perfective опублікува́ти added (aspect-pairing review,
-    yabluko-l2-verb-dictionary + Горох, 2026-08-28).
+    yabluko-l2-verb-dictionary + Горох, 2026-08-28). Merged duplicate standalone perfective
+    note ua-lexeme-0731 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
+    example: ''Журналіст опублікував статтю про роботів-хірургів.'' = ''The journalist published
+    an article about robot surgeons.''.'
 ---
 

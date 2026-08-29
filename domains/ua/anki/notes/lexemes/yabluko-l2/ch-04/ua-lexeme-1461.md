@@ -27,7 +27,7 @@ fields:
   EN_Gloss: to applaud
   Govt_Case: Д. (аплодувати комусь)
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: зааплодува́ти (ua-lexeme-2286, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''

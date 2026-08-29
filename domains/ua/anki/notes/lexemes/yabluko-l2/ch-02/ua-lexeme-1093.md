@@ -39,12 +39,14 @@ fields:
   Tags_Ch: ch:2.2.5, ch:2.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/сідати; https://goroh.pp.ua/Словозміна/сісти
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
-  Verification Notes: New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb; no
-    reflexive. Governs за+Зн. ("сідати за стіл") per yabluko-l2-verb-dictionary. Perfective
+  Verification Notes: 'New. imperfective., non-reflexive, 1 conj. Regular 1st-conj. verb;
+    no reflexive. Governs за+Зн. ("сідати за стіл") per yabluko-l2-verb-dictionary. Perfective
     сі́сти has an irregular/suppletive-looking present-future stem (ся́ду, ся́деш...) and
     irregular imperative (сядь) -- not stored here since only the imperfective gets a full
     conjugation table, but flagged for awareness. Paired with ua-verb-0231. Perfective сі́сти
     added (yabluko-l2-verb-dictionary primary pairing, Горох stress-verified, 2026-08-28,
-    ch.2.5 drafting pass).
+    ch.2.5 drafting pass). Merged duplicate standalone perfective note ua-lexeme-1093 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Сідай, будь ласка,
+    і почекай хвилинку.'' = ''Sit down, please, and wait a minute.''.'
 ---
 

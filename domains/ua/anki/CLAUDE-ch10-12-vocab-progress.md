@@ -1345,3 +1345,31 @@ Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 - After generating files: `python3 -m tools.anki.cnsf_canonicalize --write <paths>` to fix
   field order/YAML quoting, then `check_cnsf_field_schema.py` + `check_euphony_stress.py` +
   `pytest tests/ua/` (install pytest first) before committing.
+
+## 2026-08-29 follow-up: aspect-pairing completeness + dual-convention cleanup
+
+After all chapters (1-12) were confirmed complete, Craig asked for a count of verb-POS
+lexeme notes with incomplete aspect pairings, then asked to fix them.
+
+- **Incomplete-pairing fix**: found 23 verb lexemes (9 in ch.3, 13 in ch.4, 1 in ch.10)
+  with no confirmed aspect partner and no tantum tag. Researched each via Горох +
+  `yabluko-l2-verb-dictionary.pdf`. Result: 16 new lexeme+verb pairs drafted
+  (`ua-lexeme-2275`-`2290` / `ua-verb-0621`-`0636`), 5 reused an existing note as the
+  partner (cross-referenced), 2 were genuine tantums (`ua-lexeme-1345` залежати,
+  `ua-lexeme-0780` паморочитися -- tagged `aspect:imperfective-only`).
+- **Dual-convention duplicate cleanup**: while reviewing this, Craig noticed some verbs
+  had BOTH a combined note (imperfective lemma with `Perfective` field populated,
+  `TypingAnswer` testing both forms) AND a separate standalone note for the perfective
+  form alone -- redundant coverage of the same fact. A corpus-wide scan found 78 such
+  pairs (not just ch.12.7 -- spanning ch.1,3,4,5,6,7,9,10,11,12). Per Craig's decision
+  (scope: all 78, method: delete the separate note), each standalone perfective note was
+  deleted, its distinct chapter tag and example were merged into the surviving combined
+  note's `Tags_Ch`/Verification Notes, and any stray corpus cross-references to the
+  deleted IDs were repointed. UA_Verb conjugation notes were left alone (different deck,
+  not the reported duplication). See
+  `domains/ua/anki/CLAUDE-aspect-dual-convention-cleanup-worklist.md` for the full list of
+  deleted IDs and what each one's distinctive example was, in case any deserve a
+  genuinely new, separately-drafted word later (not for ID reuse -- NoteIDs aren't dense).
+- Final corpus state: 2210 lexeme notes, 705 verb notes. `pytest tests/ua/ -q` green (547
+  tests) throughout both fixes. 0 incomplete aspect pairings, 0 dual-convention
+  duplicates remaining (both re-verified after the cleanup).

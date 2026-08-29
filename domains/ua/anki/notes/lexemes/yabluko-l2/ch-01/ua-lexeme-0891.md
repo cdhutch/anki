@@ -40,8 +40,10 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/оцінювати; https://goroh.pp.ua/Словозміна/оцінити
   Source_Note: Горох-verified 2026-08-28, ch.1.4 sourcing pass (mood/dental-care/everyday
     verbs).
-  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0168. Perfective
+  Verification Notes: 'New. impf., non-reflexive, 1 conj. Paired with ua-verb-0168. Perfective
     оціни́ти added (yabluko-l2-verb-dictionary primary pairing, Горох stress-verified, 2026-08-28,
-    ch.1.4 drafting pass).
+    ch.1.4 drafting pass). Merged duplicate standalone perfective note ua-lexeme-0891 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Журі оцінило проєкт
+    на відмінно.'' = ''The jury rated the project excellent.''.'
 ---
 

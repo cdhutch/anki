@@ -39,6 +39,6 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/зробити; https://goroh.pp.ua/Словозміна/аналіз
   Source_Note: Горох-verified 2026-08-28, ch.10.6 sourcing pass (illness/injury symptoms;
     body parts; treatment).
-  Verification Notes: References зробити (ua-lexeme-0770, verb) and аналіз (ua-lexeme-0767).
+  Verification Notes: References зробити (ua-lexeme-1212, verb) and аналіз (ua-lexeme-0767).
 ---
 

@@ -44,6 +44,9 @@ fields:
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
     зруйнувати confirmed via yabluko-l2-verb-dictionary.pdf (line 1533: ''руйнувати зруйнувати
     Зн.'') -- added per Craig''s instruction to include perfective partners for imperfective
-    lemmas even though the textbook itself only bullets the perfective зруйнувати.'
+    lemmas even though the textbook itself only bullets the perfective зруйнувати. Merged
+    duplicate standalone perfective note ua-lexeme-2231 (aspect-pairing dual-convention cleanup,
+    2026-08-29). That sub-chapter''s example: ''Напад зруйнував половину села.'' = ''The attack
+    destroyed half the village.''.'
 ---
 

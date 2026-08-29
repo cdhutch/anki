@@ -40,8 +40,11 @@ fields:
   Source_Note: Горох-verified 2026-08-28/29, ch.11.1 sourcing pass (environmental pollution
     sources; conservation actions and sustainability), cross-checked against yabluko-l2-verb-dictionary.pdf
     for every verb's aspect partner per Craig's explicit instruction.
-  Verification Notes: New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
+  Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
     посортувати confirmed via yabluko-l2-verb-dictionary.pdf (line 553 area) -- this CORRECTS
-    an earlier Горох-based guess of відсортувати, which is not the textbook's intended pairing.
+    an earlier Горох-based guess of відсортувати, which is not the textbook''s intended pairing.
+    Merged duplicate standalone perfective note ua-lexeme-2104 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Вона посортувала пляшки за кольором.''
+    = ''She sorted the bottles by color.''.'
 ---
 

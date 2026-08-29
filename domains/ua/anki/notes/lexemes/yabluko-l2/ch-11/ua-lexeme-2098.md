@@ -44,6 +44,9 @@ fields:
     bullets this as the collocation ''вимикати світло'' = ''to turn off the light''. Perfective
     вимкнути confirmed via yabluko-l2-verb-dictionary.pdf (line 146: ''вимикати вимкнути Зн.'')
     -- this corrects an earlier Горох WebFetch that wrongly suggested ''висмикнути'' (which
-    actually means ''to yank out'', unrelated) as the perfective.'
+    actually means ''to yank out'', unrelated) as the perfective. Merged duplicate standalone
+    perfective note ua-lexeme-2098 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Не забудь вимкнути світло.'' = ''Don''t forget to turn off the
+    light.''.'
 ---
 

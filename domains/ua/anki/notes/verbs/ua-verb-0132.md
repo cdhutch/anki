@@ -10,6 +10,7 @@ tags:
 - class:regular-2
 - ch:2.10.6
 - status:draft
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0132
   Lemma: па́морочитися

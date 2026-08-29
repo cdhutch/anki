@@ -43,6 +43,8 @@ fields:
     instruction. Confirmed via direct visual read of PDF page 223 (Read tool, image mode).'
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й (-увати class). Perfective
     виховати confirmed via yabluko-l2-verb-dictionary.pdf (line 218: ''виховувати виховати
-    Зн.'').'
+    Зн.''). Merged duplicate standalone perfective note ua-lexeme-2227 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Вона виховала трьох дітей сама.''
+    = ''She raised three children on her own.''.'
 ---
 

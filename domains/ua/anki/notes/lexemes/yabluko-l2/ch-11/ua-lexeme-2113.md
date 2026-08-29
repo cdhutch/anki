@@ -44,6 +44,9 @@ fields:
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й. Sense note: textbook
     bullets this as the collocation ''виділяти токсичні речовини'' = ''to emit toxic substances''
     (токсичні речовини not drafted separately -- compositional, not independently bulleted).
-    Perfective виділити confirmed via yabluko-l2-verb-dictionary.pdf and Горох.'
+    Perfective виділити confirmed via yabluko-l2-verb-dictionary.pdf and Горох. Merged duplicate
+    standalone perfective note ua-lexeme-2113 (aspect-pairing dual-convention cleanup, 2026-08-29).
+    That sub-chapter''s example: ''Реакція виділила багато тепла.'' = ''The reaction released
+    a lot of heat.''.'
 ---
 

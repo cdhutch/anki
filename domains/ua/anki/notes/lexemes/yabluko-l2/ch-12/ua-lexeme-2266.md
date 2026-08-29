@@ -45,6 +45,9 @@ fields:
     verb from вимовляти (ua-lexeme-2264), both separately bulleted in the textbook''s own
     wordlist. Typically used only in 3rd person/impersonal forms (of words being pronounced),
     but the full paradigm is regular and given here per this corpus''s convention. Perfective
-    вимовитися confirmed via yabluko-l2-verb-dictionary.pdf (line 152: ''вимовлятися вимовитися'').'
+    вимовитися confirmed via yabluko-l2-verb-dictionary.pdf (line 152: ''вимовлятися вимовитися'').
+    Merged duplicate standalone perfective note ua-lexeme-2266 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Це імʼя вимовиться легко, якщо повторити
+    кілька разів.'' = ''This name will be pronounced easily if you repeat it a few times.''.'
 ---
 

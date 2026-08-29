@@ -43,6 +43,8 @@ fields:
   Verification Notes: 'New. impf., non-reflexive, regular conj1-vowel+й. Sense note: textbook
     bullets this as the collocation ''закривати кран'' = ''to turn off the tap'' (кран reused,
     ua-lexeme-0812, ch.10.7). Perfective закрити confirmed via yabluko-l2-verb-dictionary.pdf
-    (line 619 area) and Горох.'
+    (line 619 area) and Горох. Merged duplicate standalone perfective note ua-lexeme-2100
+    (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Закрий
+    кран, будь ласка.'' = ''Please turn off the tap.''.'
 ---
 

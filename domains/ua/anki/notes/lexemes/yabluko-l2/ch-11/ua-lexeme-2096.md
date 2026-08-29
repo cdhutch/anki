@@ -43,6 +43,8 @@ fields:
   Verification Notes: 'New. impf., non-reflexive, г→ж mutation before front vowels (бережу́,
     бере́жеш...), і/е past-tense ablaut (бері́г vs берегла́/берегло́/берегли́). Paired with
     ua-verb-0554. Perfective зберегти confirmed via yabluko-l2-verb-dictionary.pdf (line 22:
-    ''берегти (береже) зберегти Зн.'') and Горох.'
+    ''берегти (береже) зберегти Зн.'') and Горох. Merged duplicate standalone perfective note
+    ua-lexeme-2096 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
+    example: ''Нам вдалося зберегти цей ліс.'' = ''We managed to preserve this forest.''.'
 ---
 

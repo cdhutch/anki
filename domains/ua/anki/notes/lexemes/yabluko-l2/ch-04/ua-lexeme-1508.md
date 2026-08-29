@@ -28,7 +28,7 @@ fields:
   EN_Gloss: to give
   Govt_Case: Зн., Д.
   IrregularForms: ''
-  CounterpartForm: ''
+  CounterpartForm: да́ти (ua-lexeme-1651, perfective)
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
