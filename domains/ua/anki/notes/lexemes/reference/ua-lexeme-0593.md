@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:reference
+- ch:2.6.3
 - pos:adjective
 - status:verified
 fields:
@@ -28,13 +29,17 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster power-strength-synonyms (confusable_clusters.yaml):
+    міцни́й (this note, durability/structural integrity) vs. поту́жний (ua-lexeme-0574, raw
+    mechanical/operational capacity), си́льний (ua-lexeme-0590, general-purpose strong), могу́тній
+    (ua-lexeme-0591, authority/grandeur), ду́жий (ua-lexeme-0592, embodied physicality), and
+    відчу́тний (ua-lexeme-0594, mere perceptibility). Six-way cluster -- render via CompareMembers.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: міцний
   UA_Example: Йому потрібна міцна мотузка, яка витримає таку вагу.
   EN_Example: He needs a sturdy rope that can bear that much weight.
-  Tags_Ch: ch:reference
+  Tags_Ch: ch:reference, ch:2.6.3
   Source_URL: https://goroh.pp.ua/Тлумачення/міцний
   Source_Note: New 2026-08-27 (per Craig) -- reference-only companion to ua-lexeme-0574 (потужний),
     added to complete the потужний/strength near-synonym cluster. No Яблуко textbook chapter

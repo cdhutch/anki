@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.0
+- ch:2.5.1
 - pos:noun
 - gender:m
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: будинок
   UA_Example: Ми живемо у великому будинку на цій вулиці.
   EN_Example: We live in a large building on this street.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0, ch:2.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/будинок
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

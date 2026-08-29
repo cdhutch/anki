@@ -12,6 +12,7 @@ tags:
 - ch:2.9.5
 - pos:verb
 - ch:2.9.7
+- ch:2.6.3
 - status:verified
 fields:
   NoteID: ua-lexeme-0286
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: підніматися / піднятися
   UA_Example: Найважче було підніматися на скелі під дощем.
   EN_Example: The hardest part was climbing on the cliffs in the rain.
-  Tags_Ch: ch:2.9.5, ch:2.9.7
+  Tags_Ch: ch:2.9.5, ch:2.9.7, ch:2.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/підніматися; https://goroh.pp.ua/Словозміна/піднятися
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: '2026-07-26: reused for ch.9.7, which cites the bare perfective ''піднятися''
@@ -51,6 +52,9 @@ fields:
     family of manner-neutral general movement verbs contrasted with the PVOM prefix system,
     added ConfusableSet + Mnemonic_EN cross-referencing спускатися (ua-lexeme-0290) and the
     new family overview, ua-grammar-0010. 2026-08-28: Craig confirmed Group 5 is good in Anki,
-    including the рухатися/рушитися correction on ua-lexeme-0614.'
+    including the рухатися/рушитися correction on ua-lexeme-0614. Merged duplicate standalone
+    perfective note ua-lexeme-0286 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Ми піднялися на гору за дві години.'' = ''We climbed the mountain
+    in two hours.''.'
 ---
 

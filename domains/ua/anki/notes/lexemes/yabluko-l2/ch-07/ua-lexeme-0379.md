@@ -58,6 +58,9 @@ fields:
     of the same lexeme, not distinct words (same evidence pattern used to confirm уїжджати/уїхати
     for входити, ua-pvom-0012). Stress confirmed via Горох Словозміна for all four forms:
     устано́влювати, встано́влювати, установи́ти, встанови́ти -- euphonic variants preserve
-    the primary form''s stress position in all four cases, as expected.'
+    the primary form''s stress position in all four cases, as expected. Merged duplicate standalone
+    perfective note ua-lexeme-0379 (aspect-pairing dual-convention cleanup, 2026-08-29). That
+    sub-chapter''s example: ''Він встановив нову програму на компʼютер.'' = ''He installed
+    a new program on the computer.''.'
 ---
 

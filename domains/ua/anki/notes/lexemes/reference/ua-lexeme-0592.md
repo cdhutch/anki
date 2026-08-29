@@ -28,7 +28,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster power-strength-synonyms (confusable_clusters.yaml):
+    ду́жий (this note, embodied physicality, literary register) vs. поту́жний (ua-lexeme-0574,
+    raw mechanical/operational capacity), си́льний (ua-lexeme-0590, general-purpose strong),
+    могу́тній (ua-lexeme-0591, authority/grandeur), міцни́й (ua-lexeme-0593, durability),
+    and відчу́тний (ua-lexeme-0594, mere perceptibility). Six-way cluster -- render via CompareMembers.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: дужий

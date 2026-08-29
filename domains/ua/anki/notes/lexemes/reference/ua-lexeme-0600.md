@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:reference
+- ch:2.5.3
 - pos:noun
 - gender:m
 - status:draft
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: розпис
   UA_Example: Стіни церкви прикрашає старовинний розпис.
   EN_Example: An old mural decorates the walls of the church.
-  Tags_Ch: ch:reference
+  Tags_Ch: ch:reference, ch:2.5.3
   Source_URL: https://goroh.pp.ua/Словозміна/розпис; https://goroh.pp.ua/Тлумачення/розпис
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set) -- companion to ua-lexeme-0599
     (картина), added to complete the painting-nouns near-synonym cluster. No Яблуко textbook

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:2.5.5
 - pos:verb
 - motion:prefixed
 - status:verified
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: проходити / пройти
   UA_Example: ''
   EN_Example: ''
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:2.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/проходити
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare

@@ -9,13 +9,14 @@ tags:
 - domain:ua
 - class:conj1-vowel+й
 - ch:2.9.5
+- ch:2.6.3
 - status:verified
 fields:
   NoteID: ua-verb-0056
   Lemma: підніма́тися
   Aspect: imperfective
   VerbClass: reflexive
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.6.3
   Pres_1sg: підніма́юся
   Pres_2sg: підніма́єшся
   Pres_3sg: підніма́ється

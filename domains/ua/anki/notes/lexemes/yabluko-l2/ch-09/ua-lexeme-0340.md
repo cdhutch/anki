@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:2.6.3
 - pos:verb
 - status:verified
 fields:
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: вирушати / вирушити
   UA_Example: Вони вирушили в дорогу рано-вранці.
   EN_Example: They set off on the road very early in the morning.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:2.6.3
   Source_URL: https://goroh.pp.ua/Словозміна/вирушати; https://goroh.pp.ua/Словозміна/вирушити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: '2026-08-28: per Craig''s request to add a family of manner-neutral
@@ -51,6 +52,8 @@ fields:
     + Mnemonic_EN distinguishing вирушати from its closest near-synonym відправлятися (ua-lexeme-0315,
     formal/schedule register), and cross-referenced the new family overview, ua-grammar-0010.
     2026-08-28: Craig confirmed Group 5 is good in Anki, including the рухатися/рушитися correction
-    on ua-lexeme-0614.'
+    on ua-lexeme-0614. Merged duplicate standalone perfective note ua-lexeme-0340 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Ми вирушили в подорож
+    рано-вранці.'' = ''We set off on our trip early in the morning.''.'
 ---
 

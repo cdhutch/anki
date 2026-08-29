@@ -12,6 +12,7 @@ tags:
 - ch:1.11.4
 - pos:verb
 - status:draft
+- ch:2.2.3
 fields:
   NoteID: ua-lexeme-0603
   Lemma: фарбува́ти
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: фарбувати / пофарбувати
   UA_Example: Влітку він пофарбував паркан у зелений колір.
   EN_Example: In the summer he painted the fence green.
-  Tags_Ch: ch:1.11.4
+  Tags_Ch: ch:1.11.4, ch:2.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/фарбувати; https://goroh.pp.ua/Словозміна/пофарбувати
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set; chapter 1.11.4 per Craig)
     -- part of the painting-verbs near-synonym cluster with малювати/намалювати and розписувати/розписати.

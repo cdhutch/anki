@@ -12,13 +12,14 @@ tags:
 - phase:2a
 - class:conj2-ити
 - ch:2.9.4
+- ch:2.5.5
 - status:verified
 fields:
   NoteID: ua-verb-0021
   Lemma: прохо́дити
   Aspect: imperfective
   VerbClass: motion-walking-prefixed
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.5.5
   Pres_1sg: прохо́джу
   Pres_2sg: прохо́диш
   Pres_3sg: прохо́дить

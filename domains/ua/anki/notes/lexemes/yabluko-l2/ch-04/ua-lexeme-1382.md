@@ -1,0 +1,44 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-1382
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:2.4.2
+- pos:noun
+- status:draft
+fields:
+  NoteID: ua-lexeme-1382
+  Lemma: се́рпень
+  Lemma_Euphony: ''
+  PartOfSpeech: noun
+  Gender: m
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: August
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: серпень
+  UA_Example: Україна відзначає День незалежності двадцять четвертого серпня.
+  EN_Example: Ukraine celebrates Independence Day on the twenty-fourth of August.
+  Tags_Ch: ch:2.4.2
+  Source_URL: https://goroh.pp.ua/Словозміна/серпень
+  Source_Note: 'Горох-verified 2026-08-28, ch.4.2 sourcing pass (history: months, dates, founding/proclaiming
+    events).'
+  Verification Notes: New. Masc., 2nd decl. Gen. sg. се́рпня.
+---
+

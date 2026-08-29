@@ -10,8 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.6
+- ch:2.6.2
 - pos:verb
 - status:verified
+- ch:2.6.5
 fields:
   NoteID: ua-lexeme-0611
   Lemma: поверта́тися
@@ -43,7 +45,7 @@ fields:
   TypingAnswer: повертатися / повернутися
   UA_Example: Вона повертається додому пізно ввечері.
   EN_Example: She returns home late in the evening.
-  Tags_Ch: ch:2.9.6
+  Tags_Ch: ch:2.9.6, ch:2.6.2, ch:2.6.5
   Source_URL: https://goroh.pp.ua/Словозміна/повертатися; https://goroh.pp.ua/Словозміна/повернутися
   Source_Note: Горох-checked 2026-08-28 via WebFetch (not yet Claude-in-Chrome DOM extraction).
     поверта́тися, imperfective, 1st conjugation, reflexive; Горох lists two senses at this
@@ -60,6 +62,9 @@ fields:
     the register/theme of прибувати (0316) and відправлятися (0315), the two other formal-register
     siblings -- not tied to a confirmed textbook occurrence, so flag if this should move.
     2026-08-28: Craig confirmed Group 5 is good in Anki, including the рухатися/рушитися correction
-    on ua-lexeme-0614 -- flipped status:verified.'
+    on ua-lexeme-0614 -- flipped status:verified. Merged duplicate standalone perfective note
+    ua-lexeme-0611 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
+    example: ''Він повернеться з відрядження у пʼятницю.'' = ''He''ll be back from his business
+    trip on Friday.''.'
 ---
 

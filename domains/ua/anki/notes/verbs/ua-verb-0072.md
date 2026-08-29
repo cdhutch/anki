@@ -9,13 +9,14 @@ tags:
 - domain:ua
 - class:conj1-vowel+й
 - ch:2.9.7
+- ch:2.6.3
 - status:verified
 fields:
   NoteID: ua-verb-0072
   Lemma: вируша́ти
   Aspect: imperfective
   VerbClass: regular-1
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.6.3
   Pres_1sg: вируша́ю
   Pres_2sg: вируша́єш
   Pres_3sg: вируша́є

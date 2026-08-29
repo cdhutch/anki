@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:2.6.2
 - pos:verb
 - motion:base
 - status:verified
@@ -49,7 +50,7 @@ fields:
   TypingAnswer: ходити / йти / піти
   UA_Example: Я щодня ходжу до школи пішки, а сьогодні йшов і думав про іспит.
   EN_Example: I walk to school every day, and today I was walking and thinking about the exam.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:2.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/ходити; https://goroh.pp.ua/Словозміна/йти; https://goroh.pp.ua/Словозміна/іти;
     https://goroh.pp.ua/Словозміна/піти
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).
@@ -76,6 +77,9 @@ fields:
     a full paragraph, not a bare delimited alternate, and this note is a triplet so the singlet-only
     EuphonyNote fallback in compute_euphony_slots() didn''t apply either). Typing іти́ for
     the unidirectional slot on the EN->UA card is now graded CORRECT/PERFECT (previously always
-    INCORRECT), and the UA->EN Recognition front now shows "йти (іти́)".'
+    INCORRECT), and the UA->EN Recognition front now shows "йти (іти́)". Merged duplicate
+    standalone perfective note ua-lexeme-0581 (aspect-pairing dual-convention cleanup, 2026-08-29).
+    Also bulleted in ch:2.6.2. That sub-chapter''s example: ''Він пішов додому рано.'' = ''He
+    went home early.''.'
 ---
 

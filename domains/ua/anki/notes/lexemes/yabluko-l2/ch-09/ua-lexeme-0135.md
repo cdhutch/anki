@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
+- ch:2.2.7
 - pos:adjective
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: лижний
   UA_Example: Лижний сезон починається у грудні.
   EN_Example: Ski season starts in December.
-  Tags_Ch: ch:2.9.1
+  Tags_Ch: ch:2.9.1, ch:2.2.7
   Source_URL: https://goroh.pp.ua/Словозміна/лижний
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''

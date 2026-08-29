@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:2.4.5
 - pos:noun
 - gender:f
 - status:verified
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: мандрівка
   UA_Example: Ця мандрівка стала найпамʼятнішою пригодою літа.
   EN_Example: This journey became the most memorable adventure of the summer.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:2.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/мандрівка
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Filtered out a proper-noun homograph (a village in Ukraine). 2026-07-30

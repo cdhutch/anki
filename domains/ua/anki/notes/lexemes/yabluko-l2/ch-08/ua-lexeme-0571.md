@@ -28,7 +28,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster amazing-impressive-synonyms (confusable_clusters.yaml):
+    вража́ючий emphasizes the effect of impressing through scale, quality, or skill (this
+    note) vs. дивови́жний (ua-lexeme-0572), which emphasizes wonder or surprise.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: вражаючий

@@ -65,7 +65,7 @@
 # - No duplicate note_ids within a single cluster
 #
 # LAST UPDATED: 2026-08-27 (removed vestigial compare_a-d / homograph_sense_a-b fields)
-# COVERAGE: 82/82 members (100%)
+# COVERAGE: 84/84 members (100%)
 #
 
 clusters:
@@ -114,6 +114,14 @@ clusters:
       compare_scenario: One person has been handed way more work than they can
         reasonably manage alone -- not compared to anyone else's workload, just an
         excessive amount in itself. What word says that?
+    - note_id: ua-lexeme-1231
+      lemma: зама́ло
+      status: sourced
+      chapter: '2.3.3'
+      comment: Fused "too little/not enough" -- the negative-polarity counterpart of
+        забагато, same absolute-excess-vs-deficit category, no comparison (Горох-verified)
+      compare_scenario: Only a handful of people showed up to the community meeting --
+        nowhere near enough to make any real decisions. What word says that?
   time-of-day:
     description: 'Time-of-day nouns marking points in the daily cycle.
 
@@ -499,6 +507,94 @@ clusters:
       comment: Noticeable, perceptible -- detectability, not force
       compare_scenario: You want to say an effect or difference was noticeable/perceptible enough to register --
         not that it was powerful or strong, just detectable.
+  castle-lock-homograph:
+    description: 'Stress-shift homograph on замок: за́мок castle (primary Яблуко
+
+      vocabulary sense, ch.2.3.4) and замо́к lock/latch (reference-only companion,
+
+      added to complete the pair).
+
+      '
+    canonical_note: ua-lexeme-1282
+    members:
+    - note_id: ua-lexeme-1282
+      lemma: за́мок
+      status: sourced
+      chapter: '2.3.4'
+      comment: Castle (heritage architecture, ch.3.4 wordlist item)
+      compare_scenario: Which sense of замок is being used?
+    - note_id: ua-lexeme-1302
+      lemma: замо́к
+      status: sourced
+      chapter: reference
+      comment: Lock, latch (reference-only companion note, not itself a wordlist item)
+      compare_scenario: Which sense of замок is being used?
+  amazing-impressive-synonyms:
+    description: 'Convergent near-synonym pair (not homographs), both translatable as
+
+      "amazing"/"impressive" in English: вражаючий emphasizes the effect of impressing
+
+      through scale, quality, or skill, while дивовижний emphasizes wonder or surprise.
+
+      '
+    canonical_note: ua-lexeme-0571
+    members:
+    - note_id: ua-lexeme-0571
+      lemma: вража́ючий
+      status: sourced
+      chapter: '2.8.7'
+      comment: Impressive, striking -- effect of impressing through scale/quality/skill
+      compare_scenario: Do you mean something that impresses through its scale, quality,
+        or skill (вражаючий), or something that provokes wonder/surprise (дивовижний)?
+    - note_id: ua-lexeme-0572
+      lemma: дивови́жний
+      status: sourced
+      chapter: '2.8.7'
+      comment: Amazing, astonishing -- emphasizes wonder or surprise
+      compare_scenario: Do you mean something that provokes wonder/surprise (дивовижний),
+        or something that impresses through its scale, quality, or skill (вражаючий)?
+  knife-than-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on ніж: knife (noun)
+
+      and "than" (comparative conjunction).
+
+      '
+    canonical_note: ua-lexeme-0047
+    members:
+    - note_id: ua-lexeme-0047
+      lemma: ніж
+      status: sourced
+      chapter: '1.0'
+      comment: Knife (noun)
+      compare_scenario: Which sense of ніж is being used?
+    - note_id: ua-lexeme-1270
+      lemma: ніж
+      status: sourced
+      chapter: '2.3.4'
+      comment: '"Than" (comparative conjunction)'
+      compare_scenario: Which sense of ніж is being used?
+  ancient-synonyms:
+    description: 'Convergent near-synonym pair (not homographs), both meaning "ancient,
+
+      age-old": Горох lists them as synonyms of each other, minimal EN-distinguishable
+
+      difference.
+
+      '
+    canonical_note: ua-lexeme-1257
+    members:
+    - note_id: ua-lexeme-1257
+      lemma: старода́вній
+      status: sourced
+      chapter: '2.3.4'
+      comment: Ancient, age-old
+      compare_scenario: Which of these near-synonyms for "ancient" fits best here?
+    - note_id: ua-lexeme-1254
+      lemma: дре́вній
+      status: sourced
+      chapter: '2.3.4'
+      comment: Ancient, age-old
+      compare_scenario: Which of these near-synonyms for "ancient" fits best here?
   bench-homograph:
     description: 'Stress-shift homograph on ла́вка: bench for sitting (primary sense)
 
@@ -850,10 +946,9 @@ clusters:
       comment: Finish (a race - loanword from English "finish")
       compare_scenario: The first runner breaks the tape at the finish line.
   running-racing:
-    description: 'Running/racing noun: біг (the act of running, or racing on foot).
+    description: 'Running/racing noun: біг (the act of running, or racing on foot)
 
-      Often stands alone; can be paired with перего́ни (competitive racing by any
-      means).
+      vs. перего́ни (competitive racing by any means -- ski, car, boat, horse, etc.).
 
       '
     canonical_note: ua-lexeme-0145
@@ -865,6 +960,13 @@ clusters:
       comment: Running, race (on foot - the act or the event)
       compare_scenario: You're describing training for or watching a marathon or a
         school sprint event -- a competition specifically involving running on foot.
+    - note_id: ua-lexeme-0144
+      lemma: перего́ни
+      status: sourced
+      chapter: '2.9.1'
+      comment: Racing by any means of transport/method (ski, car, boat, horse, etc.)
+      compare_scenario: You're describing a ski race, car race, boat race, or horse
+        race -- a competition not specifically involving running on foot.
   transportation-arrival:
     description: 'Arrival in transportation context: прибуття́ (the noun - arrival
       event)
@@ -1165,7 +1267,7 @@ clusters:
     canonical_note: ua-lexeme-0108
     members:
     - note_id: ua-lexeme-0108
-      lemma: на добра́ніч
+      lemma: На добра́ніч
       status: sourced
       chapter: '1.0'
       comment: Frozen, uninflected interjection -- the traditional default farewell for parting
@@ -1173,7 +1275,7 @@ clusters:
       compare_scenario: You're saying goodbye to your host family as you head to bed for the
         night -- what's the standard, most traditional thing to say?
     - note_id: ua-lexeme-0608
-      lemma: доброї но́чі
+      lemma: Доброї но́чі
       status: sourced
       chapter: '1.0'
       comment: Genitive-of-wish alternate, same construction as доброго ранку/дня/вечора --
@@ -1216,3 +1318,59 @@ clusters:
         or gathering
       compare_scenario: You're camping with friends and someone lights a fire on purpose so
         everyone can sit around it and tell stories. What word describes that fire?
+  container-nouns-packet-vs-pack:
+    description: 'Two container nouns both loosely glossable as "pack" in English:
+      паке́т (masc.) is a wrapped or bagged single unit -- a packet, or colloquially
+      a plastic bag; па́чка (fem.) is a compact bundle or carton -- e.g. a pack of
+      cigarettes, a carton of milk or butter. Different container shapes, not
+      interchangeable. Craig-requested 2026-08-28 while both were being drafted in
+      ch.3.1 (quantities/containers).
+
+      '
+    canonical_note: ua-lexeme-1161
+    members:
+    - note_id: ua-lexeme-1161
+      lemma: паке́т
+      status: sourced
+      chapter: '2.3.1'
+      comment: A wrapped/bagged single unit -- a packet, or colloquially a plastic bag
+      compare_scenario: You're at the store and need something to carry loose
+        groceries home in, or you're asking for a packet of sugar -- which word
+        for "pack" fits?
+    - note_id: ua-lexeme-1162
+      lemma: па́чка
+      status: sourced
+      chapter: '2.3.1'
+      comment: A compact bundle or carton -- e.g. a pack of cigarettes, a carton of
+        milk or butter
+      compare_scenario: You're buying a carton of butter or a pack of cigarettes at
+        the store -- which word for "pack" fits?
+  law-right-vs-statute:
+    description: 'Convergent near-synonym PAIR both glossable as "law" in English:
+      пра́во (neut.) is law in the abstract/systemic sense -- the legal system,
+      jurisprudence, or an entitlement (a right, e.g. пра́во на осві́ту "the right to
+      education"; вивча́ти пра́во "to study law" as a discipline); зако́н (masc.) is a
+      specific enacted statute -- a law passed by a legislature (ухвали́ти зако́н "to
+      pass a law", поруши́ти зако́н "to break the law"). Craig flagged this pair
+      2026-08-28 while ch.10.5 civics vocabulary (пра́во) was being drafted alongside
+      the pre-existing зако́н note.
+
+      '
+    canonical_note: ua-lexeme-0708
+    members:
+    - note_id: ua-lexeme-0708
+      lemma: пра́во
+      status: sourced
+      chapter: '2.10.5'
+      comment: Law in the abstract/systemic sense, or an entitlement/right -- not a
+        specific statute
+      compare_scenario: You want to say everyone has the right to education, or that
+        your friend is studying law at university -- which word for "law/right" fits?
+    - note_id: ua-lexeme-0473
+      lemma: зако́н
+      status: sourced
+      chapter: '2.8.3'
+      comment: A specific enacted statute -- a law passed by a legislature, that can
+        be broken or passed
+      compare_scenario: Parliament just passed a new law, or someone got arrested for
+        breaking one -- which word for "law" fits here?
