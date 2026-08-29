@@ -26,7 +26,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | 1 | 3-4 | 36-37 | 1.1-1.7 | **done** |
 | 2 | 5-6 | 50-51 | 2.1-2.7 | **done** |
 | 3 | 7-8 | 64-65 | 3.1-3.7 | **done** |
-| 4 | 9-10 | 75-76 | 4.1-4.7 | pending |
+| 4 | 9-10 | 75-76 | 4.1-4.7 | **done** |
 | 5 | 11-12 | 89-90 | 5.1-5.7 | pending |
 | 6 | 13-14 | 100-101 | 6.1-6.7 | pending |
 | 7 | 15-16 | 112-113 | 7.1-7.7 | pending |
@@ -115,3 +115,13 @@ wants prioritized.
   Lemma_Euphony for new euphonic variant pairs and 6 fixed noun-phrase notes.
   Commits: `081d662f` (tags), `f7ea84a5` (drafts), progress index this commit.
   All 547 tests green throughout.
+- **ch.4 (all 7 subsections, complete)**: 178 unique words/phrases after within-chapter
+  dedup (relationships/dating/wedding theme, heavy internal repetition). 105 distinct
+  existing notes tagged (137 tag-applications). Decomposed collocations (взяти шлюб,
+  водити машину, подивитися в очі, поїхати додому, кожного дня, тощо) into head-word
+  tags/drafts. Merged одразу->відразу and очі->око (plural of an already-tagged
+  singular) rather than drafting duplicates. 70 new UA_Lexeme notes drafted
+  (2881-2950), including 8 fixed idiom/exclamation/compound-noun notes (Бувай!,
+  Щасти тобі!, комп'ютерні ігри, Виходь за мене!, день народження, Скажи чесно!,
+  одне одного, на щастя). Commits: `3a6068bf` (tags), `6101e93d` (drafts), progress
+  index this commit. All 547 tests green throughout.
