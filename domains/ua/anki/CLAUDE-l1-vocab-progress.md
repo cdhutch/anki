@@ -23,7 +23,7 @@ instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9
 | Unit | PDF pages | Book pages | Subsections | Status |
 |---|---|---|---|---|
 | 0 Вступ | 1-2 | 23-24 | 1-10 | **trusted done** (114 words, flat `ch:1.0`) |
-| 1 | 3-4 | 36-37 | 1.1-1.7 | pending |
+| 1 | 3-4 | 36-37 | 1.1-1.7 | **done** |
 | 2 | 5-6 | 50-51 | 2.1-2.7 | pending |
 | 3 | 7-8 | 64-65 | 3.1-3.7 | pending |
 | 4 | 9-10 | 75-76 | 4.1-4.7 | pending |
