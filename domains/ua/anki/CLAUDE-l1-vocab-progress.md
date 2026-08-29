@@ -1,0 +1,59 @@
+# Yabluko Level 1 Vocabulary Expansion — Progress Index
+
+Tracks the 2026-08-29 pass sourcing `yabluko-l1-vocabulary.pdf` (image-only PDF, read via
+direct visual page extraction). Branch: `feature/yabluko-l1-vocab-expansion`. Deadline:
+13:00Z 2026-08-29. Per Craig: same conventions as the L2 pass (dedup-first against the
+live corpus, single combined lexeme note per aspect pair with `Perfective` field
+populated -- no separate second note -- `yabluko-l1-verbs.pdf` as the authoritative
+aspect-pairing/paradigm reference when the wordlist's own inline `(I)/(II)` + present-tense
+markup isn't enough).
+
+**Key difference from L2**: the L1 wordlist already gives conjugation class (I/II) and,
+for most verbs, the impf/pf pair and 1sg+3pl present tense forms directly inline (e.g.
+"бачити (II) побачити (II)" or "варити (II)/(варю, варять)"), so most words don't need a
+separate Горох/verb-dictionary lookup -- only ambiguous/irregular ones do.
+
+**Starting state (before this pass)**: `yabluko-l1/ch-00` (Вступ) already has 114 words,
+flat-tagged `ch:1.0` (no subsection breakdown) -- trusted as complete per Craig's
+instruction to use the same conventions as L2 (which trusted pre-existing ch.8/9).
+`yabluko-l1/ch-11` has 2 words done (`ch:1.11.1`, `ch:1.11.4`).
+
+## PDF page map (28 pages, book pages 23-199)
+
+| Unit | PDF pages | Book pages | Subsections | Status |
+|---|---|---|---|---|
+| 0 Вступ | 1-2 | 23-24 | 1-10 | **trusted done** (114 words, flat `ch:1.0`) |
+| 1 | 3-4 | 36-37 | 1.1-1.7 | pending |
+| 2 | 5-6 | 50-51 | 2.1-2.7 | pending |
+| 3 | 7-8 | 64-65 | 3.1-3.7 | pending |
+| 4 | 9-10 | 75-76 | 4.1-4.7 | pending |
+| 5 | 11-12 | 89-90 | 5.1-5.7 | pending |
+| 6 | 13-14 | 100-101 | 6.1-6.7 | pending |
+| 7 | 15-16 | 112-113 | 7.1-7.7 | pending |
+| 8 | 17-18 | 130-131 | 8.1-8.7 | pending |
+| 9 | 19-20 | 145-146 | 9.1-9.7 | pending |
+| 10 | 21-22 | 162-163 | 10.1-10.7 | pending |
+| 11 | 23-26 | 180-183 | 11.1-11.7 (all verb aspect-pairs) | 11.1, 11.4 done; 11.2-11.3, 11.5-11.7 pending |
+| 12 | 27-28 | 198-199 | 12.1-12.7 | pending |
+
+Order: finish ch.11, then 1-10, then 12.
+
+## Workflow per subsection
+
+1. Transcribe the subsection's word list from the visual PDF page.
+2. Bulk dedup-check every word via `python3 -m tools.anki.inspect.check_lexeme_dedup
+   <words...>` before drafting anything.
+3. Bucket-3 matches (same meaning already in corpus, from L2 or reference): append the
+   `ch:1.X.Y` tag, no new note.
+4. Genuinely new words: draft lexeme (+ verb note for verbs), single combined note per
+   aspect pair (`Perfective` field populated on the imperfective note; no second note).
+   Use the wordlist's own inline conjugation-class/aspect/person-form data as the primary
+   source; fall back to `yabluko-l1-verbs.pdf` or Горох only when that's insufficient or
+   ambiguous.
+5. Canonicalize + `pytest tests/ua/ -q` before each commit (must stay green -- includes
+   the aspect-pairing-completeness and dual-convention-duplicate gates).
+6. Update this index after each subsection.
+
+## Progress log
+
+(updated as subsections complete)
