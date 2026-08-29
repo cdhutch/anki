@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.3
+- ch:1.7.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,9 +36,12 @@ fields:
   TypingAnswer: домашній
   UA_Example: Це дуже домашній.
   EN_Example: This is very home-made.
-  Tags_Ch: ch:1.5.3
+  Tags_Ch: ch:1.5.3, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/домашній
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    ua-lexeme-3298 into this note (final corpus-wide dual-convention-duplicate audit, ch.12
+    pass, 2026-08-29); both notes were drafted within this same vocabulary-expansion pass
+    with the same meaning -- ua-lexeme-3298's chapter tags migrated here.
 ---
 

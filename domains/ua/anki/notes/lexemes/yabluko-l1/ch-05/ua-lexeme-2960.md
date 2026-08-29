@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.5.1
+- ch:1.7.4
 - pos:adjective
 - status:draft
 fields:
@@ -35,9 +36,12 @@ fields:
   TypingAnswer: круглий
   UA_Example: Свіжий круглий дуже смачний.
   EN_Example: This is very round.
-  Tags_Ch: ch:1.5.1
+  Tags_Ch: ch:1.5.1, ch:1.7.4
   Source_URL: https://goroh.pp.ua/Словозміна/круглий
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Merged duplicate
+    ua-lexeme-3334 into this note (final corpus-wide dual-convention-duplicate audit, ch.12
+    pass, 2026-08-29); both notes were drafted within this same vocabulary-expansion pass
+    with the same meaning -- ua-lexeme-3334's chapter tags migrated here.
 ---
 
