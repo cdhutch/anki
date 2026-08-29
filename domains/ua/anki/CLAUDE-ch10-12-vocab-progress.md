@@ -1215,14 +1215,39 @@ subchapters with no new vocabulary bullets). Processing order: 12.1, 12.3, 12.5,
 - `pytest tests/ua/ -q`: 547 passed.
 - Next NoteIDs: ua-lexeme-2210, ua-verb-0601.
 
+### Ch.12.5 (community/history & character: ancestry, village life, civic terms,
+personality traits)
+
+- Lexemes: **ua-lexeme-2210 - ua-lexeme-2241** (32 notes): 17 nouns/phrases (біда,
+  вибори, винахідливість, внутрішня і зовнішня політика, громада, заробіток,
+  напад, нащадок, несправедливість, підписання договору, поведінка,
+  працьовитість, предок, прізвисько, селянин-кріпак, сміливість, степ); 5 new
+  verb pairs (виховувати/виховати, добувати/добути, руйнувати/зруйнувати,
+  надихати/надихнути, привабити -- new pf. partner of the pre-existing
+  приваблювати ua-lexeme-0288/ch.9.5); соромитися (tantum, no perfective in
+  either Горох or the verb dictionary -- tagged aspect:imperfective-only); 4
+  adjectives (безстрашний, малоемоційний, оспіваний, самоіронічний); 1 adverb
+  (поступово).
+- Verbs: **ua-verb-0601 - ua-verb-0610** (10 notes).
+- Process note: the new aspect-tag validation gate caught a real gap here --
+  соромитися's lexeme note was tagged aspect:imperfective-only but its paired
+  verb note (ua-verb-0610) was not, and `pytest tests/ua/ -q` failed on the
+  real-corpus gate test until the verb note's tag was added. This is exactly the
+  scenario the gate was built for.
+- Reused via retag: захищатися (ua-lexeme-2178, ch.11.5, applied here to
+  community/historical self-defense).
+- All `status:draft`. Tag `ch:2.12.5`.
+- `pytest tests/ua/ -q`: 547 passed (after the aspect-tag fix above).
+- Next NoteIDs: ua-lexeme-2242, ua-verb-0611.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2210**
-- Next `ua-verb-` ID: **0601**
+- Next `ua-lexeme-` ID: **2242**
+- Next `ua-verb-` ID: **0611**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
