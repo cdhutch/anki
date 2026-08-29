@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.4.6
 - pos:verb
 - motion:base
 - status:verified
@@ -42,7 +43,7 @@ fields:
   TypingAnswer: бігати / бігти / побігти
   UA_Example: Він бігає в парку щоранку, а сьогодні він біг дуже швидко.
   EN_Example: He runs in the park every morning, and today he was running very fast.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.4.6
   Source_URL: https://goroh.pp.ua/Словозміна/бігати; https://goroh.pp.ua/Словозміна/бігти;
     https://goroh.pp.ua/Словозміна/побігти
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).

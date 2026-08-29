@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.4.3
+- ch:1.4.5
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: зустрітися
   UA_Example: Ми зустрілися біля кінотеатру.
   EN_Example: We met near the movie theater.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.4.3, ch:1.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/зустрітися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (see counterpart note); yabluko-l1 vocabulary expansion pass, 2026-08-29.

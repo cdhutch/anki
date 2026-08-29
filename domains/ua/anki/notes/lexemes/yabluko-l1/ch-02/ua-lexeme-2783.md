@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.6
+- ch:1.4.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: автобус
   UA_Example: Ми сіли на автобус до центру.
   EN_Example: We got on the bus to the center.
-  Tags_Ch: ch:1.2.6
+  Tags_Ch: ch:1.2.6, ch:1.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/автобус
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:1.4.3
 - pos:adverb
 - status:verified
 fields:
@@ -34,7 +35,7 @@ fields:
   TypingAnswer: пізно
   UA_Example: Вони прибули до табору пізно ввечері.
   EN_Example: They arrived at the camp late in the evening.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/пізно
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: ''

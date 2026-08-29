@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.4.3
+- ch:1.4.3
 - pos:phrase
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: тоді
   UA_Example: Тоді ще ніхто не знав, чим це закінчиться.
   EN_Example: Back then, no one yet knew how it would end.
-  Tags_Ch: ch:2.4.3
+  Tags_Ch: ch:2.4.3, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/тоді
   Source_Note: 'Горох-verified 2026-08-28, ch.4.3 sourcing pass (history: WWII/occupation,
     emigration, education, timeline expressions).'

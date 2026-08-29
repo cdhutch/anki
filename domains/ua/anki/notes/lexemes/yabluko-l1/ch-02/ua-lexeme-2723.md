@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.2
+- ch:1.4.6
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: урок
   UA_Example: У нас чотири уроки сьогодні.
   EN_Example: We have four lessons today.
-  Tags_Ch: ch:1.2.2
+  Tags_Ch: ch:1.2.2, ch:1.4.6
   Source_URL: https://goroh.pp.ua/Словозміна/урок
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

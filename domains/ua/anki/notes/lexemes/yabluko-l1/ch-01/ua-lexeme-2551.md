@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.1.1
+- ch:1.4.3
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: одружений
   UA_Example: Він одружений уже п''ять років.
   EN_Example: He has been married for five years.
-  Tags_Ch: ch:1.1.1
+  Tags_Ch: ch:1.1.1, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/одружений
   Source_Note: yabluko-l1-vocabulary.pdf ch.1.1, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

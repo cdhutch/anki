@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.3.3
 - ch:1.11.2
+- ch:1.4.1
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: уявляти / уявити
   UA_Example: Важко уявляти життя без електрики щоразу, коли світло вимикають.
   EN_Example: It's hard to imagine life without electricity every time the power goes out.
-  Tags_Ch: ch:2.3.3, ch:1.11.2
+  Tags_Ch: ch:2.3.3, ch:1.11.2, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/уявляти
   Source_Note: Горох-verified 2026-08-29, aspect-pairing completeness pass (fixing incomplete
     verb aspect pairs flagged by count-incomplete-aspect-pairs audit), cross-checked against

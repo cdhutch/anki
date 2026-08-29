@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.4.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: перекладати / перекласти
   UA_Example: Вона перекладає документи з англійської.
   EN_Example: She translates documents from English.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.4.2
   Source_URL: https://goroh.pp.ua/Словозміна/перекладати
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj1-vowel+й / conj1-consonant+ти); yabluko-l1 vocabulary expansion pass,

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.2.4
 - ch:1.3.6
+- ch:1.4.4
 - pos:adverb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: післязавтра
   UA_Example: Ми повертаємось післязавтра.
   EN_Example: We''re coming back the day after tomorrow.
-  Tags_Ch: ch:1.2.4, ch:1.3.6
+  Tags_Ch: ch:1.2.4, ch:1.3.6, ch:1.4.4
   Source_URL: https://goroh.pp.ua/Словозміна/післязавтра
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.4, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

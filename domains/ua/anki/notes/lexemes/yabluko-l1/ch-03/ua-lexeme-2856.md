@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.3.5
+- ch:1.4.1
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: лижі
   UA_Example: Взимку ми катаємось на лижах.
   EN_Example: In winter we go skiing.
-  Tags_Ch: ch:1.3.5
+  Tags_Ch: ch:1.3.5, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/лижі
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

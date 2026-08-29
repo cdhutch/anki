@@ -12,6 +12,7 @@ tags:
 - ch:2.1.3
 - ch:1.1.5
 - ch:1.2.2
+- ch:1.4.1
 - pos:adverb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: вдома
   UA_Example: Сьогодні я залишаюся вдома.
   EN_Example: Today I am staying home.
-  Tags_Ch: ch:2.1.3, ch:1.1.5, ch:1.2.2
+  Tags_Ch: ch:2.1.3, ch:1.1.5, ch:1.2.2, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/вдома
   Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
     & routine verbs).

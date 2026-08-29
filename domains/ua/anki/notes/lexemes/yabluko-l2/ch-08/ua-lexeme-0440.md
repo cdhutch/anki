@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - ch:1.1.7
+- ch:1.4.1
 - pos:adjective
 - status:verified
 - needs-confusable-set
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: добрий
   UA_Example: Персонал готелю дуже добрий.
   EN_Example: The hotel staff are very kind.
-  Tags_Ch: ch:2.8.2, ch:1.1.7
+  Tags_Ch: ch:2.8.2, ch:1.1.7, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/добрий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

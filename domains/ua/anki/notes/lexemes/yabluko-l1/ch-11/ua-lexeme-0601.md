@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.11.1
 - ch:1.3.1
+- ch:1.4.1
 - pos:verb
 - status:draft
 fields:
@@ -37,7 +38,7 @@ fields:
   TypingAnswer: малювати / намалювати
   UA_Example: Дитина любить малювати тварин кольоровими олівцями.
   EN_Example: The child likes to draw animals with colored pencils.
-  Tags_Ch: ch:1.11.1, ch:1.3.1
+  Tags_Ch: ch:1.11.1, ch:1.3.1, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/малювати; https://goroh.pp.ua/Словозміна/намалювати
   Source_Note: New 2026-08-27 (per Craig, from an old cloze-card set; chapter 1.11.1 per Craig)
     -- part of the painting-verbs near-synonym cluster with розписувати/розписати and фарбувати/пофарбувати.

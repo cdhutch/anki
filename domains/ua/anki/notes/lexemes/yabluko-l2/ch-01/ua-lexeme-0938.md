@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.1.6
 - ch:1.11.1
+- ch:1.4.6
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: могти / змогти
   UA_Example: Ти можеш мені допомогти?
   EN_Example: Can you help me?
-  Tags_Ch: ch:2.1.6, ch:1.11.1
+  Tags_Ch: ch:2.1.6, ch:1.11.1, ch:1.4.6
   Source_URL: https://goroh.pp.ua/Словозміна/могти; https://goroh.pp.ua/Словозміна/змогти
   Source_Note: Горох-verified 2026-08-28, ch.1.6 sourcing pass (conversation; communication
     verbs).

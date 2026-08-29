@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.3.4
 - ch:1.3.3
+- ch:1.4.4
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: тиждень
   UA_Example: Ремонт фасаду тривав цілий тиждень.
   EN_Example: Repairing the facade took a whole week.
-  Tags_Ch: ch:2.3.4, ch:1.3.3
+  Tags_Ch: ch:2.3.4, ch:1.3.3, ch:1.4.4
   Source_URL: https://goroh.pp.ua/Словозміна/тиждень
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).

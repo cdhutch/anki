@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.3.6
+- ch:1.4.2
 - pos:noun
 - gender:m
 - status:draft
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: десерт
   UA_Example: На десерт ми замовили морозиво.
   EN_Example: For dessert, we ordered ice cream.
-  Tags_Ch: ch:2.3.6
+  Tags_Ch: ch:2.3.6, ch:1.4.2
   Source_URL: https://goroh.pp.ua/Словозміна/десерт
   Source_Note: 'Горох-verified 2026-08-28, ch.3.6 sourcing pass (restaurant/cafe: menu items,
     dishes, ordering formulas).'

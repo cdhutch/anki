@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.2
+- ch:1.4.2
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: готуватися / підготуватися
   UA_Example: Учні готуються до іспиту.
   EN_Example: The students are preparing for the exam.
-  Tags_Ch: ch:1.11.2
+  Tags_Ch: ch:1.11.2, ch:1.4.2
   Source_URL: https://goroh.pp.ua/Словозміна/готуватися
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

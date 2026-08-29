@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.12.1
+- ch:1.4.4
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: сумно
   UA_Example: Мені сумно без друзів.
   EN_Example: I feel sad without friends.
-  Tags_Ch: ch:2.12.1
+  Tags_Ch: ch:2.12.1, ch:1.4.4
   Source_URL: https://goroh.pp.ua/Словозміна/сумно
   Source_Note: Горох-verified 2026-08-29, ch.12.1 sourcing pass (basic emotion verbs; impersonal-predicate
     feeling adverbs; predicate adjectives of emotional state), cross-checked against yabluko-l2-verb-dictionary.pdf

@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.2.2
+- ch:1.4.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: бібліотека
   UA_Example: Він узяв книжку в бібліотеці.
   EN_Example: He borrowed a book from the library.
-  Tags_Ch: ch:1.2.2
+  Tags_Ch: ch:1.2.2, ch:1.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/бібліотека
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

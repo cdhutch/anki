@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.7.4
+- ch:1.4.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: зареєструвати
   UA_Example: Він зареєстрував акаунт за кілька секунд.
   EN_Example: He registered an account in a few seconds.
-  Tags_Ch: ch:2.7.4
+  Tags_Ch: ch:2.7.4, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/зареєструвати
   Source_Note: Горох-verified 2026-08-28, ch.7.4 sourcing pass (robots/devices nouns; connect/register
     verb pair; humanoid-robot adjectives), left-column stream of the two-independent-columns

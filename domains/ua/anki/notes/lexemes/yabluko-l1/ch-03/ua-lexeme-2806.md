@@ -13,6 +13,8 @@ tags:
 - ch:1.3.3
 - ch:1.3.4
 - ch:1.3.7
+- ch:1.4.1
+- ch:1.4.7
 - pos:verb
 - status:draft
 fields:
@@ -38,7 +40,7 @@ fields:
   TypingAnswer: подорожувати / подорожую
   UA_Example: Ми любимо подорожувати влітку.
   EN_Example: We love to travel in summer.
-  Tags_Ch: ch:1.3.1, ch:1.3.3, ch:1.3.4, ch:1.3.7
+  Tags_Ch: ch:1.3.1, ch:1.3.3, ch:1.3.4, ch:1.3.7, ch:1.4.1, ch:1.4.7
   Source_URL: https://goroh.pp.ua/Словозміна/подорожувати_/_подорожую
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

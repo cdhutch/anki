@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.3
+- ch:1.4.3
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: просити / попросити
   UA_Example: Дитина просить морозиво.
   EN_Example: The child asks for ice cream.
-  Tags_Ch: ch:1.11.3
+  Tags_Ch: ch:1.11.3, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/просити
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined

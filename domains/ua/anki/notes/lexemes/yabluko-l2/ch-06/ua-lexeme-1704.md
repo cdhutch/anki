@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.6.2
 - ch:1.11.4
+- ch:1.4.3
 - pos:verb
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: закінчитися
   UA_Example: Фільм закінчився пізно ввечері.
   EN_Example: The movie ended late in the evening.
-  Tags_Ch: ch:2.6.2, ch:1.11.4
+  Tags_Ch: ch:2.6.2, ch:1.11.4, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/закінчитися
   Source_Note: Горох-verified 2026-08-28, ch.6.2 sourcing pass (daily routine; imperfective-perfective
     verb pairs; frequency adverbs).

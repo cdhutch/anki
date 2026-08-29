@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.2
+- ch:1.4.3
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: весілля
   UA_Example: Весілля відбудеться влітку.
   EN_Example: The wedding will take place in summer.
-  Tags_Ch: ch:1.11.2
+  Tags_Ch: ch:1.11.2, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/весілля
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

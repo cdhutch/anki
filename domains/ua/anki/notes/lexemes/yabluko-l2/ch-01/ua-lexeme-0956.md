@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.1.7
+- ch:1.4.2
 - pos:adverb
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: далі
   UA_Example: Що було далі?
   EN_Example: What happened next?
-  Tags_Ch: ch:2.1.7
+  Tags_Ch: ch:2.1.7, ch:1.4.2
   Source_URL: https://goroh.pp.ua/Словозміна/далі
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).

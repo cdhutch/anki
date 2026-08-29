@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.5
+- ch:1.4.3
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: горілка
   UA_Example: На столі стояла пляшка горілки.
   EN_Example: There was a bottle of vodka on the table.
-  Tags_Ch: ch:2.2.5
+  Tags_Ch: ch:2.2.5, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/горілка
   Source_Note: Горох-verified 2026-08-28, ch.2.5 sourcing pass (party etiquette/gestures).
   Verification Notes: New. Fem., 1st decl., hard group.

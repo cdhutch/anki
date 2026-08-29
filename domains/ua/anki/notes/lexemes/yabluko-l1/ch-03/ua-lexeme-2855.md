@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.3.5
+- ch:1.4.7
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: велосипед
   UA_Example: Він їздить на роботу на велосипеді.
   EN_Example: He rides his bike to work.
-  Tags_Ch: ch:1.3.5
+  Tags_Ch: ch:1.3.5, ch:1.4.7
   Source_URL: https://goroh.pp.ua/Словозміна/велосипед
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

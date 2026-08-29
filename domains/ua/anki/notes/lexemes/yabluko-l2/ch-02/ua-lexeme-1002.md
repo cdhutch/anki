@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.2.2
+- ch:1.4.5
 - pos:noun
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: історія
   UA_Example: Дідусь любить розповідати історії про війну.
   EN_Example: Grandpa loves telling stories about the war.
-  Tags_Ch: ch:2.2.2
+  Tags_Ch: ch:2.2.2, ch:1.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/історія
   Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
   Verification Notes: New. Fem., 1st decl., soft group.

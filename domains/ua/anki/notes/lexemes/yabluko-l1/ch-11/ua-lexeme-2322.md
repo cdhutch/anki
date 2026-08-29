@@ -10,6 +10,8 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.11.1
+- ch:1.4.5
+- ch:1.4.7
 - pos:verb
 - status:draft
 fields:
@@ -35,7 +37,7 @@ fields:
   TypingAnswer: знайти
   UA_Example: Він знайшов ключі під диваном.
   EN_Example: He found the keys under the couch.
-  Tags_Ch: ch:1.11.1
+  Tags_Ch: ch:1.11.1, ch:1.4.5, ch:1.4.7
   Source_URL: https://goroh.pp.ua/Словозміна/знайти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (see counterpart note); yabluko-l1 vocabulary expansion pass, 2026-08-29.

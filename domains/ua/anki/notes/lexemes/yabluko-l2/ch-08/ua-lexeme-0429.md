@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - ch:1.1.3
+- ch:1.4.3
 - pos:adjective
 - status:verified
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: молодий
   UA_Example: У готелі працює молодий персонал.
   EN_Example: The hotel has young staff.
-  Tags_Ch: ch:2.8.2, ch:1.1.3
+  Tags_Ch: ch:2.8.2, ch:1.1.3, ch:1.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/молодий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.5.1
 - ch:1.2.1
+- ch:1.4.5
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: зупинка
   UA_Example: Автобусна зупинка знаходиться навпроти магазину.
   EN_Example: The bus stop is across from the store.
-  Tags_Ch: ch:2.5.1, ch:1.2.1
+  Tags_Ch: ch:2.5.1, ch:1.2.1, ch:1.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/зупинка
   Source_Note: Горох-verified 2026-08-28, ch.5.1 sourcing pass (street/urban infrastructure;
     natural/property features; locative prepositions).

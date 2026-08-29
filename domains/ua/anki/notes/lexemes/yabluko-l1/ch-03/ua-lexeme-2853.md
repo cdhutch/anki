@@ -10,6 +10,7 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:1.3.5
+- ch:1.4.1
 - pos:adjective
 - status:draft
 fields:
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: гарний
   UA_Example: У них гарний будинок.
   EN_Example: They have a nice house.
-  Tags_Ch: ch:1.3.5
+  Tags_Ch: ch:1.3.5, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/гарний
   Source_Note: yabluko-l1-vocabulary.pdf ch.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).

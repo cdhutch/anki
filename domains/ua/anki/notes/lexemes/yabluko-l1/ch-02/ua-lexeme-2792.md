@@ -11,6 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.2.7
 - ch:1.3.3
+- ch:1.4.1
 - pos:noun
 - status:draft
 fields:
@@ -36,7 +37,7 @@ fields:
   TypingAnswer: природа
   UA_Example: Тут дуже красива природа.
   EN_Example: The nature here is very beautiful.
-  Tags_Ch: ch:1.2.7, ch:1.3.3
+  Tags_Ch: ch:1.2.7, ch:1.3.3, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/природа
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.7, yabluko-l1 vocabulary expansion pass, 2026-08-29.
   Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
