@@ -1240,14 +1240,31 @@ personality traits)
 - `pytest tests/ua/ -q`: 547 passed (after the aspect-tag fix above).
 - Next NoteIDs: ua-lexeme-2242, ua-verb-0611.
 
+### Ch.12.6 (car-accident vocabulary; blocking a phone/bank card)
+
+- Lexemes: **ua-lexeme-2242 - ua-lexeme-2247** (6 notes): автомобільна аварія
+  (reuses аварія ua-lexeme-2154 compositionally), свідок, телефон, банківська
+  картка, блокувати (biaspectual)/заблокувати (1 new verb pair).
+- Verbs: **ua-verb-0611 - ua-verb-0612** (2 notes). блокувати not in the verb
+  dictionary; added as the imperfective/general-aspect counterpart of the
+  textbook's own bulleted заблокувати per Craig's instruction, Горох-confirmed
+  biaspectual (Aspect: biaspectual, matching the ua-verb-0061-style precedent
+  already in this corpus).
+- Reused via retag: передбачити (ua-lexeme-1972, ch.7.3), потрапити
+  (ua-lexeme-1775, ch.6.3, for потрапити в аварію -- its imperfective partner
+  потрапляти, ua-lexeme-1087, already exists as a complete pair, no gap).
+- All `status:draft`. Tag `ch:2.12.6`.
+- `pytest tests/ua/ -q`: 547 passed.
+- Next NoteIDs: ua-lexeme-2248, ua-verb-0613.
+
 ### Deadline update
 
 Per Craig: deadline extended from 23:59Z 2026-08-28 to **13:00Z 2026-08-29**.
 
 ### Next NoteIDs to use
 
-- Next `ua-lexeme-` ID: **2242**
-- Next `ua-verb-` ID: **0611**
+- Next `ua-lexeme-` ID: **2248**
+- Next `ua-verb-` ID: **0613**
 
 ### Ch.3.7 (opinion formulas; happiness/values; trust and friendship) -- commit `24f60661` -- **chapter 3 complete**
 
