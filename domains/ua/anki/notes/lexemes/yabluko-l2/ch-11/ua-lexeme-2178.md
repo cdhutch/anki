@@ -12,6 +12,7 @@ tags:
 - ch:2.11.5
 - pos:verb
 - status:draft
+- ch:2.12.5
 fields:
   NoteID: ua-lexeme-2178
   Lemma: захища́тися
@@ -35,7 +36,7 @@ fields:
   TypingAnswer: захищатися / захиститися
   UA_Example: Люди намагаються захищатися від радіації.
   EN_Example: People try to protect themselves from radiation.
-  Tags_Ch: ch:2.11.5
+  Tags_Ch: ch:2.11.5,ch:2.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/захищатися
   Source_Note: 'Горох-verified 2026-08-29, ch.11.5 sourcing pass (disaster/crisis vocabulary:
     natural and man-made catastrophes, evacuation/cleanup response, narrative and political-suppression
