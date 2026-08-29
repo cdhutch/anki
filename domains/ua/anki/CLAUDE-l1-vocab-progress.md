@@ -331,3 +331,41 @@ wants prioritized.
   (120 new notes), `6116dad1` (226 existing-note tag updates), `f3eecb7a` (8
   Perfective-field fills), `46001262` (3 duplicate merges), progress index this
   commit.
+## Final corpus-wide audit (2026-08-29, after ch.12)
+
+With all 13 units (0-12) drafted, re-ran the two audit techniques across the
+entire yabluko-l1 corpus (not just ch.12's own candidates) before the
+13:00Z deadline, per plan:
+
+- **Dual-convention-duplicate audit** (group every note by stress-stripped
+  Lemma spelling, flag any spelling with 2+ notes): found 14 spellings with
+  2+ notes. 3 were the already-known, correctly cross-linked ch.10 homograph
+  pairs (корона, курс, площа) -- left alone. The other 11 were true
+  duplicates, all ch.7 vs. an earlier chapter (4/5/6) with the same or
+  near-identical gloss (бажання, дизайн, домашній, круглий, кухня, паста,
+  свічка, секретний, столик, суміш, тістечко) -- merged (kept the earlier
+  note, migrated tags, removed the duplicate). Re-running the audit after
+  the merge shows only the 3 legitimate homographs remaining. **0 open
+  findings.**
+- **Aspect-pairing audit** (every imperfective verb with a null `Perfective`
+  field, prefix-matched against every other verb lemma in the corpus):
+  found 6 candidates, 4 real (сипати/посипати -- merged, since посипати was
+  my own ch.12 note; кохати/покохати, цілувати/поцілувати, їхати/поїхати --
+  pre-existing pairs, linked via the `Perfective` field but left as two
+  notes since they predate this pass and may carry review history) and 2
+  false positives from the crude prefix heuristic (возити vs. привозити --
+  different verbs; бувати vs. забувати -- different verbs, coincidental
+  за- prefix match). Re-running the audit shows only those 2 known false
+  positives remaining. **0 open findings** (aside from the 3 flagged
+  pre-existing pairs left as linked-but-separate notes -- Craig's call on
+  whether to consolidate those further).
+
+Not touched (explicitly out of scope, per Craig): pre-existing yabluko-l2
+duplicates/homographs, e.g. обов'язково's two L2 notes (ua-lexeme-0861,
+ua-lexeme-1071) -- ch.12's обов'язково was tagged onto ua-lexeme-0861 only,
+matching the existing (unmerged) L2 state.
+
+547/547 tests passing. All 13 units (0-12) of the yabluko-l1 vocabulary
+expansion pass are now complete. Commits: bd66005b, 6116dad1, f3eecb7a,
+46001262, 4b6ea06b (ch.12 itself), dc0144f6 (aspect-pairing audit), 841b6576
+(duplicate audit).
