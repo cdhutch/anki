@@ -612,27 +612,76 @@ clusters:
       example_ua: Цей фасад гарніший, ніж той.
       meaning_en: '"Than" (comparative conjunction)'
   ancient-synonyms:
-    description: 'Convergent near-synonym pair (not homographs), both meaning "ancient,
+    description: 'Five-way near-synonym family for "ancient/old," expanded 2026-08-31
 
-      age-old": Горох lists them as synonyms of each other, minimal EN-distinguishable
+      from a 2-member старода́вній/дре́вній pair after Craig flagged the original
 
-      difference.
+      "minimal EN-distinguishable difference" framing as too thin. Checked against
+
+      Горох''s own usage notes and a Ukrainian style-correction guide (not just the
+
+      bare synonym listing): да́вній is the neutral, everyday default; дре́вній is
+
+      stylistically disfavored/colloquial -- usage guides recommend replacing it,
+
+      it is not a deliberate poetic register choice; старода́вній is the standard
+
+      term for historical antiquity and civilizations; старови́нний describes a
+
+      physical object or artifact, not an abstract era; анти́чний evokes Ancient
+
+      Greece and Rome specifically in everyday/educational usage, even though
+
+      dictionaries list it more loosely. класи́чний was considered and deliberately
+
+      excluded -- different semantic axis (canonical/traditional status, not
+
+      historical age), and it does not appear as a synonym on Горох''s давній page.
 
       '
     canonical_note: ua-lexeme-1257
+    show_all_members: true
     members:
-    - note_id: ua-lexeme-1257
-      lemma: старода́вній
+    - note_id: ua-lexeme-1045
+      lemma: да́вній
       status: sourced
-      chapter: '2.3.4'
-      comment: Ancient, age-old
-      compare_scenario: Which of these near-synonyms for "ancient" fits best here?
+      chapter: '2.2.4'
+      comment: Old, longstanding -- the neutral, everyday default across contexts
+      compare_scenario: You're catching up with someone you've known since childhood
+        -- nothing formal, just how long the friendship's lasted.
     - note_id: ua-lexeme-1254
       lemma: дре́вній
       status: sourced
       chapter: '2.3.4'
-      comment: Ancient, age-old
-      compare_scenario: Which of these near-synonyms for "ancient" fits best here?
+      comment: Ancient, olden -- stylistically disfavored/colloquial; usage guides
+        recommend replacing it rather than treating it as deliberate elevated register
+      compare_scenario: An old-fashioned storyteller spins a legend by the fire
+        about forests from time immemorial, in a flowery, dated style -- not the
+        word a careful modern writer would choose.
+    - note_id: ua-lexeme-1257
+      lemma: старода́вній
+      status: sourced
+      chapter: '2.3.4'
+      comment: Ancient, of antiquity -- the standard term for historical civilizations
+        and eras
+      compare_scenario: You're reading a history textbook chapter titled "Ancient
+        Egypt," covering pyramids, pharaohs, and the earliest civilizations.
+    - note_id: ua-lexeme-1563
+      lemma: старови́нний
+      status: sourced
+      chapter: '2.5.2'
+      comment: Antique, old-fashioned -- describes a physical object, building,
+        or artifact, not an abstract time period
+      compare_scenario: You're admiring a centuries-old coin in a museum display
+        case, its edges worn smooth from handling.
+    - note_id: ua-lexeme-2727
+      lemma: анти́чний
+      status: sourced
+      chapter: '1.2.3'
+      comment: Classical antiquity, ancient Greco-Roman -- narrower in everyday
+        and educational usage, evokes Ancient Greece and Rome specifically
+      compare_scenario: A tour guide leads your group past marble columns and statues,
+        describing the art and architecture of Ancient Greece and Rome specifically.
   bench-homograph:
     description: 'Stress-shift homograph on ла́вка: bench for sitting (primary sense)
 
@@ -1434,3 +1483,34 @@ clusters:
         be broken or passed
       compare_scenario: Parliament just passed a new law, or someone got arrested for
         breaking one -- which word for "law" fits here?
+  heavy-hardship-synonyms:
+    description: 'Convergent near-synonym pair both glossable as "heavy" in English:
+      важки́й is the literal/general-difficulty default -- physical weight (a heavy
+      suitcase) or everyday difficulty; тяжки́й leans toward serious, severe
+      hardship -- grave illness, a heavy loss, life-altering difficulty -- a
+      heavier register than важкий, even though Горох lists тяжкий as the
+      dominant near-synonym across nearly every sense of важкий. Flagged
+      2026-08-27 via pending-confusable:тяжкий on ua-lexeme-0436 while тяжкий had
+      no note of its own yet; тяжкий sourced 2026-08-29 as ua-lexeme-3642
+      (yabluko-l1 ch.10). Clustered 2026-08-31.
+
+      '
+    canonical_note: ua-lexeme-0436
+    members:
+    - note_id: ua-lexeme-0436
+      lemma: важки́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Heavy (physical weight) or difficult in a general, everyday sense
+        -- the more literal, lower-register default
+      compare_scenario: You're helping a friend haul a stuffed suitcase up three
+        flights of stairs -- which word for "heavy" fits that physical strain?
+    - note_id: ua-lexeme-3642
+      lemma: тяжки́й
+      status: sourced
+      chapter: '1.10.2'
+      comment: Heavy in a serious, severe sense -- grave illness, a heavy loss,
+        life-altering hardship; a heavier, more emotionally weighted register
+        than важкий
+      compare_scenario: A family just got news of a loved one's grave illness,
+        or a devastating loss -- which word for "heavy" carries that gravity?

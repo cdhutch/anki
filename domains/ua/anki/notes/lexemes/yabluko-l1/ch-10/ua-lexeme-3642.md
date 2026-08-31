@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster heavy-hardship-synonyms (confusable_clusters.yaml):
+    тяжкий (this note) leans toward serious, severe hardship -- grave illness, a heavy
+    loss, life-altering difficulty -- a heavier register than важкий (ua-lexeme-0436,
+    cluster hub), which is the literal/general-difficulty default (physical weight, everyday
+    difficulty).'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: тяжкий
@@ -39,6 +43,9 @@ fields:
   Tags_Ch: ch:1.10.2
   Source_URL: https://goroh.pp.ua/Словозміна/тяжкий
   Source_Note: yabluko-l1-vocabulary.pdf ch.10, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-08-31:
+    clustered as heavy-hardship-synonyms in confusable_clusters.yaml alongside важкий
+    (ua-lexeme-0436, cluster hub), resolving the pending-confusable:тяжкий tag that had
+    been sitting on that note since 2026-08-27.'
 ---
 
