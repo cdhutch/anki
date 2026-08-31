@@ -53,7 +53,23 @@
 #   status: {string} Verification status (sourced, draft, verified, etc.)
 #   chapter: {string} Textbook chapter reference
 #   comment: {string} Editorial notes on sourcing or verification
-#   compare_scenario: {string} Usage context that distinguishes this word from cluster-mates
+#   compare_scenario: {string} Usage context that distinguishes this word from cluster-mates.
+#     Still used for chip-mode Compare cards -- see example_ua/meaning_en below for the
+#     alternative used by true-homophone clusters.
+#   example_ua: {string, optional} Sentence-mode only (added 2026-08-30). An authored UA
+#     sentence demonstrating this member's specific sense, copied from that note's own
+#     UA_Example field. Used instead of compare_scenario/chip rendering whenever a
+#     cluster's active members share an IDENTICAL lemma string -- a true homophone,
+#     where nothing in the word itself (spelling or stress) distinguishes the senses, so
+#     a word-chip choice would just repeat the same word twice. get_cluster_compare_
+#     members_json() (tools/anki/sync/ua_lexeme_import.py) auto-detects this case (every
+#     active member's lemma equal) and switches CompareMembers to {"mode": "sentence",
+#     "items": [...]} automatically -- no per-cluster opt-in flag needed. Required
+#     (alongside meaning_en) on every member of such a cluster.
+#   meaning_en: {string, optional} Sentence-mode only. The English meaning revealed as
+#     the answer for this member's example_ua sentence -- usually the comment field's
+#     content, lightly trimmed of cluster-hierarchy meta-notes ("primary sense", "this
+#     note", etc.) that only make sense inside the registry, not on a card.
 #
 # VALIDATION RULES
 # ================
@@ -63,9 +79,15 @@
 # - Lemmas must match corpus lemmas (stress-stripped comparison)
 # - canonical_note must be a member of the cluster
 # - No duplicate note_ids within a single cluster
+# - Any cluster whose active members share an identical lemma (sentence mode) MUST have
+#   example_ua and meaning_en populated on every one of those members
 #
-# LAST UPDATED: 2026-08-27 (removed vestigial compare_a-d / homograph_sense_a-b fields)
-# COVERAGE: 84/84 members (100%)
+# LAST UPDATED: 2026-08-30 (added example_ua/meaning_en sentence-mode fields for
+#   true-homophone clusters -- party-game-homograph, crayfish-cancer-homograph,
+#   knife-than-homograph, bench-homograph, seem-emerge-homograph, departure-homograph,
+#   grammatical-aspect, butterfly-homograph)
+# COVERAGE: 84/84 members have compare_scenario (100%); 16/16 sentence-mode members
+#   also have example_ua/meaning_en (100%)
 #
 
 clusters:
@@ -397,12 +419,16 @@ clusters:
       chapter: 2.9
       comment: Butterfly (the insect - primary, common sense)
       compare_scenario: Which sense of метелик is being used?
+      example_ua: Метелик сів на квітку.
+      meaning_en: Butterfly (the insect)
     - note_id: ua-lexeme-0181
       lemma: мете́лик
       status: sourced
       chapter: 2.9
       comment: 'Bow-tie (menswear accessory); informal: flyer, leaflet'
       compare_scenario: Which sense of метелик is being used?
+      example_ua: Він одягнув чорний метелик до смокінга.
+      meaning_en: 'Bow-tie (menswear accessory); informal: flyer, leaflet'
   crayfish-cancer-homograph:
     description: 'Pure polysemy homograph (no stress shift) on ра́к: the crustacean
 
@@ -421,12 +447,16 @@ clusters:
       chapter: 2.8
       comment: Crayfish (animal, animate)
       compare_scenario: Which sense of рак is being used?
+      example_ua: На ринку продавали свіжих раків.
+      meaning_en: Crayfish (animal, animate)
     - note_id: ua-lexeme-0588
       lemma: ра́к
       status: sourced
       chapter: reference
       comment: Cancer (disease, inanimate)
       compare_scenario: Which sense of рак is being used?
+      example_ua: У нього діагностували рак легенів.
+      meaning_en: Cancer (disease, inanimate)
   smooth-plump-homograph:
     description: 'Pure stress-shift homograph on гладкий: smooth, even, without
 
@@ -567,12 +597,16 @@ clusters:
       chapter: '1.0'
       comment: Knife (noun)
       compare_scenario: Which sense of ніж is being used?
+      example_ua: Кухар ріже хліб гострим ножем.
+      meaning_en: Knife (noun)
     - note_id: ua-lexeme-1270
       lemma: ніж
       status: sourced
       chapter: '2.3.4'
       comment: '"Than" (comparative conjunction)'
       compare_scenario: Which sense of ніж is being used?
+      example_ua: Цей фасад гарніший, ніж той.
+      meaning_en: '"Than" (comparative conjunction)'
   ancient-synonyms:
     description: 'Convergent near-synonym pair (not homographs), both meaning "ancient,
 
@@ -609,12 +643,16 @@ clusters:
       chapter: 2.9
       comment: Bench (for sitting, in park or classroom)
       compare_scenario: Which sense of лавка is being used?
+      example_ua: Він сід на лавку в парку, щоб трохи відпочити.
+      meaning_en: Bench (for sitting, in park or classroom)
     - note_id: ua-lexeme-0235
       lemma: ла́вка
       status: sourced
       chapter: 2.9
       comment: Market stall, shop stand (street vendor's bench)
       compare_scenario: Which sense of лавка is being used?
+      example_ua: Вона купила букет троянд у квітковій лавці на ринку.
+      meaning_en: Market stall, shop stand (street vendor's bench)
   seem-emerge-homograph:
     description: 'Pure polysemy homograph (no stress shift) on вигляда́ти: to seem, to have
 
@@ -631,12 +669,16 @@ clusters:
       chapter: '2.8'
       comment: To seem, to appear a certain way (stative/copular, imperfective-only)
       compare_scenario: Which sense of виглядати is being used?
+      example_ua: Ця страва виглядає досить незвично.
+      meaning_en: To seem, to appear a certain way
     - note_id: ua-lexeme-0587
       lemma: вигляда́ти
       status: sourced
       chapter: '2.8'
       comment: To look out, emerge, become visible (event sense, pairs with perfective ви́глянути)
       compare_scenario: Which sense of виглядати is being used?
+      example_ua: Сонце виглядало з-за хмар.
+      meaning_en: To look out, emerge, become visible
   departure-homograph:
     description: 'Stress-shift homograph on відпра́влення: departure (primary sense,
       travel context)
@@ -652,12 +694,16 @@ clusters:
       chapter: 2.9
       comment: Departure (of a train, bus, person - leaving to go somewhere)
       compare_scenario: Which sense of відправлення is being used?
+      example_ua: Час відправлення поїзда -- девʼята вечора.
+      meaning_en: Departure (of a train, bus, person - leaving to go somewhere)
     - note_id: ua-lexeme-0380
       lemma: відпра́влення
       status: sourced
       chapter: 2.9
       comment: Parcel, mailed item (letter or package sent by mail)
       compare_scenario: Which sense of відправлення is being used?
+      example_ua: Ваше відправлення готове до отримання на пошті.
+      meaning_en: Parcel, mailed item (letter or package sent by mail)
   grammatical-aspect:
     description: 'Stress-shift homograph on вид: aspect (grammatical: perfective vs.
       imperfective distinction)
@@ -674,6 +720,8 @@ clusters:
       comment: 'Aspect (grammatical term: perfective vs. imperfective)'
       compare_scenario: You're learning about verb grammar—what word describes whether
         a verb is completed or ongoing?
+      example_ua: У реченні «Я прочитав книгу» дієслово «прочитати» має доконаний вид.
+      meaning_en: 'Aspect (grammatical term: perfective vs. imperfective)'
     - note_id: ua-lexeme-0143
       lemma: вид
       status: sourced
@@ -681,6 +729,8 @@ clusters:
       comment: Kind, type (e.g., "вид спорту" = type/category of sport)
       compare_scenario: You're discussing different categories of something—what word
         means a specific type or variety?
+      example_ua: Який вид спорту тобі найбільше подобається?
+      meaning_en: Kind, type
   warmth-adverb:
     description: 'Stress-shift homograph on тепло́/те́пло: warmth (noun, abstract
       or physical sensation)
@@ -1113,12 +1163,16 @@ clusters:
       chapter: '2.9.3'
       comment: Political party (common, general-purpose sense)
       compare_scenario: Which sense of партія is being used?
+      example_ua: Ця партія перемогла на виборах.
+      meaning_en: Political party
     - note_id: ua-lexeme-0186
       lemma: па́ртія
       status: sourced
       chapter: '2.9.3'
       comment: A single round of a board/card game (chess, cards), start to finish
       compare_scenario: Which sense of партія is being used?
+      example_ua: Ми зіграли ще одну партію в шахи.
+      meaning_en: A single round of a board/card game (chess, cards), start to finish
   game-match-phrases:
     description: 'Near-synonym verb-phrases for winning a game: ви́грати па́ртію (a single
       round of a board/card game -- chess, cards) vs ви́грати матч (a scheduled athletic

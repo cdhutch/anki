@@ -381,22 +381,38 @@ def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[
 
 
 def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
-    """Serialize cluster scenario + members to JSON for Compare card rendering.
+    """Serialize cluster data to JSON for Compare card rendering.
 
-    Returns JSON string of {"scenario": ..., "members": [...]} if note is a
-    cluster member, empty string otherwise. Only includes sourced (active)
-    members. The scenario comes from this note's own compare_scenario field
-    in the registry (Phase 6: confusable_clusters.yaml is now 100% backfilled
-    with compare_scenario per member, so CompareScenario no longer needs to
-    be hand-authored per CNSF note).
+    Two payload shapes, chosen automatically per cluster:
+
+    Chip mode (default): {"scenario": ..., "members": [lemma, ...]}. Used
+    whenever a cluster's active members don't all share the exact same lemma
+    string, so the chip words themselves are visually distinguishable (e.g.
+    a stress-shift homograph like за́мок/замо́к, or a near-synonym pair). The
+    scenario comes from this note's own compare_scenario field in the
+    registry (Phase 6: confusable_clusters.yaml is 100% backfilled with
+    compare_scenario per member, so it no longer needs hand-authoring per
+    CNSF note).
+
+    Sentence mode: {"mode": "sentence", "items": [{"lemma", "example_ua",
+    "meaning_en", "is_self"}, ...]}. Used when every active member on this
+    card shares an identical lemma -- a true homophone, where nothing in the
+    word itself (spelling or stress) distinguishes the senses, so a chip
+    choice would just show the same word twice with no discriminating
+    information. Each item carries its own authored example sentence and the
+    English meaning to reveal as the answer, from the registry's
+    example_ua/meaning_en fields (added 2026-08-30, per Craig -- see the
+    party-game-homograph/crayfish-cancer-homograph "chips with no prompt"
+    bug that prompted this design). Auto-detected per note -- no per-cluster
+    opt-in flag needed, so any future identical-lemma cluster picks this up
+    automatically as soon as its members have example_ua/meaning_en set.
 
     Args:
         note_id: The note's ID (e.g., 'ua-lexeme-0467')
         tags: List of tags from the note (used only for _IsHomograph flag)
 
     Returns:
-        JSON string like '{"scenario": "...", "members": ["значно", "набагато"]}'
-        or '' if not clustered
+        JSON string (one of the two shapes above), or '' if not clustered.
     """
     try:
         registry = ClusterRegistry()
@@ -410,7 +426,27 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
         if not members:
             return ""
 
-        # Get scenario from the member of this cluster matching this note_id
+        # Sentence mode: every member this card shows has the identical
+        # lemma string -- the word itself can't distinguish the senses, so
+        # use example-sentence discrimination instead of word chips.
+        lemmas = {member.lemma for member in members}
+        if len(lemmas) == 1 and all(m.example_ua and m.meaning_en for m in members):
+            data = {
+                "mode": "sentence",
+                "items": [
+                    {
+                        "lemma": member.lemma,
+                        "example_ua": member.example_ua,
+                        "meaning_en": member.meaning_en,
+                        "is_self": member.note_id == note_id,
+                    }
+                    for member in members
+                ],
+            }
+            return json.dumps(data, ensure_ascii=False)
+
+        # Chip mode (default, unchanged): scenario from this note's own
+        # compare_scenario.
         scenario = ""
         for member in cluster.members:
             if member.note_id == note_id:

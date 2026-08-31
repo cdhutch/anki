@@ -901,35 +901,72 @@ EN_UA_BACK = (
 COMPARISON_FRONT = """\
 {{#ConfusableSet}}
 {{#CompareMembers}}
-<!-- CLUSTER MODE (Phase 1): CompareMembers holds JSON array of sourced cluster member lemmas.
-     Dynamic rendering via JavaScript. Introduced 2026-08 for unlimited cluster size support. -->
+<!-- CLUSTER MODE (Phase 1): CompareMembers holds a JSON payload for dynamic rendering
+     via JavaScript. Two shapes -- see get_cluster_compare_members_json() in
+     ua_lexeme_import.py for the full contract:
+       Chip mode (default): {"scenario": ..., "members": [lemma, ...]}
+       Sentence mode (added 2026-08-30): {"mode": "sentence", "items": [{lemma,
+         example_ua, meaning_en, is_self}, ...]} -- for true-homophone clusters
+         (identical lemma across every member), where a word chip would just show
+         the same spelling twice with nothing to distinguish it. Both blocks below
+         are always present in the static HTML; JS shows the right one and hides
+         the other, so a JS failure degrades to the old chip-mode appearance
+         (chip-mode block is the default-visible one). -->
+<div id="compare-chip-block">
 <div class="compare-prompt-header">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
   Scenario: <span id="compare-scenario">{{EN_Gloss}}</span>
 </div>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;" id="compare-members-container">
+<!-- Populated dynamically by JavaScript from CompareMembers JSON -->
+</div>
+</div>
+<div id="compare-sentence-block" style="display: none;">
+<div class="compare-prompt-header">What does the word mean in each sentence?</div>
+<div id="compare-sentence-container" style="margin-top: 14px;">
+<!-- Populated dynamically by JavaScript from CompareMembers JSON -->
+</div>
+</div>
 <script type="application/json" id="compare-members-json">
 {{CompareMembers}}
 </script>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;" id="compare-members-container">
-<!-- Populated dynamically by JavaScript from CompareMembers JSON array -->
-</div>
 <script>
 (function() {
   try {
     var el = document.getElementById('compare-members-json');
     if (!el) return;
     var data = JSON.parse(el.textContent.trim());
-    
-    // Handle both old array format (for backward compat) and new object format
+
+    if (data && data.mode === 'sentence' && Array.isArray(data.items)) {
+      // SENTENCE MODE: true homophone -- render each item's example sentence.
+      // The meaning is revealed only on the card back.
+      var chipBlock = document.getElementById('compare-chip-block');
+      if (chipBlock) chipBlock.style.display = 'none';
+      var sentenceBlock = document.getElementById('compare-sentence-block');
+      if (sentenceBlock) sentenceBlock.style.display = '';
+      var sentenceContainer = document.getElementById('compare-sentence-container');
+      data.items.forEach(function(item, i) {
+        var row = document.createElement('div');
+        row.className = 'compare-sentence-item';
+        row.style.margin = '10px 0';
+        row.style.fontSize = '17px';
+        row.textContent = (i + 1) + '. ' + item.example_ua;
+        sentenceContainer.appendChild(row);
+      });
+      return;
+    }
+
+    // CHIP MODE (default, unchanged): handle both old array format (for
+    // backward compat) and the {scenario, members} object format.
     var members = Array.isArray(data) ? data : (data.members || []);
     var scenario = (typeof data === 'object' && data.scenario) ? data.scenario : '';
-    
+
     // Update scenario if available
     if (scenario) {
       var scenarioEl = document.getElementById('compare-scenario');
       if (scenarioEl) scenarioEl.textContent = scenario;
     }
-    
+
     // Render member chips
     var container = document.getElementById('compare-members-container');
     members.forEach(function(lemma) {
@@ -953,15 +990,51 @@ COMPARISON_BACK = """\
 <hr id="answer">
 {{#ConfusableSet}}
 {{#CompareMembers}}
-<!-- CLUSTER MODE BACK: Show the correct word and why it fits.
-     Same structure as legacy confusables mode since clusters render as word chips. -->
-<div style="margin-top: 16px; font-size: 16px;">
+<!-- CLUSTER MODE BACK: Show the correct word and why it fits (chip mode), or reveal
+     each sentence's meaning (sentence mode) -- see COMPARISON_FRONT for the JSON
+     shapes. compare-members-json is already in the DOM via {{FrontSide}} above, so
+     the script below just re-reads it; no new field substitution needed. -->
+<div id="compare-chip-answer" style="margin-top: 16px; font-size: 16px;">
 <div class="compare-correct-header">✓ {{Lemma}}</div>
 <div class="compare-correct-sub">{{EN_Gloss}}</div>
 {{#Mnemonic_EN}}<div class="compare-mnemonic">
 <strong>Remember:</strong> {{Mnemonic_EN}}
 </div>{{/Mnemonic_EN}}
 </div>
+<div id="compare-sentence-answer" style="display: none; margin-top: 16px; font-size: 16px;">
+<!-- Populated dynamically by JavaScript from CompareMembers JSON (sentence mode only) -->
+</div>
+<script>
+(function() {
+  try {
+    var el = document.getElementById('compare-members-json');
+    if (!el) return;
+    var data = JSON.parse(el.textContent.trim());
+    if (!(data && data.mode === 'sentence' && Array.isArray(data.items))) return;
+
+    var chipAnswer = document.getElementById('compare-chip-answer');
+    if (chipAnswer) chipAnswer.style.display = 'none';
+    var box = document.getElementById('compare-sentence-answer');
+    if (!box) return;
+    box.style.display = '';
+    data.items.forEach(function(item, i) {
+      var row = document.createElement('div');
+      row.style.margin = '8px 0';
+      var label = document.createElement('strong');
+      label.textContent = (item.is_self ? '✓ ' : '') + (i + 1) + '.';
+      row.appendChild(label);
+      row.appendChild(document.createTextNode(' ' + item.example_ua + ' — '));
+      var meaning = document.createElement('span');
+      meaning.style.opacity = '0.75';
+      meaning.textContent = item.meaning_en;
+      row.appendChild(meaning);
+      box.appendChild(row);
+    });
+  } catch (e) {
+    console.error('Failed to render sentence-mode answer from CompareMembers:', e);
+  }
+})();
+</script>
 {{/CompareMembers}}
 
 {{/ConfusableSet}}

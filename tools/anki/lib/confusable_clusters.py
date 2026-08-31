@@ -34,6 +34,8 @@ class ClusterMember:
     chapter: Optional[str]  # "2.8.3" or "?" if unknown
     comment: str
     compare_scenario: str = ""  # Usage context distinguishing this word from cluster-mates
+    example_ua: str = ""  # Sentence mode only: authored UA sentence for this sense
+    meaning_en: str = ""  # Sentence mode only: English meaning revealed as the answer
 
     def is_active(self) -> bool:
         """Return True if this member has been sourced (note_id is not None)."""
@@ -173,7 +175,9 @@ class ClusterRegistry:
                 status=status,
                 chapter=member_data.get('chapter'),
                 comment=member_data.get('comment', ''),
-                compare_scenario=member_data.get('compare_scenario', '')
+                compare_scenario=member_data.get('compare_scenario', ''),
+                example_ua=member_data.get('example_ua', ''),
+                meaning_en=member_data.get('meaning_en', '')
             )
             members.append(member)
 
