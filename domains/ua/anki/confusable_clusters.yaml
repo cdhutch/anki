@@ -552,13 +552,15 @@ clusters:
       status: sourced
       chapter: '2.3.4'
       comment: Castle (heritage architecture, ch.3.4 wordlist item)
-      compare_scenario: Which sense of замок is being used?
+      compare_scenario: You're touring a centuries-old hilltop fortress with stone
+        towers and thick walls, once home to a noble family.
     - note_id: ua-lexeme-1302
       lemma: замо́к
       status: sourced
       chapter: reference
       comment: Lock, latch (reference-only companion note, not itself a wordlist item)
-      compare_scenario: Which sense of замок is being used?
+      compare_scenario: You come home, reach into your pocket for the key, and open
+        your front door.
   amazing-impressive-synonyms:
     description: 'Convergent near-synonym pair (not homographs), both translatable as
 
@@ -745,13 +747,15 @@ clusters:
       status: sourced
       chapter: 2.8
       comment: Warmth (noun; physical heat or abstract comfort)
-      compare_scenario: Which sense of тепло is being used?
+      compare_scenario: You wrap your hands around a hot cup of tea on a cold morning
+        and feel it spreading through your fingers.
     - note_id: ua-lexeme-0405
       lemma: те́пло
       status: sourced
       chapter: 2.8
       comment: Warmly (adverb; manner or tone of speaking/acting)
-      compare_scenario: Which sense of тепло is being used?
+      compare_scenario: She greets an old friend with a big hug and a smile, welcoming
+        them like family.
   walking-arrival-departure:
     description: 'Walking verb pair: прихо́дити (come/arrive on foot) and відхо́дити
       (walk away, depart).
