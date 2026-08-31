@@ -407,6 +407,15 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
     opt-in flag needed, so any future identical-lemma cluster picks this up
     automatically as soon as its members have example_ua/meaning_en set.
 
+    Sentence mode is emitted for the cluster's hub note only (see the
+    is_hub check below) -- the back already reveals every item's meaning_en,
+    not just the viewing note's, so a satellite's card would otherwise be a
+    near-duplicate of the hub's: same two sentences, differing only in which
+    item is marked is_self. The satellite gets "" instead, which the
+    existing empty-CompareMembers suspend policy in import_note() then
+    suppresses, leaving exactly one Compare card per cluster in the queue
+    (fix for the "doubled up" cards Craig reported 2026-08-31).
+
     Args:
         note_id: The note's ID (e.g., 'ua-lexeme-0467')
         tags: List of tags from the note (used only for _IsHomograph flag)
@@ -431,6 +440,10 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
         # use example-sentence discrimination instead of word chips.
         lemmas = {member.lemma for member in members}
         if len(lemmas) == 1 and all(m.example_ua and m.meaning_en for m in members):
+            # One canonical sentence-mode card per cluster: emit only for
+            # the hub. See docstring above for why the satellite gets "".
+            if not cluster.is_hub(note_id):
+                return ""
             data = {
                 "mode": "sentence",
                 "items": [
