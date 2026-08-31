@@ -474,13 +474,15 @@ clusters:
       status: sourced
       chapter: 2.8
       comment: Smooth, even (texture)
-      compare_scenario: Which stress/sense of гладкий is being used?
+      compare_scenario: You run your hand over a polished wooden tabletop and feel
+        no bumps or roughness at all.
     - note_id: ua-lexeme-0589
       lemma: гладки́й
       status: sourced
       chapter: reference
       comment: Fat, well-fed, plump
-      compare_scenario: Which stress/sense of гладкий is being used?
+      compare_scenario: The farmer proudly points out how round and well-fed his
+        prize pig has gotten this year.
   power-strength-synonyms:
     description: 'Near-synonym cluster for "strong/powerful," per Горох''s Синонімія
 
@@ -576,15 +578,15 @@ clusters:
       status: sourced
       chapter: '2.8.7'
       comment: Impressive, striking -- effect of impressing through scale/quality/skill
-      compare_scenario: Do you mean something that impresses through its scale, quality,
-        or skill (вражаючий), or something that provokes wonder/surprise (дивовижний)?
+      compare_scenario: A skyscraper's engineering leaves visitors stunned by its
+        sheer scale and technical achievement.
     - note_id: ua-lexeme-0572
       lemma: дивови́жний
       status: sourced
       chapter: '2.8.7'
       comment: Amazing, astonishing -- emphasizes wonder or surprise
-      compare_scenario: Do you mean something that provokes wonder/surprise (дивовижний),
-        or something that impresses through its scale, quality, or skill (вражаючий)?
+      compare_scenario: A street magician's trick leaves the crowd gasping in disbelief,
+        unable to figure out how it was possible.
   knife-than-homograph:
     description: 'Pure polysemy homograph (no stress shift) on ніж: knife (noun)
 

@@ -436,11 +436,13 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
         if not members:
             return ""
 
-        # Sentence mode: every member this card shows has the identical
-        # lemma string -- the word itself can't distinguish the senses, so
-        # use example-sentence discrimination instead of word chips.
-        lemmas = {member.lemma for member in members}
-        if len(lemmas) == 1 and all(m.example_ua and m.meaning_en for m in members):
+        # Sentence mode: every active member of the cluster has the
+        # identical lemma string -- the word itself can't distinguish the
+        # senses, so use example-sentence discrimination instead of word
+        # chips. is_sentence_mode() is the single source of truth for this
+        # condition (shared with ClusterRegistry.validate()'s degenerate-
+        # card check) so the renderer and the validator can't drift apart.
+        if cluster.is_sentence_mode():
             # One canonical sentence-mode card per cluster: emit only for
             # the hub. See docstring above for why the satellite gets "".
             if not cluster.is_hub(note_id):
