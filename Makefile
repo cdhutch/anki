@@ -819,7 +819,7 @@ ua-lexeme-fix:
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
 _ua-lexeme: ua-lexeme-fix
-	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_lexeme --root $(UA_LEXEME_ROOT) --trigger domains/ua/anki/confusable_clusters.yaml $(if $(FULL),--full,))"; \
+	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_lexeme --root $(UA_LEXEME_ROOT) --trigger domains/ua/anki/confusable_clusters.yaml --trigger tools/anki/sync/ua_lexeme_import.py $(if $(FULL),--full,))"; \
 	rc=$$?; \
 	if [ $$rc -eq 3 ]; then \
 	  echo "==> Full sync of $(UA_LEXEME_ROOT)/ (no incremental baseline yet, or FULL=1)"; \

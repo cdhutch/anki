@@ -906,7 +906,7 @@ COMPARISON_FRONT = """\
      ua_lexeme_import.py for the full contract:
        Chip mode (default): {"scenario": ..., "members": [lemma, ...]}
        Sentence mode (added 2026-08-30): {"mode": "sentence", "items": [{lemma,
-         example_ua, meaning_en, is_self}, ...]} -- for true-homophone clusters
+         example_ua, meaning_en}, ...]} -- for true-homophone clusters
          (identical lemma across every member), where a word chip would just show
          the same spelling twice with nothing to distinguish it. Both blocks below
          are always present in the static HTML; JS shows the right one and hides
@@ -1021,7 +1021,7 @@ COMPARISON_BACK = """\
       var row = document.createElement('div');
       row.style.margin = '8px 0';
       var label = document.createElement('strong');
-      label.textContent = (item.is_self ? '✓ ' : '') + (i + 1) + '.';
+      label.textContent = (i + 1) + '.';
       row.appendChild(label);
       row.appendChild(document.createTextNode(' ' + item.example_ua + ' — '));
       var meaning = document.createElement('span');

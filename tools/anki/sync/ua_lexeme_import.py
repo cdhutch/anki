@@ -395,7 +395,7 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
     CNSF note).
 
     Sentence mode: {"mode": "sentence", "items": [{"lemma", "example_ua",
-    "meaning_en", "is_self"}, ...]}. Used when every active member on this
+    "meaning_en"}, ...]}. Used when every active member on this
     card shares an identical lemma -- a true homophone, where nothing in the
     word itself (spelling or stress) distinguishes the senses, so a chip
     choice would just show the same word twice with no discriminating
@@ -409,12 +409,13 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
 
     Sentence mode is emitted for the cluster's hub note only (see the
     is_hub check below) -- the back already reveals every item's meaning_en,
-    not just the viewing note's, so a satellite's card would otherwise be a
-    near-duplicate of the hub's: same two sentences, differing only in which
-    item is marked is_self. The satellite gets "" instead, which the
+    so a satellite's card would otherwise be a near-duplicate of the hub's:
+    the exact same two sentences. The satellite gets "" instead, which the
     existing empty-CompareMembers suspend policy in import_note() then
     suppresses, leaving exactly one Compare card per cluster in the queue
-    (fix for the "doubled up" cards Craig reported 2026-08-31).
+    (fix for the "doubled up" cards Craig reported 2026-08-31). Items carry
+    no is_self flag -- Craig confirmed 2026-08-31 the checkmark wasn't
+    needed once the back already shows both meanings plainly.
 
     Args:
         note_id: The note's ID (e.g., 'ua-lexeme-0467')
@@ -451,7 +452,6 @@ def get_cluster_compare_members_json(note_id: str, tags: List[str]) -> str:
                         "lemma": member.lemma,
                         "example_ua": member.example_ua,
                         "meaning_en": member.meaning_en,
-                        "is_self": member.note_id == note_id,
                     }
                     for member in members
                 ],
