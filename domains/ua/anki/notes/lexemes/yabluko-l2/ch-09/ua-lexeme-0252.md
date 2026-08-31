@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: point, score (unit of scoring)
+  EN_Gloss: a point on an evaluative rating score
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''

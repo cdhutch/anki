@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: point (in scoring)
+  EN_Gloss: a point scored during play
   Govt_Case: ''
   IrregularForms: 'Nominative plural: очки́ (stress on the final syllable) -- NOT the regular
     neuter -а pattern one might expect. Contrast the unrelated о́чко homograph (diminutive
