@@ -35,8 +35,8 @@ fields:
     vehicles); ви- = driving out of.
   CrossLang_Analog: '≈ RU: въезжать / въехать (ʼ corresponds to RU ъ)'
   TypingAnswer: вʼїжджати / вʼїхати
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Автобус вʼїжджає у двір школи.
+  EN_Example: The bus drives into the schoolyard.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/вʼїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

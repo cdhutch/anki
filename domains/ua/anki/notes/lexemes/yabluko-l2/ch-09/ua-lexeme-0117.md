@@ -37,8 +37,8 @@ fields:
     reaching/arriving at the destination.
   CrossLang_Analog: '≈ RU: подходить / подойти (під- ≈ под-)'
   TypingAnswer: підходити / підійти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Учень підходить до вчительки, щоб поставити запитання.
+  EN_Example: The student walks up to the teacher to ask a question.
   Tags_Ch: ch:2.9.4, ch:1.7.6, ch:1.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/підходити
   Source_Note: Stress verified 2026-07-06 via Горох.

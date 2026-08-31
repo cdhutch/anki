@@ -46,8 +46,8 @@ fields:
     note.
   CrossLang_Analog: ''
   TypingAnswer: вигравати / виграти
-  UA_Example: Вона любить вигравати навіть у дружніх іграх.
-  EN_Example: She likes to win even in friendly games.
+  UA_Example: Вона виграла головний приз у лотереї.
+  EN_Example: She won the grand prize in the lottery.
   Tags_Ch: ch:2.9.3, ch:1.11.3, ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/вигравати; https://goroh.pp.ua/Словозміна/виграти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &

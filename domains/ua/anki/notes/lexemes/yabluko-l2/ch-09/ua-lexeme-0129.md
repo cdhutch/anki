@@ -34,8 +34,8 @@ fields:
   Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
   CrossLang_Analog: '≈ RU: проезжать / проехать'
   TypingAnswer: проїжджати / проїхати
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Поїзд проїжджає повз кілька маленьких станцій без зупинки.
+  EN_Example: The train passes by several small stations without stopping.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/проїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

@@ -41,8 +41,8 @@ fields:
     < добре (positive, unmarked) < чудово (enthusiastic).'
   CrossLang_Analog: ''
   TypingAnswer: непогано
-  UA_Example: Вона непогано малює, але хоче вчитися більше.
-  EN_Example: She draws not badly, but wants to study more.
+  UA_Example: — Як пройшов іспит? — Непогано, могло бути й гірше.
+  EN_Example: — How did the exam go? — Not bad, could've been worse.
   Tags_Ch: ch:1.0.3
   Source_URL: https://goroh.pp.ua/Словозміна/непогано
   Source_Note: verified 2026-07-06 via Горох

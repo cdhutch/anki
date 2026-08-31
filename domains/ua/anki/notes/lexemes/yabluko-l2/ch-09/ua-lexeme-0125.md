@@ -35,8 +35,8 @@ fields:
     vehicles); ви- = driving out of.
   CrossLang_Analog: '≈ RU: выезжать / выехать'
   TypingAnswer: виїжджати / виїхати
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Машина виїжджає з підземного паркінгу.
+  EN_Example: The car drives out of the underground parking lot.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/виїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

@@ -35,8 +35,8 @@ fields:
     by vehicle (same під-/до- opposition as підходити/доходити, applied to vehicles).
   CrossLang_Analog: '≈ RU: доезжать / доехать'
   TypingAnswer: доїжджати / доїхати
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми доїжджаємо до Львова за чотири години.
+  EN_Example: We get to Lviv in four hours.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/доїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

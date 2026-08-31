@@ -34,8 +34,8 @@ fields:
   Mnemonic_EN: пере- = PERMEATE — crossing a barrier, landing on the far side.
   CrossLang_Analog: '≈ RU: переходить / перейти'
   TypingAnswer: переходити / перейти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Пішоходи переходять через дорогу на зелене світло.
+  EN_Example: Pedestrians cross the road on a green light.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/переходити
   Source_Note: Stress verified 2026-07-06 via Горох.

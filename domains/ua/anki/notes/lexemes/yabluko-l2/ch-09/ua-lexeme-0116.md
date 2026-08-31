@@ -36,8 +36,8 @@ fields:
   Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
   CrossLang_Analog: '≈ RU: выходить / выйти'
   TypingAnswer: виходити / вийти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Діти виходять із класу на перерву.
+  EN_Example: The children go out of the classroom for recess.
   Tags_Ch: ch:2.9.4, ch:1.11.2, ch:1.7.6
   Source_URL: https://goroh.pp.ua/Словозміна/виходити
   Source_Note: Lemma re-verified 2026-08-19 via Горох after the correction ви́ходити -> вихо́дити;
