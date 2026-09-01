@@ -17,7 +17,7 @@ tags:
 - release:active
 fields:
   NoteID: ua-lexeme-0542
-  Lemma: ра́к
+  Lemma: рак
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

@@ -34,6 +34,8 @@ class ClusterMember:
     chapter: Optional[str]  # "2.8.3" or "?" if unknown
     comment: str
     compare_scenario: str = ""  # Usage context distinguishing this word from cluster-mates
+    example_ua: str = ""  # Sentence mode only: authored UA sentence for this sense
+    meaning_en: str = ""  # Sentence mode only: English meaning revealed as the answer
 
     def is_active(self) -> bool:
         """Return True if this member has been sourced (note_id is not None)."""
@@ -69,6 +71,27 @@ class ConfusableCluster:
     def is_hub(self, note_id: str) -> bool:
         """Return True if note_id is this cluster's canonical hub."""
         return note_id == self.canonical_note_id
+
+    def is_sentence_mode(self) -> bool:
+        """True if this cluster renders as a sentence-mode Compare card.
+
+        Mirrors the exact condition get_cluster_compare_members_json() in
+        ua_lexeme_import.py uses to choose sentence mode over chip mode:
+        every active member shares one identical lemma string (a true
+        homophone -- nothing in the spelling distinguishes the senses) AND
+        every active member has both example_ua and meaning_en populated.
+        Kept here as the single source of truth so the renderer and the
+        validator (validate()) can't drift apart -- an identical-lemma
+        cluster that's missing example_ua/meaning_en on some member is NOT
+        sentence mode; it silently falls back to chip mode instead, which
+        is a degenerate card (same spelling shown twice, nothing to
+        distinguish it) that validate() flags as an error.
+        """
+        active = self.get_active_members()
+        if len(active) < 2:
+            return False
+        lemmas = {m.lemma for m in active}
+        return len(lemmas) == 1 and all(m.example_ua and m.meaning_en for m in active)
 
     def __repr__(self) -> str:
         active_count = len(self.get_active_members())
@@ -173,7 +196,9 @@ class ClusterRegistry:
                 status=status,
                 chapter=member_data.get('chapter'),
                 comment=member_data.get('comment', ''),
-                compare_scenario=member_data.get('compare_scenario', '')
+                compare_scenario=member_data.get('compare_scenario', ''),
+                example_ua=member_data.get('example_ua', ''),
+                meaning_en=member_data.get('meaning_en', '')
             )
             members.append(member)
 
@@ -272,6 +297,7 @@ class ClusterRegistry:
         - All referenced note_ids are well-formed (ua-lexeme-NNNN)
         - No circular references between hubs
         - All members are either None (not sourced) or valid note IDs
+        - Compare-card content won't render degenerate (see _validate_compare_cards)
 
         Returns:
             Tuple of (errors, warnings, missing_tags):
@@ -310,7 +336,81 @@ class ClusterRegistry:
                             f"(will be added when ch-{member.chapter} is completed)"
                         )
 
+        self._validate_compare_cards(errors)
+
         return errors, warnings, missing_tags
+
+    def _validate_compare_cards(self, errors: List[str]) -> None:
+        """Catch structural Compare-card defects that don't need semantic
+        judgment to detect -- the actual failure modes hit in production
+        (2026-08-31): a chip cluster shipped with no scenario at all, two
+        stress-shift homographs whose scenario was boilerplate copy-pasted
+        across both members, and a near-synonym pair whose scenario named
+        the answer word directly. Deliberately does NOT judge whether a
+        scenario is well-written, just whether it's structurally capable of
+        distinguishing the members -- see validate_clusters.py's docstring
+        for what this can't catch and why. Appends to `errors` in place
+        (these are hard failures, meant to block a sync, not warnings).
+        """
+        for cluster_name, cluster in self.clusters.items():
+            active = cluster.get_active_members()
+            if len(active) < 2:
+                continue  # nothing to distinguish with only 0-1 sourced members
+
+            if cluster.is_sentence_mode():
+                continue  # compare_scenario is unused in sentence mode
+
+            lemmas = {m.lemma for m in active}
+            if len(lemmas) == 1:
+                # Identical lemma but is_sentence_mode() said no -> some
+                # member is missing example_ua/meaning_en, so this will
+                # silently render as chip mode: the same spelling shown
+                # twice with nothing to distinguish it. The original
+                # "chips but no scenario" bug this registry exists to
+                # prevent.
+                missing = [
+                    m.note_id for m in active
+                    if not (m.example_ua and m.meaning_en)
+                ]
+                errors.append(
+                    f"Cluster '{cluster_name}': members share identical lemma "
+                    f"'{next(iter(lemmas))}' (a true homophone) but sentence-mode "
+                    f"data is incomplete -- missing example_ua/meaning_en on: "
+                    f"{', '.join(missing)}. Without it this renders as "
+                    f"indistinguishable chips (same spelling twice, no scenario)."
+                )
+
+            scenario_owners: Dict[str, List[str]] = {}
+            for member in active:
+                scenario = (member.compare_scenario or '').strip()
+                if not scenario:
+                    errors.append(
+                        f"Cluster '{cluster_name}', member '{member.note_id}' "
+                        f"({member.lemma}): compare_scenario is empty -- card "
+                        f"will show chips with no distinguishing context"
+                    )
+                    continue
+
+                scenario_owners.setdefault(scenario, []).append(member.note_id)
+
+                for other_lemma in lemmas:
+                    if other_lemma and other_lemma in scenario:
+                        errors.append(
+                            f"Cluster '{cluster_name}', member '{member.note_id}': "
+                            f"compare_scenario contains the lemma '{other_lemma}' "
+                            f"verbatim -- gives away the answer instead of "
+                            f"describing a situation"
+                        )
+                        break
+
+            for scenario, owners in scenario_owners.items():
+                if len(owners) > 1:
+                    preview = scenario if len(scenario) <= 70 else scenario[:67] + '...'
+                    errors.append(
+                        f"Cluster '{cluster_name}': {len(owners)} members "
+                        f"({', '.join(owners)}) share identical compare_scenario "
+                        f"text (\"{preview}\") -- doesn't distinguish them"
+                    )
 
     @staticmethod
     def _is_valid_note_id(note_id: str) -> bool:

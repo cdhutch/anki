@@ -16,7 +16,7 @@ tags:
 - release:pending
 fields:
   NoteID: ua-lexeme-2194
-  Lemma: зли́й
+  Lemma: злий
   Lemma_Euphony: ''
   PartOfSpeech: adjective
   Gender: ''

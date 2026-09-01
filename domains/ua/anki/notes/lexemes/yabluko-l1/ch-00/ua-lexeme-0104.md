@@ -41,8 +41,8 @@ fields:
     < добре (positive, unmarked) < чудово (enthusiastic).'
   CrossLang_Analog: ''
   TypingAnswer: чудово
-  UA_Example: — Ти чудово зіграв цю роль!
-  EN_Example: — You played that role wonderfully!
+  UA_Example: — Як тобі вистава? — Чудово! Найкраща цього сезону.
+  EN_Example: — How was the show? — Wonderful! The best one this season.
   Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/чудово
   Source_Note: verified 2026-07-06 via Горох

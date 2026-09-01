@@ -131,6 +131,8 @@ help:
 	@echo "  ua                  Canonicalize + sync all UA note types (lexeme, grammar, visual, verb, pvom)"
 	@echo "  ua-fix              Canonicalize all UA note types (no sync)"
 	@echo "  ua-compare-check    Audit UA_Lexeme Compare/homograph card fields (report-only; STRICT=1 to fail on findings)"
+	@echo "  ua-cluster-validate Validate confusable_clusters.yaml for degenerate Compare cards (blocking; runs automatically before every ua-lexeme sync)"
+	@echo "  ua-monosyllable-validate Validate no monosyllabic Lemma carries a stress mark (blocking; runs automatically before every ua-lexeme sync)"
 	@echo "  ua-check            Aspect completeness + pending-confusable watchlist (report-only; STRICT=1 to fail on findings)"
 	@echo "  ua-check-aspect     Flag pos:verb notes with zero aspectual counterparts and no aspect:*-only tag"
 	@echo "  ua-check-pending-confusables  Report pending-confusable:<lemma> tags whose target now exists in the corpus"
@@ -735,7 +737,7 @@ UA_EXAMPLES_LIMIT ?= 10
 .PHONY: ua-pvom ua-pvom-check ua-pvom-fix _ua-pvom
 .PHONY: ua-batch ua-batch-check ua-batch-fix _ua-batch
 .PHONY: ua-book  ua-book-check  ua-book-fix _ua-book
-.PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix _ua-lexeme
+.PHONY: ua-lexeme ua-lexeme-check ua-lexeme-fix ua-cluster-validate ua-monosyllable-validate _ua-lexeme
 .PHONY: ua-grammar ua-grammar-check ua-grammar-fix _ua-grammar
 .PHONY: ua-verb ua-verb-check ua-verb-fix _ua-verb
 .PHONY: ua-stress ua-stress-extract ua-stress-fetch ua-stress-compare ua-stress-apply ua-stress-wizard
@@ -818,8 +820,14 @@ ua-lexeme-fix:
 	find $(UA_LEXEME_ROOT) -name "ua-lexeme-*.md" \
 	  | xargs $(PYTHON) tools/anki/cnsf_canonicalize.py --write
 
-_ua-lexeme: ua-lexeme-fix
-	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_lexeme --root $(UA_LEXEME_ROOT) $(if $(FULL),--full,))"; \
+ua-cluster-validate:
+	$(PYTHON) tools/anki/sync/validate_clusters.py
+
+ua-monosyllable-validate:
+	$(PYTHON) tools/anki/sync/validate_monosyllable_stress.py
+
+_ua-lexeme: ua-cluster-validate ua-monosyllable-validate ua-lexeme-fix
+	@files="$$($(PYTHON) tools/anki/sync/sync_scope.py list --state-key ua_lexeme --root $(UA_LEXEME_ROOT) --trigger domains/ua/anki/confusable_clusters.yaml --trigger tools/anki/sync/ua_lexeme_import.py $(if $(FULL),--full,))"; \
 	rc=$$?; \
 	if [ $$rc -eq 3 ]; then \
 	  echo "==> Full sync of $(UA_LEXEME_ROOT)/ (no incremental baseline yet, or FULL=1)"; \

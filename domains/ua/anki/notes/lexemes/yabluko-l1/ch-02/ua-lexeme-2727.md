@@ -30,7 +30,12 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: Near-synonym cluster ancient-synonyms (confusable_clusters.yaml), 5 members
+    as of 2026-08-31. анти́чний (this note) evokes Ancient Greece and Rome specifically in
+    everyday/educational usage, even though dictionaries list it more loosely. Contrast the
+    neutral default да́вній (ua-lexeme-1045), the disfavored/colloquial дре́вній (ua-lexeme-1254),
+    the standard historical-antiquity term старода́вній (ua-lexeme-1257), and the physical-object
+    term старови́нний (ua-lexeme-1563).
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: античний
@@ -39,6 +44,9 @@ fields:
   Tags_Ch: ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/античний
   Source_Note: yabluko-l1-vocabulary.pdf ch.2.3, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-08-31:
+    added ConfusableSet cross-link to the ancient-synonyms cluster (confusable_clusters.yaml)
+    -- 5-way near-synonym family for "ancient/old", not a homograph; cross-textbook link into
+    yabluko-l2 (1045/1254/1257/1563).'
 ---
 

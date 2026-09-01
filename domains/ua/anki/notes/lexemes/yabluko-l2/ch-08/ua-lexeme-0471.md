@@ -14,8 +14,6 @@ tags:
 - gender:m
 - status:verified
 - release:active
-- pending-confusable:вигляд
-- pending-confusable:доглядати
 fields:
   NoteID: ua-lexeme-0471
   Lemma: по́гляд
@@ -32,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster look-appearance-synonyms (confusable_clusters.yaml):
+    погляд (this note, cluster hub) is the act of looking itself -- a glance or gaze directed
+    outward by the subject. Contrast вигляд (ua-lexeme-1448), the reverse direction (how something
+    appears TO an observer), and доглядати (ua-lexeme-1756), an unrelated-root false cognate
+    meaning ''to look after/care for,'' with no connection to vision.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: погляд
@@ -48,6 +50,8 @@ fields:
     the tag spelling from the earlier доглянати guess. When доглядати is sourced, its own
     Perfective field should be populated with доглянути. Tagged pending-confusable:вигляд
     and pending-confusable:доглядати; see CLAUDE.md Vocabulary dedup & homograph handling,
-    bucket 5.'
+    bucket 5. 2026-09-01: both sourced (вигляд as ua-lexeme-1448, доглядати as ua-lexeme-1756);
+    clustered as look-appearance-synonyms in confusable_clusters.yaml, canonical on this note.
+    pending-confusable tags removed.'
 ---
 

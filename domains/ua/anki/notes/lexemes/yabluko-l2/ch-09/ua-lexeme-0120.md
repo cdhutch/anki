@@ -35,8 +35,8 @@ fields:
   Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
   CrossLang_Analog: '≈ RU: проходить / пройти'
   TypingAnswer: проходити / пройти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми щодня проходимо повз цю кавʼярню дорогою на роботу.
+  EN_Example: We walk past this café every day on the way to work.
   Tags_Ch: ch:2.9.4, ch:2.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/проходити
   Source_Note: Stress verified 2026-07-06 via Горох.

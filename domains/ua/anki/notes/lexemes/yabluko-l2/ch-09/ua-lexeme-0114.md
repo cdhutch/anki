@@ -38,8 +38,8 @@ fields:
     from it).
   CrossLang_Analog: '≈ RU: приходить / прийти'
   TypingAnswer: приходити / прийти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Гості приходять до нас щосуботи ввечері.
+  EN_Example: Guests come to our place every Saturday evening.
   Tags_Ch: ch:2.9.4, ch:1.11.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/приходити
   Source_Note: Stress verified 2026-07-06 via Горох.

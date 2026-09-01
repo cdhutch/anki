@@ -35,8 +35,9 @@ fields:
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: дивовижний
-  UA_Example: У нього дивовижний голос.
-  EN_Example: He has an amazing voice.
+  UA_Example: Це був дивовижний збіг обставин -- ми зустрілися саме тоді, коли я думав про
+    неї.
+  EN_Example: It was an amazing coincidence -- we met right when I was thinking about her.
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/дивовижний
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

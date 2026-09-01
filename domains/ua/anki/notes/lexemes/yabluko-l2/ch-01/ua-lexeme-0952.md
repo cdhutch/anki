@@ -32,7 +32,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster of-course-usually-synonyms (confusable_clusters.yaml):
+    зазвичай (this note) is the modern, stylistically preferred word for ''usually,'' habitual
+    frequency, with no comma-dependent double meaning. Contrast звичайно (ua-lexeme-2745),
+    which used to cover this sense but can also mean ''of course,'' and звісно (ua-lexeme-0453,
+    cluster hub), which never means frequency at all.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: зазвичай
@@ -42,6 +46,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/зазвичай
   Source_Note: Горох-verified 2026-08-28, ch.1.7 sourcing pass (adventures/reasons; narrating
     verbs).
-  Verification Notes: New. Indeclinable adverb.
+  Verification Notes: 'New. Indeclinable adverb. 2026-09-01: clustered as of-course-usually-synonyms
+    in confusable_clusters.yaml alongside звісно (ua-lexeme-0453, cluster hub) and звичайно
+    (ua-lexeme-2745); resolves pending-confusable:зазвичай on ua-lexeme-0453.'
 ---
 

@@ -42,8 +42,8 @@ fields:
     < добре (positive, unmarked) < чудово (enthusiastic).'
   CrossLang_Analog: ''
   TypingAnswer: добре
-  UA_Example: Він добре знає свою роботу.
-  EN_Example: He knows his work well.
+  UA_Example: — Як настрій сьогодні? — Добре, дякую.
+  EN_Example: — How are you feeling today? — Good, thanks.
   Tags_Ch: ch:1.0.3, ch:1.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/добре
   Source_Note: verified 2026-07-06 via Горох

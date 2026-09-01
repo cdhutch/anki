@@ -15,9 +15,6 @@ tags:
 - gender:f
 - status:verified
 - release:active
-- pending-confusable:погода
-- pending-confusable:природа
-- pending-confusable:порода
 fields:
   NoteID: ua-lexeme-0272
   Lemma: приго́да
@@ -34,7 +31,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Confusable cluster near-rhyme-lookalike-nouns (confusable_clusters.yaml):
+    пригода (this note, cluster hub, "adventure") shares no meaning with its cluster-mates
+    погода (ua-lexeme-0857, "weather"), природа (ua-lexeme-2792, "nature"), and порода (ua-lexeme-3728,
+    "breed") -- grouped purely because their near-identical при-/по-...-ода rhyme shape makes
+    them easy to misread or mistype for one another.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: пригода
@@ -47,6 +48,8 @@ fields:
     eventually join a confusable set with погода, природа, порода (near-rhyming, easily mixed-up
     nouns) -- only пригода itself exists in the corpus so far. Tagged pending-confusable:погода,
     pending-confusable:природа, pending-confusable:порода; see CLAUDE.md Vocabulary dedup
-    & homograph handling, bucket 5.'
+    & homograph handling, bucket 5. 2026-09-01: all three sourced (погода as ua-lexeme-0857,
+    природа as ua-lexeme-2792, порода as ua-lexeme-3728); clustered as near-rhyme-lookalike-nouns
+    in confusable_clusters.yaml, canonical on this note. pending-confusable tags removed.'
 ---
 

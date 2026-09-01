@@ -27,16 +27,30 @@ Two subcommands:
             Exit code 0, no output: nothing changed -- nothing to do.
             Exit code 3: no baseline recorded yet (first run for this key,
             or the recorded baseline commit no longer exists) -- caller
-            should do a full sync of --root instead.
+            should do a full sync of --root instead. Also returned if any
+            --trigger path changed since baseline (see below) -- caller
+            should treat this exactly like the no-baseline case.
 
     commit  Record the current HEAD SHA as the new baseline for --state-key.
             Run this only after a sync actually succeeds.
+
+--trigger (repeatable): a path outside --root (or not matching *.md) whose
+    change since baseline forces a full sync, even though a plain git-diff
+    scoped to --root would never see it. Use this for a file that drives
+    rendered content on an arbitrary, unpredictable subset of notes under
+    root -- e.g. domains/ua/anki/confusable_clusters.yaml, which supplies
+    Compare-card scenario/member data for whichever lexeme notes happen to
+    be cluster members. Editing the registry alone doesn't touch any note's
+    .md file, so without this the incremental scope would silently miss it
+    and the affected notes would never get resynced.
 
 Usage:
     python tools/anki/sync/sync_scope.py list --state-key ua_lexeme \\
         --root domains/ua/anki/notes/lexemes
     python tools/anki/sync/sync_scope.py commit --state-key ua_lexeme
     python tools/anki/sync/sync_scope.py list --state-key ua_lexeme --root ... --full
+    python tools/anki/sync/sync_scope.py list --state-key ua_lexeme --root ... \\
+        --trigger domains/ua/anki/confusable_clusters.yaml
 """
 from __future__ import annotations
 
@@ -70,7 +84,28 @@ def commit_ref_exists(sha: str) -> bool:
     return result.returncode == 0
 
 
-def cmd_list(state_key: str, root: str, full: bool, exclude: list[str]) -> int:
+def _trigger_changed(baseline: str, triggers: list[str]) -> bool:
+    """True if any trigger path changed since baseline -- committed, dirty, or new/untracked.
+
+    Trigger files live outside --root (or aren't .md) but still drive rendered
+    content for an arbitrary, unpredictable subset of notes under root -- e.g.
+    confusable_clusters.yaml, which supplies Compare-card content for whichever
+    lexeme notes happen to be cluster members. A plain git-diff scoped to --root
+    can't see that, so a registry-only edit needs its own check.
+    """
+    out = run_git(["diff", "--name-only", baseline, "HEAD", "--", *triggers])
+    if out.strip():
+        return True
+    out = run_git(["diff", "--name-only", "HEAD", "--", *triggers])
+    if out.strip():
+        return True
+    out = run_git(["ls-files", "--others", "--exclude-standard", "--", *triggers])
+    if out.strip():
+        return True
+    return False
+
+
+def cmd_list(state_key: str, root: str, full: bool, exclude: list[str], triggers: list[str]) -> int:
     sf = state_file(state_key)
     baseline = sf.read_text(encoding="utf-8").strip() if sf.exists() else ""
 
@@ -81,6 +116,14 @@ def cmd_list(state_key: str, root: str, full: bool, exclude: list[str]) -> int:
                 f"exists -- falling back to full sync",
                 file=sys.stderr,
             )
+        return 3
+
+    if triggers and _trigger_changed(baseline, triggers):
+        print(
+            f"note: trigger file(s) changed since baseline for '{state_key}' -- "
+            f"forcing full sync: {', '.join(triggers)}",
+            file=sys.stderr,
+        )
         return 3
 
     changed: set[str] = set()
@@ -148,6 +191,7 @@ def main() -> int:
     p_list.add_argument("--root", required=True)
     p_list.add_argument("--full", action="store_true")
     p_list.add_argument("--exclude", action="append", default=[], help="glob(s) to exclude, e.g. '*/exported/*'")
+    p_list.add_argument("--trigger", action="append", default=[], help="path(s) whose change since baseline forces a full sync, even outside --root")
 
     p_commit = sub.add_parser("commit")
     p_commit.add_argument("--state-key", required=True)
@@ -155,7 +199,7 @@ def main() -> int:
     args = ap.parse_args()
 
     if args.cmd == "list":
-        return cmd_list(args.state_key, args.root, args.full, args.exclude)
+        return cmd_list(args.state_key, args.root, args.full, args.exclude, args.trigger)
     elif args.cmd == "commit":
         return cmd_commit(args.state_key)
     return 1

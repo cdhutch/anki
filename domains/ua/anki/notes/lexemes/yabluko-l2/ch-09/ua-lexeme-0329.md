@@ -45,8 +45,8 @@ fields:
     put out). ва́тра (ua-lexeme-0610) = specifically a campfire, built on purpose.
   CrossLang_Analog: ''
   TypingAnswer: вогонь
-  UA_Example: Вони розпалили вогонь біля намету.
-  EN_Example: They lit a fire next to the tent.
+  UA_Example: На кухонній плиті горів синій вогонь газового пальника.
+  EN_Example: A blue gas-burner flame was burning on the kitchen stove.
   Tags_Ch: ch:2.9.7, ch:2.1.5, ch:1.11.4, ch:1.7.4
   Source_URL: https://goroh.pp.ua/Словозміна/вогонь
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.

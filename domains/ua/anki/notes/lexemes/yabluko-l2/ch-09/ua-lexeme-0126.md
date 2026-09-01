@@ -35,8 +35,8 @@ fields:
     by vehicle (same під-/до- opposition as підходити/доходити, applied to vehicles).
   CrossLang_Analog: '≈ RU: подъезжать / подъехать (ʼ corresponds to RU ъ)'
   TypingAnswer: підʼїжджати / підʼїхати
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Таксі підʼїжджає до готелю рівно о восьмій.
+  EN_Example: The taxi drives up to the hotel at exactly eight o'clock.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/підʼїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

@@ -36,8 +36,8 @@ fields:
     reaching/arriving at the destination.
   CrossLang_Analog: '≈ RU: доходить / дойти (до- + іти → дійти)'
   TypingAnswer: доходити / дійти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми доходимо до готелю пішки за десять хвилин.
+  EN_Example: We reach the hotel on foot in ten minutes.
   Tags_Ch: ch:2.9.4, ch:2.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/доходити
   Source_Note: Stress verified 2026-07-06 via Горох.

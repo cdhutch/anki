@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: to climb out (repeatedly/gradually)
+  EN_Gloss: to climb out
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''

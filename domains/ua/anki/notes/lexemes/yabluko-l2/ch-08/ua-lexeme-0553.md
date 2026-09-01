@@ -21,7 +21,7 @@ tags:
 - release:active
 fields:
   NoteID: ua-lexeme-0553
-  Lemma: сма́к
+  Lemma: смак
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
