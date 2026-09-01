@@ -1980,3 +1980,36 @@ clusters:
         THEMSELVES.
       compare_scenario: Your friends are all showing up at your place Friday evening for a
         party -- which word describes people arriving and assembling together?
+  walnut-pea-lookalike-nouns:
+    description: |
+      Two-way near-rhyme pair flagged 2026-09-01 during the legacy Anki cloze-mining pass --
+      Craig's own legacy card (Anki note 1685716391681) pairs горі́х (walnut) directly against
+      горо́х (peas) with no additional framing, the same "flag two similar-looking words
+      together" pattern that produced near-rhyme-lookalike-nouns earlier this cycle. The two
+      words are unrelated in meaning -- a walnut vs. a pea -- and differ by only their second
+      vowel (і vs о): горі́х vs горо́х. горо́х did not yet exist as a lexeme note in this corpus
+      (only горіх and the derived adjective горіховий, ua-lexeme-3130, had been sourced); it's
+      added here directly from the same yabluko-l1-vocabulary.pdf §6.1 food-vocabulary list
+      горіховий comes from -- the two words even sit adjacent on that page ("горіхове масло"
+      [nut/peanut butter], then "горох"). Like near-rhyme-lookalike-nouns, the confusion here
+      is purely visual/phonetic pattern-matching -- there's no meaning overlap to worry about,
+      only misreading one vowel for the other.
+    canonical_note: ua-lexeme-2955
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-2955
+      lemma: горіх
+      status: sourced
+      chapter: '1.5.1'
+      comment: Walnut -- a tree nut, unrelated in meaning to горо́х (peas); confusable only
+        by its near-rhyming spelling (differs by one vowel, і vs о).
+      compare_scenario: You crack open the shell to get at the food inside, then eat the
+        crunchy kernel on its own or toss it into a salad -- which word names that nut?
+    - note_id: ua-lexeme-3905
+      lemma: горо́х
+      status: sourced
+      chapter: '1.6.1'
+      comment: Peas -- a legume, unrelated in meaning to горіх (walnut); confusable only by
+        its near-rhyming spelling. Masculine, singularia tantum, irregular genitive горо́ху.
+      compare_scenario: You're shelling small round green legumes out of their pods to cook
+        for dinner -- which word names that vegetable?
