@@ -30,7 +30,12 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster quantity-synonyms (confusable_clusters.yaml): кількість
+    (this note) means "quantity, amount" -- an abstract NOUN naming the concept of "how much,"
+    not a quantifier word. A lookalike of кілька (ua-lexeme-0477, cluster hub) by shared root
+    (кільк-), but a different part of speech and meaning entirely; distinct from трохи/мало
+    (ua-lexeme-0345/1176), adverbial small-amount words; distinct from скільки (ua-lexeme-1171),
+    the interrogative "how much/how many."'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: кількість

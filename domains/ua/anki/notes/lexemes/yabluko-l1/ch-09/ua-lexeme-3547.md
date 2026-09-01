@@ -30,7 +30,12 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster journey-trip-synonyms (confusable_clusters.yaml): поїздка
+    (this note) means "trip, journey" -- specifically travel by vehicle (from їздити, "to
+    ride/travel by vehicle"), often short and practical (a car ride, a business trip). Distinct
+    from мандрівка (ua-lexeme-0330, cluster hub), the adventurous/wandering connotation; distinct
+    from подорож (ua-lexeme-0595), the neutral general-purpose word for journey/trip with
+    no implied mode of transport.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: поїздка

@@ -30,7 +30,12 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster fire-general-vs-blaze-vs-campfire (confusable_clusters.yaml):
+    вогнище (this note) means "bonfire, campfire; hearth" -- the plain, common word for a
+    controlled fire built for warmth/gathering. Горох defines ватра (ua-lexeme-0610) directly
+    as this word; ватра is the more literary/regional term for the same thing. Distinct from
+    пожежа (ua-lexeme-0173, cluster hub), a destructive uncontrolled blaze; distinct from
+    вогонь (ua-lexeme-0329), the broad general/elemental word for fire itself.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: вогнище

@@ -32,7 +32,13 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster quantity-synonyms (confusable_clusters.yaml): трохи
+    (this note) means "a little, a bit" -- a neutral, adverbial small amount ("how much").
+    Distinct from кілька/декілька (ua-lexeme-0477, cluster hub / ua-lexeme-1175), "several/a
+    few" -- a discrete countable amount ("how many"); distinct from мало (ua-lexeme-1176),
+    the same small-amount territory but with a "not enough" deficiency connotation; distinct
+    from скільки (ua-lexeme-1171), the interrogative "how much/how many"; distinct from кількість
+    (ua-lexeme-1169), the abstract noun "quantity" itself.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: трохи

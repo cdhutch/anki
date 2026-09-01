@@ -31,7 +31,12 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster sensation-feeling-synonyms (confusable_clusters.yaml):
+    настрій (this note) means "mood" -- a longer-lasting, ambient emotional/psychological
+    state, not tied to one specific trigger. Distinct from відчуття (ua-lexeme-0534, cluster
+    hub), a physical, bodily sense-perception; distinct from почуття (ua-lexeme-0902), a feeling/emotion
+    typically directed at or triggered by something specific (love for someone, joy about
+    an event).'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: настрій

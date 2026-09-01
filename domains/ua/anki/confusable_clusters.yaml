@@ -98,7 +98,10 @@ clusters:
       "too/excessively," for adjectives/adverbs) and забагато (fused "too much," specific
       to quantity/amount) both mark an ABSOLUTE excess past an acceptable limit, with no
       comparison implied. Grouped per Craig''s request (2026-08-28) to cluster занадто
-      with terms of similar EN meaning or UA spelling.
+      with terms of similar EN meaning or UA spelling. Extended 2026-09-01 with дуже
+      (Anki cloze-mining report, extension candidate) -- the plain, comparison-free,
+      excess-free "very" baseline against which значно/набагато''s comparative sense
+      and занадто/забагато/замало''s excess/deficiency sense stand out.
 
       '
     show_all_members: true
@@ -144,6 +147,16 @@ clusters:
         забагато, same absolute-excess-vs-deficit category, no comparison (Горох-verified)
       compare_scenario: Only a handful of people showed up to the community meeting --
         nowhere near enough to make any real decisions. What word says that?
+    - note_id: ua-lexeme-2755
+      lemma: ду́же
+      status: sourced
+      chapter: '1.2.5'
+      comment: Plain, general-purpose "very" -- no comparison (unlike значно/набагато)
+        and no implication of excess or deficiency (unlike занадто/забагато/замало),
+        just plain high degree
+      compare_scenario: You just want to say the soup is very tasty -- no comparison
+        to another soup, nothing excessive or insufficient about it, just plain high
+        degree. What word says "very"?
   time-of-day:
     description: 'Time-of-day nouns marking points in the daily cycle.
 
@@ -1118,6 +1131,10 @@ clusters:
       connotation) vs подорож (the neutral, general-purpose word). Горох defines
       мандрівка sense 1 directly as "подорож (у 1 знач.)", with sense 2 adding a
       "constant change of location, wandering" (блукання) nuance подорож lacks.
+      Extended 2026-09-01 with поїздка (Anki cloze-mining report, extension candidate)
+      -- adds the vehicle-travel axis (from їздити, "to ride/travel by vehicle")
+      alongside мандрівка''s wandering/adventurous connotation and подорож''s neutral
+      generality.
 
       '
     canonical_note: ua-lexeme-0330
@@ -1140,6 +1157,15 @@ clusters:
       compare_scenario: You're describing a business trip or a flight to visit
         family -- ordinary, purposeful travel with no wandering or adventurous
         connotation -- which is the default, all-purpose word for "trip"?
+    - note_id: ua-lexeme-3547
+      lemma: пої́здка
+      status: sourced
+      chapter: '1.9.3'
+      comment: A trip taken by vehicle/transport (from їздити, "to ride/travel by
+        vehicle") -- often short and practical (a car ride, a business trip)
+      compare_scenario: You drove to the next city for a doctor's appointment and
+        back the same day -- an ordinary trip by car, nothing adventurous or epic
+        about it. Which word for "trip" specifically implies travel by vehicle?
   drawing-nouns:
     description: 'Near-synonyms for drawing as product, act, and craft: малюнок
       (the finished picture) vs малювання (the act of drawing) vs малярство (the
@@ -1398,6 +1424,10 @@ clusters:
       flame, a campfire''s light, bodily heat, gunfire) -- the umbrella term, not implying
       harm or intent; ва́тра is specifically a campfire/bonfire (Горох defines it as вогнище),
       a controlled, intentional fire built for warmth, light, or gathering.
+      Extended 2026-09-01 with вогнище (Anki cloze-mining report, extension
+      candidate) -- the plain, common word for the same controlled campfire/bonfire
+      that ватра names more literarily; Горох''s own ватра entry defines it
+      directly as вогнище.
 
       '
     show_all_members: true
@@ -1427,6 +1457,16 @@ clusters:
         or gathering
       compare_scenario: You're camping with friends and someone lights a fire on purpose so
         everyone can sit around it and tell stories. What word describes that fire?
+    - note_id: ua-lexeme-3493
+      lemma: во́гнище
+      status: sourced
+      chapter: '1.8.5'
+      comment: The plain, common word for bonfire/campfire (and hearth) -- Горох
+        defines ватра directly as this word; ватра is the more literary/regional
+        term for the same controlled fire
+      compare_scenario: You're describing the fire pit in your backyard where the
+        family gathers most evenings -- the everyday, common word for a bonfire or
+        hearth, not the more literary ватра. What word do you use?
   container-nouns-packet-vs-pack:
     description: 'Two container nouns both loosely glossable as "pack" in English:
       паке́т (masc.) is a wrapped or bagged single unit -- a packet, or colloquially
@@ -1781,7 +1821,17 @@ clusters:
 
       genuinely mean the same thing, so the lesson for кілька/декілька is "these are
 
-      interchangeable, pick either," not "pick the one that fits."
+      interchangeable, pick either," not "pick the one that fits." Extended 2026-09-01
+
+      with трохи, мало, and кількість (Anki cloze-mining report, extension candidates)
+
+      -- трохи and мало add the small-amount adverbial territory ("a little" vs "not
+
+      enough") alongside кілька/декілька''s "several" and скільки''s interrogative;
+
+      кількість adds a lookalike-by-root confusion (shares кільк- with кілька) despite
+
+      being an abstract noun rather than a quantifier.
 
       '
     canonical_note: ua-lexeme-0477
@@ -1811,6 +1861,33 @@ clusters:
         just the longer of the two equally correct forms
       compare_scenario: You want to say the same thing as кілька -- "a few" apples -- but
         you've reached for the longer form. декілька means exactly the same thing, just longer.
+    - note_id: ua-lexeme-0345
+      lemma: тро́хи
+      status: sourced
+      chapter: '2.3.2'
+      comment: A little, a bit -- a neutral, adverbial small amount ("how much"), not
+        a discrete countable amount like кілька/декілька ("how many")
+      compare_scenario: You slept a little later than usual this morning -- no big
+        deal, just a small amount of extra time. What word says "a little"?
+    - note_id: ua-lexeme-1176
+      lemma: ма́ло
+      status: sourced
+      chapter: '2.3.2'
+      comment: Little, not enough -- the same small-amount territory as трохи, but
+        carrying a deficiency/insufficiency connotation трохи lacks
+      compare_scenario: You review the schedule and realize there's not enough time
+        left to finish everything -- the amount you have falls short of what's
+        needed. What word says that?
+    - note_id: ua-lexeme-1169
+      lemma: кі́лькість
+      status: sourced
+      chapter: '2.3.1'
+      comment: Quantity, amount -- an abstract NOUN naming the concept of "how
+        much" itself, not a quantifier word; a lookalike of кілька by shared root
+        (кільк-) but a different part of speech and meaning entirely
+      compare_scenario: A recipe asks how much sugar to use -- you need the noun
+        for "amount/quantity" itself, not a quantifier like "a few" or "several".
+        What word names the concept?
   sensation-feeling-synonyms:
     description: 'Pair flagged 2026-07-30 -- відчуття anchored a pending-confusable watch
 
@@ -1834,7 +1911,11 @@ clusters:
 
       abstract to show that physical grounding, so it was rewritten to something unmistakably
 
-      bodily.
+      bodily. Extended 2026-09-01 with настрій (Anki cloze-mining report, extension
+
+      candidate) -- adds "mood," a longer-lasting ambient emotional state, distinct
+
+      from почуття''s trigger-specific emotion and відчуття''s physical sensation.
 
       '
     canonical_note: ua-lexeme-0534
@@ -1855,6 +1936,16 @@ clusters:
         not a bodily sensation
       compare_scenario: You catch yourself smiling for no reason, thinking about someone you
         love -- which word for "feeling" names that emotional state?
+    - note_id: ua-lexeme-0884
+      lemma: на́стрій
+      status: sourced
+      chapter: '2.1.4'
+      comment: Mood -- a longer-lasting, ambient emotional/psychological state (a
+        good mood, a bad mood), not tied to one specific trigger the way почуття is
+        (love for someone, joy about an event)
+      compare_scenario: You woke up on the right side of the bed and everything
+        just feels good today, for no particular reason -- not joy about one
+        specific thing, just your overall emotional state. What word names that?
   near-rhyme-lookalike-nouns:
     description: 'Four-way cluster flagged 2026-07-30 -- Craig''s own framing: "near-rhyming,
 
