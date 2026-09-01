@@ -31,7 +31,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-homograph cluster lose-spend-near-homograph (confusable_clusters.yaml):
+    витрача́ти (this note) means to spend -- money, time, or effort, deliberately (витрачати
+    гроші, витрачати час); differs from втрача́ти (ua-lexeme-1505, cluster hub, to lose) by
+    a single letter (ви- vs в-), not by root meaning.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: витрачати / витратити
@@ -41,7 +44,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/витрачати; https://goroh.pp.ua/Словозміна/витратити
   Source_Note: Горох-verified 2026-08-28, ch.3.4 sourcing pass (village/town governance, heritage
     architecture, public opinion).
-  Verification Notes: New. Regular imperfective, 1st conjugation. Perfective витратити added
-    (per yabluko-l2-verb-dictionary).
+  Verification Notes: 'New. Regular imperfective, 1st conjugation. Perfective витратити added
+    (per yabluko-l2-verb-dictionary). 2026-09-01: Added to new lose-spend-near-homograph confusable
+    cluster (legacy Anki cloze-mining pass, note 1710586455905).'
 ---
 

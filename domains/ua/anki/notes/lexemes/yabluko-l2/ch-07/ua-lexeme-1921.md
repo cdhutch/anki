@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: дізна́тися (ua-lexeme-1922, perfective)
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-homograph cluster recognize-find-out-near-homograph (confusable_clusters.yaml):
+    дізнава́тися (this note) means to find out or learn brand-new information -- distinct
+    from впізнава́ти (ua-lexeme-3906, cluster hub), which means to recognize something/someone
+    already known. Shares the -знава́ти theme and visual shape with впізнавати; differs by
+    prefix (ді- vs впі-) and reflexive -ся.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: дізнаватися
@@ -40,8 +44,9 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/дізнаватися
   Source_Note: Горох-verified 2026-08-28, ch.7.2 sourcing pass (accounts/passwords tech vocabulary;
     frequency adverbs; descriptive adjectives).
-  Verification Notes: New. Imperfective, "to find out, learn", -авати-type theme (drops -ва-
+  Verification Notes: 'New. Imperfective, "to find out, learn", -авати-type theme (drops -ва-
     in the non-past, давати-family pattern). Textbook aspect pair дізнаватися-дізнатися, this
-    sub-chapter.
+    sub-chapter. 2026-09-01: Added to new recognize-find-out-near-homograph confusable cluster
+    (legacy Anki cloze-mining pass, note 1722893194501).'
 ---
 

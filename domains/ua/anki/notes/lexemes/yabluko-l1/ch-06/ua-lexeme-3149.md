@@ -30,15 +30,21 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-rhyme cluster cinnamon-well-lookalike-nouns (confusable_clusters.yaml):
+    кори́ця (this note, cluster hub) means cinnamon, a spice -- unrelated in meaning to крини́ця
+    (ua-lexeme-1577, a water well); confusable only by their similar consonant shape and shared
+    "-иця" ending.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: кориця
-  UA_Example: Я люблю кориця.
+  UA_Example: Я люблю кори́цю.
   EN_Example: I love cinnamon.
   Tags_Ch: ch:1.6.2
   Source_URL: https://goroh.pp.ua/Словозміна/кориця
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-09-01:
+    Fixed ungrammatical UA_Example (nominative "кориця" -> accusative "кори́цю", matching
+    "люблю" + direct object). Added to new cinnamon-well-lookalike-nouns confusable cluster
+    as hub (legacy Anki cloze-mining pass, note 1687963476647).'
 ---
 

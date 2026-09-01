@@ -1433,7 +1433,10 @@ clusters:
       a plastic bag; па́чка (fem.) is a compact bundle or carton -- e.g. a pack of
       cigarettes, a carton of milk or butter. Different container shapes, not
       interchangeable. Craig-requested 2026-08-28 while both were being drafted in
-      ch.3.1 (quantities/containers).
+      ch.3.1 (quantities/containers). 2026-09-01: both compare_scenario prompts
+      reworded -- the originals both closed with "which word for ''pack'' fits?",
+      a literal answer-key giveaway (Craig-flagged), same issue as the EN_Example
+      fields on both member notes.
 
       '
     canonical_note: ua-lexeme-1161
@@ -1443,17 +1446,18 @@ clusters:
       status: sourced
       chapter: '2.3.1'
       comment: A wrapped/bagged single unit -- a packet, or colloquially a plastic bag
-      compare_scenario: You're at the store and need something to carry loose
-        groceries home in, or you're asking for a packet of sugar -- which word
-        for "pack" fits?
+      compare_scenario: You need something to carry loose groceries home in, or a
+        shopkeeper hands you sugar sealed up as a single bagged unit -- which of
+        these two container words is the right one?
     - note_id: ua-lexeme-1162
       lemma: па́чка
       status: sourced
       chapter: '2.3.1'
       comment: A compact bundle or carton -- e.g. a pack of cigarettes, a carton of
         milk or butter
-      compare_scenario: You're buying a carton of butter or a pack of cigarettes at
-        the store -- which word for "pack" fits?
+      compare_scenario: You pick a small rectangular box of cigarettes, or a carton
+        of butter, off the shelf -- which of these two container words is the right
+        one?
   law-right-vs-statute:
     description: 'Convergent near-synonym PAIR both glossable as "law" in English:
       пра́во (neut.) is law in the abstract/systemic sense -- the legal system,
@@ -2013,3 +2017,229 @@ clusters:
         its near-rhyming spelling. Masculine, singularia tantum, irregular genitive горо́ху.
       compare_scenario: You're shelling small round green legumes out of their pods to cook
         for dinner -- which word names that vegetable?
+  cinnamon-well-lookalike-nouns:
+    description: |
+      Two-way near-rhyme pair flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1687963476647 pairs the two directly). кори́ця (cinnamon, a spice)
+      and крини́ця (a water well) are unrelated in meaning and unrelated in root -- the
+      confusion is purely visual/phonetic, from their shared "-иця" ending and similar
+      consonant shape (к-р.../кр...). Same pattern as near-rhyme-lookalike-nouns: nothing to
+      guess about meaning, just training the eye to read the middle of the word correctly.
+    canonical_note: ua-lexeme-3149
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3149
+      lemma: кори́ця
+      status: sourced
+      chapter: '1.6.2'
+      comment: Cinnamon -- a spice, unrelated in meaning to криниця (a well); confusable only
+        by their similar consonant shape and shared "-иця" ending.
+      compare_scenario: You sprinkle a warm brown spice over your morning oatmeal or into mulled
+        wine -- which word names that spice?
+    - note_id: ua-lexeme-1577
+      lemma: крини́ця
+      status: sourced
+      chapter: '2.5.3'
+      comment: A (water) well, unrelated in meaning to кориця (cinnamon); confusable only by
+        their similar consonant shape and shared "-иця" ending.
+      compare_scenario: In an old village yard, there's a stone-lined hole where people lower
+        a bucket to draw water -- which word names that well?
+  soul-shower-lookalike-nouns:
+    description: |
+      Two-way near-homograph pair flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1687965633546 pairs the two directly). This one is about as visually
+      close as a confusable pair gets: душ (shower) is literally душа́ (soul) minus its final
+      -а. The two meanings couldn't be less related -- one is a fixture you stand under, the
+      other is the innermost, non-physical part of a person -- but on the page they're nearly
+      the same word.
+    canonical_note: ua-lexeme-3191
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3191
+      lemma: душа́
+      status: sourced
+      chapter: '1.6.4'
+      comment: Soul -- unrelated in meaning to душ (a shower); душ is literally душа minus its
+        final -а, a pure orthographic near-homograph.
+      compare_scenario: A priest or a poet talks about the innermost, non-physical part of a
+        person that's said to live on after death -- which word names that?
+    - note_id: ua-lexeme-3190
+      lemma: душ
+      status: sourced
+      chapter: '1.6.4'
+      comment: Shower -- unrelated in meaning to душа (soul); душ is literally душа minus its
+        final -а, a pure orthographic near-homograph. Masculine, irregular genitive -у.
+      compare_scenario: You step under running water each morning to wash up and wake yourself
+        up -- which word names that fixture?
+  star-register-synonyms:
+    description: |
+      Two-way cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass (Craig's
+      legacy note 1721824259093 pairs the two directly) -- and unlike most pairs in this batch,
+      зоря́ and зі́рка aren't just visually similar, they're genuine synonyms too, both meaning
+      "star." Горох/СУМ draw a real register distinction: зі́рка is the everyday, standard word
+      for a celestial star (and for a celebrity, a ★-rating, etc.); зоря́ is markedly more
+      literary and poetic, drawn from classical Ukrainian literature (Марко Вовчок, Леся
+      Українка), and carries two senses зірка doesn't have at all -- the dawn/dusk glow on the
+      horizon before sunrise or after sunset, and an old-fashioned poetic endearment for a
+      young woman. So this cluster does double duty: same shared root making them easy to
+      mix up on the page, AND a real register choice to make once you know which one you mean.
+    canonical_note: ua-lexeme-3876
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3876
+      lemma: зоря́
+      status: sourced
+      chapter: '1.12.6'
+      comment: Star, in a literary/poetic register (also the dawn/dusk glow on the horizon,
+        and an old-fashioned endearment for a young woman) -- зірка is the everyday equivalent.
+      compare_scenario: A 19th-century Ukrainian poem describes the sky's edge glowing before
+        sunrise, or tenderly addresses a beloved young woman with this word -- which term fits
+        that literary register?
+    - note_id: ua-lexeme-3162
+      lemma: зі́рка
+      status: sourced
+      chapter: '1.6.3'
+      comment: Star -- the everyday, standard word for a celestial star (also used for
+        celebrities, ratings, etc.); зоря is its more literary/poetic counterpart.
+      compare_scenario: A child points up at the night sky and asks what those countless
+        twinkling points of light are called, using the plain everyday word -- which one is it?
+  bucket-cart-wreath-lookalike-nouns:
+    description: |
+      Three-way near-rhyme cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1706233514906 groups all three). відро́ (a bucket), візо́к (a cart,
+      trolley, or wheelchair), and віно́к (a wreath) are three completely unrelated concrete
+      nouns that happen to share a short, similar shape -- a ві-/ви- onset and a similarly
+      weighted second syllable. Same pattern as near-rhyme-lookalike-nouns: no meaning overlap
+      to worry about, just training the eye to read past the shared opening letters.
+    canonical_note: ua-lexeme-1727
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-1727
+      lemma: відро́
+      status: sourced
+      chapter: '2.6.3'
+      comment: Bucket, pail -- unrelated in meaning to візок (cart/wheelchair) or вінок
+        (wreath); the three are confusable only by their shared onset and shape.
+      compare_scenario: You fill a metal container with water from the well to carry it back
+        to the house -- which word names that container?
+    - note_id: ua-lexeme-2029
+      lemma: візо́к
+      status: sourced
+      chapter: '2.7.5'
+      comment: Cart, trolley, wheelchair -- unrelated in meaning to відро (bucket) or вінок
+        (wreath); confusable only by shared onset and shape.
+      compare_scenario: A person who can't walk gets around using a wheeled seat they push
+        themselves or that someone else pushes -- which word names that?
+    - note_id: ua-lexeme-3495
+      lemma: віно́к
+      status: sourced
+      chapter: '1.8.5'
+      comment: Wreath -- unrelated in meaning to відро (bucket) or візок (cart); confusable
+        only by shared onset and shape.
+      compare_scenario: For a summer festival, a young woman weaves flowers into a circular
+        headpiece to wear -- which word names that?
+  recognize-find-out-near-homograph:
+    description: |
+      Two-way cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass -- Craig's
+      legacy note 1722893194501 originally grouped three words here (упізнавати/пізнавати/
+      дізнаватися); only two make it into this cluster. дізнава́тися already existed in the
+      corpus. впізнава́ти did not, so it's newly sourced here from yabluko-l2-vocabulary.pdf
+      ch.1.2 (textbook's spelling; Горох's own canonical entry is filed under the variant
+      упізнавати, a normal у~в orthographic alternation). пізнава́ти ("to get to know," the
+      base, un-prefixed form) is left out -- it doesn't appear in any yabluko-l2-vocabulary.pdf
+      chapter wordlist, only in the verb-dictionary appendix, so there's no textbook chapter to
+      anchor it to; flagging that gap rather than inventing a placement.
+
+      The two that made it in share the -знава́ти theme (drops -ва- in the non-past,
+      дава́ти-family pattern) and look alike on the page, but mean different things:
+      впізнава́ти is to recognize something or someone you already know (a face, a voice);
+      дізнава́тися is to find out or learn something new. Different prefix (впі- vs ді-),
+      different reflexivity (дізнаватися takes -ся, впізнавати doesn't).
+    canonical_note: ua-lexeme-3906
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3906
+      lemma: впізнава́ти
+      status: sourced
+      chapter: '2.1.2'
+      comment: To recognize -- identifying someone or something already known, typically by
+        sight or sound. Distinct from дізнаватися (to find out new information) despite the
+        shared -знавати shape.
+      compare_scenario: You spot a face in a crowd after years apart and immediately know
+        exactly who it is -- which word means to identify someone you already know?
+    - note_id: ua-lexeme-1921
+      lemma: дізнава́тися
+      status: sourced
+      chapter: '2.7.2'
+      comment: To find out, learn brand-new information -- distinct from впізнавати (to
+        recognize something already known) despite the shared -знавати shape.
+      compare_scenario: You check the news app to see what happened overnight, learning
+        something you didn't know before -- which word means to find that out?
+  believe-trust-verify-family:
+    description: |
+      Three-way root family flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1736541471605 groups all three). ві́рити, довіря́ти, and
+      перевіря́ти all share the -вір-/-віря- root (faith/truth), but move through three
+      distinct meanings as the prefix builds up: ві́рити is the broadest -- general belief or
+      faith, in a person (dative) or in something abstract (в + accusative), e.g. believing in
+      God or believing a friend's story. довіря́ти narrows that to trust specifically --
+      relying on someone with something at stake, always dative. перевіря́ти is almost the
+      opposite mindset -- to check or verify, confirming rather than simply having faith. The
+      three are confusable by shared root and family resemblance, even though the actions they
+      describe range from "just believe" to "go double-check."
+    canonical_note: ua-lexeme-0665
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0665
+      lemma: ві́рити
+      status: sourced
+      chapter: '2.10.2'
+      comment: To believe or have faith -- the broadest of the three (вірити в Бога, вірити
+        людині); governs dative for a person or в + accusative for a thing.
+      compare_scenario: A child insists Santa Claus is real, with no need for proof -- which
+        word describes that simple, unquestioning faith?
+    - note_id: ua-lexeme-0668
+      lemma: довіря́ти
+      status: sourced
+      chapter: '2.10.2'
+      comment: To trust -- relying on someone specifically, often with something at stake;
+        narrower than вірити, always governs dative.
+      compare_scenario: You hand a friend your house keys while you're away, confident they
+        won't misuse them -- which word means to trust someone with something like that?
+    - note_id: ua-lexeme-2301
+      lemma: перевіря́ти
+      status: sourced
+      chapter: '1.11.1'
+      comment: To check or verify -- inspecting something to confirm it's correct, almost the
+        opposite mindset from simply believing; shares the root but means confirming, not
+        having faith.
+      compare_scenario: A teacher goes through a stack of homework line by line, marking
+        mistakes -- which word describes what she's doing?
+  lose-spend-near-homograph:
+    description: |
+      Two-way near-homograph pair flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1710586455905 pairs the two directly). втрача́ти (to lose) and
+      витрача́ти (to spend) differ by a single letter -- в- vs ви- -- but mean genuinely
+      different things: втрачати is usually unintentional loss (втрачати надію, втрачати
+      друга, втрачати роботу -- losing hope, a friend, a job), while витрачати is deliberate
+      expenditure (витрачати гроші, витрачати час -- spending money, time). A classic
+      prefix-swap trap: one letter changes "lose" into "spend."
+    canonical_note: ua-lexeme-1505
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-1505
+      lemma: втрача́ти
+      status: sourced
+      chapter: '2.4.5'
+      comment: To lose -- usually unintentionally (втрачати надію, втрачати друга, втрачати
+        роботу); differs from витрачати by a single letter, not by root meaning.
+      compare_scenario: After the accident, doctors said he might never fully recover the use
+        of his leg -- which word means to lose something like that, against your will?
+    - note_id: ua-lexeme-1262
+      lemma: витрача́ти
+      status: sourced
+      chapter: '2.3.4'
+      comment: To spend -- money, time, or effort, deliberately (витрачати гроші, витрачати
+        час); differs from втрачати by a single letter, not by root meaning.
+      compare_scenario: You budget carefully each month so you don't run out of money before
+        payday -- which word means to spend it?

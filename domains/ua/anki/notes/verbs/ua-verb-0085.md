@@ -13,7 +13,7 @@ tags:
 - release:active
 fields:
   NoteID: ua-verb-0085
-  Lemma: пахну́ти
+  Lemma: па́хнути
   Aspect: imperfective
   VerbClass: irregular
   FreqSource: ch:2.8
@@ -36,8 +36,13 @@ fields:
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: па́хнувши
   Source_Note: ''
-  Verification Notes: Non-reflexive. Stress-based aspect pair with perfective пахну́ти ('to
-    waft suddenly'), not drafted here. No 1pl imperative form surfaced on Горох. See lexeme
-    ua-lexeme-0552.
+  Verification Notes: 'Non-reflexive. Stress-based aspect pair with perfective пахну́ти (''to
+    waft suddenly''), not drafted here. No 1pl imperative form surfaced on Горох. See lexeme
+    ua-lexeme-0552. 2026-09-01: Fixed Lemma stress (was mistakenly written пахну́ти, the
+    perfective''s stress, even though Aspect/every conjugated form here (all first-syllable
+    stress: па́хну, па́хнеш...) are imperfective -- corrected to па́хнути (Craig-flagged).
+    The true perfective пахну́ти still has no conjugation table of its own; as a semelfactive
+    (-нути ''sudden single action'') it would only take past-tense + infinitive forms if
+    drafted, per the same single-spelling-covers-both-aspects pattern as викликати.'
 ---
 

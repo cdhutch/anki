@@ -39,10 +39,13 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: пачка
   UA_Example: Купи пачку масла.
-  EN_Example: Buy a pack of butter.
+  EN_Example: Buy a carton of butter.
   Tags_Ch: ch:2.3.1, ch:1.5.6
   Source_URL: https://goroh.pp.ua/Словозміна/пачка
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
-  Verification Notes: New. Fem., 1st decl., hard group.
+  Verification Notes: 'New. Fem., 1st decl., hard group. 2026-09-01: EN_Example reworded ("pack"
+    -> "carton") -- the old wording used the same English word as the ConfusableSet/ compare_scenario
+    answer key for this pair, a giveaway (Craig-flagged). Cluster container-nouns-packet-vs-pack''s
+    compare_scenario fields fixed the same way.'
 ---
 

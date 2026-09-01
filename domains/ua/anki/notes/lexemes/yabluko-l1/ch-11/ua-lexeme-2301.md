@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster believe-trust-verify-family (confusable_clusters.yaml):
+    перевіря́ти (this note) means to check or verify -- inspecting something to confirm it''s
+    correct, almost the opposite mindset from simply believing. Shares the -вір-/-віря- root
+    with ві́рити (ua-lexeme-0665, cluster hub, general belief/faith) and довіря́ти (ua-lexeme-0668,
+    trust), but means confirming rather than having faith.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: перевіряти / перевірити
@@ -40,7 +44,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/перевіряти
   Source_Note: yabluko-l1-vocabulary.pdf ch.11.1, drafted from the textbook's own inline conjugation-class
     annotation (conj1-vowel+й / conj2-ity); yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined
-    note; aspect pair drawn from yabluko-l1-vocabulary.pdf ch.11.1.
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). Single combined
+    note; aspect pair drawn from yabluko-l1-vocabulary.pdf ch.11.1. 2026-09-01: Added to new
+    believe-trust-verify-family confusable cluster (legacy Anki cloze-mining pass, note 1736541471605).'
 ---
 
