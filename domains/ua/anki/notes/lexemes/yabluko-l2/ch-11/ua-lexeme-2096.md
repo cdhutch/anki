@@ -31,7 +31,12 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster guard-store-gather-synonyms (confusable_clusters.yaml):
+    берегти́ (this note, cluster hub) means to guard/protect or use sparingly -- vigilance
+    against loss, harm, or waste (берегти здоровʼя, берегти таємницю). Shares its perfective
+    зберегти́ with зберіга́ти (ua-lexeme-3106) below -- two different imperfectives converging
+    on one perfective partner. Unrelated in meaning to збира́ти/збира́тися (ua-lexeme-1216/ua-lexeme-2039);
+    included here only because зберіга́ти''s spelling bridges visually to збира́ти.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: берегти / зберегти
@@ -47,6 +52,8 @@ fields:
     ua-verb-0554. Perfective зберегти confirmed via yabluko-l2-verb-dictionary.pdf (line 22:
     ''берегти (береже) зберегти Зн.'') and Горох. Merged duplicate standalone perfective note
     ua-lexeme-2096 (aspect-pairing dual-convention cleanup, 2026-08-29). That sub-chapter''s
-    example: ''Нам вдалося зберегти цей ліс.'' = ''We managed to preserve this forest.''.'
+    example: ''Нам вдалося зберегти цей ліс.'' = ''We managed to preserve this forest.''.
+    2026-09-01: Added to new guard-store-gather-synonyms confusable cluster as hub (legacy
+    Anki cloze-mining pass, note 1733166065265, Craig''s own "Mistaken words" tag).'
 ---
 

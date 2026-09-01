@@ -33,7 +33,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: зібра́тися (ua-lexeme-2040, perfective)
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster guard-store-gather-synonyms (confusable_clusters.yaml):
+    збира́тися (this note) is the reflexive of збира́ти (ua-lexeme-1216) above -- either people
+    gathering themselves together (Друзі збираються на вечірку) or, idiomatically, ''to be
+    about to / intend to'' do something (Я збираюся в кіно). An object is gathered BY you
+    (збирати); people gather THEMSELVES (збиратися). Hub: берегти́ (ua-lexeme-2096).'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: збиратися
@@ -43,7 +47,9 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/збиратися
   Source_Note: Горох-verified 2026-08-28, ch.7.6 sourcing pass (virtual reality; coordinate/gather/decline
     verb pairs; invitation discourse formulas).
-  Verification Notes: New. Imperfective, "to gather (intransitive); to be about to". Textbook
-    aspect pair збиратися-зібратися, this sub-chapter.
+  Verification Notes: 'New. Imperfective, "to gather (intransitive); to be about to". Textbook
+    aspect pair збиратися-зібратися, this sub-chapter. 2026-09-01: Added to new guard-store-gather-synonyms
+    confusable cluster (legacy Anki cloze-mining pass, note 1733166065265, Craig''s own "Mistaken
+    words" tag).'
 ---
 

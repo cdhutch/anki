@@ -1912,3 +1912,71 @@ clusters:
         only by its near-rhyming spelling
       compare_scenario: Someone asks what kind of dog that is -- Labrador? Husky? -- which
         word means "breed"?
+  guard-store-gather-synonyms:
+    description: |
+      Four-way cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass -- Craig's
+      own legacy note (Anki note 1733166065265) is literally tagged "Mistaken words," the same
+      gold-standard signal that produced near-rhyme-lookalike-nouns earlier this cycle. Unlike
+      that cluster, though, these four words aren't unrelated near-rhymes -- they split into two
+      genuinely related pairs that also happen to look confusable with each other.
+
+      Pair one: берегти́ (to guard/protect, use sparingly) and зберіга́ти (to store/preserve) are
+      two different imperfective verbs that share the exact same perfective partner, зберегти́ --
+      a genuine grammatical overlap, not just a spelling coincidence (confirmed via Горох:
+      goroh.pp.ua/тлумачення/берегти and goroh.pp.ua/тлумачення/зберігати). берегти́ is about
+      vigilance -- protecting something from loss, harm, or waste (берегти здоров'я, берегти
+      таємницю, "guard like the apple of your eye"). зберіга́ти is about preservation over time
+      or in a place -- keeping something intact, stored, or in a maintained state (зберігати
+      продукти в холодильнику, зберігати спокій, зберігати дані). Both converge on зберегти́ as
+      their perfective, which is exactly the kind of trap this cluster exists to defuse.
+
+      Pair two: збира́ти (to gather/collect a physical object, transitive) and its reflexive
+      збира́тися (people gathering themselves, or idiomatically "to be about to / intend to" do
+      something) differ only by the reflexive -ся -- an object is collected BY you, but people
+      gather THEMSELVES, and you gather yourself to go do something.
+
+      The bridge between the two pairs is visual: зберіга́ти and збира́ти are near-identical on
+      the page (зб-еріга-ти vs зб-ира-ти, a single reduplicated syllable apart), which is almost
+      certainly why Craig's own legacy deck grouped all four together as "mistaken words" even
+      though they actually split into two unrelated semantic pairs. Hub is берегти́, the
+      shortest and most basic of the four; зберіга́ти, збира́ти, and збира́тися are satellites.
+    canonical_note: ua-lexeme-2096
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-2096
+      lemma: берегти́
+      status: sourced
+      chapter: '2.11.1'
+      comment: To guard/protect or use sparingly -- vigilance against loss, harm, or waste.
+        Shares its perfective зберегти́ with зберігати below; distinguished by protective
+        vigilance vs. storage/preservation.
+      compare_scenario: You're warning a child not to run too close to the cliff edge, and
+        reminding your sister to be extra careful with grandma's ring so it doesn't get lost
+        or damaged -- which word means to guard/watch over something protectively?
+    - note_id: ua-lexeme-3106
+      lemma: зберіга́ти
+      status: sourced
+      chapter: '1.5.7'
+      comment: To store or preserve -- keeping something intact in a place or state over time.
+        Shares its perfective зберегти́ with берегти above (same perfective, two imperfectives);
+        visually close to збирати below but semantically unrelated.
+      compare_scenario: You're putting last night's leftovers in the fridge so they don't spoil
+        before next week -- which word means to store something and keep it preserved over time?
+    - note_id: ua-lexeme-1216
+      lemma: збира́ти
+      status: sourced
+      chapter: '2.3.3'
+      comment: To gather/collect a physical object or group, transitive. Visually close to
+        зберігати above (a single syllable apart) but semantically unrelated -- collecting
+        things, not preserving them.
+      compare_scenario: You're out in the forest with a basket, picking wild mushrooms one by
+        one -- which word means to gather/collect them?
+    - note_id: ua-lexeme-2039
+      lemma: збира́тися
+      status: sourced
+      chapter: '2.7.6'
+      comment: Reflexive of збирати above -- people gathering themselves, or idiomatically "to
+        be about to / intend to" do something. An object is gathered BY you; people gather
+        THEMSELVES.
+      compare_scenario: Your friends are all showing up at your place Friday evening for a
+        party -- which word describes people arriving and assembling together?
