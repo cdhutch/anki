@@ -577,13 +577,28 @@ clusters:
       compare_scenario: You come home, reach into your pocket for the key, and open
         your front door.
   amazing-impressive-synonyms:
-    description: 'Convergent near-synonym pair (not homographs), both translatable as
+    description: 'Convergent near-synonym TRIPLET (not homographs), all translatable as
 
       "amazing"/"impressive" in English: вражаючий emphasizes the effect of impressing
 
       through scale, quality, or skill, while дивовижний emphasizes wonder or surprise.
 
+      Extended 2026-09-01 with неймовірно (Anki cloze-mining report / Craig-flagged
+
+      2026-09-01) -- sourced from the same ch.8.7 wordlist line-up as вражаючий/
+
+      дивовижний/потужний. неймовірний (the adjective) does not itself appear as a
+
+      headword in either yabluko vocabulary list, so the sourced member is the adverb
+
+      неймовірно ("incredibly, unbelievably"), which adds the extreme "hard to believe"
+
+      register distinct from дивовижний''s wonder/surprise and вражаючий''s impressive
+
+      scale/skill.
+
       '
+    show_all_members: true
     canonical_note: ua-lexeme-0571
     members:
     - note_id: ua-lexeme-0571
@@ -600,6 +615,15 @@ clusters:
       comment: Amazing, astonishing -- emphasizes wonder or surprise
       compare_scenario: A street magician's trick leaves the crowd gasping in disbelief,
         unable to figure out how it was possible.
+    - note_id: ua-lexeme-3907
+      lemma: неймові́рно
+      status: sourced
+      chapter: '2.8.7'
+      comment: Incredibly, unbelievably -- the extreme "hard to believe" register,
+        often used as an intensifier or standalone exclamation
+      compare_scenario: A friend tells you a story so wild you can barely believe
+        it actually happened -- what word for "amazing" carries that specific
+        "hard to believe" flavor?
   knife-than-homograph:
     description: 'Pure polysemy homograph (no stress shift) on ніж: knife (noun)
 
@@ -2334,3 +2358,32 @@ clusters:
         час); differs from втрачати by a single letter, not by root meaning.
       compare_scenario: You budget carefully each month so you don't run out of money before
         payday -- which word means to spend it?
+  road-dear-near-homograph:
+    description: |
+      Near-homograph pair (not a true same-lemma split) flagged 2026-09-01 from the Anki
+      cloze-mining report. доро́га ("road," a noun, stress on the middle syllable) collides in
+      spelling with дорога́ (dear/affectionate), which is not itself a separate word but the
+      feminine agreement form of дороги́й. дороги́й is already split into two existing notes by
+      sense -- ua-lexeme-0437 ("expensive") and ua-lexeme-0580 ("dear/affectionate") -- both
+      cited in the corpus's masculine citation form per convention. The "dear" sense (0580)
+      surfaces as дорога́ whenever it agrees with a feminine noun (its own example sentence
+      already reads "Моя дорога́ мамо!"), producing the spelling collision with доро́га --
+      distinguished only by stress placement, not spelling.
+    canonical_note: ua-lexeme-3908
+    members:
+    - note_id: ua-lexeme-3908
+      lemma: доро́га
+      status: sourced
+      chapter: '1.2.2'
+      comment: Road -- the everyday noun, stress on the middle syllable (доро́га)
+      compare_scenario: You're driving between two towns, following the paved route that
+        connects them -- what's the plain word for that physical path itself?
+    - note_id: ua-lexeme-0580
+      lemma: дороги́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Dear, affectionate -- surfaces as "дорога́" when agreeing with a feminine noun,
+        colliding in spelling (not stress) with доро́га "road"
+      compare_scenario: You're writing a heartfelt note to your grandmother, addressing her
+        warmly right at the start -- "My ___ grandmother!" What word conveys that fondness,
+        not a paved route?

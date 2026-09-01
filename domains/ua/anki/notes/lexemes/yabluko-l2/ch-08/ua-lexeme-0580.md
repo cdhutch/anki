@@ -30,7 +30,12 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-homograph cluster road-dear-near-homograph (confusable_clusters.yaml):
+    дороги́й, "dear/affectionate" (this note, cluster hub), surfaces as дорога́ when agreeing
+    with a feminine noun (see this note''s own example, "Моя дорога́ мамо!"). That inflected
+    spelling collides with доро́га (ua-lexeme-3908), the everyday noun "road" -- distinguished
+    only by where the stress falls, not by spelling. Also distinct from ua-lexeme-0437, the
+    other дорогий sense ("expensive").'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: дорогий
