@@ -16,7 +16,7 @@ tags:
 - release:pending
 fields:
   NoteID: ua-lexeme-1160
-  Lemma: лі́тр
+  Lemma: літр
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

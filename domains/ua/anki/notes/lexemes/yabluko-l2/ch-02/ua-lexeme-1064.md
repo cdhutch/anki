@@ -17,7 +17,7 @@ tags:
 - release:pending
 fields:
   NoteID: ua-lexeme-1064
-  Lemma: сті́л
+  Lemma: стіл
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

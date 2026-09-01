@@ -430,7 +430,7 @@ clusters:
       example_ua: Він одягнув чорний метелик до смокінга.
       meaning_en: 'Bow-tie (menswear accessory); informal: flyer, leaflet'
   crayfish-cancer-homograph:
-    description: 'Pure polysemy homograph (no stress shift) on ра́к: the crustacean
+    description: 'Pure polysemy homograph (no stress shift) on рак: the crustacean
 
       (crayfish, animate) and the disease (cancer, inanimate). Distinguished
 
@@ -442,7 +442,7 @@ clusters:
     canonical_note: ua-lexeme-0542
     members:
     - note_id: ua-lexeme-0542
-      lemma: ра́к
+      lemma: рак
       status: sourced
       chapter: 2.8
       comment: Crayfish (animal, animate)
@@ -450,7 +450,7 @@ clusters:
       example_ua: На ринку продавали свіжих раків.
       meaning_en: Crayfish (animal, animate)
     - note_id: ua-lexeme-0588
-      lemma: ра́к
+      lemma: рак
       status: sourced
       chapter: reference
       comment: Cancer (disease, inanimate)
@@ -1514,3 +1514,86 @@ clusters:
         than важкий
       compare_scenario: A family just got news of a loved one's grave illness,
         or a devastating loss -- which word for "heavy" carries that gravity?
+  thick-fat-synonyms:
+    description: 'Three-way near-synonym family for "thick/fat/dense" in Ukrainian, flagged
+
+      2026-09-01 when Craig noticed lexeme 0439 (товстий) had no confusable cluster despite
+
+      two overlap candidates already sourced in the corpus (по́вний, густи́й). товсти́й is the
+
+      broadest, plainest default -- it directly describes a person''s or animal''s weight in
+
+      a blunt/informal register, and separately doubles as the general word for an object''s
+
+      physical thickness (a thick book, a thick blanket, a thick wall) with no connection to
+
+      weight at all. по́вний is reserved for describing a person''s build: СУМ defines its
+
+      body sense as "в міру товстий, округло-пухлий" (moderately heavyset, roundly plump) --
+
+      structurally a softened degree of товстий, functioning as the more diplomatic word for
+
+      a person''s weight (English "heavyset" vs. "fat"); по́вний never describes an inanimate
+
+      object''s physical thickness. густи́й sits on a wholly separate axis -- density or
+
+      concentration of a substance or mass noun (soup, fog, hair, forest, smoke, a crowd, a
+
+      deep voice) -- and per СУМ/Горох is not used of a person''s own body weight or build,
+
+      so it does not actually compete with товстий/повний in real usage; it is included here
+
+      because Craig flagged it as visually/thematically confusable with "thick," and the
+
+      cluster makes that domain separation explicit rather than leaving students to guess.
+
+      гладки́й (ua-lexeme-0589, "fat, well-fed, plump") was deliberately left OUT of this
+
+      cluster''s membership even though it is a near-synonym of повний in the body-weight
+
+      sense. ClusterRegistry.note_to_cluster is a single-valued note_id -> cluster_name map,
+
+      so a note can anchor only one Compare card of its own; 0589 already anchors the
+
+      smooth-plump-homograph stress-shift pair with ua-lexeme-0555 (гла́дкий, "smooth, even"),
+
+      the higher-value pedagogical test (identical spelling once stress is stripped), and
+
+      adding 0589 here would silently reassign its own card away from that test. Craig
+
+      confirmed 2026-09-01: keep 0589 out of this cluster''s literal membership; genuine
+
+      multi-cluster support is separate future architecture work (see confusable_clusters.py
+
+      note_to_cluster).
+
+      '
+    canonical_note: ua-lexeme-0439
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0439
+      lemma: товсти́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Fat or thick, the broadest/plainest default -- describes a person's or animal's
+        weight bluntly, and separately describes an object's physical thickness (unrelated
+        to weight)
+      compare_scenario: You're flipping through a paperback that must be eight hundred pages
+        -- doorstop-thick and heavy in your bag. Which word for "thick" fits an object like
+        that?
+    - note_id: ua-lexeme-1455
+      lemma: по́вний
+      status: sourced
+      chapter: '2.4.4'
+      comment: Plump, heavyset -- the softer, more diplomatic word for a person's build (a
+        moderate degree of товстий); never describes an object's physical thickness
+      compare_scenario: You're introducing a friendly, heavyset relative at a family gathering
+        -- the word should sound warm and neutral, not blunt.
+    - note_id: ua-lexeme-3056
+      lemma: густи́й
+      status: sourced
+      chapter: '1.5.5'
+      comment: Thick or dense, describing a substance or mass noun -- soup, fog, hair, forest
+        -- never a person's own body weight or build
+      compare_scenario: You're standing in fog so thick you can't see three steps ahead --
+        which word for "thick/dense" fits that kind of atmospheric density?

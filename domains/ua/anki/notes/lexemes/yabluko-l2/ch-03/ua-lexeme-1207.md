@@ -15,7 +15,7 @@ tags:
 - release:pending
 fields:
   NoteID: ua-lexeme-1207
-  Lemma: стре́с
+  Lemma: стрес
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m

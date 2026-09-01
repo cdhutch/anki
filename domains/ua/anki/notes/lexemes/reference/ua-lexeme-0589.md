@@ -32,7 +32,10 @@ fields:
   ConfusableSet: 'Homograph cluster smooth-plump-homograph (confusable_clusters.yaml): гладки́й,
     fat/well-fed/plump (this note) vs. гла́дкий, smooth/even (ua-lexeme-0555). Pure stress-shift
     homograph -- same spelling once stress is stripped, distinguished only by stress placement
-    (root vs. suffix) and by context.'
+    (root vs. suffix) and by context. Also a near-synonym of по́вний (ua-lexeme-1455) and
+    товстий (ua-lexeme-0439) in the body-weight sense (see the thick-fat-synonyms cluster)
+    but deliberately NOT added as a member there -- a note can anchor only one Compare card
+    via note_to_cluster, and this note''s own card stays anchored to the homograph pair above.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: гладкий
