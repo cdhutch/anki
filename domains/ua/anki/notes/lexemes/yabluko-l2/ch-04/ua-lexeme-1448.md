@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster look-appearance-synonyms (confusable_clusters.yaml):
+    вигляд (this note) is how someone or something appears TO an observer -- its outward presentation
+    -- the reverse direction from погляд (ua-lexeme-0471, cluster hub), the act of looking
+    itself. Also clustered with доглядати (ua-lexeme-1756), an unrelated-root false cognate
+    for English ''look after.'''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: вигляд
@@ -40,6 +44,9 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/вигляд
   Source_Note: Горох-verified 2026-08-28, ch.4.4 sourcing pass (sports/competition; appearance
     description; feeding/hosting verbs).
-  Verification Notes: New. Masc., 2nd decl., hard group. Stress ви́гляд (1st syllable), fixed.
+  Verification Notes: 'New. Masc., 2nd decl., hard group. Stress ви́гляд (1st syllable), fixed.
+    2026-09-01: clustered as look-appearance-synonyms in confusable_clusters.yaml alongside
+    погляд (ua-lexeme-0471, cluster hub) and доглядати (ua-lexeme-1756); resolves pending-confusable:вигляд
+    on ua-lexeme-0471.'
 ---
 

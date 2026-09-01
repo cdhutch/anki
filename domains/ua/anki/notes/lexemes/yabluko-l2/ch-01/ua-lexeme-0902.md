@@ -31,7 +31,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster sensation-feeling-synonyms (confusable_clusters.yaml):
+    почуття (this note) is specifically emotional/affective -- love, joy, a sense of humor
+    -- not a bodily sensation, unlike відчуття (ua-lexeme-0534, cluster hub), the broader
+    term covering physical sense-perception as well.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: почуття
@@ -41,9 +44,11 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/почуття
   Source_Note: Горох-verified 2026-08-28, ch.1.5 sourcing pass (Christmas customs/traditions;
     celebration verbs).
-  Verification Notes: New. Neut., 2nd decl., soft group. "почуття гумору" ("sense of humor")
+  Verification Notes: 'New. Neut., 2nd decl., soft group. "почуття гумору" ("sense of humor")
     used as the example sentence rather than a bundled phrase note -- гумор (ua-lexeme-0903)
     is also freshly drafted in this same ch:1.5 pass, not a pre-existing gap -- same precedent
-    as залишатися вдома (ch.1.3, ua-lexeme-0880).
+    as залишатися вдома (ch.1.3, ua-lexeme-0880). 2026-09-01: clustered as sensation-feeling-synonyms
+    in confusable_clusters.yaml alongside відчуття (ua-lexeme-0534, cluster hub); resolves
+    pending-confusable:почуття on ua-lexeme-0534.'
 ---
 

@@ -30,7 +30,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Confusable cluster near-rhyme-lookalike-nouns (confusable_clusters.yaml):
+    порода (this note, "breed, of an animal") shares no meaning with its near-rhyming cluster-mates
+    пригода (ua-lexeme-0272, cluster hub, "adventure"), погода (ua-lexeme-0857, "weather"),
+    and природа (ua-lexeme-2792, "nature") -- grouped purely by spelling shape, not sense.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: порода
@@ -39,6 +42,9 @@ fields:
   Tags_Ch: ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/порода
   Source_Note: yabluko-l1-vocabulary.pdf ch.10, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-09-01:
+    clustered as near-rhyme-lookalike-nouns in confusable_clusters.yaml alongside пригода
+    (ua-lexeme-0272, cluster hub), погода (ua-lexeme-0857), and природа (ua-lexeme-2792);
+    resolves pending-confusable:порода on ua-lexeme-0272.'
 ---
 

@@ -17,8 +17,6 @@ tags:
 - pos:numeral
 - status:verified
 - release:active
-- pending-confusable:скільки
-- pending-confusable:декілька
 fields:
   NoteID: ua-lexeme-0477
   Lemma: кі́лька
@@ -35,7 +33,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster quantity-synonyms (confusable_clusters.yaml): кілька
+    (this note, cluster hub) is a true synonym of декілька (ua-lexeme-1175) -- both mean ''several,
+    a few,'' with no difference in meaning, register, or formality; кілька is simply the shorter,
+    more commonly recommended form. Contrast скільки (ua-lexeme-1171), the interrogative ''how
+    much/how many,'' which turns a sentence into a question rather than stating a quantity.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: кілька
@@ -49,6 +51,8 @@ fields:
     its own note yet. Craig confirmed: all three (кілька, скільки, декілька) go together in
     one cluster, similar either in meaning or in UA spelling -- not split into separate clusters.
     Tagged pending-confusable:скільки and pending-confusable:декілька; see CLAUDE.md Vocabulary
-    dedup & homograph handling, bucket 5.'
+    dedup & homograph handling, bucket 5. 2026-09-01: both sourced (скільки as ua-lexeme-1171,
+    декілька as ua-lexeme-1175); clustered as quantity-synonyms in confusable_clusters.yaml,
+    canonical on this note. pending-confusable tags removed.'
 ---
 

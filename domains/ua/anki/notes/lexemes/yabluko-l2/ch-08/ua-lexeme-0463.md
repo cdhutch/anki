@@ -17,7 +17,6 @@ tags:
 - gender:m
 - status:verified
 - release:active
-- pending-confusable:затор
 fields:
   NoteID: ua-lexeme-0463
   Lemma: рух
@@ -34,7 +33,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster movement-jam-synonyms (confusable_clusters.yaml): рух
+    (this note, cluster hub) is the general, uncountable word for movement or traffic flow.
+    Contrast затор (ua-lexeme-3555), a specific, countable obstruction of that flow -- Горох
+    defines затор literally as ''an obstacle to рух.'''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: рух
@@ -49,6 +51,7 @@ fields:
     2026-07-30 Craig: will join a confusable set with затор once sourced -- затор doesn''t
     have its own note yet (only substring hits inside ''організатори'' on unrelated ch-09
     notes). Tagged pending-confusable:затор; see CLAUDE.md Vocabulary dedup & homograph handling,
-    bucket 5.'
+    bucket 5. 2026-09-01: затор sourced as ua-lexeme-3555; clustered as movement-jam-synonyms
+    in confusable_clusters.yaml, canonical on this note. pending-confusable tag removed.'
 ---
 

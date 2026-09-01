@@ -1597,3 +1597,318 @@ clusters:
         -- never a person's own body weight or build
       compare_scenario: You're standing in fog so thick you can't see three steps ahead --
         which word for "thick/dense" fits that kind of atmospheric density?
+  of-course-usually-synonyms:
+    description: 'Three adverbs easily tangled together, flagged 2026-07-30 when Craig noted
+
+      звісно would eventually cluster with both зазвичай and звичайно ("similar either in
+
+      meaning or in UA spelling"). звісно is a pure certainty/confirmation discourse particle
+
+      -- "of course" -- always set off by commas as a parenthetical aside, and never means
+
+      "usually." звичайно is the historically dual word: Горох''s own usage note
+
+      (слововживання) documents two senses -- the parenthetical "of course" (comma-set-off,
+
+      synonym of звісно) and the older adverbial "as usual/customary" (no comma). Modern
+
+      Ukrainian style guidance (onlinecorrector.com.ua / slovopedia.org.ua) explicitly
+
+      recommends replacing звичайно with зазвичай whenever the intended meaning is "usually"
+
+      -- зазвичай is described as "стилістично кращим" (stylistically better) and is a
+
+      classical word now being revived specifically to resolve this ambiguity. зазвичай
+
+      itself has only the one sense -- "usually," habitual frequency -- with no
+
+      comma-dependent double meaning at all. Net effect for a learner: зазвичай is the
+
+      clean, modern, unambiguous choice for frequency; звичайно is a live fossil that can
+
+      still mean either thing depending on punctuation and register; звісно never means
+
+      frequency at all.
+
+      '
+    canonical_note: ua-lexeme-0453
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0453
+      lemma: зві́сно
+      status: sourced
+      chapter: '2.8.2'
+      comment: Of course/naturally -- a pure certainty-confirmation discourse particle, always
+        comma-set-off as a parenthetical; never means "usually"
+      compare_scenario: A friend asks if you'll help them move this weekend -- you want to
+        say "of course" with warm certainty. No comma-dependent double meaning to worry about.
+    - note_id: ua-lexeme-2745
+      lemma: звича́йно
+      status: sourced
+      chapter: '1.2.4'
+      comment: Historically dual -- "of course" (comma-set-off parenthetical) or the older
+        "as usual" (no comma); modern style guides recommend зазвичай instead for the frequency
+        sense
+      compare_scenario: This is the one word here that can mean either "of course" (set off
+        by a comma, an aside) or "as usual" (no comma, a habit), depending purely on punctuation
+        -- read it both ways.
+    - note_id: ua-lexeme-0952
+      lemma: зазвича́й
+      status: sourced
+      chapter: '2.1.7'
+      comment: Usually, habitually -- the modern, stylistically preferred word for frequency,
+        with no comma-dependent double meaning (style guides now recommend it over звичайно
+        for this sense)
+      compare_scenario: You want to state a genuine habit -- "I usually get up at seven" --
+        with zero ambiguity about whether you mean "of course" instead. This is the clean
+        modern choice for that.
+  movement-jam-synonyms:
+    description: 'Pair flagged 2026-07-30 when рух was noted to eventually cluster with
+
+      затор, which didn''t have its own note yet. рух is the general, uncountable word for
+
+      movement or traffic flow -- the overall state of things moving (or not) in an area.
+
+      затор is a specific, countable obstruction of that flow: Горох''s own definition of
+
+      затор is literally "скупчення ... що створює перешкоду рухові" (an accumulation that
+
+      creates an obstacle to рух) -- затор is definitionally a blockage IN рух, not a
+
+      synonym for it. A learner should think of it as "traffic" vs. "a traffic jam" in
+
+      English: рух describes the ongoing condition, затор names the one specific pile-up
+
+      stopping it.
+
+      '
+    canonical_note: ua-lexeme-0463
+    members:
+    - note_id: ua-lexeme-0463
+      lemma: рух
+      status: sourced
+      chapter: '2.8.3'
+      comment: Movement or traffic flow in general -- the overall, ongoing condition, not
+        any one holdup
+      compare_scenario: You're describing how busy the streets are in general at rush hour
+        -- the overall flow, not any single stoppage.
+    - note_id: ua-lexeme-3555
+      lemma: зато́р
+      status: sourced
+      chapter: '1.9.4'
+      comment: A traffic jam -- a specific, countable obstruction of рух; Горох defines it
+        literally as "an obstacle to рух"
+      compare_scenario: You've been stuck in the same spot for twenty minutes because of a
+        pile-up two blocks ahead -- one specific blockage, not traffic in general.
+  look-appearance-synonyms:
+    description: 'Three-way cluster flagged 2026-07-30 around the English word "look," which
+
+      Ukrainian splits three ways with no shared root. погляд is the act of looking itself
+
+      -- a glance or gaze that a person directs outward (Горох: the visual attention itself).
+
+      вигляд is the reverse direction -- how someone or something appears TO an observer,
+
+      its outward presentation (Горох: "the collection of external features ... that creates
+
+      a corresponding impression"). доглядати is a false-cognate trap for English speakers:
+
+      "to look after" someone means to care for and tend to them, with no connection to
+
+      vision at all -- Craig specifically corrected the target spelling from an earlier
+
+      доглянати guess to доглядати (imperfective; perfective доглянути). All three notes''
+
+      existing example sentences already demonstrated their distinct senses cleanly, so none
+
+      needed rewriting.
+
+      '
+    canonical_note: ua-lexeme-0471
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0471
+      lemma: по́гляд
+      status: sourced
+      chapter: '2.8.3'
+      comment: A look, glance, or gaze -- the act of looking itself, directed outward by the
+        subject
+      compare_scenario: She glances across the room and catches his eye for a second -- which
+        word names that glance itself, the thing her eyes just did?
+    - note_id: ua-lexeme-1448
+      lemma: ви́гляд
+      status: sourced
+      chapter: '2.4.4'
+      comment: Appearance -- how someone or something looks TO an observer, its outward presentation;
+        the reverse direction from погляд
+      compare_scenario: He hasn't slept in two days and it shows on his face -- which word
+        describes how he appears to everyone else?
+    - note_id: ua-lexeme-1756
+      lemma: догляда́ти
+      status: sourced
+      chapter: '2.6.3'
+      comment: To look after, care for, tend to -- the "look" in English "look after" has
+        nothing to do with vision; unrelated in root to погляд/вигляд
+      compare_scenario: Someone has to feed the cat, water the plants, and check on Grandma
+        while you're away -- which word for "look" actually means caring for them, nothing
+        to do with eyes?
+  quantity-synonyms:
+    description: 'Three-way cluster flagged 2026-07-30 -- Craig confirmed all three belong
+
+      in one cluster together rather than split up. скільки is categorically different from
+
+      the other two: it''s the interrogative/relative "how much, how many," turning a
+
+      sentence into a question, never a plain statement of quantity. кілька and декілька
+
+      are, by contrast, genuine full synonyms -- both mean "several, a few" (roughly 3-10),
+
+      and Ukrainian-language sources (Olha Bagniy, Oleksandr Ponomariv, via
+
+      obozrevatel.com) confirm there is no difference in meaning, register, formality, or
+
+      region between them. The only real guidance is stylistic convenience: кілька is
+
+      shorter and more commonly recommended (it also forms compounds like кількаденний,
+
+      "several days long"), while декілька is the longer but equally correct alternative.
+
+      This cluster is unlike most others in the registry -- two of its three members
+
+      genuinely mean the same thing, so the lesson for кілька/декілька is "these are
+
+      interchangeable, pick either," not "pick the one that fits."
+
+      '
+    canonical_note: ua-lexeme-0477
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0477
+      lemma: кі́лька
+      status: sourced
+      chapter: '2.8.3'
+      comment: Several, a few -- a true synonym of декілька; the shorter, more commonly recommended
+        form
+      compare_scenario: You want to say you bought "a few" apples, plainly -- the shorter,
+        more commonly recommended form of the two synonyms here.
+    - note_id: ua-lexeme-1171
+      lemma: скі́льки
+      status: sourced
+      chapter: '2.3.1'
+      comment: How much, how many -- interrogative/relative, turns the sentence into a question;
+        categorically different from кілька/декілька, which are statements
+      compare_scenario: You're at the market and need to ask the price before you buy -- which
+        word turns this into a question, "how much/how many"?
+    - note_id: ua-lexeme-1175
+      lemma: де́кілька
+      status: sourced
+      chapter: '2.3.2'
+      comment: Several, a few -- a true synonym of кілька, meaning exactly the same thing;
+        just the longer of the two equally correct forms
+      compare_scenario: You want to say the same thing as кілька -- "a few" apples -- but
+        you've reached for the longer form. декілька means exactly the same thing, just longer.
+  sensation-feeling-synonyms:
+    description: 'Pair flagged 2026-07-30 -- відчуття anchored a pending-confusable watch
+
+      for почуття, which didn''t have its own note yet. Горох''s own dictionary entry draws
+
+      the line clearly: відчуття covers "сприймання органами чуття" (perception through the
+
+      sense organs) -- a physical, bodily sensation -- and, secondarily, a resulting
+
+      psychological state; почуття is specifically "стан людини, який викликається
+
+      почуттєвим досвідом" (a human state caused by emotional experience) -- the
+
+      emotional/affective register. Горох even lists почуття as a near-synonym of відчуття,
+
+      so the two genuinely overlap at the edges, but відчуття is the broader,
+
+      physically-grounded term (pain, hunger, cold, a tingle) while почуття stays in the
+
+      emotional lane (love, joy, a sense of humor). відчуття''s own example sentence was too
+
+      abstract to show that physical grounding, so it was rewritten to something unmistakably
+
+      bodily.
+
+      '
+    canonical_note: ua-lexeme-0534
+    members:
+    - note_id: ua-lexeme-0534
+      lemma: відчуття́
+      status: sourced
+      chapter: '2.8.6'
+      comment: Sensation -- a physical, bodily sense-perception (pain, hunger, cold, touch);
+        broader than почуття, which stays in the emotional register
+      compare_scenario: Your foot fell asleep and now there's a strange tingling, prickling
+        feeling running through it -- purely physical, nothing emotional about it.
+    - note_id: ua-lexeme-0902
+      lemma: почуття́
+      status: sourced
+      chapter: '2.1.5'
+      comment: Feeling -- specifically emotional/affective (love, joy, a sense of humor),
+        not a bodily sensation
+      compare_scenario: You catch yourself smiling for no reason, thinking about someone you
+        love -- which word for "feeling" names that emotional state?
+  near-rhyme-lookalike-nouns:
+    description: 'Four-way cluster flagged 2026-07-30 -- Craig''s own framing: "near-rhyming,
+
+      easily mixed-up nouns." Unlike every other cluster in this registry, these four words
+
+      don''t share meaning, register, or root -- пригода (adventure), погода (weather),
+
+      природа (nature), and порода (breed, of an animal) are four completely unrelated
+
+      concepts that happen to share the same CV-CV-da rhyme shape (при-го-да / по-го-да /
+
+      при-ро-да / по-ро-да), differing only in their first syllable''s consonant and vowel.
+
+      The confusion here is purely visual/phonetic pattern-matching, not semantic overlap
+
+      -- so unlike a near-synonym cluster, there''s no risk of picking a word that''s
+
+      "almost right in meaning," only of misreading or mis-typing one similar-shaped word
+
+      for another. The four compare_scenario prompts below are correspondingly easy to tell
+
+      apart by meaning alone; the actual pedagogical value is training the eye to slow down
+
+      and read the middle syllable correctly.
+
+      '
+    canonical_note: ua-lexeme-0272
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0272
+      lemma: приго́да
+      status: sourced
+      chapter: '2.9.5'
+      comment: Adventure -- an event or exploit, unrelated in meaning to its three near-rhyming
+        lookalikes below (confusable only by spelling shape)
+      compare_scenario: You just got back from an unplanned, story-worthy trip into the mountains
+        -- which of these near-rhyming words names the adventure itself?
+    - note_id: ua-lexeme-0857
+      lemma: пого́да
+      status: sourced
+      chapter: '2.1.3'
+      comment: Weather -- unrelated in meaning to пригода/природа/порода; confusable only
+        by its near-rhyming spelling
+      compare_scenario: You check your phone before leaving the house to see if you'll need
+        an umbrella -- which word means the weather?
+    - note_id: ua-lexeme-2792
+      lemma: приро́да
+      status: sourced
+      chapter: '1.2.7'
+      comment: Nature, the natural world -- unrelated in meaning to пригода/погода/порода;
+        confusable only by its near-rhyming spelling
+      compare_scenario: You're standing in a national park, surrounded by forest and mountains
+        untouched by the city -- which word means nature itself?
+    - note_id: ua-lexeme-3728
+      lemma: поро́да
+      status: sourced
+      chapter: '1.10.5'
+      comment: Breed (of an animal) -- unrelated in meaning to пригода/погода/природа; confusable
+        only by its near-rhyming spelling
+      compare_scenario: Someone asks what kind of dog that is -- Labrador? Husky? -- which
+        word means "breed"?

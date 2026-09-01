@@ -13,8 +13,6 @@ tags:
 - pos:adverb
 - status:verified
 - release:active
-- pending-confusable:зазвичай
-- pending-confusable:звичайно
 fields:
   NoteID: ua-lexeme-0453
   Lemma: зві́сно
@@ -31,7 +29,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster of-course-usually-synonyms (confusable_clusters.yaml):
+    звісно (this note, cluster hub) is a pure certainty-confirmation discourse particle --
+    ''of course'' -- always comma-set-off, never meaning ''usually.'' Contrast звичайно (ua-lexeme-2745),
+    which can mean either ''of course'' or the older ''as usual'' depending on punctuation,
+    and зазвичай (ua-lexeme-0952), the modern, unambiguous word for ''usually.'''
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: звісно
@@ -48,6 +50,8 @@ fields:
     (see CLAUDE.md Vocabulary dedup & homograph handling, bucket 5); `make ua-check` will
     surface the match once зазвичай is sourced. 2026-07-30 Craig: incorporate both -- зазвичай
     and звичайно are similar either in meaning or in UA spelling, so both should join this
-    cluster once sourced. Tagged pending-confusable:звичайно as well.'
+    cluster once sourced. Tagged pending-confusable:звичайно as well. 2026-09-01: both sourced
+    (зазвичай as ua-lexeme-0952, звичайно as ua-lexeme-2745); clustered as of-course-usually-synonyms
+    in confusable_clusters.yaml, canonical on this note. pending-confusable tags removed.'
 ---
 

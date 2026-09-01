@@ -30,7 +30,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster quantity-synonyms (confusable_clusters.yaml): декілька
+    (this note) is a true synonym of кілька (ua-lexeme-0477, cluster hub) -- both mean ''several,
+    a few,'' with no difference in meaning; декілька is simply the longer of the two equally
+    correct forms.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: декілька
@@ -44,6 +47,9 @@ fields:
     скільки/багато, no separate invariable прислівник реадинг is listed. Still drafted as
     PartOfSpeech=adverb for schema/pedagogical consistency with the other quantity words in
     this sub-chapter (the invariable декілька form is overwhelmingly the everyday usage in
-    practice), with the declined numeral forms noted here as the formal/literary alternate.'
+    practice), with the declined numeral forms noted here as the formal/literary alternate.
+    2026-09-01: clustered as quantity-synonyms in confusable_clusters.yaml alongside кілька
+    (ua-lexeme-0477, cluster hub) and скільки (ua-lexeme-1171); resolves pending-confusable:декілька
+    on ua-lexeme-0477.'
 ---
 
