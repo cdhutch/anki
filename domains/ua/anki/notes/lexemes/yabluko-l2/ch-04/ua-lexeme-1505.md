@@ -31,7 +31,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: втра́тити (ua-lexeme-2289, perfective)
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-homograph cluster lose-spend-near-homograph (confusable_clusters.yaml):
+    втрача́ти (this note, cluster hub) means to lose -- usually unintentionally (втрачати
+    надію, втрачати друга, втрачати роботу); differs from витрача́ти (ua-lexeme-1262) by a
+    single letter (в- vs ви-), not by root meaning.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: втрачати
@@ -41,7 +44,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/втрачати
   Source_Note: Горох-verified 2026-08-28, ch.4.5 sourcing pass (upbringing/community/generations;
     character traits).
-  Verification Notes: New. Imperfective. Textbook wordlist targets не втрачати гумору (this
-    sub-chapter, ua-lexeme-1485).
+  Verification Notes: 'New. Imperfective. Textbook wordlist targets не втрачати гумору (this
+    sub-chapter, ua-lexeme-1485). 2026-09-01: Added to new lose-spend-near-homograph confusable
+    cluster as hub (legacy Anki cloze-mining pass, note 1710586455905).'
 ---
 

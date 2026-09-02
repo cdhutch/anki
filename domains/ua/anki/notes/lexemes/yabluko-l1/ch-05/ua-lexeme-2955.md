@@ -30,7 +30,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster walnut-pea-lookalike-nouns (confusable_clusters.yaml):
+    горіх (this note, cluster hub) means walnut, a tree nut -- unrelated in meaning to горо́х
+    (ua-lexeme-3905, peas); the two are confusable only by their near-rhyming spelling (differ
+    by one vowel, і vs о: горіх vs горо́х), not by meaning.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: горіх
@@ -39,6 +42,8 @@ fields:
   Tags_Ch: ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/горіх
   Source_Note: yabluko-l1-vocabulary.pdf ch.5, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-09-01:
+    Added to new walnut-pea-lookalike-nouns confusable cluster as hub (legacy Anki cloze-mining
+    pass, note 1685716391681).'
 ---
 

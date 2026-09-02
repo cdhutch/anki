@@ -13,7 +13,7 @@ Registry is loaded from domains/ua/anki/confusable_clusters.yaml
 from dataclasses import dataclass
 from enum import Enum
 from pathlib import Path
-from typing import Dict, List, Optional, Tuple
+from typing import Dict, List, Optional, Set, Tuple
 import yaml
 
 
@@ -120,6 +120,7 @@ class ClusterRegistry:
         self.registry_path = Path(registry_path) if registry_path else self._default_path()
         self.clusters: Dict[str, ConfusableCluster] = {}
         self.note_to_cluster: Dict[str, str] = {}  # Reverse index: ua-lexeme-0467 → "intensifier-adverbs"
+        self._release_active_ids: Optional[Set[str]] = None  # lazy cache, see get_release_active_note_ids()
         self._load()
 
     def _default_path(self) -> Path:
@@ -257,7 +258,72 @@ class ClusterRegistry:
         cluster = self.get_cluster_by_note_id(note_id)
         return cluster and not cluster.is_hub(note_id)
 
-    def get_compare_card_members(self, note_id: str) -> List[ClusterMember]:
+    def get_release_active_note_ids(
+        self, note_roots: Optional[List[Path]] = None
+    ) -> Set[str]:
+        """Return every note_id that is status:verified AND release:active.
+
+        Scans CNSF note files directly (not the registry -- the registry
+        only knows a member is "sourced", i.e. has a note_id; it has no
+        idea whether that note's own tags currently make it live in Anki).
+        Used to filter Compare card membership down to cluster-mates that
+        are actually reachable elsewhere in the deck, so a verified/active
+        hub's Compare card doesn't reference a still-draft sibling the
+        learner has never seen unsuspended.
+
+        Result is cached on first call (registry content doesn't change
+        within a process; call reload() to invalidate along with the rest
+        of the registry's cached state).
+
+        Args:
+            note_roots: Directories to scan for *.md CNSF notes. Defaults to
+                the standard UA lexeme/verb note directories under repo root.
+
+        Returns:
+            Set of note_ids whose tags include both status:verified and
+            release:active.
+        """
+        if self._release_active_ids is not None:
+            return self._release_active_ids
+
+        if note_roots is None:
+            repo_root = Path(__file__).resolve().parents[3]
+            note_roots = [
+                repo_root / "domains" / "ua" / "anki" / "notes" / "lexemes",
+                repo_root / "domains" / "ua" / "anki" / "notes" / "verbs",
+            ]
+
+        ids: Set[str] = set()
+        for root in note_roots:
+            if not root.exists():
+                continue
+            for md_file in root.rglob("*.md"):
+                try:
+                    text = md_file.read_text(encoding="utf-8")
+                except OSError:
+                    continue
+                if not text.startswith("---"):
+                    continue
+                parts = text.split("---", 2)
+                if len(parts) < 3:
+                    continue
+                try:
+                    front = yaml.safe_load(parts[1])
+                except yaml.YAMLError:
+                    continue
+                if not front:
+                    continue
+                note_id = front.get("note_id")
+                tags = front.get("tags") or []
+                if note_id and "status:verified" in tags and "release:active" in tags:
+                    ids.add(note_id)
+
+        self._release_active_ids = ids
+        return ids
+
+    def get_compare_card_members(
+        self, note_id: str, release_active_ids: Optional[Set[str]] = None
+    ) -> List[ClusterMember]:
         """Return the member list for Compare card generation on this note.
 
         Hub notes show all active (sourced) members as chips.
@@ -268,6 +334,13 @@ class ClusterRegistry:
 
         Args:
             note_id: Note ID to generate Compare card for
+            release_active_ids: When given, the returned members are
+                additionally filtered down to those whose note_id is in
+                this set -- i.e. cluster-mates that are themselves
+                status:verified/release:active, and thus actually reachable
+                elsewhere in Anki. When None (default), behavior is
+                unchanged from before this filter existed: every sourced
+                cluster-mate is included regardless of its own status.
 
         Returns:
             List of ClusterMember objects to appear as chips on the Compare card.
@@ -279,16 +352,21 @@ class ClusterRegistry:
         if cluster.show_all_members or cluster.is_hub(note_id):
             # show_all_members clusters: every member shows the full list.
             # Otherwise, hub shows all active members.
-            return cluster.get_active_members()
+            members = cluster.get_active_members()
         else:
             # Satellite shows hub + self
             hub_member = cluster.get_hub_member()
             self_member = next((m for m in cluster.members if m.note_id == note_id), None)
 
             if hub_member and self_member:
-                return [hub_member, self_member]
+                members = [hub_member, self_member]
             else:
-                return []
+                members = []
+
+        if release_active_ids is not None:
+            members = [m for m in members if m.note_id in release_active_ids]
+
+        return members
 
     def validate(self) -> Tuple[List[str], List[str], List[str]]:
         """Validate cluster integrity.
@@ -430,6 +508,7 @@ class ClusterRegistry:
         """Reload registry from disk (useful for testing or manual refresh)."""
         self.clusters.clear()
         self.note_to_cluster.clear()
+        self._release_active_ids = None
         self._load()
 
     def list_clusters(self) -> List[str]:

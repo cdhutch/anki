@@ -40,10 +40,13 @@ fields:
   CrossLang_Analog: ''
   TypingAnswer: пакет
   UA_Example: Дай мені пакет цукру.
-  EN_Example: Give me a packet of sugar.
+  EN_Example: Please hand me the sealed bag of sugar.
   Tags_Ch: ch:2.3.1, ch:1.5.6, ch:1.9.7
   Source_URL: https://goroh.pp.ua/Словозміна/пакет
   Source_Note: Горох-verified 2026-08-28, ch.3.1 sourcing pass (quantities/containers).
-  Verification Notes: New. Masc., 2nd decl., hard group.
+  Verification Notes: 'New. Masc., 2nd decl., hard group. 2026-09-01: EN_Example reworded
+    ("packet" -> "sealed bag") -- the old wording used the same English word as the ConfusableSet/compare_scenario
+    answer key for this pair, a giveaway (Craig-flagged). Cluster container-nouns-packet-vs-pack''s
+    compare_scenario fields fixed the same way.'
 ---
 

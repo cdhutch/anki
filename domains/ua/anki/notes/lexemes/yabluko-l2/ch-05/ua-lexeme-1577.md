@@ -30,7 +30,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-rhyme cluster cinnamon-well-lookalike-nouns (confusable_clusters.yaml):
+    крини́ця (this note) means a water well -- unrelated in meaning to кори́ця (ua-lexeme-3149,
+    cluster hub, cinnamon); confusable only by their similar consonant shape and shared "-иця"
+    ending.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: криниця
@@ -40,6 +43,8 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/криниця
   Source_Note: Горох-verified 2026-08-28, ch.5.3 sourcing pass (public buildings/monuments;
     architectural detail nouns; sightseeing adjectives).
-  Verification Notes: New. Fem., 1st decl., soft group. Stress крини́ця (2nd syllable).
+  Verification Notes: 'New. Fem., 1st decl., soft group. Stress крини́ця (2nd syllable). 2026-09-01:
+    Added to new cinnamon-well-lookalike-nouns confusable cluster (legacy Anki cloze-mining
+    pass, note 1687963476647).'
 ---
 

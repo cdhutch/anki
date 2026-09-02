@@ -31,7 +31,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-rhyme cluster bucket-cart-wreath-lookalike-nouns (confusable_clusters.yaml):
+    візо́к (this note) means cart/trolley/wheelchair -- unrelated in meaning to відро́ (ua-lexeme-1727,
+    cluster hub, bucket) or віно́к (ua-lexeme-3495, wreath); confusable only by shared onset
+    and shape.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: візок
@@ -43,6 +46,8 @@ fields:
     -- a compact, noun-only sub-chapter: left-column stream of the two-independent-columns
     PDF layout (page 213-214), no verb pairs, adjectives, or discourse phrases appear before
     the page breaks into 7.6.'
-  Verification Notes: New. Masc., inanimate, 2nd decl., hard group (gen. візка, fleeting -о-).
+  Verification Notes: 'New. Masc., inanimate, 2nd decl., hard group (gen. візка, fleeting
+    -о-). 2026-09-01: Added to new bucket-cart-wreath-lookalike-nouns confusable cluster (legacy
+    Anki cloze-mining pass, note 1706233514906).'
 ---
 

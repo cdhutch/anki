@@ -31,7 +31,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster believe-trust-verify-family (confusable_clusters.yaml):
+    довіря́ти (this note) means to trust -- relying on someone specifically, often with something
+    at stake; narrower than ві́рити (ua-lexeme-0665, cluster hub, general belief/faith), always
+    governs dative. Distinct from перевіря́ти (ua-lexeme-2301, to check/verify), though all
+    three share the -вір-/-віря- root.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: довіряти / довірити
@@ -48,6 +52,7 @@ fields:
     Full conjugation on the paired ua-verb-0096 note. Merged duplicate standalone perfective
     note ua-lexeme-0668 (aspect-pairing dual-convention cleanup, 2026-08-29). Also bulleted
     in ch:2.3.7. That sub-chapter''s example: ''Вона довірила подрузі свою таємницю.'' = ''She
-    confided her secret to her friend.''.'
+    confided her secret to her friend.''. 2026-09-01: Added to new believe-trust-verify-family
+    confusable cluster (legacy Anki cloze-mining pass, note 1736541471605).'
 ---
 

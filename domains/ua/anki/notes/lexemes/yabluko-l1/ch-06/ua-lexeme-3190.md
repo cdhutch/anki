@@ -32,7 +32,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-homograph cluster soul-shower-lookalike-nouns (confusable_clusters.yaml):
+    душ (this note) means shower -- unrelated in meaning to душа́ (ua-lexeme-3191, cluster
+    hub, soul); душ is literally душа minus its final -а, a pure orthographic near-homograph.
+    Masculine, irregular genitive -у.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: душ
@@ -41,6 +44,8 @@ fields:
   Tags_Ch: ch:1.6.4, ch:1.7.1, ch:1.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/душ
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-09-01:
+    Added to new soul-shower-lookalike-nouns confusable cluster (legacy Anki cloze-mining
+    pass, note 1687965633546).'
 ---
 

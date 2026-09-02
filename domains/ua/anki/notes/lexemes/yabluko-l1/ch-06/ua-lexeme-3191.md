@@ -30,7 +30,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-homograph cluster soul-shower-lookalike-nouns (confusable_clusters.yaml):
+    душа́ (this note, cluster hub) means soul -- unrelated in meaning to душ (ua-lexeme-3190,
+    a shower); душ is literally душа minus its final -а, a pure orthographic near-homograph.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: душа
@@ -39,6 +41,8 @@ fields:
   Tags_Ch: ch:1.6.4
   Source_URL: https://goroh.pp.ua/Словозміна/душа
   Source_Note: yabluko-l1-vocabulary.pdf ch.6, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-09-01:
+    Added to new soul-shower-lookalike-nouns confusable cluster as hub (legacy Anki cloze-mining
+    pass, note 1687965633546).'
 ---
 

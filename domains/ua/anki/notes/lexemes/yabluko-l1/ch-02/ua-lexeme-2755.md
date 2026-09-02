@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster intensifier-adverbs (confusable_clusters.yaml): дуже
+    (this note) means "very" -- the plain, general-purpose intensifier, with no comparison
+    (unlike значно/набагато, ua-lexeme-0467 cluster hub / 0468) and no implication of excess
+    or deficiency (unlike занадто/забагато/замало, ua-lexeme-0417/0615/1231). Just plain high
+    degree.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: дуже

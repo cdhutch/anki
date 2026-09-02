@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster star-register-synonyms (confusable_clusters.yaml):
+    зоря́ (this note, cluster hub) means star in a literary/poetic register (also the dawn/dusk
+    glow on the horizon, and an old-fashioned endearment for a young woman) -- зі́рка (ua-lexeme-3162)
+    is the everyday equivalent. Горох/СУМ confirm this is a genuine register distinction,
+    not just a spelling coincidence.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: зоря
@@ -39,6 +43,8 @@ fields:
   Tags_Ch: ch:1.12.6
   Source_URL: https://goroh.pp.ua/Словозміна/зоря
   Source_Note: yabluko-l1-vocabulary.pdf ch.12, yabluko-l1 vocabulary expansion pass, 2026-08-29.
-  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+  Verification Notes: 'New (yabluko-l1 vocabulary expansion pass, 2026-08-29). 2026-09-01:
+    Added to new star-register-synonyms confusable cluster as hub (legacy Anki cloze-mining
+    pass, note 1721824259093).'
 ---
 

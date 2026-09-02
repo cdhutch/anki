@@ -31,7 +31,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-rhyme cluster bucket-cart-wreath-lookalike-nouns (confusable_clusters.yaml):
+    відро́ (this note, cluster hub) means bucket/pail -- unrelated in meaning to візо́к (ua-lexeme-2029,
+    cart/wheelchair) or віно́к (ua-lexeme-3495, wreath); the three are confusable only by
+    their shared onset and shape, not by meaning.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: відро
@@ -41,6 +44,7 @@ fields:
   Source_URL: https://goroh.pp.ua/Словозміна/відро
   Source_Note: Горох-verified 2026-08-28, ch.6.3 sourcing pass (crime/prison; getting lost;
     solitude; imperfective-perfective verb pairs; duration/manner adverbs).
-  Verification Notes: New. Neut., 2nd decl., hard group.
+  Verification Notes: 'New. Neut., 2nd decl., hard group. 2026-09-01: Added to new bucket-cart-wreath-lookalike-nouns
+    confusable cluster as hub (legacy Anki cloze-mining pass, note 1706233514906).'
 ---
 
