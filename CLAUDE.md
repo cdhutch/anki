@@ -1477,6 +1477,33 @@ this doc. Roughly in priority order:
     manual dragging in the Anki GUI will be reverted by the next setup run. That's the
     intended behaviour, not a regression.
 
+21. **Suspend `UA_Verb` Production cards with no content, per form category** — **New,
+    flagged 2026-09-02 by Craig, not started, no design yet.** Example given: a verb
+    with no imperative forms (some verbs are defective and genuinely lack an
+    imperative) shouldn't leave a blank "Production (Imperative)" card in rotation.
+    `VERB_CARD_TEMPLATES` in `setup_ua_note_types.py` defines four Production cards --
+    Present, Past, Imperative, Participles -- one per conjugation category. The only
+    existing content-awareness on this axis is `suspend_participles_card()` in
+    `ua_verb_import.py`, which unconditionally suspends card index 3 (Participles)
+    whenever the note itself isn't otherwise suspended -- a blanket default, not a
+    check of whether `Participle_*` fields are actually populated. This item asks for
+    the general case: for each of the four Production cards, suspend that specific
+    card if its own category's fields (e.g. `Imperative_2sg`/`Imperative_2pl`/
+    `Imperative_1pl` for the Imperative card) are all empty on a given verb, while
+    leaving the other Production cards on that same note unaffected. Same shape as the
+    empty-ConfusableSet-suspends-the-Compare-card policy for `UA_Lexeme` (see module
+    docstring in `ua_lexeme_import.py`) and the 2026-09-01 release-active Compare-card
+    filtering fix (item -- see "Filter Compare card membership by release-active
+    status" commit) -- both examples of a card being suspended because it has nothing
+    real to show, rather than suspended/unsuspended purely by the note's own
+    status/release tags. Not started; no design yet on whether "empty" should be a
+    literal blank-string check per field, or something that accounts for genuinely
+    inapplicable forms (e.g. impersonal verbs) vs. simply not-yet-authored ones -- that
+    distinction matters here in a way it didn't for ConfusableSet, since a not-yet-
+    authored imperative should probably behave differently (stay suspended pending
+    content) than a verb that grammatically has no imperative at all (suspended
+    permanently, not a gap to fill).
+
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
 the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph
