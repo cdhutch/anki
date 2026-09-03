@@ -32,7 +32,7 @@ fields:
   Past_1sg_n: стосува́лося
   Past_3pl: стосува́лися
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: стосу́ючись
+  Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: стосува́вшись

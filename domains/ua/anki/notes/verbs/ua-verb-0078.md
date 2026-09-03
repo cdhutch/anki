@@ -31,7 +31,7 @@ fields:
   Past_1sg_n: склада́лося
   Past_3pl: склада́лися
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: склада́ючись
+  Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: склада́вшись
