@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: sopilka (Ukrainian wooden folk flute)
+  EN_Gloss: Ukrainian wooden folk flute
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
