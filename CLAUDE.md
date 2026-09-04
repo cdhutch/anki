@@ -1477,32 +1477,100 @@ this doc. Roughly in priority order:
     manual dragging in the Anki GUI will be reverted by the next setup run. That's the
     intended behaviour, not a regression.
 
-21. **Suspend `UA_Verb` Production cards with no content, per form category** — **New,
-    flagged 2026-09-02 by Craig, not started, no design yet.** Example given: a verb
-    with no imperative forms (some verbs are defective and genuinely lack an
-    imperative) shouldn't leave a blank "Production (Imperative)" card in rotation.
-    `VERB_CARD_TEMPLATES` in `setup_ua_note_types.py` defines four Production cards --
-    Present, Past, Imperative, Participles -- one per conjugation category. The only
-    existing content-awareness on this axis is `suspend_participles_card()` in
-    `ua_verb_import.py`, which unconditionally suspends card index 3 (Participles)
-    whenever the note itself isn't otherwise suspended -- a blanket default, not a
-    check of whether `Participle_*` fields are actually populated. This item asks for
-    the general case: for each of the four Production cards, suspend that specific
-    card if its own category's fields (e.g. `Imperative_2sg`/`Imperative_2pl`/
-    `Imperative_1pl` for the Imperative card) are all empty on a given verb, while
-    leaving the other Production cards on that same note unaffected. Same shape as the
-    empty-ConfusableSet-suspends-the-Compare-card policy for `UA_Lexeme` (see module
-    docstring in `ua_lexeme_import.py`) and the 2026-09-01 release-active Compare-card
-    filtering fix (item -- see "Filter Compare card membership by release-active
-    status" commit) -- both examples of a card being suspended because it has nothing
-    real to show, rather than suspended/unsuspended purely by the note's own
-    status/release tags. Not started; no design yet on whether "empty" should be a
-    literal blank-string check per field, or something that accounts for genuinely
-    inapplicable forms (e.g. impersonal verbs) vs. simply not-yet-authored ones -- that
-    distinction matters here in a way it didn't for ConfusableSet, since a not-yet-
-    authored imperative should probably behave differently (stay suspended pending
-    content) than a verb that grammatically has no imperative at all (suspended
-    permanently, not a gap to fill).
+21. **Suspend `UA_Verb` Production cards with no content, per form category** —
+    **Done, 2026-09-03.** Flagged
+    2026-09-02; forced concrete the same day Craig hit it live -- стосуватися
+    (ua-verb-0076, a defective 3rd-person-only verb, "to concern") has no
+    `Imperative_*` forms at all, but its "Production (Imperative)" card was still
+    live, showing an unfillable blank ти/ми/ви prompt. Per Craig, resolved the
+    "empty vs. inapplicable" design question left open below by literal reading:
+    "zero actual forms" suspends the card, full stop -- no attempt to distinguish
+    a genuinely-inapplicable form (impersonal/defective verbs) from a
+    not-yet-authored one. `suspend_participles_card()` (blanket-suspended card
+    index 3 always, never a real content check) is replaced by
+    `sync_category_card_suspension()` in `ua_verb_import.py`, driven by a new
+    `CARD_FIELD_CATEGORIES` list mapping each of the four `VERB_CARD_TEMPLATES`
+    (Present/Past/Imperative/Participles, must stay index-aligned with that list
+    in `setup_ua_note_types.py`) to its own fields; a card suspends only when
+    every field in its category is blank, and -- new, the old code never did this
+    -- explicitly unsuspends a category's card once content shows up, so a verb
+    that gains its previously-missing imperative un-suspends that card on the
+    next sync rather than staying stuck. Deletion (Craig's other offered option)
+    isn't practical per-note: an AnkiConnect card belongs to its note type's
+    template, so removing a template drops that category for every verb in the
+    corpus, including ones that do have those forms -- suspension is the only
+    per-note mechanism. Pure logic (`category_is_empty()`) unit-tested in
+    `tests/ua/test_ua_verb_import.py` (`TestCategoryIsEmpty`, 6 new tests,
+    16/16 passing standalone). **Corpus-wide dry-run impact, checked before
+    handoff** (all 636 live `UA_Verb` notes): Present and Past are never fully
+    empty on any note (0 cards affected). Imperative is fully empty on 30 notes
+    (стосуватися among them, plus other defectives/modals -- могти́, бракува́ти,
+    вистача́ти, etc.) -- their Imperative card newly suspends. Participles is
+    fully empty on 535/636 notes (was already blanket-suspended by the old code,
+    so no change there) but genuinely populated on the other 101 -- those
+    previously always-suspended Participles cards now correctly unsuspend, a
+    real behavior change, not just a no-op refactor. **Run against live Anki
+    2026-09-03**: `make ua-verb` alone only picked up 7 changed notes
+    (incremental sync -- a code-only change to `ua_verb_import.py` doesn't mark
+    every note as changed the way editing `confusable_clusters.yaml` does for
+    `ua_lexeme`, since the `ua-verb` `sync_scope.py` target has no
+    `--trigger tools/anki/sync/ua_verb_import.py` of its own; possible small
+    follow-up to close that gap). `FULL=1 make ua-verb` resynced all 636 and
+    reported 636 updated, 0 errors. Craig spot-checked via a one-off
+    AnkiConnect `cardsInfo` query on the two predicted cases: ua-verb-0076
+    (стосуватися) came back Present/Past/Participles unsuspended, Imperative
+    suspended; ua-verb-0083 (вигляда́ти) came back Participles unsuspended
+    (flipped from always-suspended) -- both exactly as predicted. Added a
+    `changed` print inside `sync_category_card_suspension()` afterward (one
+    extra `cardsInfo` call per non-suspended note) so future syncs show
+    per-note suspend/unsuspend flips in the log directly, instead of needing
+    a manual AnkiConnect query to confirm. **Same-day policy correction:**
+    immediately after confirming the above, Craig clarified Participles
+    specifically should stay suspended regardless of content -- "I want the
+    participles to be suspended, since I haven't gotten to learning how to
+    form them yet." A curriculum-pacing call, not a data-quality one, so it
+    doesn't belong in `category_is_empty()`. Added a third element,
+    `force_suspend`, to each `CARD_FIELD_CATEGORIES` tuple (`False` for
+    Present/Past/Imperative, `True` for Participles); the actual per-card
+    decision moved into a new `category_should_suspend()` (force_suspend
+    wins outright, else falls back to the content check), unit-tested
+    separately from `category_is_empty()` (`TestCategoryShouldSuspend`, 3
+    tests, plus one more confirming only Participles carries the flag --
+    20/20 passing standalone). This deliberately reverts the just-applied
+    unsuspend on the 101 content-bearing Participles cards (ua-verb-0083
+    included) back to suspended on the next sync. Flip `force_suspend` to
+    `False` once participle drilling actually starts. `FULL=1 make ua-verb`
+    re-run afterward (636 updated, 0 errors) -- same incremental-sync gap as
+    above, so FULL=1 was needed again to actually reach the other 629 notes.
+    **Logging bug found in that run's output:** the `changed` print (added
+    just above) showed spurious flips -- e.g. `-> suspended` for Participles
+    on notes where nothing should have changed -- for roughly the first 87
+    notes synced, then went silent for the remaining ~549. Root cause: the
+    old two-step shape called `set_suspended()` first, which unconditionally
+    unsuspends *all* cards for a note before the per-category suspend calls
+    run, and only then did `sync_category_card_suspension()` read `cardsInfo`
+    to compute its "was this card previously suspended" baseline for the
+    print -- so that baseline was always post-reset (`False`), never the true
+    prior persisted state, making every empty/force-suspended category log a
+    false "-> suspended" on every single sync. The actual suspend/unsuspend
+    calls issued were always correct regardless (they never depended on
+    `was_suspended`, only the print did) -- confirmed by both of Craig's
+    AnkiConnect spot-checks matching predictions exactly. Fixed by
+    consolidating `set_suspended()` and `sync_category_card_suspension()`
+    into one `sync_card_suspension()` that reads `cardsInfo` exactly once,
+    before issuing any suspend/unsuspend calls, via a new pure helper
+    `compute_card_suspension_targets(fields, note_suspend)` (whole-note gate
+    wins outright when true, else the four per-category decisions in
+    `CARD_FIELD_CATEGORIES` order). `set_suspended()` removed from this file
+    (it's duplicated per-script in the other `*_import.py` modules too, so
+    this only touches `ua_verb_import.py`). New `TestComputeCardSuspensionTargets`
+    class (3 tests, modeled on стосуватися's real field values) -- 23/23
+    passing standalone. **Confirmed 2026-09-03**: pytest 23/23 passed on
+    Craig's machine, then `FULL=1 make ua-verb` re-run (636 updated, 0
+    errors) produced zero `changed` lines in the output -- exactly as
+    predicted, since the underlying suspend states were already correct
+    from the prior run and only the logging had been wrong. Item 21 fully
+    closed.
 
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),

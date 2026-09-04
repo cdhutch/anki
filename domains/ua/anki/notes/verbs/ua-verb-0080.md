@@ -25,7 +25,7 @@ fields:
   Pres_3pl: зваря́ться
   Imperative_2sg: звари́ся
   Imperative_1pl: зварі́мося
-  Imperative_2pl: зварі́тьсяы
+  Imperative_2pl: зварі́ться
   Past_1sg_m: звари́вся
   Past_1sg_f: звари́лася
   Past_1sg_n: звари́лося
