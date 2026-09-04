@@ -101,10 +101,15 @@ def _read_meta(path: Path) -> dict[str, Any] | None:
 # виписати -- VN's stale first sentence ("No imperfective counterpart... drafted
 #   this pass") is superseded by its own next sentence: the imperfective partner
 #   випи́сувати was added 2026-08-28 (aspect-pairing review). Genuinely paired now.
+# виглянути -- VN's tantum mention describes ua-lexeme-0550's stative sense of
+#   вигляда́ти (a different lemma/note), quoted while explaining which sense
+#   ви́глянути pairs with -- not a claim about ви́глянути itself, whose own
+#   imperfective partner (вигляда́ти / ua-verb-0083) is named in the same sentence.
 KNOWN_NOT_TANTUM: dict[str, str] = {
     "ua-lexeme-0551": "звучати: negated tantum mention (Perfective прозвучати populated)",
     "ua-lexeme-0317": "казати: tantum text describes говорити, not казати (Perfective сказати populated)",
     "ua-lexeme-0769": "виписати: stale first sentence, superseded within the same note (paired now)",
+    "ua-verb-0637": "виглянути: tantum text describes ua-lexeme-0550's stative sense, not виглянути (Imperfective вигляда́ти/ua-verb-0083 populated)",
 }
 
 
