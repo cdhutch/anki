@@ -9,11 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:m
 - pos:profession
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0010
   Lemma: письме́нник
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: письменник
   UA_Example: Цей письменник написав багато цікавих книжок.
   EN_Example: This writer has written many interesting books.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/письменник
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

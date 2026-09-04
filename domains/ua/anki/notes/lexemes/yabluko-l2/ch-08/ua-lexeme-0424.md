@@ -10,9 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:2.5.5
+- ch:1.5.1
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0424
   Lemma: соло́дкий
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: солодкий
   UA_Example: Цей десерт дуже солодкий.
   EN_Example: This dessert is very sweet.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:2.5.5, ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/солодкий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

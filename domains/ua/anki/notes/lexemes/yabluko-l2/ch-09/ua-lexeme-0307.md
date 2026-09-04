@@ -10,10 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.6
+- ch:2.5.2
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0307
   Lemma: ваго́н
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вагон
   UA_Example: Наш вагон -- третій від початку поїзда.
   EN_Example: Our train car is the third one from the front of the train.
-  Tags_Ch: ch:2.9.6
+  Tags_Ch: ch:2.9.6, ch:2.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/вагон
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: ''

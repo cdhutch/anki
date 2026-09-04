@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:conjunction
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0476
   Lemma: як
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: як
   UA_Example: Це місто не таке велике, як я очікував.

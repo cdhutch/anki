@@ -9,10 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
+- ch:1.1.3
 - pos:noun
 - gender:n
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0054
   Lemma: піані́но
@@ -31,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: piano · RU: пианино · DE: Pianino ← IT: pianoforte'
   TypingAnswer: піаніно
   UA_Example: Моя сестра грає на піаніно щовечора.
   EN_Example: My sister plays the piano every evening.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/піаніно
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

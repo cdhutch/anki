@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - phrase:noun
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0249
   Lemma: буке́т троя́нд
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: букет троянд
   UA_Example: Він купив букет троянд для мами.

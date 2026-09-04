@@ -7,16 +7,16 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-consonant+ти
 - motion:swimming
 - phase:2a
 - phonetic-variant
-- conj:drill
 - ch:2.9.2
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0087
-  Lemma: поплисти
+  Lemma: поплисти́
   Aspect: perfective
   VerbClass: motion-swimming-new
   FreqSource: ch:2.9
@@ -37,7 +37,7 @@ fields:
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: попли́вши
   Source_Note: ''
   Verification Notes: 'Free-variant/"phonetic-variant" of попливти (ua-verb-0010), parallel
     to плисти (ua-verb-0086) vs пливти (ua-verb-0009), and to йти (ua-verb-0003) vs іти (ua-verb-0002).
@@ -50,8 +50,8 @@ fields:
     forms look like a mismatched/corrupted verb (possibly a truncated "поплинути," by the
     same pattern as the ua-verb-0009/плинути mix-up flagged on ua-verb-0086''s note), and
     the past-tense forms (попи́в/попи́ла/попи́ло/попи́ли) match "попити" (to drink up), not
-    попливти. ua-verb-0010 is tagged stress:unverified. Flagging alongside the ua-verb-0009
-    finding for your review/decision rather than editing that existing note myself. This new
-    note (0087) uses the Горох-verified поплисти paradigm.'
+    попливти. ua-verb-0010 is unverified. Flagging alongside the ua-verb-0009 finding for
+    your review/decision rather than editing that existing note myself. This new note (0087)
+    uses the Горох-verified поплисти paradigm.'
 ---
 

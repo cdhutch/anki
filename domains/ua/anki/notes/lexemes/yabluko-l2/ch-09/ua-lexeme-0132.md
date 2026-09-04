@@ -12,6 +12,7 @@ tags:
 - ch:2.9.1
 - pos:adjective
 - status:verified
+- release:active
 - ch:2.9.3
 fields:
   NoteID: ua-lexeme-0132
@@ -31,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'RU: боевой'
   TypingAnswer: бойовий
   UA_Example: Бойовий гопак поєднує танець і бойові прийоми.

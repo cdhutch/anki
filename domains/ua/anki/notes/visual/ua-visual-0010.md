@@ -13,10 +13,12 @@ tags:
 - grammar:verb_motion
 - grammar:prefix
 - status:verified
+- release:active
 fields:
   NoteID: ua-visual-0010
   Prefix: Ø
-  Meaning_EN: departure (moving away, generically -- "геть, додому")
+  Meaning_EN: leaving or going away in general -- no specific point you're moving away from
+    is named (just going off, going home)
   Govt: ''
   Walking_Pair: йти / піти́
   Vehicle_Pair: ї́хати / пої́хати
@@ -44,6 +46,9 @@ fields:
     syllable, which is a different word, not this one). Vehicle_Pair: ї́хати / пої́хати, both
     Горох-verified. Example sentences and Govt (left blank -- геть/додому take no governed
     case) are my own draft, not yet independently reviewed by Craig beyond the diagram itself.
-    Needs your review.'
+    Needs your review. 2026-08-27: as part of the до-/при- Meaning_EN pass, rewrote Meaning_EN
+    to distinguish this from ua-visual-0005 (від-, moving away) -- see 0005''s Verification
+    Notes for the reasoning (від- names a specific point being left, via від + Р.в.; Ø/no-prefix
+    departure names none). My own draft, needs your review.'
 ---
 

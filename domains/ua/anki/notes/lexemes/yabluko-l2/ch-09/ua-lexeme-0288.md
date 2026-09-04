@@ -11,8 +11,9 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
+- ch:2.12.5
 fields:
   NoteID: ua-lexeme-0288
   Lemma: прива́блювати
@@ -31,20 +32,18 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: приваблювати / привабити
   UA_Example: Пригодницька гонка щороку приваблює нових учасників.
   EN_Example: The adventure race attracts new participants every year.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5,ch:2.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/приваблювати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
-  Verification Notes: ''
+  Verification Notes: 'Note (ch.12.5): perfective partner привабити (ua-lexeme-0288/ua-verb-0609)
+    added this pass, per Craig''s instruction to include perfective partners for imperfective
+    lemmas -- this note''s own Perfective field already named прива́бити but no separate note
+    existed for it until now. Merged duplicate standalone perfective note ua-lexeme-0288 (aspect-pairing
+    dual-convention cleanup, 2026-08-29). That sub-chapter''s example: ''Виставка привабила
+    тисячі відвідувачів.'' = ''The exhibition attracted thousands of visitors.''.'
 ---
 

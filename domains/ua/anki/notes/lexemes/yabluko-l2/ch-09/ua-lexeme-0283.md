@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0283
   Lemma: переліта́ти
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: перелітати / перелетіти
   UA_Example: Наступний етап -- перелетіти через річку на мотузці.

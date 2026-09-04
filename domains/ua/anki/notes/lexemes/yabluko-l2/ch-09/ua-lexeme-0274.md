@@ -12,8 +12,9 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
+- ch:2.7.5
 fields:
   NoteID: ua-lexeme-0274
   Lemma: ене́ргія
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: енергія
   UA_Example: Атмосфера старту була заряджена позитивною енергією пригод.
   EN_Example: The atmosphere at the start was charged with the positive energy of adventure.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5,ch:2.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/енергія
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''

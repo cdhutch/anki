@@ -9,9 +9,11 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:adverb
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0104
   Lemma: чудо́во
@@ -37,19 +39,11 @@ fields:
     \ how you feel."
   Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
     < добре (positive, unmarked) < чудово (enthusiastic).'
-  CompareScenario: A friend asks how your vacation was. It exceeded expectations and you want
-    to convey real excitement, not just satisfaction.
-  CompareA: непога́но
-  CompareB: норма́льно
-  CompareC: до́бре
-  CompareD: чудо́во
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: чудово
-  UA_Example: — Ти чудово зіграв цю роль!
-  EN_Example: — You played that role wonderfully!
-  Tags_Ch: ch:1.0
+  UA_Example: — Як тобі вистава? — Чудово! Найкраща цього сезону.
+  EN_Example: — How was the show? — Wonderful! The best one this season.
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/чудово
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.6
 - pos:adverb
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0560
   Lemma: оги́дно
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: огидно
   UA_Example: Мені було огидно це куштувати.

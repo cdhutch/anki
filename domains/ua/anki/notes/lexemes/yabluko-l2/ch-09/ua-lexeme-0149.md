@@ -10,9 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
+- ch:1.1.3
 - pos:noun
 - gender:m
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0149
   Lemma: волейбо́л
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: волейбол
   UA_Example: Ми граємо у волейбол щочетверга.
   EN_Example: We play volleyball every Thursday.
-  Tags_Ch: ch:2.9.1
+  Tags_Ch: ch:2.9.1, ch:1.1.3
   Source_URL: https://goroh.pp.ua/Словозміна/волейбол
   Source_Note: Stress verified 2026-07-22 via Горох.
   Verification Notes: ''

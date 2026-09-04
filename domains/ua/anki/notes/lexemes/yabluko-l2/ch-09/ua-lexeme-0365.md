@@ -13,8 +13,8 @@ tags:
 - pos:preposition
 - phrase:preposition
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0365
   Lemma: че́рез (три годи́ни)
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: через (три години)
   UA_Example: Поїзд прибуде через три години.

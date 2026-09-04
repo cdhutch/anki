@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - phrase:noun
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0322
   Lemma: тип ваго́на
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: тип вагона
   UA_Example: Оберіть тип вагона перед покупкою квитка.

@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.6
 - pos:adjective
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0548
   Lemma: цукро́вий
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: цукровий
   UA_Example: Цукровий сироп додають у багато десертів.

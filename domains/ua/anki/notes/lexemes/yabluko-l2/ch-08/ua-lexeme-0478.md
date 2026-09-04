@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.3
 - pos:pronoun
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0478
   Lemma: таки́й
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: такий
   UA_Example: Я не очікував такий теплий прийом.

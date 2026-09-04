@@ -12,8 +12,8 @@ tags:
 - ch:2.8.3
 - pos:phrase
 - phrase:discourse
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0494
   Lemma: на пе́рший по́гляд
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: на перший погляд
   UA_Example: На перший погляд усе виглядало знайомо.

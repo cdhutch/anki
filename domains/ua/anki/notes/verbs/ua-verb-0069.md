@@ -7,21 +7,20 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-1
+- class:conj1-vowel+й
 - ch:2.9.6
-- conj:suspended
-- status:draft
-- stress:unverified
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0069
-  Lemma: перепрошувати
+  Lemma: перепро́шувати
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.9
   Pres_1sg: перепро́шую
   Pres_2sg: перепро́шуєш
   Pres_3sg: перепро́шує
-  Pres_1pl: перепро́шуєм, перепро́шуємо
+  Pres_1pl: перепро́шуємо
   Pres_2pl: перепро́шуєте
   Pres_3pl: перепро́шують
   Imperative_2sg: перепро́шуй
@@ -33,11 +32,13 @@ fields:
   Past_3pl: перепро́шували
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
-  Participle_Passive_Past: ''
-  Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Passive_Past: перепро́шуваний
+  Participle_Impersonal_Past: перепро́шувано
+  Participle_Adverbial_Past: перепро́шувавши
   Source_Note: ''
-  Verification Notes: Imperfective-only (no attested perfective for the 'excuse me' discourse-marker
-    sense). See ua-lexeme-0321.
+  Verification Notes: Correction 2026-08-28 -- earlier draft wrongly treated this as a single-aspect
+    verb. ua-lexeme-0321 was corrected 2026-07-28 to add Perfective перепроси́ти (Горох confirms
+    a matching перепросити1/перепрошувати1 pair for the apologize sense). This verb is genuinely
+    paired. No separate ua-verb/ua-lexeme note exists yet for перепросити itself. See ua-lexeme-0321.
 ---
 

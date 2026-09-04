@@ -1,0 +1,50 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0879
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:2.1.3
+- ch:1.11.1
+- ch:1.4.4
+- ch:1.4.5
+- ch:1.4.7
+- pos:verb
+- status:draft
+- release:pending
+fields:
+  NoteID: ua-lexeme-0879
+  Lemma: шука́ти
+  Lemma_Euphony: ''
+  PartOfSpeech: verb
+  Gender: ''
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: пошука́ти
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: to search for, look for
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: шукати / пошукати
+  UA_Example: Я шукаю нову квартиру.
+  EN_Example: I am looking for a new apartment.
+  Tags_Ch: ch:2.1.3, ch:1.11.1, ch:1.4.4, ch:1.4.5, ch:1.4.7
+  Source_URL: https://goroh.pp.ua/Словозміна/шукати; https://goroh.pp.ua/Словозміна/пошукати
+  Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
+    & routine verbs).
+  Verification Notes: New. impf., non-reflexive, 1 conj.  Paired with ua-verb-0163. Perfective
+    пошука́ти added (aspect-pairing review, yabluko-l2-verb-dictionary + Горох, 2026-08-28).
+---
+

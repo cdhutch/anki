@@ -10,10 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.5
+- ch:1.10.7
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0522
   Lemma: трембі́та
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: трембіта
   UA_Example: Звук трембіти лунав по всій долині.
   EN_Example: The sound of the alpenhorn echoed throughout the valley.
-  Tags_Ch: ch:2.8.5
+  Tags_Ch: ch:2.8.5, ch:1.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/трембіта
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.
   Verification Notes: ''

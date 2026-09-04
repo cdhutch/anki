@@ -10,9 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.6
+- ch:1.11.1
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0320
   Lemma: повто́рювати
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: повторювати / повторити
   UA_Example: Провідник любʼязно повторив час прибуття.
   EN_Example: The conductor kindly repeated the arrival time.
-  Tags_Ch: ch:2.9.6
+  Tags_Ch: ch:2.9.6, ch:1.11.1
   Source_URL: https://goroh.pp.ua/Словозміна/повторювати; https://goroh.pp.ua/Словозміна/повторити
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: ''

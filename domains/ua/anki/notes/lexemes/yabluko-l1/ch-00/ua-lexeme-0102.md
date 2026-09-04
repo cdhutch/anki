@@ -9,9 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
+- ch:1.5.2
 - pos:adverb
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0102
   Lemma: пра́вильно
@@ -30,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: правильно
   UA_Example: Ти написав усі слова правильно.
   EN_Example: You wrote all the words correctly.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.10, ch:1.5.2
   Source_URL: https://goroh.pp.ua/Словозміна/правильно
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

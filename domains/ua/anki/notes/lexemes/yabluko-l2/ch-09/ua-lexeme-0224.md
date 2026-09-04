@@ -10,15 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
-- pos:phrase
+- pos:verb-phrase
 - phrase:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0224
   Lemma: би́тися з реа́льним супе́рником
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: битися з реальним суперником
   UA_Example: На останньому тренуванні він уперше бився з реальним суперником.

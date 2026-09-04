@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.6
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0053
   Lemma: па́рта
@@ -32,19 +34,11 @@ fields:
   ConfusableSet: стіле́ць
   Mnemonic_EN: парта = school desk (classroom-specific, often a desk+bench unit); стілець
     = a general standalone chair/seat.
-  CompareScenario: Describing the classroom furniture where a student sits and places their
-    notebook during a lesson.
-  CompareA: парта
-  CompareB: стілець
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: парта
   UA_Example: Учень сидить за партою біля вікна.
   EN_Example: The pupil sits at a desk near the window.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.6
   Source_URL: https://goroh.pp.ua/Словозміна/парта
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

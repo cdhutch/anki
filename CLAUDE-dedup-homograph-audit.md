@@ -164,7 +164,8 @@ from a concrete discovery: `ua-lexeme-0405`/`0407` (те́пло/тепло́, a
 pair) had `ConfusableSet` populated with just the bare alternate spelling but no
 `CompareScenario`/`CompareA`/`Homograph_SenseA`/`CompareB`/`Homograph_SenseB` at all — the
 only `homograph:true` pair in the corpus never given the full Shape-1 treatment described in
-[CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md). Because the
+the now-removed `CLAUDE-compare-card-field-mapping.md` (deleted 2026-08-26 along with the fields
+it documented). Because the
 Compare template's front rendered completely empty for these two notes before the
 2026-07-28 "should be suspended" fallback existed, Anki never generated a Compare card for
 them at all (Anki doesn't create a card whose front renders empty) — confirmed by Craig

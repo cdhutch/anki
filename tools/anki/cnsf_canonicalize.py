@@ -350,13 +350,6 @@ def _normalize_meta(meta: dict[str, Any], path: Path) -> dict[str, Any]:
             "Lemma_Euphony",
             "Perfective_Euphony",
             "ImperfectiveUnidirectional_Euphony",
-            "CompareA",
-            "CompareB",
-            "CompareC",
-            "CompareD",
-            "CompareScenario",
-            "Homograph_SenseA",
-            "Homograph_SenseB",
             "AspectCue",
             "Mnemonic_EN",
         ):

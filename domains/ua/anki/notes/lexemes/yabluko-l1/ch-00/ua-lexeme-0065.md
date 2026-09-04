@@ -9,10 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.4
+- ch:1.2.2
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0065
   Lemma: сторі́нка
@@ -31,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: сторінка
   UA_Example: Відкрийте підручник на сторінці двадцять.
   EN_Example: Open the textbook to page twenty.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.4, ch:1.2.2
   Source_URL: https://goroh.pp.ua/Словозміна/сторінка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

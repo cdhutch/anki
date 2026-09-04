@@ -69,47 +69,79 @@ class TestEuphonyFieldCoverage:
 
 
 class TestShouldSuspend:
-    """Three independent suspend axes, mirroring test_ua_verb_import.py.
+    """Three independent suspend axes: the status/release AND gate, and conj:suspended.
 
-    conj:suspended was added 2026-08-19. Before it, curation had no lever on
-    this note type: holding a note out of the drilling rotation meant tagging
-    it status:draft, which asserts "unreviewed" and pulls a verified note back
-    into list_unverified.py's report. These tests pin the separation so a
-    future simplification can't quietly re-merge the axes.
+    Per Option A refactoring (2026-08-25), stress:unverified is decoupled from
+    suspension logic. It is tracked as documentation but does not trigger
+    suspension.
+
+    conj:suspended was added 2026-08-19 as an axis independent of status; before
+    it, curation had no lever on this note type: holding a note out of the
+    drilling rotation meant tagging it status:draft, which asserts "unreviewed"
+    and pulls a verified note back into list_unverified.py's report.
+
+    release: added 2026-08-29 (per Craig) as a second gate ANDed with status --
+    status:verified AND release:active are both required to unsuspend; either
+    missing suspends, so a note with no release tag fails closed. conj:suspended
+    remains a separate, always-suspends override on top of that gate. These
+    tests pin the separation so a future simplification can't quietly re-merge
+    the axes.
     """
 
-    def test_verified_no_flags_unsuspends(self):
-        assert should_suspend(["domain:ua", "status:verified"]) is False
+    def test_verified_and_active_unsuspends(self):
+        assert should_suspend(["domain:ua", "status:verified", "release:active"]) is False
+
+    def test_verified_without_release_tag_suspends(self):
+        # AND gate fails closed: verified content not yet released stays suspended.
+        assert should_suspend(["domain:ua", "status:verified"]) is True
+
+    def test_verified_with_release_pending_suspends(self):
+        assert should_suspend(["domain:ua", "status:verified", "release:pending"]) is True
 
     def test_status_draft_suspends(self):
         assert should_suspend(["domain:ua", "status:draft"]) is True
 
-    def test_stress_unverified_suspends(self):
-        assert should_suspend(["stress:unverified"]) is True
+    def test_status_draft_suspends_even_with_release_active(self):
+        assert should_suspend(["domain:ua", "status:draft", "release:active"]) is True
+
+    def test_stress_unverified_does_not_suspend(self):
+        # Option A: stress:unverified is for documentation, not suspension --
+        # but the AND gate still needs verified+active to unsuspend.
+        assert should_suspend(
+            ["status:verified", "release:active", "stress:unverified"]
+        ) is False
 
     def test_conj_suspended_suspends(self):
-        assert should_suspend(["domain:ua", "status:verified", "conj:suspended"]) is True
+        assert should_suspend(
+            ["domain:ua", "status:verified", "release:active", "conj:suspended"]
+        ) is True
 
     def test_conj_suspended_wins_over_full_verification(self):
         # The whole point of the axis: a note can be correct on both quality
-        # axes and still be reference-only. This is the state of the nine
-        # non-selected prefixes as of 2026-08-19.
+        # axes, fully released, and still be reference-only.
         assert should_suspend(
-            ["domain:ua", "stress:verified", "status:verified", "conj:suspended"]
+            ["domain:ua", "stress:verified", "status:verified", "release:active",
+             "conj:suspended"]
         ) is True
 
     def test_conj_drill_does_not_suspend(self):
         # The four Craig keeps active (при-, в/у-, ви-, під-) carry conj:drill,
         # which must not be confused for conj:suspended by a substring check.
         assert should_suspend(
-            ["domain:ua", "stress:verified", "status:verified", "conj:drill"]
+            ["domain:ua", "stress:verified", "status:verified", "release:active",
+             "conj:drill"]
         ) is False
 
-    def test_stress_unverified_suspends_even_if_status_verified(self):
-        assert should_suspend(["status:verified", "stress:unverified"]) is True
+    def test_status_verified_and_stress_unverified_does_not_suspend(self):
+        # Option A: stress:unverified does not suspend even alongside status:verified,
+        # as long as release:active is also present.
+        assert should_suspend(
+            ["status:verified", "release:active", "stress:unverified"]
+        ) is False
 
-    def test_no_tags_unsuspends(self):
-        assert should_suspend([]) is False
+    def test_no_tags_suspends(self):
+        # Fail closed: nothing asserts verified+active.
+        assert should_suspend([]) is True
 
     def test_multiple_suspend_reasons_still_suspends(self):
         assert should_suspend(

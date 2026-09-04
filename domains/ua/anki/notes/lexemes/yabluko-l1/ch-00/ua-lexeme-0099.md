@@ -9,9 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
+- ch:1.3.4
 - pos:adverb
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0099
   Lemma: до́бре
@@ -37,19 +40,11 @@ fields:
     \ how you feel."
   Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
     < добре (positive, unmarked) < чудово (enthusiastic).'
-  CompareScenario: A friend asks how your exam went. You did solidly and feel satisfied --
-    no fireworks, just a plain, straightforwardly positive result.
-  CompareA: непога́но
-  CompareB: норма́льно
-  CompareC: до́бре
-  CompareD: чудо́во
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: добре
-  UA_Example: Він добре знає свою роботу.
-  EN_Example: He knows his work well.
-  Tags_Ch: ch:1.0
+  UA_Example: — Як настрій сьогодні? — Добре, дякую.
+  EN_Example: — How are you feeling today? — Good, thanks.
+  Tags_Ch: ch:1.0.3, ch:1.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/добре
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

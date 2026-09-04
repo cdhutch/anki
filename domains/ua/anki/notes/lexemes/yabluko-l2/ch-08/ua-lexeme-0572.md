@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.7
 - pos:adjective
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0572
   Lemma: дивови́жний
@@ -24,24 +24,21 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: amazing, astonishing
+  EN_Gloss: marvelous, amazing, astonishing
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster amazing-impressive-synonyms (confusable_clusters.yaml):
+    дивови́жний emphasizes wonder or surprise (this note) vs. вража́ючий (ua-lexeme-0571),
+    which emphasizes the effect of impressing through scale, quality, or skill, and неймові́рно
+    (ua-lexeme-3907), which emphasizes the "hard to believe" extreme.'
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: дивовижний
-  UA_Example: У нього дивовижний голос.
-  EN_Example: He has an amazing voice.
+  UA_Example: Це був дивовижний збіг обставин -- ми зустрілися саме тоді, коли я думав про
+    неї.
+  EN_Example: It was an amazing coincidence -- we met right when I was thinking about her.
   Tags_Ch: ch:2.8.7
   Source_URL: https://goroh.pp.ua/Словозміна/дивовижний
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.

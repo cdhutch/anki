@@ -9,11 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - pos:proper-noun
 - gender:f
 - pos:country
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0078
   Lemma: Кана́да
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Канада
   UA_Example: Її сестра переїхала до Канади два роки тому.
   EN_Example: Her sister moved to Canada two years ago.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/Канада
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

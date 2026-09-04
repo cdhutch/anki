@@ -1,0 +1,46 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-1000
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:2.2.2
+- pos:noun
+- status:draft
+- release:pending
+fields:
+  NoteID: ua-lexeme-1000
+  Lemma: ковба́ска
+  Lemma_Euphony: ''
+  PartOfSpeech: noun
+  Gender: f
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: small sausage (e.g. grilled over a campfire)
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: ковбаска
+  UA_Example: Ми смажили ковбаски на вогні.
+  EN_Example: We grilled sausages over the fire.
+  Tags_Ch: ch:2.2.2
+  Source_URL: https://goroh.pp.ua/Словозміна/ковбаска
+  Source_Note: Горох-verified 2026-08-28, ch.2.2 sourcing pass (beach picnic; tableware).
+  Verification Notes: New. Fem., 1st decl., hard group (diminutive of ковбаса, "sausage" --
+    not itself drafted this pass). Горох also lists an unrelated river named Ковбаска -- not
+    relevant, not drafted. Example bundles сма́жити (ua-lexeme-1003, this chapter).
+---
+

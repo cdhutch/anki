@@ -10,15 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
-- pos:phrase
+- pos:verb-phrase
 - phrase:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0376
   Lemma: бра́ти у́часть у змага́ннях
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -35,13 +35,6 @@ fields:
     (It's easy to blend with вчасно "on time," or with the Russian часть "part" -- Ukrainian
     uses частина for "part," and участь for "participation" is its own root, not built on
     "часть" at all.)
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: брати участь у змаганнях
   UA_Example: Шестеро з них беруть участь у змаганні, а ще четверо -- запасні гравці.

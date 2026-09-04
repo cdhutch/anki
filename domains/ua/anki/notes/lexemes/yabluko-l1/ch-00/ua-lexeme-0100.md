@@ -9,9 +9,11 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - pos:adverb
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0100
   Lemma: непога́но
@@ -37,19 +39,11 @@ fields:
     \ how you feel."
   Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
     < добре (positive, unmarked) < чудово (enthusiastic).'
-  CompareScenario: A coworker asks how your week went. It was fine but unremarkable -- you
-    don't want to oversell it, just acknowledge it wasn't bad.
-  CompareA: непога́но
-  CompareB: норма́льно
-  CompareC: до́бре
-  CompareD: чудо́во
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: непогано
-  UA_Example: Вона непогано малює, але хоче вчитися більше.
-  EN_Example: She draws not badly, but wants to study more.
-  Tags_Ch: ch:1.0
+  UA_Example: — Як пройшов іспит? — Непогано, могло бути й гірше.
+  EN_Example: — How did the exam go? — Not bad, could've been worse.
+  Tags_Ch: ch:1.0.3
   Source_URL: https://goroh.pp.ua/Словозміна/непогано
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

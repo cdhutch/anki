@@ -9,11 +9,15 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.7
+- ch:1.2.4
+- ch:1.3.7
 - pos:noun
 - gender:m
 - pos:profession
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0021
   Lemma: школя́р
@@ -32,18 +36,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: школяр
   UA_Example: Школяр іде до школи з великим портфелем.
   EN_Example: The schoolboy goes to school with a large schoolbag.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.7, ch:1.2.4, ch:1.3.7
   Source_URL: https://goroh.pp.ua/Словозміна/школяр
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

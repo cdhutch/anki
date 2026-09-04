@@ -10,9 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:1.4.5
+- ch:1.4.7
 - pos:adverb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0343
   Lemma: відра́зу
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: відразу
   UA_Example: Побачивши дощ, вони відразу розбили намет.
   EN_Example: Seeing the rain, they immediately set up the tent.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:1.4.5, ch:1.4.7
   Source_URL: https://goroh.pp.ua/Словозміна/відразу
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Filtered out a homograph noun 'відра́за' (disgust) -- unrelated meaning.

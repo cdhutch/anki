@@ -10,8 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.2
+- ch:1.12.7
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0178
   Lemma: поміча́ти
@@ -30,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: помічати / помітити
   UA_Example: Я помічаю кожну деталь.
   EN_Example: I notice every detail.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:1.12.7
   Source_URL: https://goroh.pp.ua/Словозміна/помічати; https://goroh.pp.ua/Словозміна/помітити
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects. Vocab list (9.2) cites
     the perfective 'помітити' — this note uses the imperfective 'помічати' as Lemma for consistency

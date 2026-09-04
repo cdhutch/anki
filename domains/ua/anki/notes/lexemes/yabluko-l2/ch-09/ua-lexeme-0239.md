@@ -6,14 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.12.5
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0239
   Lemma: буке́т
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: букет
   UA_Example: Букет троянд пахнув на всю кімнату.
   EN_Example: The bouquet of roses filled the whole room with scent.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.9.5, ch:1.12.5
   Source_URL: https://goroh.pp.ua/Словозміна/букет
   Source_Note: Горох-verified 2026-07-26, ch:2.9.4 sourcing pass.
   Verification Notes: ''

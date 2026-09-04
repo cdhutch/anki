@@ -6,13 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - pos:noun
 - gender:n
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0043
   Lemma: метро́
@@ -31,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU/FR/DE: metro'
   TypingAnswer: метро
   UA_Example: Ми їдемо до центру на метро.
   EN_Example: We go to the centre by metro.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/метро
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

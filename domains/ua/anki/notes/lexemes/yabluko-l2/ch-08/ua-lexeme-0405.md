@@ -6,13 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
+- ch:1.12.3
 - pos:adverb
-- stress:verified
 - status:verified
+- release:active
 - homograph:true
 fields:
   NoteID: ua-lexeme-0405
@@ -36,18 +39,11 @@ fields:
   Mnemonic_EN: Same spelling either way (тепло) — stress is the only visible cue. те́пло (stress
     те-) describes HOW something is done ("warmly"); тепло́ (stress -ло́) IS the thing itself
     ("warmth" as a noun, usually paired with an adjective like приємне).
-  CompareScenario: Which sense of тепло is being used?
-  CompareA: Одягайся тепло, надворі холодно.
-  CompareB: Від каміна йшло приємне тепло.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: warmly (adverb)
-  Homograph_SenseB: warmth (noun)
   CrossLang_Analog: ''
   TypingAnswer: тепло
   UA_Example: Одягайся тепло, надворі холодно.
   EN_Example: Dress warmly, it's cold outside.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.7.3, ch:1.9.1, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/тепло
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: 'Stress-based homograph pair with ua-lexeme-0407 (тепло́, noun "warmth"),

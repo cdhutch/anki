@@ -12,8 +12,8 @@ tags:
 - ch:2.8.6
 - pos:noun
 - gender:m
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0545
   Lemma: сто́вбур
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: стовбур
   UA_Example: Навколо стовбура обвився плющ.

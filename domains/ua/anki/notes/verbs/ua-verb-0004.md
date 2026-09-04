@@ -7,18 +7,19 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-irregular
 - motion:walking
 - phase:2a
-- conj:drill
 - ch:2.9.2
-- stress:verified
+- ch:2.6.2
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0004
   Lemma: піти́
   Aspect: perfective
   VerbClass: motion-walking-new
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.6.2
   Pres_1sg: піду́
   Pres_2sg: пі́деш
   Pres_3sg: пі́де

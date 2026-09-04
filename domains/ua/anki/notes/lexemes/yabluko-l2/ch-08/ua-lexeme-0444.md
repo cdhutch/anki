@@ -12,8 +12,8 @@ tags:
 - ch:2.8.2
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0444
   Lemma: тарга́н
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: тарган
   UA_Example: У номері ми побачили таргана.

@@ -13,8 +13,8 @@ tags:
 - pos:adverb
 - phrase:adverb
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0368
   Lemma: прибли́зно пі́сля (пі́вночі)
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: приблизно після (півночі)
   UA_Example: Вони прибули до табору приблизно після півночі.

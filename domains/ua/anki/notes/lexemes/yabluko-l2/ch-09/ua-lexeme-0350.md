@@ -6,13 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:2.3.4
+- ch:1.10.5
 - pos:adverb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0350
   Lemma: прибли́зно
@@ -31,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: приблизно
   UA_Example: Вони прибули приблизно після півночі.
   EN_Example: They arrived sometime after midnight.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:2.3.4, ch:1.7.5, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/приблизно
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: ''

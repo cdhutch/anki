@@ -6,13 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.6
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.11.2
 - pos:verb
 - motion:prefixed
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0116
   Lemma: вихо́дити
@@ -31,18 +34,11 @@ fields:
   VerbMotion_Pair: іти / ходити
   ConfusableSet: вхо́дити (directional opposite)
   Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
-  CompareScenario: Someone walks out of a building through the front door, on foot.
-  CompareA: входити
-  CompareB: виходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выходить / выйти'
   TypingAnswer: виходити / вийти
-  UA_Example: ''
-  EN_Example: ''
-  Tags_Ch: ch:2.9.4
+  UA_Example: Діти виходять із класу на перерву.
+  EN_Example: The children go out of the classroom for recess.
+  Tags_Ch: ch:2.9.4, ch:1.11.2, ch:1.7.6
   Source_URL: https://goroh.pp.ua/Словозміна/виходити
   Source_Note: Lemma re-verified 2026-08-19 via Горох after the correction ви́ходити -> вихо́дити;
     the earlier 2026-07-06 check covered the superseded form.

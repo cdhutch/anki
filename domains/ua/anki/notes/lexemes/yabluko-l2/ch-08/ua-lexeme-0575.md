@@ -11,8 +11,9 @@ tags:
 - textbook:яблуко
 - ch:2.8.7
 - pos:adverb
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
+- ch:2.6.6
 fields:
   NoteID: ua-lexeme-0575
   Lemma: неймові́рно
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: неймовірно
   UA_Example: Виступ був неймовірно емоційним.
   EN_Example: The performance was incredibly emotional.
-  Tags_Ch: ch:2.8.7
+  Tags_Ch: ch:2.8.7, ch:2.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/неймовірно
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.
   Verification Notes: ''

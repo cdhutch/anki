@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - phrase:noun
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0295
   Lemma: рі́вень скла́дності
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: рівень складності
   UA_Example: Організатори підвищили рівень складності другого етапу.

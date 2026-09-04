@@ -10,9 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
+- ch:2.5.2
+- ch:1.5.7
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0277
   Lemma: оста́нній
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: останній
   UA_Example: Вона перепливла озеро з останніх сил.
   EN_Example: She swam across the lake with her last ounce of strength.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:2.5.2, ch:1.5.7
   Source_URL: https://goroh.pp.ua/Словозміна/останній
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''

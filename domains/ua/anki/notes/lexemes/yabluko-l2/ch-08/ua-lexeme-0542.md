@@ -13,11 +13,11 @@ tags:
 - pos:noun
 - gender:m
 - animate:true
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0542
-  Lemma: ра́к
+  Lemma: рак
   Lemma_Euphony: ''
   PartOfSpeech: noun
   Gender: m
@@ -31,15 +31,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Homograph cluster crayfish-cancer-homograph (confusable_clusters.yaml):
+    ра́к the crustacean (this note, animate) vs. ра́к the disease (ua-lexeme-0588, inanimate).
+    Same spelling and stress -- not a stress-based split, distinguished grammatically by animacy
+    (genitive ра́ка vs. ра́ку) and by context.'
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: рак
   UA_Example: На ринку продавали свіжих раків.
@@ -49,7 +45,11 @@ fields:
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: 'Горох lists рак as a genuine homonym: the animate crustacean sense
     (used here, food context) vs. an inanimate ''cancer (disease)'' sense, plus an unrelated
-    surname Рак. Same spelling and stress across senses (not a stress-based split); only the
-    crayfish sense is drafted since that is the attested vocabulary item.'
+    surname Рак. Same spelling and stress across senses (not a stress-based split). 2026-08-27:
+    ua-lexeme-0588 (cancer sense) added per Craig to complete the pair -- reference-only,
+    no textbook chapter (ch:reference), since only this crayfish sense is actual Яблуко vocabulary.
+    Clustered as crayfish-cancer-homograph in confusable_clusters.yaml; pending-confusable:рак
+    tag removed now that the partner note exists. Surname sense (Рак) remains undocumented
+    -- not attested vocabulary, no note needed.'
 ---
 

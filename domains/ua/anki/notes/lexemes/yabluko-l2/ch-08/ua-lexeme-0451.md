@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adverb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0451
   Lemma: похму́ро
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: похмуро
   UA_Example: Надворі було похмуро і сіро.

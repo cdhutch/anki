@@ -6,13 +6,18 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
+- ch:1.11.5
+- ch:1.2.6
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0067
   Lemma: фільм
@@ -31,18 +36,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN/RU/DE/FR: film/фильм/Film/film'
   TypingAnswer: фільм
   UA_Example: Учора ввечері ми дивилися цікавий фільм.
   EN_Example: Yesterday evening we watched an interesting film.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2, ch:1.11.5, ch:1.2.6, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/фільм
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

@@ -12,6 +12,7 @@ tags:
 - ch:2.9.2
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0179
   Lemma: програва́ти
@@ -30,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: програвати / програти
   UA_Example: Він рідко програє в шахи.

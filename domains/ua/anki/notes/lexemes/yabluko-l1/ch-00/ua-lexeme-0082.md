@@ -9,11 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - pos:proper-noun
 - gender:f
 - pos:country
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0082
   Lemma: Росі́я
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Росія
   UA_Example: Москва є столицею Росії.
   EN_Example: Moscow is the capital of Russia.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/Росія
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

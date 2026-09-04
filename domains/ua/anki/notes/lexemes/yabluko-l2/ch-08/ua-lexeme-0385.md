@@ -6,14 +6,15 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0385
   Lemma: гроза́
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: гроза
   UA_Example: Учора ввечері була сильна гроза.
   EN_Example: Last night there was a strong thunderstorm.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/гроза
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: 'Горох''s Словозміна page for this spelling has 3 homograph blocks:

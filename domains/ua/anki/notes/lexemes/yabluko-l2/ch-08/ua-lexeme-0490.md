@@ -10,15 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
-- pos:phrase
+- pos:verb-phrase
 - phrase:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0490
   Lemma: склада́ється вра́ження
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: складається враження
   UA_Example: У мене складається враження, що це місто ніколи не спить.

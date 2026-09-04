@@ -13,10 +13,12 @@ tags:
 - grammar:verb_motion
 - grammar:prefix
 - status:verified
+- release:active
 fields:
   NoteID: ua-visual-0008
   Prefix: пере-
-  Meaning_EN: crossing (from one side to another)
+  Meaning_EN: crossing -- moving from one side of something to the other, ending up on the
+    opposite side (a street, a border, a river)
   Govt: через + Зн.в.
   Walking_Pair: перехо́дити / перейти́
   Vehicle_Pair: переїжджа́ти / переї́хати
@@ -35,6 +37,10 @@ fields:
   Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 --
     a curved arc arrow passing up and over a hatched square, matching the textbook''s icon
     (replacing the previous two straight segments with a dashed barrier line, which did not
-    match the source). Reviewed and approved by Craig.'
+    match the source). Reviewed and approved by Craig. 2026-08-27: as part of the до-/при-
+    Meaning_EN pass, rewrote Meaning_EN to distinguish this from ua-visual-0007 (про-, passing
+    by/through) -- see 0007''s Verification Notes for the full через-overlap reasoning. пере-
+    specifically implies ending up on the opposite side of what''s crossed; про- doesn''t
+    carry that "other side" implication. My own draft, needs your review.'
 ---
 

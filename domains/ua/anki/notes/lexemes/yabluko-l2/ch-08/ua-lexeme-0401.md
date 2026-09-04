@@ -6,13 +6,14 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.1
 - pos:adverb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0401
   Lemma: со́нячно
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: сонячно
   UA_Example: Надворі тепло і сонячно.
   EN_Example: It's warm and sunny outside.
-  Tags_Ch: ch:2.8.1
+  Tags_Ch: ch:2.8.1, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/сонячно
   Source_Note: Горох-verified 2026-07-26, ch.8.1 sourcing pass.
   Verification Notes: ''

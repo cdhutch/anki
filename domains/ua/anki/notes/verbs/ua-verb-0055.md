@@ -7,22 +7,21 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:reflexive
+- class:conj1-vowel+й
 - ch:2.9.5
-- conj:suspended
-- status:draft
-- stress:unverified
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0055
-  Lemma: переправлятися
+  Lemma: переправля́тися
   Aspect: imperfective
   VerbClass: reflexive
   FreqSource: ch:2.9
-  Pres_1sg: переправля́юсь, переправля́юся
+  Pres_1sg: переправля́юся
   Pres_2sg: переправля́єшся
   Pres_3sg: переправля́ється
-  Pres_1pl: переправля́ємось, переправля́ємося
-  Pres_2pl: переправля́єтесь, переправля́єтеся
+  Pres_1pl: переправля́ємося
+  Pres_2pl: переправля́єтеся
   Pres_3pl: переправля́ються
   Imperative_2sg: переправля́йся
   Imperative_1pl: переправля́ймося
@@ -32,10 +31,10 @@ fields:
   Past_1sg_n: переправля́лося
   Past_3pl: переправля́лися
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: переправля́ючись
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: переправля́вшись
   Source_Note: ''
   Verification Notes: Pairs with perfective перепра́витися. See ua-lexeme-0285. Feminine/neuter
     past forms follow the regular reflexive pattern (masculine confirmed via Горох, others

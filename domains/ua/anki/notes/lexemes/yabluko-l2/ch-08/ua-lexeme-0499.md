@@ -12,8 +12,8 @@ tags:
 - ch:2.8.4
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0499
   Lemma: дельтапла́н
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: дельтаплан
   UA_Example: Він уперше політав на дельтаплані над горами.

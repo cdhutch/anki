@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - motion:prefixed
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0125
   Lemma: виїжджа́ти
@@ -32,17 +33,10 @@ fields:
   ConfusableSet: вʼїжджа́ти (directional opposite)
   Mnemonic_EN: вʼ- = driving into (same в-/ви- opposition as входити/виходити, applied to
     vehicles); ви- = driving out of.
-  CompareScenario: A car pulls out of a parking garage or driveway onto the street.
-  CompareA: вʼїжджати
-  CompareB: виїжджати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: выезжать / выехать'
   TypingAnswer: виїжджати / виїхати
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Машина виїжджає з підземного паркінгу.
+  EN_Example: The car drives out of the underground parking lot.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/виїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

@@ -7,24 +7,23 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-1
+- class:conj1-vowel+й
 - ch:2.9.3
-- conj:suspended
-- status:draft
-- stress:unverified
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0041
-  Lemma: відбивати
+  Lemma: відбива́ти
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.9
   Pres_1sg: відбива́ю
   Pres_2sg: відбива́єш
-  Pres_3sg: відбива́є, відбива
-  Pres_1pl: відбива́єм, відбива́ємо
+  Pres_3sg: відбива́є
+  Pres_1pl: відбива́ємо
   Pres_2pl: відбива́єте
   Pres_3pl: відбива́ють
-  Imperative_2sg: відбива́й, відбива́й-но
+  Imperative_2sg: відбива́й
   Imperative_1pl: відбива́ймо
   Imperative_2pl: відбива́йте
   Past_1sg_m: відбива́в
@@ -32,10 +31,10 @@ fields:
   Past_1sg_n: відбива́ло
   Past_3pl: відбива́ли
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: відбива́ючи
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: відбива́вши
   Source_Note: ''
   Verification Notes: 'Perfective: відби́ти. See ua-lexeme-0213.'
 ---

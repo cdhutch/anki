@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - gender:m
 - animate:true
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0461
   Lemma: незнайо́мець
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: незнайомець
   UA_Example: Незнайомець показав нам дорогу до готелю.

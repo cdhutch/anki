@@ -10,17 +10,17 @@ tags:
 - motion:walking
 - prefixed
 - phase:2a
-- class:prefixed
+- class:conj2-ити
 - ch:2.9.4
-- stress:verified
+- ch:2.5.5
 - status:verified
-- conj:suspended
+- release:active
 fields:
   NoteID: ua-verb-0021
   Lemma: прохо́дити
   Aspect: imperfective
   VerbClass: motion-walking-prefixed
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.5.5
   Pres_1sg: прохо́джу
   Pres_2sg: прохо́диш
   Pres_3sg: прохо́дить
@@ -52,7 +52,7 @@ fields:
     in the -мо form only, per the 2026-08-04 decision; primary forms only, so the -но emphatic
     imperative and colloquial variants (приходе, приходіть) are not stored; apostrophe normalised
     to U+02BC. Claude sourced and drafted these. 2026-08-19: Craig independently verified
-    all sixteen notes (ua-verb-0017-0032) against Горох and set stress:verified himself; he
+    all sixteen notes (ua-verb-0017-0032) against Горох and marked as verified himself; he
     separately confirmed the rule that the prefixed imperfectives carry stress on -хо́-. No
     field values changed as part of that pass, only the tag.'
 ---

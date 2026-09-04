@@ -9,9 +9,11 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:adverb
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0101
   Lemma: норма́льно
@@ -37,19 +39,11 @@ fields:
     \ how you feel."
   Mnemonic_EN: 'Enthusiasm ladder: непогано (lukewarm) < нормально (neutral, most common)
     < добре (positive, unmarked) < чудово (enthusiastic).'
-  CompareScenario: Someone asks how you're doing on an ordinary Tuesday. Nothing noteworthy
-    happened either way -- this is the reflexive, default reply to a routine "how are you?"
-  CompareA: непога́но
-  CompareB: норма́льно
-  CompareC: до́бре
-  CompareD: чудо́во
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: нормально
   UA_Example: — Як справи? — Нормально, дякую.
   EN_Example: — How are things? — Fine, thanks.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/нормально
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: "2026-07-24: added ConfusableSet cross-link across the добре/непогано/нормально/чудово\

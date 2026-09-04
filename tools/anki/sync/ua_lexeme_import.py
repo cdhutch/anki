@@ -11,10 +11,16 @@ Deck layout:
 Suspension policy (applied on every import, add or update -- declarative and
 self-healing, so a re-import always converges to this state regardless of
 prior manual suspend/unsuspend actions taken outside this script):
-    - status:draft    → suspend every card on the note
-    - status:verified → unsuspend every card on the note
+    - status:draft OR release:pending      → suspend every card on the note
+    - status:verified AND release:active   → unsuspend every card on the note
+      (release: added 2026-08-29, per Craig -- a second, independent gate.
+      status tracks content-quality/review state; release tracks study-
+      pacing, i.e. whether this note has been let into rotation yet. Both
+      axes must clear for a note to be active; either one suspends.)
     - ConfusableSet empty/blank → suspend the Compare card (card #3)
-    - ConfusableSet populated   → unsuspend the Compare card (card #3)
+    - ConfusableSet populated AND note itself is status:verified/release:active
+      AND at least one OTHER cluster-mate is itself status:verified/release:active
+      → unsuspend the Compare card (card #3); otherwise suspend it too
     - note has a red-flagged card (any card) → suspend every card on the
       note, including the Compare card (added 2026-07-31, per Craig -- see
       get_flagged_note_ids_by_color in tsv_to_anki.py). Only checked for
@@ -28,6 +34,33 @@ prior manual suspend/unsuspend actions taken outside this script):
 The Compare card suspension is independent of status flags -- a status:verified
 note with no ConfusableSet will have all other cards active but the Compare card
 suspended. This prevents blank Compare cards from appearing in study.
+
+Two Compare-card fixes landed 2026-09-01, per Craig:
+
+1. A draft/pending note with a populated ConfusableSet used to be able to have
+   its Compare card sitting unsuspended even while every other card on that
+   note was suspended -- contradicting the "suspend every card" draft policy
+   above. `suspend_compare_card` is now `suspend or not compare_members`, so a
+   draft note's Compare card is suspended unconditionally, same as its other
+   cards.
+
+2. get_cluster_compare_members_json()/get_compare_card_members() used to
+   include every *sourced* cluster-mate in a Compare card's chip list,
+   regardless of whether that cluster-mate was itself status:verified/
+   release:active in its own CNSF note. That meant an already-active hub's
+   Compare card could reference and quiz the learner on a still-draft
+   sibling that is suspended everywhere else in Anki -- confirmed as a real,
+   pre-existing case (not caused by this fix): ua-lexeme-0477 (кілька,
+   quantity-synonyms hub) is verified/active, but its existing cluster-mates
+   ua-lexeme-1171 (скільки) and ua-lexeme-1175 (декілька) are both draft/
+   pending. main() now builds a release_active_ids set once per run (see
+   ClusterRegistry.get_release_active_note_ids()) and threads it through, so
+   Compare card membership is filtered down to cluster-mates that are
+   themselves reachable elsewhere in the deck. If fewer than two release-
+   active members remain after filtering, there's nothing left to compare
+   and the card renders (and suspends) as if the note weren't clustered at
+   all. No note is auto-promoted out of draft by this -- it only changes
+   which mates a Compare card is willing to show.
 
 (2026-07-22: this previously also suspended just the EN→UA card for
 motion:prefixed + status:verified notes, on the theory that PVOM's
@@ -56,10 +89,13 @@ from pathlib import Path
 import yaml
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[3]))
+from typing import List  # noqa: E402
+
 from tools.anki.lib.typing_target import (  # noqa: E402,F401
     compute_typing_target,
     strip_stress,
 )
+from tools.anki.lib.confusable_clusters import ClusterRegistry  # noqa: E402,F401
 from tools.anki.sync.tsv_to_anki import (  # noqa: E402
     FLAG_ORANGE,
     FLAG_RED,
@@ -373,13 +409,141 @@ def compute_compare_options(note_id: str, lemma: str, confusable: str) -> tuple[
     return confusable, lemma
 
 
-def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:
+def get_cluster_compare_members_json(
+    note_id: str,
+    tags: List[str],
+    registry: ClusterRegistry | None = None,
+    release_active_ids: set[str] | None = None,
+) -> str:
+    """Serialize cluster data to JSON for Compare card rendering.
+
+    Two payload shapes, chosen automatically per cluster:
+
+    Chip mode (default): {"scenario": ..., "members": [lemma, ...]}. Used
+    whenever a cluster's active members don't all share the exact same lemma
+    string, so the chip words themselves are visually distinguishable (e.g.
+    a stress-shift homograph like за́мок/замо́к, or a near-synonym pair). The
+    scenario comes from this note's own compare_scenario field in the
+    registry (Phase 6: confusable_clusters.yaml is 100% backfilled with
+    compare_scenario per member, so it no longer needs hand-authoring per
+    CNSF note).
+
+    Sentence mode: {"mode": "sentence", "items": [{"lemma", "example_ua",
+    "meaning_en"}, ...]}. Used when every active member on this
+    card shares an identical lemma -- a true homophone, where nothing in the
+    word itself (spelling or stress) distinguishes the senses, so a chip
+    choice would just show the same word twice with no discriminating
+    information. Each item carries its own authored example sentence and the
+    English meaning to reveal as the answer, from the registry's
+    example_ua/meaning_en fields (added 2026-08-30, per Craig -- see the
+    party-game-homograph/crayfish-cancer-homograph "chips with no prompt"
+    bug that prompted this design). Auto-detected per note -- no per-cluster
+    opt-in flag needed, so any future identical-lemma cluster picks this up
+    automatically as soon as its members have example_ua/meaning_en set.
+
+    Sentence mode is emitted for the cluster's hub note only (see the
+    is_hub check below) -- the back already reveals every item's meaning_en,
+    so a satellite's card would otherwise be a near-duplicate of the hub's:
+    the exact same two sentences. The satellite gets "" instead, which the
+    existing empty-CompareMembers suspend policy in import_note() then
+    suppresses, leaving exactly one Compare card per cluster in the queue
+    (fix for the "doubled up" cards Craig reported 2026-08-31). Items carry
+    no is_self flag -- Craig confirmed 2026-08-31 the checkmark wasn't
+    needed once the back already shows both meanings plainly.
+
+    Args:
+        note_id: The note's ID (e.g., 'ua-lexeme-0467')
+        tags: List of tags from the note (used only for _IsHomograph flag)
+        registry: ClusterRegistry to query. Defaults to a fresh ClusterRegistry()
+            when None (existing behavior, unchanged).
+        release_active_ids: When given, Compare card membership is filtered to
+            cluster-mates that are themselves status:verified/release:active
+            (see ClusterRegistry.get_release_active_note_ids()) -- so a
+            still-draft sibling never appears on an active hub's card. When
+            None (default), unfiltered -- every sourced cluster-mate is
+            included regardless of its own status, matching behavior before
+            this filter existed.
+
+    Returns:
+        JSON string (one of the two shapes above), or '' if not clustered.
+    """
+    try:
+        reg = registry if registry is not None else ClusterRegistry()
+        # Query by note_id to see if this note is in any cluster
+        cluster = reg.get_cluster_by_note_id(note_id)
+        if not cluster:
+            return ""
+
+        # Get compare card members (hub shows all; satellites show hub + self),
+        # filtered to release-active cluster-mates when release_active_ids is given.
+        members = reg.get_compare_card_members(note_id, release_active_ids=release_active_ids)
+        if len(members) < 2:
+            # Fewer than two reachable members means nothing left to
+            # distinguish -- either the cluster genuinely has <2 sourced
+            # members, or filtering removed enough that only this note (or
+            # nothing) remains release-active.
+            return ""
+
+        # Sentence mode: every active member of the cluster has the
+        # identical lemma string -- the word itself can't distinguish the
+        # senses, so use example-sentence discrimination instead of word
+        # chips. is_sentence_mode() is the single source of truth for this
+        # condition (shared with ClusterRegistry.validate()'s degenerate-
+        # card check) so the renderer and the validator can't drift apart.
+        if cluster.is_sentence_mode():
+            # One canonical sentence-mode card per cluster: emit only for
+            # the hub. See docstring above for why the satellite gets "".
+            if not cluster.is_hub(note_id):
+                return ""
+            data = {
+                "mode": "sentence",
+                "items": [
+                    {
+                        "lemma": member.lemma,
+                        "example_ua": member.example_ua,
+                        "meaning_en": member.meaning_en,
+                    }
+                    for member in members
+                ],
+            }
+            return json.dumps(data, ensure_ascii=False)
+
+        # Chip mode (default, unchanged): scenario from this note's own
+        # compare_scenario.
+        scenario = ""
+        for member in cluster.members:
+            if member.note_id == note_id:
+                scenario = member.compare_scenario
+                break
+
+        data = {
+            "scenario": scenario,
+            "members": [member.lemma for member in members],
+        }
+        return json.dumps(data, ensure_ascii=False)
+    except Exception as e:
+        # Log warning but don't fail import
+        print(f"Warning: Failed to load cluster members for {note_id}: {e}")
+        return ""
+
+
+def import_note(
+    data: dict,
+    dry_run: bool,
+    flagged_note_ids: set | None = None,
+    cluster_registry: ClusterRegistry | None = None,
+    release_active_ids: set[str] | None = None,
+) -> str:
     """Import a single parsed note. Returns 'added', 'updated', or 'skipped'.
 
     flagged_note_ids: Anki note IDs with a red-flagged card (orange is a
     call-out only, not a suspend reason -- see main()), from
     get_flagged_note_ids_by_color()[FLAG_RED] -- see module docstring's
     suspension policy.
+    cluster_registry, release_active_ids: passed straight through to
+    get_cluster_compare_members_json() -- see its docstring. Both default to
+    None, matching prior behavior (a fresh, unfiltered ClusterRegistry per
+    call) for any caller that doesn't pass them.
     """
     flagged_note_ids = flagged_note_ids or set()
     note_id = data.get("note_id", "")
@@ -462,16 +626,19 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     # side chip via {{CompareB}}, leaking the answer. compute_compare_options
     # is now only a fallback for notes that predate that redesign and have
     # never had CompareA/CompareB authored.
-    already_authored = fields.get("CompareA", "").strip() and fields.get("CompareB", "").strip()
-    if not is_homograph and not already_authored:
-        compare_a, compare_b = compute_compare_options(
-            note_id, fields.get("Lemma", ""), fields.get("ConfusableSet", "")
-        )
-        fields["CompareA"] = compare_a
-        fields["CompareB"] = compare_b
+    # Handle Compare field logic: only registry-driven clusters
+    # (Phase 6: CompareA/B/C/D/CompareScenario/Homograph_SenseA/B removed from
+    # schema; legacy auto-derive fallback removed. The confusable cluster
+    # registry -- confusable_clusters.yaml, 100% backfilled as of Phase 2 --
+    # is now the single source of truth for every Compare card.)
+    cluster_members_json = get_cluster_compare_members_json(
+        note_id, tags, registry=cluster_registry, release_active_ids=release_active_ids
+    )
+    fields["CompareMembers"] = cluster_members_json if cluster_members_json else ""
 
-    # Suspension policy -- see module docstring.
-    suspend = "status:draft" in tags
+    # Suspension policy -- see module docstring. AND gate: both status:verified
+    # and release:active must be present to unsuspend; either missing suspends.
+    suspend = not (("status:verified" in tags) and ("release:active" in tags))
 
     # Compare card suspension: suspend if ConfusableSet is empty (no confusables/
     # homographs), OR if it's populated but CompareA never got authored --
@@ -491,9 +658,16 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     # later has that data retracted (ConfusableSet/CompareA/CompareB cleared)
     # -- confirmed working end-to-end via a two-phase test (see CLAUDE.md
     # item 6), so the already-existing card does get suspended on re-sync.
-    confusable_set = fields.get("ConfusableSet", "").strip()
-    compare_a_content = fields.get("CompareA", "").strip()
-    suspend_compare_card = not confusable_set or not compare_a_content
+    # Compare card suspension: suspend if no cluster members
+    # (Phase 6: CompareA/B logic removed; registry is single source of truth)
+    #
+    # Also suspend whenever the note itself is suspended (fix landed
+    # 2026-09-01, per Craig -- see module docstring "Two Compare-card fixes"):
+    # previously a draft/pending note with a populated ConfusableSet could
+    # have its Compare card sitting unsuspended even while every other card
+    # on the note was suspended, contradicting the documented draft policy.
+    compare_members = fields.get("CompareMembers", "").strip()
+    suspend_compare_card = suspend or not compare_members
 
     existing_id = find_note_by_id(note_id)
 
@@ -572,6 +746,16 @@ def main():
             print(f"    {label}")
         print()
 
+    # Built once per run and threaded through every import_note() call, so
+    # Compare card membership can be filtered to cluster-mates that are
+    # themselves reachable elsewhere in the deck -- see module docstring
+    # "Two Compare-card fixes landed 2026-09-01" and
+    # ClusterRegistry.get_release_active_note_ids().
+    cluster_registry = ClusterRegistry()
+    release_active_ids = cluster_registry.get_release_active_note_ids()
+    print(f"{len(release_active_ids)} note(s) are status:verified + release:active "
+          f"(used to filter Compare card membership).\n")
+
     added = updated = skipped = errors = 0
 
     for f in files:
@@ -580,7 +764,9 @@ def main():
             skipped += 1
             continue
         try:
-            result = import_note(data, args.dry_run, flagged_note_ids)
+            result = import_note(
+                data, args.dry_run, flagged_note_ids, cluster_registry, release_active_ids
+            )
             note_id = data.get("note_id", f.name)
             lemma = (data.get("fields") or {}).get("Lemma", "")
             label = f"{note_id}  {lemma}"

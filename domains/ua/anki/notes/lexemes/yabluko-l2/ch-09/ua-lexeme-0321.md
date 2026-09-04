@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.6
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 - needs-confusable-set
 fields:
   NoteID: ua-lexeme-0321
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: перепрошувати / перепросити
   UA_Example: Перепрошую, я не почула, коли відправляється поїзд.

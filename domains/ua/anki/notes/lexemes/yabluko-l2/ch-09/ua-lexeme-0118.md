@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - motion:prefixed
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0118
   Lemma: відхо́дити
@@ -32,18 +33,10 @@ fields:
   ConfusableSet: прихо́дити (directional opposite)
   Mnemonic_EN: при- = arrival (toward the speaker/reference point); від- = departure (away
     from it).
-  CompareScenario: A guest says goodbye and walks away from your door, on foot, at the end
-    of the evening.
-  CompareA: приходити
-  CompareB: відходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: отходить / отойти (від- ≈ от-)'
   TypingAnswer: відходити / відійти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Він відходить від вікна й сідає за стіл.
+  EN_Example: He walks away from the window and sits down at the table.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/відходити
   Source_Note: Stress verified 2026-07-06 via Горох.

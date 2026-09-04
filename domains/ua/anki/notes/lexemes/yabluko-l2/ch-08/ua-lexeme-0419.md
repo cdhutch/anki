@@ -10,10 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.11.2
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0419
   Lemma: ви́бір
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вибір
   UA_Example: У готелі був великий вибір страв.
   EN_Example: The hotel had a large choice of dishes.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.11.2
   Source_URL: https://goroh.pp.ua/Словозміна/вибір
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: Component of phrase note ua-lexeme-0421 (вибір страв).

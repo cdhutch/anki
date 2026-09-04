@@ -12,6 +12,7 @@ tags:
 - ch:2.9.2
 - pos:verb
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0176
   Lemma: насоло́джуватися
@@ -30,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: насолоджуватися / насолодитися
   UA_Example: Ми насолоджуємося відпочинком на морі.

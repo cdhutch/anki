@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.4
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0504
   Lemma: попере́дній
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: попередній
   UA_Example: Попередній маршрут виявився занадто складним.

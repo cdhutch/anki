@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:f
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0141
   Lemma: їзда́
@@ -31,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: їзда
   UA_Example: Їзда на велосипеді корисна для здоровʼя.

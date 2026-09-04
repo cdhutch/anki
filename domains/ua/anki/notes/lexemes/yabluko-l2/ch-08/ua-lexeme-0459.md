@@ -12,8 +12,8 @@ tags:
 - ch:2.8.3
 - pos:noun
 - gender:n
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0459
   Lemma: житло́
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: житло
   UA_Example: Ми орендували житло в центрі міста.

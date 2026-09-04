@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.3
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0219
   Lemma: перекида́ти
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: перекидати / перекинути
   UA_Example: Діти перекидали мʼяч через сітку.

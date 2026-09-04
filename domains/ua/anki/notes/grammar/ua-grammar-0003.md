@@ -13,6 +13,7 @@ tags:
 - grammar:verb_motion
 - grammar:prefix
 - status:draft
+- release:pending
 fields:
   NoteID: ua-grammar-0003
   Topic: Motion Verb Prefixes — Meanings

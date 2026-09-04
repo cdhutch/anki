@@ -1,0 +1,93 @@
+# Study-pacing plan for tools/anki/release_wave.py.
+#
+# Independent of content status (status:draft/verified). A note can be fully
+# authored and status:verified while still sitting release:pending -- this
+# file controls when it actually gets let into Anki rotation, one batch at a
+# time, so a large backlog never dumps into FSRS all at once.
+#
+# Each group: a name, a list of tag glob patterns (fnmatch-style; matched
+# against every tag on a note -- typically ch:<level>.<chapter>.<section>),
+# and a batch_size: the max number of that group's still-pending notes
+# promoted to release:active per run of release_wave.py. Run the script
+# again whenever you're ready for the next slice; a group with nothing left
+# pending is a no-op. Edit freely -- add a group for the next chapter you
+# want to bring in, raise/lower a batch_size, or delete a group once it's
+# fully released.
+#
+# Optional `type: relearn` field (added 2026-08-29, per Craig): marks a
+# group as re-releasing material Craig already knows, rather than brand-new
+# vocabulary. release_wave.py stamps a `relearn:pending` tag on every note
+# it promotes from a `type: relearn` group (in addition to the normal
+# release:pending -> release:active flip). Deliberately a SEPARATE tag
+# namespace from release: -- release:pending/active is the single-value
+# study-pacing gate, relearn:pending/seeded is an independent single-value
+# marker for "has this note's mature interval been seeded yet," and the two
+# should never both use the release: prefix at once (multiple release:*
+# tags on one note reads as ambiguous, per Craig 2026-08-29).
+#
+# After the next normal sync (make ua-lexeme) unsuspends those notes' cards
+# in Anki, run `python tools/anki/seed_mature_interval.py` to seed them
+# with a mature FSRS interval via AnkiConnect's setDueDate (14 days on the
+# Production/EN->UA typing card, 21 days on the Recognition/UA->EN card --
+# FSRS takes over from there on the first real review) instead of making
+# Craig re-earn a practical interval from scratch on words he already
+# knows. Seeding a note flips its tag from `relearn:pending` to
+# `relearn:seeded`, so re-running the seed script is always safe --
+# already-seeded notes are skipped.
+#
+# A group with no `type:` field behaves exactly as before: plain promotion,
+# no relearn tag, no seeding -- real new cards starting at Learning.
+#
+# Special case -- ch:1.0 (Вступ/vstup, 114 notes): this was already fully
+# release:active before this pacing system (and relearn:pending) existed,
+# so it never goes through this file's promotion path. Those 114 notes
+# were tagged relearn:pending directly in a one-time backfill instead (see
+# the commit that added this comment) -- they're already eligible for
+# `seed_mature_interval.py` and don't need a group here.
+#
+# Starter groups below reflect where things stood 2026-08-29: 2.8, 2.9, and
+# part of 2.10 already active in Anki; 1.0 (vstup) just fully released.
+# Replace/extend these as you decide what's next -- they're illustrative,
+# not authoritative.
+
+groups:
+  - name: "L1 vstup remainder (ch 1.1-1.12; 1.0 already released)"
+    type: relearn
+    match:
+      - "ch:1.1.*"
+      - "ch:1.2.*"
+      - "ch:1.3.*"
+      - "ch:1.4.*"
+      - "ch:1.5.*"
+      - "ch:1.6.*"
+      - "ch:1.7.*"
+      - "ch:1.8.*"
+      - "ch:1.9.*"
+      - "ch:1.10.*"
+      - "ch:1.11.*"
+      - "ch:1.12.*"
+    batch_size: 20
+
+  - name: "L2 forward: rest of 2.10, plus 2.11-2.12"
+    match:
+      - "ch:2.10.*"
+      - "ch:2.11.*"
+      - "ch:2.12.*"
+    batch_size: 15
+
+  # Book 2, chapters 1-7 -- older material Craig has already studied,
+  # resurfaced a batch at a time and seeded with a mature interval on
+  # promotion (type: relearn, per Craig 2026-08-29). batch_size is still 0
+  # (no-op) -- raise it whenever you're ready to start bringing these back
+  # in; nothing changes until you do.
+  - name: "L2 backlog relearn (ch 2.1-2.7)"
+    type: relearn
+    match:
+      - "ch:2.1.*"
+      - "ch:2.2.*"
+      - "ch:2.3.*"
+      - "ch:2.4.*"
+      - "ch:2.5.*"
+      - "ch:2.6.*"
+      - "ch:2.7.*"
+    batch_size: 0

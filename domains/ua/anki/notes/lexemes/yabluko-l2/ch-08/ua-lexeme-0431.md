@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0431
   Lemma: стари́й
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: старий
   UA_Example: Ми зупинилися у старому готелі.

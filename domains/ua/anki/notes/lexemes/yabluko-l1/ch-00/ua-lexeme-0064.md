@@ -9,10 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.6
+- ch:1.1.4
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0064
   Lemma: стіле́ць
@@ -32,19 +35,11 @@ fields:
   ConfusableSet: па́рта
   Mnemonic_EN: парта = school desk (classroom-specific, often a desk+bench unit); стілець
     = a general standalone chair/seat.
-  CompareScenario: Describing a standalone seat with no attached desk surface, such as at
-    a dinner table or in a waiting room.
-  CompareA: парта
-  CompareB: стілець
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: стілець
   UA_Example: Сядьте, будь ласка, на стілець коло столу.
   EN_Example: Please sit down on the chair near the table.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.6, ch:1.1.4
   Source_URL: https://goroh.pp.ua/Словозміна/стілець
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

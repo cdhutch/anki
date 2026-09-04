@@ -10,10 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
+- ch:2.4.3
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0265
   Lemma: та́бір
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: табір
   UA_Example: Учасники розбили табір біля підніжжя гори.
   EN_Example: The participants set up camp at the foot of the mountain.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:2.4.3
   Source_URL: https://goroh.pp.ua/Словозміна/табір
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''

@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0068
   Lemma: фі́рма
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: firm · RU: фирма · DE: Firma ← Lat: firma'
   TypingAnswer: фірма
   UA_Example: Він працює у великій міжнародній фірмі.
   EN_Example: He works at a large international company.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2
   Source_URL: https://goroh.pp.ua/Словозміна/фірма
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

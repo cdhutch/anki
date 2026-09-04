@@ -6,13 +6,14 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.4
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0586
   Lemma: різки́й
@@ -39,19 +40,11 @@ fields:
   Mnemonic_EN: різкий = sharp as in HOW something changed (a jolt, a swerve, a sudden drop)
     -- not what a thing intrinsically is. Contrast гострий (ua-lexeme-0503), which describes
     WHAT a thing is (a blade, spicy food, a keen mind).
-  CompareScenario: The driver swerves hard and sudden to dodge a dog that darted into the
-    road.
-  CompareA: різкий
-  CompareB: гострий
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: різкий
   UA_Example: Він відчув різкий біль у нозі, коли підвернув ногу.
   EN_Example: He felt a sharp pain in his leg when he twisted his ankle.
-  Tags_Ch: ch:2.8.4
+  Tags_Ch: ch:2.8.4, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/різкий
   Source_Note: 'New note, added 2026-08-05 -- not part of the original ch:2.8.4 Яблуко vocabulary
     list. різкий was already appearing correctly in three other notes'' example sentences
@@ -64,7 +57,7 @@ fields:
     existing corpus usage rather than a fresh Горох lookup (browser tooling was unavailable
     this session) -- the draft left Lemma unaccented, no stress guess was actually included
     despite an earlier version of this note claiming otherwise. Craig independently verified
-    the stress via Горох the same day (різки́й, stressed final syllable) and flipped stress:verified/status:verified.
+    the stress via Горох the same day (різки́й, stressed final syllable) and marked as verified.
     The ConfusableSet/ Mnemonic_EN distinction (intrinsic quality vs. manner of change) and
     the example sentence were not separately called out as checked during that pass -- flag
     if either needs its own look. CompareScenario is designed to specifically trigger різкий

@@ -10,9 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.4
+- ch:1.5.1
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0503
   Lemma: го́стрий
@@ -39,19 +40,11 @@ fields:
   Mnemonic_EN: гострий = sharp as in WHAT something intrinsically is (a blade, spicy food,
     a keen mind) -- not how it changed. Contrast різкий (ua-lexeme-0586), which describes
     HOW something changed (a jolt, a swerve, a sudden drop).
-  CompareScenario: The chef warns that the soup is far too spicy, there is too much pepper
-    in it.
-  CompareA: гострий
-  CompareB: різкий
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: гострий
   UA_Example: Ця страва занадто гостра для мене.
   EN_Example: This dish is too spicy for me.
-  Tags_Ch: ch:2.8.4
+  Tags_Ch: ch:2.8.4, ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/гострий
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.
   Verification Notes: '2026-08-05: added ConfusableSet/Mnemonic_EN/CompareScenario/CompareA/

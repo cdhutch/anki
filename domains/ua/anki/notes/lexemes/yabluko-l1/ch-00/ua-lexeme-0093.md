@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0093
   Lemma: по́льський
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: польський
   UA_Example: Вона добре розуміє польську мову.
   EN_Example: She understands the Polish language well.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/польський
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

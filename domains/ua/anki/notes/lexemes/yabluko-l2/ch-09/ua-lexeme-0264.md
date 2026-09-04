@@ -12,8 +12,8 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0264
   Lemma: скла́дність
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: складність
   UA_Example: Організатори підвищили рівень складності цьогорічної гонки.

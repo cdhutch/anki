@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0146
   Lemma: тури́зм
@@ -31,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: туризм
   UA_Example: Пішохідний туризм стає дедалі популярнішим.

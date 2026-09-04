@@ -7,16 +7,16 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-consonant+ти
 - motion:swimming
 - phase:2a
 - phonetic-variant
-- conj:drill
 - ch:2.9.2
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0086
-  Lemma: плисти
+  Lemma: плисти́
   Aspect: imperfective
   VerbClass: motion-swimming-new
   FreqSource: ch:2.9
@@ -34,10 +34,10 @@ fields:
   Past_1sg_n: плило́
   Past_3pl: плили́
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: пливучи́
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: пли́вши
   Source_Note: ''
   Verification Notes: 'Free-variant/"phonetic-variant" of пливти (ua-verb-0009), parallel
     to йти (ua-verb-0003) vs іти (ua-verb-0002). Горох-verified 2026-07-31: плисти́ and пливти́
@@ -51,10 +51,10 @@ fields:
     fields (плину́/пли́неш/пли́не/пли́нем/пли́нете/плину́ть, пли́ни/пли́німе/пли́ніте) do
     NOT match пливти -- they match a different verb, плинути ("to flow/stream," a -нути verb),
     not пливти ("to swim," пливу́/пливе́ш/пливе́.../пливу́ть per Горох, matching the forms
-    on this note). ua-verb-0009 is tagged stress:unverified, so this may be a pre-existing
-    data-entry mix-up rather than anything introduced today -- flagging for your review/decision
-    rather than editing that existing note myself. This new note (0086) uses the Горох-verified
-    пливти paradigm, so if 0009 gets corrected the two should end up matching on everything
-    except the Lemma/fem./neut./plural-past/future-stem differences noted above.'
+    on this note). ua-verb-0009 is unverified, so this may be a pre-existing data-entry mix-up
+    rather than anything introduced today -- flagging for your review/decision rather than
+    editing that existing note myself. This new note (0086) uses the Горох-verified пливти
+    paradigm, so if 0009 gets corrected the two should end up matching on everything except
+    the Lemma/fem./neut./plural-past/future-stem differences noted above.'
 ---
 

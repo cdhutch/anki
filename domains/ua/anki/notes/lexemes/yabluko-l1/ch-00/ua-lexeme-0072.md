@@ -9,11 +9,14 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
+- ch:1.0.9
 - pos:proper-noun
 - gender:f
 - pos:country
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0072
   Lemma: Аме́рика
@@ -32,18 +35,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Америка
   UA_Example: Вони мріють поїхати до Америки.
   EN_Example: They dream of going to America.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2, ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/Америка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

@@ -7,18 +7,41 @@ Deck layout:
     UA::Verbs    ← All verb conjugation paradigm cards
 
 Suspension policy:
-    - status:draft → suspend cards after import (inactive verbs)
-    - status:verified → unsuspend cards (active verbs, used in current chapters)
-    - conj:suspended tag → keep suspended (reference only, not for drilling)
-    - stress:unverified tag → keep suspended (stress not yet confirmed against Горох,
-      2026-07-25) — takes precedence over status:verified; a verb isn't ready for
-      drilling if its stress marks haven't been confirmed, verified content or not
+    - status:draft OR release:pending → suspend cards after import
+      (inactive / not yet released)
+    - status:verified AND release:active → unsuspend cards (active verbs,
+      used in current chapters; release: added 2026-08-29 per Craig as a
+      second, independent gate -- see should_suspend())
+    - (conj:drill/conj:suspended curation axis removed 2026-08-27, per Craig --
+      all verified verbs are now active for drilling, not just class leaders,
+      since class leaders trickle in gradually as older chapters are backfilled)
     - note has a red-flagged card → keep suspended (added 2026-07-31, per Craig
       -- see get_flagged_note_ids_by_color in tsv_to_anki.py). Only checked
       for existing notes; a brand-new note can't already have a flagged card.
     - note has an orange-flagged card, no red → NOT suspended. Called out in
       the sync log instead (2026-08-10, per Craig -- orange means "confusing/
       unclear", not "wrong"; see CLAUDE-flag-audit.md).
+    - per-category card suspension (added 2026-09-03, per Craig; see
+      CLAUDE.md "Remaining Work" item 21): independent of the whole-note
+      suspend decision above, each of the four Production cards (Present /
+      Past / Imperative / Participles) is suspended on its own if every
+      field in that card's own category is blank on this note -- e.g.
+      стосуватися (ua-verb-0076, a defective 3rd-person-only verb) has no
+      Imperative_* forms at all, so only its Imperative card suspends; its
+      Present card stays active (Pres_3sg/Pres_3pl are populated). This
+      replaces the old suspend_participles_card(), which blanket-suspended
+      every note's Participles card regardless of whether participles were
+      actually populated -- see sync_card_suspension().
+      Deletion (Craig's other option) isn't practical per note: an AnkiConnect
+      card belongs to its note type's template, so removing a template
+      removes that category for every verb, including ones that do have
+      those forms -- suspension is the only per-note mechanism available.
+      Participles is the one exception to the content check: it's flagged
+      force_suspend=True in CARD_FIELD_CATEGORIES (added same day, per
+      Craig -- "I want the participles to be suspended, since I haven't
+      gotten to learning how to form them yet") and stays suspended
+      regardless of content, a curriculum-pacing call, not a data-quality
+      one. Present/Past/Imperative are unaffected.
 
 Usage (with Anki open + AnkiConnect running):
     # Dry run — show what would be added/updated, touch nothing
@@ -55,6 +78,39 @@ DECK_NAME = "UA::Verbs"
 # Flag-query scope for the red/orange-flag check -- scoped to this note type
 # (2026-08-20); see flag_query_for_model() in tsv_to_anki.py.
 FLAG_DECK_QUERY = flag_query_for_model(MODEL_NAME)
+
+# Which CNSF fields belong to each Production card, in the same order as
+# VERB_CARD_TEMPLATES in tools/anki/setup/setup_ua_note_types.py (added
+# 2026-09-03, per Craig -- see sync_card_suspension()). findCards
+# returns a note's cards in creation order, so index N here must keep
+# matching template index N there; if VERB_CARD_TEMPLATES is ever reordered
+# or a 5th card added, update this list to match.
+#
+# Third element (force_suspend): when True, this card is suspended
+# unconditionally regardless of content -- a curriculum-pacing decision, not
+# a content-completeness one. Participles is force_suspend=True (2026-09-03,
+# per Craig: "I want the participles to be suspended, since I haven't gotten
+# to learning how to form them yet") -- this deliberately reverts the
+# same-day content-based unsuspend for Participles specifically (see item 21
+# in CLAUDE.md) back to the original suspend_participles_card() behavior,
+# while keeping the new content-based check for Present/Past/Imperative. Flip
+# this to False once participle drilling is actually underway.
+CARD_FIELD_CATEGORIES = [
+    ("Production (Present)", ["Pres_1sg", "Pres_2sg", "Pres_3sg", "Pres_1pl", "Pres_2pl", "Pres_3pl"], False),
+    ("Production (Past)", ["Past_1sg_m", "Past_1sg_f", "Past_1sg_n", "Past_3pl"], False),
+    ("Production (Imperative)", ["Imperative_2sg", "Imperative_1pl", "Imperative_2pl"], False),
+    (
+        "Production (Participles)",
+        [
+            "Participle_Active_Present",
+            "Participle_Adverbial_Present",
+            "Participle_Passive_Past",
+            "Participle_Impersonal_Past",
+            "Participle_Adverbial_Past",
+        ],
+        True,
+    ),
+]
 
 
 # ---------------------------------------------------------------------------
@@ -103,26 +159,93 @@ def update_note(anki_id: int, fields: dict, tags: list[str], dry_run: bool):
         anki_request("addTags", {"notes": [anki_id], "tags": " ".join(tags)}, url=ANKI_URL)
 
 
-def set_suspended(anki_note_id: int, suspend: bool, dry_run: bool):
+def category_is_empty(fields: dict, field_names: list[str]) -> bool:
+    """True if every one of field_names is blank/whitespace-only in fields.
+
+    Pure logic, no AnkiConnect -- unit-tested directly in
+    tests/ua/test_ua_verb_import.py.
+    """
+    return all(not (fields.get(name) or "").strip() for name in field_names)
+
+
+def category_should_suspend(fields: dict, field_names: list[str], force_suspend: bool) -> bool:
+    """Decision for a single Production card: force_suspend (a curriculum-
+    pacing override, e.g. Participles -- see CARD_FIELD_CATEGORIES) always
+    wins; otherwise falls back to the content check (category_is_empty).
+
+    Pure logic, no AnkiConnect -- unit-tested directly in
+    tests/ua/test_ua_verb_import.py.
+    """
+    if force_suspend:
+        return True
+    return category_is_empty(fields, field_names)
+
+
+def compute_card_suspension_targets(fields: dict, note_suspend: bool) -> list[bool]:
+    """The target suspended state for each of the four Production cards, in
+    CARD_FIELD_CATEGORIES order.
+
+    note_suspend is the whole-note gate (should_suspend()/red-flag override)
+    -- when True it wins outright and every card suspends, matching the old
+    blanket set_suspended(True) behavior. Otherwise each card gets its own
+    category_should_suspend() decision (added 2026-09-03, per Craig -- see
+    CLAUDE.md "Remaining Work" item 21).
+
+    Pure logic, no AnkiConnect -- unit-tested directly in
+    tests/ua/test_ua_verb_import.py.
+    """
+    if note_suspend:
+        return [True] * len(CARD_FIELD_CATEGORIES)
+    return [
+        category_should_suspend(fields, field_names, force_suspend)
+        for _name, field_names, force_suspend in CARD_FIELD_CATEGORIES
+    ]
+
+
+def sync_card_suspension(anki_note_id: int, fields: dict, note_suspend: bool, dry_run: bool):
+    """Suspend or unsuspend all four Production cards for a note in one pass.
+
+    Replaces the old two-step set_suspended() + sync_category_card_suspension()
+    pairing (2026-09-03 same-day fix, per Craig's report of a misleading
+    "changed" log). That pairing's final suspended states were always
+    correct -- confirmed twice via Craig's own AnkiConnect spot-checks -- but
+    its "changed" print was not: set_suspended() unconditionally unsuspended
+    every card first (when note_suspend was False), and only then did the
+    old function read cardsInfo to compute its "was this card previously
+    suspended" baseline for the print, so that baseline was always
+    post-reset (False) rather than the true prior persisted state. Every
+    empty/force-suspended category (Participles chief among them) logged a
+    false "-> suspended" flip on every single sync as a result, even when
+    nothing had actually changed since the last run.
+
+    This version reads cardsInfo exactly once, before issuing any
+    suspend/unsuspend calls, via compute_card_suspension_targets() -- so the
+    "changed" print now reflects genuine flips only.
+    """
     if dry_run:
         return
     card_ids = anki_request("findCards", {"query": f"nid:{anki_note_id}"}, url=ANKI_URL)
     if not card_ids:
         return
-    action = "suspend" if suspend else "unsuspend"
-    anki_request(action, {"cards": card_ids}, url=ANKI_URL)
-
-
-def suspend_participles_card(anki_note_id: int, dry_run: bool):
-    """Suspend only the participles card (4th card, index 3) for a note."""
-    if dry_run:
-        return
-    card_ids = anki_request("findCards", {"query": f"nid:{anki_note_id}"}, url=ANKI_URL)
-    if not card_ids or len(card_ids) < 4:
-        return
-    # Card index 3 is the participles card (4th card created)
-    participles_card = card_ids[3]
-    anki_request("suspend", {"cards": [participles_card]}, url=ANKI_URL)
+    targets = compute_card_suspension_targets(fields, note_suspend)
+    cards_info = anki_request("cardsInfo", {"cards": card_ids}, url=ANKI_URL) or []
+    to_suspend = []
+    to_unsuspend = []
+    changed = []
+    for idx, card_id in enumerate(card_ids):
+        should_be_suspended = targets[idx] if idx < len(targets) else note_suspend
+        was_suspended = cards_info[idx].get("queue") == -1 if idx < len(cards_info) else None
+        (to_suspend if should_be_suspended else to_unsuspend).append(card_id)
+        if was_suspended is not None and was_suspended != should_be_suspended and idx < len(CARD_FIELD_CATEGORIES):
+            name = CARD_FIELD_CATEGORIES[idx][0]
+            changed.append(f"{name} -> {'suspended' if should_be_suspended else 'unsuspended'}")
+    if to_suspend:
+        anki_request("suspend", {"cards": to_suspend}, url=ANKI_URL)
+    if to_unsuspend:
+        anki_request("unsuspend", {"cards": to_unsuspend}, url=ANKI_URL)
+    if changed:
+        lemma = fields.get("Lemma", "")
+        print(f"    {lemma}: {', '.join(changed)}")
 
 
 # ---------------------------------------------------------------------------
@@ -154,19 +277,20 @@ def parse_note_file(path: Path) -> dict | None:
 
 def should_suspend(tags: list[str]) -> bool:
     """Suspension policy for UA_Verb cards (see module docstring):
-        - conj:suspended tag    → always suspend (reference verbs, not for drilling)
-        - status:draft tag      → suspend (inactive/unreviewed)
-        - stress:unverified tag → suspend (stress not yet confirmed against Горох,
-          2026-07-25) -- independent of status:draft/verified, since a verb can be
-          content-verified but still carry unconfirmed stress marks
-        - otherwise (status:verified, no unverified stress) → unsuspend, ready for
-          drilling
+        - status:draft OR release:pending     → suspend (inactive/not released)
+        - status:verified AND release:active  → unsuspend, ready for drilling
+
+    The conj:drill/conj:suspended curation axis was removed 2026-08-27 (per
+    Craig): all verified verbs are meant to be actively drillable, not just a
+    hand-picked set of class leaders, since class leaders will keep arriving
+    gradually as earlier chapters are backfilled into the corpus.
+
+    release: added 2026-08-29 (per Craig) as a second, independent gate --
+    status tracks content-quality/review state; release tracks study-pacing
+    (whether this note has been let into rotation yet). Both axes must clear
+    for a note to be active; either one suspends.
     """
-    return (
-        "conj:suspended" in tags
-        or "status:draft" in tags
-        or "stress:unverified" in tags
-    )
+    return not (("status:verified" in tags) and ("release:active" in tags))
 
 
 def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) -> str:
@@ -201,11 +325,7 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
     if existing_id is None:
         anki_id = add_note(fields, tags, dry_run)
         if anki_id and not dry_run:
-            if suspend:
-                set_suspended(anki_id, True, dry_run)
-            else:
-                # Suspend only the participles card (5th card) by default
-                suspend_participles_card(anki_id, dry_run)
+            sync_card_suspension(anki_id, fields, suspend, dry_run)
         return "added"
     else:
         # Red-flag override -- see module docstring. Only meaningful here
@@ -215,10 +335,7 @@ def import_note(data: dict, dry_run: bool, flagged_note_ids: set | None = None) 
         note_suspend = suspend or (existing_id in flagged_note_ids)
         update_note(existing_id, fields, tags, dry_run)
         if not dry_run:
-            set_suspended(existing_id, note_suspend, dry_run)
-            if not note_suspend:
-                # Suspend only the participles card (5th card) by default
-                suspend_participles_card(existing_id, dry_run)
+            sync_card_suspension(existing_id, fields, note_suspend, dry_run)
         return "updated"
 
 

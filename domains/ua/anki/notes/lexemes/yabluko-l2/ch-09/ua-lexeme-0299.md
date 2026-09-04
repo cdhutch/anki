@@ -10,16 +10,16 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
-- pos:verb
+- pos:verb-phrase
 - phrase:verb
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0299
   Lemma: ви́лізти на ске́лю
   Lemma_Euphony: ''
-  PartOfSpeech: verb
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вилізти на скелю
   UA_Example: Перший етап -- вилізти на скелю без страховки.

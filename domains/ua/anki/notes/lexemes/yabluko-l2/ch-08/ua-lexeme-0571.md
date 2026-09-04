@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.7
 - pos:adjective
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0571
   Lemma: вража́ючий
@@ -29,15 +29,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster amazing-impressive-synonyms (confusable_clusters.yaml):
+    вража́ючий emphasizes the effect of impressing through scale, quality, or skill (this
+    note) vs. дивови́жний (ua-lexeme-0572), which emphasizes wonder or surprise, and неймові́рно
+    (ua-lexeme-3907), which emphasizes the "hard to believe" extreme.'
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вражаючий
   UA_Example: Це було вражаюче виконання.

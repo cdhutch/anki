@@ -10,11 +10,10 @@ needed, unlike the old single-form schema this replaced.
 Suspension policy (added 2026-07-31 -- this script previously had none at
 all, so a card suspended by accident here, e.g. a mistyped Command-1/Alt-1
 during review, stayed suspended forever; nothing ever re-asserted a state):
-    - stress:unverified tag → suspend (stress not yet confirmed against Горох,
-      matching the "not ready for drilling until confirmed" rationale used in
-      ua_verb_import.py. Cleared on all 13 by Craig's 2026-08-18 Горох pass in
-      05d8e74; the check stays, since a future note starts unverified.)
     - status:draft tag → suspend (inactive/unreviewed)
+    - release:pending tag → suspend (not yet released for study pacing;
+      added 2026-08-29, per Craig -- independent of status, see
+      should_suspend())
     - conj:suspended tag → always suspend (added 2026-08-19, per Craig --
       reference only, not for drilling). Mirrors ua_verb_import.py, where the
       same tag separates the motion-verb cores that get drilled from the
@@ -64,6 +63,7 @@ from tools.anki.sync.tsv_to_anki import (  # noqa: E402
 # what gets WRITTEN -- this constant scopes flag QUERIES, which are per-run
 # rather than per-note.
 MODEL_NAME = "UA_PVOM_Infinitive"
+ANKI_URL = "http://127.0.0.1:8765"
 
 # Flag-query scope for the red/orange-flag check -- scoped to this note type
 # (2026-08-20); see flag_query_for_model() in tsv_to_anki.py. This importer is
@@ -116,17 +116,17 @@ def anki_connect(action, params=None):
 def should_suspend(tags):
     """Suspension policy for UA_PVOM_Infinitive cards -- see module docstring.
 
-    Three independent axes, matching ua_verb_import.py:
-        - stress:unverified → data not confirmed against Горох
+    Three independent axes, matching ua_verb_import.py plus the release gate:
         - status:draft      → content not reviewed
         - conj:suspended    → reviewed and correct, but deliberately not drilled
+        - release:pending   → reviewed and correct, but not yet released for
+          study pacing (added 2026-08-29, per Craig)
     Any one of them suspends. Keeping them separate is what lets a note be
-    verified on both quality axes and still held out of the rotation without
+    verified on quality axis and still held out of the rotation without
     lying about its review state.
     """
     return (
-        "stress:unverified" in tags
-        or "status:draft" in tags
+        not (("status:verified" in tags) and ("release:active" in tags))
         or "conj:suspended" in tags
     )
 

@@ -6,14 +6,15 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0191
   Lemma: па́лиця
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: палиця
   UA_Example: У народному бою іноді використовують деревʼяну палицю.
   EN_Example: In folk combat a wooden stick is sometimes used.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3, ch:1.8.5
   Source_URL: https://goroh.pp.ua/Словозміна/палиця
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

@@ -10,9 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
+- ch:1.11.4
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0216
   Lemma: заробля́ти
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: заробляти / заробити
   UA_Example: Команда заробляє очки за кожну перемогу.
   EN_Example: The team earns points for every win.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3, ch:1.11.4
   Source_URL: https://goroh.pp.ua/Словозміна/заробляти; https://goroh.pp.ua/Словозміна/заробити
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

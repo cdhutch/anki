@@ -6,13 +6,14 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
 - pos:adverb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0449
   Lemma: небезпе́чно
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: небезпечно
   UA_Example: Плавати тут небезпечно.
   EN_Example: It's dangerous to swim here.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/небезпечно
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

@@ -6,14 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:1.2.2
 - pos:noun
 - gender:n
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0339
   Lemma: таксі́
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: таксі
   UA_Example: Таксі приїхало через пʼять хвилин.
   EN_Example: The taxi arrived in five minutes.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:1.2.2, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/таксі
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: 'Indeclinable. Filtered out an unrelated homograph ''такса'' (fee/rate;

@@ -1,0 +1,44 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-3456
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.8.3
+- pos:noun
+- status:draft
+- release:pending
+fields:
+  NoteID: ua-lexeme-3456
+  Lemma: перемо́га
+  Lemma_Euphony: ''
+  PartOfSpeech: noun
+  Gender: f
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: null
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: victory
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: null
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: перемога
+  UA_Example: Перемога далася нелегко.
+  EN_Example: The victory didn't come easily.
+  Tags_Ch: ch:1.8.3
+  Source_URL: https://goroh.pp.ua/Словозміна/перемога
+  Source_Note: yabluko-l1-vocabulary.pdf ch.8, yabluko-l1 vocabulary expansion pass, 2026-08-29.
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+---
+

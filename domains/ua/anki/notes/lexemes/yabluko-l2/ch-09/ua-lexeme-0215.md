@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.3
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0215
   Lemma: завдава́ти
@@ -41,14 +41,6 @@ fields:
   Mnemonic_EN: Where does the force end up? відбивати = away (deflect an incoming ball); забивати
     = into the goal (score the shot); завдавати = onto a person (a blow); набирати = onto
     the scoreboard (the number goes up).
-  CompareScenario: Round after round, what does this boxer keep doing with his fists -- not
-    to a ball, but to the man across from him?
-  CompareA: відбива́ти
-  CompareB: забива́ти
-  CompareC: завдава́ти
-  CompareD: набира́ти
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: завдавати / завдати
   UA_Example: Боксер завдавав ударів один за одним.

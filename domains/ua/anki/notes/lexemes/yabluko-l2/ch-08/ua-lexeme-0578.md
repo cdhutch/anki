@@ -6,14 +6,15 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.7
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0578
   Lemma: шкі́ра
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: шкіра
   UA_Example: Шкіра після сонця стала червоною.
   EN_Example: The skin turned red after the sun.
-  Tags_Ch: ch:2.8.7
+  Tags_Ch: ch:2.8.7, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/шкіра
   Source_Note: Горох-verified 2026-07-26, ch.8.7 sourcing pass.
   Verification Notes: Component of idiomatic phrase ua-lexeme-0579 (мурашки по шкірі).

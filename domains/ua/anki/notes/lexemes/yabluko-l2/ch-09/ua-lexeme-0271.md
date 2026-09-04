@@ -10,10 +10,14 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
+- ch:2.5.1
+- ch:1.1.4
+- ch:1.2.2
+- ch:1.10.4
 - pos:noun
 - gender:n
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0271
   Lemma: о́зеро
@@ -32,21 +36,15 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: озеро
   UA_Example: Наступний етап -- переплисти озеро.
   EN_Example: The next stage is swimming across the lake.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:2.5.1, ch:1.1.4, ch:1.2.2, ch:1.10.4
   Source_URL: https://goroh.pp.ua/Словозміна/озеро
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: Filtered out proper-noun homographs (a village and a river both named
-    'Озеро').
+    'Озеро'). Merged duplicate note(s) ua-lexeme-2628 into this canonical note during corpus-wide
+    dedup audit (2026-08-29); their chapter tags were migrated here.
 ---
 

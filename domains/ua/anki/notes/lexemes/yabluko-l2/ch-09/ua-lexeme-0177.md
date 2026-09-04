@@ -6,13 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.2
 - pos:verb
 - status:verified
+- release:active
 - ch:2.9.3
+- ch:1.10.7
 fields:
   NoteID: ua-lexeme-0177
   Lemma: перемага́ти
@@ -42,19 +45,11 @@ fields:
   Mnemonic_EN: перемагати = WHO you beat (a person/team, direct object); вигравати = WHAT
     you win (a match/prize/thing, never a person). See ua-lexeme-0212/вигравати for the mirror
     note.
-  CompareScenario: In the championship boxing match, what did the challenger do to the reigning
-    champion?
-  CompareA: перемогти́ (перемага́ти)
-  CompareB: ви́грати (виграва́ти)
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: перемагати / перемогти
-  UA_Example: Наша команда перемагає у більшості матчів.
-  EN_Example: Our team wins most of its matches.
-  Tags_Ch: ch:2.9.2, ch:2.9.3
+  UA_Example: Наша команда перемогла головного суперника у фіналі.
+  EN_Example: Our team defeated its main rival in the final.
+  Tags_Ch: ch:2.9.2, ch:2.9.3, ch:1.8.3, ch:1.10.7
   Source_URL: https://goroh.pp.ua/Словозміна/перемагати; https://goroh.pp.ua/Словозміна/перемогти
   Source_Note: Stress verified 2026-07-22 via Горох for both aspects. Vocab list (9.2) cites
     the perfective 'перемогти' — this note uses the imperfective 'перемагати' as Lemma for

@@ -9,11 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:m
 - pos:profession
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0020
   Lemma: вчи́тель
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вчитель
   UA_Example: Вчитель пояснює нове правило на дошці.
   EN_Example: The teacher is explaining a new rule on the board.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/вчитель
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

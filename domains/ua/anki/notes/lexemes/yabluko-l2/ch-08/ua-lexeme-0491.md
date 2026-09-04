@@ -12,8 +12,8 @@ tags:
 - ch:2.8.3
 - pos:phrase
 - phrase:discourse
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0491
   Lemma: не таки́й ... як
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: не такий ... як
   UA_Example: Це місто не таке гамірне, як я думав.

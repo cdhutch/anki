@@ -12,8 +12,8 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0252
   Lemma: бал
@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: point, score (unit of scoring)
+  EN_Gloss: a point on an evaluative rating score
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
@@ -37,18 +37,10 @@ fields:
     as a rating; очко́ is scored in the action.'
   Mnemonic_EN: очко́ is won IN the game (running score); бал is given ABOUT the performance
     (a grade or rating).
-  CompareScenario: A gymnast finishes her routine, and the judges hold up number cards showing
-    how they rated her performance.
-  CompareA: очко́
-  CompareB: бал
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: бал
-  UA_Example: Команда отримала додаткові бали за швидкість.
-  EN_Example: The team got extra points for speed.
+  UA_Example: Вона отримала дванадцять балів за контрольну роботу з математики.
+  EN_Example: She got twelve points out of twelve on the math test.
   Tags_Ch: ch:2.9.5
   Source_URL: https://goroh.pp.ua/Словозміна/бал
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.

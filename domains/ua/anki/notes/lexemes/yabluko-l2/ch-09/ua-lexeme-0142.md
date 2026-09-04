@@ -10,9 +10,12 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
+- ch:1.3.5
+- ch:1.4.1
 - pos:noun
 - gender:m
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0142
   Lemma: спорт
@@ -31,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: спорт
   UA_Example: Ви любите займатися спортом?
   EN_Example: Do you like doing sports?
-  Tags_Ch: ch:2.9.1
+  Tags_Ch: ch:2.9.1, ch:1.3.5, ch:1.4.1
   Source_URL: https://goroh.pp.ua/Словозміна/спорт
   Source_Note: Verified 2026-07-22 via Горох (no stress mark needed — one syllable). Example
     is the opening question of Яблуко 2 ch.9.1.

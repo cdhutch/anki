@@ -12,8 +12,8 @@ tags:
 - ch:2.9.4
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 - homograph:true
 fields:
   NoteID: ua-lexeme-0235
@@ -34,13 +34,6 @@ fields:
   ConfusableSet: 'ла́вка (1st Горох sense: ''для сидіння'' -- bench, seat) -- homograph, unrelated
     meaning: "bench (for sitting)" -- see ua-lexeme-0372.'
   Mnemonic_EN: ''
-  CompareScenario: Which sense of лавка is being used?
-  CompareA: Вона купила букет троянд у квітковій лавці на ринку.
-  CompareB: На парку було багато лавок, де люди могли сидіти.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: market stall, shop stand
-  Homograph_SenseB: bench (for sitting)
   CrossLang_Analog: ''
   TypingAnswer: лавка
   UA_Example: Вона купила букет троянд у квітковій лавці на ринку.

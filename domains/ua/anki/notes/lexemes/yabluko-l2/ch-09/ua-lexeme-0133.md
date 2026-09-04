@@ -12,6 +12,7 @@ tags:
 - ch:2.9.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0133
   Lemma: верхови́й
@@ -23,20 +24,13 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: relating to horseback riding; upper (adj.)
+  EN_Gloss: relating to horseback riding; equestrian
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: верховий
   UA_Example: Верхова їзда розвиває координацію та впевненість.

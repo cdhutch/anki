@@ -13,8 +13,8 @@ tags:
 - pos:phrase
 - phrase:conversational
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0327
   Lemma: Вибачте, Ви сказа́ли...?
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Вибачте, Ви сказали...?
   UA_Example: Вибачте, Ви сказали, що потрібно пересісти в Києві?

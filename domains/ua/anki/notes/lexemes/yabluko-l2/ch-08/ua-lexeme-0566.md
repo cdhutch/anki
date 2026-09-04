@@ -10,15 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0566
   Lemma: сто́вбур де́рева
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: стовбур дерева
   UA_Example: Ми виміряли обхват стовбура дерева.

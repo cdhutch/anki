@@ -13,10 +13,12 @@ tags:
 - grammar:verb_motion
 - grammar:prefix
 - status:verified
+- release:active
 fields:
   NoteID: ua-visual-0004
   Prefix: під-
-  Meaning_EN: approaching
+  Meaning_EN: approaching -- getting close to something or someone, without necessarily reaching,
+    entering, or arriving at it
   Govt: до + Р.в.
   Walking_Pair: підхо́дити / підійти́
   Vehicle_Pair: підʼїжджа́ти / підʼї́хати
@@ -35,6 +37,11 @@ fields:
   Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 (arrow
     approaching a hatched square, matching the textbook''s obstacle icon). A visible gap is
     kept between the arrowhead and the square -- per Craig''s note, the arrow does not touch
-    it. Reviewed and approved by Craig.'
+    it. Reviewed and approved by Craig. 2026-08-27: as part of the до-/при- Meaning_EN pass
+    (Craig''s request that diagram + specific English phrasing combine on every prefix note),
+    rewrote Meaning_EN to state the stop-short-of-contact distinction the diagram already
+    draws: під- gets close but doesn''t reach, enter, or arrive -- unlike до- (ua-visual-0006,
+    reaches the final destination) or при- (ua-visual-0001, arrives at a place). My own draft,
+    needs your review.'
 ---
 

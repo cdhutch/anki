@@ -10,10 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
+- ch:2.3.4
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0201
   Lemma: ви́ступ
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: виступ
   UA_Example: Показовий виступ гімнастів вразив глядачів.
   EN_Example: The gymnasts' exhibition performance amazed the audience.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3, ch:2.3.4
   Source_URL: https://goroh.pp.ua/Словозміна/виступ
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).

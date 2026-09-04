@@ -10,14 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
-- pos:phrase
-- stress:verified
+- pos:noun-phrase
+- phrase:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0421
   Lemma: ви́бір страв
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -31,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вибір страв
   UA_Example: У цьому ресторані великий вибір страв.

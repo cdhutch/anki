@@ -9,9 +9,11 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.7
 - pos:phrase
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0113
   Lemma: Скі́льки Вам ро́ків?
@@ -30,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Скільки Вам років?
   UA_Example: — Скільки Вам років? — Мені тридцять.
   EN_Example: — How old are you? — I am thirty.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.7
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''

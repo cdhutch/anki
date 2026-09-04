@@ -1,0 +1,44 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-3596
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.9.4
+- pos:adverb
+- status:draft
+- release:pending
+fields:
+  NoteID: ua-lexeme-3596
+  Lemma: за кордо́н
+  Lemma_Euphony: ''
+  PartOfSpeech: adverb
+  Gender: null
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: null
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: abroad (direction, to a foreign country)
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: null
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: за кордон
+  UA_Example: Влітку вони поїхали за кордон.
+  EN_Example: In the summer they went abroad.
+  Tags_Ch: ch:1.9.4
+  Source_URL: https://goroh.pp.ua/Словозміна/за
+  Source_Note: yabluko-l1-vocabulary.pdf ch.9, yabluko-l1 vocabulary expansion pass, 2026-08-29.
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+---
+

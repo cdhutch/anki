@@ -7,24 +7,23 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-1
+- class:conj1-vowel+й
 - ch:2.9.3
-- conj:suspended
-- status:draft
-- stress:unverified
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0045
-  Lemma: кидати
+  Lemma: ки́дати
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.9
   Pres_1sg: ки́даю
   Pres_2sg: ки́даєш
   Pres_3sg: ки́дає, кида
-  Pres_1pl: ки́даєм, ки́даємо
+  Pres_1pl: ки́даємо
   Pres_2pl: ки́даєте
   Pres_3pl: ки́дають
-  Imperative_2sg: ки́дай, ки́дай-но
+  Imperative_2sg: ки́дай
   Imperative_1pl: ки́даймо
   Imperative_2pl: ки́дайте
   Past_1sg_m: ки́дав
@@ -32,10 +31,10 @@ fields:
   Past_1sg_n: ки́дало
   Past_3pl: ки́дали
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
-  Participle_Passive_Past: ''
-  Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Present: ки́даючи
+  Participle_Passive_Past: ки́даний
+  Participle_Impersonal_Past: ки́дано
+  Participle_Adverbial_Past: ки́давши
   Source_Note: ''
   Verification Notes: 'Perfective: ки́нути. See ua-lexeme-0217.'
 ---

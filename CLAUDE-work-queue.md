@@ -236,8 +236,11 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   goodbye-words aren't distinguished yet. Flagged 2026-08-03, not started.
 
 - [ ] **Pending-confusable watchlist** — run `make ua-check`
-  (`check_pending_confusables.py`) and write real `ConfusableSet`/`CompareA-D`
-  content for any `pending-confusable:<lemma>` tag whose target word now exists.
+  (`check_pending_confusables.py`) and, for any `pending-confusable:<lemma>` tag
+  whose target word now exists, write real `ConfusableSet` content and add a member
+  entry (with `compare_scenario`/`compare_a`/`compare_b`) to
+  `domains/ua/anki/confusable_clusters.yaml` -- not `CompareA-D` in CNSF, which was
+  removed 2026-08-26 in favor of the registry (see `CLAUDE.md`'s 2026-08-26 entry).
   Known tagged lemmas from the ch-08 pass: зазвичай, затор, забагато, вигляд,
   доглянати, скільки, декілька, погода/природа/порода (off пригода), подорож
   (off мандрівка).
@@ -255,6 +258,49 @@ log, `CLAUDE-active-status.md`, and the repo's own generated manifests.
   single target spelling yet) — 0436 важкий, 0440 добрий, 0321 перепрошувати.
 
 ## UA Domain — Content verification (Craig + Горох sign-off required)
+
+- [x] **Class G homograph audit — Compare card structure fixes applied (2026-08-25).**
+  Found that ua-lexeme-0143 (вид = kind/type) and ua-lexeme-0182 (вид = grammatical aspect,
+  homograph sibling) had asymmetric Compare card structures: 0182 had proper example-sentence
+  CompareA/B values while 0143 had bare "вид" words instead of example sentences. Shape 1
+  (homograph mode) requires identical example sentences on both sibling notes so the
+  CompareScenario and Homograph_SenseA/B provide the distinguishing context, not the
+  example strings themselves.
+  
+  **Fix applied:** updated ua-lexeme-0143's CompareA/B to match 0182's example-sentence
+  format:
+    - CompareA: "Який вид спорту ти любиш?" (What kind of sport do you like?)
+    - CompareB: "Дієслово "читати" має недоконаний вид." (The verb "читати" has imperfective aspect.)
+  
+  Both notes now have identical example sentences; each note's CompareScenario guides which
+  sense applies. Created two audit scripts (`audit_registry_vs_cnsf.py`,
+  `analyze_registry_compare_data.py`) for finding similar Compare card structure issues
+  corpus-wide — experimental tools, not yet part of regular workflow. Live sync verified,
+  Anki spot-check confirmed correct rendering.
+
+  **Created audit scripts for follow-up:** `tools/anki/inspect/audit_registry_vs_cnsf.py`
+  and `tools/anki/inspect/analyze_registry_compare_data.py` — check all homograph pairs
+  for Compare structure symmetry. Not yet integrated into `make ua-check`; decide whether
+  to formalize or keep as experimental tooling.
+
+- [ ] **8 new drawing/painting-cluster notes need review** (2026-08-27):
+  ua-lexeme-0596–0603 (малювання, малярство, живопис, картина, розпис, малювати/намалювати,
+  розписувати/розписати, фарбувати/пофарбувати), plus ua-lexeme-0042 (малюнок)'s updated
+  `ConfusableSet`/tags. All 8 new notes are `status:draft`, same review pattern as
+  0589–0594 — sourced from Горох and from a cloze-card set Craig supplied, but not yet
+  personally checked. See `CLAUDE.md`'s Vocabulary dedup & homograph handling section,
+  "2026-08-27 new clusters," for the full breakdown.
+
+- [ ] **ua-lexeme-0306 (тип) ↔ ua-lexeme-0143 (вид) needs a registry decision** (2026-08-27):
+  0306's `ConfusableSet` already documents a тип/вид synonym relationship in prose (from a
+  2026-07-30/08-02 pass, predating the registry), but it has no live Compare card — 0143 is
+  already the `grammatical-aspect` cluster's satellite (paired with ua-lexeme-0182, the
+  aspect-homograph sense of вид), and the registry only lets a note belong to one cluster.
+  Wiring тип/вид in for real means either (a) accepting that 0143's card flips away from the
+  aspect-homograph pairing to the тип/вид pairing, sacrificing the aspect disambiguation, or
+  (b) extending `ClusterRegistry.note_to_cluster` to support multiple clusters per note plus
+  deciding how such a note's `CompareMembers` actually renders. Recommended holding off
+  rather than picking (a) — see `CLAUDE.md` for the full reasoning. Needs your call.
 
 - [ ] **`ua-lexeme-0115`'s `ConfusableSet` corrected to `вихо́дити`** (2026-08-20,
   `fe4efcc`). It read `ви́ходити` — the prefix-stressed homograph (*to wear out by
@@ -828,6 +874,8 @@ Anki, in the repo, or against Горох — not that a log entry claimed it.
       python tools/anki/inspect/check_cnsf_field_schema.py --note-type UA_Verb --strict
 
   Wiring that into the Makefile is a separate open item, below.
+
+- [x] **Seven deprecated Compare/Homograph fields removed corpus-wide, replaced by registry-driven `CompareMembers`.** Builds on the fields surveyed in the item above (`CompareA`/`CompareB` at 63/585, `CompareC`/`CompareD` at 11/585 and 8/585, `CompareScenario` at 63/585, `Homograph_SenseA`/`SenseB` at 10/585 each) -- rather than backfilling those keys to always-present per this section's convention, Craig's call was to remove them entirely in favor of a single `CompareMembers` JSON field sourced from `confusable_clusters.yaml` (`ClusterRegistry`/`ClusterMember`, `tools/anki/lib/confusable_clusters.py`). Removed from the `FIELDS` constant and Compare-card templates in `setup_ua_note_types.py`, the `_normalize_meta()` setdefault list in `cnsf_canonicalize.py`, the live `UA_Lexeme` Anki note type, and all 585 CNSF note files. `check_cnsf_field_schema.py` now tolerates the seven old keys as deprecated rather than unknown. **Personally verified by Craig 2026-08-26** -- Anki sync checked and cards spot-checked in the browser before merging PR (`bf5a8a77`, `f4679e84`); 548 tests passing. See `CLAUDE.md`'s 2026-08-26 entry for the full account. The "Pending-confusable watchlist" open item above has been updated to point at the new registry-based workflow instead of authoring `CompareA-D` directly.
 
 ## UA Domain — Content verification (Craig + Горох sign-off required)
 

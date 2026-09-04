@@ -12,8 +12,8 @@ tags:
 - ch:2.8.1
 - pos:noun
 - gender:n
-- stress:verified
 - status:verified
+- release:active
 - homograph:true
 fields:
   NoteID: ua-lexeme-0407
@@ -37,13 +37,6 @@ fields:
   Mnemonic_EN: Same spelling either way (тепло) — stress is the only visible cue. те́пло (stress
     те-) describes HOW something is done ("warmly"); тепло́ (stress -ло́) IS the thing itself
     ("warmth" as a noun, usually paired with an adjective like приємне).
-  CompareScenario: Which sense of тепло is being used?
-  CompareA: Одягайся тепло, надворі холодно.
-  CompareB: Від каміна йшло приємне тепло.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: warmly (adverb)
-  Homograph_SenseB: warmth (noun)
   CrossLang_Analog: ''
   TypingAnswer: тепло
   UA_Example: Від каміна йшло приємне тепло.

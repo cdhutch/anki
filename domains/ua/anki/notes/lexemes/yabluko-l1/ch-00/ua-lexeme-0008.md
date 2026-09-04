@@ -9,11 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:f
 - pos:profession
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0008
   Lemma: офіціа́нтка
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: офіціантка
   UA_Example: Офіціантка приносить нам меню і посміхається.
   EN_Example: The waitress brings us the menu and smiles.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/офіціантка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

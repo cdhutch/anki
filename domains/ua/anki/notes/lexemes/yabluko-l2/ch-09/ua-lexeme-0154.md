@@ -10,14 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0154
   Lemma: бойови́й гопа́к
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -32,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: бойовий гопак
   UA_Example: Бойовий гопак поєднує елементи танцю та бойового мистецтва.

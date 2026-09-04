@@ -9,11 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:noun
 - gender:f
 - pos:profession
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0016
   Lemma: студе́нтка
@@ -33,19 +35,11 @@ fields:
   ConfusableSet: студе́нт
   Mnemonic_EN: студент = male student; студентка = female student — the counterpart form,
     not a different word.
-  CompareScenario: Introducing a female university student to a group of people who haven't
-    met her before.
-  CompareA: студент
-  CompareB: студентка
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'RU: студентка · DE: Studentin'
   TypingAnswer: студентка
   UA_Example: Студентка живе в гуртожитку недалеко від університету.
   EN_Example: The female student lives in a dormitory not far from the university.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5
   Source_URL: https://goroh.pp.ua/Словозміна/студентка
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added Mnemonic_EN + CompareScenario + CompareA/B for the

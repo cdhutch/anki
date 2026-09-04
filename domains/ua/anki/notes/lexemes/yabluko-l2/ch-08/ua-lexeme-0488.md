@@ -10,15 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
-- pos:phrase
+- pos:verb-phrase
 - phrase:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0488
   Lemma: впада́ти в о́чі
   Lemma_Euphony: упада́ти в о́чі
-  PartOfSpeech: phrase
+  PartOfSpeech: verb-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: впа́сти в о́чі
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: впадати в очі / впасти в очі
   UA_Example: Її яскрава сукня одразу впала в очі.

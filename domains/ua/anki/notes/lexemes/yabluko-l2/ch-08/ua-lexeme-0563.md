@@ -10,39 +10,32 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0563
   Lemma: жа́бʼячі ла́пки
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: frog legs
+  EN_Gloss: frog's legs
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: жабʼячі лапки
   UA_Example: Жабʼячі лапки — популярна страва у Франції.
-  EN_Example: Frog legs are a popular dish in France.
+  EN_Example: Frog's legs are a popular dish in France.
   Tags_Ch: ch:2.8.6
   Source_URL: https://goroh.pp.ua/Словозміна/жабʼячий; https://goroh.pp.ua/Словозміна/лапка
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.

@@ -13,8 +13,9 @@ tags:
 - pos:noun
 - gender:f
 - ch:2.9.7
-- stress:verified
+- ch:1.12.3
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0278
   Lemma: си́ла
@@ -33,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: сила
   UA_Example: Він доліз до вершини з останніх сил.
   EN_Example: He climbed to the top with his last ounce of strength.
-  Tags_Ch: ch:2.9.5, ch:2.9.7
+  Tags_Ch: ch:2.9.5, ch:2.9.7, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/сила
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: 'Filtered out proper-noun homographs (a given name ''Сила'' and a place

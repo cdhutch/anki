@@ -7,14 +7,13 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular
+- class:conj1-vowel+й
 - ch:2.9.2
-- conj:suspended
 - status:verified
-- stress:verified
+- release:active
 fields:
   NoteID: ua-verb-0035
-  Lemma: помічати
+  Lemma: поміча́ти
   Aspect: imperfective
   VerbClass: regular
   FreqSource: ch:2.9

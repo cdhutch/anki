@@ -6,13 +6,14 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0464
   Lemma: гости́нний
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: гостинний
   UA_Example: Господарі виявились дуже гостинними.
   EN_Example: The hosts turned out to be very hospitable.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/гостинний
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: ''

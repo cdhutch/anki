@@ -23,7 +23,6 @@ SUSPEND_FLAG_COLORS = (FLAG_RED,)
 UA_DECK_TREE = "deck:UA::*"
 
 
-
 def anki_request(action: str, params: Dict[str, Any] | None = None, url: str = "http://127.0.0.1:8765") -> Any:
     """Make a request to AnkiConnect.
 

@@ -9,10 +9,14 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
+- ch:1.2.5
+- ch:1.12.3
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0056
   Lemma: пра́пор
@@ -31,18 +35,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: прапор
   UA_Example: На будівлі висить синьо-жовтий прапор.
   EN_Example: A blue-and-yellow flag hangs on the building.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9, ch:1.2.5, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/прапор
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

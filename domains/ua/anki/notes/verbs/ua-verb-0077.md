@@ -7,35 +7,34 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-1
+- class:conj1-vowel+й
 - ch:2.8.3
-- conj:suspended
-- status:draft
-- stress:unverified
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0077
-  Lemma: дотримуватися
+  Lemma: дотри́муватися
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.8
-  Pres_1sg: дотримуюсь, дотримуюся
-  Pres_2sg: дотримуєшся
+  Pres_1sg: дотри́муюся
+  Pres_2sg: дотри́муєшся
   Pres_3sg: дотри́мується
-  Pres_1pl: дотримуємось, дотримуємося, дотримуємся
-  Pres_2pl: дотримуєтесь, дотримуєтеся
+  Pres_1pl: дотри́муємося
+  Pres_2pl: дотри́муєтеся
   Pres_3pl: дотри́муються
-  Imperative_2sg: дотримуйсь, дотримуйся
-  Imperative_1pl: дотримуймось, дотримуймося
-  Imperative_2pl: дотримуйтесь, дотримуйтеся
-  Past_1sg_m: дотримувавсь, дотримувався
-  Past_1sg_f: дотримувалась, дотримувалася
-  Past_1sg_n: дотримувалось, дотримувалося
-  Past_3pl: дотримувались, дотримувалися
+  Imperative_2sg: дотри́муйся
+  Imperative_1pl: дотри́муймося
+  Imperative_2pl: дотри́муйтеся
+  Past_1sg_m: дотри́мувався
+  Past_1sg_f: дотри́мувалася
+  Past_1sg_n: дотри́мувалося
+  Past_3pl: дотри́мувалися
   Participle_Active_Present: ''
-  Participle_Adverbial_Present: ''
+  Participle_Adverbial_Present: дотри́муючись
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: дотри́мувавшись
   Source_Note: ''
   Verification Notes: Reflexive, 1st conjugation. Govs genitive. Perfective дотриматися not
     verified this pass. See lexeme ua-lexeme-0482.

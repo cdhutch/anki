@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.7
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0342
   Lemma: підво́зити
@@ -31,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: підвозити / підвезти
   UA_Example: Місцевий фермер погодився підвезти їх до сироварні.

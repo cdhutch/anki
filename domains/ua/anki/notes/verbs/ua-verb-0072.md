@@ -7,21 +7,21 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-1
+- class:conj1-vowel+й
 - ch:2.9.7
-- conj:suspended
-- status:draft
-- stress:unverified
+- ch:2.6.3
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0072
-  Lemma: вирушати
+  Lemma: вируша́ти
   Aspect: imperfective
   VerbClass: regular-1
-  FreqSource: ch:2.9
+  FreqSource: ch:2.9, ch:2.6.3
   Pres_1sg: вируша́ю
   Pres_2sg: вируша́єш
   Pres_3sg: вируша́є
-  Pres_1pl: вируша́єм, вируша́ємо
+  Pres_1pl: вируша́ємо
   Pres_2pl: вируша́єте
   Pres_3pl: вируша́ють
   Imperative_2sg: вируша́й
@@ -35,7 +35,7 @@ fields:
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: вируша́вши
   Source_Note: ''
   Verification Notes: Pairs with perfective ви́рушити. See ua-lexeme-0340.
 ---

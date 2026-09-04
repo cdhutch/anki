@@ -12,6 +12,7 @@ tags:
 - ch:2.9.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0137
   Lemma: пішохі́дний
@@ -30,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: пішохідний
   UA_Example: Ви їдете в інші країни, щоб зайнятися пішохідним туризмом.

@@ -10,9 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.5
+- ch:2.2.6
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0273
   Lemma: приго́дницький
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: пригодницький
   UA_Example: Пригодницька гонка щороку збирає сотні команд.
   EN_Example: The adventure race draws hundreds of teams every year.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:2.2.6
   Source_URL: https://goroh.pp.ua/Словозміна/пригодницький
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''

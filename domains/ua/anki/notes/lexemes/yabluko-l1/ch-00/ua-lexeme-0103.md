@@ -9,9 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.5
 - pos:adverb
 - status:verified
+- release:active
+- relearn:seeded
+- ch:2.12.1
 fields:
   NoteID: ua-lexeme-0103
   Lemma: ціка́во
@@ -30,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: цікаво
   UA_Example: Цікаво, звідки він так добре знає українську.
   EN_Example: I wonder where he learned Ukrainian so well.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.5, ch:2.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/цікаво
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

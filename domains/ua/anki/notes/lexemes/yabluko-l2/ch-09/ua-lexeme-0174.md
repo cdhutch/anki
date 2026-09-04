@@ -13,6 +13,8 @@ tags:
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- ch:2.10.6
 fields:
   NoteID: ua-lexeme-0174
   Lemma: уда́р
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: удар
   UA_Example: Удар був дуже сильним.
   EN_Example: The strike was very strong.
-  Tags_Ch: ch:2.9.2
+  Tags_Ch: ch:2.9.2, ch:2.10.6
   Source_URL: https://goroh.pp.ua/Словозміна/удар
   Source_Note: Горох lists 3 homograph entries for 'удар' — the common noun (this word, 'blow/strike'),
     'УДАР' (a Ukrainian political party abbreviation), and 'уда́рити' (the related verb, 'to

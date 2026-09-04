@@ -6,14 +6,19 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.4
+- ch:1.8.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.3.3
+- ch:1.4.1
+- ch:1.5.5
 - pos:verb
 - motion:base
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0582
   Lemma: ї́здити
@@ -38,13 +43,6 @@ fields:
     -- e.g. commutes, makes repeated trips). ї́хати = "is riding/driving, headed one way,
     right now" (unidirectional). пої́хати = "set off (by vehicle) / departed" (perfective
     -- the trip as a completed whole).
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English "go/drive/travel" covers both їздити and їхати without marking
     the habitual-vs-single-trip distinction -- closest analogy is "used to drive out there"
     (multi) vs "was driving there" (uni) vs "set off driving" (perf).
@@ -52,7 +50,7 @@ fields:
   UA_Example: Ми часто їздимо на дачу влітку, а того дня ми їхали і слухали радіо.
   EN_Example: We often go (drive) to the dacha in summer, and that day we were driving and
     listening to the radio.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.3.3, ch:1.4.1, ch:1.5.5, ch:1.8.5, ch:1.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/їздити; https://goroh.pp.ua/Словозміна/їхати;
     https://goroh.pp.ua/Словозміна/поїхати
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).
@@ -62,7 +60,6 @@ fields:
     entry existed for this base (unprefixed) triplet -- only the separate UA_Verb conjugation
     notes (ua-verb-0005..0007). ConfusableSet intentionally left blank -- this is an aspect
     triplet, not a lexical-confusable/homograph pair, so the Compare card is expected to stay
-    suspended. Drafted per Craig''s request 2026-07-31. status:draft pending Craig''s independent
-    review.'
+    suspended. Drafted per Craig''s request 2026-07-31. Reviewed and verified 2026-08-27.'
 ---
 

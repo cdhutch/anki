@@ -7,12 +7,12 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj2-ити
 - motion:vehicle
 - phase:2a
-- conj:drill
 - ch:2.9.2
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0005
   Lemma: ї́здити

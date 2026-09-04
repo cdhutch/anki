@@ -10,9 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:2.5.5
 - pos:verb
 - motion:prefixed
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0120
   Lemma: прохо́дити
@@ -31,19 +33,11 @@ fields:
   VerbMotion_Pair: іти / ходити
   ConfusableSet: перехо́дити (pass by/through vs. cross to the far side)
   Mnemonic_EN: про- = PROCEED — moving along a path (through or by), no far side implied.
-  CompareScenario: Someone is walking along a street, passing several shops without stopping,
-    on the way somewhere else.
-  CompareA: проходити
-  CompareB: переходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: проходить / пройти'
   TypingAnswer: проходити / пройти
-  UA_Example: ''
-  EN_Example: ''
-  Tags_Ch: ch:2.9.4
+  UA_Example: Ми щодня проходимо повз цю кавʼярню дорогою на роботу.
+  EN_Example: We walk past this café every day on the way to work.
+  Tags_Ch: ch:2.9.4, ch:2.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/проходити
   Source_Note: Stress verified 2026-07-06 via Горох.
   Verification Notes: '2026-07-24: added CompareScenario + CompareA/B for the redesigned Compare

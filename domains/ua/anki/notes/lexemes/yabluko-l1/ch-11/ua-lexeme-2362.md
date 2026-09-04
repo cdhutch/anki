@@ -1,0 +1,44 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-2362
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:1.11.2
+- pos:noun
+- status:draft
+- release:pending
+fields:
+  NoteID: ua-lexeme-2362
+  Lemma: вишива́нка
+  Lemma_Euphony: ''
+  PartOfSpeech: noun
+  Gender: f
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: null
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: embroidered shirt (traditional Ukrainian garment)
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: null
+  VerbMotion_Pair: ''
+  ConfusableSet: ''
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: вишиванка
+  UA_Example: Вона одягла вишиванку на свято.
+  EN_Example: She wore an embroidered shirt for the holiday.
+  Tags_Ch: ch:1.11.2
+  Source_URL: https://goroh.pp.ua/Словозміна/вишиванка
+  Source_Note: yabluko-l1-vocabulary.pdf ch.11.2, yabluko-l1 vocabulary expansion pass, 2026-08-29.
+  Verification Notes: New (yabluko-l1 vocabulary expansion pass, 2026-08-29).
+---
+

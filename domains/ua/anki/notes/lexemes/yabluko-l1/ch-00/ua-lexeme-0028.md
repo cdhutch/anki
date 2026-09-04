@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0028
   Lemma: бу́ква
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: буква
   UA_Example: Напишіть першу букву свого імені тут.
   EN_Example: Write the first letter of your name here.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/буква
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

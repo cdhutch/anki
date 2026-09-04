@@ -7,21 +7,20 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-1
+- class:conj1-vowel+й
 - ch:2.9.6
-- conj:suspended
-- status:draft
-- stress:unverified
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0067
-  Lemma: вибачати
+  Lemma: вибача́ти
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.9
   Pres_1sg: вибача́ю
   Pres_2sg: вибача́єш
   Pres_3sg: вибача́є
-  Pres_1pl: вибача́єм, вибача́ємо
+  Pres_1pl: вибача́ємо
   Pres_2pl: вибача́єте
   Pres_3pl: вибача́ють
   Imperative_2sg: вибача́й
@@ -35,7 +34,7 @@ fields:
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: вибача́вши
   Source_Note: ''
   Verification Notes: Pairs with perfective ви́бачити. See ua-lexeme-0319.
 ---

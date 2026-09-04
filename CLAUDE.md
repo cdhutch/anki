@@ -1,10 +1,6 @@
 # CLAUDE.md — Anki Project Context (B737 + Ukrainian)
 
-**Current work**: UA domain -- Ch-09 motion-verb polish punch list (7/7 items) complete as of
-2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling
-built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see
-[CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring
-(item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
+**Current work**: Confusable-cluster registry consolidation (Phases 1-7) complete and merged to main as of 2026-08-26 -- the seven deprecated `CompareA`/`CompareB`/`CompareC`/`CompareD`/`CompareScenario`/`Homograph_SenseA`/`Homograph_SenseB` fields removed from `UA_Lexeme` (schema, CNSF corpus, and Anki note type) in favor of a single registry-driven `CompareMembers` JSON field sourced from `confusable_clusters.yaml`; 548 tests passing, verified live in Anki by Craig. UA domain -- Class G homograph audit (ua-lexeme-0143/0182, вид) complete and synced as of 2026-08-25. Ch-09 motion-verb polish punch list (7/7 items) complete as of 2026-07-22; push + PR to main pending Craig's go-ahead. Vocab dedup/homograph audit tooling built and a full-corpus audit run on `feature/ua-vocab-dedup-homograph` as of 2026-07-24 (see [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md)) -- generator-script wiring (item 0 below) still open. B737 Phase A distractor authoring paused (26/29 systems verified).
 2026-07-27: Fixed `audit_legacy_lexeme.py` to filter for chapter 2.9.x notes only (was comparing
 against all 569 canonical notes, now correctly compares against 259 ch-09 notes); audit now
 shows 59 safe-to-delete legacy vocabulary matches. Created дорогий polysemy split following the
@@ -993,6 +989,20 @@ the since-deleted `inspect_deck_configs.py` was wrong): `newGatherPriority` 0=De
 B737 presets and renaming `B737 FSRS Core (0n_200r)`, whose name promises 200 reviews/day
 against an actual 9999.
 
+2026-08-25: **Class G audit error fixed — homograph pair ua-lexeme-0143/0182 (вид) made structurally symmetric.** Found during canonicalization that the homograph siblings had mismatched `CompareA`/`CompareB` field structures. ua-lexeme-0143 (вид = "kind/type") held bare word `вид` repeated in both fields, while ua-lexeme-0182 (вид = "grammatical aspect") held Ukrainian example sentences. Per Shape 1 (homograph mode) Compare-card design, both notes must have **identical** CompareA/B — namely, example sentences that demonstrate each sense of the homograph, with the distinction between which sense is "correct" coming from each note's individual `CompareScenario` and `Homograph_SenseA`/`SenseB` fields. Fixed by updating ua-lexeme-0143's `CompareA` and `CompareB` from bare `вид` to the matching example sentences:
+- **CompareA:** "Який вид спорту ти любиш?" (demonstrating kind/type sense)
+- **CompareB:** "Дієслово "читати" має недоконаний вид." (demonstrating aspect sense)
+
+Both notes now have identical example sentences, with each note's `CompareScenario` guiding which sense is pedagogically relevant for that note's context. ua-lexeme-0143 retained as the kind/type sense note, 0182 as the aspect sense note. Synced via `make ua-lexeme` after canonicalization; red flags cleared, Compare cards now render identically on both siblings. Spot-checked in Anki browser — rendering correct.
+
+Also created two audit scripts (not yet exercised on the full corpus, filed for future use):
+- `tools/anki/inspect/audit_registry_vs_cnsf.py` — validates that `confusable_clusters.yaml` registry members exist in CNSF, CNSF Compare-data notes are listed in registry, and lemma consistency between registry and CNSF.
+- `tools/anki/inspect/analyze_registry_compare_data.py` — surveys registry structure and CNSF Compare-field population to identify gaps in field coverage.
+
+2026-08-26: **Confusable-cluster registry consolidation (Phases 1-7) complete, merged to main, and personally verified by Craig.** Removed the seven deprecated `UA_Lexeme` Compare/Homograph fields (`CompareA`, `CompareB`, `CompareC`, `CompareD`, `CompareScenario`, `Homograph_SenseA`, `Homograph_SenseB`) everywhere they existed -- the `FIELDS` constant and Compare-card templates in `setup_ua_note_types.py`, the `_normalize_meta()` setdefault block in `cnsf_canonicalize.py` (which had been silently reintroducing them as blanks), the live Anki `UA_Lexeme` note type (`make ua-setup-lexeme`), and all 585 CNSF note files in `domains/ua/anki/notes/lexemes/` -- replacing them with a single registry-driven `CompareMembers` JSON field (`{"scenario": ..., "members": [...]}`) populated from `domains/ua/anki/confusable_clusters.yaml` (100% coverage, 59/59 cluster members) via a new `ClusterRegistry`/`ClusterMember` API in `tools/anki/lib/confusable_clusters.py` and a new `tools/anki/lib/registry_validator.py`. `check_cnsf_field_schema.py` tolerates the seven old keys as deprecated (not unknown) for any note that still carries them going forward. Two commits (`bf5a8a77`, `f4679e84`), 548 tests passing (0 skipped -- two of the three previously-skipped tests in `test_cnsf_field_schema_deprecated_fields.py` were rewritten against real fixtures, one redundant one removed), merged via PR reviewed and completed by Craig on GitHub. Craig verified Anki sync and spot-checked rendered cards personally before merging. The two audit scripts logged under 2026-08-25 above (`audit_registry_vs_cnsf.py`, `analyze_registry_compare_data.py`) predate this consolidation and describe the old CNSF-carries-Compare-data shape; treat their descriptions as historical. All Compare/Homograph field references in this file's earlier dated entries (2026-07-27 through 2026-08-25) are historical record of the now-removed fields, not current schema.
+
+2026-08-26 (cont'd): **Pugh & Press Conjugation I/II verb classification established with Craig, applied to the corpus, and the `conj:drill`/`conj:suspended` curation axis removed from `UA_Verb`.** Working from Craig's own textbook (*Ukrainian: A Comprehensive Grammar*, Pugh & Press) Conjugation I/II subclass list, reorganized several of the original infinitive-ending bullets around the actual present-tense formation mechanism instead of surface spelling -- most notably a single `conj1-vowel+й` class absorbing five original bullets (`-ати`, `-яти`, `-іти`, `-ити`, `-ути`, `-авати`/`-явати`, `-увати`/`-ювати`, plus `мати`) that all form the present tense the same way (glide `-й-` inserted onto a vowel-final stem). Landed on twelve Cyrillic-spelling/English-grammar-word tag values (`class:conj1-*`, `class:conj2-*`) and applied them to all 87 live verb notes, replacing the old ad hoc `class:regular-1`/`class:prefixed`/etc. values (68 notes) or adding the tag fresh (19 notes that had none). Documented in full in `CLAUDE-ua-verb-design.md`'s new "Verb Classification" section (rationale, all twelve tag values, full 87-note mapping). Separately, at Craig's request, removed the `conj:drill`/`conj:suspended` curation axis from `ua_verb_import.py`'s `should_suspend()` entirely (was: suspend if `conj:suspended` OR `status:draft`; now: suspend only if `status:draft`) and stripped the `conj:*` tag from all 87 verb notes -- this unsuspends the 59 notes that were `status:verified` but still marked `conj:suspended` ("reference only, not for drilling"), since Craig's goal is fluent conjugation of the whole verb corpus, not just a hand-picked set of class leaders that will keep arriving gradually as earlier chapters are backfilled. `tests/ua/test_ua_verb_import.py` updated to match (7 tests, all passing); `domains/ua/anki/docs/design.md` and `CLAUDE-ua-verb-design.md`'s Tag Convention table both flagged with superseded notes rather than rewritten wholesale. This is a file-edit-only change on `maint/verb-review` -- no git commands run; staging/committing is Craig's to do. The shared `conj:suspended` axis on `UA_PVOM_Infinitive` (`ua_pvom_infinitive_import.py`) was explicitly left untouched -- this removal was scoped to `UA_Verb` only.
+
 ## Workflow Notes
 
 This repo builds and maintains Anki flashcard decks across three top-level decks:
@@ -1046,7 +1056,6 @@ in this repo -- all run by Craig, not Claude:
 | **Ch-09 vocabulary sourcing workflow** | [CLAUDE-ch09-vocab-workflow.md](CLAUDE-ch09-vocab-workflow.md) |
 | **Approved web sources** | [CLAUDE-approved-web-sources.md](CLAUDE-approved-web-sources.md) |
 | **Vocab dedup/homograph audit tooling** | [CLAUDE-dedup-homograph-audit.md](CLAUDE-dedup-homograph-audit.md) |
-| **Compare card field mapping (homograph vs confusables)** | [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) |
 
 ---
 
@@ -1468,6 +1477,101 @@ this doc. Roughly in priority order:
     manual dragging in the Anki GUI will be reverted by the next setup run. That's the
     intended behaviour, not a regression.
 
+21. **Suspend `UA_Verb` Production cards with no content, per form category** —
+    **Done, 2026-09-03.** Flagged
+    2026-09-02; forced concrete the same day Craig hit it live -- стосуватися
+    (ua-verb-0076, a defective 3rd-person-only verb, "to concern") has no
+    `Imperative_*` forms at all, but its "Production (Imperative)" card was still
+    live, showing an unfillable blank ти/ми/ви prompt. Per Craig, resolved the
+    "empty vs. inapplicable" design question left open below by literal reading:
+    "zero actual forms" suspends the card, full stop -- no attempt to distinguish
+    a genuinely-inapplicable form (impersonal/defective verbs) from a
+    not-yet-authored one. `suspend_participles_card()` (blanket-suspended card
+    index 3 always, never a real content check) is replaced by
+    `sync_category_card_suspension()` in `ua_verb_import.py`, driven by a new
+    `CARD_FIELD_CATEGORIES` list mapping each of the four `VERB_CARD_TEMPLATES`
+    (Present/Past/Imperative/Participles, must stay index-aligned with that list
+    in `setup_ua_note_types.py`) to its own fields; a card suspends only when
+    every field in its category is blank, and -- new, the old code never did this
+    -- explicitly unsuspends a category's card once content shows up, so a verb
+    that gains its previously-missing imperative un-suspends that card on the
+    next sync rather than staying stuck. Deletion (Craig's other offered option)
+    isn't practical per-note: an AnkiConnect card belongs to its note type's
+    template, so removing a template drops that category for every verb in the
+    corpus, including ones that do have those forms -- suspension is the only
+    per-note mechanism. Pure logic (`category_is_empty()`) unit-tested in
+    `tests/ua/test_ua_verb_import.py` (`TestCategoryIsEmpty`, 6 new tests,
+    16/16 passing standalone). **Corpus-wide dry-run impact, checked before
+    handoff** (all 636 live `UA_Verb` notes): Present and Past are never fully
+    empty on any note (0 cards affected). Imperative is fully empty on 30 notes
+    (стосуватися among them, plus other defectives/modals -- могти́, бракува́ти,
+    вистача́ти, etc.) -- their Imperative card newly suspends. Participles is
+    fully empty on 535/636 notes (was already blanket-suspended by the old code,
+    so no change there) but genuinely populated on the other 101 -- those
+    previously always-suspended Participles cards now correctly unsuspend, a
+    real behavior change, not just a no-op refactor. **Run against live Anki
+    2026-09-03**: `make ua-verb` alone only picked up 7 changed notes
+    (incremental sync -- a code-only change to `ua_verb_import.py` doesn't mark
+    every note as changed the way editing `confusable_clusters.yaml` does for
+    `ua_lexeme`, since the `ua-verb` `sync_scope.py` target has no
+    `--trigger tools/anki/sync/ua_verb_import.py` of its own; possible small
+    follow-up to close that gap). `FULL=1 make ua-verb` resynced all 636 and
+    reported 636 updated, 0 errors. Craig spot-checked via a one-off
+    AnkiConnect `cardsInfo` query on the two predicted cases: ua-verb-0076
+    (стосуватися) came back Present/Past/Participles unsuspended, Imperative
+    suspended; ua-verb-0083 (вигляда́ти) came back Participles unsuspended
+    (flipped from always-suspended) -- both exactly as predicted. Added a
+    `changed` print inside `sync_category_card_suspension()` afterward (one
+    extra `cardsInfo` call per non-suspended note) so future syncs show
+    per-note suspend/unsuspend flips in the log directly, instead of needing
+    a manual AnkiConnect query to confirm. **Same-day policy correction:**
+    immediately after confirming the above, Craig clarified Participles
+    specifically should stay suspended regardless of content -- "I want the
+    participles to be suspended, since I haven't gotten to learning how to
+    form them yet." A curriculum-pacing call, not a data-quality one, so it
+    doesn't belong in `category_is_empty()`. Added a third element,
+    `force_suspend`, to each `CARD_FIELD_CATEGORIES` tuple (`False` for
+    Present/Past/Imperative, `True` for Participles); the actual per-card
+    decision moved into a new `category_should_suspend()` (force_suspend
+    wins outright, else falls back to the content check), unit-tested
+    separately from `category_is_empty()` (`TestCategoryShouldSuspend`, 3
+    tests, plus one more confirming only Participles carries the flag --
+    20/20 passing standalone). This deliberately reverts the just-applied
+    unsuspend on the 101 content-bearing Participles cards (ua-verb-0083
+    included) back to suspended on the next sync. Flip `force_suspend` to
+    `False` once participle drilling actually starts. `FULL=1 make ua-verb`
+    re-run afterward (636 updated, 0 errors) -- same incremental-sync gap as
+    above, so FULL=1 was needed again to actually reach the other 629 notes.
+    **Logging bug found in that run's output:** the `changed` print (added
+    just above) showed spurious flips -- e.g. `-> suspended` for Participles
+    on notes where nothing should have changed -- for roughly the first 87
+    notes synced, then went silent for the remaining ~549. Root cause: the
+    old two-step shape called `set_suspended()` first, which unconditionally
+    unsuspends *all* cards for a note before the per-category suspend calls
+    run, and only then did `sync_category_card_suspension()` read `cardsInfo`
+    to compute its "was this card previously suspended" baseline for the
+    print -- so that baseline was always post-reset (`False`), never the true
+    prior persisted state, making every empty/force-suspended category log a
+    false "-> suspended" on every single sync. The actual suspend/unsuspend
+    calls issued were always correct regardless (they never depended on
+    `was_suspended`, only the print did) -- confirmed by both of Craig's
+    AnkiConnect spot-checks matching predictions exactly. Fixed by
+    consolidating `set_suspended()` and `sync_category_card_suspension()`
+    into one `sync_card_suspension()` that reads `cardsInfo` exactly once,
+    before issuing any suspend/unsuspend calls, via a new pure helper
+    `compute_card_suspension_targets(fields, note_suspend)` (whole-note gate
+    wins outright when true, else the four per-category decisions in
+    `CARD_FIELD_CATEGORIES` order). `set_suspended()` removed from this file
+    (it's duplicated per-script in the other `*_import.py` modules too, so
+    this only touches `ua_verb_import.py`). New `TestComputeCardSuspensionTargets`
+    class (3 tests, modeled on стосуватися's real field values) -- 23/23
+    passing standalone. **Confirmed 2026-09-03**: pytest 23/23 passed on
+    Craig's machine, then `FULL=1 make ua-verb` re-run (636 updated, 0
+    errors) produced zero `changed` lines in the output -- exactly as
+    predicted, since the underlying suspend states were already correct
+    from the prior run and only the logging had been wrong. Item 21 fully
+    closed.
+
 **Done, for reference (structural work closed out this project so far):** the
 CompareA-D/CompareScenario Compare-card redesign (2026-07-24, corrected 2026-07-28),
 the `compute_compare_options()` clobbering-bug fix (2026-07-28), the homograph
@@ -1639,8 +1743,17 @@ This shows the learner that the same Ukrainian word spans multiple semantic doma
 CompareA-D + CompareScenario -- this section previously described the pre-redesign flat-prose
 format; corrected 2026-07-28)**
 
-**See [CLAUDE-compare-card-field-mapping.md](CLAUDE-compare-card-field-mapping.md) for the
-full field-by-field spec** (added 2026-07-28 after two authoring bugs were found in the same
+> **SUPERSEDED 2026-08-26.** The `CompareA`/`CompareB`/`CompareC`/`CompareD`/`CompareScenario`/
+> `Homograph_SenseA`/`Homograph_SenseB` fields this section describes were removed from
+> `UA_Lexeme` and replaced by a single registry-driven `CompareMembers` JSON field sourced
+> from `domains/ua/anki/confusable_clusters.yaml` (see this file's 2026-08-26 dated entry
+> and `tools/anki/lib/confusable_clusters.py`'s `ClusterRegistry`/`ClusterMember`). The rest
+> of this section is kept as historical design record of the pre-registry mechanism --
+> do not author `CompareA-D` or `CompareScenario` in CNSF going forward.
+
+**See the now-removed `CLAUDE-compare-card-field-mapping.md` (deleted 2026-08-26 along with
+the fields it documented) for the full field-by-field spec that was in effect** (added
+2026-07-28 after two authoring bugs were found in the same
 session: ua-lexeme-0305 got `ConfusableSet` populated with no `CompareA`/`CompareB` authored,
 which the importer's legacy fallback then filled with the raw `ConfusableSet` prose paragraph
 -- rendered live, unsuspended, as a fake front-side answer chip; ua-lexeme-0181 had never been
@@ -2126,6 +2239,82 @@ buckets. Triage deliberately — do not assume from spelling alone.
    with other -прошувати/-просити forms), use the pre-existing generic `needs-confusable-set`
    tag instead (see ua-lexeme-0436/0440) — `check_pending_confusables.py` reports a plain count
    of these as a reminder but doesn't try to resolve them.
+
+**Compare card architecture — CompareA-D/CompareScenario/Homograph_SenseA/B retired in
+favor of a registry (landed 2026-08-26, cleaned up 2026-08-27).** Everything above in this
+section describes the pre-2026-08-26 design (per-note `CompareA`/`CompareB`/`CompareC`/
+`CompareD`/`CompareScenario`/`Homograph_SenseA`/`Homograph_SenseB` fields on the CNSF note
+itself) and is kept as-written for historical record — do not follow it for new work.
+`domains/ua/anki/confusable_clusters.yaml` (`tools/anki/lib/confusable_clusters.py`'s
+`ClusterRegistry`) is now the single source of truth for every Compare card: a cluster has
+a `canonical_note` (hub) and a list of `members`, each with `note_id`/`lemma`/`status`
+(`sourced`/`not-sourced`/`pending`, a registry-internal axis, distinct from the CNSF note's
+own `status:draft`/`status:verified` tag)/`chapter`/`comment`/`compare_scenario`. At import
+time, `get_cluster_compare_members_json()` (`tools/anki/sync/ua_lexeme_import.py`) looks up
+the note's cluster and writes a single `CompareMembers` JSON field —
+`{"scenario": ..., "members": [lemma, ...]}` — computed fresh from the registry every sync;
+nothing is hand-authored per note beyond the registry entry itself and (optionally) a
+prose-only `ConfusableSet` string for the hub note's UA→EN card-back "cf. ..." line (blank
+on satellites is fine — it doesn't affect their Compare card, which is entirely
+`CompareMembers`-driven). A cluster's member count is not capped at four/two the way the
+old `CompareA-D`/Shape-1-vs-Shape-2 split was — see `power-strength-synonyms` below, 6
+members in one cluster. **Real limitation, not yet fixed:** a note can belong to only one
+cluster (`ClusterRegistry.note_to_cluster` is a `note_id -> single cluster name` dict); a
+note listed as a member of two clusters silently renders whichever cluster is later in the
+YAML, dropping the other pairing's card entirely with no error. Hit this 2026-08-27 trying
+to wire ua-lexeme-0306 (тип) into a synonym pairing with ua-lexeme-0143 (вид, kind/type
+sense) — 0143 already anchors the `grammatical-aspect` homograph cluster with ua-lexeme-0182
+(вид, grammar-aspect sense), and adding it to a second cluster would silently steal that
+card. Left unresolved on purpose (0306's `ConfusableSet` documents the тип/вид relationship
+in prose only, no live card) rather than picking a side; needs `note_to_cluster` extended to
+a list plus a decision on how a note with two live clusters actually renders (concatenated
+`CompareMembers`, or a template change for two Compare sections) before either pairing can
+be built without sacrificing the other.
+
+**2026-08-27 registry cleanup:** the registry's own `compare_a`/`compare_b`/`compare_c`/
+`compare_d`/`homograph_sense_a`/`homograph_sense_b` per-member keys — carried over from the
+pre-2026-08-26 design and never actually read by `get_cluster_compare_members_json()`
+(confirmed by grep; it only reads `compare_scenario` and `lemma`) — were dead data kept
+alive solely by three stale tests. Stripped from all 33 then-existing clusters (426
+key-lines), rewrote the registry's own schema-header comment to match, and fixed the tests
+(`tests/ua/test_confusable_integration.py`, `tests/ua/test_confusable_clusters.py`) plus the
+standalone `tools/anki/lib/registry_validator.py` (not wired into pytest/Makefile, but
+runnable directly) to stop requiring them. One real bug surfaced along the way: "is this a
+true homograph cluster" can't be keyed off the cluster dict *name* — `grammatical-aspect`
+(вид/вид, ua-lexeme-0182/0143) and `warmth-adverb` (тепло́/те́пло) are true homographs
+without a `-homograph` suffix — so detection is keyed off the cluster's `description` text
+instead, which every homograph cluster's prose does say. Also deleted
+`tests/ua/test_compare_field_validation.py` and `tests/ua/test_compare_cluster_audit.py` —
+both tested locally-reimplemented copies of an even older `CompareA-D`-on-CNSF-notes
+validation design, never importing real production code, fully decoupled from anything live
+(one of them, `audit_compare_clusters.py`, is itself an orphaned script — not wired into the
+Makefile, referenced only by its own dead test and one migration script's help text). Full
+suite went from 548 (pre-cleanup) through several intermediate counts to 523 passing.
+
+**2026-08-27 new clusters** (all via the registry, `CompareMembers`-driven, none using the
+old fields): `crayfish-cancer-homograph` (ра́к crayfish/cancer, ua-lexeme-0542/0588),
+`smooth-plump-homograph` (гла́дкий/гладки́й stress-shift, ua-lexeme-0555/0589),
+`power-strength-synonyms` (6-way: поту́жний/си́льний/могу́тній/ду́жий/міцни́й/відчу́тний,
+ua-lexeme-0574/0590–0594), `journey-trip-synonyms` (мандрівка adventurous/wandering vs
+подорож neutral-general, ua-lexeme-0330/0595 — resolves the `pending-confusable:подорож`
+tag bucket 5 describes), and three clusters from one old cloze-card set Craig supplied for
+малюнок's family: `drawing-nouns` (малюнок product / малювання act / малярство
+discipline-craft, ua-lexeme-0042/0596/0597, resolving 0042's `needs-confusable-set` tag),
+`painting-nouns` (живопис art-form / картина a-painting / розпис mural,
+ua-lexeme-0598/0599/0600, canonical on картина), `painting-verbs` (малювати draw /
+розписувати decorate-or-sign / фарбувати solid-color-or-dye, ua-lexeme-0601/0602/0603,
+canonical on малювати — 0601/0603 are real Яблуко chapters, 1.11.1/1.11.4 per Craig, in a
+new `yabluko-l1/ch-11/` folder; the other 6 new notes have no textbook chapter and live in
+`domains/ua/anki/notes/lexemes/reference/`). All 8 new notes are `status:draft` pending
+Craig's review, same pattern as 0589–0594.
+
+**`ch:reference` convention (new 2026-08-26/27):** a chapter tag/folder for notes with no
+real Яблуко textbook placement, existing purely to complete a confusable pair or cluster
+(e.g. ра́к "cancer", the си́льний-family, малювання/малярство/живопис/картина/розпис/
+розписувати). Lives in its own `domains/ua/anki/notes/lexemes/reference/` folder, outside
+the `yabluko-l1`/`yabluko-l2` tree. `tests/ua/test_confusable_clusters.py::test_chapter_format`
+accepts it alongside the normal chapter-number pattern (which itself was widened this same
+pass to accept chapters starting with 1 or 3, not just 2).
 
 **Tooling:**
 - `tools/anki/inspect/check_lexeme_dedup.py` — given one or more candidate

@@ -10,10 +10,13 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
+- ch:2.10.5
+- ch:1.11.5
+- ch:1.6.6
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0473
   Lemma: зако́н
@@ -32,20 +35,15 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: закон
   UA_Example: Тут туристи повинні дотримуватися місцевого закону.
   EN_Example: Tourists here must abide by local law.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:2.10.5, ch:1.11.5, ch:1.6.6
   Source_URL: https://goroh.pp.ua/Словозміна/закон
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
-  Verification Notes: Component of phrase ua-lexeme-0489 (дотримуватися закону).
+  Verification Notes: Component of phrase ua-lexeme-0489 (дотримуватися закону). Merged duplicate
+    note(s) ua-lexeme-3225 into this canonical note during corpus-wide dedup audit (2026-08-29);
+    their chapter tags were migrated here.
 ---
 

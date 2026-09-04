@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.1
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0059
   Lemma: ра́нок
@@ -32,19 +34,11 @@ fields:
   ConfusableSet: ве́чір, ніч — time-of-day cluster (day/night cycle). See ua-lexeme-0029 (вечір),
     ua-lexeme-0048 (ніч).
   Mnemonic_EN: 'Time-of-day sequence: ранок (morning) → вечір (evening) → ніч (night).'
-  CompareScenario: The sun has just risen and people are having their first coffee or getting
-    ready for the day.
-  CompareA: вечір
-  CompareB: ніч
-  CompareC: ранок
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: утро'
   TypingAnswer: ранок
   UA_Example: Уранці ми снідаємо разом і говоримо про плани.
   EN_Example: In the morning we have breakfast together and talk about plans.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.1
   Source_URL: https://goroh.pp.ua/Словозміна/ранок
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: '2026-07-24: added cross-link to ніч by ID, Mnemonic_EN, CompareScenario

@@ -10,9 +10,10 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
+- ch:1.5.5
 - pos:adjective
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0540
   Lemma: ква́шений
@@ -31,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: квашений
   UA_Example: Квашені огірки теж дуже смачні.
   EN_Example: Pickled cucumbers are also very tasty.
-  Tags_Ch: ch:2.8.6
+  Tags_Ch: ch:2.8.6, ch:1.5.5
   Source_URL: https://goroh.pp.ua/Словозміна/квашений
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
   Verification Notes: Горох classifies this grammatically as a passive past participle of

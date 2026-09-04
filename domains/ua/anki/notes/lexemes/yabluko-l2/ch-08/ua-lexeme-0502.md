@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.8.4
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0502
   Lemma: пірна́ти
@@ -20,7 +20,7 @@ fields:
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: пірну́ти
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
@@ -31,21 +31,15 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: пірнати
+  TypingAnswer: пірнати / пірнути
   UA_Example: Ми пірнали біля коралового рифу.
   EN_Example: We dove near the coral reef.
   Tags_Ch: ch:2.8.4
   Source_URL: https://goroh.pp.ua/Словозміна/пірнати
   Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.
-  Verification Notes: Imperfective, non-reflexive, 1st conjugation. Perfective partner not
-    verified this pass. Full conjugation lives on ua-verb-0081.
+  Verification Notes: Imperfective, non-reflexive, 1st conjugation. Perfective partner пірнути
+    confirmed 2026-08-27 (per Craig) -- semelfactive -нути pattern. Full conjugation lives
+    on ua-verb-0081.
 ---
 

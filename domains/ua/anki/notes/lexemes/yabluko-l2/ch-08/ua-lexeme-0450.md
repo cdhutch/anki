@@ -11,8 +11,10 @@ tags:
 - textbook:яблуко
 - ch:2.8.2
 - pos:adverb
-- stress:verified
 - status:verified
+- release:active
+- ch:2.12.1
+- ch:1.12.1
 fields:
   NoteID: ua-lexeme-0450
   Lemma: ну́дно
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: нудно
   UA_Example: Без інтернету в номері було дуже нудно.
   EN_Example: It was very boring in the room without internet.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2,ch:2.12.1, ch:1.12.1
   Source_URL: https://goroh.pp.ua/Словозміна/нудно
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: ''

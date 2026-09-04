@@ -1,0 +1,2389 @@
+# Confusable Word Cluster Registry
+#
+# SCHEMA STRUCTURE
+# ================
+#
+# This registry organizes confusable Ukrainian words into semantic clusters for Compare cards.
+# All clusters render through a single mechanism at Anki-sync time: for a given note_id,
+# get_cluster_compare_members_json() (tools/anki/sync/ua_lexeme_import.py) looks up the
+# cluster, reads compare_scenario for that member, and JSON-encodes {scenario, members:
+# [lemma, ...]} into the note's CompareMembers field. The member list is not size-limited
+# to two/three/four -- a cluster can have as many members as make sense (see
+# power-strength-synonyms, 6 members).
+#
+# Two semantic cluster shapes are still distinguished for authoring/description purposes,
+# but both use the exact same fields and the exact same JSON rendering path:
+#
+# Shape 1 (Homographs): Same word, different meanings (stress-shift or polysemy)
+#   Example: лавка (bench) vs лавка (market stall) — two note_ids for same lemma
+#
+# Shape 2 (Confusables): Different words, similar meanings or usage patterns
+#   Example: значно (formal) vs набагато (everyday) — two different words, same cluster
+#
+# REMOVED FIELDS (2026-08-27): compare_a/b/c/d and homograph_sense_a/b were per-member
+# fields from an earlier (pre-JSON) Compare card design that rendered up to four fixed
+# CompareA-D note fields plus Homograph_SenseA/B. The 2026-07/08 migration removed
+# CompareA/B/C/D, CompareScenario, and Homograph_SenseA/B from the UA_Lexeme note type
+# entirely (see setup_ua_note_types.py) in favor of the single CompareMembers JSON field.
+# Since then, compare_a/b/c/d and homograph_sense_a/b in this registry were dead data --
+# never read by get_cluster_compare_members_json() or any card template -- kept alive only
+# by stale tests. They have been stripped from every cluster; compare_scenario and lemma
+# are now the only per-member fields that feed a Compare card.
+#
+# FIELD DEFINITIONS
+# =================
+#
+# Root level:
+#   clusters: {dict} All semantic clusters in the registry
+#
+# Cluster level (per cluster):
+#   description: {string} Prose description of semantic relationship and usage context
+#   canonical_note: {string} Primary note_id that shows all cluster members on Compare card
+#   members: {list} All notes belonging to this cluster
+#   show_all_members: {bool, optional, default false} When true, EVERY member's Compare
+#     card shows the full active member list (not just the hub's). Use for clusters where
+#     every member should see every other member -- e.g. a semantic triplet where each
+#     word should be distinguished against both siblings, not just the hub. Added
+#     2026-08-28 (fire-general-vs-blaze-vs-campfire) -- see confusable_clusters.py
+#     get_compare_card_members().
+#
+# Member level (per cluster member):
+#   note_id: {string} Unique identifier (ua-lexeme-XXXX)
+#   lemma: {string} Word with stress marks (U+0301)
+#   status: {string} Verification status (sourced, draft, verified, etc.)
+#   chapter: {string} Textbook chapter reference
+#   comment: {string} Editorial notes on sourcing or verification
+#   compare_scenario: {string} Usage context that distinguishes this word from cluster-mates.
+#     Still used for chip-mode Compare cards -- see example_ua/meaning_en below for the
+#     alternative used by true-homophone clusters.
+#   example_ua: {string, optional} Sentence-mode only (added 2026-08-30). An authored UA
+#     sentence demonstrating this member's specific sense, copied from that note's own
+#     UA_Example field. Used instead of compare_scenario/chip rendering whenever a
+#     cluster's active members share an IDENTICAL lemma string -- a true homophone,
+#     where nothing in the word itself (spelling or stress) distinguishes the senses, so
+#     a word-chip choice would just repeat the same word twice. get_cluster_compare_
+#     members_json() (tools/anki/sync/ua_lexeme_import.py) auto-detects this case (every
+#     active member's lemma equal) and switches CompareMembers to {"mode": "sentence",
+#     "items": [...]} automatically -- no per-cluster opt-in flag needed. Required
+#     (alongside meaning_en) on every member of such a cluster.
+#   meaning_en: {string, optional} Sentence-mode only. The English meaning revealed as
+#     the answer for this member's example_ua sentence -- usually the comment field's
+#     content, lightly trimmed of cluster-hierarchy meta-notes ("primary sense", "this
+#     note", etc.) that only make sense inside the registry, not on a card.
+#
+# VALIDATION RULES
+# ================
+#
+# - All members MUST have compare_scenario populated (100% coverage required)
+# - All note_ids must exist in domains/ua/anki/notes/lexemes/
+# - Lemmas must match corpus lemmas (stress-stripped comparison)
+# - canonical_note must be a member of the cluster
+# - No duplicate note_ids within a single cluster
+# - Any cluster whose active members share an identical lemma (sentence mode) MUST have
+#   example_ua and meaning_en populated on every one of those members
+#
+# LAST UPDATED: 2026-08-30 (added example_ua/meaning_en sentence-mode fields for
+#   true-homophone clusters -- party-game-homograph, crayfish-cancer-homograph,
+#   knife-than-homograph, bench-homograph, seem-emerge-homograph, departure-homograph,
+#   grammatical-aspect, butterfly-homograph)
+# COVERAGE: 84/84 members have compare_scenario (100%); 16/16 sentence-mode members
+#   also have example_ua/meaning_en (100%)
+#
+
+clusters:
+  intensifier-adverbs:
+    description: 'Two related pairs of degree/intensity adverbs sharing overlapping EN
+      glosses ("very/much/too"): значно (formal, measured) and набагато (everyday,
+      conversational) both intensify a COMPARATIVE ("X-er than Y"); занадто (general
+      "too/excessively," for adjectives/adverbs) and забагато (fused "too much," specific
+      to quantity/amount) both mark an ABSOLUTE excess past an acceptable limit, with no
+      comparison implied. Grouped per Craig''s request (2026-08-28) to cluster занадто
+      with terms of similar EN meaning or UA spelling. Extended 2026-09-01 with дуже
+      (Anki cloze-mining report, extension candidate) -- the plain, comparison-free,
+      excess-free "very" baseline against which значно/набагато''s comparative sense
+      and занадто/забагато/замало''s excess/deficiency sense stand out.
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0467
+    members:
+    - note_id: ua-lexeme-0467
+      lemma: зна́чно
+      status: sourced
+      chapter: 2.8.3
+      comment: Formal, measured intensifier for written/analytical comparisons (Горох-verified)
+      compare_scenario: A market report states that prices this year are considerably
+        higher than last year -- the kind of measured comparison you'd read in a news
+        analysis or official statistics.
+    - note_id: ua-lexeme-0468
+      lemma: набага́то
+      status: sourced
+      chapter: 2.8.3
+      comment: Everyday conversational intensifier (Горох-verified)
+      compare_scenario: Comparing two hotel rooms right after checking in, you tell
+        a friend casually that this room is way comfier than the other one.
+    - note_id: ua-lexeme-0417
+      lemma: зана́дто
+      status: sourced
+      chapter: '2.8.1'
+      comment: General "too/excessively" -- adjectives/adverbs, absolute excess, no
+        comparison (Горох-verified)
+      compare_scenario: It's so hot out today that nobody wants to go for a walk --
+        the heat has crossed past a comfortable point. What word says that?
+    - note_id: ua-lexeme-0615
+      lemma: забага́то
+      status: sourced
+      chapter: 2.8.3
+      comment: Fused "too much" -- quantity/amount excess specifically, no comparison
+        (Горох-verified)
+      compare_scenario: One person has been handed way more work than they can
+        reasonably manage alone -- not compared to anyone else's workload, just an
+        excessive amount in itself. What word says that?
+    - note_id: ua-lexeme-1231
+      lemma: зама́ло
+      status: sourced
+      chapter: '2.3.3'
+      comment: Fused "too little/not enough" -- the negative-polarity counterpart of
+        забагато, same absolute-excess-vs-deficit category, no comparison (Горох-verified)
+      compare_scenario: Only a handful of people showed up to the community meeting --
+        nowhere near enough to make any real decisions. What word says that?
+    - note_id: ua-lexeme-2755
+      lemma: ду́же
+      status: sourced
+      chapter: '1.2.5'
+      comment: Plain, general-purpose "very" -- no comparison (unlike значно/набагато)
+        and no implication of excess or deficiency (unlike занадто/забагато/замало),
+        just plain high degree
+      compare_scenario: You just want to say the soup is very tasty -- no comparison
+        to another soup, nothing excessive or insufficient about it, just plain high
+        degree. What word says "very"?
+  time-of-day:
+    description: 'Time-of-day nouns marking points in the daily cycle.
+
+      ранок (early morning) → вечір (late afternoon/evening) → ніч (night/dark hours).
+
+      Hub (ранок) shows all three on Compare card; satellites show hub + self.
+
+      '
+    canonical_note: ua-lexeme-0059
+    members:
+    - note_id: ua-lexeme-0059
+      lemma: ра́нок
+      status: sourced
+      chapter: 2.0
+      comment: Early morning; start of day (Горох-verified)
+      compare_scenario: The sun has just risen and people are having their first coffee
+        or getting ready for the day.
+    - note_id: ua-lexeme-0029
+      lemma: ве́чір
+      status: sourced
+      chapter: 2.0
+      comment: Late afternoon/evening; end of business day (Горох-verified)
+      compare_scenario: The sun has just set and people are finishing dinner, but
+        it's not yet late enough for most people to be asleep.
+    - note_id: ua-lexeme-0048
+      lemma: ніч
+      status: sourced
+      chapter: 2.0
+      comment: Night; dark hours (Горох-verified)
+      compare_scenario: It's the middle of the dark hours, well past midnight, when
+        most people are asleep.
+  response-register-scale:
+    description: 'Response words to "How are you?" / "How''s it going?", graded by
+      formality and enthusiasm.
+
+      добре (positive, formal) → непогано (neutral) → нормально (bland) → чудово (very
+      positive).
+
+      Register and speaker intent differ despite overlapping EN glosses ("good/fine/well").
+
+      '
+    canonical_note: ua-lexeme-0100
+    members:
+    - note_id: ua-lexeme-0100
+      lemma: непога́но
+      status: sourced
+      chapter: 2.0
+      comment: Neutral; "not bad" / "getting by" (Горох-verified)
+      compare_scenario: A coworker asks how your week went. It was fine but unremarkable
+        -- you don't want to oversell it, just acknowledge it wasn't bad.
+    - note_id: ua-lexeme-0099
+      lemma: до́бре
+      status: sourced
+      chapter: 2.0
+      comment: Positive response; formal or neutral tone (Горох-verified)
+      compare_scenario: A friend asks how your exam went. You did solidly and feel
+        satisfied -- no fireworks, just a plain, straightforwardly positive result.
+    - note_id: ua-lexeme-0101
+      lemma: норма́льно
+      status: sourced
+      chapter: 2.0
+      comment: Bland/neutral; mundane "okay" with less warmth (Горох-verified)
+      compare_scenario: Someone asks how you're doing on an ordinary Tuesday. Nothing
+        noteworthy happened either way -- this is the reflexive, default reply to
+        a routine "how are you?"
+    - note_id: ua-lexeme-0104
+      lemma: чудо́во
+      status: sourced
+      chapter: 2.0
+      comment: Very positive; enthusiastic "wonderful/great" (Горох-verified)
+      compare_scenario: A friend asks how your vacation was. It exceeded expectations
+        and you want to convey real excitement, not just satisfaction.
+  pvom-prefix-walking:
+    description: 'Walking prefix distinctions: до- (arrival/destination) vs під- (approach)
+      vs в- (entry/ingress).
+
+      All three combine with ходити root. Compare card drills which prefix carries
+      which spatial nuance.
+
+      '
+    canonical_note: ua-lexeme-0117
+    members:
+    - note_id: ua-lexeme-0117
+      lemma: підхо́дити
+      status: sourced
+      chapter: 2.9
+      comment: 'під + ходити: approach/come up to (draw near, but not necessarily
+        enter)'
+      compare_scenario: Someone is walking closer and closer to a friend waiting across
+        the room, but hasn't arrived yet.
+    - note_id: ua-lexeme-0119
+      lemma: дохо́дити
+      status: sourced
+      chapter: 2.9
+      comment: 'до + ходити: reach/arrive at (destination reached)'
+      compare_scenario: Someone finally arrives at their destination, on foot, after
+        a long walk.
+    - note_id: ua-lexeme-0115
+      lemma: вхо́дити
+      status: sourced
+      chapter: 2.9
+      comment: 'в + ходити: enter/go inside (cross threshold)'
+      compare_scenario: Someone walks into a building through the front door, on foot.
+  alphabet-types:
+    description: 'Two words for "alphabet": абетка emphasizes the learning/childhood
+      context (ABC primer),
+
+      while алфавіт is the neutral, technical term for the letter system itself.
+
+      '
+    canonical_note: ua-lexeme-0023
+    members:
+    - note_id: ua-lexeme-0023
+      lemma: алфа́ві́т
+      status: sourced
+      chapter: 2.0
+      comment: Alphabet (neutral, technical term for the letter system)
+      compare_scenario: Stating a neutral linguistic fact, such as how many letters
+        a language's writing system has.
+    - note_id: ua-lexeme-0022
+      lemma: абе́тка
+      status: sourced
+      chapter: 2.0
+      comment: ABC primer (learning context, especially childhood)
+      compare_scenario: Describing a colorful picture book aimed at small children
+        who are just learning their letters for the first time.
+  gender-student:
+    description: 'Gender pair for student: студент (m.) and студентка (f.).
+
+      Same referent, different grammatical gender.
+
+      '
+    canonical_note: ua-lexeme-0015
+    members:
+    - note_id: ua-lexeme-0015
+      lemma: студе́нт
+      status: sourced
+      chapter: 2.0
+      comment: Student (masculine)
+      compare_scenario: Introducing a male university student to a group of people
+        who haven't met him before.
+    - note_id: ua-lexeme-0016
+      lemma: студе́нтка
+      status: sourced
+      chapter: 2.0
+      comment: Student (feminine)
+      compare_scenario: Introducing a female university student to a group of people
+        who haven't met her before.
+  writing-implements:
+    description: 'Two common writing implements: ручка (pen - typical for everyday
+      writing) and олівець (pencil - erasable).
+
+      Different objects, both used for handwriting.
+
+      '
+    canonical_note: ua-lexeme-0061
+    members:
+    - note_id: ua-lexeme-0061
+      lemma: ру́чка
+      status: sourced
+      chapter: 2.0
+      comment: Pen (ballpoint or gel pen for permanent writing)
+      compare_scenario: Signing an official document or writing a permanent note that
+        shouldn't be erased.
+    - note_id: ua-lexeme-0049
+      lemma: оліве́ць
+      status: sourced
+      chapter: 2.0
+      comment: Pencil (graphite pencil, erasable)
+      compare_scenario: Sketching a drawing you plan to revise, or filling in a standardized
+        test form that requires erasable marks.
+  classroom-furniture:
+    description: 'Two pieces of classroom furniture: парта (school desk with attached
+      seat or standalone)
+
+      and стілець (chair - just the seating, no desk).
+
+      '
+    canonical_note: ua-lexeme-0053
+    members:
+    - note_id: ua-lexeme-0053
+      lemma: па́рта
+      status: sourced
+      chapter: 2.0
+      comment: School desk (often with attached seat or chair)
+      compare_scenario: Describing the classroom furniture where a student sits and
+        places their notebook during a lesson.
+    - note_id: ua-lexeme-0064
+      lemma: стіле́ць
+      status: sourced
+      chapter: 2.0
+      comment: Chair (seat without desk attached)
+      compare_scenario: Describing a standalone seat with no attached desk surface,
+        such as at a dinner table or in a waiting room.
+  profession-expertise:
+    description: 'Two words for work/job: професія (broad term for profession/occupation)
+      and фах (skilled trade or craft).
+
+      Profession is formal/general; фах emphasizes specialized expertise and manual
+      skill.
+
+      '
+    canonical_note: ua-lexeme-0058
+    members:
+    - note_id: ua-lexeme-0058
+      lemma: профе́сія
+      status: sourced
+      chapter: 2.0
+      comment: Profession, occupation (broad, formal term)
+      compare_scenario: Filling out an official form that asks for your occupation,
+        or introducing yourself formally by career at a professional networking event.
+  scoring-points:
+    description: 'Two words for points/scores: очко (in sports/games context, e.g.,
+      tennis points)
+
+      and бал (unit of scoring, e.g., grades, competition points).
+
+      Both translate "point" but used in different contexts.
+
+      '
+    canonical_note: ua-lexeme-0203
+    members:
+    - note_id: ua-lexeme-0203
+      lemma: очко́
+      status: sourced
+      chapter: 2.9
+      comment: Point (in sports/games, e.g., tennis score)
+      compare_scenario: A basketball game is tied with five seconds left on the clock,
+        and a player sinks a shot right at the buzzer.
+    - note_id: ua-lexeme-0252
+      lemma: бал
+      status: sourced
+      chapter: 2.9
+      comment: Point, score (unit of evaluation, e.g., grades, competition scoring)
+      compare_scenario: A gymnast finishes her routine, and the judges hold up number
+        cards showing how they rated her performance.
+  sharp-descriptors:
+    description: 'Two words for "sharp": гострий (sharp object or taste - spicy/hot
+      food)
+
+      and різкий (sharp change - abrupt, sudden movement, sound, or intensity).
+
+      Different senses of "sharp" (object property vs. change property).
+
+      '
+    canonical_note: ua-lexeme-0503
+    members:
+    - note_id: ua-lexeme-0503
+      lemma: го́стрий
+      status: sourced
+      chapter: 2.8
+      comment: Sharp (pointed object); spicy, hot (of food)
+      compare_scenario: The chef warns that the soup is far too spicy, there is too
+        much pepper in it.
+    - note_id: ua-lexeme-0586
+      lemma: різки́й
+      status: sourced
+      chapter: 2.8
+      comment: Sharp, abrupt, sudden (change, movement, sound, intensity)
+      compare_scenario: The driver swerves hard and sudden to dodge a dog that darted
+        into the road.
+  butterfly-homograph:
+    description: 'Stress-shift homograph on мете́лик: butterfly (primary sense, common)
+
+      and bow-tie / informal: flyer, leaflet (secondary sense, less common).
+
+      '
+    canonical_note: ua-lexeme-0171
+    members:
+    - note_id: ua-lexeme-0171
+      lemma: мете́лик
+      status: sourced
+      chapter: 2.9
+      comment: Butterfly (the insect - primary, common sense)
+      compare_scenario: Which sense of метелик is being used?
+      example_ua: Метелик сів на квітку.
+      meaning_en: Butterfly (the insect)
+    - note_id: ua-lexeme-0181
+      lemma: мете́лик
+      status: sourced
+      chapter: 2.9
+      comment: 'Bow-tie (menswear accessory); informal: flyer, leaflet'
+      compare_scenario: Which sense of метелик is being used?
+      example_ua: Він одягнув чорний метелик до смокінга.
+      meaning_en: 'Bow-tie (menswear accessory); informal: flyer, leaflet'
+  crayfish-cancer-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on рак: the crustacean
+
+      (crayfish, animate) and the disease (cancer, inanimate). Distinguished
+
+      grammatically, not just semantically -- genitive singular ра́ка (crayfish)
+
+      vs. ра́ку (cancer), animate vs. inanimate accusative.
+
+      '
+    canonical_note: ua-lexeme-0542
+    members:
+    - note_id: ua-lexeme-0542
+      lemma: рак
+      status: sourced
+      chapter: 2.8
+      comment: Crayfish (animal, animate)
+      compare_scenario: Which sense of рак is being used?
+      example_ua: На ринку продавали свіжих раків.
+      meaning_en: Crayfish (animal, animate)
+    - note_id: ua-lexeme-0588
+      lemma: рак
+      status: sourced
+      chapter: reference
+      comment: Cancer (disease, inanimate)
+      compare_scenario: Which sense of рак is being used?
+      example_ua: У нього діагностували рак легенів.
+      meaning_en: Cancer (disease, inanimate)
+  smooth-plump-homograph:
+    description: 'Pure stress-shift homograph on гладкий: smooth, even, without
+
+      irregularities (root-stressed гла́дкий) vs. fat, well-fed, plump, full-faced
+
+      (suffix-stressed гладки́й). No shared etymology beyond the spelling --
+
+      distinguished purely by stress placement.
+
+      '
+    canonical_note: ua-lexeme-0555
+    members:
+    - note_id: ua-lexeme-0555
+      lemma: гла́дкий
+      status: sourced
+      chapter: 2.8
+      comment: Smooth, even (texture)
+      compare_scenario: You run your hand over a polished wooden tabletop and feel
+        no bumps or roughness at all.
+    - note_id: ua-lexeme-0589
+      lemma: гладки́й
+      status: sourced
+      chapter: reference
+      comment: Fat, well-fed, plump
+      compare_scenario: The farmer proudly points out how round and well-fed his
+        prize pig has gotten this year.
+  power-strength-synonyms:
+    description: 'Near-synonym cluster for "strong/powerful," per Горох''s Синонімія
+
+      page for потужний. Six words sharing overlapping EN glosses but distinct emphases:
+
+      raw capacity (потужний), general strength (сильний), authority/grandeur (могутній),
+
+      embodied physicality (дужий), durability (міцний), and mere perceptibility
+
+      (відчутний, the outlier -- not about force at all).
+
+      '
+    canonical_note: ua-lexeme-0574
+    members:
+    - note_id: ua-lexeme-0574
+      lemma: поту́жний
+      status: sourced
+      chapter: 2.8
+      comment: Powerful -- raw mechanical/operational capacity, technical register
+      compare_scenario: You're describing an engine, a loudspeaker, or a machine with a lot of raw output
+        capacity -- which word fits best?
+    - note_id: ua-lexeme-0590
+      lemma: си́льний
+      status: sourced
+      chapter: reference
+      comment: Strong -- the broadest, most general-purpose term
+      compare_scenario: You want the single most general, all-purpose word for 'strong' -- physical,
+        character, or intensity, with no special nuance implied.
+    - note_id: ua-lexeme-0591
+      lemma: могу́тній
+      status: sourced
+      chapter: reference
+      comment: Mighty -- authority and grandeur, commanding scale
+      compare_scenario: You're describing an empire, a ruler, or an ancient forest -- something commanding
+        and grand in scale, not just physically strong.
+    - note_id: ua-lexeme-0592
+      lemma: ду́жий
+      status: sourced
+      chapter: reference
+      comment: Robust, vigorous -- embodied physical build, literary register
+      compare_scenario: You're describing someone's robust physical build in a folk-tale or literary style --
+        less formal/grand than могутній, more concretely physical than сильний.
+    - note_id: ua-lexeme-0593
+      lemma: міцни́й
+      status: sourced
+      chapter: reference
+      comment: Sturdy, durable -- resistance to breaking, structural integrity
+      compare_scenario: You're describing a rope, fabric, or friendship that resists breaking or wearing out --
+        durability and structural integrity, not raw force.
+    - note_id: ua-lexeme-0594
+      lemma: відчу́тний
+      status: sourced
+      chapter: reference
+      comment: Noticeable, perceptible -- detectability, not force
+      compare_scenario: You want to say an effect or difference was noticeable/perceptible enough to register --
+        not that it was powerful or strong, just detectable.
+  castle-lock-homograph:
+    description: 'Stress-shift homograph on замок: за́мок castle (primary Яблуко
+
+      vocabulary sense, ch.2.3.4) and замо́к lock/latch (reference-only companion,
+
+      added to complete the pair).
+
+      '
+    canonical_note: ua-lexeme-1282
+    members:
+    - note_id: ua-lexeme-1282
+      lemma: за́мок
+      status: sourced
+      chapter: '2.3.4'
+      comment: Castle (heritage architecture, ch.3.4 wordlist item)
+      compare_scenario: You're touring a centuries-old hilltop fortress with stone
+        towers and thick walls, once home to a noble family.
+    - note_id: ua-lexeme-1302
+      lemma: замо́к
+      status: sourced
+      chapter: reference
+      comment: Lock, latch (reference-only companion note, not itself a wordlist item)
+      compare_scenario: You come home, reach into your pocket for the key, and open
+        your front door.
+  amazing-impressive-synonyms:
+    description: 'Convergent near-synonym TRIPLET (not homographs), all translatable as
+
+      "amazing"/"impressive" in English: вражаючий emphasizes the effect of impressing
+
+      through scale, quality, or skill, while дивовижний emphasizes wonder or surprise.
+
+      Extended 2026-09-01 with неймовірно (Anki cloze-mining report / Craig-flagged
+
+      2026-09-01) -- sourced from the same ch.8.7 wordlist line-up as вражаючий/
+
+      дивовижний/потужний. неймовірний (the adjective) does not itself appear as a
+
+      headword in either yabluko vocabulary list, so the sourced member is the adverb
+
+      неймовірно ("incredibly, unbelievably"), which adds the extreme "hard to believe"
+
+      register distinct from дивовижний''s wonder/surprise and вражаючий''s impressive
+
+      scale/skill.
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0571
+    members:
+    - note_id: ua-lexeme-0571
+      lemma: вража́ючий
+      status: sourced
+      chapter: '2.8.7'
+      comment: Impressive, striking -- effect of impressing through scale/quality/skill
+      compare_scenario: A skyscraper's engineering leaves visitors stunned by its
+        sheer scale and technical achievement.
+    - note_id: ua-lexeme-0572
+      lemma: дивови́жний
+      status: sourced
+      chapter: '2.8.7'
+      comment: Amazing, astonishing -- emphasizes wonder or surprise
+      compare_scenario: A street magician's trick leaves the crowd gasping in disbelief,
+        unable to figure out how it was possible.
+    - note_id: ua-lexeme-3907
+      lemma: неймові́рно
+      status: sourced
+      chapter: '2.8.7'
+      comment: Incredibly, unbelievably -- the extreme "hard to believe" register,
+        often used as an intensifier or standalone exclamation
+      compare_scenario: A friend tells you a story so wild you can barely believe
+        it actually happened -- what word for "amazing" carries that specific
+        "hard to believe" flavor?
+  knife-than-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on ніж: knife (noun)
+
+      and "than" (comparative conjunction).
+
+      '
+    canonical_note: ua-lexeme-0047
+    members:
+    - note_id: ua-lexeme-0047
+      lemma: ніж
+      status: sourced
+      chapter: '1.0'
+      comment: Knife (noun)
+      compare_scenario: Which sense of ніж is being used?
+      example_ua: Кухар ріже хліб гострим ножем.
+      meaning_en: Knife (noun)
+    - note_id: ua-lexeme-1270
+      lemma: ніж
+      status: sourced
+      chapter: '2.3.4'
+      comment: '"Than" (comparative conjunction)'
+      compare_scenario: Which sense of ніж is being used?
+      example_ua: Цей фасад гарніший, ніж той.
+      meaning_en: '"Than" (comparative conjunction)'
+  ancient-synonyms:
+    description: 'Five-way near-synonym family for "ancient/old," expanded 2026-08-31
+
+      from a 2-member старода́вній/дре́вній pair after Craig flagged the original
+
+      "minimal EN-distinguishable difference" framing as too thin. Checked against
+
+      Горох''s own usage notes and a Ukrainian style-correction guide (not just the
+
+      bare synonym listing): да́вній is the neutral, everyday default; дре́вній is
+
+      stylistically disfavored/colloquial -- usage guides recommend replacing it,
+
+      it is not a deliberate poetic register choice; старода́вній is the standard
+
+      term for historical antiquity and civilizations; старови́нний describes a
+
+      physical object or artifact, not an abstract era; анти́чний evokes Ancient
+
+      Greece and Rome specifically in everyday/educational usage, even though
+
+      dictionaries list it more loosely. класи́чний was considered and deliberately
+
+      excluded -- different semantic axis (canonical/traditional status, not
+
+      historical age), and it does not appear as a synonym on Горох''s давній page.
+
+      '
+    canonical_note: ua-lexeme-1257
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-1045
+      lemma: да́вній
+      status: sourced
+      chapter: '2.2.4'
+      comment: Old, longstanding -- the neutral, everyday default across contexts
+      compare_scenario: You're catching up with someone you've known since childhood
+        -- nothing formal, just how long the friendship's lasted.
+    - note_id: ua-lexeme-1254
+      lemma: дре́вній
+      status: sourced
+      chapter: '2.3.4'
+      comment: Ancient, olden -- stylistically disfavored/colloquial; usage guides
+        recommend replacing it rather than treating it as deliberate elevated register
+      compare_scenario: An old-fashioned storyteller spins a legend by the fire
+        about forests from time immemorial, in a flowery, dated style -- not the
+        word a careful modern writer would choose.
+    - note_id: ua-lexeme-1257
+      lemma: старода́вній
+      status: sourced
+      chapter: '2.3.4'
+      comment: Ancient, of antiquity -- the standard term for historical civilizations
+        and eras
+      compare_scenario: You're reading a history textbook chapter titled "Ancient
+        Egypt," covering pyramids, pharaohs, and the earliest civilizations.
+    - note_id: ua-lexeme-1563
+      lemma: старови́нний
+      status: sourced
+      chapter: '2.5.2'
+      comment: Antique, old-fashioned -- describes a physical object, building,
+        or artifact, not an abstract time period
+      compare_scenario: You're admiring a centuries-old coin in a museum display
+        case, its edges worn smooth from handling.
+    - note_id: ua-lexeme-2727
+      lemma: анти́чний
+      status: sourced
+      chapter: '1.2.3'
+      comment: Classical antiquity, ancient Greco-Roman -- narrower in everyday
+        and educational usage, evokes Ancient Greece and Rome specifically
+      compare_scenario: A tour guide leads your group past marble columns and statues,
+        describing the art and architecture of Ancient Greece and Rome specifically.
+  bench-homograph:
+    description: 'Stress-shift homograph on ла́вка: bench for sitting (primary sense)
+
+      and market stall / shop (secondary sense).
+
+      '
+    canonical_note: ua-lexeme-0372
+    members:
+    - note_id: ua-lexeme-0372
+      lemma: ла́вка
+      status: sourced
+      chapter: 2.9
+      comment: Bench (for sitting, in park or classroom)
+      compare_scenario: Which sense of лавка is being used?
+      example_ua: Він сід на лавку в парку, щоб трохи відпочити.
+      meaning_en: Bench (for sitting, in park or classroom)
+    - note_id: ua-lexeme-0235
+      lemma: ла́вка
+      status: sourced
+      chapter: 2.9
+      comment: Market stall, shop stand (street vendor's bench)
+      compare_scenario: Which sense of лавка is being used?
+      example_ua: Вона купила букет троянд у квітковій лавці на ринку.
+      meaning_en: Market stall, shop stand (street vendor's bench)
+  seem-emerge-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on вигляда́ти: to seem, to have
+
+      a certain appearance (stative sense, no perfective partner) and to look out, to emerge,
+
+      to become visible (event sense, pairs with perfective ви́глянути).
+
+      '
+    canonical_note: ua-lexeme-0550
+    members:
+    - note_id: ua-lexeme-0550
+      lemma: вигляда́ти
+      status: sourced
+      chapter: '2.8'
+      comment: To seem, to appear a certain way (stative/copular, imperfective-only)
+      compare_scenario: Which sense of виглядати is being used?
+      example_ua: Ця страва виглядає досить незвично.
+      meaning_en: To seem, to appear a certain way
+    - note_id: ua-lexeme-0587
+      lemma: вигляда́ти
+      status: sourced
+      chapter: '2.8'
+      comment: To look out, emerge, become visible (event sense, pairs with perfective ви́глянути)
+      compare_scenario: Which sense of виглядати is being used?
+      example_ua: Сонце виглядало з-за хмар.
+      meaning_en: To look out, emerge, become visible
+  departure-homograph:
+    description: 'Stress-shift homograph on відпра́влення: departure (primary sense,
+      travel context)
+
+      and parcel / mailed item (secondary sense, postal context).
+
+      '
+    canonical_note: ua-lexeme-0304
+    members:
+    - note_id: ua-lexeme-0304
+      lemma: відпра́влення
+      status: sourced
+      chapter: 2.9
+      comment: Departure (of a train, bus, person - leaving to go somewhere)
+      compare_scenario: Which sense of відправлення is being used?
+      example_ua: Час відправлення поїзда -- девʼята вечора.
+      meaning_en: Departure (of a train, bus, person - leaving to go somewhere)
+    - note_id: ua-lexeme-0380
+      lemma: відпра́влення
+      status: sourced
+      chapter: 2.9
+      comment: Parcel, mailed item (letter or package sent by mail)
+      compare_scenario: Which sense of відправлення is being used?
+      example_ua: Ваше відправлення готове до отримання на пошті.
+      meaning_en: Parcel, mailed item (letter or package sent by mail)
+  grammatical-aspect:
+    description: 'Stress-shift homograph on вид: aspect (grammatical: perfective vs.
+      imperfective distinction)
+
+      and kind / type (e.g., "вид спорту" = type of sport).
+
+      '
+    canonical_note: ua-lexeme-0182
+    members:
+    - note_id: ua-lexeme-0182
+      lemma: вид
+      status: sourced
+      chapter: 2.9
+      comment: 'Aspect (grammatical term: perfective vs. imperfective)'
+      compare_scenario: You're learning about verb grammar—what word describes whether
+        a verb is completed or ongoing?
+      example_ua: У реченні «Я прочитав книгу» дієслово «прочитати» має доконаний вид.
+      meaning_en: 'Aspect (grammatical term: perfective vs. imperfective)'
+    - note_id: ua-lexeme-0143
+      lemma: вид
+      status: sourced
+      chapter: 2.9
+      comment: Kind, type (e.g., "вид спорту" = type/category of sport)
+      compare_scenario: You're discussing different categories of something—what word
+        means a specific type or variety?
+      example_ua: Який вид спорту тобі найбільше подобається?
+      meaning_en: Kind, type
+  warmth-adverb:
+    description: 'Stress-shift homograph on тепло́/те́пло: warmth (noun, abstract
+      or physical sensation)
+
+      and warmly (adverb, manner of speaking or acting).
+
+      '
+    canonical_note: ua-lexeme-0407
+    members:
+    - note_id: ua-lexeme-0407
+      lemma: тепло́
+      status: sourced
+      chapter: 2.8
+      comment: Warmth (noun; physical heat or abstract comfort)
+      compare_scenario: You wrap your hands around a hot cup of tea on a cold morning
+        and feel it spreading through your fingers.
+    - note_id: ua-lexeme-0405
+      lemma: те́пло
+      status: sourced
+      chapter: 2.8
+      comment: Warmly (adverb; manner or tone of speaking/acting)
+      compare_scenario: She greets an old friend with a big hug and a smile, welcoming
+        them like family.
+  walking-arrival-departure:
+    description: 'Walking verb pair: прихо́дити (come/arrive on foot) and відхо́дити
+      (walk away, depart).
+
+      Directional opposites for bipedal motion.
+
+      '
+    canonical_note: ua-lexeme-0114
+    members:
+    - note_id: ua-lexeme-0114
+      lemma: прихо́дити
+      status: sourced
+      chapter: 2.9
+      comment: Come, arrive (on foot - approaching movement)
+      compare_scenario: A guest arrives at your door, on foot, for a party you're
+        hosting.
+    - note_id: ua-lexeme-0118
+      lemma: відхо́дити
+      status: sourced
+      chapter: 2.9
+      comment: Walk away, depart (on foot - leaving movement)
+      compare_scenario: A guest says goodbye and walks away from your door, on foot,
+        at the end of the evening.
+  walking-entry-exit:
+    description: 'Walking verb pair: вхо́дити (enter, go in) and вихо́дити (go out,
+      exit).
+
+      Directional opposites for crossing a threshold.
+
+      '
+    canonical_note: ua-lexeme-0115
+    members:
+    - note_id: ua-lexeme-0115
+      lemma: вхо́дити
+      status: sourced
+      chapter: 2.9
+      comment: Enter, go in (on foot - crossing threshold inward)
+      compare_scenario: Someone walks into a building through the front door, on foot.
+    - note_id: ua-lexeme-0116
+      lemma: вихо́дити
+      status: sourced
+      chapter: 2.9
+      comment: Go out, exit (on foot - crossing threshold outward)
+      compare_scenario: Someone walks out of a building through the front door, on
+        foot.
+  walking-passage:
+    description: 'Walking verb pair: прохо́дити (pass by, walk past, pass through
+      a space)
+
+      and перехо́дити (cross, go to the far side, traverse to opposite side).
+
+      Both involve traversing; перехо́дити implies reaching the far side.
+
+      '
+    canonical_note: ua-lexeme-0120
+    members:
+    - note_id: ua-lexeme-0120
+      lemma: прохо́дити
+      status: sourced
+      chapter: 2.9
+      comment: Pass by, walk past (on foot - transiting through)
+      compare_scenario: Someone is walking along a street, passing several shops without
+        stopping, on the way somewhere else.
+    - note_id: ua-lexeme-0121
+      lemma: перехо́дити
+      status: sourced
+      chapter: 2.9
+      comment: Cross, go across (on foot - reaching the far side)
+      compare_scenario: Someone is walking across a street at a crosswalk, from one
+        side to the other.
+  vehicle-directions:
+    description: 'Vehicle verb pair: вʼїжджа́ти (drive in, enter by vehicle) and виїжджа́ти
+      (drive out, exit by vehicle).
+
+      Directional opposites for vehicular motion.
+
+      '
+    canonical_note: ua-lexeme-0124
+    members:
+    - note_id: ua-lexeme-0124
+      lemma: вʼїжджа́ти
+      status: sourced
+      chapter: 2.9
+      comment: Drive in, into (by vehicle - entering motion)
+      compare_scenario: A car turns into a parking garage or driveway.
+    - note_id: ua-lexeme-0125
+      lemma: виїжджа́ти
+      status: sourced
+      chapter: 2.9
+      comment: Drive out (by vehicle - exiting motion)
+      compare_scenario: A car pulls out of a parking garage or driveway onto the street.
+  vehicle-approach-reach:
+    description: 'Vehicle verb pair: підʼїжджа́ти (drive up to, approach by vehicle)
+
+      and доїжджа́ти (reach, get to, arrive at destination by vehicle).
+
+      Similar to walking approach/reach pair but for vehicular motion.
+
+      '
+    canonical_note: ua-lexeme-0126
+    members:
+    - note_id: ua-lexeme-0126
+      lemma: підʼїжджа́ти
+      status: sourced
+      chapter: 2.9
+      comment: Drive up to (by vehicle - approach motion)
+      compare_scenario: A taxi slowly pulls up next to the curb where you're waiting,
+        not yet having arrived at the final destination.
+    - note_id: ua-lexeme-0128
+      lemma: доїжджа́ти
+      status: sourced
+      chapter: 2.9
+      comment: Reach, get to (by vehicle - destination arrival)
+      compare_scenario: A car finally arrives at the destination after a long drive.
+  vehicle-passage:
+    description: 'Vehicle verb pair: проїжджа́ти (drive past, pass through) and переїжджа́ти
+      (cross, go across).
+
+      Similar to walking passage pair but for vehicular motion; переїжджа́ти also
+      means to relocate.
+
+      '
+    canonical_note: ua-lexeme-0129
+    members:
+    - note_id: ua-lexeme-0129
+      lemma: проїжджа́ти
+      status: sourced
+      chapter: 2.9
+      comment: Drive past, pass through (by vehicle - transiting)
+      compare_scenario: Driving along a highway, passing several towns without stopping,
+        on a long road trip.
+    - note_id: ua-lexeme-0130
+      lemma: переїжджа́ти
+      status: sourced
+      chapter: 2.9
+      comment: Cross (by vehicle - reaching far side); to relocate
+      compare_scenario: Driving across a bridge from one side of a river to the other
+        -- or, in its extended sense, a family moving their household to a new city.
+  sports-action-verbs:
+    description: 'Four-member cluster of ball/impact-game action verbs, each answering
+      a different question
+
+      about where the force ends up or what the result is. All gloss roughly to "hit/strike/score"
+
+      but the semantic distinction matters in games context.
+
+      відбивати: hit back, deflect, return (defensive action; in tennis, returning
+      opponent''s shot)
+
+      забивати: score, hit into goal (offensive action; driving ball into goal)
+
+      завдавати: deal, inflict (combat context; striking a person, not a ball)
+
+      набирати: accumulate, rack up (scorekeeping; the scoreboard number increasing,
+      not the physical action)
+
+      '
+    canonical_note: ua-lexeme-0213
+    members:
+    - note_id: ua-lexeme-0213
+      lemma: відбива́ти
+      status: sourced
+      chapter: 2.9
+      comment: Hit back, deflect, return (defensive action; returning opponent's shot)
+      compare_scenario: During a long volleyball rally, what does a player keep doing
+        every time the ball comes flying at them?
+    - note_id: ua-lexeme-0214
+      lemma: забива́ти
+      status: sourced
+      chapter: 2.9
+      comment: Score, hit into goal (offensive action; driving ball into goal or net)
+      compare_scenario: Game after game, this striker has a habit of doing what to
+        the ball -- putting it in the back of the net?
+    - note_id: ua-lexeme-0215
+      lemma: завдава́ти
+      status: sourced
+      chapter: 2.9
+      comment: Deal, inflict (combat; striking a person, not a ball)
+      compare_scenario: Round after round, what does this boxer keep doing with his
+        fists -- not to a ball, but to the man across from him?
+    - note_id: ua-lexeme-0218
+      lemma: набира́ти
+      status: sourced
+      chapter: 2.9
+      comment: Gain, accumulate, rack up (scorekeeping; the tally increasing, not
+        the physical strike)
+      compare_scenario: As the second half goes on, what keeps happening to the leading
+        team's number on the scoreboard?
+  win-beat-verbs:
+    description: 'Two near-synonyms for "win": перемага́ти (defeat, overcome, win
+      against someone/something)
+
+      and виграва́ти (win, gain victory, win a game/prize).
+
+      перемага́ти emphasizes overcoming an opponent; виграва́ти emphasizes gaining
+      the prize.
+
+      '
+    canonical_note: ua-lexeme-0177
+    members:
+    - note_id: ua-lexeme-0177
+      lemma: перемага́ти
+      status: sourced
+      chapter: 2.9
+      comment: Defeat, overcome, win against (emphasizes overcoming opponent)
+      compare_scenario: In the championship boxing match, what did the challenger
+        do to the reigning champion?
+    - note_id: ua-lexeme-0212
+      lemma: виграва́ти
+      status: sourced
+      chapter: 2.9
+      comment: Win, gain (emphasizes gaining the prize or victory)
+      compare_scenario: At the poker table, what does a player do to walk away with
+        the whole pot?
+  race-start-loanword:
+    description: 'Loanword verb for starting a race: стартува́ти.
+
+      Compare to native Ukrainian почина́ти/поча́ти for "begin" more generally.
+
+      '
+    canonical_note: ua-lexeme-0291
+    members:
+    - note_id: ua-lexeme-0291
+      lemma: стартува́ти
+      status: sourced
+      chapter: 2.9
+      comment: Start (a race - loanword from English "start")
+      compare_scenario: The referee fires the starting pistol and the runners take
+        off.
+  race-finish-loanword:
+    description: 'Loanword verb for finishing a race: фінішува́ти.
+
+      Compare to native Ukrainian закі́нчувати/закі́нчити for "finish" more generally.
+
+      '
+    canonical_note: ua-lexeme-0292
+    members:
+    - note_id: ua-lexeme-0292
+      lemma: фінішува́ти
+      status: sourced
+      chapter: 2.9
+      comment: Finish (a race - loanword from English "finish")
+      compare_scenario: The first runner breaks the tape at the finish line.
+  running-racing:
+    description: 'Running/racing noun: біг (the act of running, or racing on foot)
+
+      vs. перего́ни (competitive racing by any means -- ski, car, boat, horse, etc.).
+
+      '
+    canonical_note: ua-lexeme-0145
+    members:
+    - note_id: ua-lexeme-0145
+      lemma: біг
+      status: sourced
+      chapter: 2.9
+      comment: Running, race (on foot - the act or the event)
+      compare_scenario: You're describing training for or watching a marathon or a
+        school sprint event -- a competition specifically involving running on foot.
+    - note_id: ua-lexeme-0144
+      lemma: перего́ни
+      status: sourced
+      chapter: '2.9.1'
+      comment: Racing by any means of transport/method (ski, car, boat, horse, etc.)
+      compare_scenario: You're describing a ski race, car race, boat race, or horse
+        race -- a competition not specifically involving running on foot.
+  transportation-arrival:
+    description: 'Arrival in transportation context: прибуття́ (the noun - arrival
+      event)
+
+      is paired with related transportation verbs; related to прибува́ти (to arrive).
+
+      '
+    canonical_note: ua-lexeme-0305
+    members:
+    - note_id: ua-lexeme-0305
+      lemma: прибуття́
+      status: sourced
+      chapter: 2.9
+      comment: Arrival (noun; transportation context on schedule boards)
+      compare_scenario: At the station, the 9pm train from Lviv pulls in and stops
+        at the platform. What just happened to it?
+  transportation-verbs:
+    description: 'Two verbs related to transportation: відправля́тися (to depart,
+      set off)
+
+      and прибува́ти (to arrive).
+
+      Often appear as paired opposites on transportation schedule boards: "Відпр./Приб."
+
+      '
+    canonical_note: ua-lexeme-0315
+    members:
+    - note_id: ua-lexeme-0315
+      lemma: відправля́тися
+      status: sourced
+      chapter: 2.9
+      comment: To depart, set off (especially of transportation - train, bus, plane)
+      compare_scenario: The departures board at the station shows what a train does
+        at exactly nine in the evening.
+    - note_id: ua-lexeme-0316
+      lemma: прибува́ти
+      status: sourced
+      chapter: 2.9
+      comment: To arrive (especially of transportation - train, bus, plane)
+      compare_scenario: A conductor makes an announcement over the station loudspeaker
+        about when the train gets in.
+  journey-trip-synonyms:
+    description: 'Near-synonyms for journey/trip: мандрівка (adventurous, wandering
+      connotation) vs подорож (the neutral, general-purpose word). Горох defines
+      мандрівка sense 1 directly as "подорож (у 1 знач.)", with sense 2 adding a
+      "constant change of location, wandering" (блукання) nuance подорож lacks.
+      Extended 2026-09-01 with поїздка (Anki cloze-mining report, extension candidate)
+      -- adds the vehicle-travel axis (from їздити, "to ride/travel by vehicle")
+      alongside мандрівка''s wandering/adventurous connotation and подорож''s neutral
+      generality.
+
+      '
+    canonical_note: ua-lexeme-0330
+    members:
+    - note_id: ua-lexeme-0330
+      lemma: мандрі́вка
+      status: sourced
+      chapter: 2.9.7
+      comment: Adventurous/wandering connotation; Горох's sense 2 adds "constant
+        change of location, wandering" that подорож lacks.
+      compare_scenario: You're describing backpacking through a few different
+        towns with no fixed itinerary, just following your curiosity -- which
+        word for "trip" carries that wandering, adventurous feel?
+    - note_id: ua-lexeme-0595
+      lemma: по́дорож
+      status: sourced
+      chapter: reference
+      comment: The neutral, general-purpose word for journey/trip; Горох's sense
+        1 of мандрівка is defined directly as this word.
+      compare_scenario: You're describing a business trip or a flight to visit
+        family -- ordinary, purposeful travel with no wandering or adventurous
+        connotation -- which is the default, all-purpose word for "trip"?
+    - note_id: ua-lexeme-3547
+      lemma: пої́здка
+      status: sourced
+      chapter: '1.9.3'
+      comment: A trip taken by vehicle/transport (from їздити, "to ride/travel by
+        vehicle") -- often short and practical (a car ride, a business trip)
+      compare_scenario: You drove to the next city for a doctor's appointment and
+        back the same day -- an ordinary trip by car, nothing adventurous or epic
+        about it. Which word for "trip" specifically implies travel by vehicle?
+  drawing-nouns:
+    description: 'Near-synonyms for drawing as product, act, and craft: малюнок
+      (the finished picture) vs малювання (the act of drawing) vs малярство (the
+      discipline/craft of painting or drawing broadly).
+
+      '
+    canonical_note: ua-lexeme-0042
+    members:
+    - note_id: ua-lexeme-0042
+      lemma: малю́нок
+      status: sourced
+      chapter: '1.0'
+      comment: The finished drawing/picture itself (product of малювати).
+      compare_scenario: Your child hands you the finished piece of paper with
+        colored pencil marks on it -- what do you call the actual picture they
+        made?
+    - note_id: ua-lexeme-0596
+      lemma: малюва́ння
+      status: sourced
+      chapter: reference
+      comment: The act/process of drawing or painting (verbal noun of малювати).
+      compare_scenario: You're describing what your child was doing for the last
+        hour with a box of pencils, not what they produced -- what word names
+        the activity itself?
+    - note_id: ua-lexeme-0597
+      lemma: маля́рство
+      status: sourced
+      chapter: reference
+      comment: The discipline or craft of painting/drawing broadly (also, the house-painting
+        trade).
+      compare_scenario: You're describing painting as a discipline or craft someone
+        studies and practices, not a specific picture or the single act of making
+        one -- what word names the art/craft as a whole?
+  painting-nouns:
+    description: 'Near-synonyms for painting as art form, product, and mural: живопис
+      (the art form/medium) vs картина (a specific painting/canvas) vs розпис
+      (painted decoration on a wall or building).
+
+      '
+    canonical_note: ua-lexeme-0599
+    members:
+    - note_id: ua-lexeme-0598
+      lemma: живо́пис
+      status: sourced
+      chapter: reference
+      comment: Painting as an art form/genre (paint medium), largely synonymous
+        with малярство sense 1.
+      compare_scenario: You're talking about painting as an entire art form/genre,
+        not any single piece -- what word names the medium itself?
+    - note_id: ua-lexeme-0599
+      lemma: карти́на
+      status: sourced
+      chapter: reference
+      comment: A specific painting/picture as a physical object (canvas).
+      compare_scenario: You're pointing at a specific framed piece hanging on
+        the wall in a museum -- what do you call that individual object?
+    - note_id: ua-lexeme-0600
+      lemma: ро́зпис
+      status: sourced
+      chapter: reference
+      comment: A painted mural or ornamental design on a wall/surface/object.
+      compare_scenario: You're looking at a painted design covering a church
+        ceiling or the side of a building, not a framed canvas -- what word names
+        that kind of painted decoration?
+  party-game-homograph:
+    description: 'Pure polysemy homograph (no stress shift) on па́ртія: political party
+      (primary, most common sense) and a single round of a board/card game -- "a game
+      (chess, cards, etc.) from start to finish" per Горох''s Тлумачення entry.
+
+      '
+    canonical_note: ua-lexeme-0378
+    members:
+    - note_id: ua-lexeme-0378
+      lemma: па́ртія
+      status: sourced
+      chapter: '2.9.3'
+      comment: Political party (common, general-purpose sense)
+      compare_scenario: Which sense of партія is being used?
+      example_ua: Ця партія перемогла на виборах.
+      meaning_en: Political party
+    - note_id: ua-lexeme-0186
+      lemma: па́ртія
+      status: sourced
+      chapter: '2.9.3'
+      comment: A single round of a board/card game (chess, cards), start to finish
+      compare_scenario: Which sense of партія is being used?
+      example_ua: Ми зіграли ще одну партію в шахи.
+      meaning_en: A single round of a board/card game (chess, cards), start to finish
+  game-match-phrases:
+    description: 'Near-synonym verb-phrases for winning a game: ви́грати па́ртію (a single
+      round of a board/card game -- chess, cards) vs ви́грати матч (a scheduled athletic
+      contest -- football, tennis, boxing). Mirrors the underlying па́ртія/матч noun-level
+      distinction (see party-game-homograph and the standalone матч note, ua-lexeme-0604).
+
+      '
+    canonical_note: ua-lexeme-0226
+    members:
+    - note_id: ua-lexeme-0226
+      lemma: ви́грати па́ртію
+      status: sourced
+      chapter: '2.9.3'
+      comment: To win a single round of a board/card game (chess, cards)
+      compare_scenario: After a long, close game of chess, one player finally checkmates
+        the other -- what's the natural way to say they won?
+    - note_id: ua-lexeme-0605
+      lemma: ви́грати матч
+      status: sourced
+      chapter: '2.9.3'
+      comment: To win a scheduled athletic contest (football, tennis, boxing)
+      compare_scenario: A football team scores the winning goal in the final minute
+        of a scheduled match -- what's the natural way to say they won?
+  painting-verbs:
+    description: 'Near-synonyms for applying paint/color: малювати (to draw, basic
+      picture-making) vs розписувати (to decorate/sign) vs фарбувати (to apply
+      solid color or dye).
+
+      '
+    canonical_note: ua-lexeme-1034
+    members:
+    - note_id: ua-lexeme-1034
+      lemma: малюва́ти
+      status: sourced
+      chapter: '1.11.1'
+      comment: Basic verb for making a picture/drawing with pencil, crayon, paint,
+        etc.
+      compare_scenario: A child is making a picture with a pencil or crayons --
+        what's the basic verb for making that kind of image?
+    - note_id: ua-lexeme-0602
+      lemma: розпи́сувати
+      status: sourced
+      chapter: reference
+      comment: To cover a surface with an ornamental painted design, or to sign/register
+        officially.
+      compare_scenario: Someone is covering a wall or ceramic surface with an
+        ornamental painted pattern, or signing an official document -- which verb
+        names that specific action, distinct from plain drawing?
+    - note_id: ua-lexeme-0603
+      lemma: фарбува́ти
+      status: sourced
+      chapter: '1.11.4'
+      comment: To apply a solid coat of paint (or dye), e.g. a fence, wall, or
+        fabric.
+      compare_scenario: Someone is covering a fence or wall in a single solid
+        color with a paint roller, or dyeing fabric -- which verb names that
+        action, distinct from making a picture?
+
+  positional-vs-absolute-lower:
+    description: 'Convergent near-synonym TRIPLET (not homographs) on "low/lower": ни́жній is
+      a positional/relative adjective (the bottom one of a pair or ordered set -- a lower
+      berth, a lower shelf); низьки́й is the absolute POSITIVE degree, describing an object''s
+      own height (a low ceiling, a low table), independent of any pairing; ни́жчий is the
+      absolute COMPARATIVE degree, for a direct comparison between two things ("X нижчий
+      за/ніж Y"). Craig''s own stated confusion (2026-08-28), refined once he noted нижчий
+      is the true comparative of низький (not нижній) and that нижчий/нижній -- sharing the
+      "ниж-" root -- are the sharper, easier-to-confuse pair. Mirrors positional-vs-absolute-upper
+      (ве́рхній/висо́кий/ви́щий).
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0312
+    members:
+    - note_id: ua-lexeme-0312
+      lemma: ни́жній
+      status: sourced
+      chapter: '2.8.2'
+      comment: Positional/relative -- the bottom one of a pair or ordered set (a lower berth,
+        a lower shelf)
+      compare_scenario: You're comparing the bottom bunk to the top bunk on a train -- what
+        word describes the bottom one?
+    - note_id: ua-lexeme-0433
+      lemma: низьки́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute positive degree -- an object's own height/magnitude (a low ceiling,
+        a low table)
+      compare_scenario: A ceiling is uncomfortably close to your head -- what word describes
+        it?
+    - note_id: ua-lexeme-0606
+      lemma: ни́жчий
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute comparative degree -- a direct comparison between two things ("X is
+        lower than Y")
+      compare_scenario: You're comparing two rooms directly -- one ceiling is lower than the
+        other. What word says that comparison?
+
+  positional-vs-absolute-upper:
+    description: 'Convergent near-synonym TRIPLET (not homographs) on "upper/tall": ве́рхній is
+      a positional/relative adjective (the top one of a pair or ordered set -- an upper berth,
+      an upper shelf); висо́кий is the absolute POSITIVE degree, describing an object''s own
+      height (a tall building, a high ceiling), independent of any pairing; ви́щий is the
+      absolute COMPARATIVE degree, for a direct comparison between two things ("X вищий за/ніж
+      Y"). Mirrors positional-vs-absolute-lower (ни́жній/низьки́й/ни́жчий).
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0313
+    members:
+    - note_id: ua-lexeme-0313
+      lemma: ве́рхній
+      status: sourced
+      chapter: '2.8.2'
+      comment: Positional/relative -- the top one of a pair or ordered set (an upper berth,
+        an upper shelf)
+      compare_scenario: You're comparing the top bunk to the bottom bunk on a train -- what
+        word describes the top one?
+    - note_id: ua-lexeme-0438
+      lemma: висо́кий
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute positive degree -- an object's own height/magnitude (a tall building,
+        a high ceiling)
+      compare_scenario: A building towers over everything else on the street -- what word
+        describes it?
+    - note_id: ua-lexeme-0607
+      lemma: ви́щий
+      status: sourced
+      chapter: '2.8.2'
+      comment: Absolute comparative degree -- a direct comparison between two things ("X is
+        taller than Y")
+      compare_scenario: You're comparing two buildings directly -- one is taller than the
+        other. What word says that comparison?
+  greeting-genitive-vs-fixed-night:
+    description: 'Convergent near-synonym pair, not homographs, both meaning "good night" as
+      a parting farewell: на добраніч / добраніч is a frozen, uninflected interjection (Горох
+      tags it вигук, невідмінювана словникова одиниця) and is the far more traditional default;
+      доброї ночі is grammatically live -- the same genitive-of-wish construction as доброго
+      ранку/дня/вечора (genitive standing in for an implied elided verb, "[бажаю тобі] ...").
+      добра ніч (bare nominative) is deliberately NOT a cluster member -- it is not used as a
+      greeting at all, just the descriptive phrase "a good night," so there is nothing to test
+      productively.
+
+      '
+    canonical_note: ua-lexeme-0108
+    members:
+    - note_id: ua-lexeme-0108
+      lemma: На добра́ніч
+      status: sourced
+      chapter: '1.0'
+      comment: Frozen, uninflected interjection -- the traditional default farewell for parting
+        at night
+      compare_scenario: You're saying goodbye to your host family as you head to bed for the
+        night -- what's the standard, most traditional thing to say?
+    - note_id: ua-lexeme-0608
+      lemma: Доброї но́чі
+      status: sourced
+      chapter: '1.0'
+      comment: Genitive-of-wish alternate, same construction as доброго ранку/дня/вечора --
+        grammatically live, less traditional than добраніч
+      compare_scenario: You want to wish someone a good night using the same construction as
+        "доброго ранку" -- what's the genitive form of ніч?
+  fire-general-vs-blaze-vs-campfire:
+    description: 'Convergent near-synonym TRIPLET (not homographs) on "fire": пожежа is
+      specifically a destructive, uncontrolled fire -- a blaze or conflagration, the kind
+      firefighters put out; вого́нь is the broad, general/elemental word for fire itself (a
+      flame, a campfire''s light, bodily heat, gunfire) -- the umbrella term, not implying
+      harm or intent; ва́тра is specifically a campfire/bonfire (Горох defines it as вогнище),
+      a controlled, intentional fire built for warmth, light, or gathering.
+      Extended 2026-09-01 with вогнище (Anki cloze-mining report, extension
+      candidate) -- the plain, common word for the same controlled campfire/bonfire
+      that ватра names more literarily; Горох''s own ватра entry defines it
+      directly as вогнище.
+
+      '
+    show_all_members: true
+    canonical_note: ua-lexeme-0173
+    members:
+    - note_id: ua-lexeme-0173
+      lemma: поже́жа
+      status: sourced
+      chapter: '2.9.2'
+      comment: A destructive, uncontrolled fire -- a blaze or conflagration, the kind firefighters
+        put out
+      compare_scenario: A building is burning out of control and firefighters are rushing to
+        put it out -- what word describes this fire?
+    - note_id: ua-lexeme-0329
+      lemma: вого́нь
+      status: sourced
+      chapter: '2.9.7'
+      comment: The broad, general/elemental word for fire itself -- a flame, gunfire, bodily
+        heat, not implying harm or intent
+      compare_scenario: You want the plain, general word for "fire" -- not a disaster, not a
+        specific campfire, just fire itself. What word do you use?
+    - note_id: ua-lexeme-0610
+      lemma: ва́тра
+      status: sourced
+      chapter: '2.9.2'
+      comment: A campfire/bonfire -- a controlled, intentional fire built for warmth, light,
+        or gathering
+      compare_scenario: You're camping with friends and someone lights a fire on purpose so
+        everyone can sit around it and tell stories. What word describes that fire?
+    - note_id: ua-lexeme-3493
+      lemma: во́гнище
+      status: sourced
+      chapter: '1.8.5'
+      comment: The plain, common word for bonfire/campfire (and hearth) -- Горох
+        defines ватра directly as this word; ватра is the more literary/regional
+        term for the same controlled fire
+      compare_scenario: You're describing the fire pit in your backyard where the
+        family gathers most evenings -- the everyday, common word for a bonfire or
+        hearth, not the more literary ватра. What word do you use?
+  container-nouns-packet-vs-pack:
+    description: 'Two container nouns both loosely glossable as "pack" in English:
+      паке́т (masc.) is a wrapped or bagged single unit -- a packet, or colloquially
+      a plastic bag; па́чка (fem.) is a compact bundle or carton -- e.g. a pack of
+      cigarettes, a carton of milk or butter. Different container shapes, not
+      interchangeable. Craig-requested 2026-08-28 while both were being drafted in
+      ch.3.1 (quantities/containers). 2026-09-01: both compare_scenario prompts
+      reworded -- the originals both closed with "which word for ''pack'' fits?",
+      a literal answer-key giveaway (Craig-flagged), same issue as the EN_Example
+      fields on both member notes.
+
+      '
+    canonical_note: ua-lexeme-1161
+    members:
+    - note_id: ua-lexeme-1161
+      lemma: паке́т
+      status: sourced
+      chapter: '2.3.1'
+      comment: A wrapped/bagged single unit -- a packet, or colloquially a plastic bag
+      compare_scenario: You need something to carry loose groceries home in, or a
+        shopkeeper hands you sugar sealed up as a single bagged unit -- which of
+        these two container words is the right one?
+    - note_id: ua-lexeme-1162
+      lemma: па́чка
+      status: sourced
+      chapter: '2.3.1'
+      comment: A compact bundle or carton -- e.g. a pack of cigarettes, a carton of
+        milk or butter
+      compare_scenario: You pick a small rectangular box of cigarettes, or a carton
+        of butter, off the shelf -- which of these two container words is the right
+        one?
+  law-right-vs-statute:
+    description: 'Convergent near-synonym PAIR both glossable as "law" in English:
+      пра́во (neut.) is law in the abstract/systemic sense -- the legal system,
+      jurisprudence, or an entitlement (a right, e.g. пра́во на осві́ту "the right to
+      education"; вивча́ти пра́во "to study law" as a discipline); зако́н (masc.) is a
+      specific enacted statute -- a law passed by a legislature (ухвали́ти зако́н "to
+      pass a law", поруши́ти зако́н "to break the law"). Craig flagged this pair
+      2026-08-28 while ch.10.5 civics vocabulary (пра́во) was being drafted alongside
+      the pre-existing зако́н note.
+
+      '
+    canonical_note: ua-lexeme-0708
+    members:
+    - note_id: ua-lexeme-0708
+      lemma: пра́во
+      status: sourced
+      chapter: '2.10.5'
+      comment: Law in the abstract/systemic sense, or an entitlement/right -- not a
+        specific statute
+      compare_scenario: You want to say everyone has the right to education, or that
+        your friend is studying law at university -- which word for "law/right" fits?
+    - note_id: ua-lexeme-0473
+      lemma: зако́н
+      status: sourced
+      chapter: '2.8.3'
+      comment: A specific enacted statute -- a law passed by a legislature, that can
+        be broken or passed
+      compare_scenario: Parliament just passed a new law, or someone got arrested for
+        breaking one -- which word for "law" fits here?
+  heavy-hardship-synonyms:
+    description: 'Convergent near-synonym pair both glossable as "heavy" in English:
+      важки́й is the literal/general-difficulty default -- physical weight (a heavy
+      suitcase) or everyday difficulty; тяжки́й leans toward serious, severe
+      hardship -- grave illness, a heavy loss, life-altering difficulty -- a
+      heavier register than важкий, even though Горох lists тяжкий as the
+      dominant near-synonym across nearly every sense of важкий. Flagged
+      2026-08-27 via pending-confusable:тяжкий on ua-lexeme-0436 while тяжкий had
+      no note of its own yet; тяжкий sourced 2026-08-29 as ua-lexeme-3642
+      (yabluko-l1 ch.10). Clustered 2026-08-31.
+
+      '
+    canonical_note: ua-lexeme-0436
+    members:
+    - note_id: ua-lexeme-0436
+      lemma: важки́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Heavy (physical weight) or difficult in a general, everyday sense
+        -- the more literal, lower-register default
+      compare_scenario: You're helping a friend haul a stuffed suitcase up three
+        flights of stairs -- which word for "heavy" fits that physical strain?
+    - note_id: ua-lexeme-3642
+      lemma: тяжки́й
+      status: sourced
+      chapter: '1.10.2'
+      comment: Heavy in a serious, severe sense -- grave illness, a heavy loss,
+        life-altering hardship; a heavier, more emotionally weighted register
+        than важкий
+      compare_scenario: A family just got news of a loved one's grave illness,
+        or a devastating loss -- which word for "heavy" carries that gravity?
+  thick-fat-synonyms:
+    description: 'Three-way near-synonym family for "thick/fat/dense" in Ukrainian, flagged
+
+      2026-09-01 when Craig noticed lexeme 0439 (товстий) had no confusable cluster despite
+
+      two overlap candidates already sourced in the corpus (по́вний, густи́й). товсти́й is the
+
+      broadest, plainest default -- it directly describes a person''s or animal''s weight in
+
+      a blunt/informal register, and separately doubles as the general word for an object''s
+
+      physical thickness (a thick book, a thick blanket, a thick wall) with no connection to
+
+      weight at all. по́вний is reserved for describing a person''s build: СУМ defines its
+
+      body sense as "в міру товстий, округло-пухлий" (moderately heavyset, roundly plump) --
+
+      structurally a softened degree of товстий, functioning as the more diplomatic word for
+
+      a person''s weight (English "heavyset" vs. "fat"); по́вний never describes an inanimate
+
+      object''s physical thickness. густи́й sits on a wholly separate axis -- density or
+
+      concentration of a substance or mass noun (soup, fog, hair, forest, smoke, a crowd, a
+
+      deep voice) -- and per СУМ/Горох is not used of a person''s own body weight or build,
+
+      so it does not actually compete with товстий/повний in real usage; it is included here
+
+      because Craig flagged it as visually/thematically confusable with "thick," and the
+
+      cluster makes that domain separation explicit rather than leaving students to guess.
+
+      гладки́й (ua-lexeme-0589, "fat, well-fed, plump") was deliberately left OUT of this
+
+      cluster''s membership even though it is a near-synonym of повний in the body-weight
+
+      sense. ClusterRegistry.note_to_cluster is a single-valued note_id -> cluster_name map,
+
+      so a note can anchor only one Compare card of its own; 0589 already anchors the
+
+      smooth-plump-homograph stress-shift pair with ua-lexeme-0555 (гла́дкий, "smooth, even"),
+
+      the higher-value pedagogical test (identical spelling once stress is stripped), and
+
+      adding 0589 here would silently reassign its own card away from that test. Craig
+
+      confirmed 2026-09-01: keep 0589 out of this cluster''s literal membership; genuine
+
+      multi-cluster support is separate future architecture work (see confusable_clusters.py
+
+      note_to_cluster).
+
+      '
+    canonical_note: ua-lexeme-0439
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0439
+      lemma: товсти́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Fat or thick, the broadest/plainest default -- describes a person's or animal's
+        weight bluntly, and separately describes an object's physical thickness (unrelated
+        to weight)
+      compare_scenario: You're flipping through a paperback that must be eight hundred pages
+        -- doorstop-thick and heavy in your bag. Which word for "thick" fits an object like
+        that?
+    - note_id: ua-lexeme-1455
+      lemma: по́вний
+      status: sourced
+      chapter: '2.4.4'
+      comment: Plump, heavyset -- the softer, more diplomatic word for a person's build (a
+        moderate degree of товстий); never describes an object's physical thickness
+      compare_scenario: You're introducing a friendly, heavyset relative at a family gathering
+        -- the word should sound warm and neutral, not blunt.
+    - note_id: ua-lexeme-3056
+      lemma: густи́й
+      status: sourced
+      chapter: '1.5.5'
+      comment: Thick or dense, describing a substance or mass noun -- soup, fog, hair, forest
+        -- never a person's own body weight or build
+      compare_scenario: You're standing in fog so thick you can't see three steps ahead --
+        which word for "thick/dense" fits that kind of atmospheric density?
+  of-course-usually-synonyms:
+    description: 'Three adverbs easily tangled together, flagged 2026-07-30 when Craig noted
+
+      звісно would eventually cluster with both зазвичай and звичайно ("similar either in
+
+      meaning or in UA spelling"). звісно is a pure certainty/confirmation discourse particle
+
+      -- "of course" -- always set off by commas as a parenthetical aside, and never means
+
+      "usually." звичайно is the historically dual word: Горох''s own usage note
+
+      (слововживання) documents two senses -- the parenthetical "of course" (comma-set-off,
+
+      synonym of звісно) and the older adverbial "as usual/customary" (no comma). Modern
+
+      Ukrainian style guidance (onlinecorrector.com.ua / slovopedia.org.ua) explicitly
+
+      recommends replacing звичайно with зазвичай whenever the intended meaning is "usually"
+
+      -- зазвичай is described as "стилістично кращим" (stylistically better) and is a
+
+      classical word now being revived specifically to resolve this ambiguity. зазвичай
+
+      itself has only the one sense -- "usually," habitual frequency -- with no
+
+      comma-dependent double meaning at all. Net effect for a learner: зазвичай is the
+
+      clean, modern, unambiguous choice for frequency; звичайно is a live fossil that can
+
+      still mean either thing depending on punctuation and register; звісно never means
+
+      frequency at all.
+
+      '
+    canonical_note: ua-lexeme-0453
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0453
+      lemma: зві́сно
+      status: sourced
+      chapter: '2.8.2'
+      comment: Of course/naturally -- a pure certainty-confirmation discourse particle, always
+        comma-set-off as a parenthetical; never means "usually"
+      compare_scenario: A friend asks if you'll help them move this weekend -- you want to
+        say "of course" with warm certainty. No comma-dependent double meaning to worry about.
+    - note_id: ua-lexeme-2745
+      lemma: звича́йно
+      status: sourced
+      chapter: '1.2.4'
+      comment: Historically dual -- "of course" (comma-set-off parenthetical) or the older
+        "as usual" (no comma); modern style guides recommend зазвичай instead for the frequency
+        sense
+      compare_scenario: This is the one word here that can mean either "of course" (set off
+        by a comma, an aside) or "as usual" (no comma, a habit), depending purely on punctuation
+        -- read it both ways.
+    - note_id: ua-lexeme-0952
+      lemma: зазвича́й
+      status: sourced
+      chapter: '2.1.7'
+      comment: Usually, habitually -- the modern, stylistically preferred word for frequency,
+        with no comma-dependent double meaning (style guides now recommend it over звичайно
+        for this sense)
+      compare_scenario: You want to state a genuine habit -- "I usually get up at seven" --
+        with zero ambiguity about whether you mean "of course" instead. This is the clean
+        modern choice for that.
+  movement-jam-synonyms:
+    description: 'Pair flagged 2026-07-30 when рух was noted to eventually cluster with
+
+      затор, which didn''t have its own note yet. рух is the general, uncountable word for
+
+      movement or traffic flow -- the overall state of things moving (or not) in an area.
+
+      затор is a specific, countable obstruction of that flow: Горох''s own definition of
+
+      затор is literally "скупчення ... що створює перешкоду рухові" (an accumulation that
+
+      creates an obstacle to рух) -- затор is definitionally a blockage IN рух, not a
+
+      synonym for it. A learner should think of it as "traffic" vs. "a traffic jam" in
+
+      English: рух describes the ongoing condition, затор names the one specific pile-up
+
+      stopping it.
+
+      '
+    canonical_note: ua-lexeme-0463
+    members:
+    - note_id: ua-lexeme-0463
+      lemma: рух
+      status: sourced
+      chapter: '2.8.3'
+      comment: Movement or traffic flow in general -- the overall, ongoing condition, not
+        any one holdup
+      compare_scenario: You're describing how busy the streets are in general at rush hour
+        -- the overall flow, not any single stoppage.
+    - note_id: ua-lexeme-3555
+      lemma: зато́р
+      status: sourced
+      chapter: '1.9.4'
+      comment: A traffic jam -- a specific, countable obstruction of рух; Горох defines it
+        literally as "an obstacle to рух"
+      compare_scenario: You've been stuck in the same spot for twenty minutes because of a
+        pile-up two blocks ahead -- one specific blockage, not traffic in general.
+  look-appearance-synonyms:
+    description: 'Three-way cluster flagged 2026-07-30 around the English word "look," which
+
+      Ukrainian splits three ways with no shared root. погляд is the act of looking itself
+
+      -- a glance or gaze that a person directs outward (Горох: the visual attention itself).
+
+      вигляд is the reverse direction -- how someone or something appears TO an observer,
+
+      its outward presentation (Горох: "the collection of external features ... that creates
+
+      a corresponding impression"). доглядати is a false-cognate trap for English speakers:
+
+      "to look after" someone means to care for and tend to them, with no connection to
+
+      vision at all -- Craig specifically corrected the target spelling from an earlier
+
+      доглянати guess to доглядати (imperfective; perfective доглянути). All three notes''
+
+      existing example sentences already demonstrated their distinct senses cleanly, so none
+
+      needed rewriting.
+
+      '
+    canonical_note: ua-lexeme-0471
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0471
+      lemma: по́гляд
+      status: sourced
+      chapter: '2.8.3'
+      comment: A look, glance, or gaze -- the act of looking itself, directed outward by the
+        subject
+      compare_scenario: She glances across the room and catches his eye for a second -- which
+        word names that glance itself, the thing her eyes just did?
+    - note_id: ua-lexeme-1448
+      lemma: ви́гляд
+      status: sourced
+      chapter: '2.4.4'
+      comment: Appearance -- how someone or something looks TO an observer, its outward presentation;
+        the reverse direction from погляд
+      compare_scenario: He hasn't slept in two days and it shows on his face -- which word
+        describes how he appears to everyone else?
+    - note_id: ua-lexeme-1756
+      lemma: догляда́ти
+      status: sourced
+      chapter: '2.6.3'
+      comment: To look after, care for, tend to -- the "look" in English "look after" has
+        nothing to do with vision; unrelated in root to погляд/вигляд
+      compare_scenario: Someone has to feed the cat, water the plants, and check on Grandma
+        while you're away -- which word for "look" actually means caring for them, nothing
+        to do with eyes?
+  quantity-synonyms:
+    description: 'Three-way cluster flagged 2026-07-30 -- Craig confirmed all three belong
+
+      in one cluster together rather than split up. скільки is categorically different from
+
+      the other two: it''s the interrogative/relative "how much, how many," turning a
+
+      sentence into a question, never a plain statement of quantity. кілька and декілька
+
+      are, by contrast, genuine full synonyms -- both mean "several, a few" (roughly 3-10),
+
+      and Ukrainian-language sources (Olha Bagniy, Oleksandr Ponomariv, via
+
+      obozrevatel.com) confirm there is no difference in meaning, register, formality, or
+
+      region between them. The only real guidance is stylistic convenience: кілька is
+
+      shorter and more commonly recommended (it also forms compounds like кількаденний,
+
+      "several days long"), while декілька is the longer but equally correct alternative.
+
+      This cluster is unlike most others in the registry -- two of its three members
+
+      genuinely mean the same thing, so the lesson for кілька/декілька is "these are
+
+      interchangeable, pick either," not "pick the one that fits." Extended 2026-09-01
+
+      with трохи, мало, and кількість (Anki cloze-mining report, extension candidates)
+
+      -- трохи and мало add the small-amount adverbial territory ("a little" vs "not
+
+      enough") alongside кілька/декілька''s "several" and скільки''s interrogative;
+
+      кількість adds a lookalike-by-root confusion (shares кільк- with кілька) despite
+
+      being an abstract noun rather than a quantifier.
+
+      '
+    canonical_note: ua-lexeme-0477
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0477
+      lemma: кі́лька
+      status: sourced
+      chapter: '2.8.3'
+      comment: Several, a few -- a true synonym of декілька; the shorter, more commonly recommended
+        form
+      compare_scenario: You want to say you bought "a few" apples, plainly -- the shorter,
+        more commonly recommended form of the two synonyms here.
+    - note_id: ua-lexeme-1171
+      lemma: скі́льки
+      status: sourced
+      chapter: '2.3.1'
+      comment: How much, how many -- interrogative/relative, turns the sentence into a question;
+        categorically different from кілька/декілька, which are statements
+      compare_scenario: You're at the market and need to ask the price before you buy -- which
+        word turns this into a question, "how much/how many"?
+    - note_id: ua-lexeme-1175
+      lemma: де́кілька
+      status: sourced
+      chapter: '2.3.2'
+      comment: Several, a few -- a true synonym of кілька, meaning exactly the same thing;
+        just the longer of the two equally correct forms
+      compare_scenario: You want to say the same thing as кілька -- "a few" apples -- but
+        you've reached for the longer form. декілька means exactly the same thing, just longer.
+    - note_id: ua-lexeme-0345
+      lemma: тро́хи
+      status: sourced
+      chapter: '2.3.2'
+      comment: A little, a bit -- a neutral, adverbial small amount ("how much"), not
+        a discrete countable amount like кілька/декілька ("how many")
+      compare_scenario: You slept a little later than usual this morning -- no big
+        deal, just a small amount of extra time. What word says "a little"?
+    - note_id: ua-lexeme-1176
+      lemma: ма́ло
+      status: sourced
+      chapter: '2.3.2'
+      comment: Little, not enough -- the same small-amount territory as трохи, but
+        carrying a deficiency/insufficiency connotation трохи lacks
+      compare_scenario: You review the schedule and realize there's not enough time
+        left to finish everything -- the amount you have falls short of what's
+        needed. What word says that?
+    - note_id: ua-lexeme-1169
+      lemma: кі́лькість
+      status: sourced
+      chapter: '2.3.1'
+      comment: Quantity, amount -- an abstract NOUN naming the concept of "how
+        much" itself, not a quantifier word; a lookalike of кілька by shared root
+        (кільк-) but a different part of speech and meaning entirely
+      compare_scenario: A recipe asks how much sugar to use -- you need the noun
+        for "amount/quantity" itself, not a quantifier like "a few" or "several".
+        What word names the concept?
+  sensation-feeling-synonyms:
+    description: 'Pair flagged 2026-07-30 -- відчуття anchored a pending-confusable watch
+
+      for почуття, which didn''t have its own note yet. Горох''s own dictionary entry draws
+
+      the line clearly: відчуття covers "сприймання органами чуття" (perception through the
+
+      sense organs) -- a physical, bodily sensation -- and, secondarily, a resulting
+
+      psychological state; почуття is specifically "стан людини, який викликається
+
+      почуттєвим досвідом" (a human state caused by emotional experience) -- the
+
+      emotional/affective register. Горох even lists почуття as a near-synonym of відчуття,
+
+      so the two genuinely overlap at the edges, but відчуття is the broader,
+
+      physically-grounded term (pain, hunger, cold, a tingle) while почуття stays in the
+
+      emotional lane (love, joy, a sense of humor). відчуття''s own example sentence was too
+
+      abstract to show that physical grounding, so it was rewritten to something unmistakably
+
+      bodily. Extended 2026-09-01 with настрій (Anki cloze-mining report, extension
+
+      candidate) -- adds "mood," a longer-lasting ambient emotional state, distinct
+
+      from почуття''s trigger-specific emotion and відчуття''s physical sensation.
+
+      '
+    canonical_note: ua-lexeme-0534
+    members:
+    - note_id: ua-lexeme-0534
+      lemma: відчуття́
+      status: sourced
+      chapter: '2.8.6'
+      comment: Sensation -- a physical, bodily sense-perception (pain, hunger, cold, touch);
+        broader than почуття, which stays in the emotional register
+      compare_scenario: Your foot fell asleep and now there's a strange tingling, prickling
+        feeling running through it -- purely physical, nothing emotional about it.
+    - note_id: ua-lexeme-0902
+      lemma: почуття́
+      status: sourced
+      chapter: '2.1.5'
+      comment: Feeling -- specifically emotional/affective (love, joy, a sense of humor),
+        not a bodily sensation
+      compare_scenario: You catch yourself smiling for no reason, thinking about someone you
+        love -- which word for "feeling" names that emotional state?
+    - note_id: ua-lexeme-0884
+      lemma: на́стрій
+      status: sourced
+      chapter: '2.1.4'
+      comment: Mood -- a longer-lasting, ambient emotional/psychological state (a
+        good mood, a bad mood), not tied to one specific trigger the way почуття is
+        (love for someone, joy about an event)
+      compare_scenario: You woke up on the right side of the bed and everything
+        just feels good today, for no particular reason -- not joy about one
+        specific thing, just your overall emotional state. What word names that?
+  near-rhyme-lookalike-nouns:
+    description: 'Four-way cluster flagged 2026-07-30 -- Craig''s own framing: "near-rhyming,
+
+      easily mixed-up nouns." Unlike every other cluster in this registry, these four words
+
+      don''t share meaning, register, or root -- пригода (adventure), погода (weather),
+
+      природа (nature), and порода (breed, of an animal) are four completely unrelated
+
+      concepts that happen to share the same CV-CV-da rhyme shape (при-го-да / по-го-да /
+
+      при-ро-да / по-ро-да), differing only in their first syllable''s consonant and vowel.
+
+      The confusion here is purely visual/phonetic pattern-matching, not semantic overlap
+
+      -- so unlike a near-synonym cluster, there''s no risk of picking a word that''s
+
+      "almost right in meaning," only of misreading or mis-typing one similar-shaped word
+
+      for another. The four compare_scenario prompts below are correspondingly easy to tell
+
+      apart by meaning alone; the actual pedagogical value is training the eye to slow down
+
+      and read the middle syllable correctly.
+
+      '
+    canonical_note: ua-lexeme-0272
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0272
+      lemma: приго́да
+      status: sourced
+      chapter: '2.9.5'
+      comment: Adventure -- an event or exploit, unrelated in meaning to its three near-rhyming
+        lookalikes below (confusable only by spelling shape)
+      compare_scenario: You just got back from an unplanned, story-worthy trip into the mountains
+        -- which of these near-rhyming words names the adventure itself?
+    - note_id: ua-lexeme-0857
+      lemma: пого́да
+      status: sourced
+      chapter: '2.1.3'
+      comment: Weather -- unrelated in meaning to пригода/природа/порода; confusable only
+        by its near-rhyming spelling
+      compare_scenario: You check your phone before leaving the house to see if you'll need
+        an umbrella -- which word means the weather?
+    - note_id: ua-lexeme-2792
+      lemma: приро́да
+      status: sourced
+      chapter: '1.2.7'
+      comment: Nature, the natural world -- unrelated in meaning to пригода/погода/порода;
+        confusable only by its near-rhyming spelling
+      compare_scenario: You're standing in a national park, surrounded by forest and mountains
+        untouched by the city -- which word means nature itself?
+    - note_id: ua-lexeme-3728
+      lemma: поро́да
+      status: sourced
+      chapter: '1.10.5'
+      comment: Breed (of an animal) -- unrelated in meaning to пригода/погода/природа; confusable
+        only by its near-rhyming spelling
+      compare_scenario: Someone asks what kind of dog that is -- Labrador? Husky? -- which
+        word means "breed"?
+  guard-store-gather-synonyms:
+    description: |
+      Four-way cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass -- Craig's
+      own legacy note (Anki note 1733166065265) is literally tagged "Mistaken words," the same
+      gold-standard signal that produced near-rhyme-lookalike-nouns earlier this cycle. Unlike
+      that cluster, though, these four words aren't unrelated near-rhymes -- they split into two
+      genuinely related pairs that also happen to look confusable with each other.
+
+      Pair one: берегти́ (to guard/protect, use sparingly) and зберіга́ти (to store/preserve) are
+      two different imperfective verbs that share the exact same perfective partner, зберегти́ --
+      a genuine grammatical overlap, not just a spelling coincidence (confirmed via Горох:
+      goroh.pp.ua/тлумачення/берегти and goroh.pp.ua/тлумачення/зберігати). берегти́ is about
+      vigilance -- protecting something from loss, harm, or waste (берегти здоров'я, берегти
+      таємницю, "guard like the apple of your eye"). зберіга́ти is about preservation over time
+      or in a place -- keeping something intact, stored, or in a maintained state (зберігати
+      продукти в холодильнику, зберігати спокій, зберігати дані). Both converge on зберегти́ as
+      their perfective, which is exactly the kind of trap this cluster exists to defuse.
+
+      Pair two: збира́ти (to gather/collect a physical object, transitive) and its reflexive
+      збира́тися (people gathering themselves, or idiomatically "to be about to / intend to" do
+      something) differ only by the reflexive -ся -- an object is collected BY you, but people
+      gather THEMSELVES, and you gather yourself to go do something.
+
+      The bridge between the two pairs is visual: зберіга́ти and збира́ти are near-identical on
+      the page (зб-еріга-ти vs зб-ира-ти, a single reduplicated syllable apart), which is almost
+      certainly why Craig's own legacy deck grouped all four together as "mistaken words" even
+      though they actually split into two unrelated semantic pairs. Hub is берегти́, the
+      shortest and most basic of the four; зберіга́ти, збира́ти, and збира́тися are satellites.
+    canonical_note: ua-lexeme-2096
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-2096
+      lemma: берегти́
+      status: sourced
+      chapter: '2.11.1'
+      comment: To guard/protect or use sparingly -- vigilance against loss, harm, or waste.
+        Shares its perfective зберегти́ with зберігати below; distinguished by protective
+        vigilance vs. storage/preservation.
+      compare_scenario: You're warning a child not to run too close to the cliff edge, and
+        reminding your sister to be extra careful with grandma's ring so it doesn't get lost
+        or damaged -- which word means to guard/watch over something protectively?
+    - note_id: ua-lexeme-3106
+      lemma: зберіга́ти
+      status: sourced
+      chapter: '1.5.7'
+      comment: To store or preserve -- keeping something intact in a place or state over time.
+        Shares its perfective зберегти́ with берегти above (same perfective, two imperfectives);
+        visually close to збирати below but semantically unrelated.
+      compare_scenario: You're putting last night's leftovers in the fridge so they don't spoil
+        before next week -- which word means to store something and keep it preserved over time?
+    - note_id: ua-lexeme-1216
+      lemma: збира́ти
+      status: sourced
+      chapter: '2.3.3'
+      comment: To gather/collect a physical object or group, transitive. Visually close to
+        зберігати above (a single syllable apart) but semantically unrelated -- collecting
+        things, not preserving them.
+      compare_scenario: You're out in the forest with a basket, picking wild mushrooms one by
+        one -- which word means to gather/collect them?
+    - note_id: ua-lexeme-2039
+      lemma: збира́тися
+      status: sourced
+      chapter: '2.7.6'
+      comment: Reflexive of збирати above -- people gathering themselves, or idiomatically "to
+        be about to / intend to" do something. An object is gathered BY you; people gather
+        THEMSELVES.
+      compare_scenario: Your friends are all showing up at your place Friday evening for a
+        party -- which word describes people arriving and assembling together?
+  walnut-pea-lookalike-nouns:
+    description: |
+      Two-way near-rhyme pair flagged 2026-09-01 during the legacy Anki cloze-mining pass --
+      Craig's own legacy card (Anki note 1685716391681) pairs горі́х (walnut) directly against
+      горо́х (peas) with no additional framing, the same "flag two similar-looking words
+      together" pattern that produced near-rhyme-lookalike-nouns earlier this cycle. The two
+      words are unrelated in meaning -- a walnut vs. a pea -- and differ by only their second
+      vowel (і vs о): горі́х vs горо́х. горо́х did not yet exist as a lexeme note in this corpus
+      (only горіх and the derived adjective горіховий, ua-lexeme-3130, had been sourced); it's
+      added here directly from the same yabluko-l1-vocabulary.pdf §6.1 food-vocabulary list
+      горіховий comes from -- the two words even sit adjacent on that page ("горіхове масло"
+      [nut/peanut butter], then "горох"). Like near-rhyme-lookalike-nouns, the confusion here
+      is purely visual/phonetic pattern-matching -- there's no meaning overlap to worry about,
+      only misreading one vowel for the other.
+    canonical_note: ua-lexeme-2955
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-2955
+      lemma: горіх
+      status: sourced
+      chapter: '1.5.1'
+      comment: Walnut -- a tree nut, unrelated in meaning to горо́х (peas); confusable only
+        by its near-rhyming spelling (differs by one vowel, і vs о).
+      compare_scenario: You crack open the shell to get at the food inside, then eat the
+        crunchy kernel on its own or toss it into a salad -- which word names that nut?
+    - note_id: ua-lexeme-3905
+      lemma: горо́х
+      status: sourced
+      chapter: '1.6.1'
+      comment: Peas -- a legume, unrelated in meaning to горіх (walnut); confusable only by
+        its near-rhyming spelling. Masculine, singularia tantum, irregular genitive горо́ху.
+      compare_scenario: You're shelling small round green legumes out of their pods to cook
+        for dinner -- which word names that vegetable?
+  cinnamon-well-lookalike-nouns:
+    description: |
+      Two-way near-rhyme pair flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1687963476647 pairs the two directly). кори́ця (cinnamon, a spice)
+      and крини́ця (a water well) are unrelated in meaning and unrelated in root -- the
+      confusion is purely visual/phonetic, from their shared "-иця" ending and similar
+      consonant shape (к-р.../кр...). Same pattern as near-rhyme-lookalike-nouns: nothing to
+      guess about meaning, just training the eye to read the middle of the word correctly.
+    canonical_note: ua-lexeme-3149
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3149
+      lemma: кори́ця
+      status: sourced
+      chapter: '1.6.2'
+      comment: Cinnamon -- a spice, unrelated in meaning to криниця (a well); confusable only
+        by their similar consonant shape and shared "-иця" ending.
+      compare_scenario: You sprinkle a warm brown spice over your morning oatmeal or into mulled
+        wine -- which word names that spice?
+    - note_id: ua-lexeme-1577
+      lemma: крини́ця
+      status: sourced
+      chapter: '2.5.3'
+      comment: A (water) well, unrelated in meaning to кориця (cinnamon); confusable only by
+        their similar consonant shape and shared "-иця" ending.
+      compare_scenario: In an old village yard, there's a stone-lined hole where people lower
+        a bucket to draw water -- which word names that well?
+  soul-shower-lookalike-nouns:
+    description: |
+      Two-way near-homograph pair flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1687965633546 pairs the two directly). This one is about as visually
+      close as a confusable pair gets: душ (shower) is literally душа́ (soul) minus its final
+      -а. The two meanings couldn't be less related -- one is a fixture you stand under, the
+      other is the innermost, non-physical part of a person -- but on the page they're nearly
+      the same word.
+    canonical_note: ua-lexeme-3191
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3191
+      lemma: душа́
+      status: sourced
+      chapter: '1.6.4'
+      comment: Soul -- unrelated in meaning to душ (a shower); душ is literally душа minus its
+        final -а, a pure orthographic near-homograph.
+      compare_scenario: A priest or a poet talks about the innermost, non-physical part of a
+        person that's said to live on after death -- which word names that?
+    - note_id: ua-lexeme-3190
+      lemma: душ
+      status: sourced
+      chapter: '1.6.4'
+      comment: Shower -- unrelated in meaning to душа (soul); душ is literally душа minus its
+        final -а, a pure orthographic near-homograph. Masculine, irregular genitive -у.
+      compare_scenario: You step under running water each morning to wash up and wake yourself
+        up -- which word names that fixture?
+  star-register-synonyms:
+    description: |
+      Two-way cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass (Craig's
+      legacy note 1721824259093 pairs the two directly) -- and unlike most pairs in this batch,
+      зоря́ and зі́рка aren't just visually similar, they're genuine synonyms too, both meaning
+      "star." Горох/СУМ draw a real register distinction: зі́рка is the everyday, standard word
+      for a celestial star (and for a celebrity, a ★-rating, etc.); зоря́ is markedly more
+      literary and poetic, drawn from classical Ukrainian literature (Марко Вовчок, Леся
+      Українка), and carries two senses зірка doesn't have at all -- the dawn/dusk glow on the
+      horizon before sunrise or after sunset, and an old-fashioned poetic endearment for a
+      young woman. So this cluster does double duty: same shared root making them easy to
+      mix up on the page, AND a real register choice to make once you know which one you mean.
+    canonical_note: ua-lexeme-3876
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3876
+      lemma: зоря́
+      status: sourced
+      chapter: '1.12.6'
+      comment: Star, in a literary/poetic register (also the dawn/dusk glow on the horizon,
+        and an old-fashioned endearment for a young woman) -- зірка is the everyday equivalent.
+      compare_scenario: A 19th-century Ukrainian poem describes the sky's edge glowing before
+        sunrise, or tenderly addresses a beloved young woman with this word -- which term fits
+        that literary register?
+    - note_id: ua-lexeme-3162
+      lemma: зі́рка
+      status: sourced
+      chapter: '1.6.3'
+      comment: Star -- the everyday, standard word for a celestial star (also used for
+        celebrities, ratings, etc.); зоря is its more literary/poetic counterpart.
+      compare_scenario: A child points up at the night sky and asks what those countless
+        twinkling points of light are called, using the plain everyday word -- which one is it?
+  bucket-cart-wreath-lookalike-nouns:
+    description: |
+      Three-way near-rhyme cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1706233514906 groups all three). відро́ (a bucket), візо́к (a cart,
+      trolley, or wheelchair), and віно́к (a wreath) are three completely unrelated concrete
+      nouns that happen to share a short, similar shape -- a ві-/ви- onset and a similarly
+      weighted second syllable. Same pattern as near-rhyme-lookalike-nouns: no meaning overlap
+      to worry about, just training the eye to read past the shared opening letters.
+    canonical_note: ua-lexeme-1727
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-1727
+      lemma: відро́
+      status: sourced
+      chapter: '2.6.3'
+      comment: Bucket, pail -- unrelated in meaning to візок (cart/wheelchair) or вінок
+        (wreath); the three are confusable only by their shared onset and shape.
+      compare_scenario: You fill a metal container with water from the well to carry it back
+        to the house -- which word names that container?
+    - note_id: ua-lexeme-2029
+      lemma: візо́к
+      status: sourced
+      chapter: '2.7.5'
+      comment: Cart, trolley, wheelchair -- unrelated in meaning to відро (bucket) or вінок
+        (wreath); confusable only by shared onset and shape.
+      compare_scenario: A person who can't walk gets around using a wheeled seat they push
+        themselves or that someone else pushes -- which word names that?
+    - note_id: ua-lexeme-3495
+      lemma: віно́к
+      status: sourced
+      chapter: '1.8.5'
+      comment: Wreath -- unrelated in meaning to відро (bucket) or візок (cart); confusable
+        only by shared onset and shape.
+      compare_scenario: For a summer festival, a young woman weaves flowers into a circular
+        headpiece to wear -- which word names that?
+  recognize-find-out-near-homograph:
+    description: |
+      Two-way cluster flagged 2026-09-01 during the legacy Anki cloze-mining pass -- Craig's
+      legacy note 1722893194501 originally grouped three words here (упізнавати/пізнавати/
+      дізнаватися); only two make it into this cluster. дізнава́тися already existed in the
+      corpus. впізнава́ти did not, so it's newly sourced here from yabluko-l2-vocabulary.pdf
+      ch.1.2 (textbook's spelling; Горох's own canonical entry is filed under the variant
+      упізнавати, a normal у~в orthographic alternation). пізнава́ти ("to get to know," the
+      base, un-prefixed form) is left out -- it doesn't appear in any yabluko-l2-vocabulary.pdf
+      chapter wordlist, only in the verb-dictionary appendix, so there's no textbook chapter to
+      anchor it to; flagging that gap rather than inventing a placement.
+
+      The two that made it in share the -знава́ти theme (drops -ва- in the non-past,
+      дава́ти-family pattern) and look alike on the page, but mean different things:
+      впізнава́ти is to recognize something or someone you already know (a face, a voice);
+      дізнава́тися is to find out or learn something new. Different prefix (впі- vs ді-),
+      different reflexivity (дізнаватися takes -ся, впізнавати doesn't).
+    canonical_note: ua-lexeme-3906
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-3906
+      lemma: впізнава́ти
+      status: sourced
+      chapter: '2.1.2'
+      comment: To recognize -- identifying someone or something already known, typically by
+        sight or sound. Distinct from дізнаватися (to find out new information) despite the
+        shared -знавати shape.
+      compare_scenario: You spot a face in a crowd after years apart and immediately know
+        exactly who it is -- which word means to identify someone you already know?
+    - note_id: ua-lexeme-1921
+      lemma: дізнава́тися
+      status: sourced
+      chapter: '2.7.2'
+      comment: To find out, learn brand-new information -- distinct from впізнавати (to
+        recognize something already known) despite the shared -знавати shape.
+      compare_scenario: You check the news app to see what happened overnight, learning
+        something you didn't know before -- which word means to find that out?
+  believe-trust-verify-family:
+    description: |
+      Three-way root family flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1736541471605 groups all three). ві́рити, довіря́ти, and
+      перевіря́ти all share the -вір-/-віря- root (faith/truth), but move through three
+      distinct meanings as the prefix builds up: ві́рити is the broadest -- general belief or
+      faith, in a person (dative) or in something abstract (в + accusative), e.g. believing in
+      God or believing a friend's story. довіря́ти narrows that to trust specifically --
+      relying on someone with something at stake, always dative. перевіря́ти is almost the
+      opposite mindset -- to check or verify, confirming rather than simply having faith. The
+      three are confusable by shared root and family resemblance, even though the actions they
+      describe range from "just believe" to "go double-check."
+    canonical_note: ua-lexeme-0665
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-0665
+      lemma: ві́рити
+      status: sourced
+      chapter: '2.10.2'
+      comment: To believe or have faith -- the broadest of the three (вірити в Бога, вірити
+        людині); governs dative for a person or в + accusative for a thing.
+      compare_scenario: A child insists Santa Claus is real, with no need for proof -- which
+        word describes that simple, unquestioning faith?
+    - note_id: ua-lexeme-0668
+      lemma: довіря́ти
+      status: sourced
+      chapter: '2.10.2'
+      comment: To trust -- relying on someone specifically, often with something at stake;
+        narrower than вірити, always governs dative.
+      compare_scenario: You hand a friend your house keys while you're away, confident they
+        won't misuse them -- which word means to trust someone with something like that?
+    - note_id: ua-lexeme-2301
+      lemma: перевіря́ти
+      status: sourced
+      chapter: '1.11.1'
+      comment: To check or verify -- inspecting something to confirm it's correct, almost the
+        opposite mindset from simply believing; shares the root but means confirming, not
+        having faith.
+      compare_scenario: A teacher goes through a stack of homework line by line, marking
+        mistakes -- which word describes what she's doing?
+  lose-spend-near-homograph:
+    description: |
+      Two-way near-homograph pair flagged 2026-09-01 during the legacy Anki cloze-mining pass
+      (Craig's legacy note 1710586455905 pairs the two directly). втрача́ти (to lose) and
+      витрача́ти (to spend) differ by a single letter -- в- vs ви- -- but mean genuinely
+      different things: втрачати is usually unintentional loss (втрачати надію, втрачати
+      друга, втрачати роботу -- losing hope, a friend, a job), while витрачати is deliberate
+      expenditure (витрачати гроші, витрачати час -- spending money, time). A classic
+      prefix-swap trap: one letter changes "lose" into "spend."
+    canonical_note: ua-lexeme-1505
+    show_all_members: true
+    members:
+    - note_id: ua-lexeme-1505
+      lemma: втрача́ти
+      status: sourced
+      chapter: '2.4.5'
+      comment: To lose -- usually unintentionally (втрачати надію, втрачати друга, втрачати
+        роботу); differs from витрачати by a single letter, not by root meaning.
+      compare_scenario: After the accident, doctors said he might never fully recover the use
+        of his leg -- which word means to lose something like that, against your will?
+    - note_id: ua-lexeme-1262
+      lemma: витрача́ти
+      status: sourced
+      chapter: '2.3.4'
+      comment: To spend -- money, time, or effort, deliberately (витрачати гроші, витрачати
+        час); differs from втрачати by a single letter, not by root meaning.
+      compare_scenario: You budget carefully each month so you don't run out of money before
+        payday -- which word means to spend it?
+  road-dear-near-homograph:
+    description: |
+      Near-homograph pair (not a true same-lemma split) flagged 2026-09-01 from the Anki
+      cloze-mining report. доро́га ("road," a noun, stress on the middle syllable) collides in
+      spelling with дорога́ (dear/affectionate), which is not itself a separate word but the
+      feminine agreement form of дороги́й. дороги́й is already split into two existing notes by
+      sense -- ua-lexeme-0437 ("expensive") and ua-lexeme-0580 ("dear/affectionate") -- both
+      cited in the corpus's masculine citation form per convention. The "dear" sense (0580)
+      surfaces as дорога́ whenever it agrees with a feminine noun (its own example sentence
+      already reads "Моя дорога́ мамо!"), producing the spelling collision with доро́га --
+      distinguished only by stress placement, not spelling.
+    canonical_note: ua-lexeme-3908
+    members:
+    - note_id: ua-lexeme-3908
+      lemma: доро́га
+      status: sourced
+      chapter: '1.2.2'
+      comment: Road -- the everyday noun, stress on the middle syllable (доро́га)
+      compare_scenario: You're driving between two towns, following the paved route that
+        connects them -- what's the plain word for that physical path itself?
+    - note_id: ua-lexeme-0580
+      lemma: дороги́й
+      status: sourced
+      chapter: '2.8.2'
+      comment: Dear, affectionate -- surfaces as "дорога́" when agreeing with a feminine noun,
+        colliding in spelling (not stress) with доро́га "road"
+      compare_scenario: You're writing a heartfelt note to your grandmother, addressing her
+        warmly right at the start -- "My ___ grandmother!" What word conveys that fondness,
+        not a paved route?

@@ -12,8 +12,8 @@ tags:
 - ch:2.9.6
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0306
   Lemma: тип
@@ -45,14 +45,6 @@ fields:
     confusable pair tested on this card.'
   Mnemonic_EN: тип = what KIND of thing/object/document (тип вагона); вид = what KIND of activity/category
     (вид спорту) -- same job, different collocation family.
-  CompareScenario: Filling out a train ticket booking form and picking which category of train
-    car you want -- deluxe, compartment, or open-plan sleeper.
-  CompareA: тип
-  CompareB: вид
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: тип
   UA_Example: 'Оберіть тип вагона: люкс, купе чи плацкарта.'
@@ -82,6 +74,12 @@ fields:
     = EN senses, capped at 2 slots) -- neither shape can cleanly add a third, genuinely distinct
     participant: Shape 1 has no Homograph_SenseC field, and Shape 2 can''t hold two identically-spelled
     "вид" chips for two different senses. A true 3-way card would need a template change.
-    Flagged this to Craig rather than silently building something structurally broken.'
+    Flagged this to Craig rather than silently building something structurally broken. 2026-08-27:
+    this note''s existing UA_Example/EN_Example (тип вагона -- type of train car) already
+    illustrates тип''s vehicle/document/mechanism collocation family, so left unchanged; added
+    a matching UA_Example/EN_Example to ua-lexeme-0143 (вид спорту -- type of sport) so the
+    вид side of the distinction now has a concrete example too. The two are not a live contrastive
+    pair on either card (still no registry cluster between 0306 and 0143 -- see above), but
+    a learner reading both notes now sees one example from each collocation family.'
 ---
 

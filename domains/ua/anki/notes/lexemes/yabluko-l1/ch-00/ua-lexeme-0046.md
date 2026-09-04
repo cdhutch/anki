@@ -9,10 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
+- ch:1.3.1
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0046
   Lemma: му́зика
@@ -31,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: music · RU: музыка · FR: musique · DE: Musik ← Gk μουσική'
   TypingAnswer: музика
   UA_Example: Він слухає музику кожного вечора.
   EN_Example: He listens to music every evening.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2, ch:1.3.1
   Source_URL: https://goroh.pp.ua/Словозміна/музика
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

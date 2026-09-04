@@ -13,8 +13,8 @@ tags:
 - pos:noun
 - gender:f
 - animate:true
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0519
   Lemma: вівця́
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: вівця
   UA_Example: На гірських схилах пасуться отари овець.

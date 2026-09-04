@@ -259,8 +259,11 @@ Active drill cards are a deliberate opt-in, not the default. Unsuspend selective
 `ua-lexeme-0114`) so the AnkiConnect query and future tooling can navigate
 bidirectionally between the lexeme and its conjugation card.
 
-**`conj:drill` tag:** When unsuspending a conjugation card for active study, add
-the `conj:drill` tag so the unsuspension is intentional and filterable.
+**`conj:drill` tag:** ~~When unsuspending a conjugation card for active study, add
+the `conj:drill` tag so the unsuspension is intentional and filterable.~~ **Removed
+2026-08-27** -- the conj:drill/conj:suspended curation axis was dropped; all
+`status:verified` verbs are now active for drilling by default (see
+`CLAUDE-ua-verb-design.md`'s 2026-08-27 note).
 
 **Anki note type:** `UA_Verb`
 
@@ -602,4 +605,4 @@ Priority order for migration:
 Design and implement `ua_verb` note type and conjugation card templates.
 Architecture decided (see §3.3): suspended-by-default, hybrid `<details>` collapsible
 + AnkiConnect browse button on lexeme card back, `LexemeRef` field for bidirectional
-linking, `conj:drill` tag for intentional unsuspensions.
+linking. (`conj:drill`-tag-for-intentional-unsuspension was removed 2026-08-27 -- see CLAUDE-ua-verb-design.md.)

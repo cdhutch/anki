@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - motion:prefixed
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0115
   Lemma: вхо́дити
@@ -34,17 +35,10 @@ fields:
   VerbMotion_Pair: іти / ходити
   ConfusableSet: вихо́дити (directional opposite)
   Mnemonic_EN: в- = into (entering); ви- = out of (exiting).
-  CompareScenario: Someone walks into a building through the front door, on foot.
-  CompareA: входити
-  CompareB: виходити
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: входить / войти'
   TypingAnswer: входити / ввійти
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Вона входить у кімнату й вмикає світло.
+  EN_Example: She enters the room and turns on the light.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/входити
   Source_Note: Stress verified 2026-07-06 via Горох.

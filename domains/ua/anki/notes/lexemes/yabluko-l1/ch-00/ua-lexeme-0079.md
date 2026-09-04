@@ -9,11 +9,13 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - pos:proper-noun
 - gender:m
 - pos:country
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0079
   Lemma: Кита́й
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Китай
   UA_Example: Цей товар зроблений у Китаї.
   EN_Example: This product is made in China.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/Китай
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

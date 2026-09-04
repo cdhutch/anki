@@ -10,10 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.4.6
 - pos:verb
 - motion:base
-- stress:verified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0585
   Lemma: бі́гати
@@ -37,20 +38,13 @@ fields:
   Mnemonic_EN: бі́гати = "runs/jogs habitually, no set direction" (multidirectional -- e.g.
     goes running regularly, runs around). бі́гти = "is running, headed one way, right now"
     (unidirectional). побі́гти = "set off running" (perfective -- the run as a completed whole).
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English "run" covers both бігати and бігти without marking the habitual-vs-
     single-run distinction -- closest analogy is "used to run around here" (multi) vs "was
     running there" (uni) vs "took off running" (perf).
   TypingAnswer: бігати / бігти / побігти
   UA_Example: Він бігає в парку щоранку, а сьогодні він біг дуже швидко.
   EN_Example: He runs in the park every morning, and today he was running very fast.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.4.6
   Source_URL: https://goroh.pp.ua/Словозміна/бігати; https://goroh.pp.ua/Словозміна/бігти;
     https://goroh.pp.ua/Словозміна/побігти
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).
@@ -60,6 +54,6 @@ fields:
     triplet -- only the separate UA_Verb conjugation notes (ua-verb-0011..0013). ConfusableSet
     intentionally left blank -- this is an aspect triplet, not a lexical-confusable/homograph
     pair, so the Compare card is expected to stay suspended. Drafted per Craig''s request
-    2026-07-31. status:draft pending Craig''s independent review.'
+    2026-07-31. Reviewed and verified 2026-08-27.'
 ---
 

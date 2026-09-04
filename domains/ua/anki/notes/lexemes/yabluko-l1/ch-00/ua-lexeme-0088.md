@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.9
 - pos:adjective
 - pos:nationality-adj
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0088
   Lemma: брази́льський
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: бразильський
   UA_Example: Вони танцюють бразильський танець самбу.
   EN_Example: They dance the Brazilian dance samba.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.9
   Source_URL: https://goroh.pp.ua/Словозміна/бразильський
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

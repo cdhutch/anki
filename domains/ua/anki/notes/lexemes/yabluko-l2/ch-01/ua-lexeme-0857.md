@@ -1,0 +1,54 @@
+---
+schema: cnsf/v0
+note_type: ua_lexeme
+note_id: ua-lexeme-0857
+anki:
+  model: UA_Lexeme
+  deck: UA::Recognition::UA→EN
+tags:
+- domain:ua
+- topic:vocabulary
+- textbook:яблуко
+- ch:2.1.3
+- ch:1.2.4
+- pos:noun
+- status:draft
+- release:pending
+fields:
+  NoteID: ua-lexeme-0857
+  Lemma: пого́да
+  Lemma_Euphony: ''
+  PartOfSpeech: noun
+  Gender: f
+  ImperfectiveUnidirectional: ''
+  ImperfectiveUnidirectional_Euphony: ''
+  Perfective: ''
+  Perfective_Euphony: ''
+  EuphonyNote: ''
+  AspectCue: ''
+  EN_Gloss: weather
+  Govt_Case: ''
+  IrregularForms: ''
+  CounterpartForm: ''
+  VerbMotion_Pair: ''
+  ConfusableSet: 'Confusable cluster near-rhyme-lookalike-nouns (confusable_clusters.yaml):
+    погода (this note, "weather") shares no meaning with its near-rhyming cluster-mates пригода
+    (ua-lexeme-0272, cluster hub, "adventure"), природа (ua-lexeme-2792, "nature"), and порода
+    (ua-lexeme-3728, "breed") -- grouped purely by spelling shape, not sense.'
+  Mnemonic_EN: ''
+  CrossLang_Analog: ''
+  TypingAnswer: погода
+  UA_Example: Сьогодні сонячна погода.
+  EN_Example: Today the weather is sunny.
+  Tags_Ch: ch:2.1.3, ch:1.2.4
+  Source_URL: https://goroh.pp.ua/Словозміна/погода
+  Source_Note: Горох-verified 2026-08-28, ch.1.3 sourcing pass (time/weather/profession; opinion
+    & routine verbs).
+  Verification Notes: 'New. Fem., 1st decl., hard group. сонячний ("sunny", ua-lexeme-0400,
+    ch:2.8.1/ch:2.10.6) referenced in the example sentence (сонячна погода) -- same sense
+    reused, tag ch:1.3 appended to its Tags_Ch/tags per dedup bucket 3. 2026-09-01: clustered
+    as near-rhyme-lookalike-nouns in confusable_clusters.yaml alongside пригода (ua-lexeme-0272,
+    cluster hub), природа (ua-lexeme-2792), and порода (ua-lexeme-3728); resolves pending-confusable:погода
+    on ua-lexeme-0272.'
+---
+

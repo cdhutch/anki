@@ -7,12 +7,12 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-vowel+й
 - motion:running
 - phase:2a
-- conj:drill
 - ch:2.9.2
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0011
   Lemma: бі́гати

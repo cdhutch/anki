@@ -6,14 +6,16 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.8.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.3
+- ch:2.1.5
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0375
   Lemma: у́часть
@@ -35,18 +37,11 @@ fields:
     (It's easy to blend with вчасно "on time," or with the Russian часть "part" -- Ukrainian
     uses частина for "part," and участь for "participation" is its own root, not built on
     "часть" at all.)
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: участь
   UA_Example: Шестеро гравців беруть участь у змаганні, а четверо -- запасні.
   EN_Example: Six players take part in the competition, and four are substitutes.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3, ch:2.1.5, ch:1.8.3
   Source_URL: https://goroh.pp.ua/Словозміна/участь
   Source_Note: Drafted 2026-07-27 -- see ua-lexeme-0376's Source_Note for the fuller context.
   Verification Notes: '2026-07-27: Горох-verified via Chrome -- у́часть confirmed exactly

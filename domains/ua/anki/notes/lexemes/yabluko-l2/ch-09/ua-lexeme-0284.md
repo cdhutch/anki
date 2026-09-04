@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.9.5
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0284
   Lemma: переплива́ти
@@ -20,8 +20,8 @@ fields:
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: переплисти́
-  Perfective_Euphony: ''
+  Perfective: перепливти́
+  Perfective_Euphony: переплисти́
   EuphonyNote: ''
   AspectCue: ''
   EN_Gloss: to swim across
@@ -31,15 +31,8 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: перепливати / переплисти
+  TypingAnswer: перепливати / перепливти
   UA_Example: Останній етап -- переплисти озеро.
   EN_Example: The last stage is swimming across the lake.
   Tags_Ch: ch:2.9.5

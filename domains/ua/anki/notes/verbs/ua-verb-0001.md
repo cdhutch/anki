@@ -7,13 +7,12 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:leader
+- class:conj2-ити
 - motion:walking
 - phase:2a
-- conj:drill
 - ch:2.9.2
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0001
   Lemma: ходи́ти

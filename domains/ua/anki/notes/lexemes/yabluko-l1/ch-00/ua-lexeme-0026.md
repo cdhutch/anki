@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.2
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0026
   Lemma: бале́т
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'EN: ballet · RU: балет · DE: Ballett · ← FR: ballet'
   TypingAnswer: балет
   UA_Example: Учора ввечері ми дивилися чудовий балет.
   EN_Example: Yesterday evening we watched a wonderful ballet.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.2
   Source_URL: https://goroh.pp.ua/Словозміна/балет
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

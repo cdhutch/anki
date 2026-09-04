@@ -6,13 +6,15 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.6
+- ch:1.11.2
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0318
   Lemma: чу́ти
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: чути / почути
   UA_Example: Перепрошую, я не почув, з якої платформи відправлення.
   EN_Example: Excuse me, I didn't hear which platform the departure is from.
-  Tags_Ch: ch:2.9.6
+  Tags_Ch: ch:2.9.6, ch:1.11.2, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/чути
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass.
   Verification Notes: Filtered out a homograph 'чутити' (to sense/smell), a different word.

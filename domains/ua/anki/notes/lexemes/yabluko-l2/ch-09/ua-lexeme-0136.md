@@ -12,6 +12,7 @@ tags:
 - ch:2.9.1
 - pos:adjective
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0136
   Lemma: марафо́нський
@@ -30,13 +31,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: марафонський
   UA_Example: Марафонський біг вимагає багатомісячної підготовки.

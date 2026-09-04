@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:n
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0152
   Lemma: тренува́ння
@@ -31,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: тренування
   UA_Example: Як часто Ви ходите на тренування?

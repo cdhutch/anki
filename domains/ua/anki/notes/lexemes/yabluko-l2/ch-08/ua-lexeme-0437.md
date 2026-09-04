@@ -6,13 +6,17 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.9.1
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.2
+- ch:1.2.7
+- ch:1.3.7
+- ch:1.4.7
 - pos:adjective
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0437
   Lemma: дороги́й
@@ -31,18 +35,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: дорогий
   UA_Example: Цей номер у готелі занадто дорогий.
   EN_Example: This hotel room is too expensive.
-  Tags_Ch: ch:2.8.2
+  Tags_Ch: ch:2.8.2, ch:1.2.7, ch:1.3.7, ch:1.4.7, ch:1.9.1
   Source_URL: https://goroh.pp.ua/Словозміна/дорогий
   Source_Note: Горох-verified 2026-07-26, ch.8.2 sourcing pass.
   Verification Notes: 'Same-lemma polysemy split: дорогий has two disjoint senses (expensive

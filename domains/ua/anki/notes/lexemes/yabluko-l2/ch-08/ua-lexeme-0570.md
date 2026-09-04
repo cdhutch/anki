@@ -12,8 +12,8 @@ tags:
 - ch:2.8.7
 - pos:noun
 - gender:f
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0570
   Lemma: сопі́лка
@@ -25,20 +25,13 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: sopilka (Ukrainian wooden folk flute)
+  EN_Gloss: Ukrainian wooden folk flute
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: сопілка
   UA_Example: Музикант грав на сопілці народну мелодію.

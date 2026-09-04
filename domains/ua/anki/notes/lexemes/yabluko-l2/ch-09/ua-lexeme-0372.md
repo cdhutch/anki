@@ -6,14 +6,15 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.3
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 - homograph:true
 fields:
   NoteID: ua-lexeme-0372
@@ -35,18 +36,11 @@ fields:
     meaning: "market stall, shop stand" -- see ua-lexeme-0235.'
   Mnemonic_EN: Same spelling either way (лавка) — the card tests which SENSE fits, not which
     word.
-  CompareScenario: Which sense of лавка is being used?
-  CompareA: На парку було багато лавок, де люди могли сидіти.
-  CompareB: Вона купила букет троянд у квітковій лавці на ринку.
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: bench (for sitting)
-  Homograph_SenseB: market stall, shop stand
   CrossLang_Analog: ''
   TypingAnswer: лавка
   UA_Example: Він сід на лавку в парку, щоб трохи відпочити.
   EN_Example: He sat down on a bench in the park to rest for a bit.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/лавка
   Source_Note: Горох-verified 2026-07-26 -- same page as ua-lexeme-0235; this is the "для\
     сидіння"/bench sense, listed first on the Горох page.

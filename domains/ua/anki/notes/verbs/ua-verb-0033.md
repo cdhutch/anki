@@ -7,14 +7,13 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:reflexive
+- class:conj1-vowel+й
 - ch:2.9.2
-- conj:suspended
 - status:verified
-- stress:verified
+- release:active
 fields:
   NoteID: ua-verb-0033
-  Lemma: насолоджуватися
+  Lemma: насоло́джуватися
   Aspect: imperfective
   VerbClass: reflexive
   FreqSource: ch:2.9

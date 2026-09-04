@@ -13,10 +13,12 @@ tags:
 - grammar:verb_motion
 - grammar:prefix
 - status:verified
+- release:active
 fields:
   NoteID: ua-visual-0001
   Prefix: при-
-  Meaning_EN: arrival (coming to a place to stay)
+  Meaning_EN: arriving at a place -- not necessarily the final destination, could just be
+    a stop along the way
   Govt: до + Р.в.
   Walking_Pair: приходи́ти / прийти́
   Vehicle_Pair: приїжджа́ти / приї́хати
@@ -32,10 +34,16 @@ fields:
     x1="135" y1="50" x2="155" y2="70" stroke="#586e75" stroke-width="3"/><line x1="155" y1="50"
     x2="135" y2="70" stroke="#586e75" stroke-width="3"/></svg>
   Tags_Ch: ch:2.9.4
-  Source_Note: при- — arrival at place
+  Source_Note: при- — arriving somewhere (not necessarily the final stop)
   Verification Notes: '2026-07-29: Diagram_SVG redrawn from pvom_diagrams.pdf pp.126-127 (arrow
     reaching an X mark, arrival only) -- the textbook''s original icon paired this with a
     departure half (see the new ua-visual-0010, Ø/no-prefix, for that half). Reviewed and
-    approved by Craig.'
+    approved by Craig. 2026-08-27: per Craig, the diagram alone wasn''t distinguishing enough
+    from до- (ua-visual-0006) -- rewrote Meaning_EN from "arrival (coming to a place to stay)"
+    to state the actual motion contrast: при- is simple arrival at a place, not necessarily
+    the final destination, while до- (ua-visual-0006) specifically focuses on reaching the
+    final destination. Note this drops the "to stay" framing from the previous gloss, not
+    just adds to it -- Craig''s own framing, not independently re-verified against Горох --
+    needs your review.'
 ---
 

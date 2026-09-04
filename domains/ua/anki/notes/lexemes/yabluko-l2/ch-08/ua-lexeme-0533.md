@@ -12,8 +12,8 @@ tags:
 - ch:2.8.5
 - pos:phrase
 - phrase:discourse
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0533
   Lemma: у порівня́нні
@@ -32,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: у порівнянні
   UA_Example: У порівнянні з долиною, у горах значно прохолодніше.

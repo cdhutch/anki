@@ -6,13 +6,15 @@ anki:
   model: UA_Lexeme
   deck: UA::Recognition::UA→EN
 tags:
+- ch:1.7.5
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.6
 - pos:verb
-- stress:unverified
-- status:draft
+- status:verified
+- release:active
+- aspect:imperfective-only
 fields:
   NoteID: ua-lexeme-0550
   Lemma: вигляда́ти
@@ -31,21 +33,20 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: виглядати
   UA_Example: Ця страва виглядає досить незвично.
   EN_Example: This dish looks pretty unusual.
-  Tags_Ch: ch:2.8.6
+  Tags_Ch: ch:2.8.6, ch:1.7.5
   Source_URL: https://goroh.pp.ua/Словозміна/виглядати
   Source_Note: Горох-verified 2026-07-26, ch.8.6 sourcing pass.
-  Verification Notes: Imperfective, non-reflexive, 1st conjugation. Full conjugation lives
-    on ua-verb-0083.
+  Verification Notes: Imperfective, non-reflexive, 1st conjugation. Tagged aspect:imperfective-only
+    2026-08-27 (per Craig) -- this note is scoped to Горох's sense 5, "мати певний зовнішній
+    вигляд" (to have a certain appearance), a stative sense with no attested perfective partner.
+    виглядати is genuinely polysemous -- a separate sense, "to look out, emerge, become visible"
+    (Горох senses 1-2), pairs with the perfective ви́глянути and is a distinct lexeme, ua-lexeme-0587,
+    added 2026-08-27. Both share the same conjugation paradigm on ua-verb-0083 (this is pure
+    polysemy, not a stress-shift homograph). Homograph-clustered with ua-lexeme-0587 in confusable_clusters.yaml
+    (seem-emerge-homograph).
 ---
 

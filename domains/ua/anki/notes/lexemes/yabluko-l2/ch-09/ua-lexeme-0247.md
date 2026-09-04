@@ -13,8 +13,8 @@ tags:
 - pos:adverb
 - fixed-phrase
 - ch:2.9.7
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0247
   Lemma: ра́но-вра́нці
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: рано-вранці
   UA_Example: Квітковий ринок працює рано-вранці.

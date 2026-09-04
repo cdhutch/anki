@@ -10,11 +10,13 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.8.3
+- ch:2.3.2
+- ch:2.1.7
+- ch:1.5.4
+- ch:1.12.3
 - pos:numeral
-- stress:verified
 - status:verified
-- pending-confusable:скільки
-- pending-confusable:декілька
+- release:active
 fields:
   NoteID: ua-lexeme-0477
   Lemma: кі́лька
@@ -31,20 +33,17 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Near-synonym cluster quantity-synonyms (confusable_clusters.yaml): кілька
+    (this note, cluster hub) is a true synonym of декілька (ua-lexeme-1175) -- both mean ''several,
+    a few,'' with no difference in meaning, register, or formality; кілька is simply the shorter,
+    more commonly recommended form. Contrast скільки (ua-lexeme-1171), the interrogative ''how
+    much/how many,'' which turns a sentence into a question rather than stating a quantity.'
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: кілька
   UA_Example: Ми провели в місті кілька днів.
   EN_Example: We spent several days in the city.
-  Tags_Ch: ch:2.8.3
+  Tags_Ch: ch:2.8.3, ch:2.1.7, ch:2.3.2, ch:1.5.4, ch:1.12.3
   Source_URL: https://goroh.pp.ua/Словозміна/кілька
   Source_Note: Горох-verified 2026-07-26, ch.8.3 sourcing pass.
   Verification Notes: 'Component of phrase ua-lexeme-0492 (у кілька разів). 2026-07-30 Craig:
@@ -52,6 +51,8 @@ fields:
     its own note yet. Craig confirmed: all three (кілька, скільки, декілька) go together in
     one cluster, similar either in meaning or in UA spelling -- not split into separate clusters.
     Tagged pending-confusable:скільки and pending-confusable:декілька; see CLAUDE.md Vocabulary
-    dedup & homograph handling, bucket 5.'
+    dedup & homograph handling, bucket 5. 2026-09-01: both sourced (скільки as ua-lexeme-1171,
+    декілька as ua-lexeme-1175); clustered as quantity-synonyms in confusable_clusters.yaml,
+    canonical on this note. pending-confusable tags removed.'
 ---
 

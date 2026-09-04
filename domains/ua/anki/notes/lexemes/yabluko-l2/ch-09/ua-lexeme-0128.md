@@ -13,6 +13,7 @@ tags:
 - pos:verb
 - motion:prefixed
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0128
   Lemma: доїжджа́ти
@@ -32,17 +33,10 @@ fields:
   ConfusableSet: підʼїжджа́ти (approach vs. actually reach, by vehicle)
   Mnemonic_EN: під- = approaching by vehicle, getting close; до- = actually reaching the destination
     by vehicle (same під-/до- opposition as підходити/доходити, applied to vehicles).
-  CompareScenario: A car finally arrives at the destination after a long drive.
-  CompareA: підʼїжджати
-  CompareB: доїжджати
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≈ RU: доезжать / доехать'
   TypingAnswer: доїжджати / доїхати
-  UA_Example: ''
-  EN_Example: ''
+  UA_Example: Ми доїжджаємо до Львова за чотири години.
+  EN_Example: We get to Lviv in four hours.
   Tags_Ch: ch:2.9.4
   Source_URL: https://goroh.pp.ua/Словозміна/доїжджати
   Source_Note: Stress verified 2026-07-06 via Горох.

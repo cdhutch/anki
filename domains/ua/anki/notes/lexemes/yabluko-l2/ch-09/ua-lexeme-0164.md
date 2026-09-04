@@ -13,6 +13,7 @@ tags:
 - pos:noun
 - gender:pl
 - status:verified
+- release:active
 - ch:2.9.3
 fields:
   NoteID: ua-lexeme-0164
@@ -32,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: ворота
   UA_Example: Мʼяч влучив у ворота.

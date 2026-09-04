@@ -7,12 +7,12 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-irregular
 - motion:vehicle
 - phase:2a
-- conj:drill
 - ch:2.9.2
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0006
   Lemma: ї́хати

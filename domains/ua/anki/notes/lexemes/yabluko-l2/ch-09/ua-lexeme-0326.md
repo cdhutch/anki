@@ -13,8 +13,8 @@ tags:
 - pos:phrase
 - phrase:conversational
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0326
   Lemma: Перепро́шую, я не почу́в/-ла...
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: Перепрошую, я не почув/-ла...
   UA_Example: Перепрошую, я не почув, о котрій відправляється поїзд.

@@ -10,10 +10,12 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.7
+- ch:2.5.4
+- ch:1.2.3
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0351
   Lemma: пі́вніч
@@ -32,18 +34,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: північ
   UA_Example: Вони заночували в сироварні приблизно після півночі.
   EN_Example: They ended up spending the night at the cheese dairy sometime after midnight.
-  Tags_Ch: ch:2.9.7
+  Tags_Ch: ch:2.9.7, ch:2.5.4, ch:1.2.3
   Source_URL: https://goroh.pp.ua/Словозміна/північ
   Source_Note: Горох-verified 2026-07-26, ch:2.9.7 sourcing pass.
   Verification Notes: Горох lists a second sense, 'north' (частина світу); this note uses

@@ -11,44 +11,43 @@ tags:
 - textbook:яблуко
 - ch:2.8.4
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0501
-  Lemma: звари́тися
+  Lemma: вари́тися
   Lemma_Euphony: ''
   PartOfSpeech: verb
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
-  Perfective: ''
+  Perfective: звари́тися
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: to finish cooking, be cooked through (of food)
+  EN_Gloss: to cook, to be cooking (of food)
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
-  TypingAnswer: зваритися
-  UA_Example: Суп повинен зваритися ще хвилин десять.
-  EN_Example: The soup needs to cook for about ten more minutes.
+  TypingAnswer: варитися / зваритися
+  UA_Example: Зараз суп вариться на плиті.
+  EN_Example: The soup is cooking on the stove right now.
   Tags_Ch: ch:2.8.4
-  Source_URL: https://goroh.pp.ua/Словозміна/зваритися
-  Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass.
-  Verification Notes: Perfective, reflexive; imperfective partner is варитися. Горох also
-    lists a rarer sense 'to weld together (of metal)', not relevant here. A colloquial extended
-    sense ('to roast/overheat in the sun', fitting this active-travel subsection) is plausible
-    but not directly dictionary-attested this pass -- flagging for Craig rather than asserting
-    it. Full conjugation lives on ua-verb-0080.
+  Source_URL: https://goroh.pp.ua/Словозміна/варитися; https://goroh.pp.ua/Словозміна/зваритися
+  Source_Note: Горох-verified 2026-07-26, ch.8.4 sourcing pass. Restructured 2026-08-27 per
+    Craig -- see Verification Notes.
+  Verification Notes: '2026-08-27: note was originally authored backwards -- зваритися (perfective)
+    as the headword with a blank Perfective field, even though this note''s own prior text
+    already identified варитися as the imperfective partner. Restructured per Craig to the
+    corpus convention (Lemma = imperfective headword, Perfective = perfective partner), matching
+    e.g. відрізнятися/відрізнитися (ua-lexeme-0480). Горох confirms вари́тися: imperfective,
+    reflexive, 2nd conjugation, "готуватися кипʼятінням (про страву, напій)" -- to be cooked/prepared
+    by boiling (of food/drink). Горох also lists a rarer sense ''to weld together (of metal)'',
+    not relevant here. A colloquial extended sense (''to roast/overheat in the sun'', fitting
+    this active-travel subsection) is plausible but not directly dictionary-attested this
+    pass -- flagging for Craig rather than asserting it. Full conjugation lives on ua-verb-0080.'
 ---
 

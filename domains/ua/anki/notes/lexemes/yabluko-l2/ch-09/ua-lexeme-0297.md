@@ -13,8 +13,8 @@ tags:
 - pos:adjective
 - phrase:adjective
 - ch09-phrase
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0297
   Lemma: заря́джений позити́вною ене́ргією приго́д
@@ -33,13 +33,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: заряджений позитивною енергією пригод
   UA_Example: Атмосфера старту була заряджена позитивною енергією пригод.

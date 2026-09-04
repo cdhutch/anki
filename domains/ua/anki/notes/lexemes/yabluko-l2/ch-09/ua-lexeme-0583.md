@@ -10,10 +10,11 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.4
+- ch:1.10.5
 - pos:verb
 - motion:base
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0583
   Lemma: літа́ти
@@ -38,20 +39,13 @@ fields:
     flying around, someone who flies often). леті́ти = "is flying, headed one way, right now"
     (unidirectional). полеті́ти = "set off flying / departed by air" (perfective -- the flight
     as a completed whole).
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: English "fly" covers both літати and летіти without marking the habitual-vs-
     single-flight distinction -- closest analogy is "used to fly around up there" (multi)
     vs "was flying there" (uni) vs "took off / set off flying" (perf).
   TypingAnswer: літати / летіти / полетіти
   UA_Example: Птахи літають високо в небі, а орел летів прямо над нами.
   EN_Example: Birds fly high in the sky, and an eagle was flying right above us.
-  Tags_Ch: ch:2.9.4
+  Tags_Ch: ch:2.9.4, ch:1.10.5
   Source_URL: https://goroh.pp.ua/Словозміна/літати; https://goroh.pp.ua/Словозміна/летіти;
     https://goroh.pp.ua/Словозміна/полетіти
   Source_Note: Горох-verified 2026-07-31, base motion-verb triplet drafting session (ua-lexeme-0581..0585).
@@ -61,6 +55,6 @@ fields:
     triplet -- only the separate UA_Verb conjugation notes (ua-verb-0014..0016). ConfusableSet
     intentionally left blank -- this is an aspect triplet, not a lexical-confusable/homograph
     pair, so the Compare card is expected to stay suspended. Drafted per Craig''s request
-    2026-07-31. status:draft pending Craig''s independent review.'
+    2026-07-31. Reviewed and verified 2026-08-27.'
 ---
 

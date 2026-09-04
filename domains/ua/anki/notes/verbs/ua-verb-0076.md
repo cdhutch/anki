@@ -7,35 +7,35 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
-- class:regular-1
+- class:conj1-vowel+й
 - ch:2.8.3
-- conj:suspended
-- status:draft
-- stress:unverified
+- status:verified
+- release:active
+- aspect:imperfective-only
 fields:
   NoteID: ua-verb-0076
-  Lemma: стосуватися
+  Lemma: стосува́тися
   Aspect: imperfective
   VerbClass: regular-1
   FreqSource: ch:2.8
-  Pres_1sg: стосуюсь, стосуюся
-  Pres_2sg: стосуєшся
+  Pres_1sg: ''
+  Pres_2sg: ''
   Pres_3sg: стосу́ється
-  Pres_1pl: стосуємось, стосуємося, стосуємся
-  Pres_2pl: стосуєтесь, стосуєтеся
+  Pres_1pl: ''
+  Pres_2pl: ''
   Pres_3pl: стосу́ються
-  Imperative_2sg: стосуйсь, стосуйся
-  Imperative_1pl: стосуймось, стосуймося
-  Imperative_2pl: стосуйтесь, стосуйтеся
-  Past_1sg_m: стосувавсь, стосувався
-  Past_1sg_f: стосувалась, стосувалася
-  Past_1sg_n: стосувалось, стосувалося
-  Past_3pl: стосувались, стосувалися
+  Imperative_2sg: ''
+  Imperative_1pl: ''
+  Imperative_2pl: ''
+  Past_1sg_m: стосува́вся
+  Past_1sg_f: стосува́лася
+  Past_1sg_n: стосува́лося
+  Past_3pl: стосува́лися
   Participle_Active_Present: ''
   Participle_Adverbial_Present: ''
   Participle_Passive_Past: ''
   Participle_Impersonal_Past: ''
-  Participle_Adverbial_Past: ''
+  Participle_Adverbial_Past: стосува́вшись
   Source_Note: ''
   Verification Notes: Reflexive, 1st conjugation; effectively reflexivum tantum (no attested
     perfective partner). Govs genitive. See lexeme ua-lexeme-0481.

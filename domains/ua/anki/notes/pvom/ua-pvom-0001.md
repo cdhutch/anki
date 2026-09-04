@@ -12,8 +12,8 @@ tags:
 - ch:2.9.4
 - grammar:verb_motion
 - grammar:pvom_infinitive
-- stress:verified
 - status:verified
+- release:active
 - conj:suspended
 fields:
   NoteID: ua-pvom-0001

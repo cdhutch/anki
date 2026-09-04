@@ -9,9 +9,11 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.3
 - pos:phrase
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0106
   Lemma: До поба́чення
@@ -30,18 +32,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: До побачення
   UA_Example: — До побачення! — До побачення, до завтра!
   EN_Example: — Goodbye! — Goodbye, see you tomorrow!
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.3
   Source_URL: ''
   Source_Note: ''
   Verification Notes: ''

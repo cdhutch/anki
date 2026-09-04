@@ -10,9 +10,16 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.6
+- ch:2.2.5
+- ch:2.1.7
+- ch:2.1.6
+- ch:1.11.1
+- ch:1.3.1
+- ch:1.3.5
+- ch:1.4.5
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0317
   Lemma: каза́ти
@@ -31,18 +38,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: казати / сказати
   UA_Example: Вибачте, Ви сказали, що поїзд запізнюється?
   EN_Example: Sorry, did you say the train is running late?
-  Tags_Ch: ch:2.9.6
+  Tags_Ch: ch:2.9.6, ch:2.1.6, ch:2.1.7, ch:2.2.5, ch:1.11.1, ch:1.3.1, ch:1.3.5, ch:1.4.5
   Source_URL: https://goroh.pp.ua/Словозміна/казати; https://goroh.pp.ua/Словозміна/сказати
   Source_Note: Горох-verified 2026-07-26, ch:2.9.6 sourcing pass. Corrected 2026-07-28 per
     Craig''s catch -- see Verification Notes.

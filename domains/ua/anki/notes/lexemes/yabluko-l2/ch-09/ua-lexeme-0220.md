@@ -11,8 +11,9 @@ tags:
 - textbook:яблуко
 - ch:2.9.3
 - pos:verb
-- stress:verified
 - status:verified
+- release:active
+- ch:2.7.3
 fields:
   NoteID: ua-lexeme-0220
   Lemma: посіда́ти
@@ -31,25 +32,21 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: посідати / посісти
   UA_Example: Наша команда щороку посідає перше місце.
   EN_Example: Our team takes first place every year.
-  Tags_Ch: ch:2.9.3
+  Tags_Ch: ch:2.9.3,ch:2.7.3
   Source_URL: https://goroh.pp.ua/Словозміна/посідати; https://goroh.pp.ua/Словозміна/посісти
   Source_Note: Горох-verified 2026-07-24, ch.9.3 sourcing pass (гравець/команда — sports &
     combat gear).
-  Verification Notes: Горох lists 'посідати' with two distinct senses at the same spelling/stress
-    -- this note uses the 'брати у своє володіння' (take possession/occupy) sense, which pairs
-    with the perfective 'посісти' ('заволодіти' sense, used in the textbook's 'посісти третє
-    місце'). A separate, unrelated 'посідати' sense ('сісти -- про всіх або багатьох' = 'to
-    sit down, of everyone/many') is also perfective there and not relevant to this lexeme.
+  Verification Notes: 'Горох lists ''посідати'' with two distinct senses at the same spelling/stress
+    -- this note uses the ''брати у своє володіння'' (take possession/occupy) sense, which
+    pairs with the perfective ''посісти'' (''заволодіти'' sense, used in the textbook''s ''посісти
+    третє місце''). A separate, unrelated ''посідати'' sense (''сісти -- про всіх або багатьох''
+    = ''to sit down, of everyone/many'') is also perfective there and not relevant to this
+    lexeme. Merged duplicate standalone perfective note ua-lexeme-0220 (aspect-pairing dual-convention
+    cleanup, 2026-08-29). That sub-chapter''s example: ''Ця країна посіла перше місце за темпами
+    діджиталізації.'' = ''This country took first place in the pace of digitalization.''.'
 ---
 

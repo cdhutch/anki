@@ -9,10 +9,12 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
 - pos:noun
 - gender:f
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0025
   Lemma: анке́та
@@ -31,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: 'RU: анкета · ← FR: enquête'
   TypingAnswer: анкета
   UA_Example: Треба заповнити анкету і принести її завтра.
   EN_Example: You need to fill out the form and bring it tomorrow.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.10
   Source_URL: https://goroh.pp.ua/Словозміна/анкета
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

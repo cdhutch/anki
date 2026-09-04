@@ -12,8 +12,9 @@ tags:
 - ch:2.9.5
 - pos:noun
 - gender:m
-- stress:verified
 - status:verified
+- release:active
+- ch:2.7.2
 fields:
   NoteID: ua-lexeme-0263
   Lemma: рі́вень
@@ -32,18 +33,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: рівень
   UA_Example: Рівень складності траси зростав з кожним етапом.
   EN_Example: The course's level of difficulty increased with every stage.
-  Tags_Ch: ch:2.9.5
+  Tags_Ch: ch:2.9.5, ch:2.7.2
   Source_URL: https://goroh.pp.ua/Словозміна/рівень
   Source_Note: Горох-verified 2026-07-26, ch:2.9.5 sourcing pass.
   Verification Notes: ''

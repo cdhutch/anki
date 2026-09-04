@@ -7,12 +7,12 @@ anki:
   deck: UA::Verbs
 tags:
 - domain:ua
+- class:conj1-vowel+й
 - motion:swimming
 - phase:2a
-- conj:drill
 - ch:2.9.2
-- stress:verified
 - status:verified
+- release:active
 fields:
   NoteID: ua-verb-0008
   Lemma: пла́вати

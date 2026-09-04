@@ -9,10 +9,15 @@ tags:
 - domain:ua
 - topic:vocabulary
 - textbook:яблуко
-- ch:1.0
+- ch:1.0.10
+- ch:1.4.5
+- ch:1.4.6
+- ch:1.5.4
 - pos:noun
 - gender:m
 - status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0055
   Lemma: підру́чник
@@ -31,18 +36,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: '≠ RU: учебник'
   TypingAnswer: підручник
   UA_Example: Відкрийте підручник на сторінці десять.
   EN_Example: Open the textbook to page ten.
-  Tags_Ch: ch:1.0
+  Tags_Ch: ch:1.0.10, ch:1.4.5, ch:1.4.6, ch:1.5.4
   Source_URL: https://goroh.pp.ua/Словозміна/підручник
   Source_Note: verified 2026-07-06 via Горох
   Verification Notes: ''

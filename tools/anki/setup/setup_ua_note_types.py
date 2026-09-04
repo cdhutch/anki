@@ -110,13 +110,7 @@ FIELDS = [
     # -- 6. Semantic relations & Compare card --------------------------------
     "ConfusableSet",
     "Mnemonic_EN",
-    "CompareScenario",
-    "CompareA",
-    "CompareB",
-    "CompareC",
-    "CompareD",
-    "Homograph_SenseA",  # EN sense for CompareA (homographs only)
-    "Homograph_SenseB",  # EN sense for CompareB (homographs only)
+    "CompareMembers",  # JSON array of cluster member lemmas; overrides CompareA-D for clusters
     "CrossLang_Analog",
 
     # -- 7. Typing & examples -------------------------------------------------
@@ -906,54 +900,88 @@ EN_UA_BACK = (
 
 COMPARISON_FRONT = """\
 {{#ConfusableSet}}
-<!-- CompareA is "always required" by convention (CompareB/C/D optional) --
-     see comment above CARD_TEMPLATES. A blank CompareA here means the note
-     has ConfusableSet populated but Compare fields were never authored
-     (e.g. a homograph:true note where CompareA/B got skipped), or some
-     other data gap.
-     UNREACHABLE, deliberately kept. Tested 2026-08-01 (see CLAUDE.md item 6):
-     everything this branch emits is static markup with no field substitution,
-     so Anki's own empty-card rule refuses to generate the card at all when
-     CompareA is blank. The block below can never render -- not in study, not
-     in preview, not in QA -- and the importer's suspend call for this exact
-     case is a no-op against a card that does not exist.
-     Its wording used to say "this card should be suspended", which read as a
-     live safeguard and was the one misleading thing about it: nothing is
-     suspending anything here, because there is nothing to suspend. Reworded
-     2026-08-20 to describe the data gap and say plainly that seeing it at all
-     would mean Anki's empty-card behaviour had changed. Find the real gaps
-     with `make ua-check`, not with this. -->
-{{^CompareA}}
-<div class="compare-warning">
-⚠ ConfusableSet is populated but no CompareA/B/C/D was authored. If you are reading this in Anki, the empty-card rule has changed -- see COMPARISON_FRONT in setup_ua_note_types.py.
-</div>
-{{/CompareA}}
-{{#CompareA}}
-{{#_IsHomograph}}
-<!-- HOMOGRAPH MODE: UA→EN direction. Show Ukrainian sentences, student deduces EN meaning -->
-<div class="compare-prompt-header">Which sense is being used?</div>
-<div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
-  {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}[Homograph scenario]{{/CompareScenario}}
-</div>
-<div style="display: flex; flex-direction: column; gap: 12px; margin-top: 12px;">
-<div class="compare-chip-sentence">{{CompareA}}</div>
-{{#CompareB}}<div class="compare-chip-sentence">{{CompareB}}</div>{{/CompareB}}
-</div>
-{{/_IsHomograph}}
-{{^_IsHomograph}}
-<!-- CONFUSABLES MODE: EN→UA direction. Show English scenario, student picks Ukrainian word -->
+{{#CompareMembers}}
+<!-- CLUSTER MODE (Phase 1): CompareMembers holds a JSON payload for dynamic rendering
+     via JavaScript. Two shapes -- see get_cluster_compare_members_json() in
+     ua_lexeme_import.py for the full contract:
+       Chip mode (default): {"scenario": ..., "members": [lemma, ...]}
+       Sentence mode (added 2026-08-30): {"mode": "sentence", "items": [{lemma,
+         example_ua, meaning_en}, ...]} -- for true-homophone clusters
+         (identical lemma across every member), where a word chip would just show
+         the same spelling twice with nothing to distinguish it. Both blocks below
+         are always present in the static HTML; JS shows the right one and hides
+         the other, so a JS failure degrades to the old chip-mode appearance
+         (chip-mode block is the default-visible one). -->
+<div id="compare-chip-block">
 <div class="compare-prompt-header">Choose the right word:</div>
 <div class="gloss" style="font-size: 18px; margin-bottom: 16px;">
-  Scenario: {{#CompareScenario}}{{CompareScenario}}{{/CompareScenario}}{{^CompareScenario}}{{EN_Gloss}}{{/CompareScenario}}
+  Scenario: <span id="compare-scenario">{{EN_Gloss}}</span>
 </div>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;">
-<div class="compare-chip-word">{{CompareA}}</div>
-{{#CompareB}}<div class="compare-chip-word">{{CompareB}}</div>{{/CompareB}}
-{{#CompareC}}<div class="compare-chip-word">{{CompareC}}</div>{{/CompareC}}
-{{#CompareD}}<div class="compare-chip-word">{{CompareD}}</div>{{/CompareD}}
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 12px;" id="compare-members-container">
+<!-- Populated dynamically by JavaScript from CompareMembers JSON -->
 </div>
-{{/_IsHomograph}}
-{{/CompareA}}
+</div>
+<div id="compare-sentence-block" style="display: none;">
+<div class="compare-prompt-header">What does the word mean in each sentence?</div>
+<div id="compare-sentence-container" style="margin-top: 14px;">
+<!-- Populated dynamically by JavaScript from CompareMembers JSON -->
+</div>
+</div>
+<script type="application/json" id="compare-members-json">
+{{CompareMembers}}
+</script>
+<script>
+(function() {
+  try {
+    var el = document.getElementById('compare-members-json');
+    if (!el) return;
+    var data = JSON.parse(el.textContent.trim());
+
+    if (data && data.mode === 'sentence' && Array.isArray(data.items)) {
+      // SENTENCE MODE: true homophone -- render each item's example sentence.
+      // The meaning is revealed only on the card back.
+      var chipBlock = document.getElementById('compare-chip-block');
+      if (chipBlock) chipBlock.style.display = 'none';
+      var sentenceBlock = document.getElementById('compare-sentence-block');
+      if (sentenceBlock) sentenceBlock.style.display = '';
+      var sentenceContainer = document.getElementById('compare-sentence-container');
+      data.items.forEach(function(item, i) {
+        var row = document.createElement('div');
+        row.className = 'compare-sentence-item';
+        row.style.margin = '10px 0';
+        row.style.fontSize = '17px';
+        row.textContent = (i + 1) + '. ' + item.example_ua;
+        sentenceContainer.appendChild(row);
+      });
+      return;
+    }
+
+    // CHIP MODE (default, unchanged): handle both old array format (for
+    // backward compat) and the {scenario, members} object format.
+    var members = Array.isArray(data) ? data : (data.members || []);
+    var scenario = (typeof data === 'object' && data.scenario) ? data.scenario : '';
+
+    // Update scenario if available
+    if (scenario) {
+      var scenarioEl = document.getElementById('compare-scenario');
+      if (scenarioEl) scenarioEl.textContent = scenario;
+    }
+
+    // Render member chips
+    var container = document.getElementById('compare-members-container');
+    members.forEach(function(lemma) {
+      var chip = document.createElement('div');
+      chip.className = 'compare-chip-word';
+      chip.textContent = lemma;
+      container.appendChild(chip);
+    });
+  } catch (e) {
+    console.error('Failed to render cluster data from CompareMembers:', e);
+  }
+})();
+</script>
+{{/CompareMembers}}
+
 {{/ConfusableSet}}
 """
 
@@ -961,44 +989,54 @@ COMPARISON_BACK = """\
 {{FrontSide}}
 <hr id="answer">
 {{#ConfusableSet}}
-{{#CompareA}}
-{{#_IsHomograph}}
-<!-- HOMOGRAPH BACK: Show each Ukrainian sentence + its EN sense -->
-<div style="margin-top: 16px; font-size: 16px;">
-<div class="compare-reveal-header">Senses of {{Lemma}}:</div>
-<div class="compare-sense-block">
-  <div class="compare-sense-ua">{{CompareA}}</div>
-  <div class="compare-sense-en">{{Homograph_SenseA}}</div>
-</div>
-<div class="compare-sense-block">
-  <div class="compare-sense-ua">{{CompareB}}</div>
-  <div class="compare-sense-en">{{Homograph_SenseB}}</div>
-</div>
-{{#Mnemonic_EN}}<div class="compare-mnemonic">
-<strong>Remember:</strong> {{Mnemonic_EN}}
-</div>{{/Mnemonic_EN}}
-</div>
-{{/_IsHomograph}}
-{{^_IsHomograph}}
-<!-- CONFUSABLES BACK: Show the correct word and why it fits -->
-<div style="margin-top: 16px; font-size: 16px;">
+{{#CompareMembers}}
+<!-- CLUSTER MODE BACK: Show the correct word and why it fits (chip mode), or reveal
+     each sentence's meaning (sentence mode) -- see COMPARISON_FRONT for the JSON
+     shapes. compare-members-json is already in the DOM via {{FrontSide}} above, so
+     the script below just re-reads it; no new field substitution needed. -->
+<div id="compare-chip-answer" style="margin-top: 16px; font-size: 16px;">
 <div class="compare-correct-header">✓ {{Lemma}}</div>
 <div class="compare-correct-sub">{{EN_Gloss}}</div>
 {{#Mnemonic_EN}}<div class="compare-mnemonic">
 <strong>Remember:</strong> {{Mnemonic_EN}}
 </div>{{/Mnemonic_EN}}
 </div>
-{{/_IsHomograph}}
-{{/CompareA}}
-<!-- Same unreachable branch as COMPARISON_FRONT's; see the long comment
-     there. The back can only render if the front did, and the front cannot.
-     Kept in step with it so the two never disagree about what a data gap
-     looks like. -->
-{{^CompareA}}
-<div class="compare-warning">
-⚠ ConfusableSet is populated but no CompareA/B/C/D was authored. If you are reading this in Anki, the empty-card rule has changed -- see COMPARISON_FRONT in setup_ua_note_types.py.
+<div id="compare-sentence-answer" style="display: none; margin-top: 16px; font-size: 16px;">
+<!-- Populated dynamically by JavaScript from CompareMembers JSON (sentence mode only) -->
 </div>
-{{/CompareA}}
+<script>
+(function() {
+  try {
+    var el = document.getElementById('compare-members-json');
+    if (!el) return;
+    var data = JSON.parse(el.textContent.trim());
+    if (!(data && data.mode === 'sentence' && Array.isArray(data.items))) return;
+
+    var chipAnswer = document.getElementById('compare-chip-answer');
+    if (chipAnswer) chipAnswer.style.display = 'none';
+    var box = document.getElementById('compare-sentence-answer');
+    if (!box) return;
+    box.style.display = '';
+    data.items.forEach(function(item, i) {
+      var row = document.createElement('div');
+      row.style.margin = '8px 0';
+      var label = document.createElement('strong');
+      label.textContent = (i + 1) + '.';
+      row.appendChild(label);
+      row.appendChild(document.createTextNode(' ' + item.example_ua + ' — '));
+      var meaning = document.createElement('span');
+      meaning.style.opacity = '0.75';
+      meaning.textContent = item.meaning_en;
+      row.appendChild(meaning);
+      box.appendChild(row);
+    });
+  } catch (e) {
+    console.error('Failed to render sentence-mode answer from CompareMembers:', e);
+  }
+})();
+</script>
+{{/CompareMembers}}
+
 {{/ConfusableSet}}
 """
 
@@ -1547,12 +1585,18 @@ hr#answer {
 .nightMode .card svg [stroke="#7c6f64"] { stroke: #a89984; }
 """
 
-# Single card: diagram + a 2-column table (prompt labels, blanks) on front.
+# Single card: diagram + English gloss, then a 2-column table (prompt labels,
+# blanks) on front -- 2026-08-27, per Craig: Meaning_EN moved onto the front
+# so the diagram and the specific English phrasing prompt recall together,
+# rather than the gloss only appearing after the answer is already revealed.
 # Back re-renders the SAME table in place with the answer column filled in --
 # no {{FrontSide}} reproduction, no second table, no hr divider -- so it reads
 # as one table getting filled in rather than a duplicate answer block below.
+# vis-meaning is kept in the same position (right after the diagram, before
+# the table) on both sides so the layout doesn't shift when the card flips.
 VISUAL_FRONT_1 = """\
 <div>{{Diagram_SVG}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
 <table class="vis-prompt-table">
 <tr><td>Verbal prefix?</td><td>?</td></tr>
 <tr><td>Preposition + case?</td><td>?</td></tr>
@@ -1561,11 +1605,11 @@ VISUAL_FRONT_1 = """\
 
 VISUAL_BACK_1 = """\
 <div>{{Diagram_SVG}}</div>
+<div class="vis-meaning">{{Meaning_EN}}</div>
 <table class="vis-prompt-table">
 <tr><td>Verbal prefix?</td><td>{{Prefix}}</td></tr>
 <tr><td>Preposition + case?</td><td>{{Govt}}</td></tr>
 </table>
-<div class="vis-meaning">{{Meaning_EN}}</div>
 <div class="vis-pairs">{{Walking_Pair}}<br>{{Vehicle_Pair}}</div>
 {{#Example_UA}}<div class="vis-example">{{Example_UA}}</div>{{/Example_UA}}
 {{#Example_EN}}<div class="vis-example-en">{{Example_EN}}</div>{{/Example_EN}}

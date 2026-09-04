@@ -10,14 +10,15 @@ tags:
 - topic:vocabulary
 - textbook:яблуко
 - ch:2.9.1
-- pos:phrase
+- pos:noun-phrase
 - phrase:noun
 - status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0162
   Lemma: спорти́вна ходьба́
   Lemma_Euphony: ''
-  PartOfSpeech: phrase
+  PartOfSpeech: noun-phrase
   Gender: ''
   ImperfectiveUnidirectional_Euphony: ''
   Perfective: ''
@@ -31,13 +32,6 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: спортивна ходьба
   UA_Example: Спортивна ходьба виглядає простіше, ніж є насправді.

@@ -12,8 +12,11 @@ tags:
 - ch:2.8.5
 - pos:noun
 - gender:f
-- stress:verified
 - status:verified
+- release:active
+- ch:2.10.6
+- ch:2.7.3
+- ch:1.5.1
 fields:
   NoteID: ua-lexeme-0516
   Lemma: температу́ра
@@ -32,18 +35,11 @@ fields:
   VerbMotion_Pair: ''
   ConfusableSet: ''
   Mnemonic_EN: ''
-  CompareScenario: ''
-  CompareA: ''
-  CompareB: ''
-  CompareC: ''
-  CompareD: ''
-  Homograph_SenseA: ''
-  Homograph_SenseB: ''
   CrossLang_Analog: ''
   TypingAnswer: температура
   UA_Example: Температура різко впала після заходу сонця.
   EN_Example: The temperature dropped sharply after sunset.
-  Tags_Ch: ch:2.8.5
+  Tags_Ch: ch:2.8.5, ch:2.10.6,ch:2.7.3, ch:1.5.1
   Source_URL: https://goroh.pp.ua/Словозміна/температура
   Source_Note: Горох-verified 2026-07-26, ch.8.5 sourcing pass.
   Verification Notes: Component of phrase ua-lexeme-0531 (перепад температури).
