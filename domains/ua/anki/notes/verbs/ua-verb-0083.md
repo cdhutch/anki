@@ -36,6 +36,14 @@ fields:
   Participle_Impersonal_Past: ''
   Participle_Adverbial_Past: вигляда́вши
   Source_Note: ''
-  Verification Notes: Non-reflexive, 1st conjugation. See lexeme ua-lexeme-0550.
+  Verification Notes: 'Non-reflexive, 1st conjugation. See lexeme ua-lexeme-0550 (stative
+    "seem/appear" sense). Also shared, unchanged, by ua-lexeme-0587 (event "look out/emerge"
+    sense of the same вигляда́ти spelling -- pure polysemy, not a distinct conjugation; the
+    two lexeme notes are homograph-clustered as seem-emerge-homograph in confusable_clusters.yaml).
+    Perfective partner for the 0587 sense is ви́глянути, drafted separately as ua-verb-0637
+    (2026-09-03). 2026-09-03: a duplicate of this note, ua-verb-0520 (created one day after
+    the 0550/0587 homograph split, re-sourcing the same imperfective conjugation for a ch-07
+    batch unaware of the split), was deleted per Craig -- this note (0083, ch:2.8.6) remains
+    the sole imperfective conjugation note for вигляда́ти.'
 ---
 

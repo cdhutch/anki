@@ -24,7 +24,7 @@ fields:
   Pres_2pl: пірна́єте
   Pres_3pl: пірна́ють
   Imperative_2sg: пірна́й
-  Imperative_1pl: пірна́йм
+  Imperative_1pl: пірна́ймо
   Imperative_2pl: пірна́йте
   Past_1sg_m: пірна́в
   Past_1sg_f: пірна́ла

@@ -43,12 +43,18 @@ fields:
     sense 5 ("to have a certain appearance"), which Горох lists with no perfective partner.
     Example sentence drafted from Горох's sense-2 citation ("А тут ще виглянуло сонце"); conjugation
     cross-checked against ua-verb-0083 and reviewed 2026-08-27 (see Verification Notes).
-  Verification Notes: Imperfective, non-reflexive, 1st conjugation; same conjugation paradigm
+  Verification Notes: 'Imperfective, non-reflexive, 1st conjugation; same conjugation paradigm
     as ua-lexeme-0550 (both live on ua-verb-0083 -- this is a pure polysemy homograph, not
     a distinct conjugation). Perfective partner ви́глянути confirmed 2026-08-27 (per Craig).
     Homograph-clustered with ua-lexeme-0550 in confusable_clusters.yaml (seem-emerge-homograph).
     Горох separately lists two more senses of виглядати ("to watch/wait for" and "to raise
     through care") that pair with a different perfective, ви́гляділи -- not covered by either
-    lexeme note; flagging in case that vocabulary gets added later.
+    lexeme note; flagging in case that vocabulary gets added later. 2026-09-03 -- perfective
+    conjugation note ua-verb-0637 (ви́глянути) drafted, status:draft, pending Craig''s own
+    Горох check (see that note for open questions on the Imperative_1pl/2pl variant forms).
+    Also: a duplicate stative-sense lexeme note, ua-lexeme-1993, and its duplicate conjugation
+    note, ua-verb-0520 (both re-sourcing ua-lexeme-0550''s own sense during a later ch-07
+    batch, unaware of this homograph split), were deleted per Craig -- see ua-verb-0083''s
+    Verification Notes for detail.'
 ---
 
