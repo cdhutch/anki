@@ -31,7 +31,8 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. вільний (available/unoccupied/independent, adj.) -- свобода is the abstract
+    noun "freedom/liberty," a different part of speech.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: свобода

@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
-- release:active
+- release:pending
 fields:
   NoteID: ua-lexeme-0633
   Lemma: покла́жа
@@ -30,7 +30,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. валіза (a specific suitcase), сумка (an everyday personal bag/purse),
+    мішок (a bulk sack for loose goods) and торба (a cloth shopping/carry-bag) -- поклажа
+    is the abstract, collective word for everything you're carrying, not any one container.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: поклажа

@@ -2387,3 +2387,352 @@ clusters:
       compare_scenario: You're writing a heartfelt note to your grandmother, addressing her
         warmly right at the start -- "My ___ grandmother!" What word conveys that fondness,
         not a paved route?
+  coupon-ticket-distinction:
+    description: |
+      Convergent-synonym pair flagged 2026-09-04 during ch.10.1 (airport/travel prohibitions)
+      confusable review. тало́н and квито́к both gloss loosely to "ticket" in EN, but талон is
+      narrower -- a numbered stub, coupon, or claim-check (a queue number, a ration coupon, a
+      baggage claim stub) -- while квиток is the general/default word for an admission or
+      travel ticket (train, plane, concert, museum). A талон doesn't grant admission itself,
+      just a turn or a claim.
+    canonical_note: ua-lexeme-0631
+    members:
+    - note_id: ua-lexeme-0631
+      lemma: тало́н
+      status: sourced
+      chapter: '2.10.1'
+      comment: Narrower -- a numbered stub, coupon, or claim-check (queue number, ration
+        coupon, baggage claim), not general admission/travel (Горох-verified)
+      compare_scenario: You hand over a numbered slip at a counter to claim your checked
+        bag, or to take your turn in a queue -- it isn't what gets you through a gate, just
+        what proves your place or claim. What word names that slip?
+    - note_id: ua-lexeme-1124
+      lemma: квито́к
+      status: sourced
+      chapter: '2.2.7'
+      comment: General/default word for an admission or travel ticket (train, plane,
+        concert, museum) (Горох-verified)
+      compare_scenario: You're buying what gets you onto the train, into the concert, or
+        through the museum door -- the everyday word for that pass. What word is it?
+  compartment-general-vs-train-class:
+    description: |
+      Cluster flagged 2026-09-04 during ch.10.1 (airport/travel prohibitions) confusable
+      review, at Craig's request to compare відділення against train-compartment vocabulary
+      and other analogous items. відділення is the general word for a compartment, section,
+      or department in any domain (a baggage hold, a hospital department, a post-office
+      branch) -- it is not train-specific, even though its own example sentence happens to
+      be "багажне відділення" (baggage compartment). купе is the specific standard multi-berth
+      sleeping room on an overnight train; люкс is the deluxe/higher-comfort class of that
+      same train compartment (fewer berths, more comfort). Related items checked but NOT
+      added: ua-lexeme-0381 (поли́ця, "berth") names the sleeping shelf/bench INSIDE a купе,
+      not the compartment itself, so it's adjacent rather than confusable here; ua-lexeme-0797
+      (міністерство) and ua-lexeme-2725 (факультет) also gloss loosely to "department" but in
+      an institutional, non-physical sense, too distant to help distinguish these three.
+    canonical_note: ua-lexeme-0637
+    members:
+    - note_id: ua-lexeme-0637
+      lemma: відді́лення
+      status: sourced
+      chapter: '2.10.1'
+      comment: General word for a compartment/section/department in any domain (baggage
+        hold, hospital department, post-office branch) -- not train-specific (Горох-verified)
+      compare_scenario: You're told to put your suitcase in the labeled section of a bus
+        or plane's hold set aside for luggage -- a general word for a divided-off space
+        or section, not any one specific room on a train. What word names it?
+    - note_id: ua-lexeme-0309
+      lemma: купе́
+      status: sourced
+      chapter: '2.9.6'
+      comment: The standard multi-berth sleeping compartment/room on an overnight train
+        (Горох-verified)
+      compare_scenario: You're settling in for an overnight train ride, getting to know
+        the two other passengers sharing your assigned four-berth room. What's the word
+        for that whole room?
+    - note_id: ua-lexeme-0308
+      lemma: люкс
+      status: sourced
+      chapter: '2.9.6'
+      comment: The deluxe/higher-comfort class of train sleeping compartment, fewer berths
+        than the standard room (Горох-verified)
+      compare_scenario: You've paid extra for the swankiest class of overnight train room --
+        far fewer roommates, much comfier than the standard option. What word names that
+        top-tier train-car class?
+  permission-obligation-micro-dialogue-set:
+    description: |
+      All 8 variants of the textbook's ch.10.1 permission/obligation micro-dialogue set,
+      complete as of 2026-09-04. The first 3 (вам дозволено/можна/треба) were split
+      2026-09-04 from the formerly-bundled ua-lexeme-0653 per Craig's request. The remaining
+      5 (вам заборонено/потрібно, ви маєте/можете/мусите) were flagged as an unsourced gap
+      on 0653 before the split, then sourced the same day per Craig: "distinguish among all
+      five." Two grammatical constructions are in play, not just permission-vs-obligation:
+      "вам X" is an IMPERSONAL dative-predicate construction (дозволено/заборонено/можна/
+      потрібно/треба, no grammatical "you" as subject); "ви X" is a PERSONAL construction
+      (маєте/можете/мусите, "you" as the actual subject of a conjugated verb). Within that,
+      three semantic poles: permission (дозволено formal/passive, можна everyday, можете
+      personal), obligation/necessity (треба everyday, потрібно neutral/formal, маєте
+      personal "have to", мусите personal "must" -- strongest/most urgent), and prohibition,
+      the negative counterpart of permission (заборонено, formal/passive, mirrors
+      дозволено's construction with opposite polarity).
+    show_all_members: true
+    canonical_note: ua-lexeme-3910
+    members:
+    - note_id: ua-lexeme-3909
+      lemma: вам дозволено
+      status: sourced
+      chapter: '2.10.1'
+      comment: Formal/passive permission -- short-form passive participle of дозволити +
+        dative вам; the precise, official-sounding way to grant permission (Горох-verified)
+      compare_scenario: A gate agent uses precise, official wording to tell a passenger
+        exactly what they're formally permitted to carry on board -- more official-sounding
+        than a casual grant of permission. What phrase captures that formal wording?
+    - note_id: ua-lexeme-3910
+      lemma: вам можна
+      status: sourced
+      chapter: '2.10.1'
+      comment: Everyday impersonal permission -- "it is permitted / one may" + dative вам;
+        casual, conversational granting of permission (Горох-verified)
+      compare_scenario: A friend casually tells you it's totally fine for you to go ahead
+        and do something -- an easy, everyday way of saying permission is granted. What
+        phrase says that?
+    - note_id: ua-lexeme-3911
+      lemma: вам треба
+      status: sourced
+      chapter: '2.10.1'
+      comment: Impersonal obligation, not permission -- "(one) needs to / must" + dative
+        вам; flips the direction entirely, from what you MAY do to what you MUST do
+        (Горох-verified)
+      compare_scenario: A gate agent tells a passenger something they're required to do
+        before boarding -- not a permission being granted, a requirement being imposed.
+        What phrase expresses that requirement?
+    - note_id: ua-lexeme-3914
+      lemma: вам заборонено
+      status: sourced
+      chapter: '2.10.1'
+      comment: Formal/passive prohibition -- short-form passive participle of заборонити +
+        dative вам; the negative counterpart of вам дозволено, same construction, opposite
+        polarity (Горох-verified)
+      compare_scenario: A security notice at the gate specifies, in the same formal wording
+        as its permission-granting counterpart, something a passenger is flatly not allowed
+        to bring through. What phrase expresses that formal prohibition?
+    - note_id: ua-lexeme-3915
+      lemma: вам потрібно
+      status: sourced
+      chapter: '2.10.1'
+      comment: Neutral/formal-register impersonal necessity -- "it is necessary" + dative
+        вам; the same underlying meaning as вам треба but more official/neutral in tone
+        (Горох-verified)
+      compare_scenario: A check-in agent explains, in neutral official language, a document
+        a passenger is required to have ready -- not urgent or personal, just a stated
+        requirement. What phrase expresses that neutral necessity?
+    - note_id: ua-lexeme-3916
+      lemma: ви маєте
+      status: sourced
+      chapter: '2.10.1'
+      comment: Personal-construction obligation -- nominative "ви" as the actual subject of
+        a conjugated verb (маєте), not an impersonal dative predicate; "have to" (Горох-verified)
+      compare_scenario: A boarding announcement addresses passengers directly and formally,
+        telling them something they're obligated to do before they can board -- using "you"
+        as the grammatical subject, not an impersonal phrase. What phrase expresses that
+        direct personal obligation?
+    - note_id: ua-lexeme-3917
+      lemma: ви можете
+      status: sourced
+      chapter: '2.10.1'
+      comment: Personal-construction permission -- nominative "ви" as subject of a conjugated
+        verb (можете), the direct-address counterpart of вам можна (Горох-verified)
+      compare_scenario: A gate agent tells a passenger directly, addressing them as "you"
+        rather than using an impersonal phrase, that they're allowed to bring a certain item
+        along. What phrase expresses that direct personal permission?
+    - note_id: ua-lexeme-3918
+      lemma: ви мусите
+      status: sourced
+      chapter: '2.10.1'
+      comment: Personal-construction obligation, strongest/most urgent of the set -- "must,"
+        less negotiable than ви маєте or вам треба/потрібно (Горох-verified)
+      compare_scenario: A strict boarding announcement insists, urgently and without room
+        for negotiation, that passengers arrive by a certain time -- stronger and more
+        forceful than an ordinary requirement. What phrase expresses that forceful,
+        non-negotiable obligation?
+  free-available-costless-liberty:
+    description: |
+      English "free" splits across (at least) three genuinely different Ukrainian concepts;
+      cluster flagged 2026-09-04 during ch.10.1 (airport/travel prohibitions) confusable
+      review, Craig confirmed include-all. ві́льний is available/unoccupied/independent
+      (a free seat, free time, an independent person) -- adjective. безкошто́вний is costless,
+      free of charge -- adjective, same POS as вільний, the pairing most likely to trip up a
+      learner translating "free" literally. свобо́да is the abstract noun "freedom, liberty"
+      -- a different part of speech from the other two, included per Craig's request rather
+      than because it's easily mistaken for either adjective in a sentence. NOTE: a third
+      sense of English "free" -- released, not captured/held (e.g. "set free") -- has no
+      corresponding note anywhere in the corpus yet (checked звільнити/звільнений/визволити
+      and variants, all unsourced); nothing to cross-link for that sense until one is drafted.
+    canonical_note: ua-lexeme-0635
+    members:
+    - note_id: ua-lexeme-0635
+      lemma: ві́льний
+      status: sourced
+      chapter: '2.10.1'
+      comment: Available/unoccupied/independent -- a free seat, free time, an independent
+        person; NOT about cost (Горох-verified)
+      compare_scenario: You walk into a cafe and scan the room for a table nobody's sitting
+        at yet -- what word describes that open, unoccupied table?
+    - note_id: ua-lexeme-1623
+      lemma: безкошто́вний
+      status: sourced
+      chapter: '2.5.5'
+      comment: Costless, free of charge -- same adjective POS as вільний, the pair most
+        likely confused when translating English "free" literally (Горох-verified)
+      compare_scenario: A museum posts a sign saying today's admission won't cost visitors
+        anything at all -- what word describes an admission with no price tag?
+    - note_id: ua-lexeme-2769
+      lemma: свобо́да
+      status: sourced
+      chapter: '1.2.5'
+      comment: Abstract noun "freedom, liberty" -- different part of speech from the other
+        two, included per Craig's request as the word-family relative of the independent/
+        unconstrained sense of вільний
+      compare_scenario: A speech names the broad, abstract value a country's constitution
+        is meant to protect -- people's right to live and choose without being controlled
+        by others. What's the general noun for that value itself?
+  smoke-vs-burn-pal-root-family:
+    description: |
+      Cluster flagged 2026-09-04, Craig: ua-lexeme-0644 (палити, "to smoke") confuses with
+      курити (the other common "to smoke" verb) as well as any other verb meaning "to burn."
+      Extended the same day, Craig: "distinguish these three as well" -- горіти/згоріти and
+      тліти, both checked and confirmed absent from the corpus in the original pass, now
+      sourced and added. The first four members share the -пал- fire/burn root with different
+      prefixes/senses; горіти/згоріти and тліти use a different root (гор-/тл-) but the same
+      "to burn" semantic field, which is exactly why they belong in this cluster despite not
+      sharing the root. палити is the word this chapter's prohibition-sign register actually
+      uses ("Палити заборонено" is the standard Ukrainian "No Smoking" sign wording) -- its
+      smoking sense is essentially "to burn [a cigarette]." курити is the general, everyday
+      conversational verb for the smoking habit (textbook aspect pair курити/покурити,
+      ua-lexeme-1770/1771). спалювати/спалити is the dedicated destructive "burn something
+      up" pair. запалювати/запалити is the opposite end of the fire process -- to light/
+      ignite/kindle a flame, not consume by one. горіти/згоріти is the basic intransitive
+      "to burn / be on fire" pair -- not destructive like спалювати and not about ignition
+      like запалювати, just the state or process of burning itself. тліти is the smolder
+      sense -- burning without flame, no clean perfective on Горох, tagged
+      aspect:imperfective-only like палити.
+    show_all_members: true
+    canonical_note: ua-lexeme-0644
+    members:
+    - note_id: ua-lexeme-0644
+      lemma: пали́ти
+      status: sourced
+      chapter: '2.10.1'
+      comment: The word actual "No Smoking" signage uses ("Палити заборонено"); its smoking
+        sense is essentially "to burn [a cigarette]" -- imperfective-only in this sense
+        (Горох-verified)
+      compare_scenario: A sign posted right at the airport gate uses fixed, official wording
+        to forbid a well-known habit involving cigarettes -- what verb does that sign use?
+    - note_id: ua-lexeme-1770
+      lemma: кури́ти
+      status: sourced
+      chapter: '2.6.3'
+      comment: The general, everyday conversational verb for the smoking habit -- what you'd
+        use talking about someone's personal habit, not signage wording; full aspect pair
+        курити/покурити (Горох-verified)
+      compare_scenario: Catching up with an old friend, you mention that he gave up a certain
+        habit involving cigarettes two years ago -- what verb names that habit in everyday
+        conversation?
+    - note_id: ua-lexeme-0732
+      lemma: спа́лювати
+      status: sourced
+      chapter: '2.10.5'
+      comment: To burn something UP -- destructive, consuming by fire (burning books, burning
+        something down); a fully distinct root pairing from the smoking sense despite the
+        shared root (Горох-verified)
+      compare_scenario: A censorship-era decree orders that banned books be destroyed by
+        fire entirely, leaving nothing behind -- what verb names that destructive act?
+    - note_id: ua-lexeme-0918
+      lemma: запа́лювати
+      status: sourced
+      chapter: '2.1.5'
+      comment: To light/ignite/kindle -- START a flame (a candle, sparklers, a match), the
+        opposite end of the process from спалювати's destruction (Горох-verified)
+      compare_scenario: On New Year's Eve, kids can't wait to strike a match and set their
+        sparklers alight -- what verb names starting that flame?
+    - note_id: ua-lexeme-3912
+      lemma: горі́ти
+      status: sourced
+      chapter: '2.10.1'
+      comment: The basic intransitive "to burn / be on fire" -- not destructive like
+        спалювати and not about ignition like запалювати, just the state or process of
+        burning itself; perfective згорі́ти (Горох-verified)
+      compare_scenario: Through the window, you can see a candle's small flame steadily
+        lit on the table, nothing dramatic, just alight. What verb describes that plain
+        state of being on fire?
+    - note_id: ua-lexeme-3913
+      lemma: тлі́ти
+      status: sourced
+      chapter: '2.10.1'
+      comment: To smolder -- burning without flame, no clean perfective on Горох, tagged
+        aspect:imperfective-only like палити (Горох-verified)
+      compare_scenario: Long after the campfire's flames have died down, the coals are
+        still glowing red and hot, with no visible flame at all. What verb describes what
+        those coals are doing?
+  baggage-load-bag-family:
+    description: |
+      "Link them all" cluster, Craig's request 2026-09-04: поклажа (ua-lexeme-0633) plus
+      every genuinely relevant baggage/bag/container word turned up during the confusable
+      scan. поклажа is the abstract, collective "baggage, load" -- everything you're
+      carrying as a whole, not any one container, and used almost exclusively in the
+      singular. валіза narrows to a specific suitcase. сумка, мішок, and торба are three
+      near-synonymous "bag/sack" nouns whose EN_Gloss values already overlapped each other
+      before this cluster existed (сумка "bag, purse"; мішок "sack, bag"; торба "bag, sack")
+      -- distinguished here by container type and register: сумка is an everyday personal
+      handheld/shoulder bag or purse; мішок is a large, shapeless bulk sack for loose goods
+      like potatoes or grain; торба is a cloth carry-bag or sack for shopping/personal items,
+      typically over the shoulder. Excluded as false-positive keyword-search noise (matched
+      only via accidental substrings, not real confusables): равлик ("escargot" contains
+      "cargo"), голубець and капуста ("cabbage"/"garbage" both contain "bag"). Also excluded
+      as a different concept or different POS entirely: посилка (parcel/mailed item), пакет
+      (packet/plastic bag), пачка (pack/carton), запаковувати/пакувати/завантажувати ("to
+      pack"/"to load", verbs) -- plus phrases already built directly on поклажа or
+      відділення themselves (ручна поклажа, багажне відділення, багажний), which aren't
+      separate confusable words.
+    show_all_members: true
+    canonical_note: ua-lexeme-0633
+    members:
+    - note_id: ua-lexeme-0633
+      lemma: покла́жа
+      status: sourced
+      chapter: '2.10.1'
+      comment: Abstract/collective "baggage, load" -- everything being carried as a whole,
+        not any specific container; used almost exclusively in the singular (Горох-verified)
+      compare_scenario: An airport worker asks whether everything you're carrying with you
+        today -- suitcase, bags, all of it together -- is now accounted for. What's the
+        general word for everything you're carrying, not any one bag specifically?
+    - note_id: ua-lexeme-0620
+      lemma: валі́за
+      status: sourced
+      chapter: '2.10.1'
+      comment: A suitcase specifically -- a rigid/wheeled travel case (Горох-verified)
+      compare_scenario: You're wheeling a hard-shell case with a handle through the airport,
+        packed for your trip. What's the specific word for that piece of luggage?
+    - note_id: ua-lexeme-3373
+      lemma: су́мка
+      status: sourced
+      chapter: '1.7.5'
+      comment: An everyday handheld or shoulder bag/purse, personal carry, not specifically
+        for travel (Горох-verified, yabluko-l1 pass)
+      compare_scenario: Patting yourself down at the door, you're trying to remember which
+        shoulder you slung your everyday bag over before you left the house. What's the
+        everyday word for that bag or purse?
+    - note_id: ua-lexeme-3310
+      lemma: мішо́к
+      status: sourced
+      chapter: '1.7.3'
+      comment: A sack for bulk loose goods (potatoes, grain) -- large, shapeless, utilitarian,
+        not a personal carry-bag (Горох-verified, yabluko-l1 pass)
+      compare_scenario: A farmer hoists a large, shapeless burlap sack of potatoes onto a
+        truck. What's the word for that kind of bulk sack?
+    - note_id: ua-lexeme-2424
+      lemma: то́рба
+      status: sourced
+      chapter: '1.11.3'
+      comment: A cloth carry-bag or sack for shopping or personal items, often over the
+        shoulder -- distinct from мішок's bulk-storage sack (Горох-verified, yabluko-l1 pass)
+      compare_scenario: Walking home from the market, she's got a cloth bag of groceries
+        slung over one arm. What's the word for that kind of carry-bag?

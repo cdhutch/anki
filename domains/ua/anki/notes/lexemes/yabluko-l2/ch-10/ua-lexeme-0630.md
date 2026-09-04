@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:adjective
-- status:draft
+- status:verified
 - release:active
 fields:
   NoteID: ua-lexeme-0630
@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: passport- (relational)
+  EN_Gloss: 'passport (adj.: relational)'
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''

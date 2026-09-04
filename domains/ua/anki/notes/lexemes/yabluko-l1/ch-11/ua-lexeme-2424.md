@@ -30,7 +30,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. поклажа, валіза, сумка, мішок -- торба is a cloth carry-bag/sack for
+    shopping or personal items, often over the shoulder, distinct from мішок's bulk-storage
+    sack.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: торба

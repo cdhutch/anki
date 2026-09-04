@@ -12,7 +12,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:noun
-- status:draft
+- status:verified
 - release:active
 - relearn:pending
 - ch:2.2.1

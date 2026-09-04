@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:noun
-- status:draft
+- status:verified
 - release:active
 fields:
   NoteID: ua-lexeme-0624
@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: check-in, registration
+  EN_Gloss: registration, check-in
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''

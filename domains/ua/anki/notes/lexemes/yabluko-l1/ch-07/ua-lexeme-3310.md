@@ -31,7 +31,8 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. поклажа, валіза, сумка, торба -- мішок is specifically a large, shapeless
+    bulk sack for loose goods (potatoes, grain), not a personal carry-bag.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: мішок

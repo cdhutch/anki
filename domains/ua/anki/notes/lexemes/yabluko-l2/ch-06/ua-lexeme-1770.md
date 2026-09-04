@@ -32,7 +32,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: покури́ти (ua-lexeme-1771, perfective)
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. палити (the word used on "No Smoking" signage) -- курити is the everyday
+    conversational verb for the smoking habit. Also cf. спалювати, запалювати, горіти, тліти
+    -- unrelated "burn" verbs sometimes confused with the smoking sense.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: курити

@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:noun
 - status:draft
-- release:active
+- release:pending
 fields:
   NoteID: ua-lexeme-0631
   Lemma: тало́н
@@ -30,7 +30,8 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. квиток -- the general word for an admission/travel ticket; талон is narrower,
+    a numbered stub/coupon/claim-check, not admission itself.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: талон
