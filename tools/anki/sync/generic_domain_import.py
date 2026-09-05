@@ -178,15 +178,30 @@ def sync_notes_to_anki(
 
     existing_models = anki_request("modelNames", url=ANKI_URL) or []
 
-    print(f"\nSyncing {len(cnsf_files)} note(s)...")
-
-    synced = 0
-    by_deck: Dict[str, int] = {}
+    # Pre-parse to discover every deck this run will need, and create them
+    # up front (createDeck is idempotent -- a no-op for decks that already
+    # exist). AnkiConnect's addNote does NOT auto-create missing decks.
+    parsed: List[tuple[Path, Dict[str, Any]]] = []
+    needed_decks: set[str] = set()
     for cnsf_path in cnsf_files:
         cnsf_data = parse_cnsf_file(cnsf_path)
         if not cnsf_data:
             continue
+        parsed.append((cnsf_path, cnsf_data))
+        _, resolved_deck = resolve_model_and_deck(cnsf_data, model_name, deck_name)
+        if resolved_deck:
+            needed_decks.add(resolved_deck)
 
+    for deck in sorted(needed_decks):
+        anki_request("createDeck", {"deck": deck}, url=ANKI_URL)
+    if needed_decks:
+        print(f"Ensured {len(needed_decks)} deck(s) exist: {', '.join(sorted(needed_decks))}")
+
+    print(f"\nSyncing {len(cnsf_files)} note(s)...")
+
+    synced = 0
+    by_deck: Dict[str, int] = {}
+    for cnsf_path, cnsf_data in parsed:
         resolved_model, resolved_deck = resolve_model_and_deck(cnsf_data, model_name, deck_name)
         if not resolved_deck:
             print(f"  \u2717 {cnsf_path.name}: no deck in note frontmatter and no --deck fallback given")
