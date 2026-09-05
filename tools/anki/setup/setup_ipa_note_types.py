@@ -46,15 +46,14 @@ IPA_PHONEME_FIELDS = [
 ]
 
 IPA_PHONEME_FRONT = """\
-<div style="font-size: 48px; font-weight: bold; text-align: center; margin-bottom: 16px;">{{IPA_Symbol}}</div>
-<div style="font-size: 18px; text-align: center; margin-bottom: 8px;">{{Phoneme}}</div>
-<div style="font-size: 13px; text-align: center; color: #999;">{{Type}}</div>
+<div style="font-size: 72px; font-weight: bold; text-align: center;">{{IPA_Symbol}}</div>
 """
 
 IPA_PHONEME_BACK = """\
 {{FrontSide}}
 <hr>
-{{#Description}}<div style="font-size: 16px; margin-bottom: 12px;">{{Description}}</div>{{/Description}}
+{{#Type}}<div style="font-size: 13px; color: #666;"><strong>Type:</strong> {{Type}}</div>{{/Type}}
+{{#Description}}<div style="font-size: 16px; margin: 8px 0 12px;">{{Description}}</div>{{/Description}}
 {{#Manner_of_Articulation}}<div style="font-size: 13px; color: #666;"><strong>Manner:</strong> {{Manner_of_Articulation}}</div>{{/Manner_of_Articulation}}
 {{#Place_of_Articulation}}<div style="font-size: 13px; color: #666;"><strong>Place:</strong> {{Place_of_Articulation}}</div>{{/Place_of_Articulation}}
 {{#Voicing}}<div style="font-size: 13px; color: #666;"><strong>Voicing:</strong> {{Voicing}}</div>{{/Voicing}}
