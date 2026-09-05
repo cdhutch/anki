@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>B<b>oo</b>t
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>B<b>oo</b>t
     (boat)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>V<b>a</b>ter
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>V<b>a</b>ter
     (father)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

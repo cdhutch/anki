@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">French</span>b<b>on</b>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>b<b>on</b>
     (good)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

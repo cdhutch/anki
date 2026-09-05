@@ -17,11 +17,11 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>t</b>op</div><div
-    class="ipa-example-line"><span class="ipa-lang">German</span><b>T</b>ag (day)</div><div
-    class="ipa-example-line"><span class="ipa-lang">French</span><b>t</b>u (you)</div><div
-    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>т</b>ам (there)</div><div
-    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>т</b>ато (dad)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>t</b>op</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>T</b>ag (day)</div><div class="ipa-example-line"><span
+    class="ipa-flag">🇫🇷</span><b>t</b>u (you)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>т</b>ам
+    (there)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>т</b>ато
+    (dad)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

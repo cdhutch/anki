@@ -17,11 +17,10 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>l<b>aw</b>
-    (merging with ɑ for many speakers)</div><div class="ipa-example-line"><span class="ipa-lang">German</span><b>O</b>rt
-    (place)</div><div class="ipa-example-line"><span class="ipa-lang">French</span>h<b>o</b>mme
-    (man)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>о</b>ко
-    (eye)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>l<b>aw</b>
+    (merging with ɑ for many speakers)</div><div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>O</b>rt
+    (place)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>h<b>o</b>mme
+    (man)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>о</b>ко (eye)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

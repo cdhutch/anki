@@ -17,9 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>a</b>bout</div><div
-    class="ipa-example-line"><span class="ipa-lang">German</span>b<b>i</b>tt<b>e</b> (please)</div><div
-    class="ipa-example-line"><span class="ipa-lang">French</span><b>le</b> (the)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>a</b>bout</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>b<b>i</b>tt<b>e</b> (please)</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>le</b> (the)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -96,9 +96,9 @@ def sync_field_order(model_name: str, desired_fields: list[str]) -> bool:
 
 MODEL_CSS = """\
 .card { font-family: Arial; font-size: 16px; }
-.ipa-examples { margin: 12px 0; }
-.ipa-example-line { font-size: 24px; line-height: 1.9; margin: 2px 0; }
-.ipa-lang { color: #888; font-size: 0.5em; margin-right: 10px; min-width: 70px; display: inline-block; text-align: right; }
+.ipa-examples { margin: 12px 0; text-align: center; }
+.ipa-example-line { font-size: 36px; line-height: 1.7; margin: 6px 0; }
+.ipa-flag { font-size: 0.7em; margin-right: 12px; }
 """
 
 

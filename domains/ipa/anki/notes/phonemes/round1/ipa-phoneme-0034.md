@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>дз</b>він
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>дз</b>він
     (bell)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

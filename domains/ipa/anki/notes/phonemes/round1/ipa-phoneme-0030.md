@@ -17,11 +17,11 @@ fields:
   Place_of_Articulation: palatal
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>y</b>es</div><div
-    class="ipa-example-line"><span class="ipa-lang">German</span><b>j</b>a (yes)</div><div
-    class="ipa-example-line"><span class="ipa-lang">French</span>h<b>ier</b> (yesterday)</div><div
-    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>я</b> (I)</div><div class="ipa-example-line"><span
-    class="ipa-lang">Ukrainian</span><b>я</b> (I)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>y</b>es</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>j</b>a (yes)</div><div class="ipa-example-line"><span
+    class="ipa-flag">🇫🇷</span>h<b>ier</b> (yesterday)</div><div class="ipa-example-line"><span
+    class="ipa-flag">🇷🇺</span><b>я</b> (I)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>я</b>
+    (I)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

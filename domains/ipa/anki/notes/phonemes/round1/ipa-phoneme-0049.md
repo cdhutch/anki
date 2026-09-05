@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>м</b>ир
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>м</b>ир
     (world/peace)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

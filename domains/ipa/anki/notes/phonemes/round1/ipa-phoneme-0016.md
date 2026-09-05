@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: dental
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>th</b>is</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>th</b>is</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: uvular
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span><b>R</b>ot
-    (red)</div><div class="ipa-example-line"><span class="ipa-lang">French</span><b>r</b>ouge
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>R</b>ot
+    (red)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>r</b>ouge
     (red)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

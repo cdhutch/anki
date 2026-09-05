@@ -231,11 +231,20 @@ def build_examples(header: List[str], row: List[str]) -> Dict[str, str]:
     return examples
 
 
+LANG_FLAGS: Dict[str, str] = {
+    "English": "\U0001F1FA\U0001F1F8",  # US flag -- table scope is General American English
+    "German": "\U0001F1E9\U0001F1EA",
+    "French": "\U0001F1EB\U0001F1F7",
+    "Russian": "\U0001F1F7\U0001F1FA",
+    "Ukrainian": "\U0001F1FA\U0001F1E6",
+}
+
+
 def format_example_words(examples: Dict[str, str]) -> str:
-    """One styled block per language, in card-ready HTML: a small muted
-    language label followed by the (bold-lettered) example word, large."""
+    """One styled block per language, in card-ready HTML: a country flag
+    followed by the (bold-lettered) example word, large."""
     return "".join(
-        f'<div class="ipa-example-line"><span class="ipa-lang">{lang}</span>{word}</div>'
+        f'<div class="ipa-example-line"><span class="ipa-flag">{LANG_FLAGS.get(lang, "")}</span>{word}</div>'
         for lang, word in examples.items()
     )
 

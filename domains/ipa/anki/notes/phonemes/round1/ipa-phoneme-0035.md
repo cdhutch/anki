@@ -17,9 +17,9 @@ fields:
   Place_of_Articulation: postalveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>ch</b>air</div><div
-    class="ipa-example-line"><span class="ipa-lang">German</span><b>Tsch</b>üss (bye)</div><div
-    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>ч</b>ай (tea)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>ch</b>air</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>Tsch</b>üss (bye)</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>ч</b>ай (tea)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

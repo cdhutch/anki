@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: palatal
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span><b>i</b>ch
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>i</b>ch
     (I)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

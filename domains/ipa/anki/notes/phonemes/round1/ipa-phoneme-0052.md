@@ -17,9 +17,8 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>день</b>
-    (day)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>де<b>нь</b>
-    (day)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>день</b>
+    (day)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>де<b>нь</b> (day)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

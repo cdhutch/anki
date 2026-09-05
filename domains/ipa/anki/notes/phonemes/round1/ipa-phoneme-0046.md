@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: labiodental
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>ф</b>ильм
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>ф</b>ильм
     (film)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

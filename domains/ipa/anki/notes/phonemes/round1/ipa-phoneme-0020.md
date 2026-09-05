@@ -17,11 +17,11 @@ fields:
   Place_of_Articulation: postalveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>mea<b>s</b>ure</div><div
-    class="ipa-example-line"><span class="ipa-lang">German</span>Ge<b>n</b>ie (genius, loanword)</div><div
-    class="ipa-example-line"><span class="ipa-lang">French</span><b>j</b>e (I)</div><div class="ipa-example-line"><span
-    class="ipa-lang">Russian</span><b>ж</b>енщина (woman)</div><div class="ipa-example-line"><span
-    class="ipa-lang">Ukrainian</span><b>ж</b>інка (woman)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>mea<b>s</b>ure</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>Ge<b>n</b>ie (genius, loanword)</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>j</b>e (I)</div><div class="ipa-example-line"><span
+    class="ipa-flag">🇷🇺</span><b>ж</b>енщина (woman)</div><div class="ipa-example-line"><span
+    class="ipa-flag">🇺🇦</span><b>ж</b>інка (woman)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span>т<b>ы</b>
-    (you, informal)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span>т<b>ы</b> (you,
+    informal)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

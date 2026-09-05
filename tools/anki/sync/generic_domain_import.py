@@ -211,19 +211,36 @@ def sync_notes_to_anki(
             continue
 
         anki_note = build_anki_note(cnsf_data, resolved_model, fields_list)
+        note_id = cnsf_data.get("fields", {}).get("NoteID") or cnsf_data.get("note_id")
 
         try:
-            anki_request(
-                "addNote",
-                {
-                    "note": {
-                        **anki_note,
-                        "deckName": resolved_deck,
-                    }
-                },
-                url=ANKI_URL,
-            )
-            print(f"  \u2713 {cnsf_path.name} -> {resolved_deck}")
+            existing_note_ids = []
+            if note_id:
+                existing_note_ids = anki_request(
+                    "findNotes",
+                    {"query": f'note:"{resolved_model}" NoteID:"{note_id}"'},
+                    url=ANKI_URL,
+                ) or []
+
+            if existing_note_ids:
+                anki_request(
+                    "updateNoteFields",
+                    {"note": {"id": existing_note_ids[0], "fields": anki_note["fields"]}},
+                    url=ANKI_URL,
+                )
+                print(f"  \u2713 {cnsf_path.name} -> {resolved_deck} (updated)")
+            else:
+                anki_request(
+                    "addNote",
+                    {
+                        "note": {
+                            **anki_note,
+                            "deckName": resolved_deck,
+                        }
+                    },
+                    url=ANKI_URL,
+                )
+                print(f"  \u2713 {cnsf_path.name} -> {resolved_deck} (added)")
             synced += 1
             by_deck[resolved_deck] = by_deck.get(resolved_deck, 0) + 1
         except Exception as e:

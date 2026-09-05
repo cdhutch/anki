@@ -17,11 +17,11 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>see</div><div
-    class="ipa-example-line"><span class="ipa-lang">German</span>L<b>ie</b>be (love)</div><div
-    class="ipa-example-line"><span class="ipa-lang">French</span>s<b>i</b> (if)</div><div
-    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>и</b> (and)</div><div
-    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>і</b> (and)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>see</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>L<b>ie</b>be (love)</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>s<b>i</b> (if)</div><div class="ipa-example-line"><span
+    class="ipa-flag">🇷🇺</span><b>и</b> (and)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>і</b>
+    (and)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

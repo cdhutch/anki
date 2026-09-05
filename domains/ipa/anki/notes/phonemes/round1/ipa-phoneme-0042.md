@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>м</b>а<b>ть</b>
-    (mother)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>пʼя<b>ть</b>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>м</b>а<b>ть</b>
+    (mother)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>пʼя<b>ть</b>
     (five)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

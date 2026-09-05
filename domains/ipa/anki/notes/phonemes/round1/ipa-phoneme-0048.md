@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>х</b>имия
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>х</b>имия
     (chemistry)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
