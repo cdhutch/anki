@@ -17,10 +17,11 @@ fields:
   Place_of_Articulation: labiodental
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>v</b>oice</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>W</b>asser (water)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>v</b>ous (you-formal)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>в</b>ода (water)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">v</b>oice</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">W</b>asser
+    (water)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">v</b>ous
+    (you-formal)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">в</b>ода
+    (water)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

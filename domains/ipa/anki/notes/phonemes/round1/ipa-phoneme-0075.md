@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>lett<b>er</b></div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>lett<b class="ipa-sound">er</b></div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

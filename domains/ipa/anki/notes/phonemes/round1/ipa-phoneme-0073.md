@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>Vat<b>er</b>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>Vat<b class="ipa-sound">er</b>
     (father)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

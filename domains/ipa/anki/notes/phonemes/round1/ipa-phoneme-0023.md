@@ -17,8 +17,9 @@ fields:
   Place_of_Articulation: glottal
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>h</b>at</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>H</b>aus (house)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">h</b>at</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">H</b>aus
+    (house)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

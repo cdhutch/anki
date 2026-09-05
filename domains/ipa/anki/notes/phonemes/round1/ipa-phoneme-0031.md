@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: labial-palatal
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>h<b>u</b>it
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>h<b class="ipa-sound">u</b>it
     (eight)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

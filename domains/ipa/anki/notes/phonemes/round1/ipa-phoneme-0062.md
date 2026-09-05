@@ -17,10 +17,11 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>M<b>a</b>nn
-    (man)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>p<b>a</b>pa (dad)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇷🇺</span>м<b>а</b>ма (mom)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span>м<b>а</b>ма (mom)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>M<b class="ipa-sound">a</b>nn
+    (man)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>p<b class="ipa-sound">a</b>pa
+    (dad)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span>м<b class="ipa-sound">а</b>ма
+    (mom)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>м<b class="ipa-sound">а</b>ма
+    (mom)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,8 +17,9 @@ fields:
   Place_of_Articulation: labial-velar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>w</b>e</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>ou</b>i (yes)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">w</b>e</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">ou</b>i
+    (yes)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

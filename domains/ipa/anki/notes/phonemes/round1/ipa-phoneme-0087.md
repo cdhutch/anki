@@ -17,8 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>h<b>ow</b></div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>H<b>au</b>s (house)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>h<b class="ipa-sound">ow</b></div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>H<b class="ipa-sound">au</b>s
+    (house)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

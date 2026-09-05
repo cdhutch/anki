@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>sch<b>ö</b>n
-    (beautiful)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>p<b>eu</b>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>sch<b class="ipa-sound">ö</b>n
+    (beautiful)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>p<b class="ipa-sound">eu</b>
     (little/few)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

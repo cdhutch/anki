@@ -17,11 +17,12 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>s</b>un</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>e<b>s</b> (it)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇫🇷</span><b>s</b>ous (under)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇷🇺</span><b>с</b>олнце (sun)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span><b>с</b>онце (sun)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">s</b>un</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>e<b class="ipa-sound">s</b> (it)</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">s</b>ous
+    (under)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">с</b>олнце
+    (sun)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">с</b>онце
+    (sun)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

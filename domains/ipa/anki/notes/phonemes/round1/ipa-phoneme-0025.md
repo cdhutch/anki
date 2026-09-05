@@ -17,9 +17,9 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>mi<b>l</b>k
-    (coda allophone only)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>л</b>ампа
-    (lamp)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>mi<b class="ipa-sound">l</b>k
+    (coda allophone only)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b
+    class="ipa-sound">л</b>ампа (lamp)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

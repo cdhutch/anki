@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>к</b>ино
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">к</b>ино
     (cinema)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

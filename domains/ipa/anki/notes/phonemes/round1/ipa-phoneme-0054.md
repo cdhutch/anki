@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>буря</b>
-    (storm)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>бур</b>я
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">буря</b>
+    (storm)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">бур</b>я
     (storm)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

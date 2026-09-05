@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>s<b>an</b>s
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>s<b class="ipa-sound">an</b>s
     (without)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

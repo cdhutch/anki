@@ -17,9 +17,10 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>l</b>ove</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>L</b>iebe (love)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>l</b>ait (milk)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">l</b>ove</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">L</b>iebe
+    (love)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">l</b>ait
+    (milk)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

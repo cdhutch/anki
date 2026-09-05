@@ -17,10 +17,11 @@ fields:
   Place_of_Articulation: postalveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>j</b>am</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>Dsch</b>ungel (jungle, loanword)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>дж</b>ем (jam, loanword)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>дж</b>ем (jam)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">j</b>am</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">Dsch</b>ungel
+    (jungle, loanword)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b
+    class="ipa-sound">дж</b>ем (jam, loanword)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b
+    class="ipa-sound">дж</b>ем (jam)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

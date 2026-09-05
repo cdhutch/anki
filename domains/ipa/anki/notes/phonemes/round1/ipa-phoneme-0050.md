@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>с</b>егодня
-    (today)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>сь</b>огодні
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">с</b>егодня
+    (today)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">сь</b>огодні
     (today)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>r</b>ed</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">r</b>ed</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

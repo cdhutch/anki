@@ -94,11 +94,18 @@ def sync_field_order(model_name: str, desired_fields: list[str]) -> bool:
     return True
 
 
+# Gruvbox palette (github.com/morhetz/gruvbox), same one used across the
+# repo's UA cards (see setup_ua_note_types.py) -- Accent A (orange) marks
+# the letters that spell the target sound, matching the role .lemma plays
+# there. Single .nightMode selector only, no .night_mode duplicate (per
+# Craig 2026-08-01).
 MODEL_CSS = """\
 .card { font-family: Arial; font-size: 16px; }
 .ipa-examples { margin: 12px 0; text-align: center; }
 .ipa-example-line { font-size: 36px; line-height: 1.7; margin: 6px 0; }
 .ipa-flag { font-size: 0.7em; margin-right: 12px; }
+.ipa-sound { color: #af3a03; } /* Accent A: orange (light) */
+.nightMode .ipa-sound { color: #fe8019; } /* Accent A: orange (dark) */
 """
 
 

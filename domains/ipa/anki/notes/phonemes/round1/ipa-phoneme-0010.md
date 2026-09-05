@@ -17,9 +17,10 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>si<b>ng</b></div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>si<b>ng</b>en (to sing)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>parki<b>ng</b> (loanword)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>si<b class="ipa-sound">ng</b></div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>si<b class="ipa-sound">ng</b>en
+    (to sing)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>parki<b class="ipa-sound">ng</b>
+    (loanword)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

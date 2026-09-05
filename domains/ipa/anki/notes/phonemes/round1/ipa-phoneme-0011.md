@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: palatal
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>mo<b>ntagn</b>e
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>mo<b class="ipa-sound">ntagn</b>e
     (mountain)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

@@ -17,10 +17,11 @@ fields:
   Place_of_Articulation: labiodental
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>f</b>un</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>F</b>isch (fish)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>ф</b>ото (photo, loanword)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>ф</b>ото (photo, loanword)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">f</b>un</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">F</b>isch
+    (fish)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">ф</b>ото
+    (photo, loanword)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b
+    class="ipa-sound">ф</b>ото (photo, loanword)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

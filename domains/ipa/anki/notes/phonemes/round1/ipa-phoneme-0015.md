@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: dental
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>th</b>ink</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">th</b>ink</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

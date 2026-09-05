@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>D<b>eu</b>tsch
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>D<b class="ipa-sound">eu</b>tsch
     (German)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

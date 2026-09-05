@@ -17,11 +17,12 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>c</b>at</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>K</b>atze (cat)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>c</b>afé (coffee)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>к</b>от (cat)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span><b>к</b>іт (cat)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">c</b>at</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">K</b>atze
+    (cat)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">c</b>afé
+    (coffee)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">к</b>от
+    (cat)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">к</b>іт
+    (cat)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,9 +17,10 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>s<b>i</b>t</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>i</b>ch (I)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span>м<b>и</b> (we)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>s<b class="ipa-sound">i</b>t</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">i</b>ch
+    (I)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>м<b class="ipa-sound">и</b>
+    (we)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

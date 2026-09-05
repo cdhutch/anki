@@ -17,10 +17,12 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>n</b>o</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>n</b>ein (no)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇫🇷</span><b>n</b>on (no)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>н</b>ет
-    (no)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>н</b>і (no)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">n</b>o</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">n</b>ein
+    (no)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">n</b>on
+    (no)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">н</b>ет
+    (no)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">н</b>і
+    (no)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

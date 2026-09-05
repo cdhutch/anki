@@ -17,11 +17,12 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>b</b>ad</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>B</b>uch (book)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>b</b>on (good)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇷🇺</span><b>б</b>рат (brother)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span><b>б</b>рат (brother)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">b</b>ad</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">B</b>uch
+    (book)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">b</b>on
+    (good)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">б</b>рат
+    (brother)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">б</b>рат
+    (brother)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

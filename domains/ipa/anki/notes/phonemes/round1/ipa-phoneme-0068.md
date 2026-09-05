@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>eau</b>
-    (water)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span>д<b>о</b>м
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">eau</b>
+    (water)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span>д<b class="ipa-sound">о</b>м
     (house)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

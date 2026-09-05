@@ -17,10 +17,11 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>b<b>e</b>d</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>B<b>e</b>tt (bed)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇫🇷</span>p<b>è</b>re (father)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span><b>це</b> (this)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>b<b class="ipa-sound">e</b>d</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>B<b class="ipa-sound">e</b>tt
+    (bed)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>p<b class="ipa-sound">è</b>re
+    (father)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">це</b>
+    (this)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

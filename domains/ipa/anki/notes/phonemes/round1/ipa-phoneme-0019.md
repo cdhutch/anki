@@ -17,11 +17,12 @@ fields:
   Place_of_Articulation: postalveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>sh</b>ip</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>Sch</b>ule (school)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>ch</b>at (cat)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇷🇺</span><b>ш</b>кола (school)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span><b>ш</b>кола (school)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">sh</b>ip</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">Sch</b>ule
+    (school)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">ch</b>at
+    (cat)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">ш</b>кола
+    (school)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">ш</b>кола
+    (school)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

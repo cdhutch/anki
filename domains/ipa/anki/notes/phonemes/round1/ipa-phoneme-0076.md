@@ -17,8 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>ü</b>ber
-    (over/above)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>t<b>u</b>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">ü</b>ber
+    (over/above)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>t<b class="ipa-sound">u</b>
     (you)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

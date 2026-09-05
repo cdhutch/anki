@@ -17,10 +17,11 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>g</b>o</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>g</b>ut (good)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇫🇷</span><b>g</b>rand (big)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇷🇺</span><b>г</b>од (year)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>ґ<b>удзик</b>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">g</b>o</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">g</b>ut
+    (good)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">g</b>rand
+    (big)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">г</b>од
+    (year)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>ґ<b class="ipa-sound">удзик</b>
     (button)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

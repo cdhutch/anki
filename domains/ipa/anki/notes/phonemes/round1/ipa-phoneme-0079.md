@@ -17,8 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>k<b>ö</b>nnen
-    (can)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>s<b>œu</b>r (sister)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>k<b class="ipa-sound">ö</b>nnen
+    (can)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>s<b class="ipa-sound">œu</b>r
+    (sister)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

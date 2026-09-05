@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: alveolo-palatal
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>щ</b>ука
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">щ</b>ука
     (pike)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

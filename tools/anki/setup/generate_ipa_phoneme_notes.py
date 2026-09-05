@@ -165,10 +165,12 @@ def clean_cell(text: str) -> str:
 
 def cell_to_html(text: str) -> str:
     """Trim whitespace and convert markdown **bold** (marking the letters
-    that spell the target sound) to HTML <b> so Anki renders it as bold
-    instead of showing literal asterisks."""
+    that spell the target sound) to a styled HTML span so Anki renders it
+    bold AND in the repo's accent color, instead of showing literal
+    asterisks. The .ipa-sound class is defined in setup_ipa_note_types.py's
+    MODEL_CSS (Gruvbox Accent A -- same role as .lemma in the UA cards)."""
     text = text.strip()
-    return BOLD_RE.sub(r"<b>\1</b>", text)
+    return BOLD_RE.sub(r'<b class="ipa-sound">\1</b>', text)
 
 
 def slugify(text: str) -> str:

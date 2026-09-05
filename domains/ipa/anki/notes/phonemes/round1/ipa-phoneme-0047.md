@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: labiodental
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>в</b>ечер
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">в</b>ечер
     (evening)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

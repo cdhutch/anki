@@ -18,9 +18,10 @@ fields:
   Voicing: ''
   Airflow: ''
   Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>see</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>L<b>ie</b>be (love)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>s<b>i</b> (if)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇷🇺</span><b>и</b> (and)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>і</b>
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>L<b class="ipa-sound">ie</b>be
+    (love)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>s<b class="ipa-sound">i</b>
+    (if)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">и</b>
+    (and)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">і</b>
     (and)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

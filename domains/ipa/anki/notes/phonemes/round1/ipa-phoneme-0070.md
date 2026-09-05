@@ -17,8 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>b<b>oo</b>k</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>M<b>u</b>tter (mother)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>b<b class="ipa-sound">oo</b>k</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>M<b class="ipa-sound">u</b>tter
+    (mother)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

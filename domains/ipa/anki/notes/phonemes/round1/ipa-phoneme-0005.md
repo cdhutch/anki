@@ -17,11 +17,12 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>d</b>og</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>d</b>as (the/that)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>d</b>eux (two)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇷🇺</span><b>д</b>ом (house)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span><b>д</b>ім (house)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">d</b>og</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">d</b>as
+    (the/that)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">d</b>eux
+    (two)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">д</b>ом
+    (house)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">д</b>ім
+    (house)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

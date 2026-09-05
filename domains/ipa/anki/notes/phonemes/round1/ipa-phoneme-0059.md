@@ -17,8 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>T<b>ee</b>
-    (tea)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>ét<b>é</b> (summer)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>T<b class="ipa-sound">ee</b>
+    (tea)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span>ét<b class="ipa-sound">é</b>
+    (summer)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

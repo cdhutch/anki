@@ -17,8 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>m<b>y</b></div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>m<b>ei</b>n (my)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span>m<b class="ipa-sound">y</b></div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>m<b class="ipa-sound">ei</b>n
+    (my)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

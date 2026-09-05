@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: alveolo-palatal
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>ч</b>ай
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">ч</b>ай
     (tea) — more palatal than Ukrainian's ч</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

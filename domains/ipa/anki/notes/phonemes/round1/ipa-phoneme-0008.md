@@ -17,11 +17,12 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>m</b>om</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>M</b>utter (mother)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>m</b>aman (mom)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>м</b>ама (mom)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇺🇦</span><b>м</b>ама (mom)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">m</b>om</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">M</b>utter
+    (mother)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">m</b>aman
+    (mom)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">м</b>ама
+    (mom)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b class="ipa-sound">м</b>ама
+    (mom)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

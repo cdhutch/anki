@@ -17,10 +17,10 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>Ba<b>ch</b>
-    / a<b>ch</b>t (eight)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b>х</b>леб
-    (bread)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b>х</b>ліб
-    (bread)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇩🇪</span>Ba<b class="ipa-sound">ch</b>
+    / a<b class="ipa-sound">ch</b>t (eight)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b
+    class="ipa-sound">х</b>леб (bread)</div><div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span><b
+    class="ipa-sound">х</b>ліб (bread)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

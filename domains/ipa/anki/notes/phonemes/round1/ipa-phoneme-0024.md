@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: glottal
   Voicing: voiced
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>но<b>г</b>а
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇦</span>но<b class="ipa-sound">г</b>а
     (leg)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''

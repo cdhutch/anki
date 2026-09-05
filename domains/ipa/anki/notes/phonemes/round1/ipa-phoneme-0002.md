@@ -17,10 +17,11 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiceless
   Airflow: ''
-  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b>p</b>en</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b>P</b>apier (paper)</div><div
-    class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b>p</b>apa (dad)</div><div class="ipa-example-line"><span
-    class="ipa-flag">🇷🇺</span><b>п</b>апа (dad)</div>
+  Example_Words: <div class="ipa-example-line"><span class="ipa-flag">🇺🇸</span><b class="ipa-sound">p</b>en</div><div
+    class="ipa-example-line"><span class="ipa-flag">🇩🇪</span><b class="ipa-sound">P</b>apier
+    (paper)</div><div class="ipa-example-line"><span class="ipa-flag">🇫🇷</span><b class="ipa-sound">p</b>apa
+    (dad)</div><div class="ipa-example-line"><span class="ipa-flag">🇷🇺</span><b class="ipa-sound">п</b>апа
+    (dad)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''
