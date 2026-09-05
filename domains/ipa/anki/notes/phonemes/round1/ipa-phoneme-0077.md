@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German müssen (must)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>m<b>ü</b>ssen
+    (must)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: Ukrainian хлопець (boy)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>хло<b>пе</b>ц<b>ь</b>
+    (boy)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English zoo; German Sonne (sun); French zéro (zero); Russian зима (winter);
-    Ukrainian зима (winter)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>z</b>oo</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>S</b>onne (sun)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>z</b>éro (zero)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>з</b>има (winter)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>з</b>има (winter)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

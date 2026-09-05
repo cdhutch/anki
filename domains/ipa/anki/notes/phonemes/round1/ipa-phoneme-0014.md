@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: labiodental
   Voicing: voiced
   Airflow: ''
-  Example_Words: Ukrainian вода (water)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>в</b>ода
+    (water)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

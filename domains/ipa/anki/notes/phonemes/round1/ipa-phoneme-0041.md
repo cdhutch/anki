@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiced
   Airflow: ''
-  Example_Words: Russian белый (white)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>б</b>елый
+    (white)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

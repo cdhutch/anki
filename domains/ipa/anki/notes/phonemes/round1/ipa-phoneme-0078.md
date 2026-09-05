@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German schön (beautiful); French peu (little/few)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>sch<b>ö</b>n
+    (beautiful)</div><div class="ipa-example-line"><span class="ipa-lang">French</span>p<b>eu</b>
+    (little/few)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

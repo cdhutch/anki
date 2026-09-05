@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: labiodental
   Voicing: voiced
   Airflow: ''
-  Example_Words: Russian вечер (evening)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>в</b>ечер
+    (evening)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

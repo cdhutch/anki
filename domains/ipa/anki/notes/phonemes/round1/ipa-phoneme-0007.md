@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English go; German gut (good); French grand (big); Russian год (year); Ukrainian
-    ґудзик (button)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>g</b>o</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>g</b>ut (good)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>g</b>rand (big)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>г</b>од (year)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>ґ<b>удзик</b> (button)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

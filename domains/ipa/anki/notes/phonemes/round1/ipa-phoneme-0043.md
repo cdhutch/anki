@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: Russian дети (children); Ukrainian діти (children)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>д</b>ети
+    (children)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>ді</b>ти
+    (children)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: English cat; German Katze (cat); French café (coffee); Russian кот (cat);
-    Ukrainian кіт (cat)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>c</b>at</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>K</b>atze (cat)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>c</b>afé (coffee)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>к</b>от (cat)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>к</b>іт (cat)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

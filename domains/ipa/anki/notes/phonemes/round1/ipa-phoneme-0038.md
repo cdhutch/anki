@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: postalveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English jam; German Dschungel (jungle, loanword); Russian джем (jam, loanword);
-    Ukrainian джем (jam)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>j</b>am</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>Dsch</b>ungel (jungle,
+    loanword)</div><div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>дж</b>ем
+    (jam, loanword)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>дж</b>ем
+    (jam)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

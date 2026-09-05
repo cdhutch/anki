@@ -157,8 +157,18 @@ BOLD_RE = re.compile(r"\*\*(.+?)\*\*")
 
 
 def clean_cell(text: str) -> str:
+    """Whitespace-trimmed cell text, markdown bold stripped -- used only for
+    blank/cross-reference detection, never for what actually gets stored."""
     text = BOLD_RE.sub(r"\1", text.strip())
     return text.strip()
+
+
+def cell_to_html(text: str) -> str:
+    """Trim whitespace and convert markdown **bold** (marking the letters
+    that spell the target sound) to HTML <b> so Anki renders it as bold
+    instead of showing literal asterisks."""
+    text = text.strip()
+    return BOLD_RE.sub(r"<b>\1</b>", text)
 
 
 def slugify(text: str) -> str:
@@ -205,25 +215,29 @@ def parse_markdown_tables(md_text: str) -> Dict[str, List[List[str]]]:
 
 
 def build_examples(header: List[str], row: List[str]) -> Dict[str, str]:
+    """Return {language: html_word}, keyed off the cleaned (bold-stripped)
+    cell for blank/cross-reference detection, but storing the HTML version
+    (bold preserved) as the value so the card can render it."""
     examples: Dict[str, str] = {}
-    for col_name, cell in zip(header[1:], row[1:]):
-        cell = clean_cell(cell)
+    for col_name, raw_cell in zip(header[1:], row[1:]):
+        cell = clean_cell(raw_cell)
         if not cell or BLANK_CELL_RE.match(cell):
             continue
-        # drop cross-reference cells like "(see t)" or "тато -> see t" -- they
-        # duplicate another row's example rather than illustrating this phoneme
         if "see" in cell.lower() and ("(" in cell or "\u2192" in cell or "->" in cell):
             continue
-        # drop "no such sound, and here's why" annotations, e.g.
-        # "-- (contested, no clean minimal pairs)" or "-- (allophonic before k/g)"
         if cell.startswith("\u2014") or cell.startswith("-"):
             continue
-        examples[col_name] = cell
+        examples[col_name] = cell_to_html(raw_cell)
     return examples
 
 
 def format_example_words(examples: Dict[str, str]) -> str:
-    return "; ".join(f"{lang} {word}" for lang, word in examples.items())
+    """One styled block per language, in card-ready HTML: a small muted
+    language label followed by the (bold-lettered) example word, large."""
+    return "".join(
+        f'<div class="ipa-example-line"><span class="ipa-lang">{lang}</span>{word}</div>'
+        for lang, word in examples.items()
+    )
 
 
 def make_note(

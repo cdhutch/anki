@@ -17,8 +17,10 @@ fields:
   Place_of_Articulation: labiodental
   Voicing: voiceless
   Airflow: ''
-  Example_Words: English fun; German Fisch (fish); Russian фото (photo, loanword); Ukrainian
-    фото (photo, loanword)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>f</b>un</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>F</b>isch (fish)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>ф</b>ото (photo, loanword)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>ф</b>ото (photo, loanword)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

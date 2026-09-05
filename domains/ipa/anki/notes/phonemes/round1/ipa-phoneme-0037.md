@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: alveolo-palatal
   Voicing: voiceless
   Airflow: ''
-  Example_Words: Russian щука (pike)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>щ</b>ука
+    (pike)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

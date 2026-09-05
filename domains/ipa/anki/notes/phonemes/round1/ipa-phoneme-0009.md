@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English no; German nein (no); French non (no); Russian нет (no); Ukrainian
-    ні (no)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>n</b>o</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>n</b>ein (no)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>n</b>on (no)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>н</b>ет (no)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>н</b>і (no)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

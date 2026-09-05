@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English sing; German singen (to sing); French parking (loanword)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>si<b>ng</b></div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span>si<b>ng</b>en (to sing)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span>parki<b>ng</b> (loanword)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

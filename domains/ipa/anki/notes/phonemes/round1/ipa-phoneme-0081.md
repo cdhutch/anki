@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: French bon (good)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">French</span>b<b>on</b>
+    (good)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

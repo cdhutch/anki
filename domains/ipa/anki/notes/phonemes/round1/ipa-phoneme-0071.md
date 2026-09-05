@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: English cup
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>c<b>u</b>p</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

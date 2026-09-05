@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German Boot (boat)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>B<b>oo</b>t
+    (boat)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

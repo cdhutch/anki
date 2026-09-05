@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: Russian мать (mother); Ukrainian пʼять (five)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>м</b>а<b>ть</b>
+    (mother)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>пʼя<b>ть</b>
+    (five)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

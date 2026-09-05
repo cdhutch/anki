@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiceless
   Airflow: ''
-  Example_Words: Russian первый (first)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>п</b>ервый
+    (first)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

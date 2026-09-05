@@ -17,7 +17,10 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: English bed; German Bett (bed); French père (father); Ukrainian це (this)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>b<b>e</b>d</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span>B<b>e</b>tt (bed)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span>p<b>è</b>re (father)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>це</b> (this)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German über (over/above); French tu (you)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span><b>ü</b>ber
+    (over/above)</div><div class="ipa-example-line"><span class="ipa-lang">French</span>t<b>u</b>
+    (you)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

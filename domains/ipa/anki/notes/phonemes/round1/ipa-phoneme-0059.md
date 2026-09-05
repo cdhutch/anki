@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German Tee (tea); French été (summer)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>T<b>ee</b>
+    (tea)</div><div class="ipa-example-line"><span class="ipa-lang">French</span>ét<b>é</b>
+    (summer)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

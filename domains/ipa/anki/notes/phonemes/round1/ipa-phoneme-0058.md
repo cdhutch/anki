@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: Russian ты (you, informal)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span>т<b>ы</b>
+    (you, informal)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

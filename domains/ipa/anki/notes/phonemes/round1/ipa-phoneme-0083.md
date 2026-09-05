@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: French un (a/one)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">French</span><b>un</b>
+    (a/one)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiced
   Airflow: ''
-  Example_Words: English mom; German Mutter (mother); French maman (mom); Russian мама (mom);
-    Ukrainian мама (mom)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>m</b>om</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>M</b>utter (mother)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>m</b>aman (mom)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>м</b>ама (mom)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>м</b>ама (mom)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

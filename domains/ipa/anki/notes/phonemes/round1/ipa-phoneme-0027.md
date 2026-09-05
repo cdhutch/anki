@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English red
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>r</b>ed</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: alveolo-palatal
   Voicing: voiceless
   Airflow: ''
-  Example_Words: Russian чай (tea) — more palatal than Ukrainian's ч
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>ч</b>ай
+    (tea) — more palatal than Ukrainian's ч</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

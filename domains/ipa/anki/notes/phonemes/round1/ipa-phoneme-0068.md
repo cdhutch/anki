@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: French eau (water); Russian дом (house)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">French</span><b>eau</b>
+    (water)</div><div class="ipa-example-line"><span class="ipa-lang">Russian</span>д<b>о</b>м
+    (house)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German (contested; rare)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>(contested;
+    rare)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

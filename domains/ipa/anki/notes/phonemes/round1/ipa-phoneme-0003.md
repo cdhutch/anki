@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiced
   Airflow: ''
-  Example_Words: English bad; German Buch (book); French bon (good); Russian брат (brother);
-    Ukrainian брат (brother)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>b</b>ad</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>B</b>uch (book)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>b</b>on (good)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>б</b>рат (brother)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>б</b>рат (brother)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

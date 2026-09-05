@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: Russian сегодня (today); Ukrainian сьогодні (today)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>с</b>егодня
+    (today)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>сь</b>огодні
+    (today)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

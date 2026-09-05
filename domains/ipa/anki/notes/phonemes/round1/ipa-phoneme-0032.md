@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: labial-velar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English we; French oui (yes)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>w</b>e</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>ou</b>i (yes)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

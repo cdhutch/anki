@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: Russian друзья (friends); Ukrainian друзі (friends)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span>дру<b>зья</b>
+    (friends)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>дру<b>зі</b>
+    (friends)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

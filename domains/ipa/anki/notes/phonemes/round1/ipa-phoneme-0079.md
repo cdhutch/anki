@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German können (can); French sœur (sister)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>k<b>ö</b>nnen
+    (can)</div><div class="ipa-example-line"><span class="ipa-lang">French</span>s<b>œu</b>r
+    (sister)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

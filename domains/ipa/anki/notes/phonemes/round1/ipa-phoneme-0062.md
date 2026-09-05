@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German Mann (man); French papa (dad); Russian мама (mom); Ukrainian мама
-    (mom)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>M<b>a</b>nn
+    (man)</div><div class="ipa-example-line"><span class="ipa-lang">French</span>p<b>a</b>pa
+    (dad)</div><div class="ipa-example-line"><span class="ipa-lang">Russian</span>м<b>а</b>ма
+    (mom)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>м<b>а</b>ма
+    (mom)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

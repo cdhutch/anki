@@ -17,7 +17,10 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiceless
   Airflow: ''
-  Example_Words: German Zeit (time); Russian яйцо (egg); Ukrainian яйце (egg)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span><b>Z</b>eit
+    (time)</div><div class="ipa-example-line"><span class="ipa-lang">Russian</span>яй<b>ц</b>о
+    (egg)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>яй<b>ц</b>е
+    (egg)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

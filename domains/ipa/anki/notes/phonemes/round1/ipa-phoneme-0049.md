@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiced
   Airflow: ''
-  Example_Words: Russian мир (world/peace)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>м</b>ир
+    (world/peace)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

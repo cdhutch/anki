@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: English dog; German das (the/that); French deux (two); Russian дом (house);
-    Ukrainian дім (house)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>d</b>og</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>d</b>as (the/that)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>d</b>eux (two)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>д</b>ом (house)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span><b>д</b>ім (house)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

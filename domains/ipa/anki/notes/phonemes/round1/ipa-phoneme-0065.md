@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: English father
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>f<b>a</b>ther</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

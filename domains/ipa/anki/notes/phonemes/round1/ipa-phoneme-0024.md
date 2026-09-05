@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: glottal
   Voicing: voiced
   Airflow: ''
-  Example_Words: Ukrainian нога (leg)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>но<b>г</b>а
+    (leg)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

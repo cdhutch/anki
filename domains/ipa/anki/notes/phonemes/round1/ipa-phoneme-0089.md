@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: German Deutsch (German)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span>D<b>eu</b>tsch
+    (German)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: English sit; German ich (I); Ukrainian ми (we)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>s<b>i</b>t</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>i</b>ch (I)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>м<b>и</b> (we)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

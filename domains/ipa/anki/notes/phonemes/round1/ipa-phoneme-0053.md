@@ -17,7 +17,9 @@ fields:
   Place_of_Articulation: alveolar
   Voicing: voiced
   Airflow: ''
-  Example_Words: Russian соль (salt); Ukrainian більше (more)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>соль</b>
+    (salt)</div><div class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>бі<b>ль</b>ше
+    (more)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,7 +17,10 @@ fields:
   Place_of_Articulation: bilabial
   Voicing: voiceless
   Airflow: ''
-  Example_Words: English pen; German Papier (paper); French papa (dad); Russian папа (dad)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span><b>p</b>en</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span><b>P</b>apier (paper)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span><b>p</b>apa (dad)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span><b>п</b>апа (dad)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

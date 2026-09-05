@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: palatal
   Voicing: voiced
   Airflow: ''
-  Example_Words: French montagne (mountain)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">French</span>mo<b>ntagn</b>e
+    (mountain)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

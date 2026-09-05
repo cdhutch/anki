@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: velar
   Voicing: voiced
   Airflow: ''
-  Example_Words: Russian гид (guide)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">Russian</span><b>г</b>ид
+    (guide)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

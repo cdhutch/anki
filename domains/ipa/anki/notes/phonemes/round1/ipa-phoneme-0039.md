@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: bilabial-labiodental
   Voicing: voiceless
   Airflow: ''
-  Example_Words: German Pfeffer (pepper)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">German</span><b>Pf</b>effer
+    (pepper)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

@@ -17,7 +17,8 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: French sans (without)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">French</span>s<b>an</b>s
+    (without)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

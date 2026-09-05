@@ -17,8 +17,11 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: English food; German Buch (book); French tout (all); Russian рука (hand);
-    Ukrainian рука (hand)
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>f<b>oo</b>d</div><div
+    class="ipa-example-line"><span class="ipa-lang">German</span>B<b>u</b>ch (book)</div><div
+    class="ipa-example-line"><span class="ipa-lang">French</span>t<b>ou</b>t (all)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Russian</span>р<b>у</b>ка (hand)</div><div
+    class="ipa-example-line"><span class="ipa-lang">Ukrainian</span>р<b>у</b>ка (hand)</div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

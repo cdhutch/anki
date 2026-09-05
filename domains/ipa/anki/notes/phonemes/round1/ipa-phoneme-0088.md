@@ -17,7 +17,7 @@ fields:
   Place_of_Articulation: ''
   Voicing: ''
   Airflow: ''
-  Example_Words: English boy
+  Example_Words: <div class="ipa-example-line"><span class="ipa-lang">English</span>b<b>oy</b></div>
   Language_Analogs: ''
   Minimal_Pairs: ''
   Confusable_With: ''

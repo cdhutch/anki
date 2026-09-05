@@ -52,13 +52,13 @@ IPA_PHONEME_FRONT = """\
 IPA_PHONEME_BACK = """\
 {{FrontSide}}
 <hr>
-{{#Type}}<div style="font-size: 13px; color: #666;"><strong>Type:</strong> {{Type}}</div>{{/Type}}
+{{#Example_Words}}<div class="ipa-examples">{{Example_Words}}</div>{{/Example_Words}}
+{{#Type}}<div style="font-size: 13px; color: #666; margin-top: 12px;"><strong>Type:</strong> {{Type}}</div>{{/Type}}
 {{#Description}}<div style="font-size: 16px; margin: 8px 0 12px;">{{Description}}</div>{{/Description}}
 {{#Manner_of_Articulation}}<div style="font-size: 13px; color: #666;"><strong>Manner:</strong> {{Manner_of_Articulation}}</div>{{/Manner_of_Articulation}}
 {{#Place_of_Articulation}}<div style="font-size: 13px; color: #666;"><strong>Place:</strong> {{Place_of_Articulation}}</div>{{/Place_of_Articulation}}
 {{#Voicing}}<div style="font-size: 13px; color: #666;"><strong>Voicing:</strong> {{Voicing}}</div>{{/Voicing}}
 {{#Airflow}}<div style="font-size: 13px; color: #666;"><strong>Airflow:</strong> {{Airflow}}</div>{{/Airflow}}
-{{#Example_Words}}<div style="font-size: 13px; margin-top: 12px;"><strong>Examples:</strong> {{Example_Words}}</div>{{/Example_Words}}
 {{#Language_Analogs}}<div style="font-size: 12px; color: #999; margin-top: 8px;">{{Language_Analogs}}</div>{{/Language_Analogs}}
 <div style="font-size: 10px; color: #999; margin-top: 16px;">{{NoteID}}</div>
 """
@@ -94,6 +94,14 @@ def sync_field_order(model_name: str, desired_fields: list[str]) -> bool:
     return True
 
 
+MODEL_CSS = """\
+.card { font-family: Arial; font-size: 16px; }
+.ipa-examples { margin: 12px 0; }
+.ipa-example-line { font-size: 24px; line-height: 1.9; margin: 2px 0; }
+.ipa-lang { color: #888; font-size: 0.5em; margin-right: 10px; min-width: 70px; display: inline-block; text-align: right; }
+"""
+
+
 def create_model(model_name: str, fields: list[str], templates: list[dict]):
     """Create a new note type in Anki."""
     print(f"Creating note type '{model_name}'...")
@@ -102,7 +110,7 @@ def create_model(model_name: str, fields: list[str], templates: list[dict]):
         {
             "modelName": model_name,
             "inOrderFields": fields,
-            "css": ".card { font-family: Arial; font-size: 16px; }",
+            "css": MODEL_CSS,
             "cardTemplates": templates,
         },
         url=ANKI_URL,
@@ -149,6 +157,15 @@ def update_model(model_name: str, fields: list[str], templates: list[dict]):
 
     # Sync field order
     sync_field_order(model_name, fields)
+
+    # Push current CSS (createModel only sets it once; existing models need
+    # an explicit update or new/changed classes like .ipa-example-line never
+    # reach a model that was created before they existed).
+    anki_request(
+        "updateModelStyling",
+        {"model": {"name": model_name, "css": MODEL_CSS}},
+        url=ANKI_URL,
+    )
 
     print("  Updated.")
 
