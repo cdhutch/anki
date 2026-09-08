@@ -16,7 +16,7 @@ tags:
 - pos:noun
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0829
   Lemma: свя́то

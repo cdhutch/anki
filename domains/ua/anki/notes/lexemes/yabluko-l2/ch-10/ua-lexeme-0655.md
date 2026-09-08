@@ -14,7 +14,7 @@ tags:
 - pos:noun
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0655
   Lemma: ма́чуха
