@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:phrase
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0651
   Lemma: ручна́ покла́жа

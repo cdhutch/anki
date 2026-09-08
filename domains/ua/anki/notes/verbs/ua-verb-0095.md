@@ -10,7 +10,7 @@ tags:
 - class:regular-1
 - ch:2.10.2
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-verb-0095
   Lemma: дивува́тися

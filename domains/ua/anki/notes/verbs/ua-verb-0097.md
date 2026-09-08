@@ -11,7 +11,7 @@ tags:
 - ch:2.10.2
 - ch:2.6.1
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-verb-0097
   Lemma: допомага́ти

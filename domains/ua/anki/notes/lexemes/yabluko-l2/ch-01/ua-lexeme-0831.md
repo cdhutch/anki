@@ -15,7 +15,8 @@ tags:
 - ch:1.12.4
 - pos:verb
 - status:verified
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-0831
   Lemma: нена́видіти
