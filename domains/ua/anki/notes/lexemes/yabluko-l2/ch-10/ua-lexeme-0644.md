@@ -31,7 +31,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. курити (everyday verb for the smoking habit; палити is what "No Smoking"
+    signage uses), спалювати (to burn something up), запалювати (to light/ignite), горіти
+    (plain "to be on fire") and тліти (to smolder).
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: палити

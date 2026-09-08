@@ -31,7 +31,8 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. вільний (available/unoccupied/independent) -- безкоштовний is specifically
+    about cost (free of charge), the pair most likely confused when translating English "free."
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: безкоштовний

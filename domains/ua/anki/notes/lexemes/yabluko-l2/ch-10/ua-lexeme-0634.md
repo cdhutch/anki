@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:adjective
-- status:draft
+- status:verified
 - release:pending
 fields:
   NoteID: ua-lexeme-0634
@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: hand-, manual
+  EN_Gloss: hand-operated, hand-, manual
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''

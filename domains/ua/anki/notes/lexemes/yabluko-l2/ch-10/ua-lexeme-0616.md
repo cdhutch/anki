@@ -13,7 +13,7 @@ tags:
 - ch:2.3.4
 - ch:1.11.2
 - pos:noun
-- status:draft
+- status:verified
 - release:active
 - relearn:pending
 fields:

@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.1.1
 - pos:adverb
-- status:draft
+- status:verified
 - release:pending
 - ch:2.7.2
 - ch:1.5.7

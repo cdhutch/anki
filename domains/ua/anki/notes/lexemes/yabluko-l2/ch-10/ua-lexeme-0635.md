@@ -14,7 +14,7 @@ tags:
 - ch:1.6.6
 - pos:adjective
 - status:draft
-- release:active
+- release:pending
 - relearn:pending
 fields:
   NoteID: ua-lexeme-0635
@@ -28,12 +28,13 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: free
+  EN_Gloss: free, not busy, independent, unconstrained
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. безкоштовний (costless, free of charge) and свобода (the abstract noun
+    "freedom") -- вільний is specifically available/unoccupied/independent, not about price.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: вільний
