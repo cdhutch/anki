@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.1.1
 - pos:numeral
-- status:draft
+- status:verified
 - release:pending
 fields:
   NoteID: ua-lexeme-0833
@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: both
+  EN_Gloss: both (m.), both (f.), both (n.)
   Govt_Case: ''
   IrregularForms: оби́два (m.), оби́дві (f./n.), обо́є (genderless collective) -- see goroh.pp.ua/Словозміна/обидва
     and /обоє for full declension tables.

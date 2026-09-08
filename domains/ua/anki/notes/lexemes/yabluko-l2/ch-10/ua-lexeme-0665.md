@@ -14,7 +14,7 @@ tags:
 - ch:1.11.2
 - ch:1.12.4
 - pos:verb
-- status:draft
+- status:verified
 - release:active
 - relearn:pending
 fields:

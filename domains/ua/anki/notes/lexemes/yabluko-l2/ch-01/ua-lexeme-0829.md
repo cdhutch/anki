@@ -14,7 +14,7 @@ tags:
 - ch:1.4.3
 - ch:1.4.5
 - pos:noun
-- status:draft
+- status:verified
 - release:pending
 fields:
   NoteID: ua-lexeme-0829

@@ -2736,3 +2736,66 @@ clusters:
         shoulder -- distinct from мішок's bulk-storage sack (Горох-verified, yabluko-l1 pass)
       compare_scenario: Walking home from the market, she's got a cloth bag of groceries
         slung over one arm. What's the word for that kind of carry-bag?
+  stepmother-vs-mother-in-law:
+    description: 'Two-way cluster for two unrelated "not my biological mother" female
+      relations that learners tend to flatten into one vague "mother-in-law" gloss:
+      мачуха is a STEPMOTHER (a parent''s new spouse after death/divorce/remarriage, no
+      blood relation -- the classic "evil stepmother" of fairy tales); свекруха is
+      specifically a WIFE''s MOTHER-IN-LAW (her husband''s mother). The two share no
+      etymology and no real semantic overlap beyond both being an older female in-law
+      figure who is not the speaker''s own mother -- confusable purely by gloss
+      collision. Added 2026-09-08 per Craig''s ch.2.10.2 lexeme verification pass.
+
+      '
+    canonical_note: ua-lexeme-0655
+    members:
+    - note_id: ua-lexeme-0655
+      lemma: ма́чуха
+      status: sourced
+      chapter: '2.10.2'
+      comment: Stepmother -- a parent's new wife after remarriage, no blood relation
+        (Горох-verified)
+      compare_scenario: In the fairy tale, a girl's mother has died and her father has
+        remarried -- it's his new wife, cruel and unrelated to her by blood, who now
+        rules the house. What word names that classic fairy-tale figure?
+    - note_id: ua-lexeme-3808
+      lemma: свекру́ха
+      status: sourced
+      chapter: '1.12.2'
+      comment: Mother-in-law specifically from the wife's side -- her husband's mother
+        (Горох-verified)
+      compare_scenario: A newly married woman visits for the holidays, and it's her
+        husband's own mother -- not a stepmother, not her own mother -- who's in the
+        kitchen making borscht. What word names her?
+  prikro-vs-na-zhal:
+    description: 'Two-way cluster for adverbs whose EN glosses both drift toward "it''s
+      a pity"/"unfortunately" and get conflated by learners: на жаль is a neutral,
+      sentence-prefacing "unfortunately" -- announcing a regrettable FACT or circumstance
+      to a listener (На жаль, музей сьогодні зачинений); при́кро is a predicative
+      "it''s upsetting/a pity" -- expressing the speaker''s own personal sting of
+      hurt or annoyance about something (pairs with мені: мені прикро "I feel bad
+      about it"), and doubles as a plain manner adverb "upsettingly." Both commonly
+      open a "..., що..." clause, which is exactly what makes them easy to mix up.
+      Added 2026-09-08 per Craig''s ch.2.10.2 lexeme verification pass.
+
+      '
+    canonical_note: ua-lexeme-0662
+    members:
+    - note_id: ua-lexeme-0662
+      lemma: при́кро
+      status: sourced
+      chapter: '2.10.2'
+      comment: Predicative "it's upsetting/a pity" -- the speaker's own emotional sting,
+        often with мені; also a manner adverb "upsettingly" (Горох-verified)
+      compare_scenario: A friend couldn't make it to your event, and you tell them it
+        genuinely stings a little -- not just a neutral fact, but something that actually
+        hurt your feelings a bit. What predicative word says that?
+    - note_id: ua-lexeme-2798
+      lemma: на жаль
+      status: sourced
+      chapter: '1.2.5'
+      comment: Neutral sentence-prefacing "unfortunately" -- announcing a regrettable
+        fact/circumstance, no personal emotional sting implied (yabluko-l1 pass)
+      compare_scenario: You're telling a friend, matter-of-factly, that the museum they
+        wanted to visit is closed today -- just relaying a disappointing fact, not
+        expressing that it personally upset you. What word opens that sentence?

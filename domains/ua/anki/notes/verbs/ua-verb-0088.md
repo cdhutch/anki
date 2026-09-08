@@ -9,7 +9,7 @@ tags:
 - domain:ua
 - class:regular-1
 - ch:2.10.1
-- status:draft
+- status:verified
 - release:pending
 fields:
   NoteID: ua-verb-0088

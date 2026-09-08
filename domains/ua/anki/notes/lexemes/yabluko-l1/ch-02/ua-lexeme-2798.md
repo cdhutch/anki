@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: Satellite note in prikro-vs-na-zhal cluster; hub is ua-lexeme-0662 (прикро).
+    See domains/ua/anki/confusable_clusters.yaml for full cluster. на жаль = neutral, sentence-prefacing
+    "unfortunately" (a regrettable fact/circumstance); прикро = predicative "it's upsetting/a
+    pity," the speaker's own emotional sting -- unrelated in etymology, confusable only because
+    both gloss toward regret.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: на жаль

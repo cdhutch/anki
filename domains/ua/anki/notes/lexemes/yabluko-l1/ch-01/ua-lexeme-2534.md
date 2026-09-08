@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:1.1.1
 - pos:noun
-- status:draft
+- status:verified
 - release:pending
 fields:
   NoteID: ua-lexeme-2534
