@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:adjective
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0638
   Lemma: бага́жний

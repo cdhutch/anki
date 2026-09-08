@@ -32,7 +32,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. поклажа (the abstract collective "baggage/load"), валіза (a suitcase),
+    мішок (a bulk sack) and торба (a cloth shopping bag) -- сумка is an everyday personal
+    handheld/shoulder bag or purse.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: сумка

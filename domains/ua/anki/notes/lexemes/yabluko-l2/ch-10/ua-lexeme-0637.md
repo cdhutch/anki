@@ -30,7 +30,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. купе (the standard sleeping compartment on an overnight train) and люкс
+    (its deluxe class) -- відділення is the general word for any compartment/section/department,
+    not train-specific.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: відділення

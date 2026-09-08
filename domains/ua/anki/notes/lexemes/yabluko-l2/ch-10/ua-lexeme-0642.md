@@ -12,8 +12,8 @@ tags:
 - ch:2.10.1
 - pos:verb
 - aspect:imperfective-only
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0642
   Lemma: трима́ти

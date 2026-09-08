@@ -30,7 +30,9 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. палити/курити (to smoke, not burn), запалювати (to light/ignite -- the
+    opposite of спалювати's destruction), горіти (plain "to be on fire," not destructive)
+    and тліти (to smolder).
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: спалювати / спалити

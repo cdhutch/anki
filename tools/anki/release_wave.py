@@ -182,6 +182,7 @@ def main() -> int:
     ap.add_argument("--root", type=Path, default=DEFAULT_ROOT, help="Note directory to scan (recursive)")
     ap.add_argument("--dry-run", action="store_true", help="Show what would be promoted; touch nothing")
     args = ap.parse_args()
+    args.root = args.root.resolve()  # normalize a relative --root so fp.relative_to(REPO_ROOT) below can't raise
 
     groups = load_plan(args.plan)
     if not groups:

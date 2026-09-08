@@ -13,9 +13,9 @@ tags:
 - ch:2.3.4
 - ch:1.11.2
 - pos:noun
-- status:draft
+- status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0616
   Lemma: до́звіл

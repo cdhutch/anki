@@ -12,9 +12,9 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:noun
-- status:draft
+- status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0620
   Lemma: валі́за
@@ -32,7 +32,8 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: cf. поклажа (the abstract, collective "baggage/load," not any one item),
+    сумка, мішок, торба (other bag/sack types) -- валіза is specifically a suitcase.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: валіза

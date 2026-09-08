@@ -14,8 +14,9 @@ tags:
 - ch:1.4.3
 - ch:1.4.5
 - pos:noun
-- status:draft
-- release:pending
+- status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0829
   Lemma: свя́то

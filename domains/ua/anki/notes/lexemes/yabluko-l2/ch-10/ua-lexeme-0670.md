@@ -12,9 +12,9 @@ tags:
 - ch:2.10.2
 - ch:1.12.2
 - pos:verb
-- status:draft
+- status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0670
   Lemma: дя́кувати

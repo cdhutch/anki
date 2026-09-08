@@ -11,7 +11,7 @@ tags:
 - textbook:яблуко
 - ch:2.10.2
 - pos:adverb
-- status:draft
+- status:verified
 - release:pending
 fields:
   NoteID: ua-lexeme-0662
@@ -30,7 +30,11 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Hub note for prikro-vs-na-zhal cluster (see domains/ua/anki/confusable_clusters.yaml).
+    Members: ua-lexeme-0662 (прикро, predicative "it''s upsetting/a pity"), ua-lexeme-2798
+    (на жаль, neutral "unfortunately"). Both commonly open a "..., що..." clause, which is
+    exactly what makes them easy to mix up -- прикро carries the speaker''s own emotional
+    sting, на жаль just relays a regrettable fact.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: прикро

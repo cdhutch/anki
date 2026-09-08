@@ -11,8 +11,9 @@ tags:
 - textbook:яблуко
 - ch:1.1.1
 - pos:noun
-- status:draft
-- release:pending
+- status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-2534
   Lemma: бабу́ся

@@ -12,8 +12,9 @@ tags:
 - ch:2.10.2
 - ch:1.12.7
 - pos:verb
-- status:draft
-- release:pending
+- status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0674
   Lemma: обража́тися

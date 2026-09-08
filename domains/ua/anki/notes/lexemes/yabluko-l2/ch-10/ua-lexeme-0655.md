@@ -12,9 +12,9 @@ tags:
 - ch:2.10.2
 - ch:1.12.2
 - pos:noun
-- status:draft
+- status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0655
   Lemma: ма́чуха
@@ -32,7 +32,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: ''
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: 'Hub note for stepmother-vs-mother-in-law cluster (see domains/ua/anki/confusable_clusters.yaml).
+    Members: ua-lexeme-0655 (мачуха, stepmother), ua-lexeme-3808 (свекруха, husband''s mother/wife''s
+    mother-in-law). Two unrelated female in-law/step relations that share no etymology, distinguished
+    purely because learners flatten both to a vague "mother-in-law" gloss.'
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: мачуха

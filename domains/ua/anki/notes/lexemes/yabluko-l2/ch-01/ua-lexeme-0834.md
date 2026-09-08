@@ -11,8 +11,9 @@ tags:
 - textbook:яблуко
 - ch:2.1.1
 - pos:adverb
-- status:draft
-- release:pending
+- status:verified
+- release:active
+- relearn:seeded
 - ch:2.7.2
 - ch:1.5.7
 fields:

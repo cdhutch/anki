@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:phrase
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0652
   Lemma: табло́ вильо́тів та прильо́тів

@@ -11,8 +11,9 @@ tags:
 - textbook:яблуко
 - ch:1.12.2
 - pos:noun
-- status:draft
-- release:pending
+- status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-3808
   Lemma: свекру́ха
@@ -30,7 +31,10 @@ fields:
   IrregularForms: ''
   CounterpartForm: null
   VerbMotion_Pair: ''
-  ConfusableSet: ''
+  ConfusableSet: Satellite note in stepmother-vs-mother-in-law cluster; hub is ua-lexeme-0655
+    (мачуха). See domains/ua/anki/confusable_clusters.yaml for full cluster. свекруха = husband's
+    mother (wife's mother-in-law); мачуха = stepmother (a parent's new spouse, no blood relation)
+    -- unrelated concepts, confusable only by gloss collision.
   Mnemonic_EN: ''
   CrossLang_Analog: ''
   TypingAnswer: свекруха

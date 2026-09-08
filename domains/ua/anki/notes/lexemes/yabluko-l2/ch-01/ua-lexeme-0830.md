@@ -16,8 +16,9 @@ tags:
 - ch:1.3.7
 - ch:1.6.5
 - pos:verb
-- status:draft
-- release:pending
+- status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0830
   Lemma: відпочива́ти

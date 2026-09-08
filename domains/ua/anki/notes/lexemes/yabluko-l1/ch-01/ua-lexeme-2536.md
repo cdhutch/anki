@@ -12,8 +12,9 @@ tags:
 - ch:1.1.1
 - ch:1.3.3
 - pos:noun
-- status:draft
-- release:pending
+- status:verified
+- release:active
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-2536
   Lemma: внук

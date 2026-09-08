@@ -12,9 +12,9 @@ tags:
 - ch:2.10.2
 - ch:1.11.2
 - pos:adjective
-- status:draft
+- status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0659
   Lemma: за́йнятий

@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:adjective
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0634
   Lemma: ручни́й
@@ -25,7 +25,7 @@ fields:
   Perfective_Euphony: ''
   EuphonyNote: ''
   AspectCue: ''
-  EN_Gloss: hand-, manual
+  EN_Gloss: hand-operated, hand-, manual
   Govt_Case: ''
   IrregularForms: ''
   CounterpartForm: ''

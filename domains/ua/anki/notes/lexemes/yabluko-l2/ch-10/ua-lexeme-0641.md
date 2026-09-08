@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.10.1
 - pos:noun
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0641
   Lemma: табло́

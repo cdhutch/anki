@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - class:regular-2
 - ch:2.10.1
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0090
   Lemma: пали́ти

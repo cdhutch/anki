@@ -12,9 +12,9 @@ tags:
 - textbook:яблуко
 - ch:2.10.2
 - pos:noun
-- status:draft
+- status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0658
   Lemma: фе́я

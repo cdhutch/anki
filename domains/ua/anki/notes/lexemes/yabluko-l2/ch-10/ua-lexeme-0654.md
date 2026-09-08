@@ -11,8 +11,8 @@ tags:
 - textbook:яблуко
 - ch:2.10.2
 - pos:noun
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0654
   Lemma: близню́чка

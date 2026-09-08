@@ -12,8 +12,8 @@ tags:
 - ch:2.10.1
 - ch:2.3.4
 - pos:noun
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-lexeme-0636
   Lemma: торгі́вля

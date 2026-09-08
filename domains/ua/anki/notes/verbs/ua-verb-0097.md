@@ -10,8 +10,8 @@ tags:
 - class:regular-1
 - ch:2.10.2
 - ch:2.6.1
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0097
   Lemma: допомага́ти

@@ -9,8 +9,8 @@ tags:
 - domain:ua
 - class:regular-1
 - ch:2.10.2
-- status:draft
-- release:pending
+- status:verified
+- release:active
 fields:
   NoteID: ua-verb-0102
   Lemma: обража́тися
