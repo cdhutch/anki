@@ -13,7 +13,7 @@ tags:
 - pos:verb
 - aspect:imperfective-only
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0642
   Lemma: трима́ти

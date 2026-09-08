@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:phrase
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0648
   Lemma: магази́н ві́льної торгі́влі

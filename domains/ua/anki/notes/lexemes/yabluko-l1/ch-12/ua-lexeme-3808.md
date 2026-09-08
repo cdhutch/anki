@@ -12,7 +12,8 @@ tags:
 - ch:1.12.2
 - pos:noun
 - status:verified
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-3808
   Lemma: свекру́ха

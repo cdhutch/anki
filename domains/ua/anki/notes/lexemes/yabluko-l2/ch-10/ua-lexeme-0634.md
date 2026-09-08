@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:adjective
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0634
   Lemma: ручни́й

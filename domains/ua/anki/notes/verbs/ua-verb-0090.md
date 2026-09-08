@@ -10,7 +10,7 @@ tags:
 - class:regular-2
 - ch:2.10.1
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-verb-0090
   Lemma: пали́ти

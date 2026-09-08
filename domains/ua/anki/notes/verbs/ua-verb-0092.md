@@ -11,7 +11,7 @@ tags:
 - ch:2.10.2
 - ch:2.4.5
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-verb-0092
   Lemma: бажа́ти

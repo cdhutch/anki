@@ -12,7 +12,7 @@ tags:
 - ch:2.10.2
 - pos:noun
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0654
   Lemma: близню́чка

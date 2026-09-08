@@ -12,7 +12,8 @@ tags:
 - ch:1.1.1
 - pos:noun
 - status:verified
-- release:pending
+- release:active
+- relearn:pending
 fields:
   NoteID: ua-lexeme-2534
   Lemma: бабу́ся

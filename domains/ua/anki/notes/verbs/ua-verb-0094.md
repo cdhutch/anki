@@ -10,7 +10,7 @@ tags:
 - class:regular-2
 - ch:2.10.2
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-verb-0094
   Lemma: дзвони́ти

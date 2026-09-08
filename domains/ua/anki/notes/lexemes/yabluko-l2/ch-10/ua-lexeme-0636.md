@@ -13,7 +13,7 @@ tags:
 - ch:2.3.4
 - pos:noun
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0636
   Lemma: торгі́вля

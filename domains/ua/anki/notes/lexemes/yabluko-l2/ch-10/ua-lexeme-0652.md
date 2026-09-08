@@ -12,7 +12,7 @@ tags:
 - ch:2.10.1
 - pos:phrase
 - status:verified
-- release:pending
+- release:active
 fields:
   NoteID: ua-lexeme-0652
   Lemma: табло́ вильо́тів та прильо́тів
