@@ -14,7 +14,7 @@ tags:
 - pos:adjective
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 fields:
   NoteID: ua-lexeme-0659
   Lemma: за́йнятий

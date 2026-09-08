@@ -13,7 +13,7 @@ tags:
 - pos:verb
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 - ch:2.12.1
 - ch:1.11.6
 - ch:1.12.2

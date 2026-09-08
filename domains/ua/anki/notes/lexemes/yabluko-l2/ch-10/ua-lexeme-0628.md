@@ -14,7 +14,7 @@ tags:
 - pos:noun
 - status:verified
 - release:active
-- relearn:pending
+- relearn:seeded
 - ch:2.2.1
 - ch:1.2.1
 fields:
